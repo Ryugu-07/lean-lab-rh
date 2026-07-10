@@ -7207,3 +7207,38 @@ Future attempt records must include:
   theorem and conjugation lemmas had compiled; the fixed DAG, preregistration, worktree, and exact
   file state were rechecked before continuing.
 - detailed record: `research/m1_zeta_ratio_digamma_20260711.md`.
+
+## Audit 2026-07-11-M1-07: corrected F1 route
+
+- `loop_id`: `AUDIT-20260711-M1-07`
+- `node_id`: `M1`
+- `gap_id`: `G2/F1`
+- `work_class`: `AUDIT`
+- exact target: determine the weakest published dependency chain for the remaining fixed-epsilon
+  convergence block and select the first honest theorem target.
+- source comparison: Baez-Duarte `math/0202141v2` uses Balazard-Saias plus RH-to-Lindelof; Burnol
+  `math/0202166v1`, Theorem 1.4 and Section 2, replaces Lindelof by the unconditional critical-line
+  bound `|zeta(1/2+it)|=O(|t|^(1/4))`.
+- integrability calculation: the transformed truncation error is bounded by
+  `N^(-epsilon/3)*|s|^theta*|zeta(s)/s|`, hence by a constant times
+  `N^(-epsilon/3)*|t|^(-3/4+theta)`; its square is integrable for `theta<1/4`.
+- external Lean result: no Balazard-Saias implementation was found. The audited Apache-2.0
+  `PrimeNumberTheoremAnd/RiemannZetaConvexity.lean` compiles but proves only an exponent-one linear
+  strip bound, which is insufficient. An unlicensed public exploration leaves the required
+  weighted Phragmen-Lindelof interpolation as an explicit axiom; no code was reused.
+- selected next theorem: an unconditional critical-line zeta bound with any exponent below `1/2`,
+  for example `3/8`. It requires genuine polynomial-boundary Phragmen-Lindelof interpolation and
+  sharp enough Gamma boundary control.
+- `result_class`: `DEPENDENCY_GAP_IDENTIFIED`
+- `assumption_frontier_after`: RH-to-Lindelof is removed from the chosen published route. F1 now
+  consists exactly of the unconditional zeta convexity bound plus Balazard-Saias.
+- `hard_gap_after`: F1 remains open; F2/F3 stay closed; the reverse base criterion, G1, D, and RH
+  remain open.
+- model: Codex, GPT-5 family; exact backend identifier and reasoning effort are not exposed.
+- budget: unbounded persistent-goal budget; no explicit per-round token budget.
+- compaction state: compaction occurred after the source audit and initial documentation edits,
+  before final verification. The continuation summary was checked against the worktree, fixed DAG,
+  and preregistration before work resumed.
+- verification: full `lake build` passes with 8586 jobs; incomplete-proof and explicit-declaration
+  scans and `git diff --check` pass. No Lean source file changed in this audit.
+- detailed record: `research/m1_f1_route_audit_20260711.md`.

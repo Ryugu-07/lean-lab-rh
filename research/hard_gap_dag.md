@@ -23,7 +23,7 @@ flowchart TD
 | --- | --- | --- | --- |
 | A | in progress | Project-local xi, Li, Nyman-Beurling, and Baez-Duarte scaffolding. | Mostly formalization scaffolding; not RH progress under v2. |
 | M0 | complete | Align project-local Nyman-Beurling/Baez-Duarte predicates with published statements. | The positive-natural Baez-Duarte closure side is aligned in real and complex `L2(0,infinity)`: parameter indexing, kernel formula, target, closed span, whole-line error, endpoint, tolerance, and coefficient field are Lean-checked. |
-| M1 | in progress | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | The exact eligible closure side is fixed. Audit M1-01 split Theorem 1.1 into forward and reverse routes; Batches M1-02 through M1-06 closed the kernel Mellin identity, positive-natural scaling, weighted-log Fourier-Mellin `L2` isometry, power-majorant integrability, almost-everywhere zeta-ratio limit, weighted-to-unweighted tail transfer, and Baez-Duarte Lemma 2.2 with a fixed `L2` majorant. |
+| M1 | in progress | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | The exact eligible closure side is fixed. Batches M1-02 through M1-06 closed all forward analytic blocks except F1. Audit M1-07 selected Burnol's published fixed-epsilon route, replacing the RH-to-Lindelof dependency with an unconditional critical-line zeta convexity bound below exponent `1/2`. |
 | D | open | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | No direct bridge yet. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
 
@@ -32,7 +32,7 @@ flowchart TD
 | gap_id | node_id | status | description |
 | --- | --- | --- | --- |
 | G1 | M1/D | open | Formalize the classical Nyman-Beurling/Baez-Duarte equivalence with RH, using either Beurling's moment-constrained unit-interval space or Baez-Duarte's full-line space, and connect it to `Mathlib.RiemannHypothesis`. |
-| G2 | M1 | in progress | Available: full-line `L2`, finite-error/field alignment, exact kernel Mellin transforms, weighted-log Fourier-Mellin isometry and Plancherel, source power-majorant integrability, countability/nullity of critical-line zeta-zero ordinates, almost-everywhere convergence of the epsilon-dependent zeta ratio, Baez-Duarte Lemma 2.2 with an epsilon-independent `L2` majorant, and the quantitative weighted-to-unweighted tail transfer. The source tail exponent is Lean-verified as `1+2*epsilon`. Missing forward quantitative block: (F1) the Balazard-Saias Mobius partial-sum estimate and RH-to-Lindelof bound needed for fixed-epsilon transformed convergence. Missing reverse block: the base Nyman-Beurling criterion and its half-plane Hardy-space factorization infrastructure. |
+| G2 | M1 | in progress | Available: full-line `L2`, finite-error/field alignment, exact kernel Mellin transforms, weighted-log Fourier-Mellin isometry and Plancherel, source power-majorant integrability, countability/nullity of critical-line zeta-zero ordinates, almost-everywhere convergence of the epsilon-dependent zeta ratio, Baez-Duarte Lemma 2.2 with an epsilon-independent `L2` majorant, and the quantitative weighted-to-unweighted tail transfer. The source tail exponent is Lean-verified as `1+2*epsilon`. Missing forward block F1, using Burnol's published route: the Balazard-Saias Mobius partial-sum estimate plus an unconditional critical-line zeta convexity bound with exponent strictly below `1/2`. This route does not require RH-to-Lindelof. Missing reverse block: the base Nyman-Beurling criterion and its half-plane Hardy-space factorization infrastructure. |
 | G3 | M2 | parked | Construct unconditional finite approximants with error tending to zero. In the NB/BD framework this is essentially the hard RH direction; numerical convergence is not evidence. |
 
 ## Loop Reporting Policy
@@ -105,3 +105,10 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   fixed positive epsilon interval. Lean also verifies that the resulting transformed quotients are
   dominated by one explicit `MemLp` function. Result: `HARD_GAP_REDUCED`; F2 is removed, while F1
   and the reverse base criterion remain open.
+- Audit `AUDIT-20260711-M1-07` compared Baez-Duarte's fixed-epsilon argument with Burnol's
+  published alternative. Burnol combines the Balazard-Saias estimate with the unconditional
+  critical-line convexity bound `zeta(1/2+it)=O(|t|^(1/4))`, so RH-to-Lindelof is not required for
+  this route. The pinned and public Lean audit found neither Balazard-Saias nor a zeta convexity
+  exponent below `1/2`; an Apache-2.0 external module supplies only a linear strip bound, while an
+  unlicensed exploration leaves the weighted Phragmen-Lindelof core as an axiom. Result:
+  `DEPENDENCY_GAP_IDENTIFIED`; F1 is corrected but remains open.

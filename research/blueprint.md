@@ -1759,6 +1759,16 @@ sharp but malformed printed Gamma display is not used. The forward route now has
 Balazard-Saias plus RH-to-Lindelof; the reverse base criterion remains open. Result:
 `HARD_GAP_REDUCED`.
 
+Audit `AUDIT-20260711-M1-07` corrects the final forward dependency F1. Baez-Duarte's presentation
+uses RH-to-Lindelof after the Balazard-Saias partial-sum estimate, but Burnol's published
+`math/0202166` proof instead uses the unconditional critical-line convexity estimate
+`|zeta(1/2+it)| = O(|t|^(1/4))`. Together with the arbitrary positive exponent in
+Balazard-Saias, this gives an `L2` error majorant whenever that exponent is below `1/4`. Thus the
+forward route does not intrinsically require formalizing Lindelof from RH. The corrected F1 consists
+of the Balazard-Saias theorem and a critical-line zeta convexity bound with any exponent below
+`1/2`. Neither theorem currently exists in pinned mathlib or a reusable licensed Lean project.
+Result: `DEPENDENCY_GAP_IDENTIFIED`.
+
 ## Tier 3: Horizon
 
 `RiemannHypothesis` remains the orientation point. It is not an admissible immediate proof-loop
