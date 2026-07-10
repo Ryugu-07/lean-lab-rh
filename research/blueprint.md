@@ -1693,6 +1693,22 @@ Lean status:
 - M0 audit `AUDIT-20260710-M0-01` subsequently proved `nymanBeurlingConcreteApprox`
   unconditionally using parameters `1` and `-1`; this target is therefore obsolete and parked.
 
+## M1: Baez-Duarte Theorem 1.1
+
+The eligible theorem carrier after M0 is
+`baezDuarteComplexTargetL2 ∈ baezDuarteComplexKernelClosure`.
+
+Audit `AUDIT-20260710-M1-01` splits the proof into two fixed-gap routes:
+
+- forward: RH zero-free half-plane, Balazard-Saias quantitative Mobius estimate, kernel Mellin
+  identity, weighted-log Fourier-Mellin `L2` isometry, and two convergence arguments;
+- reverse: inclusion into the full Beurling closure followed by the base Nyman-Beurling criterion,
+  whose classical proof uses half-plane Hardy-space factorization.
+
+The RH-to-zero-free-half-plane interface is compiled. The quantitative Mobius estimate and base
+criterion are theorem-level missing dependencies; neither may be replaced by the existing
+absolute-convergence identity on `re(s) > 1`.
+
 ## Tier 3: Horizon
 
 `RiemannHypothesis` remains the orientation point. It is not an admissible immediate proof-loop

@@ -102,6 +102,21 @@ theorem RiemannHypothesis.zero_on_line_or_trivial
       riemannZeta_ne_zero_of_one_le_re (s := (1 : ℂ)) (by norm_num)
     exact hone (by simpa [IsZetaZero, hs_one] using hz)
 
+/-- Under RH, zeta has no zero strictly to the right of any vertical line
+whose real part is at least `1 / 2`. This is the zero-free hypothesis used
+when applying the Balazard-Saias estimate in the Baez-Duarte route. -/
+theorem RiemannHypothesis.riemannZeta_ne_zero_of_half_le_lt_re
+    (hRH : RiemannHypothesis) {α : ℝ} (hα : 1 / 2 ≤ α)
+    {s : ℂ} (hs : α < s.re) :
+    riemannZeta s ≠ 0 := by
+  intro hz
+  rcases RiemannHypothesis.zero_on_line_or_trivial hRH (hz := hz) with hline | htriv
+  · rw [OnCriticalLine] at hline
+    linarith
+  · rcases htriv with ⟨n, rfl⟩
+    have hneg := trivial_zero_re_lt_zero n
+    linarith
+
 theorem riemannZetaZeros_closed :
     IsClosed riemannZetaZeros :=
   isClosed_riemannZetaZeros

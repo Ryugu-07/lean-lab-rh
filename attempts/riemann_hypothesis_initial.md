@@ -6930,3 +6930,62 @@ Future attempt records must include:
 - `git diff --check`: passed.
 - commit SHA: resolve the commit titled `research: complete Baez-Duarte statement alignment`; the
   exact SHA is recorded in the external task ledger after the commit is created.
+
+## Audit 2026-07-10-M1-01: Baez-Duarte proof dependency boundary
+
+- `loop_id`: `AUDIT-20260710-M1-01`
+- `node_id`: `M1`
+- `gap_id`: `G2`
+- `work_class`: `FORMALIZATION`
+- expected `result_class`: `DEPENDENCY_GAP_IDENTIFIED`
+- exact mathematical target: connect `Mathlib.RiemannHypothesis` to the zero-free-half-plane
+  hypothesis used by Baez-Duarte's quoted Balazard-Saias lemma, and audit every remaining theorem
+  dependency in both directions of Theorem 1.1 against current mathlib APIs.
+- primary source: Baez-Duarte, *A Strengthening of the Nyman-Beurling Criterion for the Riemann
+  Hypothesis*, arXiv `math/0202141`, Theorem 1.1 and Section 2. The proof uses a quantitative
+  Mobius partial-sum estimate, a Fourier-Mellin isometry, the Mellin transform of the
+  fractional-part kernel, dominated convergence, and the base Nyman-Beurling criterion.
+- `assumption_frontier_before`: the exact complex closure side is compiled, but no implication in
+  either direction with `Mathlib.RiemannHypothesis` is formalized.
+- `hard_gap_before`: G1 and G2 are open; it is not yet known which paper dependencies are already
+  available in mathlib and which require new theorem-level formalization.
+- expected `hard_gap_delta`: replace the broad G2 inventory with an evidence-backed dependency
+  boundary and compile the RH-to-zero-free-half-plane interface. Do not claim G1 or RH progress.
+- batch justification: the RH assumption conversion and complete proof-dependency inventory are
+  one clean-context entry audit for fixed node M1.
+- model: GPT-5 Codex
+- reasoning effort: not exposed by the current runtime
+- budget: no explicit per-round token budget
+- compaction state: clean continuation after M0 completion; current worktree, fixed DAG, primary
+  paper, exact RH definition, Mellin/Fourier files, and Mobius L-series files were inspected before
+  registration.
+- `result_class`: `DEPENDENCY_GAP_IDENTIFIED`
+- compiled theorem: `RiemannHypothesis.riemannZeta_ne_zero_of_half_le_lt_re`; for
+  `1/2 <= alpha < re(s)`, RH implies `riemannZeta s != 0`.
+- available infrastructure: `mellin`, `mellin_eq_fourier`, Fourier `Lp` Plancherel,
+  `Lp.compMeasurePreserving`, the Mobius arithmetic function, and Mobius L-series inversion on
+  `re(s) > 1`.
+- missing forward blocks: the Balazard-Saias quantitative Mobius estimate near `re(s)=1/2`, the
+  RH-to-Lindelof bound used after equation (2.8), the fractional-kernel Mellin identity, a packaged
+  weighted-log Fourier-Mellin `L2` isometry, and the two source-specific convergence arguments.
+- missing reverse block: the base Nyman-Beurling criterion; the classical proof uses a half-plane
+  Hardy space and inner/outer invariant-subspace factorization not found in the pinned mathlib
+  tree.
+- `assumption_frontier_after`: the RH premise now reaches the exact zero-free premise of the quoted
+  estimate, but the estimate itself and the base criterion remain unavailable.
+- `hard_gap_after`: G2 is in progress with explicit forward and reverse theorem boundaries. G1,
+  D, and RH remain open.
+- `hard_gap_delta`: dependency uncertainty reduced; no criterion implication was proved.
+- detailed audit: `research/m1_baez_duarte_dependency_audit_20260710.md`
+- decision: search external Lean projects for the two heavy dependencies. If absent, batch the
+  literature-stable fractional-kernel Mellin identity with the weighted-log `L2` isometry before
+  attempting the quantitative Mobius estimate.
+- Lean verification: `lake env lean LeanLab/Riemann/Basic.lean` passed without warnings.
+- Lean verification: `lake env lean LeanLab/Riemann/NymanBeurling.lean` passed.
+- Lean verification: `lake env lean LeanLab/Riemann/Targets.lean` passed.
+- Lean verification: `lake env lean LeanLab/Riemann/TargetChecks.lean` passed.
+- Lean verification: `lake build` passed with 8566 jobs.
+- full project proof-gap keyword scan: passed with no matches.
+- `git diff --check`: passed.
+- commit SHA: resolve the commit titled `research: audit Baez-Duarte proof dependencies`; the exact
+  SHA is recorded in the external task ledger after the commit is created.

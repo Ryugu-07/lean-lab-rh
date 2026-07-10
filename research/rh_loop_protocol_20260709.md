@@ -183,6 +183,17 @@ audit found no remaining statement mismatch, so M0 is complete and the result is
 `HARD_GAP_REDUCED`. This does not prove the published RH equivalence; M1/G1 now begins from the
 eligible complex closure side. See `research/m0_completion_audit_20260710.md`.
 
+## M1 Audit 2026-07-10-01
+
+Audit `AUDIT-20260710-M1-01` starts fixed node M1/G2 without adding an RH-equivalence wrapper. Lean
+proves `RiemannHypothesis.riemannZeta_ne_zero_of_half_le_lt_re`, which supplies the zero-free
+half-plane premise in Baez-Duarte's quoted Balazard-Saias lemma. The pinned mathlib tree has complex
+Mellin transforms, pointwise Mellin/Fourier conversion, Fourier `L2` Plancherel, and Mobius L-series
+inversion only for `re(s) > 1`. It lacks the RH-conditional quantitative Mobius estimate near the
+critical line and the base Nyman-Beurling/Hardy-space criterion needed for the reverse direction.
+The result is `DEPENDENCY_GAP_IDENTIFIED`, not G1 or RH progress. See
+`research/m1_baez_duarte_dependency_audit_20260710.md`.
+
 ## Loop 86 Update
 
 The Li/Hadamard inventory is complete as
