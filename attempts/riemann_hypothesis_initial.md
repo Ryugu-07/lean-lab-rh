@@ -6866,3 +6866,67 @@ Future attempt records must include:
 - `git diff --check`: passed.
 - commit SHA: resolve the commit titled `research: align Baez-Duarte L2 closure`; the exact SHA is
   recorded in the external task ledger after the commit is created.
+
+## Batch 2026-07-10-M0-05: coefficient-field closure audit
+
+- `loop_id`: `BATCH-20260710-M0-05`
+- `node_id`: `M0`
+- `work_class`: `FORMALIZATION`
+- expected `result_class`: `HARD_GAP_REDUCED`
+- exact mathematical target: define the complex `L2(0,infinity)` closure of the same real-valued
+  positive-natural kernels and prove that the real target belongs to it if and only if
+  `baezDuarteTargetL2` belongs to the real closure from Batch 04.
+- primary source: Baez-Duarte (2002/2003), *A Strengthening of the Nyman-Beurling Criterion for the
+  Riemann Hypothesis*, abstract, Section 1, Theorem 1.1, and Section 2.2. The paper sets
+  `H = L2(0,infinity)`, defines `Bnat` as the linear hull of the real-valued kernels, and in the RH
+  direction constructs finite approximants with coefficients `mu(a) / a^epsilon` for real
+  positive `epsilon`.
+- source audit conclusion before Lean work: the paper's proof already supplies real coefficients,
+  but the scalar convention behind the phrase linear hull is not explicit enough to leave
+  unaudited. A real-part bridge will make either convention equivalent for this real target and
+  real generating family.
+- `assumption_frontier_before`: the source-faithful real closure statement is compiled; a possible
+  complex-Hilbert-space reading has not been connected to it.
+- `hard_gap_before`: M0 has one remaining coefficient-field/source-convention item; M1/G1 is open.
+- expected `hard_gap_delta`: close M0 if and only if the complex/real closure bridge compiles and a
+  final requirement-by-requirement M0 audit finds no remaining statement mismatch. M1, G1, D, and
+  RH remain unproved.
+- batch justification: complex `Lp` packaging, pointwise real-part transport of finite spans,
+  continuity through closure, and the final M0 audit are one coefficient-field alignment batch.
+- model: GPT-5 Codex
+- reasoning effort: not exposed by the current runtime
+- budget: no explicit per-round token budget
+- compaction state: clean continuation after Batch 04; current worktree, fixed DAG, task ledger,
+  primary-source PDF, and mathlib `ContinuousLinearMap.compLpL` APIs were checked before
+  registration.
+- `result_class`: `HARD_GAP_REDUCED`
+- source artifact: `https://arxiv.org/pdf/math/0202141`, SHA-256
+  `3ce4aff466443c71094affc1f8b6f5f0dd36cb4377dc5d2ceddbd2537c1d1819`.
+- source audit result: the paper uses `H = L2(0,infinity)`, target `chi_(0,1]`, positive-natural
+  kernels `rho(1/(a*x))`, and a generated subspace that is closed under the Hilbert-space limits
+  used in Section 2.2. Its RH-direction approximants have real coefficients for real positive
+  `epsilon`.
+- Lean theorem names: `baezDuarteKernel_source_formula`, `baezDuarteRealPartLp_ofReal`,
+  `baezDuarteRealPartLp_complex_smul_kernel`, `baezDuarteOfRealLp_maps_real_span`,
+  `baezDuarteRealPartLp_maps_complex_span`,
+  `baezDuarteComplexTarget_mem_closure_iff_real`, and
+  `baezDuarteComplexTarget_mem_closure_iff_fullLineConcreteApprox`.
+- `assumption_frontier_after`: the published positive-natural closure side is represented exactly
+  in both real and complex `L2(0,infinity)`, and both are equivalent to the source-aligned
+  positive-tolerance predicate.
+- `hard_gap_after`: fixed node M0 is complete. M1/G1, D, and RH remain open.
+- `hard_gap_delta`: M0 closed after all parameter, domain, target, generated-closure, endpoint,
+  tolerance, kernel-formula, and coefficient-field requirements received direct source and Lean
+  evidence.
+- detailed completion record: `research/m0_completion_audit_20260710.md`
+- decision: `ADVANCE` to fixed node M1. The only eligible criterion carrier is
+  `baezDuarteComplexTargetL2 ∈ baezDuarteComplexKernelClosure`, with the real closure and
+  full-line concrete predicate available as compiled equivalents.
+- Lean verification: `lake env lean LeanLab/Riemann/NymanBeurling.lean` passed without warnings.
+- Lean verification: `lake env lean LeanLab/Riemann/Targets.lean` passed.
+- Lean verification: `lake env lean LeanLab/Riemann/TargetChecks.lean` passed.
+- Lean verification: `lake build` passed with 8566 jobs.
+- full project proof-gap keyword scan: passed with no matches.
+- `git diff --check`: passed.
+- commit SHA: resolve the commit titled `research: complete Baez-Duarte statement alignment`; the
+  exact SHA is recorded in the external task ledger after the commit is created.

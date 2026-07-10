@@ -75,7 +75,7 @@ statement, not merely an analogous split formula.
 | Full-line finite error | Equal in Lean to `baezDuarteSplitFullLineError`. |
 | Endpoint `(0,1]` vs `(0,1)` | Closed by a null-endpoint integral identity. |
 | Closure membership vs positive tolerance | Exactly equivalent in Lean. |
-| Real vs complex coefficient convention | Still requires a source audit or a real-part bridge. |
+| Real vs complex coefficient convention | Closed in Batch 05 by `baezDuarteComplexTarget_mem_closure_iff_real`. |
 | Equivalence with `Mathlib.RiemannHypothesis` | Open M1/G1 work. |
 
 ## Result
@@ -92,3 +92,6 @@ statement, not merely an analogous split formula.
   was proved.
 - decision: `CONTINUE` M0 with a bounded coefficient-field audit, then decide whether M0 can close
   and M1 can begin.
+
+Batch `BATCH-20260710-M0-05` subsequently compiled the real/complex closure bridge and completed
+the primary-source requirement audit. M0 is complete; see `research/m0_completion_audit_20260710.md`.

@@ -102,3 +102,6 @@ Batch `BATCH-20260710-M0-04` subsequently completed the full-line `L2` packaging
 and closure/tolerance equivalence; see
 `research/m0_baez_duarte_l2_closure_alignment_20260710.md`. The coefficient-field convention is the
 remaining M0 audit item.
+
+Batch `BATCH-20260710-M0-05` subsequently proved the real and complex closure formulations
+equivalent and closed M0; see `research/m0_completion_audit_20260710.md`.

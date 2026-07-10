@@ -131,3 +131,7 @@ work is whole-space `Lp` closure packaging and endpoint/coefficient-field alignm
 Batch `BATCH-20260710-M0-04` subsequently compiled the actual real `L2(0,infinity)` target,
 generators, span, closure, endpoint bridge, and exact closure/tolerance equivalence. The bounded
 coefficient-field/source-convention audit is the remaining M0 item.
+
+Batch `BATCH-20260710-M0-05` subsequently completed that audit by proving real and complex closure
+membership equivalent for the source target and generators. M0 is complete; the published RH
+equivalence remains M1/G1.

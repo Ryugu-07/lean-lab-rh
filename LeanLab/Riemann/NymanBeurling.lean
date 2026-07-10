@@ -1053,6 +1053,14 @@ theorem baezDuarteKernelL2_coeFn (n : baezDuartePositiveNatIndex) :
       (baezDuarte_reciprocal_mem_restricted n).1
       (baezDuarte_reciprocal_mem_restricted n).2)
 
+/-- The project reciprocal-parameter kernel is exactly the source notation
+`rho(1 / (n * x))`. -/
+theorem baezDuarteKernel_source_formula
+    (n : baezDuartePositiveNatIndex) (x : ℝ) :
+    fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) x =
+      Int.fract (1 / (((n : ℕ) : ℝ) * x)) := by
+  simp [fractionalPartKernel, div_eq_mul_inv, mul_inv_rev, mul_comm]
+
 /-- The real finite span of the positive-natural Baez-Duarte kernels. -/
 def baezDuarteKernelSpan : Submodule ℝ positiveHalfLineL2 :=
   Submodule.span ℝ (Set.range baezDuarteKernelL2)
@@ -1242,6 +1250,168 @@ theorem baezDuarteTargetL2_mem_closure_iff_fullLineConcreteApprox :
         rwa [norm_sub_baezDuarte_sum_sq_eq_wholeLineError,
           baezDuarteWholeLineError_eq_split]
       exact (sq_lt_sq₀ (norm_nonneg _) hε.le).mp hsq)
+
+/-- The complex Hilbert-space version of `L²(0, infinity)`. -/
+abbrev positiveHalfLineComplexL2 : Type :=
+  Lp ℂ (2 : ℝ≥0∞) (volume.restrict (Set.Ioi (0 : ℝ)))
+
+/-- Pointwise inclusion of real `Lp` functions into complex `Lp`. -/
+def baezDuarteOfRealLp :
+    positiveHalfLineL2 →L[ℝ] positiveHalfLineComplexL2 :=
+  Complex.ofRealCLM.compLpL (2 : ℝ≥0∞)
+    (volume.restrict (Set.Ioi (0 : ℝ)))
+
+/-- Pointwise real part from complex `Lp` functions to real `Lp`. -/
+def baezDuarteRealPartLp :
+    positiveHalfLineComplexL2 →L[ℝ] positiveHalfLineL2 :=
+  Complex.reCLM.compLpL (2 : ℝ≥0∞)
+    (volume.restrict (Set.Ioi (0 : ℝ)))
+
+theorem baezDuarteOfRealLp_coeFn (f : positiveHalfLineL2) :
+    baezDuarteOfRealLp f
+      =ᵐ[volume.restrict (Set.Ioi (0 : ℝ))]
+        fun x => (f x : ℂ) := by
+  simpa [baezDuarteOfRealLp] using
+    (ContinuousLinearMap.coeFn_compLpL Complex.ofRealCLM f)
+
+theorem baezDuarteRealPartLp_coeFn
+    (f : positiveHalfLineComplexL2) :
+    baezDuarteRealPartLp f
+      =ᵐ[volume.restrict (Set.Ioi (0 : ℝ))]
+        fun x => (f x).re := by
+  simpa [baezDuarteRealPartLp] using
+    (ContinuousLinearMap.coeFn_compLpL Complex.reCLM f)
+
+theorem baezDuarteRealPartLp_ofReal (f : positiveHalfLineL2) :
+    baezDuarteRealPartLp (baezDuarteOfRealLp f) = f := by
+  apply Lp.ext
+  filter_upwards [baezDuarteRealPartLp_coeFn (baezDuarteOfRealLp f),
+    baezDuarteOfRealLp_coeFn f] with x hre hof
+  simp only [hre, hof, Complex.ofReal_re]
+
+/-- The real target embedded into complex `L²(0, infinity)`. -/
+def baezDuarteComplexTargetL2 : positiveHalfLineComplexL2 :=
+  baezDuarteOfRealLp baezDuarteTargetL2
+
+/-- The real-valued positive-natural kernel embedded into complex
+`L²(0, infinity)`. -/
+def baezDuarteComplexKernelL2
+    (n : baezDuartePositiveNatIndex) : positiveHalfLineComplexL2 :=
+  baezDuarteOfRealLp (baezDuarteKernelL2 n)
+
+/-- The complex span of the positive-natural kernels. -/
+def baezDuarteComplexKernelSpan :
+    Submodule ℂ positiveHalfLineComplexL2 :=
+  Submodule.span ℂ (Set.range baezDuarteComplexKernelL2)
+
+/-- The closure of the complex positive-natural kernel span. -/
+def baezDuarteComplexKernelClosure :
+    Submodule ℂ positiveHalfLineComplexL2 :=
+  baezDuarteComplexKernelSpan.topologicalClosure
+
+theorem baezDuarteComplexKernelClosure_coe :
+    (baezDuarteComplexKernelClosure : Set positiveHalfLineComplexL2) =
+      closure (baezDuarteComplexKernelSpan : Set positiveHalfLineComplexL2) := by
+  exact Submodule.topologicalClosure_coe baezDuarteComplexKernelSpan
+
+theorem mem_baezDuarteComplexKernelSpan_iff_exists_finsupp_sum
+    (g : positiveHalfLineComplexL2) :
+    g ∈ baezDuarteComplexKernelSpan ↔
+      ∃ c : baezDuartePositiveNatIndex →₀ ℂ,
+        (c.sum fun n z => z • baezDuarteComplexKernelL2 n) = g := by
+  rw [baezDuarteComplexKernelSpan]
+  exact Finsupp.mem_span_range_iff_exists_finsupp
+
+theorem baezDuarteOfRealLp_smul
+    (r : ℝ) (f : positiveHalfLineL2) :
+    baezDuarteOfRealLp (r • f) =
+      (r : ℂ) • baezDuarteOfRealLp f := by
+  rw [map_smul]
+  rfl
+
+/-- Taking real parts of a complex multiple of a real-valued kernel keeps
+only the real part of its coefficient. -/
+theorem baezDuarteRealPartLp_complex_smul_kernel
+    (z : ℂ) (n : baezDuartePositiveNatIndex) :
+    baezDuarteRealPartLp (z • baezDuarteComplexKernelL2 n) =
+      z.re • baezDuarteKernelL2 n := by
+  change baezDuarteRealPartLp
+    (z • baezDuarteOfRealLp (baezDuarteKernelL2 n)) = _
+  apply Lp.ext
+  filter_upwards [baezDuarteRealPartLp_coeFn
+      (z • baezDuarteOfRealLp (baezDuarteKernelL2 n)),
+    Lp.coeFn_smul z (baezDuarteOfRealLp (baezDuarteKernelL2 n)),
+    baezDuarteOfRealLp_coeFn (baezDuarteKernelL2 n),
+    Lp.coeFn_smul z.re (baezDuarteKernelL2 n)] with x hre hsmul hof hreal
+  simp [hre, hsmul, hof, hreal, Pi.smul_apply, smul_eq_mul]
+
+theorem baezDuarteOfRealLp_maps_real_span
+    {f : positiveHalfLineL2} (hf : f ∈ baezDuarteKernelSpan) :
+    baezDuarteOfRealLp f ∈ baezDuarteComplexKernelSpan := by
+  rcases (mem_baezDuarteKernelSpan_iff_exists_finsupp_sum f).mp hf with ⟨c, hc⟩
+  rw [← hc, Finsupp.sum, map_sum]
+  exact Submodule.sum_mem _ (fun n _hn => by
+    rw [baezDuarteOfRealLp_smul]
+    exact Submodule.smul_mem _ (c n : ℂ)
+      (Submodule.subset_span ⟨n, rfl⟩))
+
+theorem baezDuarteRealPartLp_maps_complex_span
+    {f : positiveHalfLineComplexL2}
+    (hf : f ∈ baezDuarteComplexKernelSpan) :
+    baezDuarteRealPartLp f ∈ baezDuarteKernelSpan := by
+  rcases (mem_baezDuarteComplexKernelSpan_iff_exists_finsupp_sum f).mp hf with ⟨c, hc⟩
+  rw [← hc, Finsupp.sum, map_sum]
+  exact Submodule.sum_mem _ (fun n _hn => by
+    rw [baezDuarteRealPartLp_complex_smul_kernel]
+    exact Submodule.smul_mem _ (c n).re
+      (Submodule.subset_span ⟨n, rfl⟩))
+
+theorem baezDuarteTarget_mem_realClosure_imp_complexClosure
+    (h : baezDuarteTargetL2 ∈ baezDuarteKernelClosure) :
+    baezDuarteComplexTargetL2 ∈ baezDuarteComplexKernelClosure := by
+  have hreal : baezDuarteTargetL2 ∈
+      closure (baezDuarteKernelSpan : Set positiveHalfLineL2) := by
+    rwa [← baezDuarteKernelClosure_coe]
+  have hcomplex : baezDuarteOfRealLp baezDuarteTargetL2 ∈
+      closure (baezDuarteComplexKernelSpan : Set positiveHalfLineComplexL2) :=
+    map_mem_closure baezDuarteOfRealLp.continuous hreal
+      (fun _ hf => baezDuarteOfRealLp_maps_real_span hf)
+  change baezDuarteComplexTargetL2 ∈
+    (baezDuarteComplexKernelClosure : Set positiveHalfLineComplexL2)
+  rw [baezDuarteComplexKernelClosure_coe]
+  exact hcomplex
+
+theorem baezDuarteTarget_mem_complexClosure_imp_realClosure
+    (h : baezDuarteComplexTargetL2 ∈ baezDuarteComplexKernelClosure) :
+    baezDuarteTargetL2 ∈ baezDuarteKernelClosure := by
+  have hcomplex : baezDuarteComplexTargetL2 ∈
+      closure (baezDuarteComplexKernelSpan : Set positiveHalfLineComplexL2) := by
+    rwa [← baezDuarteComplexKernelClosure_coe]
+  have hreal : baezDuarteRealPartLp baezDuarteComplexTargetL2 ∈
+      closure (baezDuarteKernelSpan : Set positiveHalfLineL2) :=
+    map_mem_closure baezDuarteRealPartLp.continuous hcomplex
+      (fun _ hf => baezDuarteRealPartLp_maps_complex_span hf)
+  rw [baezDuarteComplexTargetL2,
+    baezDuarteRealPartLp_ofReal] at hreal
+  change baezDuarteTargetL2 ∈ (baezDuarteKernelClosure : Set positiveHalfLineL2)
+  rw [baezDuarteKernelClosure_coe]
+  exact hreal
+
+/-- For the real target and real-valued generators, allowing complex
+coefficients does not change closure membership. -/
+theorem baezDuarteComplexTarget_mem_closure_iff_real :
+    baezDuarteComplexTargetL2 ∈ baezDuarteComplexKernelClosure ↔
+      baezDuarteTargetL2 ∈ baezDuarteKernelClosure := by
+  exact ⟨baezDuarteTarget_mem_complexClosure_imp_realClosure,
+    baezDuarteTarget_mem_realClosure_imp_complexClosure⟩
+
+/-- The source-aligned finite-error predicate is also exactly the complex
+Hilbert-space closure formulation. -/
+theorem baezDuarteComplexTarget_mem_closure_iff_fullLineConcreteApprox :
+    baezDuarteComplexTargetL2 ∈ baezDuarteComplexKernelClosure ↔
+      nymanBeurlingBaezDuarteFullLineConcreteApprox := by
+  rw [baezDuarteComplexTarget_mem_closure_iff_real,
+    baezDuarteTargetL2_mem_closure_iff_fullLineConcreteApprox]
 
 /-- The restricted positive-tolerance predicate is exactly constant-one
 membership in the closure of the restricted kernel span. -/

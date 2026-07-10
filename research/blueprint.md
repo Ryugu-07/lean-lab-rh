@@ -1661,6 +1661,10 @@ M0 correction:
 - Batch `BATCH-20260710-M0-04` packages this predicate as exact target membership in the closure of
   the positive-natural kernels in real `L2(0,infinity)` and closes the endpoint mismatch. The
   coefficient-field/source-convention audit remains before M0 can be declared complete.
+- Batch `BATCH-20260710-M0-05` proves the corresponding complex closure is equivalent to the real
+  closure and the same finite-error predicate. The primary-source completion audit closes M0. M1
+  must now formalize Baez-Duarte Theorem 1.1 against `Mathlib.RiemannHypothesis`; no local scaffold
+  predicate may replace that equivalence.
 
 Next action:
 

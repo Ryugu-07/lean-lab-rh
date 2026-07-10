@@ -45,7 +45,7 @@ Audit ID: `AUDIT-20260710-M0-01`
 | `nymanBeurlingBaezDuarteConcreteApprox` | positive-natural `rho(1 / (n*x))` approximation | Not aligned with the published full-line theorem: restricting to `(0,1)` deletes the tail error, which is the squared reciprocal coefficient moment. |
 | `nymanBeurlingBaezDuarteFullLineConcreteApprox` | Baez-Duarte positive-natural full-line finite error | Aligned in split integral form by Batch 03; its normal form restores the squared reciprocal moment. |
 | `nymanBeurlingConcreteApprox` | no classical counterpart with arbitrary signed parameters | Rejected as a criterion carrier: it is unconditional. |
-| coefficient field | real project coefficients vs source conventions | Real reduction is expected for real targets and generators, but the corresponding full-line Lean bridge remains unchecked. |
+| coefficient field | real project coefficients vs source conventions | Closed in Batch 05: complex target closure membership is equivalent to real target closure membership. |
 
 ## Lean-Checked Falsification
 
@@ -88,3 +88,7 @@ the unconstrained local predicates.
 Batch `BATCH-20260710-M0-04` then packaged the source-faithful predicate in the actual real
 `L2(0,infinity)` space and proved its exact closure-membership equivalence, including the null
 endpoint bridge; see `research/m0_baez_duarte_l2_closure_alignment_20260710.md`.
+
+Batch `BATCH-20260710-M0-05` then proved the real/complex closure equivalence and completed the
+primary-source requirement matrix; see `research/m0_completion_audit_20260710.md`. Fixed node M0
+is complete.

@@ -22,8 +22,8 @@ flowchart TD
 | node_id | status | description | current frontier |
 | --- | --- | --- | --- |
 | A | in progress | Project-local xi, Li, Nyman-Beurling, and Baez-Duarte scaffolding. | Mostly formalization scaffolding; not RH progress under v2. |
-| M0 | in progress | Align project-local Nyman-Beurling/Baez-Duarte predicates with published statements. | Unrestricted signed parameters are rejected. The source-faithful positive-natural predicate is now exactly closure membership in real `L2(0,infinity)`, including the target endpoint and full tail. Only the coefficient-field/source-convention audit remains. |
-| M1 | open | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | Needs M0 first; likely requires Mellin-Plancherel and critical-line L2 infrastructure. |
+| M0 | complete | Align project-local Nyman-Beurling/Baez-Duarte predicates with published statements. | The positive-natural Baez-Duarte closure side is aligned in real and complex `L2(0,infinity)`: parameter indexing, kernel formula, target, closed span, whole-line error, endpoint, tolerance, and coefficient field are Lean-checked. |
+| M1 | open | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | M0 is complete. The exact eligible closure side is `baezDuarteComplexTargetL2 ∈ baezDuarteComplexKernelClosure`; the theorem-equivalence proof and its analytic dependencies remain. |
 | D | open | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | No direct bridge yet. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
 
@@ -32,7 +32,7 @@ flowchart TD
 | gap_id | node_id | status | description |
 | --- | --- | --- | --- |
 | G1 | M1/D | open | Formalize the classical Nyman-Beurling/Baez-Duarte equivalence with RH, using either Beurling's moment-constrained unit-interval space or Baez-Duarte's full-line space, and connect it to `Mathlib.RiemannHypothesis`. |
-| G2 | M1 | open | Inventory and import required analytic infrastructure: full-line `L2`, the moment/tail decomposition, vertical-line Plancherel/Hardy-space tools, Mellin transforms, and possible external Lean repos such as PrimeNumberTheoremAnd and EulerProducts. |
+| G2 | M1 | open | Full-line `L2`, the finite-error split, and coefficient-field alignment are compiled. Remaining dependency audit must cover the Fourier-Mellin isometry, the Mellin transform of the kernels, zeta/Mobius partial sums, and the convergence arguments used in Baez-Duarte Theorem 1.1. |
 | G3 | M2 | parked | Construct unconditional finite approximants with error tending to zero. In the NB/BD framework this is essentially the hard RH direction; numerical convergence is not evidence. |
 
 ## Loop Reporting Policy
@@ -68,3 +68,7 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   endpoint difference is discharged by a null-set integral identity. Result:
   `FORMALIZATION_ONLY`; the coefficient-field convention remains under M0, while M1/G1 and RH are
   unchanged.
+- Batch `BATCH-20260710-M0-05` inspected the primary Baez-Duarte paper, proved the source kernel
+  formula, packaged the complex `L2(0, infinity)` closed span, and proved complex target closure
+  membership equivalent to the real closure and source-aligned finite-error predicate. Result:
+  `HARD_GAP_REDUCED`; fixed node M0 is complete. M1/G1, D, and RH remain open.

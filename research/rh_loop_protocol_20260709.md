@@ -172,6 +172,17 @@ norm error equals `baezDuarteSplitFullLineError`, including the null-endpoint br
 `FORMALIZATION_ONLY`; M1/G1 and RH remain open. M0 next permits only the bounded coefficient-field
 and source-convention audit. See `research/m0_baez_duarte_l2_closure_alignment_20260710.md`.
 
+## M0 Batch 2026-07-10-05
+
+Batch `BATCH-20260710-M0-05` inspected the primary Baez-Duarte paper and closed the remaining
+coefficient-field ambiguity. Lean proves `baezDuarteKernel_source_formula`, packages the complex
+positive-half-line `Lp` target and natural-kernel closure, and proves both
+`baezDuarteComplexTarget_mem_closure_iff_real` and
+`baezDuarteComplexTarget_mem_closure_iff_fullLineConcreteApprox`. A requirement-by-requirement
+audit found no remaining statement mismatch, so M0 is complete and the result is
+`HARD_GAP_REDUCED`. This does not prove the published RH equivalence; M1/G1 now begins from the
+eligible complex closure side. See `research/m0_completion_audit_20260710.md`.
+
 ## Loop 86 Update
 
 The Li/Hadamard inventory is complete as

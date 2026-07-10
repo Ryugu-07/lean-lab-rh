@@ -107,3 +107,7 @@ transport target and do not use the unconstrained restricted predicate in M1.
 Batch `BATCH-20260710-M0-03` completed this step as
 `nymanBeurlingBaezDuarteFullLineConcreteApprox`. The remaining M0 task is whole-space `Lp` closure
 packaging and endpoint/coefficient-field alignment.
+
+Batches `BATCH-20260710-M0-04` and `BATCH-20260710-M0-05` subsequently completed the whole-space,
+endpoint, and coefficient-field alignment. M0 is complete; see
+`research/m0_completion_audit_20260710.md`.
