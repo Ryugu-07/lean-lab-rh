@@ -1,5 +1,5 @@
 import LeanLab.Riemann.Targets
-import LeanLab.Riemann.BaezDuarteMellin
+import LeanLab.Riemann.FourierMellin
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -14,6 +14,8 @@ examples.
 -/
 
 namespace LeanLab.Riemann
+
+open scoped FourierTransform
 
 /-- Name-resolution witness for every `.proven` ledger target with a `leanName`. -/
 def checkedTargetNames : List Lean.Name :=
@@ -129,5 +131,31 @@ example (n : baezDuartePositiveNatIndex) (s : ℂ)
         (fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) x : ℂ)) s
       (((n : ℕ) : ℂ) ^ (-s) * (-riemannZeta s / s)) :=
   hasMellin_baezDuarteKernel n s hs0 hs1
+
+noncomputable example :
+    positiveHalfLineComplexL2 ≃ₗᵢ[ℂ] realLineComplexL2 :=
+  weightedLogPullback
+
+example (f : positiveHalfLineComplexL2) :
+    weightedLogPullback f =ᵐ[MeasureTheory.volume]
+      fun u : ℝ => (Real.exp (-u / 2) : ℂ) * f (Real.exp (-u)) :=
+  weightedLogPullback_coeFn f
+
+example (g : realLineComplexL2) :
+    weightedLogPullback.symm g
+      =ᵐ[MeasureTheory.volume.restrict (Set.Ioi (0 : ℝ))]
+        fun x : ℝ => ((x ^ (-1 / 2 : ℝ) : ℝ) : ℂ) * g (-Real.log x) :=
+  weightedLogPullback_symm_coeFn g
+
+noncomputable example :
+    positiveHalfLineComplexL2 ≃ₗᵢ[ℂ] realLineComplexL2 :=
+  baezDuarteFourierMellinL2
+
+example (f : ℝ → ℂ) (τ : ℝ) :
+    mellin f ((1 / 2 : ℂ) + τ * Complex.I) =
+      𝓕 (fun u : ℝ =>
+        (Real.exp (-u / 2) : ℂ) * f (Real.exp (-u)))
+        (τ / (2 * Real.pi)) :=
+  mellin_criticalLine_eq_fourier f τ
 
 end LeanLab.Riemann

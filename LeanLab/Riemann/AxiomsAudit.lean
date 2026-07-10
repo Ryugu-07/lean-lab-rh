@@ -1,4 +1,4 @@
-import LeanLab.Riemann.BaezDuarteMellin
+import LeanLab.Riemann.FourierMellin
 
 set_option linter.style.header false
 
@@ -13,3 +13,10 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.riemannZeta_eq_zetaAbelContinuationFormula_of_re_pos
 #print axioms LeanLab.Riemann.hasMellin_fractionalPartKernel_one
 #print axioms LeanLab.Riemann.hasMellin_baezDuarteKernel
+#print axioms LeanLab.Riemann.expNeg_quasiMeasurePreserving
+#print axioms LeanLab.Riemann.eLpNorm_weightedLogForwardFun
+#print axioms LeanLab.Riemann.weightedLogForward_inverse
+#print axioms LeanLab.Riemann.weightedLogPullback_coeFn
+#print axioms LeanLab.Riemann.weightedLogPullback_symm_coeFn
+#print axioms LeanLab.Riemann.norm_baezDuarteFourierMellinL2
+#print axioms LeanLab.Riemann.mellin_criticalLine_eq_fourier

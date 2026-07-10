@@ -7048,3 +7048,50 @@ Future attempt records must include:
 - `git diff --check`: passed.
 - commit SHA: resolve the commit titled `research: formalize Baez-Duarte Mellin identity`; the
   exact SHA is recorded in the external task ledger after creation.
+
+## Batch 2026-07-11-M1-03: weighted-log Fourier-Mellin L2 isometry
+
+- `loop_id`: `BATCH-20260711-M1-03`
+- `node_id`: `M1`
+- `gap_id`: `G2`
+- `work_class`: `FORMALIZATION`
+- exact target: package `U(f)(u) = exp(-u/2) f(exp(-u))` as an invertible complex-linear isometry
+  `L2(0,infinity) -> L2(real line)`, expose the inverse representative
+  `x^(-1/2) g(-log x)`, compose with Fourier Plancherel, and verify frequency `tau/(2*pi)`.
+- source: Baez-Duarte, arXiv `math/0202141v2`, source lines 226-245; inspected source SHA-256
+  `3bdb7d9da83314b685572aaa739b02e4d075cb3dec9ffccc6a66faee932818c0`.
+- first design finding: equality of the two square-norm integrals alone was insufficient because
+  `Lp` is a quotient by almost-everywhere equality. Linearity also required proving that
+  `u -> exp(-u)` pulls positive-half-line null sets back to real-line null sets.
+- successful measure route: prove `expNeg_quasiMeasurePreserving` from the one-dimensional
+  Jacobian formula applied to indicators. This allowed `Lp.coeFn_add` and `Lp.coeFn_smul` to be
+  pulled through the logarithmic parametrization without selecting unchecked representatives.
+- automation failure: `fun_prop` did not unfold the new `expNeg` definition and initially timed
+  out inside the zero-integral proof. Explicit derivative, measurability, and indicator-product
+  proofs compiled quickly and were retained.
+- inverse design: internally use `exp(-log(x)/2)` because both inverse laws simplify directly by
+  `log_exp` and `exp_add`; convert to the source-facing `x^(-1/2)` only in the final positive-axis
+  representative theorem via `Real.rpow_def_of_pos`.
+- packaging route: construct `weightedLogForwardLinearIsometry`, prove surjectivity with the
+  explicit inverse candidate, then use `LinearIsometryEquiv.ofSurjective`. This avoids assuming an
+  inverse linear map before its quotient-level well-definedness is established.
+- theorem names: `expNeg_quasiMeasurePreserving`, `eLpNorm_weightedLogForwardFun`,
+  `eLpNorm_weightedLogInverseFun`, `weightedLogForwardLinearIsometry`,
+  `weightedLogForward_inverse`, `weightedLogPullback`, `weightedLogPullback_coeFn`,
+  `weightedLogPullback_symm_coeFn`, `baezDuarteFourierMellinL2`, and
+  `mellin_criticalLine_eq_fourier`.
+- `result_class`: `HARD_GAP_REDUCED`
+- `assumption_frontier_after`: the full weighted-log equivalence and Fourier composition are
+  unconditional Lean objects; no theorem about Mobius growth, Lindelof, convergence of the paper's
+  approximants, the base criterion, or RH was assumed.
+- `hard_gap_after`: remove the packaged weighted-log Fourier-Mellin `L2` isometry from G2. Keep the
+  Balazard-Saias quantitative Mobius estimate, RH-to-Lindelof bound, source-specific convergence,
+  and reverse base Nyman-Beurling criterion open.
+- verification: full `lake build` passed with 8582 jobs; exact `TargetChecks` witnesses passed;
+  trusted dependencies are only `propext`, `Classical.choice`, and `Quot.sound`; incomplete-proof
+  keyword scan, explicit `axiom` scan, and `git diff --check` passed.
+- compaction state: this batch resumed from a compacted summary and rechecked the fixed DAG,
+  source formula, current worktree, and relevant mathlib APIs before preregistration.
+- model: GPT-5 Codex family; exact backend identifier and reasoning effort are not exposed.
+- budget: no explicit per-round token budget.
+- detailed record: `research/m1_weighted_log_fourier_mellin_20260711.md`.

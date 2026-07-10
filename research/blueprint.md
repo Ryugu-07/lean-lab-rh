@@ -1714,6 +1714,13 @@ Batch `BATCH-20260710-M1-02` closes the fractional-kernel Mellin node with the c
 positive-natural scaling used in the paper. This removes one named G2 block but does not establish
 either implication of Theorem 1.1.
 
+Batch `BATCH-20260711-M1-03` closes the weighted-log Fourier-Mellin `L2` node with the compiled
+equivalence `weightedLogPullback`, its forward and inverse representative formulas, and the
+Fourier composition `baezDuarteFourierMellinL2`. The theorem `mellin_criticalLine_eq_fourier`
+checks the source/mathlib frequency conversion `tau/(2*pi)`. The remaining forward route still
+requires the quantitative Mobius and RH-to-Lindelof estimates plus source-specific convergence;
+the reverse base criterion remains open.
+
 ## Tier 3: Horizon
 
 `RiemannHypothesis` remains the orientation point. It is not an admissible immediate proof-loop
