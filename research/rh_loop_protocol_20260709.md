@@ -1,63 +1,138 @@
-# RH Loop Protocol Revision
+# RH Loop Protocol v2
 
-Date: 2026-07-09
+Date: 2026-07-10
 
-Source review: `/Users/karasuakamatsu/Downloads/review_rh_loop_goal_20260709.md`
+Sources:
 
-## Revised Operational Goal
+- `/Users/karasuakamatsu/Downloads/rh_loop_protocol_v2_20260710.md`
+- `/Users/karasuakamatsu/.codex/attachments/fb68cde6-ceb8-4986-9180-fbceb69fae28/pasted-text.txt`
+- Historical v1 source:
+  `/Users/karasuakamatsu/Downloads/review_rh_loop_goal_20260709.md`
 
-Run the RH project as a three-tier proof-engineering program:
+This v2 section replaces the operating rules from v1. The historical loop updates below remain as
+chronology, not as authority for choosing future proof targets.
 
-- Tier 1: close the project-local xi/Li scaffold into a readable deliverable.
-- Tier 2: after a bounded mathlib inventory, choose one structural route rather than computing Li
-  candidates one by one.
-- Tier 3: keep `RiemannHypothesis` as the horizon, not as an immediate loop target.
+## Operational Goal
 
-No unverified mathematical statement may be used as a proof premise. Planned targets are tracked in
-`LeanLab/Riemann/Targets.lean`, but only theorem names that already compile may be used by proofs.
+Advance auditable RH research in `/Users/karasuakamatsu/lean-lab`.
 
-## Loop Admission Rule
+New local Lean lemmas, rewrite lemmas, predicate wrappers, finite-sum transports, and closing
+self-created ledger nodes do not count as RH research progress by themselves. Lean verifies
+correctness. Research progress is defined only by reduction of a fixed external hard gap.
 
-A new proof loop is admissible only if it does at least one of the following:
+Fixed milestones:
 
-- discharges a target from `LeanLab/Riemann/Targets.lean`;
-- fills or validates a node in `research/blueprint.md`;
-- performs a bounded mathlib inventory required by a Tier 1 or Tier 2 node;
-- records a failed route with a concrete dependency gap and updates the blueprint.
+- M0 Statement Alignment: compare the project-local Nyman-Beurling/Baez-Duarte predicates with
+  published classical criteria. Prove exact equivalence item by item, or record each mismatch.
+- M1 Known Criterion Formalization: after M0, formalize one accurately cited published
+  Nyman-Beurling or Baez-Duarte criterion as a Lean equivalence with `Mathlib.RiemannHypothesis`.
+- M2 Discovery: count direct RH progress only for an unconditional proof of such a criterion, an
+  explicit approximating family with error tending to zero, or a literature-audited new structural
+  lemma.
 
-Adding a convenient rewrite lemma is allowed only when it is directly attached to one of those
-items.
+All future work must target a pre-existing node in `research/hard_gap_dag.md`. The model must not
+create a local successor node merely to make the next loop executable. Mechanical lemmas are batched.
 
-## Loop Discipline
+## Work Classes
 
-Before starting a loop:
+Each loop or engineering batch has exactly one tag:
 
-- pre-register the intended Lean statement or inventory question;
-- search local mathlib names first with `rg`, `#check`, and available Lean tooling;
-- record at least one rejected route when a choice is non-obvious.
+- FORMALIZATION: formalizes known mathematics, infrastructure, bridges, or batched transports.
+- DISCOVERY: attempts a new structural lemma, constant, or error bound; requires the novelty audit
+  below.
+- RH_PROGRESS: not the default; allowed only when `research/hard_gap_dag.md` changes a hard-gap
+  status and an auditor confirms the delta.
 
-During a loop:
+## Result Classes
 
-- pure algebraic rewriting may not dominate more than two consecutive loops;
-- numerical estimates should be batched and justified by a named target;
-- every claimed mathematical fact must pass Lean before it becomes a premise.
+Each loop result is exactly one of:
 
-Every ten loops:
+- HARD_GAP_REDUCED
+- KNOWN_THEOREM_FORMALIZED
+- BRANCH_FALSIFIED
+- DEPENDENCY_GAP_IDENTIFIED
+- FORMALIZATION_ONLY
+- NO_PROGRESS
 
-- count open Tier 1 targets;
-- check whether a blueprint node was completed;
-- if neither changed, stop and rewrite the plan before continuing.
+If `hard_gap_delta = 0`, the result cannot be `HARD_GAP_REDUCED`.
 
-## Immediate Next Loop
+## Fixed-Gap Entry Rule
 
-After the xi/completed-zeta bridge, xi/nontrivial-zero bridge, and local second Li-candidate
-positivity target are closed, and after the Tier 1 scaffold note is written, the next loop should
-perform bounded Tier 2 inventory before starting another long proof chain:
+Before starting a loop, record:
 
-- inspect Li criterion/Hadamard support: entire functions, zero multisets, Hadamard products, and
-  log-derivative infrastructure; or
-- inspect Nyman-Beurling/Báez-Duarte support: `L2`, closures, density, step functions, and
-  fractional-part infrastructure.
+- `node_id`
+- `work_class`
+- exact mathematical statement
+- exact Lean statement, when applicable
+- published source or novelty rationale
+- `assumption_frontier_before`
+- `hard_gap_before`
+- expected `hard_gap_delta`
+- why the work is not a mechanical batch item
+
+Reject a standalone loop when the proposed work only composes proved implications, only renames or
+repackages a predicate, keeps the same unproved assumption frontier, is a one-step corollary in the
+same edge, or targets a node created by the immediately previous loop.
+
+## Stop Rules
+
+Stop or pivot before another proof loop when any of these occurs:
+
+- three consecutive loops have `hard_gap_delta = 0`;
+- five loops keep the same unproved assumption frontier;
+- two loops repeat the same strategy;
+- the next target is only a mechanical corollary;
+- compaction/summary occurred and the fixed DAG has not been re-audited from source files;
+- no published source or novelty rationale is available.
+
+Every five accepted loops, a clean-context audit must decide one of `CONTINUE`, `PIVOT`, `BATCH`,
+or `STOP`.
+
+## Batching Rule
+
+Definitions, iff rewrites, finite-support transports, norm/integral rewrites, predicate wrappers,
+and one-step corollaries on the same edge must be grouped into one engineering batch whenever
+possible. The planned loop-131 corollary is a mechanical batch item, not a standalone research
+loop.
+
+## Target Ledger Hardening
+
+- Use double-backtick Lean identifiers in `LeanLab/Riemann/Targets.lean`, so missing names fail
+  elaboration.
+- Keep `LeanLab/Riemann/TargetChecks.lean` in the build. It must typecheck every `.proven` target
+  that has a `leanName`; exact statement witnesses should be expanded in engineering batches.
+- New target nodes need external-source or auditor sign-off before they can count as research
+  progress.
+
+## Future Attempt Record Fields
+
+Each future loop or batch record must include:
+
+- `loop_id`
+- `node_id`
+- `work_class`
+- `result_class`
+- `assumption_frontier_before`
+- `assumption_frontier_after`
+- `hard_gap_before`
+- `hard_gap_after`
+- `hard_gap_delta`
+- Lean verification commands and results
+- theorem names
+- nearest known literature
+- model
+- reasoning effort
+- budget
+- compaction state
+- commit SHA
+
+## Novelty Audit
+
+Claims of possible first formalization or candidate new mathematics require a note comparing the
+claim against mathlib, Isabelle AFP, relevant external Lean repositories, and arXiv. A local mathlib
+miss is not evidence of novelty.
+
+## Historical Loop Updates
 
 ## Loop 86 Update
 

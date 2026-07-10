@@ -6634,6 +6634,34 @@ Verification:
 
 Next route:
 
-- Close `T2.nyman.baez.duarte.natural.concrete.approx.unrestricted`: compose
+- V2 protocol reclassifies `T2.nyman.baez.duarte.natural.concrete.approx.unrestricted` as a
+  mechanical batch item: compose
   `nymanBeurlingRestrictedConcreteApprox_of_baezDuarte` with
   `nymanBeurlingConcreteApprox_of_restricted`.
+
+## Governance checkpoint 2026-07-10: Loop Protocol V2
+
+Source:
+
+- `/Users/karasuakamatsu/Downloads/rh_loop_protocol_v2_20260710.md`
+- `/Users/karasuakamatsu/.codex/attachments/fb68cde6-ceb8-4986-9180-fbceb69fae28/pasted-text.txt`
+
+Result:
+
+- Do not resume the RH proof loop from the old target-selection rule.
+- Added fixed hard-gap tracking in `research/hard_gap_dag.md` and `research/hard_gaps.md`.
+- Classified loops 1-130 in `research/loop_classification_20260710.md`.
+- Replaced the operating section of `research/rh_loop_protocol_20260709.md` with protocol v2.
+- Hardened `LeanLab/Riemann/Targets.lean` by changing `leanName` entries to checked
+  double-backtick identifiers.
+- Added `LeanLab/Riemann/TargetChecks.lean` and imported it from `LeanLab.lean`.
+- Marked the would-be loop-131 corollary as a mechanical batch item, not standalone RH progress.
+
+Future attempt records must include:
+
+- `node_id`, `work_class`, `result_class`
+- `assumption_frontier_before`, `assumption_frontier_after`
+- `hard_gap_before`, `hard_gap_after`, `hard_gap_delta`
+- Lean verification commands and results
+- theorem names and nearest known literature
+- model, reasoning effort, budget, compaction state, and commit SHA

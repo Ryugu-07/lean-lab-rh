@@ -1639,7 +1639,8 @@ Result:
 
 Next action:
 
-- close `T2.nyman.baez.duarte.natural.concrete.approx.unrestricted`.
+- protocol v2 reclassifies `T2.nyman.baez.duarte.natural.concrete.approx.unrestricted` as a
+  mechanical batch item, not a standalone research loop.
 
 ### T2.nyman.baez.duarte.natural.concrete.approx.unrestricted
 
@@ -1658,7 +1659,8 @@ Expected output:
 Lean status:
 
 - target recorded in `LeanLab/Riemann/Targets.lean`;
-- planned one-step corollary.
+- planned one-step corollary; under protocol v2 it should be batched with adjacent engineering
+  checks.
 
 ## Tier 3: Horizon
 
