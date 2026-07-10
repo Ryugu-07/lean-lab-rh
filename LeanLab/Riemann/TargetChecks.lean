@@ -102,6 +102,17 @@ example (h : nymanBeurlingBaezDuarteConcreteApprox) :
   nymanBeurlingRestrictedConcreteApprox_of_baezDuarte h
 
 example :
+    nymanBeurlingBaezDuarteFullLineConcreteApprox ↔
+      ∀ δ : ℝ, 0 < δ →
+        ∃ c : baezDuartePositiveNatIndex →₀ ℝ,
+          baezDuarteUnitIntervalError c + baezDuarteReciprocalMoment c ^ 2 < δ :=
+  nymanBeurlingBaezDuarteFullLineConcreteApprox_iff
+
+example (h : nymanBeurlingBaezDuarteFullLineConcreteApprox) :
+    nymanBeurlingBaezDuarteConcreteApprox :=
+  nymanBeurlingBaezDuarteConcreteApprox_of_fullLine h
+
+example :
     RiemannHypothesis ↔ ∀ (s : ℂ), IsNontrivialZero s → OnCriticalLine s :=
   riemannHypothesis_iff_nontrivial_zeros_on_line
 

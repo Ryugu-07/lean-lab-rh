@@ -117,3 +117,6 @@ statement alignment. Baez-Duarte's theorem uses the full `L2(0,infinity)` error.
 to `(0,1)`, the missing tail is exactly the square of the reciprocal coefficient moment. Any M1
 criterion statement must restore that term; the local positive-natural predicate alone is not the
 published criterion.
+
+Batch `BATCH-20260710-M0-03` restored the term in
+`nymanBeurlingBaezDuarteFullLineConcreteApprox` and proved the split full-line error normal form.

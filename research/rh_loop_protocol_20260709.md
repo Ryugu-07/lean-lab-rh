@@ -153,6 +153,16 @@ coefficient-parameter moment. The result class is `DEPENDENCY_GAP_IDENTIFIED`, a
 `PIVOT` to a published positive-natural finite-error statement with the moment/tail term restored.
 See `research/m0_restricted_closure_alignment_20260710.md`.
 
+## M0 Batch 2026-07-10-03
+
+Batch `BATCH-20260710-M0-03` restored the missing tail in a separate source-faithful
+positive-natural predicate. `baezDuarteSplitFullLineError` keeps the `(0,1)` constant-one error and
+the `(1, infinity)` zero-target tail as separate integrals; Lean proves its normalized form is local
+error plus squared reciprocal moment. `nymanBeurlingBaezDuarteFullLineConcreteApprox` is the only
+current natural predicate eligible for later M1 work. The result is `FORMALIZATION_ONLY`; the
+Baez-Duarte equivalence with RH remains open. See
+`research/m0_baez_duarte_full_line_alignment_20260710.md`.
+
 ## Loop 86 Update
 
 The Li/Hadamard inventory is complete as

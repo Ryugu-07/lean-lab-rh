@@ -1650,6 +1650,15 @@ Result:
 - the predicate implies `nymanBeurlingRestrictedConcreteApprox` by composing the natural integral
   bridge with the restricted-subtype-to-real-support bridge.
 
+M0 correction:
+
+- this predicate measures only `(0,1)` error and is weaker than the published Baez-Duarte
+  full-line statement;
+- Batch `BATCH-20260710-M0-03` added
+  `nymanBeurlingBaezDuarteFullLineConcreteApprox`, whose split error restores the tail and is
+  definitionally separate from this local scaffold;
+- only the full-line predicate is eligible for later M1 work.
+
 Next action:
 
 - protocol v2 reclassifies `T2.nyman.baez.duarte.natural.concrete.approx.unrestricted` as a

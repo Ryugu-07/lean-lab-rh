@@ -22,7 +22,7 @@ flowchart TD
 | node_id | status | description | current frontier |
 | --- | --- | --- | --- |
 | A | in progress | Project-local xi, Li, Nyman-Beurling, and Baez-Duarte scaffolding. | Mostly formalization scaffolding; not RH progress under v2. |
-| M0 | in progress | Align project-local Nyman-Beurling/Baez-Duarte predicates with published statements. | Unrestricted signed parameters are rejected. Project restricted closure/tolerance is internally equivalent, but it omits Beurling's zero-moment condition. The positive-natural local predicate omits the equivalent full-line tail penalty; endpoint and coefficient-field conventions remain secondary checks. |
+| M0 | in progress | Align project-local Nyman-Beurling/Baez-Duarte predicates with published statements. | Unrestricted signed parameters are rejected. The old restricted/local predicates omit Beurling's moment condition. A positive-natural split full-line finite-error predicate now restores the exact tail; whole-space `Lp` closure packaging plus endpoint and coefficient-field bridges remain. |
 | M1 | open | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | Needs M0 first; likely requires Mellin-Plancherel and critical-line L2 infrastructure. |
 | D | open | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | No direct bridge yet. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
@@ -60,3 +60,6 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   computed the omitted `(1, infinity)` tail as the square of `sum c_k * a_k`. The result is
   `DEPENDENCY_GAP_IDENTIFIED`: current restricted and positive-natural local predicates omit the
   moment/tail condition present in the published criteria.
+- Batch `BATCH-20260710-M0-03` defined the positive-natural split full-line error, proved its
+  normalized form `unitIntervalError + reciprocalMoment^2`, and packaged the source-faithful
+  positive-tolerance predicate. Result: `FORMALIZATION_ONLY`; M1/G1 and RH remain open.

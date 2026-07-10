@@ -122,3 +122,8 @@ insufficient. M0 must next formalize either:
 
 The latter is closer to the existing positive-natural scaffold. No new local
 successor node should be created; this remains work on fixed node M0.
+
+Batch `BATCH-20260710-M0-03` implemented that decision as
+`nymanBeurlingBaezDuarteFullLineConcreteApprox`, with the full-line error retained in split integral
+form and a Lean theorem reducing it to local error plus squared reciprocal moment. Remaining M0
+work is whole-space `Lp` closure packaging and endpoint/coefficient-field alignment.

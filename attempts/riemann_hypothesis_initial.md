@@ -6758,3 +6758,54 @@ Future attempt records must include:
 - full project proof-gap keyword scan: passed with no matches.
 - commit SHA: resolve the commit titled `research: isolate Nyman moment tail gap`; the exact SHA is
   recorded in the external task ledger after the commit is created.
+
+## Batch 2026-07-10-M0-03: positive-natural full-line split error
+
+- `loop_id`: `BATCH-20260710-M0-03`
+- `node_id`: `M0`
+- `work_class`: `FORMALIZATION`
+- `result_class`: `FORMALIZATION_ONLY`
+- exact mathematical statement: for positive-natural reciprocal kernels, the published
+  `L2(0,infinity)` finite approximation error is the `(0,1)` constant-one error plus the
+  `(1,infinity)` zero-target tail, and the tail equals the squared reciprocal coefficient moment.
+- exact Lean outputs: define `baezDuarteSplitFullLineError` and
+  `nymanBeurlingBaezDuarteFullLineConcreteApprox`; prove the split error normal form and the safe
+  implication from the full-line predicate to `nymanBeurlingBaezDuarteConcreteApprox`.
+- published source: Baez-Duarte, *A Strengthening of the Nyman-Beurling Criterion for the Riemann
+  Hypothesis* (2003), Theorem 1.1, `H = L2(0,infinity)` and positive-natural generators.
+- `assumption_frontier_before`: reciprocal natural indexing is compiled, but the only packaged
+  natural predicate drops the full-line tail and is not the published statement.
+- `hard_gap_before`: M0 has isolated but not restored the natural-criterion domain/target mismatch.
+- expected `hard_gap_delta`: produce a Lean statement with the correct split full-line finite
+  error; do not claim the published RH equivalence or any G1/D progress.
+- `assumption_frontier_after`: the source-faithful positive-natural split full-line finite-error
+  predicate is compiled; the old local predicate is only a weak consequence.
+- `hard_gap_after`: positive-natural parameters, target values, and finite full-line error are
+  aligned in split form. Whole-space `Lp` closure packaging, endpoint/field bridges, and M1 remain.
+- `hard_gap_delta`: the missing tail is restored in the formal statement, but G1, M1, D, and RH are
+  unchanged.
+- batch justification: reciprocal moment, natural tail, split error, normal form, and safe local
+  implication are one external-statement alignment batch.
+- model: GPT-5 Codex
+- reasoning effort: not exposed by the current runtime
+- budget: no explicit per-round token budget
+- compaction state: M0 source audit, fixed DAG, exact natural-index definitions, and Batch 02 tail
+  theorem were re-read before starting
+- theorem names: `baezDuarteReciprocalMoment`, `baezDuarteUnitIntervalError`,
+  `baezDuarteSplitFullLineError`,
+  `baezDuarte_finsupp_sum_eq_reciprocalMoment_div_of_one_lt`,
+  `baezDuarte_finsupp_tail_error_eq_reciprocalMoment_sq`,
+  `baezDuarteSplitFullLineError_eq_unitInterval_add_moment_sq`,
+  `nymanBeurlingBaezDuarteFullLineConcreteApprox`,
+  `nymanBeurlingBaezDuarteFullLineConcreteApprox_iff`, and
+  `nymanBeurlingBaezDuarteConcreteApprox_of_fullLine`
+- nearest known literature: Baez-Duarte (2003), Theorem 1.1, positive-natural generators in
+  `L2(0,infinity)` with target `chi_(0,1]`.
+- detailed alignment record: `research/m0_baez_duarte_full_line_alignment_20260710.md`
+- decision: `CONTINUE` M0 with whole-space `Lp` closure packaging
+- Lean verification: `lake env lean LeanLab/Riemann/NymanBeurling.lean` passed.
+- Lean verification: `lake env lean LeanLab/Riemann/Targets.lean` passed.
+- Lean verification: `lake env lean LeanLab/Riemann/TargetChecks.lean` passed.
+- Lean verification: `lake build` passed with 8566 jobs.
+- commit SHA: resolve the commit titled `research: restore Baez-Duarte full-line error`; the exact
+  SHA is recorded in the external task ledger after the commit is created.

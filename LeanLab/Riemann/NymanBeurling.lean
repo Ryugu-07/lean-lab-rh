@@ -874,6 +874,99 @@ theorem restricted_finsupp_tail_error_eq_moment_sq
     _ = (c.sum fun a r => r * a) ^ 2 :=
       integral_Ioi_moment_div_mul_self _
 
+/-- The reciprocal coefficient moment for positive-natural Baez-Duarte
+approximants. -/
+def baezDuarteReciprocalMoment
+    (c : baezDuartePositiveNatIndex →₀ ℝ) : ℝ :=
+  c.sum fun n r => r * (((n : ℕ) : ℝ)⁻¹)
+
+/-- The squared approximation error on `(0, 1)` for a positive-natural
+Baez-Duarte finite sum. -/
+def baezDuarteUnitIntervalError
+    (c : baezDuartePositiveNatIndex →₀ ℝ) : ℝ :=
+  ∫ x : ℝ,
+    (1 - c.sum fun n r => r * fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) x) *
+      (1 - c.sum fun n r => r * fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) x) ∂
+        (volume.restrict (Set.Ioo (0 : ℝ) 1))
+
+/-- The full-line Baez-Duarte finite error split at `1`: the target is one
+on `(0, 1)` and zero on `(1, infinity)`. -/
+def baezDuarteSplitFullLineError
+    (c : baezDuartePositiveNatIndex →₀ ℝ) : ℝ :=
+  baezDuarteUnitIntervalError c +
+    ∫ x : ℝ in Set.Ioi 1,
+      (c.sum fun n r => r * fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) x) *
+        (c.sum fun n r => r * fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) x)
+
+theorem baezDuarte_finsupp_sum_eq_reciprocalMoment_div_of_one_lt
+    (c : baezDuartePositiveNatIndex →₀ ℝ) {x : ℝ} (hx : 1 < x) :
+    c.sum (fun n r => r * fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) x) =
+      baezDuarteReciprocalMoment c / x := by
+  classical
+  rw [baezDuarteReciprocalMoment, Finsupp.sum, Finsupp.sum]
+  calc
+    (∑ n ∈ c.support,
+      c n * fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) x) =
+        ∑ n ∈ c.support, (c n * (((n : ℕ) : ℝ)⁻¹)) / x := by
+      refine Finset.sum_congr rfl (fun n _hn => ?_)
+      have hn_bounds := baezDuarte_reciprocal_mem_restricted n
+      have hx0 : 0 < x := lt_trans zero_lt_one hx
+      have hfract :
+          fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) x =
+            (((n : ℕ) : ℝ)⁻¹) / x := by
+        rw [fractionalPartKernel, Int.fract_eq_self.mpr]
+        exact ⟨(div_pos hn_bounds.1 hx0).le,
+          (div_lt_one hx0).mpr (lt_of_le_of_lt hn_bounds.2 hx)⟩
+      rw [hfract]
+      ring
+    _ = (∑ n ∈ c.support, c n * (((n : ℕ) : ℝ)⁻¹)) / x := by
+      rw [Finset.sum_div]
+
+theorem baezDuarte_finsupp_tail_error_eq_reciprocalMoment_sq
+    (c : baezDuartePositiveNatIndex →₀ ℝ) :
+    (∫ x : ℝ in Set.Ioi 1,
+      (c.sum fun n r => r * fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) x) *
+        (c.sum fun n r => r * fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) x)) =
+      baezDuarteReciprocalMoment c ^ 2 := by
+  calc
+    (∫ x : ℝ in Set.Ioi 1,
+      (c.sum fun n r => r * fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) x) *
+        (c.sum fun n r => r * fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) x)) =
+        ∫ x : ℝ in Set.Ioi 1,
+          (baezDuarteReciprocalMoment c / x) *
+            (baezDuarteReciprocalMoment c / x) := by
+      refine setIntegral_congr_fun measurableSet_Ioi (fun x hx => ?_)
+      rw [baezDuarte_finsupp_sum_eq_reciprocalMoment_div_of_one_lt c hx]
+    _ = baezDuarteReciprocalMoment c ^ 2 :=
+      integral_Ioi_moment_div_mul_self _
+
+theorem baezDuarteSplitFullLineError_eq_unitInterval_add_moment_sq
+    (c : baezDuartePositiveNatIndex →₀ ℝ) :
+    baezDuarteSplitFullLineError c =
+      baezDuarteUnitIntervalError c + baezDuarteReciprocalMoment c ^ 2 := by
+  rw [baezDuarteSplitFullLineError,
+    baezDuarte_finsupp_tail_error_eq_reciprocalMoment_sq]
+
+/-- Positive-natural Baez-Duarte approximation with the full-line tail
+retained in split integral form. -/
+def nymanBeurlingBaezDuarteFullLineConcreteApprox : Prop :=
+  ∀ δ : ℝ, 0 < δ →
+    ∃ c : baezDuartePositiveNatIndex →₀ ℝ,
+      baezDuarteSplitFullLineError c < δ
+
+theorem nymanBeurlingBaezDuarteFullLineConcreteApprox_iff :
+    nymanBeurlingBaezDuarteFullLineConcreteApprox ↔
+      ∀ δ : ℝ, 0 < δ →
+        ∃ c : baezDuartePositiveNatIndex →₀ ℝ,
+          baezDuarteUnitIntervalError c + baezDuarteReciprocalMoment c ^ 2 < δ := by
+  constructor
+  · intro h δ hδ
+    rcases h δ hδ with ⟨c, hc⟩
+    exact ⟨c, by rwa [baezDuarteSplitFullLineError_eq_unitInterval_add_moment_sq] at hc⟩
+  · intro h δ hδ
+    rcases h δ hδ with ⟨c, hc⟩
+    exact ⟨c, by rwa [baezDuarteSplitFullLineError_eq_unitInterval_add_moment_sq]⟩
+
 /-- The restricted positive-tolerance predicate is exactly constant-one
 membership in the closure of the restricted kernel span. -/
 theorem unitIntervalOneL2_mem_restrictedClosure_iff_concreteApprox :
@@ -925,6 +1018,18 @@ def nymanBeurlingBaezDuarteConcreteApprox : Prop :=
         (1 - c.sum fun n r => r * fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) x) *
           (1 - c.sum fun n r => r * fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) x) ∂(volume.restrict
             (Set.Ioo (0 : ℝ) 1))) < δ
+
+theorem nymanBeurlingBaezDuarteConcreteApprox_of_fullLine
+    (h : nymanBeurlingBaezDuarteFullLineConcreteApprox) :
+    nymanBeurlingBaezDuarteConcreteApprox := by
+  intro δ hδ
+  rcases h δ hδ with ⟨c, hc⟩
+  have hsplit :
+      baezDuarteUnitIntervalError c + baezDuarteReciprocalMoment c ^ 2 < δ := by
+    rwa [baezDuarteSplitFullLineError_eq_unitInterval_add_moment_sq] at hc
+  have hlocal : baezDuarteUnitIntervalError c < δ := by
+    nlinarith [sq_nonneg (baezDuarteReciprocalMoment c)]
+  exact ⟨c, by simpa [baezDuarteUnitIntervalError] using hlocal⟩
 
 theorem nymanBeurlingConcreteApprox_of_restricted
     (h : nymanBeurlingRestrictedConcreteApprox) :

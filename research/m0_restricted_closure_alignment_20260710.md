@@ -93,3 +93,7 @@ zero; in the Baez-Duarte full-line criterion it is retained by the tail norm.
 The next M0 batch should formalize the published positive-natural finite-error shape by adding the
 squared reciprocal moment to the existing `(0,1)` error. This is preferable to adding more local
 span wrappers because the tail identity proves exactly why that term is required.
+
+Batch `BATCH-20260710-M0-03` subsequently completed this action as
+`nymanBeurlingBaezDuarteFullLineConcreteApprox`; see
+`research/m0_baez_duarte_full_line_alignment_20260710.md`.

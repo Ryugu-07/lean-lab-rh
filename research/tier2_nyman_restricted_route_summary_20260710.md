@@ -103,3 +103,7 @@ restricted branch, the remaining gaps are sharper:
 Remain on fixed node M0. Formalize the positive-natural published finite-error shape by adding the
 squared reciprocal coefficient moment to the existing `(0,1)` error. Do not add another local
 transport target and do not use the unconstrained restricted predicate in M1.
+
+Batch `BATCH-20260710-M0-03` completed this step as
+`nymanBeurlingBaezDuarteFullLineConcreteApprox`. The remaining M0 task is whole-space `Lp` closure
+packaging and endpoint/coefficient-field alignment.

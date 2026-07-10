@@ -43,6 +43,7 @@ Audit ID: `AUDIT-20260710-M0-01`
 | `nymanBeurlingRestrictedKernelDense` | density of Beurling's unit-interval manifold | Not aligned: the project uses raw kernels with no `sum c_k * theta_k = 0` condition; the endpoint difference is secondary. |
 | `nymanBeurlingRestrictedConcreteApprox` | constant one in the Beurling closure | Exactly equivalent to the project's unconstrained restricted closure, but not to Beurling's constrained closure. |
 | `nymanBeurlingBaezDuarteConcreteApprox` | positive-natural `rho(1 / (n*x))` approximation | Not aligned with the published full-line theorem: restricting to `(0,1)` deletes the tail error, which is the squared reciprocal coefficient moment. |
+| `nymanBeurlingBaezDuarteFullLineConcreteApprox` | Baez-Duarte positive-natural full-line finite error | Aligned in split integral form by Batch 03; its normal form restores the squared reciprocal moment. |
 | `nymanBeurlingConcreteApprox` | no classical counterpart with arbitrary signed parameters | Rejected as a criterion carrier: it is unconditional. |
 | coefficient field | real project coefficients vs source conventions | Real reduction is expected for real targets and generators, but the corresponding full-line Lean bridge remains unchecked. |
 
@@ -79,5 +80,7 @@ RH premise.
 The parked one-step implication to `nymanBeurlingConcreteApprox` should not be proved as a research
 target. Batch `BATCH-20260710-M0-02` subsequently closed the project-internal restricted
 closure/tolerance equivalence and identified the missing published moment/tail condition; see
-`research/m0_restricted_closure_alignment_20260710.md`. M1 must not use the current unconstrained
-local predicates.
+`research/m0_restricted_closure_alignment_20260710.md`. Batch `BATCH-20260710-M0-03` then restored
+that tail in `nymanBeurlingBaezDuarteFullLineConcreteApprox`; see
+`research/m0_baez_duarte_full_line_alignment_20260710.md`. M1 must use the full-line predicate, not
+the unconstrained local predicates.

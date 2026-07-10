@@ -448,7 +448,7 @@ def rhTargets : List ResearchTarget :=
         "Define the Baez-Duarte positive-natural concrete approximation predicate and prove that it implies nymanBeurlingRestrictedConcreteApprox."
       leanName := some ``nymanBeurlingRestrictedConcreteApprox_of_baezDuarte
       status := .proven
-      note := "Loop 130 defined a local positive-natural predicate. M0 batch 02 confirmed that it omits the published Baez-Duarte full-line tail, equivalently the squared reciprocal coefficient moment, so it must not be used as the M1 criterion statement." },
+      note := "Loop 130 defined a local positive-natural predicate. M0 batch 02 found its missing full-line tail; Batch 03 added the separate source-faithful predicate nymanBeurlingBaezDuarteFullLineConcreteApprox. This local target remains only a weak consequence." },
     { id := "T2.nyman.baez.duarte.natural.concrete.approx.unrestricted"
       tier := .tier2
       title := "Forget the Baez-Duarte restriction to the concrete predicate"
