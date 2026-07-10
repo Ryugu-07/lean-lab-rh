@@ -1,4 +1,5 @@
 import LeanLab.Riemann.Basic
+import Mathlib.Analysis.SpecialFunctions.ImproperIntegrals
 
 set_option linter.style.header false
 
@@ -790,6 +791,131 @@ def nymanBeurlingRestrictedConcreteApprox : Prop :=
           (1 - c.sum fun a r => r * fractionalPartKernel a x) *
             (1 - c.sum fun a r => r * fractionalPartKernel a x) ∂
               (volume.restrict (Set.Ioo (0 : ℝ) 1))) < δ
+
+theorem finsupp_sum_mem_nymanBeurlingRestrictedKernelSpan
+    (c : ℝ →₀ ℝ) (hc : ∀ a ∈ c.support, 0 < a ∧ a ≤ 1) :
+    c.sum (fun a r => r • fractionalPartKernelL2 a) ∈
+      nymanBeurlingRestrictedKernelSpan := by
+  classical
+  rw [Finsupp.sum]
+  exact Submodule.sum_mem _ (fun a ha =>
+    Submodule.smul_mem _ (c a)
+      (fractionalPartKernelL2_mem_nymanBeurlingRestrictedKernelSpan
+        (hc a ha).1 (hc a ha).2))
+
+/-- Above the unit interval, a restricted finite kernel combination is its
+coefficient-parameter moment divided by `x`. -/
+theorem restricted_finsupp_sum_eq_moment_div_of_one_lt
+    (c : ℝ →₀ ℝ) (hc : ∀ a ∈ c.support, 0 < a ∧ a ≤ 1)
+    {x : ℝ} (hx : 1 < x) :
+    c.sum (fun a r => r * fractionalPartKernel a x) =
+      (c.sum fun a r => r * a) / x := by
+  classical
+  rw [Finsupp.sum, Finsupp.sum]
+  calc
+    (∑ a ∈ c.support, c a * fractionalPartKernel a x) =
+        ∑ a ∈ c.support, (c a * a) / x := by
+      refine Finset.sum_congr rfl (fun a ha => ?_)
+      have ha_bounds := hc a ha
+      have hx0 : 0 < x := lt_trans zero_lt_one hx
+      have hfract : fractionalPartKernel a x = a / x := by
+        rw [fractionalPartKernel, Int.fract_eq_self.mpr]
+        exact ⟨(div_pos ha_bounds.1 hx0).le,
+          (div_lt_one hx0).mpr (lt_of_le_of_lt ha_bounds.2 hx)⟩
+      rw [hfract]
+      ring
+    _ = (∑ a ∈ c.support, c a * a) / x := by
+      rw [Finset.sum_div]
+
+theorem integral_Ioi_moment_div_mul_self (m : ℝ) :
+    (∫ x : ℝ in Set.Ioi 1, (m / x) * (m / x)) = m ^ 2 := by
+  have hrpow {x : ℝ} (hx : 0 < x) :
+      x ^ (-2 : ℝ) = (x ^ (2 : ℕ))⁻¹ := by
+    rw [show (-2 : ℝ) = -(2 : ℝ) by norm_num, Real.rpow_neg hx.le]
+    exact congrArg Inv.inv (Real.rpow_natCast x 2)
+  have hbase :
+      (∫ x : ℝ in Set.Ioi 1, x ^ (-2 : ℝ)) = 1 := by
+    have h :=
+      integral_Ioi_rpow_of_lt (a := (-2 : ℝ)) (by norm_num) (c := (1 : ℝ)) (by norm_num)
+    norm_num at h
+    calc
+      (∫ x : ℝ in Set.Ioi 1, x ^ (-2 : ℝ)) =
+          ∫ x : ℝ in Set.Ioi 1, (x ^ (2 : ℕ))⁻¹ := by
+        refine setIntegral_congr_fun measurableSet_Ioi (fun x hx => ?_)
+        exact hrpow (lt_trans zero_lt_one hx)
+      _ = 1 := h
+  calc
+    (∫ x : ℝ in Set.Ioi 1, (m / x) * (m / x)) =
+        ∫ x : ℝ in Set.Ioi 1, m ^ 2 * x ^ (-2 : ℝ) := by
+      refine setIntegral_congr_fun measurableSet_Ioi (fun x hx => ?_)
+      rw [hrpow (lt_trans zero_lt_one hx)]
+      simp [div_eq_mul_inv, ← inv_pow]
+      ring
+    _ = m ^ 2 * ∫ x : ℝ in Set.Ioi 1, x ^ (-2 : ℝ) := by
+      rw [integral_const_mul]
+    _ = m ^ 2 := by rw [hbase, mul_one]
+
+/-- The omitted `(1, infinity)` tail is exactly the square of the
+coefficient-parameter moment. -/
+theorem restricted_finsupp_tail_error_eq_moment_sq
+    (c : ℝ →₀ ℝ) (hc : ∀ a ∈ c.support, 0 < a ∧ a ≤ 1) :
+    (∫ x : ℝ in Set.Ioi 1,
+      (c.sum fun a r => r * fractionalPartKernel a x) *
+        (c.sum fun a r => r * fractionalPartKernel a x)) =
+      (c.sum fun a r => r * a) ^ 2 := by
+  calc
+    (∫ x : ℝ in Set.Ioi 1,
+      (c.sum fun a r => r * fractionalPartKernel a x) *
+        (c.sum fun a r => r * fractionalPartKernel a x)) =
+        ∫ x : ℝ in Set.Ioi 1,
+          ((c.sum fun a r => r * a) / x) * ((c.sum fun a r => r * a) / x) := by
+      refine setIntegral_congr_fun measurableSet_Ioi (fun x hx => ?_)
+      rw [restricted_finsupp_sum_eq_moment_div_of_one_lt c hc hx]
+    _ = (c.sum fun a r => r * a) ^ 2 :=
+      integral_Ioi_moment_div_mul_self _
+
+/-- The restricted positive-tolerance predicate is exactly constant-one
+membership in the closure of the restricted kernel span. -/
+theorem unitIntervalOneL2_mem_restrictedClosure_iff_concreteApprox :
+    unitIntervalOneL2 ∈ nymanBeurlingRestrictedKernelClosure ↔
+      nymanBeurlingRestrictedConcreteApprox := by
+  constructor
+  · intro hclosure δ hδ
+    have hsqrt : 0 < Real.sqrt δ := Real.sqrt_pos_of_pos hδ
+    rcases (unitIntervalOneL2_mem_restrictedClosure_iff_forall_exists_dist_lt.mp
+        hclosure) (Real.sqrt δ) hsqrt with
+      ⟨g, hgspan, hgdist⟩
+    rcases (mem_nymanBeurlingRestrictedKernelSpan_iff_exists_finsupp_sum g).mp
+        hgspan with
+      ⟨c, hc⟩
+    have hnorm :
+        ‖unitIntervalOneL2 -
+          (c.sum fun a r => r • fractionalPartKernelL2 (a : ℝ))‖ < Real.sqrt δ := by
+      simpa [dist_eq_norm, hc] using hgdist
+    have hintegral :
+        (∫ x : ℝ,
+          (1 - c.sum fun a r => r * fractionalPartKernel (a : ℝ) x) *
+            (1 - c.sum fun a r => r * fractionalPartKernel (a : ℝ) x) ∂
+              (volume.restrict (Set.Ioo (0 : ℝ) 1))) < δ := by
+      rw [← norm_sub_restricted_finsupp_sum_sq_eq_integral_concrete c]
+      have hsq := (sq_lt_sq₀ (norm_nonneg _) hsqrt.le).mpr hnorm
+      simpa [Real.sq_sqrt hδ.le] using hsq
+    exact exists_real_finsupp_integral_lt_of_restricted ⟨c, hintegral⟩
+  · intro hconcrete
+    exact unitIntervalOneL2_mem_restrictedClosure_iff_forall_exists_dist_lt.mpr
+      (fun ε hε => by
+        rcases hconcrete (ε ^ 2) (sq_pos_of_pos hε) with ⟨c, hcsupport, hcintegral⟩
+        let g : unitIntervalL2 :=
+          c.sum fun a r => r • fractionalPartKernelL2 a
+        refine ⟨g, finsupp_sum_mem_nymanBeurlingRestrictedKernelSpan c hcsupport, ?_⟩
+        have hsq :
+            ‖unitIntervalOneL2 - g‖ ^ 2 < ε ^ 2 := by
+          dsimp [g]
+          rw [norm_sub_finsupp_sum_fractionalPartKernelL2_sq_eq_integral_concrete c]
+          exact hcintegral
+        have hnorm : ‖unitIntervalOneL2 - g‖ < ε :=
+          (sq_lt_sq₀ (norm_nonneg _) hε.le).mp hsq
+        simpa [dist_eq_norm] using hnorm)
 
 /-- Concrete approximation using only Baez-Duarte positive natural reciprocal parameters. -/
 def nymanBeurlingBaezDuarteConcreteApprox : Prop :=

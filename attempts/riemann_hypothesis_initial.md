@@ -6706,3 +6706,55 @@ Future attempt records must include:
 - audit decision: `PIVOT`
 - commit SHA: resolve the commit titled `research: falsify unrestricted Nyman predicate`; the exact
   SHA is recorded in the external task ledger after the commit is created.
+
+## Batch 2026-07-10-M0-02: restricted closure/tolerance alignment
+
+- `loop_id`: `BATCH-20260710-M0-02`
+- `node_id`: `M0`
+- `work_class`: `FORMALIZATION`
+- `result_class`: `DEPENDENCY_GAP_IDENTIFIED`
+- exact mathematical statement: the constant-one vector belongs to the closure of the span of
+  kernels with `0 < a` and `a <= 1` if and only if finite combinations with the same support
+  restriction have arbitrarily small positive squared-error integral.
+- exact Lean statement: `unitIntervalOneL2_mem_restrictedClosure_iff_concreteApprox :
+  unitIntervalOneL2 ∈ nymanBeurlingRestrictedKernelClosure ↔
+    nymanBeurlingRestrictedConcreteApprox`
+- published source: Balazard-Saias (1998), unit-interval Nyman-Beurling closure formulation; this
+  batch only aligns the project tolerance predicate with its closure shape.
+- `assumption_frontier_before`: restricted density implies the concrete predicate, but no converse
+  or exact closure-membership equivalence is compiled.
+- `hard_gap_before`: M0 closure-versus-tolerance alignment is open.
+- expected `hard_gap_delta`: close the closure/tolerance representation mismatch inside M0; do not
+  claim G1, M1, D, or RH progress.
+- `assumption_frontier_after`: the project restricted closure and tolerance predicate are exactly
+  equivalent, but neither is the published Beurling space because both omit the zero-moment
+  condition. The positive-natural local predicate likewise omits the Baez-Duarte full-line tail.
+- `hard_gap_after`: M0 closure/tolerance representation is closed; the missing moment/tail
+  dependency is isolated and Lean-validated.
+- `hard_gap_delta`: one internal mismatch closed and one previously hidden published-statement
+  dependency identified; G1, M1, D, and RH are unchanged.
+- batch justification: support membership, finite-sum span membership, norm-square transport, and
+  the final iff are one representation-alignment batch.
+- model: GPT-5 Codex
+- reasoning effort: not exposed by the current runtime
+- budget: no explicit per-round token budget
+- compaction state: source DAG, protocol, handoff, exact Lean definitions, and previous M0 audit
+  were re-read before starting
+- theorem names: `finsupp_sum_mem_nymanBeurlingRestrictedKernelSpan`,
+  `unitIntervalOneL2_mem_restrictedClosure_iff_concreteApprox`,
+  `restricted_finsupp_sum_eq_moment_div_of_one_lt`,
+  `integral_Ioi_moment_div_mul_self`, and
+  `restricted_finsupp_tail_error_eq_moment_sq`
+- nearest known literature: Beurling (1955) imposes `sum c_k * theta_k = 0`; Balazard-Saias
+  (2000) use modified generators encoding that condition; Baez-Duarte (2003) retains the
+  equivalent tail through the full `L2(0,infinity)` norm.
+- detailed alignment record: `research/m0_restricted_closure_alignment_20260710.md`
+- audit decision: `PIVOT` to a positive-natural finite-error statement with the squared reciprocal
+  moment restored
+- Lean verification: `lake env lean LeanLab/Riemann/NymanBeurling.lean` passed.
+- Lean verification: `lake env lean LeanLab/Riemann/Targets.lean` passed.
+- Lean verification: `lake env lean LeanLab/Riemann/TargetChecks.lean` passed.
+- Lean verification: `lake build` passed with 8566 jobs.
+- full project proof-gap keyword scan: passed with no matches.
+- commit SHA: resolve the commit titled `research: isolate Nyman moment tail gap`; the exact SHA is
+  recorded in the external task ledger after the commit is created.

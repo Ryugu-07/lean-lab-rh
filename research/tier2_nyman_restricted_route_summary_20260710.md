@@ -29,6 +29,13 @@ nymanBeurlingConcreteApprox_of_restricted
 Together these give a concrete approximation consequence of restricted kernel density, but only
 inside the project-local formulation.
 
+Batch `BATCH-20260710-M0-02` later strengthened the internal endpoint to the exact equivalence
+
+```lean
+unitIntervalOneL2 ∈ nymanBeurlingRestrictedKernelClosure ↔
+  nymanBeurlingRestrictedConcreteApprox.
+```
+
 ## Internal Bridge Nodes
 
 The branch was built from these compiled nodes:
@@ -54,6 +61,11 @@ The branch was built from these compiled nodes:
   `exists_real_finsupp_integral_lt_of_restricted`;
 - packaged predicate:
   `nymanBeurlingRestrictedConcreteApprox_of_restrictedKernelDense`.
+- exact local closure/tolerance bridge:
+  `unitIntervalOneL2_mem_restrictedClosure_iff_concreteApprox`.
+- omitted-tail calculation:
+  `restricted_finsupp_sum_eq_moment_div_of_one_lt`,
+  `restricted_finsupp_tail_error_eq_moment_sq`.
 
 ## What This Does Not Prove
 
@@ -63,19 +75,22 @@ an implication to `RiemannHypothesis`.
 The current endpoint is a project-local concrete integral-tolerance predicate on `L²(0,1)` with
 finite real-indexed coefficients whose support is contained in `0 < a ∧ a ≤ 1`.
 
+It omits Beurling's condition `sum c_k * a_k = 0`. Consequently its restricted closure is not the
+published Beurling closure. It also omits the Baez-Duarte `(1,∞)` tail, whose squared norm is exactly
+the square of that coefficient-parameter moment.
+
 ## Remaining Classical Gaps
 
 The earlier inventory
 `research/tier2_nyman_classical_criterion_inventory_20260710.md` listed the broad gaps. After the
 restricted branch, the remaining gaps are sharper:
 
-- Natural-parameter gap:
-  Baez-Duarte's strengthening uses natural parameters. The local predicate still allows arbitrary
-  real parameters in `(0, 1]`.
-- Index map gap:
-  A likely bridge sends positive natural indices to restricted real parameters, for example
-  `n ↦ ((n : ℝ)⁻¹)` or an equivalent reciprocal convention. The exact Lean statement has not been
-  selected.
+- Moment/tail gap:
+  Beurling's unit-interval criterion imposes `sum c_k * a_k = 0`; Baez-Duarte's full-line norm
+  retains the equivalent squared tail penalty. The project predicate has neither.
+- Natural-parameter indexing:
+  Loops 126-130 later compiled the reciprocal positive-natural indexing and finite-sum transport,
+  so indexing itself is no longer the leading gap.
 - Domain/target gap:
   The local route works over `volume.restrict (Set.Ioo 0 1)` and approximates the constant-one
   representative. Baez-Duarte's usual shape is expressed on `L²(0,∞)` with an indicator target.
@@ -83,23 +98,8 @@ restricted branch, the remaining gaps are sharper:
   There is still no compiled bridge from any Nyman-Beurling or Baez-Duarte criterion to
   `RiemannHypothesis`.
 
-## Recommended Next Target
+## Corrected V2 Next Step
 
-Next target:
-
-```lean
-T2.nyman.baez.duarte.natural.index.inventory
-```
-
-Question:
-
-Which Lean indexing shape should represent Baez-Duarte natural parameters, and what exact bridge
-is needed from that shape to `nymanBeurlingRestrictedConcreteApprox`?
-
-Expected output:
-
-- a bounded inventory of candidate Lean index types, such as `ℕ+`, `{n : ℕ // 0 < n}`, or a
-  positivity-constrained `ℕ`;
-- a decision about the reciprocal map into `(0, 1]`;
-- a small next formal target, likely a `Finsupp.embDomain` or finite-sum reindexing lemma from
-  natural-indexed coefficients into real-indexed restricted coefficients.
+Remain on fixed node M0. Formalize the positive-natural published finite-error shape by adding the
+squared reciprocal coefficient moment to the existing `(0,1)` error. Do not add another local
+transport target and do not use the unconstrained restricted predicate in M1.

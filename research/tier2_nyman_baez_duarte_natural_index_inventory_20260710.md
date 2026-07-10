@@ -109,3 +109,11 @@ Expected next Lean work:
 - if needed immediately, package it as an embedding for `Finsupp.embDomain`;
 - then attempt the finite-sum bridge from natural-indexed coefficients to restricted-parameter
   coefficients.
+
+## M0 Correction
+
+Batch `BATCH-20260710-M0-02` confirmed that reciprocal indexing is correct but not sufficient for
+statement alignment. Baez-Duarte's theorem uses the full `L2(0,infinity)` error. After restricting
+to `(0,1)`, the missing tail is exactly the square of the reciprocal coefficient moment. Any M1
+criterion statement must restore that term; the local positive-natural predicate alone is not the
+published criterion.

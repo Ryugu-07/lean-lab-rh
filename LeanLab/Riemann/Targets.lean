@@ -264,7 +264,7 @@ def rhTargets : List ResearchTarget :=
         "Compare nymanBeurlingConcreteApprox with the classical Nyman-Beurling/Baez-Duarte criterion and record the exact formal gaps before attempting an RH bridge."
       leanName := none
       status := .proven
-      note := "Loop 107 recorded research/tier2_nyman_classical_criterion_inventory_20260710.md, identifying parameter-domain, natural-parameter, domain/target, closure/tolerance, and criterion-to-RH gaps." },
+      note := "Loop 107 recorded the first inventory. M0 batch 02 corrected it: Beurling's unit-interval space has a zero-moment condition, while Baez-Duarte's full-line norm retains the equivalent tail penalty; current local predicates omit both." },
     { id := "T2.nyman.restricted.concrete.approx.predicate"
       tier := .tier2
       title := "Package a restricted-parameter concrete approximation predicate"
@@ -272,7 +272,7 @@ def rhTargets : List ResearchTarget :=
         "Define a concrete approximation predicate requiring finite coefficient support to lie in 0 < a and a <= 1, and prove it implies nymanBeurlingConcreteApprox."
       leanName := some ``nymanBeurlingConcreteApprox_of_restricted
       status := .proven
-      note := "Loop 108 defined nymanBeurlingRestrictedConcreteApprox and proved it implies nymanBeurlingConcreteApprox by forgetting the support restriction." },
+      note := "Loop 108 defined the project-local restricted predicate. M0 batch 02 proved its exact local closure equivalence but confirmed it is not Beurling's published space because it lacks the zero-moment condition." },
     { id := "T2.nyman.restricted.span.scaffold"
       tier := .tier2
       title := "Scaffold the restricted-parameter kernel span"
@@ -408,7 +408,7 @@ def rhTargets : List ResearchTarget :=
         "Record the compiled chain from nymanBeurlingRestrictedKernelDense to nymanBeurlingRestrictedConcreteApprox and onward to nymanBeurlingConcreteApprox, with remaining classical criterion gaps."
       leanName := none
       status := .proven
-      note := "Loop 125 recorded research/tier2_nyman_restricted_route_summary_20260710.md, summarizing the compiled restricted branch and remaining classical criterion gaps." },
+      note := "Loop 125 recorded the local restricted chain. M0 batch 02 corrected the summary by isolating the missing zero-moment/full-line-tail condition." },
     { id := "T2.nyman.baez.duarte.natural.index.inventory"
       tier := .tier2
       title := "Inventory Baez-Duarte natural-parameter indexing"
@@ -448,7 +448,7 @@ def rhTargets : List ResearchTarget :=
         "Define the Baez-Duarte positive-natural concrete approximation predicate and prove that it implies nymanBeurlingRestrictedConcreteApprox."
       leanName := some ``nymanBeurlingRestrictedConcreteApprox_of_baezDuarte
       status := .proven
-      note := "Loop 130 defined nymanBeurlingBaezDuarteConcreteApprox and proved it implies nymanBeurlingRestrictedConcreteApprox by the natural integral bridge and the restricted real-support bridge." },
+      note := "Loop 130 defined a local positive-natural predicate. M0 batch 02 confirmed that it omits the published Baez-Duarte full-line tail, equivalently the squared reciprocal coefficient moment, so it must not be used as the M1 criterion statement." },
     { id := "T2.nyman.baez.duarte.natural.concrete.approx.unrestricted"
       tier := .tier2
       title := "Forget the Baez-Duarte restriction to the concrete predicate"

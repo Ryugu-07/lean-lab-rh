@@ -143,6 +143,16 @@ result class is `BRANCH_FALSIFIED`, the unrestricted criterion branch is rejecte
 decision is `PIVOT` to exact restricted-statement alignment. See
 `research/m0_statement_alignment_20260710.md`.
 
+## M0 Batch 2026-07-10-02
+
+Batch `BATCH-20260710-M0-02` proved the exact equivalence between the project restricted closure
+membership and `nymanBeurlingRestrictedConcreteApprox`. A primary-source audit then found that
+Beurling's unit-interval criterion requires `sum c_k * theta_k = 0`, which the project predicate
+omits. Lean proved that the omitted Baez-Duarte `(1, infinity)` tail is exactly the square of this
+coefficient-parameter moment. The result class is `DEPENDENCY_GAP_IDENTIFIED`, and the decision is
+`PIVOT` to a published positive-natural finite-error statement with the moment/tail term restored.
+See `research/m0_restricted_closure_alignment_20260710.md`.
+
 ## Loop 86 Update
 
 The Li/Hadamard inventory is complete as

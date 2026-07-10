@@ -22,7 +22,7 @@ flowchart TD
 | node_id | status | description | current frontier |
 | --- | --- | --- | --- |
 | A | in progress | Project-local xi, Li, Nyman-Beurling, and Baez-Duarte scaffolding. | Mostly formalization scaffolding; not RH progress under v2. |
-| M0 | in progress | Align project-local Nyman-Beurling/Baez-Duarte predicates with published statements. | The unrestricted signed-parameter predicate is formally rejected as unconditional. Remaining work is restricted closure/tolerance equivalence, endpoint convention, coefficient field, and the full-line-to-unit-interval natural bridge. |
+| M0 | in progress | Align project-local Nyman-Beurling/Baez-Duarte predicates with published statements. | Unrestricted signed parameters are rejected. Project restricted closure/tolerance is internally equivalent, but it omits Beurling's zero-moment condition. The positive-natural local predicate omits the equivalent full-line tail penalty; endpoint and coefficient-field conventions remain secondary checks. |
 | M1 | open | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | Needs M0 first; likely requires Mellin-Plancherel and critical-line L2 infrastructure. |
 | D | open | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | No direct bridge yet. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
@@ -31,8 +31,8 @@ flowchart TD
 
 | gap_id | node_id | status | description |
 | --- | --- | --- | --- |
-| G1 | M1/D | open | Formalize the classical Nyman-Beurling/Baez-Duarte equivalence with RH, including the published closure/density criterion and its connection to `Mathlib.RiemannHypothesis`. |
-| G2 | M1 | open | Inventory and import required analytic infrastructure: vertical-line Plancherel/Hardy-space tools, Mellin transforms, and possible external Lean repos such as PrimeNumberTheoremAnd and EulerProducts. |
+| G1 | M1/D | open | Formalize the classical Nyman-Beurling/Baez-Duarte equivalence with RH, using either Beurling's moment-constrained unit-interval space or Baez-Duarte's full-line space, and connect it to `Mathlib.RiemannHypothesis`. |
+| G2 | M1 | open | Inventory and import required analytic infrastructure: full-line `L2`, the moment/tail decomposition, vertical-line Plancherel/Hardy-space tools, Mellin transforms, and possible external Lean repos such as PrimeNumberTheoremAnd and EulerProducts. |
 | G3 | M2 | parked | Construct unconditional finite approximants with error tending to zero. In the NB/BD framework this is essentially the hard RH direction; numerical convergence is not evidence. |
 
 ## Loop Reporting Policy
@@ -56,3 +56,7 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - Audit `AUDIT-20260710-M0-01` proved `nymanBeurlingConcreteApprox` unconditionally by using
   parameters `1` and `-1`. The unrestricted branch is falsified as a criterion carrier, and the
   governance decision is `PIVOT` to exact restricted-statement alignment.
+- Batch `BATCH-20260710-M0-02` proved the project restricted closure/tolerance equivalence and
+  computed the omitted `(1, infinity)` tail as the square of `sum c_k * a_k`. The result is
+  `DEPENDENCY_GAP_IDENTIFIED`: current restricted and positive-natural local predicates omit the
+  moment/tail condition present in the published criteria.

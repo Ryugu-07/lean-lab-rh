@@ -896,6 +896,14 @@ Result:
 - no local theorem now connects a Nyman-Beurling closure criterion to mathlib's
   `RiemannHypothesis`.
 
+M0 correction after Batch 02:
+
+- Beurling's unit-interval space has the additional condition `sum c_k * theta_k = 0`;
+- Balazard-Saias encode it with modified generators;
+- the project restricted predicate omits that condition, and the project positive-natural local
+  predicate omits the equivalent Baez-Duarte full-line tail;
+- `restricted_finsupp_tail_error_eq_moment_sq` computes the missing tail in Lean.
+
 Next action:
 
 - fill `T2.nyman.restricted.concrete.approx.predicate`, defining a restricted-parameter concrete
@@ -928,6 +936,9 @@ Result:
   `0 < a ∧ a ≤ 1`;
 - this restricted predicate implies the previous unrestricted concrete predicate by reusing the
   same finite coefficient family and dropping only the support condition.
+- M0 Batch 02 proved this predicate is exactly membership of `unitIntervalOneL2` in the project
+  restricted closure, but it is not the published Beurling closure because the coefficient moment
+  is unconstrained.
 
 Next action:
 
@@ -1476,6 +1487,8 @@ Result:
 - recorded the compiled project-local chain
   `nymanBeurlingRestrictedKernelDense → nymanBeurlingRestrictedConcreteApprox`;
 - separated this local result from the remaining classical Báez-Duarte/Nyman-Beurling gaps.
+- later M0 correction: the leading gap is the missing zero-moment/full-line-tail term, not natural
+  indexing or the endpoint convention.
 
 Next action:
 

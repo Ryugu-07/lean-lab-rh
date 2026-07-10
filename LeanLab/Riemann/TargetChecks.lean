@@ -85,6 +85,18 @@ example (h : nymanBeurlingRestrictedConcreteApprox) :
     nymanBeurlingConcreteApprox :=
   nymanBeurlingConcreteApprox_of_restricted h
 
+example :
+    unitIntervalOneL2 ∈ nymanBeurlingRestrictedKernelClosure ↔
+      nymanBeurlingRestrictedConcreteApprox :=
+  unitIntervalOneL2_mem_restrictedClosure_iff_concreteApprox
+
+example (c : ℝ →₀ ℝ) (hc : ∀ a ∈ c.support, 0 < a ∧ a ≤ 1) :
+    (∫ x : ℝ in Set.Ioi 1,
+      (c.sum fun a r => r * fractionalPartKernel a x) *
+        (c.sum fun a r => r * fractionalPartKernel a x)) =
+      (c.sum fun a r => r * a) ^ 2 :=
+  restricted_finsupp_tail_error_eq_moment_sq c hc
+
 example (h : nymanBeurlingBaezDuarteConcreteApprox) :
     nymanBeurlingRestrictedConcreteApprox :=
   nymanBeurlingRestrictedConcreteApprox_of_baezDuarte h
