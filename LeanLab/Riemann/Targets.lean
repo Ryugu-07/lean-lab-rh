@@ -454,9 +454,9 @@ def rhTargets : List ResearchTarget :=
       title := "Forget the Baez-Duarte restriction to the concrete predicate"
       statement :=
         "Prove nymanBeurlingBaezDuarteConcreteApprox implies nymanBeurlingConcreteApprox by composing through nymanBeurlingRestrictedConcreteApprox."
-      leanName := none
-      status := .planned
-      note := "Protocol v2 marks this one-step corollary as a mechanical batch item, not a standalone research loop." },
+      leanName := some ``nymanBeurlingConcreteApprox_unconditional
+      status := .parked
+      note := "M0 audit AUDIT-20260710-M0-01 proved the conclusion unconditionally using opposite signed parameters. The implication is obsolete as a criterion target, and the unrestricted predicate must not be used for M1." },
     { id := "T3.rh.horizon"
       tier := .tier3
       title := "Riemann Hypothesis horizon"

@@ -6665,3 +6665,44 @@ Future attempt records must include:
 - Lean verification commands and results
 - theorem names and nearest known literature
 - model, reasoning effort, budget, compaction state, and commit SHA
+
+## Audit 2026-07-10-M0-01: unrestricted-parameter falsification test
+
+- `loop_id`: `AUDIT-20260710-M0-01`
+- `node_id`: `M0`
+- `work_class`: `FORMALIZATION`
+- `result_class`: `BRANCH_FALSIFIED`
+- exact mathematical statement: allowing both `a` and `-a` makes the unrestricted concrete
+  approximation predicate unconditional, because their fractional-part kernels sum to one away
+  from a countable exceptional set.
+- exact Lean statement: `nymanBeurlingConcreteApprox_unconditional :
+  nymanBeurlingConcreteApprox`
+- published source: this is a statement-alignment audit against the restricted parameter domains
+  in Balazard-Saias (1998) and Baez-Duarte (2002), not a new criterion claim.
+- `assumption_frontier_before`: the project treats `nymanBeurlingConcreteApprox` as a possible
+  local approximation shape but has no criterion bridge.
+- `hard_gap_before`: M0 is open; the unrestricted predicate has not been tested for accidental
+  triviality.
+- `assumption_frontier_after`: the unrestricted predicate is proved without RH and is excluded
+  from future criterion work; only restricted continuous and positive-natural statements remain.
+- `hard_gap_after`: M0 remains in progress with the unrestricted branch formally rejected.
+- `hard_gap_delta`: one candidate statement branch eliminated.
+- standalone justification: this is not a rename or one-step transport; it can falsify a candidate
+  statement by proving it without RH.
+- model: GPT-5 Codex
+- reasoning effort: not exposed by the current runtime
+- budget: no explicit per-round token budget
+- compaction state: clean-context audit started after reading the source DAG, protocol, handoff,
+  target ledger, attempt tail, and exact Lean definitions
+- theorem name: `nymanBeurlingConcreteApprox_unconditional`
+- nearest known literature: Balazard-Saias (1998) restricts to positive unit-interval parameters;
+  Baez-Duarte (2002) restricts to positive natural dilations.
+- Lean verification: `lake env lean LeanLab/Riemann/NymanBeurling.lean` passed.
+- Lean verification: `lake env lean LeanLab/Riemann/Targets.lean` passed.
+- Lean verification: `lake env lean LeanLab/Riemann/TargetChecks.lean` passed.
+- Lean verification: `lake build` passed with 8566 jobs.
+- full project proof-gap keyword scan: passed with no matches.
+- detailed alignment record: `research/m0_statement_alignment_20260710.md`
+- audit decision: `PIVOT`
+- commit SHA: resolve the commit titled `research: falsify unrestricted Nyman predicate`; the exact
+  SHA is recorded in the external task ledger after the commit is created.

@@ -22,7 +22,7 @@ flowchart TD
 | node_id | status | description | current frontier |
 | --- | --- | --- | --- |
 | A | in progress | Project-local xi, Li, Nyman-Beurling, and Baez-Duarte scaffolding. | Mostly formalization scaffolding; not RH progress under v2. |
-| M0 | open | Align project-local Nyman-Beurling/Baez-Duarte predicates with published statements. | Need exact comparison of parameter domains, L2 domains, target functions, closure/density form, and natural-parameter form. |
+| M0 | in progress | Align project-local Nyman-Beurling/Baez-Duarte predicates with published statements. | The unrestricted signed-parameter predicate is formally rejected as unconditional. Remaining work is restricted closure/tolerance equivalence, endpoint convention, coefficient field, and the full-line-to-unit-interval natural bridge. |
 | M1 | open | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | Needs M0 first; likely requires Mellin-Plancherel and critical-line L2 infrastructure. |
 | D | open | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | No direct bridge yet. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
@@ -53,3 +53,6 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - The proposed loop-131 corollary
   `nymanBeurlingBaezDuarteConcreteApprox -> nymanBeurlingConcreteApprox` is a mechanical batch
   item on node A. It is not an accepted standalone research loop.
+- Audit `AUDIT-20260710-M0-01` proved `nymanBeurlingConcreteApprox` unconditionally by using
+  parameters `1` and `-1`. The unrestricted branch is falsified as a criterion carrier, and the
+  governance decision is `PIVOT` to exact restricted-statement alignment.

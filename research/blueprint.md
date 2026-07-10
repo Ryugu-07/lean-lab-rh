@@ -1661,6 +1661,8 @@ Lean status:
 - target recorded in `LeanLab/Riemann/Targets.lean`;
 - planned one-step corollary; under protocol v2 it should be batched with adjacent engineering
   checks.
+- M0 audit `AUDIT-20260710-M0-01` subsequently proved `nymanBeurlingConcreteApprox`
+  unconditionally using parameters `1` and `-1`; this target is therefore obsolete and parked.
 
 ## Tier 3: Horizon
 

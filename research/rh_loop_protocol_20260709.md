@@ -134,6 +134,15 @@ miss is not evidence of novelty.
 
 ## Historical Loop Updates
 
+## M0 Audit 2026-07-10-01
+
+Clean-context audit `AUDIT-20260710-M0-01` targeted fixed node M0 and proved
+`nymanBeurlingConcreteApprox_unconditional`. Arbitrary signed parameters make the unrestricted
+predicate unconditional because the kernels at `1` and `-1` sum to one almost everywhere. The
+result class is `BRANCH_FALSIFIED`, the unrestricted criterion branch is rejected, and the audit
+decision is `PIVOT` to exact restricted-statement alignment. See
+`research/m0_statement_alignment_20260710.md`.
+
 ## Loop 86 Update
 
 The Li/Hadamard inventory is complete as

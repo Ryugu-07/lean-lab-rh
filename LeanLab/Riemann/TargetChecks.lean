@@ -77,6 +77,10 @@ example (h : nymanBeurlingKernelDense) :
     nymanBeurlingConcreteApprox :=
   nymanBeurlingConcreteApprox_of_dense h
 
+example :
+    nymanBeurlingConcreteApprox :=
+  nymanBeurlingConcreteApprox_unconditional
+
 example (h : nymanBeurlingRestrictedConcreteApprox) :
     nymanBeurlingConcreteApprox :=
   nymanBeurlingConcreteApprox_of_restricted h

@@ -738,6 +738,49 @@ def nymanBeurlingConcreteApprox : Prop :=
           (1 - c.sum fun a r => r * fractionalPartKernel a x) ∂
             (volume.restrict (Set.Ioo (0 : ℝ) 1))) < δ
 
+/-- Allowing arbitrary real parameters makes the unrestricted approximation
+predicate unconditional: opposite parameters sum to one almost everywhere. -/
+theorem nymanBeurlingConcreteApprox_unconditional :
+    nymanBeurlingConcreteApprox := by
+  intro δ hδ
+  let c : ℝ →₀ ℝ := Finsupp.single 1 1 + Finsupp.single (-1) 1
+  refine ⟨c, ?_⟩
+  let exceptional : Set ℝ := Set.range fun z : ℤ => ((z : ℝ)⁻¹)
+  have hexceptional_countable : exceptional.Countable := Set.countable_range _
+  have hexceptional_zero :
+      (volume.restrict (Set.Ioo (0 : ℝ) 1)) exceptional = 0 :=
+    hexceptional_countable.measure_zero _
+  have hae_not_exceptional :
+      ∀ᵐ x ∂(volume.restrict (Set.Ioo (0 : ℝ) 1)), x ∉ exceptional :=
+    measure_eq_zero_iff_ae_notMem.mp hexceptional_zero
+  have hintegrand :
+      (fun x : ℝ =>
+        (1 - c.sum fun a r => r * fractionalPartKernel a x) *
+          (1 - c.sum fun a r => r * fractionalPartKernel a x))
+        =ᵐ[volume.restrict (Set.Ioo (0 : ℝ) 1)] 0 := by
+    filter_upwards [hae_not_exceptional] with x hx
+    have hfract : Int.fract (1 / x) ≠ 0 := by
+      intro hzero
+      rcases Int.fract_eq_zero_iff.mp hzero with ⟨z, hz⟩
+      apply hx
+      refine ⟨z, ?_⟩
+      simpa [one_div] using congrArg Inv.inv hz
+    have hkernels :
+        fractionalPartKernel 1 x + fractionalPartKernel (-1) x = 1 := by
+      rw [fractionalPartKernel, fractionalPartKernel]
+      have hneg : (-1 : ℝ) / x = -(1 / x) := by ring
+      rw [hneg, Int.fract_neg hfract]
+      ring
+    have hsum : c.sum (fun a r => r * fractionalPartKernel a x) = 1 := by
+      change ((Finsupp.single (1 : ℝ) (1 : ℝ) + Finsupp.single (-1 : ℝ) (1 : ℝ)).sum
+        fun a r => r * fractionalPartKernel a x) = 1
+      rw [Finsupp.sum_add_index' (by simp) (by intros; ring)]
+      rw [Finsupp.sum_single_index (by simp), Finsupp.sum_single_index (by simp)]
+      simpa using hkernels
+    simp [hsum]
+  rw [integral_congr_ae hintegrand]
+  simpa using hδ
+
 /-- Concrete approximation with all active parameters in the unit interval. -/
 def nymanBeurlingRestrictedConcreteApprox : Prop :=
   ∀ δ : ℝ, 0 < δ →
