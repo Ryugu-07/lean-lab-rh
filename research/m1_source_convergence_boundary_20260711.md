@@ -190,3 +190,7 @@ The trusted-dependency audit for the three representative final theorems reports
   dependencies and Lean-closed subedges.
 - `hard_gap_delta`: dependency uncertainty was reduced, but neither full convergence theorem nor
   either implication of Baez-Duarte Theorem 1.1 was proved.
+
+Postscript: Batch `BATCH-20260711-M1-05` subsequently reconstructed the tail from the source
+definition, Lean-verified the `1+2*epsilon` exponent, and closed the weighted-to-unweighted transfer
+as G2/F3. The M1-04 matrix above is retained as the state at the end of that earlier batch.

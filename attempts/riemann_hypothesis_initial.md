@@ -7129,3 +7129,35 @@ Future attempt records must include:
 - trusted dependencies: representative final theorems use only `propext`, `Classical.choice`, and
   `Quot.sound`.
 - detailed record: `research/m1_source_convergence_boundary_20260711.md`.
+
+## Batch 2026-07-11-M1-05: weighted-to-unweighted tail transfer
+
+- `loop_id`: `BATCH-20260711-M1-05`
+- `node_id`: `M1`
+- `gap_id`: `G2/F3`
+- `work_class`: `FORMALIZATION`
+- source reconstruction: from the definition of `f_(delta,n)`, every kernel equals `1/(a*x)` for
+  `x>1`, so the tail coefficient exponent is `1+delta`. Lean theorem
+  `baezDuarteMobiusApprox_two_mul_eq_dirichletTail_of_one_lt` verifies `1+2*epsilon` for
+  `f_(2*epsilon,n)`; the source's printed `1+epsilon` is a typo.
+- exact analytic result: for actual real `L2(0,infinity)` elements satisfying
+  `w(x)=x^(-epsilon)f(x)` almost everywhere and `f(x)=m/x` above one,
+  `baezDuarte_weightedTail_norm_sq_le` proves
+  `norm(f)^2 <= (1+2*epsilon)*norm(w)^2`.
+- proof route: split the positive half-line into `Ioc 0 1` and `Ioi 1`; on the first interval the
+  weight is at least one; on the second interval compute the weighted tail integral exactly as
+  `m^2/(1+2*epsilon)` and the unweighted tail integral as `m^2`.
+- convergence result: `tendsto_norm_zero_of_baezDuarte_weightedTail` handles varying
+  `epsilon_i -> 0`; fixed epsilon is the constant-family case.
+- source instantiation: `baezDuarte_finsupp_norm_sq_le_of_weighted` applies the theorem to the
+  project's actual positive-natural finite kernel sum and compiled reciprocal-moment tail.
+- rejected weaker stopping point: the batch did not stop after the tail integral or a generic raw
+  function lemma; it reached quotient-level `Lp`, convergence, and source finite-sum witnesses as
+  required by preregistration.
+- `result_class`: `HARD_GAP_REDUCED`
+- `assumption_frontier_after`: no independent tail-transfer premise remains. F1/F2 must still
+  provide weighted convergence; the transfer back to ordinary `L2` is compiled.
+- `hard_gap_after`: remove F3 from G2. F1, F2, the reverse base criterion, G1, D, and RH remain open.
+- trusted dependencies: representative final theorems use only `propext`, `Classical.choice`, and
+  `Quot.sound`.
+- detailed record: `research/m1_weighted_tail_transfer_20260711.md`.

@@ -1,4 +1,4 @@
-import LeanLab.Riemann.BaezDuarteConvergence
+import LeanLab.Riemann.BaezDuarteTailTransfer
 
 set_option linter.style.header false
 
@@ -23,3 +23,7 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.baezDuarteVerticalMajorant_memLp
 #print axioms LeanLab.Riemann.baezDuarteCriticalLineZetaZeroOrdinates_countable
 #print axioms LeanLab.Riemann.ae_tendsto_baezDuarteZetaRatio_one
+#print axioms LeanLab.Riemann.baezDuarteMobiusApprox_two_mul_eq_dirichletTail_of_one_lt
+#print axioms LeanLab.Riemann.baezDuarte_weightedTail_norm_sq_le
+#print axioms LeanLab.Riemann.tendsto_norm_zero_of_baezDuarte_weightedTail
+#print axioms LeanLab.Riemann.baezDuarte_finsupp_norm_sq_le_of_weighted

@@ -1,5 +1,5 @@
 import LeanLab.Riemann.Targets
-import LeanLab.Riemann.BaezDuarteConvergence
+import LeanLab.Riemann.BaezDuarteTailTransfer
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -177,5 +177,33 @@ example :
       Filter.Tendsto (fun ε : ℝ => baezDuarteZetaRatio ε τ)
         (nhds 0) (nhds 1) :=
   ae_tendsto_baezDuarteZetaRatio_one
+
+example (ε : ℝ) (N : ℕ) {x : ℝ} (hx : 1 < x) :
+    baezDuarteMobiusApprox (2 * ε) N x =
+      (∑ a ∈ Finset.Icc 1 N,
+        ((ArithmeticFunction.moebius a : ℤ) : ℝ) *
+          (a : ℝ) ^ (-(1 + 2 * ε))) / x :=
+  baezDuarteMobiusApprox_two_mul_eq_dirichletTail_of_one_lt ε N hx
+
+example (ε m : ℝ) (hε : 0 ≤ ε)
+    (f w : positiveHalfLineL2)
+    (hweighted :
+      w =ᵐ[MeasureTheory.volume.restrict (Set.Ioi (0 : ℝ))]
+        fun x : ℝ => x ^ (-ε) * f x)
+    (htail :
+      ∀ᵐ x : ℝ ∂(MeasureTheory.volume.restrict (Set.Ioi (0 : ℝ))),
+        1 < x → f x = m / x) :
+    ‖f‖ ^ 2 ≤ (1 + 2 * ε) * ‖w‖ ^ 2 :=
+  baezDuarte_weightedTail_norm_sq_le ε m hε f w hweighted htail
+
+example (ε : ℝ) (hε : 0 ≤ ε)
+    (c : baezDuartePositiveNatIndex →₀ ℝ) (w : positiveHalfLineL2)
+    (hweighted :
+      w =ᵐ[MeasureTheory.volume.restrict (Set.Ioi (0 : ℝ))]
+        fun x : ℝ => x ^ (-ε) *
+          (c.sum fun n r => r • baezDuarteKernelL2 n) x) :
+    ‖c.sum fun n r => r • baezDuarteKernelL2 n‖ ^ 2 ≤
+      (1 + 2 * ε) * ‖w‖ ^ 2 :=
+  baezDuarte_finsupp_norm_sq_le_of_weighted ε hε c w hweighted
 
 end LeanLab.Riemann

@@ -1735,6 +1735,20 @@ weighted-to-unweighted tail transfer. The source TeX contains a malformed displa
 and an exponent ambiguity in that tail passage, so the intended statements must be reconstructed
 from definitions before they are eligible Lean premises. Result: `DEPENDENCY_GAP_IDENTIFIED`.
 
+Batch `BATCH-20260711-M1-05` closes the shared weighted-to-unweighted tail-transfer block. Directly
+from the source definition, Lean verifies that `f_(2*epsilon,n)` has exponent `1+2*epsilon` above
+one, so the printed `1+epsilon` is not used. For any actual real `L2(0,infinity)` error with tail
+`m/x`, Lean proves
+
+```text
+norm(f)^2 <= (1 + 2*epsilon) * norm(x^(-epsilon) * f)^2.
+```
+
+The theorem is formulated modulo almost-everywhere equality, yields the varying-epsilon convergence
+transfer, and is instantiated on the project's natural-kernel finite sums. F3 is therefore closed.
+The forward route is now concentrated on F1, the Balazard-Saias/RH-to-Lindelof estimate, and F2,
+Baez-Duarte Lemma 2.2 plus complex-Gamma vertical-strip control. Result: `HARD_GAP_REDUCED`.
+
 ## Tier 3: Horizon
 
 `RiemannHypothesis` remains the orientation point. It is not an admissible immediate proof-loop
