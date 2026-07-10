@@ -1,5 +1,5 @@
 import LeanLab.Riemann.Targets
-import LeanLab.Riemann.FourierMellin
+import LeanLab.Riemann.BaezDuarteConvergence
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -15,7 +15,7 @@ examples.
 
 namespace LeanLab.Riemann
 
-open scoped FourierTransform
+open scoped ENNReal FourierTransform
 
 /-- Name-resolution witness for every `.proven` ledger target with a `leanName`. -/
 def checkedTargetNames : List Lean.Name :=
@@ -157,5 +157,25 @@ example (f : ℝ → ℂ) (τ : ℝ) :
         (Real.exp (-u / 2) : ℂ) * f (Real.exp (-u)))
         (τ / (2 * Real.pi)) :=
   mellin_criticalLine_eq_fourier f τ
+
+example (β : ℝ) (hβ : β < 1 / 2) :
+    MeasureTheory.MemLp (baezDuarteVerticalMajorant β) (2 : ℝ≥0∞)
+      MeasureTheory.volume :=
+  baezDuarteVerticalMajorant_memLp β hβ
+
+example (ε : ℝ) (hε : ε < 1 / 4) :
+    MeasureTheory.MemLp (baezDuarteVerticalMajorant (2 * ε)) (2 : ℝ≥0∞)
+      MeasureTheory.volume :=
+  baezDuarteFirstConvergenceMajorant_memLp ε hε
+
+example :
+    baezDuarteCriticalLineZetaZeroOrdinates.Countable :=
+  baezDuarteCriticalLineZetaZeroOrdinates_countable
+
+example :
+    ∀ᵐ τ : ℝ ∂MeasureTheory.volume,
+      Filter.Tendsto (fun ε : ℝ => baezDuarteZetaRatio ε τ)
+        (nhds 0) (nhds 1) :=
+  ae_tendsto_baezDuarteZetaRatio_one
 
 end LeanLab.Riemann

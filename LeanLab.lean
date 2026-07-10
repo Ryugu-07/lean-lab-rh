@@ -5,6 +5,7 @@ import LeanLab.Riemann.LiScaffold
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BaezDuarteMellin
 import LeanLab.Riemann.FourierMellin
+import LeanLab.Riemann.BaezDuarteConvergence
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.TargetChecks
 import LeanLab.Riemann.AxiomsAudit

@@ -1721,6 +1721,20 @@ checks the source/mathlib frequency conversion `tau/(2*pi)`. The remaining forwa
 requires the quantitative Mobius and RH-to-Lindelof estimates plus source-specific convergence;
 the reverse base criterion remains open.
 
+Batch `BATCH-20260711-M1-04` resolves the broad source-convergence label into two source-accurate
+chains. `baezDuarteVerticalMajorant_memLp` proves that `(1+|tau|)^(-1+beta)` is in `L2(R)` for
+`beta < 1/2`, and its `2*epsilon` specialization closes the integrability step in the first chain.
+For the unconditional `epsilon -> 0` chain, Lean proves that critical-line zeta-zero ordinates are
+countable and null and that the source zeta ratio tends almost everywhere to one.
+
+This batch does not close either convergence theorem. The fixed-epsilon chain still needs the
+Balazard-Saias Mobius estimate and RH-to-Lindelof bound. The epsilon-to-zero chain still needs the
+uniform zeta-ratio estimate of Baez-Duarte Lemma 2.2, whose proof requires a complex-Gamma
+vertical-strip ratio estimate absent from current mathlib. Both chains still need the source's
+weighted-to-unweighted tail transfer. The source TeX contains a malformed displayed Gamma ratio
+and an exponent ambiguity in that tail passage, so the intended statements must be reconstructed
+from definitions before they are eligible Lean premises. Result: `DEPENDENCY_GAP_IDENTIFIED`.
+
 ## Tier 3: Horizon
 
 `RiemannHypothesis` remains the orientation point. It is not an admissible immediate proof-loop

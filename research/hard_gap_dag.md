@@ -23,7 +23,7 @@ flowchart TD
 | --- | --- | --- | --- |
 | A | in progress | Project-local xi, Li, Nyman-Beurling, and Baez-Duarte scaffolding. | Mostly formalization scaffolding; not RH progress under v2. |
 | M0 | complete | Align project-local Nyman-Beurling/Baez-Duarte predicates with published statements. | The positive-natural Baez-Duarte closure side is aligned in real and complex `L2(0,infinity)`: parameter indexing, kernel formula, target, closed span, whole-line error, endpoint, tolerance, and coefficient field are Lean-checked. |
-| M1 | in progress | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | The exact eligible closure side is fixed. Audit M1-01 split Theorem 1.1 into forward and reverse routes; Batches M1-02 and M1-03 formalized the source kernel Mellin identity, every positive-natural scaling, and the weighted-log Fourier-Mellin `L2` isometry. |
+| M1 | in progress | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | The exact eligible closure side is fixed. Audit M1-01 split Theorem 1.1 into forward and reverse routes; Batches M1-02 through M1-04 closed the kernel Mellin identity, positive-natural scaling, weighted-log Fourier-Mellin `L2` isometry, power-majorant integrability, and the almost-everywhere zeta-ratio limit. |
 | D | open | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | No direct bridge yet. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
 
@@ -32,7 +32,7 @@ flowchart TD
 | gap_id | node_id | status | description |
 | --- | --- | --- | --- |
 | G1 | M1/D | open | Formalize the classical Nyman-Beurling/Baez-Duarte equivalence with RH, using either Beurling's moment-constrained unit-interval space or Baez-Duarte's full-line space, and connect it to `Mathlib.RiemannHypothesis`. |
-| G2 | M1 | in progress | Available: full-line `L2`, finite-error/field alignment, the exact `HasMellin` identity for `rho(1/x)` and all positive-natural kernels, the packaged weighted-log Fourier-Mellin `L2` isometry with inverse representatives and frequency normalization, Fourier `L2` Plancherel, and Mobius L-series inversion for `re(s) > 1`. Missing forward blocks: Balazard-Saias quantitative Mobius estimate near `re(s) = 1/2`, RH-to-Lindelof bounds, and source-specific convergence. Missing reverse block: the base Nyman-Beurling criterion and its half-plane Hardy-space factorization infrastructure. |
+| G2 | M1 | in progress | Available: full-line `L2`, finite-error/field alignment, exact kernel Mellin transforms, weighted-log Fourier-Mellin isometry and Plancherel, square-integrability of the source power majorants, countability/nullity of critical-line zero ordinates, and almost-everywhere convergence of the epsilon-dependent zeta ratio to one. Missing forward quantitative blocks: (F1) Balazard-Saias Mobius partial-sum estimate and the RH-to-Lindelof bound needed for fixed-epsilon transformed convergence; (F2) Baez-Duarte Lemma 2.2's uniform zeta-ratio estimate, requiring an unavailable complex-Gamma vertical-strip ratio bound; (F3) source-specific weighted-to-unweighted `L2` tail transfer, whose printed exponent must first be disambiguated. Generic dominated convergence is available but cannot replace F1/F2. Missing reverse block: the base Nyman-Beurling criterion and its half-plane Hardy-space factorization infrastructure. |
 | G3 | M2 | parked | Construct unconditional finite approximants with error tending to zero. In the NB/BD framework this is essentially the hard RH direction; numerical convergence is not evidence. |
 
 ## Loop Reporting Policy
@@ -87,3 +87,9 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   representatives, composed it with Fourier Plancherel, and verified the `tau/(2*pi)` frequency
   normalization. Result: `HARD_GAP_REDUCED`; the weighted-log isometry block is closed, while the
   quantitative Mobius, RH-to-Lindelof, source-convergence, and reverse-criterion gaps remain.
+- Batch `BATCH-20260711-M1-04` inspected both source convergence passages and compiled the exact
+  power-majorant `L2` statements, the countability and nullity of critical-line zeta-zero
+  ordinates, and almost-everywhere convergence of the source zeta ratio to one. Result:
+  `DEPENDENCY_GAP_IDENTIFIED`; G2 remains open but its broad convergence item is replaced by F1-F3
+  above. The source's malformed displayed Gamma ratio and ambiguous tail exponent are recorded in
+  `research/m1_source_convergence_boundary_20260711.md` and are not assumed.

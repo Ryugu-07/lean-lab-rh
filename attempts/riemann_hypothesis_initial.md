@@ -7095,3 +7095,37 @@ Future attempt records must include:
 - model: GPT-5 Codex family; exact backend identifier and reasoning effort are not exposed.
 - budget: no explicit per-round token budget.
 - detailed record: `research/m1_weighted_log_fourier_mellin_20260711.md`.
+
+## Batch 2026-07-11-M1-04: source convergence boundary
+
+- `loop_id`: `BATCH-20260711-M1-04`
+- `node_id`: `M1`
+- `gap_id`: `G2`
+- `work_class`: `FORMALIZATION`
+- exact target: prove `L2(R)` membership of the source power majorant for exponent below `1/2`,
+  then audit both Section 2.2 convergence passages down to their exact source dependencies.
+- source: Baez-Duarte, arXiv `math/0202141v2`, Section 2.2; source-export SHA-256
+  `3bdb7d9da83314b685572aaa739b02e4d075cb3dec9ffccc6a66faee932818c0`.
+- compiled majorant result: `baezDuarteVerticalMajorant_memLp`; the specialization
+  `baezDuarteFirstConvergenceMajorant_memLp` gives the source range `epsilon < 1/4`.
+- compiled exceptional-set results: critical-line zeta-zero ordinates are countable and have
+  volume zero, using mathlib's discreteness theorem for `riemannZetaZeros`.
+- compiled pointwise result: away from those ordinates, continuity of `riemannZeta` proves the
+  epsilon-dependent zeta ratio tends to one; hence `ae_tendsto_baezDuarteZetaRatio_one`.
+- failed full-convergence route: a generic dominated-convergence invocation cannot start without
+  the source's uniform estimates. For fixed epsilon these require the Balazard-Saias Mobius
+  estimate and RH-to-Lindelof growth; for epsilon tending to zero they require Lemma 2.2's uniform
+  zeta-ratio estimate and a complex-Gamma vertical-strip ratio bound not found in mathlib.
+- remaining shared edge: the weighted-to-unweighted full-line `L2` transfer on `(0,1)` and
+  `(1,infinity)` is source-specific and not yet formalized.
+- source-risk finding: the TeX proof of Lemma 2.2 displays an identical Gamma numerator and
+  denominator; the tail passage also has an exponent inconsistent with the surrounding
+  `f_(2*epsilon,n)` indexing. Neither printed expression was assumed.
+- `result_class`: `DEPENDENCY_GAP_IDENTIFIED`
+- `assumption_frontier_after`: majorant integrability and almost-everywhere ratio convergence are
+  unconditional Lean theorems; all remaining quantitative premises are explicit and unchecked.
+- `hard_gap_after`: G2 and both directions of Theorem 1.1 remain open; the broad convergence block
+  is replaced by named dependencies F1-F3 in `research/hard_gap_dag.md`.
+- trusted dependencies: representative final theorems use only `propext`, `Classical.choice`, and
+  `Quot.sound`.
+- detailed record: `research/m1_source_convergence_boundary_20260711.md`.

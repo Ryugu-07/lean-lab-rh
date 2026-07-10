@@ -1,4 +1,4 @@
-import LeanLab.Riemann.FourierMellin
+import LeanLab.Riemann.BaezDuarteConvergence
 
 set_option linter.style.header false
 
@@ -20,3 +20,6 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.weightedLogPullback_symm_coeFn
 #print axioms LeanLab.Riemann.norm_baezDuarteFourierMellinL2
 #print axioms LeanLab.Riemann.mellin_criticalLine_eq_fourier
+#print axioms LeanLab.Riemann.baezDuarteVerticalMajorant_memLp
+#print axioms LeanLab.Riemann.baezDuarteCriticalLineZetaZeroOrdinates_countable
+#print axioms LeanLab.Riemann.ae_tendsto_baezDuarteZetaRatio_one
