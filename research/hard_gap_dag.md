@@ -112,3 +112,9 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   exponent below `1/2`; an Apache-2.0 external module supplies only a linear strip bound, while an
   unlicensed exploration leaves the weighted Phragmen-Lindelof core as an axiom. Result:
   `DEPENDENCY_GAP_IDENTIFIED`; F1 is corrected but remains open.
+- Batch `BATCH-20260711-M1-08` compiled the removable entire function `(s-1)zeta(s)`, an Abel
+  truncation bound of exponent `1/8` on `Re(s)=1`, exact Gamma-reflection cancellation on
+  `Re(s)=0`, and the resulting pole-removed boundary exponents `9/8` and `13/8`. The fixed
+  critical-line `3/8` target remains open because the corrected Fiori midpoint quotient and its
+  uniform interior growth witness are not yet formalized. Result: `FORMALIZATION_ONLY`; G2/F1 is
+  unchanged and no interpolation theorem is assumed.

@@ -7242,3 +7242,28 @@ Future attempt records must include:
 - verification: full `lake build` passes with 8586 jobs; incomplete-proof and explicit-declaration
   scans and `git diff --check` pass. No Lean source file changed in this audit.
 - detailed record: `research/m1_f1_route_audit_20260711.md`.
+
+## Batch 2026-07-11-M1-08: zeta convexity boundary closure
+
+- `loop_id`: `BATCH-20260711-M1-08`
+- `node_id`: `M1`
+- `gap_id`: `G2/F1/zeta-convexity`
+- `work_class`: `FORMALIZATION`
+- preregistered target: an unconditional critical-line zeta bound with exponent `3/8`.
+- compiled progress: entire pole removal; Abel `1/8` right-edge bound; exact Gamma reflection and
+  cosine cancellation; zeta `5/8` left-edge bound; pole-removed boundary powers `9/8` and `13/8`.
+- stopped dependency: the corrected Fiori midpoint quotient and its uniform interior growth
+  witness for `PhragmenLindelof.vertical_strip` remain to be formalized.
+- rejected shortcut: no invalid `re(s)`-dependent auxiliary function and no axiom for weighted
+  interpolation or growth was introduced.
+- `result_class`: `FORMALIZATION_ONLY`
+- `hard_gap_before`: F1 contains zeta convexity plus Balazard-Saias.
+- `hard_gap_after`: unchanged; the fixed `3/8` theorem is not compiled.
+- `hard_gap_delta`: none.
+- `assumption_frontier_after`: both polynomial edge estimates are compiled; midpoint interpolation
+  and interior growth remain explicit open obligations.
+- model: Codex, GPT-5 family; exact backend identifier and reasoning effort are not exposed.
+- budget: unbounded persistent-goal budget; no explicit per-round token budget.
+- compaction state: resumed from a generated context summary after preregistration and rechecked
+  the fixed DAG, sources, and worktree before continuing.
+- detailed record: `research/m1_zeta_convexity_boundary_20260711.md`.

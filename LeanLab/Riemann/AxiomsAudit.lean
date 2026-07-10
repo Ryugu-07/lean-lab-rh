@@ -1,4 +1,4 @@
-import LeanLab.Riemann.BaezDuarteZetaRatio
+import LeanLab.Riemann.ZetaConvexity
 
 set_option linter.style.header false
 
@@ -32,3 +32,9 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.exists_norm_baezDuarteZetaRatio_le_rpow
 #print axioms LeanLab.Riemann.exists_baezDuarteZetaRatio_bound
 #print axioms LeanLab.Riemann.exists_baezDuarteZetaRatioIntegrand_majorant
+#print axioms LeanLab.Riemann.differentiable_zetaPoleRemoved
+#print axioms LeanLab.Riemann.exists_norm_riemannZeta_one_add_mul_I_le_rpow
+#print axioms LeanLab.Riemann.norm_Gamma_mul_cos_one_sub_mul_I_le
+#print axioms LeanLab.Riemann.exists_norm_riemannZeta_mul_I_le_rpow
+#print axioms LeanLab.Riemann.exists_norm_zetaPoleRemoved_one_add_mul_I_le_rpow
+#print axioms LeanLab.Riemann.exists_norm_zetaPoleRemoved_mul_I_le_rpow
