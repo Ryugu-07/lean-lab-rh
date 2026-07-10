@@ -151,3 +151,9 @@ as an assumption or bypassed by the `re(s) > 1` theorem.
 - `hard_gap_after`: G2 is narrowed to two route-critical theorem boundaries, with five explicit
   missing forward blocks and one explicit reverse block.
 - `hard_gap_delta`: dependency uncertainty reduced; G1 and the RH equivalence remain unproved.
+
+## Follow-Up
+
+Batch `BATCH-20260710-M1-02` subsequently closed missing forward block 3. Lean now proves the exact
+`HasMellin` identity for `rho(1/x)` on `0 < re(s) < 1` and its scaling to every positive-natural
+Baez-Duarte kernel. The remaining forward and reverse boundaries listed above are unchanged.

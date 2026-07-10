@@ -23,7 +23,7 @@ flowchart TD
 | --- | --- | --- | --- |
 | A | in progress | Project-local xi, Li, Nyman-Beurling, and Baez-Duarte scaffolding. | Mostly formalization scaffolding; not RH progress under v2. |
 | M0 | complete | Align project-local Nyman-Beurling/Baez-Duarte predicates with published statements. | The positive-natural Baez-Duarte closure side is aligned in real and complex `L2(0,infinity)`: parameter indexing, kernel formula, target, closed span, whole-line error, endpoint, tolerance, and coefficient field are Lean-checked. |
-| M1 | in progress | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | The exact eligible closure side is fixed. Audit M1-01 compiled the RH-to-zero-free-half-plane interface and split Theorem 1.1 into a forward quantitative-Mobius/Mellin route and a reverse base-Nyman-Beurling/Hardy route. |
+| M1 | in progress | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | The exact eligible closure side is fixed. Audit M1-01 split Theorem 1.1 into forward and reverse routes; Batch M1-02 formalized the source fractional-kernel Mellin identity and every positive-natural scaling. |
 | D | open | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | No direct bridge yet. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
 
@@ -32,7 +32,7 @@ flowchart TD
 | gap_id | node_id | status | description |
 | --- | --- | --- | --- |
 | G1 | M1/D | open | Formalize the classical Nyman-Beurling/Baez-Duarte equivalence with RH, using either Beurling's moment-constrained unit-interval space or Baez-Duarte's full-line space, and connect it to `Mathlib.RiemannHypothesis`. |
-| G2 | M1 | in progress | Available: full-line `L2`, finite-error/field alignment, pointwise Mellin-Fourier conversion, Fourier `L2` Plancherel, and Mobius L-series inversion for `re(s) > 1`. Missing forward blocks: Balazard-Saias quantitative Mobius estimate near `re(s) = 1/2`, RH-to-Lindelof bounds, the fractional-kernel Mellin identity, a packaged weighted-log Fourier-Mellin `L2` isometry, and source-specific convergence. Missing reverse block: the base Nyman-Beurling criterion and its half-plane Hardy-space factorization infrastructure. |
+| G2 | M1 | in progress | Available: full-line `L2`, finite-error/field alignment, the exact `HasMellin` identity for `rho(1/x)` and all positive-natural kernels, pointwise Mellin-Fourier conversion, Fourier `L2` Plancherel, and Mobius L-series inversion for `re(s) > 1`. Missing forward blocks: Balazard-Saias quantitative Mobius estimate near `re(s) = 1/2`, RH-to-Lindelof bounds, a packaged weighted-log Fourier-Mellin `L2` isometry, and source-specific convergence. Missing reverse block: the base Nyman-Beurling criterion and its half-plane Hardy-space factorization infrastructure. |
 | G3 | M2 | parked | Construct unconditional finite approximants with error tending to zero. In the NB/BD framework this is essentially the hard RH direction; numerical convergence is not evidence. |
 
 ## Loop Reporting Policy
@@ -76,3 +76,9 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `RiemannHypothesis.riemannZeta_ne_zero_of_half_le_lt_re` and compared every Theorem 1.1 proof
   block against the pinned mathlib tree. Result: `DEPENDENCY_GAP_IDENTIFIED`. G2 is narrowed to
   explicit forward and reverse theorem boundaries; G1 and RH remain unproved.
+- Batch `BATCH-20260710-M1-02` audited external Lean projects, vendored only the trusted
+  Abel-continuation source subset from `PrimeNumberTheoremAnd`, extended its formula to the full
+  half-plane `re(s) > 0`, and proved `hasMellin_fractionalPartKernel_one` plus
+  `hasMellin_baezDuarteKernel`. Result: `HARD_GAP_REDUCED`; the fractional-kernel Mellin block is
+  closed, while the quantitative Mobius, weighted-log isometry, convergence, and reverse-criterion
+  gaps remain.

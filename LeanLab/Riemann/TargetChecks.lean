@@ -1,4 +1,5 @@
 import LeanLab.Riemann.Targets
+import LeanLab.Riemann.BaezDuarteMellin
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -115,5 +116,18 @@ example (h : nymanBeurlingBaezDuarteFullLineConcreteApprox) :
 example :
     RiemannHypothesis ↔ ∀ (s : ℂ), IsNontrivialZero s → OnCriticalLine s :=
   riemannHypothesis_iff_nontrivial_zeros_on_line
+
+example (s : ℂ) (hs0 : 0 < s.re) (hs1 : s.re < 1) :
+    HasMellin (fun x : ℝ => (fractionalPartKernel 1 x : ℂ)) s
+      (-riemannZeta s / s) :=
+  hasMellin_fractionalPartKernel_one s hs0 hs1
+
+example (n : baezDuartePositiveNatIndex) (s : ℂ)
+    (hs0 : 0 < s.re) (hs1 : s.re < 1) :
+    HasMellin
+      (fun x : ℝ =>
+        (fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) x : ℂ)) s
+      (((n : ℕ) : ℂ) ^ (-s) * (-riemannZeta s / s)) :=
+  hasMellin_baezDuarteKernel n s hs0 hs1
 
 end LeanLab.Riemann

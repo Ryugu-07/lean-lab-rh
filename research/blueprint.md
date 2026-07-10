@@ -1709,6 +1709,11 @@ The RH-to-zero-free-half-plane interface is compiled. The quantitative Mobius es
 criterion are theorem-level missing dependencies; neither may be replaced by the existing
 absolute-convergence identity on `re(s) > 1`.
 
+Batch `BATCH-20260710-M1-02` closes the fractional-kernel Mellin node with the compiled theorem
+`hasMellin_fractionalPartKernel_one`; `hasMellin_baezDuarteKernel` supplies the exact
+positive-natural scaling used in the paper. This removes one named G2 block but does not establish
+either implication of Theorem 1.1.
+
 ## Tier 3: Horizon
 
 `RiemannHypothesis` remains the orientation point. It is not an admissible immediate proof-loop

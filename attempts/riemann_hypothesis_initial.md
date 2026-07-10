@@ -6989,3 +6989,62 @@ Future attempt records must include:
 - `git diff --check`: passed.
 - commit SHA: resolve the commit titled `research: audit Baez-Duarte proof dependencies`; the exact
   SHA is recorded in the external task ledger after the commit is created.
+
+## Batch 2026-07-10-M1-02: fractional-kernel Mellin identity
+
+- `loop_id`: `BATCH-20260710-M1-02`
+- `node_id`: `M1`
+- `gap_id`: `G2`
+- `work_class`: `FORMALIZATION`
+- expected `result_class`: `HARD_GAP_REDUCED`
+- exact mathematical target: for `0 < re(s) < 1`, prove as a convergent Mellin transform that
+  `M[rho(1/x)](s) = -zeta(s)/s`, then include the adjacent scaling to every kernel
+  `rho(1/(n*x))` with positive natural `n`.
+- primary source: Baez-Duarte, arXiv `math/0202141v2`, source lines 226-245; the paper attributes
+  the identity to Titchmarsh (2.1.5).
+- source artifact: `https://export.arxiv.org/e-print/math/0202141`, SHA-256
+  `3bdb7d9da83314b685572aaa739b02e4d075cb3dec9ffccc6a66faee932818c0`.
+- `assumption_frontier_before`: Audit M1-01 listed the kernel Mellin identity as one of five
+  missing forward blocks. No implication of the published criterion was available.
+- `hard_gap_before`: G2 lacked the source transform needed to convert finite kernel sums into zeta
+  and Dirichlet-polynomial expressions on vertical lines.
+- expected `hard_gap_delta`: remove exactly the fractional-kernel Mellin block if the full
+  `HasMellin` statement and trusted-dependency audit pass.
+- batch justification: Abel continuation, the split at one, reciprocal change of variables,
+  convergence, and positive-natural scaling are one source analytic edge. The weighted-log `L2`
+  isometry remains a separate batch.
+- model: GPT-5 Codex family; exact backend identifier not exposed
+- reasoning effort: not exposed by the current runtime
+- budget: no explicit per-round token budget
+- compaction state: resumed from a generated context summary and re-audited the fixed DAG, current
+  worktree, primary source, mathlib APIs, external repositories, and attempt ledger.
+- external search result: no Lean implementation was found for Nyman-Beurling, Baez-Duarte,
+  Balazard-Saias, or the critical-strip Mobius estimate. `EulerProducts` stops in the absolute
+  convergence region. `PrimeNumberTheoremAnd` contains an Abel-continuation implementation but
+  its full repository also contains unrelated unfinished files.
+- dependency decision: vendor only the 13-module Apache-2.0 Abel-continuation source subset from
+  `PrimeNumberTheoremAnd` commit `d963a6e694a05cd82e5f9b9ae7f4d94123e85393`; do not add the full
+  repository as a package dependency.
+- compatibility result: all 13 modules compile individually and as a Lake library against this
+  project's pinned Lean 4.31/mathlib `v4.31.0`.
+- theorem names: `riemannZeta_eq_zetaAbelContinuationFormula_of_re_pos`,
+  `mellinConvergent_complexFractionalPart_neg`, `mellin_complexFractionalPart_neg_eq`,
+  `hasMellin_fractionalPartKernel_one`, and `hasMellin_baezDuarteKernel`.
+- trusted-dependency result: the upstream Abel theorem, the positive-half-plane extension, and
+  both final kernel theorems depend only on `propext`, `Classical.choice`, and `Quot.sound`.
+- `result_class`: `HARD_GAP_REDUCED`
+- `assumption_frontier_after`: the transform identity and all positive-natural scalings are
+  unconditional compiled theorems; no unproved analytic statement is used as a premise.
+- `hard_gap_after`: G2 no longer lists the fractional-kernel Mellin identity. The quantitative
+  Mobius estimate, RH-to-Lindelof bound, weighted-log `L2` isometry, source convergence, and base
+  reverse criterion remain open.
+- `hard_gap_delta`: one fixed external analytic block closed; neither direction of the full
+  criterion, G1, D, nor RH is proved.
+- detailed record: `research/m1_fractional_kernel_mellin_20260710.md`
+- Lean verification: `LeanLab.Riemann.BaezDuarteMellin`, exact typed witnesses, and
+  `LeanLab.Riemann.AxiomsAudit` pass; full `lake build` passes with 8581 jobs.
+- source audit: incomplete-proof keyword and explicit `axiom` declaration scans have no matches;
+  all 13 vendored Lean modules are byte-identical to the audited upstream commit.
+- `git diff --check`: passed.
+- commit SHA: resolve the commit titled `research: formalize Baez-Duarte Mellin identity`; the
+  exact SHA is recorded in the external task ledger after creation.
