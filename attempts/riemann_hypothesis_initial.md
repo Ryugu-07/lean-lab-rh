@@ -6809,3 +6809,60 @@ Future attempt records must include:
 - Lean verification: `lake build` passed with 8566 jobs.
 - commit SHA: resolve the commit titled `research: restore Baez-Duarte full-line error`; the exact
   SHA is recorded in the external task ledger after the commit is created.
+
+## Batch 2026-07-10-M0-04: positive-half-line L2 closure alignment
+
+- `loop_id`: `BATCH-20260710-M0-04`
+- `node_id`: `M0`
+- `work_class`: `FORMALIZATION`
+- expected `result_class`: `FORMALIZATION_ONLY`
+- exact mathematical target: package the target indicator and positive-natural fractional-part
+  kernels in the actual real Hilbert space `L2((0, infinity), dx)`, then prove that target
+  membership in the closure of their real finite span is equivalent to
+  `nymanBeurlingBaezDuarteFullLineConcreteApprox`.
+- published source: Baez-Duarte, *A Strengthening of the Nyman-Beurling Criterion for the Riemann
+  Hypothesis* (2003), Theorem 1.1, with `H = L2(0, infinity)`, target `chi_(0,1]`, and generators
+  indexed by positive natural reciprocals.
+- `assumption_frontier_before`: the source-faithful finite error is available only as two split
+  integrals; no whole-space `Lp` objects, span, closure, or closure/tolerance equivalence exist.
+- `hard_gap_before`: M0 whole-space closure packaging, endpoint alignment, and coefficient-field
+  comparison remain; M1/G1 is open.
+- expected `hard_gap_delta`: close the real whole-space closure/tolerance representation mismatch
+  and absorb the endpoint difference as a null-set fact; do not claim M1, G1, D, or RH progress.
+- batch justification: `MemLp` packaging, representative formulas, norm-square integration,
+  interval splitting, finite-span membership, and closure/tolerance conversion are one external
+  statement-alignment batch.
+- model: GPT-5 Codex
+- reasoning effort: not exposed by the current runtime
+- budget: no explicit per-round token budget
+- compaction state: resumed from a generated context summary, then re-read the worktree, fixed DAG,
+  attempts tail, external memory protocol, and exact Lean definitions before registration
+- planned Lean verification: `lake env lean LeanLab/Riemann/NymanBeurling.lean`, relevant target
+  checks, full `lake build`, full project proof-gap keyword scan, and diff checks.
+- `result_class`: `FORMALIZATION_ONLY`
+- `assumption_frontier_after`: `chi_(0,1]` and every positive-natural reciprocal kernel are
+  packaged in real `L2(0,infinity)`; the whole-space norm error equals the Batch 03 split error,
+  and target closure membership is exactly the source-faithful positive-tolerance predicate.
+- `hard_gap_after`: M0 whole-space packaging and endpoint alignment are closed. The bounded
+  coefficient-field/source-convention audit remains; M1/G1, D, and RH are unchanged.
+- `hard_gap_delta`: two M0 representation mismatches closed; no published criterion-to-RH theorem
+  was proved.
+- theorem names: `fractionalPartKernel_memLp_two_positiveHalfLine`,
+  `baezDuarteTargetFunction_memLp_two_positiveHalfLine`, `baezDuarteKernelL2`,
+  `baezDuarteKernelSpan`, `baezDuarteKernelClosure`,
+  `norm_sub_baezDuarte_sum_sq_eq_wholeLineError`, `baezDuarteWholeLineError_eq_split`, and
+  `baezDuarteTargetL2_mem_closure_iff_fullLineConcreteApprox`.
+- endpoint result: `(0,1]` and `(0,1)` give the same local volume integral by
+  `integral_Ioc_eq_integral_Ioo`.
+- detailed alignment record: `research/m0_baez_duarte_l2_closure_alignment_20260710.md`
+- decision: `CONTINUE` M0 only for the coefficient-field/source-convention audit, then decide
+  whether M0 can close and M1 can begin.
+- Lean verification: `lake env lean LeanLab/Riemann/NymanBeurling.lean` passed without warnings.
+- Lean verification: `lake env lean LeanLab/Riemann/Targets.lean` passed.
+- Lean verification: `lake env lean LeanLab/Riemann/TargetChecks.lean` passed.
+- Lean verification: `lake build` passed with 8566 jobs; the only style warning was removed and the
+  affected file was recompiled cleanly.
+- full project proof-gap keyword scan: passed with no matches.
+- `git diff --check`: passed.
+- commit SHA: resolve the commit titled `research: align Baez-Duarte L2 closure`; the exact SHA is
+  recorded in the external task ledger after the commit is created.

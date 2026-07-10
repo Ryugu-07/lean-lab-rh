@@ -127,3 +127,7 @@ Batch `BATCH-20260710-M0-03` implemented that decision as
 `nymanBeurlingBaezDuarteFullLineConcreteApprox`, with the full-line error retained in split integral
 form and a Lean theorem reducing it to local error plus squared reciprocal moment. Remaining M0
 work is whole-space `Lp` closure packaging and endpoint/coefficient-field alignment.
+
+Batch `BATCH-20260710-M0-04` subsequently compiled the actual real `L2(0,infinity)` target,
+generators, span, closure, endpoint bridge, and exact closure/tolerance equivalence. The bounded
+coefficient-field/source-convention audit is the remaining M0 item.

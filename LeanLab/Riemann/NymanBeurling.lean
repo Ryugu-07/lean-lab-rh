@@ -6,9 +6,9 @@ set_option linter.style.header false
 /-!
 # Nyman-Beurling route scaffolding
 
-This file contains only small, compiled infrastructure for the Nyman-Beurling
-route. The first step is to package the fractional-part kernels as honest
-`L²` objects on the unit interval.
+This file contains compiled infrastructure for the Nyman-Beurling route. It
+packages fractional-part kernels on the unit interval and the source-aligned
+positive-natural family in `L²(0, infinity)`.
 -/
 
 noncomputable section
@@ -966,6 +966,282 @@ theorem nymanBeurlingBaezDuarteFullLineConcreteApprox_iff :
   · intro h δ hδ
     rcases h δ hδ with ⟨c, hc⟩
     exact ⟨c, by rwa [baezDuarteSplitFullLineError_eq_unitInterval_add_moment_sq]⟩
+
+/-- The real Hilbert space `L²(0, infinity)` used by the Baez-Duarte criterion. -/
+abbrev positiveHalfLineL2 : Type :=
+  Lp ℝ (2 : ℝ≥0∞) (volume.restrict (Set.Ioi (0 : ℝ)))
+
+/-- The indicator of `(0, 1]`, viewed as a real-valued function. -/
+def baezDuarteTargetFunction (x : ℝ) : ℝ :=
+  Set.Ioc (0 : ℝ) 1 |>.indicator (fun _ => 1) x
+
+theorem baezDuarteTargetFunction_memLp_two_positiveHalfLine :
+    MemLp baezDuarteTargetFunction (2 : ℝ≥0∞)
+      (volume.restrict (Set.Ioi (0 : ℝ))) := by
+  change MemLp (Set.Ioc (0 : ℝ) 1 |>.indicator (fun _ => (1 : ℝ)))
+    (2 : ℝ≥0∞) (volume.restrict (Set.Ioi (0 : ℝ)))
+  apply memLp_indicator_const
+  · exact measurableSet_Ioc
+  · right
+    simp
+
+/-- A fractional-part kernel with parameter in `(0, 1]` belongs to the
+full positive-half-line `L²` space. -/
+theorem fractionalPartKernel_memLp_two_positiveHalfLine
+    {a : ℝ} (ha0 : 0 < a) (ha1 : a ≤ 1) :
+    MemLp (fractionalPartKernel a) (2 : ℝ≥0∞)
+      (volume.restrict (Set.Ioi (0 : ℝ))) := by
+  rw [memLp_two_iff_integrable_sq
+    (measurable_fractionalPartKernel a).aestronglyMeasurable]
+  change IntegrableOn (fun x : ℝ => fractionalPartKernel a x ^ 2)
+    (Set.Ioi (0 : ℝ)) volume
+  rw [← Set.Ioc_union_Ioi_eq_Ioi (show (0 : ℝ) ≤ 1 by norm_num)]
+  apply IntegrableOn.union
+  · have hlocal :
+        MemLp (fractionalPartKernel a) (2 : ℝ≥0∞)
+          (volume.restrict (Set.Ioc (0 : ℝ) 1)) := by
+      refine MemLp.of_bound
+        (measurable_fractionalPartKernel a).aestronglyMeasurable 1 ?_
+      exact ae_of_all _ (fun x => norm_fractionalPartKernel_le_one a x)
+    exact (memLp_two_iff_integrable_sq
+      (measurable_fractionalPartKernel a).aestronglyMeasurable).mp hlocal
+  · have hbase : IntegrableOn (fun x : ℝ => x ^ (-2 : ℝ)) (Set.Ioi 1) volume :=
+      integrableOn_Ioi_rpow_of_lt (by norm_num) (by norm_num)
+    have hscaled :
+        IntegrableOn (fun x : ℝ => a ^ 2 * x ^ (-2 : ℝ)) (Set.Ioi 1) volume :=
+      hbase.const_mul (a ^ 2)
+    refine hscaled.congr_fun ?_ measurableSet_Ioi
+    intro x hx
+    change a ^ 2 * x ^ (-2 : ℝ) = fractionalPartKernel a x ^ 2
+    have hx0 : 0 < x := lt_trans zero_lt_one hx
+    have hfract : fractionalPartKernel a x = a / x := by
+      rw [fractionalPartKernel, Int.fract_eq_self.mpr]
+      exact ⟨(div_pos ha0 hx0).le,
+        (div_lt_one hx0).mpr (lt_of_le_of_lt ha1 hx)⟩
+    rw [hfract]
+    have hrpow : x ^ (-2 : ℝ) = (x ^ (2 : ℕ))⁻¹ := by
+      rw [show (-2 : ℝ) = -(2 : ℝ) by norm_num, Real.rpow_neg hx0.le]
+      exact congrArg Inv.inv (Real.rpow_natCast x 2)
+    rw [hrpow]
+    field_simp
+
+/-- The target indicator as an element of `L²(0, infinity)`. -/
+def baezDuarteTargetL2 : positiveHalfLineL2 :=
+  baezDuarteTargetFunction_memLp_two_positiveHalfLine.toLp
+    baezDuarteTargetFunction
+
+theorem baezDuarteTargetL2_coeFn :
+    baezDuarteTargetL2
+      =ᵐ[volume.restrict (Set.Ioi (0 : ℝ))] baezDuarteTargetFunction := by
+  exact MemLp.coeFn_toLp baezDuarteTargetFunction_memLp_two_positiveHalfLine
+
+/-- The positive-natural reciprocal kernel as an element of
+`L²(0, infinity)`. -/
+def baezDuarteKernelL2
+    (n : baezDuartePositiveNatIndex) : positiveHalfLineL2 :=
+  (fractionalPartKernel_memLp_two_positiveHalfLine
+    (baezDuarte_reciprocal_mem_restricted n).1
+    (baezDuarte_reciprocal_mem_restricted n).2).toLp
+      (fractionalPartKernel (((n : ℕ) : ℝ)⁻¹))
+
+theorem baezDuarteKernelL2_coeFn (n : baezDuartePositiveNatIndex) :
+    baezDuarteKernelL2 n
+      =ᵐ[volume.restrict (Set.Ioi (0 : ℝ))]
+        fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) := by
+  exact MemLp.coeFn_toLp
+    (fractionalPartKernel_memLp_two_positiveHalfLine
+      (baezDuarte_reciprocal_mem_restricted n).1
+      (baezDuarte_reciprocal_mem_restricted n).2)
+
+/-- The real finite span of the positive-natural Baez-Duarte kernels. -/
+def baezDuarteKernelSpan : Submodule ℝ positiveHalfLineL2 :=
+  Submodule.span ℝ (Set.range baezDuarteKernelL2)
+
+/-- The closure of the positive-natural kernel span in `L²(0, infinity)`. -/
+def baezDuarteKernelClosure : Submodule ℝ positiveHalfLineL2 :=
+  baezDuarteKernelSpan.topologicalClosure
+
+theorem baezDuarteKernelClosure_coe :
+    (baezDuarteKernelClosure : Set positiveHalfLineL2) =
+      closure (baezDuarteKernelSpan : Set positiveHalfLineL2) := by
+  exact Submodule.topologicalClosure_coe baezDuarteKernelSpan
+
+theorem mem_baezDuarteKernelSpan_iff_exists_finsupp_sum
+    (g : positiveHalfLineL2) :
+    g ∈ baezDuarteKernelSpan ↔
+      ∃ c : baezDuartePositiveNatIndex →₀ ℝ,
+        (c.sum fun n r => r • baezDuarteKernelL2 n) = g := by
+  rw [baezDuarteKernelSpan]
+  exact Finsupp.mem_span_range_iff_exists_finsupp
+
+theorem baezDuarteTargetL2_mem_closure_iff_norm :
+    baezDuarteTargetL2 ∈ baezDuarteKernelClosure ↔
+      ∀ ε : ℝ, 0 < ε →
+        ∃ c : baezDuartePositiveNatIndex →₀ ℝ,
+          ‖baezDuarteTargetL2 -
+            (c.sum fun n r => r • baezDuarteKernelL2 n)‖ < ε := by
+  constructor
+  · intro h ε hε
+    have hmetric :
+        baezDuarteTargetL2 ∈ closure
+          (baezDuarteKernelSpan : Set positiveHalfLineL2) := by
+      rwa [← baezDuarteKernelClosure_coe]
+    rcases (Metric.mem_closure_iff.mp hmetric) ε hε with ⟨g, hgspan, hgdist⟩
+    rcases (mem_baezDuarteKernelSpan_iff_exists_finsupp_sum g).mp hgspan with
+      ⟨c, hc⟩
+    exact ⟨c, by simpa [dist_eq_norm, hc] using hgdist⟩
+  · intro h
+    have hmetric :
+        baezDuarteTargetL2 ∈ closure
+          (baezDuarteKernelSpan : Set positiveHalfLineL2) := by
+      exact Metric.mem_closure_iff.mpr (fun ε hε => by
+        rcases h ε hε with ⟨c, hc⟩
+        refine ⟨c.sum fun n r => r • baezDuarteKernelL2 n, ?_, ?_⟩
+        · exact (mem_baezDuarteKernelSpan_iff_exists_finsupp_sum _).mpr ⟨c, rfl⟩
+        · simpa [dist_eq_norm] using hc)
+    change baezDuarteTargetL2 ∈ (baezDuarteKernelClosure : Set positiveHalfLineL2)
+    rw [baezDuarteKernelClosure_coe]
+    exact hmetric
+
+theorem baezDuarte_finsupp_sum_kernelL2_coeFn
+    (c : baezDuartePositiveNatIndex →₀ ℝ) :
+    (↑↑(c.sum fun n r => r • baezDuarteKernelL2 n) : ℝ → ℝ)
+      =ᵐ[volume.restrict (Set.Ioi (0 : ℝ))]
+        fun x : ℝ => c.sum fun n r =>
+          r * fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) x := by
+  classical
+  rw [Finsupp.sum]
+  refine (Lp.coeFn_fun_finsetSum c.support fun n =>
+    c n • baezDuarteKernelL2 n).trans ?_
+  have hfun :
+      (fun x : ℝ => ∑ n ∈ c.support,
+          ((c n • baezDuarteKernelL2 n : positiveHalfLineL2) : ℝ → ℝ) x)
+        =ᵐ[volume.restrict (Set.Ioi (0 : ℝ))]
+          (∑ n ∈ c.support,
+            ((c n • baezDuarteKernelL2 n : positiveHalfLineL2) : ℝ → ℝ)) := by
+    exact ae_of_all _ fun x => by
+      simp [Finset.sum_apply]
+  refine hfun.trans ?_
+  refine (eventuallyEq_sum
+    (s := c.support) (l := ae (volume.restrict (Set.Ioi (0 : ℝ))))
+    (fun n _hn => by
+      refine (Lp.coeFn_smul (c n) (baezDuarteKernelL2 n)).trans ?_
+      exact (baezDuarteKernelL2_coeFn n).const_smul (c n))).trans ?_
+  exact ae_of_all _ fun x => by
+    simp [Pi.smul_apply, Finset.sum_apply, Finsupp.sum]
+
+theorem baezDuarteTarget_sub_finsupp_sum_coeFn
+    (c : baezDuartePositiveNatIndex →₀ ℝ) :
+    (baezDuarteTargetL2 -
+        (c.sum fun n r => r • baezDuarteKernelL2 n))
+      =ᵐ[volume.restrict (Set.Ioi (0 : ℝ))]
+        fun x : ℝ => baezDuarteTargetFunction x -
+          c.sum fun n r => r * fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) x := by
+  refine (Lp.coeFn_sub baezDuarteTargetL2
+    (c.sum fun n r => r • baezDuarteKernelL2 n)).trans ?_
+  exact baezDuarteTargetL2_coeFn.sub
+    (baezDuarte_finsupp_sum_kernelL2_coeFn c)
+
+theorem positiveHalfLineL2_norm_sq_eq_integral_mul_self
+    (f : positiveHalfLineL2) :
+    ‖f‖ ^ 2 = ∫ x : ℝ, f x * f x ∂
+      (volume.restrict (Set.Ioi (0 : ℝ))) := by
+  rw [norm_sq_eq_re_inner (𝕜 := ℝ) f, L2.inner_def]
+  refine integral_congr_ae (ae_of_all _ fun x => ?_)
+  simp [Real.norm_eq_abs, sq]
+
+/-- The squared whole-space error before splitting the positive half-line at
+`1`. -/
+def baezDuarteWholeLineError
+    (c : baezDuartePositiveNatIndex →₀ ℝ) : ℝ :=
+  ∫ x : ℝ,
+    (baezDuarteTargetFunction x -
+      c.sum fun n r => r * fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) x) ^ 2 ∂
+        (volume.restrict (Set.Ioi (0 : ℝ)))
+
+theorem norm_sub_baezDuarte_sum_sq_eq_wholeLineError
+    (c : baezDuartePositiveNatIndex →₀ ℝ) :
+    ‖baezDuarteTargetL2 -
+      (c.sum fun n r => r • baezDuarteKernelL2 n)‖ ^ 2 =
+        baezDuarteWholeLineError c := by
+  rw [positiveHalfLineL2_norm_sq_eq_integral_mul_self]
+  rw [baezDuarteWholeLineError]
+  refine integral_congr_ae
+    ((baezDuarteTarget_sub_finsupp_sum_coeFn c).mono ?_)
+  intro x hx
+  simpa [pow_two] using congrArg (fun y : ℝ => y * y) hx
+
+/-- The actual `L²(0, infinity)` error is exactly the split finite error from
+the source-aligned predicate. -/
+theorem baezDuarteWholeLineError_eq_split
+    (c : baezDuartePositiveNatIndex →₀ ℝ) :
+    baezDuarteWholeLineError c = baezDuarteSplitFullLineError c := by
+  let F : ℝ → ℝ := fun x =>
+    (baezDuarteTargetFunction x -
+      c.sum fun n r => r * fractionalPartKernel (((n : ℕ) : ℝ)⁻¹) x) ^ 2
+  let fL2 : positiveHalfLineL2 :=
+    baezDuarteTargetL2 -
+      (c.sum fun n r => r • baezDuarteKernelL2 n)
+  have hrep : (fun x : ℝ => fL2 x ^ 2)
+      =ᵐ[volume.restrict (Set.Ioi (0 : ℝ))] F := by
+    filter_upwards [baezDuarteTarget_sub_finsupp_sum_coeFn c] with x hx
+    exact congrArg (fun y : ℝ => y ^ 2) hx
+  have hF : Integrable F (volume.restrict (Set.Ioi (0 : ℝ))) := by
+    have hf : Integrable (fun x : ℝ => fL2 x ^ 2)
+        (volume.restrict (Set.Ioi (0 : ℝ))) :=
+      (memLp_two_iff_integrable_sq (Lp.memLp fL2).1).mp (Lp.memLp fL2)
+    exact hf.congr hrep
+  have hIoc : Integrable F (volume.restrict (Set.Ioc (0 : ℝ) 1)) :=
+    hF.mono_measure (Measure.restrict_mono (by intro x hx; exact hx.1) le_rfl)
+  have hIoi : Integrable F (volume.restrict (Set.Ioi (1 : ℝ))) :=
+    hF.mono_measure (Measure.restrict_mono
+      (by intro x hx
+          change (1 : ℝ) < x at hx
+          exact lt_trans zero_lt_one hx) le_rfl)
+  have hmeasure :
+      volume.restrict (Set.Ioi (0 : ℝ)) =
+        volume.restrict (Set.Ioc (0 : ℝ) 1) +
+          volume.restrict (Set.Ioi (1 : ℝ)) := by
+    rw [← Set.Ioc_union_Ioi_eq_Ioi (show (0 : ℝ) ≤ 1 by norm_num)]
+    exact Measure.restrict_union (Set.Ioc_disjoint_Ioi le_rfl) measurableSet_Ioi
+  rw [baezDuarteWholeLineError]
+  change (∫ x : ℝ, F x ∂(volume.restrict (Set.Ioi (0 : ℝ)))) = _
+  rw [hmeasure, integral_add_measure hIoc hIoi]
+  rw [baezDuarteSplitFullLineError]
+  congr 1
+  · rw [baezDuarteUnitIntervalError]
+    rw [← integral_Ioc_eq_integral_Ioo]
+    refine setIntegral_congr_fun measurableSet_Ioc (fun x hx => ?_)
+    simp [F, baezDuarteTargetFunction, hx, pow_two]
+  · refine setIntegral_congr_fun measurableSet_Ioi (fun x hx => ?_)
+    change (1 : ℝ) < x at hx
+    simp [F, baezDuarteTargetFunction, not_le_of_gt hx, pow_two]
+
+/-- The real whole-space closure formulation and the source-aligned positive
+tolerance formulation are equivalent. -/
+theorem baezDuarteTargetL2_mem_closure_iff_fullLineConcreteApprox :
+    baezDuarteTargetL2 ∈ baezDuarteKernelClosure ↔
+      nymanBeurlingBaezDuarteFullLineConcreteApprox := by
+  constructor
+  · intro h δ hδ
+    have hsqrt : 0 < Real.sqrt δ := Real.sqrt_pos_of_pos hδ
+    rcases (baezDuarteTargetL2_mem_closure_iff_norm.mp h)
+        (Real.sqrt δ) hsqrt with ⟨c, hc⟩
+    refine ⟨c, ?_⟩
+    rw [← baezDuarteWholeLineError_eq_split c,
+      ← norm_sub_baezDuarte_sum_sq_eq_wholeLineError c]
+    have hsq := (sq_lt_sq₀ (norm_nonneg _) hsqrt.le).mpr hc
+    simpa [Real.sq_sqrt hδ.le] using hsq
+  · intro h
+    exact baezDuarteTargetL2_mem_closure_iff_norm.mpr (fun ε hε => by
+      rcases h (ε ^ 2) (sq_pos_of_pos hε) with ⟨c, hc⟩
+      refine ⟨c, ?_⟩
+      have hsq :
+          ‖baezDuarteTargetL2 -
+            (c.sum fun n r => r • baezDuarteKernelL2 n)‖ ^ 2 < ε ^ 2 := by
+        rwa [norm_sub_baezDuarte_sum_sq_eq_wholeLineError,
+          baezDuarteWholeLineError_eq_split]
+      exact (sq_lt_sq₀ (norm_nonneg _) hε.le).mp hsq)
 
 /-- The restricted positive-tolerance predicate is exactly constant-one
 membership in the closure of the restricted kernel span. -/

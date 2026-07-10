@@ -163,6 +163,15 @@ current natural predicate eligible for later M1 work. The result is `FORMALIZATI
 Baez-Duarte equivalence with RH remains open. See
 `research/m0_baez_duarte_full_line_alignment_20260710.md`.
 
+## M0 Batch 2026-07-10-04
+
+Batch `BATCH-20260710-M0-04` packages `chi_(0,1]` and every positive-natural reciprocal kernel in
+the actual real `Lp Real 2 (volume.restrict (Set.Ioi 0))` space. Lean proves that the whole-space
+norm error equals `baezDuarteSplitFullLineError`, including the null-endpoint bridge, and proves
+`baezDuarteTargetL2_mem_closure_iff_fullLineConcreteApprox`. The result is
+`FORMALIZATION_ONLY`; M1/G1 and RH remain open. M0 next permits only the bounded coefficient-field
+and source-convention audit. See `research/m0_baez_duarte_l2_closure_alignment_20260710.md`.
+
 ## Loop 86 Update
 
 The Li/Hadamard inventory is complete as

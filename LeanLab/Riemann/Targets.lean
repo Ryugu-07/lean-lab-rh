@@ -264,7 +264,7 @@ def rhTargets : List ResearchTarget :=
         "Compare nymanBeurlingConcreteApprox with the classical Nyman-Beurling/Baez-Duarte criterion and record the exact formal gaps before attempting an RH bridge."
       leanName := none
       status := .proven
-      note := "Loop 107 recorded the first inventory. M0 batch 02 corrected it: Beurling's unit-interval space has a zero-moment condition, while Baez-Duarte's full-line norm retains the equivalent tail penalty; current local predicates omit both." },
+      note := "Loop 107 recorded the first inventory. M0 batch 02 isolated the omitted moment/tail. Batches 03-04 restored the full-line error and proved its positive-tolerance predicate is exactly target closure membership in real L2(0,infinity); only the coefficient-field convention remains in M0." },
     { id := "T2.nyman.restricted.concrete.approx.predicate"
       tier := .tier2
       title := "Package a restricted-parameter concrete approximation predicate"

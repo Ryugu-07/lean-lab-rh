@@ -22,7 +22,7 @@ flowchart TD
 | node_id | status | description | current frontier |
 | --- | --- | --- | --- |
 | A | in progress | Project-local xi, Li, Nyman-Beurling, and Baez-Duarte scaffolding. | Mostly formalization scaffolding; not RH progress under v2. |
-| M0 | in progress | Align project-local Nyman-Beurling/Baez-Duarte predicates with published statements. | Unrestricted signed parameters are rejected. The old restricted/local predicates omit Beurling's moment condition. A positive-natural split full-line finite-error predicate now restores the exact tail; whole-space `Lp` closure packaging plus endpoint and coefficient-field bridges remain. |
+| M0 | in progress | Align project-local Nyman-Beurling/Baez-Duarte predicates with published statements. | Unrestricted signed parameters are rejected. The source-faithful positive-natural predicate is now exactly closure membership in real `L2(0,infinity)`, including the target endpoint and full tail. Only the coefficient-field/source-convention audit remains. |
 | M1 | open | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | Needs M0 first; likely requires Mellin-Plancherel and critical-line L2 infrastructure. |
 | D | open | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | No direct bridge yet. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
@@ -63,3 +63,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - Batch `BATCH-20260710-M0-03` defined the positive-natural split full-line error, proved its
   normalized form `unitIntervalError + reciprocalMoment^2`, and packaged the source-faithful
   positive-tolerance predicate. Result: `FORMALIZATION_ONLY`; M1/G1 and RH remain open.
+- Batch `BATCH-20260710-M0-04` packaged the target and positive-natural kernels in the actual real
+  `L2(0, infinity)` space and proved closure membership equivalent to the Batch 03 predicate. The
+  endpoint difference is discharged by a null-set integral identity. Result:
+  `FORMALIZATION_ONLY`; the coefficient-field convention remains under M0, while M1/G1 and RH are
+  unchanged.

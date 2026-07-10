@@ -81,9 +81,9 @@ reverse implication is not available and must not be assumed.
 | Positive-natural parameters | Aligned by `baezDuartePositiveNatIndex` and `n -> 1/n`. |
 | Target function | Aligned in split form: one on `(0,1)`, zero on `(1,infinity)`. |
 | Full `L2(0,infinity)` finite error | Aligned in split integral form and normalized in Lean. |
-| Endpoint `(0,1]` vs open split intervals | Difference is null for volume; a packaged whole-space endpoint bridge remains. |
+| Endpoint `(0,1]` vs open split intervals | Closed in Batch 04 by `baezDuarteWholeLineError_eq_split`. |
 | Real vs complex coefficients | Real finite-error form is compiled; a full-line complex-to-real closure bridge remains. |
-| Full-line closure membership vs positive-tolerance predicate | Not yet packaged as an `Lp` closure equivalence. |
+| Full-line closure membership vs positive-tolerance predicate | Closed in Batch 04 by `baezDuarteTargetL2_mem_closure_iff_fullLineConcreteApprox`. |
 | Equivalence with `Mathlib.RiemannHypothesis` | Open M1/G1 work. |
 
 ## Result
@@ -97,3 +97,8 @@ reverse implication is not available and must not be assumed.
   published criterion theorem or RH implication was proved.
 - decision: `CONTINUE` on M0, next with full-line `L2` closure packaging rather than another local
   coefficient transport.
+
+Batch `BATCH-20260710-M0-04` subsequently completed the full-line `L2` packaging, endpoint bridge,
+and closure/tolerance equivalence; see
+`research/m0_baez_duarte_l2_closure_alignment_20260710.md`. The coefficient-field convention is the
+remaining M0 audit item.

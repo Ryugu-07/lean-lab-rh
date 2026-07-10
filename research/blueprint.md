@@ -1658,6 +1658,9 @@ M0 correction:
   `nymanBeurlingBaezDuarteFullLineConcreteApprox`, whose split error restores the tail and is
   definitionally separate from this local scaffold;
 - only the full-line predicate is eligible for later M1 work.
+- Batch `BATCH-20260710-M0-04` packages this predicate as exact target membership in the closure of
+  the positive-natural kernels in real `L2(0,infinity)` and closes the endpoint mismatch. The
+  coefficient-field/source-convention audit remains before M0 can be declared complete.
 
 Next action:
 

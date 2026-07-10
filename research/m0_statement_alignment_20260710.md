@@ -84,3 +84,7 @@ closure/tolerance equivalence and identified the missing published moment/tail c
 that tail in `nymanBeurlingBaezDuarteFullLineConcreteApprox`; see
 `research/m0_baez_duarte_full_line_alignment_20260710.md`. M1 must use the full-line predicate, not
 the unconstrained local predicates.
+
+Batch `BATCH-20260710-M0-04` then packaged the source-faithful predicate in the actual real
+`L2(0,infinity)` space and proved its exact closure-membership equivalence, including the null
+endpoint bridge; see `research/m0_baez_duarte_l2_closure_alignment_20260710.md`.
