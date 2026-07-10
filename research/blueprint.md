@@ -1749,6 +1749,16 @@ transfer, and is instantiated on the project's natural-kernel finite sums. F3 is
 The forward route is now concentrated on F1, the Balazard-Saias/RH-to-Lindelof estimate, and F2,
 Baez-Duarte Lemma 2.2 plus complex-Gamma vertical-strip control. Result: `HARD_GAP_REDUCED`.
 
+Batch `BATCH-20260711-M1-06` closes F2. An unchanged Apache-2.0 digamma-series module from
+`PrimeNumberTheoremAnd` supplies logarithmic digamma growth on vertical strips. Continuous
+Gronwall then gives a Gamma quotient bound with exponent `C*epsilon`; the completed-zeta
+functional equation, conjugation, and the denominator-zero case convert it to the source zeta
+ratio. Choosing an explicit smaller `epsilon0` makes `C*epsilon0 < 1/2`, and Lean proves all
+transformed quotients on `[0,epsilon0]` are dominated by one explicit `L2(R)` power majorant. The
+sharp but malformed printed Gamma display is not used. The forward route now has only F1,
+Balazard-Saias plus RH-to-Lindelof; the reverse base criterion remains open. Result:
+`HARD_GAP_REDUCED`.
+
 ## Tier 3: Horizon
 
 `RiemannHypothesis` remains the orientation point. It is not an admissible immediate proof-loop

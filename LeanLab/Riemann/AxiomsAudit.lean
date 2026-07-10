@@ -1,4 +1,4 @@
-import LeanLab.Riemann.BaezDuarteTailTransfer
+import LeanLab.Riemann.BaezDuarteZetaRatio
 
 set_option linter.style.header false
 
@@ -27,3 +27,8 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.baezDuarte_weightedTail_norm_sq_le
 #print axioms LeanLab.Riemann.tendsto_norm_zero_of_baezDuarte_weightedTail
 #print axioms LeanLab.Riemann.baezDuarte_finsupp_norm_sq_le_of_weighted
+#print axioms Complex.exists_norm_digamma_le_log
+#print axioms LeanLab.Riemann.exists_norm_Gamma_div_le_rpow_of_re_mem_Icc
+#print axioms LeanLab.Riemann.exists_norm_baezDuarteZetaRatio_le_rpow
+#print axioms LeanLab.Riemann.exists_baezDuarteZetaRatio_bound
+#print axioms LeanLab.Riemann.exists_baezDuarteZetaRatioIntegrand_majorant

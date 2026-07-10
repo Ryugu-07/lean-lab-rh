@@ -7161,3 +7161,49 @@ Future attempt records must include:
 - trusted dependencies: representative final theorems use only `propext`, `Classical.choice`, and
   `Quot.sound`.
 - detailed record: `research/m1_weighted_tail_transfer_20260711.md`.
+
+## Batch 2026-07-11-M1-06: Baez-Duarte zeta-ratio bound
+
+- `loop_id`: `BATCH-20260711-M1-06`
+- `node_id`: `M1`
+- `gap_id`: `G2/F2`
+- `work_class`: `FORMALIZATION`
+- exact target: reconstruct Baez-Duarte Lemma 2.2's malformed Gamma display, prove a uniform
+  zeta-ratio bound on a fixed positive epsilon interval, and expose one epsilon-independent `L2`
+  majorant for the transformed quotients.
+- source correction: the functional equation requires
+  `pi^(-epsilon) * |Gamma(1/4+epsilon/2+i*tau/2) /
+  Gamma(1/4-epsilon/2+i*tau/2)|`; the source display with identical numerator and denominator was
+  not assumed.
+- external audit: `PrimeNumberTheoremAnd` commit
+  `d963a6e694a05cd82e5f9b9ae7f4d94123e85393` contains an Apache-2.0 digamma-series theorem giving
+  logarithmic vertical-strip growth. The exact file was vendored unchanged; SHA-256
+  `815c1f1507058efbef756eb955e055267d5c78eb577d3a6a45d52da3ad6778a4`.
+- rejected alternative: AINTLIB commit `f190f93db1b51b73a99051f358eb0b45ea45ad80` has compatible
+  Gamma strip bounds, but the repository exposes no license and its polynomial losses are too
+  large for this convergence argument. No AINTLIB code was copied or imported.
+- proof route: apply continuous Gronwall to
+  `u -> Gamma(z+u)/Gamma(z)` using the digamma bound; prove zeta and completed-Gamma conjugation;
+  use the completed-zeta functional equation; isolate the `pi^(-epsilon)` factor; and handle zeta
+  denominator zeros separately, where Lean division is zero.
+- sharpness decision: Gronwall yields exponent `C*epsilon`, not the source's sharp coefficient one.
+  Set `epsilon0 = 1/(8*(C+1))`; Lean verifies `C*epsilon0 < 1/2`, so the weaker estimate still
+  supplies the required `L2` domination.
+- compiled final theorems: `exists_norm_Gamma_div_le_rpow_of_re_mem_Icc`,
+  `exists_norm_baezDuarteZetaRatio_le_rpow`, `exists_baezDuarteZetaRatio_bound`, and
+  `exists_baezDuarteZetaRatioIntegrand_majorant`.
+- `result_class`: `HARD_GAP_REDUCED`
+- `assumption_frontier_after`: F2 is unconditional Lean code, including the uniform ratio bound
+  and a fixed `MemLp` majorant. No unproved Gamma asymptotic or malformed source statement remains
+  as a premise.
+- `hard_gap_after`: remove F2 from G2. F1, the reverse base criterion, G1, D, and RH remain open.
+- verification: the source module, exact target witnesses, and axiom audit pass; full `lake build`
+  passes with 8586 jobs; incomplete-proof and explicit-declaration scans, upstream identity check,
+  and `git diff --check` pass. Trusted dependencies are only `propext`, `Classical.choice`, and
+  `Quot.sound`.
+- model: Codex, GPT-5 family; exact backend identifier and reasoning effort are not exposed.
+- budget: unbounded persistent-goal budget; no explicit per-round token budget.
+- compaction state: this batch resumed from a generated context summary after the Gamma-ratio
+  theorem and conjugation lemmas had compiled; the fixed DAG, preregistration, worktree, and exact
+  file state were rechecked before continuing.
+- detailed record: `research/m1_zeta_ratio_digamma_20260711.md`.

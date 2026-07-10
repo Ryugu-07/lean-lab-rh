@@ -8,7 +8,7 @@ hard-gap identifiers used by the v2 loop protocol.
 | gap_id | canonical node | current status |
 | --- | --- | --- |
 | G1 | M1/D | open |
-| G2 | M1 | open |
+| G2 | M1 | in progress |
 | G3 | M2 | parked |
 
 Future attempt logs must copy `hard_gap_before`, `hard_gap_after`, and `hard_gap_delta` from

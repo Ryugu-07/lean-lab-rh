@@ -1,5 +1,5 @@
 import LeanLab.Riemann.Targets
-import LeanLab.Riemann.BaezDuarteTailTransfer
+import LeanLab.Riemann.BaezDuarteZetaRatio
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -205,5 +205,25 @@ example (ε : ℝ) (hε : 0 ≤ ε)
     ‖c.sum fun n r => r • baezDuarteKernelL2 n‖ ^ 2 ≤
       (1 + 2 * ε) * ‖w‖ ^ 2 :=
   baezDuarte_finsupp_norm_sq_le_of_weighted ε hε c w hweighted
+
+example :
+    ∃ C ε₀ K : ℝ,
+      0 < C ∧ 0 < ε₀ ∧ ε₀ < 1 / 4 ∧ C * ε₀ < 1 / 2 ∧ 0 < K ∧
+      ∀ (ε τ : ℝ), 0 ≤ ε → ε ≤ ε₀ →
+        ‖baezDuarteZetaRatio ε τ‖ ≤
+          K * (1 + |τ|) ^ (C * ε) :=
+  exists_baezDuarteZetaRatio_bound
+
+example :
+    ∃ C ε₀ K : ℝ,
+      0 < C ∧ 0 < ε₀ ∧ ε₀ < 1 / 4 ∧ C * ε₀ < 1 / 2 ∧ 0 < K ∧
+      MeasureTheory.MemLp
+        (fun τ : ℝ =>
+          ((5 * K : ℝ) : ℂ) * baezDuarteVerticalMajorant (C * ε₀) τ)
+        (2 : ℝ≥0∞) MeasureTheory.volume ∧
+      ∀ (ε τ : ℝ), 0 ≤ ε → ε ≤ ε₀ →
+        ‖baezDuarteZetaRatioIntegrand ε τ‖ ≤
+          ‖((5 * K : ℝ) : ℂ) * baezDuarteVerticalMajorant (C * ε₀) τ‖ :=
+  exists_baezDuarteZetaRatioIntegrand_majorant
 
 end LeanLab.Riemann
