@@ -130,3 +130,10 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   decay `-5/8`; hence the source height exponent must satisfy `eta < 1/8`, and the coefficient
   `N^(-delta/3)` tends to zero. The encoded estimate is never asserted or hidden as an axiom.
   Result: `FORMALIZATION_ONLY` with `hard_gap_delta = 0`; G2/F1 remains exactly Balazard-Saias.
+- Batch `BATCH-20260711-M1-11` reads Titchmarsh Sections 3.12, 14.2, and 14.25 and decomposes the
+  Balazard-Saias source route into truncated Perron, reciprocal-zeta subpower growth, and contour
+  balancing. Lean proves that a nonvanishing holomorphic function on a simply connected open set
+  has a holomorphic logarithm branch with derivative `g'/g`, and applies it to zeta on zero-free
+  domains that explicitly avoid `1`. Result: `DEPENDENCY_GAP_IDENTIFIED`, `hard_gap_delta = 0`;
+  the next hard subedge is the Borel-Caratheodory/Hadamard reciprocal-zeta bound, while G2/F1
+  remains Balazard-Saias.

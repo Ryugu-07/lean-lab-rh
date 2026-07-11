@@ -1782,6 +1782,15 @@ Lean separately proves this height majorant is in `L2(R)` for `eta<1/8` and that
 tends to zero. The source theorem itself remains unproved, so the batch is
 `FORMALIZATION_ONLY` with `hard_gap_delta=0`; the fixed frontier does not move.
 
+Batch `BATCH-20260711-M1-11` audits the source-proof route against Titchmarsh Sections 3.12, 14.2,
+and 14.25. The quantitative Mobius estimate decomposes into a truncated Perron formula, a
+zero-free-region subpower bound for reciprocal zeta, and a rectangular contour shift with balanced
+edge errors. Lean now upgrades mathlib's continuous logarithm lift to a holomorphic branch on any
+simply connected zero-free open domain and instantiates it for zeta while explicitly excluding its
+pole at `1`. The next source edge is the Borel-Caratheodory/Hadamard derivation of the reciprocal
+zeta bound; Perron and contour balancing follow. Result: `DEPENDENCY_GAP_IDENTIFIED` with
+`hard_gap_delta=0`; Balazard-Saias remains open.
+
 ## Tier 3: Horizon
 
 `RiemannHypothesis` remains the orientation point. It is not an admissible immediate proof-loop
