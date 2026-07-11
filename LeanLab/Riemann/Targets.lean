@@ -5,6 +5,7 @@ import LeanLab.Riemann.ReciprocalZetaSubpower
 import LeanLab.Riemann.TruncatedPerron
 import LeanLab.Riemann.BalazardSaiasContour
 import LeanLab.Riemann.BaezDuarteReverse
+import LeanLab.Riemann.BaezDuarteForward
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -54,7 +55,15 @@ structure ResearchTarget where
 
 /-- Current target ledger after the 2026-07-09 architectural review. -/
 def rhTargets : List ResearchTarget :=
-  [ { id := "T1.m1.baez.duarte.reverse"
+  [ { id := "T1.m1.baez.duarte.fixed.epsilon"
+      tier := .tier1
+      title := "Compile fixed-epsilon Baez-Duarte convergence"
+      statement :=
+        "Under Mathlib.RiemannHypothesis and 0<delta<=1/2, prove the source natural Mobius approximations converge in real L2(0,infinity) to an element of the natural-kernel closure."
+      leanName := some ``RiemannHypothesis.exists_tendsto_baezDuarteMobiusApproxL2
+      status := .proven
+      note := "Batch M1-17 proves the exact fixed-delta source convergence through classical/L2 Fourier compatibility, Burnol's compiled transformed-error bound, Plancherel, and closure closedness. The unconditional delta-to-zero limit and final RH-to-target-closure assembly remain open." },
+    { id := "T1.m1.baez.duarte.reverse"
       tier := .tier1
       title := "Formalize the reverse strong Baez-Duarte implication"
       statement :=

@@ -24,7 +24,8 @@ open scoped ENNReal FourierTransform
 
 /-- Name-resolution witness for every `.proven` ledger target with a `leanName`. -/
 def checkedTargetNames : List Lean.Name :=
-  [ ``exists_norm_riemannZeta_criticalLine_le_rpow,
+  [ ``RiemannHypothesis.exists_tendsto_baezDuarteMobiusApproxL2,
+    ``exists_norm_riemannZeta_criticalLine_le_rpow,
     ``riemannXi_eq_mul_completedRiemannZeta,
     ``isNontrivialZero_iff_riemannXi_eq_zero_and_not_trivial,
     ``liCoefficientCandidate_one_re_pos,
@@ -256,5 +257,12 @@ example {δ : ℝ} (hδ : 0 < δ) :
     Filter.Tendsto (fun N : ℕ => (N : ℝ) ^ (-δ / 3))
       Filter.atTop (nhds 0) :=
   tendsto_natCast_rpow_neg_delta_div_three hδ
+
+example (hRH : RiemannHypothesis) {δ : ℝ}
+    (hδ : 0 < δ) (hδ_top : δ ≤ 1 / 2) :
+    ∃ f : positiveHalfLineL2,
+      Filter.Tendsto (baezDuarteMobiusApproxL2 δ) Filter.atTop (nhds f) ∧
+        f ∈ baezDuarteKernelClosure :=
+  RiemannHypothesis.exists_tendsto_baezDuarteMobiusApproxL2 hRH hδ hδ_top
 
 end LeanLab.Riemann

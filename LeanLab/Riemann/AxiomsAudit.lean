@@ -4,6 +4,7 @@ import LeanLab.Riemann.ReciprocalZetaSubpower
 import LeanLab.Riemann.TruncatedPerron
 import LeanLab.Riemann.BalazardSaiasContour
 import LeanLab.Riemann.BaezDuarteReverse
+import LeanLab.Riemann.BaezDuarteForward
 
 set_option linter.style.header false
 
@@ -65,3 +66,6 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.RiemannHypothesis.exists_norm_burnolMobiusTransformedError_le_compiled
 #print axioms LeanLab.Riemann.riemannZeta_ne_zero_of_baezDuarteComplexTarget_mem_closure
 #print axioms LeanLab.Riemann.baezDuarteComplexTarget_mem_closure_imp_riemannHypothesis
+#print axioms LeanLab.Riemann.fourier_toLp_eq_toLp_fourier
+#print axioms LeanLab.Riemann.RiemannHypothesis.cauchySeq_baezDuarteMobiusApproxComplexL2
+#print axioms LeanLab.Riemann.RiemannHypothesis.exists_tendsto_baezDuarteMobiusApproxL2

@@ -7435,3 +7435,33 @@ Future attempt records must include:
 - compaction state: none during this batch.
 - detailed record: `research/m1_baez_duarte_reverse_prereg_m1_16_20260711.md` and
   `attempts/m1_16_baez_duarte_reverse.md`.
+
+## Batch 2026-07-11-M1-17: Baez-Duarte fixed-epsilon convergence
+
+- `loop_id`: `BATCH-20260711-M1-17`
+- `node_id`: `M1`
+- `gap_id`: `G2/forward/fixed-epsilon-natural-convergence`
+- `work_class`: `FORMALIZATION`
+- fixed target: under RH and `0 < delta <= 1/2`, prove the exact natural Mobius sums converge in
+  real `L2(0,infinity)` to an element of `baezDuarteKernelClosure`.
+- compiled result: `RiemannHypothesis.exists_tendsto_baezDuarteMobiusApproxL2`.
+- route: finite Mellin formula; tempered-distribution classical/L2 Fourier compatibility;
+  weighted-log representative; Burnol error-difference identity; scaled `L2` majorant;
+  Plancherel Cauchy estimate; completeness, real part, and closure closedness.
+- `result_class`: `HARD_GAP_REDUCED`
+- `hard_gap_before`: no theorem connected F1's transformed pointwise bound to physical `L2`
+  convergence or a natural-kernel closure limit.
+- `hard_gap_after`: fixed-positive-delta convergence and closure membership are compiled; the
+  unconditional `delta -> 0` target limit and final forward assembly remain open.
+- `hard_gap_delta`: remove only `G2/forward/fixed-epsilon-natural-convergence`.
+- `assumption_frontier_after`: only RH and `0 < delta <= 1/2`; no explicit Balazard-Saias premise,
+  new axiom, or incomplete proof.
+- verification: full `lake build` passes with 8607 jobs; exact target witnesses, incomplete-proof
+  and explicit-declaration scans, trusted-dependency audit, and `git diff --check` pass. The three
+  audited new theorems use only `propext`, `Classical.choice`, and `Quot.sound`. Public CI is
+  recorded after push.
+- model: Codex, GPT-5 family; exact backend identifier and reasoning effort are not exposed.
+- budget: unbounded persistent-goal budget; no explicit per-round token budget.
+- compaction state: resumed from a generated summary and rechecked target, source, and interfaces.
+- detailed record: `research/m1_baez_duarte_fixed_epsilon_prereg_m1_17_20260711.md` and
+  `attempts/m1_17_baez_duarte_fixed_epsilon.md`.
