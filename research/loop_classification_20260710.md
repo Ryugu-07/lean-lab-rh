@@ -32,3 +32,10 @@ or G3 in `research/hard_gap_dag.md`; therefore none is classified as `HARD_GAP_R
   a standalone loop.
 - Before any new math loop, a clean-context audit must choose `CONTINUE`, `PIVOT`, `BATCH`, or
   `STOP` against the fixed DAG.
+
+## Governed Batches After Loop 130
+
+| batch | result_class | hard_gap_delta | rationale |
+| --- | --- | --- | --- |
+| M1-11 | DEPENDENCY_GAP_IDENTIFIED | 0 | Isolated the exact Titchmarsh analytic-log/Borel/Hadamard boundary and compiled the analytic logarithm branch. |
+| M1-12 | HARD_GAP_REDUCED | remove reciprocal-zeta subedge | Compiled the exact RH reciprocal-zeta arbitrary-subpower theorem used by the Balazard-Saias route. |

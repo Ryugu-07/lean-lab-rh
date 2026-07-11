@@ -1,6 +1,7 @@
 import LeanLab.Riemann.LiScaffold
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
+import LeanLab.Riemann.ReciprocalZetaSubpower
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -57,7 +58,15 @@ def rhTargets : List ResearchTarget :=
         "From zero-freeness in Re(s)>alpha, prove the uniform N^(-delta/3)(1+|Im(s)|)^eta error bound for Mobius Dirichlet partial sums on alpha+delta<=Re(s)<=1."
       leanName := none
       status := .inProgress
-      note := "Batch M1-10 encodes the exact source statement and checks its Burnol consumer chain. Batch M1-11 audits Titchmarsh's Perron proof and proves the required holomorphic logarithm branch for zeta on zero-free, pole-free simply connected domains. The next source edge is the Borel-Caratheodory/Hadamard reciprocal-zeta subpower bound; the Balazard-Saias estimate remains unproved." },
+      note := "Batch M1-10 encodes the exact source statement and checks its Burnol consumer chain. Batches M1-11 and M1-12 close the analytic logarithm and RH reciprocal-zeta subpower dependencies. The next source edges are truncated Perron and contour-error balancing; the Balazard-Saias estimate remains unproved." },
+    { id := "T1.m1.reciprocal.zeta.subpower"
+      tier := .tier1
+      title := "Close the RH reciprocal-zeta subpower component of F1"
+      statement :=
+        "Under RH, uniformly bound reciprocal zeta by C*(1+|Im(s)|)^eta on every closed substrip 1/2+delta<=Re(s)<=1, for arbitrary delta and eta positive."
+      leanName := some ``RiemannHypothesis.exists_reciprocalZeta_subpower_bound
+      status := .proven
+      note := "Batch M1-12 formalizes Titchmarsh 14.2 via an RH zero-free logarithm branch, Borel-Caratheodory, Hadamard three-circles, strict sublinear log growth, asymptotic exponentiation, and a compact low-height patch." },
     { id := "T1.m1.zeta.convexity.three.eighths"
       tier := .tier1
       title := "Close the unconditional zeta-convexity component of F1"

@@ -23,7 +23,7 @@ flowchart TD
 | --- | --- | --- | --- |
 | A | in progress | Project-local xi, Li, Nyman-Beurling, and Baez-Duarte scaffolding. | Mostly formalization scaffolding; not RH progress under v2. |
 | M0 | complete | Align project-local Nyman-Beurling/Baez-Duarte predicates with published statements. | The positive-natural Baez-Duarte closure side is aligned in real and complex `L2(0,infinity)`: parameter indexing, kernel formula, target, closed span, whole-line error, endpoint, tolerance, and coefficient field are Lean-checked. |
-| M1 | in progress | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | The exact eligible closure side is fixed. Batches M1-02 through M1-06 closed F2/F3 and the supporting transforms. Batch M1-09 closes the unconditional critical-line zeta-convexity component of F1 with exponent `3/8`; Balazard-Saias remains the forward quantitative gap. |
+| M1 | in progress | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | The exact eligible closure side is fixed. Batches M1-02 through M1-06 closed F2/F3 and the supporting transforms. Batch M1-09 closes the unconditional critical-line zeta-convexity component of F1; Batch M1-12 closes its RH reciprocal-zeta subpower input. Truncated Perron and contour balancing remain before Balazard-Saias is closed. |
 | D | open | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | No direct bridge yet. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
 
@@ -32,7 +32,7 @@ flowchart TD
 | gap_id | node_id | status | description |
 | --- | --- | --- | --- |
 | G1 | M1/D | open | Formalize the classical Nyman-Beurling/Baez-Duarte equivalence with RH, using either Beurling's moment-constrained unit-interval space or Baez-Duarte's full-line space, and connect it to `Mathlib.RiemannHypothesis`. |
-| G2 | M1 | in progress | Available: full-line `L2`, finite-error/field alignment, exact kernel Mellin transforms, weighted-log Fourier-Mellin isometry and Plancherel, source power-majorant integrability, countability/nullity of critical-line zeta-zero ordinates, almost-everywhere convergence of the epsilon-dependent zeta ratio, Baez-Duarte Lemma 2.2 with an epsilon-independent `L2` majorant, the quantitative weighted-to-unweighted tail transfer, and an unconditional critical-line zeta bound with exponent `3/8`. The source tail exponent is Lean-verified as `1+2*epsilon`. Missing forward block F1 is now precisely the Balazard-Saias Mobius partial-sum estimate in Burnol's route. Missing reverse block: the base Nyman-Beurling criterion and its half-plane Hardy-space factorization infrastructure. |
+| G2 | M1 | in progress | Available: full-line `L2`, finite-error/field alignment, exact kernel Mellin transforms, weighted-log Fourier-Mellin isometry and Plancherel, source power-majorant integrability, countability/nullity of critical-line zeta-zero ordinates, almost-everywhere convergence of the epsilon-dependent zeta ratio, Baez-Duarte Lemma 2.2 with an epsilon-independent `L2` majorant, the quantitative weighted-to-unweighted tail transfer, an unconditional critical-line zeta bound with exponent `3/8`, and the RH reciprocal-zeta arbitrary-subpower bound on closed critical substrips. The source tail exponent is Lean-verified as `1+2*epsilon`. Missing forward block F1 is the truncated Perron and contour-balancing remainder of the Balazard-Saias Mobius partial-sum estimate in Burnol's route. Missing reverse block: the base Nyman-Beurling criterion and its half-plane Hardy-space factorization infrastructure. |
 | G3 | M2 | parked | Construct unconditional finite approximants with error tending to zero. In the NB/BD framework this is essentially the hard RH direction; numerical convergence is not evidence. |
 
 ## Loop Reporting Policy
@@ -137,3 +137,10 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   domains that explicitly avoid `1`. Result: `DEPENDENCY_GAP_IDENTIFIED`, `hard_gap_delta = 0`;
   the next hard subedge is the Borel-Caratheodory/Hadamard reciprocal-zeta bound, while G2/F1
   remains Balazard-Saias.
+- Batch `BATCH-20260711-M1-12` formalizes Titchmarsh 14.2 in the exact RH specialization required
+  downstream. Lean derives a coarse outer-circle zeta bound from Abel continuation, normalizes a
+  zero-free analytic logarithm, applies Borel-Caratheodory, derives three-circles from Mathlib's
+  Hadamard three-lines theorem, proves the uniform interpolation exponent is strictly below one,
+  exponentiates to arbitrary positive powers, and patches finite heights by residue control and
+  compactness. Result: `HARD_GAP_REDUCED`; remove only the reciprocal-zeta subpower subedge. The
+  Balazard-Saias estimate, reverse criterion, G1, D, and RH remain open.

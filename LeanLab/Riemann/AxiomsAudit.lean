@@ -1,5 +1,6 @@
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.AnalyticLogBranch
+import LeanLab.Riemann.ReciprocalZetaSubpower
 
 set_option linter.style.header false
 
@@ -49,3 +50,4 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.tendsto_natCast_rpow_neg_delta_div_three
 #print axioms Complex.exists_differentiableOn_eqOn_exp_comp_of_isSimplyConnected
 #print axioms LeanLab.Riemann.exists_riemannZeta_differentiableLogBranch
+#print axioms LeanLab.Riemann.RiemannHypothesis.exists_reciprocalZeta_subpower_bound

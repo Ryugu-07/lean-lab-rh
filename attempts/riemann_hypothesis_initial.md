@@ -7298,3 +7298,31 @@ Future attempt records must include:
 - budget: unbounded persistent-goal budget; no explicit per-round token budget.
 - compaction state: none during this batch.
 - detailed record: `research/m1_zeta_convexity_midpoint_20260711.md`.
+
+## Batch 2026-07-11-M1-12: reciprocal-zeta subpower
+
+- `loop_id`: `BATCH-20260711-M1-12`
+- `node_id`: `M1`
+- `gap_id`: `G2/F1/Balazard-Saias/reciprocal-zeta-subpower`
+- `work_class`: `FORMALIZATION`
+- fixed target: under RH, prove arbitrary positive reciprocal-zeta power growth uniformly on
+  `1/2+delta <= Re(s) <= 1`.
+- compiled result: `RiemannHypothesis.exists_reciprocalZeta_subpower_bound` proves the exact target.
+- route: Abel outer bound; normalized analytic `log zeta`; Borel-Caratheodory; Hadamard
+  three-circles derived from checked three-lines; `delta/2` margin giving `theta_delta<1`;
+  exponentiation; residue and compact finite-height patch.
+- `result_class`: `HARD_GAP_REDUCED`
+- `hard_gap_before`: Balazard-Saias still required reciprocal-zeta subpower, truncated Perron, and
+  contour balancing.
+- `hard_gap_after`: reciprocal-zeta subpower is closed; truncated Perron and contour balancing
+  remain, so Balazard-Saias and G2 remain open.
+- `hard_gap_delta`: remove only `G2/F1/Balazard-Saias/reciprocal-zeta-subpower`.
+- `assumption_frontier_before`: no quantitative critical-strip bound on the M1-11 logarithm branch.
+- `assumption_frontier_after`: exact reciprocal-zeta target compiled with no reciprocal-growth
+  premise.
+- model: Codex, GPT-5 family; exact backend identifier and reasoning effort are not exposed.
+- budget: unbounded persistent-goal budget; no explicit per-round token budget.
+- compaction state: resumed from a generated summary after partial Borel implementation; fixed
+  target, source geometry, worktree, and remaining goals were rechecked.
+- detailed record: `research/m1_reciprocal_zeta_subpower_prereg_20260711.md` and
+  `attempts/m1_12_reciprocal_zeta_subpower.md`.
