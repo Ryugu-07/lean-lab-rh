@@ -6,6 +6,7 @@ import LeanLab.Riemann.TruncatedPerron
 import LeanLab.Riemann.BalazardSaiasContour
 import LeanLab.Riemann.BaezDuarteReverse
 import LeanLab.Riemann.BaezDuarteForward
+import LeanLab.Riemann.BaezDuarteForwardLimit
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -55,14 +56,22 @@ structure ResearchTarget where
 
 /-- Current target ledger after the 2026-07-09 architectural review. -/
 def rhTargets : List ResearchTarget :=
-  [ { id := "T1.m1.baez.duarte.fixed.epsilon"
+  [ { id := "T1.m1.baez.duarte.criterion"
+      tier := .tier1
+      title := "Formalize the exact strong Baez-Duarte criterion"
+      statement :=
+        "Prove Mathlib.RiemannHypothesis iff the aligned complex positive-natural target belongs to the full-half-line natural-kernel closure."
+      leanName := some ``riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure
+      status := .proven
+      note := "Batch M1-18 completes the forward direction through the source weighted Mellin/Fourier formula, compiled Balazard-Saias estimate, fixed-epsilon transformed convergence, epsilon-to-zero dominated convergence, diagonal selection, and weighted-tail removal. Combined with M1-16, this is the exact published strong criterion; it is an RH equivalence, not an unconditional proof of RH." },
+    { id := "T1.m1.baez.duarte.fixed.epsilon"
       tier := .tier1
       title := "Compile fixed-epsilon Baez-Duarte convergence"
       statement :=
         "Under Mathlib.RiemannHypothesis and 0<delta<=1/2, prove the source natural Mobius approximations converge in real L2(0,infinity) to an element of the natural-kernel closure."
       leanName := some ``RiemannHypothesis.exists_tendsto_baezDuarteMobiusApproxL2
       status := .proven
-      note := "Batch M1-17 proves the exact fixed-delta source convergence through classical/L2 Fourier compatibility, Burnol's compiled transformed-error bound, Plancherel, and closure closedness. The unconditional delta-to-zero limit and final RH-to-target-closure assembly remain open." },
+      note := "Batch M1-17 proves the exact fixed-delta source convergence through classical/L2 Fourier compatibility, Burnol's compiled transformed-error bound, Plancherel, and closure closedness. Batch M1-18 subsequently completes the source weighted epsilon-to-zero passage and final RH-to-target-closure assembly." },
     { id := "T1.m1.baez.duarte.reverse"
       tier := .tier1
       title := "Formalize the reverse strong Baez-Duarte implication"

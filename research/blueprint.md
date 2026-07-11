@@ -1819,5 +1819,14 @@ closure; the separately compiled F1/F2/F3 components do not yet constitute that 
 
 ## Tier 3: Horizon
 
+### M1-18 Strong Baez-Duarte Criterion
+
+Batch `BATCH-20260711-M1-18` compiles the remaining forward implication. It works directly with
+finite weighted Mobius sums, proves their exact Mellin/Fourier formula, controls their transformed
+error, performs an explicit diagonal epsilon limit, and removes the weight using the exact tail
+estimate. The theorem `riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure` closes M1
+and D. This is the published criterion formalized as an equivalence, not an unconditional proof
+of RH.
+
 `RiemannHypothesis` remains the orientation point. It is not an admissible immediate proof-loop
 target.

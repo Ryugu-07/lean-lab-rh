@@ -23,16 +23,16 @@ flowchart TD
 | --- | --- | --- | --- |
 | A | in progress | Project-local xi, Li, Nyman-Beurling, and Baez-Duarte scaffolding. | Mostly formalization scaffolding; not RH progress under v2. |
 | M0 | complete | Align project-local Nyman-Beurling/Baez-Duarte predicates with published statements. | The positive-natural Baez-Duarte closure side is aligned in real and complex `L2(0,infinity)`: parameter indexing, kernel formula, target, closed span, whole-line error, endpoint, tolerance, and coefficient field are Lean-checked. |
-| M1 | in progress | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | The exact eligible closure side and `closure -> RH` are compiled. Batch M1-17 compiles RH-conditional fixed-positive-delta convergence of the source natural Mobius sums. Remaining: unconditional `delta -> 0` convergence to the target and final `RH -> closure` assembly. |
-| D | open | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | The reverse bridge is compiled directly; the forward bridge awaits the remaining M1 convergence edge. |
+| M1 | complete | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | Batch M1-18 compiles both directions of the exact strong positive-natural Baez-Duarte criterion in full-half-line complex `L2`. |
+| D | complete | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | `riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure` is the exact compiled bridge. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
 
 ## Hard Gaps
 
 | gap_id | node_id | status | description |
 | --- | --- | --- | --- |
-| G1 | M1/D | open | Formalize the classical Nyman-Beurling/Baez-Duarte equivalence with RH, using either Beurling's moment-constrained unit-interval space or Baez-Duarte's full-line space, and connect it to `Mathlib.RiemannHypothesis`. |
-| G2 | M1 | in progress | Available: exact full-line closure alignment; `closure -> Mathlib.RiemannHypothesis`; kernel Mellin transforms; classical/L2 Fourier compatibility; weighted-log Fourier-Mellin isometry and Plancherel; F1/F2/F3 quantitative components; RH-conditional fixed-positive-delta convergence with a closure limit; exact tail exponent `1+2*epsilon`. Missing block: prove the unconditional `delta -> 0` convergence to the target and assemble `Mathlib.RiemannHypothesis -> baezDuarteComplexTargetL2 ∈ baezDuarteComplexKernelClosure`. |
+| G1 | M1/D | complete | The exact strong positive-natural Baez-Duarte full-line closure criterion is Lean-equivalent to `Mathlib.RiemannHypothesis`. |
+| G2 | M1 | complete | Batch M1-18 compiles the weighted finite formula, fixed-epsilon transformed limit, epsilon-to-zero dominated convergence, diagonal assembly, tail removal, and `RH -> closure`. |
 | G3 | M2 | parked | Construct unconditional finite approximants with error tending to zero. In the NB/BD framework this is essentially the hard RH direction; numerical convergence is not evidence. |
 
 ## Loop Reporting Policy
@@ -180,3 +180,9 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   closure. Result: `HARD_GAP_REDUCED`; remove only
   `G2/forward/fixed-epsilon-natural-convergence`. The unconditional `delta -> 0` source limit and
   final RH-to-target-closure assembly remain, so M1, G2, G1, D, and RH are open.
+- Batch `BATCH-20260711-M1-18` closes `G2/forward/delta-to-zero-and-assembly`. Lean proves the
+  finite weighted formula, fixed-epsilon transformed convergence, epsilon-to-zero dominated
+  convergence, diagonal selection, and exact tail removal. The forward closure theorem combines
+  with M1-16 as `riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure`. Result:
+  `KNOWN_THEOREM_FORMALIZED`; M1, G1, G2, and D are complete. This is a criterion equivalence,
+  not an unconditional proof of either side; G3/M2 remains parked.

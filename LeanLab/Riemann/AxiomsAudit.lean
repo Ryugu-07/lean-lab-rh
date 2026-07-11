@@ -5,8 +5,10 @@ import LeanLab.Riemann.TruncatedPerron
 import LeanLab.Riemann.BalazardSaiasContour
 import LeanLab.Riemann.BaezDuarteReverse
 import LeanLab.Riemann.BaezDuarteForward
+import LeanLab.Riemann.BaezDuarteForwardLimit
 
 set_option linter.style.header false
+set_option linter.style.longLine false
 
 /-!
 # Trusted-dependency audit for fixed-gap RH work
@@ -69,3 +71,8 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.fourier_toLp_eq_toLp_fourier
 #print axioms LeanLab.Riemann.RiemannHypothesis.cauchySeq_baezDuarteMobiusApproxComplexL2
 #print axioms LeanLab.Riemann.RiemannHypothesis.exists_tendsto_baezDuarteMobiusApproxL2
+#print axioms LeanLab.Riemann.RiemannHypothesis.exists_weightedMobiusTransformedError_majorant
+#print axioms LeanLab.Riemann.RiemannHypothesis.exists_tendsto_scaledWeightedLimitTransform_neg_target
+#print axioms LeanLab.Riemann.RiemannHypothesis.exists_mobiusApproxL2_close_neg_target
+#print axioms LeanLab.Riemann.RiemannHypothesis.baezDuarteComplexTargetL2_mem_kernelClosure
+#print axioms LeanLab.Riemann.riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure
