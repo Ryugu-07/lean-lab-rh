@@ -7398,7 +7398,8 @@ Future attempt records must include:
   `BalazardSaiasEstimate`; no new axiom or incomplete proof is used.
 - verification: full `lake build` passes with 8604 jobs; incomplete-proof and explicit-declaration
   scans, exact target checks, trusted-dependency audit, and `git diff --check` pass. The two new main
-  theorems use only `propext`, `Classical.choice`, and `Quot.sound`.
+  theorems use only `propext`, `Classical.choice`, and `Quot.sound`. Public commit `25f4117` passes
+  Lean Action CI run `29151912852` (job `86542626185`).
 - model: Codex, GPT-5 family; exact backend identifier and reasoning effort are not exposed.
 - budget: unbounded persistent-goal budget; no explicit per-round token budget.
 - compaction state: resumed from a generated summary after the contour component lemmas compiled;

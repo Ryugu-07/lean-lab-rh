@@ -103,4 +103,5 @@ None of these inputs asserts the target estimate.
   worktree, current target ledger, hard-gap DAG, relevant Lean modules, and pinned source files.
 - `verification`: full `lake build` passes with 8604 jobs; incomplete-proof and explicit-declaration
   scans have no matches; target checks, axiom audit, and `git diff --check` pass. The two compiled
-  main theorems use only `propext`, `Classical.choice`, and `Quot.sound`.
+  main theorems use only `propext`, `Classical.choice`, and `Quot.sound`. Public commit `25f4117`
+  passes Lean Action CI run `29151912852`, job `86542626185`.

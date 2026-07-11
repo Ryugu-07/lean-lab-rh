@@ -70,4 +70,5 @@ and RH itself remain open.
 Full `lake build` passes with 8604 jobs. The incomplete-proof and explicit-declaration scans over
 `LeanLab` and `PrimeNumberTheoremAnd` have no matches, and `git diff --check` passes. The two main
 theorems depend only on `propext`, `Classical.choice`, and `Quot.sound`. Public CI is recorded after
-the batch commit is pushed.
+the batch commit is pushed: commit `25f4117` passes Lean Action CI run `29151912852`, job
+`86542626185`, in 2m27s.
