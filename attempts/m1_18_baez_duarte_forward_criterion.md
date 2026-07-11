@@ -31,3 +31,5 @@ equivalence is established unconditionally.
 
 Full `lake build` passes with 8608 jobs. Incomplete-proof, explicit-declaration, and whitespace
 scans pass. The final equivalence uses only `propext`, `Classical.choice`, and `Quot.sound`.
+Public implementation commit `0c5f39c` passes Lean Action CI run `29156608433`, build job
+`86554644071`.

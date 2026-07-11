@@ -117,3 +117,5 @@ unconditionally and does not prove `RiemannHypothesis`.
 - explicit declaration scan: no project `axiom` or `constant` declarations;
 - `git diff --check`: success;
 - final theorem axiom set: `propext`, `Classical.choice`, `Quot.sound` only.
+- public implementation commit: `0c5f39c`;
+- public Lean Action CI: run `29156608433`, build job `86554644071`, success.
