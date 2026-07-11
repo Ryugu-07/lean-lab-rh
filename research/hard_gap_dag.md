@@ -23,7 +23,7 @@ flowchart TD
 | --- | --- | --- | --- |
 | A | in progress | Project-local xi, Li, Nyman-Beurling, and Baez-Duarte scaffolding. | Mostly formalization scaffolding; not RH progress under v2. |
 | M0 | complete | Align project-local Nyman-Beurling/Baez-Duarte predicates with published statements. | The positive-natural Baez-Duarte closure side is aligned in real and complex `L2(0,infinity)`: parameter indexing, kernel formula, target, closed span, whole-line error, endpoint, tolerance, and coefficient field are Lean-checked. |
-| M1 | in progress | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | The exact eligible closure side is fixed. Batches M1-02 through M1-15 close the RH-specialized forward convergence blocks F1/F2/F3 and their supporting transforms. The reverse base criterion and Hardy-space factorization remain. |
+| M1 | in progress | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | The exact eligible closure side is fixed. Batch M1-16 closes `closure -> RH` directly by the source Mellin zero obstruction. The remaining theorem is the forward convergence assembly `RH -> closure` from the compiled F1/F2/F3 components. |
 | D | open | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | No direct bridge yet. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
 
@@ -32,7 +32,7 @@ flowchart TD
 | gap_id | node_id | status | description |
 | --- | --- | --- | --- |
 | G1 | M1/D | open | Formalize the classical Nyman-Beurling/Baez-Duarte equivalence with RH, using either Beurling's moment-constrained unit-interval space or Baez-Duarte's full-line space, and connect it to `Mathlib.RiemannHypothesis`. |
-| G2 | M1 | in progress | Available: full-line `L2`, finite-error/field alignment, exact kernel Mellin transforms, weighted-log Fourier-Mellin isometry and Plancherel, the F2/F3 convergence blocks, the unconditional critical-line zeta `3/8` bound, and the complete RH-specialized Balazard-Saias/Burnol forward block F1. The source tail exponent is Lean-verified as `1+2*epsilon`. Missing block: the reverse base Nyman-Beurling criterion and its half-plane Hardy-space factorization infrastructure. |
+| G2 | M1 | in progress | Available: exact full-line closure alignment; `closure -> Mathlib.RiemannHypothesis`; kernel Mellin transforms; weighted-log Fourier-Mellin isometry and Plancherel; F1/F2/F3 quantitative components; the exact source tail exponent `1+2*epsilon`. Missing block: assemble these forward components into the actual theorem `Mathlib.RiemannHypothesis -> baezDuarteComplexTargetL2 ∈ baezDuarteComplexKernelClosure`. |
 | G3 | M2 | parked | Construct unconditional finite approximants with error tending to zero. In the NB/BD framework this is essentially the hard RH direction; numerical convergence is not evidence. |
 
 ## Loop Reporting Policy
@@ -165,3 +165,10 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `HARD_GAP_REDUCED`; remove the contour-balancing subedge and close forward block F1. The stronger
   general-alpha proposition and the reverse criterion remain open, so M1, G2, G1, D, and RH are
   not complete.
+- Batch `BATCH-20260711-M1-16` closes the reverse implication for the exact M0-aligned carrier.
+  Lean proves the full Mellin transform of finite natural-kernel sums vanishes at a zeta zero,
+  controls the local error by Holder, computes the exact `m/x` tail contribution, and reflects
+  left-side nontrivial zeros with the completed-zeta functional equation. Result:
+  `HARD_GAP_REDUCED`; remove `G2/reverse/base-criterion`. The earlier projected Hardy-space
+  dependency is bypassed for this exact carrier, without asserting the general base criterion.
+  The forward RH-to-closure convergence assembly remains, so M1, G2, G1, D, and RH are open.

@@ -15,6 +15,11 @@ examples.
 
 namespace LeanLab.Riemann
 
+example
+    (h : baezDuarteComplexTargetL2 ∈ baezDuarteComplexKernelClosure) :
+    RiemannHypothesis :=
+  baezDuarteComplexTarget_mem_closure_imp_riemannHypothesis h
+
 open scoped ENNReal FourierTransform
 
 /-- Name-resolution witness for every `.proven` ledger target with a `leanName`. -/

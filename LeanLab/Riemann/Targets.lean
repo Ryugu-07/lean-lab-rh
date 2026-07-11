@@ -4,6 +4,7 @@ import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
 import LeanLab.Riemann.TruncatedPerron
 import LeanLab.Riemann.BalazardSaiasContour
+import LeanLab.Riemann.BaezDuarteReverse
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -53,7 +54,15 @@ structure ResearchTarget where
 
 /-- Current target ledger after the 2026-07-09 architectural review. -/
 def rhTargets : List ResearchTarget :=
-  [ { id := "T1.m1.balazard.saias"
+  [ { id := "T1.m1.baez.duarte.reverse"
+      tier := .tier1
+      title := "Formalize the reverse strong Baez-Duarte implication"
+      statement :=
+        "Prove that membership of the aligned complex positive-natural target in the kernel closure implies Mathlib.RiemannHypothesis."
+      leanName := some ``baezDuarteComplexTarget_mem_closure_imp_riemannHypothesis
+      status := .proven
+      note := "Batch M1-16 proves the exact reverse implication by the Mellin zero obstruction on source-structured full-line errors; no general Nyman-Beurling or Hardy-space premise is assumed. The forward RH-to-closure convergence assembly remains open." },
+    { id := "T1.m1.balazard.saias"
       tier := .tier1
       title := "Compile the RH-specialized Balazard-Saias Mobius estimate"
       statement :=

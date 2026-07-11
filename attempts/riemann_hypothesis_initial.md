@@ -7406,3 +7406,31 @@ Future attempt records must include:
   the fixed target, worktree, interfaces, and source audit were rechecked before assembly.
 - detailed record: `research/m1_balazard_saias_contour_prereg_m1_15_20260711.md` and
   `attempts/m1_15_balazard_saias_contour.md`.
+
+## Batch 2026-07-11-M1-16: Baez-Duarte reverse implication
+
+- `loop_id`: `BATCH-20260711-M1-16`
+- `node_id`: `M1`
+- `gap_id`: `G2/reverse/base-criterion`
+- `work_class`: `FORMALIZATION`
+- fixed target: prove that the exact M0-aligned complex natural-kernel closure carrier implies
+  `Mathlib.RiemannHypothesis`.
+- compiled result: `baezDuarteComplexTarget_mem_closure_imp_riemannHypothesis`.
+- route: finite-kernel Mellin zero identity; local `L2` Holder bound; exact `1/s` target integral;
+  exact reciprocal-moment tail integral; quantitative contradiction; completed-zeta reflection.
+- `result_class`: `HARD_GAP_REDUCED`
+- `hard_gap_before`: the entire reverse implication was open and projected to require the general
+  base criterion and half-plane Hardy-space factorization.
+- `hard_gap_after`: the aligned reverse implication is closed directly; the general criterion is
+  not claimed. The forward RH-to-closure convergence assembly remains open.
+- `hard_gap_delta`: remove `G2/reverse/base-criterion` for the exact aligned carrier.
+- `assumption_frontier_after`: closure implies RH without a base-criterion or Hardy-space premise;
+  no new axiom or incomplete proof is used.
+- verification: full `lake build` passes with 8605 jobs; incomplete-proof and explicit-declaration
+  scans, exact target checks, trusted-dependency audit, and `git diff --check` pass. The two new main
+  theorems use only `propext`, `Classical.choice`, and `Quot.sound`.
+- model: Codex, GPT-5 family; exact backend identifier and reasoning effort are not exposed.
+- budget: unbounded persistent-goal budget; no explicit per-round token budget.
+- compaction state: none during this batch.
+- detailed record: `research/m1_baez_duarte_reverse_prereg_m1_16_20260711.md` and
+  `attempts/m1_16_baez_duarte_reverse.md`.

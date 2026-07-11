@@ -1809,6 +1809,14 @@ logarithmic left-edge integral, horizontal-edge estimates, and the choice
 no longer assumes `BalazardSaiasEstimate`; RH-specialized F1 is closed. The stronger general-alpha
 proposition and the reverse base criterion remain open, so M1 and RH are not proved.
 
+Batch `BATCH-20260711-M1-16` compiles the reverse implication of the exact M0-aligned strong
+Baez-Duarte carrier. Instead of asserting the more general Nyman-Beurling theorem, Lean applies the
+source Mellin identity directly to full-line finite errors. The `(0,1)` part is controlled by
+Holder, while the exact `m/x` tail is controlled by the reciprocal moment already present in the
+M0 error formula. This excludes right-half-strip zeta zeros; completed-zeta reflection supplies the
+full Mathlib RH statement. The remaining M1 theorem is the forward convergence assembly from RH to
+closure; the separately compiled F1/F2/F3 components do not yet constitute that theorem.
+
 ## Tier 3: Horizon
 
 `RiemannHypothesis` remains the orientation point. It is not an admissible immediate proof-loop
