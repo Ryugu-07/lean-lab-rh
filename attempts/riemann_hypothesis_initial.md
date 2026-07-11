@@ -7267,3 +7267,34 @@ Future attempt records must include:
 - compaction state: resumed from a generated context summary after preregistration and rechecked
   the fixed DAG, sources, and worktree before continuing.
 - detailed record: `research/m1_zeta_convexity_boundary_20260711.md`.
+
+## Batch 2026-07-11-M1-09: corrected zeta convexity midpoint
+
+- `loop_id`: `BATCH-20260711-M1-09`
+- `node_id`: `M1`
+- `gap_id`: `G2/F1/zeta-convexity`
+- `work_class`: `FORMALIZATION`
+- fixed target: unconditional critical-line zeta exponent `3/8`.
+- compiled result: `exists_norm_riemannZeta_criticalLine_le_rpow` proves the exact target.
+- route: extend the `13/8` and `9/8` edge bounds over compact segments; formalize Fiori's
+  holomorphic reflection and `(13,9)` quotient; prove both edge bounds; use the audited global
+  finite-order theorem to discharge `PhragmenLindelof.vertical_strip`; take a sixteenth root and
+  divide by the pole-removal factor.
+- upstream reuse: 11 Apache-2.0 modules from `PrimeNumberTheoremAnd` commit
+  `d963a6e694a05cd82e5f9b9ae7f4d94123e85393` were vendored unchanged. Exact hashes are in the
+  detailed record.
+- invalid route excluded: no `re(s)`-dependent auxiliary function and no growth/interpolation
+  axiom.
+- `result_class`: `HARD_GAP_REDUCED`
+- `hard_gap_before`: zeta convexity and Balazard-Saias both remain inside F1.
+- `hard_gap_after`: zeta convexity is closed; Balazard-Saias remains, so F1 itself stays open.
+- `hard_gap_delta`: remove only `G2/F1/zeta-convexity`.
+- `assumption_frontier_after`: unconditional `3/8` theorem compiled; Balazard-Saias is not assumed.
+- trusted dependencies: representative upstream, growth, midpoint, and final theorems use only
+  `propext`, `Classical.choice`, and `Quot.sound`.
+- verification: full build passed with 8599 jobs; exact target witness, incomplete-proof scan,
+  explicit-declaration scan, upstream hash identity, and `git diff --check` passed.
+- model: Codex, GPT-5 family; exact backend identifier and reasoning effort are not exposed.
+- budget: unbounded persistent-goal budget; no explicit per-round token budget.
+- compaction state: none during this batch.
+- detailed record: `research/m1_zeta_convexity_midpoint_20260711.md`.

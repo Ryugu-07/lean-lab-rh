@@ -1,5 +1,6 @@
 import LeanLab.Riemann.LiScaffold
 import LeanLab.Riemann.NymanBeurling
+import LeanLab.Riemann.ZetaConvexityMidpoint
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -49,7 +50,15 @@ structure ResearchTarget where
 
 /-- Current target ledger after the 2026-07-09 architectural review. -/
 def rhTargets : List ResearchTarget :=
-  [ { id := "T1.xi.completed.bridge"
+  [ { id := "T1.m1.zeta.convexity.three.eighths"
+      tier := .tier1
+      title := "Close the unconditional zeta-convexity component of F1"
+      statement :=
+        "Prove an unconditional critical-line Riemann zeta bound with exponent 3/8 for |t| >= 1."
+      leanName := some ``exists_norm_riemannZeta_criticalLine_le_rpow
+      status := .proven
+      note := "Batch M1-09 formalized Fiori's corrected midpoint Phragmen-Lindelof argument. Balazard-Saias remains open, so F1 itself is not closed." },
+    { id := "T1.xi.completed.bridge"
       tier := .tier1
       title := "Bridge local xi to the completed zeta variant outside the poles"
       statement :=

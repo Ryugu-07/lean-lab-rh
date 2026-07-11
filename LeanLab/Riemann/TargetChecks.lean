@@ -19,7 +19,8 @@ open scoped ENNReal FourierTransform
 
 /-- Name-resolution witness for every `.proven` ledger target with a `leanName`. -/
 def checkedTargetNames : List Lean.Name :=
-  [ ``riemannXi_eq_mul_completedRiemannZeta,
+  [ ``exists_norm_riemannZeta_criticalLine_le_rpow,
+    ``riemannXi_eq_mul_completedRiemannZeta,
     ``isNontrivialZero_iff_riemannXi_eq_zero_and_not_trivial,
     ``liCoefficientCandidate_one_re_pos,
     ``fractionalPartKernel_memLp_two_unitInterval,
@@ -67,6 +68,12 @@ def checkedTargetNames : List Lean.Name :=
 example {s : ℂ} (hs0 : s ≠ 0) (hs1 : s ≠ 1) :
     riemannXi s = s * (s - 1) / 2 * completedRiemannZeta s :=
   riemannXi_eq_mul_completedRiemannZeta hs0 hs1
+
+example :
+    ∃ C : ℝ, 0 < C ∧ ∀ t : ℝ, 1 ≤ |t| →
+      ‖riemannZeta ((1 / 2 : ℂ) + t * Complex.I)‖ ≤
+        C * (1 + |t|) ^ (3 / 8 : ℝ) :=
+  exists_norm_riemannZeta_criticalLine_le_rpow
 
 example (s : ℂ) :
     IsNontrivialZero s ↔ riemannXi s = 0 ∧ ¬IsTrivialZeroPoint s :=

@@ -1,4 +1,4 @@
-import LeanLab.Riemann.ZetaConvexity
+import LeanLab.Riemann.ZetaConvexityMidpoint
 
 set_option linter.style.header false
 
@@ -38,3 +38,7 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.exists_norm_riemannZeta_mul_I_le_rpow
 #print axioms LeanLab.Riemann.exists_norm_zetaPoleRemoved_one_add_mul_I_le_rpow
 #print axioms LeanLab.Riemann.exists_norm_zetaPoleRemoved_mul_I_le_rpow
+#print axioms Complex.zeta_minus_pole_entire_growth
+#print axioms LeanLab.Riemann.fioriMidpointQuotient_zetaPoleRemoved_growth
+#print axioms LeanLab.Riemann.exists_norm_zetaPoleRemoved_criticalLine_le_rpow
+#print axioms LeanLab.Riemann.exists_norm_riemannZeta_criticalLine_le_rpow
