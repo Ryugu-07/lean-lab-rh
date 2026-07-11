@@ -104,5 +104,5 @@ None asserts convergence of the source finite approximants.
 - `verification`: full `lake build` passes with 8607 jobs; exact target witnesses, incomplete-proof
   scan, explicit-declaration scan, trusted-dependency audit, and `git diff --check` pass. The
   classical/L2 compatibility theorem, Cauchy theorem, and final fixed-delta theorem use only
-  `propext`, `Classical.choice`, and `Quot.sound`. Commit, push, and public CI are recorded after
-  publication.
+  `propext`, `Classical.choice`, and `Quot.sound`. Public commit `2f1503e` passes Lean Action CI
+  run `29154261012`, build job `86548687415`, in 1m52s.

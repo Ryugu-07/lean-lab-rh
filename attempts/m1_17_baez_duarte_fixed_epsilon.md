@@ -52,4 +52,5 @@ converge in real `L2(0,infinity)` to an element of `baezDuarteKernelClosure`.
 Full `lake build` passes with 8607 jobs. Exact target witnesses, incomplete-proof and explicit-
 declaration scans, trusted-dependency audit, and `git diff --check` pass. The compatibility,
 Cauchy, and final convergence theorems use only `propext`, `Classical.choice`, and `Quot.sound`.
-Commit, push, and public-CI data are appended after publication.
+Public commit `2f1503e` passes Lean Action CI run `29154261012`, build job `86548687415`, in
+1m52s.
