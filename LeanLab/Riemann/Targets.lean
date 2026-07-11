@@ -59,15 +59,15 @@ def rhTargets : List ResearchTarget :=
         "From zero-freeness in Re(s)>alpha, prove the uniform N^(-delta/3)(1+|Im(s)|)^eta error bound for Mobius Dirichlet partial sums on alpha+delta<=Re(s)<=1."
       leanName := none
       status := .inProgress
-      note := "Batch M1-10 encodes the exact source statement and checks its Burnol consumer chain. Batches M1-11 and M1-12 close the analytic logarithm and RH reciprocal-zeta subpower dependencies. Batch M1-13 checks the negative-side truncated Perron kernel and isolates the missing positive-side residue theorem; the full truncated Perron target and contour balancing remain open." },
+      note := "Batch M1-10 encodes the exact source statement and checks its Burnol consumer chain. Batches M1-11 and M1-12 close the analytic logarithm and RH reciprocal-zeta subpower dependencies. Batch M1-14 closes the source-specialized Mobius truncated Perron estimate. The next source edge is contour shifting and quantitative error balancing; Balazard-Saias remains unproved." },
     { id := "T1.m1.truncated.perron"
       tier := .tier1
       title := "Formalize the source-specialized Mobius truncated Perron estimate"
       statement :=
         "Uniformly approximate the Mobius Dirichlet partial sum by the c=2, x=N+1/2 truncated Perron integral with an absolute C*(N+1)^2/T error."
-      leanName := none
-      status := .inProgress
-      note := "Batch M1-13 proves the right-half-plane rectangle identity, horizontal and remote-vertical estimates, and the exact negative-side c=2 kernel bound. The positive-side kernel still needs the 2*pi*i residue contribution for 1/w; series interchange and source-error summation follow after that dependency." },
+      leanName := some ``exists_mobiusDirichletPartialSum_sub_truncatedPerronIntegral_le
+      status := .proven
+      note := "Batch M1-14 proves the exact source target via an explicit 2*pi*i rectangle residue calculation, positive and negative kernel estimates, dominated Mobius-series integration, half-integral logarithmic spacing, and a summable n^(-3/2) majorant." },
     { id := "T1.m1.reciprocal.zeta.subpower"
       tier := .tier1
       title := "Close the RH reciprocal-zeta subpower component of F1"

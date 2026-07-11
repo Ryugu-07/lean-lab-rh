@@ -7351,3 +7351,27 @@ Future attempt records must include:
   rechecked before implementation.
 - detailed record: `research/m1_mobius_truncated_perron_prereg_20260711.md` and
   `attempts/m1_13_mobius_truncated_perron.md`.
+
+## Batch 2026-07-11-M1-14: Mobius truncated Perron completion
+
+- `loop_id`: `BATCH-20260711-M1-14`
+- `node_id`: `M1`
+- `gap_id`: `G2/F1/Balazard-Saias/truncated-Perron`
+- `work_class`: `FORMALIZATION`
+- fixed target: the absolute uniform `C*(N+1)^2/T` Mobius truncated Perron formula.
+- compiled result: `exists_mobiusDirichletPartialSum_sub_truncatedPerronIntegral_le`.
+- route: explicit rectangle `2*pi*i` residue; entire `dslope` subtraction; positive and negative
+  kernel bounds; `Re=5/2` dominated Mobius series integration; coefficient-kernel identity;
+  half-integral logarithmic spacing; `n^(-3/2)` p-series summation.
+- `result_class`: `HARD_GAP_REDUCED`
+- `hard_gap_before`: truncated Perron and contour balancing remained inside Balazard-Saias.
+- `hard_gap_after`: truncated Perron is closed; contour shifting and quantitative error balancing
+  remain, so Balazard-Saias and G2 remain open.
+- `hard_gap_delta`: remove only `G2/F1/Balazard-Saias/truncated-Perron`.
+- `assumption_frontier_after`: no Perron premise, residue premise, or new axiom; the exact source
+  truncated Perron estimate is compiled.
+- model: Codex, GPT-5 family; exact backend identifier and reasoning effort are not exposed.
+- budget: unbounded persistent-goal budget; no explicit per-round token budget.
+- compaction state: none during this batch.
+- detailed record: `research/m1_mobius_truncated_perron_prereg_m1_14_20260711.md` and
+  `attempts/m1_14_mobius_truncated_perron.md`.

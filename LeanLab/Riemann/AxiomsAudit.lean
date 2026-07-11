@@ -55,3 +55,7 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.LSeries_moebius_eq_reciprocal_riemannZeta
 #print axioms LeanLab.Riemann.norm_perronIntegrand_vertical_integral_le_of_neg
 #print axioms LeanLab.Riemann.norm_truncatedPerronKernel_two_le_of_lt_one
+#print axioms LeanLab.Riemann.integral_inv_boundary_rect_eq_two_pi_mul_I
+#print axioms LeanLab.Riemann.norm_truncatedPerronKernel_two_sub_one_le_of_one_lt
+#print axioms LeanLab.Riemann.hasSum_integral_mobiusPerronSeriesTerm
+#print axioms LeanLab.Riemann.exists_mobiusDirichletPartialSum_sub_truncatedPerronIntegral_le

@@ -23,7 +23,7 @@ flowchart TD
 | --- | --- | --- | --- |
 | A | in progress | Project-local xi, Li, Nyman-Beurling, and Baez-Duarte scaffolding. | Mostly formalization scaffolding; not RH progress under v2. |
 | M0 | complete | Align project-local Nyman-Beurling/Baez-Duarte predicates with published statements. | The positive-natural Baez-Duarte closure side is aligned in real and complex `L2(0,infinity)`: parameter indexing, kernel formula, target, closed span, whole-line error, endpoint, tolerance, and coefficient field are Lean-checked. |
-| M1 | in progress | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | The exact eligible closure side is fixed. Batches M1-02 through M1-06 closed F2/F3 and the supporting transforms. Batch M1-09 closes the unconditional critical-line zeta-convexity component of F1; Batch M1-12 closes its RH reciprocal-zeta subpower input. Truncated Perron and contour balancing remain before Balazard-Saias is closed. |
+| M1 | in progress | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | The exact eligible closure side is fixed. Batches M1-02 through M1-06 closed F2/F3 and the supporting transforms. Batch M1-09 closes zeta convexity, M1-12 closes RH reciprocal-zeta subpower, and M1-14 closes truncated Perron. Contour shifting and quantitative error balancing remain before Balazard-Saias is closed. |
 | D | open | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | No direct bridge yet. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
 
@@ -151,3 +151,10 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   dependency is the positive-side `2*pi*i` residue contribution for `1/w`, followed by series
   interchange and source-error summation. Result: `DEPENDENCY_GAP_IDENTIFIED`;
   `hard_gap_delta=0`.
+- Batch `BATCH-20260711-M1-14` closes the source-specialized Mobius truncated Perron input. Lean
+  computes the crossing-pole rectangle boundary from explicit arctangent integrals, obtains both
+  single-coefficient kernel estimates, exchanges the absolutely convergent Mobius series with the
+  finite interval integral by dominated convergence, and sums the half-integral spacing errors
+  with an `n^(-3/2)` majorant. The exact absolute `C*(N+1)^2/T` theorem compiles. Result:
+  `HARD_GAP_REDUCED`; remove only `G2/F1/Balazard-Saias/truncated-Perron`. Contour shifting and
+  error balancing remain, so Balazard-Saias and G2 are open.
