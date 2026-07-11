@@ -125,3 +125,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   bound `|zeta(1/2+it)| <= C*(1+|t|)^(3/8)`. Result: `HARD_GAP_REDUCED`; the zeta-convexity
   component is removed from F1, while Balazard-Saias, the reverse criterion, G1, D, and RH remain
   open.
+- Batch `BATCH-20260711-M1-10` encodes the exact Balazard-Saias statement as an explicit proposition
+  and Lean-checks its complete Burnol consumer chain. The compiled `3/8` zeta bound gives quotient
+  decay `-5/8`; hence the source height exponent must satisfy `eta < 1/8`, and the coefficient
+  `N^(-delta/3)` tends to zero. The encoded estimate is never asserted or hidden as an axiom.
+  Result: `FORMALIZATION_ONLY` with `hard_gap_delta = 0`; G2/F1 remains exactly Balazard-Saias.

@@ -1,6 +1,6 @@
 import LeanLab.Riemann.LiScaffold
 import LeanLab.Riemann.NymanBeurling
-import LeanLab.Riemann.ZetaConvexityMidpoint
+import LeanLab.Riemann.BalazardSaias
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -50,7 +50,15 @@ structure ResearchTarget where
 
 /-- Current target ledger after the 2026-07-09 architectural review. -/
 def rhTargets : List ResearchTarget :=
-  [ { id := "T1.m1.zeta.convexity.three.eighths"
+  [ { id := "T1.m1.balazard.saias"
+      tier := .tier1
+      title := "Prove the Balazard-Saias Mobius partial-sum estimate"
+      statement :=
+        "From zero-freeness in Re(s)>alpha, prove the uniform N^(-delta/3)(1+|Im(s)|)^eta error bound for Mobius Dirichlet partial sums on alpha+delta<=Re(s)<=1."
+      leanName := none
+      status := .inProgress
+      note := "Batch M1-10 encodes the exact source statement and Lean-checks its full Burnol majorant: the 3/8 zeta bound leaves eta<1/8 and N^(-delta/3) tends to zero. The number-theoretic estimate itself remains unproved and is never assumed implicitly." },
+    { id := "T1.m1.zeta.convexity.three.eighths"
       tier := .tier1
       title := "Close the unconditional zeta-convexity component of F1"
       statement :=

@@ -233,4 +233,23 @@ example :
           ‖((5 * K : ℝ) : ℂ) * baezDuarteVerticalMajorant (C * ε₀) τ‖ :=
   exists_baezDuarteZetaRatioIntegrand_majorant
 
+example (hRH : RiemannHypothesis) (hBS : BalazardSaiasEstimate)
+    {δ η : ℝ} (hδ : 0 < δ) (hδ_top : δ ≤ 1 / 2) (hη : 0 < η) :
+    ∃ K : ℝ, 0 < K ∧ ∀ (N : ℕ) (t : ℝ), 2 ≤ N →
+      ‖burnolMobiusTransformedError δ N t‖ ≤
+        K * (N : ℝ) ^ (-δ / 3) *
+          ‖baezDuarteVerticalMajorant (3 / 8 + η) t‖ :=
+  RiemannHypothesis.exists_norm_burnolMobiusTransformedError_le
+    hRH hBS hδ hδ_top hη
+
+example {η : ℝ} (hη : η < 1 / 8) :
+    MeasureTheory.MemLp (baezDuarteVerticalMajorant (3 / 8 + η))
+      (2 : ℝ≥0∞) MeasureTheory.volume :=
+  burnolMobiusMajorant_memLp hη
+
+example {δ : ℝ} (hδ : 0 < δ) :
+    Filter.Tendsto (fun N : ℕ => (N : ℝ) ^ (-δ / 3))
+      Filter.atTop (nhds 0) :=
+  tendsto_natCast_rpow_neg_delta_div_three hδ
+
 end LeanLab.Riemann

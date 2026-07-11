@@ -10,6 +10,7 @@ import LeanLab.Riemann.BaezDuarteTailTransfer
 import LeanLab.Riemann.BaezDuarteZetaRatio
 import LeanLab.Riemann.ZetaConvexity
 import LeanLab.Riemann.ZetaConvexityMidpoint
+import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.TargetChecks
 import LeanLab.Riemann.AxiomsAudit

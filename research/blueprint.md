@@ -1769,6 +1769,19 @@ of the Balazard-Saias theorem and a critical-line zeta convexity bound with any 
 `1/2`. Neither theorem currently exists in pinned mathlib or a reusable licensed Lean project.
 Result: `DEPENDENCY_GAP_IDENTIFIED`.
 
+Batch `BATCH-20260711-M1-10` formalizes the exact remaining F1 interface without asserting it.
+`BalazardSaiasEstimate` records all source quantifiers and constant dependencies, and RH supplies
+its zero-free premise at `alpha=1/2`. Conditional on that explicit proposition, Lean proves
+Burnol's transformed error is bounded by
+
+```text
+K * N^(-delta/3) * (1+|t|)^(-5/8+eta).
+```
+
+Lean separately proves this height majorant is in `L2(R)` for `eta<1/8` and that the `N` factor
+tends to zero. The source theorem itself remains unproved, so the batch is
+`FORMALIZATION_ONLY` with `hard_gap_delta=0`; the fixed frontier does not move.
+
 ## Tier 3: Horizon
 
 `RiemannHypothesis` remains the orientation point. It is not an admissible immediate proof-loop
