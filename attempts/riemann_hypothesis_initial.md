@@ -7326,3 +7326,28 @@ Future attempt records must include:
   target, source geometry, worktree, and remaining goals were rechecked.
 - detailed record: `research/m1_reciprocal_zeta_subpower_prereg_20260711.md` and
   `attempts/m1_12_reciprocal_zeta_subpower.md`.
+
+## Batch 2026-07-11-M1-13: Mobius truncated Perron
+
+- `loop_id`: `BATCH-20260711-M1-13`
+- `node_id`: `M1`
+- `gap_id`: `G2/F1/Balazard-Saias/truncated-Perron`
+- `work_class`: `FORMALIZATION`
+- fixed target: prove the absolute uniform `C*(N+1)^2/T` Mobius truncated Perron formula with
+  `x=N+1/2` and `Re(w)=2`.
+- compiled dependency: `norm_truncatedPerronKernel_two_le_of_lt_one` proves the full quantitative
+  negative-side kernel estimate via a checked rectangle deformation.
+- unresolved exact dependency: the positive-side kernel needs the `2*pi*i` rectangle residue of
+  `1/w`; pinned Mathlib has no ready rectangle residue theorem.
+- `result_class`: `DEPENDENCY_GAP_IDENTIFIED`
+- `hard_gap_before`: truncated Perron and contour balancing remain inside Balazard-Saias.
+- `hard_gap_after`: unchanged; the sole truncated Perron target remains open.
+- `hard_gap_delta`: `0`.
+- `assumption_frontier_after`: no Perron estimate premise or new axiom; negative-side kernel is
+  checked, while positive-side residue, series interchange, and source-error summation are open.
+- model: Codex, GPT-5 family; exact backend identifier and reasoning effort are not exposed.
+- budget: unbounded persistent-goal budget; no explicit per-round token budget.
+- compaction state: resumed from a generated summary; fixed target and worktree state were
+  rechecked before implementation.
+- detailed record: `research/m1_mobius_truncated_perron_prereg_20260711.md` and
+  `attempts/m1_13_mobius_truncated_perron.md`.

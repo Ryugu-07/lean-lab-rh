@@ -39,3 +39,4 @@ or G3 in `research/hard_gap_dag.md`; therefore none is classified as `HARD_GAP_R
 | --- | --- | --- | --- |
 | M1-11 | DEPENDENCY_GAP_IDENTIFIED | 0 | Isolated the exact Titchmarsh analytic-log/Borel/Hadamard boundary and compiled the analytic logarithm branch. |
 | M1-12 | HARD_GAP_REDUCED | remove reciprocal-zeta subedge | Compiled the exact RH reciprocal-zeta arbitrary-subpower theorem used by the Balazard-Saias route. |
+| M1-13 | DEPENDENCY_GAP_IDENTIFIED | 0 | Compiled the complete negative-side truncated Perron kernel estimate and isolated the positive-side `2*pi*i` rectangle residue theorem; the sole Mobius truncated Perron target remains open. |

@@ -1,6 +1,7 @@
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.AnalyticLogBranch
 import LeanLab.Riemann.ReciprocalZetaSubpower
+import LeanLab.Riemann.TruncatedPerron
 
 set_option linter.style.header false
 
@@ -51,3 +52,6 @@ principles for each theorem below.
 #print axioms Complex.exists_differentiableOn_eqOn_exp_comp_of_isSimplyConnected
 #print axioms LeanLab.Riemann.exists_riemannZeta_differentiableLogBranch
 #print axioms LeanLab.Riemann.RiemannHypothesis.exists_reciprocalZeta_subpower_bound
+#print axioms LeanLab.Riemann.LSeries_moebius_eq_reciprocal_riemannZeta
+#print axioms LeanLab.Riemann.norm_perronIntegrand_vertical_integral_le_of_neg
+#print axioms LeanLab.Riemann.norm_truncatedPerronKernel_two_le_of_lt_one

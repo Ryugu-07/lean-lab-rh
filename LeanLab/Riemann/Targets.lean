@@ -2,6 +2,7 @@ import LeanLab.Riemann.LiScaffold
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
+import LeanLab.Riemann.TruncatedPerron
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -58,7 +59,15 @@ def rhTargets : List ResearchTarget :=
         "From zero-freeness in Re(s)>alpha, prove the uniform N^(-delta/3)(1+|Im(s)|)^eta error bound for Mobius Dirichlet partial sums on alpha+delta<=Re(s)<=1."
       leanName := none
       status := .inProgress
-      note := "Batch M1-10 encodes the exact source statement and checks its Burnol consumer chain. Batches M1-11 and M1-12 close the analytic logarithm and RH reciprocal-zeta subpower dependencies. The next source edges are truncated Perron and contour-error balancing; the Balazard-Saias estimate remains unproved." },
+      note := "Batch M1-10 encodes the exact source statement and checks its Burnol consumer chain. Batches M1-11 and M1-12 close the analytic logarithm and RH reciprocal-zeta subpower dependencies. Batch M1-13 checks the negative-side truncated Perron kernel and isolates the missing positive-side residue theorem; the full truncated Perron target and contour balancing remain open." },
+    { id := "T1.m1.truncated.perron"
+      tier := .tier1
+      title := "Formalize the source-specialized Mobius truncated Perron estimate"
+      statement :=
+        "Uniformly approximate the Mobius Dirichlet partial sum by the c=2, x=N+1/2 truncated Perron integral with an absolute C*(N+1)^2/T error."
+      leanName := none
+      status := .inProgress
+      note := "Batch M1-13 proves the right-half-plane rectangle identity, horizontal and remote-vertical estimates, and the exact negative-side c=2 kernel bound. The positive-side kernel still needs the 2*pi*i residue contribution for 1/w; series interchange and source-error summation follow after that dependency." },
     { id := "T1.m1.reciprocal.zeta.subpower"
       tier := .tier1
       title := "Close the RH reciprocal-zeta subpower component of F1"

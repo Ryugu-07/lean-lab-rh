@@ -144,3 +144,10 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   exponentiates to arbitrary positive powers, and patches finite heights by residue control and
   compactness. Result: `HARD_GAP_REDUCED`; remove only the reciprocal-zeta subpower subedge. The
   Balazard-Saias estimate, reverse criterion, G1, D, and RH remain open.
+- Batch `BATCH-20260711-M1-13` audits Titchmarsh Lemma 3.12 and formalizes the no-pole half of its
+  truncated Perron kernel argument. Lean checks the right-half-plane rectangle identity, both
+  horizontal estimates, vanishing of the remote vertical side, and the quantitative `c=2`,
+  `0<y<1` kernel bound. The sole Mobius truncated Perron target remains open: the exact next
+  dependency is the positive-side `2*pi*i` residue contribution for `1/w`, followed by series
+  interchange and source-error summation. Result: `DEPENDENCY_GAP_IDENTIFIED`;
+  `hard_gap_delta=0`.
