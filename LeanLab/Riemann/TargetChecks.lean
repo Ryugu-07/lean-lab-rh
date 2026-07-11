@@ -233,14 +233,14 @@ example :
           ‖((5 * K : ℝ) : ℂ) * baezDuarteVerticalMajorant (C * ε₀) τ‖ :=
   exists_baezDuarteZetaRatioIntegrand_majorant
 
-example (hRH : RiemannHypothesis) (hBS : BalazardSaiasEstimate)
+example (hRH : RiemannHypothesis)
     {δ η : ℝ} (hδ : 0 < δ) (hδ_top : δ ≤ 1 / 2) (hη : 0 < η) :
     ∃ K : ℝ, 0 < K ∧ ∀ (N : ℕ) (t : ℝ), 2 ≤ N →
       ‖burnolMobiusTransformedError δ N t‖ ≤
         K * (N : ℝ) ^ (-δ / 3) *
           ‖baezDuarteVerticalMajorant (3 / 8 + η) t‖ :=
-  RiemannHypothesis.exists_norm_burnolMobiusTransformedError_le
-    hRH hBS hδ hδ_top hη
+  RiemannHypothesis.exists_norm_burnolMobiusTransformedError_le_compiled
+    hRH hδ hδ_top hη
 
 example {η : ℝ} (hη : η < 1 / 8) :
     MeasureTheory.MemLp (baezDuarteVerticalMajorant (3 / 8 + η))

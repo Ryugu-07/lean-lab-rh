@@ -3,6 +3,7 @@ import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
 import LeanLab.Riemann.TruncatedPerron
+import LeanLab.Riemann.BalazardSaiasContour
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -54,12 +55,12 @@ structure ResearchTarget where
 def rhTargets : List ResearchTarget :=
   [ { id := "T1.m1.balazard.saias"
       tier := .tier1
-      title := "Prove the Balazard-Saias Mobius partial-sum estimate"
+      title := "Compile the RH-specialized Balazard-Saias Mobius estimate"
       statement :=
-        "From zero-freeness in Re(s)>alpha, prove the uniform N^(-delta/3)(1+|Im(s)|)^eta error bound for Mobius Dirichlet partial sums on alpha+delta<=Re(s)<=1."
-      leanName := none
-      status := .inProgress
-      note := "Batch M1-10 encodes the exact source statement and checks its Burnol consumer chain. Batches M1-11 and M1-12 close the analytic logarithm and RH reciprocal-zeta subpower dependencies. Batch M1-14 closes the source-specialized Mobius truncated Perron estimate. The next source edge is contour shifting and quantitative error balancing; Balazard-Saias remains unproved." },
+        "Under Mathlib.RiemannHypothesis, prove the uniform N^(-delta/3)(1+|Im(s)|)^eta error bound for Mobius Dirichlet partial sums on 1/2+delta<=Re(s)<=1, using the analytic reciprocal of zeta at s=1."
+      leanName := some ``RiemannHypothesis.exists_balazardSaias_specialized_bound_compiled
+      status := .proven
+      note := "Batch M1-15 compiles the preregistered RH specialization by contour shifting and quantitative error balancing, and discharges the Balazard-Saias premise from the Burnol forward consumer. The stronger general-alpha zero-free-half-plane proposition BalazardSaiasEstimate remains encoded but unproved." },
     { id := "T1.m1.truncated.perron"
       tier := .tier1
       title := "Formalize the source-specialized Mobius truncated Perron estimate"

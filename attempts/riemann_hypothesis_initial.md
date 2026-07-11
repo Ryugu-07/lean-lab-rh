@@ -7375,3 +7375,33 @@ Future attempt records must include:
 - compaction state: none during this batch.
 - detailed record: `research/m1_mobius_truncated_perron_prereg_m1_14_20260711.md` and
   `attempts/m1_14_mobius_truncated_perron.md`.
+
+## Batch 2026-07-11-M1-15: Balazard-Saias contour completion
+
+- `loop_id`: `BATCH-20260711-M1-15`
+- `node_id`: `M1`
+- `gap_id`: `G2/F1/Balazard-Saias/contour-shifting-and-error-balancing`
+- `work_class`: `FORMALIZATION`
+- fixed target: compile the RH-specialized `N^(-delta/3)(1+|Im(s)|)^eta` Mobius partial-sum
+  estimate and discharge `hBS` from the fixed Burnol consumer.
+- compiled results: `RiemannHypothesis.exists_balazardSaias_specialized_bound_compiled` and
+  `RiemannHypothesis.exists_norm_burnolMobiusTransformedError_le_compiled`.
+- route: analytic reciprocal through `s=1`; residue-subtracted contour integrand; exact rectangle
+  identity; logarithmic left-edge integration; horizontal estimates on the widened reciprocal-zeta
+  strip; `T=(N+1/2)^3*(1+|Im(s)|)` and checked three-way power balancing.
+- `result_class`: `HARD_GAP_REDUCED`
+- `hard_gap_before`: contour shifting and quantitative balancing remained inside F1.
+- `hard_gap_after`: RH-specialized F1 is closed; the general-alpha source proposition and reverse
+  base criterion remain open, so M1/G2 are not complete.
+- `hard_gap_delta`: remove the contour-balancing subedge and the explicit `hBS` consumer edge.
+- `assumption_frontier_after`: the compiled Burnol consumer assumes RH but not
+  `BalazardSaiasEstimate`; no new axiom or incomplete proof is used.
+- verification: full `lake build` passes with 8604 jobs; incomplete-proof and explicit-declaration
+  scans, exact target checks, trusted-dependency audit, and `git diff --check` pass. The two new main
+  theorems use only `propext`, `Classical.choice`, and `Quot.sound`.
+- model: Codex, GPT-5 family; exact backend identifier and reasoning effort are not exposed.
+- budget: unbounded persistent-goal budget; no explicit per-round token budget.
+- compaction state: resumed from a generated summary after the contour component lemmas compiled;
+  the fixed target, worktree, interfaces, and source audit were rechecked before assembly.
+- detailed record: `research/m1_balazard_saias_contour_prereg_m1_15_20260711.md` and
+  `attempts/m1_15_balazard_saias_contour.md`.

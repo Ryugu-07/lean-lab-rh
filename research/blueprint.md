@@ -1791,6 +1791,24 @@ pole at `1`. The next source edge is the Borel-Caratheodory/Hadamard derivation 
 zeta bound; Perron and contour balancing follow. Result: `DEPENDENCY_GAP_IDENTIFIED` with
 `hard_gap_delta=0`; Balazard-Saias remains open.
 
+Batch `BATCH-20260711-M1-12` compiles the RH reciprocal-zeta arbitrary-subpower bound on closed
+critical substrips using the analytic logarithm, Borel-Caratheodory, Hadamard three-circles,
+strictly sublinear logarithmic growth, and a compact low-height patch. This removes only the
+reciprocal-zeta subedge of F1.
+
+Batch `BATCH-20260711-M1-14` compiles the source-specialized truncated Perron formula with an
+absolute `C*(N+1)^2/T` error. The proof includes the crossing-pole rectangle residue, both scalar
+kernel bounds, dominated Mobius series integration, and half-integral logarithmic spacing. This
+removes only the truncated-Perron subedge.
+
+Batch `BATCH-20260711-M1-15` compiles the remaining RH-specialized contour shift and error balance.
+The source reciprocal is represented by a holomorphic extension through `s=1`, not by Mathlib's
+raw field inverse at its regularized point value. The residue-subtracted rectangle identity,
+logarithmic left-edge integral, horizontal-edge estimates, and the choice
+`T=(N+1/2)^3*(1+|Im(s)|)` yield the exact preregistered power bound. The compiled Burnol consumer
+no longer assumes `BalazardSaiasEstimate`; RH-specialized F1 is closed. The stronger general-alpha
+proposition and the reverse base criterion remain open, so M1 and RH are not proved.
+
 ## Tier 3: Horizon
 
 `RiemannHypothesis` remains the orientation point. It is not an admissible immediate proof-loop

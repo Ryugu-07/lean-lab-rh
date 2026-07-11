@@ -23,7 +23,7 @@ flowchart TD
 | --- | --- | --- | --- |
 | A | in progress | Project-local xi, Li, Nyman-Beurling, and Baez-Duarte scaffolding. | Mostly formalization scaffolding; not RH progress under v2. |
 | M0 | complete | Align project-local Nyman-Beurling/Baez-Duarte predicates with published statements. | The positive-natural Baez-Duarte closure side is aligned in real and complex `L2(0,infinity)`: parameter indexing, kernel formula, target, closed span, whole-line error, endpoint, tolerance, and coefficient field are Lean-checked. |
-| M1 | in progress | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | The exact eligible closure side is fixed. Batches M1-02 through M1-06 closed F2/F3 and the supporting transforms. Batch M1-09 closes zeta convexity, M1-12 closes RH reciprocal-zeta subpower, and M1-14 closes truncated Perron. Contour shifting and quantitative error balancing remain before Balazard-Saias is closed. |
+| M1 | in progress | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | The exact eligible closure side is fixed. Batches M1-02 through M1-15 close the RH-specialized forward convergence blocks F1/F2/F3 and their supporting transforms. The reverse base criterion and Hardy-space factorization remain. |
 | D | open | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | No direct bridge yet. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
 
@@ -32,7 +32,7 @@ flowchart TD
 | gap_id | node_id | status | description |
 | --- | --- | --- | --- |
 | G1 | M1/D | open | Formalize the classical Nyman-Beurling/Baez-Duarte equivalence with RH, using either Beurling's moment-constrained unit-interval space or Baez-Duarte's full-line space, and connect it to `Mathlib.RiemannHypothesis`. |
-| G2 | M1 | in progress | Available: full-line `L2`, finite-error/field alignment, exact kernel Mellin transforms, weighted-log Fourier-Mellin isometry and Plancherel, source power-majorant integrability, countability/nullity of critical-line zeta-zero ordinates, almost-everywhere convergence of the epsilon-dependent zeta ratio, Baez-Duarte Lemma 2.2 with an epsilon-independent `L2` majorant, the quantitative weighted-to-unweighted tail transfer, an unconditional critical-line zeta bound with exponent `3/8`, and the RH reciprocal-zeta arbitrary-subpower bound on closed critical substrips. The source tail exponent is Lean-verified as `1+2*epsilon`. Missing forward block F1 is the truncated Perron and contour-balancing remainder of the Balazard-Saias Mobius partial-sum estimate in Burnol's route. Missing reverse block: the base Nyman-Beurling criterion and its half-plane Hardy-space factorization infrastructure. |
+| G2 | M1 | in progress | Available: full-line `L2`, finite-error/field alignment, exact kernel Mellin transforms, weighted-log Fourier-Mellin isometry and Plancherel, the F2/F3 convergence blocks, the unconditional critical-line zeta `3/8` bound, and the complete RH-specialized Balazard-Saias/Burnol forward block F1. The source tail exponent is Lean-verified as `1+2*epsilon`. Missing block: the reverse base Nyman-Beurling criterion and its half-plane Hardy-space factorization infrastructure. |
 | G3 | M2 | parked | Construct unconditional finite approximants with error tending to zero. In the NB/BD framework this is essentially the hard RH direction; numerical convergence is not evidence. |
 
 ## Loop Reporting Policy
@@ -158,3 +158,10 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   with an `n^(-3/2)` majorant. The exact absolute `C*(N+1)^2/T` theorem compiles. Result:
   `HARD_GAP_REDUCED`; remove only `G2/F1/Balazard-Saias/truncated-Perron`. Contour shifting and
   error balancing remain, so Balazard-Saias and G2 are open.
+- Batch `BATCH-20260711-M1-15` closes the preregistered RH-specialized Balazard-Saias estimate.
+  Lean formalizes the analytic reciprocal at the zeta pole, the residue-subtracted rectangle
+  identity, logarithmic left-edge integration, both horizontal-edge bounds, and the simultaneous
+  choice `T=(N+1/2)^3*(1+|Im(s)|)`. The compiled Burnol consumer has no `hBS` premise. Result:
+  `HARD_GAP_REDUCED`; remove the contour-balancing subedge and close forward block F1. The stronger
+  general-alpha proposition and the reverse criterion remain open, so M1, G2, G1, D, and RH are
+  not complete.

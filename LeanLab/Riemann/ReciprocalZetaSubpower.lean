@@ -173,10 +173,10 @@ theorem norm_log_riemannZeta_le_two_of_three_le_re
 /-- Center of the local Borel and three-circles argument. -/
 def reciprocalZetaBorelCenter (t : ℝ) : ℂ := (4 : ℂ) + t * Complex.I
 
-/-- On the horizontal line through the Borel center, points in the critical strip have purely
+/-- On the horizontal line through the Borel center, points to the left of `Re(s)=3` have purely
 real displacement from that center. -/
 theorem norm_sub_reciprocalZetaBorelCenter_eq
-    {s : ℂ} {t : ℝ} (hsim : s.im = t) (hsre : s.re ≤ 1) :
+    {s : ℂ} {t : ℝ} (hsim : s.im = t) (hsre : s.re ≤ 3) :
     ‖s - reciprocalZetaBorelCenter t‖ = 4 - s.re := by
   let c := reciprocalZetaBorelCenter t
   have hc_re : c.re = 4 := by simp [c, reciprocalZetaBorelCenter]
@@ -718,7 +718,7 @@ theorem RiemannHypothesis.exists_logBranch_three_circles_bound
         Set.EqOn (Complex.exp ∘ f) riemannZeta
           (Metric.ball (reciprocalZetaBorelCenter t)
             (reciprocalZetaBorelOuterRadius (delta / 2))) ∧
-        ∀ s : ℂ, s.im = t → s.re ∈ Set.Icc (1 / 2 + delta : ℝ) 1 →
+        ∀ s : ℂ, s.im = t → s.re ∈ Set.Icc (1 / 2 + delta : ℝ) 3 →
           ‖f s‖ ≤
             2 ^ (1 - reciprocalZetaThreeCirclesExponent delta
               ‖s - reciprocalZetaBorelCenter t‖) *
@@ -783,7 +783,7 @@ theorem RiemannHypothesis.exists_logBranch_log_rpow_bound
           Set.EqOn (Complex.exp ∘ f) riemannZeta
             (Metric.ball (reciprocalZetaBorelCenter t)
               (reciprocalZetaBorelOuterRadius (delta / 2))) ∧
-          ∀ s : ℂ, s.im = t → s.re ∈ Set.Icc (1 / 2 + delta : ℝ) 1 →
+          ∀ s : ℂ, s.im = t → s.re ∈ Set.Icc (1 / 2 + delta : ℝ) 3 →
             ‖f s‖ ≤
               (2 * (160 / delta) ^ theta) * (Real.log (2 + |t|)) ^ theta := by
   let theta := reciprocalZetaThreeCirclesMaxExponent delta
@@ -851,7 +851,7 @@ theorem RiemannHypothesis.exists_reciprocalZeta_rpow_bound_at_large_logHeight
     (hdelta_le : delta ≤ 1 / 2) (heta : 0 < eta) :
     ∃ A : ℝ, ∀ s : ℂ,
       5 ≤ |s.im| → A ≤ Real.log (2 + |s.im|) →
-      s.re ∈ Set.Icc (1 / 2 + delta : ℝ) 1 →
+      s.re ∈ Set.Icc (1 / 2 + delta : ℝ) 3 →
       ‖(riemannZeta s)⁻¹‖ ≤ (2 + |s.im|) ^ eta := by
   let theta := reciprocalZetaThreeCirclesMaxExponent delta
   let K := 2 * (160 / delta) ^ theta
@@ -900,7 +900,7 @@ theorem RiemannHypothesis.exists_reciprocalZeta_rpow_bound_two_add
     (hRH : RiemannHypothesis) {delta eta : ℝ} (hdelta : 0 < delta)
     (hdelta_le : delta ≤ 1 / 2) (heta : 0 < eta) :
     ∃ C : ℝ, 0 < C ∧ ∀ s : ℂ,
-      s.re ∈ Set.Icc (1 / 2 + delta : ℝ) 1 →
+      s.re ∈ Set.Icc (1 / 2 + delta : ℝ) 3 →
       ‖(riemannZeta s)⁻¹‖ ≤ C * (2 + |s.im|) ^ eta := by
   obtain ⟨A, hlarge⟩ :=
     RiemannHypothesis.exists_reciprocalZeta_rpow_bound_at_large_logHeight
@@ -909,7 +909,7 @@ theorem RiemannHypothesis.exists_reciprocalZeta_rpow_bound_two_add
     exists_norm_reciprocal_riemannZeta_le_near_one
   let T := max 5 (Real.exp A)
   let rectangle : Set ℂ :=
-    Set.Icc (1 / 2 + delta : ℝ) 1 ×ℂ Set.Icc (-T) T
+    Set.Icc (1 / 2 + delta : ℝ) 3 ×ℂ Set.Icc (-T) T
   let compactPart : Set ℂ := rectangle \ Metric.ball 1 epsilon
   have hT_pos : 0 < T := lt_of_lt_of_le (by norm_num) (le_max_left _ _)
   have hcompact : IsCompact compactPart := by
@@ -923,7 +923,7 @@ theorem RiemannHypothesis.exists_reciprocalZeta_rpow_bound_two_add
       subst s
       exact hs.2 (Metric.mem_ball_self hepsilon)
     have hsrect : s ∈ rectangle := hs.1
-    change s ∈ Set.Icc (1 / 2 + delta : ℝ) 1 ×ℂ Set.Icc (-T) T at hsrect
+    change s ∈ Set.Icc (1 / 2 + delta : ℝ) 3 ×ℂ Set.Icc (-T) T at hsrect
     rw [Complex.mem_reProdIm] at hsrect
     have hzeta_ne : riemannZeta s ≠ 0 :=
       RiemannHypothesis.riemannZeta_ne_zero_of_half_le_lt_re hRH (by rfl) (by
@@ -953,7 +953,7 @@ theorem RiemannHypothesis.exists_reciprocalZeta_rpow_bound_two_add
       by_cases hs_ball : s ∈ Metric.ball 1 epsilon
       · exact (hpole s (Metric.mem_ball.mp hs_ball)).trans (le_max_left _ _)
       · have hs_rectangle : s ∈ rectangle := by
-          change s ∈ Set.Icc (1 / 2 + delta : ℝ) 1 ×ℂ Set.Icc (-T) T
+          change s ∈ Set.Icc (1 / 2 + delta : ℝ) 3 ×ℂ Set.Icc (-T) T
           rw [Complex.mem_reProdIm]
           refine ⟨hsre, ?_⟩
           exact ⟨by linarith [neg_abs_le s.im], by linarith [le_abs_self s.im]⟩
@@ -983,12 +983,14 @@ theorem RiemannHypothesis.exists_reciprocalZeta_subpower_bound
   have hC' : 0 < C' := mul_pos hC htwo_power_pos
   refine ⟨C', hC', ?_⟩
   intro s hsre
+  have hsre' : s.re ∈ Set.Icc (1 / 2 + delta : ℝ) 3 :=
+    ⟨hsre.1, hsre.2.trans (by norm_num)⟩
   have hbase : 2 + |s.im| ≤ 2 * (1 + |s.im|) := by
     linarith [abs_nonneg s.im]
   have hpower : (2 + |s.im|) ^ eta ≤ (2 * (1 + |s.im|)) ^ eta :=
     Real.rpow_le_rpow (by positivity) hbase heta.le
   calc
-    ‖(riemannZeta s)⁻¹‖ ≤ C * (2 + |s.im|) ^ eta := hbound s hsre
+    ‖(riemannZeta s)⁻¹‖ ≤ C * (2 + |s.im|) ^ eta := hbound s hsre'
     _ ≤ C * (2 * (1 + |s.im|)) ^ eta :=
       mul_le_mul_of_nonneg_left hpower hC.le
     _ = C' * (1 + |s.im|) ^ eta := by

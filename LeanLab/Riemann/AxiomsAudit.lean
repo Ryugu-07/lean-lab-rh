@@ -2,6 +2,7 @@ import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.AnalyticLogBranch
 import LeanLab.Riemann.ReciprocalZetaSubpower
 import LeanLab.Riemann.TruncatedPerron
+import LeanLab.Riemann.BalazardSaiasContour
 
 set_option linter.style.header false
 
@@ -59,3 +60,5 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.norm_truncatedPerronKernel_two_sub_one_le_of_one_lt
 #print axioms LeanLab.Riemann.hasSum_integral_mobiusPerronSeriesTerm
 #print axioms LeanLab.Riemann.exists_mobiusDirichletPartialSum_sub_truncatedPerronIntegral_le
+#print axioms LeanLab.Riemann.RiemannHypothesis.exists_balazardSaias_specialized_bound_compiled
+#print axioms LeanLab.Riemann.RiemannHypothesis.exists_norm_burnolMobiusTransformedError_le_compiled

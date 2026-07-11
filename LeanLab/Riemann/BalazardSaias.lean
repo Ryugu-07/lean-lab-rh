@@ -23,6 +23,23 @@ def mobiusDirichletPartialSum (N : ℕ) (s : ℂ) : ℂ :=
   ∑ n ∈ Finset.Icc 1 N,
     ((ArithmeticFunction.moebius n : ℤ) : ℂ) * (n : ℂ) ^ (-s)
 
+/-- The source meaning of `1 / zeta(s)`, extended holomorphically through the pole at `s = 1`.
+Mathlib assigns zeta a finite regularized point value at one, so the raw field inverse is not the
+function occurring in the Balazard-Saias estimate at that endpoint. -/
+def analyticReciprocalRiemannZeta (s : ℂ) : ℂ :=
+  (s - 1) / zetaPoleRemoved s
+
+@[simp]
+theorem analyticReciprocalRiemannZeta_one : analyticReciprocalRiemannZeta 1 = 0 := by
+  simp [analyticReciprocalRiemannZeta]
+
+theorem analyticReciprocalRiemannZeta_eq_inv
+    {s : ℂ} (hs_one : s ≠ 1) (hs_zero : riemannZeta s ≠ 0) :
+    analyticReciprocalRiemannZeta s = (riemannZeta s)⁻¹ := by
+  have hsub : s - 1 ≠ 0 := sub_ne_zero.mpr hs_one
+  rw [analyticReciprocalRiemannZeta, zetaPoleRemoved_eq hs_one]
+  field_simp [hsub, hs_zero]
+
 /-- The exact uniform estimate quoted as Baez-Duarte Lemma 2.1.
 
 Defining this proposition does not assert that it holds. In particular, it may only be used by
@@ -33,7 +50,7 @@ def BalazardSaiasEstimate : Prop :=
       (∀ s : ℂ, α < s.re → riemannZeta s ≠ 0) →
         ∃ C : ℝ, 0 < C ∧ ∀ (N : ℕ) (s : ℂ),
           2 ≤ N → α + δ ≤ s.re → s.re ≤ 1 →
-            ‖mobiusDirichletPartialSum N s - (riemannZeta s)⁻¹‖ ≤
+          ‖mobiusDirichletPartialSum N s - analyticReciprocalRiemannZeta s‖ ≤
               C * (N : ℝ) ^ (-δ / 3) * (1 + |s.im|) ^ η
 
 /-- Under RH, the already-compiled zero-free bridge supplies exactly the analytic premise in the
@@ -43,7 +60,7 @@ theorem RiemannHypothesis.exists_balazardSaias_specialized_bound
     {δ η : ℝ} (hδ : 0 < δ) (hη : 0 < η) :
     ∃ C : ℝ, 0 < C ∧ ∀ (N : ℕ) (s : ℂ),
       2 ≤ N → (1 / 2 : ℝ) + δ ≤ s.re → s.re ≤ 1 →
-        ‖mobiusDirichletPartialSum N s - (riemannZeta s)⁻¹‖ ≤
+        ‖mobiusDirichletPartialSum N s - analyticReciprocalRiemannZeta s‖ ≤
           C * (N : ℝ) ^ (-δ / 3) * (1 + |s.im|) ^ η := by
   apply hBS (1 / 2) δ η (by rfl) (by norm_num) hδ hη
   intro s hs
@@ -157,7 +174,7 @@ theorem exists_norm_riemannZeta_div_criticalLine_le_rpow :
 def burnolMobiusTransformedError (δ : ℝ) (N : ℕ) (t : ℝ) : ℂ :=
   let s : ℂ := (1 / 2 : ℂ) + t * Complex.I
   riemannZeta s / s *
-    (mobiusDirichletPartialSum N (s + δ) - (riemannZeta (s + δ))⁻¹)
+    (mobiusDirichletPartialSum N (s + δ) - analyticReciprocalRiemannZeta (s + δ))
 
 theorem norm_baezDuarteVerticalMajorant_three_eighths_add
     (η t : ℝ) :
@@ -189,18 +206,18 @@ theorem RiemannHypothesis.exists_norm_burnolMobiusTransformedError_le
   have hz_re : z.re = (1 / 2 : ℝ) + δ := by simp [z, s]
   have hz_im : z.im = t := by simp [z, s]
   have hmobius' :
-      ‖mobiusDirichletPartialSum N z - (riemannZeta z)⁻¹‖ ≤
+      ‖mobiusDirichletPartialSum N z - analyticReciprocalRiemannZeta z‖ ≤
         B * (N : ℝ) ^ (-δ / 3) * x ^ η := by
     have h := hmobius N z hN (by rw [hz_re]) (by rw [hz_re]; linarith)
     simpa only [hz_im, x] using h
   have hquot' : ‖riemannZeta s / s‖ ≤ A * x ^ (-5 / 8 : ℝ) := by
     simpa only [s, x] using hquot t
   change ‖riemannZeta s / s *
-    (mobiusDirichletPartialSum N z - (riemannZeta z)⁻¹)‖ ≤ _
+    (mobiusDirichletPartialSum N z - analyticReciprocalRiemannZeta z)‖ ≤ _
   rw [norm_mul]
   calc
     ‖riemannZeta s / s‖ *
-        ‖mobiusDirichletPartialSum N z - (riemannZeta z)⁻¹‖
+        ‖mobiusDirichletPartialSum N z - analyticReciprocalRiemannZeta z‖
         ≤ (A * x ^ (-5 / 8 : ℝ)) *
           (B * (N : ℝ) ^ (-δ / 3) * x ^ η) := by gcongr
     _ = (A * B) * (N : ℝ) ^ (-δ / 3) *
