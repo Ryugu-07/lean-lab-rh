@@ -61,4 +61,5 @@ separate F1/F2/F3 estimates is not itself that theorem. M1, G1, D, and RH remain
 Full `lake build` passes with 8605 jobs. Incomplete-proof and explicit-declaration scans over
 `LeanLab` and `PrimeNumberTheoremAnd` have no matches, and `git diff --check` passes. The two main
 theorems depend only on `propext`, `Classical.choice`, and `Quot.sound`. Public CI is recorded after
-the batch commit is pushed.
+the batch commit is pushed: commit `e17c7e7` passes Lean Action CI run `29152779507`, job
+`86544889780`, in 2m9s.

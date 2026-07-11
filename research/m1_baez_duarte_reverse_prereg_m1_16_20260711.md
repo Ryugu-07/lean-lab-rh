@@ -102,4 +102,5 @@ None of these inputs asserts the target implication.
 - `compaction_since_previous_loop`: no
 - `verification`: full `lake build` passes with 8605 jobs; incomplete-proof and explicit-declaration
   scans have no matches; target checks, axiom audit, and `git diff --check` pass. The two compiled
-  main theorems use only `propext`, `Classical.choice`, and `Quot.sound`.
+  main theorems use only `propext`, `Classical.choice`, and `Quot.sound`. Public commit `e17c7e7`
+  passes Lean Action CI run `29152779507`, job `86544889780`.

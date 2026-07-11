@@ -7428,7 +7428,8 @@ Future attempt records must include:
   no new axiom or incomplete proof is used.
 - verification: full `lake build` passes with 8605 jobs; incomplete-proof and explicit-declaration
   scans, exact target checks, trusted-dependency audit, and `git diff --check` pass. The two new main
-  theorems use only `propext`, `Classical.choice`, and `Quot.sound`.
+  theorems use only `propext`, `Classical.choice`, and `Quot.sound`. Public commit `e17c7e7` passes
+  Lean Action CI run `29152779507` (job `86544889780`).
 - model: Codex, GPT-5 family; exact backend identifier and reasoning effort are not exposed.
 - budget: unbounded persistent-goal budget; no explicit per-round token budget.
 - compaction state: none during this batch.
