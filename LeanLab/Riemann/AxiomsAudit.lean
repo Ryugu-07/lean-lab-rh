@@ -8,6 +8,7 @@ import LeanLab.Riemann.BaezDuarteForward
 import LeanLab.Riemann.BaezDuarteForwardLimit
 import LeanLab.Riemann.BurnolLowerBound
 import LeanLab.Riemann.BurnolA
+import LeanLab.Riemann.BurnolHardy
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -85,3 +86,9 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.burnolA_memLp_two_positiveHalfLine
 #print axioms LeanLab.Riemann.mellin_burnolComplexFractionalPartTail_eq
 #print axioms LeanLab.Riemann.hasMellin_burnolA
+#print axioms LeanLab.Riemann.norm_burnolHardyInverseMultiplier
+#print axioms LeanLab.Riemann.hasMellin_burnolChiOne
+#print axioms LeanLab.Riemann.burnolHardyInverseL2_target
+#print axioms LeanLab.Riemann.burnolHardyInverseL2_kernel
+#print axioms LeanLab.Riemann.burnolHardyInverseL2_map_kernelSpan
+#print axioms LeanLab.Riemann.burnolDistance_eq_modelDistance

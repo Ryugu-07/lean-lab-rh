@@ -2,6 +2,7 @@ import LeanLab.Riemann.Targets
 import LeanLab.Riemann.BaezDuarteZetaRatio
 import LeanLab.Riemann.BurnolLowerBound
 import LeanLab.Riemann.BurnolA
+import LeanLab.Riemann.BurnolHardy
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -307,6 +308,28 @@ example (s : ℂ) (hs0 : 0 < s.re) (hs1 : s.re < 1) :
     HasMellin (fun t : ℝ => (burnolA t : ℂ)) s
       ((s - 1) * riemannZeta s / s ^ 2) :=
   hasMellin_burnolA s hs0 hs1
+
+noncomputable example :
+    positiveHalfLineComplexL2 ≃ₗᵢ[ℂ] positiveHalfLineComplexL2 :=
+  burnolHardyInverseL2
+
+example :
+    burnolHardyInverseL2 baezDuarteComplexTargetL2 = burnolChiOneL2 :=
+  burnolHardyInverseL2_target
+
+example (theta : burnolContinuousParameter) :
+    burnolHardyInverseL2 (burnolContinuousKernelL2 theta) =
+      -burnolModelKernelL2 theta :=
+  burnolHardyInverseL2_kernel theta
+
+example (cutoff : ℝ) :
+    (burnolKernelSpan cutoff).map burnolHardyInverseL2.toLinearMap =
+      burnolModelKernelSpan cutoff :=
+  burnolHardyInverseL2_map_kernelSpan cutoff
+
+example (cutoff : ℝ) :
+    burnolDistance cutoff = burnolModelDistance cutoff :=
+  burnolDistance_eq_modelDistance cutoff
 
 example (hRH : RiemannHypothesis) {δ : ℝ}
     (hδ : 0 < δ) (hδ_top : δ ≤ 1 / 2) :

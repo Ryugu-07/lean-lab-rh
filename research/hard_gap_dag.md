@@ -27,7 +27,7 @@ flowchart TD
 | M1 | complete | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | Batch M1-18 compiles both directions of the exact strong positive-natural Baez-Duarte criterion in full-half-line complex `L2`. |
 | D | complete | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | `riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure` is the exact compiled bridge. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
-| B1 | in progress | Formalize Burnol's published quantitative lower bound for the Nyman-Beurling approximation distance. | Batch G4-F0 closes the continuous/natural alignment. Audit G4-F1-01 recovers the unitary model. Batch G4-F1a closes the explicit source function, `L2`, and Mellin-transform edge; F1b is next. This is known mathematics, not M2 progress. |
+| B1 | in progress | Formalize Burnol's published quantitative lower bound for the Nyman-Beurling approximation distance. | Batch G4-F0 closes the continuous/natural alignment. Batches G4-F1a/F1b close the explicit source function and complete unitary distance model. F2, the source vectors and orthogonality block, is next. This is known mathematics, not M2 progress. |
 
 ## Hard Gaps
 
@@ -44,8 +44,8 @@ flowchart TD
 | --- | --- | --- |
 | F0 | complete | Continuous `B_lambda`, finite natural `V_N`, distances, `V_N <= B_(1/N)`, `D(1/N) <= d_N`, and `1/N -> 0+` are Lean-checked in `BurnolLowerBound.lean`. |
 | F1a | complete | `BurnolA.lean` defines the explicit floor formula, proves support in `(0,1]`, the exact Hardy-tail identity, `L2` membership, and `HasMellin A s ((s-1)zeta(s)/s^2)` for `0<Re(s)<1`. |
-| F1b | open, selected | The unitary multiplier `(s-1)/s`, its action on `chi` and `rho(1/t)`, span transport, and `D(lambda)=dist(chi1,C_lambda)`. |
-| F2 | open | Existence and orthogonality of the vectors `Y(lambda,s,k)`. |
+| F1b | complete | `BurnolHardy.lean` constructs the critical-line phase isometry, proves its explicit action on `chi` and every `rho(theta/t)`, transports the explicit model span, and proves `D(lambda)=dist(chi1,C_lambda)`. |
+| F2 | open, selected | Existence and orthogonality of the vectors `Y(lambda,s,k)`. |
 | F3 | open | Gram-block and target-pairing asymptotics, including the Hilbert/Cauchy inverse entry `m^2`. |
 | F4 | open | Finite-zero-set liminf lower bound under RH. |
 | F5 | open | Full zero sum, optional off-RH branch, and natural-distance asymptotic transfer. |
@@ -230,3 +230,9 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   representation and `L2` membership, establishes absolute integrability on the triangle
   `0<t<u`, and uses Fubini to prove `Mellin(A)(s)=(s-1)zeta(s)/s^2` on `0<Re(s)<1`. Result:
   `KNOWN_THEOREM_FORMALIZED`; close only G4/F1a and select F1b. F2-F5 and M2/G3 are unchanged.
+- Batch `BATCH-20260713-G4-F1B` closes the complete unitary distance-model edge. Lean constructs
+  the critical-line multiplier `(s-1)/s` as a complex `L2` isometric equivalence, conjugates it by
+  Fourier-Mellin, proves `T chi=chi1` and `T rho(theta/t)=-A(t/theta)` for every admissible
+  `theta`, maps the original span exactly onto the explicit model span, and proves the exact
+  distance equality. Result: `KNOWN_THEOREM_FORMALIZED`; close only G4/F1b and select F2. F3-F5
+  and M2/G3 are unchanged.

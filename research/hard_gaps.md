@@ -10,7 +10,7 @@ hard-gap identifiers used by the v2 loop protocol.
 | G1 | M1/D | complete |
 | G2 | M1 | complete |
 | G3 | M2 | parked |
-| G4 | B1 | in progress; F0 and F1a complete, F1b selected |
+| G4 | B1 | in progress; F0, F1a, and F1b complete, F2 selected |
 
 Future attempt logs must copy `hard_gap_before`, `hard_gap_after`, and `hard_gap_delta` from
 `research/hard_gap_dag.md`, not from self-created local targets.

@@ -7,6 +7,7 @@ import LeanLab.Riemann.BalazardSaiasContour
 import LeanLab.Riemann.BaezDuarteReverse
 import LeanLab.Riemann.BaezDuarteForward
 import LeanLab.Riemann.BaezDuarteForwardLimit
+import LeanLab.Riemann.BurnolHardy
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -527,7 +528,7 @@ def rhTargets : List ResearchTarget :=
         "Align and formalize Burnol's published lower bound liminf D(lambda)*sqrt(log(1/lambda)) >= sqrt(sum_rho m_rho^2/|rho|^2), and transfer its natural-subspace consequence d_N^2 >= C/log N without treating it as RH progress."
       leanName := none
       status := .inProgress
-      note := "Admitted by the independent Arch M1 audit of 2026-07-13 as the post-M1 research line. Audit G4-01 fixes source dependencies F0-F5; Batch G4-F0 Lean-checks the continuous/natural transfer. Audit G4-F1-01 recovers the exact unitary model, signs, and dilation normalization. Batch G4-F1a formalizes the explicit Burnol A, its support and L2 membership, and its exact Mellin transform Z(s)=(s-1)zeta(s)/s^2. F1b, the multiplier isometry and distance assembly, is next. This is known mathematics and a quantitative obstruction, not M2/G3 progress." },
+      note := "Admitted by the independent Arch M1 audit of 2026-07-13 as the post-M1 research line. Audit G4-01 fixes source dependencies F0-F5; Batch G4-F0 Lean-checks the continuous/natural transfer. Audit G4-F1-01 recovers the exact unitary model, signs, and dilation normalization. Batch G4-F1a formalizes the explicit Burnol A and its Mellin transform. Batch G4-F1b constructs the critical-line phase isometry, proves T chi=chi1 and T rho(theta/t)=-A(t/theta), transports the explicit spans, and proves the exact distance equality. F2, the source vectors and orthogonality block, is next. This is known mathematics and a quantitative obstruction, not M2/G3 progress." },
     { id := "T3.rh.horizon"
       tier := .tier3
       title := "Riemann Hypothesis horizon"

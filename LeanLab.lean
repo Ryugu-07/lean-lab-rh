@@ -21,6 +21,7 @@ import LeanLab.Riemann.BaezDuarteForward
 import LeanLab.Riemann.BaezDuarteForwardLimit
 import LeanLab.Riemann.BurnolLowerBound
 import LeanLab.Riemann.BurnolA
+import LeanLab.Riemann.BurnolHardy
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.TargetChecks
 import LeanLab.Riemann.AxiomsAudit
