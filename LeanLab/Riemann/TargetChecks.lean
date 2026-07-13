@@ -3,6 +3,7 @@ import LeanLab.Riemann.BaezDuarteZetaRatio
 import LeanLab.Riemann.BurnolLowerBound
 import LeanLab.Riemann.BurnolA
 import LeanLab.Riemann.BurnolHardy
+import LeanLab.Riemann.BurnolY
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -23,7 +24,7 @@ example
     RiemannHypothesis :=
   baezDuarteComplexTarget_mem_closure_imp_riemannHypothesis h
 
-open scoped ENNReal FourierTransform
+open scoped ENNReal FourierTransform Topology
 
 /-- Name-resolution witness for every `.proven` ledger target with a `leanName`. -/
 def checkedTargetNames : List Lean.Name :=
@@ -330,6 +331,53 @@ example (cutoff : ℝ) :
 example (cutoff : ℝ) :
     burnolDistance cutoff = burnolModelDistance cutoff :=
   burnolDistance_eq_modelDistance cutoff
+
+example {lambda : ℝ} (hlambda0 : 0 < lambda) (hlambda1 : lambda ≤ 1)
+    (s : ℂ) (k : ℕ) (hs : s.re = 1 / 2) :
+    Filter.Tendsto (fun w : ℂ => burnolPreY lambda w k)
+      (𝓝[{w : ℂ | w.re < 1 / 2}] s)
+      (𝓝 (burnolY lambda s k)) :=
+  tendsto_burnolPreY hlambda0 hlambda1 s k hs
+
+example {lambda t : ℝ} (hlt : t < lambda) (s : ℂ) (k : ℕ) :
+    burnolYTransformed lambda s k t = 0 :=
+  burnolYTransformed_eq_zero_of_lt hlt s k
+
+example {lambda t : ℝ} (hlambdaT : lambda ≤ t)
+    (s : ℂ) (k : ℕ) (hs0 : 0 < s.re) (hs1 : s.re < 1)
+    (ht0 : 0 < t) (ht1 : t ≤ 1) :
+    ‖burnolYTransformed lambda s k t -
+        iteratedDeriv k
+          (fun z : ℂ => burnolVSpectral z * (t : ℂ) ^ (-z)) s‖ ≤
+      4 * burnolPhiSeriesBound k :=
+  norm_burnolYTransformed_sub_V_cpow_le
+    hlambdaT s k hs0 hs1 ht0 ht1
+
+example {lambda t : ℝ} (hlambda1 : lambda ≤ 1)
+    (s : ℂ) (k : ℕ) (hs0 : 0 < s.re) (hs1 : s.re < 1)
+    (ht : 1 ≤ t) :
+    ‖burnolYTransformed lambda s k t‖ ≤
+      burnolPhiHardySquareLargeCoeff s k *
+        (1 + |Real.log t|) ^ 2 / t :=
+  norm_burnolYTransformed_le_large hlambda1 s k hs0 hs1 ht
+
+example {lambda : ℝ} (hlambda0 : 0 < lambda) (hlambda1 : lambda ≤ 1)
+    (theta : burnolContinuousParameter) (s : ℂ) (k : ℕ)
+    (hlambdaTheta : lambda ≤ (theta : ℝ)) (hs : s.re = 1 / 2) :
+    inner (𝕜 := ℂ) (burnolY lambda s k)
+        (burnolNormalizedModelKernelL2 theta) =
+      (-1 : ℂ) ^ k *
+        iteratedDeriv k (burnolDirectPairingSource theta) s :=
+  inner_burnolY_normalizedModelKernel
+    hlambda0 hlambda1 theta s k hlambdaTheta hs
+
+example {lambda : ℝ} (hlambda0 : 0 < lambda) (hlambda1 : lambda ≤ 1)
+    (s : ℂ) (k : ℕ) (hs : s.re = 1 / 2)
+    (hzeta : riemannZeta s = 0)
+    (horder : (k + 1 : ℕ∞) ≤ analyticOrderAt riemannZeta s) :
+    burnolY lambda s k ∈ (burnolModelKernelSpan lambda)ᗮ :=
+  burnolY_mem_modelKernelSpan_orthogonal
+    hlambda0 hlambda1 s k hs hzeta horder
 
 example (hRH : RiemannHypothesis) {δ : ℝ}
     (hδ : 0 < δ) (hδ_top : δ ≤ 1 / 2) :

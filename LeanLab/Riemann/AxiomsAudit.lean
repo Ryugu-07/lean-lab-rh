@@ -9,6 +9,7 @@ import LeanLab.Riemann.BaezDuarteForwardLimit
 import LeanLab.Riemann.BurnolLowerBound
 import LeanLab.Riemann.BurnolA
 import LeanLab.Riemann.BurnolHardy
+import LeanLab.Riemann.BurnolY
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -92,3 +93,11 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.burnolHardyInverseL2_kernel
 #print axioms LeanLab.Riemann.burnolHardyInverseL2_map_kernelSpan
 #print axioms LeanLab.Riemann.burnolDistance_eq_modelDistance
+#print axioms LeanLab.Riemann.ae_burnolAPhaseMultiplier_eq_source
+#print axioms LeanLab.Riemann.burnolAPhaseL2_burnolPsiL2_eq_hardySquare
+#print axioms LeanLab.Riemann.tendsto_burnolPreY
+#print axioms LeanLab.Riemann.burnolAPhaseL2_burnolY_coeFn
+#print axioms LeanLab.Riemann.norm_burnolYTransformed_sub_V_cpow_le
+#print axioms LeanLab.Riemann.norm_burnolYTransformed_le_large
+#print axioms LeanLab.Riemann.inner_burnolY_normalizedModelKernel
+#print axioms LeanLab.Riemann.burnolY_mem_modelKernelSpan_orthogonal
