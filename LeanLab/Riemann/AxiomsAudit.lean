@@ -10,6 +10,7 @@ import LeanLab.Riemann.BurnolLowerBound
 import LeanLab.Riemann.BurnolA
 import LeanLab.Riemann.BurnolHardy
 import LeanLab.Riemann.BurnolY
+import LeanLab.Riemann.BurnolGram
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -101,3 +102,15 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.norm_burnolYTransformed_le_large
 #print axioms LeanLab.Riemann.inner_burnolY_normalizedModelKernel
 #print axioms LeanLab.Riemann.burnolY_mem_modelKernelSpan_orthogonal
+#print axioms LeanLab.Riemann.tendsto_inner_burnolX
+#print axioms LeanLab.Riemann.burnolChiOnePhase_isBigO_sq
+#print axioms LeanLab.Riemann.burnolAPhaseL2_chiOne
+#print axioms LeanLab.Riemann.tendsto_sqrtLog_inner_chiOne_burnolX
+#print axioms LeanLab.Riemann.burnolHilbertMatrix_isUnit_det
+#print axioms LeanLab.Riemann.burnolHilbertMatrix_inv_zero_zero
+#print axioms LeanLab.Riemann.tendsto_burnolGramMatrix_inv
+#print axioms LeanLab.Riemann.tendsto_burnolBlockGramMatrix
+#print axioms LeanLab.Riemann.tendsto_burnolBlockGramMatrix_inv
+#print axioms LeanLab.Riemann.tendsto_burnolFiniteGramMatrix
+#print axioms LeanLab.Riemann.burnolFiniteHilbertMatrix_isUnit_det
+#print axioms LeanLab.Riemann.tendsto_burnolFiniteGramMatrix_inv

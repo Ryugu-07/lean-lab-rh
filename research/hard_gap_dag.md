@@ -27,7 +27,7 @@ flowchart TD
 | M1 | complete | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | Batch M1-18 compiles both directions of the exact strong positive-natural Baez-Duarte criterion in full-half-line complex `L2`. |
 | D | complete | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | `riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure` is the exact compiled bridge. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
-| B1 | in progress | Formalize Burnol's published quantitative lower bound for the Nyman-Beurling approximation distance. | Batches G4-F0 through F2 close the continuous/natural alignment, explicit source function, unitary distance model, and exact boundary vectors with source estimates and order orthogonality. F3 finite-dimensional Gram/Cauchy asymptotics is selected. This is known mathematics, not M2 progress. |
+| B1 | in progress | Formalize Burnol's published quantitative lower bound for the Nyman-Beurling approximation distance. | Batches G4-F0 through F2 are public. F3's full finite-dimensional Gram/Cauchy and target-pairing surface is locally verified, including unequal source multiplicities; its public-CI gate is pending. This is known mathematics, not M2 progress. |
 
 ## Hard Gaps
 
@@ -46,7 +46,7 @@ flowchart TD
 | F1a | complete | `BurnolA.lean` defines the explicit floor formula, proves support in `(0,1]`, the exact Hardy-tail identity, `L2` membership, and `HasMellin A s ((s-1)zeta(s)/s^2)` for `0<Re(s)<1`. |
 | F1b | complete | `BurnolHardy.lean` constructs the critical-line phase isometry, proves its explicit action on `chi` and every `rho(theta/t)`, transports the explicit model span, and proves `D(lambda)=dist(chi1,C_lambda)`. |
 | F2 | complete | `BurnolY.lean` constructs the second source phase `V`, physical cutoff `Q_lambda`, `psi(w,k)`, the BBLS/Burnol oscillatory continuation, critical-line `L2` limits `Y(lambda,s,k)`, lambda-independent transformed representative bounds, exact model-kernel pairings, and analytic-order orthogonality to the full model span. |
-| F3 | open, selected | Gram-block and target-pairing asymptotics, including the Hilbert/Cauchy inverse entry `m^2`. |
+| F3 | open, selected; public-CI gate | Gram-block and target-pairing asymptotics are locally verified, including the Hilbert/Cauchy inverse entry `m^2` and unequal multiplicity blocks. |
 | F4 | open | Finite-zero-set liminf lower bound under RH. |
 | F5 | open | Full zero sum, optional off-RH branch, and natural-distance asymptotic transfer. |
 
@@ -250,3 +250,11 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   bounds, proves the direct normalized source pairing, and converts analytic zeta order to
   orthogonality against the complete model span. Result: `KNOWN_THEOREM_FORMALIZED`; close F2 and
   select F3. F4-F5 and M2/G3 are unchanged.
+- Batch `BATCH-20260714-G4-F3` is locally Lean-complete as one indivisible source-formalization
+  batch. The actual normalized Gram entries, physical `chi1` image and both target-pairing cases,
+  explicit `O(t^2)` small-end decay, Hilbert determinant and inverse `(0,0)=m^2`, generic inverse
+  continuity, and actual finite Burnol block/inverse limits all compile without new premises. The
+  final source-facing block is indexed by `Sigma a, Fin (multiplicity a)`, allowing unequal
+  multiplicities at distinct critical parameters. Exact target checks, standard-only axiom
+  output, scans, diff check, and the 8613-job local build pass. The implementation/public-CI gate
+  is pending, so F3 remains selected and F4-F5 remain forbidden; M2/G3 remain parked and unchanged.

@@ -4,6 +4,7 @@ import LeanLab.Riemann.BurnolLowerBound
 import LeanLab.Riemann.BurnolA
 import LeanLab.Riemann.BurnolHardy
 import LeanLab.Riemann.BurnolY
+import LeanLab.Riemann.BurnolGram
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -378,6 +379,85 @@ example {lambda : ℝ} (hlambda0 : 0 < lambda) (hlambda1 : lambda ≤ 1)
     burnolY lambda s k ∈ (burnolModelKernelSpan lambda)ᗮ :=
   burnolY_mem_modelKernelSpan_orthogonal
     hlambda0 hlambda1 s k hs hzeta horder
+
+example {s₁ s₂ : ℂ} (hs₁ : s₁.re = 1 / 2) (hs₂ : s₂.re = 1 / 2)
+    (k l : ℕ) :
+    Filter.Tendsto (fun lambda : ℝ =>
+      inner ℂ (burnolX lambda s₂ l) (burnolX lambda s₁ k))
+      (𝓝[>] (0 : ℝ))
+      (nhds (if s₁ = s₂ then
+        ((((k + l + 1 : ℕ) : ℝ)⁻¹ : ℝ) : ℂ) else 0)) :=
+  tendsto_inner_burnolX hs₁ hs₂ k l
+
+example :
+    burnolChiOnePhase =O[𝓝[>] (0 : ℝ)]
+      (fun t : ℝ => ((t ^ 2 : ℝ) : ℂ)) :=
+  burnolChiOnePhase_isBigO_sq
+
+example :
+    burnolAPhaseL2 burnolChiOneL2 = burnolChiOnePhaseL2 :=
+  burnolAPhaseL2_chiOne
+
+example {s : ℂ} (hs : s.re = 1 / 2) (k : ℕ) :
+    Filter.Tendsto (fun lambda : ℝ =>
+      ((Real.sqrt (burnolLogScale lambda) : ℝ) : ℂ) *
+        inner ℂ (burnolX lambda s k) burnolChiOneL2)
+      (𝓝[>] (0 : ℝ))
+      (nhds (if k = 0 then (s - 1) / s ^ 2 else 0)) :=
+  tendsto_sqrtLog_inner_chiOne_burnolX hs k
+
+example (m : ℕ) : IsUnit (burnolHilbertMatrix m).det :=
+  burnolHilbertMatrix_isUnit_det m
+
+example (n : ℕ) :
+    (burnolHilbertMatrix (n + 1))⁻¹
+        (0 : Fin (n + 1)) (0 : Fin (n + 1)) =
+      (((n + 1 : ℕ) : ℂ)) ^ 2 :=
+  burnolHilbertMatrix_inv_zero_zero n
+
+example {s : ℂ} (hs : s.re = 1 / 2) (m : ℕ) :
+    Filter.Tendsto (fun lambda : ℝ => (burnolGramMatrix lambda s m)⁻¹)
+      (𝓝[>] (0 : ℝ)) (nhds (burnolHilbertMatrix m)⁻¹) :=
+  tendsto_burnolGramMatrix_inv hs m
+
+example {ι : Type*} [Fintype ι] [DecidableEq ι]
+    {rho : ι → ℂ} (hcritical : ∀ a, (rho a).re = 1 / 2)
+    (hinjective : Function.Injective rho) (m : ℕ) :
+    Filter.Tendsto (fun lambda : ℝ => burnolBlockGramMatrix lambda rho m)
+      (𝓝[>] (0 : ℝ))
+      (nhds (burnolHilbertBlockMatrix (ι := ι) m)) :=
+  tendsto_burnolBlockGramMatrix hcritical hinjective m
+
+example {ι : Type*} [Fintype ι] [DecidableEq ι]
+    {rho : ι → ℂ} (hcritical : ∀ a, (rho a).re = 1 / 2)
+    (hinjective : Function.Injective rho) (m : ℕ) :
+    Filter.Tendsto (fun lambda : ℝ => (burnolBlockGramMatrix lambda rho m)⁻¹)
+      (𝓝[>] (0 : ℝ))
+      (nhds (burnolHilbertBlockMatrix (ι := ι) m)⁻¹) :=
+  tendsto_burnolBlockGramMatrix_inv hcritical hinjective m
+
+example {ι : Type*} [Fintype ι] [DecidableEq ι]
+    {rho : ι → ℂ} (hcritical : ∀ a, (rho a).re = 1 / 2)
+    (hinjective : Function.Injective rho) (multiplicity : ι → ℕ) :
+    Filter.Tendsto (fun lambda : ℝ =>
+      burnolFiniteGramMatrix lambda rho multiplicity)
+      (𝓝[>] (0 : ℝ))
+      (nhds (burnolFiniteHilbertMatrix multiplicity)) :=
+  tendsto_burnolFiniteGramMatrix hcritical hinjective multiplicity
+
+example {ι : Type*} [Fintype ι] [DecidableEq ι]
+    (multiplicity : ι → ℕ) :
+    IsUnit (burnolFiniteHilbertMatrix multiplicity).det :=
+  burnolFiniteHilbertMatrix_isUnit_det multiplicity
+
+example {ι : Type*} [Fintype ι] [DecidableEq ι]
+    {rho : ι → ℂ} (hcritical : ∀ a, (rho a).re = 1 / 2)
+    (hinjective : Function.Injective rho) (multiplicity : ι → ℕ) :
+    Filter.Tendsto (fun lambda : ℝ =>
+      (burnolFiniteGramMatrix lambda rho multiplicity)⁻¹)
+      (𝓝[>] (0 : ℝ))
+      (nhds (burnolFiniteHilbertMatrix multiplicity)⁻¹) :=
+  tendsto_burnolFiniteGramMatrix_inv hcritical hinjective multiplicity
 
 example (hRH : RiemannHypothesis) {δ : ℝ}
     (hδ : 0 < δ) (hδ_top : δ ≤ 1 / 2) :
