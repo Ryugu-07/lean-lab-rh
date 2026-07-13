@@ -47,5 +47,5 @@ Fixed implementation target: `research/g4_burnol_f2_prereg_20260713.md`.
 - `reasoning_effort`: not exposed.
 - `budget`: unbounded persistent-goal budget.
 - `compaction_state`: no compaction during this audit.
-- `commit_SHA`: pending.
-- `public_CI`: pending.
+- `commit_SHA`: `6aa73266bf0697383f535358160a033e0fcd2893`.
+- `public_CI`: Lean Action run `29232724946` succeeded; build job `86760317208`.

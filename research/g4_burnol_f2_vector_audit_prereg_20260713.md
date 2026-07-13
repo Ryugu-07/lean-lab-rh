@@ -67,5 +67,5 @@ phase operator, nor replace the source vectors by arbitrary members of an orthog
   (`V`, `Q_lambda`, `psi`, pre-boundary pairing) and Gate B (oscillatory continuation, exact `L2`
   limit, representative estimates, boundary pairing, and zero-order orthogonality). Both gates are
   required in the same F2 completion batch.
-- `commit_SHA`: pending
-- `public_CI`: pending
+- `commit_SHA`: `6aa73266bf0697383f535358160a033e0fcd2893`
+- `public_CI`: Lean Action run `29232724946` succeeded; build job `86760317208`
