@@ -141,5 +141,5 @@ elements, with explicit almost-everywhere representative theorems available for 
 - `verification`: full `lake build` passes with 8611 jobs; exact target witnesses,
   incomplete-proof and explicit-declaration scans, and `git diff --check` pass.
 - `axiom_audit`: only `propext`, `Classical.choice`, and `Quot.sound`.
-- `commit_SHA`: pending
-- `public_CI`: pending
+- `commit_SHA`: `087f07a28c48794d9dbfec30309759a05b37db20`
+- `public_CI`: success, run `29231279145`, build job `86755849239`.

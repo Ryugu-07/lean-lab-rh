@@ -75,5 +75,5 @@ the resulting span transport, and Burnol's exact distance identity.
 - `budget`: unbounded persistent-goal budget.
 - `compaction_state`: one automatic compaction occurred during implementation; work resumed from
   retained state and rechecked the fixed target before assembly.
-- `commit_SHA`: pending.
-- `public_CI`: pending.
+- `commit_SHA`: `087f07a28c48794d9dbfec30309759a05b37db20`.
+- `public_CI`: success, run `29231279145`, build job `86755849239`.
