@@ -27,7 +27,7 @@ flowchart TD
 | M1 | complete | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | Batch M1-18 compiles both directions of the exact strong positive-natural Baez-Duarte criterion in full-half-line complex `L2`. |
 | D | complete | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | `riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure` is the exact compiled bridge. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
-| B1 | planned | Formalize Burnol's published quantitative lower bound for the Nyman-Beurling approximation distance. | First align Burnol's continuous parameter space `B_lambda` and distance `D(lambda)` with the project's natural-kernel spaces, then inventory the zero-multiplicity and liminf dependencies. This is known mathematics, not M2 progress. |
+| B1 | in progress | Formalize Burnol's published quantitative lower bound for the Nyman-Beurling approximation distance. | Audit G4-01 distinguishes the continuous `B_lambda` from finite natural spaces and fixes source dependencies F0-F5. F0 is the next engineering batch; F1-F4 contain the source-specific hard analysis. This is known mathematics, not M2 progress. |
 
 ## Hard Gaps
 
@@ -36,7 +36,18 @@ flowchart TD
 | G1 | M1/D | complete | The exact strong positive-natural Baez-Duarte full-line closure criterion is Lean-equivalent to `Mathlib.RiemannHypothesis`. |
 | G2 | M1 | complete | Batch M1-18 compiles the weighted finite formula, fixed-epsilon transformed limit, epsilon-to-zero dominated convergence, diagonal assembly, tail removal, and `RH -> closure`. |
 | G3 | M2 | parked | Construct unconditional finite approximants with error tending to zero. In the NB/BD framework this is essentially the hard RH direction; numerical convergence is not evidence. |
-| G4 | B1 | planned | Burnol's lower bound `liminf D(lambda) * sqrt(log(1/lambda)) >= sqrt(sum_rho m_rho^2 / |rho|^2)` and its natural-subspace consequence of order at least `1/log N` for squared distance. Admitted by the independent Arch audit dated 2026-07-13. |
+| G4 | B1 | in progress | Burnol's lower bound `liminf D(lambda) * sqrt(log(1/lambda)) >= sqrt(sum_rho m_rho^2 / |rho|^2)` and its natural-subspace consequence of order at least `1/log N` for squared distance. Audit G4-01 fixes the dependency frontier F0-F5 without changing M2/G3. |
+
+## G4 Fixed Source Frontier
+
+| edge | status | source-level content |
+| --- | --- | --- |
+| F0 | open, engineering batch | Continuous `B_lambda`, finite natural `V_N`, distances, `V_N <= B_(1/N)`, and `D(1/N) <= d_N`. |
+| F1 | open | Burnol's unitary model identifying `D(lambda)` with the distance from `chi1` to `C_lambda`. |
+| F2 | open | Existence and orthogonality of the vectors `Y(lambda,s,k)`. |
+| F3 | open | Gram-block and target-pairing asymptotics, including the Hilbert/Cauchy inverse entry `m^2`. |
+| F4 | open | Finite-zero-set liminf lower bound under RH. |
+| F5 | open | Full zero sum, optional off-RH branch, and natural-distance asymptotic transfer. |
 
 ## Post-M1 Admission Rule
 

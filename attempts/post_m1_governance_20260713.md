@@ -21,7 +21,7 @@ Date: 2026-07-13
 - `budget`: unbounded persistent-goal budget
 - `compaction_state`: compaction occurred before this continuation; repository state and fixed DAG
   were reread before editing.
-- `commit_SHA`: pending
+- `commit_SHA`: `fba10e74600b2deda36c8bd9ac73ca34730a4431`
 
 ## Planned Verification
 
@@ -40,6 +40,6 @@ Date: 2026-07-13
 - `git diff --check`: success;
 - P1 independent review: Sol 5.6 max agent `019f59c3-c4c7-7b63-a203-c25a12034c14`, no P0-P3
   finding, decision `CONTINUE`.
+- public Lean Action CI: run `29224952001`, build job `86737084562`, success.
 
 The batch changes no RH hard gap and makes no novelty claim.
-

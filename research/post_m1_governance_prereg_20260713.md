@@ -70,3 +70,5 @@ review completed P1 with no P0-P3 finding and decision `CONTINUE`; P2 and P3 rem
 - incomplete-proof scan: no `sorry`, `admit`, or `sorryAx` in project Lean files;
 - explicit declaration scan: no project `axiom` or `constant` declarations;
 - `git diff --check`: success.
+- public governance commit: `fba10e74600b2deda36c8bd9ac73ca34730a4431`;
+- public Lean Action CI: run `29224952001`, build job `86737084562`, success.

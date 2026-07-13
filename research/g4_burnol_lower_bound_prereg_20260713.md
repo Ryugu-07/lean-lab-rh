@@ -10,7 +10,7 @@ Proposed batch ID: `AUDIT-20260713-G4-01`
 - `gap_id`: `G4`
 - `work_class`: `LITERATURE`
 - `novelty_label`: `KNOWN_MATHEMATICS`
-- `status`: planned
+- `status`: complete
 
 The fixed published target is Burnol's theorem for
 
@@ -86,3 +86,11 @@ implementation is admitted until this audit identifies the first source-level ed
 - `FORMALIZATION_ONLY`: only local distance/subspace definitions are added.
 - `NO_PROGRESS`: no source-level frontier is made more precise.
 
+## Result
+
+`result_class`: `DEPENDENCY_GAP_IDENTIFIED`.
+
+The statement alignment and dependency DAG are recorded in
+`research/g4_burnol_dependency_audit_20260713.md`. The valid natural transfer uses
+`V_N <= B_(1/N)` and hence `D(1/N) <= d_N`. The source proof is fixed as F0-F5; no Lean theorem
+was added, and G3 remains unchanged.
