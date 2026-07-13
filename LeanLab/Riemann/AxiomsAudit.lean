@@ -7,6 +7,7 @@ import LeanLab.Riemann.BaezDuarteReverse
 import LeanLab.Riemann.BaezDuarteForward
 import LeanLab.Riemann.BaezDuarteForwardLimit
 import LeanLab.Riemann.BurnolLowerBound
+import LeanLab.Riemann.BurnolA
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -80,3 +81,7 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.baezDuarteFiniteComplexKernelSpan_le_burnolKernelSpan
 #print axioms LeanLab.Riemann.burnolDistance_inv_natCast_le_baezDuarteNaturalDistance
 #print axioms LeanLab.Riemann.tendsto_natCast_inv_nhdsWithin_Ioi_zero
+#print axioms LeanLab.Riemann.burnolA_eq_tailIntegral_sub_fractionalPart
+#print axioms LeanLab.Riemann.burnolA_memLp_two_positiveHalfLine
+#print axioms LeanLab.Riemann.mellin_burnolComplexFractionalPartTail_eq
+#print axioms LeanLab.Riemann.hasMellin_burnolA

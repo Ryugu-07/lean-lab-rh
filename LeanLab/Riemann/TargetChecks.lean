@@ -1,6 +1,7 @@
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.BaezDuarteZetaRatio
 import LeanLab.Riemann.BurnolLowerBound
+import LeanLab.Riemann.BurnolA
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -278,6 +279,34 @@ example :
     Filter.Tendsto (fun N : ℕ => ((N : ℝ)⁻¹)) Filter.atTop
       (nhdsWithin 0 (Set.Ioi 0)) :=
   tendsto_natCast_inv_nhdsWithin_Ioi_zero
+
+example {t : ℝ} (ht : 1 < t) :
+    burnolA t = 0 :=
+  burnolA_eq_zero_of_one_lt ht
+
+example {t : ℝ} (ht : 0 < t) :
+    burnolA t =
+      (∫ u : ℝ in Set.Ioi t, burnolFractionalPartDiv u) - fractionalPartKernel 1 t :=
+  burnolA_eq_tailIntegral_sub_fractionalPart ht
+
+example :
+    MeasureTheory.MemLp burnolA (2 : ℝ≥0∞)
+      (MeasureTheory.volume.restrict (Set.Ioi (0 : ℝ))) :=
+  burnolA_memLp_two_positiveHalfLine
+
+noncomputable example : positiveHalfLineComplexL2 :=
+  burnolComplexAL2
+
+example :
+    burnolComplexAL2
+      =ᵐ[MeasureTheory.volume.restrict (Set.Ioi (0 : ℝ))]
+        fun t => (burnolA t : ℂ) :=
+  burnolComplexAL2_coeFn
+
+example (s : ℂ) (hs0 : 0 < s.re) (hs1 : s.re < 1) :
+    HasMellin (fun t : ℝ => (burnolA t : ℂ)) s
+      ((s - 1) * riemannZeta s / s ^ 2) :=
+  hasMellin_burnolA s hs0 hs1
 
 example (hRH : RiemannHypothesis) {δ : ℝ}
     (hδ : 0 < δ) (hδ_top : δ ≤ 1 / 2) :
