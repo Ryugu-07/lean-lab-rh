@@ -27,7 +27,7 @@ flowchart TD
 | M1 | complete | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | Batch M1-18 compiles both directions of the exact strong positive-natural Baez-Duarte criterion in full-half-line complex `L2`. |
 | D | complete | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | `riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure` is the exact compiled bridge. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
-| B1 | in progress | Formalize Burnol's published quantitative lower bound for the Nyman-Beurling approximation distance. | Batch G4-F0 closes the continuous/natural alignment. Batches G4-F1a/F1b close the explicit source function and complete unitary distance model. Audit G4-F2-01 fixes the second phase, oscillatory continuation, boundary-limit, representative-bound, and orthogonality burden; F2 remains selected. This is known mathematics, not M2 progress. |
+| B1 | in progress | Formalize Burnol's published quantitative lower bound for the Nyman-Beurling approximation distance. | Batches G4-F0 through F2 close the continuous/natural alignment, explicit source function, unitary distance model, and exact boundary vectors with source estimates and order orthogonality. F3 finite-dimensional Gram/Cauchy asymptotics is selected. This is known mathematics, not M2 progress. |
 
 ## Hard Gaps
 
@@ -45,8 +45,8 @@ flowchart TD
 | F0 | complete | Continuous `B_lambda`, finite natural `V_N`, distances, `V_N <= B_(1/N)`, `D(1/N) <= d_N`, and `1/N -> 0+` are Lean-checked in `BurnolLowerBound.lean`. |
 | F1a | complete | `BurnolA.lean` defines the explicit floor formula, proves support in `(0,1]`, the exact Hardy-tail identity, `L2` membership, and `HasMellin A s ((s-1)zeta(s)/s^2)` for `0<Re(s)<1`. |
 | F1b | complete | `BurnolHardy.lean` constructs the critical-line phase isometry, proves its explicit action on `chi` and every `rho(theta/t)`, transports the explicit model span, and proves `D(lambda)=dist(chi1,C_lambda)`. |
-| F2 | open, selected | Construct the second source phase `V`, physical cutoff `Q_lambda`, and `psi(w,k)`; formalize the BBLS/Burnol oscillatory continuation and prove the critical-line `L2` limits `Y(lambda,s,k)`, lambda-independent transformed representative bounds, exact model-kernel pairings, and zero-order orthogonality. Infrastructure alone does not close F2. |
-| F3 | open | Gram-block and target-pairing asymptotics, including the Hilbert/Cauchy inverse entry `m^2`. |
+| F2 | complete | `BurnolY.lean` constructs the second source phase `V`, physical cutoff `Q_lambda`, `psi(w,k)`, the BBLS/Burnol oscillatory continuation, critical-line `L2` limits `Y(lambda,s,k)`, lambda-independent transformed representative bounds, exact model-kernel pairings, and analytic-order orthogonality to the full model span. |
+| F3 | open, selected | Gram-block and target-pairing asymptotics, including the Hilbert/Cauchy inverse entry `m^2`. |
 | F4 | open | Finite-zero-set liminf lower bound under RH. |
 | F5 | open | Full zero sum, optional off-RH branch, and natural-distance asymptotic transfer. |
 
@@ -243,3 +243,10 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   Result: `DEPENDENCY_GAP_IDENTIFIED`; F2 remains open and selected as one indivisible batch that
   must include F3-ready representative bounds and zero-order orthogonality. F3-F5 and M2/G3 are
   unchanged.
+- Batch `BATCH-20260713-G4-F2` closes the indivisible boundary-vector edge. Lean constructs the
+  total second phase, physical time reversal and cutoff, all-order `psi` and oscillatory `phi`,
+  proves the exact interior Mellin/Fourier phase identity, obtains a local-uniform square-
+  integrable majorant and the critical-line `L2` limit, exposes F3-ready small/large physical
+  bounds, proves the direct normalized source pairing, and converts analytic zeta order to
+  orthogonality against the complete model span. Result: `KNOWN_THEOREM_FORMALIZED`; close F2 and
+  select F3. F4-F5 and M2/G3 are unchanged.

@@ -10,7 +10,7 @@ Batch ID: `BATCH-20260713-G4-F2`
 - `gap_id`: `G4/F2`
 - `work_class`: `SOURCE_FORMALIZATION`
 - `novelty_label`: `KNOWN_MATHEMATICS`
-- `status`: preregistered
+- `status`: completed
 
 Formalize Burnol's `Y(lambda,s,k)` boundary vectors, their source physical estimates, exact model-
 kernel pairings, and zero-order orthogonality as one indivisible batch. F2 may not close after only
@@ -161,4 +161,26 @@ orthogonal complement, or assuming derivative vanishing as an unchecked premise,
 - `model`: Codex, GPT-5 family (exact backend identifier not exposed)
 - `reasoning_effort`: not exposed
 - `loop_budget`: unbounded persistent-goal budget
-- `compaction_since_previous_loop`: no
+- `compaction_since_previous_loop`: yes; automatic compaction occurred during implementation.
+  Work resumed from the retained fixed-batch checkpoint and rechecked the source frontier before
+  completing the boundary convergence and pairing chain.
+
+## Result
+
+- `result_class`: `KNOWN_THEOREM_FORMALIZED`
+- `hard_gap_after`: G4/F2 complete; F3 selected; F4-F5 and M2/G3 unchanged.
+- `hard_gap_delta`: closed exactly the preregistered F2 source edge. This is Burnol's known
+  boundary-vector construction and is not unconditional RH progress.
+- `assumption_frontier_after`: no phase, oscillatory-continuation, cutoff-limit, representative-
+  estimate, exact-pairing, or analytic-order orthogonality premise remains external in F2.
+- `Lean_surface`: `burnolAPhaseL2`, `burnolTimeReverseL2`, `burnolCutoffL2`, `burnolPsiL2`,
+  `burnolPreY`, `burnolPhi`, `burnolYTransformed`, `burnolY`, `tendsto_burnolPreY`,
+  `inner_burnolY_normalizedModelKernel`, and
+  `burnolY_mem_modelKernelSpan_orthogonal`.
+- `verification`: full `lake build` passes with 8612 jobs; exact boundary-limit, physical-bound,
+  pairing, and orthogonality witnesses compile in `TargetChecks.lean`; incomplete-proof,
+  explicit-declaration, and `git diff --check` scans pass.
+- `axiom_audit`: all audited F2 surfaces depend only on `propext`, `Classical.choice`, and
+  `Quot.sound`.
+- `implementation_SHA`: `21f600b6de9e859dc9d912a82db6411547bae325`
+- `public_CI`: success, run `29278978470`, build job `86915163555`.
