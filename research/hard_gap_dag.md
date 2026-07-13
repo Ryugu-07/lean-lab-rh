@@ -1,6 +1,6 @@
 # RH Hard-Gap DAG
 
-Date: 2026-07-11
+Date: 2026-07-13
 
 This file is the fixed external gap ledger for future RH work. A future loop may only count as
 research progress when it changes the status of one of these nodes. Local predicate wrappers,
@@ -15,6 +15,7 @@ flowchart TD
     M0 --> M1["M1: published criterion formalized in Lean"]
     M1 --> D["D: equivalence with Mathlib.RiemannHypothesis"]
     E["M2: unconditional discovery"] --> M1
+    M1 --> G4["G4: Burnol quantitative obstruction"]
 ```
 
 ## Fixed Nodes
@@ -26,6 +27,7 @@ flowchart TD
 | M1 | complete | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | Batch M1-18 compiles both directions of the exact strong positive-natural Baez-Duarte criterion in full-half-line complex `L2`. |
 | D | complete | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | `riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure` is the exact compiled bridge. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
+| B1 | planned | Formalize Burnol's published quantitative lower bound for the Nyman-Beurling approximation distance. | First align Burnol's continuous parameter space `B_lambda` and distance `D(lambda)` with the project's natural-kernel spaces, then inventory the zero-multiplicity and liminf dependencies. This is known mathematics, not M2 progress. |
 
 ## Hard Gaps
 
@@ -34,6 +36,31 @@ flowchart TD
 | G1 | M1/D | complete | The exact strong positive-natural Baez-Duarte full-line closure criterion is Lean-equivalent to `Mathlib.RiemannHypothesis`. |
 | G2 | M1 | complete | Batch M1-18 compiles the weighted finite formula, fixed-epsilon transformed limit, epsilon-to-zero dominated convergence, diagonal assembly, tail removal, and `RH -> closure`. |
 | G3 | M2 | parked | Construct unconditional finite approximants with error tending to zero. In the NB/BD framework this is essentially the hard RH direction; numerical convergence is not evidence. |
+| G4 | B1 | planned | Burnol's lower bound `liminf D(lambda) * sqrt(log(1/lambda)) >= sqrt(sum_rho m_rho^2 / |rho|^2)` and its natural-subspace consequence of order at least `1/log N` for squared distance. Admitted by the independent Arch audit dated 2026-07-13. |
+
+## Post-M1 Admission Rule
+
+- `G3` remains parked and must not be selected by the automatic loop. It may be reopened only by an
+  independent novelty audit that preregisters a specific unconditional estimate or structural
+  lemma against the closest published results.
+- `G4` is an auditor-approved adjacent research line. Closing it is `KNOWN_THEOREM_FORMALIZED`, not
+  `HARD_GAP_REDUCED` for RH and not evidence that the approximation distance tends to zero.
+- Mathlib upstreaming is an engineering/publication track and must not be reported as a change to
+  `M2` or `G3`.
+
+## External Publication Gate
+
+The final M1 equivalence may be described inside this repository as a compiled project-local
+formalization aligned with Baez-Duarte 2002. A public claim of "first formalization" or a release
+claim that the equivalence has passed external review requires all three independent gates:
+
+| gate | status | evidence required |
+| --- | --- | --- |
+| P1 | complete | Clean-context Sol 5.6 max review `019f59c3-c4c7-7b63-a203-c25a12034c14`; no P0-P3 finding, decision `CONTINUE`. See `research/m1_sol_max_review_20260713.md`. |
+| P2 | pending | Lean Zulip `#maths` statement/definition review with no unresolved objection. |
+| P3 | pending | Novelty audit covering mathlib, Isabelle AFP, relevant external Lean repositories, and arXiv. |
+
+Until P1-P3 are complete, repository documentation must not call this the first formalization.
 
 ## Loop Reporting Policy
 

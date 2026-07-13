@@ -132,6 +132,22 @@ Claims of possible first formalization or candidate new mathematics require a no
 claim against mathlib, Isabelle AFP, relevant external Lean repositories, and arXiv. A local mathlib
 miss is not evidence of novelty.
 
+## Post-M1 Route And Publication Gate
+
+- `G3` is permanently parked for automatic looping. An implementation model may not select
+  unconditional construction of the Baez-Duarte approximants as its next routine target, because
+  that is the unresolved RH direction itself.
+- The independent Arch audit dated 2026-07-13 admits `G4`, Burnol's published Nyman-Beurling
+  distance lower bound, as the next fixed research line. It is known mathematics and may only be
+  classified `KNOWN_THEOREM_FORMALIZED`, `DEPENDENCY_GAP_IDENTIFIED`, `BRANCH_FALSIFIED`,
+  `FORMALIZATION_ONLY`, or `NO_PROGRESS`; it cannot by itself reduce `G3`.
+- Public wording such as "first formalization" or "externally reviewed equivalence" is blocked
+  until all of the following are recorded: a clean-context Sol max theorem-by-theorem review, a
+  Lean Zulip `#maths` statement/definition review with no unresolved objection, and a novelty audit
+  covering mathlib, Isabelle AFP, relevant external Lean repositories, and arXiv.
+- `LeanLab/Riemann/TargetChecks.lean` must contain an exact statement witness for the final M1 iff,
+  in addition to name resolution and the existing axiom audit.
+
 ## Historical Loop Updates
 
 ## M0 Audit 2026-07-10-01

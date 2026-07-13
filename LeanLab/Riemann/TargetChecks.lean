@@ -24,7 +24,8 @@ open scoped ENNReal FourierTransform
 
 /-- Name-resolution witness for every `.proven` ledger target with a `leanName`. -/
 def checkedTargetNames : List Lean.Name :=
-  [ ``RiemannHypothesis.exists_tendsto_baezDuarteMobiusApproxL2,
+  [ ``riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure,
+    ``RiemannHypothesis.exists_tendsto_baezDuarteMobiusApproxL2,
     ``exists_norm_riemannZeta_criticalLine_le_rpow,
     ``riemannXi_eq_mul_completedRiemannZeta,
     ``isNontrivialZero_iff_riemannXi_eq_zero_and_not_trivial,
@@ -70,6 +71,11 @@ def checkedTargetNames : List Lean.Name :=
     ``exists_restricted_finsupp_integral_lt_of_baezDuarte,
     ``nymanBeurlingRestrictedConcreteApprox_of_baezDuarte,
     ``riemannHypothesis_iff_nontrivial_zeros_on_line ]
+
+example :
+    RiemannHypothesis ↔
+      baezDuarteComplexTargetL2 ∈ baezDuarteComplexKernelClosure :=
+  riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure
 
 example {s : ℂ} (hs0 : s ≠ 0) (hs1 : s ≠ 1) :
     riemannXi s = s * (s - 1) / 2 * completedRiemannZeta s :=

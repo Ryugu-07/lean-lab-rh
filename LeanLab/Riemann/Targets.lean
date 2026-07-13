@@ -520,6 +520,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``nymanBeurlingConcreteApprox_unconditional
       status := .parked
       note := "M0 audit AUDIT-20260710-M0-01 proved the conclusion unconditionally using opposite signed parameters. The implication is obsolete as a criterion target, and the unrestricted predicate must not be used for M1." },
+    { id := "T2.burnol.distance.lower-bound"
+      tier := .tier2
+      title := "Formalize Burnol's Nyman-Beurling distance lower bound"
+      statement :=
+        "Align and formalize Burnol's published lower bound liminf D(lambda)*sqrt(log(1/lambda)) >= sqrt(sum_rho m_rho^2/|rho|^2), and transfer its natural-subspace consequence d_N^2 >= C/log N without treating it as RH progress."
+      leanName := none
+      status := .planned
+      note := "Admitted by the independent Arch M1 audit of 2026-07-13 as the post-M1 research line. This is known mathematics and a quantitative obstruction, not an unconditional approximating family and not M2/G3 progress. The exact continuous-versus-natural statement alignment must precede Lean implementation." },
     { id := "T3.rh.horizon"
       tier := .tier3
       title := "Riemann Hypothesis horizon"
