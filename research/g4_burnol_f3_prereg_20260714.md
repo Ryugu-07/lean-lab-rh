@@ -181,5 +181,13 @@ pairing cases. Exact target witnesses and the axiom audit pass, every new audite
 only `propext`, `Classical.choice`, and `Quot.sound`, and the full local build passes with 8613
 jobs. Placeholder and explicit-declaration scans and `git diff --check` are clean.
 
-The implementation commit and public Lean Action CI are still pending. Therefore the local gates
-are complete, but F3 remains selected and F4-F5 remain forbidden until the public gate passes.
+The implementation commit and public Lean Action CI were still pending at this checkpoint.
+Therefore the local gates were complete, but F3 remained selected and F4-F5 remained forbidden
+until the public gate passed.
+
+## Published Result
+
+Implementation commit `897e35b16ad3039c069d86f0c35f89d4bce526ad` passed public Lean Action
+CI run `29289392653`, build job `86949324989`, in 2m7s. The batch result is
+`KNOWN_THEOREM_FORMALIZED`: F3 is complete and F4 is selected but not started. F5 and parked
+M2/G3 are unchanged, and no unconditional RH claim is made.

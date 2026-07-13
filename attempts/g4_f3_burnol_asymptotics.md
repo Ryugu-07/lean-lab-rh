@@ -6,7 +6,7 @@ Date: 2026-07-14
 - `node_id`: `B1`
 - `gap_id`: `G4/F3`
 - `work_class`: `SOURCE_FORMALIZATION`
-- `status`: local verification complete; public CI pending
+- `status`: complete
 - `hard_gap_before`: F3 selected; F4-F5 open; M2/G3 parked and unchanged.
 - `assumption_frontier_before`: normalized Gram limits, target-pairing limits, the finite
   Hilbert/Cauchy inverse entry, and matrix inverse convergence are external facts.
@@ -116,5 +116,13 @@ expansion was introduced.
 - no `sorry`, `admit`, `sorryAx`, project `axiom`, `constant`, or `opaque` declaration; `git diff
   --check` passes.
 
-Local result: every preregistered mathematical gate is satisfied. F3 remains selected until the
-implementation commit passes public CI; F4-F5 remain forbidden and M2/G3 remain parked.
+Local result: every preregistered mathematical gate is satisfied. F3 remained selected until the
+implementation commit passed public CI; F4-F5 remained forbidden and M2/G3 remained parked.
+
+## Published Verification And Result
+
+- implementation commit: `897e35b16ad3039c069d86f0c35f89d4bce526ad`;
+- public Lean Action CI: run `29289392653`, build job `86949324989`, success in 2m7s;
+- classification: `KNOWN_THEOREM_FORMALIZED`;
+- `hard_gap_after`: F3 complete; F4 selected but not started; F5 and M2/G3 unchanged;
+- no unconditional approximation, closure membership, or proof of RH is claimed.
