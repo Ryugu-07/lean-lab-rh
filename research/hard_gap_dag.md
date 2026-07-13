@@ -27,7 +27,7 @@ flowchart TD
 | M1 | complete | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | Batch M1-18 compiles both directions of the exact strong positive-natural Baez-Duarte criterion in full-half-line complex `L2`. |
 | D | complete | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | `riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure` is the exact compiled bridge. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
-| B1 | in progress | Formalize Burnol's published quantitative lower bound for the Nyman-Beurling approximation distance. | Batch G4-F0 Lean-checks the continuous/natural space alignment and distance transfer. F1 is now the next source edge; F1-F4 contain the source-specific hard analysis. This is known mathematics, not M2 progress. |
+| B1 | in progress | Formalize Burnol's published quantitative lower bound for the Nyman-Beurling approximation distance. | Batch G4-F0 closes the continuous/natural alignment. Audit G4-F1-01 recovers the unitary model and splits F1 into explicit source function F1a and distance assembly F1b; F1a is next. This is known mathematics, not M2 progress. |
 
 ## Hard Gaps
 
@@ -43,7 +43,8 @@ flowchart TD
 | edge | status | source-level content |
 | --- | --- | --- |
 | F0 | complete | Continuous `B_lambda`, finite natural `V_N`, distances, `V_N <= B_(1/N)`, `D(1/N) <= d_N`, and `1/N -> 0+` are Lean-checked in `BurnolLowerBound.lean`. |
-| F1 | open | Burnol's unitary model identifying `D(lambda)` with the distance from `chi1` to `C_lambda`. |
+| F1a | open, selected | Burnol's explicit `A`: support in `(0,1]`, `L2` membership, and Mellin transform `Z(s)=(s-1)zeta(s)/s^2`. |
+| F1b | open | The unitary multiplier `(s-1)/s`, its action on `chi` and `rho(1/t)`, span transport, and `D(lambda)=dist(chi1,C_lambda)`. |
 | F2 | open | Existence and orthogonality of the vectors `Y(lambda,s,k)`. |
 | F3 | open | Gram-block and target-pairing asymptotics, including the Hilbert/Cauchy inverse entry `m^2`. |
 | F4 | open | Finite-zero-set liminf lower bound under RH. |
