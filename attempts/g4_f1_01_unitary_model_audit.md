@@ -21,12 +21,11 @@ Date: 2026-07-13
 - `reasoning_effort`: not exposed
 - `budget`: unbounded persistent-goal budget
 - `compaction_state`: no compaction since G4/F0 completed.
-- `commit_SHA`: pending
-- `public_CI`: pending
+- `commit_SHA`: `35fc37c44dd8790ec5b0d55ba4d6c166073aa59a`
+- `public_CI`: success, run `29226167722`, build job `86740559793`.
 
 ## Route Decision
 
 Proceed through the explicit source function `A`, not through a generic image-space wrapper. The
 next implementation batch must prove support, `L2` membership, and the Mellin formula together.
 Only then may the spectral multiplier and distance equality be assembled as F1b.
-

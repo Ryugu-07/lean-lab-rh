@@ -86,5 +86,5 @@ must include enough source-facing content for F2, specifically:
   and no RH progress.
 - `assumption_frontier_after`: no added premise; `T=(1-M)^-1`, multiplier `(s-1)/s`,
   `T chi=chi1`, and `T rho(1/t)=-A` are source-checked.
-- `commit_SHA`: pending
-- `public_CI`: pending
+- `commit_SHA`: `35fc37c44dd8790ec5b0d55ba4d6c166073aa59a`
+- `public_CI`: success, run `29226167722`, build job `86740559793`.
