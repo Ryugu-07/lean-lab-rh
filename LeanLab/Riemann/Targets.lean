@@ -528,7 +528,7 @@ def rhTargets : List ResearchTarget :=
         "Align and formalize Burnol's published lower bound liminf D(lambda)*sqrt(log(1/lambda)) >= sqrt(sum_rho m_rho^2/|rho|^2), and transfer its natural-subspace consequence d_N^2 >= C/log N without treating it as RH progress."
       leanName := none
       status := .inProgress
-      note := "Admitted by the independent Arch M1 audit of 2026-07-13 as the post-M1 research line. Audit G4-01 fixes source dependencies F0-F5; Batch G4-F0 Lean-checks the continuous/natural transfer. Audit G4-F1-01 recovers the exact unitary model, signs, and dilation normalization. Batch G4-F1a formalizes the explicit Burnol A and its Mellin transform. Batch G4-F1b constructs the critical-line phase isometry, proves T chi=chi1 and T rho(theta/t)=-A(t/theta), transports the explicit spans, and proves the exact distance equality. F2, the source vectors and orthogonality block, is next. This is known mathematics and a quantitative obstruction, not M2/G3 progress." },
+      note := "Admitted by the independent Arch M1 audit of 2026-07-13 as the post-M1 research line. Audit G4-01 fixes source dependencies F0-F5; Batch G4-F0 Lean-checks the continuous/natural transfer. Audit G4-F1-01 and Batches G4-F1a/F1b complete the explicit A and unitary distance model. Audit G4-F2-01 shows that F2 additionally needs the second phase V of Mellin(A), the physical cutoff, the BBLS/Burnol oscillatory continuation, the exact boundary L2 limit, F3-ready representative bounds, and zero-order orthogonality. F2 remains selected as one indivisible batch. This is known mathematics and a quantitative obstruction, not M2/G3 progress." },
     { id := "T3.rh.horizon"
       tier := .tier3
       title := "Riemann Hypothesis horizon"

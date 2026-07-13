@@ -27,7 +27,7 @@ flowchart TD
 | M1 | complete | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | Batch M1-18 compiles both directions of the exact strong positive-natural Baez-Duarte criterion in full-half-line complex `L2`. |
 | D | complete | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | `riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure` is the exact compiled bridge. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
-| B1 | in progress | Formalize Burnol's published quantitative lower bound for the Nyman-Beurling approximation distance. | Batch G4-F0 closes the continuous/natural alignment. Batches G4-F1a/F1b close the explicit source function and complete unitary distance model. F2, the source vectors and orthogonality block, is next. This is known mathematics, not M2 progress. |
+| B1 | in progress | Formalize Burnol's published quantitative lower bound for the Nyman-Beurling approximation distance. | Batch G4-F0 closes the continuous/natural alignment. Batches G4-F1a/F1b close the explicit source function and complete unitary distance model. Audit G4-F2-01 fixes the second phase, oscillatory continuation, boundary-limit, representative-bound, and orthogonality burden; F2 remains selected. This is known mathematics, not M2 progress. |
 
 ## Hard Gaps
 
@@ -45,7 +45,7 @@ flowchart TD
 | F0 | complete | Continuous `B_lambda`, finite natural `V_N`, distances, `V_N <= B_(1/N)`, `D(1/N) <= d_N`, and `1/N -> 0+` are Lean-checked in `BurnolLowerBound.lean`. |
 | F1a | complete | `BurnolA.lean` defines the explicit floor formula, proves support in `(0,1]`, the exact Hardy-tail identity, `L2` membership, and `HasMellin A s ((s-1)zeta(s)/s^2)` for `0<Re(s)<1`. |
 | F1b | complete | `BurnolHardy.lean` constructs the critical-line phase isometry, proves its explicit action on `chi` and every `rho(theta/t)`, transports the explicit model span, and proves `D(lambda)=dist(chi1,C_lambda)`. |
-| F2 | open, selected | Existence and orthogonality of the vectors `Y(lambda,s,k)`. |
+| F2 | open, selected | Construct the second source phase `V`, physical cutoff `Q_lambda`, and `psi(w,k)`; formalize the BBLS/Burnol oscillatory continuation and prove the critical-line `L2` limits `Y(lambda,s,k)`, lambda-independent transformed representative bounds, exact model-kernel pairings, and zero-order orthogonality. Infrastructure alone does not close F2. |
 | F3 | open | Gram-block and target-pairing asymptotics, including the Hilbert/Cauchy inverse entry `m^2`. |
 | F4 | open | Finite-zero-set liminf lower bound under RH. |
 | F5 | open | Full zero sum, optional off-RH branch, and natural-distance asymptotic transfer. |
@@ -236,3 +236,10 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `theta`, maps the original span exactly onto the explicit model span, and proves the exact
   distance equality. Result: `KNOWN_THEOREM_FORMALIZED`; close only G4/F1b and select F2. F3-F5
   and M2/G3 are unchanged.
+- Audit `AUDIT-20260713-G4-F2-01` recovers the exact Burnol-vector construction. F2 uses the phase
+  `V=conj(Mellin(A))/Mellin(A)`, not the completed F1b distance isometry. Its boundary limit
+  depends essentially on the BBLS Lemma 4/6 oscillatory estimates for `k=0`, Burnol's `k>=1`
+  integral/series extension, two Hardy averages, and dominated convergence after `Q_lambda`.
+  Result: `DEPENDENCY_GAP_IDENTIFIED`; F2 remains open and selected as one indivisible batch that
+  must include F3-ready representative bounds and zero-order orthogonality. F3-F5 and M2/G3 are
+  unchanged.
