@@ -1,5 +1,6 @@
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.BaezDuarteZetaRatio
+import LeanLab.Riemann.BurnolLowerBound
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -263,6 +264,20 @@ example {δ : ℝ} (hδ : 0 < δ) :
     Filter.Tendsto (fun N : ℕ => (N : ℝ) ^ (-δ / 3))
       Filter.atTop (nhds 0) :=
   tendsto_natCast_rpow_neg_delta_div_three hδ
+
+example (N : ℕ) (hN : 0 < N) :
+    baezDuarteFiniteComplexKernelSpan N ≤
+      burnolKernelSpan ((N : ℝ)⁻¹) :=
+  baezDuarteFiniteComplexKernelSpan_le_burnolKernelSpan N hN
+
+example (N : ℕ) (hN : 0 < N) :
+    burnolDistance ((N : ℝ)⁻¹) ≤ baezDuarteNaturalDistance N :=
+  burnolDistance_inv_natCast_le_baezDuarteNaturalDistance N hN
+
+example :
+    Filter.Tendsto (fun N : ℕ => ((N : ℝ)⁻¹)) Filter.atTop
+      (nhdsWithin 0 (Set.Ioi 0)) :=
+  tendsto_natCast_inv_nhdsWithin_Ioi_zero
 
 example (hRH : RiemannHypothesis) {δ : ℝ}
     (hδ : 0 < δ) (hδ_top : δ ≤ 1 / 2) :

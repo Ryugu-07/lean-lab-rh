@@ -27,7 +27,7 @@ flowchart TD
 | M1 | complete | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | Batch M1-18 compiles both directions of the exact strong positive-natural Baez-Duarte criterion in full-half-line complex `L2`. |
 | D | complete | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | `riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure` is the exact compiled bridge. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
-| B1 | in progress | Formalize Burnol's published quantitative lower bound for the Nyman-Beurling approximation distance. | Audit G4-01 distinguishes the continuous `B_lambda` from finite natural spaces and fixes source dependencies F0-F5. F0 is the next engineering batch; F1-F4 contain the source-specific hard analysis. This is known mathematics, not M2 progress. |
+| B1 | in progress | Formalize Burnol's published quantitative lower bound for the Nyman-Beurling approximation distance. | Batch G4-F0 Lean-checks the continuous/natural space alignment and distance transfer. F1 is now the next source edge; F1-F4 contain the source-specific hard analysis. This is known mathematics, not M2 progress. |
 
 ## Hard Gaps
 
@@ -42,7 +42,7 @@ flowchart TD
 
 | edge | status | source-level content |
 | --- | --- | --- |
-| F0 | open, engineering batch | Continuous `B_lambda`, finite natural `V_N`, distances, `V_N <= B_(1/N)`, and `D(1/N) <= d_N`. |
+| F0 | complete | Continuous `B_lambda`, finite natural `V_N`, distances, `V_N <= B_(1/N)`, `D(1/N) <= d_N`, and `1/N -> 0+` are Lean-checked in `BurnolLowerBound.lean`. |
 | F1 | open | Burnol's unitary model identifying `D(lambda)` with the distance from `chi1` to `C_lambda`. |
 | F2 | open | Existence and orthogonality of the vectors `Y(lambda,s,k)`. |
 | F3 | open | Gram-block and target-pairing asymptotics, including the Hilbert/Cauchy inverse entry `m^2`. |

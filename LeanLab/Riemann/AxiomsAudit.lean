@@ -6,6 +6,7 @@ import LeanLab.Riemann.BalazardSaiasContour
 import LeanLab.Riemann.BaezDuarteReverse
 import LeanLab.Riemann.BaezDuarteForward
 import LeanLab.Riemann.BaezDuarteForwardLimit
+import LeanLab.Riemann.BurnolLowerBound
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -76,3 +77,6 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.RiemannHypothesis.exists_mobiusApproxL2_close_neg_target
 #print axioms LeanLab.Riemann.RiemannHypothesis.baezDuarteComplexTargetL2_mem_kernelClosure
 #print axioms LeanLab.Riemann.riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure
+#print axioms LeanLab.Riemann.baezDuarteFiniteComplexKernelSpan_le_burnolKernelSpan
+#print axioms LeanLab.Riemann.burnolDistance_inv_natCast_le_baezDuarteNaturalDistance
+#print axioms LeanLab.Riemann.tendsto_natCast_inv_nhdsWithin_Ioi_zero

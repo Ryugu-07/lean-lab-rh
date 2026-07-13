@@ -527,7 +527,7 @@ def rhTargets : List ResearchTarget :=
         "Align and formalize Burnol's published lower bound liminf D(lambda)*sqrt(log(1/lambda)) >= sqrt(sum_rho m_rho^2/|rho|^2), and transfer its natural-subspace consequence d_N^2 >= C/log N without treating it as RH progress."
       leanName := none
       status := .inProgress
-      note := "Admitted by the independent Arch M1 audit of 2026-07-13 as the post-M1 research line. Audit G4-01 distinguishes Burnol's continuous B_lambda from the finite natural spaces, verifies the inclusion V_N <= B_(1/N), and fixes source dependencies F0-F5. This is known mathematics and a quantitative obstruction, not an unconditional approximating family and not M2/G3 progress." },
+      note := "Admitted by the independent Arch M1 audit of 2026-07-13 as the post-M1 research line. Audit G4-01 fixes source dependencies F0-F5; Batch G4-F0 Lean-checks the continuous/natural distinction, V_N <= B_(1/N), D(1/N) <= d_N, and 1/N -> 0+. F1 is next. This is known mathematics and a quantitative obstruction, not an unconditional approximating family and not M2/G3 progress." },
     { id := "T3.rh.horizon"
       tier := .tier3
       title := "Riemann Hypothesis horizon"

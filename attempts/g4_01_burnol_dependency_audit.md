@@ -22,7 +22,7 @@ Date: 2026-07-13
 - `reasoning_effort`: not exposed
 - `budget`: unbounded persistent-goal budget
 - `compaction_state`: no compaction since the immediately preceding governance batch.
-- `commit_SHA`: pending
+- `commit_SHA`: `a88bb53`
 
 ## Route Decision
 
@@ -34,4 +34,3 @@ subspace inclusion.
 The next batch must implement all F0 definitions and transfer facts together. Those facts are
 statement alignment and will be classified `FORMALIZATION_ONLY`; they are not a substitute for the
 Burnol vectors or the finite-zero lower bound.
-
