@@ -106,5 +106,5 @@ compiled source-facing statements above.
   `burnolA_eq_tailIntegral_sub_fractionalPart`, `burnolA_memLp_two_positiveHalfLine`,
   `burnolComplexAL2`, `burnolComplexAL2_coeFn`, `hasMellin_burnolA`.
 - `axiom_audit`: only `propext`, `Classical.choice`, and `Quot.sound`.
-- `commit_SHA`: pending
-- `public_CI`: pending
+- `commit_SHA`: `6800d29b2b197e8d2ae33a3c3dd6c0298a05ad73`
+- `public_CI`: success, run `29228962278`, build job `86748844527`.

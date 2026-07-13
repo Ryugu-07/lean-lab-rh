@@ -65,5 +65,5 @@ HasMellin A s ((s-1)*zeta(s)/s^2),  0 < Re(s) < 1.
 - `budget`: unbounded persistent-goal budget.
 - `compaction_state`: one automatic compaction occurred during implementation; work resumed from
   the retained state without changing the target.
-- `commit_SHA`: pending.
-- `public_CI`: pending.
+- `commit_SHA`: `6800d29b2b197e8d2ae33a3c3dd6c0298a05ad73`.
+- `public_CI`: success, run `29228962278`, build job `86748844527`.
