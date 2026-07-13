@@ -22,7 +22,8 @@ Date: 2026-07-13
 - `reasoning_effort`: not exposed
 - `budget`: unbounded persistent-goal budget
 - `compaction_state`: no compaction since the immediately preceding governance batch.
-- `commit_SHA`: `a88bb53`
+- `commit_SHA`: `a88bb53d8e49805598faaedc4011e6a902a240c1`
+- `public_CI`: success, run `29225122139`.
 
 ## Route Decision
 

@@ -74,7 +74,8 @@ order gives `1/N<=1/n`. Distance reverses this inclusion.
 - `model`: Codex, GPT-5 family (exact backend identifier not exposed)
 - `reasoning_effort`: not exposed
 - `loop_budget`: unbounded persistent-goal budget
-- `compaction_since_previous_loop`: no
+- `compaction_since_previous_loop`: yes; automatic compaction occurred immediately before the
+  implementation resumed from the retained handoff summary.
 
 ## Result
 
@@ -86,5 +87,5 @@ order gives `1/N<=1/n`. Distance reverses this inclusion.
 - `Lean_verification`: all preregistered names compile and the three central statements have exact
   witnesses in `LeanLab/Riemann/TargetChecks.lean`.
 - `axiom_audit`: only `propext`, `Classical.choice`, and `Quot.sound`.
-- `commit_SHA`: pending
-- `public_CI`: pending
+- `commit_SHA`: `1383db8e9cea271874b7f4f399eb35d1cf07f103`
+- `public_CI`: success, run `29225515844`, build job `86738660740`.

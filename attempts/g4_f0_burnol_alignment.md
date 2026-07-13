@@ -29,8 +29,8 @@ Date: 2026-07-13
 - `budget`: unbounded persistent-goal budget
 - `compaction_state`: automatic compaction occurred immediately before this implementation batch;
   execution resumed from the retained handoff summary without changing the preregistered target.
-- `commit_SHA`: pending
-- `public_CI`: pending
+- `commit_SHA`: `1383db8e9cea271874b7f4f399eb35d1cf07f103`
+- `public_CI`: success, run `29225515844`, build job `86738660740`.
 
 ## Outcome
 
