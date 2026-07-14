@@ -40,23 +40,23 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - 每个定理都要有 attempts 日志：statement、策略、编译结果、失败原因/换路记录、token 花费（若可得）。
 - 证明文件中不允许残留占位证明。
 
-## RH current handoff (2026-07-14, G4-F4 complete)
+## RH current handoff (2026-07-14, G4-F5 local verification complete)
 
 - M0, M1, G1, G2, and D remain complete; M2/G3 remains parked. No unconditional proof of RH or
   closure membership is claimed.
-- Burnol node B1 has F0-F4 publicly complete. The preregistered F4 implementation in
-  `LeanLab/Riemann/BurnolFiniteLowerBound.lean` proves the exact RH-conditional finite-zero-set
-  `ENNReal` liminf endpoint.
-- Lean derives the canonical zeta-zero multiplicity from `analyticOrderNatAt`, proves finite order
-  and positivity, constructs and verifies the inverse-Gram projection, compares it with the model
-  distance, evaluates its limiting energy, and passes the eventual inequality through `liminf`.
-- Exact TargetChecks, standard-only axiom output, empty placeholder/declaration/resource scans,
-  `git diff --check`, and the 8614-job full build pass. This is Burnol's known theorem, not RH or
-  M2/G3 progress.
-- Implementation commit `3cf0b91a65f6830eb73896bee77cc0db65b7387b` passed public Lean Action
-  CI run `29351353828`, build job `87148078056`, in 1m57s. F4 is
-  `KNOWN_THEOREM_FORMALIZED`; F5 full-sum and natural transfer is now selected. F2-F4 must not be
-  reopened for standalone helper lemmas, and M2/G3 remain parked.
+- Burnol node B1 has F0-F4 publicly complete. F5 is now locally Lean-complete in
+  `LeanLab/Riemann/BurnolFullLowerBound.lean` but remains selected pending publication.
+- Lean identifies the full constant with the half-power of the arbitrary nonnegative `ENNReal`
+  zero sum, reduces it to all finite F4 bounds, and proves the exact RH-conditional continuous
+  liminf endpoint without summability or countability premises.
+- F0's checked distance comparison and `N -> (N : Real)^-1` convergence then give the exact
+  natural endpoint `liminf d_N * sqrt(log N)` with the same full constant. This is an asymptotic
+  liminf statement, not an unjustified pointwise exact-constant bound.
+- Exact TargetChecks, standard-only axiom output, empty forbidden-token/declaration/resource
+  scans, `git diff --check`, and the 8615-job full build pass. F5 and G4/B1 may be closed only after
+  the implementation commit passes public Lean Action and its immutable identifiers are logged.
+- This remains formalization of Burnol's known RH-conditional obstruction, not RH or M2/G3
+  progress. F0-F4 must not be reopened for standalone helper lemmas, and M2/G3 remain parked.
 
 ## 黎曼猜想研究启动
 - 2026-07-08：已按“证明工程/研究流程”启动 RH 首轮，不承诺解决 RH。

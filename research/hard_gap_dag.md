@@ -268,3 +268,10 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   the 8614-job local build pass. Implementation commit
   `3cf0b91a65f6830eb73896bee77cc0db65b7387b` passed public CI run `29351353828`, build job
   `87148078056`. Result: `KNOWN_THEOREM_FORMALIZED`; close F4 and select F5. M2/G3 are unchanged.
+- Batch `BATCH-20260714-G4-F5` is locally complete pending publication. Lean identifies the full
+  extended zero-sum constant as the supremum of finite F4 constants, proves the RH-conditional
+  continuous liminf lower bound without summability or countability assumptions, and transfers it
+  along `lambda=(N : Real)^-1` to the exact natural-distance `liminf d_N*sqrt(log N)` endpoint.
+  Exact targets, standard-only axiom checks, clean scans/diff check, and the 8615-job full build
+  pass. Provisional result: `KNOWN_THEOREM_FORMALIZED`; F5 and G4/B1 remain in progress until the
+  implementation commit passes public CI. M2/G3 are unchanged.

@@ -6,6 +6,7 @@ import LeanLab.Riemann.BurnolHardy
 import LeanLab.Riemann.BurnolY
 import LeanLab.Riemann.BurnolGram
 import LeanLab.Riemann.BurnolFiniteLowerBound
+import LeanLab.Riemann.BurnolFullLowerBound
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -471,6 +472,21 @@ example (hRH : RiemannHypothesis)
           ENNReal.ofReal (Real.sqrt (burnolLogScale lambda)))
         (nhdsWithin 0 (Set.Ioi 0)) :=
   RiemannHypothesis.burnolDistance_liminf_ge_finset hRH R
+
+example (hRH : RiemannHypothesis) :
+    burnolFullZeroLowerConstant ≤
+      Filter.liminf (fun lambda : ℝ =>
+        ENNReal.ofReal (burnolDistance lambda) *
+          ENNReal.ofReal (Real.sqrt (burnolLogScale lambda)))
+        (nhdsWithin 0 (Set.Ioi 0)) :=
+  RiemannHypothesis.burnolDistance_liminf_ge_fullZeroSum hRH
+
+example (hRH : RiemannHypothesis) :
+    burnolFullZeroLowerConstant ≤
+      Filter.liminf (fun N : ℕ =>
+        ENNReal.ofReal (baezDuarteNaturalDistance N) *
+          ENNReal.ofReal (Real.sqrt (Real.log (N : ℝ)))) Filter.atTop :=
+  RiemannHypothesis.baezDuarteNaturalDistance_liminf_ge_fullZeroSum hRH
 
 example (hRH : RiemannHypothesis) {δ : ℝ}
     (hδ : 0 < δ) (hδ_top : δ ≤ 1 / 2) :
