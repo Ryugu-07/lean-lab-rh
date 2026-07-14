@@ -6,8 +6,11 @@ Date: 2026-07-14
 - `node_id`: `B1`
 - `gap_id`: `G4/F4`
 - `work_class`: `SOURCE_FORMALIZATION`
-- `status`: active
+- `status`: complete
+- `result_class`: `KNOWN_THEOREM_FORMALIZED`
 - `hard_gap_before`: F3 complete; F4 selected; F5 open; M2/G3 parked and unchanged.
+- `hard_gap_after`: F4 complete; F5 selected; M2/G3 parked and unchanged.
+- `hard_gap_delta`: closed exactly the finite-zero-set projection and liminf source edge.
 - `assumption_frontier_before`: the finite orthogonal-projection distance inequality and the
   finite-zero-set liminf assembly are external facts.
 
@@ -161,3 +164,14 @@ quadratic form at the `k=0` coordinates, convert the critical-line target factor
 - Next obstruction: publish the implementation commit and require successful public Lean Action
   CI before closing F4, selecting F5, or starting any F5 proof work.
 - Classification: `KNOWN_THEOREM_FORMALIZED` pending the public gate; M2/G3 remain unchanged.
+
+### Loop 7: public implementation gate
+
+- Result: complete.
+- Implementation commit `3cf0b91a65f6830eb73896bee77cc0db65b7387b` is public on `main`.
+- Public Lean Action CI run `29351353828` completed successfully in 1m57s; build job
+  `87148078056` succeeded.
+- F4 is now closed as `KNOWN_THEOREM_FORMALIZED`. F5 is selected as the next fixed source edge;
+  no F5 proof work was started in this loop, and M2/G3 remain parked and unchanged.
+- Classification: `KNOWN_THEOREM_FORMALIZED`; this is formalization of Burnol's published finite
+  lower bound, not an unconditional RH result.

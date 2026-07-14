@@ -528,7 +528,7 @@ def rhTargets : List ResearchTarget :=
         "Align and formalize Burnol's published lower bound liminf D(lambda)*sqrt(log(1/lambda)) >= sqrt(sum_rho m_rho^2/|rho|^2), and transfer its natural-subspace consequence d_N^2 >= C/log N without treating it as RH progress."
       leanName := none
       status := .inProgress
-      note := "Admitted by the independent Arch M1 audit of 2026-07-13 as the post-M1 research line. Audit G4-01 fixes source dependencies F0-F5. Batches G4-F0 through G4-F3 are publicly complete. The exact F4 finite-zero-set liminf endpoint, canonical multiplicities, inverse-Gram projection, distance comparison, and finite quadratic-form limit pass every local gate; F4 remains selected pending public CI, and F5 remains forbidden. This is known mathematics and a quantitative obstruction, not M2/G3 progress." },
+      note := "Admitted by the independent Arch M1 audit of 2026-07-13 as the post-M1 research line. Audit G4-01 fixes source dependencies F0-F5. Batches G4-F0 through G4-F4 are publicly complete: the exact RH-conditional finite-zero-set liminf endpoint uses canonical multiplicities, a checked inverse-Gram projection, the model-distance comparison, and the finite quadratic-form limit. F5 full-sum and natural-subspace transfer is selected. This is known mathematics and a quantitative obstruction, not M2/G3 progress." },
     { id := "T3.rh.horizon"
       tier := .tier3
       title := "Riemann Hypothesis horizon"

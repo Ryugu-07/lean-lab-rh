@@ -185,3 +185,10 @@ The exact target witness and transitive axiom audit pass; the audited endpoints 
 placeholder, explicit-declaration, resource-relaxation, ignored-artifact, and whitespace scans
 are clean. The implementation commit and public Lean Action CI are pending, so F4 remains selected
 and F5 remains forbidden at this checkpoint.
+
+## Published Result
+
+Implementation commit `3cf0b91a65f6830eb73896bee77cc0db65b7387b` passed public Lean Action
+CI run `29351353828`, build job `87148078056`, in 1m57s. The batch result is
+`KNOWN_THEOREM_FORMALIZED`: F4 is complete and F5 is selected. M2/G3 remain parked and unchanged,
+and no unconditional RH claim is made.
