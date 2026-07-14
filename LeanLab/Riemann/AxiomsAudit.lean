@@ -11,6 +11,7 @@ import LeanLab.Riemann.BurnolA
 import LeanLab.Riemann.BurnolHardy
 import LeanLab.Riemann.BurnolY
 import LeanLab.Riemann.BurnolGram
+import LeanLab.Riemann.BurnolFiniteLowerBound
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -114,3 +115,6 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.tendsto_burnolFiniteGramMatrix
 #print axioms LeanLab.Riemann.burnolFiniteHilbertMatrix_isUnit_det
 #print axioms LeanLab.Riemann.tendsto_burnolFiniteGramMatrix_inv
+#print axioms LeanLab.Riemann.analyticOrderAt_riemannZeta_ne_top_of_isNontrivialZero
+#print axioms LeanLab.Riemann.norm_burnolFiniteZetaProjection_le_distance
+#print axioms LeanLab.Riemann.RiemannHypothesis.burnolDistance_liminf_ge_finset

@@ -260,3 +260,10 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `897e35b16ad3039c069d86f0c35f89d4bce526ad` passed public CI run `29289392653`, build job
   `86949324989`. Result: `KNOWN_THEOREM_FORMALIZED`; close F3 and select F4. F5 and M2/G3 remain
   parked and unchanged.
+- Batch `BATCH-20260714-G4-F4` locally closes the preregistered finite-zero-set edge. Lean proves
+  canonical positive zeta-zero multiplicities, the explicit inverse-Gram projection and its
+  model-distance comparison, convergence and exact evaluation of the scaled finite quadratic
+  form, convergence of the scaled projection norm, and the exact RH-conditional finite-Finset
+  `ENNReal` liminf endpoint. Exact target and standard-only axiom checks, scans, diff check, and
+  the 8614-job local build pass. Public commit and CI remain pending, so F4 stays selected and F5
+  stays forbidden at this checkpoint; M2/G3 are unchanged.

@@ -5,6 +5,7 @@ import LeanLab.Riemann.BurnolA
 import LeanLab.Riemann.BurnolHardy
 import LeanLab.Riemann.BurnolY
 import LeanLab.Riemann.BurnolGram
+import LeanLab.Riemann.BurnolFiniteLowerBound
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -458,6 +459,18 @@ example {ι : Type*} [Fintype ι] [DecidableEq ι]
       (𝓝[>] (0 : ℝ))
       (nhds (burnolFiniteHilbertMatrix multiplicity)⁻¹) :=
   tendsto_burnolFiniteGramMatrix_inv hcritical hinjective multiplicity
+
+example (hRH : RiemannHypothesis)
+    (R : Finset {rho : ℂ // IsNontrivialZero rho}) :
+    ENNReal.ofReal (Real.sqrt (
+      ∑ rho ∈ R,
+        (burnolZetaZeroMultiplicity (rho : ℂ) : ℝ) ^ 2 /
+          ‖(rho : ℂ)‖ ^ 2)) ≤
+      Filter.liminf (fun lambda : ℝ =>
+        ENNReal.ofReal (burnolDistance lambda) *
+          ENNReal.ofReal (Real.sqrt (burnolLogScale lambda)))
+        (nhdsWithin 0 (Set.Ioi 0)) :=
+  RiemannHypothesis.burnolDistance_liminf_ge_finset hRH R
 
 example (hRH : RiemannHypothesis) {δ : ℝ}
     (hδ : 0 < δ) (hδ_top : δ ≤ 1 / 2) :

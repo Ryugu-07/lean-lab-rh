@@ -40,21 +40,21 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - 每个定理都要有 attempts 日志：statement、策略、编译结果、失败原因/换路记录、token 花费（若可得）。
 - 证明文件中不允许残留占位证明。
 
-## RH current handoff (2026-07-14, G4-F3 complete)
+## RH current handoff (2026-07-14, G4-F4 local verification complete)
 
 - M0, M1, G1, G2, and D remain complete; M2/G3 remains parked. No unconditional proof of RH or
   closure membership is claimed.
-- Burnol node B1 has F0-F3 publicly complete. The preregistered F3 implementation in
-  `LeanLab/Riemann/BurnolGram.lean` proves actual normalized Gram limits, the
-  physical `sinc - M sinc` image of `chi1` with `O(t^2)` decay, both target-pairing cases, the
-  checked Hilbert/Cauchy inverse with `(0,0)=m^2`, and finite block Gram/inverse limits all compile.
-- The final source-level block uses `Sigma a, Fin (multiplicity a)`, so distinct critical
-  parameters may have different multiplicities. `TargetChecks`, the trusted-dependency audit,
-  empty placeholder/declaration scans, `git diff --check`, and the 8613-job full build pass.
-- Implementation commit `897e35b16ad3039c069d86f0c35f89d4bce526ad` passed public Lean Action
-  CI run `29289392653`, build job `86949324989`. F3 is `KNOWN_THEOREM_FORMALIZED`, not RH
-  progress. F4 is now selected but has not started; F5 and M2/G3 remain unchanged. Do not reopen
-  F2/F3 for standalone helper lemmas.
+- Burnol node B1 has F0-F3 publicly complete. The preregistered F4 implementation in
+  `LeanLab/Riemann/BurnolFiniteLowerBound.lean` now passes every local gate and proves the exact
+  RH-conditional finite-zero-set `ENNReal` liminf endpoint.
+- Lean derives the canonical zeta-zero multiplicity from `analyticOrderNatAt`, proves finite order
+  and positivity, constructs and verifies the inverse-Gram projection, compares it with the model
+  distance, evaluates its limiting energy, and passes the eventual inequality through `liminf`.
+- Exact TargetChecks, standard-only axiom output, empty placeholder/declaration/resource scans,
+  `git diff --check`, and the 8614-job full build pass. This is Burnol's known theorem, not RH or
+  M2/G3 progress.
+- The implementation commit and public CI are still pending. Until that gate passes, F4 remains
+  selected, F5 remains forbidden, and F2/F3 must not be reopened for standalone helper lemmas.
 
 ## 黎曼猜想研究启动
 - 2026-07-08：已按“证明工程/研究流程”启动 RH 首轮，不承诺解决 RH。
