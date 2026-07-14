@@ -6,10 +6,14 @@ Date: 2026-07-14
 - `node_id`: `B1`
 - `gap_id`: `G4/F5`
 - `work_class`: `SOURCE_FORMALIZATION`
-- `status`: active
+- `status`: complete
 - `hard_gap_before`: F0-F4 complete; F5 selected; M2/G3 parked and unchanged.
 - `assumption_frontier_before`: the full finite-supremum passage and natural subsequence transfer
   are not yet in the checked theorem graph.
+- `hard_gap_after`: G4/B1 and F0-F5 complete; M2/G3 parked and unchanged.
+- `assumption_frontier_after`: no unchecked premise remains in the fixed Burnol source theorem;
+  the theorem remains conditional on `RiemannHypothesis` exactly as preregistered.
+- `result_class`: `KNOWN_THEOREM_FORMALIZED`
 
 ## Source Audit
 
@@ -98,3 +102,15 @@ liminf monotonicity.
 - Next obstruction: publish the implementation commit, require public CI success, then backfill
   immutable commit/run identifiers and close G4/B1.
 - Classification: `KNOWN_THEOREM_FORMALIZED` provisionally; local verification complete.
+
+### Loop 5: public implementation gate
+
+- Result: implementation published and publicly verified; close F5 and G4/B1.
+- Implementation commit: `9edf524877c7fcfd2112d50095eb021f3da12b0a`.
+- Public Lean Action CI: run `29352792330`, build job `87152928492`, success in 2m23s.
+- The public commit contains both final endpoints, exact target witnesses, transitive axiom audit,
+  preregistration, and the complete loop record through local verification.
+- Hard-gap accounting: F0-F5 are complete, so the auditor-approved Burnol node G4/B1 is complete.
+  M2/G3 is unchanged and remains parked; no unconditional RH or closure-membership result is
+  claimed.
+- Classification: `KNOWN_THEOREM_FORMALIZED`.

@@ -77,6 +77,7 @@ def checkedTargetNames : List Lean.Name :=
     ``exists_restricted_finsupp_of_baezDuarte_finsupp,
     ``exists_restricted_finsupp_integral_lt_of_baezDuarte,
     ``nymanBeurlingRestrictedConcreteApprox_of_baezDuarte,
+    ``RiemannHypothesis.baezDuarteNaturalDistance_liminf_ge_fullZeroSum,
     ``riemannHypothesis_iff_nontrivial_zeros_on_line ]
 
 example :

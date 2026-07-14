@@ -8,6 +8,7 @@ import LeanLab.Riemann.BaezDuarteReverse
 import LeanLab.Riemann.BaezDuarteForward
 import LeanLab.Riemann.BaezDuarteForwardLimit
 import LeanLab.Riemann.BurnolHardy
+import LeanLab.Riemann.BurnolFullLowerBound
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -525,10 +526,10 @@ def rhTargets : List ResearchTarget :=
       tier := .tier2
       title := "Formalize Burnol's Nyman-Beurling distance lower bound"
       statement :=
-        "Align and formalize Burnol's published lower bound liminf D(lambda)*sqrt(log(1/lambda)) >= sqrt(sum_rho m_rho^2/|rho|^2), and transfer its natural-subspace consequence d_N^2 >= C/log N without treating it as RH progress."
-      leanName := none
-      status := .inProgress
-      note := "Admitted by the independent Arch M1 audit of 2026-07-13 as the post-M1 research line. Audit G4-01 fixes source dependencies F0-F5. Batches G4-F0 through G4-F4 are publicly complete. F5 now locally proves both the full extended zero-sum continuous liminf bound and its reciprocal-natural distance transfer; exact targets, standard-only axiom checks, clean scans, and the full build pass. F5 remains selected pending public commit and CI. This is known mathematics and a quantitative obstruction, not M2/G3 progress." },
+        "Under RH, formalize Burnol's lower bound liminf D(lambda)*sqrt(log(1/lambda)) >= sqrt(sum_rho m_rho^2/|rho|^2), and transfer it to the natural-subspace liminf of d_N*sqrt(log N)."
+      leanName := some ``RiemannHypothesis.baezDuarteNaturalDistance_liminf_ge_fullZeroSum
+      status := .proven
+      note := "Audit G4-01 fixed source dependencies F0-F5, and batches G4-F0 through G4-F5 are publicly complete. The final theorem uses the full extended nonnegative zero sum, needs no summability or countability premise, and proves the exact RH-conditional natural-distance liminf endpoint. Implementation commit 9edf524877c7fcfd2112d50095eb021f3da12b0a passed public CI run 29352792330. This is known mathematics and a quantitative obstruction, not M2/G3 or unconditional RH progress." },
     { id := "T3.rh.horizon"
       tier := .tier3
       title := "Riemann Hypothesis horizon"

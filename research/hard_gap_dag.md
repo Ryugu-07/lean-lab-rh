@@ -27,7 +27,7 @@ flowchart TD
 | M1 | complete | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | Batch M1-18 compiles both directions of the exact strong positive-natural Baez-Duarte criterion in full-half-line complex `L2`. |
 | D | complete | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | `riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure` is the exact compiled bridge. |
 | M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
-| B1 | in progress | Formalize Burnol's published quantitative lower bound for the Nyman-Beurling approximation distance. | Batches G4-F0 through F3 are public. F3 closes the full finite-dimensional Gram/Cauchy and target-pairing surface, including unequal source multiplicities. F4 finite-zero-set assembly is selected. This is known mathematics, not M2 progress. |
+| B1 | complete | Formalize Burnol's published quantitative lower bound for the Nyman-Beurling approximation distance. | Batches G4-F0 through G4-F5 are public. The full RH-conditional continuous zero-sum lower bound and exact natural-distance liminf transfer are Lean-checked. This is known mathematics, not M2 progress. |
 
 ## Hard Gaps
 
@@ -36,7 +36,7 @@ flowchart TD
 | G1 | M1/D | complete | The exact strong positive-natural Baez-Duarte full-line closure criterion is Lean-equivalent to `Mathlib.RiemannHypothesis`. |
 | G2 | M1 | complete | Batch M1-18 compiles the weighted finite formula, fixed-epsilon transformed limit, epsilon-to-zero dominated convergence, diagonal assembly, tail removal, and `RH -> closure`. |
 | G3 | M2 | parked | Construct unconditional finite approximants with error tending to zero. In the NB/BD framework this is essentially the hard RH direction; numerical convergence is not evidence. |
-| G4 | B1 | in progress | Burnol's lower bound `liminf D(lambda) * sqrt(log(1/lambda)) >= sqrt(sum_rho m_rho^2 / |rho|^2)` and its natural-subspace consequence of order at least `1/log N` for squared distance. Audit G4-01 fixes the dependency frontier F0-F5 without changing M2/G3. |
+| G4 | B1 | complete | Burnol's RH-conditional lower bound `liminf D(lambda) * sqrt(log(1/lambda)) >= sqrt(sum_rho m_rho^2 / |rho|^2)` and its natural-subspace liminf consequence are publicly Lean-checked through the fixed F0-F5 frontier. M2/G3 is unchanged. |
 
 ## G4 Fixed Source Frontier
 
@@ -47,8 +47,8 @@ flowchart TD
 | F1b | complete | `BurnolHardy.lean` constructs the critical-line phase isometry, proves its explicit action on `chi` and every `rho(theta/t)`, transports the explicit model span, and proves `D(lambda)=dist(chi1,C_lambda)`. |
 | F2 | complete | `BurnolY.lean` constructs the second source phase `V`, physical cutoff `Q_lambda`, `psi(w,k)`, the BBLS/Burnol oscillatory continuation, critical-line `L2` limits `Y(lambda,s,k)`, lambda-independent transformed representative bounds, exact model-kernel pairings, and analytic-order orthogonality to the full model span. |
 | F3 | complete | Gram-block and target-pairing asymptotics, including the Hilbert/Cauchy inverse entry `m^2`, unequal multiplicity blocks, and inverse convergence, are publicly Lean-checked. |
-| F4 | open, selected | Finite-zero-set liminf lower bound under RH. |
-| F5 | open | Full zero sum, optional off-RH branch, and natural-distance asymptotic transfer. |
+| F4 | complete | The RH-conditional finite-zero-set liminf lower bound is publicly Lean-checked. |
+| F5 | complete | The full extended zero sum and exact natural-distance asymptotic liminf transfer are publicly Lean-checked. |
 
 ## Post-M1 Admission Rule
 
@@ -268,10 +268,11 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   the 8614-job local build pass. Implementation commit
   `3cf0b91a65f6830eb73896bee77cc0db65b7387b` passed public CI run `29351353828`, build job
   `87148078056`. Result: `KNOWN_THEOREM_FORMALIZED`; close F4 and select F5. M2/G3 are unchanged.
-- Batch `BATCH-20260714-G4-F5` is locally complete pending publication. Lean identifies the full
+- Batch `BATCH-20260714-G4-F5` closes the fixed full-sum and natural-transfer edge. Lean identifies the full
   extended zero-sum constant as the supremum of finite F4 constants, proves the RH-conditional
   continuous liminf lower bound without summability or countability assumptions, and transfers it
   along `lambda=(N : Real)^-1` to the exact natural-distance `liminf d_N*sqrt(log N)` endpoint.
   Exact targets, standard-only axiom checks, clean scans/diff check, and the 8615-job full build
-  pass. Provisional result: `KNOWN_THEOREM_FORMALIZED`; F5 and G4/B1 remain in progress until the
-  implementation commit passes public CI. M2/G3 are unchanged.
+  pass. Implementation commit `9edf524877c7fcfd2112d50095eb021f3da12b0a` passed public CI run
+  `29352792330`, build job `87152928492`. Result: `KNOWN_THEOREM_FORMALIZED`; close F5 and G4/B1.
+  M2/G3 are unchanged.

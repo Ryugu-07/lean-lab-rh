@@ -10,7 +10,7 @@ Batch ID: `BATCH-20260714-G4-F5`
 - `gap_id`: `G4/F5`
 - `work_class`: `SOURCE_FORMALIZATION`
 - `novelty_label`: `KNOWN_MATHEMATICS`
-- `status`: preregistered
+- `status`: published
 
 Close the final fixed Burnol edge in one batch: identify the source constant as the half-power of
 the full nonnegative `ENNReal` sum over all project nontrivial zeta zeros, prove the continuous
@@ -145,3 +145,10 @@ witnesses and transitive axiom checks pass; each endpoint depends only on `prope
 `Classical.choice`, and `Quot.sound`. The full 8615-job build, forbidden-token/declaration/resource
 scans, and `git diff --check` pass. This is a provisional `KNOWN_THEOREM_FORMALIZED` result pending
 the required public commit and public Lean Action gate; F5 and G4 are not yet marked complete.
+
+## Published Result
+
+Implementation commit `9edf524877c7fcfd2112d50095eb021f3da12b0a` passed public Lean Action
+CI run `29352792330`, build job `87152928492`, in 2m23s. Both exact endpoints and all fixed batch
+gates are therefore public and verified. Final classification: `KNOWN_THEOREM_FORMALIZED`; close
+F5 and G4/B1. M2/G3 remains parked and unchanged.
