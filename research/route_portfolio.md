@@ -151,8 +151,9 @@ quotient/uniqueness/completeness, density, the complete explicit formula, positi
 Exact targets, standard-only axiom output, scans, diff check, and the 8,664-job full build pass
 locally. `hard_gap_delta=0`. Implementation commit
 `335d6dfa175a345555aaa408b5581ed743d2abf7` passed public Lean Action CI run `29412820223`, build
-job `87343685661`, in 1m42s. Evidence backfill and clean synchronization remain before public
-closure.
+job `87343685661`, in 1m42s. Evidence-backfill commit
+`4b1d549504ae1965fb8cd34e314a4c682ca662a2` passed public Lean Action CI run `29413062276`, build
+job `87344475624`, in 1m46s. The campaign is publicly closed.
 
 ## Portfolio Update: R3 Xi Zero Divisor
 

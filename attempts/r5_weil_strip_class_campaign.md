@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260715-R5-WEIL-STRIP-CLASS-01`
 
 Date: 2026-07-15
 
-Status: `IMPLEMENTATION_PUBLICLY_VERIFIED`
+Status: `CLOSED_KNOWN_THEOREM_FORMALIZED`
 
 Route: R5, explicit formula and test-function positivity.
 
@@ -42,5 +42,7 @@ metric space of raw functions, density, the explicit formula, positivity, or RH.
 backfill, its public CI, and final clean synchronization are the remaining campaign gates.
 
 Implementation commit `335d6dfa175a345555aaa408b5581ed743d2abf7` passed public Lean Action CI
-run `29412820223`, build job `87343685661`, in 1m42s. Immutable evidence backfill and final clean
-synchronization remain.
+run `29412820223`, build job `87343685661`, in 1m42s. Evidence-backfill commit
+`4b1d549504ae1965fb8cd34e314a4c682ca662a2` passed public Lean Action CI run `29413062276`, build
+job `87344475624`, in 1m46s. The campaign is publicly closed and returns to route selection; the
+persistent RH Goal remains active.
