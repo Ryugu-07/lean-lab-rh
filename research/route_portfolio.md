@@ -854,3 +854,47 @@ run `29456771395`, build job `87491571306`, in `1m47s`. Together with implementa
 listed-premise contraction inference without a concrete surrounding-map norm theorem or exact
 energy identity. The broader R4 route and the persistent RH Goal remain active; return to fresh
 `INDEPENDENT_AUDIT -> ROUTE_SELECTION`.
+
+## Portfolio Update: R5 Fixed-Width Gaussian Criterion Publicly Closed
+
+Date: 2026-07-16
+
+Fresh DISCOVERY route selection asked whether the all-width Gaussian-Weil criterion could be
+compressed to one arbitrary positive width without assuming a Bochner representation or a
+tempered extension. Campaign `CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-FIXED-WIDTH-01` uses the finite
+Rademacher multiplier `cosh(sqrt(c/n)*z)^n`; its paired multiplier converges to `exp(c*z^2)`, is
+uniformly bounded on centered xi zeros, and remains inside the finite real shift algebra.
+Dominated convergence transfers every larger-width zero and arithmetic quadratic back to the
+fixed base width. The threshold-strengthened W2g1 separator then gives the exact fixed-width iff.
+
+The exact theorem, target witnesses, standard-only axiom audit, forbidden scans, diff check, and
+8,677-job full build pass. Implementation `f56b70478ab552802cac719b8e9af0f56fc44b1d`, evidence
+`f93e73cbdd71785a28cc2b05f8ef2b0390b358cf`, and closure
+`8b45a091aa4f16e348a2cd8b73e949480f446508` each passed public CI runs `29458594435`,
+`29458788171`, and `29458987040`. The campaign is publicly closed as
+`NEW_RELEVANT_LEAN_THEOREM` pending independent novelty review. It has `hard_gap_delta=0` for
+unconditional W2, G7, and RH; return to a fresh route and do not reopen width compression without
+a strictly stronger endpoint.
+
+## Selection Update: R5 Compact Laplace Xi-Divisor Separator
+
+Date: 2026-07-16
+
+Fresh LITERATURE route selection compares five source-aligned candidates after W2g2 closure. The
+full Connes--Consani archimedean operator theorem is deferred because its decisive spectrum bound
+depends on prolate functions and a large computer-assisted approximation. Generic strip-class
+integration still lacks vertical decay; immediate Hermite density would hide an unproved
+tempered-extension step; and another Gaussian width reformulation violates anti-cycling.
+
+Campaign `CAMPAIGN-20260716-R5-COMPACT-LAPLACE-SEPARATOR-01` selects the compact-support
+interpolation mechanism underlying Connes--Consani Appendix C and Yoshida's compact-support Weil
+criterion. Its exact endpoint is a smooth compactly supported function on the logarithmic line
+whose bilateral Laplace transform equals one at a chosen multiplicity-bearing xi zero and has
+arbitrarily small absolute `tsum` over all different xi-zero values. The construction uses a
+target-modulated positive bump, twofold integration by parts, a finite exponential polynomial on
+one fixed transform superlevel, and compact convolution powers.
+
+This is an unconditional W1 reverse-separation component, not the generic explicit formula,
+unconditional Weil positivity, or RH. G6/W1 and G7/W2 remain open and expected hard-gap delta is
+zero. The exact statement, adversarial tests, source boundary, and rejection conditions are fixed
+in `research/r5_compact_laplace_separator_prereg_20260716.md` before Lean proof edits.
