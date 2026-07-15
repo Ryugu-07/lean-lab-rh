@@ -92,8 +92,10 @@ Exact TargetChecks, five standard-only axiom prints, all forbidden-token/declara
 scans, `git diff --check`, the standalone module build, and the 8,670-job full build pass. The
 campaign is locally complete as `BRIDGE_REDUCED`.
 Implementation commit `6c65019d9de2d31127dd3bf8389994207c17dcb5` passed public Lean Action CI
-run `29441160498`, build job `87440149741`, in `2m33s`; evidence-backfill CI remains before public
-closure.
+run `29441160498`, build job `87440149741`, in `2m33s`. Evidence-backfill commit
+`fa5fdc5aefd4dd3e99966cc1e0fcca62293e9600` passed public CI run `29441452307`, build job
+`87441220281`, in `1m28s`. The campaign is publicly closed as `BRIDGE_REDUCED`; a fresh route
+selection is required before another campaign.
 
 ## R1: Exact Baez-Duarte Gram And Projection Geometry
 

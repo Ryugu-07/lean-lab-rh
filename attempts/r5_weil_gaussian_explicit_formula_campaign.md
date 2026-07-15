@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-WEIL-GAUSSIAN-EXPLICIT-FORMULA-01`
 
 Date: 2026-07-16
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED_BRIDGE_REDUCED`
 
 ## Runtime Record
 
@@ -24,6 +24,7 @@ Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 | 5 | `PROOF_ATTEMPT_A_CONTINUED` | Built an independent two-pole symmetric rectangle, checked both residues `G_a(0)=G_a(1)=exp(a/4)`, proved top-edge decay and full-line pole value `2*pi*exp(a/4)`, then passed all arithmetic truncations to the full line and proved `gaussianXi_arithmetic_explicit_formula`. | Admit the indivisible endpoint to independent audit; no Attempt B or pivot was needed. |
 | 6 | `INDEPENDENT_AUDIT` | Exact TargetChecks and five selected axiom prints pass; all new prints use only `propext`, `Classical.choice`, and `Quot.sound`. The standalone module is warning-free; forbidden-token, declaration, and resource-option scans are empty; `git diff --check` and the 8,670-job full build pass. | Close locally as `BRIDGE_REDUCED`; publish and require public CI before public closure. |
 | 7 | `PUBLIC_IMPLEMENTATION_GATE` | Implementation commit `6c65019d9de2d31127dd3bf8389994207c17dcb5` passed public Lean Action CI run `29441160498`, build job `87440149741`, in `2m33s`. | Backfill immutable evidence and require that commit's own public CI before closure. |
+| 8 | `PUBLIC_EVIDENCE_GATE` | Evidence-backfill commit `fa5fdc5aefd4dd3e99966cc1e0fcca62293e9600` passed public Lean Action CI run `29441452307`, build job `87441220281`, in `1m28s`. | Close publicly as `BRIDGE_REDUCED`; return to fresh route selection with the persistent RH Goal active. |
 
 ## Fixed Endpoint
 

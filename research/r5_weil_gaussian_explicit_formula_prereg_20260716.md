@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-WEIL-GAUSSIAN-EXPLICIT-FORMULA-01`
 
 Date: 2026-07-16
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED_BRIDGE_REDUCED`
 
 ## Route Boundary
 
@@ -151,5 +151,7 @@ declaration, and resource-option scans, `git diff --check`, and the 8,670-job fu
 campaign is locally complete as `BRIDGE_REDUCED`, and the persistent RH Goal stays active.
 
 Implementation commit `6c65019d9de2d31127dd3bf8389994207c17dcb5` passed public Lean Action CI
-run `29441160498`, build job `87440149741`, in `2m33s`. The evidence-backfill commit and its own
-public CI remain before public closure.
+run `29441160498`, build job `87440149741`, in `2m33s`. Evidence-backfill commit
+`fa5fdc5aefd4dd3e99966cc1e0fcca62293e9600` passed public Lean Action CI run `29441452307`, build
+job `87441220281`, in `1m28s`. The campaign is publicly closed as `BRIDGE_REDUCED`; the persistent
+RH Goal remains active.
