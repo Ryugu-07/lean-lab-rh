@@ -354,3 +354,13 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `87487225276`. Result: `BRANCH_ELIMINATED`, `hard_gap_delta=0`. This rejects only the tested
   integral-retention mechanism; analytic continuation, the revised 2026 Thorin framework, G6/W1,
   G7/W2, G3/M2, and RH remain unchanged.
+- Audit `AUDIT-20260716-R4-FREEDMAN-GREEN-LIFT-CONTRACTION-01` tests a closure inference in
+  Freedman arXiv `2606.29555`. Lean gives a two-dimensional model with nontrivial trace kernel,
+  exact trace-fiber Euler--Lagrange orthogonality, a contractive middle multiplier, and
+  `G_-=C K E G_+`, while `C K E` expands by two and the signed unit form is `-3`. Implementation
+  commit `b360163ccdad0d0076408c2a65eee99d2d4df7b5` passed public CI run `29456581043`, build job
+  `87490980870`; evidence commit `779a8092992e85b8e8a4b3a57a872456dd7fc1d9` passed run
+  `29456771395`, build job `87491571306`. Result: `BRANCH_ELIMINATED`, `hard_gap_delta=0`. The
+  displayed premises do not force contraction; a concrete surrounding-map norm estimate or exact
+  energy identity could still repair the Volterra route. G6/W1, G7/W2, G3/M2, and RH are
+  unchanged.

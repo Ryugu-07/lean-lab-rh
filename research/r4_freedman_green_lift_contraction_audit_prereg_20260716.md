@@ -4,7 +4,7 @@ Audit: `AUDIT-20260716-R4-FREEDMAN-GREEN-LIFT-CONTRACTION-01`
 
 Date: 2026-07-16
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Source Claim Under Audit
 
@@ -151,3 +151,9 @@ The local classification is `BRANCH_ELIMINATED` for the displayed listed-premise
 Implementation commit `b360163ccdad0d0076408c2a65eee99d2d4df7b5` passed public Lean Action CI
 run `29456581043`, build job `87490980870`, in `2m7s`. Immutable evidence is now backfilled; the
 evidence commit must pass its own public CI before the audit closes.
+
+Evidence commit `779a8092992e85b8e8a4b3a57a872456dd7fc1d9` passed public Lean Action CI
+run `29456771395`, build job `87491571306`, in `1m47s`. The audit is publicly closed as
+`BRANCH_ELIMINATED`. Do not reuse the source's listed-premise contraction inference without a new
+concrete norm estimate or energy identity. Return to fresh route selection under the active RH
+Goal.

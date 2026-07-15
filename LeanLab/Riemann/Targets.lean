@@ -333,7 +333,7 @@ def rhTargets : List ResearchTarget :=
         "Give an exact finite-dimensional model with a nontrivial trace kernel satisfying the displayed Green-lift factorization, middle-multiplier contraction, and trace-fiber Euler-Lagrange orthogonality, while the compressed map expands and the signed form is negative."
       leanName := some ``freedmanGreenLift_listedPremises_do_not_force_contraction
       status := .proven
-      note := "Audit AUDIT-20260716-R4-FREEDMAN-GREEN-LIFT-CONTRACTION-01 checks a two-dimensional real model in which K is contractive, G_-=C K E G_+ and trace-kernel orthogonality hold, but C K E multiplies by two and the unit signed form is -3. Implementation commit b360163ccdad0d0076408c2a65eee99d2d4df7b5 passed public Lean Action CI run 29456581043, build job 87490980870. This eliminates only the claim that those listed premises force contraction; a concrete Volterra proof with additional norm control, KLM positivity, and RH remain open." },
+      note := "Audit AUDIT-20260716-R4-FREEDMAN-GREEN-LIFT-CONTRACTION-01 checks a two-dimensional real model in which K is contractive, G_-=C K E G_+ and trace-kernel orthogonality hold, but C K E multiplies by two and the unit signed form is -3. Implementation commit b360163ccdad0d0076408c2a65eee99d2d4df7b5 passed public Lean Action CI run 29456581043, build job 87490980870; evidence commit 779a8092992e85b8e8a4b3a57a872456dd7fc1d9 passed run 29456771395, build job 87491571306. This eliminates only the claim that those listed premises force contraction; a concrete Volterra proof with additional norm control, KLM positivity, and RH remain open." },
     { id := "T2.inventory.nyman.beurling"
       tier := .tier2
       title := "Inventory mathlib support for the Nyman-Beurling route"

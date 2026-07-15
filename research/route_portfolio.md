@@ -846,3 +846,11 @@ Implementation commit `b360163ccdad0d0076408c2a65eee99d2d4df7b5` passed public L
 run `29456581043`, build job `87490980870`, in `2m7s`. The listed-premise countermodel is now
 independently public-built. Immutable evidence backfill and its own public CI remain before audit
 closure; the persistent RH Goal stays active.
+
+Evidence commit `779a8092992e85b8e8a4b3a57a872456dd7fc1d9` passed public Lean Action CI
+run `29456771395`, build job `87491571306`, in `1m47s`. Together with implementation run
+`29456581043`, this publicly closes
+`AUDIT-20260716-R4-FREEDMAN-GREEN-LIFT-CONTRACTION-01` as `BRANCH_ELIMINATED`. Do not reuse the
+listed-premise contraction inference without a concrete surrounding-map norm theorem or exact
+energy identity. The broader R4 route and the persistent RH Goal remain active; return to fresh
+`INDEPENDENT_AUDIT -> ROUTE_SELECTION`.

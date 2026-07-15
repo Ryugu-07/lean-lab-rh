@@ -4,7 +4,7 @@ Audit: `AUDIT-20260716-R4-FREEDMAN-GREEN-LIFT-CONTRACTION-01`
 
 Date: 2026-07-16
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Runtime Record
 
@@ -34,6 +34,7 @@ Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 | 4 | `INDEPENDENT_AUDIT` | The batch also proves `contraction_comp_three`: separate contraction estimates for `C`, `K`, and `E` do imply contraction of their composition. Exact Targets and statement witnesses compile; both selected axiom prints contain only standard axioms. | Accept only the source-local dependency diagnosis; do not infer nonpositivity of the concrete Weyl kernel. |
 | 5 | `LOCAL_VERIFICATION` | Standalone compilation, the 2,966-job module build, Targets, TargetChecks, AxiomsAudit, empty forbidden/scratch scans, `git diff --check`, and the full 8,676-job build pass. | Classify locally as `BRANCH_ELIMINATED`; publish implementation and require public CI. |
 | 6 | `PUBLIC_IMPLEMENTATION_VERIFICATION` | Implementation commit `b360163ccdad0d0076408c2a65eee99d2d4df7b5` passed public Lean Action CI run `29456581043`, build job `87490980870`, in `2m7s`. | Backfill immutable evidence and require that evidence commit's own public CI before closure. |
+| 7 | `PUBLIC_EVIDENCE_VERIFICATION` | Evidence commit `779a8092992e85b8e8a4b3a57a872456dd7fc1d9` passed public Lean Action CI run `29456771395`, build job `87491571306`, in `1m47s`. | Close as `BRANCH_ELIMINATED`; do not reuse the listed-premise contraction inference without an additional concrete norm or energy theorem. |
 
 ## Current Accounting
 
@@ -45,4 +46,4 @@ Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 - `assumption_frontier_after`: the concrete source must prove norm control for the surrounding
   compression/right inverse, or an exact energy identity implying their combined contraction
 - `classification`: `BRANCH_ELIMINATED`
-- `next_gate`: evidence-backfill commit, push, and public Lean Action CI
+- `next_gate`: fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION` under the active RH Goal
