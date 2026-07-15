@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-QUADRATIC-POSITIVITY-01`
 
 Date: 2026-07-16
 
-Status: `IMPLEMENTATION_PUBLICLY_VERIFIED`
+Status: `PUBLICLY_CLOSED_BRIDGE_REDUCED`
 
 ## Runtime Record
 
@@ -24,6 +24,7 @@ Status: `IMPLEMENTATION_PUBLICLY_VERIFIED`
 | 4 | `SCRATCH_ADMISSION` | Lean compiles the critical-line Gaussian evaluation, the finite cosine-difference Gram identity, packet-to-square pointwise equality, transport of summability to the real square family, exact zero `tsum` identity, direct packet arithmetic formula, and RH-forward real-part nonnegativity. | Admit the candidate and begin formal Proof Attempt A; helper-only closure is forbidden. |
 | 5 | `PROOF_ATTEMPT_A_AND_INDEPENDENT_AUDIT` | `WeilGaussianQuadraticPositivity.lean` reaches the exact square `tsum`, direct arithmetic identity, and RH-forward arithmetic nonnegativity. Singleton and zero-coefficient boundaries compile. The warning-free standalone module, Targets, exact TargetChecks, seven standard-only axiom prints, empty forbidden scans, `git diff --check`, and the 8,673-job full build pass. | Close locally as `BRIDGE_REDUCED`; publish implementation and require public CI before later use. |
 | 6 | `PUBLIC_IMPLEMENTATION_GATE` | Implementation commit `cf271684f786efcb2e83a57d76c51e215205d1d1` passed public Lean Action CI run `29447980403`, build job `87463120301`, in `1m49s`. | Backfill immutable evidence and require the evidence commit's own public CI. |
+| 7 | `PUBLIC_EVIDENCE_GATE` | Evidence-backfill commit `dafcd758a5257718ed2c9f6c8813213a2821708e` passed public Lean Action CI run `29448199280`, build job `87463856783`, in `1m32s`. | Close publicly as `BRIDGE_REDUCED`; keep the persistent RH Goal active and return to fresh route selection. |
 
 ## Accounting At Selection
 
@@ -58,4 +59,5 @@ Status: `IMPLEMENTATION_PUBLICLY_VERIFIED`
 - `full_build`: 8,673 jobs passed
 - `classification`: `BRIDGE_REDUCED`
 - `implementation_ci`: run `29447980403`, job `87463120301`, passed in `1m49s`
-- `remaining_gate`: immutable evidence commit and public Lean Action CI
+- `evidence_ci`: run `29448199280`, job `87463856783`, passed in `1m32s`
+- `remaining_gate`: none

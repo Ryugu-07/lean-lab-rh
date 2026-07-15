@@ -704,5 +704,10 @@ Classification is locally `BRIDGE_REDUCED`, with zero unconditional RH hard-gap 
 evidence closure remains.
 
 Implementation commit `cf271684f786efcb2e83a57d76c51e215205d1d1` passed public Lean Action CI
-run `29447980403`, build job `87463120301`, in `1m49s`. Immutable evidence backfill and its own
-public CI remain before campaign closure.
+run `29447980403`, build job `87463120301`, in `1m49s`. At that gate, immutable evidence backfill
+and its own public CI remained before campaign closure.
+
+Evidence-backfill commit `dafcd758a5257718ed2c9f6c8813213a2821708e` passed public Lean Action CI
+run `29448199280`, build job `87463856783`, in `1m32s`. The campaign is publicly closed as
+`BRIDGE_REDUCED`. The conditional Gaussian kernel theorem is now public, but unconditional W2,
+G7, and RH are unchanged; the persistent Goal remains active and returns to fresh route selection.

@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-QUADRATIC-POSITIVITY-01`
 
 Date: 2026-07-16
 
-Status: `LOCAL_COMPLETE_BRIDGE_REDUCED`
+Status: `PUBLICLY_CLOSED_BRIDGE_REDUCED`
 
 ## Route Boundary
 
@@ -173,5 +173,9 @@ uses only `propext`, `Classical.choice`, and `Quot.sound`. Classification is loc
 `BRIDGE_REDUCED`; publication evidence remains before closure.
 
 Implementation commit `cf271684f786efcb2e83a57d76c51e215205d1d1` passed public Lean Action CI
-run `29447980403`, build job `87463120301`, in `1m49s`. Immutable evidence backfill and that
-commit's own public CI remain before closure.
+run `29447980403`, build job `87463120301`, in `1m49s`. At that gate, immutable evidence backfill
+and the backfill commit's own public CI remained before closure.
+
+Evidence-backfill commit `dafcd758a5257718ed2c9f6c8813213a2821708e` passed public Lean Action CI
+run `29448199280`, build job `87463856783`, in `1m32s`. Together with the implementation CI, this
+publicly closes the campaign as `BRIDGE_REDUCED`. The persistent RH Goal remains active.
