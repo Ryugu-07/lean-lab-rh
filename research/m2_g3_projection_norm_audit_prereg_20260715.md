@@ -146,6 +146,9 @@ family at `n=3`, not merely unsupported by the generic norm comparison.
 - `governance_decision`: do not reopen M2/G3 and do not create a successor edge from this source.
 - `local_verification`: exact target checks, standard-only axiom audit, empty forbidden scans,
   `git diff --check`, and the 8616-job full build pass.
+- `public_verification`: implementation commit
+  `b4894f0cb9903b5fa14c766e30bdb10c3bdeaeb4` passed Lean Action CI run `29383306167`, build job
+  `87251333374`, in 2m3s.
 
 This result invalidates the audited proof route, not RH. A possible larger uniform bound for all
 special `P_n` is not ruled out by the `n=3` example, but the source neither obtains such a bound

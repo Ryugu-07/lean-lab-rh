@@ -61,6 +61,8 @@ Date: 2026-07-15
   `propext`, `Classical.choice`, and `Quot.sound`.
 - The 8616-job full build and `git diff --check` pass. Forbidden Lean token, declaration, and
   resource-relaxation scans are empty.
+- Implementation commit `b4894f0cb9903b5fa14c766e30bdb10c3bdeaeb4` passed public Lean Action
+  CI run `29383306167`, build job `87251333374`, in 2m3s.
 - `hard_gap_after`: M2/G3 remains parked; M0, M1, D, and G4 remain complete.
 - `hard_gap_delta`: zero. This rejects a proposed proof branch but does not prove unconditional
   closure membership.

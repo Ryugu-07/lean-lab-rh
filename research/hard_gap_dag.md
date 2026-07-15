@@ -282,4 +282,6 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `(1,1,-1,1,1)`. Thus the source's asserted bound
   `norm_infinity(P_n) <= norm_2(P_n) = 1` fails inside its own special family. Result:
   `BRANCH_FALSIFIED`; the proof route is rejected, no successor edge is admitted, and the
-  unconditional closure-membership frontier and M2/G3 status are unchanged.
+  unconditional closure-membership frontier and M2/G3 status are unchanged. Implementation
+  commit `b4894f0cb9903b5fa14c766e30bdb10c3bdeaeb4` passed public Lean Action CI run
+  `29383306167`, build job `87251333374`.
