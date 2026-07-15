@@ -204,4 +204,6 @@ convolution theorem, source-faithful test class, zero/prime/pole/archimedean exp
 density theorem, and unconditional Weil positivity all remain open. No statement of RH or its
 negation is derived. Standalone compilation, exact target checks, selected standard-only axiom
 output, the 8,662-job full build, forbidden scans, and `git diff --check` pass locally. The
-persistent RH goal remains active.
+persistent RH goal remains active. Implementation commit
+`24621330af4a24269a1748c5b3a4f924c16a7768` passed public Lean Action CI run `29409014307`, build
+job `87331366564`, in 2m27s. Immutable evidence backfill and final clean synchronization remain.

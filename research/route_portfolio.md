@@ -330,4 +330,7 @@ This completes only the first test-algebra subedge. It does not state the multip
 convolution theorem, the explicit formula, the Weil quadratic form, density, or positivity.
 `hard_gap_delta=0`; the RH assumption frontier is unchanged. The next state is
 `INDEPENDENT_AUDIT -> ROUTE_SELECTION`, and another R5 campaign requires a genuinely new exact
-edge rather than wrappers around the compiled involution.
+edge rather than wrappers around the compiled involution. Implementation commit
+`24621330af4a24269a1748c5b3a4f924c16a7768` passed public Lean Action CI run `29409014307`, build
+job `87331366564`, in 2m27s. Evidence backfill and clean synchronization remain before public
+closure.

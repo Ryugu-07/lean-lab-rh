@@ -44,6 +44,8 @@ Result: `KNOWN_THEOREM_FORMALIZED`
 - All selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`.
 - Standalone compilation, exact target checks, the 8,662-job full build, all forbidden scans, and
   `git diff --check` pass locally.
+- Implementation commit `24621330af4a24269a1748c5b3a4f924c16a7768` passed public Lean Action
+  CI run `29409014307`, build job `87331366564`, in 2m27s.
 - `hard_gap_before`: full R5 convolution/test class, explicit formula, density, and positivity.
 - `hard_gap_after`: the exact involution/star and Mellin-convergence subedge is compiled; full
   convolution/test class, explicit formula, density, and positivity remain.
@@ -51,6 +53,7 @@ Result: `KNOWN_THEOREM_FORMALIZED`
 - `assumption_frontier_before`: complete explicit formula and unconditional Weil positivity.
 - `assumption_frontier_after`: unchanged.
 
-The local campaign is closed. The persistent RH goal remains active and returns to
+The mathematical campaign is closed; immutable evidence backfill and final clean synchronization
+remain. The persistent RH goal stays active and returns to
 `INDEPENDENT_AUDIT -> ROUTE_SELECTION`; a successor may not count algebraic wrappers around these
 theorems as a new campaign.
