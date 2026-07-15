@@ -40,7 +40,7 @@ flowchart TD
 | L1 | complete | Prove the RH-forward all-index Li real-part nonnegativity direction. | Under RH every paired summand is exactly half a complex norm square. |
 | L2 | complete | Prove all-index Li real-part nonnegativity implies `Mathlib.RiemannHypothesis`. | The project-specialized Bombieri-Lagarias argument compiles: finite threshold superlevels, simultaneous phase recurrence, fixed-weight tail domination, an off-line-to-negative-coefficient theorem, and the exact Li/RH iff. Implementation and evidence commits passed public CI runs `29406614212` and `29406932411`. |
 | W0 | complete | Formalize Weil's multiplicative test-function involution, conjugate star, and exact Mellin covariance. | `WeilTestAlgebra.lean` proves pointwise involutivity on `0<x`, the zero-boundary counterexample, convergence iff, endpoint swap, conjugate-star covariance, and critical-line specialization. This is test algebra only. |
-| W1 | open | Formalize a source-faithful admissible test class, multiplicative convolution, and the complete zero/prime/pole/archimedean explicit formula. | W1a is public and W1b's physical analytic-strip algebra core is locally complete. Quotient/completeness, contour, gamma, prime-sum, zero-sum, and regularization remain. |
+| W1 | open | Formalize a source-faithful admissible test class, multiplicative convolution, and the complete zero/prime/pole/archimedean explicit formula. | W1a and W1b's physical analytic-strip algebra core are public. Quotient/completeness, contour, gamma, prime-sum, zero-sum, and regularization remain. |
 | W2 | open | Prove unconditional Weil positivity on a complete RH-equivalent test class. | This is the genuine RH-hard R5 edge. Connes-Consani's semi-local mechanism is explicitly conjectural and is not a premise. |
 
 ## Hard Gaps
@@ -60,7 +60,7 @@ flowchart TD
 | edge | status | source-level content |
 | --- | --- | --- |
 | W1a | complete | Source-faithful `dy/y` convolution, exact convergence closure, Mellin product, star covariance, and critical-line `normSq` autocorrelation compile through logarithmic transport to Mathlib additive Bochner convolution. |
-| W1b | local complete | A positive-width physical class with pointwise closed-strip convergence, open-strip analyticity, closed-strip continuity, and a finite uniform bound is closed under vector operations, involution, conjugate star, convolution, and autocorrelation. Quotient/uniqueness/completeness and density are explicitly not claimed. Public CI remains. |
+| W1b | complete | A positive-width physical class with pointwise closed-strip convergence, open-strip analyticity, closed-strip continuity, and a finite uniform bound is closed under vector operations, involution, conjugate star, convolution, and autocorrelation. Quotient/uniqueness/completeness and density are explicitly not claimed. Implementation commit `335d6dfa175a345555aaa408b5581ed743d2abf7` passed public CI run `29412820223`. |
 | W1c | open | Prove the complete zero/prime/pole/archimedean explicit formula, including distributional convergence and all regularization choices. |
 
 ## G4 Fixed Source Frontier

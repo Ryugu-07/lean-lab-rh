@@ -149,7 +149,10 @@ the convolution proof uses W1a rather than assuming transform closure.
 This completes W1b's physical algebra core only. It does not claim metric separation,
 quotient/uniqueness/completeness, density, the complete explicit formula, positivity, or RH.
 Exact targets, standard-only axiom output, scans, diff check, and the 8,664-job full build pass
-locally. `hard_gap_delta=0`; publication and public CI remain.
+locally. `hard_gap_delta=0`. Implementation commit
+`335d6dfa175a345555aaa408b5581ed743d2abf7` passed public Lean Action CI run `29412820223`, build
+job `87343685661`, in 1m42s. Evidence backfill and clean synchronization remain before public
+closure.
 
 ## Portfolio Update: R3 Xi Zero Divisor
 

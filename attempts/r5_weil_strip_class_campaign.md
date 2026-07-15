@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260715-R5-WEIL-STRIP-CLASS-01`
 
 Date: 2026-07-15
 
-Status: `LOCALLY_VERIFIED`
+Status: `IMPLEMENTATION_PUBLICLY_VERIFIED`
 
 Route: R5, explicit formula and test-function positivity.
 
@@ -38,5 +38,9 @@ count as separate research loops.
 `LeanLab/Riemann/WeilStripClass.lean` proves the fixed endpoint without `sorry`, project axioms,
 `native_decide`, hidden closure fields, or resource relaxations. The result is infrastructure for
 stating the explicit formula on one physical algebra; it does not establish a separated complete
-metric space of raw functions, density, the explicit formula, positivity, or RH. Publication and
-public CI are the only remaining campaign gates.
+metric space of raw functions, density, the explicit formula, positivity, or RH. Evidence
+backfill, its public CI, and final clean synchronization are the remaining campaign gates.
+
+Implementation commit `335d6dfa175a345555aaa408b5581ed743d2abf7` passed public Lean Action CI
+run `29412820223`, build job `87343685661`, in 1m42s. Immutable evidence backfill and final clean
+synchronization remain.
