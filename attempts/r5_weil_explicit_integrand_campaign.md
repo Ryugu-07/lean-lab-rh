@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260715-R5-WEIL-EXPLICIT-INTEGRAND-01`
 
 Date: 2026-07-15
 
-Status: `IMPLEMENTATION_PUBLICLY_VERIFIED`
+Status: `CLOSED_BRIDGE_REDUCED`
 
 Route: R5, source-faithful Weil explicit formula.
 
@@ -48,5 +48,7 @@ Result: `BRIDGE_REDUCED`
 This closes W1c0 only. Test-function integration, contour and zero-cutoff limits, local
 regularization, the covariance extension, W2 positivity, and RH remain open. Implementation
 commit `89d4dd12ebedc75c13261a0d43a9254b5931c30d` passed public Lean Action CI run
-`29417432562`, build job `87359008630`, in 1m47s. Immutable evidence backfill and final clean
-synchronization remain.
+`29417432562`, build job `87359008630`, in 1m47s. Evidence-backfill commit
+`1b405639a4e28c72fc1e2484259c047ad95ed0b2` passed public Lean Action CI run `29417710278`, build
+job `87359940112`, in 1m31s. The campaign is publicly closed; only the final closure-log CI and
+clean synchronization check remain.

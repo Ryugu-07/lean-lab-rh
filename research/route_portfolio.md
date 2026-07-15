@@ -181,7 +181,7 @@ job `87352327801`, in 1m48s. Evidence-backfill commit
 job `87353260131`, in 1m35s. The campaign is publicly closed; only closure-log CI and clean
 synchronization remain before fresh route selection.
 
-## Selected Campaign: R5 Weil Explicit Integrand Locally Complete
+## Selected Campaign: R5 Weil Explicit Integrand Publicly Closed
 
 Date: 2026-07-15
 
@@ -203,8 +203,10 @@ right-half-plane xi product, its exact pole/GammaR/von-Mangoldt logarithmic deri
 with the existing multiplicity-bearing Hadamard zero sum. Exact targets, all six standard-only
 axiom outputs, scans, diff check, standalone builds, and the 8,666-job full build pass locally.
 Implementation commit `89d4dd12ebedc75c13261a0d43a9254b5931c30d` passed public Lean Action CI
-run `29417432562`, build job `87359008630`, in 1m47s. Evidence backfill and clean synchronization
-remain.
+run `29417432562`, build job `87359008630`, in 1m47s. Evidence-backfill commit
+`1b405639a4e28c72fc1e2484259c047ad95ed0b2` passed public Lean Action CI run `29417710278`, build
+job `87359940112`, in 1m31s. The campaign is publicly closed; closure-log CI and clean
+synchronization remain before fresh route selection.
 
 ## Portfolio Update: R3 Xi Zero Divisor
 
