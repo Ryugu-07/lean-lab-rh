@@ -1,6 +1,7 @@
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
+import LeanLab.Riemann.WeilTestAlgebra
 import LeanLab.Riemann.BaezDuarteZetaRatio
 import LeanLab.Riemann.BurnolLowerBound
 import LeanLab.Riemann.BurnolA
@@ -33,7 +34,7 @@ example
     RiemannHypothesis :=
   baezDuarteComplexTarget_mem_closure_imp_riemannHypothesis h
 
-open scoped ENNReal FourierTransform InnerProductSpace Topology
+open scoped ComplexConjugate ENNReal FourierTransform InnerProductSpace Topology
 
 /-- Name-resolution witness for every `.proven` ledger target with a `leanName`. -/
 def checkedTargetNames : List Lean.Name :=
@@ -47,6 +48,7 @@ def checkedTargetNames : List Lean.Name :=
     ``exists_liCoefficientCandidate_eq_hadamard_zero_formula,
     ``liCoefficientCandidate_eq_tsum_riemannXiSymmetrizedLiZeroTerm,
     ``riemannHypothesis_iff_forall_liCoefficientCandidate_re_nonneg,
+    ``mellin_weilStar_criticalLine,
     ``liCoefficientCandidate_one_re_pos,
     ``fractionalPartKernel_memLp_two_unitInterval,
     ``fractionalPartKernelL2_mem_nymanBeurlingKernelSpan,
@@ -665,5 +667,19 @@ example (hRH : RiemannHypothesis) {δ : ℝ}
       Filter.Tendsto (baezDuarteMobiusApproxL2 δ) Filter.atTop (nhds f) ∧
         f ∈ baezDuarteKernelClosure :=
   RiemannHypothesis.exists_tendsto_baezDuarteMobiusApproxL2 hRH hδ hδ_top
+
+example (f : ℝ → ℂ) (s : ℂ) :
+    mellin (weilInvolution f) s = mellin f (1 - s) :=
+  mellin_weilInvolution f s
+
+example (f : ℝ → ℂ) (s : ℂ) :
+    MellinConvergent (weilStar f) s ↔
+      MellinConvergent f (1 - conj s) :=
+  mellinConvergent_weilStar_iff f s
+
+example (f : ℝ → ℂ) (t : ℝ) :
+    mellin (weilStar f) (1 / 2 + (t : ℂ) * Complex.I) =
+      conj (mellin f (1 / 2 + (t : ℂ) * Complex.I)) :=
+  mellin_weilStar_criticalLine f t
 
 end LeanLab.Riemann

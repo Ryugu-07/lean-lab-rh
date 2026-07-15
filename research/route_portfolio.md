@@ -130,14 +130,17 @@ equivalence or to another exact RH criterion.
   operator problem.
 - **Six-loop campaign:** source statement; test-space inventory; finite countertests; explicit-formula
   dependency map; one exact subedge attempt; independent audit.
-- **Decision:** **DEFER**. This is a serious future route, but its first missing infrastructure edge
-  is larger than the selected exact-Gram campaign.
+- **Decision (2026-07-15 independent audit):** **SELECTED FOR ONE TEST-ALGEBRA CAMPAIGN** after the
+  R3 Li criterion campaign closed. `CAMPAIGN-20260715-R5-WEIL-TEST-ALGEBRA-01` targets exactly
+  Lagarias Appendix A (A.1)-(A.2), including the conjugate-star critical-line specialization. This
+  is necessary infrastructure with `hard_gap_delta=0`; the complete explicit formula remains the
+  fixed R5 frontier and finite positivity remains inadmissible as RH progress.
 
 ## Selected Campaign
 
-`CAMPAIGN-20260715-GRAM-01` selects R1. It may produce a relevant unconditional Gram theorem or
-eliminate a coercivity mechanism, but it leaves `M2/G3` parked unless an independent novelty audit
-confirms that a fixed unconditional bridge edge has actually been reduced.
+`CAMPAIGN-20260715-R5-WEIL-TEST-ALGEBRA-01` is locally closed as
+`KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0`. No campaign is selected while the persistent
+goal returns to `INDEPENDENT_AUDIT -> ROUTE_SELECTION`.
 
 ## Portfolio Update: R3 Xi Zero Divisor
 
@@ -306,3 +309,25 @@ Evidence-backfill commit `48385f277c83b06a5d72aee83d06d0f4b31623d1` passed publi
 CI run `29406932411`, build job `87324549428`, in 1m21s. The campaign is publicly closed. R3 has
 now compiled the complete project Li/RH equivalence, but no unconditional side of that equivalence.
 Next state is `INDEPENDENT_AUDIT -> ROUTE_SELECTION`; the persistent RH goal remains active.
+
+## Portfolio Update: R5 Weil Test Algebra Complete
+
+Date: 2026-07-15
+
+After the complete R3 Li criterion closed, route selection moved to the distinct R5 explicit-formula
+family. `CAMPAIGN-20260715-R5-WEIL-TEST-ALGEBRA-01` closes as `KNOWN_THEOREM_FORMALIZED`:
+
+- Weil's positive-half-line involution `f_tilde(x)=x^(-1)f(x^(-1))` is Lean-defined and
+  pointwise involutive exactly where `0<x`;
+- a compiled counterexample rejects involutivity at `x=0` for the total extension;
+- Mellin convergence is preserved iff under `s |-> 1-s`;
+- the transform value obeys Lagarias (A.2), including the exact `0/1` endpoint swap;
+- the conjugate-star operation preserves convergence under `s |-> 1-conj(s)` and transforms by
+  complex conjugation;
+- on `Re(s)=1/2`, the star transform is conjugation at the same spectral point.
+
+This completes only the first test-algebra subedge. It does not state the multiplicative
+convolution theorem, the explicit formula, the Weil quadratic form, density, or positivity.
+`hard_gap_delta=0`; the RH assumption frontier is unchanged. The next state is
+`INDEPENDENT_AUDIT -> ROUTE_SELECTION`, and another R5 campaign requires a genuinely new exact
+edge rather than wrappers around the compiled involution.

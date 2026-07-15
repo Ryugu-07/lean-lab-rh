@@ -4,6 +4,7 @@ import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula
 import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
+import LeanLab.Riemann.WeilTestAlgebra
 import LeanLab.Riemann.AnalyticLogBranch
 import LeanLab.Riemann.ReciprocalZetaSubpower
 import LeanLab.Riemann.TruncatedPerron
@@ -167,6 +168,17 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.exists_liCoefficientCandidate_re_neg_of_divisorZero_re_ne_half
 #print axioms LeanLab.Riemann.riemannHypothesis_of_forall_liCoefficientCandidate_re_nonneg
 #print axioms LeanLab.Riemann.riemannHypothesis_iff_forall_liCoefficientCandidate_re_nonneg
+#print axioms LeanLab.Riemann.weilInvolution_involution_of_pos
+#print axioms LeanLab.Riemann.weilInvolution_involution_not_at_zero
+#print axioms LeanLab.Riemann.mellinConvergent_weilInvolution_iff
+#print axioms LeanLab.Riemann.mellin_weilInvolution
+#print axioms LeanLab.Riemann.mellin_weilInvolution_zero
+#print axioms LeanLab.Riemann.mellin_weilInvolution_one
+#print axioms LeanLab.Riemann.mellin_conj
+#print axioms LeanLab.Riemann.mellinConvergent_conj_iff
+#print axioms LeanLab.Riemann.mellin_weilStar
+#print axioms LeanLab.Riemann.mellinConvergent_weilStar_iff
+#print axioms LeanLab.Riemann.mellin_weilStar_criticalLine
 #print axioms LeanLab.Riemann.integral_fractionalPartKernel_mul_le
 #print axioms LeanLab.Riemann.baezDuarteNormalizedKernel_diagonal_lower
 #print axioms LeanLab.Riemann.norm_inner_sparseGram_ne_le

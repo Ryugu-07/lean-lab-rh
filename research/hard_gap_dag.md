@@ -1,6 +1,6 @@
 # RH Hard-Gap DAG
 
-Date: 2026-07-13
+Date: 2026-07-15
 
 This file is the fixed external gap ledger for future RH work. A future loop may only count as
 research progress when it changes the status of one of these nodes. Local predicate wrappers,
@@ -20,6 +20,10 @@ flowchart TD
     L0 --> L1["L1: RH-forward all-index Li positivity"]
     L1 --> L2["L2: reverse all-index Li criterion"]
     L2 --> D
+    A --> W0["W0: Weil test involution and Mellin covariance"]
+    W0 --> W1["W1: complete explicit formula and test class"]
+    W1 --> W2["W2: unconditional Weil positivity"]
+    W2 --> D
 ```
 
 ## Fixed Nodes
@@ -35,6 +39,9 @@ flowchart TD
 | L0 | complete | Align the project xi divisor, genus-one Hadamard product, all-index Li family, and symmetry-paired raw zero formula. | The multiplicity-bearing paired formula is public and all infinite-sum operations are Lean-checked. |
 | L1 | complete | Prove the RH-forward all-index Li real-part nonnegativity direction. | Under RH every paired summand is exactly half a complex norm square. |
 | L2 | complete | Prove all-index Li real-part nonnegativity implies `Mathlib.RiemannHypothesis`. | The project-specialized Bombieri-Lagarias argument compiles: finite threshold superlevels, simultaneous phase recurrence, fixed-weight tail domination, an off-line-to-negative-coefficient theorem, and the exact Li/RH iff. Implementation and evidence commits passed public CI runs `29406614212` and `29406932411`. |
+| W0 | complete | Formalize Weil's multiplicative test-function involution, conjugate star, and exact Mellin covariance. | `WeilTestAlgebra.lean` proves pointwise involutivity on `0<x`, the zero-boundary counterexample, convergence iff, endpoint swap, conjugate-star covariance, and critical-line specialization. This is test algebra only. |
+| W1 | open | Formalize a source-faithful admissible test class, multiplicative convolution, and the complete zero/prime/pole/archimedean explicit formula. | No complete explicit formula exists in the pinned project; all convergence, contour, gamma, prime-sum, and regularization choices remain. |
+| W2 | open | Prove unconditional Weil positivity on a complete RH-equivalent test class. | This is the genuine RH-hard R5 edge. Connes-Consani's semi-local mechanism is explicitly conjectural and is not a premise. |
 
 ## Hard Gaps
 
@@ -45,6 +52,8 @@ flowchart TD
 | G3 | M2 | parked | Construct unconditional finite approximants with error tending to zero. In the NB/BD framework this is essentially the hard RH direction; numerical convergence is not evidence. |
 | G4 | B1 | complete | Burnol's RH-conditional lower bound `liminf D(lambda) * sqrt(log(1/lambda)) >= sqrt(sum_rho m_rho^2 / |rho|^2)` and its natural-subspace liminf consequence are publicly Lean-checked through the fixed F0-F5 frontier. M2/G3 is unchanged. |
 | G5 | L2 | complete | Reverse the exact project Li criterion: from nonnegative real parts of every `liCoefficientCandidate n`, derive RH by a project-specialized Bombieri-Lagarias transformed-zero argument. |
+| G6 | W1 | open | Prove the complete source-faithful Weil explicit formula and convolution-stable admissible test space, without dropping moment, density, convergence, or regularization conditions. |
+| G7 | W2 | open | Supply an unconditional positivity mechanism on the full Weil class. Finite test-family checks and RH-conditional norm identities do not reduce this gap. |
 
 ## G4 Fixed Source Frontier
 

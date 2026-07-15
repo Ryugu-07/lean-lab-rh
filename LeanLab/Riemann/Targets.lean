@@ -4,6 +4,7 @@ import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula
 import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
+import LeanLab.Riemann.WeilTestAlgebra
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
@@ -199,6 +200,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``riemannHypothesis_iff_forall_liCoefficientCandidate_re_nonneg
       status := .proven
       note := "Campaign CAMPAIGN-20260715-LI-REVERSE-BOMBIERI-LAGARIAS-01 specializes the published large-index power-sum argument to the multiplicity-bearing xi divisor. A finite orbit-radius superlevel set is phase-aligned simultaneously, one off-line orbit supplies the exponentially negative main term, and the complement is dominated by a fixed reciprocal-square tsum times a strictly smaller exponential. This closes the exact Li/RH criterion as known-theorem formalization; it does not prove either equivalent side unconditionally." },
+    { id := "T2.weil.test-algebra.involution"
+      tier := .tier2
+      title := "Formalize the Weil test-function involution"
+      statement :=
+        "Define f_tilde(x)=x^(-1)f(x^(-1)), prove it is involutive on the positive half-line, prove M(f_tilde)(s)=M(f)(1-s), and prove the conjugate-star transform specializes to conjugation on the critical line."
+      leanName := some ``mellin_weilStar_criticalLine
+      status := .proven
+      note := "Campaign CAMPAIGN-20260715-R5-WEIL-TEST-ALGEBRA-01 formalizes Lagarias Appendix A (A.1)-(A.2) using Mathlib's actual Mellin integral, including the endpoint-moment swap and the exact conjugate-star parameter. This is necessary R5 test algebra with hard_gap_delta=0; it is not the explicit formula or a positivity result." },
     { id := "T2.inventory.nyman.beurling"
       tier := .tier2
       title := "Inventory mathlib support for the Nyman-Beurling route"
