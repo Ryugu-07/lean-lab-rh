@@ -4,7 +4,7 @@ Audit: `AUDIT-20260716-R5-POLSON-GGC-CONTINUATION-01`
 
 Date: 2026-07-16
 
-Status: `LOCAL_VERIFICATION_COMPLETE`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Source Claim Under Audit
 
@@ -131,3 +131,7 @@ component would imply integrability of its real part, giving the complex endpoin
 The local classification is `BRANCH_ELIMINATED`. This removes only the tested 2018
 integral-retention mechanism. The RH hard-gap delta is zero, and the persistent RH Goal remains
 active.
+
+Implementation commit `0c174e82713c18be16ae9ea3afd5197b77ab4347` passed public Lean Action CI
+run `29455171888`, build job `87486632024`, in `1m50s`. Immutable evidence is now backfilled; the
+evidence commit must pass its own public CI before the audit closes.

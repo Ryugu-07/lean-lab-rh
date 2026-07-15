@@ -790,4 +790,10 @@ TargetChecks, three standard-only transitive axiom prints, empty forbidden and s
 `git diff --check`, and the full 8,675-job build pass. The classification is
 `BRANCH_ELIMINATED`: only retention of the 2018 defining integral in this imaginary regime is
 rejected. Analytic continuation, the revised 2026 RH-equivalent Thorin program, G6/W1, G7/W2,
-G3/M2, and RH are unchanged. Implementation publication and public CI remain.
+G3/M2, and RH are unchanged. At that local gate, implementation publication and public CI
+remained.
+
+Implementation commit `0c174e82713c18be16ae9ea3afd5197b77ab4347` passed public Lean Action CI
+run `29455171888`, build job `87486632024`, in `1m50s`. The source-specific branch elimination is
+now independently public-built. Immutable evidence backfill and its own public CI remain before
+audit closure; the persistent RH Goal stays active.
