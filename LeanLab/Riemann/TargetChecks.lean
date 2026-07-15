@@ -9,6 +9,7 @@ import LeanLab.Riemann.BurnolFiniteLowerBound
 import LeanLab.Riemann.BurnolFullLowerBound
 import LeanLab.Riemann.M2ProjectionNormAudit
 import LeanLab.Riemann.M2LadderFrequencyAudit
+import LeanLab.Riemann.M2GramGeometry
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -29,7 +30,7 @@ example
     RiemannHypothesis :=
   baezDuarteComplexTarget_mem_closure_imp_riemannHypothesis h
 
-open scoped ENNReal FourierTransform Topology
+open scoped ENNReal FourierTransform InnerProductSpace Topology
 
 /-- Name-resolution witness for every `.proven` ledger target with a `leanName`. -/
 def checkedTargetNames : List Lean.Name :=
@@ -508,6 +509,18 @@ example :
         (m2AuditCarvillLadderDistance 0 2 3 0 : ℝ) ≤
       |m2AuditCarvillLadderFrequency 0 2 3 0| :=
   not_m2Audit_carvill_source_frequency_lower_bound
+
+example (c : Nat →₀ Complex) :
+    (1 / 40 : Real) * (∑ i ∈ c.support, ‖c i‖ ^ 2) <=
+      ‖sparseGramCombination c‖ ^ 2 :=
+  sparseGram_lower_frame_bound c
+
+example : (Matrix.gram Real finiteGramWitnessVector).PosDef :=
+  finiteGramWitness_posDef
+
+example (i : Fin 1) :
+    ⟪finiteGramWitnessVector i, finiteGramWitnessTarget⟫_Real = 0 :=
+  finiteGramWitness_target_orthogonal i
 
 example (hRH : RiemannHypothesis) {δ : ℝ}
     (hδ : 0 < δ) (hδ_top : δ ≤ 1 / 2) :

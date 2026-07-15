@@ -15,6 +15,7 @@ import LeanLab.Riemann.BurnolFiniteLowerBound
 import LeanLab.Riemann.BurnolFullLowerBound
 import LeanLab.Riemann.M2ProjectionNormAudit
 import LeanLab.Riemann.M2LadderFrequencyAudit
+import LeanLab.Riemann.M2GramGeometry
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -126,3 +127,9 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.exists_symmetric_idempotent_not_maxNorm_nonexpansive
 #print axioms LeanLab.Riemann.not_m2AuditWongPThree_maxNorm_nonexpansive
 #print axioms LeanLab.Riemann.not_m2Audit_carvill_source_frequency_lower_bound
+#print axioms LeanLab.Riemann.integral_fractionalPartKernel_mul_le
+#print axioms LeanLab.Riemann.baezDuarteNormalizedKernel_diagonal_lower
+#print axioms LeanLab.Riemann.norm_inner_sparseGram_ne_le
+#print axioms LeanLab.Riemann.sparseGram_lower_frame_bound
+#print axioms LeanLab.Riemann.finiteGramWitness_posDef
+#print axioms LeanLab.Riemann.finiteGramWitness_target_orthogonal
