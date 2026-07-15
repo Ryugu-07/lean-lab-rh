@@ -750,3 +750,10 @@ Implementation commit `b2d2ce18ff1491f684098b04c7a5be73e0ebdc98` passed public L
 run `29453270303`, build job `87480595744`, in `2m14s`. The exact restricted Gaussian criterion is
 now independently public-built. Immutable evidence backfill and its own public CI remain before
 campaign closure; the persistent RH Goal stays active.
+
+Evidence-backfill commit `68e96525f3f89562ae47e1da9e074911701a6c2e` passed public Lean Action CI
+run `29453470463`, build job `87481233198`, in `1m24s`. Together with the implementation CI, this
+publicly closes `CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-REVERSE-CRITERION-01` conservatively as
+`KNOWN_THEOREM_FORMALIZED`. Do not reopen the fixed restricted criterion without new evidence.
+Return to fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`; unconditional Gaussian positivity and RH
+remain open, and the persistent Goal stays active.

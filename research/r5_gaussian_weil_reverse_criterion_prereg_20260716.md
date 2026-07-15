@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-REVERSE-CRITERION-01`
 
 Date: 2026-07-16
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Fixed Proposition
 
@@ -133,5 +133,16 @@ commit and CI remain before campaign closure.
 - conclusion: `success`
 - duration: `2m14s`
 
-The implementation is independently public-built. This evidence backfill and its own public CI
-remain before campaign closure.
+The implementation was independently public-built before the evidence-backfill commit below.
+
+## Public Closure Evidence
+
+- evidence-backfill commit: `68e96525f3f89562ae47e1da9e074911701a6c2e`
+- Lean Action CI run: `29453470463`
+- build job: `87481233198`
+- conclusion: `success`
+- duration: `1m24s`
+
+Together with the implementation evidence above, this publicly closes the fixed campaign as
+`KNOWN_THEOREM_FORMALIZED` pending any later independent novelty review. The broad RH Goal remains
+active; unconditional positivity and RH remain open.

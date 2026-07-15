@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-REVERSE-CRITERION-01`
 
 Date: 2026-07-16
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Runtime Record
 
@@ -38,6 +38,7 @@ Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 | 7 | `INDEPENDENT_AUDIT` | The 1,476-line formal module cold-compiles without warnings or placeholders. Exact Targets and TargetChecks compile. Six selected declarations, spanning separator, infinite tail, zero-side negativity, arithmetic negativity, reverse implication, and iff, use only `propext`, `Classical.choice`, and `Quot.sound`. | Run forbidden scans, diff validation, and the full project build. |
 | 8 | `LOCAL_VERIFICATION` | Forbidden placeholder/declaration/resource scans are empty, `git diff --check` passes, and the full 8,674-job Lake build succeeds. | Classify conservatively as `KNOWN_THEOREM_FORMALIZED` pending independent novelty review; publish implementation and require public CI. |
 | 9 | `PUBLIC_IMPLEMENTATION_CI` | Implementation commit `b2d2ce18ff1491f684098b04c7a5be73e0ebdc98` passed Lean Action CI run `29453270303`, build job `87480595744`, in `2m14s`. | Publish this immutable evidence backfill and require its own public CI before closure. |
+| 10 | `PUBLIC_EVIDENCE_CI` | Evidence-backfill commit `68e96525f3f89562ae47e1da9e074911701a6c2e` passed Lean Action CI run `29453470463`, build job `87481233198`, in `1m24s`. | Publicly close the fixed campaign and return to fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`; keep the persistent RH Goal active. |
 
 ## Current Accounting
 
@@ -50,4 +51,4 @@ Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
   temperedness, zero simplicity, zero enumeration, or a new premise
 - `classification`: `KNOWN_THEOREM_FORMALIZED` pending independent novelty review; no first-proof
   or first-formalization claim
-- `next_gate`: evidence-backfill commit and its independent GitHub Lean Action CI
+- `next_gate`: final closure-ledger commit and its public CI, then fresh route selection
