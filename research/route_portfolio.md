@@ -672,3 +672,33 @@ public CI remain before campaign closure.
 Evidence-backfill commit `6d7433b694b60150c19ca67f85087ba0e0c6255b` passed public Lean Action CI
 run `29446148141`, build job `87456989353`, in `1m26s`. The campaign is publicly closed as
 `BRIDGE_REDUCED`; the persistent RH Goal remains active and must return to fresh route selection.
+
+## Selection Update: R5 Gaussian-Weil Quadratic Positivity
+
+Date: 2026-07-16
+
+Fresh route selection first audited the proposed fixed-width Gaussian density continuation.
+Mathlib supplies Schwartz seminorms, Fourier automorphisms, translations, and locally convex
+separation, but it does not package the Gaussian/Hermite Schwartz-density or Wiener machinery
+needed for the full endpoint. More importantly, extending the separated prime and zero
+functionals by assumed continuity would hide the RH-equivalent temperedness issue identified by
+Arias de Reyna. L2 density was rejected as too weak.
+
+Campaign `CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-QUADRATIC-POSITIVITY-01` therefore selects a narrower
+and explicit conditional W2 bridge. For a common `a>0`, real shifts `b_i`, and real coefficients
+`w_i`, it instantiates the finite packet formula on ordered pairs with shift `b_i-b_j` and
+coefficient `w_i*w_j`. Under RH, every divisor zero contributes
+
+```text
+exp(-a*gamma^2) *
+  ((sum_i w_i*cos(b_i*gamma))^2 + (sum_i w_i*sin(b_i*gamma))^2).
+```
+
+Lean closes the pointwise critical-line evaluation, finite Gram identity, summability of the real
+square family, exact zero `tsum`, direct arithmetic formula, and real-part nonnegativity. The
+formal module compiles without warnings with singleton and zero-coefficient boundary checks,
+exact Targets/TargetChecks, seven standard-only axiom prints, empty forbidden scans,
+`git diff --check`, and the 8,673-job full build. This is RH-forward only: unconditional arithmetic
+sign, a converse criterion, Schwartz closure, separated temperedness, G7, and RH remain open.
+Classification is locally `BRIDGE_REDUCED`, with zero unconditional RH hard-gap delta; public
+commit and CI remain.

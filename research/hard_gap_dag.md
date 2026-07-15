@@ -1,6 +1,6 @@
 # RH Hard-Gap DAG
 
-Date: 2026-07-15
+Date: 2026-07-16
 
 This file is the fixed external gap ledger for future RH work. A future loop may only count as
 research progress when it changes the status of one of these nodes. Local predicate wrappers,
@@ -45,7 +45,7 @@ flowchart TD
 | LW0 | complete | Construct the multiplicity-bearing Li-test Weil Gram form and prove positivity on every finite real combination is exactly equivalent to RH. | The reflection-averaged kernel, exact Li matrix, RH norm-square formula, and finite-real-span positivity iff are public. Implementation commit `2317143e73e1d788d65dcdff9b609a98f8ac60b2` passed public CI run `29415448733`. This is known-theorem formalization with hard_gap_delta=0. |
 | W0 | complete | Formalize Weil's multiplicative test-function involution, conjugate star, and exact Mellin covariance. | `WeilTestAlgebra.lean` proves pointwise involutivity on `0<x`, the zero-boundary counterexample, convergence iff, endpoint swap, conjugate-star covariance, and critical-line specialization. This is test algebra only. |
 | W1 | open | Formalize a source-faithful admissible test class, multiplicative convolution, and the complete zero/prime/pole/archimedean explicit formula. | W1a, W1b's physical analytic-strip algebra core, and W1c0 are public. Centered and translated Gaussian probes are public, and their finite complex test core is locally verified. Generic class integration, quotient/completeness, Schwartz density, continuity, and regularization remain. |
-| W2 | open | Prove unconditional Weil positivity on a complete RH-equivalent test class. | This is the genuine RH-hard R5 edge. Connes-Consani's semi-local mechanism is explicitly conjectural and is not a premise. |
+| W2 | open | Prove unconditional Weil positivity on a complete RH-equivalent test class. | The finite equal-width Gaussian kernel now has a locally verified RH-forward arithmetic square theorem. This conditional direction does not supply an unconditional sign, a converse, or a complete test class. Connes-Consani's semi-local mechanism is explicitly conjectural and is not a premise. |
 
 ## Hard Gaps
 
@@ -57,7 +57,7 @@ flowchart TD
 | G4 | B1 | complete | Burnol's RH-conditional lower bound `liminf D(lambda) * sqrt(log(1/lambda)) >= sqrt(sum_rho m_rho^2 / |rho|^2)` and its natural-subspace liminf consequence are publicly Lean-checked through the fixed F0-F5 frontier. M2/G3 is unchanged. |
 | G5 | L2 | complete | Reverse the exact project Li criterion: from nonnegative real parts of every `liCoefficientCandidate n`, derive RH by a project-specialized Bombieri-Lagarias transformed-zero argument. |
 | G6 | W1 | open | Prove the complete source-faithful Weil explicit formula and convolution-stable admissible test space, without dropping moment, density, convergence, or regularization conditions. |
-| G7 | W2 | open | Supply an unconditional positivity mechanism on the full Weil class. Finite test-family checks and RH-conditional norm identities do not reduce this gap. |
+| G7 | W2 | open | Supply an unconditional positivity mechanism on the full Weil class. The compiled RH-forward finite Gaussian quadratic identity is a conditional kernel bridge and does not reduce this gap. |
 
 ## W1 Fixed Source Frontier
 
@@ -72,6 +72,12 @@ flowchart TD
 | W1c1g2 | complete | `WeilSymmetricGaussianFamily.lean` proves the two-parameter family `exp(a(s-1/2)^2)cosh(b(s-1/2))`, including a generic selected-height rectangle skeleton, both translated von-Mangoldt kernels, the exact pole term, GammaR integrability, and `b=0` compatibility. Implementation `5c4ae54c031a6d999111390694ef738a3da57146` and evidence backfill `ed92d851f0eb697f2b2aec0e1260fe0002ea5bcf` passed public CI runs `29444276732` and `29444485950`. Schwartz/Hermite density, tempered extension, generic W1c1, and positivity remain open. |
 | W1c1g3 | complete | `WeilFiniteGaussianTestCore.lean` proves the complete direct zero/pole/GammaR/prime explicit formula for every finite complex packet of positive-width symmetric Gaussian probes. Absolute summability, integrability, all finite interchanges, and singleton/empty reductions compile. Implementation `736901e03f08ccb399e4ec5f84980a641cb4e344` passed public CI run `29445905312`, job `87456185038`, in `2m33s`; evidence backfill `6d7433b694b60150c19ca67f85087ba0e0c6255b` passed run `29446148141`, job `87456989353`, in `1m26s`. This constructs the algebraic test core but does not prove its Schwartz density, functional continuity, tempered extension, generic W1c1, or positivity. |
 | W1c2 | open | Prove the complete distributional limit and all endpoint/local regularization choices, including the covariance extension. |
+
+## W2 Conditional Frontier
+
+| edge | status | source-level content |
+| --- | --- | --- |
+| W2g0 | locally verified | `WeilGaussianQuadraticPositivity.lean` applies the direct finite packet formula to ordered pairs with common width `a>0`, shift `b_i-b_j`, and real coefficient `w_i*w_j`. Under RH, every multiplicity-bearing zero term is `exp(-a*gamma^2)` times a cosine square plus a sine square; the real square family is summable, its `tsum` equals the direct zero packet, and the real part of the direct pole/GammaR/von-Mangoldt arithmetic expression is nonnegative. This is RH-forward only and has zero hard-gap delta for unconditional W2, G7, and RH. |
 
 ## G4 Fixed Source Frontier
 

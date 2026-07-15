@@ -11,6 +11,7 @@ import LeanLab.Riemann.WeilGaussianHeight
 import LeanLab.Riemann.WeilGaussianExplicitFormula
 import LeanLab.Riemann.WeilSymmetricGaussianFamily
 import LeanLab.Riemann.WeilFiniteGaussianTestCore
+import LeanLab.Riemann.WeilGaussianQuadraticPositivity
 import LeanLab.Riemann.BaezDuarteZetaRatio
 import LeanLab.Riemann.BaezDuarteQTwo
 import LeanLab.Riemann.BurnolLowerBound
@@ -66,7 +67,10 @@ def checkedTargetNames : List Lean.Name :=
     ``exists_weilExplicitIntegrand_eq_hadamardZeroSum,
     ``rectangleBoundaryIntegral_weighted_logDeriv_riemannXi_eq_finsum,
     ``exists_gaussianXiZeroFreeHeight_tendsto_rightVerticalIntegral,
+    ``gaussianXi_arithmetic_explicit_formula,
     ``symmetricGaussianXi_arithmetic_explicit_formula,
+    ``symmetricGaussianXiPacket_arithmetic_explicit_formula,
+    ``RiemannHypothesis.gaussianXiArithmeticQuadratic_re_nonneg,
     ``liCoefficientCandidate_one_re_pos,
     ``fractionalPartKernel_memLp_two_unitInterval,
     ``fractionalPartKernelL2_mem_nymanBeurlingKernelSpan,
@@ -874,5 +878,32 @@ example {ι : Type*} [Fintype ι]
         symmetricGaussianXiPacketArchimedeanIntegral a b w c -
           ∑' n : ℕ, symmetricGaussianPacketVonMangoldtWeight a b w n :=
   symmetricGaussianXiPacket_arithmetic_explicit_formula a b w ha hc
+
+example {ι : Type*} [Fintype ι] (hRH : RiemannHypothesis)
+    {a : ℝ} (ha : 0 < a) (b w : ι → ℝ) :
+    Summable (gaussianXiZeroSquareTerm a b w) :=
+  RiemannHypothesis.summable_gaussianXiZeroSquareTerm hRH ha b w
+
+example {ι : Type*} [Fintype ι] (hRH : RiemannHypothesis)
+    (a : ℝ) (b w : ι → ℝ) :
+    gaussianXiZeroQuadratic a b w =
+      ((∑' p : RiemannXiDivisorZeroIndex,
+        gaussianXiZeroSquareTerm a b w p : ℝ) : ℂ) :=
+  RiemannHypothesis.gaussianXiZeroQuadratic_eq_tsum_square hRH a b w
+
+example {ι : Type*} [Fintype ι]
+    {a c : ℝ} (ha : 0 < a) (hc : 1 < c) (b w : ι → ℝ) :
+    (Real.pi : ℂ) * gaussianXiZeroQuadratic a b w =
+      gaussianXiArithmeticQuadratic a b w c :=
+  gaussianXiZeroQuadratic_arithmetic_formula ha hc b w
+
+example {ι : Type*} [Fintype ι] (hRH : RiemannHypothesis)
+    {a c : ℝ} (ha : 0 < a) (hc : 1 < c) (b w : ι → ℝ) :
+    0 ≤ (gaussianXiArithmeticQuadratic a b w c).re :=
+  RiemannHypothesis.gaussianXiArithmeticQuadratic_re_nonneg hRH ha hc b w
+
+example {ι : Type*} [Fintype ι] (a : ℝ) (b : ι → ℝ) (c : ℝ) :
+    gaussianXiArithmeticQuadratic a b (fun _ => 0) c = 0 :=
+  gaussianXiArithmeticQuadratic_zero a b c
 
 end LeanLab.Riemann

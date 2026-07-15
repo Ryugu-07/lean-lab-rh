@@ -14,6 +14,7 @@ import LeanLab.Riemann.WeilGaussianHeight
 import LeanLab.Riemann.WeilGaussianExplicitFormula
 import LeanLab.Riemann.WeilSymmetricGaussianFamily
 import LeanLab.Riemann.WeilFiniteGaussianTestCore
+import LeanLab.Riemann.WeilGaussianQuadraticPositivity
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
@@ -298,6 +299,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``symmetricGaussianXiPacket_arithmetic_explicit_formula
       status := .proven
       note := "Campaign CAMPAIGN-20260716-R5-WEIL-FINITE-GAUSSIAN-TEST-CORE-01 constructs the algebraic test core needed before a density/continuity extension. It proves direct packet summability and finite-sum interchange on the zero, archimedean, and prime sides, and exact singleton and empty-packet reductions. This closes one G6 algebraic-core subedge; Schwartz density, tempered extension, regularization, Weil positivity, and RH remain open." },
+    { id := "T2.weil.gaussian-quadratic-positivity"
+      tier := .tier2
+      title := "Derive Gaussian-Weil quadratic positivity under RH"
+      statement :=
+        "Assuming RH, prove that every finite real ordered-pair packet of equal-width symmetric Gaussian probes has a summable zero-side square expansion and that the real part of its direct pole-plus-GammaR-minus-von-Mangoldt arithmetic expression is nonnegative."
+      leanName := some ``RiemannHypothesis.gaussianXiArithmeticQuadratic_re_nonneg
+      status := .proven
+      note := "Campaign CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-QUADRATIC-POSITIVITY-01 instantiates the finite packet formula at shifts b_i-b_j and coefficients w_i*w_j. Under RH, every multiplicity-bearing zero contribution is exp(-a*gamma^2) times a cosine square plus a sine square. This closes one conditional W2 kernel bridge only; unconditional arithmetic positivity, the converse Weil criterion, Schwartz closure, separated temperedness, and RH remain open." },
     { id := "T2.inventory.nyman.beurling"
       tier := .tier2
       title := "Inventory mathlib support for the Nyman-Beurling route"
