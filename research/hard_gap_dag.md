@@ -294,3 +294,10 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   unconditional closure frontier and M2/G3 status unchanged. Implementation commit
   `ff0f14f10e75d73424addb671b3da34f0c44c679` passed public Lean Action CI run `29384172003`,
   build job `87253877106`.
+- Audit `AUDIT-20260715-M2-G3-03` screens the remaining current candidates and admits no new Lean
+  edge. Iyer's residual covariance is explicitly open and equivalent to the weighted Hilbert
+  approximation bridge; the 2026 Colombeau result is an RH equivalence; Bhattacharjee et al. study
+  a mismatched `{x/k}` rank-one carrier and disclaim an RH proof; the dyadic exploration is
+  conditional and numerical. Result: `NO_PROGRESS`, `hard_gap_delta=0`. Together with audits 01
+  and 02, this triggers the v2 three-zero-delta `STOP` rule. M2/G3 remains parked and automatic
+  candidate looping must not resume without a new independently qualified external input.
