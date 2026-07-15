@@ -14,6 +14,7 @@ import LeanLab.Riemann.WeilFiniteGaussianTestCore
 import LeanLab.Riemann.WeilGaussianQuadraticPositivity
 import LeanLab.Riemann.WeilGaussianPositivityCriterion
 import LeanLab.Riemann.PolsonGGCContinuationAudit
+import LeanLab.Riemann.FreedmanGreenLiftAudit
 import LeanLab.Riemann.BaezDuarteZetaRatio
 import LeanLab.Riemann.BaezDuarteQTwo
 import LeanLab.Riemann.BurnolLowerBound
@@ -75,6 +76,7 @@ def checkedTargetNames : List Lean.Name :=
     ``RiemannHypothesis.gaussianXiArithmeticQuadratic_re_nonneg,
     ``riemannHypothesis_iff_gaussianXiArithmeticQuadratic_re_nonneg,
     ``not_integrableOn_polsonImaginaryFrullaniComponent,
+    ``freedmanGreenLift_listedPremises_do_not_force_contraction,
     ``liCoefficientCandidate_one_re_pos,
     ``fractionalPartKernel_memLp_two_unitInterval,
     ``fractionalPartKernelL2_mem_nymanBeurlingKernelSpan,
@@ -929,6 +931,34 @@ example {gamma y : ℝ} (hgamma : 0 < gamma) (hy : 2 * gamma ^ 2 < y ^ 2) :
     ¬ MeasureTheory.IntegrableOn
       (polsonImaginaryFrullaniComponent gamma y) (Set.Ioi 1) :=
   not_integrableOn_polsonImaginaryFrullaniComponent hgamma hy
+
+example :
+    (∀ x, freedmanGreenAuditTrace (freedmanGreenAuditRepresentative x) = x) ∧
+    (∃ h : FreedmanGreenAuditSpace, h ≠ 0 ∧ freedmanGreenAuditTrace h = 0) ∧
+    (∀ x h, freedmanGreenAuditTrace h = 0 →
+      freedmanGreenAuditForm (freedmanGreenAuditRepresentative x) h = 0) ∧
+    (∀ t, |freedmanGreenAuditMultiplier t| ≤ |t|) ∧
+    (∀ x, freedmanGreenAuditNegativeFeature (freedmanGreenAuditRepresentative x) =
+      freedmanGreenAuditCompression
+        (freedmanGreenAuditMultiplier
+          (freedmanGreenAuditLift
+            (freedmanGreenAuditPositiveFeature (freedmanGreenAuditRepresentative x))))) ∧
+    (¬ ∀ x,
+      |freedmanGreenAuditCompression
+        (freedmanGreenAuditMultiplier
+          (freedmanGreenAuditLift
+            (freedmanGreenAuditPositiveFeature (freedmanGreenAuditRepresentative x))))| ≤
+        |freedmanGreenAuditPositiveFeature (freedmanGreenAuditRepresentative x)|) ∧
+    freedmanGreenAuditForm (freedmanGreenAuditRepresentative 1)
+      (freedmanGreenAuditRepresentative 1) < 0 :=
+  freedmanGreenLift_listedPremises_do_not_force_contraction
+
+example {C K E : ℝ → ℝ}
+    (hC : ∀ t, |C t| ≤ |t|)
+    (hK : ∀ t, |K t| ≤ |t|)
+    (hE : ∀ t, |E t| ≤ |t|) :
+    ∀ t, |C (K (E t))| ≤ |t| :=
+  contraction_comp_three hC hK hE
 
 example {ι : Type*} [Fintype ι] (a : ℝ) (b : ι → ℝ) (c : ℝ) :
     gaussianXiArithmeticQuadratic a b (fun _ => 0) c = 0 :=

@@ -17,6 +17,7 @@ import LeanLab.Riemann.WeilFiniteGaussianTestCore
 import LeanLab.Riemann.WeilGaussianQuadraticPositivity
 import LeanLab.Riemann.WeilGaussianPositivityCriterion
 import LeanLab.Riemann.PolsonGGCContinuationAudit
+import LeanLab.Riemann.FreedmanGreenLiftAudit
 import LeanLab.Riemann.AnalyticLogBranch
 import LeanLab.Riemann.ReciprocalZetaSubpower
 import LeanLab.Riemann.TruncatedPerron
@@ -291,6 +292,8 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.polsonImaginaryFrullaniComponent_eq_ofReal
 #print axioms LeanLab.Riemann.not_integrableOn_polsonImaginaryFrullaniIntegrand
 #print axioms LeanLab.Riemann.not_integrableOn_polsonImaginaryFrullaniComponent
+#print axioms LeanLab.Riemann.freedmanGreenLift_listedPremises_do_not_force_contraction
+#print axioms LeanLab.Riemann.contraction_comp_three
 #print axioms LeanLab.Riemann.integral_fractionalPartKernel_mul_le
 #print axioms LeanLab.Riemann.baezDuarteNormalizedKernel_diagonal_lower
 #print axioms LeanLab.Riemann.norm_inner_sparseGram_ne_le

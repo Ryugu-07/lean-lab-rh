@@ -804,3 +804,39 @@ run `29455360041`, build job `87487225276`, in `2m2s`. Together with implementat
 `BRANCH_ELIMINATED`. Do not reopen the exact tested 2018 integral-retention mechanism without new
 source evidence. Return to fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`; the unconditional RH
 frontier is unchanged and the persistent Goal remains active.
+
+## Selection Update: R4 Freedman Green-Lift Contraction Audit
+
+Date: 2026-07-16
+
+After compaction, fresh route selection re-audited the fixed DAG rather than extending the previous
+source branch. The only unconditional RH frontiers remain G6/W1 and G7/W2, while G3/M2 remains
+parked. The selected new input is Freedman's arXiv `2606.29555`, a Weyl/Volterra reduction paper
+that explicitly leaves the final KLM/de Branges/RH bridge open but describes its normalized
+Green-lift contraction as closed.
+
+Five source mechanisms were screened. The theta differential identity is exact but mechanical;
+the finite trace-frame constant and uniform-parameter passage are not stated with enough rigorous
+data for a faithful endpoint; and the final KLM pullback is explicitly open. Audit
+`AUDIT-20260716-R4-FREEDMAN-GREEN-LIFT-CONTRACTION-01` selects the displayed inference from
+`G_-=C K E G_+`, pointwise contraction of `K`, and trace-fiber Euler--Lagrange orthogonality to
+contraction of `C K E`.
+
+A fixed two-dimensional real model has a nontrivial trace kernel, satisfies all those listed
+premises exactly, but makes `C K E` multiplication by two and the signed Green form equal to `-3`
+at the unit trace. Lean must check the complete premise bundle and also record the repaired
+three-map contraction condition. Completion eliminates only the source's listed-premise closure
+argument; it does not disprove a stronger concrete Volterra estimate, KLM positivity, or RH.
+Expected `hard_gap_delta=0`.
+
+The fixed endpoint is now locally complete in `FreedmanGreenLiftAudit.lean`. Lean checks a
+nontrivial trace kernel, exact Green representative, trace-fiber Euler--Lagrange orthogonality,
+contractive middle multiplier, and `G_-=C K E G_+`, while `C K E` expands the unit input from one
+to two and the signed Green form is exactly `-3`. The same batch proves that separate contraction
+bounds for all three maps would repair the abstract inference.
+
+Exact Targets and TargetChecks, two standard-only transitive axiom prints, empty forbidden and
+scratch-name scans, `git diff --check`, the 2,966-job module build, and the full 8,676-job build
+pass. Classification is `BRANCH_ELIMINATED` only for the listed-premise closure argument. A
+stronger concrete Volterra energy estimate, KLM positivity, the final de Branges/RH bridge, G6/W1,
+G7/W2, G3/M2, and RH remain open. Implementation publication and public CI remain.

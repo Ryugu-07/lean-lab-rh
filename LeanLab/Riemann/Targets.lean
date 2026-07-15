@@ -17,6 +17,7 @@ import LeanLab.Riemann.WeilFiniteGaussianTestCore
 import LeanLab.Riemann.WeilGaussianQuadraticPositivity
 import LeanLab.Riemann.WeilGaussianPositivityCriterion
 import LeanLab.Riemann.PolsonGGCContinuationAudit
+import LeanLab.Riemann.FreedmanGreenLiftAudit
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
@@ -325,6 +326,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``not_integrableOn_polsonImaginaryFrullaniComponent
       status := .proven
       note := "Audit AUDIT-20260716-R5-POLSON-GGC-CONTINUATION-01 Lean-checks the exact complex-to-real specialization and the positive exponential tail. Implementation commit 0c174e82713c18be16ae9ea3afd5197b77ab4347 passed public Lean Action CI run 29455171888, build job 87486632024; evidence commit d277252fa21de89e228a2d1db6addd727d975d99 passed run 29455360041, build job 87487225276. It eliminates retention of the 2018 defining integral outside its convergence domain, but does not obstruct analytic continuation, reject the revised 2026 RH-equivalent Thorin framework, or imply RH or its negation." },
+    { id := "T2.audit.freedman-green-lift-contraction"
+      tier := .tier2
+      title := "Audit the Green-lift contraction inference"
+      statement :=
+        "Give an exact finite-dimensional model with a nontrivial trace kernel satisfying the displayed Green-lift factorization, middle-multiplier contraction, and trace-fiber Euler-Lagrange orthogonality, while the compressed map expands and the signed form is negative."
+      leanName := some ``freedmanGreenLift_listedPremises_do_not_force_contraction
+      status := .proven
+      note := "Audit AUDIT-20260716-R4-FREEDMAN-GREEN-LIFT-CONTRACTION-01 checks a two-dimensional real model in which K is contractive, G_-=C K E G_+ and trace-kernel orthogonality hold, but C K E multiplies by two and the unit signed form is -3. This eliminates only the claim that those listed premises force contraction; a concrete Volterra proof with additional norm control, KLM positivity, and RH remain open." },
     { id := "T2.inventory.nyman.beurling"
       tier := .tier2
       title := "Inventory mathlib support for the Nyman-Beurling route"
