@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-WEIL-GAUSSIAN-HEIGHT-LIMIT-01`
 
 Date: 2026-07-16
 
-Status: `LOCALLY_CLOSED_BRIDGE_REDUCED_PENDING_PUBLIC_CI`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_PENDING_EVIDENCE_CI`
 
 ## Source Boundary
 
@@ -181,4 +181,8 @@ without warnings; exact TargetChecks pass; five selected declarations use only `
 the complete 8,669-job project build passes. Replayed warnings belong only to pre-existing modules.
 
 The campaign is locally closed as `BRIDGE_REDUCED`, with `hard_gap_delta=1` for the fixed-test W1c1
-subedge and `hard_gap_delta=0` for RH. Public implementation CI remains mandatory.
+subedge and `hard_gap_delta=0` for RH. Public implementation CI was the next mandatory gate.
+
+Implementation commit `00410cc2a6919acfa5835b121c47489c5105e0de` passed public Lean Action CI
+run `29436179027`, build job `87423295204`, in `2m23s`. The immutable evidence backfill and its own
+public CI remain before final campaign closure.

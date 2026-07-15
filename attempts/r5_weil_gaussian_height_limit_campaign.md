@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-WEIL-GAUSSIAN-HEIGHT-LIMIT-01`
 
 Date: 2026-07-16
 
-Status: `LOCALLY_CLOSED_BRIDGE_REDUCED_PENDING_PUBLIC_CI`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_PENDING_EVIDENCE_CI`
 
 ## Runtime Record
 
@@ -61,5 +61,13 @@ multiplicity is retained.
   extension, W1c2 regularization, W2 positivity, and RH
 - `new_axioms`: none beyond `propext`, `Classical.choice`, and `Quot.sound`
 
-The persistent RH Goal remains active. Public implementation and evidence commits are still
-required before this campaign is publicly closed.
+## Public Implementation Evidence
+
+- implementation commit: `00410cc2a6919acfa5835b121c47489c5105e0de`
+- public repository: `Ryugu-07/lean-lab-rh`, branch `main`
+- Lean Action CI run: `29436179027`
+- build job: `87423295204`
+- conclusion: success in `2m23s`
+
+The persistent RH Goal remains active. Publish this immutable evidence backfill and require its
+own successful CI before the campaign is publicly closed.
