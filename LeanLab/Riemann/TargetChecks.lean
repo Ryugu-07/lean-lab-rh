@@ -13,6 +13,7 @@ import LeanLab.Riemann.WeilSymmetricGaussianFamily
 import LeanLab.Riemann.WeilFiniteGaussianTestCore
 import LeanLab.Riemann.WeilGaussianQuadraticPositivity
 import LeanLab.Riemann.WeilGaussianPositivityCriterion
+import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.BaezDuarteZetaRatio
 import LeanLab.Riemann.BaezDuarteQTwo
 import LeanLab.Riemann.BurnolLowerBound
@@ -73,6 +74,7 @@ def checkedTargetNames : List Lean.Name :=
     ``symmetricGaussianXiPacket_arithmetic_explicit_formula,
     ``RiemannHypothesis.gaussianXiArithmeticQuadratic_re_nonneg,
     ``riemannHypothesis_iff_gaussianXiArithmeticQuadratic_re_nonneg,
+    ``not_integrableOn_polsonImaginaryFrullaniComponent,
     ``liCoefficientCandidate_one_re_pos,
     ``fractionalPartKernel_memLp_two_unitInterval,
     ``fractionalPartKernelL2_mem_nymanBeurlingKernelSpan,
@@ -917,6 +919,16 @@ example
         0 ≤ (gaussianXiArithmeticQuadratic a b w 2).re) :
     RiemannHypothesis :=
   riemannHypothesis_of_gaussianXiArithmeticQuadratic_re_nonneg hpos
+
+example {gamma y : ℝ} (hgamma : 0 < gamma) (hy : 2 * gamma ^ 2 < y ^ 2) :
+    ¬ MeasureTheory.IntegrableOn
+      (polsonImaginaryFrullaniIntegrand gamma y) (Set.Ioi 1) :=
+  not_integrableOn_polsonImaginaryFrullaniIntegrand hgamma hy
+
+example {gamma y : ℝ} (hgamma : 0 < gamma) (hy : 2 * gamma ^ 2 < y ^ 2) :
+    ¬ MeasureTheory.IntegrableOn
+      (polsonImaginaryFrullaniComponent gamma y) (Set.Ioi 1) :=
+  not_integrableOn_polsonImaginaryFrullaniComponent hgamma hy
 
 example {ι : Type*} [Fintype ι] (a : ℝ) (b : ι → ℝ) (c : ℝ) :
     gaussianXiArithmeticQuadratic a b (fun _ => 0) c = 0 :=

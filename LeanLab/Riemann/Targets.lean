@@ -16,6 +16,7 @@ import LeanLab.Riemann.WeilSymmetricGaussianFamily
 import LeanLab.Riemann.WeilFiniteGaussianTestCore
 import LeanLab.Riemann.WeilGaussianQuadraticPositivity
 import LeanLab.Riemann.WeilGaussianPositivityCriterion
+import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
@@ -316,6 +317,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``riemannHypothesis_iff_gaussianXiArithmeticQuadratic_re_nonneg
       status := .proven
       note := "Campaign CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-REVERSE-CRITERION-01 proves the converse by isolating any off-line multiplicity-bearing xi divisor zero with a finite real exponential separator, annihilating its finite low-decay competitors, and controlling the higher-decay tail by dominated convergence. Implementation commit b2d2ce18ff1491f684098b04c7a5be73e0ebdc98 passed public CI run 29453270303; evidence commit 68e96525f3f89562ae47e1da9e074911701a6c2e passed run 29453470463. This formalizes an exact RH-equivalent restricted Gaussian criterion; it does not prove unconditional positivity or RH." },
+    { id := "T2.audit.polson-ggc-imaginary-tail"
+      tier := .tier2
+      title := "Audit the imaginary-axis GGC continuation tail"
+      statement :=
+        "Prove that a Polson 2018 Levy-Frullani exponential component evaluated at s=i*y is not integrable on (1,infinity) whenever gamma>0 and y^2>2*gamma^2."
+      leanName := some ``not_integrableOn_polsonImaginaryFrullaniComponent
+      status := .proven
+      note := "Audit AUDIT-20260716-R5-POLSON-GGC-CONTINUATION-01 Lean-checks the exact complex-to-real specialization and the positive exponential tail. It eliminates retention of the 2018 defining integral outside its convergence domain, but does not obstruct analytic continuation, reject the revised 2026 RH-equivalent Thorin framework, or imply RH or its negation." },
     { id := "T2.inventory.nyman.beurling"
       tier := .tier2
       title := "Inventory mathlib support for the Nyman-Beurling route"

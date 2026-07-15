@@ -757,3 +757,37 @@ publicly closes `CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-REVERSE-CRITERION-01` conser
 `KNOWN_THEOREM_FORMALIZED`. Do not reopen the fixed restricted criterion without new evidence.
 Return to fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`; unconditional Gaussian positivity and RH
 remain open, and the persistent Goal stays active.
+
+## Selection Update: R5 Polson GGC Continuation Audit
+
+Date: 2026-07-16
+
+Fresh route selection moves to `FALSIFICATION` and admits
+`AUDIT-20260716-R5-POLSON-GGC-CONTINUATION-01`. Polson's 2018 GGC source first derives a
+Levy-Frullani integral for positive real spectral displacement, then evaluates the same integral
+after a large imaginary substitution. The 2026 SSRN abstracts use a more conservative structure:
+right-half-plane density positivity is unconditional, while the critical-line Thorin sign is an
+RH-equivalent residual condition.
+
+Five candidate mechanisms were screened. Unconditional centre positivity, pointwise-to-complete
+monotonicity, discreteness of arbitrary Bernstein measures, and unrestricted preservation of an
+integral under analytic continuation fail admission. The selected exact endpoint isolates one
+exponential mixing component: at `s=i*y` its real integrand is
+
+```text
+(exp((y^2/2-gamma^2)*t)-exp(-gamma^2*t))/t.
+```
+
+When `gamma>0` and `y^2>2*gamma^2`, this tail should be nonintegrable. A Lean proof would eliminate
+only the 2018 integral-retention mechanism; it would not disprove analytic continuation, the 2026
+RH-equivalent Thorin framework, or RH. G6/W1 and G7/W2 remain open, G3/M2 remains parked, and the
+expected `hard_gap_delta` is zero.
+
+The fixed endpoint is now locally complete in `PolsonGGCContinuationAudit.lean`. Lean identifies
+the exact complex component at `s=i*y` with the real displayed integrand and proves that neither
+is integrable on `(1,infinity)` under `gamma>0` and `y^2>2*gamma^2`. Exact Targets and
+TargetChecks, three standard-only transitive axiom prints, empty forbidden and scratch-name scans,
+`git diff --check`, and the full 8,675-job build pass. The classification is
+`BRANCH_ELIMINATED`: only retention of the 2018 defining integral in this imaginary regime is
+rejected. Analytic continuation, the revised 2026 RH-equivalent Thorin program, G6/W1, G7/W2,
+G3/M2, and RH are unchanged. Implementation publication and public CI remain.
