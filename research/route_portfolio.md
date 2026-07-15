@@ -357,5 +357,6 @@ explicit formula, distributional convergence, density, and Weil positivity remai
 `hard_gap_delta=0` for RH, and the global assumption frontier is unchanged. Local standalone,
 target, axiom, scan, diff, and 8,663-job full-build gates pass. Implementation commit
 `90874a87a89ee371719c2f50f5cc02eaae8a5040` passed public Lean Action CI run `29410786209`, build
-job `87337104802`, in 1m46s. Evidence backfill and clean synchronization remain before public
-closure.
+job `87337104802`, in 1m46s. Evidence-backfill commit
+`30a816118acf74a0ab9bead03b7541d6929dcfe3` passed public Lean Action CI run `29410987990`, build
+job `87337750370`, in 1m29s. The campaign is publicly closed.

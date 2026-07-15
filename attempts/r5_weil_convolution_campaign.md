@@ -52,7 +52,8 @@ Result: `KNOWN_THEOREM_FORMALIZED`
 - Implementation commit `90874a87a89ee371719c2f50f5cc02eaae8a5040` passed public Lean Action CI
   run `29410786209`, build job `87337104802`, in 1m46s.
 
-This mathematically closes only W1a; immutable evidence backfill and clean synchronization remain.
-It does not package Lagarias's analytic-strip `A_delta`, define the Weil
+Evidence-backfill commit `30a816118acf74a0ab9bead03b7541d6929dcfe3` passed public Lean Action CI
+run `29410987990`, build job `87337750370`, in 1m29s. The campaign is publicly closed. It does not
+package Lagarias's analytic-strip `A_delta`, define the Weil
 distribution, prove any zero/prime/pole/archimedean explicit formula, or establish positivity. RH
 and the persistent global goal remain unchanged.

@@ -161,5 +161,6 @@ builds, standard-only axiom output, forbidden scans, `git diff --check`, and the
 build pass locally. The persistent RH goal remains active.
 
 Implementation commit `90874a87a89ee371719c2f50f5cc02eaae8a5040` passed public Lean Action CI
-run `29410786209`, build job `87337104802`, in 1m46s. Immutable evidence backfill and final clean
-synchronization remain.
+run `29410786209`, build job `87337104802`, in 1m46s. Evidence-backfill commit
+`30a816118acf74a0ab9bead03b7541d6929dcfe3` passed public run `29410987990`, build job
+`87337750370`, in 1m29s. The campaign is publicly closed and returns to route selection.
