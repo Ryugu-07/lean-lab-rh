@@ -100,6 +100,8 @@ claimed.
 - `rtk git diff --check`: passed.
 - Implementation commit `88037ad4423c430809f3f381fd354699dc307827` is public on `main`.
 - Lean Action CI run `29397368460`, build job `87293810332`, succeeded in 1m48s.
+- Evidence-backfill commit `286bd1fa12d0009d4fe86bd9149219bedbb61470` is public on `main`.
+- Lean Action CI run `29397552248`, build job `87294383278`, succeeded in 1m32s.
 
 ## Progress Accounting
 
