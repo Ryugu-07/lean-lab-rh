@@ -4,7 +4,7 @@ Audit: `AUDIT-20260716-R4-FREEDMAN-GREEN-LIFT-CONTRACTION-01`
 
 Date: 2026-07-16
 
-Status: `LOCAL_VERIFICATION_COMPLETE`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Runtime Record
 
@@ -33,6 +33,7 @@ Status: `LOCAL_VERIFICATION_COMPLETE`
 | 3 | `FALSIFICATION_PROOF` | `FreedmanGreenLiftAudit.lean` constructs the two-dimensional trace model. Lean checks the nontrivial kernel, fiber representative, Euler--Lagrange orthogonality, contractive middle multiplier, exact compressed factorization, twofold expansion, and signed unit value `-3`. | The listed premises are insufficient. Retain the concrete Volterra route only behind an additional norm/energy theorem. |
 | 4 | `INDEPENDENT_AUDIT` | The batch also proves `contraction_comp_three`: separate contraction estimates for `C`, `K`, and `E` do imply contraction of their composition. Exact Targets and statement witnesses compile; both selected axiom prints contain only standard axioms. | Accept only the source-local dependency diagnosis; do not infer nonpositivity of the concrete Weyl kernel. |
 | 5 | `LOCAL_VERIFICATION` | Standalone compilation, the 2,966-job module build, Targets, TargetChecks, AxiomsAudit, empty forbidden/scratch scans, `git diff --check`, and the full 8,676-job build pass. | Classify locally as `BRANCH_ELIMINATED`; publish implementation and require public CI. |
+| 6 | `PUBLIC_IMPLEMENTATION_VERIFICATION` | Implementation commit `b360163ccdad0d0076408c2a65eee99d2d4df7b5` passed public Lean Action CI run `29456581043`, build job `87490980870`, in `2m7s`. | Backfill immutable evidence and require that evidence commit's own public CI before closure. |
 
 ## Current Accounting
 
@@ -44,4 +45,4 @@ Status: `LOCAL_VERIFICATION_COMPLETE`
 - `assumption_frontier_after`: the concrete source must prove norm control for the surrounding
   compression/right inverse, or an exact energy identity implying their combined contraction
 - `classification`: `BRANCH_ELIMINATED`
-- `next_gate`: implementation commit, push, and public Lean Action CI
+- `next_gate`: evidence-backfill commit, push, and public Lean Action CI

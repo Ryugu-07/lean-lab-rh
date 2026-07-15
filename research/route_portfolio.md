@@ -839,4 +839,10 @@ Exact Targets and TargetChecks, two standard-only transitive axiom prints, empty
 scratch-name scans, `git diff --check`, the 2,966-job module build, and the full 8,676-job build
 pass. Classification is `BRANCH_ELIMINATED` only for the listed-premise closure argument. A
 stronger concrete Volterra energy estimate, KLM positivity, the final de Branges/RH bridge, G6/W1,
-G7/W2, G3/M2, and RH remain open. Implementation publication and public CI remain.
+G7/W2, G3/M2, and RH remain open. At that local gate, implementation publication and public CI
+remained.
+
+Implementation commit `b360163ccdad0d0076408c2a65eee99d2d4df7b5` passed public Lean Action CI
+run `29456581043`, build job `87490980870`, in `2m7s`. The listed-premise countermodel is now
+independently public-built. Immutable evidence backfill and its own public CI remain before audit
+closure; the persistent RH Goal stays active.

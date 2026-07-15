@@ -4,7 +4,7 @@ Audit: `AUDIT-20260716-R4-FREEDMAN-GREEN-LIFT-CONTRACTION-01`
 
 Date: 2026-07-16
 
-Status: `LOCAL_VERIFICATION_COMPLETE`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Source Claim Under Audit
 
@@ -147,3 +147,7 @@ does not supply the missing contraction hypotheses for the source's concrete `C`
 
 The local classification is `BRANCH_ELIMINATED` for the displayed listed-premise inference, with
 `hard_gap_delta=0`. The broader Weyl/Volterra program and the persistent RH Goal remain active.
+
+Implementation commit `b360163ccdad0d0076408c2a65eee99d2d4df7b5` passed public Lean Action CI
+run `29456581043`, build job `87490980870`, in `2m7s`. Immutable evidence is now backfilled; the
+evidence commit must pass its own public CI before the audit closes.
