@@ -112,6 +112,9 @@ admissible ladder indices.
   an M2 successor from smoothed Gram compressibility.
 - `local_verification`: exact target checks, standard-only axiom audit, empty forbidden scans,
   `git diff --check`, and the 8617-job full build pass.
+- `public_verification`: implementation commit
+  `ff0f14f10e75d73424addb671b3da34f0c44c679` passed Lean Action CI run `29384172003`, build job
+  `87253877106`, in 2m34s.
 
 The result falsifies a decisive proof step, not necessarily every alternative form of Gram decay.
 Any repair must control Diophantine cancellation in the actual logarithmic frequency and must

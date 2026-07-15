@@ -51,6 +51,8 @@ Date: 2026-07-15
   `propext`, `Classical.choice`, and `Quot.sound`.
 - The 8617-job full build and `git diff --check` pass. Forbidden Lean token, declaration, and
   resource-relaxation scans are empty.
+- Implementation commit `ff0f14f10e75d73424addb671b3da34f0c44c679` passed public Lean Action
+  CI run `29384172003`, build job `87253877106`, in 2m34s.
 - `hard_gap_after`: M2/G3 remains parked; M0, M1, D, and G4 remain complete.
 - `hard_gap_delta`: zero.
 - `assumption_frontier_after`: unconditional membership of `baezDuarteComplexTargetL2` in

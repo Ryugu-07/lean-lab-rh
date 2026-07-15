@@ -291,4 +291,6 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   bound, using the exact inequalities `2^3<3^2<2^4`. Result: `BRANCH_FALSIFIED`; the advertised
   polynomial distance decay and finite-section consequences do not follow from that proof. This
   does not disprove every possible Gram-decay theorem, admits no M2 successor, and leaves the
-  unconditional closure frontier and M2/G3 status unchanged.
+  unconditional closure frontier and M2/G3 status unchanged. Implementation commit
+  `ff0f14f10e75d73424addb671b3da34f0c44c679` passed public Lean Action CI run `29384172003`,
+  build job `87253877106`.
