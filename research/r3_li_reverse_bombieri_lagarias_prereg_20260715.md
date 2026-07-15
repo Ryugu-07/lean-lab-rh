@@ -228,4 +228,6 @@ L2/G5 is locally complete. The assumption frontier changes only from an unformal
 equivalence: neither RH nor all-index Li nonnegativity is proved unconditionally. The persistent RH
 goal remains active. Implementation commit `22cedfa17788fec546b91b9dc78452de52d87e64`
 passed public Lean Action CI run `29406614212`, build job `87323510543`, in 2m31s. Evidence-backfill
-publication and final loop closure remain pending.
+commit `48385f277c83b06a5d72aee83d06d0f4b31623d1` passed public run `29406932411`, build job
+`87324549428`, in 1m21s. The campaign is publicly closed under its indivisible success condition;
+the next state is `INDEPENDENT_AUDIT -> ROUTE_SELECTION`.

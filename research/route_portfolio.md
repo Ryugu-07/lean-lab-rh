@@ -273,11 +273,11 @@ singularity theorem and the route needs a larger analytic-continuation stack. A 
 multiset formalization is also deferred as unnecessary abstraction. Partial phase or tail helpers
 do not count as campaign progress.
 
-## Portfolio Update: R3 Reverse Li Criterion Locally Complete
+## Portfolio Update: R3 Reverse Li Criterion Publicly Complete
 
 Date: 2026-07-15
 
-`CAMPAIGN-20260715-LI-REVERSE-BOMBIERI-LAGARIAS-01` closes locally as
+`CAMPAIGN-20260715-LI-REVERSE-BOMBIERI-LAGARIAS-01` closes as
 `KNOWN_THEOREM_FORMALIZED_WITH_PROJECT_SPECIALIZED_PHASE_ARGUMENT`:
 
 - the Mobius Li transform lies in the unit disk exactly on the correct half-plane;
@@ -300,4 +300,9 @@ unconditional proof of either side, so the global RH assumption frontier remains
 persistent Goal stays active. Standalone, exact targets, standard-only axiom audit, scans, diff
 check, and the 8,661-job full build pass locally. Implementation commit
 `22cedfa17788fec546b91b9dc78452de52d87e64` passed public Lean Action CI run `29406614212`, build
-job `87323510543`, in 2m31s. Evidence-backfill publication and final loop closure remain.
+job `87323510543`, in 2m31s.
+
+Evidence-backfill commit `48385f277c83b06a5d72aee83d06d0f4b31623d1` passed public Lean Action
+CI run `29406932411`, build job `87324549428`, in 1m21s. The campaign is publicly closed. R3 has
+now compiled the complete project Li/RH equivalence, but no unconditional side of that equivalence.
+Next state is `INDEPENDENT_AUDIT -> ROUTE_SELECTION`; the persistent RH goal remains active.

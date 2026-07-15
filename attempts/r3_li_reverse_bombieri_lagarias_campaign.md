@@ -6,7 +6,7 @@ Campaign: `CAMPAIGN-20260715-LI-REVERSE-BOMBIERI-LAGARIAS-01`
 
 Route: R3, Li and Weil positivity
 
-Status: `IMPLEMENTATION_PUBLIC_CI_PASSED`
+Status: `CLOSED_PUBLIC_CI_VERIFIED`
 
 Fixed endpoint and admission conditions:
 `research/r3_li_reverse_bombieri_lagarias_prereg_20260715.md`.
@@ -69,7 +69,8 @@ The project index remains classical `lambda_(n+1)`.
 - `rtk git diff --check`: passed.
 - Implementation commit `22cedfa17788fec546b91b9dc78452de52d87e64` is public on `main`.
 - Lean Action CI run `29406614212`, build job `87323510543`, succeeded in 2m31s.
-- Evidence-backfill publication and its public CI remain pending.
+- Evidence-backfill commit `48385f277c83b06a5d72aee83d06d0f4b31623d1` is public on `main`.
+- Lean Action CI run `29406932411`, build job `87324549428`, succeeded in 1m21s.
 
 ## Progress Accounting
 
@@ -89,3 +90,12 @@ literature level; the project had compiled only the RH-forward direction.
 equivalent side is proved unconditionally. The global RH goal remains active.
 
 Next state after publication: `INDEPENDENT_AUDIT -> ROUTE_SELECTION`.
+
+## Loop Closure
+
+The implementation and evidence-backfill commits are public and independently pass Lean Action
+CI. This campaign is closed as
+`KNOWN_THEOREM_FORMALIZED_WITH_PROJECT_SPECIALIZED_PHASE_ARGUMENT`, `hard_gap_delta=1`.
+L2/G5 is complete. This closes an exact criterion edge but does not prove RH or all-index Li
+nonnegativity unconditionally. The persistent RH goal remains active, and route selection must now
+move through independent audit rather than manufacture another local Li helper.
