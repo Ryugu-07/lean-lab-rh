@@ -6,6 +6,7 @@ import LeanLab.Riemann.WeilTestAlgebra
 import LeanLab.Riemann.WeilConvolution
 import LeanLab.Riemann.WeilStripClass
 import LeanLab.Riemann.WeilExplicitIntegrand
+import LeanLab.Riemann.WeilZeroCutoff
 import LeanLab.Riemann.BaezDuarteZetaRatio
 import LeanLab.Riemann.BurnolLowerBound
 import LeanLab.Riemann.BurnolA
@@ -57,6 +58,7 @@ def checkedTargetNames : List Lean.Name :=
     ``mellin_weilConvolution_star_criticalLine,
     ``IsWeilStripAdmissible.weilAutocorrelation,
     ``exists_weilExplicitIntegrand_eq_hadamardZeroSum,
+    ``rectangleBoundaryIntegral_weighted_logDeriv_riemannXi_eq_finsum,
     ``liCoefficientCandidate_one_re_pos,
     ``fractionalPartKernel_memLp_two_unitInterval,
     ``fractionalPartKernelL2_mem_nymanBeurlingKernelSpan,
@@ -789,5 +791,18 @@ example {s : ℂ} (hs : 1 < s.re) :
         1 / s + 1 / (s - 1) + logDeriv Complex.Gammaℝ s -
           LSeries (fun n : ℕ => (ArithmeticFunction.vonMangoldt n : ℂ)) s :=
   exists_weilExplicitIntegrand_eq_hadamardZeroSum hs
+
+example {F : ℂ → ℂ} (hF : Differentiable ℂ F)
+    {l r b t : ℝ} (hlr : l < r) (hbt : b < t)
+    (hboundary : ∀ p : RiemannXiDivisorZeroIndex,
+      ¬riemannXiZeroOnRectangleBoundary l r b t p) :
+    rectangleBoundaryIntegral (fun z => F z * logDeriv riemannXi z) l r b t =
+      2 * (Real.pi : ℂ) * Complex.I *
+        ∑ᶠ p : RiemannXiDivisorZeroIndex,
+          if riemannXiZeroStrictlyInsideRectangle l r b t p then
+            F (riemannXiDivisorZeroValue p)
+          else 0 :=
+  rectangleBoundaryIntegral_weighted_logDeriv_riemannXi_eq_finsum
+    hF hlr hbt hboundary
 
 end LeanLab.Riemann

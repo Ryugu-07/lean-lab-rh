@@ -426,3 +426,31 @@ target, axiom, scan, diff, and 8,663-job full-build gates pass. Implementation c
 job `87337104802`, in 1m46s. Evidence-backfill commit
 `30a816118acf74a0ab9bead03b7541d6929dcfe3` passed public Lean Action CI run `29410987990`, build
 job `87337750370`, in 1m29s. The campaign is publicly closed.
+
+## Portfolio Update: R5 Finite-Height Zero Cutoff Selected
+
+Date: 2026-07-15
+
+After W1c0 closed, a fresh independent audit selected
+`CAMPAIGN-20260715-R5-WEIL-ZERO-CUTOFF-01`. The fixed endpoint is the unconditional finite-height
+weighted argument principle for `riemannXi`: the rectangle boundary integral of
+`F * logDeriv riemannXi` must equal `2*pi*I` times the multiplicity-bearing `finsum` of `F(rho)`
+over strictly interior xi zeros. Existing compact far-zero estimates in `LiZeroFormula.lean`
+provide specific evidence for the required `k=0` local-uniform extension. Single-pole,
+unweighted, and assumed finite-kernel statements are helpers or rejected endpoints, not campaign
+success. If complete, this closes only the finite-height subedge of W1c1; height limits,
+regularization, W2, and RH remain open.
+
+## Portfolio Update: R5 Finite-Height Zero Cutoff Locally Complete
+
+Date: 2026-07-15
+
+`CAMPAIGN-20260715-R5-WEIL-ZERO-CUTOFF-01` reaches its exact fixed endpoint locally as
+`BRIDGE_REDUCED`. `WeilZeroCutoff.lean` proves the compensated `k=0` zero series is locally
+uniformly summable away from xi zeros, commutes that series with all four weighted boundary
+integrals, evaluates each multiplicity-bearing zero by the strict-inside residue dichotomy,
+collapses the result to a finite `finsum`, and splices the actual xi logarithmic derivative while
+removing the entire Hadamard polynomial term. Exact targets, seven standard-only axiom prints,
+empty forbidden scans, `git diff --check`, the 8,635-job module build, and the 8,667-job full build
+pass. The next W1c frontier is the height-limit/contour-decay passage and W1c2 regularization; W2
+and RH remain open. Public CI is pending.

@@ -9,6 +9,7 @@ import LeanLab.Riemann.WeilTestAlgebra
 import LeanLab.Riemann.WeilConvolution
 import LeanLab.Riemann.WeilStripClass
 import LeanLab.Riemann.WeilExplicitIntegrand
+import LeanLab.Riemann.WeilZeroCutoff
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
@@ -244,6 +245,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``exists_weilExplicitIntegrand_eq_hadamardZeroSum
       status := .proven
       note := "Campaign CAMPAIGN-20260715-R5-WEIL-EXPLICIT-INTEGRAND-01 closes the unconditional W1c0 analytic integrand subedge. It does not assert test-function integration, contour or zero-cutoff limits, local regularization, the complete explicit formula, W2 positivity, or RH." },
+    { id := "T2.weil.zero-cutoff.finite-height"
+      tier := .tier2
+      title := "Formalize the finite-height weighted xi zero cutoff"
+      statement :=
+        "For every entire weight and rectangle whose boundary contains no xi zero, prove that the boundary integral of the weighted xi logarithmic derivative is 2*pi*i times the finite multiplicity-bearing sum of the weight over strictly interior xi zeros."
+      leanName := some ``rectangleBoundaryIntegral_weighted_logDeriv_riemannXi_eq_finsum
+      status := .proven
+      note := "Campaign CAMPAIGN-20260715-R5-WEIL-ZERO-CUTOFF-01 closes the unconditional finite-height W1c1 zero-side subedge. Genus-one compensation supplies local-uniform convergence on the complete boundary, and the divisor index retains analytic multiplicity. Height limits, prime-side contour decay, endpoint regularization, the complete explicit formula, W2 positivity, and RH remain open." },
     { id := "T2.inventory.nyman.beurling"
       tier := .tier2
       title := "Inventory mathlib support for the Nyman-Beurling route"

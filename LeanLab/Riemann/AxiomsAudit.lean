@@ -9,6 +9,7 @@ import LeanLab.Riemann.WeilTestAlgebra
 import LeanLab.Riemann.WeilConvolution
 import LeanLab.Riemann.WeilStripClass
 import LeanLab.Riemann.WeilExplicitIntegrand
+import LeanLab.Riemann.WeilZeroCutoff
 import LeanLab.Riemann.AnalyticLogBranch
 import LeanLab.Riemann.ReciprocalZetaSubpower
 import LeanLab.Riemann.TruncatedPerron
@@ -229,6 +230,13 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.logDeriv_riemannZeta_eq_neg_vonMangoldtLSeries
 #print axioms LeanLab.Riemann.logDeriv_riemannXi_eq_poles_archimedean_sub_vonMangoldt
 #print axioms LeanLab.Riemann.exists_weilExplicitIntegrand_eq_hadamardZeroSum
+#print axioms LeanLab.Riemann.summableLocallyUniformlyOn_riemannXiLogDerivZeroTerm
+#print axioms LeanLab.Riemann.finite_riemannXiZeroStrictlyInsideRectangle
+#print axioms LeanLab.Riemann.rectangleBoundaryIntegral_weighted_cauchyKernel
+#print axioms LeanLab.Riemann.hasSum_rectangleBoundaryIntegral_weighted_riemannXiLogDerivZeroTerm
+#print axioms LeanLab.Riemann.rectangleBoundaryIntegral_weighted_riemannXiLogDerivZeroTerm
+#print axioms LeanLab.Riemann.rectangleBoundaryIntegral_weighted_riemannXiZeroSum_eq_finsum
+#print axioms LeanLab.Riemann.rectangleBoundaryIntegral_weighted_logDeriv_riemannXi_eq_finsum
 #print axioms LeanLab.Riemann.integral_fractionalPartKernel_mul_le
 #print axioms LeanLab.Riemann.baezDuarteNormalizedKernel_diagonal_lower
 #print axioms LeanLab.Riemann.norm_inner_sparseGram_ne_le
