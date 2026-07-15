@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-WEIL-FINITE-GAUSSIAN-TEST-CORE-01`
 
 Date: 2026-07-16
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED_BRIDGE_REDUCED`
 
 ## Runtime Record
 
@@ -24,6 +24,7 @@ Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 | 4 | `PROOF_ATTEMPT_A` | `WeilFiniteGaussianTestCore.lean` defines the directly synthesized packet weight, pole factor, GammaR integral, and von-Mangoldt family. Lean proves absolute zero and prime summability, direct finite `tsum` interchange, direct integrability and integral interchange, and the complete packet formula over every finite index type with complex coefficients. Independent singleton and empty-packet reductions compile. | The fixed endpoint is reached without statement shrinkage; run the complete verification gate. |
 | 5 | `INDEPENDENT_AUDIT` | Rechecked direct rather than componentwise definitions, arbitrary finite types, complex coefficients, positive-width quantification, singleton/empty boundaries, and the absence of density, positivity, or RH claims. Standalone source, exact Targets and TargetChecks, six standard-only axiom prints, empty forbidden scans, `git diff --check`, and the 8,672-job full build pass. | Close locally as `BRIDGE_REDUCED`; publish implementation and require public CI. |
 | 6 | `PUBLIC_IMPLEMENTATION_GATE` | Implementation commit `736901e03f08ccb399e4ec5f84980a641cb4e344` passed public Lean Action CI run `29445905312`, build job `87456185038`, in `2m33s`. | Backfill immutable evidence and require the evidence commit's own public CI. |
+| 7 | `PUBLIC_EVIDENCE_GATE` | Evidence-backfill commit `6d7433b694b60150c19ca67f85087ba0e0c6255b` passed public Lean Action CI run `29446148141`, build job `87456989353`, in `1m26s`. | Close publicly as `BRIDGE_REDUCED`; keep the persistent RH Goal active and return to fresh route selection. |
 
 ## Accounting At Selection
 
@@ -47,4 +48,5 @@ Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 - `local_verification`: complete
 - `full_build`: 8,672 jobs passed
 - `implementation_ci`: run `29445905312`, job `87456185038`, passed in `2m33s`
-- `remaining_gate`: evidence-backfill commit and public CI
+- `evidence_ci`: run `29446148141`, job `87456989353`, passed in `1m26s`
+- `remaining_gate`: none

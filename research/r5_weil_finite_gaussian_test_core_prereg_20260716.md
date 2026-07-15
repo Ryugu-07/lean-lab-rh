@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-WEIL-FINITE-GAUSSIAN-TEST-CORE-01`
 
 Date: 2026-07-16
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED_BRIDGE_REDUCED`
 
 ## Route Boundary
 
@@ -159,3 +159,7 @@ Classification is `BRIDGE_REDUCED`; publication and public CI remain before clos
 Implementation commit `736901e03f08ccb399e4ec5f84980a641cb4e344` passed public Lean Action CI
 run `29445905312`, build job `87456185038`, in `2m33s`. Immutable evidence backfill and that
 commit's own public CI remain before closure.
+
+Evidence-backfill commit `6d7433b694b60150c19ca67f85087ba0e0c6255b` passed public Lean Action CI
+run `29446148141`, build job `87456989353`, in `1m26s`. The campaign is publicly closed as
+`BRIDGE_REDUCED`; the persistent RH Goal remains active.

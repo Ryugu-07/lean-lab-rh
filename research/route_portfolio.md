@@ -668,3 +668,7 @@ regularization, Weil positivity, and RH remain open. Public commit and CI are pe
 Implementation commit `736901e03f08ccb399e4ec5f84980a641cb4e344` passed public Lean Action CI
 run `29445905312`, build job `87456185038`, in `2m33s`. Immutable evidence backfill and its own
 public CI remain before campaign closure.
+
+Evidence-backfill commit `6d7433b694b60150c19ca67f85087ba0e0c6255b` passed public Lean Action CI
+run `29446148141`, build job `87456989353`, in `1m26s`. The campaign is publicly closed as
+`BRIDGE_REDUCED`; the persistent RH Goal remains active and must return to fresh route selection.
