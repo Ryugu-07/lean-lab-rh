@@ -1,4 +1,5 @@
 import LeanLab.Riemann.Targets
+import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.BaezDuarteZetaRatio
 import LeanLab.Riemann.BurnolLowerBound
 import LeanLab.Riemann.BurnolA
@@ -43,6 +44,7 @@ def checkedTargetNames : List Lean.Name :=
     ``support_riemannXiZeroDivisor,
     ``exists_riemannXi_hadamard_factorization,
     ``exists_liCoefficientCandidate_eq_hadamard_zero_formula,
+    ``liCoefficientCandidate_eq_tsum_riemannXiSymmetrizedLiZeroTerm,
     ``liCoefficientCandidate_one_re_pos,
     ``fractionalPartKernel_memLp_two_unitInterval,
     ``fractionalPartKernelL2_mem_nymanBeurlingKernelSpan,
@@ -184,6 +186,27 @@ example :
                   riemannXiLogDerivZeroDerivativeTerm (n - i) p 1)) /
           (n.factorial : ℂ) :=
   exists_liCoefficientCandidate_eq_hadamard_zero_formula
+
+example (n : ℕ) :
+    Summable (riemannXiSymmetrizedLiZeroTerm n) :=
+  summable_riemannXiSymmetrizedLiZeroTerm n
+
+example (n : ℕ) :
+    liCoefficientCandidate n =
+      ∑' p : RiemannXiDivisorZeroIndex, riemannXiSymmetrizedLiZeroTerm n p :=
+  liCoefficientCandidate_eq_tsum_riemannXiSymmetrizedLiZeroTerm n
+
+example (hRH : RiemannHypothesis) (n : ℕ) :
+    liCoefficientCandidate n =
+      ∑' p : RiemannXiDivisorZeroIndex,
+        (Complex.normSq
+          (liRawZeroTerm (n + 1) (riemannXiDivisorZeroValue p)) : ℂ) / 2 :=
+  RiemannHypothesis.liCoefficientCandidate_eq_tsum_normSq hRH n
+
+example (hRH : RiemannHypothesis) (n : ℕ) :
+    (liCoefficientCandidate n).im = 0 ∧ 0 ≤ (liCoefficientCandidate n).re :=
+  ⟨RiemannHypothesis.liCoefficientCandidate_im_eq_zero hRH n,
+    RiemannHypothesis.liCoefficientCandidate_re_nonneg hRH n⟩
 
 example :
     0 < (liCoefficientCandidate 1).re :=

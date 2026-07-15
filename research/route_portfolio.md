@@ -211,3 +211,30 @@ classical zero sum, positivity for all coefficients, and the exact Li/RH equival
 
 Next state is `INDEPENDENT_AUDIT`, then `ROUTE_SELECTION`. Continue R3 only with one of those
 precise global edges or choose a distinct route family; do not return to fixed-index coefficients.
+
+## Portfolio Update: R3 Symmetry-Paired Li Formula And RH-Forward Positivity
+
+Date: 2026-07-15
+
+Independent audit admitted
+`CAMPAIGN-20260715-LI-SYMMETRIC-ZERO-01` as the global successor to the compensated formula. The
+campaign closes locally as `BRIDGE_REDUCED`:
+
+- the full multiplicity-bearing xi divisor index has an involution with value `rho |-> 1-rho`;
+- the unpaired raw series is not falsely claimed summable, and a compiled harmonic model rejects
+  that inference;
+- the averaged raw Li term is summable for every index;
+- the Hadamard polynomial and reciprocal compensation cancel by the xi functional equation;
+- every derivative-defined project coefficient equals the unconditional paired raw zero sum;
+- under RH every summand is half a norm square, giving zero imaginary part and nonnegative real
+  part for all indices;
+- a compiled off-critical pair shows the termwise sign conclusion genuinely requires RH.
+
+This is existing Li/Bombieri-Lagarias mathematics aligned with project objects. Route-local
+`hard_gap_delta=2`; the RH assumption frontier is unchanged. R3 no longer lacks raw paired
+zero-sum normalization or the RH-forward all-index positivity direction. The reverse implication
+from all-index Li nonnegativity to RH remains the exact open R3 edge.
+
+Next state after public verification is `INDEPENDENT_AUDIT`, then `ROUTE_SELECTION`. A reverse Li
+criterion campaign requires a source-audited large-index/unit-disk argument and must not assume
+the conclusion as a zero-location premise.

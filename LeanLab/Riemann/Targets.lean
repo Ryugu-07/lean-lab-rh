@@ -2,6 +2,7 @@ import LeanLab.Riemann.LiScaffold
 import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula
+import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
@@ -181,6 +182,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``exists_liCoefficientCandidate_eq_hadamard_zero_formula
       status := .proven
       note := "Campaign CAMPAIGN-20260715-LI-ZERO-FORMULA-01 proves a compact-set M-test dominated by the compiled squared reciprocal zero sum, applies iteratedDerivWithin_tsum for every order at s=1, and combines it with the all-index Leibniz identity. The k=0 compensation and the degree-at-most-one exponential polynomial remain explicit. This is known-theorem formalization; the raw classically ordered zero sum, all-index positivity, the Li/RH equivalence, and RH remain open." },
+    { id := "T2.li.xi.zero.formula.symmetric-all-index"
+      tier := .tier2
+      title := "Normalize the all-index Li formula by zero symmetry"
+      statement :=
+        "Pair every multiplicity-bearing xi zero rho with 1-rho, prove the averaged raw Li zero term is summable and equals liCoefficientCandidate at every index, and under RH identify the summands with half norm squares to obtain real nonnegativity."
+      leanName := some ``liCoefficientCandidate_eq_tsum_riemannXiSymmetrizedLiZeroTerm
+      status := .proven
+      note := "Campaign CAMPAIGN-20260715-LI-SYMMETRIC-ZERO-01 constructs the exact divisor-index involution, averages the compensated summable formula, and derives cancellation of the degree-at-most-one Hadamard polynomial from xi symmetry. Under RH every paired term is exactly half a complex norm square, so every project Li coefficient is real and nonnegative. This is known-theorem formalization and the forward Li direction only; the reverse positivity-to-RH implication and RH remain open." },
     { id := "T2.inventory.nyman.beurling"
       tier := .tier2
       title := "Inventory mathlib support for the Nyman-Beurling route"
