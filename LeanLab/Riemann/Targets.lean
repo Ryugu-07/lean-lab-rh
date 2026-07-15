@@ -13,6 +13,7 @@ import LeanLab.Riemann.WeilZeroCutoff
 import LeanLab.Riemann.WeilGaussianHeight
 import LeanLab.Riemann.WeilGaussianExplicitFormula
 import LeanLab.Riemann.WeilSymmetricGaussianFamily
+import LeanLab.Riemann.WeilFiniteGaussianTestCore
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
@@ -289,6 +290,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``symmetricGaussianXi_arithmetic_explicit_formula
       status := .proven
       note := "Campaign CAMPAIGN-20260716-R5-WEIL-SYMMETRIC-GAUSSIAN-FAMILY-01 closes one unconditional two-parameter probe-family subedge. It also factors out a generic selected-height rectangle skeleton for analytic reflection-symmetric summable weights, proves both translated prime branches by exact quadratic-exponential integration, and recovers the centered formula at b=0. Schwartz/Hermite density, tempered-distribution extension, Weil positivity, and RH remain open." },
+    { id := "T2.weil.finite-gaussian-test-core"
+      tier := .tier2
+      title := "Extend the Gaussian formula to its finite test core"
+      statement :=
+        "For every finite complex superposition of positive-width symmetric Gaussian xi probes, prove the complete explicit formula with the directly synthesized zero tsum, GammaR integral, pole factor, and von-Mangoldt tsum, including absolute convergence and singleton compatibility."
+      leanName := some ``symmetricGaussianXiPacket_arithmetic_explicit_formula
+      status := .proven
+      note := "Campaign CAMPAIGN-20260716-R5-WEIL-FINITE-GAUSSIAN-TEST-CORE-01 constructs the algebraic test core needed before a density/continuity extension. It proves direct packet summability and finite-sum interchange on the zero, archimedean, and prime sides, and exact singleton and empty-packet reductions. This closes one G6 algebraic-core subedge; Schwartz density, tempered extension, regularization, Weil positivity, and RH remain open." },
     { id := "T2.inventory.nyman.beurling"
       tier := .tier2
       title := "Inventory mathlib support for the Nyman-Beurling route"

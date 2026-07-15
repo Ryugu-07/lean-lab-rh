@@ -10,6 +10,7 @@ import LeanLab.Riemann.WeilZeroCutoff
 import LeanLab.Riemann.WeilGaussianHeight
 import LeanLab.Riemann.WeilGaussianExplicitFormula
 import LeanLab.Riemann.WeilSymmetricGaussianFamily
+import LeanLab.Riemann.WeilFiniteGaussianTestCore
 import LeanLab.Riemann.BaezDuarteZetaRatio
 import LeanLab.Riemann.BaezDuarteQTwo
 import LeanLab.Riemann.BurnolLowerBound
@@ -862,5 +863,16 @@ example {a b c : ℝ} (ha : 0 < a) (hc : 1 < c) :
         symmetricGaussianXiArchimedeanIntegral a b c -
           ∑' n : ℕ, symmetricGaussianVonMangoldtWeight a b n :=
   symmetricGaussianXi_arithmetic_explicit_formula ha hc
+
+example {ι : Type*} [Fintype ι]
+    (a b : ι → ℝ) (w : ι → ℂ) (ha : ∀ i, 0 < a i)
+    {c : ℝ} (hc : 1 < c) :
+    (Real.pi : ℂ) *
+        ∑' p : RiemannXiDivisorZeroIndex,
+          riemannXiSymmetricGaussianPacketWeight a b w (riemannXiDivisorZeroValue p) =
+      2 * (Real.pi : ℂ) * symmetricGaussianXiPacketPoleFactor a b w +
+        symmetricGaussianXiPacketArchimedeanIntegral a b w c -
+          ∑' n : ℕ, symmetricGaussianPacketVonMangoldtWeight a b w n :=
+  symmetricGaussianXiPacket_arithmetic_explicit_formula a b w ha hc
 
 end LeanLab.Riemann

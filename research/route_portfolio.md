@@ -642,3 +642,25 @@ run `29430307834`, build job `87403316754`, in `2m20s`. Evidence-backfill commit
 `b5b8f0f3688cfef8d310ecc503d7f829dbc8e646` passed public Lean Action CI run `29430594438`, build
 job `87404277090`, in `1m26s`. The campaign is publicly closed as `KNOWN_THEOREM_FORMALIZED`;
 return to a fresh independent route audit.
+
+## Portfolio Update: R5 Finite Gaussian Test Core Locally Complete
+
+Date: 2026-07-16
+
+Fresh route selection compared a direct Schwartz-density campaign with the algebraic test core
+that must precede any closure argument. Arias de Reyna's explicit-formula proof confirms the
+finite-core-then-continuity architecture. Fixed-width Gaussian-cosine density survived
+mathematical falsification, but Mathlib currently lacks the packaged Hermite completeness or
+compactly supported smooth Schwartz-density infrastructure needed to close it as one bounded
+campaign. L2 density was rejected as too weak, and prime-distribution temperedness was rejected as
+RH-equivalent.
+
+`CAMPAIGN-20260716-R5-WEIL-FINITE-GAUSSIAN-TEST-CORE-01` reaches its preregistered endpoint
+locally. `WeilFiniteGaussianTestCore.lean` defines arbitrary finite complex packets and proves the
+complete explicit formula with the directly synthesized zero `tsum`, pole factor, GammaR
+integral, and von-Mangoldt `tsum`. Both series are absolutely summable, the real-place integrand is
+integrable, every finite interchange is explicit, and singleton and empty packets reduce exactly.
+Exact TargetChecks, six standard-only axiom prints, empty forbidden/declaration/resource scans,
+`git diff --check`, and the 8,672-job full build pass. Classification is `BRIDGE_REDUCED`: one G6
+algebraic-core subedge closes locally, while Schwartz density, continuity, tempered extension,
+regularization, Weil positivity, and RH remain open. Public commit and CI are pending.

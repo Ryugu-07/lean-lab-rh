@@ -13,6 +13,7 @@ import LeanLab.Riemann.WeilZeroCutoff
 import LeanLab.Riemann.WeilGaussianHeight
 import LeanLab.Riemann.WeilGaussianExplicitFormula
 import LeanLab.Riemann.WeilSymmetricGaussianFamily
+import LeanLab.Riemann.WeilFiniteGaussianTestCore
 import LeanLab.Riemann.AnalyticLogBranch
 import LeanLab.Riemann.ReciprocalZetaSubpower
 import LeanLab.Riemann.TruncatedPerron
@@ -265,6 +266,12 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.integral_symmetricGaussianXiPolePair_eq
 #print axioms LeanLab.Riemann.symmetricGaussianXi_arithmetic_explicit_formula
 #print axioms LeanLab.Riemann.symmetricGaussianXi_arithmetic_explicit_formula_zero
+#print axioms LeanLab.Riemann.summable_riemannXiSymmetricGaussianPacketWeight
+#print axioms LeanLab.Riemann.summable_symmetricGaussianPacketVonMangoldtWeight
+#print axioms LeanLab.Riemann.integrable_symmetricGaussianXiPacketArchimedean
+#print axioms LeanLab.Riemann.symmetricGaussianXiPacket_arithmetic_explicit_formula
+#print axioms LeanLab.Riemann.symmetricGaussianXiPacket_arithmetic_explicit_formula_unit
+#print axioms LeanLab.Riemann.symmetricGaussianXiPacket_arithmetic_explicit_formula_empty
 #print axioms LeanLab.Riemann.integral_fractionalPartKernel_mul_le
 #print axioms LeanLab.Riemann.baezDuarteNormalizedKernel_diagonal_lower
 #print axioms LeanLab.Riemann.norm_inner_sparseGram_ne_le
