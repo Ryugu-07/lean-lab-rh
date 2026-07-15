@@ -61,7 +61,9 @@ All seven mathematical steps in the indivisible batch compile.
 - `rtk lake build`: passed, 8,660 jobs. Replayed warnings are confined to pre-existing modules.
 - Placeholder, explicit declaration, `native_decide`, and resource-relaxation scans are empty.
 - `rtk git diff --check`: passed.
-- Publication commit, push, and public Lean Action CI remain pending.
+- Implementation commit `4168188f70e2cb6f2e47c65334a8326dabd23edc` is public on `main`.
+- Lean Action CI run `29401711930`, build job `87307546611`, succeeded in 1m48s.
+- Evidence-backfill publication and its public CI remain pending.
 
 ## Progress Accounting
 

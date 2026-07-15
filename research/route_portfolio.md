@@ -233,7 +233,9 @@ campaign closes locally as `BRIDGE_REDUCED`:
 This is existing Li/Bombieri-Lagarias mathematics aligned with project objects. Route-local
 `hard_gap_delta=2`; the RH assumption frontier is unchanged. R3 no longer lacks raw paired
 zero-sum normalization or the RH-forward all-index positivity direction. The reverse implication
-from all-index Li nonnegativity to RH remains the exact open R3 edge.
+from all-index Li nonnegativity to RH remains the exact open R3 edge. Implementation commit
+`4168188f70e2cb6f2e47c65334a8326dabd23edc` passed public Lean Action CI run `29401711930`, build
+job `87307546611`, in 1m48s.
 
 Next state after public verification is `INDEPENDENT_AUDIT`, then `ROUTE_SELECTION`. A reverse Li
 criterion campaign requires a source-audited large-index/unit-disk argument and must not assume

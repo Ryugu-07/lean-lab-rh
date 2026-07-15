@@ -212,5 +212,6 @@ off-critical falsification witnesses also compile.
 Classification: `BRIDGE_REDUCED`, `hard_gap_delta=2`, assumption frontier unchanged,
 `KNOWN_THEOREM_FORMALIZED_AND_PROJECT_ALIGNED`. Standalone and module builds, exact target checks,
 standard-only transitive axiom output, the 8,660-job full build, forbidden scans, and
-`git diff --check` pass. Publication and public CI remain pending. The reverse Li positivity
-criterion and RH remain unproved.
+`git diff --check` pass. Implementation commit `4168188f70e2cb6f2e47c65334a8326dabd23edc`
+passed public Lean Action CI run `29401711930`, build job `87307546611`, in 1m48s. The reverse Li
+positivity criterion and RH remain unproved.
