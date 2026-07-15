@@ -136,11 +136,20 @@ equivalence or to another exact RH criterion.
   is necessary infrastructure with `hard_gap_delta=0`; the complete explicit formula remains the
   fixed R5 frontier and finite positivity remains inadmissible as RH progress.
 
-## Selected Campaign
+## Selected Campaign: R5 Weil Strip Class Locally Complete
 
-`CAMPAIGN-20260715-R5-WEIL-CONVOLUTION-01` is locally closed as
-`KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` for RH. W1a is complete; no successor campaign
-is selected before `INDEPENDENT_AUDIT -> ROUTE_SELECTION`.
+Independent audit admits one exact same-route successor from Lagarias's `A_delta` definition and
+the publicly closed W1a convolution theorem. `CAMPAIGN-20260715-R5-WEIL-STRIP-CLASS-01` now closes
+locally as `KNOWN_THEOREM_FORMALIZED`. `WeilStripClass.lean` packages a positive-width physical
+Mellin class with closed-strip convergence, continuity, and finite uniform bound plus open-strip
+analyticity, then proves vector, involution, conjugation/star, convolution, and autocorrelation
+closure. The conjugation proof checks the cancellation of the two anti-holomorphic operations;
+the convolution proof uses W1a rather than assuming transform closure.
+
+This completes W1b's physical algebra core only. It does not claim metric separation,
+quotient/uniqueness/completeness, density, the complete explicit formula, positivity, or RH.
+Exact targets, standard-only axiom output, scans, diff check, and the 8,664-job full build pass
+locally. `hard_gap_delta=0`; publication and public CI remain.
 
 ## Portfolio Update: R3 Xi Zero Divisor
 

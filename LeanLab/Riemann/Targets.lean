@@ -6,6 +6,7 @@ import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
 import LeanLab.Riemann.WeilTestAlgebra
 import LeanLab.Riemann.WeilConvolution
+import LeanLab.Riemann.WeilStripClass
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
@@ -217,6 +218,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``mellin_weilConvolution_star_criticalLine
       status := .proven
       note := "Campaign CAMPAIGN-20260715-R5-WEIL-CONVOLUTION-01 transports multiplicative convolution to Mathlib's additive Bochner convolution in logarithmic coordinates and justifies Fubini from the two exact MellinConvergent assumptions. This closes W1a only; the analytic-strip test class, complete explicit formula, positivity, and RH remain open." },
+    { id := "T2.weil.test-algebra.strip-class"
+      tier := .tier2
+      title := "Package the physical Weil strip test algebra"
+      statement :=
+        "Define the positive-width physical Mellin strip class with pointwise closed-strip convergence, open-strip analyticity, closed-strip continuity, and a uniform bound; prove closure under linear operations, Weil involution, conjugate star, multiplicative convolution, and autocorrelation."
+      leanName := some ``IsWeilStripAdmissible.weilAutocorrelation
+      status := .proven
+      note := "Campaign CAMPAIGN-20260715-R5-WEIL-STRIP-CLASS-01 packages the source-facing physical A_delta conditions and proves the W1b algebra core using the compiled W1a transform laws. It deliberately does not claim that the raw-function uniform distance is separated or complete, nor density, a complete explicit formula, positivity, or RH." },
     { id := "T2.inventory.nyman.beurling"
       tier := .tier2
       title := "Inventory mathlib support for the Nyman-Beurling route"

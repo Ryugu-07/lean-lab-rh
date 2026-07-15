@@ -3,6 +3,7 @@ import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
 import LeanLab.Riemann.WeilTestAlgebra
 import LeanLab.Riemann.WeilConvolution
+import LeanLab.Riemann.WeilStripClass
 import LeanLab.Riemann.BaezDuarteZetaRatio
 import LeanLab.Riemann.BurnolLowerBound
 import LeanLab.Riemann.BurnolA
@@ -51,6 +52,7 @@ def checkedTargetNames : List Lean.Name :=
     ``riemannHypothesis_iff_forall_liCoefficientCandidate_re_nonneg,
     ``mellin_weilStar_criticalLine,
     ``mellin_weilConvolution_star_criticalLine,
+    ``IsWeilStripAdmissible.weilAutocorrelation,
     ``liCoefficientCandidate_one_re_pos,
     ``fractionalPartKernel_memLp_two_unitInterval,
     ``fractionalPartKernelL2_mem_nymanBeurlingKernelSpan,
@@ -707,5 +709,35 @@ example {f : ℝ → ℂ} (t : ℝ)
     mellin (weilConvolution f (weilStar f)) (1 / 2 + (t : ℂ) * Complex.I) =
       Complex.normSq (mellin f (1 / 2 + (t : ℂ) * Complex.I)) :=
   mellin_weilAutocorrelation_criticalLine t hf
+
+example {δ : ℝ} (hδ : 0 < δ) :
+    IsWeilStripAdmissible δ (0 : ℝ → ℂ) :=
+  isWeilStripAdmissible_zero hδ
+
+example {δ : ℝ} {f g : ℝ → ℂ}
+    (hf : IsWeilStripAdmissible δ f) (hg : IsWeilStripAdmissible δ g) :
+    IsWeilStripAdmissible δ (f + g) :=
+  hf.add hg
+
+example {δ : ℝ} {f : ℝ → ℂ} (hf : IsWeilStripAdmissible δ f) (c : ℂ) :
+    IsWeilStripAdmissible δ (c • f) :=
+  hf.const_smul c
+
+example {δ : ℝ} {f : ℝ → ℂ} (hf : IsWeilStripAdmissible δ f) :
+    IsWeilStripAdmissible δ (weilInvolution f) :=
+  hf.weilInvolution
+
+example {δ : ℝ} {f : ℝ → ℂ} (hf : IsWeilStripAdmissible δ f) :
+    IsWeilStripAdmissible δ (weilStar f) :=
+  hf.weilStar
+
+example {δ : ℝ} {f g : ℝ → ℂ}
+    (hf : IsWeilStripAdmissible δ f) (hg : IsWeilStripAdmissible δ g) :
+    IsWeilStripAdmissible δ (weilConvolution f g) :=
+  hf.weilConvolution hg
+
+example {δ : ℝ} {f : ℝ → ℂ} (hf : IsWeilStripAdmissible δ f) :
+    IsWeilStripAdmissible δ (weilConvolution f (weilStar f)) :=
+  hf.weilAutocorrelation
 
 end LeanLab.Riemann

@@ -6,6 +6,7 @@ import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
 import LeanLab.Riemann.WeilTestAlgebra
 import LeanLab.Riemann.WeilConvolution
+import LeanLab.Riemann.WeilStripClass
 import LeanLab.Riemann.AnalyticLogBranch
 import LeanLab.Riemann.ReciprocalZetaSubpower
 import LeanLab.Riemann.TruncatedPerron
@@ -189,6 +190,22 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.mellin_weilConvolution_star
 #print axioms LeanLab.Riemann.mellin_weilConvolution_star_criticalLine
 #print axioms LeanLab.Riemann.mellin_weilAutocorrelation_criticalLine
+#print axioms LeanLab.Riemann.isOpen_weilOpenStrip
+#print axioms LeanLab.Riemann.weilOpenStrip_subset_closedStrip
+#print axioms LeanLab.Riemann.one_sub_mem_weilOpenStrip_iff
+#print axioms LeanLab.Riemann.one_sub_mem_weilClosedStrip_iff
+#print axioms LeanLab.Riemann.conj_mem_weilOpenStrip_iff
+#print axioms LeanLab.Riemann.conj_mem_weilClosedStrip_iff
+#print axioms LeanLab.Riemann.one_sub_conj_mem_weilOpenStrip_iff
+#print axioms LeanLab.Riemann.one_sub_conj_mem_weilClosedStrip_iff
+#print axioms LeanLab.Riemann.isWeilStripAdmissible_zero
+#print axioms LeanLab.Riemann.IsWeilStripAdmissible.add
+#print axioms LeanLab.Riemann.IsWeilStripAdmissible.const_smul
+#print axioms LeanLab.Riemann.IsWeilStripAdmissible.weilInvolution
+#print axioms LeanLab.Riemann.IsWeilStripAdmissible.conj
+#print axioms LeanLab.Riemann.IsWeilStripAdmissible.weilStar
+#print axioms LeanLab.Riemann.IsWeilStripAdmissible.weilConvolution
+#print axioms LeanLab.Riemann.IsWeilStripAdmissible.weilAutocorrelation
 #print axioms LeanLab.Riemann.integral_fractionalPartKernel_mul_le
 #print axioms LeanLab.Riemann.baezDuarteNormalizedKernel_diagonal_lower
 #print axioms LeanLab.Riemann.norm_inner_sparseGram_ne_le
