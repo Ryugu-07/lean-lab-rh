@@ -158,3 +158,12 @@ closure.
 - `next_state`: publish implementation, verify public CI, backfill immutable evidence, then return
   to `INDEPENDENT_AUDIT -> ROUTE_SELECTION`
 - The persistent RH Goal remains active.
+
+## Public Implementation Evidence
+
+- implementation commit: `90313d83210bdfe0aca8b62153240d51e0c924b1`
+- public repository: `Ryugu-07/lean-lab-rh`, branch `main`
+- Lean Action CI run: `29430307834`
+- build job: `87403316754`
+- conclusion: success in `2m20s`
+- immutable evidence-backfill commit and its CI remain to be recorded.
