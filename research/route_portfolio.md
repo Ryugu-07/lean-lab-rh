@@ -461,3 +461,51 @@ run `29423254678`, build job `87378909471`, in 3m1s. Immutable evidence backfill
 Evidence-backfill commit `626fef55bb951d1cb59a76f8ff22250c4bc3a0e2` passed public Lean Action CI
 run `29423572352`, build job `87380039889`, in 1m47s. The campaign is publicly closed as
 `BRIDGE_REDUCED`; begin a fresh independent route audit before choosing the next campaign.
+
+## Portfolio Update: R1 q=2 Baez-Duarte Criterion Selected
+
+Date: 2026-07-15
+
+The independent audit does not admit an immediate continuation of R5. Lagarias's `A_delta`
+definition supplies analyticity, closed-strip continuity, and a uniform transform bound, but no
+vertical-decay field that would by itself remove the horizontal edges in the finite-height theorem.
+The source treats the zero functional by a height cutoff and requires additional regularization for
+larger classes. A complete contour/distributional passage is not one bounded successor campaign.
+
+Five R1 candidates were then adversarially screened. Exact natural Gram evaluation and generic
+projection identities do not control target residuals; Ehm's modified Levinson-Selberg route leaves
+the decisive Mertens/Landau estimates explicitly open; and the previous geometric sparse family is
+Lean-excluded by an exact orthogonal witness. The surviving candidate is Ehm's `q=2` variation of
+the Baez-Duarte criterion, which is genuinely distinct from sparse target coupling.
+
+`CAMPAIGN-20260715-R1-BAEZ-DUARTE-QTWO-01` fixes the exact endpoint
+
+```lean
+RiemannHypothesis <->
+  baezDuarteQTwoComplexTargetL2 in baezDuarteQTwoComplexKernelClosure
+```
+
+where the target is the multiplicative convolution of the unit-interval indicator with itself and
+each generator is its convolution with the existing positive-natural kernel. The transform values
+are fixed as `1 / s^2` and `n^(-s) * (-zeta(s) / s^2)`. The bounded critical-line multiplier proves
+only the RH-forward direction; the reverse must independently reconstruct the zero obstruction,
+because multiplication by `1/s` has no bounded inverse. This is a known RH-equivalent criterion,
+so the expected RH `hard_gap_delta` is zero even on success.
+
+## Portfolio Update: R1 q=2 Baez-Duarte Criterion Locally Complete
+
+Date: 2026-07-15
+
+`CAMPAIGN-20260715-R1-BAEZ-DUARTE-QTWO-01` reaches the exact fixed endpoint locally as
+`KNOWN_THEOREM_FORMALIZED`. The new module constructs the twice-weighted target and natural
+generators by multiplicative convolution, proves their exact Mellin transforms and reciprocal
+tail, and transports the bounded critical multiplier by `1/s` through the Fourier-Mellin
+isometry. This yields the RH-forward closure direction. The reverse direction independently
+excludes off-critical zeta zeros through finite-sum Mellin vanishing, local Cauchy-Schwarz, and
+tail-moment control; no inverse multiplier is assumed. The final theorem is
+`riemannHypothesis_iff_baezDuarteQTwoComplexTarget_mem_kernelClosure`.
+
+The warning-free module, exact TargetChecks, eight standard-only axiom prints, five empty forbidden
+scans, `git diff --check`, the 8,608-job module build, and the 8,668-job full build pass locally.
+This is an exact known RH equivalence with `hard_gap_delta=0`, not an unconditional proof of RH.
+Public CI is pending.

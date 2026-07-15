@@ -17,6 +17,7 @@ import LeanLab.Riemann.BalazardSaiasContour
 import LeanLab.Riemann.BaezDuarteReverse
 import LeanLab.Riemann.BaezDuarteForward
 import LeanLab.Riemann.BaezDuarteForwardLimit
+import LeanLab.Riemann.BaezDuarteQTwo
 import LeanLab.Riemann.BurnolLowerBound
 import LeanLab.Riemann.BurnolA
 import LeanLab.Riemann.BurnolHardy
@@ -98,6 +99,14 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.RiemannHypothesis.exists_mobiusApproxL2_close_neg_target
 #print axioms LeanLab.Riemann.RiemannHypothesis.baezDuarteComplexTargetL2_mem_kernelClosure
 #print axioms LeanLab.Riemann.riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure
+#print axioms LeanLab.Riemann.hasMellin_baezDuarteQTwoTargetFunction
+#print axioms LeanLab.Riemann.hasMellin_baezDuarteQTwoKernelFunction
+#print axioms LeanLab.Riemann.baezDuarteQTwoPhysicalCLM_target_eq
+#print axioms LeanLab.Riemann.baezDuarteQTwoPhysicalCLM_kernel_eq
+#print axioms LeanLab.Riemann.RiemannHypothesis.baezDuarteQTwoComplexTargetL2_mem_kernelClosure
+#print axioms LeanLab.Riemann.riemannZeta_ne_zero_of_baezDuarteQTwoComplexTarget_mem_closure
+#print axioms LeanLab.Riemann.baezDuarteQTwoComplexTarget_mem_closure_imp_riemannHypothesis
+#print axioms LeanLab.Riemann.riemannHypothesis_iff_baezDuarteQTwoComplexTarget_mem_kernelClosure
 #print axioms LeanLab.Riemann.baezDuarteFiniteComplexKernelSpan_le_burnolKernelSpan
 #print axioms LeanLab.Riemann.burnolDistance_inv_natCast_le_baezDuarteNaturalDistance
 #print axioms LeanLab.Riemann.tendsto_natCast_inv_nhdsWithin_Ioi_zero

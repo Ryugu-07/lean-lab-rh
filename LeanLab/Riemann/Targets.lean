@@ -18,6 +18,7 @@ import LeanLab.Riemann.BalazardSaiasContour
 import LeanLab.Riemann.BaezDuarteReverse
 import LeanLab.Riemann.BaezDuarteForward
 import LeanLab.Riemann.BaezDuarteForwardLimit
+import LeanLab.Riemann.BaezDuarteQTwo
 import LeanLab.Riemann.BurnolHardy
 import LeanLab.Riemann.BurnolFullLowerBound
 
@@ -69,7 +70,15 @@ structure ResearchTarget where
 
 /-- Current target ledger after the 2026-07-09 architectural review. -/
 def rhTargets : List ResearchTarget :=
-  [ { id := "T1.m1.baez.duarte.criterion"
+  [ { id := "T1.r1.baez.duarte.qtwo.criterion"
+      tier := .tier1
+      title := "Formalize Ehm's twice-weighted Baez-Duarte criterion"
+      statement :=
+        "Prove Mathlib.RiemannHypothesis iff chi multiplicatively convolved with chi belongs to the complex closed span of chi multiplicatively convolved with the positive-natural Baez-Duarte kernels."
+      leanName := some ``riemannHypothesis_iff_baezDuarteQTwoComplexTarget_mem_kernelClosure
+      status := .proven
+      note := "Campaign CAMPAIGN-20260715-R1-BAEZ-DUARTE-QTWO-01 proves the q=2 criterion. The forward half transports the established q=1 closure through the bounded critical multiplier 1/s. The reverse half independently uses the exact 1/s^2 target Mellin value, the reciprocal kernel tail, local Cauchy-Schwarz, and zero reflection; it does not invert the multiplier. This is an exact RH equivalence, not an unconditional proof of RH." },
+    { id := "T1.m1.baez.duarte.criterion"
       tier := .tier1
       title := "Formalize the exact strong Baez-Duarte criterion"
       statement :=

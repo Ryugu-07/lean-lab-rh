@@ -8,6 +8,7 @@ import LeanLab.Riemann.WeilStripClass
 import LeanLab.Riemann.WeilExplicitIntegrand
 import LeanLab.Riemann.WeilZeroCutoff
 import LeanLab.Riemann.BaezDuarteZetaRatio
+import LeanLab.Riemann.BaezDuarteQTwo
 import LeanLab.Riemann.BurnolLowerBound
 import LeanLab.Riemann.BurnolA
 import LeanLab.Riemann.BurnolHardy
@@ -43,7 +44,8 @@ open scoped BigOperators ComplexConjugate ENNReal FourierTransform InnerProductS
 
 /-- Name-resolution witness for every `.proven` ledger target with a `leanName`. -/
 def checkedTargetNames : List Lean.Name :=
-  [ ``riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure,
+  [ ``riemannHypothesis_iff_baezDuarteQTwoComplexTarget_mem_kernelClosure,
+    ``riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure,
     ``RiemannHypothesis.exists_tendsto_baezDuarteMobiusApproxL2,
     ``exists_norm_riemannZeta_criticalLine_le_rpow,
     ``riemannXi_eq_mul_completedRiemannZeta,
@@ -107,6 +109,12 @@ example :
     RiemannHypothesis ↔
       baezDuarteComplexTargetL2 ∈ baezDuarteComplexKernelClosure :=
   riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure
+
+example :
+    RiemannHypothesis ↔
+      baezDuarteQTwoComplexTargetL2 ∈
+        baezDuarteQTwoComplexKernelClosure :=
+  riemannHypothesis_iff_baezDuarteQTwoComplexTarget_mem_kernelClosure
 
 example {s : ℂ} (hs0 : s ≠ 0) (hs1 : s ≠ 1) :
     riemannXi s = s * (s - 1) / 2 * completedRiemannZeta s :=
