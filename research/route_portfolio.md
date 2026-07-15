@@ -745,3 +745,8 @@ empty forbidden scans, `git diff --check`, and the full 8,674-job build pass. Cl
 conservatively `KNOWN_THEOREM_FORMALIZED` pending independent novelty review, with no first-proof
 claim. This closes the restricted-family reverse edge but has `hard_gap_delta=0` for unconditional
 positivity, W2, G7, and RH. Implementation publication and public CI remain.
+
+Implementation commit `b2d2ce18ff1491f684098b04c7a5be73e0ebdc98` passed public Lean Action CI
+run `29453270303`, build job `87480595744`, in `2m14s`. The exact restricted Gaussian criterion is
+now independently public-built. Immutable evidence backfill and its own public CI remain before
+campaign closure; the persistent RH Goal stays active.

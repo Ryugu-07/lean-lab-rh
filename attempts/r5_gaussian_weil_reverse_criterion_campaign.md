@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-REVERSE-CRITERION-01`
 
 Date: 2026-07-16
 
-Status: `LOCAL_VERIFICATION_COMPLETE`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Runtime Record
 
@@ -37,6 +37,7 @@ Status: `LOCAL_VERIFICATION_COMPLETE`
 | 6 | `DISCOVERY_EXPLICIT_FORMULA` | The existing Gaussian packet explicit formula converts the negative zero `tsum` into a finite real arithmetic quadratic at `c=2` with negative real part. Positivity for all finite `Type` index families therefore excludes every off-line nontrivial zero and implies RH. The exact iff compiles. | Promote the endpoint to the formal module and begin independent evidence checks. |
 | 7 | `INDEPENDENT_AUDIT` | The 1,476-line formal module cold-compiles without warnings or placeholders. Exact Targets and TargetChecks compile. Six selected declarations, spanning separator, infinite tail, zero-side negativity, arithmetic negativity, reverse implication, and iff, use only `propext`, `Classical.choice`, and `Quot.sound`. | Run forbidden scans, diff validation, and the full project build. |
 | 8 | `LOCAL_VERIFICATION` | Forbidden placeholder/declaration/resource scans are empty, `git diff --check` passes, and the full 8,674-job Lake build succeeds. | Classify conservatively as `KNOWN_THEOREM_FORMALIZED` pending independent novelty review; publish implementation and require public CI. |
+| 9 | `PUBLIC_IMPLEMENTATION_CI` | Implementation commit `b2d2ce18ff1491f684098b04c7a5be73e0ebdc98` passed Lean Action CI run `29453270303`, build job `87480595744`, in `2m14s`. | Publish this immutable evidence backfill and require its own public CI before closure. |
 
 ## Current Accounting
 
@@ -49,4 +50,4 @@ Status: `LOCAL_VERIFICATION_COMPLETE`
   temperedness, zero simplicity, zero enumeration, or a new premise
 - `classification`: `KNOWN_THEOREM_FORMALIZED` pending independent novelty review; no first-proof
   or first-formalization claim
-- `next_gate`: implementation commit, public push, and independent GitHub Lean Action CI
+- `next_gate`: evidence-backfill commit and its independent GitHub Lean Action CI

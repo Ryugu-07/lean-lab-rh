@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-REVERSE-CRITERION-01`
 
 Date: 2026-07-16
 
-Status: `LOCAL_VERIFICATION_COMPLETE`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Fixed Proposition
 
@@ -124,3 +124,14 @@ arithmetic contradiction, and the final RH equivalence. Exact Targets and Target
 six selected transitive axiom prints contain only `propext`, `Classical.choice`, and `Quot.sound`;
 forbidden scans and `git diff --check` are clean; and the full 8,674-job build passes. Public
 commit and CI remain before campaign closure.
+
+## Public Implementation Evidence
+
+- implementation commit: `b2d2ce18ff1491f684098b04c7a5be73e0ebdc98`
+- Lean Action CI run: `29453270303`
+- build job: `87480595744`
+- conclusion: `success`
+- duration: `2m14s`
+
+The implementation is independently public-built. This evidence backfill and its own public CI
+remain before campaign closure.
