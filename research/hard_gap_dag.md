@@ -345,3 +345,12 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   candidate looping must not resume without a new independently qualified external input.
   Governance commit `6bdbd1f9a459edb1b0baa7d3568b44605f0d4fc6` passed public Lean Action CI
   run `29384810340`, build job `87255750317`.
+- Audit `AUDIT-20260716-R5-POLSON-GGC-CONTINUATION-01` tests retention of the defining 2018
+  Levy-Frullani integral after an imaginary spectral substitution. Lean proves the exact complex
+  component is not integrable on `(1,infinity)` whenever `gamma>0` and
+  `y^2>2*gamma^2`. Implementation commit `0c174e82713c18be16ae9ea3afd5197b77ab4347`
+  passed public CI run `29455171888`, build job `87486632024`; evidence commit
+  `d277252fa21de89e228a2d1db6addd727d975d99` passed run `29455360041`, build job
+  `87487225276`. Result: `BRANCH_ELIMINATED`, `hard_gap_delta=0`. This rejects only the tested
+  integral-retention mechanism; analytic continuation, the revised 2026 Thorin framework, G6/W1,
+  G7/W2, G3/M2, and RH remain unchanged.

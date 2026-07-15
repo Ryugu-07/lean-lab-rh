@@ -797,3 +797,10 @@ Implementation commit `0c174e82713c18be16ae9ea3afd5197b77ab4347` passed public L
 run `29455171888`, build job `87486632024`, in `1m50s`. The source-specific branch elimination is
 now independently public-built. Immutable evidence backfill and its own public CI remain before
 audit closure; the persistent RH Goal stays active.
+
+Evidence commit `d277252fa21de89e228a2d1db6addd727d975d99` passed public Lean Action CI
+run `29455360041`, build job `87487225276`, in `2m2s`. Together with implementation run
+`29455171888`, this publicly closes `AUDIT-20260716-R5-POLSON-GGC-CONTINUATION-01` as
+`BRANCH_ELIMINATED`. Do not reopen the exact tested 2018 integral-retention mechanism without new
+source evidence. Return to fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`; the unconditional RH
+frontier is unchanged and the persistent Goal remains active.

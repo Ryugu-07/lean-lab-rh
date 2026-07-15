@@ -4,7 +4,7 @@ Audit: `AUDIT-20260716-R5-POLSON-GGC-CONTINUATION-01`
 
 Date: 2026-07-16
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Runtime Record
 
@@ -31,6 +31,7 @@ Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 | 4 | `INDEPENDENT_AUDIT` | Exact Targets and TargetChecks compile. The three selected transitive axiom prints contain only `propext`, `Classical.choice`, and `Quot.sound`; forbidden-token, declaration, resource-relaxation, and scratch-name scans are empty. | Accept the theorem only as an audit of retention of the 2018 defining integral. Do not transfer it to analytic continuation or the revised 2026 framework. |
 | 5 | `LOCAL_VERIFICATION` | Standalone compilation, the dedicated module build, `Targets.lean`, `TargetChecks.lean`, `AxiomsAudit.lean`, `git diff --check`, and the full 8,675-job build pass. | Classify locally as `BRANCH_ELIMINATED`; publish implementation and require public CI. |
 | 6 | `PUBLIC_IMPLEMENTATION_VERIFICATION` | Implementation commit `0c174e82713c18be16ae9ea3afd5197b77ab4347` passed public Lean Action CI run `29455171888`, build job `87486632024`, in `1m50s`. | Backfill immutable evidence and require that evidence commit's own public CI before closure. |
+| 7 | `PUBLIC_EVIDENCE_VERIFICATION` | Evidence commit `d277252fa21de89e228a2d1db6addd727d975d99` passed public Lean Action CI run `29455360041`, build job `87487225276`, in `2m2s`. | Close the audit as `BRANCH_ELIMINATED`; do not reopen this exact 2018 integral-retention mechanism without new source evidence. |
 
 ## Current Accounting
 
@@ -43,4 +44,4 @@ Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
   imaginary regime `y^2>2*gamma^2`; analytic continuation and the revised 2026 framework remain
   outside this theorem
 - `classification`: `BRANCH_ELIMINATED`
-- `next_gate`: evidence-backfill commit, push, and public Lean Action CI
+- `next_gate`: fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION` under the active RH Goal
