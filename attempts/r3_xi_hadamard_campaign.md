@@ -133,7 +133,9 @@ source file.
 - Placeholder, explicit axiom, `native_decide`, and resource-relaxation source scans: empty.
 - `rtk git diff --check`: pass.
 
-Commit, push, and public Lean Action CI evidence are pending.
+Implementation commit `406fef704202777a6510a9eddd69a402075d31f6` is public on
+`Ryugu-07/lean-lab-rh`. Lean Action CI run `29394659365`, build job `87285308740`, completed
+successfully in 3m12s.
 
 ## Progress Accounting
 

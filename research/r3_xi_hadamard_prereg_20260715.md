@@ -187,4 +187,6 @@ the compensated logarithmic-derivative zero sum away from `IsNontrivialZero`.
 Exact target checks, standard-only axiom output, the 8,658-job full build, source scans, closure
 byte audit, and `git diff --check` pass. This result does not define or prove positivity of the full
 Li coefficient family and does not prove RH. Publication evidence is recorded in
-`attempts/r3_xi_hadamard_campaign.md`.
+`attempts/r3_xi_hadamard_campaign.md`. Implementation commit
+`406fef704202777a6510a9eddd69a402075d31f6` passed public Lean Action CI run `29394659365`, build
+job `87285308740`, in 3m12s.
