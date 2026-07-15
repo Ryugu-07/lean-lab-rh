@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-WEIL-SYMMETRIC-GAUSSIAN-FAMILY-01`
 
 Date: 2026-07-16
 
-Status: `LOCALLY_COMPLETE_PENDING_PUBLIC_CI`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Route Boundary
 
@@ -179,4 +179,9 @@ Standalone source, Targets, TargetChecks, and AxiomsAudit builds pass. The selec
 contain only `propext`, `Classical.choice`, and `Quot.sound`. Placeholder, forbidden declaration,
 and diff scans are empty, and the 8,671-job full build passes. Classification is
 `NEW_RELEVANT_LEAN_THEOREM`; the fixed accounting remains one parametric probe-family subedge and
-zero delta for G6, G7, and RH. Public commit, push, and CI remain before closure.
+zero delta for G6, G7, and RH. At the local gate, public commit, push, and CI remained before
+closure.
+
+Implementation commit `5c4ae54c031a6d999111390694ef738a3da57146` passed public Lean Action CI
+run `29444276732`, build job `87450715956`, in `1m50s`. The evidence-backfill commit and its own
+public CI remain before closure.

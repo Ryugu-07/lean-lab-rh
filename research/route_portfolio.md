@@ -138,7 +138,12 @@ placeholders.
 Standalone, target, TargetChecks, standard-only axiom, forbidden scan, diff, and 8,671-job full
 build gates pass. This closes one unconditional two-parameter probe-family subedge only. It does
 not prove Schwartz/Hermite density, temperedness of the prime/archimedean distribution, Weil
-positivity, or RH; `hard_gap_delta=0` for G6, G7, and RH. Public CI remains before closure.
+positivity, or RH; `hard_gap_delta=0` for G6, G7, and RH. At the local gate, public CI remained
+before closure.
+
+Implementation commit `5c4ae54c031a6d999111390694ef738a3da57146` passed public Lean Action CI
+run `29444276732`, build job `87450715956`, in `1m50s`; evidence-backfill CI remains before public
+closure.
 
 ## R1: Exact Baez-Duarte Gram And Projection Geometry
 

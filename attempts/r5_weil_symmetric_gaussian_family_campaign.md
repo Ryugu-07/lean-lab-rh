@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-WEIL-SYMMETRIC-GAUSSIAN-FAMILY-01`
 
 Date: 2026-07-16
 
-Status: `LOCAL_VERIFICATION_COMPLETE`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Runtime Record
 
@@ -24,6 +24,7 @@ Status: `LOCAL_VERIFICATION_COMPLETE`
 | 5 | `PROOF_ATTEMPT_A/PRIME_SIDE` | Split `cosh` into two exponential branches. Lean evaluated each quadratic exponential exactly, proved individual and summed integrability, justified absolute sum/integral interchange, and recovered the average of kernels centered at `log(n)=b` and `log(n)=-b`. | Continue to pole and GammaR terms; both preregistered branches survived sign checks. |
 | 6 | `PROOF_ATTEMPT_A/ASSEMBLY` | Proved the GammaR term integrable by bounded modulation, generalized the two-pole rectangle argument, computed both residues as `exp(a/4)*cosh(b/2)`, and spliced all selected truncation limits. The final theorem and its independent `b=0` compatibility theorem compile without placeholders. | Classify locally as `NEW_RELEVANT_LEAN_THEOREM`; run the full verification gate. |
 | 7 | `VERIFICATION` | Standalone, Targets, TargetChecks, AxiomsAudit, empty placeholder/declaration scans, `git diff --check`, and the 8,671-job full build pass. Selected axiom prints contain only the three standard Lean/mathlib axioms. | Local verification complete; publish implementation and require public CI before campaign closure. |
+| 8 | `PUBLIC_IMPLEMENTATION_GATE` | Implementation commit `5c4ae54c031a6d999111390694ef738a3da57146` passed public Lean Action CI run `29444276732`, build job `87450715956`, in `1m50s`. | Backfill immutable evidence and require that evidence commit's own public CI before closure. |
 
 ## Accounting At Selection
 
