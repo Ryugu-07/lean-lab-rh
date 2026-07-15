@@ -40,6 +40,7 @@ def checkedTargetNames : List Lean.Name :=
     ``exists_norm_riemannZeta_criticalLine_le_rpow,
     ``riemannXi_eq_mul_completedRiemannZeta,
     ``isNontrivialZero_iff_riemannXi_eq_zero_and_not_trivial,
+    ``support_riemannXiZeroDivisor,
     ``liCoefficientCandidate_one_re_pos,
     ``fractionalPartKernel_memLp_two_unitInterval,
     ``fractionalPartKernelL2_mem_nymanBeurlingKernelSpan,
@@ -102,6 +103,34 @@ example :
 example (s : ℂ) :
     IsNontrivialZero s ↔ riemannXi s = 0 ∧ ¬IsTrivialZeroPoint s :=
   isNontrivialZero_iff_riemannXi_eq_zero_and_not_trivial s
+
+example (s : ℂ) :
+    IsNontrivialZero s ↔ riemannXi s = 0 :=
+  isNontrivialZero_iff_riemannXi_eq_zero s
+
+example {s : ℂ} (hs : IsTrivialZeroPoint s) :
+    riemannXi s ≠ 0 :=
+  riemannXi_ne_zero_of_isTrivialZeroPoint hs
+
+example (s : ℂ) :
+    riemannXiZeroDivisor s = (riemannXiZeroMultiplicity s : ℤ) :=
+  riemannXiZeroDivisor_apply s
+
+example :
+    Function.support riemannXiZeroDivisor = {s : ℂ | IsNontrivialZero s} :=
+  support_riemannXiZeroDivisor
+
+example (s : ℂ) :
+    0 < riemannXiZeroMultiplicity s ↔ IsNontrivialZero s :=
+  riemannXiZeroMultiplicity_pos_iff s
+
+example (s : ℂ) :
+    riemannXiZeroMultiplicity (1 - s) = riemannXiZeroMultiplicity s :=
+  riemannXiZeroMultiplicity_one_sub s
+
+example {K : Set ℂ} (hK : IsCompact K) :
+    (K ∩ {s : ℂ | IsNontrivialZero s}).Finite :=
+  compact_inter_nontrivialZeros_finite hK
 
 example :
     0 < (liCoefficientCandidate 1).re :=

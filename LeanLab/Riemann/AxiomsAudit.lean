@@ -1,4 +1,5 @@
 import LeanLab.Riemann.BalazardSaias
+import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.AnalyticLogBranch
 import LeanLab.Riemann.ReciprocalZetaSubpower
 import LeanLab.Riemann.TruncatedPerron
@@ -128,6 +129,12 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.exists_symmetric_idempotent_not_maxNorm_nonexpansive
 #print axioms LeanLab.Riemann.not_m2AuditWongPThree_maxNorm_nonexpansive
 #print axioms LeanLab.Riemann.not_m2Audit_carvill_source_frequency_lower_bound
+#print axioms LeanLab.Riemann.riemannXi_ne_zero_of_isTrivialZeroPoint
+#print axioms LeanLab.Riemann.isNontrivialZero_iff_riemannXi_eq_zero
+#print axioms LeanLab.Riemann.analyticOrderAt_riemannXi_ne_top
+#print axioms LeanLab.Riemann.riemannXiZeroDivisor_apply
+#print axioms LeanLab.Riemann.support_riemannXiZeroDivisor
+#print axioms LeanLab.Riemann.riemannXiZeroMultiplicity_one_sub
 #print axioms LeanLab.Riemann.integral_fractionalPartKernel_mul_le
 #print axioms LeanLab.Riemann.baezDuarteNormalizedKernel_diagonal_lower
 #print axioms LeanLab.Riemann.norm_inner_sparseGram_ne_le

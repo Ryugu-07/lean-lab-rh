@@ -138,3 +138,27 @@ equivalence or to another exact RH criterion.
 `CAMPAIGN-20260715-GRAM-01` selects R1. It may produce a relevant unconditional Gram theorem or
 eliminate a coercivity mechanism, but it leaves `M2/G3` parked unless an independent novelty audit
 confirms that a fixed unconditional bridge edge has actually been reduced.
+
+## Portfolio Update: R3 Xi Zero Divisor
+
+Date: 2026-07-15
+
+R1's selected sparse mechanism is now closed: the lower-frame theorem was proved, and an exact
+three-interval witness subsequently proved that the target is not in the sparse closed span. Do not
+resume target coupling for the `(2^24)^j` family without a genuinely different endpoint.
+
+Route selection therefore moved to the distinct R3 family for
+`CAMPAIGN-20260715-XI-DIVISOR-01`. The campaign closes as `BRIDGE_REDUCED`:
+
+- `riemannXiZeroDivisor` is a global locally finite divisor;
+- its value is the finite natural analytic zero multiplicity;
+- its support is exactly `{s | IsNontrivialZero s}`;
+- multiplicity is invariant under `s |-> 1-s`;
+- negative-even trivial zeta zeros and infinite local order are Lean-excluded.
+
+This gives `hard_gap_delta=1` for the inventoried divisor/local-multiplicity prerequisite and no
+change to the RH assumption frontier. R3 still lacks order-one growth, a global Hadamard product or
+substitute, zero-sum convergence, the coefficient-to-zero identity, and all-index positivity.
+
+Next state is `INDEPENDENT_AUDIT`, then `ROUTE_SELECTION`. R3 may continue only if the audit admits
+one of those precise global edges; fixed low-index coefficient work remains rejected.

@@ -1,4 +1,5 @@
 import LeanLab.Riemann.LiScaffold
+import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
@@ -154,6 +155,14 @@ def rhTargets : List ResearchTarget :=
       leanName := none
       status := .proven
       note := "Inventory completed as research/tier2_li_hadamard_inventory_20260709.md; recommendation is not to choose this as the immediate Tier 2 route until global product and zero-enumeration bridges exist." },
+    { id := "T2.li.xi.zero.divisor"
+      tier := .tier2
+      title := "Package the exact xi zero divisor with multiplicity"
+      statement :=
+        "Construct a globally locally finite divisor for riemannXi, prove its finite natural values are the analytic zero multiplicities, identify its support exactly with IsNontrivialZero, and transport multiplicity under s -> 1-s."
+      leanName := some ``support_riemannXiZeroDivisor
+      status := .proven
+      note := "Campaign CAMPAIGN-20260715-XI-DIVISOR-01 excludes negative-even trivial zeta zeros from xi, rules out infinite local order by the identity theorem, and packages the exact locally finite multiplicity carrier. This closes the divisor/local-multiplicity prerequisite only; order-one growth, a Hadamard product, global zero summability, the Li zero-sum identity, all-index positivity, and RH remain open." },
     { id := "T2.inventory.nyman.beurling"
       tier := .tier2
       title := "Inventory mathlib support for the Nyman-Beurling route"
