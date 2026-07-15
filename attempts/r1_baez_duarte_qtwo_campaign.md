@@ -166,4 +166,15 @@ closure.
 - Lean Action CI run: `29430307834`
 - build job: `87403316754`
 - conclusion: success in `2m20s`
-- immutable evidence-backfill commit and its CI remain to be recorded.
+- evidence-backfill commit: `b5b8f0f3688cfef8d310ecc503d7f829dbc8e646`
+- evidence-backfill Lean Action CI run: `29430594438`
+- evidence-backfill build job: `87404277090`
+- evidence-backfill conclusion: success in `1m26s`
+
+## Public Closure
+
+Both implementation and immutable evidence commits passed independent public CI. Campaign
+`CAMPAIGN-20260715-R1-BAEZ-DUARTE-QTWO-01` is publicly closed as
+`KNOWN_THEOREM_FORMALIZED`. Return to a fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`; do not
+continue mining helper lemmas from this closed criterion unless new evidence changes the route
+map. The persistent RH Goal remains active.

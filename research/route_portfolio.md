@@ -509,4 +509,7 @@ The warning-free module, exact TargetChecks, eight standard-only axiom prints, f
 scans, `git diff --check`, the 8,608-job module build, and the 8,668-job full build pass locally.
 This is an exact known RH equivalence with `hard_gap_delta=0`, not an unconditional proof of RH.
 Implementation commit `90313d83210bdfe0aca8b62153240d51e0c924b1` passed public Lean Action CI
-run `29430307834`, build job `87403316754`, in `2m20s`. Immutable evidence backfill is pending.
+run `29430307834`, build job `87403316754`, in `2m20s`. Evidence-backfill commit
+`b5b8f0f3688cfef8d310ecc503d7f829dbc8e646` passed public Lean Action CI run `29430594438`, build
+job `87404277090`, in `1m26s`. The campaign is publicly closed as `KNOWN_THEOREM_FORMALIZED`;
+return to a fresh independent route audit.
