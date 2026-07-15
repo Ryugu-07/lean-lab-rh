@@ -90,7 +90,10 @@ identifies the arithmetic limit with the absolute multiplicity-bearing Gaussian 
 an unconditional fixed-test explicit formula, not a generic Weil class, positivity theorem, or RH.
 Exact TargetChecks, five standard-only axiom prints, all forbidden-token/declaration/resource
 scans, `git diff --check`, the standalone module build, and the 8,670-job full build pass. The
-campaign is locally complete as `BRIDGE_REDUCED`; public CI and evidence backfill remain.
+campaign is locally complete as `BRIDGE_REDUCED`.
+Implementation commit `6c65019d9de2d31127dd3bf8389994207c17dcb5` passed public Lean Action CI
+run `29441160498`, build job `87440149741`, in `2m33s`; evidence-backfill CI remains before public
+closure.
 
 ## R1: Exact Baez-Duarte Gram And Projection Geometry
 

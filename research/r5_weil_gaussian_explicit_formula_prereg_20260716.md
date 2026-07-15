@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-WEIL-GAUSSIAN-EXPLICIT-FORMULA-01`
 
 Date: 2026-07-16
 
-Status: `LOCALLY_COMPLETE_BRIDGE_REDUCED`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Route Boundary
 
@@ -148,5 +148,8 @@ two residues at `0` and `1`; and the final splice uses the compiled selected-hei
 limit. Exact TargetChecks and five standard-only axiom prints pass; every print uses only
 `propext`, `Classical.choice`, and `Quot.sound`. The standalone module build, all forbidden-token,
 declaration, and resource-option scans, `git diff --check`, and the 8,670-job full build pass. The
-campaign is locally complete as `BRIDGE_REDUCED`; publication and public CI remain, and the
-persistent RH Goal stays active.
+campaign is locally complete as `BRIDGE_REDUCED`, and the persistent RH Goal stays active.
+
+Implementation commit `6c65019d9de2d31127dd3bf8389994207c17dcb5` passed public Lean Action CI
+run `29441160498`, build job `87440149741`, in `2m33s`. The evidence-backfill commit and its own
+public CI remain before public closure.

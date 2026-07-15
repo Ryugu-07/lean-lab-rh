@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-WEIL-GAUSSIAN-EXPLICIT-FORMULA-01`
 
 Date: 2026-07-16
 
-Status: `LOCALLY_COMPLETE_BRIDGE_REDUCED`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Runtime Record
 
@@ -23,6 +23,7 @@ Status: `LOCALLY_COMPLETE_BRIDGE_REDUCED`
 | 4 | `PROOF_ATTEMPT_A` | Proved the exact vertical Gaussian and L-series forms; evaluated every positive-index term by `integral_cexp_quadratic`; handled `n=0` separately; proved summable integral norms from von-Mangoldt L-series absolute convergence; exchanged sum and integral; derived `logDeriv GammaR = -log(pi)/2 + digamma(s/2)/2`; proved GammaR integrability. | Continue the same proof DAG to the pole pair and final splice. |
 | 5 | `PROOF_ATTEMPT_A_CONTINUED` | Built an independent two-pole symmetric rectangle, checked both residues `G_a(0)=G_a(1)=exp(a/4)`, proved top-edge decay and full-line pole value `2*pi*exp(a/4)`, then passed all arithmetic truncations to the full line and proved `gaussianXi_arithmetic_explicit_formula`. | Admit the indivisible endpoint to independent audit; no Attempt B or pivot was needed. |
 | 6 | `INDEPENDENT_AUDIT` | Exact TargetChecks and five selected axiom prints pass; all new prints use only `propext`, `Classical.choice`, and `Quot.sound`. The standalone module is warning-free; forbidden-token, declaration, and resource-option scans are empty; `git diff --check` and the 8,670-job full build pass. | Close locally as `BRIDGE_REDUCED`; publish and require public CI before public closure. |
+| 7 | `PUBLIC_IMPLEMENTATION_GATE` | Implementation commit `6c65019d9de2d31127dd3bf8389994207c17dcb5` passed public Lean Action CI run `29441160498`, build job `87440149741`, in `2m33s`. | Backfill immutable evidence and require that commit's own public CI before closure. |
 
 ## Fixed Endpoint
 
