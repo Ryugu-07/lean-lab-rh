@@ -301,3 +301,5 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   conditional and numerical. Result: `NO_PROGRESS`, `hard_gap_delta=0`. Together with audits 01
   and 02, this triggers the v2 three-zero-delta `STOP` rule. M2/G3 remains parked and automatic
   candidate looping must not resume without a new independently qualified external input.
+  Governance commit `6bdbd1f9a459edb1b0baa7d3568b44605f0d4fc6` passed public Lean Action CI
+  run `29384810340`, build job `87255750317`.

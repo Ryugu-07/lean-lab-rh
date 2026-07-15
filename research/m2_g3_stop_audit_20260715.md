@@ -81,6 +81,8 @@ Accordingly no Lean statement is preregistered and no mathematical source file i
 - `Lean_verification`: not applicable; no mathematical proposition was admitted.
 - `theorem_names_added`: none.
 - `repository_verification`: `git diff --check` and the unchanged 8617-job project build pass.
+- `public_verification`: governance commit `6bdbd1f9a459edb1b0baa7d3568b44605f0d4fc6`
+  passed Lean Action CI run `29384810340`, build job `87255750317`, in 1m24s.
 
 ## Stop Rule
 
