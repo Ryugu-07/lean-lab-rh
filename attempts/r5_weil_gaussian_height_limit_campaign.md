@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-WEIL-GAUSSIAN-HEIGHT-LIMIT-01`
 
 Date: 2026-07-16
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_PENDING_EVIDENCE_CI`
+Status: `PUBLICLY_CLOSED_BRIDGE_REDUCED`
 
 ## Runtime Record
 
@@ -68,6 +68,14 @@ multiplicity is retained.
 - Lean Action CI run: `29436179027`
 - build job: `87423295204`
 - conclusion: success in `2m23s`
+- evidence-backfill commit: `2292801d710a1a95857de69a92498c39ae79d0d3`
+- evidence-backfill Lean Action CI run: `29436471220`
+- evidence-backfill build job: `87424276428`
+- evidence-backfill conclusion: success in `1m57s`
 
-The persistent RH Goal remains active. Publish this immutable evidence backfill and require its
-own successful CI before the campaign is publicly closed.
+## Public Closure
+
+Both the implementation and immutable evidence commits passed independent public CI. Campaign
+`CAMPAIGN-20260716-R5-WEIL-GAUSSIAN-HEIGHT-LIMIT-01` is publicly closed as `BRIDGE_REDUCED`.
+Do not reopen this fixed Gaussian height-limit endpoint without new evidence. Return to fresh
+`INDEPENDENT_AUDIT -> ROUTE_SELECTION`; the persistent RH Goal remains active.

@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-WEIL-GAUSSIAN-HEIGHT-LIMIT-01`
 
 Date: 2026-07-16
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_PENDING_EVIDENCE_CI`
+Status: `PUBLICLY_CLOSED_BRIDGE_REDUCED`
 
 ## Source Boundary
 
@@ -184,5 +184,9 @@ The campaign is locally closed as `BRIDGE_REDUCED`, with `hard_gap_delta=1` for 
 subedge and `hard_gap_delta=0` for RH. Public implementation CI was the next mandatory gate.
 
 Implementation commit `00410cc2a6919acfa5835b121c47489c5105e0de` passed public Lean Action CI
-run `29436179027`, build job `87423295204`, in `2m23s`. The immutable evidence backfill and its own
-public CI remain before final campaign closure.
+run `29436179027`, build job `87423295204`, in `2m23s`.
+
+Evidence-backfill commit `2292801d710a1a95857de69a92498c39ae79d0d3` passed public Lean Action CI
+run `29436471220`, build job `87424276428`, in `1m57s`. The campaign is publicly closed as
+`BRIDGE_REDUCED`. The fixed Gaussian W1c1 height limit must not be reopened without new evidence;
+the persistent RH Goal remains active and returns to fresh route selection.

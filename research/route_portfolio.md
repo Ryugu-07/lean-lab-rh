@@ -52,7 +52,9 @@ supplies the polynomial near/far boundary control, while exact Gaussian decay ki
 horizontal integrals. Reflection and the finite rectangle theorem give the checked factor `pi`.
 The campaign closes locally as `BRIDGE_REDUCED`: one fixed-test W1c1 height-limit subedge is now
 complete, but generic class-E limits, prime/archimedean evaluation, regularization, positivity,
-and RH are unchanged. Public CI remains before immutable closure.
+and RH are unchanged. Implementation commit `00410cc2a6919acfa5835b121c47489c5105e0de` and
+evidence-backfill commit `2292801d710a1a95857de69a92498c39ae79d0d3` both passed public CI, so the
+campaign is publicly closed and this fixed endpoint must not be reopened without new evidence.
 
 ## R1: Exact Baez-Duarte Gram And Projection Geometry
 
