@@ -142,4 +142,6 @@ multiplicity under `s |-> 1-s`. Exact TargetChecks, transitive axiom prints, the
 build, forbidden scans, and `git diff --check` pass.
 
 No Hadamard product, global zero enumeration or sum, Li positivity, or RH is inferred. Publication
-evidence is recorded in `attempts/r3_xi_zero_divisor_campaign.md`.
+evidence is recorded in `attempts/r3_xi_zero_divisor_campaign.md`. Implementation commit
+`15e30c800e39d904b1623d5e8efcb40864e18655` passed public Lean Action CI run `29392983909`, build
+job `87280263113`, in 2m2s.

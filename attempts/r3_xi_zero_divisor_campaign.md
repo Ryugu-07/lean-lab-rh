@@ -92,7 +92,9 @@ theorem riemannXiZeroDivisor_apply (s : Complex) :
 - `rtk git diff --check`: pass.
 - Audited new declarations depend only on `propext`, `Classical.choice`, and `Quot.sound`.
 
-Implementation commit and public Lean Action evidence: pending publication.
+Implementation commit `15e30c800e39d904b1623d5e8efcb40864e18655` is public on
+`Ryugu-07/lean-lab-rh`. Lean Action CI run `29392983909`, build job `87280263113`, completed
+successfully in 2m2s.
 
 ## Progress Accounting
 
@@ -106,4 +108,3 @@ coefficient, all-index positivity, and the exact Li/RH equivalence in Lean.
 Next state: `INDEPENDENT_AUDIT`, then `ROUTE_SELECTION`. Continuing R3 requires the audit to admit
 a precise order-growth, canonical-product, or zero-summability edge; low-index Li calculations are
 not admissible successors.
-
