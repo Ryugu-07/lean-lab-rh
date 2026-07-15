@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-WEIL-FINITE-GAUSSIAN-TEST-CORE-01`
 
 Date: 2026-07-16
 
-Status: `LOCALLY_VERIFIED_PUBLIC_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Route Boundary
 
@@ -155,3 +155,7 @@ theorems compile. The standalone module, exact Targets and TargetChecks, six sel
 prints, forbidden declaration/token/resource scans, `git diff --check`, and the 8,672-job full
 build pass. Every selected theorem uses only `propext`, `Classical.choice`, and `Quot.sound`.
 Classification is `BRIDGE_REDUCED`; publication and public CI remain before closure.
+
+Implementation commit `736901e03f08ccb399e4ec5f84980a641cb4e344` passed public Lean Action CI
+run `29445905312`, build job `87456185038`, in `2m33s`. Immutable evidence backfill and that
+commit's own public CI remain before closure.

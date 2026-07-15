@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-WEIL-FINITE-GAUSSIAN-TEST-CORE-01`
 
 Date: 2026-07-16
 
-Status: `LOCALLY_VERIFIED_PUBLIC_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Runtime Record
 
@@ -23,6 +23,7 @@ Status: `LOCALLY_VERIFIED_PUBLIC_CI_PENDING`
 | 3 | `FALSIFICATION` | Fixed-width Gaussian-cosine density survived mathematical boundary checks, but immediate formalization requires several missing analysis edges. Finite complex packets survive empty, singleton, repeated-parameter, zero-coefficient, summability, and carrier checks, and directly create the algebraic core needed before closure. | Select and preregister the direct finite-packet explicit formula; begin Proof Attempt A. |
 | 4 | `PROOF_ATTEMPT_A` | `WeilFiniteGaussianTestCore.lean` defines the directly synthesized packet weight, pole factor, GammaR integral, and von-Mangoldt family. Lean proves absolute zero and prime summability, direct finite `tsum` interchange, direct integrability and integral interchange, and the complete packet formula over every finite index type with complex coefficients. Independent singleton and empty-packet reductions compile. | The fixed endpoint is reached without statement shrinkage; run the complete verification gate. |
 | 5 | `INDEPENDENT_AUDIT` | Rechecked direct rather than componentwise definitions, arbitrary finite types, complex coefficients, positive-width quantification, singleton/empty boundaries, and the absence of density, positivity, or RH claims. Standalone source, exact Targets and TargetChecks, six standard-only axiom prints, empty forbidden scans, `git diff --check`, and the 8,672-job full build pass. | Close locally as `BRIDGE_REDUCED`; publish implementation and require public CI. |
+| 6 | `PUBLIC_IMPLEMENTATION_GATE` | Implementation commit `736901e03f08ccb399e4ec5f84980a641cb4e344` passed public Lean Action CI run `29445905312`, build job `87456185038`, in `2m33s`. | Backfill immutable evidence and require the evidence commit's own public CI. |
 
 ## Accounting At Selection
 
@@ -45,4 +46,5 @@ Status: `LOCALLY_VERIFIED_PUBLIC_CI_PENDING`
 - `axiom_audit_so_far`: only `propext`, `Classical.choice`, and `Quot.sound`
 - `local_verification`: complete
 - `full_build`: 8,672 jobs passed
-- `remaining_gate`: publication and public CI
+- `implementation_ci`: run `29445905312`, job `87456185038`, passed in `2m33s`
+- `remaining_gate`: evidence-backfill commit and public CI
