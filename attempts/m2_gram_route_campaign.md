@@ -90,4 +90,5 @@ target-coupling mechanism rather than extend constants or add generic Gram wrapp
 - forbidden placeholder, explicit declaration, `native_decide`, and resource-relaxation scans:
   empty
 - `git diff --check`: passed
-- commit, push, and public CI: pending at this checkpoint
+- implementation commit: `f433644b5c9ad7a21ccabbc87b03ef6e8b3a1284`, pushed to public `main`
+- Lean Action CI: run `29390161766`, build job `87271625044`, succeeded

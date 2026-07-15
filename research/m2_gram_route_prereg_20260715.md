@@ -170,3 +170,8 @@ No target-closure membership, residual convergence, or RH implication follows fr
 lower frame bound alone. The RH assumption frontier and M2/G3 hard gap are unchanged. The explicit
 constant has not been matched exhaustively against the literature, so the novelty label remains
 `NOVELTY_UNCHECKED`.
+
+## Publication Evidence
+
+- implementation commit: `f433644b5c9ad7a21ccabbc87b03ef6e8b3a1284`
+- public Lean Action CI: run `29390161766`, build job `87271625044`, succeeded
