@@ -11,6 +11,7 @@ import LeanLab.Riemann.WeilStripClass
 import LeanLab.Riemann.WeilExplicitIntegrand
 import LeanLab.Riemann.WeilZeroCutoff
 import LeanLab.Riemann.WeilGaussianHeight
+import LeanLab.Riemann.WeilGaussianExplicitFormula
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
@@ -271,6 +272,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``exists_gaussianXiZeroFreeHeight_tendsto_rightVerticalIntegral
       status := .proven
       note := "Campaign CAMPAIGN-20260716-R5-WEIL-GAUSSIAN-HEIGHT-LIMIT-01 proves the fixed-test W1c1 height limit. Reciprocal-square Hadamard summability gives absolute Gaussian zero summability, a polynomial zero-count bound, and quantitatively separated zero-free heights; exp(-a*T^2) then absorbs the fourth-power horizontal log-derivative bound. This is unconditional and multiplicity-bearing, but it is not a generic test-class explicit formula, prime-side identity, positivity criterion, or RH." },
+    { id := "T2.weil.gaussian-arithmetic-explicit-formula"
+      tier := .tier2
+      title := "Evaluate the arithmetic side of the Gaussian xi contour"
+      statement :=
+        "For every a>0 and c>1, prove the fixed Gaussian explicit formula equating pi times the absolute multiplicity-bearing xi-zero sum to the explicit two-pole contribution plus the integrable GammaR line term minus an absolutely summable Gaussian-smoothed von-Mangoldt prime-power series."
+      leanName := some ``gaussianXi_arithmetic_explicit_formula
+      status := .proven
+      note := "Campaign CAMPAIGN-20260716-R5-WEIL-GAUSSIAN-EXPLICIT-FORMULA-01 closes the fixed-test arithmetic W1c subedge. It proves the exact Fourier-Gaussian von-Mangoldt prime-power weights and absolute interchange, GammaR full-line integrability from digamma growth, the independent two-pole residue value 2*pi*exp(a/4), and the final multiplicity-bearing Gaussian explicit formula without RH. Generic test classes, singular regularization, Weil positivity, and RH remain open." },
     { id := "T2.inventory.nyman.beurling"
       tier := .tier2
       title := "Inventory mathlib support for the Nyman-Beurling route"

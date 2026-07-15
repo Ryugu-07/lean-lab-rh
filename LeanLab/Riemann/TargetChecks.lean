@@ -8,6 +8,7 @@ import LeanLab.Riemann.WeilStripClass
 import LeanLab.Riemann.WeilExplicitIntegrand
 import LeanLab.Riemann.WeilZeroCutoff
 import LeanLab.Riemann.WeilGaussianHeight
+import LeanLab.Riemann.WeilGaussianExplicitFormula
 import LeanLab.Riemann.BaezDuarteZetaRatio
 import LeanLab.Riemann.BaezDuarteQTwo
 import LeanLab.Riemann.BurnolLowerBound
@@ -830,5 +831,24 @@ example {a c : ℝ} (ha : 0 < a) (hc : 1 < c) :
           ∑' p : RiemannXiDivisorZeroIndex,
             riemannXiGaussianWeight a (riemannXiDivisorZeroValue p))) :=
   exists_gaussianXiZeroFreeHeight_tendsto_rightVerticalIntegral ha hc
+
+example {a c : ℝ} (ha : 0 < a) (hc : 1 < c) :
+    Summable (gaussianVonMangoldtWeight a) :=
+  summable_gaussianVonMangoldtWeight ha hc
+
+example {a c : ℝ} (ha : 0 < a) (hc : 1 < c) :
+    MeasureTheory.Integrable (fun y : ℝ =>
+      riemannXiGaussianWeight a ((c : ℂ) + y * Complex.I) *
+        logDeriv Complex.Gammaℝ ((c : ℂ) + y * Complex.I)) :=
+  integrable_gaussianXiArchimedean ha hc
+
+example {a c : ℝ} (ha : 0 < a) (hc : 1 < c) :
+    (Real.pi : ℂ) *
+        ∑' p : RiemannXiDivisorZeroIndex,
+          riemannXiGaussianWeight a (riemannXiDivisorZeroValue p) =
+      2 * (Real.pi : ℂ) * Real.exp (a / 4) +
+        gaussianXiArchimedeanIntegral a c -
+          ∑' n : ℕ, gaussianVonMangoldtWeight a n :=
+  gaussianXi_arithmetic_explicit_formula ha hc
 
 end LeanLab.Riemann

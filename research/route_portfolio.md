@@ -56,6 +56,42 @@ and RH are unchanged. Implementation commit `00410cc2a6919acfa5835b121c47489c510
 evidence-backfill commit `2292801d710a1a95857de69a92498c39ae79d0d3` both passed public CI, so the
 campaign is publicly closed and this fixed endpoint must not be reopened without new evidence.
 
+## Selection Update: R5 Gaussian Arithmetic Explicit Formula
+
+Date: 2026-07-16
+
+Fresh route selection after the public Gaussian height-limit closure screens six candidates. A
+generic `A_delta` limit still lacks vertical decay; the 2026 finite Galerkin dictionary is exact
+but uses a different band-limited carrier and finite positivity is not RH progress; the
+screw-function operator limit is explicitly conjectural; Gaussian positivity has no unconditional
+off-line-zero mechanism; and mere full-line integrability is too narrow. The only adjacent
+candidate with a complete mechanism is the fixed Gaussian arithmetic explicit formula.
+
+Campaign `CAMPAIGN-20260716-R5-WEIL-GAUSSIAN-EXPLICIT-FORMULA-01` fixes the indivisible endpoint
+
+```text
+pi * GaussianZeroSum
+  = 2*pi*exp(a/4) + GammaRLineIntegral - GaussianVonMangoldtSum.
+```
+
+The mechanism is the exact Fourier transform of a Gaussian, absolute L-series convergence on
+`Re(s)=c>1`, logarithmic digamma growth, and a two-pole contour/reflection calculation. It is
+unconditional and does not imply RH. Success reduces one fixed-test arithmetic W1c subedge only;
+generic test classes, regularization, W2 positivity, and RH remain open.
+
+### Endpoint Update
+
+The exact endpoint now compiles as `gaussianXi_arithmetic_explicit_formula`. The one-term Gaussian
+transform simplifies to the `c`-independent von-Mangoldt weight; absolute convergence justifies
+the full-line interchange; `logDeriv GammaR` is reduced to digamma and dominated by a linear-times-
+Gaussian majorant; and an independent symmetric rectangle encloses the poles at `0` and `1`,
+giving `2*pi*exp(a/4)` on the right line. The compiled selected-height zero-side theorem then
+identifies the arithmetic limit with the absolute multiplicity-bearing Gaussian zero sum. This is
+an unconditional fixed-test explicit formula, not a generic Weil class, positivity theorem, or RH.
+Exact TargetChecks, five standard-only axiom prints, all forbidden-token/declaration/resource
+scans, `git diff --check`, the standalone module build, and the 8,670-job full build pass. The
+campaign is locally complete as `BRIDGE_REDUCED`; public CI and evidence backfill remain.
+
 ## R1: Exact Baez-Duarte Gram And Projection Geometry
 
 - **Exact RH endpoint:** unconditional closure membership for the positive-natural kernel span.
