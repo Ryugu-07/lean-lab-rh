@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-FIXED-WIDTH-01`
 
 Date: 2026-07-16
 
-Status: `LOCAL_VERIFIED`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED`
 
 ## Runtime Record
 
@@ -36,6 +36,7 @@ Status: `LOCAL_VERIFIED`
 | 6 | `LEAN_PROOF_ATTEMPT_A_DOMINATED_TRANSFER` | Lean proves `norm(cosh z) <= exp(z.re^2/2)`, bounds every centered xi-zero multiplier by `exp(c)`, and applies `tendsto_tsum_of_dominated_convergence` using the summable base-width Gaussian packet. It transfers any negative larger-width arithmetic quadratic to a finite negative quadratic at exactly `a0`. | Strengthen the existing off-line separator to exceed any prescribed width threshold. |
 | 7 | `LEAN_PROOF_ATTEMPT_A_ENDPOINT` | Lean compiles the threshold-strengthened off-line negativity theorem, the contradiction from fixed-width positivity, and the exact preregistered iff. Targets and exact type witnesses compile; five transitive axiom prints report only `propext`, `Classical.choice`, and `Quot.sound`. | Mark the proof locally complete and run repository-wide hygiene/build verification before publication. |
 | 8 | `INDEPENDENT_LOCAL_AUDIT` | The standalone formal module cold-compiles without diagnostics. Repository-wide Lean scans find no `sorry`, `admit`, `native_decide`, added `axiom`/`constant`, or `unsafe`; the changed integration files contain no scratch names or resource-limit relaxation. `git diff --check` and the full 8,677-job build pass. | Close locally as verified; publish the implementation and require independent public CI before external use. |
+| 9 | `PUBLIC_CI_IMPLEMENTATION` | Implementation commit `f56b70478ab552802cac719b8e9af0f56fc44b1d` passed public Lean Action CI run `29458594435`, build job `87497146736`, in `2m15s`. | Publish the immutable evidence backfill and require that commit's own public CI before campaign closure. |
 
 ## Current Accounting
 
@@ -46,4 +47,4 @@ Status: `LOCAL_VERIFIED`
 - `assumption_frontier_after`: finite real Gaussian tests at one base width are proved closed under
   larger-width transfer through a dominated finite Rademacher approximation
 - `classification`: `NEW_RELEVANT_LEAN_THEOREM` pending independent novelty review and public CI
-- `next_gate`: implementation commit, public push, and independent GitHub Actions evidence
+- `next_gate`: evidence-backfill commit and its independent public GitHub Actions result

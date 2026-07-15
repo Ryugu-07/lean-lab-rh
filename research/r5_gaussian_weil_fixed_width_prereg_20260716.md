@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-FIXED-WIDTH-01`
 
 Date: 2026-07-16
 
-Status: `LOCAL_VERIFIED`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED`
 
 ## Fixed Proposition
 
@@ -120,7 +120,11 @@ The exact witnesses in `TargetChecks.lean` compile. Axiom prints for the analyti
 `tsum` transfer, off-line negative witness, reverse implication, and final iff report only
 `propext`, `Classical.choice`, and `Quot.sound`. Repository-wide forbidden declaration, scratch
 name, and resource-relaxation scans are empty; `git diff --check` passes; and the full 8,677-job
-build succeeds. Publication and independent public CI remain pending at this checkpoint.
+build succeeds. This completed the local verification checkpoint before publication.
+
+Implementation commit `f56b70478ab552802cac719b8e9af0f56fc44b1d` passed public Lean Action CI
+run `29458594435`, build job `87497146736`, in `2m15s`. The evidence-backfill commit and its own
+public CI remain pending at this checkpoint.
 
 ## Rejection Conditions
 
