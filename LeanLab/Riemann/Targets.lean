@@ -4,6 +4,7 @@ import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula
 import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
+import LeanLab.Riemann.LiWeilGram
 import LeanLab.Riemann.WeilTestAlgebra
 import LeanLab.Riemann.WeilConvolution
 import LeanLab.Riemann.WeilStripClass
@@ -202,6 +203,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``riemannHypothesis_iff_forall_liCoefficientCandidate_re_nonneg
       status := .proven
       note := "Campaign CAMPAIGN-20260715-LI-REVERSE-BOMBIERI-LAGARIAS-01 specializes the published large-index power-sum argument to the multiplicity-bearing xi divisor. A finite orbit-radius superlevel set is phase-aligned simultaneously, one off-line orbit supplies the exponentially negative main term, and the complement is dominated by a fixed reciprocal-square tsum times a strictly smaller exponential. This closes the exact Li/RH criterion as known-theorem formalization; it does not prove either equivalent side unconditionally." },
+    { id := "T2.li.weil.gram-criterion"
+      tier := .tier2
+      title := "Formalize the Li-test Weil Gram positivity criterion"
+      statement :=
+        "Construct the reflection-averaged multiplicity-bearing Gram kernel for Li test functions, prove its exact matrix in terms of the project Li coefficients, identify every finite real quadratic combination with a zero-side norm-square sum under RH, and prove positivity of all such combinations is equivalent to RH."
+      leanName := some ``riemannHypothesis_iff_forall_liWeilQuadratic_nonneg
+      status := .proven
+      note := "Campaign CAMPAIGN-20260715-R3-R5-LI-WEIL-GRAM-01 formalizes Lagarias Theorem 3.1 on the project xi divisor. Reflection averaging cancels the nonsummable reciprocal term before tsum, and the reverse direction uses genuine one-coordinate Finsupp tests. This is an RH-equivalent reformulation with hard_gap_delta=0; it does not prove W1c, W2, or RH." },
     { id := "T2.weil.test-algebra.involution"
       tier := .tier2
       title := "Formalize the Weil test-function involution"

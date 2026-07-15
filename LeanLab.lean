@@ -7,6 +7,7 @@ import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula
 import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
+import LeanLab.Riemann.LiWeilGram
 import LeanLab.Riemann.WeilTestAlgebra
 import LeanLab.Riemann.WeilConvolution
 import LeanLab.Riemann.WeilStripClass

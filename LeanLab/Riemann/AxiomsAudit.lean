@@ -4,6 +4,7 @@ import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula
 import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
+import LeanLab.Riemann.LiWeilGram
 import LeanLab.Riemann.WeilTestAlgebra
 import LeanLab.Riemann.WeilConvolution
 import LeanLab.Riemann.WeilStripClass
@@ -170,6 +171,21 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.exists_liCoefficientCandidate_re_neg_of_divisorZero_re_ne_half
 #print axioms LeanLab.Riemann.riemannHypothesis_of_forall_liCoefficientCandidate_re_nonneg
 #print axioms LeanLab.Riemann.riemannHypothesis_iff_forall_liCoefficientCandidate_re_nonneg
+#print axioms LeanLab.Riemann.liWeilGramTerm_eq_symmetrized
+#print axioms LeanLab.Riemann.summable_liWeilGramTerm
+#print axioms LeanLab.Riemann.liWeilGramTerm_comm
+#print axioms LeanLab.Riemann.liWeilGram_comm
+#print axioms LeanLab.Riemann.liWeilGram_eq_liCoefficients
+#print axioms LeanLab.Riemann.liWeilGram_diagonal
+#print axioms LeanLab.Riemann.RiemannHypothesis.liWeilGramTerm_re_eq
+#print axioms LeanLab.Riemann.RiemannHypothesis.liWeilQuadraticIntegrand_eq_normSq
+#print axioms LeanLab.Riemann.summable_liWeilQuadraticIntegrand
+#print axioms LeanLab.Riemann.RiemannHypothesis.summable_liWeilCombination_normSq
+#print axioms LeanLab.Riemann.liWeilQuadratic_eq_tsum_integrand
+#print axioms LeanLab.Riemann.RiemannHypothesis.liWeilQuadratic_eq_tsum_normSq
+#print axioms LeanLab.Riemann.RiemannHypothesis.liWeilQuadratic_nonneg
+#print axioms LeanLab.Riemann.liWeilQuadratic_single_one
+#print axioms LeanLab.Riemann.riemannHypothesis_iff_forall_liWeilQuadratic_nonneg
 #print axioms LeanLab.Riemann.weilInvolution_involution_of_pos
 #print axioms LeanLab.Riemann.weilInvolution_involution_not_at_zero
 #print axioms LeanLab.Riemann.mellinConvergent_weilInvolution_iff

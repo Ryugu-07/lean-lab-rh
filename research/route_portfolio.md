@@ -155,6 +155,27 @@ job `87343685661`, in 1m42s. Evidence-backfill commit
 `4b1d549504ae1965fb8cd34e314a4c682ca662a2` passed public Lean Action CI run `29413062276`, build
 job `87344475624`, in 1m46s. The campaign is publicly closed.
 
+## Selected Campaign: R3/R5 Li-Weil Gram Locally Complete
+
+Date: 2026-07-15
+
+Fresh independent audit does not admit the complete W1c explicit formula as one bounded successor:
+Lagarias Appendix A requires a conditionally convergent zero cutoff, local Euler-factor terms,
+unconditional strip width, and cutoff regularization. Instead, Theorem 3.1 supplies a distinct
+cross-route source edge. `CAMPAIGN-20260715-R3-R5-LI-WEIL-GRAM-01` is selected to construct the
+reflection-averaged, multiplicity-bearing Li-test Gram kernel, prove its exact coefficient matrix,
+identify every finite real quadratic combination with a zero-side norm-square sum under RH, and
+recover the exact RH equivalence from one-coordinate tests.
+
+The campaign now closes locally as `KNOWN_THEOREM_FORMALIZED`. `LiWeilGram.lean` proves the
+reflection average is a summable finite combination of paired Li terms, obtains the exact
+successor-indexed coefficient matrix, identifies every finite real quadratic value with a
+summable zero-side norm-square series under RH, and recovers RH from one-coordinate positivity.
+
+This campaign is knowingly RH-equivalent with `hard_gap_delta=0`. It does not prove W1c, W2, or
+either side of the resulting criterion. Exact targets, 15 standard-only axiom outputs, scans, diff
+check, and the 8,665-job full build pass locally. Publication and public CI remain.
+
 ## Portfolio Update: R3 Xi Zero Divisor
 
 Date: 2026-07-15

@@ -1,6 +1,7 @@
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
+import LeanLab.Riemann.LiWeilGram
 import LeanLab.Riemann.WeilTestAlgebra
 import LeanLab.Riemann.WeilConvolution
 import LeanLab.Riemann.WeilStripClass
@@ -50,6 +51,7 @@ def checkedTargetNames : List Lean.Name :=
     ``exists_liCoefficientCandidate_eq_hadamard_zero_formula,
     ``liCoefficientCandidate_eq_tsum_riemannXiSymmetrizedLiZeroTerm,
     ``riemannHypothesis_iff_forall_liCoefficientCandidate_re_nonneg,
+    ``riemannHypothesis_iff_forall_liWeilQuadratic_nonneg,
     ``mellin_weilStar_criticalLine,
     ``mellin_weilConvolution_star_criticalLine,
     ``IsWeilStripAdmissible.weilAutocorrelation,
@@ -223,6 +225,36 @@ example (hLi : ∀ n : ℕ, 0 ≤ (liCoefficientCandidate n).re) :
 example :
     RiemannHypothesis ↔ ∀ n : ℕ, 0 ≤ (liCoefficientCandidate n).re :=
   riemannHypothesis_iff_forall_liCoefficientCandidate_re_nonneg
+
+example (n m : ℕ) :
+    liWeilGram n m =
+      liCoefficientCandidate n + liCoefficientCandidate m -
+        if n = m then 0 else liCoefficientCandidate (Nat.dist n m - 1) :=
+  liWeilGram_eq_liCoefficients n m
+
+example (n : ℕ) :
+    liWeilGram n n = 2 * liCoefficientCandidate n :=
+  liWeilGram_diagonal n
+
+example : liWeilGram 0 1 = liCoefficientCandidate 1 := by
+  rw [liWeilGram_eq_liCoefficients]
+  norm_num [Nat.dist]
+
+example :
+    liWeilGram 0 2 =
+      liCoefficientCandidate 0 + liCoefficientCandidate 2 - liCoefficientCandidate 1 := by
+  rw [liWeilGram_eq_liCoefficients]
+  norm_num [Nat.dist]
+
+example (hRH : RiemannHypothesis) (c : ℕ →₀ ℝ) :
+    liWeilQuadratic c =
+      ∑' p : RiemannXiDivisorZeroIndex,
+        Complex.normSq (liWeilCombination c p) :=
+  RiemannHypothesis.liWeilQuadratic_eq_tsum_normSq hRH c
+
+example :
+    RiemannHypothesis ↔ ∀ c : ℕ →₀ ℝ, 0 ≤ liWeilQuadratic c :=
+  riemannHypothesis_iff_forall_liWeilQuadratic_nonneg
 
 example :
     0 < (liCoefficientCandidate 1).re :=
