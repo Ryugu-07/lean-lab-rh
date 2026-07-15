@@ -332,5 +332,6 @@ convolution theorem, the explicit formula, the Weil quadratic form, density, or 
 `INDEPENDENT_AUDIT -> ROUTE_SELECTION`, and another R5 campaign requires a genuinely new exact
 edge rather than wrappers around the compiled involution. Implementation commit
 `24621330af4a24269a1748c5b3a4f924c16a7768` passed public Lean Action CI run `29409014307`, build
-job `87331366564`, in 2m27s. Evidence backfill and clean synchronization remain before public
-closure.
+job `87331366564`, in 2m27s. Evidence-backfill commit
+`1c9e7fe27536bda8e04aa7e7bda2af1d110fe61c` passed public Lean Action CI run `29409249934`, build
+job `87332127195`, in 1m33s. The campaign is publicly closed.

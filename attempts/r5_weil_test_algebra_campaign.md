@@ -53,7 +53,8 @@ Result: `KNOWN_THEOREM_FORMALIZED`
 - `assumption_frontier_before`: complete explicit formula and unconditional Weil positivity.
 - `assumption_frontier_after`: unchanged.
 
-The mathematical campaign is closed; immutable evidence backfill and final clean synchronization
-remain. The persistent RH goal stays active and returns to
+Evidence-backfill commit `1c9e7fe27536bda8e04aa7e7bda2af1d110fe61c` passed public Lean Action
+CI run `29409249934`, build job `87332127195`, in 1m33s. The campaign is publicly closed. The
+persistent RH goal stays active and returns to
 `INDEPENDENT_AUDIT -> ROUTE_SELECTION`; a successor may not count algebraic wrappers around these
 theorems as a new campaign.
