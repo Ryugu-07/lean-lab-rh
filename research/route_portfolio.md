@@ -298,4 +298,6 @@ Date: 2026-07-15
 Route-local `hard_gap_delta=1`: L2/G5 is complete. This is an exact RH-equivalent criterion, not an
 unconditional proof of either side, so the global RH assumption frontier remains open and the
 persistent Goal stays active. Standalone, exact targets, standard-only axiom audit, scans, diff
-check, and the 8,661-job full build pass locally. Publication and public CI remain.
+check, and the 8,661-job full build pass locally. Implementation commit
+`22cedfa17788fec546b91b9dc78452de52d87e64` passed public Lean Action CI run `29406614212`, build
+job `87323510543`, in 2m31s. Evidence-backfill publication and final loop closure remain.

@@ -226,4 +226,6 @@ Classification:
 `KNOWN_THEOREM_FORMALIZED_WITH_PROJECT_SPECIALIZED_PHASE_ARGUMENT`, `hard_gap_delta=1`.
 L2/G5 is locally complete. The assumption frontier changes only from an unformalized to a compiled
 equivalence: neither RH nor all-index Li nonnegativity is proved unconditionally. The persistent RH
-goal remains active. Publication and public CI remain pending.
+goal remains active. Implementation commit `22cedfa17788fec546b91b9dc78452de52d87e64`
+passed public Lean Action CI run `29406614212`, build job `87323510543`, in 2m31s. Evidence-backfill
+publication and final loop closure remain pending.

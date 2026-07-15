@@ -6,7 +6,7 @@ Campaign: `CAMPAIGN-20260715-LI-REVERSE-BOMBIERI-LAGARIAS-01`
 
 Route: R3, Li and Weil positivity
 
-Status: `LOCAL_VERIFICATION_COMPLETE`
+Status: `IMPLEMENTATION_PUBLIC_CI_PASSED`
 
 Fixed endpoint and admission conditions:
 `research/r3_li_reverse_bombieri_lagarias_prereg_20260715.md`.
@@ -67,7 +67,9 @@ The project index remains classical `lambda_(n+1)`.
 - Placeholder, explicit axiom, `native_decide`, unsafe/opaque declaration, and resource-relaxation
   scans are empty.
 - `rtk git diff --check`: passed.
-- Publication commit and public Lean Action CI remain pending.
+- Implementation commit `22cedfa17788fec546b91b9dc78452de52d87e64` is public on `main`.
+- Lean Action CI run `29406614212`, build job `87323510543`, succeeded in 2m31s.
+- Evidence-backfill publication and its public CI remain pending.
 
 ## Progress Accounting
 
