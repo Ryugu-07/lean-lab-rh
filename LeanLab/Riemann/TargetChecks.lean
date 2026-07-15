@@ -7,6 +7,7 @@ import LeanLab.Riemann.BurnolY
 import LeanLab.Riemann.BurnolGram
 import LeanLab.Riemann.BurnolFiniteLowerBound
 import LeanLab.Riemann.BurnolFullLowerBound
+import LeanLab.Riemann.M2ProjectionNormAudit
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -488,6 +489,18 @@ example (hRH : RiemannHypothesis) :
         ENNReal.ofReal (baezDuarteNaturalDistance N) *
           ENNReal.ofReal (Real.sqrt (Real.log (N : ℝ)))) Filter.atTop :=
   RiemannHypothesis.baezDuarteNaturalDistance_liminf_ge_fullZeroSum hRH
+
+example :
+    ∃ P : Matrix (Fin 2) (Fin 2) ℝ,
+      P.transpose = P ∧ P * P = P ∧
+        ¬ ∀ x : Fin 2 → ℝ,
+          finTwoMaxNorm (Matrix.mulVec P x) ≤ finTwoMaxNorm x :=
+  exists_symmetric_idempotent_not_maxNorm_nonexpansive
+
+example :
+    ¬ ∀ x : Fin 5 → ℝ,
+      finFiveMaxNorm (Matrix.mulVec m2AuditWongPThree x) ≤ finFiveMaxNorm x :=
+  not_m2AuditWongPThree_maxNorm_nonexpansive
 
 example (hRH : RiemannHypothesis) {δ : ℝ}
     (hδ : 0 < δ) (hδ_top : δ ≤ 1 / 2) :

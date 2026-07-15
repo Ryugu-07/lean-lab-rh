@@ -276,3 +276,10 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   pass. Implementation commit `9edf524877c7fcfd2112d50095eb021f3da12b0a` passed public CI run
   `29352792330`, build job `87152928492`. Result: `KNOWN_THEOREM_FORMALIZED`; close F5 and G4/B1.
   M2/G3 are unchanged.
+- Audit `AUDIT-20260715-M2-G3-01` tests Wong arXiv `2310.03972v5`, an apparent unconditional
+  NB/BD route, without reopening M2/G3. Lean verifies the source's exact `n=3` matrix, Gram
+  inverse, and Euclidean projection, then computes maximum-norm growth from `1` to `10/7` on
+  `(1,1,-1,1,1)`. Thus the source's asserted bound
+  `norm_infinity(P_n) <= norm_2(P_n) = 1` fails inside its own special family. Result:
+  `BRANCH_FALSIFIED`; the proof route is rejected, no successor edge is admitted, and the
+  unconditional closure-membership frontier and M2/G3 status are unchanged.

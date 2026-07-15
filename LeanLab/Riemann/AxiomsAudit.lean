@@ -13,6 +13,7 @@ import LeanLab.Riemann.BurnolY
 import LeanLab.Riemann.BurnolGram
 import LeanLab.Riemann.BurnolFiniteLowerBound
 import LeanLab.Riemann.BurnolFullLowerBound
+import LeanLab.Riemann.M2ProjectionNormAudit
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -121,3 +122,5 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.RiemannHypothesis.burnolDistance_liminf_ge_finset
 #print axioms LeanLab.Riemann.RiemannHypothesis.burnolDistance_liminf_ge_fullZeroSum
 #print axioms LeanLab.Riemann.RiemannHypothesis.baezDuarteNaturalDistance_liminf_ge_fullZeroSum
+#print axioms LeanLab.Riemann.exists_symmetric_idempotent_not_maxNorm_nonexpansive
+#print axioms LeanLab.Riemann.not_m2AuditWongPThree_maxNorm_nonexpansive
