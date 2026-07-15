@@ -170,4 +170,8 @@ The singleton square term and zero-coefficient arithmetic expression reduce exac
 warning-free standalone module, Targets, exact TargetChecks, seven selected axiom prints, empty
 forbidden scans, `git diff --check`, and the 8,673-job full build pass. Every selected declaration
 uses only `propext`, `Classical.choice`, and `Quot.sound`. Classification is locally
-`BRIDGE_REDUCED`; public commit and public CI remain before closure.
+`BRIDGE_REDUCED`; publication evidence remains before closure.
+
+Implementation commit `cf271684f786efcb2e83a57d76c51e215205d1d1` passed public Lean Action CI
+run `29447980403`, build job `87463120301`, in `1m49s`. Immutable evidence backfill and that
+commit's own public CI remain before closure.

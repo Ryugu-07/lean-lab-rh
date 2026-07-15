@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-QUADRATIC-POSITIVITY-01`
 
 Date: 2026-07-16
 
-Status: `LOCAL_COMPLETE_BRIDGE_REDUCED`
+Status: `IMPLEMENTATION_PUBLICLY_VERIFIED`
 
 ## Runtime Record
 
@@ -23,6 +23,7 @@ Status: `LOCAL_COMPLETE_BRIDGE_REDUCED`
 | 3 | `FALSIFICATION` | Mathlib has Schwartz seminorms, Fourier automorphisms, translation, locally convex separation, and tempered-distribution multiplication, but no packaged Gaussian/Hermite Schwartz density or Wiener theorem. L2 density is insufficient. A direct RH-forward pair-packet calculation survives all algebraic, sign, and summability checks. | Select the finite real Gaussian-Weil quadratic endpoint and preregister it as conditional only. |
 | 4 | `SCRATCH_ADMISSION` | Lean compiles the critical-line Gaussian evaluation, the finite cosine-difference Gram identity, packet-to-square pointwise equality, transport of summability to the real square family, exact zero `tsum` identity, direct packet arithmetic formula, and RH-forward real-part nonnegativity. | Admit the candidate and begin formal Proof Attempt A; helper-only closure is forbidden. |
 | 5 | `PROOF_ATTEMPT_A_AND_INDEPENDENT_AUDIT` | `WeilGaussianQuadraticPositivity.lean` reaches the exact square `tsum`, direct arithmetic identity, and RH-forward arithmetic nonnegativity. Singleton and zero-coefficient boundaries compile. The warning-free standalone module, Targets, exact TargetChecks, seven standard-only axiom prints, empty forbidden scans, `git diff --check`, and the 8,673-job full build pass. | Close locally as `BRIDGE_REDUCED`; publish implementation and require public CI before later use. |
+| 6 | `PUBLIC_IMPLEMENTATION_GATE` | Implementation commit `cf271684f786efcb2e83a57d76c51e215205d1d1` passed public Lean Action CI run `29447980403`, build job `87463120301`, in `1m49s`. | Backfill immutable evidence and require the evidence commit's own public CI. |
 
 ## Accounting At Selection
 
@@ -56,4 +57,5 @@ Status: `LOCAL_COMPLETE_BRIDGE_REDUCED`
 - `axiom_audit`: only `propext`, `Classical.choice`, and `Quot.sound`
 - `full_build`: 8,673 jobs passed
 - `classification`: `BRIDGE_REDUCED`
-- `remaining_gate`: implementation commit and public Lean Action CI
+- `implementation_ci`: run `29447980403`, job `87463120301`, passed in `1m49s`
+- `remaining_gate`: immutable evidence commit and public Lean Action CI

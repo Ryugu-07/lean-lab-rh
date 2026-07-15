@@ -701,4 +701,8 @@ exact Targets/TargetChecks, seven standard-only axiom prints, empty forbidden sc
 `git diff --check`, and the 8,673-job full build. This is RH-forward only: unconditional arithmetic
 sign, a converse criterion, Schwartz closure, separated temperedness, G7, and RH remain open.
 Classification is locally `BRIDGE_REDUCED`, with zero unconditional RH hard-gap delta; public
-commit and CI remain.
+evidence closure remains.
+
+Implementation commit `cf271684f786efcb2e83a57d76c51e215205d1d1` passed public Lean Action CI
+run `29447980403`, build job `87463120301`, in `1m49s`. Immutable evidence backfill and its own
+public CI remain before campaign closure.
