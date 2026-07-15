@@ -454,3 +454,6 @@ removing the entire Hadamard polynomial term. Exact targets, seven standard-only
 empty forbidden scans, `git diff --check`, the 8,635-job module build, and the 8,667-job full build
 pass. The next W1c frontier is the height-limit/contour-decay passage and W1c2 regularization; W2
 and RH remain open. Public CI is pending.
+
+Implementation commit `7e140a86b6fbe1ed410917b8ee46089bb5dff6fb` passed public Lean Action CI
+run `29423254678`, build job `87378909471`, in 3m1s. Immutable evidence backfill is pending.

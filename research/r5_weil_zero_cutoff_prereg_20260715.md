@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260715-R5-WEIL-ZERO-CUTOFF-01`
 
 Date: 2026-07-15
 
-Status: `LOCAL_BRIDGE_REDUCED_AWAITING_PUBLIC_CI`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_AWAITING_EVIDENCE_CI`
 
 ## Source Boundary
 
@@ -132,3 +132,7 @@ All selected declarations depend only on `propext`, `Classical.choice`, and `Quo
 Local classification is `BRIDGE_REDUCED`: the finite-height W1c1 zero-side subedge is closed.
 Height limits, prime-side contour decay, W1c2 regularization, W2 positivity, and RH remain open.
 Public CI is still required before final campaign closure.
+
+The implementation commit `7e140a86b6fbe1ed410917b8ee46089bb5dff6fb` passed public Lean Action CI
+run `29423254678`, build job `87378909471`, in 3m1s. The evidence-backfill commit and its own CI
+remain required before final closure.

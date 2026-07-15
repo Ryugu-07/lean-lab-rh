@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260715-R5-WEIL-ZERO-CUTOFF-01`
 
 Date: 2026-07-15
 
-Status: `LOCAL_BRIDGE_REDUCED_AWAITING_PUBLIC_CI`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_AWAITING_EVIDENCE_CI`
 
 Route: R5, source-faithful Weil explicit formula.
 
@@ -37,3 +37,9 @@ Classification: `BRIDGE_REDUCED` locally, pending public CI.
 The campaign proves the complete fixed endpoint without RH or a weakened surrogate. It does not
 prove a height limit, horizontal-edge decay, prime-side inversion, endpoint regularization, the
 complete Weil explicit formula, W2 positivity, or RH.
+
+## Public Implementation Gate
+
+Implementation commit `7e140a86b6fbe1ed410917b8ee46089bb5dff6fb` passed public Lean Action CI
+run `29423254678`, build job `87378909471`, in 3m1s. Publish this immutable evidence backfill and
+require its own successful CI before final campaign closure.
