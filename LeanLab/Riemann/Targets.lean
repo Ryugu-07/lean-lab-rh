@@ -3,6 +3,7 @@ import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula
 import LeanLab.Riemann.LiSymmetricZeroFormula
+import LeanLab.Riemann.LiReverseCriterion
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
@@ -189,7 +190,15 @@ def rhTargets : List ResearchTarget :=
         "Pair every multiplicity-bearing xi zero rho with 1-rho, prove the averaged raw Li zero term is summable and equals liCoefficientCandidate at every index, and under RH identify the summands with half norm squares to obtain real nonnegativity."
       leanName := some ``liCoefficientCandidate_eq_tsum_riemannXiSymmetrizedLiZeroTerm
       status := .proven
-      note := "Campaign CAMPAIGN-20260715-LI-SYMMETRIC-ZERO-01 constructs the exact divisor-index involution, averages the compensated summable formula, and derives cancellation of the degree-at-most-one Hadamard polynomial from xi symmetry. Under RH every paired term is exactly half a complex norm square, so every project Li coefficient is real and nonnegative. This is known-theorem formalization and the forward Li direction only; the reverse positivity-to-RH implication and RH remain open." },
+      note := "Campaign CAMPAIGN-20260715-LI-SYMMETRIC-ZERO-01 constructs the exact divisor-index involution, averages the compensated summable formula, and derives cancellation of the degree-at-most-one Hadamard polynomial from xi symmetry. Under RH every paired term is exactly half a complex norm square, so every project Li coefficient is real and nonnegative. This is known-theorem formalization and the forward direction; the reverse implication is closed by the successor reverse-Li campaign, while RH itself remains open." },
+    { id := "T2.li.reverse.criterion"
+      tier := .tier2
+      title := "Formalize the reverse all-index Li criterion"
+      statement :=
+        "Prove that nonnegative real parts of every derivative-defined project Li coefficient imply Mathlib.RiemannHypothesis, and combine this with the forward direction as an exact equivalence."
+      leanName := some ``riemannHypothesis_iff_forall_liCoefficientCandidate_re_nonneg
+      status := .proven
+      note := "Campaign CAMPAIGN-20260715-LI-REVERSE-BOMBIERI-LAGARIAS-01 specializes the published large-index power-sum argument to the multiplicity-bearing xi divisor. A finite orbit-radius superlevel set is phase-aligned simultaneously, one off-line orbit supplies the exponentially negative main term, and the complement is dominated by a fixed reciprocal-square tsum times a strictly smaller exponential. This closes the exact Li/RH criterion as known-theorem formalization; it does not prove either equivalent side unconditionally." },
     { id := "T2.inventory.nyman.beurling"
       tier := .tier2
       title := "Inventory mathlib support for the Nyman-Beurling route"

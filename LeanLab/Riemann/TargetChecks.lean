@@ -1,5 +1,6 @@
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.LiSymmetricZeroFormula
+import LeanLab.Riemann.LiReverseCriterion
 import LeanLab.Riemann.BaezDuarteZetaRatio
 import LeanLab.Riemann.BurnolLowerBound
 import LeanLab.Riemann.BurnolA
@@ -45,6 +46,7 @@ def checkedTargetNames : List Lean.Name :=
     ``exists_riemannXi_hadamard_factorization,
     ``exists_liCoefficientCandidate_eq_hadamard_zero_formula,
     ``liCoefficientCandidate_eq_tsum_riemannXiSymmetrizedLiZeroTerm,
+    ``riemannHypothesis_iff_forall_liCoefficientCandidate_re_nonneg,
     ``liCoefficientCandidate_one_re_pos,
     ``fractionalPartKernel_memLp_two_unitInterval,
     ``fractionalPartKernelL2_mem_nymanBeurlingKernelSpan,
@@ -207,6 +209,14 @@ example (hRH : RiemannHypothesis) (n : ℕ) :
     (liCoefficientCandidate n).im = 0 ∧ 0 ≤ (liCoefficientCandidate n).re :=
   ⟨RiemannHypothesis.liCoefficientCandidate_im_eq_zero hRH n,
     RiemannHypothesis.liCoefficientCandidate_re_nonneg hRH n⟩
+
+example (hLi : ∀ n : ℕ, 0 ≤ (liCoefficientCandidate n).re) :
+    RiemannHypothesis :=
+  riemannHypothesis_of_forall_liCoefficientCandidate_re_nonneg hLi
+
+example :
+    RiemannHypothesis ↔ ∀ n : ℕ, 0 ≤ (liCoefficientCandidate n).re :=
+  riemannHypothesis_iff_forall_liCoefficientCandidate_re_nonneg
 
 example :
     0 < (liCoefficientCandidate 1).re :=

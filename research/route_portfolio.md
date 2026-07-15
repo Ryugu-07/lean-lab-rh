@@ -244,3 +244,58 @@ selection must now independently audit the reverse Li criterion or choose anothe
 Next state after public verification is `INDEPENDENT_AUDIT`, then `ROUTE_SELECTION`. A reverse Li
 criterion campaign requires a source-audited large-index/unit-disk argument and must not assume
 the conclusion as a zero-location premise.
+
+## Portfolio Update: R3 Reverse Li Criterion Selected
+
+Date: 2026-07-15
+
+Independent audit reconstructed both published reverse mechanisms: the Bombieri-Lagarias maximal
+transformed-zero power-sum argument and the Pringsheim generating-series argument. Five precise
+candidates and their adversarial tests are recorded in
+`research/r3_li_reverse_bombieri_lagarias_prereg_20260715.md`.
+
+`CAMPAIGN-20260715-LI-REVERSE-BOMBIERI-LAGARIAS-01` selects the project-specialized power-sum
+route. Its indivisible endpoint is
+
+```lean
+RiemannHypothesis <->
+  forall n : Nat, 0 <= (liCoefficientCandidate n).re
+```
+
+The source's conjugate-pair cosine bookkeeping will be replaced by a finite-product compactness
+argument that simultaneously returns every maximal unit phase near `1` along an unbounded even
+subsequence. This is a proof-mechanism simplification, not a stronger premise. The remaining
+source blocks are retained exactly: attained finite maximal orbit radius, strict complement gap,
+far/near split, squared-reciprocal tail control, and exponential domination.
+
+R3 remains **SELECTED**. Pringsheim is deferred because pinned Mathlib lacks the boundary
+singularity theorem and the route needs a larger analytic-continuation stack. A generic arbitrary
+multiset formalization is also deferred as unnecessary abstraction. Partial phase or tail helpers
+do not count as campaign progress.
+
+## Portfolio Update: R3 Reverse Li Criterion Locally Complete
+
+Date: 2026-07-15
+
+`CAMPAIGN-20260715-LI-REVERSE-BOMBIERI-LAGARIAS-01` closes locally as
+`KNOWN_THEOREM_FORMALIZED_WITH_PROJECT_SPECIALIZED_PHASE_ARGUMENT`:
+
+- the Mobius Li transform lies in the unit disk exactly on the correct half-plane;
+- reflection exchanges the transform with its inverse, and every off-line orbit has radius above
+  one;
+- every radius superlevel above one is finite on the full multiplicity-bearing divisor index;
+- all dominant unit phases in such a finite set return simultaneously near one at arbitrarily
+  large even powers;
+- the aligned paired term has an explicit exponentially negative real-part bound;
+- the whole complement is bounded by one fixed summable reciprocal-square weight times
+  `m^2*c^m`;
+- choosing `c=(1+R0)/2` for any off-line orbit avoids the source proof's global-maximum and
+  far/near bookkeeping while retaining a strict exponential gap;
+- any off-line zero therefore forces a negative project Li coefficient;
+- Lean proves both the reverse implication and
+  `RiemannHypothesis <-> forall n, 0 <= Re(liCoefficientCandidate n)`.
+
+Route-local `hard_gap_delta=1`: L2/G5 is complete. This is an exact RH-equivalent criterion, not an
+unconditional proof of either side, so the global RH assumption frontier remains open and the
+persistent Goal stays active. Standalone, exact targets, standard-only axiom audit, scans, diff
+check, and the 8,661-job full build pass locally. Publication and public CI remain.

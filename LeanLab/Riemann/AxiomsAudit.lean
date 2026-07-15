@@ -3,6 +3,7 @@ import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula
 import LeanLab.Riemann.LiSymmetricZeroFormula
+import LeanLab.Riemann.LiReverseCriterion
 import LeanLab.Riemann.AnalyticLogBranch
 import LeanLab.Riemann.ReciprocalZetaSubpower
 import LeanLab.Riemann.TruncatedPerron
@@ -158,6 +159,14 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.RiemannHypothesis.liCoefficientCandidate_eq_tsum_normSq
 #print axioms LeanLab.Riemann.RiemannHypothesis.liCoefficientCandidate_im_eq_zero
 #print axioms LeanLab.Riemann.RiemannHypothesis.liCoefficientCandidate_re_nonneg
+#print axioms LeanLab.Riemann.exists_even_gt_forall_circle_pow_dist_one_lt
+#print axioms LeanLab.Riemann.norm_liZeroTransform_le_one_iff
+#print axioms LeanLab.Riemann.finite_riemannXiLiOrbitRadius_superlevel
+#print axioms LeanLab.Riemann.norm_tsum_indicator_compl_riemannXiSymmetrizedLiZeroTerm_le
+#print axioms LeanLab.Riemann.three_quarters_mul_orbitRadius_pow_lt_dominant_pow_re
+#print axioms LeanLab.Riemann.exists_liCoefficientCandidate_re_neg_of_divisorZero_re_ne_half
+#print axioms LeanLab.Riemann.riemannHypothesis_of_forall_liCoefficientCandidate_re_nonneg
+#print axioms LeanLab.Riemann.riemannHypothesis_iff_forall_liCoefficientCandidate_re_nonneg
 #print axioms LeanLab.Riemann.integral_fractionalPartKernel_mul_le
 #print axioms LeanLab.Riemann.baezDuarteNormalizedKernel_diagonal_lower
 #print axioms LeanLab.Riemann.norm_inner_sparseGram_ne_le
