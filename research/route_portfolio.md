@@ -174,7 +174,10 @@ summable zero-side norm-square series under RH, and recovers RH from one-coordin
 
 This campaign is knowingly RH-equivalent with `hard_gap_delta=0`. It does not prove W1c, W2, or
 either side of the resulting criterion. Exact targets, 15 standard-only axiom outputs, scans, diff
-check, and the 8,665-job full build pass locally. Publication and public CI remain.
+check, and the 8,665-job full build pass locally. Implementation commit
+`2317143e73e1d788d65dcdff9b609a98f8ac60b2` passed public Lean Action CI run `29415448733`, build
+job `87352327801`, in 1m48s. Evidence backfill and clean synchronization remain before public
+closure.
 
 ## Portfolio Update: R3 Xi Zero Divisor
 

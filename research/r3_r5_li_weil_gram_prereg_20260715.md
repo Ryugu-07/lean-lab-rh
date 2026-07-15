@@ -172,4 +172,8 @@ One-coordinate `Finsupp.single` tests recover the compiled reverse Li criterion.
 Standalone/module builds, exact TargetChecks, all 15 public transitive axiom prints, empty
 forbidden-token/declaration/resource scans, `git diff --check`, and the 8,665-job full build pass.
 Every new theorem uses only `propext`, `Classical.choice`, and `Quot.sound`. Classification is
-locally `KNOWN_THEOREM_FORMALIZED`, `hard_gap_delta=0`; publication and public CI remain.
+locally `KNOWN_THEOREM_FORMALIZED`, `hard_gap_delta=0`.
+
+Implementation commit `2317143e73e1d788d65dcdff9b609a98f8ac60b2` passed public Lean Action CI
+run `29415448733`, build job `87352327801`, in 1m48s. Immutable evidence backfill and final clean
+synchronization remain.

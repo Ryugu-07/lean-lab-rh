@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260715-R3-R5-LI-WEIL-GRAM-01`
 
 Date: 2026-07-15
 
-Status: `LOCALLY_VERIFIED`
+Status: `IMPLEMENTATION_PUBLICLY_VERIFIED`
 
 Route: R3/R5 bridge, Li coefficients as a Weil-positive test-function Gram form.
 
@@ -48,5 +48,9 @@ Result: `KNOWN_THEOREM_FORMALIZED`
   pass locally.
 
 This theorem is knowingly equivalent to the already compiled Li criterion and does not prove
-either side. Complex-coefficient Hermitian extension, W1c, W2, and RH remain open. Publication and
-public CI remain.
+either side. Complex-coefficient Hermitian extension, W1c, W2, and RH remain open. Evidence
+backfill, its public CI, and final clean synchronization remain.
+
+Implementation commit `2317143e73e1d788d65dcdff9b609a98f8ac60b2` passed public Lean Action CI
+run `29415448733`, build job `87352327801`, in 1m48s. Immutable evidence backfill and final clean
+synchronization remain.
