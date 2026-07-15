@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-WEIL-SYMMETRIC-GAUSSIAN-FAMILY-01`
 
 Date: 2026-07-16
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED_NEW_RELEVANT_LEAN_THEOREM`
 
 ## Runtime Record
 
@@ -25,6 +25,7 @@ Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 | 6 | `PROOF_ATTEMPT_A/ASSEMBLY` | Proved the GammaR term integrable by bounded modulation, generalized the two-pole rectangle argument, computed both residues as `exp(a/4)*cosh(b/2)`, and spliced all selected truncation limits. The final theorem and its independent `b=0` compatibility theorem compile without placeholders. | Classify locally as `NEW_RELEVANT_LEAN_THEOREM`; run the full verification gate. |
 | 7 | `VERIFICATION` | Standalone, Targets, TargetChecks, AxiomsAudit, empty placeholder/declaration scans, `git diff --check`, and the 8,671-job full build pass. Selected axiom prints contain only the three standard Lean/mathlib axioms. | Local verification complete; publish implementation and require public CI before campaign closure. |
 | 8 | `PUBLIC_IMPLEMENTATION_GATE` | Implementation commit `5c4ae54c031a6d999111390694ef738a3da57146` passed public Lean Action CI run `29444276732`, build job `87450715956`, in `1m50s`. | Backfill immutable evidence and require that evidence commit's own public CI before closure. |
+| 9 | `PUBLIC_EVIDENCE_GATE` | Evidence-backfill commit `ed92d851f0eb697f2b2aec0e1260fe0002ea5bcf` passed public Lean Action CI run `29444485950`, build job `87451417716`, in `1m31s`. | Close publicly as `NEW_RELEVANT_LEAN_THEOREM`; keep the persistent RH Goal active and require fresh route selection before another campaign. |
 
 ## Accounting At Selection
 

@@ -142,8 +142,11 @@ positivity, or RH; `hard_gap_delta=0` for G6, G7, and RH. At the local gate, pub
 before closure.
 
 Implementation commit `5c4ae54c031a6d999111390694ef738a3da57146` passed public Lean Action CI
-run `29444276732`, build job `87450715956`, in `1m50s`; evidence-backfill CI remains before public
-closure.
+run `29444276732`, build job `87450715956`, in `1m50s`. Evidence-backfill commit
+`ed92d851f0eb697f2b2aec0e1260fe0002ea5bcf` passed public Lean Action CI run `29444485950`, build
+job `87451417716`, in `1m31s`. The campaign is publicly closed as
+`NEW_RELEVANT_LEAN_THEOREM`; a fresh independent route selection is required before another
+campaign.
 
 ## R1: Exact Baez-Duarte Gram And Projection Geometry
 
