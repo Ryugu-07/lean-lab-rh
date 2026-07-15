@@ -16,6 +16,7 @@ import LeanLab.Riemann.WeilSymmetricGaussianFamily
 import LeanLab.Riemann.WeilFiniteGaussianTestCore
 import LeanLab.Riemann.WeilGaussianQuadraticPositivity
 import LeanLab.Riemann.WeilGaussianPositivityCriterion
+import LeanLab.Riemann.WeilGaussianFixedWidthCriterion
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
 import LeanLab.Riemann.NymanBeurling
@@ -318,6 +319,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``riemannHypothesis_iff_gaussianXiArithmeticQuadratic_re_nonneg
       status := .proven
       note := "Campaign CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-REVERSE-CRITERION-01 proves the converse by isolating any off-line multiplicity-bearing xi divisor zero with a finite real exponential separator, annihilating its finite low-decay competitors, and controlling the higher-decay tail by dominated convergence. Implementation commit b2d2ce18ff1491f684098b04c7a5be73e0ebdc98 passed public CI run 29453270303; evidence commit 68e96525f3f89562ae47e1da9e074911701a6c2e passed run 29453470463. This formalizes an exact RH-equivalent restricted Gaussian criterion; it does not prove unconditional positivity or RH." },
+    { id := "T2.weil.gaussian-fixed-width-positivity-criterion"
+      tier := .tier2
+      title := "Compress Gaussian-Weil positivity to one fixed width"
+      statement :=
+        "For every preassigned a0>0, prove that RH is equivalent to nonnegativity of every finite real Gaussian-Weil arithmetic quadratic at exactly width a0 and contour parameter c=2."
+      leanName := some ``riemannHypothesis_iff_fixedWidth_gaussianXiArithmeticQuadratic_re_nonneg
+      status := .proven
+      note := "Campaign CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-FIXED-WIDTH-01 realizes every larger Gaussian width as a dominated limit of finite Rademacher exponential packets at the fixed base width, then combines this transfer with the off-line separator criterion. This strictly compresses an RH-equivalent Gaussian criterion; it does not prove unconditional positivity or RH." },
     { id := "T2.audit.polson-ggc-imaginary-tail"
       tier := .tier2
       title := "Audit the imaginary-axis GGC continuation tail"

@@ -13,6 +13,7 @@ import LeanLab.Riemann.WeilSymmetricGaussianFamily
 import LeanLab.Riemann.WeilFiniteGaussianTestCore
 import LeanLab.Riemann.WeilGaussianQuadraticPositivity
 import LeanLab.Riemann.WeilGaussianPositivityCriterion
+import LeanLab.Riemann.WeilGaussianFixedWidthCriterion
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
 import LeanLab.Riemann.BaezDuarteZetaRatio
@@ -921,6 +922,18 @@ example
         0 ≤ (gaussianXiArithmeticQuadratic a b w 2).re) :
     RiemannHypothesis :=
   riemannHypothesis_of_gaussianXiArithmeticQuadratic_re_nonneg hpos
+
+example {a0 : ℝ} (ha0 : 0 < a0) :
+    RiemannHypothesis ↔
+      ∀ (ι : Type) [Fintype ι], ∀ b w : ι → ℝ,
+        0 ≤ (gaussianXiArithmeticQuadratic a0 b w 2).re :=
+  riemannHypothesis_iff_fixedWidth_gaussianXiArithmeticQuadratic_re_nonneg ha0
+
+example {a0 : ℝ} (ha0 : 0 < a0)
+    (hpos : ∀ (ι : Type) [Fintype ι], ∀ b w : ι → ℝ,
+      0 ≤ (gaussianXiArithmeticQuadratic a0 b w 2).re) :
+    RiemannHypothesis :=
+  riemannHypothesis_of_fixedWidth_gaussianXiArithmeticQuadratic_re_nonneg ha0 hpos
 
 example {gamma y : ℝ} (hgamma : 0 < gamma) (hy : 2 * gamma ^ 2 < y ^ 2) :
     ¬ MeasureTheory.IntegrableOn
