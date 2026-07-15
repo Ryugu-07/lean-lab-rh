@@ -159,3 +159,7 @@ This checks the final conjugation direction used by Weil's covariance form. Clas
 W1c's complete explicit formula, W2 positivity, and RH remain open. Standalone and exact target
 builds, standard-only axiom output, forbidden scans, `git diff --check`, and the 8,663-job full
 build pass locally. The persistent RH goal remains active.
+
+Implementation commit `90874a87a89ee371719c2f50f5cc02eaae8a5040` passed public Lean Action CI
+run `29410786209`, build job `87337104802`, in 1m46s. Immutable evidence backfill and final clean
+synchronization remain.

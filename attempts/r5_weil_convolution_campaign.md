@@ -49,7 +49,10 @@ Result: `KNOWN_THEOREM_FORMALIZED`
 - Every audited declaration depends only on `propext`, `Classical.choice`, and `Quot.sound`.
 - Standalone compilation, exact targets, scans, `git diff --check`, and the 8,663-job full build
   pass locally.
+- Implementation commit `90874a87a89ee371719c2f50f5cc02eaae8a5040` passed public Lean Action CI
+  run `29410786209`, build job `87337104802`, in 1m46s.
 
-This closes only W1a. It does not package Lagarias's analytic-strip `A_delta`, define the Weil
+This mathematically closes only W1a; immutable evidence backfill and clean synchronization remain.
+It does not package Lagarias's analytic-strip `A_delta`, define the Weil
 distribution, prove any zero/prime/pole/archimedean explicit formula, or establish positivity. RH
 and the persistent global goal remain unchanged.
