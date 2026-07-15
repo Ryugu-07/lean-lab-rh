@@ -98,7 +98,8 @@ claimed.
 - Full project source scan found no `sorry`, `admit`, project `axiom`, `native_decide`, or resource
   relaxation token.
 - `rtk git diff --check`: passed.
-- Public implementation commit and CI: pending evidence backfill.
+- Implementation commit `88037ad4423c430809f3f381fd354699dc307827` is public on `main`.
+- Lean Action CI run `29397368460`, build job `87293810332`, succeeded in 1m48s.
 
 ## Progress Accounting
 

@@ -202,4 +202,6 @@ continue only through a precise convergence/normalization theorem for the raw cl
 an exact Li/RH equivalence, or another comparably global edge. Fixed-index coefficient work remains
 inadmissible.
 
-Publication evidence is recorded in the attempts log and `HANDOFF.md` after public CI completes.
+Implementation commit `88037ad4423c430809f3f381fd354699dc307827` is public on `main`. Lean
+Action CI run `29397368460`, build job `87293810332`, succeeded in 1m48s. The evidence-backfill
+commit and its own public CI remain before final campaign closure.
