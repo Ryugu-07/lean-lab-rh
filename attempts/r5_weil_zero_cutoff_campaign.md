@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260715-R5-WEIL-ZERO-CUTOFF-01`
 
 Date: 2026-07-15
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_AWAITING_EVIDENCE_CI`
+Status: `PUBLICLY_CLOSED_BRIDGE_REDUCED`
 
 Route: R5, source-faithful Weil explicit formula.
 
@@ -43,3 +43,8 @@ complete Weil explicit formula, W2 positivity, or RH.
 Implementation commit `7e140a86b6fbe1ed410917b8ee46089bb5dff6fb` passed public Lean Action CI
 run `29423254678`, build job `87378909471`, in 3m1s. Publish this immutable evidence backfill and
 require its own successful CI before final campaign closure.
+
+Evidence-backfill commit `626fef55bb951d1cb59a76f8ff22250c4bc3a0e2` passed public Lean Action CI
+run `29423572352`, build job `87380039889`, in 1m47s. The campaign is publicly closed as
+`BRIDGE_REDUCED`. Return to fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`; do not reopen this fixed
+finite-height edge without new evidence.

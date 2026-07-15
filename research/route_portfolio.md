@@ -457,3 +457,7 @@ and RH remain open. Public CI is pending.
 
 Implementation commit `7e140a86b6fbe1ed410917b8ee46089bb5dff6fb` passed public Lean Action CI
 run `29423254678`, build job `87378909471`, in 3m1s. Immutable evidence backfill is pending.
+
+Evidence-backfill commit `626fef55bb951d1cb59a76f8ff22250c4bc3a0e2` passed public Lean Action CI
+run `29423572352`, build job `87380039889`, in 1m47s. The campaign is publicly closed as
+`BRIDGE_REDUCED`; begin a fresh independent route audit before choosing the next campaign.
