@@ -16,6 +16,7 @@ import LeanLab.Riemann.BurnolFullLowerBound
 import LeanLab.Riemann.M2ProjectionNormAudit
 import LeanLab.Riemann.M2LadderFrequencyAudit
 import LeanLab.Riemann.M2GramGeometry
+import LeanLab.Riemann.M2SparseObstruction
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -133,3 +134,6 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.sparseGram_lower_frame_bound
 #print axioms LeanLab.Riemann.finiteGramWitness_posDef
 #print axioms LeanLab.Riemann.finiteGramWitness_target_orthogonal
+#print axioms LeanLab.Riemann.inner_baezDuarteKernelL2_sparseTargetWitnessRealL2_eq_zero
+#print axioms LeanLab.Riemann.inner_target_sparseTargetWitness
+#print axioms LeanLab.Riemann.baezDuarteComplexTargetL2_not_mem_sparseGramKernelClosure

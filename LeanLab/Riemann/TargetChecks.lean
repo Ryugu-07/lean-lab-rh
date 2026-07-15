@@ -10,6 +10,7 @@ import LeanLab.Riemann.BurnolFullLowerBound
 import LeanLab.Riemann.M2ProjectionNormAudit
 import LeanLab.Riemann.M2LadderFrequencyAudit
 import LeanLab.Riemann.M2GramGeometry
+import LeanLab.Riemann.M2SparseObstruction
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -521,6 +522,27 @@ example : (Matrix.gram Real finiteGramWitnessVector).PosDef :=
 example (i : Fin 1) :
     ⟪finiteGramWitnessVector i, finiteGramWitnessTarget⟫_Real = 0 :=
   finiteGramWitness_target_orthogonal i
+
+example (j : Nat) :
+    ⟪baezDuarteNormalizedComplexKernelL2 (sparseGramIndex j),
+        sparseTargetWitnessL2⟫_Complex = 0 :=
+  inner_sparseGramKernel_sparseTargetWitness_eq_zero j
+
+example {x : Real} (hx : x ∈ Set.Ioc (1 / 2 : Real) (2 / 3)) :
+    (1 : Real) = -fractionalPartKernel 1 x + 1 / x :=
+  one_eq_neg_fractionalPartKernel_add_div_on_sparseInterval_one hx
+
+example :
+    (1 / 6 : Real) * (11 / 225) - (1 / 15) * (7 / 72) = 1 / 600 :=
+  sparseTarget_two_piece_moment_determinant
+
+example :
+    ⟪baezDuarteComplexTargetL2, sparseTargetWitnessL2⟫_Complex =
+      (1 / 9 : Complex) :=
+  inner_target_sparseTargetWitness
+
+example : baezDuarteComplexTargetL2 ∉ sparseGramKernelClosure :=
+  baezDuarteComplexTargetL2_not_mem_sparseGramKernelClosure
 
 example (hRH : RiemannHypothesis) {δ : ℝ}
     (hδ : 0 < δ) (hδ_top : δ ≤ 1 / 2) :
