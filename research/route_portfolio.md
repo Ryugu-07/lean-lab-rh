@@ -155,7 +155,7 @@ job `87343685661`, in 1m42s. Evidence-backfill commit
 `4b1d549504ae1965fb8cd34e314a4c682ca662a2` passed public Lean Action CI run `29413062276`, build
 job `87344475624`, in 1m46s. The campaign is publicly closed.
 
-## Selected Campaign: R3/R5 Li-Weil Gram Locally Complete
+## Selected Campaign: R3/R5 Li-Weil Gram Publicly Closed
 
 Date: 2026-07-15
 
@@ -167,7 +167,7 @@ reflection-averaged, multiplicity-bearing Li-test Gram kernel, prove its exact c
 identify every finite real quadratic combination with a zero-side norm-square sum under RH, and
 recover the exact RH equivalence from one-coordinate tests.
 
-The campaign now closes locally as `KNOWN_THEOREM_FORMALIZED`. `LiWeilGram.lean` proves the
+The campaign closes as `KNOWN_THEOREM_FORMALIZED`. `LiWeilGram.lean` proves the
 reflection average is a summable finite combination of paired Li terms, obtains the exact
 successor-indexed coefficient matrix, identifies every finite real quadratic value with a
 summable zero-side norm-square series under RH, and recovers RH from one-coordinate positivity.
@@ -176,8 +176,10 @@ This campaign is knowingly RH-equivalent with `hard_gap_delta=0`. It does not pr
 either side of the resulting criterion. Exact targets, 15 standard-only axiom outputs, scans, diff
 check, and the 8,665-job full build pass locally. Implementation commit
 `2317143e73e1d788d65dcdff9b609a98f8ac60b2` passed public Lean Action CI run `29415448733`, build
-job `87352327801`, in 1m48s. Evidence backfill and clean synchronization remain before public
-closure.
+job `87352327801`, in 1m48s. Evidence-backfill commit
+`89fb947b493c8fd315bbe67a5be8c09fc99cdfa3` passed public Lean Action CI run `29415725269`, build
+job `87353260131`, in 1m35s. The campaign is publicly closed; only closure-log CI and clean
+synchronization remain before fresh route selection.
 
 ## Portfolio Update: R3 Xi Zero Divisor
 

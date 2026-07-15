@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260715-R3-R5-LI-WEIL-GRAM-01`
 
 Date: 2026-07-15
 
-Status: `IMPLEMENTATION_PUBLICLY_VERIFIED`
+Status: `CLOSED_KNOWN_THEOREM_FORMALIZED`
 
 Route: R3/R5 bridge, Li coefficients as a Weil-positive test-function Gram form.
 
@@ -17,7 +17,7 @@ Route: R3/R5 bridge, Li coefficients as a Weil-positive test-function Gram form.
 | 3 | `ADVERSARIAL_TEST` | Full W1c is too large; finite cutoffs do not reduce it; the raw W1b functional lacks a justified zero limit; a coefficient-defined kernel is circular. The reflection average cancels the nonsummable reciprocal term and reduces to compiled symmetrized Li terms. Real finite coefficients retain the diagonal reverse criterion and avoid an unproved complex Hermitian extension. | Select and preregister C4. |
 | 4 | `PROOF_ATTEMPT_A` | Defined the reflection-averaged divisor kernel. The first Lean attempt exposed exactly the expected inverse-power and index-normalization failures; after explicitly normalizing `q^(m+1)=q^(n+1)q^(m-n)`, the pointwise identity compiled. Every kernel term reduces to two compiled symmetrized Li terms minus the distance term, so summability and the exact coefficient matrix follow without an unsymmetrized raw zero sum. Tests `(0,1)`, `(0,2)`, and the diagonal compile. | Continue to the full finite real span. |
 | 5 | `PROOF_ATTEMPT_B_OR_PIVOT` | Defined `liWeilCombination` and `liWeilQuadratic`. Proved finite double sums commute with the absolutely convergent divisor tsum. Under RH, `1-rho=conj(rho)` turns every finite integrand into `Complex.normSq`; the norm-square sequence is summable. A genuine `Finsupp.single n 1` recovers `2*Re(lambda_(n+1))`, yielding the exact quadratic positivity iff RH. | Fixed endpoint reached; do not extend to complex coefficients or W1c without a separate campaign. |
-| 6 | `INDEPENDENT_AUDIT` | Rechecked the reflection average, multiplicity, source/project index shift, real-coefficient restriction, and reverse implication against Lagarias Theorem 3.1. Exact Targets include `(0,1)`, `(0,2)`, diagonal, norm-square, and iff statements. All 15 public axiom prints are standard-only; forbidden scans, `git diff --check`, standalone builds, and the 8,665-job full build pass. | Close locally as `KNOWN_THEOREM_FORMALIZED`; public CI remains. |
+| 6 | `INDEPENDENT_AUDIT` | Rechecked the reflection average, multiplicity, source/project index shift, real-coefficient restriction, and reverse implication against Lagarias Theorem 3.1. Exact Targets include `(0,1)`, `(0,2)`, diagonal, norm-square, and iff statements. All 15 public axiom prints are standard-only; forbidden scans, `git diff --check`, standalone builds, and the 8,665-job full build pass. | Close as `KNOWN_THEOREM_FORMALIZED`; publication follows the fixed evidence sequence. |
 
 ## Fixed Accounting
 
@@ -33,7 +33,7 @@ Route: R3/R5 bridge, Li coefficients as a Weil-positive test-function Gram form.
 Kernel algebra, finite-sum interchange, and one-coordinate specialization are one indivisible
 campaign and do not count as separate research loops.
 
-## Local Result
+## Public Result
 
 Result: `KNOWN_THEOREM_FORMALIZED`
 
@@ -45,12 +45,13 @@ Result: `KNOWN_THEOREM_FORMALIZED`
 - `riemannHypothesis_iff_forall_liWeilQuadratic_nonneg` is the exact finite-real-span criterion.
 - Every audited declaration depends only on `propext`, `Classical.choice`, and `Quot.sound`.
 - Standalone compilation, exact targets, scans, `git diff --check`, and the 8,665-job full build
-  pass locally.
+  pass locally and in public CI.
 
 This theorem is knowingly equivalent to the already compiled Li criterion and does not prove
-either side. Complex-coefficient Hermitian extension, W1c, W2, and RH remain open. Evidence
-backfill, its public CI, and final clean synchronization remain.
+either side. Complex-coefficient Hermitian extension, W1c, W2, and RH remain open. The campaign
+is publicly closed; only the final closure-log CI and clean synchronization check remain.
 
 Implementation commit `2317143e73e1d788d65dcdff9b609a98f8ac60b2` passed public Lean Action CI
-run `29415448733`, build job `87352327801`, in 1m48s. Immutable evidence backfill and final clean
-synchronization remain.
+run `29415448733`, build job `87352327801`, in 1m48s. Evidence-backfill commit
+`89fb947b493c8fd315bbe67a5be8c09fc99cdfa3` passed public Lean Action CI run `29415725269`, build
+job `87353260131`, in 1m35s.
