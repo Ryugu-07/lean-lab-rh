@@ -187,3 +187,27 @@ zero-sum convergence. It still lacks the all-index derivative-defined Li family,
 derivative-to-zero identity with justified infinite-sum operations, all-index positivity, and the
 Li/RH equivalence. Next state is `INDEPENDENT_AUDIT`, then `ROUTE_SELECTION`; do not resume
 fixed-index coefficient calculations.
+
+## Portfolio Update: R3 All-Index Compensated Li Zero Formula
+
+Date: 2026-07-15
+
+Independent audit admitted
+`CAMPAIGN-20260715-LI-ZERO-FORMULA-01` as the exact successor to the xi Hadamard bridge. The
+campaign closes as `BRIDGE_REDUCED`:
+
+- the derivative-defined project Li family is expanded for every index, not a fixed prefix;
+- the genus-one compensated zero-term formula is differentiated to every order;
+- every positive-order derivative series is compact-locally uniformly summable on the xi nonzero
+  set from the squared reciprocal zero estimate;
+- termwise iterated differentiation at `1` is justified through `iteratedDerivWithin_tsum`;
+- one fixed degree-at-most-one Hadamard polynomial works for every derivative order and Li index;
+- the final formula retains multiplicity, order-zero compensation, and the polynomial derivative.
+
+This is existing Li/Hadamard mathematics aligned with the project objects, not a new proof idea.
+Route-local `hard_gap_delta=1`; the RH assumption frontier is unchanged. R3 no longer lacks the
+all-index derivative-to-compensated-zero identity. It still lacks a proved normalization to the raw
+classical zero sum, positivity for all coefficients, and the exact Li/RH equivalence.
+
+Next state is `INDEPENDENT_AUDIT`, then `ROUTE_SELECTION`. Continue R3 only with one of those
+precise global edges or choose a distinct route family; do not return to fixed-index coefficients.

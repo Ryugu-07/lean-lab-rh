@@ -42,6 +42,7 @@ def checkedTargetNames : List Lean.Name :=
     ``isNontrivialZero_iff_riemannXi_eq_zero_and_not_trivial,
     ``support_riemannXiZeroDivisor,
     ``exists_riemannXi_hadamard_factorization,
+    ``exists_liCoefficientCandidate_eq_hadamard_zero_formula,
     ``liCoefficientCandidate_one_re_pos,
     ``fractionalPartKernel_memLp_two_unitInterval,
     ``fractionalPartKernelL2_mem_nymanBeurlingKernelSpan,
@@ -169,6 +170,20 @@ example {z : ℂ} (hz : ¬IsNontrivialZero z) :
           (1 / (z - Complex.Hadamard.divisorZeroIndex₀_val p) +
             1 / Complex.Hadamard.divisorZeroIndex₀_val p) :=
   exists_riemannXi_logDeriv_eq_polynomial_derivative_add_tsum hz
+
+example :
+    ∃ P : Polynomial ℂ, P.degree ≤ 1 ∧
+      (∀ z : ℂ, riemannXi z = Complex.exp (Polynomial.eval z P) *
+        Complex.Hadamard.divisorCanonicalProduct 1 riemannXi (Set.univ : Set ℂ) z) ∧
+      ∀ n : ℕ, liCoefficientCandidate n =
+        (∑ i ∈ Finset.range (n + 1),
+            ((n + 1).choose i : ℂ) * (n.descFactorial i : ℂ) *
+              (iteratedDeriv (n - i)
+                  (fun z : ℂ => Polynomial.eval z P.derivative) 1 +
+                ∑' p : RiemannXiDivisorZeroIndex,
+                  riemannXiLogDerivZeroDerivativeTerm (n - i) p 1)) /
+          (n.factorial : ℂ) :=
+  exists_liCoefficientCandidate_eq_hadamard_zero_formula
 
 example :
     0 < (liCoefficientCandidate 1).re :=

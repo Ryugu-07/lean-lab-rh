@@ -1,6 +1,7 @@
 import LeanLab.Riemann.LiScaffold
 import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard
+import LeanLab.Riemann.LiZeroFormula
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
@@ -172,6 +173,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``exists_riemannXi_hadamard_factorization
       status := .proven
       note := "Campaign CAMPAIGN-20260715-XI-HADAMARD-01 snapshots the exact Apache-2.0 dependency closure from PrimeNumberTheoremAnd commit d963a6e694a05cd82e5f9b9ae7f4d94123e85393 and Lean-aligns its global factorization with the prior local xi divisor. This closes the R3 order-growth, canonical-product, and squared-reciprocal zero-summability prerequisites. The derivative-defined Li family, derivative-to-zero identity, all-index positivity, and RH remain open." },
+    { id := "T2.li.xi.zero.formula.all-index"
+      tier := .tier2
+      title := "Justify the all-index compensated Li zero formula"
+      statement :=
+        "For one fixed genus-one xi Hadamard polynomial, prove every derivative-defined Li candidate equals the exact finite Leibniz combination of the polynomial derivative and multiplicity-indexed compensated zero derivatives, with all infinite-sum differentiations justified locally uniformly."
+      leanName := some ``exists_liCoefficientCandidate_eq_hadamard_zero_formula
+      status := .proven
+      note := "Campaign CAMPAIGN-20260715-LI-ZERO-FORMULA-01 proves a compact-set M-test dominated by the compiled squared reciprocal zero sum, applies iteratedDerivWithin_tsum for every order at s=1, and combines it with the all-index Leibniz identity. The k=0 compensation and the degree-at-most-one exponential polynomial remain explicit. This is known-theorem formalization; the raw classically ordered zero sum, all-index positivity, the Li/RH equivalence, and RH remain open." },
     { id := "T2.inventory.nyman.beurling"
       tier := .tier2
       title := "Inventory mathlib support for the Nyman-Beurling route"
