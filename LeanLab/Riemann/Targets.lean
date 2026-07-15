@@ -15,6 +15,7 @@ import LeanLab.Riemann.WeilGaussianExplicitFormula
 import LeanLab.Riemann.WeilSymmetricGaussianFamily
 import LeanLab.Riemann.WeilFiniteGaussianTestCore
 import LeanLab.Riemann.WeilGaussianQuadraticPositivity
+import LeanLab.Riemann.WeilGaussianPositivityCriterion
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
@@ -307,6 +308,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``RiemannHypothesis.gaussianXiArithmeticQuadratic_re_nonneg
       status := .proven
       note := "Campaign CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-QUADRATIC-POSITIVITY-01 instantiates the finite packet formula at shifts b_i-b_j and coefficients w_i*w_j. Under RH, every multiplicity-bearing zero contribution is exp(-a*gamma^2) times a cosine square plus a sine square. This closes one conditional W2 kernel bridge only; unconditional arithmetic positivity, the converse Weil criterion, Schwartz closure, separated temperedness, and RH remain open." },
+    { id := "T2.weil.gaussian-positivity-criterion"
+      tier := .tier2
+      title := "Characterize RH by finite Gaussian-Weil quadratic positivity"
+      statement :=
+        "Prove that RH is equivalent to nonnegativity of the real part of every positive-width finite real Gaussian-Weil arithmetic quadratic at contour parameter c=2."
+      leanName := some ``riemannHypothesis_iff_gaussianXiArithmeticQuadratic_re_nonneg
+      status := .proven
+      note := "Campaign CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-REVERSE-CRITERION-01 proves the converse by isolating any off-line multiplicity-bearing xi divisor zero with a finite real exponential separator, annihilating its finite low-decay competitors, and controlling the higher-decay tail by dominated convergence. This formalizes an exact RH-equivalent restricted Gaussian criterion; it does not prove unconditional positivity or RH." },
     { id := "T2.inventory.nyman.beurling"
       tier := .tier2
       title := "Inventory mathlib support for the Nyman-Beurling route"

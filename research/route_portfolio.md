@@ -711,3 +711,37 @@ Evidence-backfill commit `dafcd758a5257718ed2c9f6c8813213a2821708e` passed publi
 run `29448199280`, build job `87463856783`, in `1m32s`. The campaign is publicly closed as
 `BRIDGE_REDUCED`. The conditional Gaussian kernel theorem is now public, but unconditional W2,
 G7, and RH are unchanged; the persistent Goal remains active and returns to fresh route selection.
+
+## Selection Update: R5 Gaussian-Weil Reverse Criterion
+
+Date: 2026-07-16
+
+Fresh route selection admits
+`CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-REVERSE-CRITERION-01`. Its fixed endpoint is the exact
+equivalence between RH and nonnegativity of the existing direct arithmetic quadratic for every
+positive-width finite real Gaussian shift packet. The proposed reverse does not pass through
+Schwartz density or separated temperedness. It selects a minimal off-line value of
+`q=-Re((rho-1/2)^2)`, annihilates the finite lower/same unwanted layer by a real exponential
+polynomial, locks the surviving target-square phase negative, and sends the strictly higher-layer
+`tsum` to zero under a fixed width-one summable majorant.
+
+Lean scratch already checks every high-risk component separately, including the real-axis
+degeneracy handled by `P^2*(X-1)`. The campaign is therefore admitted to Proof Attempt A, but it
+cannot close on helpers: the finite divisor layer, complete scaled zero-sum negativity, arithmetic
+contradiction, and exact iff are indivisible. Completion would be an RH-equivalent criterion with
+`hard_gap_delta=0`; unconditional W2, G7, and RH remain open.
+
+Proof Attempt A reaches the exact endpoint locally in
+`WeilGaussianPositivityCriterion.lean`. The final argument is stronger than the preregistered
+selection step: it starts from an arbitrary off-line divisor zero, because the finite separator
+can annihilate every unwanted lower or same-decay square class. The protected target contribution
+is made strictly negative either by phase-locked widths or by the direct real-axis product, while
+the scaled higher-decay `tsum` tends to zero under a fixed summable majorant. The existing explicit
+formula then produces a finite arithmetic quadratic with negative real part and yields the reverse
+implication to RH.
+
+The 1,476-line module, exact Targets and TargetChecks, six standard-only transitive axiom prints,
+empty forbidden scans, `git diff --check`, and the full 8,674-job build pass. Classification is
+conservatively `KNOWN_THEOREM_FORMALIZED` pending independent novelty review, with no first-proof
+claim. This closes the restricted-family reverse edge but has `hard_gap_delta=0` for unconditional
+positivity, W2, G7, and RH. Implementation publication and public CI remain.

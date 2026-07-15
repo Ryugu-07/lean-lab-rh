@@ -12,6 +12,7 @@ import LeanLab.Riemann.WeilGaussianExplicitFormula
 import LeanLab.Riemann.WeilSymmetricGaussianFamily
 import LeanLab.Riemann.WeilFiniteGaussianTestCore
 import LeanLab.Riemann.WeilGaussianQuadraticPositivity
+import LeanLab.Riemann.WeilGaussianPositivityCriterion
 import LeanLab.Riemann.BaezDuarteZetaRatio
 import LeanLab.Riemann.BaezDuarteQTwo
 import LeanLab.Riemann.BurnolLowerBound
@@ -71,6 +72,7 @@ def checkedTargetNames : List Lean.Name :=
     ``symmetricGaussianXi_arithmetic_explicit_formula,
     ``symmetricGaussianXiPacket_arithmetic_explicit_formula,
     ``RiemannHypothesis.gaussianXiArithmeticQuadratic_re_nonneg,
+    ``riemannHypothesis_iff_gaussianXiArithmeticQuadratic_re_nonneg,
     ``liCoefficientCandidate_one_re_pos,
     ``fractionalPartKernel_memLp_two_unitInterval,
     ``fractionalPartKernelL2_mem_nymanBeurlingKernelSpan,
@@ -901,6 +903,20 @@ example {ι : Type*} [Fintype ι] (hRH : RiemannHypothesis)
     {a c : ℝ} (ha : 0 < a) (hc : 1 < c) (b w : ι → ℝ) :
     0 ≤ (gaussianXiArithmeticQuadratic a b w c).re :=
   RiemannHypothesis.gaussianXiArithmeticQuadratic_re_nonneg hRH ha hc b w
+
+example :
+    RiemannHypothesis ↔
+      ∀ (ι : Type) [Fintype ι] {a : ℝ}, 0 < a →
+        ∀ b w : ι → ℝ,
+          0 ≤ (gaussianXiArithmeticQuadratic a b w 2).re :=
+  riemannHypothesis_iff_gaussianXiArithmeticQuadratic_re_nonneg
+
+example
+    (hpos : ∀ (ι : Type) [Fintype ι] {a : ℝ}, 0 < a →
+      ∀ b w : ι → ℝ,
+        0 ≤ (gaussianXiArithmeticQuadratic a b w 2).re) :
+    RiemannHypothesis :=
+  riemannHypothesis_of_gaussianXiArithmeticQuadratic_re_nonneg hpos
 
 example {ι : Type*} [Fintype ι] (a : ℝ) (b : ι → ℝ) (c : ℝ) :
     gaussianXiArithmeticQuadratic a b (fun _ => 0) c = 0 :=

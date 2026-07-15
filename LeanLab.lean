@@ -18,6 +18,7 @@ import LeanLab.Riemann.WeilGaussianExplicitFormula
 import LeanLab.Riemann.WeilSymmetricGaussianFamily
 import LeanLab.Riemann.WeilFiniteGaussianTestCore
 import LeanLab.Riemann.WeilGaussianQuadraticPositivity
+import LeanLab.Riemann.WeilGaussianPositivityCriterion
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BaezDuarteMellin
 import LeanLab.Riemann.FourierMellin

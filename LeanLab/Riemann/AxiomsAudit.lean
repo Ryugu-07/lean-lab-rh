@@ -15,6 +15,7 @@ import LeanLab.Riemann.WeilGaussianExplicitFormula
 import LeanLab.Riemann.WeilSymmetricGaussianFamily
 import LeanLab.Riemann.WeilFiniteGaussianTestCore
 import LeanLab.Riemann.WeilGaussianQuadraticPositivity
+import LeanLab.Riemann.WeilGaussianPositivityCriterion
 import LeanLab.Riemann.AnalyticLogBranch
 import LeanLab.Riemann.ReciprocalZetaSubpower
 import LeanLab.Riemann.TruncatedPerron
@@ -280,6 +281,12 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.gaussianXiZeroQuadratic_arithmetic_formula
 #print axioms LeanLab.Riemann.RiemannHypothesis.gaussianXiArithmeticQuadratic_re_nonneg
 #print axioms LeanLab.Riemann.gaussianXiArithmeticQuadratic_zero
+#print axioms LeanLab.Riemann.gaussianCriterion_exists_pos_exp_mul_separates_finsets
+#print axioms LeanLab.Riemann.gaussianCriterion_tendsto_tsum_gaussianScaledHigherTerm_zero
+#print axioms LeanLab.Riemann.gaussianCriterion_exists_pos_tsum_gaussianGeneratedPacket_re_neg_of_offLine
+#print axioms LeanLab.Riemann.gaussianCriterion_exists_pos_gaussianXiArithmeticQuadratic_re_neg_of_offLine
+#print axioms LeanLab.Riemann.riemannHypothesis_of_gaussianXiArithmeticQuadratic_re_nonneg
+#print axioms LeanLab.Riemann.riemannHypothesis_iff_gaussianXiArithmeticQuadratic_re_nonneg
 #print axioms LeanLab.Riemann.integral_fractionalPartKernel_mul_le
 #print axioms LeanLab.Riemann.baezDuarteNormalizedKernel_diagonal_lower
 #print axioms LeanLab.Riemann.norm_inner_sparseGram_ne_le
