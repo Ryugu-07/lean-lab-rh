@@ -237,6 +237,10 @@ from all-index Li nonnegativity to RH remains the exact open R3 edge. Implementa
 `4168188f70e2cb6f2e47c65334a8326dabd23edc` passed public Lean Action CI run `29401711930`, build
 job `87307546611`, in 1m48s.
 
+Evidence-backfill commit `81c53eb62acf3500aee00061e5ee0ff8cc6eb13e` passed public Lean Action
+CI run `29401901693`, build job `87308160283`, in 1m55s. The campaign is publicly closed; route
+selection must now independently audit the reverse Li criterion or choose another route family.
+
 Next state after public verification is `INDEPENDENT_AUDIT`, then `ROUTE_SELECTION`. A reverse Li
 criterion campaign requires a source-audited large-index/unit-disk argument and must not assume
 the conclusion as a zero-location premise.

@@ -63,7 +63,8 @@ All seven mathematical steps in the indivisible batch compile.
 - `rtk git diff --check`: passed.
 - Implementation commit `4168188f70e2cb6f2e47c65334a8326dabd23edc` is public on `main`.
 - Lean Action CI run `29401711930`, build job `87307546611`, succeeded in 1m48s.
-- Evidence-backfill publication and its public CI remain pending.
+- Evidence-backfill commit `81c53eb62acf3500aee00061e5ee0ff8cc6eb13e` is public on `main`.
+- Lean Action CI run `29401901693`, build job `87308160283`, succeeded in 1m55s.
 
 ## Progress Accounting
 
@@ -76,3 +77,11 @@ the positivity result assumes RH. The reverse Li/Bombieri-Lagarias implication f
 nonnegativity to RH remains open and is not used.
 
 Next state after public verification: `INDEPENDENT_AUDIT -> ROUTE_SELECTION`.
+
+## Loop Closure
+
+The implementation and evidence-backfill commits are public and independently pass Lean Action
+CI. This campaign is closed as `BRIDGE_REDUCED`, `hard_gap_delta=2`, with the assumption frontier
+unchanged. Do not count the RH-conditional forward positivity theorem as unconditional RH
+progress, and do not use it to bypass the still-open reverse Li criterion. The persistent RH goal
+remains active.

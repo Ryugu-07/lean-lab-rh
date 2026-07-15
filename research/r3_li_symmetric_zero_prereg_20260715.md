@@ -214,4 +214,6 @@ Classification: `BRIDGE_REDUCED`, `hard_gap_delta=2`, assumption frontier unchan
 standard-only transitive axiom output, the 8,660-job full build, forbidden scans, and
 `git diff --check` pass. Implementation commit `4168188f70e2cb6f2e47c65334a8326dabd23edc`
 passed public Lean Action CI run `29401711930`, build job `87307546611`, in 1m48s. The reverse Li
-positivity criterion and RH remain unproved.
+positivity criterion and RH remain unproved. Evidence-backfill commit
+`81c53eb62acf3500aee00061e5ee0ff8cc6eb13e` passed public run `29401901693`, build job
+`87308160283`, in 1m55s; the campaign is publicly closed under its preregistered success condition.
