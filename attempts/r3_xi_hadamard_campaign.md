@@ -135,7 +135,8 @@ source file.
 
 Implementation commit `406fef704202777a6510a9eddd69a402075d31f6` is public on
 `Ryugu-07/lean-lab-rh`. Lean Action CI run `29394659365`, build job `87285308740`, completed
-successfully in 3m12s.
+successfully in 3m12s. Evidence-backfill commit `ffbd4967d3e220593bbbcaa1c63ffbe37dea4282`
+passed Lean Action CI run `29394898804`, build job `87286063151`, in 1m28s.
 
 ## Progress Accounting
 

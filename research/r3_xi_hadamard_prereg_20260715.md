@@ -189,4 +189,6 @@ byte audit, and `git diff --check` pass. This result does not define or prove po
 Li coefficient family and does not prove RH. Publication evidence is recorded in
 `attempts/r3_xi_hadamard_campaign.md`. Implementation commit
 `406fef704202777a6510a9eddd69a402075d31f6` passed public Lean Action CI run `29394659365`, build
-job `87285308740`, in 3m12s.
+job `87285308740`, in 3m12s. Evidence-backfill commit
+`ffbd4967d3e220593bbbcaa1c63ffbe37dea4282` passed run `29394898804`, build job `87286063151`, in
+1m28s.
