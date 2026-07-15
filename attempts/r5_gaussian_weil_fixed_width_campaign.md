@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-FIXED-WIDTH-01`
 
 Date: 2026-07-16
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED`
+Status: `PUBLICLY_CLOSED`
 
 ## Runtime Record
 
@@ -22,7 +22,8 @@ Status: `PUBLIC_IMPLEMENTATION_VERIFIED`
   reverse criterion infrastructure, and standard Mathlib analysis only
 - `strategy`: realize Gaussian width increase as a dominated limit of finite Rademacher/cosh
   multipliers that remain inside the fixed-width test algebra
-- `unresolved_frontier`: publication and independent public CI
+- `unresolved_frontier`: independent novelty review and unconditional fixed-width arithmetic
+  positivity, which remains exactly RH-hard
 
 ## Loop Ledger
 
@@ -37,6 +38,7 @@ Status: `PUBLIC_IMPLEMENTATION_VERIFIED`
 | 7 | `LEAN_PROOF_ATTEMPT_A_ENDPOINT` | Lean compiles the threshold-strengthened off-line negativity theorem, the contradiction from fixed-width positivity, and the exact preregistered iff. Targets and exact type witnesses compile; five transitive axiom prints report only `propext`, `Classical.choice`, and `Quot.sound`. | Mark the proof locally complete and run repository-wide hygiene/build verification before publication. |
 | 8 | `INDEPENDENT_LOCAL_AUDIT` | The standalone formal module cold-compiles without diagnostics. Repository-wide Lean scans find no `sorry`, `admit`, `native_decide`, added `axiom`/`constant`, or `unsafe`; the changed integration files contain no scratch names or resource-limit relaxation. `git diff --check` and the full 8,677-job build pass. | Close locally as verified; publish the implementation and require independent public CI before external use. |
 | 9 | `PUBLIC_CI_IMPLEMENTATION` | Implementation commit `f56b70478ab552802cac719b8e9af0f56fc44b1d` passed public Lean Action CI run `29458594435`, build job `87497146736`, in `2m15s`. | Publish the immutable evidence backfill and require that commit's own public CI before campaign closure. |
+| 10 | `PUBLIC_CI_EVIDENCE_AND_CLOSURE` | Evidence commit `f93e73cbdd71785a28cc2b05f8ef2b0390b358cf` passed public Lean Action CI run `29458788171`, build job `87497720018`, in `1m46s`. The implementation and its evidence are independently public-built. | Close this fixed endpoint and return the active RH Goal to fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`. |
 
 ## Current Accounting
 
@@ -46,5 +48,6 @@ Status: `PUBLIC_IMPLEMENTATION_VERIFIED`
 - `assumption_frontier_before`: no finite-test width-increase closure theorem
 - `assumption_frontier_after`: finite real Gaussian tests at one base width are proved closed under
   larger-width transfer through a dominated finite Rademacher approximation
-- `classification`: `NEW_RELEVANT_LEAN_THEOREM` pending independent novelty review and public CI
-- `next_gate`: evidence-backfill commit and its independent public GitHub Actions result
+- `classification`: `NEW_RELEVANT_LEAN_THEOREM` pending independent novelty review
+- `next_gate`: fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`; do not reopen width compression
+  without a strictly stronger endpoint

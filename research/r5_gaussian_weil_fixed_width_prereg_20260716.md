@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-FIXED-WIDTH-01`
 
 Date: 2026-07-16
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED`
+Status: `PUBLICLY_CLOSED`
 
 ## Fixed Proposition
 
@@ -123,8 +123,13 @@ name, and resource-relaxation scans are empty; `git diff --check` passes; and th
 build succeeds. This completed the local verification checkpoint before publication.
 
 Implementation commit `f56b70478ab552802cac719b8e9af0f56fc44b1d` passed public Lean Action CI
-run `29458594435`, build job `87497146736`, in `2m15s`. The evidence-backfill commit and its own
-public CI remain pending at this checkpoint.
+run `29458594435`, build job `87497146736`, in `2m15s`. At that implementation checkpoint, the
+evidence-backfill commit and its own public CI remained pending.
+
+Evidence commit `f93e73cbdd71785a28cc2b05f8ef2b0390b358cf` passed public Lean Action CI
+run `29458788171`, build job `87497720018`, in `1m46s`. The preregistered endpoint is therefore
+publicly closed. Independent novelty review and unconditional arithmetic positivity remain open;
+the global RH Goal stays active and returns to fresh route selection.
 
 ## Rejection Conditions
 
@@ -145,7 +150,7 @@ public CI remain pending at this checkpoint.
 
 - `research_activity`: active
 - `work_class`: `DISCOVERY`
-- `classification`: `NEW_RELEVANT_LEAN_THEOREM` pending independent novelty review and public CI
+- `classification`: `NEW_RELEVANT_LEAN_THEOREM` pending independent novelty review
 - `hard_gap_before`: the compiled Gaussian arithmetic criterion quantifies every positive width
 - `hard_gap_after`: one arbitrary preassigned positive width suffices
 - `hard_gap_delta`: 0 for unconditional RH, W2, and G7
