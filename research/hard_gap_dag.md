@@ -40,7 +40,7 @@ flowchart TD
 | L1 | complete | Prove the RH-forward all-index Li real-part nonnegativity direction. | Under RH every paired summand is exactly half a complex norm square. |
 | L2 | complete | Prove all-index Li real-part nonnegativity implies `Mathlib.RiemannHypothesis`. | The project-specialized Bombieri-Lagarias argument compiles: finite threshold superlevels, simultaneous phase recurrence, fixed-weight tail domination, an off-line-to-negative-coefficient theorem, and the exact Li/RH iff. Implementation and evidence commits passed public CI runs `29406614212` and `29406932411`. |
 | W0 | complete | Formalize Weil's multiplicative test-function involution, conjugate star, and exact Mellin covariance. | `WeilTestAlgebra.lean` proves pointwise involutivity on `0<x`, the zero-boundary counterexample, convergence iff, endpoint swap, conjugate-star covariance, and critical-line specialization. This is test algebra only. |
-| W1 | open | Formalize a source-faithful admissible test class, multiplicative convolution, and the complete zero/prime/pole/archimedean explicit formula. | No complete explicit formula exists in the pinned project; all convergence, contour, gamma, prime-sum, and regularization choices remain. |
+| W1 | open | Formalize a source-faithful admissible test class, multiplicative convolution, and the complete zero/prime/pole/archimedean explicit formula. | W1a's exact convergent multiplicative Mellin product is locally complete. The analytic-strip class, contour, gamma, prime-sum, zero-sum, and regularization choices remain. |
 | W2 | open | Prove unconditional Weil positivity on a complete RH-equivalent test class. | This is the genuine RH-hard R5 edge. Connes-Consani's semi-local mechanism is explicitly conjectural and is not a premise. |
 
 ## Hard Gaps
@@ -54,6 +54,14 @@ flowchart TD
 | G5 | L2 | complete | Reverse the exact project Li criterion: from nonnegative real parts of every `liCoefficientCandidate n`, derive RH by a project-specialized Bombieri-Lagarias transformed-zero argument. |
 | G6 | W1 | open | Prove the complete source-faithful Weil explicit formula and convolution-stable admissible test space, without dropping moment, density, convergence, or regularization conditions. |
 | G7 | W2 | open | Supply an unconditional positivity mechanism on the full Weil class. Finite test-family checks and RH-conditional norm identities do not reduce this gap. |
+
+## W1 Fixed Source Frontier
+
+| edge | status | source-level content |
+| --- | --- | --- |
+| W1a | complete | Source-faithful `dy/y` convolution, exact convergence closure, Mellin product, star covariance, and critical-line `normSq` autocorrelation compile through logarithmic transport to Mathlib additive Bochner convolution. |
+| W1b | open | Package a strip-analytic, boundary-continuous convolution-stable admissible class aligned with Lagarias `A_delta`, without replacing it by an unproved dense subclass. |
+| W1c | open | Prove the complete zero/prime/pole/archimedean explicit formula, including distributional convergence and all regularization choices. |
 
 ## G4 Fixed Source Frontier
 

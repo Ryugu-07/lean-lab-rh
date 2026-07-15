@@ -5,6 +5,7 @@ import LeanLab.Riemann.LiZeroFormula
 import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
 import LeanLab.Riemann.WeilTestAlgebra
+import LeanLab.Riemann.WeilConvolution
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
@@ -208,6 +209,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``mellin_weilStar_criticalLine
       status := .proven
       note := "Campaign CAMPAIGN-20260715-R5-WEIL-TEST-ALGEBRA-01 formalizes Lagarias Appendix A (A.1)-(A.2) using Mathlib's actual Mellin integral, including the endpoint-moment swap and the exact conjugate-star parameter. This is necessary R5 test algebra with hard_gap_delta=0; it is not the explicit formula or a positivity result." },
+    { id := "T2.weil.test-algebra.convolution"
+      tier := .tier2
+      title := "Formalize multiplicative Weil convolution"
+      statement :=
+        "Define source-faithful dy/y convolution, prove pointwise Mellin convergence is closed under it, prove its Mellin transform is the product, and derive the conjugate-star Hermitian product on the critical line."
+      leanName := some ``mellin_weilConvolution_star_criticalLine
+      status := .proven
+      note := "Campaign CAMPAIGN-20260715-R5-WEIL-CONVOLUTION-01 transports multiplicative convolution to Mathlib's additive Bochner convolution in logarithmic coordinates and justifies Fubini from the two exact MellinConvergent assumptions. This closes W1a only; the analytic-strip test class, complete explicit formula, positivity, and RH remain open." },
     { id := "T2.inventory.nyman.beurling"
       tier := .tier2
       title := "Inventory mathlib support for the Nyman-Beurling route"

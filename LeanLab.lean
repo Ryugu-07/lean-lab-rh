@@ -8,6 +8,7 @@ import LeanLab.Riemann.LiZeroFormula
 import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
 import LeanLab.Riemann.WeilTestAlgebra
+import LeanLab.Riemann.WeilConvolution
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BaezDuarteMellin
 import LeanLab.Riemann.FourierMellin

@@ -2,6 +2,7 @@ import LeanLab.Riemann.Targets
 import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
 import LeanLab.Riemann.WeilTestAlgebra
+import LeanLab.Riemann.WeilConvolution
 import LeanLab.Riemann.BaezDuarteZetaRatio
 import LeanLab.Riemann.BurnolLowerBound
 import LeanLab.Riemann.BurnolA
@@ -49,6 +50,7 @@ def checkedTargetNames : List Lean.Name :=
     ``liCoefficientCandidate_eq_tsum_riemannXiSymmetrizedLiZeroTerm,
     ``riemannHypothesis_iff_forall_liCoefficientCandidate_re_nonneg,
     ``mellin_weilStar_criticalLine,
+    ``mellin_weilConvolution_star_criticalLine,
     ``liCoefficientCandidate_one_re_pos,
     ``fractionalPartKernel_memLp_two_unitInterval,
     ``fractionalPartKernelL2_mem_nymanBeurlingKernelSpan,
@@ -681,5 +683,29 @@ example (f : ℝ → ℂ) (t : ℝ) :
     mellin (weilStar f) (1 / 2 + (t : ℂ) * Complex.I) =
       conj (mellin f (1 / 2 + (t : ℂ) * Complex.I)) :=
   mellin_weilStar_criticalLine f t
+
+example {f g : ℝ → ℂ} {s : ℂ}
+    (hf : MellinConvergent f s) (hg : MellinConvergent g s) :
+    MellinConvergent (weilConvolution f g) s :=
+  mellinConvergent_weilConvolution hf hg
+
+example {f g : ℝ → ℂ} {s : ℂ}
+    (hf : MellinConvergent f s) (hg : MellinConvergent g s) :
+    mellin (weilConvolution f g) s = mellin f s * mellin g s :=
+  mellin_weilConvolution hf hg
+
+example {f g : ℝ → ℂ} (t : ℝ)
+    (hf : MellinConvergent f (1 / 2 + (t : ℂ) * Complex.I))
+    (hg : MellinConvergent g (1 / 2 + (t : ℂ) * Complex.I)) :
+    mellin (weilConvolution f (weilStar g)) (1 / 2 + (t : ℂ) * Complex.I) =
+      mellin f (1 / 2 + (t : ℂ) * Complex.I) *
+        conj (mellin g (1 / 2 + (t : ℂ) * Complex.I)) :=
+  mellin_weilConvolution_star_criticalLine t hf hg
+
+example {f : ℝ → ℂ} (t : ℝ)
+    (hf : MellinConvergent f (1 / 2 + (t : ℂ) * Complex.I)) :
+    mellin (weilConvolution f (weilStar f)) (1 / 2 + (t : ℂ) * Complex.I) =
+      Complex.normSq (mellin f (1 / 2 + (t : ℂ) * Complex.I)) :=
+  mellin_weilAutocorrelation_criticalLine t hf
 
 end LeanLab.Riemann

@@ -138,9 +138,9 @@ equivalence or to another exact RH criterion.
 
 ## Selected Campaign
 
-`CAMPAIGN-20260715-R5-WEIL-TEST-ALGEBRA-01` is locally closed as
-`KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0`. No campaign is selected while the persistent
-goal returns to `INDEPENDENT_AUDIT -> ROUTE_SELECTION`.
+`CAMPAIGN-20260715-R5-WEIL-CONVOLUTION-01` is locally closed as
+`KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` for RH. W1a is complete; no successor campaign
+is selected before `INDEPENDENT_AUDIT -> ROUTE_SELECTION`.
 
 ## Portfolio Update: R3 Xi Zero Divisor
 
@@ -335,3 +335,24 @@ edge rather than wrappers around the compiled involution. Implementation commit
 job `87331366564`, in 2m27s. Evidence-backfill commit
 `1c9e7fe27536bda8e04aa7e7bda2af1d110fe61c` passed public Lean Action CI run `29409249934`, build
 job `87332127195`, in 1m33s. The campaign is publicly closed.
+
+## Portfolio Update: R5 Weil Convolution Locally Complete
+
+Date: 2026-07-15
+
+Independent audit admitted the exact same-route successor from Lagarias (A.7) and Mathlib's
+additive Bochner-convolution infrastructure. `CAMPAIGN-20260715-R5-WEIL-CONVOLUTION-01` closes
+locally as `KNOWN_THEOREM_FORMALIZED`:
+
+- source-faithful multiplicative convolution is defined with the exact Haar element `dy/y`;
+- Mellin convergence is equivalent to integrability of an explicit logarithmic lift;
+- logarithmic lift converts multiplicative convolution to additive Bochner convolution;
+- two pointwise Mellin-convergent inputs produce a Mellin-convergent convolution;
+- the Mellin transform of the convolution is the product of the input transforms;
+- convolution with `weilStar` has the exact `1-conj(s)` factor;
+- on the critical line, self-star autocorrelation is exactly `Complex.normSq`.
+
+This closes W1a only. Lagarias's complete analytic-strip class, the zero/prime/pole/archimedean
+explicit formula, distributional convergence, density, and Weil positivity remain open.
+`hard_gap_delta=0` for RH, and the global assumption frontier is unchanged. Local standalone,
+target, axiom, scan, diff, and 8,663-job full-build gates pass. Publication and public CI remain.

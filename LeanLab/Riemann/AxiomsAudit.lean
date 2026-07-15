@@ -5,6 +5,7 @@ import LeanLab.Riemann.LiZeroFormula
 import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
 import LeanLab.Riemann.WeilTestAlgebra
+import LeanLab.Riemann.WeilConvolution
 import LeanLab.Riemann.AnalyticLogBranch
 import LeanLab.Riemann.ReciprocalZetaSubpower
 import LeanLab.Riemann.TruncatedPerron
@@ -179,6 +180,15 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.mellin_weilStar
 #print axioms LeanLab.Riemann.mellinConvergent_weilStar_iff
 #print axioms LeanLab.Riemann.mellin_weilStar_criticalLine
+#print axioms LeanLab.Riemann.mellinConvergent_iff_integrable_mellinLogLift
+#print axioms LeanLab.Riemann.mellin_eq_integral_mellinLogLift
+#print axioms LeanLab.Riemann.weilConvolution_exp_neg
+#print axioms LeanLab.Riemann.mellinLogLift_weilConvolution
+#print axioms LeanLab.Riemann.mellinConvergent_weilConvolution
+#print axioms LeanLab.Riemann.mellin_weilConvolution
+#print axioms LeanLab.Riemann.mellin_weilConvolution_star
+#print axioms LeanLab.Riemann.mellin_weilConvolution_star_criticalLine
+#print axioms LeanLab.Riemann.mellin_weilAutocorrelation_criticalLine
 #print axioms LeanLab.Riemann.integral_fractionalPartKernel_mul_le
 #print axioms LeanLab.Riemann.baezDuarteNormalizedKernel_diagonal_lower
 #print axioms LeanLab.Riemann.norm_inner_sparseGram_ne_le
