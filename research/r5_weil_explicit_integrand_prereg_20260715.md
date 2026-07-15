@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260715-R5-WEIL-EXPLICIT-INTEGRAND-01`
 
 Date: 2026-07-15
 
-Status: `LOCALLY_VERIFIED`
+Status: `IMPLEMENTATION_PUBLICLY_VERIFIED`
 
 ## Source Boundary
 
@@ -108,6 +108,9 @@ Hadamard zero sum.
 
 Exact TargetChecks, all six public transitive axiom prints, empty forbidden/declaration/resource
 scans, `git diff --check`, standalone builds, and the 8,666-job full build pass. Every new theorem
-uses only `propext`, `Classical.choice`, and `Quot.sound`. Classification is locally
-`BRIDGE_REDUCED`: W1c0 closes, while W1c1/W1c2, W2, and RH remain open. Publication and public CI
-remain.
+uses only `propext`, `Classical.choice`, and `Quot.sound`. Classification is
+`BRIDGE_REDUCED`: W1c0 closes, while W1c1/W1c2, W2, and RH remain open.
+
+Implementation commit `89d4dd12ebedc75c13261a0d43a9254b5931c30d` passed public Lean Action CI
+run `29417432562`, build job `87359008630`, in 1m47s. Immutable evidence backfill and final clean
+synchronization remain.

@@ -202,7 +202,9 @@ The fixed endpoint now compiles as `BRIDGE_REDUCED`. `WeilExplicitIntegrand.lean
 right-half-plane xi product, its exact pole/GammaR/von-Mangoldt logarithmic derivative, and equality
 with the existing multiplicity-bearing Hadamard zero sum. Exact targets, all six standard-only
 axiom outputs, scans, diff check, standalone builds, and the 8,666-job full build pass locally.
-Public implementation CI, evidence backfill, and clean synchronization remain.
+Implementation commit `89d4dd12ebedc75c13261a0d43a9254b5931c30d` passed public Lean Action CI
+run `29417432562`, build job `87359008630`, in 1m47s. Evidence backfill and clean synchronization
+remain.
 
 ## Portfolio Update: R3 Xi Zero Divisor
 
