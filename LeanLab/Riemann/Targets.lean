@@ -8,6 +8,7 @@ import LeanLab.Riemann.LiWeilGram
 import LeanLab.Riemann.WeilTestAlgebra
 import LeanLab.Riemann.WeilConvolution
 import LeanLab.Riemann.WeilStripClass
+import LeanLab.Riemann.WeilExplicitIntegrand
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
@@ -235,6 +236,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``IsWeilStripAdmissible.weilAutocorrelation
       status := .proven
       note := "Campaign CAMPAIGN-20260715-R5-WEIL-STRIP-CLASS-01 packages the source-facing physical A_delta conditions and proves the W1b algebra core using the compiled W1a transform laws. It deliberately does not claim that the raw-function uniform distance is separated or complete, nor density, a complete explicit formula, positivity, or RH." },
+    { id := "T2.weil.explicit-integrand"
+      tier := .tier2
+      title := "Join the Weil zero, pole, archimedean, and prime integrands"
+      statement :=
+        "On Re(s)>1, prove the exact xi logarithmic-derivative decomposition into pole terms, the GammaR logarithmic derivative, and the von Mangoldt L-series, then identify it with the multiplicity-bearing Hadamard zero sum."
+      leanName := some ``exists_weilExplicitIntegrand_eq_hadamardZeroSum
+      status := .proven
+      note := "Campaign CAMPAIGN-20260715-R5-WEIL-EXPLICIT-INTEGRAND-01 closes the unconditional W1c0 analytic integrand subedge. It does not assert test-function integration, contour or zero-cutoff limits, local regularization, the complete explicit formula, W2 positivity, or RH." },
     { id := "T2.inventory.nyman.beurling"
       tier := .tier2
       title := "Inventory mathlib support for the Nyman-Beurling route"

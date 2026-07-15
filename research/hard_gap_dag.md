@@ -65,7 +65,9 @@ flowchart TD
 | --- | --- | --- |
 | W1a | complete | Source-faithful `dy/y` convolution, exact convergence closure, Mellin product, star covariance, and critical-line `normSq` autocorrelation compile through logarithmic transport to Mathlib additive Bochner convolution. |
 | W1b | complete | A positive-width physical class with pointwise closed-strip convergence, open-strip analyticity, closed-strip continuity, and a finite uniform bound is closed under vector operations, involution, conjugate star, convolution, and autocorrelation. Quotient/uniqueness/completeness and density are explicitly not claimed. Implementation commit `335d6dfa175a345555aaa408b5581ed743d2abf7` passed public CI run `29412820223`. |
-| W1c | open | Prove the complete zero/prime/pole/archimedean explicit formula, including distributional convergence and all regularization choices. |
+| W1c0 | complete | On `Re(s)>1`, `WeilExplicitIntegrand.lean` proves the exact xi logarithmic-derivative identity joining the multiplicity-bearing Hadamard zero sum to the pole, `GammaR`, and von Mangoldt terms. This is the analytic integrand only; public CI remains before campaign closure. |
+| W1c1 | open | Integrate the compiled identity against a source-faithful test class and justify the rectangle/zero cutoff passage. |
+| W1c2 | open | Prove the complete distributional limit and all endpoint/local regularization choices, including the covariance extension. |
 
 ## G4 Fixed Source Frontier
 

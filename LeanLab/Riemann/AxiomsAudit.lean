@@ -8,6 +8,7 @@ import LeanLab.Riemann.LiWeilGram
 import LeanLab.Riemann.WeilTestAlgebra
 import LeanLab.Riemann.WeilConvolution
 import LeanLab.Riemann.WeilStripClass
+import LeanLab.Riemann.WeilExplicitIntegrand
 import LeanLab.Riemann.AnalyticLogBranch
 import LeanLab.Riemann.ReciprocalZetaSubpower
 import LeanLab.Riemann.TruncatedPerron
@@ -222,6 +223,12 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.IsWeilStripAdmissible.weilStar
 #print axioms LeanLab.Riemann.IsWeilStripAdmissible.weilConvolution
 #print axioms LeanLab.Riemann.IsWeilStripAdmissible.weilAutocorrelation
+#print axioms LeanLab.Riemann.differentiableAt_GammaR_of_re_pos
+#print axioms LeanLab.Riemann.logDeriv_riemannXiFactor
+#print axioms LeanLab.Riemann.riemannXi_eq_factor_mul_GammaR_mul_riemannZeta
+#print axioms LeanLab.Riemann.logDeriv_riemannZeta_eq_neg_vonMangoldtLSeries
+#print axioms LeanLab.Riemann.logDeriv_riemannXi_eq_poles_archimedean_sub_vonMangoldt
+#print axioms LeanLab.Riemann.exists_weilExplicitIntegrand_eq_hadamardZeroSum
 #print axioms LeanLab.Riemann.integral_fractionalPartKernel_mul_le
 #print axioms LeanLab.Riemann.baezDuarteNormalizedKernel_diagonal_lower
 #print axioms LeanLab.Riemann.norm_inner_sparseGram_ne_le

@@ -181,6 +181,29 @@ job `87352327801`, in 1m48s. Evidence-backfill commit
 job `87353260131`, in 1m35s. The campaign is publicly closed; only closure-log CI and clean
 synchronization remain before fresh route selection.
 
+## Selected Campaign: R5 Weil Explicit Integrand Locally Complete
+
+Date: 2026-07-15
+
+Fresh route selection returns to R5/W1c only after an independent five-candidate audit. The
+complete class-E explicit formula is too large for one bounded campaign, while isolated prime or
+archimedean terms and a single fixed test function do not connect the source sides. Campaign
+`CAMPAIGN-20260715-R5-WEIL-EXPLICIT-INTEGRAND-01` therefore fixes the unconditional
+`Re(s)>1` logarithmic-derivative identity joining the project xi function to its pole terms,
+`GammaR` factor, and Mathlib's von Mangoldt L-series, then splices this with the compiled
+genus-one Hadamard zero sum.
+
+This endpoint is strictly weaker than the complete explicit formula and does not imply RH. If it
+passes the fixed verification gate, W1c0's analytic integrand subedge closes while test-function
+integration, contour cutoffs, zero-sum limits, local regularization, W2, and RH remain open.
+Preregistration: `research/r5_weil_explicit_integrand_prereg_20260715.md`.
+
+The fixed endpoint now compiles as `BRIDGE_REDUCED`. `WeilExplicitIntegrand.lean` proves the
+right-half-plane xi product, its exact pole/GammaR/von-Mangoldt logarithmic derivative, and equality
+with the existing multiplicity-bearing Hadamard zero sum. Exact targets, all six standard-only
+axiom outputs, scans, diff check, standalone builds, and the 8,666-job full build pass locally.
+Public implementation CI, evidence backfill, and clean synchronization remain.
+
 ## Portfolio Update: R3 Xi Zero Divisor
 
 Date: 2026-07-15
