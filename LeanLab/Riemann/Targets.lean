@@ -1,5 +1,6 @@
 import LeanLab.Riemann.LiScaffold
 import LeanLab.Riemann.LiZeroDivisor
+import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
@@ -163,6 +164,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``support_riemannXiZeroDivisor
       status := .proven
       note := "Campaign CAMPAIGN-20260715-XI-DIVISOR-01 excludes negative-even trivial zeta zeros from xi, rules out infinite local order by the identity theorem, and packages the exact locally finite multiplicity carrier. This closes the divisor/local-multiplicity prerequisite only; order-one growth, a Hadamard product, global zero summability, the Li zero-sum identity, all-index positivity, and RH remain open." },
+    { id := "T2.li.xi.hadamard.global"
+      tier := .tier2
+      title := "Align the global genus-one xi Hadamard product"
+      statement :=
+        "Prove that the project xi is the audited order-one entire xi, align its multiplicity-bearing divisor index exactly with IsNontrivialZero, and transport squared reciprocal summability, the global genus-one product, and the away-from-zeros logarithmic-derivative sum."
+      leanName := some ``exists_riemannXi_hadamard_factorization
+      status := .proven
+      note := "Campaign CAMPAIGN-20260715-XI-HADAMARD-01 snapshots the exact Apache-2.0 dependency closure from PrimeNumberTheoremAnd commit d963a6e694a05cd82e5f9b9ae7f4d94123e85393 and Lean-aligns its global factorization with the prior local xi divisor. This closes the R3 order-growth, canonical-product, and squared-reciprocal zero-summability prerequisites. The derivative-defined Li family, derivative-to-zero identity, all-index positivity, and RH remain open." },
     { id := "T2.inventory.nyman.beurling"
       tier := .tier2
       title := "Inventory mathlib support for the Nyman-Beurling route"

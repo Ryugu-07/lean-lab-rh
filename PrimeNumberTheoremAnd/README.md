@@ -9,7 +9,9 @@ formalization modules.
 - snapshot scope: the 13-module Abel-continuation dependency graph ending at
   `Mathlib.NumberTheory.LSeries.RiemannZetaAbelContinuation`, plus the standalone
   `Mathlib.Analysis.SpecialFunctions.Gamma.DigammaSeries` module, plus the 11-module finite-order
-  expansion ending at `Mathlib.NumberTheory.LSeries.ZetaFiniteOrder`
+  expansion ending at `Mathlib.NumberTheory.LSeries.ZetaFiniteOrder`, plus the 37 missing modules
+  that complete the 61-module recursive custom dependency closure ending at
+  `Mathlib.NumberTheory.LSeries.RiemannZetaHadamard`
 
 Every snapshotted module was compiled individually against this project's pinned Lean 4.31 and
 mathlib `v4.31.0`. Representative final theorems are checked in

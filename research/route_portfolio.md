@@ -162,3 +162,28 @@ substitute, zero-sum convergence, the coefficient-to-zero identity, and all-inde
 
 Next state is `INDEPENDENT_AUDIT`, then `ROUTE_SELECTION`. R3 may continue only if the audit admits
 one of those precise global edges; fixed low-index coefficient work remains rejected.
+
+## Portfolio Update: R3 Global Xi Hadamard Bridge
+
+Date: 2026-07-15
+
+Independent audit admitted the precise global successor
+`CAMPAIGN-20260715-XI-HADAMARD-01`. The campaign closes as `BRIDGE_REDUCED`:
+
+- the project xi is Lean-proved equal to the audited order-one entire `Complex.riemannXi`;
+- its nonzero divisor index uses exactly the preceding campaign's analytic multiplicities;
+- index values are exactly the project `IsNontrivialZero` points;
+- squared reciprocal zero norms are summable with multiplicity;
+- xi has a global genus-one Hadamard product with a degree-at-most-one exponential polynomial;
+- away from nontrivial zeros, its log derivative is the convergent compensated zero sum plus the
+  polynomial derivative.
+
+The source closure is existing Apache-2.0 formalization from pinned
+`PrimeNumberTheoremAnd@d963a6e694a05cd82e5f9b9ae7f4d94123e85393`, not a new mathematical
+factorization result. Route-local `hard_gap_delta=3`; the RH assumption frontier is unchanged.
+
+R3 no longer lacks order-one growth, a global canonical product, or genus-one compensated
+zero-sum convergence. It still lacks the all-index derivative-defined Li family, the exact
+derivative-to-zero identity with justified infinite-sum operations, all-index positivity, and the
+Li/RH equivalence. Next state is `INDEPENDENT_AUDIT`, then `ROUTE_SELECTION`; do not resume
+fixed-index coefficient calculations.

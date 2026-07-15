@@ -41,6 +41,7 @@ def checkedTargetNames : List Lean.Name :=
     ``riemannXi_eq_mul_completedRiemannZeta,
     ``isNontrivialZero_iff_riemannXi_eq_zero_and_not_trivial,
     ``support_riemannXiZeroDivisor,
+    ``exists_riemannXi_hadamard_factorization,
     ``liCoefficientCandidate_one_re_pos,
     ``fractionalPartKernel_memLp_two_unitInterval,
     ``fractionalPartKernelL2_mem_nymanBeurlingKernelSpan,
@@ -131,6 +132,43 @@ example (s : ℂ) :
 example {K : Set ℂ} (hK : IsCompact K) :
     (K ∩ {s : ℂ | IsNontrivialZero s}).Finite :=
   compact_inter_nontrivialZeros_finite hK
+
+example : riemannXi = Complex.riemannXi :=
+  riemannXi_eq_complex_riemannXi
+
+example (s : ℂ) :
+    Int.toNat (MeromorphicOn.divisor riemannXi Set.univ s) =
+      riemannXiZeroMultiplicity s :=
+  riemannXi_divisor_toNat_eq_zeroMultiplicity s
+
+example (ρ : ℂ) :
+    (∃ p : Complex.Hadamard.divisorZeroIndex₀ riemannXi (Set.univ : Set ℂ),
+      Complex.Hadamard.divisorZeroIndex₀_val p = ρ) ↔ IsNontrivialZero ρ :=
+  exists_riemannXiDivisorZeroIndex_val_iff ρ
+
+example :
+    Complex.Hadamard.EntireOfOrderAtMost (1 : ℝ) riemannXi :=
+  riemannXi_entireOfOrderAtMost_one
+
+example :
+    Summable
+      (fun p : Complex.Hadamard.divisorZeroIndex₀ riemannXi (Set.univ : Set ℂ) =>
+        ‖Complex.Hadamard.divisorZeroIndex₀_val p‖⁻¹ ^ (2 : ℕ)) :=
+  summable_riemannXiDivisorZeroIndex_norm_inv_sq
+
+example :
+    ∃ P : Polynomial ℂ, P.degree ≤ 1 ∧ ∀ z : ℂ,
+      riemannXi z = Complex.exp (Polynomial.eval z P) *
+        Complex.Hadamard.divisorCanonicalProduct 1 riemannXi (Set.univ : Set ℂ) z :=
+  exists_riemannXi_hadamard_factorization
+
+example {z : ℂ} (hz : ¬IsNontrivialZero z) :
+    ∃ P : Polynomial ℂ, P.degree ≤ 1 ∧
+      logDeriv riemannXi z = Polynomial.eval z P.derivative +
+        ∑' p : Complex.Hadamard.divisorZeroIndex₀ riemannXi (Set.univ : Set ℂ),
+          (1 / (z - Complex.Hadamard.divisorZeroIndex₀_val p) +
+            1 / Complex.Hadamard.divisorZeroIndex₀_val p) :=
+  exists_riemannXi_logDeriv_eq_polynomial_derivative_add_tsum hz
 
 example :
     0 < (liCoefficientCandidate 1).re :=

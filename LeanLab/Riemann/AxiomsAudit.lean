@@ -1,5 +1,6 @@
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.LiZeroDivisor
+import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.AnalyticLogBranch
 import LeanLab.Riemann.ReciprocalZetaSubpower
 import LeanLab.Riemann.TruncatedPerron
@@ -135,6 +136,13 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.riemannXiZeroDivisor_apply
 #print axioms LeanLab.Riemann.support_riemannXiZeroDivisor
 #print axioms LeanLab.Riemann.riemannXiZeroMultiplicity_one_sub
+#print axioms LeanLab.Riemann.riemannXi_eq_complex_riemannXi
+#print axioms LeanLab.Riemann.riemannXi_divisor_toNat_eq_zeroMultiplicity
+#print axioms LeanLab.Riemann.exists_riemannXiDivisorZeroIndex_val_iff
+#print axioms LeanLab.Riemann.riemannXi_entireOfOrderAtMost_one
+#print axioms LeanLab.Riemann.summable_riemannXiDivisorZeroIndex_norm_inv_sq
+#print axioms LeanLab.Riemann.exists_riemannXi_hadamard_factorization
+#print axioms LeanLab.Riemann.exists_riemannXi_logDeriv_eq_polynomial_derivative_add_tsum
 #print axioms LeanLab.Riemann.integral_fractionalPartKernel_mul_le
 #print axioms LeanLab.Riemann.baezDuarteNormalizedKernel_diagonal_lower
 #print axioms LeanLab.Riemann.norm_inner_sparseGram_ne_le
