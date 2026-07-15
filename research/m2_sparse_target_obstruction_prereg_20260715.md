@@ -145,3 +145,8 @@ The theorem excludes only the registered sparse subfamily. It neither contradict
 compiled RH equivalence for the full positive-natural family. M2/G3 remains parked,
 `hard_gap_delta=0`, and novelty remains `NOVELTY_UNCHECKED`. The next state is `ROUTE_SELECTION`
 with a different route family.
+
+## Publication Evidence
+
+- implementation commit: `c2e6f086b30fc54b5e0ed6ab2782bf5ef9283a85`
+- public Lean Action CI: run `29391437206`, build job `87275634635`, succeeded

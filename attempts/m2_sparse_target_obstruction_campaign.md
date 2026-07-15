@@ -85,4 +85,5 @@ different mathematical endpoint.
 - forbidden placeholder, explicit declaration, `native_decide`, and resource-relaxation scans:
   empty
 - `git diff --check`: passed
-- commit, push, and public CI: pending at this checkpoint
+- implementation commit: `c2e6f086b30fc54b5e0ed6ab2782bf5ef9283a85`, pushed to public `main`
+- Lean Action CI: run `29391437206`, build job `87275634635`, succeeded
