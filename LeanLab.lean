@@ -15,6 +15,7 @@ import LeanLab.Riemann.WeilExplicitIntegrand
 import LeanLab.Riemann.WeilZeroCutoff
 import LeanLab.Riemann.WeilGaussianHeight
 import LeanLab.Riemann.WeilGaussianExplicitFormula
+import LeanLab.Riemann.WeilSymmetricGaussianFamily
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BaezDuarteMellin
 import LeanLab.Riemann.FourierMellin

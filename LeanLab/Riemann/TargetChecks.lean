@@ -9,6 +9,7 @@ import LeanLab.Riemann.WeilExplicitIntegrand
 import LeanLab.Riemann.WeilZeroCutoff
 import LeanLab.Riemann.WeilGaussianHeight
 import LeanLab.Riemann.WeilGaussianExplicitFormula
+import LeanLab.Riemann.WeilSymmetricGaussianFamily
 import LeanLab.Riemann.BaezDuarteZetaRatio
 import LeanLab.Riemann.BaezDuarteQTwo
 import LeanLab.Riemann.BurnolLowerBound
@@ -64,6 +65,7 @@ def checkedTargetNames : List Lean.Name :=
     ``exists_weilExplicitIntegrand_eq_hadamardZeroSum,
     ``rectangleBoundaryIntegral_weighted_logDeriv_riemannXi_eq_finsum,
     ``exists_gaussianXiZeroFreeHeight_tendsto_rightVerticalIntegral,
+    ``symmetricGaussianXi_arithmetic_explicit_formula,
     ``liCoefficientCandidate_one_re_pos,
     ``fractionalPartKernel_memLp_two_unitInterval,
     ``fractionalPartKernelL2_mem_nymanBeurlingKernelSpan,
@@ -850,5 +852,15 @@ example {a c : ℝ} (ha : 0 < a) (hc : 1 < c) :
         gaussianXiArchimedeanIntegral a c -
           ∑' n : ℕ, gaussianVonMangoldtWeight a n :=
   gaussianXi_arithmetic_explicit_formula ha hc
+
+example {a b c : ℝ} (ha : 0 < a) (hc : 1 < c) :
+    (Real.pi : ℂ) *
+        ∑' p : RiemannXiDivisorZeroIndex,
+          riemannXiSymmetricGaussianWeight a b (riemannXiDivisorZeroValue p) =
+      2 * (Real.pi : ℂ) *
+          (Real.exp (a / 4) * Real.cosh (b / 2) : ℝ) +
+        symmetricGaussianXiArchimedeanIntegral a b c -
+          ∑' n : ℕ, symmetricGaussianVonMangoldtWeight a b n :=
+  symmetricGaussianXi_arithmetic_explicit_formula ha hc
 
 end LeanLab.Riemann

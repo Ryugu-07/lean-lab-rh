@@ -12,6 +12,7 @@ import LeanLab.Riemann.WeilExplicitIntegrand
 import LeanLab.Riemann.WeilZeroCutoff
 import LeanLab.Riemann.WeilGaussianHeight
 import LeanLab.Riemann.WeilGaussianExplicitFormula
+import LeanLab.Riemann.WeilSymmetricGaussianFamily
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
@@ -280,6 +281,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``gaussianXi_arithmetic_explicit_formula
       status := .proven
       note := "Campaign CAMPAIGN-20260716-R5-WEIL-GAUSSIAN-EXPLICIT-FORMULA-01 closes the fixed-test arithmetic W1c subedge. It proves the exact Fourier-Gaussian von-Mangoldt prime-power weights and absolute interchange, GammaR full-line integrability from digamma growth, the independent two-pole residue value 2*pi*exp(a/4), and the final multiplicity-bearing Gaussian explicit formula without RH. Generic test classes, singular regularization, Weil positivity, and RH remain open." },
+    { id := "T2.weil.symmetric-gaussian-family-explicit-formula"
+      tier := .tier2
+      title := "Evaluate the symmetric translated Gaussian family"
+      statement :=
+        "For every a>0, real translation b, and c>1, prove the xi explicit formula for exp(a(s-1/2)^2)cosh(b(s-1/2)), with an absolutely convergent zero sum, exact two-pole term, integrable GammaR term, and the average of the two von-Mangoldt Gaussian kernels centered at log(n)=plus-or-minus b."
+      leanName := some ``symmetricGaussianXi_arithmetic_explicit_formula
+      status := .proven
+      note := "Campaign CAMPAIGN-20260716-R5-WEIL-SYMMETRIC-GAUSSIAN-FAMILY-01 closes one unconditional two-parameter probe-family subedge. It also factors out a generic selected-height rectangle skeleton for analytic reflection-symmetric summable weights, proves both translated prime branches by exact quadratic-exponential integration, and recovers the centered formula at b=0. Schwartz/Hermite density, tempered-distribution extension, Weil positivity, and RH remain open." },
     { id := "T2.inventory.nyman.beurling"
       tier := .tier2
       title := "Inventory mathlib support for the Nyman-Beurling route"

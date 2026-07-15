@@ -97,6 +97,49 @@ run `29441160498`, build job `87440149741`, in `2m33s`. Evidence-backfill commit
 `87441220281`, in `1m28s`. The campaign is publicly closed as `BRIDGE_REDUCED`; a fresh route
 selection is required before another campaign.
 
+## Selection Update: R5 Symmetric Gaussian Translate Family
+
+Date: 2026-07-16
+
+Fresh cross-route selection screens six candidates after the centered Gaussian formula closed.
+The Gaussian-Perron defect has a useful new error-function smoothing but a different `1/z` carrier
+and conditional later localization; Arias de Reyna's tempered prime distribution is exactly
+RH-equivalent; de Bruijn--Newman requires a new zero-reality theory; Suzuki's finite-interval
+operator limit is conjectural; and R1 has no new unconditional residual upper bound.
+
+Campaign `CAMPAIGN-20260716-R5-WEIL-SYMMETRIC-GAUSSIAN-FAMILY-01` selects
+
+```text
+G_(a,b)(s) = exp(a*(s-1/2)^2) * cosh(b*(s-1/2)),  a>0, b real.
+```
+
+The factor is reflection invariant and uniformly bounded in the vertical direction on fixed
+strips. Its two exponential branches translate the prime-side Gaussian to `log(n)-b` and
+`log(n)+b`. Lean pre-admission checks pass for reflection, `b` parity, `b=0`, both transform
+exponents, and absolute zero summability. The indivisible endpoint is the full two-parameter
+zero/pole/GammaR/von-Mangoldt formula plus exact specialization to the publicly closed `b=0`
+theorem. This supplies Gaussian translation probes for the Arias de Reyna distributional route;
+it does not assume density, temperedness, positivity, or RH.
+
+## Portfolio Update: R5 Symmetric Gaussian Translate Family Locally Complete
+
+Date: 2026-07-16
+
+`CAMPAIGN-20260716-R5-WEIL-SYMMETRIC-GAUSSIAN-FAMILY-01` reaches its fixed endpoint locally as
+`NEW_RELEVANT_LEAN_THEOREM`. The new module first extracts a generic selected-height rectangle
+limit for analytic reflection-symmetric weights whose xi-zero restriction is absolutely summable
+and whose selected top edge vanishes. It then proves those hypotheses for
+`exp(a(s-1/2)^2)cosh(b(s-1/2))`, evaluates the two exponential prime branches as Gaussian kernels
+centered at `log(n)=b` and `log(n)=-b`, transfers GammaR integrability through the bounded
+modulation, and computes the pole pair as `2*pi*exp(a/4)*cosh(b/2)`. The endpoint
+`symmetricGaussianXi_arithmetic_explicit_formula` and exact `b=0` reduction compile without
+placeholders.
+
+Standalone, target, TargetChecks, standard-only axiom, forbidden scan, diff, and 8,671-job full
+build gates pass. This closes one unconditional two-parameter probe-family subedge only. It does
+not prove Schwartz/Hermite density, temperedness of the prime/archimedean distribution, Weil
+positivity, or RH; `hard_gap_delta=0` for G6, G7, and RH. Public CI remains before closure.
+
 ## R1: Exact Baez-Duarte Gram And Projection Geometry
 
 - **Exact RH endpoint:** unconditional closure membership for the positive-natural kernel span.
