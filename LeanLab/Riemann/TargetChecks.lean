@@ -8,6 +8,7 @@ import LeanLab.Riemann.BurnolGram
 import LeanLab.Riemann.BurnolFiniteLowerBound
 import LeanLab.Riemann.BurnolFullLowerBound
 import LeanLab.Riemann.M2ProjectionNormAudit
+import LeanLab.Riemann.M2LadderFrequencyAudit
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -501,6 +502,12 @@ example :
     ¬ ∀ x : Fin 5 → ℝ,
       finFiveMaxNorm (Matrix.mulVec m2AuditWongPThree x) ≤ finFiveMaxNorm x :=
   not_m2AuditWongPThree_maxNorm_nonexpansive
+
+example :
+    ¬ min (Real.log 2) (Real.log 3) *
+        (m2AuditCarvillLadderDistance 0 2 3 0 : ℝ) ≤
+      |m2AuditCarvillLadderFrequency 0 2 3 0| :=
+  not_m2Audit_carvill_source_frequency_lower_bound
 
 example (hRH : RiemannHypothesis) {δ : ℝ}
     (hδ : 0 < δ) (hδ_top : δ ≤ 1 / 2) :

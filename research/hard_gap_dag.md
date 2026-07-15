@@ -285,3 +285,10 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   unconditional closure-membership frontier and M2/G3 status are unchanged. Implementation
   commit `b4894f0cb9903b5fa14c766e30bdb10c3bdeaeb4` passed public Lean Action CI run
   `29383306167`, build job `87251333374`.
+- Audit `AUDIT-20260715-M2-G3-02` tests the unconditional smoothed-ladder decay route in Carvill
+  arXiv `2510.18132`. Lean verifies that the source's admissible index pair `(0,2)` and `(3,0)` has
+  Manhattan distance `5` but satisfies the strict reverse of the proof's asserted frequency lower
+  bound, using the exact inequalities `2^3<3^2<2^4`. Result: `BRANCH_FALSIFIED`; the advertised
+  polynomial distance decay and finite-section consequences do not follow from that proof. This
+  does not disprove every possible Gram-decay theorem, admits no M2 successor, and leaves the
+  unconditional closure frontier and M2/G3 status unchanged.

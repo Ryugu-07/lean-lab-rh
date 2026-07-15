@@ -27,6 +27,7 @@ import LeanLab.Riemann.BurnolGram
 import LeanLab.Riemann.BurnolFiniteLowerBound
 import LeanLab.Riemann.BurnolFullLowerBound
 import LeanLab.Riemann.M2ProjectionNormAudit
+import LeanLab.Riemann.M2LadderFrequencyAudit
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.TargetChecks
 import LeanLab.Riemann.AxiomsAudit
