@@ -7,6 +7,7 @@ import LeanLab.Riemann.WeilConvolution
 import LeanLab.Riemann.WeilStripClass
 import LeanLab.Riemann.WeilExplicitIntegrand
 import LeanLab.Riemann.WeilZeroCutoff
+import LeanLab.Riemann.WeilGaussianHeight
 import LeanLab.Riemann.BaezDuarteZetaRatio
 import LeanLab.Riemann.BaezDuarteQTwo
 import LeanLab.Riemann.BurnolLowerBound
@@ -61,6 +62,7 @@ def checkedTargetNames : List Lean.Name :=
     ``IsWeilStripAdmissible.weilAutocorrelation,
     ``exists_weilExplicitIntegrand_eq_hadamardZeroSum,
     ``rectangleBoundaryIntegral_weighted_logDeriv_riemannXi_eq_finsum,
+    ``exists_gaussianXiZeroFreeHeight_tendsto_rightVerticalIntegral,
     ``liCoefficientCandidate_one_re_pos,
     ``fractionalPartKernel_memLp_two_unitInterval,
     ``fractionalPartKernelL2_mem_nymanBeurlingKernelSpan,
@@ -812,5 +814,21 @@ example {F : ℂ → ℂ} (hF : Differentiable ℂ F)
           else 0 :=
   rectangleBoundaryIntegral_weighted_logDeriv_riemannXi_eq_finsum
     hF hlr hbt hboundary
+
+example {a c : ℝ} (ha : 0 < a) (hc : 1 < c) :
+    ∃ T : ℕ → ℝ,
+      Filter.Tendsto T Filter.atTop Filter.atTop ∧
+      (∀ n : ℕ, ∀ p : RiemannXiDivisorZeroIndex,
+        ¬riemannXiZeroOnRectangleBoundary (1 - c) c (-T n) (T n) p) ∧
+      Filter.Tendsto
+        (fun n : ℕ =>
+          ∫ y : ℝ in -T n..T n,
+            riemannXiGaussianWeight a ((c : ℂ) + y * Complex.I) *
+              logDeriv riemannXi ((c : ℂ) + y * Complex.I))
+        Filter.atTop
+        (nhds ((Real.pi : ℂ) *
+          ∑' p : RiemannXiDivisorZeroIndex,
+            riemannXiGaussianWeight a (riemannXiDivisorZeroValue p))) :=
+  exists_gaussianXiZeroFreeHeight_tendsto_rightVerticalIntegral ha hc
 
 end LeanLab.Riemann

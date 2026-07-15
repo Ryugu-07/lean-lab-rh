@@ -10,6 +10,7 @@ import LeanLab.Riemann.WeilConvolution
 import LeanLab.Riemann.WeilStripClass
 import LeanLab.Riemann.WeilExplicitIntegrand
 import LeanLab.Riemann.WeilZeroCutoff
+import LeanLab.Riemann.WeilGaussianHeight
 import LeanLab.Riemann.AnalyticLogBranch
 import LeanLab.Riemann.ReciprocalZetaSubpower
 import LeanLab.Riemann.TruncatedPerron
@@ -246,6 +247,11 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.rectangleBoundaryIntegral_weighted_riemannXiLogDerivZeroTerm
 #print axioms LeanLab.Riemann.rectangleBoundaryIntegral_weighted_riemannXiZeroSum_eq_finsum
 #print axioms LeanLab.Riemann.rectangleBoundaryIntegral_weighted_logDeriv_riemannXi_eq_finsum
+#print axioms LeanLab.Riemann.summable_riemannXiGaussianWeight
+#print axioms LeanLab.Riemann.gaussianXiSelectedHeight_zeroFreeBoundary
+#print axioms LeanLab.Riemann.tendsto_gaussianXiTopHorizontalIntegral
+#print axioms LeanLab.Riemann.tendsto_gaussianXiRightVerticalIntegral
+#print axioms LeanLab.Riemann.exists_gaussianXiZeroFreeHeight_tendsto_rightVerticalIntegral
 #print axioms LeanLab.Riemann.integral_fractionalPartKernel_mul_le
 #print axioms LeanLab.Riemann.baezDuarteNormalizedKernel_diagonal_lower
 #print axioms LeanLab.Riemann.norm_inner_sparseGram_ne_le

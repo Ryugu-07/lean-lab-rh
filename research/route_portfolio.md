@@ -19,6 +19,41 @@ Mathlib.RiemannHypothesis ↔
 The routes differ only in how they might attack an unconditional edge leading to one side of this
 equivalence or to another exact RH criterion.
 
+## Selection Update: R5 Symmetric Gaussian Height Limit
+
+Date: 2026-07-16
+
+After the public closure of the R1 q=2 criterion, a fresh six-candidate audit rejects another
+q-weighted equivalence, unconditional exact approximants, Li-matrix operator repackaging, a
+self-adjoint compression without a spectral bridge, and the previously deferred generic
+`A_delta` height limit. Only one candidate has specific new evidence:
+
+```text
+G_a(s) = exp(a * (s - 1/2)^2),  a > 0.
+```
+
+This weight is entire, reflection invariant, and contributes `exp(-a*T^2)` uniformly on each
+fixed horizontal edge. Combined with the existing multiplicity-bearing reciprocal-square xi-zero
+sum, it should permit a polynomial near-zero count, quantitatively separated heights, a
+polynomial compensated-log-derivative bound, and hence vanishing horizontal integrals. Campaign
+`CAMPAIGN-20260716-R5-WEIL-GAUSSIAN-HEIGHT-LIMIT-01` preregisters the indivisible selected-height
+right-vertical integral limit to `pi` times the absolute Gaussian zero `tsum`.
+
+This is an unconditional fixed-test W1c1 theorem, not the generic explicit formula, positivity, or
+RH. Success has `hard_gap_delta=1` only for that fixed-test height-limit subedge and 0 for RH.
+Proof Attempt A begins with exact Gaussian norm/symmetry, absolute zero summability, and xi
+logarithmic-derivative reflection. The campaign may not close on those helpers alone.
+
+### Completion Update
+
+The fixed endpoint now compiles as
+`exists_gaussianXiZeroFreeHeight_tendsto_rightVerticalIntegral`. Reciprocal-square zero mass alone
+supplies the polynomial near/far boundary control, while exact Gaussian decay kills the selected
+horizontal integrals. Reflection and the finite rectangle theorem give the checked factor `pi`.
+The campaign closes locally as `BRIDGE_REDUCED`: one fixed-test W1c1 height-limit subedge is now
+complete, but generic class-E limits, prime/archimedean evaluation, regularization, positivity,
+and RH are unchanged. Public CI remains before immutable closure.
+
 ## R1: Exact Baez-Duarte Gram And Projection Geometry
 
 - **Exact RH endpoint:** unconditional closure membership for the positive-natural kernel span.

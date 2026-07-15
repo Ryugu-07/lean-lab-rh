@@ -10,6 +10,7 @@ import LeanLab.Riemann.WeilConvolution
 import LeanLab.Riemann.WeilStripClass
 import LeanLab.Riemann.WeilExplicitIntegrand
 import LeanLab.Riemann.WeilZeroCutoff
+import LeanLab.Riemann.WeilGaussianHeight
 import LeanLab.Riemann.NymanBeurling
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ReciprocalZetaSubpower
@@ -262,6 +263,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``rectangleBoundaryIntegral_weighted_logDeriv_riemannXi_eq_finsum
       status := .proven
       note := "Campaign CAMPAIGN-20260715-R5-WEIL-ZERO-CUTOFF-01 closes the unconditional finite-height W1c1 zero-side subedge. Genus-one compensation supplies local-uniform convergence on the complete boundary, and the divisor index retains analytic multiplicity. Height limits, prime-side contour decay, endpoint regularization, the complete explicit formula, W2 positivity, and RH remain open." },
+    { id := "T2.weil.gaussian-height-limit"
+      tier := .tier2
+      title := "Pass the symmetric Gaussian xi contour to infinite height"
+      statement :=
+        "For every a>0 and right line c>1, construct symmetric zero-free heights tending to infinity and prove that the Gaussian-weighted right-vertical xi logarithmic-derivative integrals tend to pi times the absolute multiplicity-bearing Gaussian sum over all xi zeros."
+      leanName := some ``exists_gaussianXiZeroFreeHeight_tendsto_rightVerticalIntegral
+      status := .proven
+      note := "Campaign CAMPAIGN-20260716-R5-WEIL-GAUSSIAN-HEIGHT-LIMIT-01 proves the fixed-test W1c1 height limit. Reciprocal-square Hadamard summability gives absolute Gaussian zero summability, a polynomial zero-count bound, and quantitatively separated zero-free heights; exp(-a*T^2) then absorbs the fourth-power horizontal log-derivative bound. This is unconditional and multiplicity-bearing, but it is not a generic test-class explicit formula, prime-side identity, positivity criterion, or RH." },
     { id := "T2.inventory.nyman.beurling"
       tier := .tier2
       title := "Inventory mathlib support for the Nyman-Beurling route"
