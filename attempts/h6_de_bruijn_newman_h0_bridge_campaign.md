@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260717-H6-H0-XI-BRIDGE-01`
 
 Mode: `LITERATURE`
 
-Status: `PUBLICLY_PREREGISTERED_IMPLEMENTATION_ACTIVE`
+Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
 
 ## Runtime record
 
@@ -18,8 +18,8 @@ Status: `PUBLICLY_PREREGISTERED_IMPLEMENTATION_ACTIVE`
 
 - `exact_mathematical_statement`: the source-defined time-zero cosine transform satisfies
   `H_0(z) = (1/8) * riemannXi((1+i*z)/2)` for every complex `z`.
-- `proposed_lean_statement`: `deBruijnNewmanH_zero` in
-  `research/h6_de_bruijn_newman_h0_bridge_prereg_20260717.md`.
+- `implemented_lean_statement`: `deBruijnNewmanH_zero_eq_riemannXi` in
+  `LeanLab/Riemann/DeBruijnNewman.lean`.
 - `relation_to_RH`: bridge; it changes no unconditional RH frontier.
 - `success_criterion`: complete identity, exact witness, standard-only axiom audit, full build, and
   public CI.
@@ -53,27 +53,56 @@ Status: `PUBLICLY_PREREGISTERED_IMPLEMENTATION_ACTIVE`
 - `route_infrastructure_delta`: 0
 - `engineering_delta`: 0
 
+## Implementation loop
+
+- Defined the source-normalized theta tail, derivative terms, `deBruijnNewmanPhiTerm`,
+  `deBruijnNewmanPhi`, and `deBruijnNewmanH` explicitly. The final theorem does not obtain the
+  identity by defining `H` in terms of xi.
+- Proved the termwise differential identity `F_n'' - F_n = 8 * Phi_n`, the derivative boundary
+  sum at zero, double-exponential summability and integrability, termwise integration by parts,
+  and the global theta-tail/Phi cosine-transform identity.
+- Split the self-dual theta Mellin integral at one, transformed its lower half by `x -> 1/x`,
+  changed variables by `x = exp (4*u)`, and converted the conjugate exponential pair on the
+  critical line to the complex cosine transform.
+- Compiled
+  `completedRiemannZeta₀_critical_line_eq_thetaTailIntegral`, then combined it with the global
+  integration-by-parts identity and the project's xi normalization to prove
+  `deBruijnNewmanH_zero_eq_riemannXi`.
+- The `z = 0`, factors-of-two/eight, xi reflection, and complex-cosine normalization checks are
+  all consequences of the same exact theorem rather than numerical tests.
+
 ## Mechanical audit
 
-- exact module compilation: pending implementation
-- `Targets.lean`: pending implementation
-- `TargetChecks.lean` exact witness: pending implementation
-- `AxiomsAudit.lean` and printed axioms: pending implementation
-- forbidden token/declaration/resource scan: pending implementation
-- witness audit: pending implementation
-- definition/source alignment: fixed in preregistration; proof pending
-- full `lake build`: pending implementation
+- exact module compilation: passed without diagnostics
+- `Targets.lean`: passed; `H6.debruijn-newman.h0-xi-bridge` is a proven target
+- `TargetChecks.lean` exact witness: passed for the completed-zeta integral and final H0-xi bridge
+- `AxiomsAudit.lean`: passed; all four new prints use only `propext`, `Classical.choice`, and
+  `Quot.sound`
+- forbidden token/declaration/resource scan: empty
+- witness audit: exact theorem witness compiled; no weakened wrapper is registered
+- definition/source alignment: explicit Polymath-normalized kernel and cosine transform compiled
+- full `lake build`: passed locally, 8,683 jobs
+- `git diff --check`: passed before documentation backfill and will be rerun before publication
 
 ## Result
 
-- `result_class`: pending
-- `assumption_frontier_after`: pending
-- `hard_gap_after`: pending
-- `OBS_node`: none yet
-- `theorem_names`: none yet
-- `failure_or_obstacle`: pending
-- `route_selection_decision`: H6-B selected
+- `result_class`: `KNOWN_THEOREM_FORMALIZED`
+- `assumption_frontier_after`: the source-defined `Phi` and `H_t` are now connected exactly to the
+  project xi at `t = 0`; later H6 work may use this compiled bridge as a premise
+- `hard_gap_after`: H6-H/H6-E (`Lambda <= 0` or all zeros of `H_0` real), W2/G7, M2/G3, and RH
+  remain open
+- `hard_gap_delta`: 0
+- `route_infrastructure_delta`: 1
+- `OBS_node`: none; the preregistered theta-Mellin conversion obstacle is closed
+- `theorem_names`: `integral_Ioi_deBruijnNewmanPhi_mul_cos`,
+  `mellin_hurwitzEvenFEPair_zero_critical_line`,
+  `completedRiemannZeta₀_critical_line_eq_thetaTailIntegral`,
+  `deBruijnNewmanH_zero_eq_thetaTailIntegral`, `deBruijnNewmanH_zero_eq_riemannXi`
+- `failure_or_obstacle`: no normalization mismatch; the next H6 obstruction is the heat-flow and
+  all-real-zero theory, not the H0-xi definition bridge
+- `route_selection_decision`: H6-B complete; fresh value-ranked route selection required after
+  public closure
 - `preregistration_commit`: `0eab341f1ad74b866fc942ccb9d89e77cbe51438`
 - `preregistration_CI`: public Lean Action run `29493974202`, build job `87606471329`, passed in
   `1m55s` (`2026-07-16T11:19:01Z` to `2026-07-16T11:20:56Z`)
-- `commit_and_CI`: preregistration public; implementation pending
+- `commit_and_CI`: preregistration public; implementation commit and public CI pending

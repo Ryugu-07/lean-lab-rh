@@ -2,6 +2,7 @@ import LeanLab.Basic
 import LeanLab.HelloProof
 import LeanLab.Riemann.Basic
 import LeanLab.Riemann.LiScaffold
+import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula

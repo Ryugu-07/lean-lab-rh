@@ -1062,4 +1062,15 @@ example (F : Finset ℂ)
   riemannHypothesis_iff_compactWeilArithmeticQuadratic_re_nonneg
     F hFzero hzero hone
 
+example (z : ℂ) :
+    completedRiemannZeta₀ ((1 + Complex.I * z) / 2) =
+      8 * ∫ u : ℝ in Set.Ioi 0,
+        (deBruijnNewmanThetaTail u : ℂ) * Complex.cos (z * (u : ℂ)) :=
+  completedRiemannZeta₀_critical_line_eq_thetaTailIntegral z
+
+example (z : ℂ) :
+    deBruijnNewmanH 0 z =
+      (1 / 8) * riemannXi ((1 + Complex.I * z) / 2) :=
+  deBruijnNewmanH_zero_eq_riemannXi z
+
 end LeanLab.Riemann

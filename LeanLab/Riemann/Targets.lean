@@ -1,4 +1,5 @@
 import LeanLab.Riemann.LiScaffold
+import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula
@@ -772,14 +773,22 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``RiemannHypothesis.baezDuarteNaturalDistance_liminf_ge_fullZeroSum
       status := .proven
       note := "Audit G4-01 fixed source dependencies F0-F5, and batches G4-F0 through G4-F5 are publicly complete. The final theorem uses the full extended nonnegative zero sum, needs no summability or countability premise, and proves the exact RH-conditional natural-distance liminf endpoint. Implementation commit 9edf524877c7fcfd2112d50095eb021f3da12b0a passed public CI run 29352792330. This is known mathematics and a quantitative obstruction, not M2/G3 or unconditional RH progress." },
-    { id := "T3.rh.horizon"
-      tier := .tier3
-      title := "Riemann Hypothesis horizon"
+    { id := "H6.debruijn-newman.h0-xi-bridge"
+      tier := .tier2
+      title := "Identify the source-normalized de Bruijn-Newman H0 with Riemann xi"
       statement :=
-        "Keep mathlib's RiemannHypothesis as the long-run horizon, not as a direct loop target."
+        "For the explicit de Bruijn-Newman kernel Phi and transform H, prove H_0(z) = (1/8) * riemannXi((1 + i*z)/2) for every complex z."
+      leanName := some ``deBruijnNewmanH_zero_eq_riemannXi
+      status := .proven
+      note := "Campaign CAMPAIGN-20260717-H6-H0-XI-BRIDGE-01 closed the theta-Mellin/Poisson, change-of-variables, summation, and integration-by-parts chain with no proof placeholders." },
+    { id := "T3.rh.goal"
+      tier := .tier3
+      title := "Riemann Hypothesis"
+      statement :=
+        "Prove or disprove mathlib's RiemannHypothesis without adding nonstandard axioms."
       leanName := some ``riemannHypothesis_iff_nontrivial_zeros_on_line
-      status := .parked
-      note := "Useful for orientation, but not an admissible immediate loop target." } ]
+      status := .inProgress
+      note := "RH is the active project goal under V4.1 and may be attacked directly or through any valuable unresolved dependency." } ]
 
 /-- Targets that still require work before they can be considered discharged. -/
 def openRhTargets : List ResearchTarget :=

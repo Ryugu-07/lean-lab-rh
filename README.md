@@ -25,6 +25,11 @@ The compact criterion uses the project's arithmetic-side sign convention. Its pr
 compact explicit formula and a reverse separator argument; it does not establish the still-open
 unconditional arithmetic positivity statement.
 
+The source-normalized de Bruijn-Newman gateway also compiles:
+[`deBruijnNewmanH_zero_eq_riemannXi`](LeanLab/Riemann/DeBruijnNewman.lean) proves
+`H_0(z) = (1/8) * riemannXi((1+i*z)/2)` from an explicit theta kernel and Mellin-transform chain.
+This is a normalization bridge, not an all-real-zero theorem; `Lambda <= 0` remains open.
+
 These are formalizations of known equivalence mechanisms, not a solution of RH. A bounded
 [novelty and exposure audit](research/exposure_novelty_audit_20260716.md) records the literature
 mapping and the repositories searched. No first-formalization priority claim is made.

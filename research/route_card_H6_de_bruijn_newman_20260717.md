@@ -65,11 +65,11 @@ de Bruijn monotonicity, threshold existence/closedness, and certified complex no
 
 `forall z : C, H 0 z = (1/8) * riemannXi ((1 + I*z)/2)`.
 
-**Proposed Lean statement.** The definition-alignment campaign must first compare the project's
-`riemannXi` normalization term by term:
+**Compiled Lean statement.** The definition-alignment campaign compares the project's `riemannXi`
+normalization term by term:
 
 ```lean
-theorem deBruijnNewmanH_zero (z : Complex) :
+theorem deBruijnNewmanH_zero_eq_riemannXi (z : Complex) :
     deBruijnNewmanH 0 z =
       (1 / 8 : Complex) * riemannXi ((1 + Complex.I * z) / 2)
 ```
@@ -80,8 +80,14 @@ it is necessary before any H6 theorem can touch the project RH target.
 **Adversarial tests.** Evaluate `z = 0`, check all factors of two and eight, compare the project's
 xi at `s` and `1-s`, and verify the complex cosine/Fourier convention.
 
-**Verdict:** `SHORTLIST_CANDIDATE`. This is the highest-value bounded formalization candidate in
-Batch A.
+**Implementation result.** `LeanLab/Riemann/DeBruijnNewman.lean` explicitly defines the source
+theta kernel and heat family, proves the double-exponential convergence and integration-by-parts
+chain, transforms mathlib's self-dual theta Mellin representation by `x = exp (4*u)`, and compiles
+the exact identity above. TargetCheck witnesses and the transitive axiom audit pass with only
+`propext`, `Classical.choice`, and `Quot.sound`.
+
+**Verdict:** `COMPLETE`, classified `KNOWN_THEOREM_FORMALIZED`. This closes the H6/M0 bridge with
+`hard_gap_delta=0`; it does not prove any new zero statement.
 
 ## Candidate H6-Q: improve the upper bound to one fifth
 
@@ -143,5 +149,6 @@ source normalization and analytic hypotheses.
 
 ## Recommendation
 
-`FORMALIZE` H6-B as a source-aligned infrastructure campaign, then reassess the heat equation and
-H6-X. Keep H6-Q as a later `PROOF-ATTEMPT`; it is not the immediate next target.
+H6-B is complete. Return to fresh value-ranked route selection, with the backward heat equation,
+the analytic all-real-zero framework, and H6-X now eligible for reassessment. Keep H6-Q as a later
+`PROOF-ATTEMPT`; the H0-xi bridge alone supplies no evidence for its global zero certificate.

@@ -1,4 +1,5 @@
 import LeanLab.Riemann.BalazardSaias
+import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula
@@ -344,3 +345,7 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.inner_baezDuarteKernelL2_sparseTargetWitnessRealL2_eq_zero
 #print axioms LeanLab.Riemann.inner_target_sparseTargetWitness
 #print axioms LeanLab.Riemann.baezDuarteComplexTargetL2_not_mem_sparseGramKernelClosure
+#print axioms LeanLab.Riemann.mellin_hurwitzEvenFEPair_zero_critical_line
+#print axioms LeanLab.Riemann.completedRiemannZeta₀_critical_line_eq_thetaTailIntegral
+#print axioms LeanLab.Riemann.integral_Ioi_deBruijnNewmanPhi_mul_cos
+#print axioms LeanLab.Riemann.deBruijnNewmanH_zero_eq_riemannXi

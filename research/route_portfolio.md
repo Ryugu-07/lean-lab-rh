@@ -1277,3 +1277,19 @@ Local closure verification compiles Targets, exact TargetChecks, and the complet
 all printed dependencies remain standard-only. Forbidden scans and `git diff --check` are clean,
 and the full 8,682-job build succeeds. Exposure engineering is complete apart from the human-owned
 P2 publication action; route selection may proceed in parallel under V4.1.
+
+## Local Completion Update: H6 Time-Zero Xi Bridge
+
+Date: 2026-07-17
+
+Campaign `CAMPAIGN-20260717-H6-H0-XI-BRIDGE-01` reaches its exact indivisible endpoint as
+`deBruijnNewmanH_zero_eq_riemannXi`. The new source module explicitly defines the Polymath theta
+kernel and heat family, proves the required super-exponential convergence and integration by
+parts, converts the self-dual theta Mellin integral by `x=exp(4*u)`, and derives
+`H_0(z)=(1/8)*riemannXi((1+i*z)/2)` without a tautological definition.
+
+The exact module, Targets, TargetChecks, four standard-only axiom prints, empty forbidden scans,
+and the full 8,683-job build pass locally. Classification is `KNOWN_THEOREM_FORMALIZED`, with
+`hard_gap_delta=0` and `route_infrastructure_delta=1`. H6-H/H6-E, including the heat-flow zero
+framework and `Lambda <= 0`, remain open together with W2/G7, M2/G3, and RH. Implementation
+commit and public CI evidence are pending.
