@@ -180,3 +180,18 @@ source normalization and analytic hypotheses.
 H6-B and H6-H1 are complete. Return to fresh value-ranked route selection before choosing the
 all-real-zero/threshold framework or H6-X. Keep H6-Q as a later `PROOF-ATTEMPT`; the H0-xi bridge
 and heat equation alone supply no evidence for its global zero certificate.
+
+## Candidate H6-Y: reverse-heat Li transfer audit
+
+**Exact falsification target.** Test whether the heat PDE, reflection symmetry, nonvanishing at
+`s=1`, and critical-line zeros at a later time generically force Li positivity at an earlier time.
+The fixed polynomial candidate is
+
+`F_t(s)=(s-1/2)^2-1/16+t/2`.
+
+It is predicted to satisfy all those structural clauses, while its generalized second Li value is
+`-64/9` at time zero and `448/121` at time one. This would leave the fixed-time H6-X criterion
+intact but prove that a backward transfer needs theta-kernel-specific information.
+
+**Verdict:** `SELECTED` as `AUDIT-20260717-H6-REVERSE-HEAT-LI-01`; no clause is a premise before
+the exact Lean countermodel compiles.

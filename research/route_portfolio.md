@@ -1435,3 +1435,20 @@ reciprocal-pairing circle corollary. No curve point-count theorem or number-fiel
 and uniform-tail bridge was proved: `hard_gap_delta=0`, while `route_infrastructure_delta=1`.
 H6-E/G8, W2/G7, M2/G3, and RH remain open. The persistent Goal returns to fresh independent route
 selection; no successor campaign is selected here.
+
+## Selection Update: H6 Reverse-Heat Li Transfer Falsification
+
+Date: 2026-07-17
+
+Fresh selection compares direct W2 global cancellation, M2 target coupling, H6-Q, generic H6
+backward propagation, H1/H2 count bridges, and another criterion formalization. Existing W2 and
+M2 obstruction records leave no concrete new identity or approximant to test in this loop; H6-Q
+requires a global certified zero computation; the count bridges and another equivalence have
+lower immediate value.
+
+Audit `AUDIT-20260717-H6-REVERSE-HEAT-LI-01` therefore selects an exact finite countermodel test.
+The polynomial `F_t(s)=(s-1/2)^2-1/16+t/2` should satisfy the forward heat PDE, reflection
+symmetry, entire-ness, and nonvanishing at `s=1` for every real `t>=0`. Every zero at time one
+should lie on the critical line, but time zero has the explicit off-line zero `3/4`; the exact
+generalized second Li values should be `448/121` and `-64/9`. Success eliminates only the generic
+backward-transfer mechanism and creates an H6 obstruction node with `hard_gap_delta=0`.
