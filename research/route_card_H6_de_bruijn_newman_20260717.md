@@ -401,7 +401,7 @@ Implementation commit `ce65db1c0379a4accfef579c9e8c08995662dc19` passed public L
 run `29534356022`, build job `87741989620`, in `2m36s`. The first spine is public; H6-E/G8 and RH
 remain open.
 
-**Local trajectory and collision-frontier result.** Loop 2 applies the product-domain real
+**Public trajectory and collision-frontier result.** Loop 2 applies the product-domain real
 implicit-function theorem to the joint source derivative. Every simple real zero extends to a
 locally unique differentiable zero path; conjugation and uniqueness force local real-valuedness,
 and two distinct anchors remain locally ordered.
@@ -413,7 +413,9 @@ proves the residual divisor sum absolutely convergent, and verifies
 
 For real anchored paths this yields `(gap^2)'=8+4*gap*Re(pairRemainder)`. The constant `8` is the
 exact mutual pair interaction. The standalone module, exact Targets/TargetChecks, standard-only
-axiom audit, forbidden scans, `git diff --check`, and the 8,691-job build pass locally.
+axiom audit, forbidden scans, `git diff --check`, and the 8,691-job build pass. Implementation
+commit `03ce2ac2ee68b7d9a6d48d56aed37ab40836c30d` passed public Lean Action CI run
+`29536815968`, build job `87750004173`, in `1m54s`.
 
 **Next attack.** H6-E is unchanged. The required new content is global continuation over the
 unbounded zero set and a theta-specific integrated upper control on the displayed derivative

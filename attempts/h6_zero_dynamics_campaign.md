@@ -116,6 +116,8 @@ Public preregistration passed. Exact architecture and adversarial checks are in
 - full `lake build`: loop 2 passes with 8,691 jobs; warnings replayed only from pre-existing files.
 - public implementation CI: commit `ce65db1c0379a4accfef579c9e8c08995662dc19` passed Lean
   Action run `29534356022`, build job `87741989620`, in `2m36s`.
+- public loop-2 implementation CI: commit `03ce2ac2ee68b7d9a6d48d56aed37ab40836c30d`
+  passed Lean Action run `29536815968`, build job `87750004173`, in `1m54s`.
 
 ## Runtime record
 
@@ -127,12 +129,14 @@ Public preregistration passed. Exact architecture and adversarial checks are in
 - `commit_and_CI`: preregistration commit `4405d60c2a33444f8ae43f2406631cc80faff356`;
   public Lean Action CI run `29532612360`, build job `87736257748`, passed in `2m29s`.
   Implementation commit `ce65db1c0379a4accfef579c9e8c08995662dc19` passed public run
-  `29534356022`, build job `87741989620`, in `2m36s`.
+  `29534356022`, build job `87741989620`, in `2m36s`. Loop-2 implementation commit
+  `03ce2ac2ee68b7d9a6d48d56aed37ab40836c30d` passed public run `29536815968`, build job
+  `87750004173`, in `1m54s`.
 
 ## Result
 
-- `result_class`: active direct proof attempt; known local zero-dynamics interface formalized
-  locally through pair-removed squared-gap evolution.
+- `result_class`: active direct proof attempt; known local zero-dynamics interface is publicly
+  formalized through pair-removed squared-gap evolution.
 - `assumption_frontier_after`: exact summable divisor force, simple-zero derivative ratio, joint
   time-space Frechet derivative, locally unique real simple-zero paths, local ordering, and the
   exact pair-removed squared-gap law.

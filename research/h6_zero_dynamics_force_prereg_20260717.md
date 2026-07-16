@@ -233,3 +233,10 @@ The next mathematical attack is no longer local path construction. It is a theta
 height-aware integrated control of the pair-removed remainder strong enough to continue all
 relevant real zero pairs from the good time `1/2` to time `0`, together with treatment of the
 first possible repeated zero. No fixed positive height-uniform gap premise is admitted.
+
+## Public loop-2 implementation gate
+
+Implementation commit `03ce2ac2ee68b7d9a6d48d56aed37ab40836c30d` passed public Lean Action CI
+run `29536815968`, build job `87750004173`, in `1m54s`. Local real path construction, pair
+ordering, the pair-removed force decomposition, squared-gap evolution, exact Targets/TargetChecks,
+and the standard-only axiom audit are now public and may be used by the next attack loop.

@@ -1664,7 +1664,7 @@ The first spine is now public with `hard_gap_delta=0` and `route_infrastructure_
 `PROOF-ATTEMPT-20260717-H6-ZERO-DYNAMICS-01` remains active at local real trajectory construction;
 collision exclusion, H6-E/G8, and RH remain open.
 
-## Local Loop-2 Update: H6 Zero Trajectories And Pair Remainder
+## Public Loop-2 Update: H6 Zero Trajectories And Pair Remainder
 
 Date: 2026-07-17
 
@@ -1682,6 +1682,9 @@ Consequently `(gap^2)'=8+4*gap*Re(pairRemainder)` for real anchored local paths.
 eleven campaign TargetChecks, twelve standard-only campaign axiom prints, empty forbidden scans,
 `git diff --check`, and the full 8,691-job build pass. This remains route infrastructure with
 `hard_gap_delta=0` and campaign-level `route_infrastructure_delta=1`.
+
+Implementation commit `03ce2ac2ee68b7d9a6d48d56aed37ab40836c30d` passed public Lean Action CI
+run `29536815968`, build job `87750004173`, in `1m54s`.
 
 The next proof loop must attack global height-aware continuation and a theta-specific integrated
 bound on the pair remainder through time zero. Local IFT does not handle the first repeated zero,
