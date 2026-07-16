@@ -3,6 +3,7 @@ import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
 import LeanLab.Riemann.DeBruijnNewmanForward
+import LeanLab.Riemann.DeBruijnNewmanUpperHalf
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiSymmetricZeroFormula
@@ -1135,6 +1136,14 @@ example {t tau : ℝ} (htt : t ≤ tau)
     (ht : deBruijnNewmanAllZerosReal t) :
     deBruijnNewmanAllZerosReal tau :=
   deBruijnNewmanAllZerosReal_mono htt ht
+
+example {t : ℝ} (ht0 : 0 ≤ t) (hthalf : t ≤ (1 : ℝ) / 2)
+    {z : ℂ} (hz : deBruijnNewmanH t z = 0) :
+    z.im ^ 2 ≤ 1 - 2 * t :=
+  deBruijnNewmanH_zero_im_sq_le_one_sub_two_mul ht0 hthalf hz
+
+example : deBruijnNewmanAllZerosReal ((1 : ℝ) / 2) :=
+  deBruijnNewmanAllZerosReal_one_half
 
 example {ι : Type*} [Fintype ι] (alpha : ι → ℂ)
     {R C : ℝ} (hR : 0 < R) (hC : 0 ≤ C)

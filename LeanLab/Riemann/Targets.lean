@@ -4,6 +4,7 @@ import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
 import LeanLab.Riemann.DeBruijnNewmanForward
+import LeanLab.Riemann.DeBruijnNewmanUpperHalf
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiZeroDivisor
@@ -819,6 +820,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanAllZerosReal_mono
       status := .proven
       note := "Campaign CAMPAIGN-20260717-H6-FORWARD-PRESERVATION-01 proves the exact source-normalized two-time implication through order-one Hadamard factorization, de Bruijn vertical-shift averages, scaled cosh heat multipliers, dominated compact-uniform convergence, and Jensen zero persistence. This closes forward preservation only; threshold nonemptiness, H6-E/G8, W2/G7, M2/G3, and RH remain open." },
+    { id := "H6.debruijn-newman.upper-half"
+      tier := .tier2
+      title := "Prove de Bruijn's half-time upper bound"
+      statement :=
+        "For every 0 <= t <= 1/2, prove every zero of the exact source-normalized H_t satisfies Im(z)^2 <= 1-2*t, and deduce unconditionally that every zero of H_(1/2) is real."
+      leanName := some ``deBruijnNewmanAllZerosReal_one_half
+      status := .proven
+      note := "Campaign CAMPAIGN-20260717-H6-UPPER-HALF-01 reconstructs de Bruijn's strip contraction through conjugation-preserving multiplicities, paired genus-one factors, finite vertical-average iteration, and Jensen zero persistence. This proves threshold nonemptiness and Lambda <= 1/2 only; H6-E/G8, W2/G7, M2/G3, and RH remain open." },
     { id := "H6.audit.reverse-heat-li-transfer"
       tier := .tier2
       title := "Falsify generic reverse-heat Li transfer"

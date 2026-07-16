@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `H6_UPPER_HALF_SELECTED_PREREGISTRATION_CI_PENDING`
+Status: `H6_UPPER_HALF_LOCAL_IMPLEMENTATION_VERIFIED_PUBLIC_CI_PENDING`
 
 ## Endpoint and normalization
 
@@ -275,7 +275,19 @@ epsilon-width, conditional, simple-zero, and numerical-surrogate endpoints.
 `h6_upper_half_prereg_20260717.md`. Public preregistration CI is required before Lean proof-source
 edits.
 
-**Verdict:** `PREREGISTRATION_LOCAL_READY_PUBLIC_CI_PENDING`.
+Preregistration commit `502864b4a84740600c80a4864f3a3e3deb331c46` passed public Lean Action CI
+run `29528426983`, build job `87722558836`, in `1m50s`.
+
+**Implementation result.** `DeBruijnNewmanUpperHalf.lean` compiles the full fixed proposition and
+the half-time endpoint. The proof registers conjugation-preserving analytic multiplicity, a
+multiplicity-aware divisor involution, paired genus-one factor comparison, one-step strip
+contraction, the finite `1-n*a^2` invariant, and isolating-ball Jensen persistence. Targets,
+TargetChecks, standard-only axiom audit, forbidden scans, `git diff --check`, and the 8,690-job
+full build pass locally.
+
+**Verdict:** `LOCAL_COMPLETE` as `KNOWN_THEOREM_FORMALIZED`; public implementation and evidence
+CI remain. Threshold nonemptiness and `Lambda<=1/2` are closed locally. H6-E/G8, W2/G7, M2/G3,
+and RH remain open.
 
 ## Candidate H6-Q: improve the upper bound to one fifth
 
@@ -337,10 +349,10 @@ source normalization and analytic hypotheses.
 
 ## Recommendation
 
-H6-B, H6-H1, H6-H2a, H6-H2b, and H6-H2c are publicly complete. Execute the selected H6-H2d
-strip-contraction campaign through its public preregistration gate. This establishes the first
-nonempty good time before any threshold packaging. Keep H6-Q as a later `PROOF-ATTEMPT` and keep
-direct H6-E/G8, W2/G7, and M2/G3 attacks open.
+H6-B, H6-H1, H6-H2a, H6-H2b, and H6-H2c are publicly complete; H6-H2d is locally complete and
+awaits public implementation/evidence CI. After closure, return to fresh value-ranked route
+selection. Keep H6-Q as a later `PROOF-ATTEMPT` and keep direct H6-E/G8, W2/G7, and M2/G3 attacks
+open.
 
 ## Candidate H6-Y: reverse-heat Li transfer audit
 

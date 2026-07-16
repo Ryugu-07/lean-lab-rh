@@ -440,7 +440,7 @@ private theorem norm_weierstrassFactor_one_sub_I_lt_add_I
     norm_mul, norm_mul, hexp]
   exact mul_lt_mul_of_pos_right hnorm (norm_pos_iff.mpr (Complex.exp_ne_zero _))
 
-private theorem norm_tprod_lt_norm_tprod_of_pointwise
+theorem norm_tprod_lt_norm_tprod_of_pointwise
     {ι : Type*} {f g : ι → ℂ} (hf : Multipliable f) (hg : Multipliable g)
     (hle : ∀ i, ‖f i‖ ≤ ‖g i‖) {i₀ : ι} (hlt : ‖f i₀‖ < ‖g i₀‖)
     (hg0 : ∏' i, g i ≠ 0) :
@@ -610,7 +610,7 @@ theorem deBruijnNewman_verticalAverage_allZerosReal
     · exact hz
     · exact (deBruijnNewman_verticalAverage_ne_zero_of_im_pos ht ha hz havg).elim
 
-private theorem deriv_zero_of_even
+theorem deriv_zero_of_even
     {F : ℂ → ℂ} (hF : Differentiable ℂ F) (heven : ∀ z, F (-z) = F z) :
     deriv F 0 = 0 := by
   have hfun : (fun z : ℂ ↦ F (-z)) = F := funext heven
@@ -673,7 +673,7 @@ private theorem logDeriv_eq_polynomial_derivative_add_tsum
           Complex.Hadamard.logDeriv_divisorCanonicalProduct_one_eq_tsum_of_forall_ne
             hsum hz]
 
-private theorem exists_constant_hadamard_factorization
+theorem exists_constant_hadamard_factorization
     {F : ℂ → ℂ} (horder : Complex.Hadamard.EntireOfOrderAtMost (1 : ℝ) F)
     (hzero : F 0 ≠ 0) (hderiv : deriv F 0 = 0) :
     ∃ b : ℂ, ∀ z : ℂ, F z = Complex.exp b *
@@ -864,10 +864,10 @@ private theorem verticalAverage_allZerosReal
     · exact hz
     · exact (hupper hz havg).elim
 
-private def verticalAverage (a : ℝ) (F : ℂ → ℂ) (z : ℂ) : ℂ :=
+def verticalAverage (a : ℝ) (F : ℂ → ℂ) (z : ℂ) : ℂ :=
   (F (z + I * (a : ℂ)) + F (z - I * (a : ℂ))) / 2
 
-private theorem entireOfOrderAtMost_verticalAverage
+theorem entireOfOrderAtMost_verticalAverage
     {F : ℂ → ℂ} (horder : Complex.Hadamard.EntireOfOrderAtMost (1 : ℝ) F)
     (a : ℝ) :
     Complex.Hadamard.EntireOfOrderAtMost (1 : ℝ) (verticalAverage a F) := by
@@ -904,7 +904,7 @@ private theorem entireOfOrderAtMost_verticalAverage
         gcongr
       _ = Real.exp ((Cp + Cm) * R) := by ring
 
-private theorem verticalAverage_even
+theorem verticalAverage_even
     {F : ℂ → ℂ} (heven : ∀ z : ℂ, F (-z) = F z) (a : ℝ) :
     ∀ z : ℂ, verticalAverage a F (-z) = verticalAverage a F z := by
   intro z
@@ -949,7 +949,7 @@ private theorem VerticalAverageAdmissible.verticalAverage
   intro z hz
   exact verticalAverage_allZerosReal hF.order_one hF.even hF.zero_ne hF.zeros_real ha z hz
 
-private def verticalAverageIterate (a : ℝ) : ℕ → (ℂ → ℂ) → (ℂ → ℂ)
+def verticalAverageIterate (a : ℝ) : ℕ → (ℂ → ℂ) → (ℂ → ℂ)
   | 0, F => F
   | n + 1, F => verticalAverage a (verticalAverageIterate a n F)
 
@@ -973,11 +973,11 @@ private theorem cos_add_I_average (z : ℂ) (a u : ℝ) :
   push_cast
   ring
 
-private def dbnCoshIntegrand (t a : ℝ) (n : ℕ) (z : ℂ) (u : ℝ) : ℂ :=
+def dbnCoshIntegrand (t a : ℝ) (n : ℕ) (z : ℂ) (u : ℝ) : ℂ :=
   (((Real.exp (t * u ^ 2) * deBruijnNewmanPhi u : ℝ) : ℂ) *
     Complex.cos (z * (u : ℂ))) * (Real.cosh (a * u) ^ n : ℝ)
 
-private theorem integrableOn_dbn_cosh_pow_integrand
+theorem integrableOn_dbn_cosh_pow_integrand
     (t a : ℝ) (n : ℕ) (z : ℂ) :
     IntegrableOn (dbnCoshIntegrand t a n z) (Ioi 0) := by
   change IntegrableOn
@@ -1041,10 +1041,10 @@ private theorem integrableOn_dbn_cosh_pow_integrand
               ‖deBruijnNewmanPhi u‖) := by gcongr
           _ = _ := by ring
 
-private def dbnCoshApprox (t a : ℝ) (n : ℕ) (z : ℂ) : ℂ :=
+def dbnCoshApprox (t a : ℝ) (n : ℕ) (z : ℂ) : ℂ :=
   ∫ u in Ioi (0 : ℝ), dbnCoshIntegrand t a n z u
 
-private theorem dbnCoshApprox_zero (t a : ℝ) :
+theorem dbnCoshApprox_zero (t a : ℝ) :
     dbnCoshApprox t a 0 = deBruijnNewmanH t := by
   funext z
   rw [dbnCoshApprox, deBruijnNewmanH]
@@ -1077,7 +1077,7 @@ private theorem dbnCoshIntegrand_average
     _ = A * C * (c0 * ch) := by rw [htrig]
     _ = A * c0 * (C * ch) := by ring
 
-private theorem verticalAverage_dbnCoshApprox
+theorem verticalAverage_dbnCoshApprox
     (t a : ℝ) (n : ℕ) (z : ℂ) :
     verticalAverage a (dbnCoshApprox t a n) z = dbnCoshApprox t a (n + 1) z := by
   have hp := integrableOn_dbn_cosh_pow_integrand t a n (z + I * (a : ℂ))
@@ -1093,7 +1093,7 @@ private theorem verticalAverage_dbnCoshApprox
   filter_upwards with u
   exact dbnCoshIntegrand_average t a n z u
 
-private theorem verticalAverageIterate_deBruijnNewmanH
+theorem verticalAverageIterate_deBruijnNewmanH
     (t a : ℝ) (n : ℕ) :
     verticalAverageIterate a n (deBruijnNewmanH t) = dbnCoshApprox t a n := by
   induction n with
@@ -1197,7 +1197,7 @@ private theorem tendsto_cosh_sqrt_pow_exp
   rw [hfun] at hmain
   exact hmain
 
-private def dbnForwardApprox (t δ : ℝ) (n : ℕ) : ℂ → ℂ :=
+def dbnForwardApprox (t δ : ℝ) (n : ℕ) : ℂ → ℂ :=
   dbnCoshApprox t (Real.sqrt (2 * δ / (n : ℝ))) n
 
 private theorem cosh_sqrt_pow_le_exp
@@ -1244,7 +1244,7 @@ private theorem dbnForwardApprox_zeros_real
     ∀ z : ℂ, dbnForwardApprox t δ n z = 0 → z.im = 0 :=
   (dbnForwardApprox_admissible ht δ n).zeros_real
 
-private def dbnForwardError (t δ B : ℝ) (n : ℕ) (u : ℝ) : ℝ :=
+def dbnForwardError (t δ B : ℝ) (n : ℕ) (u : ℝ) : ℝ :=
   Real.exp (t * u ^ 2) * ‖deBruijnNewmanPhi u‖ *
     |Real.cosh (Real.sqrt (2 * δ / (n : ℝ)) * u) ^ n -
       Real.exp (δ * u ^ 2)| * Real.exp (B * u)
@@ -1333,7 +1333,7 @@ private theorem integrableOn_dbnForwardError
     filter_upwards with u hu
     exact norm_dbnForwardError_le t hδ B n hu.le
 
-private theorem tendsto_integral_dbnForwardError
+theorem tendsto_integral_dbnForwardError
     (t : ℝ) {δ : ℝ} (hδ : 0 ≤ δ) (B : ℝ) :
     Tendsto (fun n : ℕ ↦ ∫ u in Ioi (0 : ℝ), dbnForwardError t δ B n u)
       atTop (𝓝 0) := by
@@ -1373,7 +1373,7 @@ private theorem tendsto_integral_dbnForwardError
   have hmain := tendsto_integral_filter_of_dominated_convergence bound hmeas hdom hbound hlim
   simpa using hmain
 
-private theorem norm_dbnForwardApprox_sub_le_errorIntegral
+theorem norm_dbnForwardApprox_sub_le_errorIntegral
     (t : ℝ) {δ : ℝ} (hδ : 0 ≤ δ) {B : ℝ} {z : ℂ} (hzB : ‖z‖ ≤ B)
     (n : ℕ) :
     ‖dbnForwardApprox t δ n z - deBruijnNewmanH (t + δ) z‖ ≤

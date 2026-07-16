@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260717-H6-UPPER-HALF-01`
 
 Mode: `LITERATURE`
 
-Status: `PREREGISTRATION_LOCAL_READY_PUBLIC_CI_PENDING`
+Status: `LOCAL_IMPLEMENTATION_VERIFIED_PUBLIC_IMPLEMENTATION_CI_PENDING`
 
 ## Runtime record
 
@@ -69,7 +69,38 @@ Status: `PREREGISTRATION_LOCAL_READY_PUBLIC_CI_PENDING`
 
 ## Current decision
 
-- `route_selection_decision`: publicly preregister the fixed quantitative strip endpoint before
-  any Lean proof-source edit.
-- `campaign_status`: local preregistration ready; public preregistration CI pending; persistent RH
-  Goal remains active.
+- `public_preregistration`: commit `502864b4a84740600c80a4864f3a3e3deb331c46`, Lean Action CI
+  run `29528426983`, build job `87722558836`, passed in `1m50s`.
+- `route_selection_decision`: begin the fixed implementation with conjugation multiplicity and
+  paired-factor contraction, without weakening either endpoint.
+- `campaign_status`: public preregistration verified; implementation active; persistent RH Goal
+  remains active.
+
+## Implementation loops
+
+| Loop | State | Compiler-checked result | Decision |
+| --- | --- | --- | --- |
+| 1 | `CONJUGATION_MULTIPLICITY` | Proved source conjugation symmetry, iterated-derivative symmetry, equality of analytic zero orders under conjugation, and a multiplicity-bearing divisor involution. | Continue to the fixed paired-factor obstruction. |
+| 2 | `PAIRED_FACTOR_ALGEBRA` | Proved strict lower/upper shift comparison for the product of the genus-one factors at `r` and `conj(r)`. The numerator difference is `8*a*Im(z)*((Re(r)-Re(z))^2+Im(z)^2+a^2-Im(r)^2)`; exponential norms cancel. | Lift from one pair to the full divisor product. |
+| 3 | `INFINITE_PRODUCT_PAIRING` | Initial concrete-equivalence reindexing exceeded deterministic heartbeats because the dependent divisor equivalence unfolded repeatedly. Factoring the argument into `norm_tprod_lt_norm_tprod_of_equiv_pairing` made the equivalence opaque and compiled under default limits. | Retain the generic helper; no resource relaxation. |
+| 4 | `ONE_STEP_STRIP` | Proved `verticalAverage_zero_im_sq_le`, including empty divisors, real fixed roots, nonzero upper product, and both half-planes. | Establish every finite-stage nonvanishing premise independently. |
+| 5 | `FINITE_ITERATION` | Proved strict positivity of `dbnCoshApprox t a n 0`, then order-one, evenness, conjugation, and the invariant `Im(z)^2 <= 1-n*a^2`. For `a=sqrt(2*t/n)` this becomes exactly `1-2*t` for every `n>0`. | Transfer the closed strip to the heat limit. |
+| 6 | `LIMIT_PERSISTENCE` | Built an isolating closed ball wholly outside the contracted strip and reused compact-uniform error control plus Jensen's circle mean to force a late approximant zero in that ball. | Contradict the finite-stage strip and close both endpoints. |
+| 7 | `INDEPENDENT_LOCAL_AUDIT` | Exact module, Targets, TargetChecks, eight standard-only axiom prints, empty forbidden/resource scans, `git diff --check`, and the 8,690-job full build pass. | Publish implementation and require public CI. |
+
+## Local result
+
+- `exact_endpoint`: `deBruijnNewmanH_zero_im_sq_le_one_sub_two_mul` compiles for the full fixed
+  interval and exact width `1-2*t`; `deBruijnNewmanAllZerosReal_one_half` compiles unconditionally.
+- `axiom_status`: every registered witness and endpoint prints exactly `propext`,
+  `Classical.choice`, and `Quot.sound`.
+- `sorry_or_unchecked_declaration_used`: no.
+- `assumption_frontier_after`: the exact good-time set is compiled as nonempty, with witness
+  `t=1/2`; combined with H6-H2b/H2c it contains the closed upper ray from that witness.
+- `hard_gap_after`: H6-E/G8 (`Lambda<=0`), W2/G7, M2/G3, and RH remain open.
+- `hard_gap_delta`: 0.
+- `route_infrastructure_delta`: 1.
+- `classification`: `KNOWN_THEOREM_FORMALIZED`; this reconstructs de Bruijn's classical theorem
+  and makes no originality claim.
+- `next_gate`: implementation commit and public Lean Action CI, then immutable evidence backfill
+  and closure CI. The persistent RH Goal remains active throughout.

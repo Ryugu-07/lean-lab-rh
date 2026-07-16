@@ -6,7 +6,7 @@ Campaign: `CAMPAIGN-20260717-H6-UPPER-HALF-01`
 
 Mode: `LITERATURE`
 
-Status: `PREREGISTRATION_LOCAL_READY_PUBLIC_CI_PENDING`
+Status: `LOCAL_IMPLEMENTATION_VERIFIED_PUBLIC_IMPLEMENTATION_CI_PENDING`
 
 ## Route selection
 
@@ -187,4 +187,26 @@ No Lean proof source may be edited before this preregistration passes public Lea
 
 ## Public preregistration gate
 
-Pending. Record the immutable commit, run, build job, and duration before proof-source edits.
+Preregistration commit `502864b4a84740600c80a4864f3a3e3deb331c46` passed public Lean Action CI
+run `29528426983`, build job `87722558836`, in `1m50s`. Lean proof-source edits may begin from
+this fixed endpoint and architecture.
+
+## Local implementation gate
+
+`LeanLab/Riemann/DeBruijnNewmanUpperHalf.lean` compiles both fixed endpoints without weakening:
+
+- `deBruijnNewmanH_zero_im_sq_le_one_sub_two_mul` proves the full quadratic strip on
+  `0 <= t <= 1/2`;
+- `deBruijnNewmanAllZerosReal_one_half` proves the unconditional half-time good witness.
+
+The registered witnesses cover conjugation-preserving analytic multiplicity, paired genus-one
+factor comparison, one-step vertical-average strip contraction, finite `cosh` iteration, and
+Jensen limit persistence. Targets, both exact TargetChecks, and eight selected axiom prints pass;
+all selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`. Placeholder,
+custom-declaration, native-decision, and resource-relaxation scans are empty, `git diff --check`
+passes, and the full 8,690-job build succeeds.
+
+Local classification is `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`. Threshold nonemptiness and the classical `Lambda <= 1/2` bound
+are now compiled locally. This does not prove `Lambda <= 0`, H6-E/G8, or RH. Public implementation
+CI and evidence-backfill CI remain required before campaign closure.

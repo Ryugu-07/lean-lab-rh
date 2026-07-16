@@ -1583,3 +1583,23 @@ nonvanishing, isolated zeros, and Jensen persistence. `hard_gap_delta=0` and
 `route_infrastructure_delta=1`; forward preservation, threshold nonemptiness/upper-ray structure,
 H6-E/G8, W2/G7, M2/G3, and RH remain open. The persistent Goal returns to fresh value-ranked
 route selection after closure CI; no successor campaign is selected here.
+
+## Local Completion Update: H6 de Bruijn Upper-Half Bound
+
+Date: 2026-07-17
+
+Campaign `CAMPAIGN-20260717-H6-UPPER-HALF-01` reaches both fixed endpoints locally.
+`DeBruijnNewmanUpperHalf.lean` proves every zero of `H_t` satisfies
+`Im(z)^2<=1-2*t` for `0<=t<=1/2`, and proves unconditionally that every zero of `H_(1/2)` is real.
+
+The mechanism preserves analytic zero multiplicity under conjugation, pairs genus-one factors on
+the multiplicity-bearing divisor, contracts squared strip width by `a^2` under one vertical
+average, iterates to the exact finite width, and transfers zeros through compact-uniform
+convergence using an isolating ball and Jensen's logarithmic circle mean. The exact module,
+Targets, TargetChecks, eight standard-only axiom prints, empty forbidden/resource scans,
+`git diff --check`, and the 8,690-job full build pass.
+
+Classification is `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`. This closes threshold nonemptiness and supplies the classical
+bound `Lambda<=1/2`; it does not prove H6-E/G8 (`Lambda<=0`) or RH. Public implementation CI and
+evidence-backfill CI remain before campaign closure.
