@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260717-H6-HEAT-EQUATION-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Runtime record
 
@@ -113,7 +113,10 @@ Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
 - `preregistration_commit`: `ee6d08a108255d336e3b1c46166a753da48c06df`
 - `preregistration_CI`: public Lean Action run `29501372019`, build job `87630848802`, passed in
   `1m58s`
-- `implementation_commit`: pending
-- `implementation_CI`: pending
-- `commit_and_CI`: preregistration is public; implementation publication, independent CI, evidence
-  backfill, and closure remain
+- `implementation_commit`: `cc62a398160c5865861de0d667b3683ac57694b1`
+- `implementation_CI`: public Lean Action run `29504396806`, build job `87641274871`, passed in
+  `2m9s` (`2026-07-16T13:57:03Z` to `2026-07-16T13:59:12Z`)
+- `evidence_commit`: pending
+- `evidence_CI`: pending
+- `commit_and_CI`: preregistration and implementation are public and independently built; immutable
+  evidence backfill and closure remain

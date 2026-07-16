@@ -1352,4 +1352,6 @@ The new module is diagnostic-free. Targets, five exact TargetChecks, five standa
 prints, all forbidden scans, `git diff --check`, and the full 8,684-job build pass locally.
 Classification is `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
 `route_infrastructure_delta=1`. H6-H2's all-real-zero/threshold theory, H6-E/G8, W2/G7, M2/G3,
-and RH remain open. Public implementation CI and immutable evidence backfill are still required.
+and RH remain open. Implementation commit `cc62a398160c5865861de0d667b3683ac57694b1` passed public
+Lean Action CI run `29504396806`, build job `87641274871`, in `2m9s`. Immutable evidence backfill
+and its own public CI are still required.
