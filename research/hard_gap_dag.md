@@ -69,6 +69,7 @@ flowchart TD
 | G6 | W1 | open | Prove the complete source-faithful Weil explicit formula and convolution-stable admissible test space, without dropping moment, density, convergence, or regularization conditions. |
 | G7 | W2 | open | Supply an unconditional positivity mechanism on the full Weil class. The compiled finite Gaussian arithmetic family is exactly RH-equivalent; this sharper criterion still does not provide its unconditional sign and therefore does not reduce G7. |
 | G8 | H6-E | open | Prove `Lambda <= 0`, equivalently all zeros of the compiled source-normalized `H_0` are real. H6-B removes only the normalization dependency. |
+| OBS-H6-REVERSE-HEAT-LI-01 | H6-H/H6-E | complete obstruction | An exact degree-two heat-Xi polynomial has reflection symmetry, the forward heat PDE, nonvanishing at `s=1` for every nonnegative real time, and all time-one zeros on the critical line, yet its time-zero second Li value is `-64/9` and it has an off-line zero. Generic backward Li transfer is false; theta-specific structure is required. |
 
 ## W1 Fixed Source Frontier
 

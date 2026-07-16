@@ -6,7 +6,7 @@ Campaign: `AUDIT-20260717-H6-REVERSE-HEAT-LI-01`
 
 Mode: `FALSIFICATION`
 
-Status: `LOCAL_PREREGISTERED_PUBLIC_CI_PENDING`
+Status: `PUBLIC_PREREGISTRATION_COMPLETE_LOCAL_COUNTERMODEL_COMPILED`
 
 ## Route selection
 
@@ -128,3 +128,14 @@ project countermodel, not a novelty or priority claim.
   is refuted and the exact failure is recorded. Do not continue into a generic polynomial library.
 
 No Lean proof source has been edited in this campaign before this preregistration.
+
+## Registered implementation result
+
+Preregistration commit `215ebcf661a421350d30920ec5aee43518d89559` passed public Lean Action CI run
+`29508598381`, build job `87655833650`, in `1m30s`, before proof-source edits.
+
+`H6ReverseHeatLiAudit.lean` now compiles every registered clause without changing the polynomial,
+Li convention, time values, or constants. The aggregate theorem is
+`h6AuditHeatXiQuadratic_falsifies_reverseLiTransfer`. Local exact witness, standard-only axiom,
+forbidden scan, diff, and 8,686-job full-build gates pass. Implementation publication remains
+pending.

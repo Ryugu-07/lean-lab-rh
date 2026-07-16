@@ -4,7 +4,7 @@ Campaign: `AUDIT-20260717-H6-REVERSE-HEAT-LI-01`
 
 Mode: `FALSIFICATION`
 
-Status: `LOCAL_PREREGISTERED_PUBLIC_CI_PENDING`
+Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
 
 ## Runtime record
 
@@ -44,30 +44,69 @@ Status: `LOCAL_PREREGISTERED_PUBLIC_CI_PENDING`
 - Targeted primary-source search confirmed the canonical one-way heat-flow setting and found no
   source claim matching the generic backward Li transfer.
 - Fixed the polynomial and both rational Li values before any Lean proof source edit.
-- `result`: `LOCAL_PREREGISTRATION_COMPLETE`
+- Preregistration commit `215ebcf661a421350d30920ec5aee43518d89559` passed public Lean Action CI run
+  `29508598381`, build job `87655833650`, in `1m30s`.
+- `result`: `PUBLIC_PREREGISTRATION_COMPLETE`
 - `rh_frontier_delta`: 0
 - `route_infrastructure_delta`: 0
 - `engineering_delta`: 0
 
+## Lean falsification loop
+
+- Added `H6ReverseHeatLiAudit.lean` with the exact registered polynomial and the generalized
+  second Li expression `2*logDeriv(f)(1)+(logDeriv(f))'(1)`.
+- Proved complex differentiability in both variables and the exact heat equation
+  `partial_t F=(1/4)*partial_s^2 F`; proved reflection by polynomial identity.
+- Proved `F_t(1)!=0` for every real `t>=0`, retaining the base-point hypothesis throughout the
+  time interval rather than exploiting a logarithmic-derivative pole.
+- For an arbitrary complex zero of `F_1`, separated real and imaginary parts. The imaginary
+  equation gives `(Re(s)-1/2)*Im(s)=0`; the real equation rules out `Im(s)=0`, forcing
+  `Re(s)=1/2`. This is an all-zero theorem, not a finite root listing.
+- Lean verifies `F_0(3/4)=0` and that `3/4` is off the critical line.
+- Derived the logarithmic-derivative quotient and its derivative at `1`, obtaining the exact
+  second Li values `-64/9` at time zero and `448/121` at time one.
+- Registered one aggregate theorem containing every clause in Targets and TargetChecks.
+- `result`: `BRANCH_FALSIFIED`
+- `rh_frontier_delta`: 0
+- `route_infrastructure_delta`: 0
+- `engineering_delta`: 1
+
 ## Mechanical audit
 
-- preregistration diff check: pending
-- public preregistration commit and CI: pending
-- exact module compilation: pending implementation
-- `Targets.lean`: pending implementation
-- `TargetChecks.lean`: pending implementation
-- `AxiomsAudit.lean`: pending implementation
-- forbidden token/declaration/resource scan: pending implementation
-- full `lake build`: pending implementation
+- preregistration diff check: passed before publication
+- public preregistration commit and CI: passed at commit
+  `215ebcf661a421350d30920ec5aee43518d89559`, run `29508598381`, job `87655833650`
+- exact module compilation: diagnostic-free
+- `Targets.lean`: exact obstruction target compiles as proven
+- `TargetChecks.lean`: exact aggregate witness compiles
+- `AxiomsAudit.lean`: all-zero theorem, both exact Li values, and aggregate theorem each use only
+  `propext`, `Classical.choice`, and `Quot.sound`
+- forbidden token/declaration/resource scan: empty
+- witness audit: all time-one zeros are quantified; the time-zero off-line witness is exact
+- definition alignment: the second Li expression matches the project's compiled
+  `liCoefficientCandidate_one_eq_two_logDeriv_add_deriv_logDeriv` convention
+- full `lake build`: passed locally, 8,686 jobs
+- `git diff --check`: pending after documentation backfill
+- implementation public CI: pending
 
 ## Result
 
-- `result_class`: pending
-- `assumption_frontier_after`: pending
-- `hard_gap_after`: pending
-- `hard_gap_delta`: pending
-- `OBS_node`: proposed `OBS-H6-REVERSE-HEAT-LI-01`
-- `theorem_names`: pending
-- `failure_or_obstacle`: pending
-- `route_selection_decision`: H6 reverse-heat Li transfer falsification selected
-- `commit_and_CI`: pending
+- `result_class`: `BRANCH_FALSIFIED`
+- `assumption_frontier_after`: generic complex heat PDE, reflection, entire-ness, nonvanishing at
+  the Li base point for all nonnegative real times, and later critical-line zeros do not imply
+  earlier Li positivity
+- `hard_gap_after`: H6-E/G8, W2/G7, M2/G3, and RH remain open
+- `hard_gap_delta`: 0
+- `OBS_node`: `OBS-H6-REVERSE-HEAT-LI-01`, locally compiled
+- `theorem_names`: `h6AuditHeatXiQuadratic_heatEquation`,
+  `h6AuditHeatXiQuadratic_one_allZerosOnCriticalLine`,
+  `h6AuditHeatXiQuadratic_zero_offLine_witness`, `h6AuditSecondLiValue_zero`,
+  `h6AuditSecondLiValue_one`, `h6AuditHeatXiQuadratic_falsifies_reverseLiTransfer`
+- `failure_or_obstacle`: a successful reverse-time proof for the actual H6 family must use
+  theta-kernel-specific estimates, infinite zero dynamics, or another premise absent from this
+  countermodel; structural heat and Li data alone are insufficient
+- `route_selection_decision`: publish and close the obstruction, then return to fresh value-ranked
+  route selection; do not generalize the polynomial library
+- `preregistration_commit_and_CI`: commit `215ebcf661a421350d30920ec5aee43518d89559`,
+  run `29508598381`, job `87655833650`, passed in `1m30s`
+- `implementation_commit_and_CI`: pending

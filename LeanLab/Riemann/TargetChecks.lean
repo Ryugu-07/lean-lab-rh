@@ -1,6 +1,7 @@
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.FinitePowerSumRigidity
+import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
 import LeanLab.Riemann.LiWeilGram
@@ -1112,5 +1113,18 @@ example {ι : Type*} [Fintype ι] (alpha : ι → ℂ) (sigma : Equiv.Perm ι)
       ‖finiteComplexPowerSum alpha n‖ ≤ C * Real.sqrt q ^ n) :
     ∀ i, ‖alpha i‖ = Real.sqrt q :=
   norm_eq_sqrt_of_powerSum_bound_and_reciprocal alpha sigma hq hC hpair hbound
+
+example :
+    (∀ s : ℂ, Differentiable ℂ (fun t : ℂ ↦ h6AuditHeatXiQuadratic t s)) ∧
+    (∀ t : ℂ, Differentiable ℂ (h6AuditHeatXiQuadratic t)) ∧
+    (∀ t s : ℂ, h6AuditHeatXiQuadratic t (1 - s) = h6AuditHeatXiQuadratic t s) ∧
+    (∀ t s : ℂ, deriv (fun u : ℂ ↦ h6AuditHeatXiQuadratic u s) t =
+      (1 / 4) * deriv (deriv (h6AuditHeatXiQuadratic t)) s) ∧
+    (∀ t : ℝ, 0 ≤ t → h6AuditHeatXiQuadratic t 1 ≠ 0) ∧
+    (∀ s : ℂ, h6AuditHeatXiQuadratic 1 s = 0 → OnCriticalLine s) ∧
+    (h6AuditHeatXiQuadratic 0 (3 / 4) = 0 ∧ ¬ OnCriticalLine (3 / 4 : ℂ)) ∧
+    h6AuditSecondLiValue (h6AuditHeatXiQuadratic 0) = -64 / 9 ∧
+    h6AuditSecondLiValue (h6AuditHeatXiQuadratic 1) = 448 / 121 :=
+  h6AuditHeatXiQuadratic_falsifies_reverseLiTransfer
 
 end LeanLab.Riemann

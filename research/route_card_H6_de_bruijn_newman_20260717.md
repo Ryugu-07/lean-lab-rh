@@ -193,5 +193,9 @@ It is predicted to satisfy all those structural clauses, while its generalized s
 `-64/9` at time zero and `448/121` at time one. This would leave the fixed-time H6-X criterion
 intact but prove that a backward transfer needs theta-kernel-specific information.
 
-**Verdict:** `SELECTED` as `AUDIT-20260717-H6-REVERSE-HEAT-LI-01`; no clause is a premise before
-the exact Lean countermodel compiles.
+**Implementation result.** Every registered clause compiles in `H6ReverseHeatLiAudit.lean`,
+including the all-zero theorem and the exact `logDeriv`-based Li values. The base point stays
+nonzero for all real `t>=0`, so the sign reversal is not caused by crossing a Li singularity.
+
+**Verdict:** `BRANCH_FALSIFIED` as `OBS-H6-REVERSE-HEAT-LI-01`, with `hard_gap_delta=0`. The
+actual theta-kernel family, fixed-time H6-X criterion, H6-E/G8, and RH are unchanged.

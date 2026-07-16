@@ -1452,3 +1452,21 @@ symmetry, entire-ness, and nonvanishing at `s=1` for every real `t>=0`. Every ze
 should lie on the critical line, but time zero has the explicit off-line zero `3/4`; the exact
 generalized second Li values should be `448/121` and `-64/9`. Success eliminates only the generic
 backward-transfer mechanism and creates an H6 obstruction node with `hard_gap_delta=0`.
+
+## Local Completion Update: H6 Reverse-Heat Li Transfer Falsification
+
+Date: 2026-07-17
+
+The exact countermodel compiles in `H6ReverseHeatLiAudit.lean`. Lean proves both-variable
+entire-ness, reflection, the forward heat PDE, and nonvanishing at `s=1` for all real `t>=0`. A
+real/imaginary-part argument proves every time-one zero has real part `1/2`, while `3/4` is an
+explicit time-zero off-line zero. Under the project's `logDeriv` convention, the generalized
+second Li value is exactly `-64/9` at time zero and `448/121` at time one.
+
+The module is diagnostic-free. The exact aggregate TargetCheck, four standard-only axiom prints,
+empty forbidden scans, and the 8,686-job full build pass locally. Classification is
+`BRANCH_FALSIFIED`; `OBS-H6-REVERSE-HEAT-LI-01` records that generic heat, symmetry,
+base-point nonvanishing, and later real-rootedness cannot transfer Li positivity backward.
+`hard_gap_delta=0`: actual theta-kernel zero dynamics, H6-E/G8, W2/G7, M2/G3, and RH remain open.
+Preregistration commit `215ebcf661a421350d30920ec5aee43518d89559` passed public CI run
+`29508598381`, job `87655833650`, in `1m30s`; implementation publication remains pending.

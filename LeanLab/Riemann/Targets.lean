@@ -2,6 +2,7 @@ import LeanLab.Riemann.LiScaffold
 import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.FinitePowerSumRigidity
+import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula
@@ -791,6 +792,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanH_backward_heat_equation
       status := .proven
       note := "Campaign CAMPAIGN-20260717-H6-HEAT-EQUATION-01 proves the source-normalized all-real-time analytic evolution using an explicit double-exponential majorant. This closes the heat-evolution subedge only. The all-real-zero framework, Lambda <= 0, and RH remain open." },
+    { id := "H6.audit.reverse-heat-li-transfer"
+      tier := .tier2
+      title := "Falsify generic reverse-heat Li transfer"
+      statement :=
+        "Construct an entire reflection-symmetric polynomial heat family, nonzero at the Li base point for all nonnegative real times, whose time-one zeros all lie on the critical line but whose time-zero second Li value is negative."
+      leanName := some ``h6AuditHeatXiQuadratic_falsifies_reverseLiTransfer
+      status := .proven
+      note := "Audit AUDIT-20260717-H6-REVERSE-HEAT-LI-01 gives a degree-two exact countermodel. It eliminates only a generic backward-transfer mechanism; the actual de Bruijn-Newman theta family, H6-E/G8, and RH remain open." },
     { id := "H10.function-field.finite-spectral-rigidity"
       tier := .tier2
       title := "Formalize finite power-sum spectral rigidity"
