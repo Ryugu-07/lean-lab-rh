@@ -6,7 +6,7 @@ Campaign: `DISCOVERY-20260717-H6-HEAT-LI-MOMENTS-01`
 
 Mode: `DISCOVERY`
 
-Status: `PREREGISTERED_PUBLIC_CI_PENDING`
+Status: `LOCAL_VERIFIED_PUBLIC_IMPLEMENTATION_CI_PENDING`
 
 ## Exact source definitions
 
@@ -110,3 +110,17 @@ attempt, not a novelty claim.
   `ROUTE_SELECTION`. No result here closes H6-E or the global Goal.
 
 No Lean proof source may be edited before this preregistration passes public Lean Action CI.
+
+## Gate and local result
+
+Preregistration commit `05b2b57e392ab53c0aeb9488cd7e31d28f9ff8f0` passed public Lean Action CI
+run `29539585856`, build job `87758769100`, before proof-source edits.
+
+`DeBruijnNewmanLiMoments.lean` now compiles the complete fixed endpoint as
+`deBruijnNewmanHeat_firstTwoLi_endpoint`, together with exact reflection, time-zero xi alignment,
+and the Xi-coordinate heat equation with coefficient `1/4`. The exact Cauchy-Schwarz witness is
+`deBruijnNewmanHeatLiMomentB_sq_le_mul`; it is derived by square completion under the positive
+theta weight, not assumed through a generic inequality wrapper. Targets, exact TargetChecks, seven
+selected standard-only axiom prints, forbidden scans, `git diff --check`, and the 8,693-job full
+build pass locally. Classification is `DISCOVERY_FORMALIZED`, with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`. Public implementation CI is pending.

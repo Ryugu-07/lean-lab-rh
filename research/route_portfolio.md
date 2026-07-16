@@ -1727,3 +1727,24 @@ the first two Li moment identities for all real times, a weighted Cauchy-Schwarz
 strict positivity. Finite Li positivity has `hard_gap_delta=0`; the purpose is to test a
 theta-specific hierarchy that could either expose a scalable mechanism or fail at a precise
 moment inequality. Preregistration public CI precedes all Lean proof edits.
+
+## Local Completion Update: H6 Heat-Li Positive Moments
+
+Date: 2026-07-17
+
+Preregistration commit `05b2b57e392ab53c0aeb9488cd7e31d28f9ff8f0` passed public Lean Action CI
+run `29539585856`, build job `87758769100`, before proof-source edits. The fixed endpoint now
+compiles in `DeBruijnNewmanLiMoments.lean` for every real heat time.
+
+Lean proves `F_t(1-s)=F_t(s)`, `F_0=riemannXi`,
+`partial_t F=(1/4)*partial_s^2 F`, `F_t(1)=8A`, `F_t'(1)=16B`, `F_t''(1)=32C`, exact real-cast formulas for the first two
+Li differential expressions, and strict positivity of both. The core theta-specific inequality
+`B^2<=A*C` is proved from the positive weight
+`W=exp(t*u^2)*Phi(u)*cosh(u)`: square completion yields `B^2<=A*D` for
+`D=integral W*(u*tanh(u))^2`, while `tanh(u)^2<=1` gives `D<=C`.
+
+The standalone module, Targets, exact TargetChecks, seven standard-only axiom prints, empty
+forbidden/resource scans, `git diff --check`, and the 8,693-job full build pass. Classification is
+`DISCOVERY_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`. This finite
+endpoint does not imply all-index Li positivity; public implementation CI remains before evidence
+closure.

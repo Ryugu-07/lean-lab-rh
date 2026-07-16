@@ -6,6 +6,7 @@ import LeanLab.Riemann.DeBruijnNewmanThreshold
 import LeanLab.Riemann.DeBruijnNewmanForward
 import LeanLab.Riemann.DeBruijnNewmanUpperHalf
 import LeanLab.Riemann.DeBruijnNewmanDynamics
+import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6ReverseHeatLiAudit
@@ -409,3 +410,10 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.h6AuditSecondLiValue_zero
 #print axioms LeanLab.Riemann.h6AuditSecondLiValue_one
 #print axioms LeanLab.Riemann.h6AuditHeatXiQuadratic_falsifies_reverseLiTransfer
+#print axioms LeanLab.Riemann.deBruijnNewmanHeatXi_one_sub
+#print axioms LeanLab.Riemann.deBruijnNewmanHeatXi_zero_eq_riemannXi
+#print axioms LeanLab.Riemann.deBruijnNewmanHeatXi_heat_equation
+#print axioms LeanLab.Riemann.deBruijnNewmanHeatLiOne_eq
+#print axioms LeanLab.Riemann.deBruijnNewmanHeatLiMomentB_sq_le_mul
+#print axioms LeanLab.Riemann.deBruijnNewmanHeatLiTwo_eq
+#print axioms LeanLab.Riemann.deBruijnNewmanHeat_firstTwoLi_endpoint

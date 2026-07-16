@@ -453,3 +453,16 @@ polynomial countermodel does not satisfy.
 This is a finite diagnostic spine below H6-X, not RH progress. Extending positivity to all indices
 at `t=0` is RH-equivalent and is neither assumed nor inferred. Exact preregistration is in
 `h6_heat_li_moments_prereg_20260717.md`; public preregistration CI is required before proof edits.
+
+**Local implementation result.** Preregistration commit
+`05b2b57e392ab53c0aeb9488cd7e31d28f9ff8f0` passed public Lean Action CI run `29539585856`, build
+job `87758769100`, before source edits. `DeBruijnNewmanLiMoments.lean` now compiles the complete
+endpoint for every real `t`. It also checks `F_t(1-s)=F_t(s)`, `F_0=riemannXi`, and
+`partial_t F=(1/4)*partial_s^2 F`. The proof establishes all three moment integrability/strictness
+claims, the exact factors `8,16,32`, both `logDeriv` formulas, and `B^2<=A*C` by integrating
+`W(A*u*tanh(u)-B)^2` and bounding the resulting tanh second moment by `C`.
+
+Targets, the definition-alignment and complete conjunction TargetChecks, seven selected axiom prints, forbidden scans,
+`git diff --check`, and the 8,693-job full build pass locally. Every audited theorem uses only
+`propext`, `Classical.choice`, and `Quot.sound`. Classification is `DISCOVERY_FORMALIZED`, with
+`hard_gap_delta=0` and `route_infrastructure_delta=1`; public implementation CI is pending.

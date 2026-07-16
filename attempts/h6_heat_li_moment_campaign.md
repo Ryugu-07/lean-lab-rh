@@ -2,7 +2,7 @@
 
 Campaign: `DISCOVERY-20260717-H6-HEAT-LI-MOMENTS-01`
 
-Status: `PREREGISTERED_PUBLIC_CI_PENDING`
+Status: `LOCAL_VERIFIED_PUBLIC_IMPLEMENTATION_CI_PENDING`
 
 ## Target
 
@@ -47,13 +47,26 @@ Status: `PREREGISTERED_PUBLIC_CI_PENDING`
 
 ## Attempt log
 
-Preregistration prepared. No Lean proof source has been edited.
+| Loop | State | Compiler-checked result | Decision |
+| --- | --- | --- | --- |
+| 0 | `PREREGISTRATION_GATE` | Preregistration commit `05b2b57e392ab53c0aeb9488cd7e31d28f9ff8f0` passed public Lean Action CI run `29539585856`, build job `87758769100`, from `2026-07-16T22:27:21Z` to `22:28:49Z`. | Open the fixed proof surface. |
+| 1 | `MOMENT_INTEGRABILITY` | Defined the exact heat-Xi coordinate and moments `A/B/C`. Reused the complex heat integrability for `A/C`; dominated `B` by `A+C` using `sinh(u)<=cosh(u)` on the positive half-line. Proved all three moments strictly positive. | Continue to exact derivative normalization. |
+| 2 | `DEFINITION_AND_DERIVATIVE_NORMALIZATION` | Proved the exact reflection `F_t(1-s)=F_t(s)`, time-zero identity `F_0=riemannXi`, Xi-coordinate heat equation `partial_t F=(1/4)*partial_s^2 F`, `H_t(-i)=A`, `H_t'(-i)=iB`, and the registered second moment equals `C`; the chain rule compiles `F_t(1)=8A`, `F_t'(1)=16B`, `F_t''(1)=32C`. | Admit definition alignment and derive logarithmic derivatives. |
+| 3 | `LOG_DERIV_FORMULAS` | Proved `heatLiOne=2B/A` and `heatLiTwo=4*(A*B+A*C-B^2)/A^2`, carrying the compiled `A!=0` witness through both quotient derivatives. | Continue to the theta-specific inequality. |
+| 4 | `WEIGHTED_CAUCHY_SCHWARZ` | With `W=exp(t*u^2)*Phi(u)*cosh(u)` and `X=u*tanh(u)`, defined `D=integral W*X^2`, proved `D<=C`, and expanded the nonnegative integral `integral W*(A*X-B)^2` to obtain `B^2<=A*D<=A*C`. | The fixed analytic obstacle is closed. |
+| 5 | `FIXED_ENDPOINT` | Proved both Li quantities have zero imaginary part and strictly positive real part for every real `t`. Bundled every preregistered clause in `deBruijnNewmanHeat_firstTwoLi_endpoint`. | Run all local output gates. |
+| 6 | `INDEPENDENT_LOCAL_AUDIT` | Standalone module, Targets, exact TargetChecks, seven selected axiom prints, placeholder/declaration/resource scans, and `git diff --check` pass. Every selected theorem uses only `propext`, `Classical.choice`, and `Quot.sound`; the full build passes with 8,693 jobs. | Publish the implementation and require exact public CI before evidence closure. |
 
 ## Accounting
 
 - `assumption_frontier_before`: exact source `Phi>0`, all-time heat integrability, entire spatial
   family, two spatial derivatives, backward heat PDE, and generic log-derivative algebra.
 - `hard_gap_before`: H6-E/G8, W2/G7, M2/G3, and RH are open.
+- `assumption_frontier_after`: no new mathematical premise. The new reusable edge is the exact
+  positive theta-moment representation and first-two all-real-time positivity.
+- `hard_gap_delta`: 0. Finite first-two positivity does not imply the all-index Li criterion.
+- `route_infrastructure_delta`: 1.
+- `classification`: `DISCOVERY_FORMALIZED`; no novelty claim is made.
 - `hard_gap_delta_expected`: 0.
 - `route_infrastructure_delta_expected`: 1 only for the complete fixed endpoint.
 - `nearest_project_attempt`: `OBS-H6-REVERSE-HEAT-LI-01` rejects generic backward Li transfer;
@@ -64,5 +77,9 @@ Preregistration prepared. No Lean proof source has been edited.
 - `model`: GPT-5 Codex (exact exposed runtime model identifier unavailable).
 - `reasoning_effort`: not exposed.
 - `budget`: no token budget.
-- `compaction_state`: no new compaction detected after the public adjacent-gap evidence gate.
-- `commit_and_CI`: pending preregistration publication.
+- `compaction_state`: the implementation continuation began from a compacted thread summary;
+  canonical files, clean git state, fixed endpoint, and the preregistration gate were rechecked
+  before source edits.
+- `preregistration_commit_and_CI`: commit `05b2b57e392ab53c0aeb9488cd7e31d28f9ff8f0`,
+  run `29539585856`, job `87758769100`, success.
+- `implementation_commit_and_CI`: pending publication.

@@ -5,6 +5,7 @@ import LeanLab.Riemann.DeBruijnNewmanThreshold
 import LeanLab.Riemann.DeBruijnNewmanForward
 import LeanLab.Riemann.DeBruijnNewmanUpperHalf
 import LeanLab.Riemann.DeBruijnNewmanDynamics
+import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6ReverseHeatLiAudit
@@ -136,6 +137,7 @@ def checkedTargetNames : List Lean.Name :=
     ``nymanBeurlingRestrictedConcreteApprox_of_baezDuarte,
     ``RiemannHypothesis.baezDuarteNaturalDistance_liminf_ge_fullZeroSum,
     ``deBruijnNewman_zeroCoordinate_framework,
+    ``deBruijnNewmanHeat_firstTwoLi_endpoint,
     ``riemannHypothesis_iff_nontrivial_zeros_on_line ]
 
 example :
@@ -1343,5 +1345,34 @@ example :
     h6AuditSecondLiValue (h6AuditHeatXiQuadratic 0) = -64 / 9 ∧
     h6AuditSecondLiValue (h6AuditHeatXiQuadratic 1) = 448 / 121 :=
   h6AuditHeatXiQuadratic_falsifies_reverseLiTransfer
+
+example (t : ℝ) (s : ℂ) :
+    deBruijnNewmanHeatXi t (1 - s) = deBruijnNewmanHeatXi t s :=
+  deBruijnNewmanHeatXi_one_sub t s
+
+example (s : ℂ) : deBruijnNewmanHeatXi 0 s = riemannXi s :=
+  deBruijnNewmanHeatXi_zero_eq_riemannXi s
+
+example (t : ℝ) (s : ℂ) :
+    deriv (fun tau : ℝ ↦ deBruijnNewmanHeatXi tau s) t =
+      (1 / 4 : ℂ) * deriv (deriv (deBruijnNewmanHeatXi t)) s :=
+  deBruijnNewmanHeatXi_heat_equation t s
+
+example (t : ℝ) :
+    deBruijnNewmanHeatXi t 1 ≠ 0 ∧
+    deBruijnNewmanHeatLiOne t =
+      ((2 * deBruijnNewmanHeatLiMomentB t / deBruijnNewmanHeatLiMomentA t : ℝ) : ℂ) ∧
+    0 < (deBruijnNewmanHeatLiOne t).re ∧
+    (deBruijnNewmanHeatLiOne t).im = 0 ∧
+    deBruijnNewmanHeatLiMomentB t ^ 2 ≤
+      deBruijnNewmanHeatLiMomentA t * deBruijnNewmanHeatLiMomentC t ∧
+    deBruijnNewmanHeatLiTwo t =
+      ((4 * (deBruijnNewmanHeatLiMomentA t * deBruijnNewmanHeatLiMomentB t +
+        deBruijnNewmanHeatLiMomentA t * deBruijnNewmanHeatLiMomentC t -
+        deBruijnNewmanHeatLiMomentB t ^ 2) /
+        deBruijnNewmanHeatLiMomentA t ^ 2 : ℝ) : ℂ) ∧
+    0 < (deBruijnNewmanHeatLiTwo t).re ∧
+    (deBruijnNewmanHeatLiTwo t).im = 0 :=
+  deBruijnNewmanHeat_firstTwoLi_endpoint t
 
 end LeanLab.Riemann

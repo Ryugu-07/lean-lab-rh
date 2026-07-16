@@ -6,6 +6,7 @@ import LeanLab.Riemann.DeBruijnNewmanThreshold
 import LeanLab.Riemann.DeBruijnNewmanForward
 import LeanLab.Riemann.DeBruijnNewmanUpperHalf
 import LeanLab.Riemann.DeBruijnNewmanDynamics
+import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6ReverseHeatLiAudit
@@ -862,6 +863,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``h6AuditHeatXiQuadratic_falsifies_reverseLiTransfer
       status := .proven
       note := "Audit AUDIT-20260717-H6-REVERSE-HEAT-LI-01 gives a degree-two exact countermodel. It eliminates only a generic backward-transfer mechanism; the actual de Bruijn-Newman theta family, H6-E/G8, and RH remain open." },
+    { id := "H6.debruijn-newman.heat-li-first-two"
+      tier := .tier2
+      title := "Prove the first two heat-family Li moment inequalities"
+      statement :=
+        "For every real heat time, identify the first two Li differential expressions of 8*H_t(-i*(2*s-1)) with explicit positive hyperbolic moments, prove the weighted Cauchy-Schwarz bound B(t)^2 <= A(t)*C(t), and deduce that both expressions are positive real numbers."
+      leanName := some ``deBruijnNewmanHeat_firstTwoLi_endpoint
+      status := .proven
+      note := "Campaign PROOF-ATTEMPT-20260717-H6-HEAT-LI-MOMENTS-01 proves the theta-specific all-real-time endpoint. The proof derives exact values F_t(1)=8A, F_t'(1)=16B, F_t''(1)=32C and proves B^2<=AC by integrating the nonnegative square W(A*u*tanh(u)-B)^2. This is a finite-index positive-kernel theorem and is strictly weaker than the all-index Li criterion equivalent to RH." },
     { id := "H10.function-field.finite-spectral-rigidity"
       tier := .tier2
       title := "Formalize finite power-sum spectral rigidity"
