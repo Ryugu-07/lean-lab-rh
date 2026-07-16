@@ -79,3 +79,10 @@ No Lean source was edited and no mathematical theorem is claimed.
 Next enter `ROUTE_SELECTION`. H6-B is the best bounded Batch A formalization candidate, but it must
 be compared with direct RH, W2/G7, and M2/G3 attacks. Batch B recommendation is the required H10
 Bombieri-Stepanov/function-field transfer-gap card.
+
+## Public evidence
+
+- Census/import commit: `28874d45a8e14858f6d473edb4b10d1e6d88527a`
+- Public Lean Action CI run: `29493531239`
+- Build job: `87605050960`
+- Result: success in `2m13s`
