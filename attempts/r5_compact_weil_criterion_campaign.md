@@ -88,3 +88,13 @@ Campaign: `CAMPAIGN-20260716-R5-COMPACT-WEIL-CRITERION-01`
 - `hard_gap_delta_if_public_ci_passes`: one source-level W1/G6 compact-criterion edge; zero for
   W2/G7 and RH
 - `next_state`: `PUBLIC_IMPLEMENTATION_GATE`
+
+## Loop 6: public implementation verification
+
+- Implementation commit `d590ee42e37366388800bafda04020a84eee8452` passed Lean Action CI run
+  `29487332091`, build job `87584836879`, in `1m53s`.
+- The independent public build includes the fixed iff endpoint, constrained separator, complete
+  off-line negative witness, Targets, TargetChecks, and transitive axiom audit.
+- `result`: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+- `hard_gap_delta`: one W1/G6 compact-criterion edge, pending immutable evidence-backfill CI
+- `next_state`: `PUBLIC_EVIDENCE_GATE`

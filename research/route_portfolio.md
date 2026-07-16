@@ -1224,3 +1224,13 @@ empty forbidden scans, `git diff --check`, and the full 8,682-job build pass loc
 is `KNOWN_THEOREM_FORMALIZED` with `hard_gap_delta=1` at the source-level W1/G6 compact criterion
 edge once implementation publication and independent public CI pass. Unconditional W2/G7
 positivity, RH, and the optional Delsarte/distributional extension remain open.
+
+## Public Implementation Update: R5 Compact Weil Criterion
+
+Date: 2026-07-16
+
+Implementation commit `d590ee42e37366388800bafda04020a84eee8452` passed public Lean Action CI
+run `29487332091`, build job `87584836879`, in `1m53s`. The exact arbitrary-finite-`F` RH
+equivalence, constrained compact separator, conjugate-reflection autocorrelation, and complete
+off-line negative arithmetic witness are independently public-built. Immutable evidence backfill
+and its own public CI remain before campaign closure; W2/G7 and RH remain open.
