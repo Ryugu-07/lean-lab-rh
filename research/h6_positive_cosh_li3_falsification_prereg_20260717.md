@@ -6,7 +6,7 @@ Campaign: `AUDIT-20260717-H6-POSITIVE-COSH-LI3-01`
 
 Mode: `FALSIFICATION`
 
-Status: `PREREGISTERED_LOCAL`
+Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
 
 ## Route selection
 
@@ -163,3 +163,19 @@ is a project-generated obstruction test, not a novelty or priority claim.
   clause is refuted and recorded. Do not grow a general exponential-polynomial library.
 
 No Lean proof source has been edited in this campaign before this preregistration.
+
+## Registered implementation result
+
+Preregistration commit `316ece356aaf5a11f2ddd18ff91da7a9f2ac73e3` passed public Lean Action CI
+run `29542262029`, build job `87766756340`, in `1m56s`, before proof-source edits.
+
+`H6PositiveCoshLiAudit.lean` now compiles the exact fixed endpoint. The aggregate theorem
+`h6PositiveCoshAudit_falsifies_allOrder_positiveKernelLi` carries the positive coefficients,
+entire-ness, reflection, normalization, three exact standard Li formulas, and strict real sign
+pattern `(+,+,-)`. The third sign uses Mathlib's certified lower bound for `log 2` and exact
+rational algebra, not a numerical premise.
+
+The standalone module, exact Targets and TargetChecks, five standard-only axiom prints,
+forbidden declaration/proof/resource scans, `git diff --check`, and the 8,694-job full build pass
+locally. Classification is `BRANCH_FALSIFIED`, with `hard_gap_delta=0`. Public implementation CI
+and immutable evidence backfill remain before closure.

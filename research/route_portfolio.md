@@ -1792,3 +1792,22 @@ Success creates `OBS-H6-POSITIVE-COSH-LI3-01`: positive even-transform structure
 moment/Hankel positivity alone do not scale the H6-Z Cauchy--Schwarz proof to all indices. The
 actual theta kernel, H6-E/G8, W2/G7, M2/G3, and RH are unchanged. Public preregistration CI must
 pass before any Lean proof-source edit.
+
+## Local Completion Update: Positive-Cosh Third-Li Falsification
+
+Date: 2026-07-17
+
+Preregistration commit `316ece356aaf5a11f2ddd18ff91da7a9f2ac73e3` passed public Lean Action CI
+run `29542262029`, build job `87766756340`, before source edits. The fixed two-atom transform now
+compiles in `H6PositiveCoshLiAudit.lean`.
+
+Lean proves complex entire-ness, reflection, strict positivity of both atom coefficients,
+normalization at one, and the exact first-three standard Li formulas. The signs are `(+,+,-)`.
+In particular, the negative third sign is derived from exact hyperbolic values and Mathlib's
+certified rational lower bound for `log 2`, with no floating-point premise.
+
+This records local obstruction `OBS-H6-POSITIVE-COSH-LI3-01`: generic positive-kernel and Hankel
+moment structure cannot extend H6-Z's first-two argument to all indices. It does not address the
+actual theta-kernel shape. The module, exact Targets/TargetChecks, five standard-only axiom
+prints, empty forbidden scans, `git diff --check`, and the 8,694-job full build pass.
+Classification is `BRANCH_FALSIFIED`, `hard_gap_delta=0`; public implementation CI remains.

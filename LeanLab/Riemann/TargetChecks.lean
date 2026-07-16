@@ -8,6 +8,7 @@ import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6GapVelocityAudit
+import LeanLab.Riemann.H6PositiveCoshLiAudit
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
@@ -1374,5 +1375,29 @@ example (t : ℝ) :
     0 < (deBruijnNewmanHeatLiTwo t).re ∧
     (deBruijnNewmanHeatLiTwo t).im = 0 :=
   deBruijnNewmanHeat_firstTwoLi_endpoint t
+
+example :
+    Differentiable ℂ h6PositiveCoshAudit ∧
+    (∀ s : ℂ, h6PositiveCoshAudit (1 - s) = h6PositiveCoshAudit s) ∧
+    (0 < (1 / 8 : ℝ) / Real.cosh h6PositiveCoshAuditL ∧
+      0 < (7 / 8 : ℝ) / Real.cosh (10 * h6PositiveCoshAuditL)) ∧
+    h6PositiveCoshAudit 1 = 1 ∧
+    h6PositiveCoshAuditLiOne =
+      (2 * h6PositiveCoshAuditBeta * h6PositiveCoshAuditL : ℝ) ∧
+    h6PositiveCoshAuditLiTwo =
+      (4 * (h6PositiveCoshAuditBeta * h6PositiveCoshAuditL +
+        (h6PositiveCoshAuditGamma - h6PositiveCoshAuditBeta ^ 2) *
+          h6PositiveCoshAuditL ^ 2) : ℝ) ∧
+    h6PositiveCoshAuditLiThree =
+      ((6 * h6PositiveCoshAuditBeta * h6PositiveCoshAuditL +
+        12 * (h6PositiveCoshAuditGamma - h6PositiveCoshAuditBeta ^ 2) *
+          h6PositiveCoshAuditL ^ 2 +
+        (4 * h6PositiveCoshAuditDelta -
+          12 * h6PositiveCoshAuditBeta * h6PositiveCoshAuditGamma +
+          8 * h6PositiveCoshAuditBeta ^ 3) * h6PositiveCoshAuditL ^ 3 : ℝ) : ℂ) ∧
+    0 < h6PositiveCoshAuditLiOne.re ∧ h6PositiveCoshAuditLiOne.im = 0 ∧
+    0 < h6PositiveCoshAuditLiTwo.re ∧ h6PositiveCoshAuditLiTwo.im = 0 ∧
+    h6PositiveCoshAuditLiThree.re < 0 ∧ h6PositiveCoshAuditLiThree.im = 0 :=
+  h6PositiveCoshAudit_falsifies_allOrder_positiveKernelLi
 
 end LeanLab.Riemann

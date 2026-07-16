@@ -489,3 +489,16 @@ is an obstruction audit with expected `hard_gap_delta=0`, not a statement about 
 `deBruijnNewmanPhi`. Exact preregistration is in
 `h6_positive_cosh_li3_falsification_prereg_20260717.md`; public preregistration CI precedes proof
 source edits.
+
+**Local implementation result.** Preregistration commit
+`316ece356aaf5a11f2ddd18ff91da7a9f2ac73e3` passed public Lean Action CI run `29542262029`, build
+job `87766756340`, before proof edits. `H6PositiveCoshLiAudit.lean` proves the complete registered
+endpoint. The exact first-three formulas have strict signs `(+,+,-)`, with the third sign certified
+from exact rational hyperbolic values and Mathlib's interval for `log 2`.
+
+The standalone module, exact Targets/TargetChecks, five standard-only axiom prints, forbidden
+scans, `git diff --check`, and the 8,694-job full build pass. Local classification is
+`BRANCH_FALSIFIED`, `hard_gap_delta=0`. This creates
+`OBS-H6-POSITIVE-COSH-LI3-01` and requires any future H6 moment continuation to use quantitative
+theta-kernel structure rather than positivity/Hankel inequalities alone. Public implementation CI
+remains before closure.

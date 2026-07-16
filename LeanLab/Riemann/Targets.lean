@@ -9,6 +9,7 @@ import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6GapVelocityAudit
+import LeanLab.Riemann.H6PositiveCoshLiAudit
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard
@@ -871,6 +872,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanHeat_firstTwoLi_endpoint
       status := .proven
       note := "Campaign PROOF-ATTEMPT-20260717-H6-HEAT-LI-MOMENTS-01 proves the theta-specific all-real-time endpoint. The proof derives exact values F_t(1)=8A, F_t'(1)=16B, F_t''(1)=32C and proves B^2<=AC by integrating the nonnegative square W(A*u*tanh(u)-B)^2. This is a finite-index positive-kernel theorem and is strictly weaker than the all-index Li criterion equivalent to RH. Implementation commit 2bc304e9fe2473519c398269b26b0b06b715e593 passed public Lean Action CI run 29541314279, build job 87763968249; evidence commit 1a7d3d6d8ef08e7726aeb8dff261372822d49b6e passed run 29541519607, job 87764575644." },
+    { id := "H6.audit.positive-cosh-li3"
+      tier := .tier2
+      title := "Falsify generic all-order positive-kernel Li extrapolation"
+      statement :=
+        "Construct an entire reflection-symmetric positive two-atom cosh transform, normalized at s=1, whose standard first two Li differential expressions are positive real numbers but whose third is a negative real number."
+      leanName := some ``h6PositiveCoshAudit_falsifies_allOrder_positiveKernelLi
+      status := .proven
+      note := "Audit AUDIT-20260717-H6-POSITIVE-COSH-LI3-01 uses atoms at log 2 and 10*log 2 with normalized masses 1/8 and 7/8. Exact hyperbolic values and Mathlib's certified rational interval for log 2 prove the (+,+,-) sign pattern. This eliminates only a generic positive-kernel/Hankel extrapolation from the first-two theta moment theorem; the actual theta kernel, H6-E/G8, W2/G7, M2/G3, and RH remain open." },
     { id := "H10.function-field.finite-spectral-rigidity"
       tier := .tier2
       title := "Formalize finite power-sum spectral rigidity"
