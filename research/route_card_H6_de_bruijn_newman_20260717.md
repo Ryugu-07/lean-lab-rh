@@ -500,5 +500,6 @@ The standalone module, exact Targets/TargetChecks, five standard-only axiom prin
 scans, `git diff --check`, and the 8,694-job full build pass. Local classification is
 `BRANCH_FALSIFIED`, `hard_gap_delta=0`. This creates
 `OBS-H6-POSITIVE-COSH-LI3-01` and requires any future H6 moment continuation to use quantitative
-theta-kernel structure rather than positivity/Hankel inequalities alone. Public implementation CI
-remains before closure.
+theta-kernel structure rather than positivity/Hankel inequalities alone. Immutable implementation
+commit `5fdfc5c7437349735c57552a75838f16b4d63f5e` passed public Lean Action CI run `29543145545`,
+build job `87769424525`, in `1m55s`; evidence backfill CI remains before closure.

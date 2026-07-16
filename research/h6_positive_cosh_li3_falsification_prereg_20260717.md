@@ -6,7 +6,7 @@ Campaign: `AUDIT-20260717-H6-POSITIVE-COSH-LI3-01`
 
 Mode: `FALSIFICATION`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_CI_PENDING`
 
 ## Route selection
 
@@ -177,5 +177,7 @@ rational algebra, not a numerical premise.
 
 The standalone module, exact Targets and TargetChecks, five standard-only axiom prints,
 forbidden declaration/proof/resource scans, `git diff --check`, and the 8,694-job full build pass
-locally. Classification is `BRANCH_FALSIFIED`, with `hard_gap_delta=0`. Public implementation CI
-and immutable evidence backfill remain before closure.
+locally. Classification is `BRANCH_FALSIFIED`, with `hard_gap_delta=0`. Immutable implementation
+commit `5fdfc5c7437349735c57552a75838f16b4d63f5e` passed public Lean Action CI run `29543145545`,
+build job `87769424525`, from `2026-07-16T23:51:36Z` to `23:53:31Z` (`1m55s`). Only immutable
+evidence backfill and its public CI remain before closure.

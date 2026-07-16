@@ -1810,4 +1810,6 @@ This records local obstruction `OBS-H6-POSITIVE-COSH-LI3-01`: generic positive-k
 moment structure cannot extend H6-Z's first-two argument to all indices. It does not address the
 actual theta-kernel shape. The module, exact Targets/TargetChecks, five standard-only axiom
 prints, empty forbidden scans, `git diff --check`, and the 8,694-job full build pass.
-Classification is `BRANCH_FALSIFIED`, `hard_gap_delta=0`; public implementation CI remains.
+Classification is `BRANCH_FALSIFIED`, `hard_gap_delta=0`. Immutable implementation commit
+`5fdfc5c7437349735c57552a75838f16b4d63f5e` passed public Lean Action CI run `29543145545`, build
+job `87769424525`, in `1m55s`; evidence backfill CI remains before closure.

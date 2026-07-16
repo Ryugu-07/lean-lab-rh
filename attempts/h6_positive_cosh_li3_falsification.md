@@ -4,7 +4,7 @@ Campaign: `AUDIT-20260717-H6-POSITIVE-COSH-LI3-01`
 
 Mode: `FALSIFICATION`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_CI_PENDING`
 
 ## Runtime record
 
@@ -53,7 +53,7 @@ Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
 
 ## Pending gates
 
-- implementation public CI and immutable evidence backfill
+- immutable evidence backfill and its public CI
 
 ## Public preregistration gate
 
@@ -117,4 +117,14 @@ Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
   all-index argument using positive-kernel or ordinary Hankel positivity alone
 - `route_selection_decision`: after public closure, require a genuinely theta-specific
   inequality/cumulant control or return to independent value-ranked route selection
-- `implementation_publication`: pending
+- `implementation_publication`: commit `5fdfc5c7437349735c57552a75838f16b4d63f5e` passed
+  public Lean Action CI run `29543145545`, build job `87769424525`, from
+  `2026-07-16T23:51:36Z` to `23:53:31Z` (`1m55s`)
+
+## Public implementation gate
+
+- Immutable implementation commit `5fdfc5c7437349735c57552a75838f16b4d63f5e` passed public
+  Lean Action CI run `29543145545`, build job `87769424525`, from
+  `2026-07-16T23:51:36Z` to `23:53:31Z` (`1m55s`).
+- `result`: `PUBLIC_IMPLEMENTATION_VERIFIED`
+- Only evidence backfill and its public CI remain before campaign closure.
