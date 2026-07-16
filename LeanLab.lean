@@ -10,6 +10,7 @@ import LeanLab.Riemann.DeBruijnNewmanForward
 import LeanLab.Riemann.DeBruijnNewmanUpperHalf
 import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.FinitePowerSumRigidity
+import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard

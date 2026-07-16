@@ -7,6 +7,7 @@ import LeanLab.Riemann.DeBruijnNewmanForward
 import LeanLab.Riemann.DeBruijnNewmanUpperHalf
 import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.FinitePowerSumRigidity
+import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard
@@ -395,6 +396,13 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.summable_deBruijnNewman_zeroPairForceTerm
 #print axioms LeanLab.Riemann.deBruijnNewmanRegularizedZeroForce_sub_eq_two_div_add_pairRemainder
 #print axioms LeanLab.Riemann.hasDerivAt_deBruijnNewman_simpleZeroPath_realGapSq_pairRemainder
+#print axioms LeanLab.Riemann.deBruijnNewmanH_divisorZeroIndex₀_val_eq_zero
+#print axioms LeanLab.Riemann.realPairForceContribution_re_pos_of_between
+#print axioms LeanLab.Riemann.deBruijnNewmanZeroPairForceRemainder_re_nonpos
+#print axioms LeanLab.Riemann.hasDerivAt_deBruijnNewman_adjacentSimpleZeroPath_realGapSq_and_deriv_le_eight
+#print axioms LeanLab.Riemann.deBruijnNewman_adjacentSimpleZeroPath_realGapSq_lower_bound
+#print axioms LeanLab.Riemann.h6GapAuditHeatPolynomial_backwardHeatEquation
+#print axioms LeanLab.Riemann.exists_h6GapAuditHeatPolynomial_collision_within
 #print axioms LeanLab.Riemann.norm_le_of_forall_norm_finiteComplexPowerSum_le
 #print axioms LeanLab.Riemann.norm_eq_sqrt_of_powerSum_bound_and_reciprocal
 #print axioms LeanLab.Riemann.h6AuditHeatXiQuadratic_one_allZerosOnCriticalLine

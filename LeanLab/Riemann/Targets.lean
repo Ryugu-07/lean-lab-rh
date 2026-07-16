@@ -7,6 +7,7 @@ import LeanLab.Riemann.DeBruijnNewmanForward
 import LeanLab.Riemann.DeBruijnNewmanUpperHalf
 import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.FinitePowerSumRigidity
+import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard
@@ -845,6 +846,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``exists_deBruijnNewman_localRealSimpleZeroPath
       status := .proven
       note := "Campaign PROOF-ATTEMPT-20260717-H6-ZERO-DYNAMICS-01 applies the product-domain real implicit-function theorem to the jointly strict-differentiable source family; conjugation and local uniqueness force real-valuedness. The compiled pair-force decomposition removes both complete simple-zero fibers, proves the remainder absolutely convergent, and isolates the remaining global obstacle as theta-specific control of that remainder over all relevant zero pairs and heights. This is route infrastructure, not collision exclusion or RH progress." },
+    { id := "H6.audit.adjacent-gap-eight-sharp"
+      tier := .tier2
+      title := "Audit sharpness of the adjacent squared-gap velocity bound"
+      statement :=
+        "Prove that adjacent real simple-zero paths satisfy (gap^2)' <= 8 and its integrated backward lower bound, then construct exact quadratic backward-heat pairs that collide after terminal gap squared divided by eight and within every proposed positive uniform interval."
+      leanName := some ``exists_h6GapAuditHeatPolynomial_collision_within
+      status := .proven
+      note := "Campaign PROOF-ATTEMPT-20260717-H6-ZERO-DYNAMICS-01 proves the adjacent-pair remainder is nonpositive and integrates the resulting sharp velocity bound. The quadratic audit shows this generic mechanism cannot yield a height-uniform backward continuation interval. It eliminates only the generic adjacent-gap branch; theta-specific control, H6-E/G8, and RH remain open." },
     { id := "H6.audit.reverse-heat-li-transfer"
       tier := .tier2
       title := "Falsify generic reverse-heat Li transfer"

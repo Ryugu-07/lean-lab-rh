@@ -1,5 +1,6 @@
 import LeanLab.Riemann.DeBruijnNewmanUpperHalf
 import PrimeNumberTheoremAnd.Mathlib.Analysis.Complex.DivisorQuotientRemovable
+import Mathlib.Analysis.Calculus.Deriv.MeanValue
 import Mathlib.Analysis.Calculus.ImplicitFunction.ProdDomain
 
 set_option linter.style.header false
@@ -285,6 +286,106 @@ theorem summable_deBruijnNewman_zeroPairForceTerm (t : ℝ) (r s : ℂ) :
     regularizedDivisorForceTerm]
   rw [if_neg (fun h ↦ hp' (Or.inr h)), if_neg (fun h ↦ hp' (Or.inl h))]
   ring
+
+/-- Every value represented by the multiplicity-bearing Hadamard divisor index is an actual zero
+of the source heat family. -/
+theorem deBruijnNewmanH_divisorZeroIndex₀_val_eq_zero (t : ℝ)
+    (p : Complex.Hadamard.divisorZeroIndex₀
+      (deBruijnNewmanH t) (Set.univ : Set ℂ)) :
+    deBruijnNewmanH t (Complex.Hadamard.divisorZeroIndex₀_val p) = 0 := by
+  obtain ⟨b, hfactor⟩ := exists_deBruijnNewmanH_constant_hadamard_factorization t
+  rw [hfactor]
+  rw [Complex.Hadamard.divisorCanonicalProduct_eq_zero_at_index 1 (deBruijnNewmanH t)
+    (summable_deBruijnNewmanH_divisorZeroIndex_norm_inv_sq t) p]
+  simp
+
+/-- Two real zeros are adjacent when they are strictly ordered and no real zero lies strictly
+between them. Simplicity is separate because the sign of the pair remainder does not need it. -/
+def deBruijnNewmanAdjacentRealZeros (t r s : ℝ) : Prop :=
+  r < s ∧
+    deBruijnNewmanH t (r : ℂ) = 0 ∧
+    deBruijnNewmanH t (s : ℂ) = 0 ∧
+    ∀ u : ℝ, deBruijnNewmanH t (u : ℂ) = 0 → ¬(r < u ∧ u < s)
+
+private theorem one_div_sub_sub_one_div_sub_nonpos_of_outside
+    {r s u : ℝ} (hrs : r < s) (hur : u ≠ r) (hus : u ≠ s)
+    (hout : u ≤ r ∨ s ≤ u) :
+    1 / (s - u) - 1 / (r - u) ≤ 0 := by
+  have hsu : s - u ≠ 0 := sub_ne_zero.mpr (Ne.symm hus)
+  have hru : r - u ≠ 0 := sub_ne_zero.mpr (Ne.symm hur)
+  have hid : 1 / (s - u) - 1 / (r - u) =
+      (r - s) / ((s - u) * (r - u)) := by
+    field_simp [hsu, hru]
+    ring
+  rw [hid]
+  apply div_nonpos_of_nonpos_of_nonneg (sub_nonpos.mpr hrs.le)
+  rcases hout with hu | hu
+  · exact mul_nonneg (sub_nonneg.mpr (hu.trans hrs.le)) (sub_nonneg.mpr hu)
+  · exact mul_nonneg_of_nonpos_of_nonpos (sub_nonpos.mpr hu)
+      (sub_nonpos.mpr (hrs.le.trans hu))
+
+/-- A real zero strictly between the selected endpoints contributes positively to the pair force.
+This is the exact adversarial witness showing that adjacency is necessary for the sign theorem. -/
+theorem realPairForceContribution_re_pos_of_between
+    {r u s : ℝ} (hru : r < u) (hus : u < s) :
+    0 < (1 / ((s : ℂ) - (u : ℂ)) - 1 / ((r : ℂ) - (u : ℂ))).re := by
+  norm_cast
+  have hleft : 0 < 1 / (s - u) := one_div_pos.mpr (sub_pos.mpr hus)
+  have hright : 1 / (r - u) < 0 := one_div_neg.mpr (sub_neg.mpr hru)
+  linarith
+
+private theorem deBruijnNewmanZeroPairForceTerm_re_nonpos_of_adjacent
+    {t r s : ℝ} (hall : deBruijnNewmanAllZerosReal t)
+    (hadj : deBruijnNewmanAdjacentRealZeros t r s)
+    (p : Complex.Hadamard.divisorZeroIndex₀
+      (deBruijnNewmanH t) (Set.univ : Set ℂ)) :
+    (deBruijnNewmanZeroPairForceTerm t (r : ℂ) (s : ℂ) p).re ≤ 0 := by
+  let a : ℂ := Complex.Hadamard.divisorZeroIndex₀_val p
+  by_cases har : a = (r : ℂ)
+  · simp [deBruijnNewmanZeroPairForceTerm, a, har]
+  by_cases has : a = (s : ℂ)
+  · simp [deBruijnNewmanZeroPairForceTerm, a, has]
+  have haZero : deBruijnNewmanH t a = 0 := by
+    simpa only [a] using deBruijnNewmanH_divisorZeroIndex₀_val_eq_zero t p
+  have haReal : a.im = 0 := hall a haZero
+  let u : ℝ := a.re
+  have hau : a = (u : ℂ) := by
+    apply Complex.ext
+    · simp [u]
+    · simpa [u] using haReal
+  have hur : u ≠ r := by
+    intro h
+    apply har
+    simp [hau, h]
+  have hus : u ≠ s := by
+    intro h
+    apply has
+    simp [hau, h]
+  have huZero : deBruijnNewmanH t (u : ℂ) = 0 := by
+    simpa only [hau] using haZero
+  have hout : u ≤ r ∨ s ≤ u := by
+    by_cases hur' : u ≤ r
+    · exact Or.inl hur'
+    · right
+      by_contra hsu'
+      exact hadj.2.2.2 u huZero ⟨lt_of_not_ge hur', lt_of_not_ge hsu'⟩
+  rw [deBruijnNewmanZeroPairForceTerm, if_neg]
+  · change (1 / ((s : ℂ) - a) - 1 / ((r : ℂ) - a)).re ≤ 0
+    rw [hau]
+    norm_cast
+    exact one_div_sub_sub_one_div_sub_nonpos_of_outside hadj.1 hur hus hout
+  · simpa only [a] using not_or_intro har has
+
+/-- At an all-real time, every remaining zero outside an adjacent pair contributes nonpositively
+to the real pair force. Hence the complete absolutely convergent pair remainder is nonpositive. -/
+theorem deBruijnNewmanZeroPairForceRemainder_re_nonpos
+    {t r s : ℝ} (hall : deBruijnNewmanAllZerosReal t)
+    (hadj : deBruijnNewmanAdjacentRealZeros t r s) :
+    (deBruijnNewmanZeroPairForceRemainder t (r : ℂ) (s : ℂ)).re ≤ 0 := by
+  rw [deBruijnNewmanZeroPairForceRemainder,
+    Complex.re_tsum (summable_deBruijnNewman_zeroPairForceTerm t (r : ℂ) (s : ℂ))]
+  exact tsum_nonpos fun p ↦
+    deBruijnNewmanZeroPairForceTerm_re_nonpos_of_adjacent hall hadj p
 
 private theorem deBruijnNewman_simpleZero_fiber_card_eq_one
     {t : ℝ} {r : ℂ} (hr : deBruijnNewmanH t r = 0)
@@ -917,6 +1018,99 @@ theorem hasDerivAt_deBruijnNewman_simpleZeroPath_realGapSq_pairRemainder
   simp only [ofReal_re, add_re, hmutualRe]
   field_simp [sub_ne_zero.mpr hrs.ne']
   ring
+
+/-- At an all-real time, an adjacent simple-zero pair has squared-gap velocity at most `8`. The
+derivative identity and its inequality certificate are returned together so the bound cannot be
+detached from the exact pair-removed dynamics. -/
+theorem hasDerivAt_deBruijnNewman_adjacentSimpleZeroPath_realGapSq_and_deriv_le_eight
+    {x y : ℝ → ℂ} {t r s : ℝ} {vx vy : ℂ}
+    (hall : deBruijnNewmanAllZerosReal t)
+    (hadj : deBruijnNewmanAdjacentRealZeros t r s)
+    (hxAnchor : x t = (r : ℂ)) (hyAnchor : y t = (s : ℂ))
+    (hx : HasDerivAt x vx t) (hy : HasDerivAt y vy t)
+    (hxZero : ∀ᶠ tau in nhds t, deBruijnNewmanH tau (x tau) = 0)
+    (hyZero : ∀ᶠ tau in nhds t, deBruijnNewmanH tau (y tau) = 0)
+    (hxSimple : deriv (deBruijnNewmanH t) (x t) ≠ 0)
+    (hySimple : deriv (deBruijnNewmanH t) (y t) ≠ 0) :
+    HasDerivAt (fun tau : ℝ ↦ ((y tau).re - (x tau).re) ^ 2)
+        (8 + 4 * (s - r) *
+          (deBruijnNewmanZeroPairForceRemainder t (r : ℂ) (s : ℂ)).re) t ∧
+      8 + 4 * (s - r) *
+          (deBruijnNewmanZeroPairForceRemainder t (r : ℂ) (s : ℂ)).re ≤ 8 := by
+  refine ⟨hasDerivAt_deBruijnNewman_simpleZeroPath_realGapSq_pairRemainder hadj.1
+    hxAnchor hyAnchor hx hy hxZero hyZero hxSimple hySimple, ?_⟩
+  have hrem := deBruijnNewmanZeroPairForceRemainder_re_nonpos hall hadj
+  have hcoeff : 0 ≤ 4 * (s - r) := mul_nonneg (by norm_num) (sub_nonneg.mpr hadj.1.le)
+  have hprod : 4 * (s - r) *
+      (deBruijnNewmanZeroPairForceRemainder t (r : ℂ) (s : ℂ)).re ≤ 0 :=
+    mul_nonpos_of_nonneg_of_nonpos hcoeff hrem
+  linarith
+
+private theorem sub_le_eight_mul_sub_of_hasDerivAt_le_eight
+    {q d : ℝ → ℝ} {a b : ℝ} (hab : a ≤ b)
+    (hq : ∀ u ∈ Set.Icc a b, HasDerivAt q (d u) u)
+    (hd : ∀ u ∈ Set.Icc a b, d u ≤ 8) :
+    q b - q a ≤ 8 * (b - a) := by
+  let g : ℝ → ℝ := (fun u ↦ 8 * u) - q
+  have hg (u : ℝ) (hu : u ∈ Set.Icc a b) :
+      HasDerivAt g (8 - d u) u := by
+    simpa [g, Function.id_def] using
+      ((hasDerivAt_id u).const_mul (8 : ℝ)).sub (hq u hu)
+  have hgContinuous : ContinuousOn g (Set.Icc a b) := by
+    intro u hu
+    exact (hg u hu).continuousAt.continuousWithinAt
+  have hgMono : MonotoneOn g (Set.Icc a b) := by
+    apply monotoneOn_of_hasDerivWithinAt_nonneg (convex_Icc a b) hgContinuous
+    · intro u hu
+      exact (hg u (interior_subset hu)).hasDerivWithinAt
+    · intro u hu
+      exact sub_nonneg.mpr (hd u (interior_subset hu))
+  have hmono := hgMono (Set.left_mem_Icc.mpr hab) (Set.right_mem_Icc.mpr hab) hab
+  change 8 * a - q a ≤ 8 * b - q b at hmono
+  linarith
+
+/-- Integrating the adjacent-pair velocity bound backward over an interval of all-real, adjacent,
+simple zero paths gives the exact terminal-gap lower bound. Its useful time scale is the terminal
+squared gap divided by `8`; no height-uniform lower gap is asserted. -/
+theorem deBruijnNewman_adjacentSimpleZeroPath_realGapSq_lower_bound
+    {x y : ℝ → ℂ} {a b : ℝ} (hab : a ≤ b)
+    (hall : ∀ t ∈ Set.Icc a b, deBruijnNewmanAllZerosReal t)
+    (hadj : ∀ t ∈ Set.Icc a b,
+      deBruijnNewmanAdjacentRealZeros t (x t).re (y t).re)
+    (hxZero : ∀ t : ℝ, deBruijnNewmanH t (x t) = 0)
+    (hyZero : ∀ t : ℝ, deBruijnNewmanH t (y t) = 0)
+    (hxDiff : ∀ t ∈ Set.Icc a b, ∃ v : ℂ, HasDerivAt x v t)
+    (hyDiff : ∀ t ∈ Set.Icc a b, ∃ v : ℂ, HasDerivAt y v t)
+    (hxSimple : ∀ t ∈ Set.Icc a b, deriv (deBruijnNewmanH t) (x t) ≠ 0)
+    (hySimple : ∀ t ∈ Set.Icc a b, deriv (deBruijnNewmanH t) (y t) ≠ 0) :
+    ((y b).re - (x b).re) ^ 2 - 8 * (b - a) ≤
+      ((y a).re - (x a).re) ^ 2 := by
+  let q : ℝ → ℝ := fun t ↦ ((y t).re - (x t).re) ^ 2
+  let d : ℝ → ℝ := fun t ↦
+    8 + 4 * ((y t).re - (x t).re) *
+      (deBruijnNewmanZeroPairForceRemainder t ((x t).re : ℂ) ((y t).re : ℂ)).re
+  have hqd (t : ℝ) (ht : t ∈ Set.Icc a b) :
+      HasDerivAt q (d t) t ∧ d t ≤ 8 := by
+    obtain ⟨vx, hx⟩ := hxDiff t ht
+    obtain ⟨vy, hy⟩ := hyDiff t ht
+    have hxAnchor : x t = ((x t).re : ℂ) := by
+      apply Complex.ext
+      · simp
+      · simpa using hall t ht (x t) (hxZero t)
+    have hyAnchor : y t = ((y t).re : ℂ) := by
+      apply Complex.ext
+      · simp
+      · simpa using hall t ht (y t) (hyZero t)
+    simpa only [q, d] using
+      (hasDerivAt_deBruijnNewman_adjacentSimpleZeroPath_realGapSq_and_deriv_le_eight
+        (hall t ht) (hadj t ht) hxAnchor hyAnchor hx hy
+        (Filter.Eventually.of_forall hxZero) (Filter.Eventually.of_forall hyZero)
+        (hxSimple t ht) (hySimple t ht))
+  have hbound : q b - q a ≤ 8 * (b - a) :=
+    sub_le_eight_mul_sub_of_hasDerivAt_le_eight hab
+      (fun t ht ↦ (hqd t ht).1) (fun t ht ↦ (hqd t ht).2)
+  dsimp only [q] at hbound
+  linarith
 
 end
 

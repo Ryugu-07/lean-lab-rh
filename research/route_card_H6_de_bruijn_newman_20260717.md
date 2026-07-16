@@ -421,4 +421,18 @@ commit `03ce2ac2ee68b7d9a6d48d56aed37ab40836c30d` passed public Lean Action CI r
 unbounded zero set and a theta-specific integrated upper control on the displayed derivative
 relative to the terminal gaps, including the first possible repeated zero. A fixed positive
 height-uniform gap is not a viable substitute because zero spacing shrinks with height. The
-campaign remains active and no OBS node is declared before this estimate is actually attempted.
+campaign next tests the strongest sign consequence available from generic adjacent real-zero
+geometry before selecting a theta-specific successor.
+
+**Loop 3 local result and route obstruction.** At an all-real time, adjacency forces every
+remaining pair-remainder term to have nonpositive real part. Lean transports this through the
+absolutely convergent divisor sum and proves `(gap^2)'<=8`; integration gives
+`gap(a)^2>=gap(b)^2-8*(b-a)`. A separate exact quadratic backward-heat model has terminal simple
+zeros of gap `epsilon` that collide after `epsilon^2/8`, and Lean proves such a collision exists
+inside every proposed positive uniform interval.
+
+This is `OBS-H6-ADJACENT-GAP-EIGHT-01`, locally verified with `hard_gap_delta=0`. It eliminates
+the generic adjacent-gap branch, not the source theta family or H6-E. The next H6 proof attempt
+must introduce a theta-specific height-aware estimate or a different invariant controlling the
+first repeated zero. Exact Targets/TargetChecks, standard-only axiom prints, forbidden scans,
+`git diff --check`, and the 8,692-job build pass; public implementation CI is pending.

@@ -6,6 +6,7 @@ import LeanLab.Riemann.DeBruijnNewmanForward
 import LeanLab.Riemann.DeBruijnNewmanUpperHalf
 import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.FinitePowerSumRigidity
+import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
@@ -1253,6 +1254,68 @@ example {x y : ℝ → ℂ} {t r s : ℝ} {vx vy : ℂ} (hrs : r < s)
         (deBruijnNewmanZeroPairForceRemainder t (r : ℂ) (s : ℂ)).re) t :=
   hasDerivAt_deBruijnNewman_simpleZeroPath_realGapSq_pairRemainder
     hrs hxAnchor hyAnchor hx hy hxZero hyZero hxSimple hySimple
+
+example (t : ℝ)
+    (p : Complex.Hadamard.divisorZeroIndex₀
+      (deBruijnNewmanH t) (Set.univ : Set ℂ)) :
+    deBruijnNewmanH t (Complex.Hadamard.divisorZeroIndex₀_val p) = 0 :=
+  deBruijnNewmanH_divisorZeroIndex₀_val_eq_zero t p
+
+example {r u s : ℝ} (hru : r < u) (hus : u < s) :
+    0 < (1 / ((s : ℂ) - (u : ℂ)) - 1 / ((r : ℂ) - (u : ℂ))).re :=
+  realPairForceContribution_re_pos_of_between hru hus
+
+example {t r s : ℝ} (hall : deBruijnNewmanAllZerosReal t)
+    (hadj : deBruijnNewmanAdjacentRealZeros t r s) :
+    (deBruijnNewmanZeroPairForceRemainder t (r : ℂ) (s : ℂ)).re ≤ 0 :=
+  deBruijnNewmanZeroPairForceRemainder_re_nonpos hall hadj
+
+example {x y : ℝ → ℂ} {t r s : ℝ} {vx vy : ℂ}
+    (hall : deBruijnNewmanAllZerosReal t)
+    (hadj : deBruijnNewmanAdjacentRealZeros t r s)
+    (hxAnchor : x t = (r : ℂ)) (hyAnchor : y t = (s : ℂ))
+    (hx : HasDerivAt x vx t) (hy : HasDerivAt y vy t)
+    (hxZero : ∀ᶠ tau in nhds t, deBruijnNewmanH tau (x tau) = 0)
+    (hyZero : ∀ᶠ tau in nhds t, deBruijnNewmanH tau (y tau) = 0)
+    (hxSimple : deriv (deBruijnNewmanH t) (x t) ≠ 0)
+    (hySimple : deriv (deBruijnNewmanH t) (y t) ≠ 0) :
+    HasDerivAt (fun tau : ℝ ↦ ((y tau).re - (x tau).re) ^ 2)
+        (8 + 4 * (s - r) *
+          (deBruijnNewmanZeroPairForceRemainder t (r : ℂ) (s : ℂ)).re) t ∧
+      8 + 4 * (s - r) *
+          (deBruijnNewmanZeroPairForceRemainder t (r : ℂ) (s : ℂ)).re ≤ 8 :=
+  hasDerivAt_deBruijnNewman_adjacentSimpleZeroPath_realGapSq_and_deriv_le_eight
+    hall hadj hxAnchor hyAnchor hx hy hxZero hyZero hxSimple hySimple
+
+example {x y : ℝ → ℂ} {a b : ℝ} (hab : a ≤ b)
+    (hall : ∀ t ∈ Set.Icc a b, deBruijnNewmanAllZerosReal t)
+    (hadj : ∀ t ∈ Set.Icc a b,
+      deBruijnNewmanAdjacentRealZeros t (x t).re (y t).re)
+    (hxZero : ∀ t : ℝ, deBruijnNewmanH t (x t) = 0)
+    (hyZero : ∀ t : ℝ, deBruijnNewmanH t (y t) = 0)
+    (hxDiff : ∀ t ∈ Set.Icc a b, ∃ v : ℂ, HasDerivAt x v t)
+    (hyDiff : ∀ t ∈ Set.Icc a b, ∃ v : ℂ, HasDerivAt y v t)
+    (hxSimple : ∀ t ∈ Set.Icc a b, deriv (deBruijnNewmanH t) (x t) ≠ 0)
+    (hySimple : ∀ t ∈ Set.Icc a b, deriv (deBruijnNewmanH t) (y t) ≠ 0) :
+    ((y b).re - (x b).re) ^ 2 - 8 * (b - a) ≤
+      ((y a).re - (x a).re) ^ 2 :=
+  deBruijnNewman_adjacentSimpleZeroPath_realGapSq_lower_bound
+    hab hall hadj hxZero hyZero hxDiff hyDiff hxSimple hySimple
+
+example (b epsilon t z : ℂ) :
+    deriv (fun tau : ℂ ↦ h6GapAuditHeatPolynomial b epsilon tau z) t =
+      -deriv (deriv (h6GapAuditHeatPolynomial b epsilon t)) z :=
+  h6GapAuditHeatPolynomial_backwardHeatEquation b epsilon t z
+
+example {delta : ℝ} (hdelta : 0 < delta) :
+    ∃ epsilon : ℝ, 0 < epsilon ∧ epsilon ^ 2 / 8 < delta ∧
+      h6GapAuditHeatPolynomial 0 epsilon 0 (-epsilon / 2) = 0 ∧
+      h6GapAuditHeatPolynomial 0 epsilon 0 (epsilon / 2) = 0 ∧
+      deriv (h6GapAuditHeatPolynomial 0 epsilon 0) (-epsilon / 2) ≠ 0 ∧
+      deriv (h6GapAuditHeatPolynomial 0 epsilon 0) (epsilon / 2) ≠ 0 ∧
+      h6GapAuditHeatPolynomial 0 epsilon (h6GapAuditCollisionTime 0 epsilon) 0 = 0 ∧
+      deriv (h6GapAuditHeatPolynomial 0 epsilon (h6GapAuditCollisionTime 0 epsilon)) 0 = 0 :=
+  exists_h6GapAuditHeatPolynomial_collision_within hdelta
 
 example {ι : Type*} [Fintype ι] (alpha : ι → ℂ)
     {R C : ℝ} (hR : 0 < R) (hC : 0 ≤ C)

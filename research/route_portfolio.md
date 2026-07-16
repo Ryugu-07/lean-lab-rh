@@ -1690,3 +1690,24 @@ The next proof loop must attack global height-aware continuation and a theta-spe
 bound on the pair remainder through time zero. Local IFT does not handle the first repeated zero,
 and a fixed positive height-uniform gap is not an admissible replacement. The campaign remains
 active; H6-E/G8 and RH remain open.
+
+## Local Loop-3 Update: Adjacent Gap Bound Is Generically Sharp
+
+Date: 2026-07-17
+
+The active H6-E campaign proves that, at an all-real time, every zero outside an adjacent pair
+contributes nonpositively to the pair remainder. The exact compiled consequence is
+`(gap^2)'<=8`, and its interval form is
+`gap(a)^2>=gap(b)^2-8*(b-a)`. A separate theorem verifies that a nonadjacent middle zero contributes
+positively, so adjacency is not cosmetic.
+
+`H6GapVelocityAudit.lean` then supplies a quadratic family satisfying the same backward heat
+equation. Two terminal simple real zeros of gap `epsilon` collide into a double zero after
+`epsilon^2/8`, and the bundled Lean theorem produces such a collision within every positive
+proposed uniform interval. This records `OBS-H6-ADJACENT-GAP-EIGHT-01`: generic adjacent-pair
+geometry is insufficient for height-uniform continuation.
+
+The exact modules, Targets, seven new TargetChecks, seven selected standard-only axiom prints,
+empty forbidden scans, `git diff --check`, and the full 8,692-job build pass locally.
+`hard_gap_delta=0`; H6-E/G8 and RH remain open. Public CI is pending, after which the persistent
+Goal returns to value-ranked route selection for a theta-specific mechanism or a different route.

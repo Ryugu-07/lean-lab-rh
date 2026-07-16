@@ -240,3 +240,45 @@ Implementation commit `03ce2ac2ee68b7d9a6d48d56aed37ab40836c30d` passed public L
 run `29536815968`, build job `87750004173`, in `1m54s`. Local real path construction, pair
 ordering, the pair-removed force decomposition, squared-gap evolution, exact Targets/TargetChecks,
 and the standard-only axiom audit are now public and may be used by the next attack loop.
+
+## Loop 3 preregistration: sign of the adjacent pair remainder
+
+Fix a good time `t`, adjacent real simple zeros `r<s`, and the public pair-removed remainder. The
+next exact target is
+
+`Re(pairRemainder(t,r,s)) <= 0`,
+
+followed by the local path consequence `(gap^2)'<=8`. Each remaining divisor value is an actual
+zero. All-zero realness puts it on the real axis; adjacency puts it outside `(r,s)`; and then
+
+`1/(s-a)-1/(r-a) = (r-s)/((s-a)(r-a)) <= 0`.
+
+The proof must transport the genuinely summable complex divisor series through `Complex.re_tsum`;
+finite partial-sum intuition is not accepted as a substitute.
+
+This target is deliberately not described as theta-specific progress. A nonadjacent middle zero
+gives a positive term, proving the adjacency hypothesis necessary. A formal equally spaced lattice
+has remainder `-2/gap` and squared-gap derivative zero, showing that the sign law belongs to
+generic real-zero geometry. Moreover `(gap^2)'<=8` alone gives only a backward interval
+proportional to the terminal squared gap, which degenerates with height. After compilation the
+loop must either extract a stronger source-kernel estimate or record this precise uniformity
+failure in the obstacle map.
+
+## Loop 3 local result and obstruction
+
+The fixed sign target compiles. Every source divisor value is proved to be a zero, every remaining
+term outside an adjacent all-real pair is nonpositive, and the complex `tsum` transports exactly to
+`Re(pairRemainder)<=0`. The middle-zero adversarial theorem also compiles and shows the adjacency
+hypothesis cannot be removed.
+
+The exact derivative consequence `(gap^2)'<=8` and its integrated form
+`gap(a)^2>=gap(b)^2-8*(b-a)` compile in `DeBruijnNewmanDynamics.lean`. The separate
+`H6GapVelocityAudit.lean` quadratic backward-heat family attains collision after
+`terminal_gap^2/8`; Lean proves a distinct simple pair can collide within every proposed positive
+uniform interval.
+
+This records local obstruction `OBS-H6-ADJACENT-GAP-EIGHT-01`. Generic adjacent-pair geometry is
+insufficient for height-uniform continuation. The result does not rule out theta-specific control
+and does not change H6-E/G8 or RH. Exact Targets, seven loop-3 TargetChecks, seven selected
+standard-only axiom prints, empty forbidden scans, `git diff --check`, and the 8,692-job full build
+pass locally. Public implementation CI is pending.
