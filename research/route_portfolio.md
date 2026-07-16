@@ -1177,3 +1177,28 @@ as `BRIDGE_REDUCED`.
 `W1c1c2` is complete for compactly supported additive-log functions with six continuous
 derivatives. The persistent RH Goal returns to fresh route selection with quotient/completeness,
 full-class regularization, W2/G7, G3/M2, and RH still open.
+
+## Selection Update: R5 Compact Weil Criterion
+
+Date: 2026-07-16
+
+Fresh LITERATURE route selection uses the newly public compact C6 formula and complete-divisor
+compact separator as specific new evidence. Five candidates were screened. Delsarte rapid-strip
+extension needs a new infinite prime/distribution topology; raw strip completion is nonseparated
+and has no decay; Arias de Reyna temperedness is RH-equivalent; and the semi-local operator route
+requires prolate and computer-assisted infrastructure. Only Connes--Consani Appendix C,
+Proposition C.1 has a complete adjacent mechanism.
+
+Campaign `CAMPAIGN-20260716-R5-COMPACT-WEIL-CRITERION-01` therefore fixes the arbitrary-finite-set
+compact-support criterion. For every finite `F` containing `0,1` and disjoint from the nontrivial
+zeros, it must prove RH equivalent to nonnegativity of the exact compact arithmetic Weil quadratic
+for every smooth compactly supported additive-log function whose Laplace transform vanishes on
+`F`.
+
+The proof must construct the source conjugate-reflection convolution square, strengthen the
+separator with exact finite-set vanishing, and build a strictly negative complete zero quadratic
+from any off-line zero. The public compact explicit formula then transfers the zero criterion to
+the finite-prime/GammaR arithmetic side and the endpoint moments remove the pole term. Success
+changes only the source-level W1/G6 compact-criterion edge; unconditional W2/G7 positivity and RH
+remain open. The exact endpoint and rejection conditions are fixed in
+`research/r5_compact_weil_criterion_prereg_20260716.md` before Lean source edits.
