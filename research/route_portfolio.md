@@ -1106,3 +1106,29 @@ Evidence commit `ed5d03f65bd234f95afb55389b2766d611a3eeab` passed public Lean Ac
 `BRIDGE_REDUCED`. W1c1c1 is complete for the compact-smooth reflection class; the persistent RH
 Goal returns to fresh route selection with quotient/completeness, regularization, W2/G7, G3/M2,
 and RH still open.
+
+## Selection Update: R5 Compact C6 Explicit Formula
+
+Date: 2026-07-16
+
+Fresh FALSIFICATION route selection first re-audits the remaining W1/W2 interfaces and the parked
+Baez-Duarte/Burnol route. Wong's maximum-norm contraction and Carvill's ladder-frequency estimate
+remain Lean-falsified; the sparse `(2^24)^j` family has a checked lower frame bound but also a
+checked orthogonal target witness. Ehm's exact Gram identities do not supply the missing natural
+target residual estimate.
+
+The new Pyvovarov preprint arXiv `2607.12084v1` supplies exponential-damping identities, but it
+explicitly leaves continuity of the approximant norm at zero as the difficulty. That step is the
+RH-equivalent target-coupling frontier. The raw Lagarias strip class is also not an immediate
+successor: it is nonseparated on the physical carrier and its bounded transform has no vertical
+decay field. Unconditional compact positivity would repeat the closed Gaussian reverse route.
+
+Campaign `CAMPAIGN-20260716-R5-COMPACT-C6-EXPLICIT-FORMULA-01` therefore selects the exact
+finite-regularity successor. The current compact formula requires `C-infinity` only because its
+Fourier inversion and first moment use a Schwartz wrapper; the contour estimate itself uses six
+derivatives. The fixed endpoint proves the unchanged multiplicity-bearing zero/pole/GammaR/finite-
+prime identity from `ContDiff R 6 f` and compact support, while preserving the old smooth theorem
+as a corollary. Success reduces only the W1 compact finite-regularity subedge; quotient/completion,
+full-class regularization, W2/G7, G3/M2, and RH remain open. Exact adversarial and rejection
+conditions are preregistered in
+`research/r5_compact_c6_explicit_formula_prereg_20260716.md` before Lean proof edits.
