@@ -932,3 +932,21 @@ run `29461494669`, build job `87505716647`, in `2m22s`. Together with implementa
 `CAMPAIGN-20260716-R5-COMPACT-LAPLACE-SEPARATOR-01` is publicly closed at its exact endpoint.
 Return the persistent RH Goal to fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`; generic W1c1,
 unconditional Weil positivity, G7/W2, and RH remain open, with `hard_gap_delta=0`.
+
+## Selection Update: R5 Gaussian Prime-Kernel Sign Audit
+
+Date: 2026-07-16
+
+Fresh DISCOVERY route selection rejects an immediate compact-separator RH criterion because it
+would repeat the already compiled Gaussian reverse-separation mechanism. It also rejects full
+fixed-width arithmetic positivity as an auxiliary target because the project has proved that
+statement equivalent to RH.
+
+Five local arithmetic-kernel mechanisms were screened. The surviving falsification target is the
+actual `n=2` symmetric Gaussian von-Mangoldt translation kernel at width `(log 2)^2/16`: its
+two-point matrix at shifts `0, log 2` is conjectured to have both a negative quadratic direction
+and a positive diagonal direction. Audit
+`AUDIT-20260716-R5-GAUSSIAN-PRIME-KERNEL-SIGN-01` preregisters exact two-sided indefiniteness.
+Success eliminates termwise semidefinite local-prime assembly as a G7 mechanism but leaves
+complete pole/archimedean/prime cancellation, W1c1, W2/G7, and RH open; expected
+`hard_gap_delta=0`.
