@@ -1387,3 +1387,24 @@ pairing at `R=sqrt(q)` must force the exact critical circle. The card records th
 spectrum, all-extension point counts, and uniform tail absence are precisely what do not transfer
 to the number-field zero divisor. Exact success/falsification criteria are preregistered before
 Lean proof edits in `research/h10_finite_spectral_rigidity_prereg_20260717.md`.
+
+## Local Completion Update: H10 Finite Spectral Rigidity
+
+Date: 2026-07-17
+
+Campaign `CAMPAIGN-20260717-H10-FINITE-SPECTRAL-RIGIDITY-01` reaches both exact clauses locally.
+`norm_le_of_forall_norm_finiteComplexPowerSum_le` proves that an all-natural-power aggregate bound
+controls each member of an arbitrary finite complex family. Its proof aligns all nonzero unit
+phases near `1` at one arbitrarily large power, so every real part is nonnegative and a value with
+norm above `R` cannot be hidden by cancellation. Zeros, duplicates, exact opposite phases, and
+arbitrary finite index types are included. `norm_eq_sqrt_of_powerSum_bound_and_reciprocal` then
+uses reciprocal product pairing to force every norm to equal `sqrt(q)`.
+
+The standalone module is diagnostic-free. Both exact TargetChecks, both standard-only axiom
+prints, forbidden-token/declaration/resource scans, `git diff --check`, and the 8,685-job full
+build pass locally. Classification is `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`. The unresolved work is the actual curve point-count theorem and,
+for number-field RH, a finite trace spectrum or uniform infinite-tail mechanism that does not
+exist in the current route. Preregistration commit
+`af15b161049aedd65d46fd1f2af1f27e8dc69d44` passed public CI run `29505635350`, job
+`87645529929`, in `1m56s`; implementation publication and public CI remain pending.

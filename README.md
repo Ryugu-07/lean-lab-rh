@@ -33,6 +33,13 @@ the same source integral is entire in `z` for every real time and satisfies
 `partial_t H_t = -partial_z^2 H_t`. These are analytic infrastructure results, not an all-real-zero
 theorem; `Lambda <= 0` remains open.
 
+The function-field comparison route now includes
+[`norm_eq_sqrt_of_powerSum_bound_and_reciprocal`](LeanLab/Riemann/FinitePowerSumRigidity.lean):
+an all-power aggregate bound controls every member of a finite complex spectrum, and reciprocal
+pairing forces the square-root circle. This formalizes the last spectral step after a Hasse-Weil
+point-count bound; it neither proves that bound for curves nor transfers finite Frobenius spectra
+to the infinite zero divisor of the Riemann zeta function.
+
 These are formalizations of known equivalence mechanisms, not a solution of RH. A bounded
 [novelty and exposure audit](research/exposure_novelty_audit_20260716.md) records the literature
 mapping and the repositories searched. No first-formalization priority claim is made.

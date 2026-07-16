@@ -1,6 +1,7 @@
 import LeanLab.Riemann.LiScaffold
 import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.DeBruijnNewmanHeat
+import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula
@@ -790,6 +791,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanH_backward_heat_equation
       status := .proven
       note := "Campaign CAMPAIGN-20260717-H6-HEAT-EQUATION-01 proves the source-normalized all-real-time analytic evolution using an explicit double-exponential majorant. This closes the heat-evolution subedge only. The all-real-zero framework, Lambda <= 0, and RH remain open." },
+    { id := "H10.function-field.finite-spectral-rigidity"
+      tier := .tier2
+      title := "Formalize finite power-sum spectral rigidity"
+      statement :=
+        "Prove that an all-power aggregate bound on a finite complex spectrum controls every spectral radius, and that reciprocal functional-equation pairing forces the exact square-root critical circle."
+      leanName := some ``norm_eq_sqrt_of_powerSum_bound_and_reciprocal
+      status := .proven
+      note := "Campaign CAMPAIGN-20260717-H10-FINITE-SPECTRAL-RIGIDITY-01 formalizes the final finite-spectral step in function-field RH using simultaneous phase recurrence. It assumes the aggregate point-count-scale bound and reciprocal pairing; it does not construct them for curves or transfer them to the infinite number-field zero divisor." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

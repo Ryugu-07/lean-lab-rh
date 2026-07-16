@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `SOURCE_ALIGNED_H10_B_SELECTED`
+Status: `H10_B_LOCAL_COMPLETE`
 
 ## Exact endpoint
 
@@ -91,7 +91,15 @@ It is neither number-field RH nor an implication toward RH without a finite-spec
 `{a,-a}`, non-involutive permutations, `R=0`, negative `C`, and bounds on only a subsequence of
 powers must not be silently accepted.
 
-**Verdict:** `SELECTED` as `CAMPAIGN-20260717-H10-FINITE-SPECTRAL-RIGIDITY-01`.
+**Implementation result.** `FinitePowerSumRigidity.lean` proves the full proposition. The proof
+normalizes every nonzero entry to `Circle`, applies simultaneous finite phase recurrence at an
+arbitrarily large power, and forces every term into the nonnegative real half-plane. If one entry
+has norm above `R`, its positive real contribution alone eventually exceeds `C*R^n`, contradicting
+the aggregate bound. Product norms and the paired upper bounds then force the exact square-root
+circle.
+
+**Verdict:** `COMPLETE` as `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`.
 
 ## Candidate H10-Q: auxiliary zero-versus-pole lemma
 
@@ -125,6 +133,7 @@ premise because no noncircular tail mechanism is known.
 
 ## Recommendation
 
-Compile H10-B as the exact finite spectral rigidity interface and use its proof to record where
-finiteness enters. Do not begin a full algebraic-geometry development until route selection finds
-a number-field-relevant consumer for the Frobenius/Riemann-Roch layers.
+H10-B is complete as the exact finite spectral rigidity interface, and its proof records where
+finiteness enters. Return to fresh route selection after public closure. Do not begin a full
+algebraic-geometry development until route selection finds a number-field-relevant consumer for
+the Frobenius/Riemann-Roch layers.

@@ -1,5 +1,6 @@
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.DeBruijnNewmanHeat
+import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
 import LeanLab.Riemann.LiWeilGram
@@ -1097,5 +1098,19 @@ example (t : ℝ) (z : ℂ) :
     deriv (fun tau : ℝ ↦ deBruijnNewmanH tau z) t =
       -deriv (deriv (deBruijnNewmanH t)) z :=
   deBruijnNewmanH_backward_heat_equation t z
+
+example {ι : Type*} [Fintype ι] (alpha : ι → ℂ)
+    {R C : ℝ} (hR : 0 < R) (hC : 0 ≤ C)
+    (hbound : ∀ n : ℕ, ‖finiteComplexPowerSum alpha n‖ ≤ C * R ^ n) :
+    ∀ i, ‖alpha i‖ ≤ R :=
+  norm_le_of_forall_norm_finiteComplexPowerSum_le alpha hR hC hbound
+
+example {ι : Type*} [Fintype ι] (alpha : ι → ℂ) (sigma : Equiv.Perm ι)
+    {q C : ℝ} (hq : 0 < q) (hC : 0 ≤ C)
+    (hpair : ∀ i, alpha (sigma i) * alpha i = (q : ℂ))
+    (hbound : ∀ n : ℕ,
+      ‖finiteComplexPowerSum alpha n‖ ≤ C * Real.sqrt q ^ n) :
+    ∀ i, ‖alpha i‖ = Real.sqrt q :=
+  norm_eq_sqrt_of_powerSum_bound_and_reciprocal alpha sigma hq hC hpair hbound
 
 end LeanLab.Riemann

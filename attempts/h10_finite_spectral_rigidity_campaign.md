@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260717-H10-FINITE-SPECTRAL-RIGIDITY-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_PREREGISTERED_PUBLIC_CI_PENDING`
+Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
 
 ## Runtime record
 
@@ -47,31 +47,66 @@ Status: `LOCAL_PREREGISTERED_PUBLIC_CI_PENDING`
   Riemann-Roch/zeta/trace stack is not source-ready, while the project phase recurrence is directly
   sufficient for the selected spectral endpoint.
 - No Lean proof source was edited during preregistration.
-- `result`: `LOCAL_PREREGISTRATION_COMPLETE`
+- Preregistration commit `af15b161049aedd65d46fd1f2af1f27e8dc69d44` passed public Lean Action CI
+  run `29505635350`, build job `87645529929`, in `1m56s`.
+- `result`: `PUBLIC_PREREGISTRATION_COMPLETE`
 - `rh_frontier_delta`: 0
 - `route_infrastructure_delta`: 0
 - `engineering_delta`: 0
 
+## Implementation loop
+
+- Added `FinitePowerSumRigidity.lean` with the exact pre-registered finite power-sum definition
+  and both endpoint theorems.
+- Normalized every nonzero spectral value to the unit circle and reused
+  `exists_even_gt_forall_circle_pow_dist_one_lt` to align all phases near `1` at one arbitrarily
+  large power.
+- Proved that phase closeness gives a strict `3/4` real-part lower bound after restoring each
+  modulus. Every term then has nonnegative real part, including zero terms and the `n=0` case.
+- If one modulus exceeds `R`, exponential growth makes its real contribution larger than
+  `C*R^n`; the aggregate norm bound yields a contradiction. This handles duplicates and exact
+  cancellation patterns such as `{a,-a}` without distinctness or positivity assumptions.
+- Applied the radius theorem to both members of an arbitrary permutation pairing. The norm of the
+  product is `q`, while both factors are at most `sqrt(q)`; Lean closes equality by real arithmetic.
+- Integrated the exact declarations into Targets, TargetChecks, AxiomsAudit, and the project root.
+- `result`: `LOCAL_IMPLEMENTATION_COMPLETE`
+- `rh_frontier_delta`: 0
+- `route_infrastructure_delta`: 1
+- `engineering_delta`: 1
+
 ## Mechanical audit
 
-- preregistration diff check: pending
-- public preregistration commit and CI: pending
-- exact module compilation: pending implementation
-- `Targets.lean`: pending implementation
-- `TargetChecks.lean` exact witness: pending implementation
-- `AxiomsAudit.lean` and printed axioms: pending implementation
-- forbidden token/declaration/resource scan: pending implementation
-- witness and source-alignment audit: pending implementation
-- full `lake build`: pending implementation
+- preregistration diff check: passed before preregistration publication
+- public preregistration commit and CI: passed at commit
+  `af15b161049aedd65d46fd1f2af1f27e8dc69d44`, run `29505635350`, job `87645529929`
+- exact module compilation: diagnostic-free
+- `Targets.lean`: exact H10 target compiles
+- `TargetChecks.lean`: both exact witnesses compile
+- `AxiomsAudit.lean`: both selected transitive axiom prints are exactly `propext`,
+  `Classical.choice`, and `Quot.sound`
+- forbidden token/declaration/resource scan: empty
+- witness and source-alignment audit: passed locally; finite spectral theorem is explicitly
+  separated from the curve point-count theorem and number-field transfer
+- full `lake build`: passed locally, 8,685 jobs
+- implementation public CI: pending
 
 ## Result
 
-- `result_class`: pending
-- `assumption_frontier_after`: pending
-- `hard_gap_after`: pending
-- `hard_gap_delta`: pending
-- `OBS_node`: none yet
-- `theorem_names`: none yet
-- `failure_or_obstacle`: pending
-- `route_selection_decision`: H10-B selected
-- `commit_and_CI`: pending
+- `result_class`: `KNOWN_THEOREM_FORMALIZED`
+- `assumption_frontier_after`: finite all-power aggregate bound plus reciprocal product pairing
+  implies the exact critical circle; no curve point-count premise was constructed
+- `hard_gap_after`: H6-E/G8, W2/G7, M2/G3, and RH remain open; H10's curve construction and
+  number-field transfer gaps remain open
+- `hard_gap_delta`: 0
+- `route_infrastructure_delta`: 1
+- `OBS_node`: none; arbitrary finite cancellation is handled by simultaneous phase alignment
+- `theorem_names`: `norm_le_of_forall_norm_finiteComplexPowerSum_le`,
+  `norm_eq_sqrt_of_powerSum_bound_and_reciprocal`
+- `failure_or_obstacle`: the Riemann zeta zero divisor is infinite and the route has no finite
+  Frobenius trace model or uniform tail estimate that would let this finite theorem exclude an
+  off-line zero
+- `route_selection_decision`: H10-B locally complete; fresh route selection is required only
+  after implementation and evidence commits pass public CI
+- `preregistration_commit_and_CI`: commit `af15b161049aedd65d46fd1f2af1f27e8dc69d44`, run
+  `29505635350`, job `87645529929`, passed in `1m56s`
+- `implementation_commit_and_CI`: pending
