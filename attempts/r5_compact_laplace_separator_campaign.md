@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-COMPACT-LAPLACE-SEPARATOR-01`
 
 Date: 2026-07-16
 
-Status: `LOCAL_VERIFIED`
+Status: `IMPLEMENTATION_CI_PASSED`
 
 Mode: `LITERATURE`
 
@@ -41,6 +41,7 @@ Mode: `LITERATURE`
 | 8 | `PROOF_A_FINITE_ANNIHILATOR` | A positive real shift separates the target exponential from the finite unwanted value set. A normalized complex polynomial vanishes on all bad values, and its coefficient packet is realized by finitely many real translates with exact Laplace covariance, smoothness, and compact support. | Close proof DAG step 5 without circular tail enlargement. |
 | 9 | `PROOF_A_CONVOLUTION_SUPPRESSION` | The `(m+1)`-fold compact convolution iterate has transform `F^(m+1)`. The normalized packet tail is pointwise bounded by `B*2^(-m)*abs(F)`, so complete-divisor `tsum` comparison and geometric convergence select an `m` with strict tail below any positive epsilon. | Exact preregistered endpoint compiles. |
 | 10 | `LOCAL_AUDIT` | Formal module, exact Targets and TargetChecks compile. Five selected transitive axiom prints contain only `propext`, `Classical.choice`, and `Quot.sound`; forbidden/scratch/resource scans and `git diff --check` are clean; the full 8,678-job build passes. | Local gate passed; publish the implementation and require independent public CI. |
+| 11 | `IMPLEMENTATION_PUBLIC_CI` | Implementation commit `6d12bad98b80c34217757df01943509965a64781` passed public Lean Action CI run `29461298466`, build job `87505125618`, in `1m47s`. | Backfill immutable evidence, publish it, and require the evidence commit's own CI before closure. |
 
 ## Current Accounting
 
@@ -48,7 +49,7 @@ Mode: `LITERATURE`
 - `hard_gap_after`: G6/W1 remains open with one compact-support reverse-separation subedge compiled; G7/W2 and G3/M2 remain unchanged
 - `hard_gap_delta`: 0
 - `classification`: `KNOWN_MECHANISM_RECONSTRUCTED` / unconditional W1 reverse-separation component
-- `next_gate`: implementation publication and independent public CI
+- `next_gate`: evidence-backfill publication and independent public CI
 
 ## Compiled Endpoint
 

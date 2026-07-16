@@ -916,3 +916,8 @@ full 8,678-job build pass locally. Classify
 as `KNOWN_MECHANISM_RECONSTRUCTED`, with `hard_gap_delta=0`: this supplies an unconditional W1
 reverse-separation component but not the generic explicit formula, unconditional Weil positivity,
 G7/W2, or RH. Publication and public CI remain before campaign closure.
+
+Implementation commit `6d12bad98b80c34217757df01943509965a64781` passed public Lean Action CI
+run `29461298466`, build job `87505125618`, in `1m47s`. The exact separator theorem is now
+independently public-built. Immutable evidence backfill and its own public CI remain before local
+campaign closure; all RH hard gaps are unchanged.
