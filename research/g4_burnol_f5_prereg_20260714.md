@@ -116,11 +116,11 @@ The implementation must prove:
 
 ## Frontier
 
-- `hard_gap_before`: F0-F4 complete; F5 open and selected; M2/G3 parked and unchanged.
+- `hard_gap_before`: F0-F4 complete; F5 open and selected; M2/G3 historically unselected (open under V4.1).
 - `assumption_frontier_before`: the full finite-supremum passage and natural subsequence transfer
   remain external to the checked theorem graph.
 - `expected_hard_gap_delta`: close F5 and therefore the fixed G4/B1 source-formalization node only.
-- `hard_gap_after_on_success`: G4/B1 complete; M2/G3 remain parked and unchanged.
+- `hard_gap_after_on_success`: G4/B1 complete; M2/G3 was unchanged in this historical attempt (open under V4.1).
 
 ## Result Rules
 
@@ -151,4 +151,4 @@ the required public commit and public Lean Action gate; F5 and G4 are not yet ma
 Implementation commit `9edf524877c7fcfd2112d50095eb021f3da12b0a` passed public Lean Action
 CI run `29352792330`, build job `87152928492`, in 2m23s. Both exact endpoints and all fixed batch
 gates are therefore public and verified. Final classification: `KNOWN_THEOREM_FORMALIZED`; close
-F5 and G4/B1. M2/G3 remains parked and unchanged.
+F5 and G4/B1. M2/G3 was unchanged in this historical attempt (open under V4.1).

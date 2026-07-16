@@ -10,8 +10,8 @@ Date: 2026-07-13
   exact reverse-direction witness; external publication conditions are not executable ledger data.
 - `assumption_frontier_after`: the exact final iff is type-witnessed; P1 clean-context theorem
   review is complete; P2 Zulip review and P3 novelty audit remain explicit publication blockers.
-- `hard_gap_before`: M1/G1/G2/D complete; M2/G3 parked.
-- `hard_gap_after`: M1/G1/G2/D remain complete; M2/G3 remains parked; auditor-approved G4 is
+- `hard_gap_before`: M1/G1/G2/D complete; M2/G3 historically unselected (open under V4.1).
+- `hard_gap_after`: M1/G1/G2/D remain complete; M2/G3 was historically unselected (open under V4.1); auditor-approved G4 is
   planned as known-mathematics formalization.
 - `hard_gap_delta`: expected zero.
 - `nearest_known_literature`: Baez-Duarte, arXiv `math/0202141v2`; Burnol, arXiv

@@ -1,4 +1,4 @@
-# RH Loop Protocol v2
+# RH Loop Protocol v2 (Historical Compatibility)
 
 Date: 2026-07-10
 
@@ -9,12 +9,15 @@ Sources:
 - Historical v1 source:
   `/Users/karasuakamatsu/Downloads/review_rh_loop_goal_20260709.md`
 
-This v2 section replaces the operating rules from v1. The historical loop updates below remain as
-chronology, not as authority for choosing future proof targets.
+This file preserves the v2 chronology. Current work is governed by
+[`rh_governance_current.md`](rh_governance_current.md), which supersedes all numerical stop rules,
+input-side approval gates, and closed-route language below. Historical loop updates remain
+evidence, not authority for choosing future proof targets.
 
 ## Operational Goal
 
-Advance auditable RH research in `/Users/karasuakamatsu/lean-lab`.
+Advance auditable RH research in `/Users/karasuakamatsu/lean-lab`, including direct attempts on
+`Mathlib.RiemannHypothesis` and every open equivalent condition.
 
 New local Lean lemmas, rewrite lemmas, predicate wrappers, finite-sum transports, and closing
 self-created ledger nodes do not count as RH research progress by themselves. Lean verifies
@@ -30,18 +33,22 @@ Fixed milestones:
   explicit approximating family with error tending to zero, or a literature-audited new structural
   lemma.
 
-All future work must target a pre-existing node in `research/hard_gap_dag.md`. The model must not
-create a local successor node merely to make the next loop executable. Mechanical lemmas are batched.
+Future work normally targets `research/hard_gap_dag.md`, the route atlas, or a conjecture admitted
+through conjecture CI. Direct RH attacks are always eligible. The model must not create a local
+successor node merely to make the next loop executable. Mechanical lemmas are batched.
 
 ## Work Classes
 
-Each loop or engineering batch has exactly one tag:
+Each research campaign has exactly one primary mode:
 
-- FORMALIZATION: formalizes known mathematics, infrastructure, bridges, or batched transports.
-- DISCOVERY: attempts a new structural lemma, constant, or error bound; requires the novelty audit
-  below.
-- RH_PROGRESS: not the default; allowed only when `research/hard_gap_dag.md` changes a hard-gap
-  status and an auditor confirms the delta.
+- `LITERATURE`: audits, reconstructs, or formalizes known mathematics and its exact obstruction.
+- `DISCOVERY`: attempts a new structural lemma, constant, error bound, or bridge.
+- `PROOF-ATTEMPT`: directly attacks an open proposition, including RH itself.
+- `FALSIFICATION`: searches for a counterexample, edge case, finite model, numerical failure, or
+  Lean refutation.
+
+Exposure and upstreaming are standing duties rather than a fifth mode. `RH_PROGRESS` is a result
+claim, not a work class, and requires the mechanical output gates.
 
 ## Result Classes
 
@@ -76,17 +83,14 @@ same edge, or targets a node created by the immediately previous loop.
 
 ## Stop Rules
 
-Stop or pivot before another proof loop when any of these occurs:
+Local `STOP` or `PIVOT` occurs when the preregistered endpoint is proved, falsified, or reduced to
+a precise obstruction; the same failed mechanism has no materially new angle; or the next target
+would only manufacture bookkeeping lemmas. `NO_PROGRESS` triggers `ROUTE_SELECTION`, not a pause
+of the global Goal.
 
-- three consecutive loops have `hard_gap_delta = 0`;
-- five loops keep the same unproved assumption frontier;
-- two loops repeat the same strategy;
-- the next target is only a mechanical corollary;
-- compaction/summary occurred and the fixed DAG has not been re-audited from source files;
-- no published source or novelty rationale is available.
-
-Every five accepted loops, a clean-context audit must decide one of `CONTINUE`, `PIVOT`, `BATCH`,
-or `STOP`.
+There are no numerical loop, route/week, commit, line, or literature quotas. After compaction,
+re-read the canonical governance, HANDOFF, Targets, TargetChecks, current attempt, hard-gap DAG,
+and route preregistration before selecting the next target.
 
 ## Batching Rule
 
@@ -101,8 +105,9 @@ loop.
   elaboration.
 - Keep `LeanLab/Riemann/TargetChecks.lean` in the build. It must typecheck every `.proven` target
   that has a `leanName`; exact statement witnesses should be expanded in engineering batches.
-- New target nodes need external-source or auditor sign-off before they can count as research
-  progress.
+- New target nodes need a primary source or explicit originality rationale, preregistration, and
+  the mechanical truth gates before they can count as research progress; no approval is required
+  to attempt them.
 
 ## Future Attempt Record Fields
 
@@ -117,6 +122,9 @@ Each future loop or batch record must include:
 - `hard_gap_before`
 - `hard_gap_after`
 - `hard_gap_delta`
+- exact mathematical and proposed Lean statements
+- success and falsification criteria
+- known obstacles and nearest prior attempt
 - Lean verification commands and results
 - theorem names
 - nearest known literature
@@ -134,9 +142,7 @@ miss is not evidence of novelty.
 
 ## Post-M1 Route And Publication Gate
 
-- `G3` is permanently parked for automatic looping. An implementation model may not select
-  unconditional construction of the Baez-Duarte approximants as its next routine target, because
-  that is the unresolved RH direction itself.
+- `G3/M2`, `W2/G7`, and RH are open and may be selected directly through `PROOF-ATTEMPT`.
 - The independent Arch audit dated 2026-07-13 admits `G4`, Burnol's published Nyman-Beurling
   distance lower bound, as the next fixed research line. It is known mathematics and may only be
   classified `KNOWN_THEOREM_FORMALIZED`, `DEPENDENCY_GAP_IDENTIFIED`, `BRANCH_FALSIFIED`,
@@ -145,6 +151,7 @@ miss is not evidence of novelty.
   until all of the following are recorded: a clean-context Sol max theorem-by-theorem review, a
   Lean Zulip `#maths` statement/definition review with no unresolved objection, and a novelty audit
   covering mathlib, Isabelle AFP, relevant external Lean repositories, and arXiv.
+- These are output/publication gates only. They never block a proof attempt.
 - `LeanLab/Riemann/TargetChecks.lean` must contain an exact statement witness for the final M1 iff,
   in addition to name resolution and the existing axiom audit.
 

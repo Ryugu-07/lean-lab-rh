@@ -2,6 +2,9 @@
 
 Date: 2026-07-15
 
+Current note: this file records a historical local decision. V4.1 abolishes the numerical stop
+condition; M2/G3 is open, and a materially new preregistered attack may re-enter it.
+
 Audit ID: `AUDIT-20260715-M2-G3-03`
 
 ## Fixed-Gap Entry
@@ -11,7 +14,7 @@ Audit ID: `AUDIT-20260715-M2-G3-03`
 - `work_class`: `AUDIT/LITERATURE`
 - `novelty_label`: `NOVELTY_UNCHECKED` for rejected candidates; no result admitted.
 - `status`: complete
-- `hard_gap_before`: M2/G3 parked; M0, M1, D, and G4 complete.
+- `hard_gap_before`: M2/G3 historically unselected (open under V4.1); M0, M1, D, and G4 complete.
 - `assumption_frontier_before`: no unconditional proof that
   `baezDuarteComplexTargetL2` belongs to `baezDuarteComplexKernelClosure`.
 - `expected_hard_gap_delta`: zero unless a remaining 2025-2026 source contains an unconditional
@@ -74,7 +77,7 @@ Accordingly no Lean statement is preregistered and no mathematical source file i
 
 - `result`: `NO_PROGRESS`
 - `audit_decision`: `STOP`
-- `hard_gap_after`: M2/G3 remains parked; M0, M1, D, and G4 remain complete.
+- `hard_gap_after`: M2/G3 was historically unselected (open under V4.1); M0, M1, D, and G4 remain complete.
 - `hard_gap_delta`: zero.
 - `assumption_frontier_after`: no unconditional proof that
   `baezDuarteComplexTargetL2` belongs to `baezDuarteComplexKernelClosure`.
@@ -93,11 +96,11 @@ assumption frontier:
 2. `AUDIT-20260715-M2-G3-02`: Carvill ladder-frequency branch, `BRANCH_FALSIFIED`;
 3. `AUDIT-20260715-M2-G3-03`: remaining-candidate audit, `NO_PROGRESS`.
 
-Loop Protocol v2 therefore requires automatic looping to stop. M2/G3 may be reconsidered only
-after a new external source or an independently proposed structural estimate is accompanied by a
-specific unconditional statement, closest-results comparison, and a credible bridge to the fixed
-closure frontier. Repackaging an equivalent criterion, auxiliary smoothing, or numerical evidence
-is insufficient.
+Loop Protocol v2 therefore required that historical automatic screening campaign to stop. Under
+V4.1 this numerical trigger has no current force. Re-entry may use literature or a model-original
+attack, provided it preregisters a specific statement, known obstacle, closest-results comparison,
+and materially new mechanism. Repackaging an equivalent criterion, auxiliary smoothing, or
+numerical evidence alone still does not prove the closure frontier.
 
 ## Runtime Record
 

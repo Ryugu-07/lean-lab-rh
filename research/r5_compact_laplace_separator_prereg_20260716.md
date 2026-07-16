@@ -121,7 +121,7 @@ No novelty claim is allowed. Classification on success is at most `BRIDGE_REDUCE
 
 ## Accounting
 
-- `hard_gap_before`: G6/W1 open; G7/W2 open; G3/M2 parked
+- `hard_gap_before`: G6/W1 open; G7/W2 open; G3/M2 historically unselected (open under V4.1)
 - `hard_gap_after_if_complete`: G6/W1 remains open with one compact-support reverse-separation
   subedge compiled; G7/W2 remains open
 - `hard_gap_delta`: 0 for fixed hard-gap nodes and RH

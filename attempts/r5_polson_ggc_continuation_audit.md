@@ -35,7 +35,7 @@ Status: `PUBLICLY_CLOSED`
 
 ## Current Accounting
 
-- `hard_gap_before`: G6/W1 and G7/W2 open; G3/M2 parked
+- `hard_gap_before`: G6/W1 and G7/W2 open; G3/M2 historically unselected (open under V4.1)
 - `hard_gap_after`: unchanged
 - `hard_gap_delta`: 0
 - `assumption_frontier_before`: unchecked retention of the 2018 integral outside its convergence

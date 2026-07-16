@@ -11,7 +11,7 @@ Audit ID: `AUDIT-20260715-M2-G3-01`
 - `work_class`: `AUDIT/LITERATURE`
 - `novelty_label`: `KNOWN_MATHEMATICS`
 - `status`: complete
-- `hard_gap_before`: M2/G3 parked; M0, M1, D, and G4 complete.
+- `hard_gap_before`: M2/G3 historically unselected (open under V4.1); M0, M1, D, and G4 complete.
 - `assumption_frontier_before`: no unconditional proof that
   `baezDuarteComplexTargetL2` belongs to `baezDuarteComplexKernelClosure`.
 - `expected_hard_gap_delta`: zero unless a cited unconditional proof branch survives exact
@@ -139,7 +139,7 @@ claimed bound `norm_infinity(P_n) <= norm_2(P_n) = 1` is therefore false for its
 family at `n=3`, not merely unsupported by the generic norm comparison.
 
 - `result`: `BRANCH_FALSIFIED`
-- `hard_gap_after`: M2/G3 remains parked; M0, M1, D, and G4 remain complete.
+- `hard_gap_after`: M2/G3 was historically unselected (open under V4.1); M0, M1, D, and G4 remain complete.
 - `hard_gap_delta`: zero.
 - `assumption_frontier_after`: no unconditional proof that
   `baezDuarteComplexTargetL2` belongs to `baezDuarteComplexKernelClosure`.

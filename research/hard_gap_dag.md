@@ -1,11 +1,11 @@
 # RH Hard-Gap DAG
 
-Date: 2026-07-16
+Date: 2026-07-17
 
-This file is the fixed external gap ledger for future RH work. A future loop may only count as
-research progress when it changes the status of one of these nodes. Local predicate wrappers,
-rewrite bridges, finite-support transports, and one-step corollaries are engineering work unless
-they reduce a node below.
+This file is the external gap ledger for RH work under
+[`rh_governance_current.md`](rh_governance_current.md). Local predicate wrappers, rewrite bridges,
+finite-support transports, and one-step corollaries are engineering work unless they change an
+open mathematical frontier. RH itself and every open node may be attacked directly.
 
 ## DAG
 
@@ -33,11 +33,11 @@ flowchart TD
 
 | node_id | status | description | current frontier |
 | --- | --- | --- | --- |
-| A | in progress | Project-local xi, Li, Nyman-Beurling, and Baez-Duarte scaffolding. | Mostly formalization scaffolding; not RH progress under v2. |
+| A | in progress | Project-local xi, Li, Nyman-Beurling, and Baez-Duarte scaffolding. | Mostly formalization infrastructure; classify it separately from unconditional RH progress. |
 | M0 | complete | Align project-local Nyman-Beurling/Baez-Duarte predicates with published statements. | The positive-natural Baez-Duarte closure side is aligned in real and complex `L2(0,infinity)`: parameter indexing, kernel formula, target, closed span, whole-line error, endpoint, tolerance, and coefficient field are Lean-checked. |
 | M1 | complete | Formalize one accurately cited published Nyman-Beurling or Baez-Duarte criterion. | Batch M1-18 compiles both directions of the exact strong positive-natural Baez-Duarte criterion in full-half-line complex `L2`. |
 | D | complete | Connect the formalized criterion to `Mathlib.RiemannHypothesis`. | `riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure` is the exact compiled bridge. |
-| M2 | parked | Unconditional discovery route: explicit approximants with error tending to zero, or a literature-audited new structural lemma. | Parked unless a novelty audit justifies work. |
+| M2 | open | Unconditional discovery route: explicit approximants with error tending to zero, or a new structural lemma. | Direct `PROOF-ATTEMPT` is allowed; preregister the exact endpoint, known obstacle, and new attack angle. |
 | B1 | complete | Formalize Burnol's published quantitative lower bound for the Nyman-Beurling approximation distance. | Batches G4-F0 through G4-F5 are public. The full RH-conditional continuous zero-sum lower bound and exact natural-distance liminf transfer are Lean-checked. This is known mathematics, not M2 progress. |
 | L0 | complete | Align the project xi divisor, genus-one Hadamard product, all-index Li family, and symmetry-paired raw zero formula. | The multiplicity-bearing paired formula is public and all infinite-sum operations are Lean-checked. |
 | L1 | complete | Prove the RH-forward all-index Li real-part nonnegativity direction. | Under RH every paired summand is exactly half a complex norm square. |
@@ -53,7 +53,7 @@ flowchart TD
 | --- | --- | --- | --- |
 | G1 | M1/D | complete | The exact strong positive-natural Baez-Duarte full-line closure criterion is Lean-equivalent to `Mathlib.RiemannHypothesis`. |
 | G2 | M1 | complete | Batch M1-18 compiles the weighted finite formula, fixed-epsilon transformed limit, epsilon-to-zero dominated convergence, diagonal assembly, tail removal, and `RH -> closure`. |
-| G3 | M2 | parked | Construct unconditional finite approximants with error tending to zero. In the NB/BD framework this is essentially the hard RH direction; numerical convergence is not evidence. |
+| G3 | M2 | open | Construct unconditional finite approximants with error tending to zero. Numerical convergence can select a candidate but is not a proof premise. |
 | G4 | B1 | complete | Burnol's RH-conditional lower bound `liminf D(lambda) * sqrt(log(1/lambda)) >= sqrt(sum_rho m_rho^2 / |rho|^2)` and its natural-subspace liminf consequence are publicly Lean-checked through the fixed F0-F5 frontier. M2/G3 is unchanged. |
 | G5 | L2 | complete | Reverse the exact project Li criterion: from nonnegative real parts of every `liCoefficientCandidate n`, derive RH by a project-specialized Bombieri-Lagarias transformed-zero argument. |
 | G6 | W1 | open | Prove the complete source-faithful Weil explicit formula and convolution-stable admissible test space, without dropping moment, density, convergence, or regularization conditions. |
@@ -78,7 +78,7 @@ flowchart TD
 | W1c1c3 | complete | The Connes--Consani/Yoshida compact-support criterion is Lean-equivalent to `Mathlib.RiemannHypothesis` for every finite zero-free `F` containing `0,1`. The reverse uses finite-constrained compact separators, the conjugate-reflection pair, complete multiplicity-bearing tails, and no assumed conjugation permutation. Implementation `d590ee42e37366388800bafda04020a84eee8452` and evidence `03e1661b077ab8d3e2f8c9b93b19aa63c3c1eebc` passed public CI runs `29487332091` and `29487596817`. This closes the compact criterion edge only; W1 full-class extension, W2/G7, and RH remain open. |
 | W1c2 | open | Prove the complete distributional limit and all endpoint/local regularization choices, including the covariance extension. |
 
-## W2 Conditional Frontier
+## W2 Open Frontier
 
 | edge | status | source-level content |
 | --- | --- | --- |
@@ -99,12 +99,11 @@ flowchart TD
 | F4 | complete | The RH-conditional finite-zero-set liminf lower bound is publicly Lean-checked. |
 | F5 | complete | The full extended zero sum and exact natural-distance asymptotic liminf transfer are publicly Lean-checked. |
 
-## Post-M1 Admission Rule
+## Post-M1 Open-Route Rule
 
-- `G3` remains parked and must not be selected by the automatic loop. It may be reopened only by an
-  independent novelty audit that preregisters a specific unconditional estimate or structural
-  lemma against the closest published results.
-- `G4` is an auditor-approved adjacent research line. Closing it is `KNOWN_THEOREM_FORMALIZED`, not
+- `G3/M2`, `W2/G7`, and RH are open and selectable without approval. Direct attacks use the
+  `PROOF-ATTEMPT` preregistration and output audit.
+- `G4` is an adjacent known-mathematics line. Closing it is `KNOWN_THEOREM_FORMALIZED`, not
   `HARD_GAP_REDUCED` for RH and not evidence that the approximation distance tends to zero.
 - Mathlib upstreaming is an engineering/publication track and must not be reported as a change to
   `M2` or `G3`.
@@ -117,11 +116,12 @@ claim that the equivalence has passed external review requires all three indepen
 
 | gate | status | evidence required |
 | --- | --- | --- |
-| P1 | complete | Clean-context Sol 5.6 max review `019f59c3-c4c7-7b63-a203-c25a12034c14`; no P0-P3 finding, decision `CONTINUE`. See `research/m1_sol_max_review_20260713.md`. |
-| P2 | pending | Lean Zulip `#maths` statement/definition review with no unresolved objection. |
-| P3 | pending | Novelty audit covering mathlib, Isabelle AFP, relevant external Lean repositories, and arXiv. |
+| P1a | complete | Clean-context Sol 5.6 max review `019f59c3-c4c7-7b63-a203-c25a12034c14`; no P0-P3 finding, decision `CONTINUE`, for the earlier Baez-Duarte/contour surface. See `research/m1_sol_max_review_20260713.md`. |
+| P1b | complete | Separate clean-context Sol 5.6 max review found no P0-P2 issue and two P3 statement/attribution corrections. See `research/li_weil_sol_max_review_20260717.md`. |
+| P2 | pending human publication | Lean Zulip `#maths` statement/definition review with no unresolved objection; the request must be written by the user in their own words under current mathlib policy. |
+| P3 | complete within fixed scope | Bounded novelty audit covering pinned mathlib, Isabelle AFP, PNT+, selected external Lean repositories, and primary literature. See `research/exposure_novelty_audit_20260716.md`; it explicitly makes no global absence or first-formalization claim. |
 
-Until P1-P3 are complete, repository documentation must not call this the first formalization.
+Until P1a-P3 are complete, repository documentation must not call this the first formalization.
 
 ## Loop Reporting Policy
 
@@ -273,7 +273,7 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   convergence, diagonal selection, and exact tail removal. The forward closure theorem combines
   with M1-16 as `riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelClosure`. Result:
   `KNOWN_THEOREM_FORMALIZED`; M1, G1, G2, and D are complete. This is a criterion equivalence,
-  not an unconditional proof of either side; G3/M2 remains parked.
+  not an unconditional proof of either side; G3/M2 was historically unselected (open under V4.1).
 - Batch `BATCH-20260713-G4-F1A` closes the explicit-function half of Burnol's unitary model. Lean
   checks the source floor formula including its tail constant, proves the exact Hardy-tail
   representation and `L2` membership, establishes absolute integrability on the triangle
@@ -307,8 +307,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   multiplicities at distinct critical parameters. Exact target checks, standard-only axiom
   output, scans, diff check, and the 8613-job local build pass. Implementation commit
   `897e35b16ad3039c069d86f0c35f89d4bce526ad` passed public CI run `29289392653`, build job
-  `86949324989`. Result: `KNOWN_THEOREM_FORMALIZED`; close F3 and select F4. F5 and M2/G3 remain
-  parked and unchanged.
+  `86949324989`. Result: `KNOWN_THEOREM_FORMALIZED`; close F3 and select F4. F5 was not started in
+  that batch; M2/G3 is open under V4.1.
 - Batch `BATCH-20260714-G4-F4` closes the preregistered finite-zero-set edge. Lean proves
   canonical positive zeta-zero multiplicities, the explicit inverse-Gram projection and its
   model-distance comparison, convergence and exact evaluation of the scaled finite quadratic
@@ -348,8 +348,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   approximation bridge; the 2026 Colombeau result is an RH equivalence; Bhattacharjee et al. study
   a mismatched `{x/k}` rank-one carrier and disclaim an RH proof; the dyadic exploration is
   conditional and numerical. Result: `NO_PROGRESS`, `hard_gap_delta=0`. Together with audits 01
-  and 02, this triggers the v2 three-zero-delta `STOP` rule. M2/G3 remains parked and automatic
-  candidate looping must not resume without a new independently qualified external input.
+  and 02, this triggered the then-current v2 local `STOP`. V4.1 abolishes that numerical rule;
+  M2/G3 is open, and a materially new preregistered attack may re-enter it.
   Governance commit `6bdbd1f9a459edb1b0baa7d3568b44605f0d4fc6` passed public Lean Action CI
   run `29384810340`, build job `87255750317`.
 - Audit `AUDIT-20260716-R5-POLSON-GGC-CONTINUATION-01` tests retention of the defining 2018

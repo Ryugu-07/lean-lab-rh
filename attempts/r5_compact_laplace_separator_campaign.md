@@ -31,7 +31,7 @@ Mode: `LITERATURE`
 
 | Loop | Mode | Result | Decision |
 |---|---|---|---|
-| 1 | `ROUTE_MAP` | W2g2 is publicly closed and does not supply an unconditional sign. G3/M2 remains parked. The honest active frontiers are generic W1 compact-support/distributional infrastructure and unconditional W2. | Rotate to a source-focused LITERATURE campaign rather than reopen Gaussian width compression. |
+| 1 | `ROUTE_MAP` | W2g2 is publicly closed and does not supply an unconditional sign. G3/M2 was historically unselected (open under V4.1). The honest active frontiers are generic W1 compact-support/distributional infrastructure and unconditional W2. | Rotate to a source-focused LITERATURE campaign rather than reopen Gaussian width compression. |
 | 2 | `SOURCE_AUDIT` | Connes--Consani Appendix C records the compact-support Weil criterion and a Yoshida separator with finite Mellin zeros, protected target value, and quadratic zero-tail decay. Their main archimedean operator theorem is not a bounded Lean target because its spectral estimate is heavily computer-assisted. | Isolate the compact-support separator mechanism as the candidate source edge. |
 | 3 | `LIBRARY_AUDIT` | Mathlib supplies strictly positive smooth compact bumps, compact-support preservation under derivatives and convolution, smoothness of convolution, and whole-line integration by parts. The project supplies the xi strip, reciprocal-square divisor summability, and finite real-shift exponential separation. | The source edge has a plausible no-placeholder Lean path. |
 | 4 | `ADVERSARIAL_TEST_AND_ADMISSION` | The naive finite-tail argument is circular because the annihilating polynomial grows with the finite set. The repaired mechanism fixes a transform superlevel, annihilates it once, and uses convolution powers to suppress the remaining values geometrically. Multiplicity copies are explicitly protected. | Admit the exact compact-support `ell^1` xi-divisor separator and begin Proof Attempt A. |
@@ -46,7 +46,7 @@ Mode: `LITERATURE`
 
 ## Current Accounting
 
-- `hard_gap_before`: G6/W1 open; G7/W2 open; G3/M2 parked
+- `hard_gap_before`: G6/W1 open; G7/W2 open; G3/M2 historically unselected (open under V4.1)
 - `hard_gap_after`: G6/W1 remains open with one compact-support reverse-separation subedge compiled; G7/W2 and G3/M2 remain unchanged
 - `hard_gap_delta`: 0
 - `classification`: `KNOWN_MECHANISM_RECONSTRUCTED` / unconditional W1 reverse-separation component

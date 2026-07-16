@@ -7,7 +7,7 @@ Date: 2026-07-14
 - `gap_id`: `G4/F3`
 - `work_class`: `SOURCE_FORMALIZATION`
 - `status`: complete
-- `hard_gap_before`: F3 selected; F4-F5 open; M2/G3 parked and unchanged.
+- `hard_gap_before`: F3 selected; F4-F5 open; M2/G3 historically unselected (open under V4.1).
 - `assumption_frontier_before`: normalized Gram limits, target-pairing limits, the finite
   Hilbert/Cauchy inverse entry, and matrix inverse convergence are external facts.
 
@@ -117,7 +117,8 @@ expansion was introduced.
   --check` passes.
 
 Local result: every preregistered mathematical gate is satisfied. F3 remained selected until the
-implementation commit passed public CI; F4-F5 remained forbidden and M2/G3 remained parked.
+implementation commit passed public CI; F4-F5 were not started in that batch, and M2/G3 was
+historically unselected (open under V4.1).
 
 ## Published Verification And Result
 

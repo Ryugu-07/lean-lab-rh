@@ -780,7 +780,7 @@ exponential mixing component: at `s=i*y` its real integrand is
 
 When `gamma>0` and `y^2>2*gamma^2`, this tail should be nonintegrable. A Lean proof would eliminate
 only the 2018 integral-retention mechanism; it would not disprove analytic continuation, the 2026
-RH-equivalent Thorin framework, or RH. G6/W1 and G7/W2 remain open, G3/M2 remains parked, and the
+RH-equivalent Thorin framework, or RH. G6/W1 and G7/W2 remain open, G3/M2 was historically unselected (open under V4.1), and the
 expected `hard_gap_delta` is zero.
 
 The fixed endpoint is now locally complete in `PolsonGGCContinuationAudit.lean`. Lean identifies
@@ -810,8 +810,8 @@ frontier is unchanged and the persistent Goal remains active.
 Date: 2026-07-16
 
 After compaction, fresh route selection re-audited the fixed DAG rather than extending the previous
-source branch. The only unconditional RH frontiers remain G6/W1 and G7/W2, while G3/M2 remains
-parked. The selected new input is Freedman's arXiv `2606.29555`, a Weyl/Volterra reduction paper
+source branch. G6/W1, G7/W2, and G3/M2 are open. The selected new input is Freedman's arXiv
+`2606.29555`, a Weyl/Volterra reduction paper
 that explicitly leaves the final KLM/de Branges/RH bridge open but describes its normalized
 Green-lift contraction as closed.
 
@@ -1111,7 +1111,7 @@ and RH still open.
 
 Date: 2026-07-16
 
-Fresh FALSIFICATION route selection first re-audits the remaining W1/W2 interfaces and the parked
+Fresh FALSIFICATION route selection first re-audits the remaining W1/W2 interfaces and the open
 Baez-Duarte/Burnol route. Wong's maximum-norm contraction and Carvill's ladder-frequency estimate
 remain Lean-falsified; the sparse `(2^24)^j` family has a checked lower frame bound but also a
 checked orthogonal target witness. Ehm's exact Gram identities do not supply the missing natural
@@ -1250,3 +1250,30 @@ zero-free `F` containing `0,1`. This changes one W1/G6 compact-criterion edge on
 prove the arithmetic quadratic nonnegative unconditionally, so W2/G7 and RH remain open; the
 full-class quotient/completeness and distributional extension also remain open. The persistent RH
 Goal returns to fresh independent route selection.
+
+## Exposure Sprint Update: public review surface
+
+Date: 2026-07-16
+
+The post-campaign independent audit starts an exposure sprint as the first priority while proof
+campaigns remain open in parallel. The placeholder public README is replaced by exact statements
+for the Baez-Duarte, Li, Li-Weil Gram, and compact Weil criterion spines, together with a trust-base
+and open-gap declaration. PNT+ provenance is fixed at upstream commit
+`d963a6e694a05cd82e5f9b9ae7f4d94123e85393`, with repository snapshot dates recorded.
+
+A bounded novelty audit found no exact counterpart in the pinned mathlib tree, the inspected PNT+
+surface, the official AFP catalog queries, or selected external Lean repositories. This result is
+deliberately weaker than a global novelty claim and does not license "first formalization"
+language. P3 is complete only within the published fixed scope.
+
+The older clean-context Sol review remains evidence only for the Baez-Duarte/contour surface. The
+new Sol max review of the Li/Weil spine completed P1b with no P0-P2 issue and two P3 wording
+corrections. Two browser attempts failed before Lean Zulip loaded, so no message was sent and P2
+remains pending as a human-authored publication action. These are output-readiness states, not
+proof-admission gates. Current authority is `research/rh_governance_current.md`; RH, W2/G7, and
+M2/G3 are open for direct preregistered attacks.
+
+Local closure verification compiles Targets, exact TargetChecks, and the complete AxiomsAudit;
+all printed dependencies remain standard-only. Forbidden scans and `git diff --check` are clean,
+and the full 8,682-job build succeeds. Exposure engineering is complete apart from the human-owned
+P2 publication action; route selection may proceed in parallel under V4.1.

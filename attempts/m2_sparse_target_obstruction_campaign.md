@@ -29,7 +29,7 @@ Campaign: `CAMPAIGN-20260715-SPARSE-OBSTRUCTION-01`
 
 ## Frontier Before Proof
 
-- `hard_gap_before`: M2/G3 parked
+- `hard_gap_before`: M2/G3 historically unselected (open under V4.1)
 - `assumption_frontier_before`: unchanged
 - `expected_result`: `BRANCH_ELIMINATED` or `NO_PROGRESS`
 - `expected_hard_gap_delta`: zero
@@ -66,7 +66,7 @@ two-piece moment determinant is `1/600`, so neither screening conclusion remains
 
 - `activity_result`: `LEAN_PROOF_ATTEMPT_COMPLETE`
 - `research_progress`: exact sparse target-coupling branch eliminated
-- `hard_gap_after`: M2/G3 remains parked
+- `hard_gap_after`: M2/G3 was historically unselected (open under V4.1)
 - `hard_gap_delta`: zero
 - `assumption_frontier_after`: unchanged
 - `novelty_after`: `NOVELTY_UNCHECKED`

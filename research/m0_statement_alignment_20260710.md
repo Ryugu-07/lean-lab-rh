@@ -77,7 +77,7 @@ RH premise.
   statement or retain the full-line tail in the positive-natural statement.
 - audit decision: `PIVOT`
 
-The parked one-step implication to `nymanBeurlingConcreteApprox` should not be proved as a research
+The retired one-step implication to `nymanBeurlingConcreteApprox` should not be proved as a research
 target. Batch `BATCH-20260710-M0-02` subsequently closed the project-internal restricted
 closure/tolerance equivalence and identified the missing published moment/tail condition; see
 `research/m0_restricted_closure_alignment_20260710.md`. Batch `BATCH-20260710-M0-03` then restored

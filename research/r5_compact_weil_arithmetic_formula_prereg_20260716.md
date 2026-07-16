@@ -86,7 +86,7 @@ compact physical prime side.
    Gaussian family already compiles the reverse-separation criterion. Repeating it for compact
    tests supplies no unconditional sign mechanism and is rejected by the anti-cycling rule.
 
-G3/M2 remains parked by its public three-zero-delta STOP audit, and the previous local-prime
+G3/M2 had a historical local STOP after three zero-delta audits but is open under V4.1; the previous local-prime
 same-sign W2 branch is eliminated. Neither is silently reopened by this campaign.
 
 ## Source And Novelty Boundary

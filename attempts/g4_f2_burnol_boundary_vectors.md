@@ -7,7 +7,7 @@ Date: 2026-07-13
 - `gap_id`: `G4/F2`
 - `work_class`: `SOURCE_FORMALIZATION`
 - `result_class`: `KNOWN_THEOREM_FORMALIZED`
-- `hard_gap_before`: F2 selected; F3-F5 open; M2/G3 parked and unchanged.
+- `hard_gap_before`: F2 selected; F3-F5 open; M2/G3 historically unselected (open under V4.1).
 - `hard_gap_after`: F2 complete; F3 selected; F4-F5 and M2/G3 unchanged.
 - `hard_gap_delta`: closed exactly the fixed Burnol boundary-vector edge.
 

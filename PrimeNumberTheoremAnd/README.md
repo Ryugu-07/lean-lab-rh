@@ -5,6 +5,8 @@ formalization modules.
 
 - upstream: `https://github.com/AlexKontorovich/PrimeNumberTheoremAnd`
 - upstream commit: `d963a6e694a05cd82e5f9b9ae7f4d94123e85393`
+- snapshot introduced: `2026-07-10`
+- snapshot last expanded: `2026-07-15`
 - license: Apache-2.0; see `LICENSE` and the headers in each Lean source file
 - snapshot scope: the 13-module Abel-continuation dependency graph ending at
   `Mathlib.NumberTheory.LSeries.RiemannZetaAbelContinuation`, plus the standalone

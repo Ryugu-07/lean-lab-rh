@@ -96,7 +96,7 @@ elements, with explicit almost-everywhere representative theorems available for 
 
 ## Frontier
 
-- `hard_gap_before`: G4/F1b open and selected; F2-F5 open; M2/G3 parked and unchanged.
+- `hard_gap_before`: G4/F1b open and selected; F2-F5 open; M2/G3 historically unselected (open under V4.1).
 - `assumption_frontier_before`: Burnol's phase isometry, explicit target/kernel action, span image,
   and distance equality are source facts not yet compiled in Lean.
 - `expected_hard_gap_delta`: close F1b only and select F2 next.

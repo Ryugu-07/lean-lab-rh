@@ -12,7 +12,7 @@ Route: R5, source-faithful Weil explicit formula.
 
 | Loop | Mode | Result | Decision |
 |---|---|---|---|
-| 1 | `ROUTE_MAP` | R1/R2 are parked at RH-hard approximation edges, R3's exact Li criterion and Li-Weil Gram packaging are complete, R4 still lacks an operator/spectrum bridge, and R5 has the unique open source bridge W1c. | Audit bounded W1c subedges. |
+| 1 | `ROUTE_MAP` | R1/R2 have recorded approximation obstructions, R3's exact Li criterion and Li-Weil Gram packaging are complete, R4 still lacks an operator/spectrum bridge, and R5 has the unique open source bridge W1c. | Audit bounded W1c subedges. |
 | 2 | `CONJECTURE_GENERATION` | Generated five candidates: the full class-E formula, finite-prime terms, the archimedean local term, the right-half-plane logarithmic-derivative integrand, and a single fixed test function. | Send all five to source and strength audit. |
 | 3 | `ADVERSARIAL_TEST` | The full formula exceeds one campaign; isolated local terms and a fixed test do not connect both sides. The integrand identity is unconditional, strictly weaker than RH, sign-testable from the xi product, and supported by existing Hadamard and von Mangoldt APIs. | Select and preregister C4. |
 | 4 | `PROOF_ATTEMPT_A` | The first Lean compile exposed eta-expansion of `GammaR`, denominator normalization in the pole factor, the von Mangoldt minus sign, and missing neighborhood scope. After explicit repairs, `GammaR` differentiability, the local xi product, and `logDeriv xi = poles + logDeriv GammaR - L(vonMangoldt)` compile on `Re(s)>1`. | Continue without changing the fixed statement. |

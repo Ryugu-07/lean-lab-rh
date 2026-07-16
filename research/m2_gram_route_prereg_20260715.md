@@ -8,7 +8,7 @@ Date: 2026-07-15
 
 - `route`: exact Baez-Duarte Gram/projection geometry
 - `work_class`: `DISCOVERY` plus `FALSIFICATION`
-- `hard_gap_before`: M0, M1, D, and G4 complete; M2/G3 parked
+- `hard_gap_before`: M0, M1, D, and G4 complete; M2/G3 historically unselected (open under V4.1)
 - `assumption_frontier_before`: no unconditional proof that
   `baezDuarteComplexTargetL2` belongs to `baezDuarteComplexKernelClosure`
 - `expected_hard_gap_delta`: zero unless the campaign unexpectedly proves a source-aligned

@@ -141,7 +141,7 @@ orthogonal complement, or assuming derivative vanishing as an unchecked premise,
 
 ## Frontier
 
-- `hard_gap_before`: G4/F2 open and selected; F3-F5 open; M2/G3 parked and unchanged.
+- `hard_gap_before`: G4/F2 open and selected; F3-F5 open; M2/G3 historically unselected (open under V4.1).
 - `assumption_frontier_before`: the source `V`, oscillatory continuation, boundary convergence,
   physical estimates, pairing, and order orthogonality are external facts.
 - `expected_hard_gap_delta`: close F2 only and select F3 next.

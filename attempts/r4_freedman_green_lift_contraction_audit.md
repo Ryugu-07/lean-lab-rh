@@ -28,7 +28,7 @@ Status: `PUBLICLY_CLOSED`
 
 | Loop | Mode | Result | Decision |
 |---|---|---|---|
-| 1 | `ROUTE_MAP` | Re-audited the fixed DAG after compaction. The open frontiers remain generic W1/regularization and unconditional W2; M2/G3 remains parked. A fresh 2026 Weyl/Volterra preprint provides a distinct R4 literature route. | Audit the original TeX before admitting any certificate claim. |
+| 1 | `ROUTE_MAP` | Re-audited the fixed DAG after compaction. The open frontiers remain generic W1/regularization and unconditional W2; M2/G3 was historically unselected (open under V4.1). A fresh 2026 Weyl/Volterra preprint provides a distinct R4 literature route. | Audit the original TeX before admitting any certificate claim. |
 | 2 | `LITERATURE_CANDIDATE_SCREEN` | Compared five exact source mechanisms. The theta identity is valid but mechanical; the KLM/RH bridge is explicitly open; numerical frame and uniform-parameter claims are under-specified. The Green-lift contraction inference has a precise finite-dimensional abstraction. | Pre-register the nontrivial-kernel scalar countermodel and begin Falsification Attempt A. |
 | 3 | `FALSIFICATION_PROOF` | `FreedmanGreenLiftAudit.lean` constructs the two-dimensional trace model. Lean checks the nontrivial kernel, fiber representative, Euler--Lagrange orthogonality, contractive middle multiplier, exact compressed factorization, twofold expansion, and signed unit value `-3`. | The listed premises are insufficient. Retain the concrete Volterra route only behind an additional norm/energy theorem. |
 | 4 | `INDEPENDENT_AUDIT` | The batch also proves `contraction_comp_three`: separate contraction estimates for `C`, `K`, and `E` do imply contraction of their composition. Exact Targets and statement witnesses compile; both selected axiom prints contain only standard axioms. | Accept only the source-local dependency diagnosis; do not infer nonpositivity of the concrete Weyl kernel. |
@@ -38,7 +38,7 @@ Status: `PUBLICLY_CLOSED`
 
 ## Current Accounting
 
-- `hard_gap_before`: G6/W1 and G7/W2 open; G3/M2 parked
+- `hard_gap_before`: G6/W1 and G7/W2 open; G3/M2 historically unselected (open under V4.1)
 - `hard_gap_after`: unchanged
 - `hard_gap_delta`: 0
 - `assumption_frontier_before`: no proved norm control for the compression/right-inverse around

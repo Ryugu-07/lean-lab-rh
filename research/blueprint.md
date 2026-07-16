@@ -1691,7 +1691,7 @@ Lean status:
 - planned one-step corollary; under protocol v2 it should be batched with adjacent engineering
   checks.
 - M0 audit `AUDIT-20260710-M0-01` subsequently proved `nymanBeurlingConcreteApprox`
-  unconditionally using parameters `1` and `-1`; this target is therefore obsolete and parked.
+  unconditionally using parameters `1` and `-1`; this target is therefore obsolete and retired.
 
 ## M1: Baez-Duarte Theorem 1.1
 
@@ -1817,7 +1817,7 @@ M0 error formula. This excludes right-half-strip zeta zeros; completed-zeta refl
 full Mathlib RH statement. The remaining M1 theorem is the forward convergence assembly from RH to
 closure; the separately compiled F1/F2/F3 components do not yet constitute that theorem.
 
-## Tier 3: Horizon
+## Direct RH and PROOF-ATTEMPT
 
 ### M1-18 Strong Baez-Duarte Criterion
 
@@ -1828,5 +1828,7 @@ estimate. The theorem `riemannHypothesis_iff_baezDuarteComplexTarget_mem_kernelC
 and D. This is the published criterion formalized as an equivalence, not an unconditional proof
 of RH.
 
-`RiemannHypothesis` remains the orientation point. It is not an admissible immediate proof-loop
-target.
+`RiemannHypothesis` is an admissible immediate `PROOF-ATTEMPT` target, as are W2/G7 and M2/G3.
+An attack must preregister its exact endpoint, success/falsification criteria, and known obstacle;
+its claims become usable only after compilation, exact witness, axiom audit, and definition
+alignment.

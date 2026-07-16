@@ -142,7 +142,7 @@ tendsto_burnolGramMatrix_inv
 
 ## Frontier
 
-- `hard_gap_before`: G4/F3 open and selected; F4-F5 open; M2/G3 parked and unchanged.
+- `hard_gap_before`: G4/F3 open and selected; F4-F5 open; M2/G3 historically unselected (open under V4.1).
 - `assumption_frontier_before`: Burnol's normalized Gram limits, target-pairing limits,
   Hilbert/Cauchy inverse entry, and finite matrix inverse limit remain external facts.
 - `expected_hard_gap_delta`: close F3 only and select F4 next.
@@ -189,5 +189,5 @@ until the public gate passed.
 
 Implementation commit `897e35b16ad3039c069d86f0c35f89d4bce526ad` passed public Lean Action
 CI run `29289392653`, build job `86949324989`, in 2m7s. The batch result is
-`KNOWN_THEOREM_FORMALIZED`: F3 is complete and F4 is selected but not started. F5 and parked
-M2/G3 are unchanged, and no unconditional RH claim is made.
+`KNOWN_THEOREM_FORMALIZED`: F3 is complete and F4 is selected but not started. F5 was unchanged;
+M2/G3 is open under V4.1, and no unconditional RH claim is made.

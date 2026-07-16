@@ -32,7 +32,7 @@ Mode: `DISCOVERY -> FALSIFICATION`
 
 | Loop | Mode | Result | Decision |
 |---|---|---|---|
-| 1 | `INDEPENDENT_AUDIT` | The compact Laplace separator campaign is fully closed with three independent public CI runs. W1c1 and W2/G7 remain open; M2/G3 remains parked. Repackaging the separator as another RH-equivalent reverse criterion would repeat the Gaussian strategy with zero hard-gap delta. | Rotate from LITERATURE to DISCOVERY and inspect arithmetic-kernel mechanisms. |
+| 1 | `INDEPENDENT_AUDIT` | The compact Laplace separator campaign is fully closed with three independent public CI runs. W1c1 and W2/G7 remain open; M2/G3 was historically unselected (open under V4.1). Repackaging the separator as another RH-equivalent reverse criterion would repeat the Gaussian strategy with zero hard-gap delta. | Rotate from LITERATURE to DISCOVERY and inspect arithmetic-kernel mechanisms. |
 | 2 | `CONJECTURE_GENERATION_AND_ADVERSARIAL_SCREEN` | Five exact mechanisms were screened. Full fixed-width positivity is already RH-equivalent; local pole/prime semidefinite decompositions face two-point sign tests. The actual `n=2` prime kernel has an exact candidate witness with width `(log 2)^2/16` and shifts `0, log 2`. | Admit only the two-sided prime-kernel indefiniteness endpoint and begin Lean Falsification Attempt A. |
 | 3 | `LEAN_FALSIFICATION_ATTEMPT_A` | Lean rewrites the existing complex von-Mangoldt weight to an exact real kernel, proves the witness width positive, computes the diagonal factor `exp(-4)` and off-diagonal factor `(1+exp(-16))/2`, and proves the latter is strictly larger. The vector `(1,-1)` gives a negative quadratic value while the diagonal is positive. | The actual `n=2` kernel and its negation both fail positive semidefiniteness; classify the termwise local-prime sign branch as eliminated. |
 | 4 | `INDEPENDENT_LOCAL_AUDIT` | The 251-line module, exact Targets and TargetChecks, four standard-only axiom prints, forbidden/scratch/resource scans, `git diff --check`, aggregate import, and full 8,679-job build pass. | Local gate passed; publish the implementation and require independent public CI. |
@@ -44,7 +44,7 @@ run `29462185050`, build job `87507838744`, before the mathematical implementati
 
 ## Current Accounting
 
-- `hard_gap_before`: G6/W1 open; G7/W2 open; G3/M2 parked
+- `hard_gap_before`: G6/W1 open; G7/W2 open; G3/M2 historically unselected (open under V4.1)
 - `hard_gap_after`: unchanged; the termwise same-sign local-prime assembly branch is eliminated,
   while complete Weil positivity remains open
 - `hard_gap_delta`: 0

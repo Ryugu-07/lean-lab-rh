@@ -35,7 +35,7 @@ The clean-context Arch audit in
 
 ## Frontier Before
 
-- `hard_gap_before`: M1, G1, G2, and D are complete; M2/G3 is parked.
+- `hard_gap_before`: M1, G1, G2, and D are complete; M2/G3 was historically unselected (open under V4.1).
 - `assumption_frontier_before`: the final theorem has an axiom audit and a reverse-only exact
   witness, but no exact iff witness in `TargetChecks.lean`; publication gates are prose only.
 - `expected_hard_gap_delta`: none. This batch is governance and cannot be RH progress.

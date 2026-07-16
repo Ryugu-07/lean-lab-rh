@@ -87,7 +87,7 @@ source component at `s=i*y`. Harmless naming and reassociation changes are allow
 
 ## DAG Accounting
 
-- `hard_gap_before`: G6/W1 and G7/W2 open; G3/M2 parked
+- `hard_gap_before`: G6/W1 and G7/W2 open; G3/M2 historically unselected (open under V4.1)
 - `hard_gap_after_if_complete`: unchanged
 - `hard_gap_delta`: 0
 - `assumption_frontier_before`: the 2018 continuation step has no checked convergence domain

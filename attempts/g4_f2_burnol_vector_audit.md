@@ -7,7 +7,7 @@ Date: 2026-07-13
 - `gap_id`: `G4/F2`
 - `work_class`: `LITERATURE_AND_DEPENDENCY_AUDIT`
 - `result_class`: `DEPENDENCY_GAP_IDENTIFIED`
-- `hard_gap_before`: F2 selected; F3-F5 open; M2/G3 parked.
+- `hard_gap_before`: F2 selected; F3-F5 open; M2/G3 historically unselected (open under V4.1).
 - `hard_gap_after`: F2 remains selected with one exact indivisible implementation boundary;
   F3-F5 and M2/G3 unchanged.
 - `hard_gap_delta`: no theorem edge closed; corrected the source dependency boundary.

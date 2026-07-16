@@ -106,7 +106,7 @@ for the source's concrete Volterra operators; it records the missing dependency 
 
 - `work_class`: `LITERATURE` with a Lean falsification endpoint
 - `route`: R4 spectral/Weyl/Volterra positivity
-- `hard_gap_before`: G6/W1 and G7/W2 open; G3/M2 parked
+- `hard_gap_before`: G6/W1 and G7/W2 open; G3/M2 historically unselected (open under V4.1)
 - `hard_gap_after_if_complete`: unchanged
 - `hard_gap_delta`: 0
 - `assumption_frontier_before`: the source treats multiplier contraction plus trace-fiber

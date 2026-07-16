@@ -7,10 +7,10 @@ Date: 2026-07-14
 - `gap_id`: `G4/F5`
 - `work_class`: `SOURCE_FORMALIZATION`
 - `status`: complete
-- `hard_gap_before`: F0-F4 complete; F5 selected; M2/G3 parked and unchanged.
+- `hard_gap_before`: F0-F4 complete; F5 selected; M2/G3 historically unselected (open under V4.1).
 - `assumption_frontier_before`: the full finite-supremum passage and natural subsequence transfer
   are not yet in the checked theorem graph.
-- `hard_gap_after`: G4/B1 and F0-F5 complete; M2/G3 parked and unchanged.
+- `hard_gap_after`: G4/B1 and F0-F5 complete; M2/G3 historically unselected (open under V4.1).
 - `assumption_frontier_after`: no unchecked premise remains in the fixed Burnol source theorem;
   the theorem remains conditional on `RiemannHypothesis` exactly as preregistered.
 - `result_class`: `KNOWN_THEOREM_FORMALIZED`
@@ -111,6 +111,6 @@ liminf monotonicity.
 - The public commit contains both final endpoints, exact target witnesses, transitive axiom audit,
   preregistration, and the complete loop record through local verification.
 - Hard-gap accounting: F0-F5 are complete, so the auditor-approved Burnol node G4/B1 is complete.
-  M2/G3 is unchanged and remains parked; no unconditional RH or closure-membership result is
+  M2/G3 was unchanged in this historical attempt (open under V4.1); no unconditional RH or closure-membership result is
   claimed.
 - Classification: `KNOWN_THEOREM_FORMALIZED`.

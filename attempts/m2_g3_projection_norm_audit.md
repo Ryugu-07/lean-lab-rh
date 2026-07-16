@@ -7,7 +7,7 @@ Date: 2026-07-15
 - `gap_id`: `G3`
 - `work_class`: `AUDIT/LITERATURE`
 - `status`: complete
-- `hard_gap_before`: M2/G3 parked; M0, M1, D, and G4 complete.
+- `hard_gap_before`: M2/G3 historically unselected (open under V4.1); M0, M1, D, and G4 complete.
 - `assumption_frontier_before`: unconditional positive-natural target closure membership remains
   unproved and Lean-equivalent to RH.
 
@@ -25,7 +25,7 @@ Date: 2026-07-15
   coordinate maximum norm from `1` to `6/5`.
 - Next obstruction: compile all projection and norm facts in one Lean module, then decide only
   whether this proof branch is falsified.
-- Provisional classification: `DEPENDENCY_GAP_IDENTIFIED`; M2/G3 remains parked.
+- Provisional classification: `DEPENDENCY_GAP_IDENTIFIED`; M2/G3 was historically unselected (open under V4.1).
 
 ## Loop 2: generic projection counterexample
 
@@ -39,7 +39,7 @@ Date: 2026-07-15
   Euclidean projection with candidate maximum-norm growth `10/7`; this extension was registered
   before its Lean source edit.
 - Next obstruction: verify the exact `A_3`, Gram inverse, `P_3`, and test-vector calculation.
-- Provisional classification: `BRANCH_FALSIFIED`; M2/G3 remains parked.
+- Provisional classification: `BRANCH_FALSIFIED`; M2/G3 was historically unselected (open under V4.1).
 
 ## Loop 3: source-specific `n = 3` counterexample
 
@@ -63,7 +63,7 @@ Date: 2026-07-15
   resource-relaxation scans are empty.
 - Implementation commit `b4894f0cb9903b5fa14c766e30bdb10c3bdeaeb4` passed public Lean Action
   CI run `29383306167`, build job `87251333374`, in 2m3s.
-- `hard_gap_after`: M2/G3 remains parked; M0, M1, D, and G4 remain complete.
+- `hard_gap_after`: M2/G3 was historically unselected (open under V4.1); M0, M1, D, and G4 remain complete.
 - `hard_gap_delta`: zero. This rejects a proposed proof branch but does not prove unconditional
   closure membership.
 - `assumption_frontier_after`: unconditional membership of `baezDuarteComplexTargetL2` in

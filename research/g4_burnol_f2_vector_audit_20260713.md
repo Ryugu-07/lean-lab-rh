@@ -188,7 +188,7 @@ compile without unchecked premises.
 
 ## Frontier
 
-- `hard_gap_before`: G4/F2 open and selected; F3-F5 open; M2/G3 parked.
+- `hard_gap_before`: G4/F2 open and selected; F3-F5 open; M2/G3 historically unselected (open under V4.1).
 - `hard_gap_after`: G4/F2 remains open and selected with its exact source boundary recovered;
   F3-F5 and M2/G3 are unchanged.
 - `hard_gap_delta`: zero theorem edges closed; the false identification of `T` with `V` and the

@@ -11,7 +11,7 @@ Audit ID: `AUDIT-20260715-M2-G3-02`
 - `work_class`: `AUDIT/LITERATURE`
 - `novelty_label`: `KNOWN_MATHEMATICS`
 - `status`: complete
-- `hard_gap_before`: M2/G3 parked; M0, M1, D, and G4 complete.
+- `hard_gap_before`: M2/G3 historically unselected (open under V4.1); M0, M1, D, and G4 complete.
 - `assumption_frontier_before`: no unconditional proof that
   `baezDuarteComplexTargetL2` belongs to `baezDuarteComplexKernelClosure`.
 - `expected_hard_gap_delta`: zero unless the audited unconditional structural estimate survives
@@ -104,7 +104,7 @@ evaluation. Hence the frequency lower bound invoked on PDF page 8 fails for the 
 admissible ladder indices.
 
 - `result`: `BRANCH_FALSIFIED`
-- `hard_gap_after`: M2/G3 remains parked; M0, M1, D, and G4 remain complete.
+- `hard_gap_after`: M2/G3 was historically unselected (open under V4.1); M0, M1, D, and G4 remain complete.
 - `hard_gap_delta`: zero.
 - `assumption_frontier_after`: no unconditional proof that
   `baezDuarteComplexTargetL2` belongs to `baezDuarteComplexKernelClosure`.

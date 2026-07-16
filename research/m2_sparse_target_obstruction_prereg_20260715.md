@@ -10,7 +10,7 @@ Date: 2026-07-15
 - `work_class`: `FALSIFICATION`
 - `previous_evidence`: the published `1/40` lower-frame bound for the kernels indexed by
   `(2^24)^j`
-- `hard_gap_before`: M2/G3 parked
+- `hard_gap_before`: M2/G3 historically unselected (open under V4.1)
 - `assumption_frontier_before`: no unconditional membership of
   `baezDuarteComplexTargetL2` in `baezDuarteComplexKernelClosure`
 - `expected_hard_gap_delta`: zero
@@ -142,7 +142,7 @@ Result: `BRANCH_ELIMINATED`
 - No numerical result, unproved proposition, or additional axiom is used.
 
 The theorem excludes only the registered sparse subfamily. It neither contradicts nor weakens the
-compiled RH equivalence for the full positive-natural family. M2/G3 remains parked,
+compiled RH equivalence for the full positive-natural family. M2/G3 was historically unselected (open under V4.1),
 `hard_gap_delta=0`, and novelty remains `NOVELTY_UNCHECKED`. The next state is `ROUTE_SELECTION`
 with a different route family.
 

@@ -2,22 +2,24 @@
 
 Date: 2026-07-15
 
-This protocol supplements, rather than erases, the fixed-gap and anti-gaming rules in Loop
-Protocol V2. The `STOP` recorded at commit `5d75abc` closes only the automatic recent-literature
-screening campaign. It does not stop the persistent RH goal.
+This file preserves the V3 campaign chronology. Current authority is
+[`rh_governance_current.md`](rh_governance_current.md). The `STOP` recorded at commit `5d75abc`
+closes only that recent-literature screening campaign and never stops the persistent RH Goal.
+V4.1 removes V3's numerical campaign length while retaining preregistration, anti-cycling, honest
+classification, and route selection.
 
 ## Global Persistence Rule
 
 - A `STOP` decision applies only to the current branch or campaign unless the user explicitly
   requests a global stop.
-- After a local stop, enter `ROUTE_SELECTION`. Do not resume the stopped branch without new
-  evidence, but continue through a different route family.
+- After a local stop, enter `ROUTE_SELECTION`. Re-enter the same branch only with a materially new
+  preregistered attack angle; otherwise continue through a different route family.
 - The Wong and Carvill branches remain rejected. Their Lean counterexamples are preserved and may
   be used as falsification tests, not reopened as proof routes.
 
 ## Research Campaign
 
-A campaign contains at most six admitted research loops:
+A campaign may use the following stages when they fit the target, without a numerical loop limit:
 
 1. `ROUTE_MAP`
 2. `CONJECTURE_GENERATION`

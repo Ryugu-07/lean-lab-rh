@@ -8,8 +8,8 @@ Date: 2026-07-14
 - `work_class`: `SOURCE_FORMALIZATION`
 - `status`: complete
 - `result_class`: `KNOWN_THEOREM_FORMALIZED`
-- `hard_gap_before`: F3 complete; F4 selected; F5 open; M2/G3 parked and unchanged.
-- `hard_gap_after`: F4 complete; F5 selected; M2/G3 parked and unchanged.
+- `hard_gap_before`: F3 complete; F4 selected; F5 open; M2/G3 historically unselected (open under V4.1).
+- `hard_gap_after`: F4 complete; F5 selected; M2/G3 historically unselected (open under V4.1).
 - `hard_gap_delta`: closed exactly the finite-zero-set projection and liminf source edge.
 - `assumption_frontier_before`: the finite orthogonal-projection distance inequality and the
   finite-zero-set liminf assembly are external facts.
@@ -172,6 +172,6 @@ quadratic form at the `k=0` coordinates, convert the critical-line target factor
 - Public Lean Action CI run `29351353828` completed successfully in 1m57s; build job
   `87148078056` succeeded.
 - F4 is now closed as `KNOWN_THEOREM_FORMALIZED`. F5 is selected as the next fixed source edge;
-  no F5 proof work was started in this loop, and M2/G3 remain parked and unchanged.
+  no F5 proof work was started in this loop, and M2/G3 was unchanged in this historical attempt (open under V4.1).
 - Classification: `KNOWN_THEOREM_FORMALIZED`; this is formalization of Burnol's published finite
   lower bound, not an unconditional RH result.

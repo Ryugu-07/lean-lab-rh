@@ -14,10 +14,10 @@ Status: `PUBLICLY_CLOSED`
 ## Loop 1: independent route map
 
 - Rotated from the previous FALSIFICATION campaign to LITERATURE.
-- Re-audited W1/W2, the parked Baez-Duarte/Burnol routes, the raw Lagarias strip class, the compact
+- Re-audited W1/W2, the open Baez-Duarte/Burnol routes, the raw Lagarias strip class, the compact
   C6 formula, and the complete-divisor compact separator.
 - Confirmed that Wong, Carvill, the sparse Gram family, Pyvovarov zero-damping continuity, and
-  unconditional compact positivity remain closed or parked at their recorded frontiers.
+  unconditional compact positivity remain closed or open with recorded frontiers.
 - `result`: `ROUTE_MAP_COMPLETE`
 - `hard_gap_delta`: zero during audit
 

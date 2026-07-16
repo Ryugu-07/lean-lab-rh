@@ -141,7 +141,7 @@ conversions must be proved.
 
 ## Frontier
 
-- `hard_gap_before`: F3 complete; F4 open and selected; F5 open; M2/G3 parked and unchanged.
+- `hard_gap_before`: F3 complete; F4 open and selected; F5 open; M2/G3 historically unselected (open under V4.1).
 - `assumption_frontier_before`: Burnol's finite orthogonal-projection distance inequality and
   finite-zero-set liminf assembly remain external source mathematics.
 - `expected_hard_gap_delta`: close F4 only and select F5 next.
@@ -190,5 +190,5 @@ and F5 remains forbidden at this checkpoint.
 
 Implementation commit `3cf0b91a65f6830eb73896bee77cc0db65b7387b` passed public Lean Action
 CI run `29351353828`, build job `87148078056`, in 1m57s. The batch result is
-`KNOWN_THEOREM_FORMALIZED`: F4 is complete and F5 is selected. M2/G3 remain parked and unchanged,
+`KNOWN_THEOREM_FORMALIZED`: F4 is complete and F5 is selected. M2/G3 was unchanged in this historical attempt (open under V4.1),
 and no unconditional RH claim is made.

@@ -7,7 +7,7 @@ Date: 2026-07-15
 - `gap_id`: `G3`
 - `work_class`: `AUDIT/LITERATURE`
 - `status`: complete
-- `hard_gap_before`: M2/G3 parked; M0, M1, D, and G4 complete.
+- `hard_gap_before`: M2/G3 historically unselected (open under V4.1); M0, M1, D, and G4 complete.
 - `assumption_frontier_before`: unconditional positive-natural target closure membership remains
   unproved and Lean-equivalent to RH.
 
@@ -28,7 +28,7 @@ Date: 2026-07-15
 - Registered the first small cancellation test `(0,2)` versus `(3,0)` before any Lean source edit.
 - Next obstruction: exact Lean verification of the strict reverse inequality without numerical
   evaluation.
-- Provisional classification: `DEPENDENCY_GAP_IDENTIFIED`; M2/G3 remains parked.
+- Provisional classification: `DEPENDENCY_GAP_IDENTIFIED`; M2/G3 was historically unselected (open under V4.1).
 
 ## Loop 2: exact ladder-frequency counterexample
 
@@ -53,7 +53,7 @@ Date: 2026-07-15
   resource-relaxation scans are empty.
 - Implementation commit `ff0f14f10e75d73424addb671b3da34f0c44c679` passed public Lean Action
   CI run `29384172003`, build job `87253877106`, in 2m34s.
-- `hard_gap_after`: M2/G3 remains parked; M0, M1, D, and G4 remain complete.
+- `hard_gap_after`: M2/G3 was historically unselected (open under V4.1); M0, M1, D, and G4 remain complete.
 - `hard_gap_delta`: zero.
 - `assumption_frontier_after`: unconditional membership of `baezDuarteComplexTargetL2` in
   `baezDuarteComplexKernelClosure` remains unproved and Lean-equivalent to RH.
