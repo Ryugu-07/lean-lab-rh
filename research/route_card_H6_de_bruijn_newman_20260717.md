@@ -502,4 +502,6 @@ scans, `git diff --check`, and the 8,694-job full build pass. Local classificati
 `OBS-H6-POSITIVE-COSH-LI3-01` and requires any future H6 moment continuation to use quantitative
 theta-kernel structure rather than positivity/Hankel inequalities alone. Immutable implementation
 commit `5fdfc5c7437349735c57552a75838f16b4d63f5e` passed public Lean Action CI run `29543145545`,
-build job `87769424525`, in `1m55s`; evidence backfill CI remains before closure.
+build job `87769424525`, in `1m55s`. Evidence-backfill commit
+`61ce528793a9fc04e4a6b26ba83463cf0557bafc` passed run `29543336971`, build job `87770059112`,
+in `2m06s`. This campaign is publicly closed; H6-E and RH remain open.

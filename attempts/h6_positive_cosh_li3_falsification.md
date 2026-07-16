@@ -4,7 +4,7 @@ Campaign: `AUDIT-20260717-H6-POSITIVE-COSH-LI3-01`
 
 Mode: `FALSIFICATION`
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_CI_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Runtime record
 
@@ -53,7 +53,7 @@ Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_CI_PENDING`
 
 ## Pending gates
 
-- immutable evidence backfill and its public CI
+- none; the campaign is publicly closed
 
 ## Public preregistration gate
 
@@ -127,4 +127,12 @@ Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_CI_PENDING`
   Lean Action CI run `29543145545`, build job `87769424525`, from
   `2026-07-16T23:51:36Z` to `23:53:31Z` (`1m55s`).
 - `result`: `PUBLIC_IMPLEMENTATION_VERIFIED`
-- Only evidence backfill and its public CI remain before campaign closure.
+
+## Public evidence gate and closure
+
+- Evidence-backfill commit `61ce528793a9fc04e4a6b26ba83463cf0557bafc` passed public Lean
+  Action CI run `29543336971`, build job `87770059112`, from `2026-07-16T23:55:50Z` to
+  `23:57:56Z` (`2m06s`).
+- `result`: `PUBLICLY_CLOSED`
+- `global_goal`: remains active; return to value-ranked route selection with the new obstruction
+  recorded.

@@ -1812,4 +1812,7 @@ actual theta-kernel shape. The module, exact Targets/TargetChecks, five standard
 prints, empty forbidden scans, `git diff --check`, and the 8,694-job full build pass.
 Classification is `BRANCH_FALSIFIED`, `hard_gap_delta=0`. Immutable implementation commit
 `5fdfc5c7437349735c57552a75838f16b4d63f5e` passed public Lean Action CI run `29543145545`, build
-job `87769424525`, in `1m55s`; evidence backfill CI remains before closure.
+job `87769424525`, in `1m55s`. Evidence-backfill commit
+`61ce528793a9fc04e4a6b26ba83463cf0557bafc` passed run `29543336971`, build job `87770059112`,
+in `2m06s`. The campaign is publicly closed; the persistent RH Goal returns to value-ranked route
+selection.

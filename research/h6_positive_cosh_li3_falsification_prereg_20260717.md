@@ -6,7 +6,7 @@ Campaign: `AUDIT-20260717-H6-POSITIVE-COSH-LI3-01`
 
 Mode: `FALSIFICATION`
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_CI_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Route selection
 
@@ -180,4 +180,7 @@ forbidden declaration/proof/resource scans, `git diff --check`, and the 8,694-jo
 locally. Classification is `BRANCH_FALSIFIED`, with `hard_gap_delta=0`. Immutable implementation
 commit `5fdfc5c7437349735c57552a75838f16b4d63f5e` passed public Lean Action CI run `29543145545`,
 build job `87769424525`, from `2026-07-16T23:51:36Z` to `23:53:31Z` (`1m55s`). Only immutable
-evidence backfill and its public CI remain before closure.
+evidence backfill and its public CI remained before closure. Evidence-backfill commit
+`61ce528793a9fc04e4a6b26ba83463cf0557bafc` then passed public Lean Action CI run `29543336971`,
+build job `87770059112`, from `2026-07-16T23:55:50Z` to `23:57:56Z` (`2m06s`). The campaign is
+publicly closed; the persistent RH Goal remains active and returns to value-ranked route selection.
