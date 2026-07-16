@@ -30,10 +30,25 @@ Every route card records:
 - up to three high-value candidate endpoints;
 - nearest failed project attempt and the substantive difference of any re-entry.
 
-The H1, H2, and H6 labels from the historical governance request remain reserved for their source
-cards. The available downloaded atlas does not define those identifiers, so this file does not
-invent a mapping; the cards must bind them when the original table or a source-audited replacement
-is available.
+The imported Sol census fixes the requested identifiers:
+
+- `H1`: classical critical-line, mollifier, and critical-zero-proportion methods;
+- `H2`: zero-free regions, zero-density, moments, mean values, subconvexity, and Lindelof-type
+  bounds;
+- `H6`: de Bruijn-Newman heat flow and zero dynamics.
+
+Their full H0-H14 context is recorded in
+[`historical_route_census.md`](historical_route_census.md).
+
+Batch A is source-aligned in the following cards:
+
+- [`route_card_H1_critical_line_mollifiers_20260717.md`](route_card_H1_critical_line_mollifiers_20260717.md);
+- [`route_card_H2_density_moments_20260717.md`](route_card_H2_density_moments_20260717.md);
+- [`route_card_H6_de_bruijn_newman_20260717.md`](route_card_H6_de_bruijn_newman_20260717.md).
+
+The exact nine-candidate verdicts are in
+[`census_batch_A_conjecture_audit_20260717.md`](census_batch_A_conjecture_audit_20260717.md).
+They are selection inputs only, never proof premises.
 
 ## Initial route families
 

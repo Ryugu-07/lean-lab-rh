@@ -15,7 +15,15 @@ protocols and attempt records remain historical evidence but cannot reintroduce 
   [`rh_governance_sol_claude_audit_20260717.md`](rh_governance_sol_claude_audit_20260717.md).
 - Current route source:
   [`rh_route_atlas_and_conjecture_factory_20260717.md`](rh_route_atlas_and_conjecture_factory_20260717.md).
+- Imported Sol census: [`historical_route_census.md`](historical_route_census.md), with H0-H14
+  coverage and the requested H1/H2/H6 Batch A definitions.
+- Imported Sol progress audit:
+  [`latest_progress_audit_20260716.md`](latest_progress_audit_20260716.md).
+- Imported V4 source, adapted only where V4.1 supersedes it:
+  [`rh_research_governance_v4_20260716.md`](rh_research_governance_v4_20260716.md).
+- Sol patch provenance: [`sol_v4_patch_import_20260717.md`](sol_v4_patch_import_20260717.md).
 - Source policy: [`source_grade_registry_20260717.md`](source_grade_registry_20260717.md).
+- Source inventory: [`literature_source_registry.csv`](literature_source_registry.csv).
 - Public/upstream queue: [`mathlib_upstream_queue_20260717.md`](mathlib_upstream_queue_20260717.md).
 
 V4.1 overrides every V4 clause that imposed an input-side restriction, including proof freezes,
@@ -115,9 +123,13 @@ provide factual theorem names, links, and audit evidence, but no AI-authored mes
 ## Historical route atlas and exposure priority
 
 The fixed route atlas, not an endless stream of recent manuscripts, is the default source of
-candidate routes. H1, H2, and H6 route cards and the nine-candidate audit remain required, and the
-function-field Bombieri-Stepanov line should receive an early source card. These research tasks do
-not restrict direct attacks on other open nodes.
+candidate routes. H1 (critical-line/mollifier), H2 (density/moments/subconvexity), and H6
+(de Bruijn-Newman) now have source-aligned route cards and a completed nine-candidate audit in
+[`census_batch_A_conjecture_audit_20260717.md`](census_batch_A_conjecture_audit_20260717.md).
+The function-field Bombieri-Stepanov line should receive the next census source card. These
+research tasks do not restrict direct attacks on other open nodes. The original Batch A
+deliverable remains recorded in
+[`next_route_census_instruction_20260716.md`](next_route_census_instruction_20260716.md).
 
 Exposure remains the current first priority: maintain the README, complete bounded novelty and
 definition review, split mathlib-ready components, and assemble human-owned publication evidence.

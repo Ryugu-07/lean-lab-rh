@@ -4,12 +4,13 @@ Date: 2026-07-17
 
 ## Provenance
 
-This repository record adapts the available combined Claude/Sol review in
-`/Users/karasuakamatsu/Downloads/rh_directive_v4_final_20260717.md`. The original separate Sol
-sandbox files named by that review were not found in the repository, Downloads, or available
-Codex attachments on 2026-07-16. Therefore this file preserves only claims supported by the
-available combined review and repository evidence; it is not represented as a verbatim missing
-Sol artifact.
+This repository record adapts the combined Claude/Sol review in
+`/Users/karasuakamatsu/Downloads/rh_directive_v4_final_20260717.md`. The separate Sol artifacts
+were later supplied in `/Users/karasuakamatsu/Downloads/RH_GOVERNANCE_V4_PATCH.zip` and imported as
+`historical_route_census.md`, `latest_progress_audit_20260716.md`,
+`literature_source_registry.csv`, `next_route_census_instruction_20260716.md`, and
+`rh_research_governance_v4_20260716.md`. Their input-side restrictions were removed where V4.1
+supersedes them; route history, source evidence, and accounting findings were retained.
 
 The user ruling in [`rh_directive_v4_1_20260717.md`](rh_directive_v4_1_20260717.md) supersedes the
 combined V4 review wherever they differ.
