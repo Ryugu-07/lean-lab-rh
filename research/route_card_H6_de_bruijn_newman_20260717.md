@@ -392,7 +392,11 @@ H_t(z)`, and derives `x'(t)=2*force(t,x(t))` for every path differentiable at th
 zero. Exact Targets, five TargetChecks, five standard-only axiom prints, forbidden scans,
 `git diff --check`, and the 8,691-job build pass locally.
 
-**DAG verdict.** This is known source dynamics infrastructure with `hard_gap_delta=0` and local
+**DAG verdict.** This is known source dynamics infrastructure with `hard_gap_delta=0` and
 `route_infrastructure_delta=1`. It does not construct or globally order the real zero paths, handle
 the first collision, or provide a theta-specific gap estimate. The campaign remains active at
-local trajectory construction; public implementation CI is pending.
+local trajectory construction.
+
+Implementation commit `ce65db1c0379a4accfef579c9e8c08995662dc19` passed public Lean Action CI
+run `29534356022`, build job `87741989620`, in `2m36s`. The first spine is public; H6-E/G8 and RH
+remain open.

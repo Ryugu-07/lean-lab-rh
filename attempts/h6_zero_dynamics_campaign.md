@@ -71,7 +71,7 @@ Public preregistration passed. Exact architecture and adversarial checks are in
 - `result`: first formalization spine locally complete; campaign remains active at architecture
   step 6 (construct and order local real simple-zero trajectories).
 - `hard_gap_delta`: 0.
-- `route_infrastructure_delta`: 1 locally, pending public implementation CI.
+- `route_infrastructure_delta`: 1, verified by public implementation CI.
 
 ## Mechanical audit
 
@@ -86,7 +86,8 @@ Public preregistration passed. Exact architecture and adversarial checks are in
   preregistered Rodgers-Tao convention.
 - `git diff --check`: passes.
 - full `lake build`: passes with 8,691 jobs.
-- public implementation CI: pending publication.
+- public implementation CI: commit `ce65db1c0379a4accfef579c9e8c08995662dc19` passed Lean
+  Action run `29534356022`, build job `87741989620`, in `2m36s`.
 
 ## Runtime record
 
@@ -97,6 +98,8 @@ Public preregistration passed. Exact architecture and adversarial checks are in
   selection.
 - `commit_and_CI`: preregistration commit `4405d60c2a33444f8ae43f2406631cc80faff356`;
   public Lean Action CI run `29532612360`, build job `87736257748`, passed in `2m29s`.
+  Implementation commit `ce65db1c0379a4accfef579c9e8c08995662dc19` passed public run
+  `29534356022`, build job `87741989620`, in `2m36s`.
 
 ## Result
 

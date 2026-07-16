@@ -199,5 +199,11 @@ positive sign and factor two.
 The standalone module, exact Targets and five TargetChecks, five standard-only axiom prints,
 forbidden scans, and `git diff --check` pass. The full 8,691-job build succeeds locally.
 `hard_gap_delta=0` and `route_infrastructure_delta=1`: this is the known first-spine interface,
-not collision exclusion or RH. The campaign remains active at steps 6-7; public implementation CI
-is pending.
+not collision exclusion or RH. The campaign remains active at steps 6-7.
+
+## Public implementation gate
+
+Implementation commit `ce65db1c0379a4accfef579c9e8c08995662dc19` passed public Lean Action CI
+run `29534356022`, build job `87741989620`, in `2m36s`. The first spine is now public and may be
+used by the next loop. The campaign remains active at local trajectory construction; H6-E/G8 and
+RH remain open.

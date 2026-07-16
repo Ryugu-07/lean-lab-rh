@@ -1650,3 +1650,16 @@ scans, `git diff --check`, and the full 8,691-job build pass. Classification is 
 known first spine with `hard_gap_delta=0` and `route_infrastructure_delta=1`. H6-E/G8, collision
 exclusion, W2/G7, M2/G3, and RH remain open. Next within the same campaign is construction and
 ordering of local real simple-zero trajectories; public implementation CI is pending.
+
+## Public Implementation Update: H6 Zero Dynamics First Spine
+
+Date: 2026-07-17
+
+Implementation commit `ce65db1c0379a4accfef579c9e8c08995662dc19` passed public Lean Action CI
+run `29534356022`, build job `87741989620`, in `2m36s`. The independent runner rebuilt the
+summable divisor force, exact simple-zero derivative ratio, joint Frechet chain rule, path
+velocity, Targets, TargetChecks, and standard-only axiom audit.
+
+The first spine is now public with `hard_gap_delta=0` and `route_infrastructure_delta=1`. Campaign
+`PROOF-ATTEMPT-20260717-H6-ZERO-DYNAMICS-01` remains active at local real trajectory construction;
+collision exclusion, H6-E/G8, and RH remain open.
