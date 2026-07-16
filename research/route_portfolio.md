@@ -1303,3 +1303,19 @@ Implementation commit `b7824a3b3f3d206617f0a23b124959b6edad937d` passed public L
 theta kernel, completed-zeta Mellin conversion, global integration-by-parts chain, exact Target
 witnesses, and standard-only axiom audit. Immutable evidence backfill and its own public CI remain
 before campaign closure; H6-H/H6-E and RH are unchanged.
+
+## Public Closure Update: H6 Time-Zero Xi Bridge
+
+Date: 2026-07-17
+
+Evidence commit `8b9bd1c10000a518ff2f689a69f6431fba412281` passed public Lean Action CI run
+`29500378390`, build job `87627536976`, in `1m28s`. Together with preregistration run
+`29493974202` and implementation commit `b7824a3b3f3d206617f0a23b124959b6edad937d`, run
+`29500096845`, campaign `CAMPAIGN-20260717-H6-H0-XI-BRIDGE-01` is publicly closed as
+`KNOWN_THEOREM_FORMALIZED`.
+
+The reusable gain is an exact, source-defined H6 time-zero family connected to project xi, plus
+the theta-Mellin and integration-by-parts lemmas needed to justify that connection. No zero
+location theorem was proved: `hard_gap_delta=0`, while `route_infrastructure_delta=1`. H6-H/H6-E,
+W2/G7, M2/G3, and RH remain open. The persistent Goal returns to fresh independent route
+selection; no successor campaign is selected by this closure record.

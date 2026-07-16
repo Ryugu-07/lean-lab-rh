@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `SOURCE_ALIGNED`
+Status: `H6_B_COMPLETE`
 
 ## Endpoint and normalization
 
