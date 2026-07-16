@@ -1712,3 +1712,18 @@ empty forbidden scans, `git diff --check`, and the full 8,692-job build pass. Im
 `ce5b0c405f06078f549c6a27a477df04ccbcfb35` passed public Lean Action CI run `29538670221`, build
 job `87755892757`, in `1m58s`. `hard_gap_delta=0`; H6-E/G8 and RH remain open. The persistent Goal
 returns to value-ranked route selection for a theta-specific mechanism or a different route.
+
+## Route Selection: H6 Heat-Li Positive Moments
+
+Date: 2026-07-17
+
+After the public adjacent-gap obstruction, route selection rejects another generic repulsion
+attack and defers the strictly weaker numerical H6-Q endpoint. No new explicit M2 approximant or
+W2 global cancellation mechanism survives the recorded obstruction map.
+
+Select `DISCOVERY-20260717-H6-HEAT-LI-MOMENTS-01`. The new input is the exact positive theta-kernel
+cosh transform in Xi coordinates, not merely the heat PDE or later real zeros. The campaign fixes
+the first two Li moment identities for all real times, a weighted Cauchy-Schwarz certificate, and
+strict positivity. Finite Li positivity has `hard_gap_delta=0`; the purpose is to test a
+theta-specific hierarchy that could either expose a scalable mechanism or fail at a precise
+moment inequality. Preregistration public CI precedes all Lean proof edits.

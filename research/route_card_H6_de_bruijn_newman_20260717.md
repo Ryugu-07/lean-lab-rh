@@ -438,3 +438,18 @@ first repeated zero. Exact Targets/TargetChecks, standard-only axiom prints, for
 `git diff --check`, and the 8,692-job build pass. Implementation commit
 `ce5b0c405f06078f549c6a27a477df04ccbcfb35` passed public Lean Action CI run `29538670221`, build
 job `87755892757`, in `1m58s`.
+
+## Selected H6-Z: source heat-Li positive moments
+
+Campaign `DISCOVERY-20260717-H6-HEAT-LI-MOMENTS-01` changes attack surface after both generic H6
+obstructions. In the Xi coordinate `z=-i*(2*s-1)`, it expresses the first two Li quantities of the
+exact source heat family through three real theta moments `A_t`, `B_t`, and `C_t`.
+
+The fixed endpoint proves, for every real `t`, `A_t>0`, `B_t>0`,
+`B_t^2<=A_t*C_t`, the exact derivative factors `8,16,32`, and strict positivity of both Li real
+parts. This uses the positive-cosh transform representation, which the generic reverse-heat
+polynomial countermodel does not satisfy.
+
+This is a finite diagnostic spine below H6-X, not RH progress. Extending positivity to all indices
+at `t=0` is RH-equivalent and is neither assumed nor inferred. Exact preregistration is in
+`h6_heat_li_moments_prereg_20260717.md`; public preregistration CI is required before proof edits.
