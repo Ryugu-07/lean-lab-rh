@@ -982,3 +982,27 @@ Evidence commit `af7848aea84287329ce50900d5e425538165baaa` passed public Lean Ac
 `BRANCH_ELIMINATED`. Do not reuse termwise same-sign local-prime assembly without a genuinely
 global cancellation mechanism. W1c1, W2/G7, and RH remain open, with `hard_gap_delta=0`; return
 the persistent Goal to fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`.
+
+## Selection Update: R5 Compact Weil Zero Cutoff
+
+Date: 2026-07-16
+
+Fresh LITERATURE route selection audits the classical smooth compact-support Weil formula rather
+than extending the closed local-prime sign branch. The existing generic selected-height rectangle
+theorem reduces the zero-side problem to four exact premises, but the current compact Laplace
+module supplies only reciprocal-square decay on the xi strip. That decay is insufficient against
+the selected top edge's compiled fourth-power logarithmic-derivative bound.
+
+Five source-aligned endpoints were screened. A full compact arithmetic formula is deferred as the
+natural successor because it adds Fourier inversion and physical finite-prime support; prime
+inversion alone and pole/Gamma estimates are incomplete endpoints; and another compact reverse
+criterion repeats the Gaussian separator route. Campaign
+`CAMPAIGN-20260716-R5-COMPACT-WEIL-ZERO-CUTOFF-01` selects the generic zero-side passage for the
+reflection symmetrization of every smooth compactly supported log-line function.
+
+The proposed mechanism proves transform entire-ness, divisor summability, and sixfold integration-
+by-parts decay on the full fixed rectangle strip. The resulting `O(R^(-6))` weight absorbs the
+compiled `O(R^4)` xi bound and makes the top integral `O(R^(-2))`. Success reduces the fixed W1c1
+compact zero-side subedge but does not evaluate the arithmetic side, prove W2/G7, or prove RH. The
+exact endpoint and rejection conditions are fixed in
+`research/r5_compact_weil_zero_cutoff_prereg_20260716.md` before Lean proof edits.
