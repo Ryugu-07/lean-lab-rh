@@ -921,3 +921,14 @@ Implementation commit `6d12bad98b80c34217757df01943509965a64781` passed public L
 run `29461298466`, build job `87505125618`, in `1m47s`. The exact separator theorem is now
 independently public-built. Immutable evidence backfill and its own public CI remain before local
 campaign closure; all RH hard gaps are unchanged.
+
+## Public Closure Update: R5 Compact Laplace Xi-Divisor Separator
+
+Date: 2026-07-16
+
+Evidence commit `941756c2e7e0b4da8f765dc7187e4be703af36c8` passed public Lean Action CI
+run `29461494669`, build job `87505716647`, in `2m22s`. Together with implementation commit
+`6d12bad98b80c34217757df01943509965a64781` and run `29461298466`, campaign
+`CAMPAIGN-20260716-R5-COMPACT-LAPLACE-SEPARATOR-01` is publicly closed at its exact endpoint.
+Return the persistent RH Goal to fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`; generic W1c1,
+unconditional Weil positivity, G7/W2, and RH remain open, with `hard_gap_delta=0`.

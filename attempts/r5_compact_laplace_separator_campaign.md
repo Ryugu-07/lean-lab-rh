@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-COMPACT-LAPLACE-SEPARATOR-01`
 
 Date: 2026-07-16
 
-Status: `IMPLEMENTATION_CI_PASSED`
+Status: `PUBLICLY_CLOSED`
 
 Mode: `LITERATURE`
 
@@ -42,6 +42,7 @@ Mode: `LITERATURE`
 | 9 | `PROOF_A_CONVOLUTION_SUPPRESSION` | The `(m+1)`-fold compact convolution iterate has transform `F^(m+1)`. The normalized packet tail is pointwise bounded by `B*2^(-m)*abs(F)`, so complete-divisor `tsum` comparison and geometric convergence select an `m` with strict tail below any positive epsilon. | Exact preregistered endpoint compiles. |
 | 10 | `LOCAL_AUDIT` | Formal module, exact Targets and TargetChecks compile. Five selected transitive axiom prints contain only `propext`, `Classical.choice`, and `Quot.sound`; forbidden/scratch/resource scans and `git diff --check` are clean; the full 8,678-job build passes. | Local gate passed; publish the implementation and require independent public CI. |
 | 11 | `IMPLEMENTATION_PUBLIC_CI` | Implementation commit `6d12bad98b80c34217757df01943509965a64781` passed public Lean Action CI run `29461298466`, build job `87505125618`, in `1m47s`. | Backfill immutable evidence, publish it, and require the evidence commit's own CI before closure. |
+| 12 | `PUBLIC_CI_EVIDENCE_AND_CLOSURE` | Evidence commit `941756c2e7e0b4da8f765dc7187e4be703af36c8` passed public Lean Action CI run `29461494669`, build job `87505716647`, in `2m22s`. The implementation and its evidence are independently public-built. | Close this fixed endpoint and return the active RH Goal to fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`. |
 
 ## Current Accounting
 
@@ -49,7 +50,8 @@ Mode: `LITERATURE`
 - `hard_gap_after`: G6/W1 remains open with one compact-support reverse-separation subedge compiled; G7/W2 and G3/M2 remain unchanged
 - `hard_gap_delta`: 0
 - `classification`: `KNOWN_MECHANISM_RECONSTRUCTED` / unconditional W1 reverse-separation component
-- `next_gate`: evidence-backfill publication and independent public CI
+- `next_gate`: fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`; do not reopen this separator endpoint
+  without a strictly stronger target
 
 ## Compiled Endpoint
 
