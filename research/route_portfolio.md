@@ -1163,3 +1163,17 @@ run `29468797210`, build job `87527584998`, in `2m0s`. The exact compact C6 arit
 finite-order Fourier inversion, selected top-edge limit, and old smooth compatibility theorem are
 independently public-built. Immutable evidence backfill and its own public CI remain before
 campaign closure; all broader hard gaps are unchanged.
+
+## Public Closure Update: R5 Compact C6 Explicit Formula
+
+Date: 2026-07-16
+
+Evidence-backfill commit `94b6be8fc934b3d4909d066b168491389df9afd8` passed public Lean Action CI
+run `29468980147`, build job `87528144506`, in `1m56s`. Together with preregistration run
+`29467845311` and implementation commit `3e3c677495c592096d7843aa4845e861bc393937`, run
+`29468797210`, campaign `CAMPAIGN-20260716-R5-COMPACT-C6-EXPLICIT-FORMULA-01` is publicly closed
+as `BRIDGE_REDUCED`.
+
+`W1c1c2` is complete for compactly supported additive-log functions with six continuous
+derivatives. The persistent RH Goal returns to fresh route selection with quotient/completeness,
+full-class regularization, W2/G7, G3/M2, and RH still open.

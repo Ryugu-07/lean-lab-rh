@@ -61,3 +61,15 @@ Campaign: `CAMPAIGN-20260716-R5-COMPACT-C6-EXPLICIT-FORMULA-01`
 - `classification`: `BRIDGE_REDUCED`
 - `hard_gap_delta`: unchanged at one only for `W1c1c2`
 - `next_state`: `IMMUTABLE_EVIDENCE_BACKFILL`
+
+## Loop 4: evidence gate and campaign closure
+
+- Evidence-backfill commit `94b6be8fc934b3d4909d066b168491389df9afd8` passed public Lean Action CI
+  run `29468980147`, build job `87528144506`, in `1m56s`.
+- Together with preregistration run `29467845311` and implementation run `29468797210`, every
+  required public evidence gate for the fixed endpoint now passes.
+- `result`: `PUBLICLY_CLOSED`
+- `classification`: `BRIDGE_REDUCED`
+- `hard_gap_delta`: one only at `W1c1c2`
+- `global_goal`: remains active; RH is neither proved nor disproved
+- `next_state`: fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`
