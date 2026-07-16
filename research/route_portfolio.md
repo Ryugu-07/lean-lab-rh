@@ -1616,3 +1616,18 @@ Targets, TargetChecks, and standard-only axiom audit.
 Classification remains `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
 `route_infrastructure_delta=1`. H6-E/G8, W2/G7, M2/G3, and RH remain open. Immutable evidence
 backfill and its own public CI remain before campaign closure.
+
+## Public Closure Update: H6 de Bruijn Upper-Half Bound
+
+Date: 2026-07-17
+
+Evidence-backfill commit `ac128f4db100fdac0d47c670e0dcbd832ddb6005` passed public Lean Action CI
+run `29531495280`, build job `87732612433`, in `1m47s`. Together with preregistration run
+`29528426983` and implementation run `29531232787`, campaign
+`CAMPAIGN-20260717-H6-UPPER-HALF-01` is publicly closed as `KNOWN_THEOREM_FORMALIZED`.
+
+The reusable gain is exact threshold nonemptiness for the source-normalized heat family and the
+classical upper bound `Lambda<=1/2`, proved through multiplicity-aware conjugate factor pairing,
+finite strip contraction, and Jensen limit persistence. `hard_gap_delta=0` and
+`route_infrastructure_delta=1`; H6-E/G8, W2/G7, M2/G3, and RH remain open. The persistent RH Goal
+returns to fresh value-ranked route selection; no successor campaign is selected here.

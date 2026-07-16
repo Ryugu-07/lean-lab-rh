@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `H6_UPPER_HALF_PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `H6_UPPER_HALF_PUBLICLY_CLOSED`
 
 ## Endpoint and normalization
 
@@ -288,9 +288,12 @@ full build pass locally.
 Implementation commit `8669c2db7577eaa718684e9e9ec052062b5488fa` passed public Lean Action CI
 run `29531232787`, build job `87731748374`, in `2m6s`.
 
-**Verdict:** `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING` as
-`KNOWN_THEOREM_FORMALIZED`. Threshold nonemptiness and `Lambda<=1/2` are public-built; immutable
-evidence CI remains. H6-E/G8, W2/G7, M2/G3, and RH remain open.
+Evidence-backfill commit `ac128f4db100fdac0d47c670e0dcbd832ddb6005` passed public Lean Action CI
+run `29531495280`, build job `87732612433`, in `1m47s`.
+
+**Verdict:** `COMPLETE` as `KNOWN_THEOREM_FORMALIZED`. Threshold nonemptiness and
+`Lambda<=1/2` are publicly closed with `hard_gap_delta=0` and `route_infrastructure_delta=1`.
+H6-E/G8, W2/G7, M2/G3, and RH remain open.
 
 ## Candidate H6-Q: improve the upper bound to one fifth
 
@@ -352,8 +355,7 @@ source normalization and analytic hypotheses.
 
 ## Recommendation
 
-H6-B, H6-H1, H6-H2a, H6-H2b, and H6-H2c are publicly complete; H6-H2d is locally complete and
-awaits public implementation/evidence CI. After closure, return to fresh value-ranked route
+H6-B, H6-H1, and H6-H2a through H6-H2d are publicly complete. Return to fresh value-ranked route
 selection. Keep H6-Q as a later `PROOF-ATTEMPT` and keep direct H6-E/G8, W2/G7, and M2/G3 attacks
 open.
 

@@ -6,7 +6,7 @@ Campaign: `CAMPAIGN-20260717-H6-UPPER-HALF-01`
 
 Mode: `LITERATURE`
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Route selection
 
@@ -218,3 +218,15 @@ run `29531232787`, build job `87731748374`, in `2m6s`. The public runner indepen
 both exact endpoints, their registered witnesses, Targets, TargetChecks, and axiom audit. Campaign
 status is `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`; this evidence backfill and its own
 public CI remain before closure.
+
+## Public evidence and closure gate
+
+Evidence-backfill commit `ac128f4db100fdac0d47c670e0dcbd832ddb6005` passed public Lean Action CI
+run `29531495280`, build job `87732612433`, in `1m47s`. Together with preregistration commit
+`502864b4a84740600c80a4864f3a3e3deb331c46` and implementation commit
+`8669c2db7577eaa718684e9e9ec052062b5488fa`, all three required public gates pass.
+
+Campaign `CAMPAIGN-20260717-H6-UPPER-HALF-01` is closed as `KNOWN_THEOREM_FORMALIZED`, with
+`hard_gap_delta=0` and `route_infrastructure_delta=1`. The durable gain is exact threshold
+nonemptiness and the classical `Lambda <= 1/2` upper bound. H6-E/G8 (`Lambda <= 0`), W2/G7,
+M2/G3, and RH remain open; the persistent RH Goal returns to fresh route selection.

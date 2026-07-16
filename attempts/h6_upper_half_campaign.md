@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260717-H6-UPPER-HALF-01`
 
 Mode: `LITERATURE`
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Runtime record
 
@@ -112,3 +112,14 @@ run `29531232787`, build job `87731748374`, in `2m6s`. Both fixed endpoints and 
 registered proof chain are now independently public-built. The campaign remains active at
 `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`; immutable evidence backfill and its own public
 CI are required before closure.
+
+## Public closure result
+
+Evidence-backfill commit `ac128f4db100fdac0d47c670e0dcbd832ddb6005` passed public Lean Action CI
+run `29531495280`, build job `87732612433`, in `1m47s`. Preregistration, implementation, and
+immutable evidence now each have independent passing public CI. Close
+`CAMPAIGN-20260717-H6-UPPER-HALF-01` as `KNOWN_THEOREM_FORMALIZED`.
+
+The exact positive-time witness and `Lambda<=1/2` are durable compiled assets. No claim of
+`Lambda<=0`, H6-E/G8, or RH is made. The persistent RH Goal remains active; the next loop begins
+with fresh value-ranked route selection rather than extending this closed campaign by inertia.
