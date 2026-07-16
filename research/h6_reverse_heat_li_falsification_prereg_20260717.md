@@ -6,7 +6,7 @@ Campaign: `AUDIT-20260717-H6-REVERSE-HEAT-LI-01`
 
 Mode: `FALSIFICATION`
 
-Status: `PUBLIC_IMPLEMENTATION_COMPLETE_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Route selection
 
@@ -140,4 +140,6 @@ Li convention, time values, or constants. The aggregate theorem is
 forbidden scan, diff, and 8,686-job full-build gates pass. Implementation commit
 `819f3de472c43220895772788911a25e114cc7bd` passed public Lean Action CI run `29509859982`, build
 job `87660158241`, in `2m38s` (`2026-07-16T15:09:26Z` to `2026-07-16T15:12:04Z`). Immutable
-evidence backfill and its independent public CI remain before closure.
+evidence commit `b9ebb0d36f4c9d957b26ba089c374172f502907e` passed public Lean Action CI run
+`29510451484`, build job `87662213942`, in `2m14s` (`2026-07-16T15:17:14Z` to
+`2026-07-16T15:19:28Z`). The campaign is publicly closed as `BRANCH_FALSIFIED`.

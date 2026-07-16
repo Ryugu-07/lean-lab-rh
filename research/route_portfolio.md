@@ -1484,3 +1484,19 @@ generic inference from heat, reflection, base-point nonvanishing, and later crit
 earlier Li positivity. The actual theta-kernel family, fixed-time H6-X, H6-E/G8, W2/G7, M2/G3,
 and RH remain open. Immutable evidence backfill and its own public CI remain before campaign
 closure.
+
+## Public Closure Update: H6 Reverse-Heat Li Transfer Falsification
+
+Date: 2026-07-17
+
+Evidence commit `b9ebb0d36f4c9d957b26ba089c374172f502907e` passed public Lean Action CI run
+`29510451484`, build job `87662213942`, in `2m14s`. Together with preregistration run
+`29508598381` and implementation commit `819f3de472c43220895772788911a25e114cc7bd`, run
+`29509859982`, campaign `AUDIT-20260717-H6-REVERSE-HEAT-LI-01` is publicly closed as
+`BRANCH_FALSIFIED`.
+
+The durable result is `OBS-H6-REVERSE-HEAT-LI-01`: generic heat, reflection, base-point
+nonvanishing, and later critical-line zeros cannot by themselves transfer Li positivity backward.
+No statement about the actual theta-kernel zeros was falsified or proved. `hard_gap_delta=0`;
+H6-E/G8, W2/G7, M2/G3, and RH remain open. The persistent Goal returns to fresh value-ranked route
+selection; no successor campaign is selected here.

@@ -4,7 +4,7 @@ Campaign: `AUDIT-20260717-H6-REVERSE-HEAT-LI-01`
 
 Mode: `FALSIFICATION`
 
-Status: `PUBLIC_IMPLEMENTATION_COMPLETE_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Runtime record
 
@@ -89,7 +89,8 @@ Status: `PUBLIC_IMPLEMENTATION_COMPLETE_EVIDENCE_PENDING`
 - `git diff --check`: passed before implementation publication
 - implementation public CI: passed at commit
   `819f3de472c43220895772788911a25e114cc7bd`, run `29509859982`, job `87660158241`, in `2m38s`
-- immutable evidence backfill and public CI: pending
+- immutable evidence backfill and public CI: passed at commit
+  `b9ebb0d36f4c9d957b26ba089c374172f502907e`, run `29510451484`, job `87662213942`, in `2m14s`
 
 ## Result
 
@@ -99,7 +100,7 @@ Status: `PUBLIC_IMPLEMENTATION_COMPLETE_EVIDENCE_PENDING`
   earlier Li positivity
 - `hard_gap_after`: H6-E/G8, W2/G7, M2/G3, and RH remain open
 - `hard_gap_delta`: 0
-- `OBS_node`: `OBS-H6-REVERSE-HEAT-LI-01`, locally compiled
+- `OBS_node`: `OBS-H6-REVERSE-HEAT-LI-01`, publicly closed
 - `theorem_names`: `h6AuditHeatXiQuadratic_heatEquation`,
   `h6AuditHeatXiQuadratic_one_allZerosOnCriticalLine`,
   `h6AuditHeatXiQuadratic_zero_offLine_witness`, `h6AuditSecondLiValue_zero`,
@@ -107,10 +108,12 @@ Status: `PUBLIC_IMPLEMENTATION_COMPLETE_EVIDENCE_PENDING`
 - `failure_or_obstacle`: a successful reverse-time proof for the actual H6 family must use
   theta-kernel-specific estimates, infinite zero dynamics, or another premise absent from this
   countermodel; structural heat and Li data alone are insufficient
-- `route_selection_decision`: publish and close the obstruction, then return to fresh value-ranked
-  route selection; do not generalize the polynomial library
+- `route_selection_decision`: obstruction publicly closed; return to fresh value-ranked route
+  selection and do not generalize the polynomial library
 - `preregistration_commit_and_CI`: commit `215ebcf661a421350d30920ec5aee43518d89559`,
   run `29508598381`, job `87655833650`, passed in `1m30s`
 - `implementation_commit_and_CI`: commit `819f3de472c43220895772788911a25e114cc7bd`,
   run `29509859982`, job `87660158241`, passed in `2m38s`
-- `evidence_commit_and_CI`: pending
+- `evidence_commit_and_CI`: commit `b9ebb0d36f4c9d957b26ba089c374172f502907e`,
+  run `29510451484`, job `87662213942`, passed in `2m14s`
+- `campaign_status`: publicly closed; persistent RH Goal remains active

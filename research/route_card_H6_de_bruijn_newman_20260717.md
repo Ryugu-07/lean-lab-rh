@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `H6_H1_PUBLICLY_CLOSED_REVERSE_HEAT_LI_EVIDENCE_PENDING`
+Status: `H6_H1_AND_REVERSE_HEAT_LI_PUBLICLY_CLOSED`
 
 ## Endpoint and normalization
 
