@@ -28,7 +28,8 @@ flowchart TD
     W1 --> W2["W2: unconditional Weil positivity"]
     W2 --> D
     A --> H6B["H6-B: exact H0-xi bridge"]
-    H6B --> H6H["H6-H: heat flow and all-real-zero framework"]
+    H6B --> H6H1["H6-H1: entire heat evolution"]
+    H6H1 --> H6H["H6-H2: all-real-zero framework"]
     H6H --> H6E["H6-E: prove Lambda <= 0"]
     H6E --> D
 ```
@@ -51,7 +52,8 @@ flowchart TD
 | W1 | open | Formalize a source-faithful admissible test class, multiplicative convolution, and the complete zero/prime/pole/archimedean explicit formula. | W1a, W1b's physical analytic-strip algebra core, W1c0, and the Gaussian test cores are public. The complete compact `C^6` reflection-class formula and its arbitrary-finite-`F` RH-equivalent positivity criterion are public; quotient/completeness, closure identification, continuity, and distributional regularization remain. |
 | W2 | open | Prove unconditional Weil positivity on a complete RH-equivalent test class. | The finite equal-width Gaussian arithmetic family is now publicly Lean-equivalent to RH: W2g0 gives the forward square identity, W2g1 gives the reverse separator criterion, and W2g2 compresses the width quantifier to any one preassigned positive width. None supplies the unconditional sign, so W2 and G7 remain fully open. Connes-Consani's semi-local mechanism is explicitly conjectural and is not a premise. |
 | H6-B | complete | Align the Polymath-normalized de Bruijn-Newman heat family at time zero with the project xi. | `deBruijnNewmanH_zero_eq_riemannXi` proves `H_0(z) = (1/8) * riemannXi((1+i*z)/2)` from explicit theta-kernel and Mellin calculations. This is a definition bridge with `hard_gap_delta=0`. |
-| H6-H | open | Formalize the heat equation, entire-function and all-real-zero framework, forward preservation, and threshold closedness for the exact H6-B family. | The exact time-zero normalization is available; the global heat-flow zero theory is not yet compiled. |
+| H6-H1 | complete | Prove the exact source family is entire in space for every real time and satisfies the backward heat equation. | `DeBruijnNewmanHeat.lean` proves arbitrary quadratic/linear weighted integrability, differentiation in time and twice in complex space, and `partial_t H_t = -partial_z^2 H_t` on all `R x C`. This is analytic infrastructure with `hard_gap_delta=0`. |
+| H6-H | open | Formalize the all-real-zero predicate, de Bruijn forward preservation, threshold existence, and threshold closedness for the exact H6-B/H6-H1 family. | The source normalization and entire heat evolution are compiled; the global heat-flow zero theory is not. |
 | H6-E | open | Prove all zeros of `H_0` are real, equivalently `Lambda <= 0` in the audited normalization. | This is the direct H6 RH endpoint. Rodgers-Tao's `Lambda >= 0` and the unconditional upper bound do not close it. |
 
 ## Hard Gaps

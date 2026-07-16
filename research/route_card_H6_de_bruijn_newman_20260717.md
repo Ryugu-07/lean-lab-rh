@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `H6_B_COMPLETE`
+Status: `H6_H1_COMPLETE`
 
 ## Endpoint and normalization
 
@@ -106,8 +106,16 @@ zero-dynamics layer require it.
 `z`, not only the real axis; audit the backward sign; and prove neighborhood-uniform domination
 rather than differentiating a merely formal integrand.
 
-**Verdict:** `SELECTED` as `CAMPAIGN-20260717-H6-HEAT-EQUATION-01`. The exact endpoint and failure
-boundary are fixed in `h6_de_bruijn_newman_heat_equation_prereg_20260717.md`.
+**Implementation result.** `LeanLab/Riemann/DeBruijnNewmanHeat.lean` proves a reusable all-real-time
+majorant for `(1+u^2)*exp(c*u^2+d*u)*|Phi(u)|`, then applies dominated parameter integration in
+real time and complex space. The compiled endpoints are `hasDerivAt_deBruijnNewmanH_time`,
+`differentiable_deBruijnNewmanH`, `deriv_deriv_deBruijnNewmanH`, and
+`deBruijnNewmanH_backward_heat_equation`. Exact witnesses and all five selected transitive axiom
+prints pass; the latter use only `propext`, `Classical.choice`, and `Quot.sound`.
+
+**Verdict:** `COMPLETE` as `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`. It closes H6-H1 only. The all-real-zero predicate, forward
+preservation, threshold existence/closedness, H6-E, and RH remain open.
 
 ## Candidate H6-Q: improve the upper bound to one fifth
 
@@ -169,7 +177,6 @@ source normalization and analytic hypotheses.
 
 ## Recommendation
 
-H6-B is complete and H6-H1 is selected. After H6-H1 stops, return to fresh value-ranked route
-selection before choosing the analytic all-real-zero framework or H6-X. Keep H6-Q as a later
-`PROOF-ATTEMPT`; the H0-xi bridge and heat equation alone supply no evidence for its global zero
-certificate.
+H6-B and H6-H1 are complete. Return to fresh value-ranked route selection before choosing the
+all-real-zero/threshold framework or H6-X. Keep H6-Q as a later `PROOF-ATTEMPT`; the H0-xi bridge
+and heat equation alone supply no evidence for its global zero certificate.

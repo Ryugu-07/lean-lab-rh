@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260717-H6-HEAT-EQUATION-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_PREREGISTERED_PUBLIC_CI_PENDING`
+Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
 
 ## Runtime record
 
@@ -51,32 +51,69 @@ Status: `LOCAL_PREREGISTERED_PUBLIC_CI_PENDING`
   double-exponential kernel estimates. The missing reusable theorem is the arbitrary quadratic-
   weight majorant needed to combine them.
 - No Lean proof source was edited during preregistration.
-- `result`: `LOCAL_PREREGISTRATION_COMPLETE`
+- Preregistration commit `ee6d08a108255d336e3b1c46166a753da48c06df` passed public Lean Action CI
+  run `29501372019`, build job `87630848802`, in `1m58s`.
+- `result`: `PUBLIC_PREREGISTRATION_COMPLETE`
 - `rh_frontier_delta`: 0
 - `route_infrastructure_delta`: 0
 - `engineering_delta`: 0
 
+## Implementation loop
+
+- Exposed the source term identity and the existing elementary double-exponential integrability
+  and complex sine/cosine norm estimates without changing their statements.
+- Proved `integrableOn_one_add_sq_mul_exp_mul_norm_deBruijnNewmanPhi`: for every `c>=0` and real
+  `d`, `(1+u^2)*exp(c*u^2+d*u)*|Phi(u)|` is integrable on `(0,infinity)`. The proof separates a
+  summable index majorant from the source double-exponential `u` decay.
+- Defined the exact `u^2` source moment and proved integrability of the original, first spatial,
+  and second spatial moment integrands for every real time and complex spatial parameter.
+- Applied `hasDerivAt_integral_of_dominated_loc_of_deriv_le` with explicit unit-ball majorants in
+  both parameter spaces. This proves the real-time derivative, complex first derivative, entire
+  spatial family, and complex second derivative without restricting `t` or `z`.
+- Compiled the preregistered sign and quantifiers as
+  `deBruijnNewmanH_backward_heat_equation (t : R) (z : C)`.
+- The campaign proves no zero-location statement and does not define a Newman threshold.
+
 ## Mechanical audit
 
-- preregistration diff check: pending
-- public preregistration commit and CI: pending
-- exact module compilation: pending implementation
-- `Targets.lean`: pending implementation
-- `TargetChecks.lean` exact witness: pending implementation
-- `AxiomsAudit.lean` and printed axioms: pending implementation
-- forbidden token/declaration/resource scan: pending implementation
-- witness audit: pending implementation
+- preregistration diff check: passed before public preregistration
+- public preregistration commit and CI: passed as commit
+  `ee6d08a108255d336e3b1c46166a753da48c06df`, run `29501372019`, job `87630848802`
+- exact module compilation: passed without diagnostics
+- `Targets.lean`: passed; `H6.debruijn-newman.heat-evolution` is proven
+- `TargetChecks.lean` exact witness: passed for the majorant, time derivative, entire family,
+  second spatial derivative, and final PDE
+- `AxiomsAudit.lean` and printed axioms: passed; all five new entries use only `propext`,
+  `Classical.choice`, and `Quot.sound`
+- forbidden token/declaration/resource scan: empty; an initial broad declaration scan matched the
+  English word `constant,` in an old comment, and the declaration-shaped rescan was empty
+- witness audit: exact full-quantifier endpoint compiled; no weakened wrapper is registered
 - definition/source alignment: inherited exact source definitions; derivative alignment fixed here
-- full `lake build`: pending implementation
+- full `lake build`: passed locally, 8,684 jobs
+- `git diff --check`: passed before this documentation backfill and will be rerun before publication
 
 ## Result
 
-- `result_class`: pending
-- `assumption_frontier_after`: pending
-- `hard_gap_after`: pending
-- `hard_gap_delta`: pending
-- `OBS_node`: none yet
-- `theorem_names`: none yet
-- `failure_or_obstacle`: pending
-- `route_selection_decision`: H6-H selected
-- `commit_and_CI`: pending
+- `result_class`: `KNOWN_THEOREM_FORMALIZED`
+- `assumption_frontier_after`: the exact H6-B family is now an all-real-time entire heat evolution;
+  later H6 work may use its compiled derivatives and PDE
+- `hard_gap_after`: H6-H2 all-real-zero/threshold theory, H6-E/G8 (`Lambda <= 0`), W2/G7,
+  M2/G3, and RH remain open
+- `hard_gap_delta`: 0
+- `route_infrastructure_delta`: 1
+- `OBS_node`: none; the preregistered arbitrary-weight domination obstacle is closed
+- `theorem_names`: `integrableOn_one_add_sq_mul_exp_mul_norm_deBruijnNewmanPhi`,
+  `hasDerivAt_deBruijnNewmanH_time`, `hasDerivAt_deBruijnNewmanH_spatial`,
+  `differentiable_deBruijnNewmanH`, `deriv_deriv_deBruijnNewmanH`,
+  `deBruijnNewmanH_backward_heat_equation`
+- `failure_or_obstacle`: no parameter-integral dependency gap; the next H6 obstruction is global
+  zero dynamics and threshold closedness, not differentiation of the source family
+- `route_selection_decision`: H6-H1 complete; fresh value-ranked route selection required after
+  public closure
+- `preregistration_commit`: `ee6d08a108255d336e3b1c46166a753da48c06df`
+- `preregistration_CI`: public Lean Action run `29501372019`, build job `87630848802`, passed in
+  `1m58s`
+- `implementation_commit`: pending
+- `implementation_CI`: pending
+- `commit_and_CI`: preregistration is public; implementation publication, independent CI, evidence
+  backfill, and closure remain

@@ -28,7 +28,10 @@ unconditional arithmetic positivity statement.
 The source-normalized de Bruijn-Newman gateway also compiles:
 [`deBruijnNewmanH_zero_eq_riemannXi`](LeanLab/Riemann/DeBruijnNewman.lean) proves
 `H_0(z) = (1/8) * riemannXi((1+i*z)/2)` from an explicit theta kernel and Mellin-transform chain.
-This is a normalization bridge, not an all-real-zero theorem; `Lambda <= 0` remains open.
+[`deBruijnNewmanH_backward_heat_equation`](LeanLab/Riemann/DeBruijnNewmanHeat.lean) proves that
+the same source integral is entire in `z` for every real time and satisfies
+`partial_t H_t = -partial_z^2 H_t`. These are analytic infrastructure results, not an all-real-zero
+theorem; `Lambda <= 0` remains open.
 
 These are formalizations of known equivalence mechanisms, not a solution of RH. A bounded
 [novelty and exposure audit](research/exposure_novelty_audit_20260716.md) records the literature

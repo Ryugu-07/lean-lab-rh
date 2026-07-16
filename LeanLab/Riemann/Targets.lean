@@ -1,5 +1,6 @@
 import LeanLab.Riemann.LiScaffold
 import LeanLab.Riemann.DeBruijnNewman
+import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula
@@ -781,6 +782,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanH_zero_eq_riemannXi
       status := .proven
       note := "Campaign CAMPAIGN-20260717-H6-H0-XI-BRIDGE-01 closed the theta-Mellin/Poisson, change-of-variables, summation, and integration-by-parts chain with no proof placeholders." },
+    { id := "H6.debruijn-newman.heat-evolution"
+      tier := .tier2
+      title := "Formalize the entire de Bruijn-Newman heat evolution"
+      statement :=
+        "For every real t, prove that z maps to H_t(z) is entire; justify differentiation in t and twice in z under the defining integral; and prove the backward heat equation d_t H_t(z) = -d_z^2 H_t(z) for every complex z."
+      leanName := some ``deBruijnNewmanH_backward_heat_equation
+      status := .proven
+      note := "Campaign CAMPAIGN-20260717-H6-HEAT-EQUATION-01 proves the source-normalized all-real-time analytic evolution using an explicit double-exponential majorant. This closes the heat-evolution subedge only. The all-real-zero framework, Lambda <= 0, and RH remain open." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

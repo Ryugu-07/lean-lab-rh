@@ -1,4 +1,5 @@
 import LeanLab.Riemann.Targets
+import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
 import LeanLab.Riemann.LiWeilGram
@@ -1072,5 +1073,29 @@ example (z : ℂ) :
     deBruijnNewmanH 0 z =
       (1 / 8) * riemannXi ((1 + Complex.I * z) / 2) :=
   deBruijnNewmanH_zero_eq_riemannXi z
+
+example (c : ℝ) (hc : 0 ≤ c) (d : ℝ) :
+    MeasureTheory.IntegrableOn
+      (fun u : ℝ ↦ (1 + u ^ 2) * Real.exp (c * u ^ 2 + d * u) *
+        ‖deBruijnNewmanPhi u‖) (Set.Ioi 0) :=
+  integrableOn_one_add_sq_mul_exp_mul_norm_deBruijnNewmanPhi c hc d
+
+example (t : ℝ) (z : ℂ) :
+    HasDerivAt (fun tau : ℝ ↦ deBruijnNewmanH tau z)
+      (deBruijnNewmanHSecondMoment t z) t :=
+  hasDerivAt_deBruijnNewmanH_time t z
+
+example (t : ℝ) : Differentiable ℂ (deBruijnNewmanH t) :=
+  differentiable_deBruijnNewmanH t
+
+example (t : ℝ) (z : ℂ) :
+    deriv (deriv (deBruijnNewmanH t)) z =
+      -deBruijnNewmanHSecondMoment t z :=
+  deriv_deriv_deBruijnNewmanH t z
+
+example (t : ℝ) (z : ℂ) :
+    deriv (fun tau : ℝ ↦ deBruijnNewmanH tau z) t =
+      -deriv (deriv (deBruijnNewmanH t)) z :=
+  deBruijnNewmanH_backward_heat_equation t z
 
 end LeanLab.Riemann

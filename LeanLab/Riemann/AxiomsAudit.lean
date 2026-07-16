@@ -1,5 +1,6 @@
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.DeBruijnNewman
+import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula
@@ -349,3 +350,8 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.completedRiemannZeta₀_critical_line_eq_thetaTailIntegral
 #print axioms LeanLab.Riemann.integral_Ioi_deBruijnNewmanPhi_mul_cos
 #print axioms LeanLab.Riemann.deBruijnNewmanH_zero_eq_riemannXi
+#print axioms LeanLab.Riemann.integrableOn_one_add_sq_mul_exp_mul_norm_deBruijnNewmanPhi
+#print axioms LeanLab.Riemann.hasDerivAt_deBruijnNewmanH_time
+#print axioms LeanLab.Riemann.differentiable_deBruijnNewmanH
+#print axioms LeanLab.Riemann.deriv_deriv_deBruijnNewmanH
+#print axioms LeanLab.Riemann.deBruijnNewmanH_backward_heat_equation

@@ -1336,3 +1336,20 @@ linear exponential weights. H6-X depends on this interface; H1-B/H2-B have lower
 leverage; H10 remains the next census card; and no materially new W2 or M2 attack angle was found
 in this selection. The exact success and falsification criteria are preregistered before Lean proof
 edits in `research/h6_de_bruijn_newman_heat_equation_prereg_20260717.md`.
+
+## Local Completion Update: H6 Entire Heat Equation
+
+Date: 2026-07-17
+
+Campaign `CAMPAIGN-20260717-H6-HEAT-EQUATION-01` reaches its exact endpoint. The reusable majorant
+`integrableOn_one_add_sq_mul_exp_mul_norm_deBruijnNewmanPhi` absorbs arbitrary fixed nonnegative
+quadratic and real linear exponential weights together with the `u^2` moment. Dominated parameter
+integration proves `H_t` entire in complex space for every real `t`, identifies the real-time and
+second spatial derivatives with the same source moment, and compiles
+`deBruijnNewmanH_backward_heat_equation` on all `R x C`.
+
+The new module is diagnostic-free. Targets, five exact TargetChecks, five standard-only axiom
+prints, all forbidden scans, `git diff --check`, and the full 8,684-job build pass locally.
+Classification is `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`. H6-H2's all-real-zero/threshold theory, H6-E/G8, W2/G7, M2/G3,
+and RH remain open. Public implementation CI and immutable evidence backfill are still required.

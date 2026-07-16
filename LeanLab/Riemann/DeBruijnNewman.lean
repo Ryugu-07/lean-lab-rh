@@ -46,6 +46,13 @@ def deBruijnNewmanPhiTerm (n : ℕ) (u : ℝ) : ℝ :=
       3 * π * dbnIndex n ^ 2 * Real.exp (5 * u)) *
     Real.exp (-π * dbnIndex n ^ 2 * Real.exp (4 * u))
 
+theorem deBruijnNewmanPhiTerm_eq (n : ℕ) (u : ℝ) :
+    deBruijnNewmanPhiTerm n u =
+      (2 * π ^ 2 * ((n : ℝ) + 1) ^ 4 * Real.exp (9 * u) -
+          3 * π * ((n : ℝ) + 1) ^ 2 * Real.exp (5 * u)) *
+        Real.exp (-π * ((n : ℝ) + 1) ^ 2 * Real.exp (4 * u)) := by
+  rfl
+
 /-- The source-normalized de Bruijn-Newman kernel `Phi`. -/
 def deBruijnNewmanPhi (u : ℝ) : ℝ :=
   ∑' n : ℕ, deBruijnNewmanPhiTerm n u
@@ -326,7 +333,7 @@ private theorem tendsto_dbn_exp_dominates (a : ℝ) (ha : 0 < a) (r : ℝ) :
       nlinarith⟩)
     hquadratic
 
-private theorem integrableOn_dbn_exp_mul_exp_neg_exp
+theorem integrableOn_dbn_exp_mul_exp_neg_exp
     (a : ℝ) (ha : 0 < a) (r : ℝ) :
     IntegrableOn
       (fun u : ℝ ↦ Real.exp (r * u) * Real.exp (-a * Real.exp (4 * u)))
@@ -397,12 +404,12 @@ private theorem norm_complex_sin_le_exp_norm (w : ℂ) :
         exact (Complex.re_le_norm _).trans_eq (by simp)
     _ = Real.exp ‖w‖ := by ring
 
-private theorem norm_complex_cos_mul_real_le (z : ℂ) {u : ℝ} (hu : 0 ≤ u) :
+theorem norm_complex_cos_mul_real_le (z : ℂ) {u : ℝ} (hu : 0 ≤ u) :
     ‖Complex.cos (z * (u : ℂ))‖ ≤ Real.exp (‖z‖ * u) := by
   convert norm_complex_cos_le_exp_norm (z * (u : ℂ)) using 1
   rw [norm_mul, norm_real, Real.norm_eq_abs, abs_of_nonneg hu]
 
-private theorem norm_complex_sin_mul_real_le (z : ℂ) {u : ℝ} (hu : 0 ≤ u) :
+theorem norm_complex_sin_mul_real_le (z : ℂ) {u : ℝ} (hu : 0 ≤ u) :
     ‖Complex.sin (z * (u : ℂ))‖ ≤ Real.exp (‖z‖ * u) := by
   convert norm_complex_sin_le_exp_norm (z * (u : ℂ)) using 1
   rw [norm_mul, norm_real, Real.norm_eq_abs, abs_of_nonneg hu]
