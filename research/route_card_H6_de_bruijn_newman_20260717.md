@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `H6_ZERO_COORDINATE_FRAMEWORK_SELECTED`
+Status: `H6_ZERO_COORDINATE_FRAMEWORK_LOCALLY_COMPLETE`
 
 ## Endpoint and normalization
 
@@ -133,10 +133,20 @@ predicate and coordinate required by forward preservation and threshold work.
 surjectivity from an arbitrary nontrivial zero, the nonzero factor `1/8`, and all complex zero
 quantifiers. Do not claim multiplicity transport.
 
-**Verdict:** `SELECTED` as campaign
+**Campaign gate.** Selected as campaign
 `CAMPAIGN-20260717-H6-ZERO-COORDINATE-FRAMEWORK-01`. Exact preregistration is in
-`h6_zero_coordinate_framework_prereg_20260717.md`; proof-source edits wait for public
-preregistration CI.
+`h6_zero_coordinate_framework_prereg_20260717.md`. Preregistration commit
+`8ec051e767319a2a7c6dc40c465e0e9d8b1e2d7e` passed public CI run `29512089828`, build job
+`87667820977`, in `2m17s`.
+
+**Implementation result.** `DeBruijnNewmanZeros.lean` compiles the exact source coordinate and
+inverse, both zero-correspondence directions, strict strip, boundary exclusions, and
+`RiemannHypothesis <-> deBruijnNewmanAllZerosReal 0`. The aggregate witness and five selected
+axiom prints pass with the standard trust base only.
+
+**Verdict:** locally `COMPLETE` as `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`. Forward preservation, threshold existence/closedness, H6-E/G8,
+and RH remain open; implementation publication and public CI are pending.
 
 ## Candidate H6-Q: improve the upper bound to one fifth
 

@@ -4,6 +4,7 @@ import LeanLab.Riemann.Basic
 import LeanLab.Riemann.LiScaffold
 import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.DeBruijnNewmanHeat
+import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiZeroDivisor

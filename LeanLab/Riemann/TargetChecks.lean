@@ -1,5 +1,6 @@
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.DeBruijnNewmanHeat
+import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiSymmetricZeroFormula
@@ -129,6 +130,7 @@ def checkedTargetNames : List Lean.Name :=
     ``exists_restricted_finsupp_integral_lt_of_baezDuarte,
     ``nymanBeurlingRestrictedConcreteApprox_of_baezDuarte,
     ``RiemannHypothesis.baezDuarteNaturalDistance_liminf_ge_fullZeroSum,
+    ``deBruijnNewman_zeroCoordinate_framework,
     ``riemannHypothesis_iff_nontrivial_zeros_on_line ]
 
 example :
@@ -1099,6 +1101,21 @@ example (t : ℝ) (z : ℂ) :
     deriv (fun tau : ℝ ↦ deBruijnNewmanH tau z) t =
       -deriv (deriv (deBruijnNewmanH t)) z :=
   deBruijnNewmanH_backward_heat_equation t z
+
+example :
+    (∀ z : ℂ, deBruijnNewmanH 0 z = 0 ↔
+      IsNontrivialZero ((1 + Complex.I * z) / 2)) ∧
+    (∀ s : ℂ, deBruijnNewmanH 0 (deBruijnNewmanZeroCoordinate s) = 0 ↔
+      IsNontrivialZero s) ∧
+    (∀ z : ℂ, deBruijnNewmanH 0 z = 0 → z.im ∈ Set.Ioo (-1) 1) ∧
+    (RiemannHypothesis ↔ deBruijnNewmanAllZerosReal 0) :=
+  deBruijnNewman_zeroCoordinate_framework
+
+example : deBruijnNewmanH 0 Complex.I ≠ 0 :=
+  deBruijnNewmanH_zero_I_ne_zero
+
+example : deBruijnNewmanH 0 (-Complex.I) ≠ 0 :=
+  deBruijnNewmanH_zero_neg_I_ne_zero
 
 example {ι : Type*} [Fintype ι] (alpha : ι → ℂ)
     {R C : ℝ} (hR : 0 < R) (hC : 0 ≤ C)

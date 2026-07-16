@@ -1516,3 +1516,22 @@ time-zero coordinate layer: `H_0(z)=0` iff `(1+i*z)/2` is a nontrivial zeta zero
 being real. This is known-theorem H6-H2 infrastructure with expected `hard_gap_delta=0` and
 `route_infrastructure_delta=1`; forward preservation, threshold existence/closedness, H6-E/G8,
 and RH remain open. Public preregistration CI is required before Lean proof edits.
+
+Preregistration commit `8ec051e767319a2a7c6dc40c465e0e9d8b1e2d7e` passed public Lean Action CI run
+`29512089828`, build job `87667820977`, in `2m17s`. The four fixed clauses are public before
+proof-source edits; implementation may now begin without changing the endpoint.
+
+## Local Completion Update: H6 Zero-Coordinate Framework
+
+Date: 2026-07-17
+
+The exact framework compiles in `DeBruijnNewmanZeros.lean`. Lean verifies the source coordinate
+and inverse, both directions between `H_0` zeros and nontrivial zeta zeros, the strict strip
+`-1<Im(z)<1`, the boundary exclusions at `i` and `-i`, and the exact equivalence
+`RiemannHypothesis <-> deBruijnNewmanAllZerosReal 0`.
+
+The standalone module is diagnostic-free. The aggregate TargetCheck, both boundary witnesses,
+five standard-only axiom prints, empty forbidden scan, `git diff --check`, and the 8,687-job full
+build pass locally. Classification is `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`. Forward preservation, threshold existence/closedness, H6-E/G8,
+W2/G7, M2/G3, and RH remain open; implementation publication and public CI are pending.

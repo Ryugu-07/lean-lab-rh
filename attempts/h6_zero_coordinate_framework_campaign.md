@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260717-H6-ZERO-COORDINATE-FRAMEWORK-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_PREREGISTRATION_COMPLETE_PUBLIC_CI_PENDING`
+Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
 
 ## Runtime record
 
@@ -41,31 +41,68 @@ Status: `LOCAL_PREREGISTRATION_COMPLETE_PUBLIC_CI_PENDING`
 - Compared H1/H2 finite counts, direct M2/G3 and W2/G7 re-entry, H6-Q, H6-X, and H6-H2.
 - Rechecked the exact Polymath/Rodgers-Tao normalization and the project's compiled xi-zero bridge.
 - Fixed all four declarations and boundary tests before any Lean proof-source edit.
-- `result`: local preregistration complete; public CI pending
+- Preregistration commit `8ec051e767319a2a7c6dc40c465e0e9d8b1e2d7e` passed public Lean Action CI
+  run `29512089828`, build job `87667820977`, in `2m17s`.
+- `result`: public preregistration complete; implementation active
 - `rh_frontier_delta`: 0
 - `route_infrastructure_delta`: 0
 - `engineering_delta`: 0
 
+## Lean implementation loop
+
+- Added `DeBruijnNewmanZeros.lean` with the exact all-real-zero predicate and inverse source
+  coordinate `-i*(2*s-1)`.
+- Lean normalizes the coordinate's real and imaginary parts and proves
+  `(1+i*z(s))/2=s` exactly.
+- The nonzero factor `1/8` and the compiled xi-zero bridge yield both directions of the `H_0`
+  zero/nontrivial-zero correspondence.
+- Xi reflection plus the strict right critical-strip bound gives `0<Re(s)<1`; the exact coordinate
+  then gives `-1<Im(z)<1` for every time-zero zero.
+- The strip theorem kernel-checks both adversarial boundaries `H_0(i)!=0` and `H_0(-i)!=0`.
+- Transporting `OnCriticalLine` through the coordinate in both directions proves the exact
+  `RiemannHypothesis <-> deBruijnNewmanAllZerosReal 0` statement.
+- Registered one aggregate theorem containing every endpoint clause.
+- `result`: `KNOWN_THEOREM_FORMALIZED`
+- `rh_frontier_delta`: 0
+- `route_infrastructure_delta`: 1
+- `engineering_delta`: 1
+
 ## Mechanical audit
 
 - preregistration diff check: passed before staging
-- public preregistration commit and CI: pending
-- exact module compilation: not started
-- `Targets.lean`: not started
-- `TargetChecks.lean`: not started
-- `AxiomsAudit.lean`: not started
-- forbidden scan: not started
-- witness and definition alignment: preregistered
-- full `lake build`: unchanged public baseline; new preregistration CI pending
+- public preregistration commit and CI: passed at commit
+  `8ec051e767319a2a7c6dc40c465e0e9d8b1e2d7e`, run `29512089828`, job `87667820977`
+- exact module compilation: diagnostic-free
+- `Targets.lean`: exact H6 zero-coordinate target compiles as proven
+- `TargetChecks.lean`: exact aggregate witness and both boundary witnesses compile
+- `AxiomsAudit.lean`: all five selected theorem prints use only `propext`, `Classical.choice`, and
+  `Quot.sound`
+- forbidden token/declaration/resource scan: empty
+- witness and definition alignment: exact source coordinate, inverse, strict strip, and all-complex
+  zero quantifier compile; no multiplicity claim is made
+- full `lake build`: passed locally, 8,687 jobs
+- `git diff --check`: passed before documentation backfill
+- implementation public CI: pending
 
 ## Result
 
-- `result_class`: active preregistration
-- `assumption_frontier_after`: unchanged
-- `hard_gap_after`: unchanged
+- `result_class`: `KNOWN_THEOREM_FORMALIZED`
+- `assumption_frontier_after`: exact time-zero all-real-zero predicate, bijective zero coordinate,
+  strict strip, and RH equivalence are compiled and available as premises
+- `hard_gap_after`: H6-H2 forward preservation and threshold existence/closedness, H6-E/G8,
+  W2/G7, M2/G3, and RH remain open
 - `hard_gap_delta`: 0
+- `route_infrastructure_delta`: 1
 - `OBS_node`: none
-- `theorem_names`: pending
-- `failure_or_obstacle`: none yet
-- `route_selection_decision`: publish preregistration and require public CI before proof edits
-- `commit_and_CI`: pending
+- `theorem_names`: `deBruijnNewmanH_zero_iff_isNontrivialZero`,
+  `deBruijnNewmanH_zeroCoordinate_eq_zero_iff`, `deBruijnNewmanH_zero_im_mem_Ioo`,
+  `deBruijnNewmanH_zero_I_ne_zero`, `deBruijnNewmanH_zero_neg_I_ne_zero`,
+  `riemannHypothesis_iff_deBruijnNewmanAllZerosReal_zero`,
+  `deBruijnNewman_zeroCoordinate_framework`
+- `failure_or_obstacle`: no coordinate or boundary obstruction; the next H6 obstacle is the
+  global de Bruijn zero-preservation/threshold theory
+- `route_selection_decision`: publish implementation, require public CI, then backfill immutable
+  evidence before closure
+- `preregistration_commit_and_CI`: commit `8ec051e767319a2a7c6dc40c465e0e9d8b1e2d7e`,
+  run `29512089828`, job `87667820977`, passed in `2m17s`
+- `implementation_commit_and_CI`: pending

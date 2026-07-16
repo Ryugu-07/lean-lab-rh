@@ -1,6 +1,7 @@
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.DeBruijnNewmanHeat
+import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiZeroDivisor
@@ -357,6 +358,11 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.differentiable_deBruijnNewmanH
 #print axioms LeanLab.Riemann.deriv_deriv_deBruijnNewmanH
 #print axioms LeanLab.Riemann.deBruijnNewmanH_backward_heat_equation
+#print axioms LeanLab.Riemann.deBruijnNewmanH_zero_iff_isNontrivialZero
+#print axioms LeanLab.Riemann.deBruijnNewmanH_zeroCoordinate_eq_zero_iff
+#print axioms LeanLab.Riemann.deBruijnNewmanH_zero_im_mem_Ioo
+#print axioms LeanLab.Riemann.riemannHypothesis_iff_deBruijnNewmanAllZerosReal_zero
+#print axioms LeanLab.Riemann.deBruijnNewman_zeroCoordinate_framework
 #print axioms LeanLab.Riemann.norm_le_of_forall_norm_finiteComplexPowerSum_le
 #print axioms LeanLab.Riemann.norm_eq_sqrt_of_powerSum_bound_and_reciprocal
 #print axioms LeanLab.Riemann.h6AuditHeatXiQuadratic_one_allZerosOnCriticalLine

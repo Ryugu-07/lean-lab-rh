@@ -6,7 +6,7 @@ Campaign: `CAMPAIGN-20260717-H6-ZERO-COORDINATE-FRAMEWORK-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_PREREGISTRATION_COMPLETE_PUBLIC_CI_PENDING`
+Status: `PUBLIC_PREREGISTRATION_COMPLETE_LOCAL_IMPLEMENTATION_COMPILED`
 
 ## Route selection
 
@@ -139,3 +139,18 @@ remain open.
   preservation in the same campaign.
 
 No Lean proof source has been edited in this campaign before this preregistration.
+
+## Public preregistration gate
+
+Preregistration commit `8ec051e767319a2a7c6dc40c465e0e9d8b1e2d7e` passed public Lean Action CI
+run `29512089828`, build job `87667820977`, in `2m17s` (`2026-07-16T15:38:51Z` to
+`2026-07-16T15:41:08Z`). Lean proof-source edits begin only after this gate.
+
+## Registered implementation result
+
+`DeBruijnNewmanZeros.lean` compiles every fixed clause without changing the coordinate, strip, or
+quantifiers. The exact aggregate theorem is `deBruijnNewman_zeroCoordinate_framework`. Both
+boundary witnesses, exact TargetCheck, five standard-only axiom prints, empty forbidden scan,
+`git diff --check`, and the 8,687-job full build pass locally. Classification is
+`KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`.
+Implementation publication and public CI remain pending.

@@ -1,6 +1,7 @@
 import LeanLab.Riemann.LiScaffold
 import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.DeBruijnNewmanHeat
+import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiZeroDivisor
@@ -792,6 +793,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanH_backward_heat_equation
       status := .proven
       note := "Campaign CAMPAIGN-20260717-H6-HEAT-EQUATION-01 proves the source-normalized all-real-time analytic evolution using an explicit double-exponential majorant. This closes the heat-evolution subedge only. The all-real-zero framework, Lambda <= 0, and RH remain open." },
+    { id := "H6.debruijn-newman.zero-coordinate-framework"
+      tier := .tier2
+      title := "Align the time-zero de Bruijn-Newman zero coordinate"
+      statement :=
+        "Prove the exact bijective coordinate between zeros of H_0 and nontrivial zeta zeros, the strict transformed critical strip, and the equivalence between Mathlib.RiemannHypothesis and all zeros of H_0 being real."
+      leanName := some ``deBruijnNewman_zeroCoordinate_framework
+      status := .proven
+      note := "Campaign CAMPAIGN-20260717-H6-ZERO-COORDINATE-FRAMEWORK-01 compiles the full source coordinate z <-> (1+i*z)/2, its inverse, the strict strip -1<Im(z)<1, and the exact RH/all-real-H_0 equivalence. This closes only the definition-alignment part of H6-H2; forward preservation, threshold existence/closedness, H6-E/G8, and RH remain open." },
     { id := "H6.audit.reverse-heat-li-transfer"
       tier := .tier2
       title := "Falsify generic reverse-heat Li transfer"
