@@ -4,7 +4,7 @@ Audit: `AUDIT-20260716-R5-GAUSSIAN-PRIME-KERNEL-SIGN-01`
 
 Date: 2026-07-16
 
-Status: `LOCAL_VERIFIED`
+Status: `IMPLEMENTATION_CI_PASSED`
 
 Mode: `DISCOVERY -> FALSIFICATION`
 
@@ -123,3 +123,7 @@ aggregate import, `git diff --check`, and full 8,679-job build pass. The axiom p
 
 The immutable preregistration commit `672f965556fbd68f74e9c5e8d322e46b97db7fed` passed public
 Lean Action CI run `29462185050`, build job `87507838744`, before implementation publication.
+
+Implementation commit `01ea63517670a81b8c640de1135dec62d44436b9` passed public Lean Action CI
+run `29462677629`, build job `87509304721`, in `1m54s`. Publish the immutable evidence backfill and
+require its own public CI before closing the audit.

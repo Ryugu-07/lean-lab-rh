@@ -965,3 +965,8 @@ obtained by assigning one common semidefinite sign to each Gaussian prime-power 
 kernel. Global cancellation and operator mechanisms are untouched. Exact targets, typed witness,
 four standard-only axiom prints, scans, and the full 8,679-job build pass locally. W1c1, W2/G7,
 and RH remain open, with `hard_gap_delta=0`; publication and public CI remain.
+
+Implementation commit `01ea63517670a81b8c640de1135dec62d44436b9` passed public Lean Action CI
+run `29462677629`, build job `87509304721`, in `1m54s`. The exact arithmetic-kernel obstruction is
+now independently public-built. Immutable evidence backfill and its own public CI remain before
+audit closure; all RH hard gaps are unchanged.
