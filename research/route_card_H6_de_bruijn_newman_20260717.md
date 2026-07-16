@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `H6_THRESHOLD_CLOSEDNESS_PUBLICLY_CLOSED`
+Status: `H6_FORWARD_PRESERVATION_SELECTED`
 
 ## Endpoint and normalization
 
@@ -193,6 +193,38 @@ Action CI run `29518062294`, build job `87687972172`, in `2m7s`. Evidence-backfi
 `route_infrastructure_delta=1`. Forward preservation, threshold nonemptiness/upper-ray structure,
 H6-E/G8, W2/G7, M2/G3, and RH remain open.
 
+## Candidate H6-H2c: de Bruijn forward real-zero preservation
+
+**Exact proposition.** For the compiled source family and all-complex-zero predicate,
+
+`t <= tau -> deBruijnNewmanAllZerosReal t -> deBruijnNewmanAllZerosReal tau`.
+
+The statement permits arbitrary multiplicity and an infinite zero set. It has no simplicity,
+spacing, bounded-time, or finite-degree premise.
+
+**Proof architecture.** Prove source order at most one from the double-exponential kernel decay,
+then use the vendored genus-one Hadamard factorization to establish de Bruijn's vertical-shift
+average preserver. Iterating shifts of size `sqrt(2*(tau-t)/n)` gives the Fourier multiplier
+`cosh(sqrt(2*(tau-t)/n)*u)^n`, which converges compact-uniformly to the exact heat multiplier
+`exp((tau-t)*u^2)`. Jensen zero persistence excludes a nonreal zero in the nonzero limit.
+
+**DAG and strength.** This is the next open H6-H2 threshold edge. Together with the compiled
+closedness theorem it will show that the good-time set is a closed upper set. It does not prove
+that the set is nonempty or that time zero belongs to it. Expected `hard_gap_delta=0` and
+`route_infrastructure_delta=1`.
+
+**Adversarial tests.** Require equality times, arbitrary multiplicity, infinite zero sets, the
+backward-heat sign, the factor of two in the shift scale, compact-uniform rather than real-axis
+convergence, and the exact source predicate. Reject small-time, simple-zero, bounded-time, and
+polynomial-surrogate weakenings.
+
+**Campaign gate.** Selected as
+`CAMPAIGN-20260717-H6-FORWARD-PRESERVATION-01`. Exact preregistration is in
+`h6_forward_preservation_prereg_20260717.md`. Public preregistration CI is required before Lean
+proof-source edits.
+
+**Verdict:** `SELECTED_PENDING_PUBLIC_PREREGISTRATION`.
+
 ## Candidate H6-Q: improve the upper bound to one fifth
 
 **Exact proposition.** Every zero of `H_(1/5)` is real. With the established de Bruijn
@@ -253,9 +285,10 @@ source normalization and analytic hypotheses.
 
 ## Recommendation
 
-H6-B, H6-H1, and H6-H2a are complete. Execute the selected H6-H2b closedness campaign through
-its public preregistration gate. Keep forward preservation as the next deeper H6-H2 edge and H6-Q
-as a later `PROOF-ATTEMPT`; closedness alone supplies no global real-zero certificate.
+H6-B, H6-H1, H6-H2a, and H6-H2b are publicly complete. Execute the selected H6-H2c forward
+preservation campaign through its public preregistration gate. Keep H6-Q as a later
+`PROOF-ATTEMPT`; closedness and forward preservation still require a nonempty good-time witness
+before they produce a threshold interval.
 
 ## Candidate H6-Y: reverse-heat Li transfer audit
 
