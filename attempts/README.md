@@ -10,6 +10,7 @@ output checks, not approval.
 
 ## Current audit
 
+- [H6 de Bruijn upper-half campaign](h6_upper_half_campaign.md)
 - [H6 forward real-zero preservation campaign](h6_forward_preservation_campaign.md)
 - [H6 threshold closedness campaign](h6_threshold_closedness_campaign.md)
 - [H6 reverse-heat Li transfer falsification](h6_reverse_heat_li_falsification.md)

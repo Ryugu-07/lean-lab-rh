@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `H6_FORWARD_PRESERVATION_PUBLICLY_CLOSED`
+Status: `H6_UPPER_HALF_SELECTED_PREREGISTRATION_CI_PENDING`
 
 ## Endpoint and normalization
 
@@ -246,6 +246,37 @@ job `87718477219`, in `1m57s`; the campaign is publicly closed.
 `route_infrastructure_delta=1`. Threshold nonemptiness/upper-time existence, H6-E/G8, W2/G7,
 M2/G3, and RH remain open.
 
+## Candidate H6-H2d: de Bruijn strip contraction and the half-time upper bound
+
+**Exact proposition.** For every `0<=t<=1/2` and every zero `z` of the compiled source family,
+
+`Im(z)^2 <= 1-2*t`.
+
+In particular `deBruijnNewmanAllZerosReal (1/2)`.
+
+**Proof architecture.** Generalize H6-H2c's real-root factor comparison to conjugate pairs of
+genus-one Weierstrass factors. A conjugation involution on the multiplicity-bearing divisor index
+turns the paired strict inequality into de Bruijn's vertical-average strip contraction. Iterating
+`n` shifts of size `sqrt(2*t/n)` subtracts exactly `2*t` from the squared strip width. The
+compiled `cosh` heat-multiplier limit and Jensen persistence transfer the same closed strip to
+`H_t`.
+
+**DAG and strength.** This is the first nonempty-good-time edge after closedness and forward
+preservation. It gives the classical unconditional upper bound `Lambda<=1/2` once a threshold is
+packaged. It does not prove the RH-equivalent time-zero predicate and has expected
+`hard_gap_delta=0`, `route_infrastructure_delta=1`.
+
+**Adversarial tests.** Require the exact factor `1-2*t`, equality at `t=1/2`, arbitrary
+multiplicity, infinite zero sets, real fixed points of conjugation, a positive-natural iteration
+index, and a limit ball disjoint from the full contracted strip. Reject polynomial-only,
+epsilon-width, conditional, simple-zero, and numerical-surrogate endpoints.
+
+**Campaign gate.** Selected as `CAMPAIGN-20260717-H6-UPPER-HALF-01`. Exact preregistration is in
+`h6_upper_half_prereg_20260717.md`. Public preregistration CI is required before Lean proof-source
+edits.
+
+**Verdict:** `PREREGISTRATION_LOCAL_READY_PUBLIC_CI_PENDING`.
+
 ## Candidate H6-Q: improve the upper bound to one fifth
 
 **Exact proposition.** Every zero of `H_(1/5)` is real. With the established de Bruijn
@@ -306,9 +337,10 @@ source normalization and analytic hypotheses.
 
 ## Recommendation
 
-H6-B, H6-H1, H6-H2a, H6-H2b, and H6-H2c are publicly complete. Value-rank the nonempty
-good-time/upper-time witness needed to turn closedness and forward preservation into a threshold
-interval against direct H6-E/G8, W2/G7, and M2/G3 attacks. Keep H6-Q as a later `PROOF-ATTEMPT`.
+H6-B, H6-H1, H6-H2a, H6-H2b, and H6-H2c are publicly complete. Execute the selected H6-H2d
+strip-contraction campaign through its public preregistration gate. This establishes the first
+nonempty good time before any threshold packaging. Keep H6-Q as a later `PROOF-ATTEMPT` and keep
+direct H6-E/G8, W2/G7, and M2/G3 attacks open.
 
 ## Candidate H6-Y: reverse-heat Li transfer audit
 
