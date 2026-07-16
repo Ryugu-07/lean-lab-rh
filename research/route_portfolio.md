@@ -1370,3 +1370,20 @@ The reusable gain is the exact all-real-time entire heat evolution and its sourc
 derivatives. No zero-location or threshold theorem was proved: `hard_gap_delta=0`, while
 `route_infrastructure_delta=1`. H6-H2, H6-E/G8, W2/G7, M2/G3, and RH remain open. The persistent
 Goal returns to fresh independent route selection; no successor campaign is selected here.
+
+## Selection Update: H10 Finite Spectral Rigidity
+
+Date: 2026-07-17
+
+Fresh selection compares direct H6-E/H6-Q, H6-H2, H6-X, W2/G7, M2/G3, H1-B, H2-B, and the
+required H10 census. No materially new unconditional mechanism appears in the three hard-gap
+routes. Continuing H6 would presently add another equivalence layer. H10 instead supplies a new
+structural route with a primary-source exact endpoint and a reusable compiled phase tool.
+
+Campaign `CAMPAIGN-20260717-H10-FINITE-SPECTRAL-RIGIDITY-01` selects the final spectral step of the
+Bombieri-Stepanov function-field proof: an aggregate power-sum bound at radius `R` must control
+each member of a finite complex spectrum despite cancellation, and functional-equation reciprocal
+pairing at `R=sqrt(q)` must force the exact critical circle. The card records that finite Frobenius
+spectrum, all-extension point counts, and uniform tail absence are precisely what do not transfer
+to the number-field zero divisor. Exact success/falsification criteria are preregistered before
+Lean proof edits in `research/h10_finite_spectral_rigidity_prereg_20260717.md`.

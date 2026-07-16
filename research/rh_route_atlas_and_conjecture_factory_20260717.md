@@ -46,6 +46,12 @@ Batch A is source-aligned in the following cards:
 - [`route_card_H2_density_moments_20260717.md`](route_card_H2_density_moments_20260717.md);
 - [`route_card_H6_de_bruijn_newman_20260717.md`](route_card_H6_de_bruijn_newman_20260717.md).
 
+The first Batch B card is now source-aligned:
+
+- [`route_card_H10_bombieri_stepanov_20260717.md`](route_card_H10_bombieri_stepanov_20260717.md),
+  separating the Frobenius/Riemann-Roch point-count construction from the finite power-sum
+  spectral-rigidity step and the unresolved number-field transfer.
+
 The exact nine-candidate verdicts are in
 [`census_batch_A_conjecture_audit_20260717.md`](census_batch_A_conjecture_audit_20260717.md).
 They are selection inputs only, never proof premises.
