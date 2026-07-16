@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `H6_THRESHOLD_CLOSEDNESS_SELECTED`
+Status: `H6_THRESHOLD_CLOSEDNESS_LOCAL_AUDITS_COMPLETE_PUBLIC_IMPLEMENTATION_CI_PENDING`
 
 ## Endpoint and normalization
 
@@ -172,10 +172,22 @@ the exact all-complex-zero predicate. Do not infer threshold existence or forwar
 
 **Campaign gate.** Selected as
 `CAMPAIGN-20260717-H6-THRESHOLD-CLOSEDNESS-01`. Exact preregistration is in
-`h6_threshold_closedness_prereg_20260717.md`. Public preregistration CI is pending; no Lean proof
-source may be edited before it passes.
+`h6_threshold_closedness_prereg_20260717.md`.
 
-**Verdict:** `SELECTED_PENDING_PUBLIC_PREREGISTRATION`.
+Preregistration commit `02758ff243c3f8cd434eb3c007a2a5f6b094fea7` passed public Lean Action CI
+run `29515723482`, build job `87680126242`, in `1m56s`.
+
+**Implementation result.** `DeBruijnNewmanThreshold.lean` proves source-kernel positivity,
+nonvanishing at spatial zero for every real time, joint time-space continuity, and full-multiplicity
+zero persistence using Jensen's zero-free logarithmic circle mean. Analytic isolated zeros provide
+a nonreal isolating ball, and the complement of the all-real-zero time set is open.
+
+The exact endpoint, target witness, four TargetChecks, and four standard-only axiom prints compile
+locally. Forbidden scans are empty, `git diff --check` passes, and the full 8,688-job build
+succeeds. Public implementation CI is pending.
+
+**Verdict:** `LOCAL_AUDITS_COMPLETE_PUBLIC_IMPLEMENTATION_CI_PENDING` as
+`KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`.
 
 ## Candidate H6-Q: improve the upper bound to one fifth
 

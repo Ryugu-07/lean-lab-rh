@@ -6,7 +6,7 @@ Campaign: `CAMPAIGN-20260717-H6-THRESHOLD-CLOSEDNESS-01`
 
 Mode: `LITERATURE`
 
-Status: `SELECTED_PENDING_PUBLIC_PREREGISTRATION`
+Status: `LOCAL_AUDITS_COMPLETE_PUBLIC_IMPLEMENTATION_CI_PENDING`
 
 ## Route selection
 
@@ -138,4 +138,22 @@ No Lean proof source has been edited in this campaign before this preregistratio
 
 ## Public preregistration gate
 
-Pending. Lean proof-source edits begin only after the preregistration commit passes public CI.
+Preregistration commit `02758ff243c3f8cd434eb3c007a2a5f6b094fea7` passed public Lean Action CI
+run `29515723482`, build job `87680126242`, in `1m56s`. Lean proof-source edits begin only after
+this gate.
+
+## Registered implementation result
+
+`LeanLab/Riemann/DeBruijnNewmanThreshold.lean` compiles the exact preregistered endpoint
+`isClosed_setOf_deBruijnNewmanAllZerosReal`. The proof establishes strict positivity of the source
+kernel, nonvanishing at spatial zero for every real time, joint time-space continuity, and
+arbitrary-multiplicity zero persistence through Jensen's zero-free logarithmic circle mean. It
+then proves the complement of the exact all-complex-zero predicate is open.
+
+The module is diagnostic-free. Targets, four exact TargetChecks, and four selected transitive
+axiom prints compile; every selected declaration uses only `propext`, `Classical.choice`, and
+`Quot.sound`. Forbidden proof-token, declaration, and resource-relaxation scans are empty;
+`git diff --check` passes; and the full 8,688-job build succeeds. Classification is locally
+`KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`. Public
+implementation CI is pending. Forward preservation, nonempty upper-time existence, threshold
+upper-ray structure, H6-E/G8, and RH remain open.

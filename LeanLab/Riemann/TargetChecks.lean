@@ -1,6 +1,7 @@
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
+import LeanLab.Riemann.DeBruijnNewmanThreshold
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiSymmetricZeroFormula
@@ -1116,6 +1117,18 @@ example : deBruijnNewmanH 0 Complex.I ≠ 0 :=
 
 example : deBruijnNewmanH 0 (-Complex.I) ≠ 0 :=
   deBruijnNewmanH_zero_neg_I_ne_zero
+
+example {u : ℝ} (hu : 0 ≤ u) : 0 < deBruijnNewmanPhi u :=
+  deBruijnNewmanPhi_pos hu
+
+example (t : ℝ) : deBruijnNewmanH t 0 ≠ 0 :=
+  deBruijnNewmanH_zero_ne_zero t
+
+example : Continuous (fun p : ℝ × ℂ ↦ deBruijnNewmanH p.1 p.2) :=
+  continuous_deBruijnNewmanH_joint
+
+example : IsClosed {t : ℝ | deBruijnNewmanAllZerosReal t} :=
+  isClosed_setOf_deBruijnNewmanAllZerosReal
 
 example {ι : Type*} [Fintype ι] (alpha : ι → ℂ)
     {R C : ℝ} (hR : 0 < R) (hC : 0 ≤ C)

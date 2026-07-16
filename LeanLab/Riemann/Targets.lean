@@ -2,6 +2,7 @@ import LeanLab.Riemann.LiScaffold
 import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
+import LeanLab.Riemann.DeBruijnNewmanThreshold
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiZeroDivisor
@@ -801,6 +802,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewman_zeroCoordinate_framework
       status := .proven
       note := "Campaign CAMPAIGN-20260717-H6-ZERO-COORDINATE-FRAMEWORK-01 compiles the full source coordinate z <-> (1+i*z)/2, its inverse, the strict strip -1<Im(z)<1, and the exact RH/all-real-H_0 equivalence. This closes only the definition-alignment part of H6-H2; forward preservation, threshold existence/closedness, H6-E/G8, and RH remain open." },
+    { id := "H6.debruijn-newman.threshold-closedness"
+      tier := .tier2
+      title := "Prove closedness of the all-real-zero time set"
+      statement :=
+        "For the exact source-normalized family, prove that the set of real times at which every complex zero of H_t is real is closed, without a simple-zero assumption."
+      leanName := some ``isClosed_setOf_deBruijnNewmanAllZerosReal
+      status := .proven
+      note := "Campaign CAMPAIGN-20260717-H6-THRESHOLD-CLOSEDNESS-01 proves joint time-space continuity, strict positivity at spatial zero, arbitrary-multiplicity zero persistence through Jensen's logarithmic circle mean, and exact closedness. Forward preservation, nonempty upper-time existence, H6-E/G8, and RH remain open." },
     { id := "H6.audit.reverse-heat-li-transfer"
       tier := .tier2
       title := "Falsify generic reverse-heat Li transfer"
