@@ -6,7 +6,7 @@ Campaign: `AUDIT-20260717-H6-REVERSE-HEAT-LI-01`
 
 Mode: `FALSIFICATION`
 
-Status: `PUBLIC_PREREGISTRATION_COMPLETE_LOCAL_COUNTERMODEL_COMPILED`
+Status: `PUBLIC_IMPLEMENTATION_COMPLETE_EVIDENCE_PENDING`
 
 ## Route selection
 
@@ -137,5 +137,7 @@ Preregistration commit `215ebcf661a421350d30920ec5aee43518d89559` passed public 
 `H6ReverseHeatLiAudit.lean` now compiles every registered clause without changing the polynomial,
 Li convention, time values, or constants. The aggregate theorem is
 `h6AuditHeatXiQuadratic_falsifies_reverseLiTransfer`. Local exact witness, standard-only axiom,
-forbidden scan, diff, and 8,686-job full-build gates pass. Implementation publication remains
-pending.
+forbidden scan, diff, and 8,686-job full-build gates pass. Implementation commit
+`819f3de472c43220895772788911a25e114cc7bd` passed public Lean Action CI run `29509859982`, build
+job `87660158241`, in `2m38s` (`2026-07-16T15:09:26Z` to `2026-07-16T15:12:04Z`). Immutable
+evidence backfill and its independent public CI remain before closure.

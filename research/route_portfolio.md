@@ -1470,3 +1470,17 @@ base-point nonvanishing, and later real-rootedness cannot transfer Li positivity
 `hard_gap_delta=0`: actual theta-kernel zero dynamics, H6-E/G8, W2/G7, M2/G3, and RH remain open.
 Preregistration commit `215ebcf661a421350d30920ec5aee43518d89559` passed public CI run
 `29508598381`, job `87655833650`, in `1m30s`; implementation publication remains pending.
+
+## Public Implementation Update: H6 Reverse-Heat Li Transfer Falsification
+
+Date: 2026-07-17
+
+Implementation commit `819f3de472c43220895772788911a25e114cc7bd` passed public Lean Action CI run
+`29509859982`, build job `87660158241`, in `2m38s`. The independent build verifies every fixed
+countermodel clause, the exact aggregate witness, and the standard-only axiom audit.
+
+Classification remains `BRANCH_FALSIFIED` with `hard_gap_delta=0`. This eliminates only the
+generic inference from heat, reflection, base-point nonvanishing, and later critical-line zeros to
+earlier Li positivity. The actual theta-kernel family, fixed-time H6-X, H6-E/G8, W2/G7, M2/G3,
+and RH remain open. Immutable evidence backfill and its own public CI remain before campaign
+closure.

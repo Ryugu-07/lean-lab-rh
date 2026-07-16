@@ -4,7 +4,7 @@ Campaign: `AUDIT-20260717-H6-REVERSE-HEAT-LI-01`
 
 Mode: `FALSIFICATION`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_COMPLETE_EVIDENCE_PENDING`
 
 ## Runtime record
 
@@ -86,8 +86,10 @@ Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
 - definition alignment: the second Li expression matches the project's compiled
   `liCoefficientCandidate_one_eq_two_logDeriv_add_deriv_logDeriv` convention
 - full `lake build`: passed locally, 8,686 jobs
-- `git diff --check`: pending after documentation backfill
-- implementation public CI: pending
+- `git diff --check`: passed before implementation publication
+- implementation public CI: passed at commit
+  `819f3de472c43220895772788911a25e114cc7bd`, run `29509859982`, job `87660158241`, in `2m38s`
+- immutable evidence backfill and public CI: pending
 
 ## Result
 
@@ -109,4 +111,6 @@ Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
   route selection; do not generalize the polynomial library
 - `preregistration_commit_and_CI`: commit `215ebcf661a421350d30920ec5aee43518d89559`,
   run `29508598381`, job `87655833650`, passed in `1m30s`
-- `implementation_commit_and_CI`: pending
+- `implementation_commit_and_CI`: commit `819f3de472c43220895772788911a25e114cc7bd`,
+  run `29509859982`, job `87660158241`, passed in `2m38s`
+- `evidence_commit_and_CI`: pending
