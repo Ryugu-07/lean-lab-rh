@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `H6_H1_COMPLETE`
+Status: `H6_H1_PUBLICLY_CLOSED`
 
 ## Endpoint and normalization
 

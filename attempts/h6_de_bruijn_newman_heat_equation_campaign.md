@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260717-H6-HEAT-EQUATION-01`
 
 Mode: `LITERATURE`
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Runtime record
 
@@ -116,7 +116,8 @@ Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 - `implementation_commit`: `cc62a398160c5865861de0d667b3683ac57694b1`
 - `implementation_CI`: public Lean Action run `29504396806`, build job `87641274871`, passed in
   `2m9s` (`2026-07-16T13:57:03Z` to `2026-07-16T13:59:12Z`)
-- `evidence_commit`: pending
-- `evidence_CI`: pending
-- `commit_and_CI`: preregistration and implementation are public and independently built; immutable
-  evidence backfill and closure remain
+- `evidence_commit`: `535554372f1e04a3f3c409ae93e0b3e9d7cac04a`
+- `evidence_CI`: public Lean Action run `29504634992`, build job `87642099186`, passed in `1m32s`
+  (`2026-07-16T14:00:19Z` to `2026-07-16T14:01:51Z`)
+- `commit_and_CI`: preregistration, implementation, and immutable evidence backfill are public and
+  independently built; campaign closed

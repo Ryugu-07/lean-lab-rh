@@ -1355,3 +1355,18 @@ Classification is `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
 and RH remain open. Implementation commit `cc62a398160c5865861de0d667b3683ac57694b1` passed public
 Lean Action CI run `29504396806`, build job `87641274871`, in `2m9s`. Immutable evidence backfill
 and its own public CI are still required.
+
+## Public Closure Update: H6 Entire Heat Equation
+
+Date: 2026-07-17
+
+Evidence commit `535554372f1e04a3f3c409ae93e0b3e9d7cac04a` passed public Lean Action CI run
+`29504634992`, build job `87642099186`, in `1m32s`. Together with preregistration run
+`29501372019` and implementation commit `cc62a398160c5865861de0d667b3683ac57694b1`, run
+`29504396806`, campaign `CAMPAIGN-20260717-H6-HEAT-EQUATION-01` is publicly closed as
+`KNOWN_THEOREM_FORMALIZED`.
+
+The reusable gain is the exact all-real-time entire heat evolution and its source moment
+derivatives. No zero-location or threshold theorem was proved: `hard_gap_delta=0`, while
+`route_infrastructure_delta=1`. H6-H2, H6-E/G8, W2/G7, M2/G3, and RH remain open. The persistent
+Goal returns to fresh independent route selection; no successor campaign is selected here.
