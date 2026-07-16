@@ -22,6 +22,7 @@ import LeanLab.Riemann.WeilGaussianPositivityCriterion
 import LeanLab.Riemann.WeilGaussianFixedWidthCriterion
 import LeanLab.Riemann.WeilCompactLaplaceSeparator
 import LeanLab.Riemann.WeilCompactLaplaceZeroCutoff
+import LeanLab.Riemann.WeilCompactLaplaceArithmeticFormula
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit

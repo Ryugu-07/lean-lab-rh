@@ -40,25 +40,26 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - 每个定理都要有 attempts 日志：statement、策略、编译结果、失败原因/换路记录、token 花费（若可得）。
 - 证明文件中不允许残留占位证明。
 
-## RH current handoff (2026-07-16, R5 compact arithmetic formula preregistered)
+## RH current handoff (2026-07-16, R5 compact arithmetic formula locally complete)
 
-- The persistent RH Goal remains active. Fresh DISCOVERY route selection admits
-  `CAMPAIGN-20260716-R5-COMPACT-WEIL-ARITHMETIC-FORMULA-01` at the remaining W1c1 compact
-  arithmetic subedge.
-- The exact endpoint quantifies over every complex `ContDiff R infinity` compactly supported `f`
-  and proves the complete zero/pole/GammaR/von-Mangoldt explicit formula for its reflection-
-  symmetrized bilateral Laplace transform.
-- The physical prime weight is fixed as
-  `pi*vonMangoldt(n)*(f(log n)+f(-log n)/n)` and must be proved to have finite support. The proof
-  may not leave Fourier transforms, line integrals, or convergence premises unevaluated.
-- The proof DAG uses mathlib Schwartz Fourier inversion, exact real-line scaling, the compiled
-  generic pole residue skeleton, compact inverse-sixth-power decay, digamma growth, and the
-  publicly closed compact zero-side theorem.
-- Expected classification is `BRIDGE_REDUCED`, with `hard_gap_delta=1` only at the W1c1 compact
-  arithmetic subedge. W2/G7, G3/M2, regularization, and RH remain open.
-- Exact statement and rejection conditions are fixed in
-  `research/r5_compact_weil_arithmetic_formula_prereg_20260716.md`. Publish preregistration and
-  require public CI before Lean proof edits.
+- The persistent RH Goal remains active. Campaign
+  `CAMPAIGN-20260716-R5-COMPACT-WEIL-ARITHMETIC-FORMULA-01` has reached its exact fixed endpoint
+  locally as `symmetrizedCompactLaplaceXi_arithmetic_explicit_formula`.
+- `WeilCompactLaplaceArithmeticFormula.lean` proves exact Schwartz Fourier inversion with the
+  `2*pi` scaling, the physical weight
+  `pi*vonMangoldt(n)*(f(log n)+f(-log n)/n)`, absolute interchange, and genuine finite natural
+  support from compact support.
+- The same module proves selected pole-top decay, the full two-residue integral `2*pi*F(1)`, an
+  integrable first absolute moment for every compact vertical branch, GammaR integrability, exact
+  finite-edge arithmetic splitting, and all full-line limits.
+- The 1,012-line module is diagnostic-free. Exact Targets and TargetChecks, five standard-only
+  axiom prints, empty forbidden scans, `git diff --check`, aggregate import, and the full 8,681-job
+  build pass locally.
+- Classification is `BRIDGE_REDUCED`, with `hard_gap_delta=1` only at the compact W1c1 arithmetic
+  subedge. Quotient/completeness, distributional regularization, W2/G7, G3/M2, and RH remain open.
+- Preregistration commit `ccebc64b1f3419636461e6fbf968fc55c4f24b8c` passed public CI run
+  `29465070647`, build job `87516408926`. Implementation publication and independent public CI
+  are the next evidence gates; do not use the local theorem as publicly closed before they pass.
 
 ## RH current handoff (2026-07-16, R5 compact Weil zero cutoff publicly closed)
 

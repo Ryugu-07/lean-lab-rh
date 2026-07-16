@@ -1063,3 +1063,25 @@ as `2*pi*F(1)`, prove GammaR integrability, and assemble these with the complete
 bearing zero sum. Success reduces the fixed W1c1 compact arithmetic subedge but does not prove
 quotient/completeness, regularization, W2/G7, G3/M2, or RH. Exact rejection conditions are fixed in
 `research/r5_compact_weil_arithmetic_formula_prereg_20260716.md` before Lean proof edits.
+
+## Local Completion Update: R5 Compact Weil Arithmetic Formula
+
+Date: 2026-07-16
+
+The exact fixed endpoint now compiles in
+`LeanLab/Riemann/WeilCompactLaplaceArithmeticFormula.lean`. Mathlib Schwartz inversion gives the
+two exact physical branches with `2*pi` scaling; after reflection symmetrization the von-Mangoldt
+weight is `pi*Lambda(n)*(f(log n)+f(-log n)/n)`. Lean separately proves this natural-index weight
+has finite support from compactness of `tsupport f`.
+
+The compiled generic pole rectangle plus inverse-sixth selected-edge decay gives the exact
+`2*pi*F(1)` pole term. A first-absolute-moment Schwartz estimate absorbs the digamma growth and
+proves GammaR integrability. Finite-edge splitting and three full-line limits then match the
+publicly closed zero-side limit and prove the complete formula with multiplicity.
+
+Standalone compilation, exact Targets and TargetChecks, five standard-only axiom prints, empty
+forbidden scans, aggregate import, `git diff --check`, and the full 8,681-job build pass locally.
+Classify as `BRIDGE_REDUCED`, with `hard_gap_delta=1` only at W1c1c1. Quotient/completeness,
+distributional regularization, W2/G7, G3/M2, and RH remain open. Preregistration commit
+`ccebc64b1f3419636461e6fbf968fc55c4f24b8c` passed public CI run `29465070647`; implementation
+publication and public CI remain.

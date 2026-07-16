@@ -19,6 +19,7 @@ import LeanLab.Riemann.WeilGaussianPositivityCriterion
 import LeanLab.Riemann.WeilGaussianFixedWidthCriterion
 import LeanLab.Riemann.WeilCompactLaplaceSeparator
 import LeanLab.Riemann.WeilCompactLaplaceZeroCutoff
+import LeanLab.Riemann.WeilCompactLaplaceArithmeticFormula
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -346,6 +347,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``tendsto_symmetrizedCompactLaplaceXiRightVerticalIntegral
       status := .proven
       note := "Campaign CAMPAIGN-20260716-R5-COMPACT-WEIL-ZERO-CUTOFF-01 proves transform entire-ness by dominated differentiation, reflection symmetry, complete divisor summability, arbitrary iterated integration by parts, and fixed-strip inverse-sixth-power decay. That decay absorbs the compiled fourth-power selected-edge xi logarithmic-derivative bound and closes the compact-smooth zero-side cutoff passage. Implementation commit 0e6451944ee1edb2d76d67f4fe097de2aa19ad17 and evidence commit 6c2f3ab912097e4e5b325e9d0c27d43438a29d99 passed public Lean Action CI runs 29464308480 and 29464469804. The generic compact arithmetic evaluation, W2/G7, and RH remain open." },
+    { id := "T2.weil.compact-laplace-arithmetic-formula"
+      tier := .tier2
+      title := "Evaluate the compact-smooth Weil arithmetic side"
+      statement :=
+        "For every smooth compactly supported additive-log function and c>1, prove the complete reflection-symmetrized xi explicit formula with the multiplicity-bearing zero tsum, both elementary poles, the GammaR integral, and an explicitly finite von-Mangoldt side."
+      leanName := some ``symmetrizedCompactLaplaceXi_arithmetic_explicit_formula
+      status := .proven
+      note := "Campaign CAMPAIGN-20260716-R5-COMPACT-WEIL-ARITHMETIC-FORMULA-01 proves exact two-branch Schwartz Fourier inversion with the 2*pi scaling, the reflected 1/n prime factor, finite physical prime support from compact support, full-line pole and GammaR integrability, and the selected-height arithmetic limit. This closes the W1c1 compact arithmetic subedge only; quotient/completeness, distributional regularization, W2/G7 positivity, and RH remain open." },
     { id := "T2.audit.gaussian-prime-kernel-sign"
       tier := .tier2
       title := "Audit the sign of one Gaussian prime-power kernel"

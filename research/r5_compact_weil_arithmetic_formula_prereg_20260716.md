@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-COMPACT-WEIL-ARITHMETIC-FORMULA-01`
 
 Date: 2026-07-16
 
-Status: `PREREGISTERED`
+Status: `LOCAL_COMPLETE_PENDING_PUBLIC_CI`
 
 Mode: `DISCOVERY -> PROOF_ATTEMPT_A`
 
@@ -157,3 +157,26 @@ the literature.
   evaluators, or resource-limit relaxations.
 - If exact prime inversion or generic pole/GammaR control fails under two independent Lean
   approaches, close as `NO_PROGRESS`; do not weaken the endpoint to one internal DAG node.
+
+## Local Result
+
+The exact preregistered theorem compiles in
+`LeanLab/Riemann/WeilCompactLaplaceArithmeticFormula.lean`. Lean proves exact scaled Fourier
+inversion for both compact branches, including the reflected `1/n` factor; absolute prime
+series/integral interchange; finite natural support of the physical von-Mangoldt weight; selected
+top-edge pole decay and the exact two-residue full-line integral; an integrable first absolute
+moment for the compact symmetric weight; GammaR integrability; and the final arithmetic limit.
+
+The first-moment Schwartz argument is a stronger implementation of proof-DAG item 7 than the
+registered inverse-sixth tail split and uses no extra premise. All adversarial boundaries remain:
+`n=0` is separate, no evenness or real-valuedness is assumed, `c` cancels from the physical prime
+weight, and analytic zero multiplicity is preserved.
+
+The 1,012-line module is diagnostic-free. Exact Targets and TargetChecks compile; the five
+selected transitive axiom prints use only `propext`, `Classical.choice`, and `Quot.sound`; all
+forbidden scans and `git diff --check` pass; and the full 8,681-job build succeeds locally.
+
+Classification is `BRIDGE_REDUCED`, with `hard_gap_delta=1` only at the compact W1c1 arithmetic
+subedge. Preregistration commit `ccebc64b1f3419636461e6fbf968fc55c4f24b8c` passed public Lean
+Action CI run `29465070647`, build job `87516408926`, in `1m31s`. Implementation publication and
+independent public CI remain; W2/G7, G3/M2, distributional regularization, and RH remain open.

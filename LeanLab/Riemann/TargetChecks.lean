@@ -16,6 +16,7 @@ import LeanLab.Riemann.WeilGaussianPositivityCriterion
 import LeanLab.Riemann.WeilGaussianFixedWidthCriterion
 import LeanLab.Riemann.WeilCompactLaplaceSeparator
 import LeanLab.Riemann.WeilCompactLaplaceZeroCutoff
+import LeanLab.Riemann.WeilCompactLaplaceArithmeticFormula
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -963,6 +964,20 @@ example {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport 
           symmetrizedCompactLaplaceWeight f
             (riemannXiDivisorZeroValue p))) :=
   tendsto_symmetrizedCompactLaplaceXiRightVerticalIntegral hf hfsupp hc
+
+example {f : ℝ → ℂ} (hfsupp : HasCompactSupport f) :
+    Function.HasFiniteSupport (compactSymmetrizedVonMangoldtWeight f) :=
+  hasFiniteSupport_compactSymmetrizedVonMangoldtWeight hfsupp
+
+example {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {c : ℝ} (hc : 1 < c) :
+    (Real.pi : ℂ) * ∑' p : RiemannXiDivisorZeroIndex,
+        symmetrizedCompactLaplaceWeight f
+          (riemannXiDivisorZeroValue p) =
+      2 * (Real.pi : ℂ) * symmetrizedCompactLaplaceWeight f 1 +
+        compactSymmetrizedXiArchimedeanIntegral f c -
+        ∑' n : ℕ, compactSymmetrizedVonMangoldtWeight f n :=
+  symmetrizedCompactLaplaceXi_arithmetic_explicit_formula hf hfsupp hc
 
 example :
     ∃ a : ℝ, ∃ b : Fin 2 → ℝ,
