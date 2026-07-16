@@ -20,6 +20,7 @@ import LeanLab.Riemann.WeilGaussianFixedWidthCriterion
 import LeanLab.Riemann.WeilCompactLaplaceSeparator
 import LeanLab.Riemann.WeilCompactLaplaceZeroCutoff
 import LeanLab.Riemann.WeilCompactLaplaceArithmeticFormula
+import LeanLab.Riemann.WeilCompactPositivityCriterion
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -363,6 +364,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``symmetrizedCompactLaplaceXi_arithmetic_explicit_formula_sixContDiff
       status := .proven
       note := "Campaign CAMPAIGN-20260716-R5-COMPACT-C6-EXPLICIT-FORMULA-01 removes the C-infinity Schwartz wrapper from the compact formula. General Fourier inversion is justified by inverse-square Fourier decay, the first absolute moment follows from inverse-sixth decay, and the selected xi top edge uses exactly six continuous derivatives. Independent module checks, exact target checks, standard-only axiom audits, forbidden scans, and the full 8,681-job build pass locally. Preregistration 540b0ddcbf90a219084f8fdcb80a02ddaad5e277, implementation 3e3c677495c592096d7843aa4845e861bc393937, and evidence 94b6be8fc934b3d4909d066b168491389df9afd8 passed public CI runs 29467845311, 29468797210, and 29468980147. The campaign is publicly closed. This closes only the compact finite-regularity W1 subedge; quotient/completeness, full-class regularization, W2/G7 positivity, and RH remain open." },
+    { id := "T2.weil.compact-positivity-criterion"
+      tier := .tier2
+      title := "Characterize RH by compact arithmetic Weil positivity"
+      statement :=
+        "For every finite set F containing 0 and 1 and disjoint from the nontrivial zeros, prove that RH is equivalent to nonnegativity of the exact compact arithmetic Weil quadratic for every smooth compactly supported additive-log test whose bilateral Laplace transform vanishes on F."
+      leanName := some ``riemannHypothesis_iff_compactWeilArithmeticQuadratic_re_nonneg
+      status := .proven
+      note := "Campaign CAMPAIGN-20260716-R5-COMPACT-WEIL-CRITERION-01 formalizes the Connes--Consani/Yoshida compact-support criterion. The reverse strengthens the complete-divisor separator with arbitrary finite exact vanishing, pairs rho with 1-conj(rho), and bounds the complete off-target autocorrelation tail without assuming a conjugation permutation. The fixed endpoint compiles locally; full scans, axiom audit, build, publication, and public CI remain evidence gates. This closes one source-level W1/G6 compact-criterion edge only; unconditional W2/G7 positivity, RH, and the optional distributional extension remain open." },
     { id := "T2.audit.gaussian-prime-kernel-sign"
       tier := .tier2
       title := "Audit the sign of one Gaussian prime-power kernel"

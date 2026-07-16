@@ -1050,4 +1050,16 @@ example {ι : Type*} [Fintype ι] (a : ℝ) (b : ι → ℝ) (c : ℝ) :
     gaussianXiArithmeticQuadratic a b (fun _ => 0) c = 0 :=
   gaussianXiArithmeticQuadratic_zero a b c
 
+example (F : Finset ℂ)
+    (hFzero : ∀ z ∈ F, ¬ IsNontrivialZero z)
+    (hzero : 0 ∈ F) (hone : 1 ∈ F) :
+    RiemannHypothesis ↔
+      ∀ g : ℝ → ℂ,
+        ContDiff ℝ ∞ g →
+        HasCompactSupport g →
+        (∀ z ∈ F, compactLaplaceTransform g z = 0) →
+        0 ≤ (compactWeilArithmeticQuadratic g).re :=
+  riemannHypothesis_iff_compactWeilArithmeticQuadratic_re_nonneg
+    F hFzero hzero hone
+
 end LeanLab.Riemann

@@ -44,3 +44,47 @@ Campaign: `CAMPAIGN-20260716-R5-COMPACT-WEIL-CRITERION-01`
 - `hard_gap_delta_if_successful`: one at the W1/G6 compact criterion edge; zero for W2/G7 and RH
 - `next_state`: `PUBLIC_PREREGISTRATION_GATE -> PROOF_ATTEMPT_A`
 
+## Loop 4: public preregistration and forward implication
+
+- Public preregistration commit `55a634402aa0dc5db4266ee56c499efb7d6c5d13` passed Lean Action CI run
+  `29484731600`, build job `87576390864`, in `1m35s` before proof-source edits began.
+- Added the additive-log conjugate involution and proved exact Laplace covariance
+  `G*(s) = conj(G(1-conj(s)))`, with smoothness and compact-support preservation.
+- Proved xi conjugation reality and closure of nontrivial zeros under conjugation and conjugate
+  reflection without assuming a divisor-index conjugation permutation.
+- Defined the compact autocorrelation, the complete divisor zero quadratic, and the exact
+  finite-prime/GammaR arithmetic quadratic. With `G(0)=G(1)=0`, the public compact explicit
+  formula gives `arithmeticQuadratic = pi * zeroQuadratic` exactly.
+- Under RH, every autocorrelation value at a divisor zero is a norm square. Reflection handles the
+  second symmetrized value, complete summability justifies `re_tsum`, and the exact arbitrary-`F`
+  forward implication now compiles.
+- `result`: `FORWARD_DIRECTION_COMPILES`
+- `hard_gap_delta`: zero until the preregistered iff, especially its reverse direction, compiles
+- `next_state`: `PROOF_ATTEMPT_A_CONSTRAINED_SEPARATOR`
+
+## Loop 5: constrained separator and complete reverse implication
+
+- Strengthened the compact complete-divisor separator to vanish exactly on an arbitrary finite
+  set disjoint from the protected target while preserving normalization, absolute summability,
+  and an arbitrarily small strict `ell^1` tail over all different zero values.
+- For an off-line divisor value `rho`, set `sigma = 1-conj(rho)`, constructed separators at both
+  targets, and subtracted them. The resulting transform is `1` at `rho`, `-1` at `sigma`, and zero
+  on the source-admissible finite set `F`.
+- The reverse tail proof uses no conjugation permutation. For every non-target zero `z`, the value
+  `1-conj(z)` is a nontrivial zero and therefore has some divisor index. The same strict tail then
+  bounds the partner factor pointwise. One selected term is `-1`, equal-value multiplicity copies
+  are also `-1`, and all remaining terms have total upper bound below `1/16`.
+- Proved that divisor reflection identifies the symmetrized zero quadratic with the raw
+  autocorrelation `tsum`; endpoint vanishing removes the pole term, and positivity of `pi`
+  transfers the off-line negative witness to the exact arithmetic quadratic.
+- The fixed endpoint
+  `riemannHypothesis_iff_compactWeilArithmeticQuadratic_re_nonneg` now compiles with arbitrary
+  finite zero-free `F` containing `0,1` and exact transform vanishing on `F`.
+- Exact module, Target, and TargetCheck compilation pass. Six selected transitive axiom prints use
+  only `propext`, `Classical.choice`, and `Quot.sound`; new-module and repository forbidden scans
+  are empty; `git diff --check` passes; the full default build succeeds with 8,682 jobs.
+- `result`: `LOCAL_ENDPOINT_VERIFIED`
+- `classification_if_public_ci_passes`: `KNOWN_THEOREM_FORMALIZED`
+- `hard_gap_delta_if_public_ci_passes`: one source-level W1/G6 compact-criterion edge; zero for
+  W2/G7 and RH
+- `next_state`: `PUBLIC_IMPLEMENTATION_GATE`

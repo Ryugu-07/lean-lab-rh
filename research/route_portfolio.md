@@ -1202,3 +1202,25 @@ the finite-prime/GammaR arithmetic side and the endpoint moments remove the pole
 changes only the source-level W1/G6 compact-criterion edge; unconditional W2/G7 positivity and RH
 remain open. The exact endpoint and rejection conditions are fixed in
 `research/r5_compact_weil_criterion_prereg_20260716.md` before Lean source edits.
+
+## Local Completion Update: R5 Compact Weil Criterion
+
+Date: 2026-07-16
+
+The exact arbitrary-finite-`F` endpoint now compiles as
+`riemannHypothesis_iff_compactWeilArithmeticQuadratic_re_nonneg`. The additive-log conjugate
+involution has transform `conj(G(1-conj(s)))`; its autocorrelation gives norm squares under RH.
+The public compact explicit formula identifies the finite-prime/GammaR arithmetic quadratic with
+`pi` times the complete divisor quadratic once `G(0)=G(1)=0`.
+
+The converse strengthens the compact separator with exact finite-set vanishing. From an off-line
+zero `rho`, two separators produce transform values `1` at `rho` and `-1` at
+`1-conj(rho)`. The complete tail estimate uses existence of an index for each conjugate-reflected
+zero rather than an unproved multiplicity-preserving conjugation permutation. Equal-value
+multiplicity copies contribute additional negative terms.
+
+Exact module, Target, and TargetCheck compilation, six standard-only transitive axiom prints,
+empty forbidden scans, `git diff --check`, and the full 8,682-job build pass locally. Classification
+is `KNOWN_THEOREM_FORMALIZED` with `hard_gap_delta=1` at the source-level W1/G6 compact criterion
+edge once implementation publication and independent public CI pass. Unconditional W2/G7
+positivity, RH, and the optional Delsarte/distributional extension remain open.
