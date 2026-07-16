@@ -6,7 +6,7 @@ Campaign: `CAMPAIGN-20260717-H6-FORWARD-PRESERVATION-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_IMPLEMENTATION_VERIFIED_PUBLIC_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Route selection
 
@@ -185,6 +185,8 @@ limits; forbidden proof-token, custom-declaration, and resource-relaxation scans
 `git diff --check` passes; and the full 8,689-job build succeeds.
 
 This is `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
-`route_infrastructure_delta=1`. Public implementation CI remains pending, so the campaign is not
-yet publicly closed. Threshold nonemptiness and upper-time existence, H6-E/G8, W2/G7, M2/G3,
-and RH remain open.
+`route_infrastructure_delta=1`. Implementation commit
+`344b4669224a5beb9e7c9a99a176b24735688986` passed public Lean Action CI run `29526887492`,
+build job `87717424885`, in `2m47s`. Immutable evidence backfill and its own public CI remain, so
+the campaign is not yet publicly closed. Threshold nonemptiness and upper-time existence,
+H6-E/G8, W2/G7, M2/G3, and RH remain open.

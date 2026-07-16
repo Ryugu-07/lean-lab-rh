@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `H6_FORWARD_PRESERVATION_LOCAL_VERIFIED_PUBLIC_CI_PENDING`
+Status: `H6_FORWARD_PRESERVATION_PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Endpoint and normalization
 
@@ -237,10 +237,13 @@ The exact target and TargetCheck compile. Four registered axiom prints each cont
 `propext`, `Classical.choice`, and `Quot.sound`; forbidden scans and `git diff --check` pass; and
 the full 8,689-job build succeeds under default resource limits.
 
-**Verdict:** `LOCAL_IMPLEMENTATION_VERIFIED_PUBLIC_CI_PENDING`, classified
-`KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`. Public
-implementation CI is still required before campaign closure. Threshold nonemptiness/upper-time
-existence, H6-E/G8, W2/G7, M2/G3, and RH remain open.
+Implementation commit `344b4669224a5beb9e7c9a99a176b24735688986` passed public Lean Action CI
+run `29526887492`, build job `87717424885`, in `2m47s`.
+
+**Verdict:** `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`, classified
+`KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`. Immutable
+evidence backfill and its public CI are still required before campaign closure. Threshold
+nonemptiness/upper-time existence, H6-E/G8, W2/G7, M2/G3, and RH remain open.
 
 ## Candidate H6-Q: improve the upper bound to one fifth
 
@@ -302,10 +305,10 @@ source normalization and analytic hypotheses.
 
 ## Recommendation
 
-H6-B, H6-H1, H6-H2a, and H6-H2b are publicly complete. H6-H2c is locally complete and awaits
-public implementation CI. After public closure, value-rank the nonempty good-time/upper-time
-witness needed to turn closedness and forward preservation into a threshold interval against
-direct H6-E/G8, W2/G7, and M2/G3 attacks. Keep H6-Q as a later `PROOF-ATTEMPT`.
+H6-B, H6-H1, H6-H2a, and H6-H2b are publicly complete. H6-H2c has passed public implementation
+CI and awaits evidence-backfill CI. After public closure, value-rank the nonempty
+good-time/upper-time witness needed to turn closedness and forward preservation into a threshold
+interval against direct H6-E/G8, W2/G7, and M2/G3 attacks. Keep H6-Q as a later `PROOF-ATTEMPT`.
 
 ## Candidate H6-Y: reverse-heat Li transfer audit
 

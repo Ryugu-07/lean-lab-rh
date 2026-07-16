@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260717-H6-FORWARD-PRESERVATION-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_IMPLEMENTATION_VERIFIED_PUBLIC_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Runtime record
 
@@ -73,8 +73,8 @@ Status: `LOCAL_IMPLEMENTATION_VERIFIED_PUBLIC_CI_PENDING`
   CI run `29520281656`, build job `87695371156`, passed in `1m51s`
 - `route_selection_decision`: begin the fixed implementation and identify the first exact missing
   dependency without weakening the endpoint
-- `campaign_status`: exact implementation verified locally; public implementation CI pending;
-  persistent RH Goal remains active
+- `campaign_status`: exact implementation verified by public CI; immutable evidence backfill and
+  its public CI pending; persistent RH Goal remains active
 
 ## Implementation checkpoint: order one and vertical average
 
@@ -119,5 +119,7 @@ Status: `LOCAL_IMPLEMENTATION_VERIFIED_PUBLIC_CI_PENDING`
 - `route_infrastructure_delta`: 1.
 - `remaining_frontier`: threshold nonemptiness and upper-time existence, H6-E/G8, W2/G7,
   M2/G3, and RH remain open.
-- `next_gate`: commit and push the implementation, require public Lean Action CI, then backfill
-  immutable run evidence before public campaign closure.
+- `public_implementation`: commit `344b4669224a5beb9e7c9a99a176b24735688986`, Lean Action CI
+  run `29526887492`, build job `87717424885`, passed in `2m47s`.
+- `next_gate`: commit and push this immutable evidence backfill and require its own public Lean
+  Action CI before campaign closure.
