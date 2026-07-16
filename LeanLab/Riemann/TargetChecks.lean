@@ -15,6 +15,7 @@ import LeanLab.Riemann.WeilGaussianQuadraticPositivity
 import LeanLab.Riemann.WeilGaussianPositivityCriterion
 import LeanLab.Riemann.WeilGaussianFixedWidthCriterion
 import LeanLab.Riemann.WeilCompactLaplaceSeparator
+import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
 import LeanLab.Riemann.BaezDuarteZetaRatio
@@ -949,6 +950,13 @@ example (p0 : RiemannXiDivisorZeroIndex) {ε : ℝ} (hε : 0 < ε) :
         (if riemannXiDivisorZeroValue p = riemannXiDivisorZeroValue p0 then 0
         else ‖compactLaplaceTransform f (riemannXiDivisorZeroValue p)‖) < ε :=
   exists_compactSupport_xiDivisor_laplace_tsum_separator p0 hε
+
+example :
+    ∃ a : ℝ, ∃ b : Fin 2 → ℝ,
+      0 < a ∧
+      ¬(symmetricGaussianPrimeKernelMatrix a b 2).PosSemidef ∧
+      ¬(-symmetricGaussianPrimeKernelMatrix a b 2).PosSemidef :=
+  exists_pos_symmetricGaussianPrimeKernelMatrix_indefinite
 
 example {gamma y : ℝ} (hgamma : 0 < gamma) (hy : 2 * gamma ^ 2 < y ^ 2) :
     ¬ MeasureTheory.IntegrableOn

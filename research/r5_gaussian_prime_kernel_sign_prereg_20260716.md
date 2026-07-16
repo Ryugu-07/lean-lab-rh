@@ -4,7 +4,7 @@ Audit: `AUDIT-20260716-R5-GAUSSIAN-PRIME-KERNEL-SIGN-01`
 
 Date: 2026-07-16
 
-Status: `PREREGISTERED`
+Status: `LOCAL_VERIFIED`
 
 Mode: `DISCOVERY -> FALSIFICATION`
 
@@ -108,3 +108,18 @@ targeted search. This is not a novelty determination, and no novelty claim is al
   declarations, or resource-limit relaxations.
 - If the exact arithmetic-weight rewrite fails under two independent approaches, close as
   `NO_PROGRESS`; do not weaken the endpoint to the normalized surrogate shape.
+
+## Local Result
+
+The exact endpoint compiles in `LeanLab/Riemann/WeilGaussianPrimeKernelSignAudit.lean`. Lean proves
+the actual complex arithmetic weight equals its real kernel, the explicit width is positive, the
+two exact kernel values have factors `exp(-4)` and `(1+exp(-16))/2`, and the off-diagonal is
+strictly larger. Matrix positive-semidefiniteness is then contradicted by `(1,-1)`, while positive
+diagonal value contradicts positive-semidefiniteness of the negated matrix.
+
+The standalone module, exact Targets/TargetChecks, four selected axiom prints, repository scans,
+aggregate import, `git diff --check`, and full 8,679-job build pass. The axiom prints contain only
+`propext`, `Classical.choice`, and `Quot.sound`. Publication and public CI remain before closure.
+
+The immutable preregistration commit `672f965556fbd68f74e9c5e8d322e46b97db7fed` passed public
+Lean Action CI run `29462185050`, build job `87507838744`, before implementation publication.

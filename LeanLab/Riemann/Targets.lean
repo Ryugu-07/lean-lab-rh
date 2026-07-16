@@ -18,6 +18,7 @@ import LeanLab.Riemann.WeilGaussianQuadraticPositivity
 import LeanLab.Riemann.WeilGaussianPositivityCriterion
 import LeanLab.Riemann.WeilGaussianFixedWidthCriterion
 import LeanLab.Riemann.WeilCompactLaplaceSeparator
+import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
 import LeanLab.Riemann.NymanBeurling
@@ -336,6 +337,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``exists_compactSupport_xiDivisor_laplace_tsum_separator
       status := .proven
       note := "Campaign CAMPAIGN-20260716-R5-COMPACT-LAPLACE-SEPARATOR-01 proves twofold integration-by-parts decay, complete xi-divisor summability, finite superlevel annihilation by a real-shift exponential polynomial, and geometric suppression by compact convolution powers. Equal-value multiplicity copies are protected. Implementation commit 6d12bad98b80c34217757df01943509965a64781 passed public Lean Action CI run 29461298466, build job 87505125618; evidence commit 941756c2e7e0b4da8f765dc7187e4be703af36c8 passed run 29461494669, build job 87505716647. This compiles one unconditional W1 reverse-separation subedge; the generic explicit formula, Weil positivity, G7/W2, and RH remain open." },
+    { id := "T2.audit.gaussian-prime-kernel-sign"
+      tier := .tier2
+      title := "Audit the sign of one Gaussian prime-power kernel"
+      statement :=
+        "For the actual n=2 symmetric Gaussian von-Mangoldt term, construct a positive width and two real shifts whose translation-kernel matrix is neither positive nor negative semidefinite."
+      leanName := some ``exists_pos_symmetricGaussianPrimeKernelMatrix_indefinite
+      status := .proven
+      note := "Audit AUDIT-20260716-R5-GAUSSIAN-PRIME-KERNEL-SIGN-01 uses width (log 2)^2/16 and shifts 0, log 2. The exact arithmetic kernel has a negative (1,-1) quadratic direction and a positive diagonal direction. This eliminates termwise same-sign local-prime Gram assembly only; cancellation in the complete pole, archimedean, and prime form, G6/W1, G7/W2, and RH remain open." },
     { id := "T2.audit.polson-ggc-imaginary-tail"
       tier := .tier2
       title := "Audit the imaginary-axis GGC continuation tail"

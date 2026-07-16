@@ -18,6 +18,7 @@ import LeanLab.Riemann.WeilGaussianQuadraticPositivity
 import LeanLab.Riemann.WeilGaussianPositivityCriterion
 import LeanLab.Riemann.WeilGaussianFixedWidthCriterion
 import LeanLab.Riemann.WeilCompactLaplaceSeparator
+import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
 import LeanLab.Riemann.AnalyticLogBranch
@@ -301,6 +302,10 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.summable_norm_compactLaplaceTransform_xiDivisorZero
 #print axioms LeanLab.Riemann.compactLaplaceTransform_polynomialPacket
 #print axioms LeanLab.Riemann.exists_compactSupport_xiDivisor_laplace_tsum_separator
+#print axioms LeanLab.Riemann.symmetricGaussianVonMangoldtWeight_eq_ofReal_kernel
+#print axioms LeanLab.Riemann.symmetricGaussianVonMangoldtWeight_audit_offDiag_gt_diag
+#print axioms LeanLab.Riemann.not_posSemidef_symmetricGaussianPrimeKernelMatrix_audit
+#print axioms LeanLab.Riemann.exists_pos_symmetricGaussianPrimeKernelMatrix_indefinite
 #print axioms LeanLab.Riemann.polsonImaginaryFrullaniComponent_eq_ofReal
 #print axioms LeanLab.Riemann.not_integrableOn_polsonImaginaryFrullaniIntegrand
 #print axioms LeanLab.Riemann.not_integrableOn_polsonImaginaryFrullaniComponent

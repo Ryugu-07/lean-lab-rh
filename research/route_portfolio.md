@@ -950,3 +950,18 @@ and a positive diagonal direction. Audit
 Success eliminates termwise semidefinite local-prime assembly as a G7 mechanism but leaves
 complete pole/archimedean/prime cancellation, W1c1, W2/G7, and RH open; expected
 `hard_gap_delta=0`.
+
+## Local Completion Update: R5 Gaussian Prime-Kernel Sign Audit
+
+Date: 2026-07-16
+
+The exact endpoint now compiles in `LeanLab/Riemann/WeilGaussianPrimeKernelSignAudit.lean`. Lean
+checks the actual complex square-root prefactor, `vonMangoldt 2 = log 2`, the positive witness
+width, exact diagonal/off-diagonal formulas, strict exponential comparison, and both matrix-sign
+counterwitnesses. Thus one local prime-power kernel is genuinely indefinite.
+
+This closes the audited branch as `BRANCH_ELIMINATED`: unconditional Weil positivity cannot be
+obtained by assigning one common semidefinite sign to each Gaussian prime-power translation
+kernel. Global cancellation and operator mechanisms are untouched. Exact targets, typed witness,
+four standard-only axiom prints, scans, and the full 8,679-job build pass locally. W1c1, W2/G7,
+and RH remain open, with `hard_gap_delta=0`; publication and public CI remain.
