@@ -1094,3 +1094,15 @@ Implementation commit `55a6406f235a7548bf7f7d53ae5d30014795e9ce` passed public L
 run `29466850965`, build job `87521708037`, in `1m51s`. The exact compact-smooth arithmetic
 formula and its finite physical prime side are independently public-built. Immutable evidence
 backfill and its own public CI remain before campaign closure; all broader hard gaps are unchanged.
+
+## Public Closure Update: R5 Compact Weil Arithmetic Formula
+
+Date: 2026-07-16
+
+Evidence commit `ed5d03f65bd234f95afb55389b2766d611a3eeab` passed public Lean Action CI run
+`29467021669`, build job `87522220122`, in `1m43s`. Together with preregistration run
+`29465070647` and implementation run `29466850965`, campaign
+`CAMPAIGN-20260716-R5-COMPACT-WEIL-ARITHMETIC-FORMULA-01` is publicly closed as
+`BRIDGE_REDUCED`. W1c1c1 is complete for the compact-smooth reflection class; the persistent RH
+Goal returns to fresh route selection with quotient/completeness, regularization, W2/G7, G3/M2,
+and RH still open.

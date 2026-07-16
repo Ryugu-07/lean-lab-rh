@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-COMPACT-WEIL-ARITHMETIC-FORMULA-01`
 
 Date: 2026-07-16
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 Mode: `DISCOVERY -> PROOF_ATTEMPT_A`
 
@@ -185,3 +185,8 @@ regularization, and RH remain open.
 Implementation commit `55a6406f235a7548bf7f7d53ae5d30014795e9ce` passed public Lean Action CI
 run `29466850965`, build job `87521708037`, in `1m51s`. Immutable evidence backfill and its own
 public CI remain before campaign closure.
+
+Evidence commit `ed5d03f65bd234f95afb55389b2766d611a3eeab` passed public Lean Action CI
+run `29467021669`, build job `87522220122`, in `1m43s`. Preregistration, implementation, and
+evidence now each have independent passing public CI. The campaign is publicly closed as
+`BRIDGE_REDUCED`; the broad RH Goal remains active.

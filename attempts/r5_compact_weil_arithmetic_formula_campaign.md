@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-COMPACT-WEIL-ARITHMETIC-FORMULA-01`
 
 Date: 2026-07-16
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 Mode: `DISCOVERY -> PROOF_ATTEMPT_A`
 
@@ -34,6 +34,7 @@ Mode: `DISCOVERY -> PROOF_ATTEMPT_A`
 - `expected_hard_gap_delta`: 1 at the W1c1 compact arithmetic subedge
 - `preregistration_commit_sha`: `ccebc64b1f3419636461e6fbf968fc55c4f24b8c`
 - `commit_sha`: `55a6406f235a7548bf7f7d53ae5d30014795e9ce`
+- `evidence_commit_sha`: `ed5d03f65bd234f95afb55389b2766d611a3eeab`
 
 ## Normalized Tuple
 
@@ -60,6 +61,7 @@ Mode: `DISCOVERY -> PROOF_ATTEMPT_A`
 | 8 | `PROOF_ATTEMPT_A_ASSEMBLY` | On every selected finite right edge, Lean splits `logDeriv riemannXi` into pole, GammaR, and von-Mangoldt terms with exact signs. All three truncations converge; uniqueness against the compiled zero-side limit proves the fixed endpoint verbatim. | Accept the indivisible endpoint and advance to independent local audit. |
 | 9 | `INDEPENDENT_LOCAL_AUDIT` | The 1,012-line module is diagnostic-free. Exact Targets and TargetChecks compile; five selected axiom prints contain only `propext`, `Classical.choice`, and `Quot.sound`; placeholder, declaration, `native_decide`, unsafe, resource-option, and scratch scans are empty; `git diff --check` passes; the full 8,681-job build succeeds. | Classify as `BRIDGE_REDUCED`, with `hard_gap_delta=1` only at the compact W1c1 arithmetic subedge. Publish implementation and require independent public CI. |
 | 10 | `PUBLIC_IMPLEMENTATION_CI` | Implementation commit `55a6406f235a7548bf7f7d53ae5d30014795e9ce` passed public Lean Action CI run `29466850965`, build job `87521708037`, in `1m51s`. | Backfill immutable evidence and require the evidence commit's own public CI before closure. |
+| 11 | `PUBLIC_CI_CLOSURE` | Evidence commit `ed5d03f65bd234f95afb55389b2766d611a3eeab` passed public Lean Action CI run `29467021669`, build job `87522220122`, in `1m43s`. The preregistration, implementation, and evidence states all independently build. | Close as `BRIDGE_REDUCED` and return the persistent RH Goal to fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`; do not extend this campaign with helper-only work. |
 
 ## Preregistration
 
@@ -104,3 +106,11 @@ Implementation commit `55a6406f235a7548bf7f7d53ae5d30014795e9ce` passed public L
 run `29466850965`, build job `87521708037`, in `1m51s`. The exact theorem and all repository
 checks therefore rebuild from the public commit. Immutable evidence backfill and its own public CI
 remain before campaign closure.
+
+## Public Closure
+
+Evidence commit `ed5d03f65bd234f95afb55389b2766d611a3eeab` passed public Lean Action CI
+run `29467021669`, build job `87522220122`, in `1m43s`. Together with preregistration run
+`29465070647` and implementation run `29466850965`, the fixed campaign is publicly closed as
+`BRIDGE_REDUCED`. The persistent RH Goal remains active and returns to fresh route selection;
+quotient/completeness, distributional regularization, W2/G7, G3/M2, and RH remain open.
