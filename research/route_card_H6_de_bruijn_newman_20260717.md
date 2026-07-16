@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `H6_ZERO_COORDINATE_FRAMEWORK_LOCALLY_COMPLETE`
+Status: `H6_ZERO_COORDINATE_FRAMEWORK_EVIDENCE_PENDING`
 
 ## Endpoint and normalization
 
@@ -144,9 +144,11 @@ inverse, both zero-correspondence directions, strict strip, boundary exclusions,
 `RiemannHypothesis <-> deBruijnNewmanAllZerosReal 0`. The aggregate witness and five selected
 axiom prints pass with the standard trust base only.
 
-**Verdict:** locally `COMPLETE` as `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
-`route_infrastructure_delta=1`. Forward preservation, threshold existence/closedness, H6-E/G8,
-and RH remain open; implementation publication and public CI are pending.
+**Verdict:** `COMPLETE` as `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`. Implementation commit
+`0283db6a11ef452a7241e17c535744677272a7d1` passed public CI run `29513380203`, build job
+`87672181193`, in `1m59s`. Forward preservation, threshold existence/closedness, H6-E/G8, and RH
+remain open; immutable evidence backfill and its public CI are pending.
 
 ## Candidate H6-Q: improve the upper bound to one fifth
 

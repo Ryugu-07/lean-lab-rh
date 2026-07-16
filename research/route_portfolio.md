@@ -1535,3 +1535,17 @@ five standard-only axiom prints, empty forbidden scan, `git diff --check`, and t
 build pass locally. Classification is `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
 `route_infrastructure_delta=1`. Forward preservation, threshold existence/closedness, H6-E/G8,
 W2/G7, M2/G3, and RH remain open; implementation publication and public CI are pending.
+
+## Public Implementation Update: H6 Zero-Coordinate Framework
+
+Date: 2026-07-17
+
+Implementation commit `0283db6a11ef452a7241e17c535744677272a7d1` passed public Lean Action CI run
+`29513380203`, build job `87672181193`, in `1m59s`. The independent build verifies the exact
+coordinate and inverse, both zero correspondences, strict strip and boundary witnesses, the
+RH/all-real-zero equivalence, aggregate TargetCheck, and standard-only axiom audit.
+
+Classification remains `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`. Forward preservation, threshold existence/closedness, H6-E/G8,
+W2/G7, M2/G3, and RH remain open. Immutable evidence backfill and its own public CI remain before
+campaign closure.

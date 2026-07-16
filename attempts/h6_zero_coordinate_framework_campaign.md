@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260717-H6-ZERO-COORDINATE-FRAMEWORK-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_COMPLETE_EVIDENCE_PENDING`
 
 ## Runtime record
 
@@ -82,7 +82,9 @@ Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
   zero quantifier compile; no multiplicity claim is made
 - full `lake build`: passed locally, 8,687 jobs
 - `git diff --check`: passed before documentation backfill
-- implementation public CI: pending
+- implementation public CI: passed at commit
+  `0283db6a11ef452a7241e17c535744677272a7d1`, run `29513380203`, job `87672181193`, in `1m59s`
+- immutable evidence backfill and public CI: pending
 
 ## Result
 
@@ -105,4 +107,6 @@ Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
   evidence before closure
 - `preregistration_commit_and_CI`: commit `8ec051e767319a2a7c6dc40c465e0e9d8b1e2d7e`,
   run `29512089828`, job `87667820977`, passed in `2m17s`
-- `implementation_commit_and_CI`: pending
+- `implementation_commit_and_CI`: commit `0283db6a11ef452a7241e17c535744677272a7d1`,
+  run `29513380203`, job `87672181193`, passed in `1m59s`
+- `evidence_commit_and_CI`: pending

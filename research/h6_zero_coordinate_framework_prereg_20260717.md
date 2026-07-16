@@ -6,7 +6,7 @@ Campaign: `CAMPAIGN-20260717-H6-ZERO-COORDINATE-FRAMEWORK-01`
 
 Mode: `LITERATURE`
 
-Status: `PUBLIC_PREREGISTRATION_COMPLETE_LOCAL_IMPLEMENTATION_COMPILED`
+Status: `PUBLIC_IMPLEMENTATION_COMPLETE_EVIDENCE_PENDING`
 
 ## Route selection
 
@@ -153,4 +153,7 @@ quantifiers. The exact aggregate theorem is `deBruijnNewman_zeroCoordinate_frame
 boundary witnesses, exact TargetCheck, five standard-only axiom prints, empty forbidden scan,
 `git diff --check`, and the 8,687-job full build pass locally. Classification is
 `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`.
-Implementation publication and public CI remain pending.
+Implementation commit `0283db6a11ef452a7241e17c535744677272a7d1` passed public Lean Action CI run
+`29513380203`, build job `87672181193`, in `1m59s` (`2026-07-16T15:56:06Z` to
+`2026-07-16T15:58:05Z`). Immutable evidence backfill and its independent public CI remain before
+closure.
