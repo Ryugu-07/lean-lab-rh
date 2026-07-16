@@ -6,7 +6,7 @@ Campaign: `CAMPAIGN-20260717-H6-THRESHOLD-CLOSEDNESS-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_AUDITS_COMPLETE_PUBLIC_IMPLEMENTATION_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Route selection
 
@@ -154,6 +154,8 @@ The module is diagnostic-free. Targets, four exact TargetChecks, and four select
 axiom prints compile; every selected declaration uses only `propext`, `Classical.choice`, and
 `Quot.sound`. Forbidden proof-token, declaration, and resource-relaxation scans are empty;
 `git diff --check` passes; and the full 8,688-job build succeeds. Classification is locally
-`KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`. Public
-implementation CI is pending. Forward preservation, nonempty upper-time existence, threshold
-upper-ray structure, H6-E/G8, and RH remain open.
+`KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`.
+Implementation commit `6322bbd59d25f919befc91cd5a057251bcf94cb4` passed public Lean Action CI
+run `29518062294`, build job `87687972172`, in `2m7s`. Immutable evidence backfill and its own
+public CI are pending. Forward preservation, nonempty upper-time existence, threshold upper-ray
+structure, H6-E/G8, and RH remain open.

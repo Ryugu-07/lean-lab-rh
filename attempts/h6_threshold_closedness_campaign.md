@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260717-H6-THRESHOLD-CLOSEDNESS-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_AUDITS_COMPLETE_PUBLIC_IMPLEMENTATION_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Runtime record
 
@@ -71,7 +71,9 @@ Status: `LOCAL_AUDITS_COMPLETE_PUBLIC_IMPLEMENTATION_CI_PENDING`
   shrinking inside `|Im(z0)|` keeps the entire closed ball off the real axis.
 - The complement of the all-real-zero time set is therefore open, compiling the exact fixed
   `IsClosed` endpoint.
-- `result`: `KNOWN_THEOREM_FORMALIZED` locally; public implementation CI pending
+- Implementation commit `6322bbd59d25f919befc91cd5a057251bcf94cb4` passed public Lean Action CI
+  run `29518062294`, build job `87687972172`, in `2m7s`.
+- `result`: `KNOWN_THEOREM_FORMALIZED`; public implementation verified, evidence backfill pending
 - `rh_frontier_delta`: 0
 - `route_infrastructure_delta`: 1
 - `engineering_delta`: 1
@@ -87,7 +89,8 @@ Status: `LOCAL_AUDITS_COMPLETE_PUBLIC_IMPLEMENTATION_CI_PENDING`
 - forbidden proof-token, declaration, and resource-relaxation scans: empty
 - `git diff --check`: passed
 - full local build: passed, 8,688 jobs
-- public implementation CI: pending
+- public implementation CI: passed, run `29518062294`, build job `87687972172`, in `2m7s`
+- immutable evidence-backfill commit and its public CI: pending
 
 ## Result
 
@@ -103,6 +106,7 @@ Status: `LOCAL_AUDITS_COMPLETE_PUBLIC_IMPLEMENTATION_CI_PENDING`
   `isClosed_setOf_deBruijnNewmanAllZerosReal`
 - `failure_or_obstacle`: none at the closedness endpoint; forward preservation is the next deeper
   source theorem and remains unproved
-- `route_selection_decision`: publish the locally audited implementation and require public CI
-  before immutable evidence closure
-- `campaign_status`: active; persistent RH Goal remains active
+- `route_selection_decision`: backfill immutable implementation evidence and require that commit's
+  own public CI before campaign closure
+- `campaign_status`: public implementation verified, evidence pending; persistent RH Goal remains
+  active

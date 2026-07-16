@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `H6_THRESHOLD_CLOSEDNESS_LOCAL_AUDITS_COMPLETE_PUBLIC_IMPLEMENTATION_CI_PENDING`
+Status: `H6_THRESHOLD_CLOSEDNESS_PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Endpoint and normalization
 
@@ -184,9 +184,11 @@ a nonreal isolating ball, and the complement of the all-real-zero time set is op
 
 The exact endpoint, target witness, four TargetChecks, and four standard-only axiom prints compile
 locally. Forbidden scans are empty, `git diff --check` passes, and the full 8,688-job build
-succeeds. Public implementation CI is pending.
+succeeds. Implementation commit `6322bbd59d25f919befc91cd5a057251bcf94cb4` passed public Lean
+Action CI run `29518062294`, build job `87687972172`, in `2m7s`. Immutable evidence backfill and
+its public CI are pending.
 
-**Verdict:** `LOCAL_AUDITS_COMPLETE_PUBLIC_IMPLEMENTATION_CI_PENDING` as
+**Verdict:** `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING` as
 `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`.
 
 ## Candidate H6-Q: improve the upper bound to one fifth
