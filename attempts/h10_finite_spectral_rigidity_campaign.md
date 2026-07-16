@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260717-H10-FINITE-SPECTRAL-RIGIDITY-01`
 
 Mode: `LITERATURE`
 
-Status: `PUBLIC_IMPLEMENTATION_COMPLETE_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Runtime record
 
@@ -90,6 +90,8 @@ Status: `PUBLIC_IMPLEMENTATION_COMPLETE_EVIDENCE_PENDING`
 - full `lake build`: passed locally, 8,685 jobs
 - implementation public CI: passed at commit
   `2fc3a7e8efff9636735dcdab0055957a7fdf911f`, run `29506928654`, job `87649987984`, in `1m51s`
+- immutable evidence backfill: passed at commit `54388fae4aea20dc768dd6eeaaee8abcb75316fa`,
+  run `29507245904`, job `87651088794`, in `2m19s`
 
 ## Result
 
@@ -106,11 +108,14 @@ Status: `PUBLIC_IMPLEMENTATION_COMPLETE_EVIDENCE_PENDING`
 - `failure_or_obstacle`: the Riemann zeta zero divisor is infinite and the route has no finite
   Frobenius trace model or uniform tail estimate that would let this finite theorem exclude an
   off-line zero
-- `route_selection_decision`: H10-B locally complete; fresh route selection is required only
-  after implementation and evidence commits pass public CI
+- `route_selection_decision`: H10-B publicly closed; fresh value-ranked route selection required
 - `preregistration_commit_and_CI`: commit `af15b161049aedd65d46fd1f2af1f27e8dc69d44`, run
   `29505635350`, job `87645529929`, passed in `1m56s`
 - `implementation_commit`: `2fc3a7e8efff9636735dcdab0055957a7fdf911f`
 - `implementation_CI`: public Lean Action run `29506928654`, build job `87649987984`, passed in
   `1m51s` (`2026-07-16T14:30:56Z` to `2026-07-16T14:32:47Z`)
-- `evidence_commit_and_CI`: pending
+- `evidence_commit`: `54388fae4aea20dc768dd6eeaaee8abcb75316fa`
+- `evidence_CI`: public Lean Action run `29507245904`, build job `87651088794`, passed in `2m19s`
+  (`2026-07-16T14:35:08Z` to `2026-07-16T14:37:27Z`)
+- `commit_and_CI`: preregistration, implementation, and immutable evidence backfill are public and
+  independently built; campaign closed

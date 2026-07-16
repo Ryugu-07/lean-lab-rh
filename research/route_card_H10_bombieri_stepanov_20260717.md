@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `H10_B_PUBLIC_IMPLEMENTATION_COMPLETE`
+Status: `H10_B_PUBLICLY_CLOSED`
 
 ## Exact endpoint
 
@@ -133,7 +133,7 @@ premise because no noncircular tail mechanism is known.
 
 ## Recommendation
 
-H10-B is complete as the exact finite spectral rigidity interface, and its proof records where
-finiteness enters. Return to fresh route selection after public closure. Do not begin a full
+H10-B is publicly complete as the exact finite spectral rigidity interface, and its proof records
+where finiteness enters. Return to fresh route selection. Do not begin a full
 algebraic-geometry development until route selection finds a number-field-relevant consumer for
 the Frobenius/Riemann-Roch layers.

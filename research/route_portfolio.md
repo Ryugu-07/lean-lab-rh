@@ -1419,3 +1419,19 @@ finite-spectrum clauses, registered witnesses, and the standard-only axiom audit
 `KNOWN_THEOREM_FORMALIZED` with `hard_gap_delta=0`: no curve point-count bound or number-field
 finite-spectrum/tail bridge has been added. Immutable evidence backfill and its own public CI
 remain before campaign closure.
+
+## Public Closure Update: H10 Finite Spectral Rigidity
+
+Date: 2026-07-17
+
+Evidence commit `54388fae4aea20dc768dd6eeaaee8abcb75316fa` passed public Lean Action CI run
+`29507245904`, build job `87651088794`, in `2m19s`. Together with preregistration run
+`29505635350` and implementation commit `2fc3a7e8efff9636735dcdab0055957a7fdf911f`, run
+`29506928654`, campaign `CAMPAIGN-20260717-H10-FINITE-SPECTRAL-RIGIDITY-01` is publicly closed as
+`KNOWN_THEOREM_FORMALIZED`.
+
+The reusable gain is the exact no-cancellation theorem for a finite complex trace spectrum and its
+reciprocal-pairing circle corollary. No curve point-count theorem or number-field finite-spectrum
+and uniform-tail bridge was proved: `hard_gap_delta=0`, while `route_infrastructure_delta=1`.
+H6-E/G8, W2/G7, M2/G3, and RH remain open. The persistent Goal returns to fresh independent route
+selection; no successor campaign is selected here.
