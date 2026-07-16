@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `H6_THRESHOLD_CLOSEDNESS_PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `H6_THRESHOLD_CLOSEDNESS_PUBLICLY_CLOSED`
 
 ## Endpoint and normalization
 
@@ -185,11 +185,13 @@ a nonreal isolating ball, and the complement of the all-real-zero time set is op
 The exact endpoint, target witness, four TargetChecks, and four standard-only axiom prints compile
 locally. Forbidden scans are empty, `git diff --check` passes, and the full 8,688-job build
 succeeds. Implementation commit `6322bbd59d25f919befc91cd5a057251bcf94cb4` passed public Lean
-Action CI run `29518062294`, build job `87687972172`, in `2m7s`. Immutable evidence backfill and
-its public CI are pending.
+Action CI run `29518062294`, build job `87687972172`, in `2m7s`. Evidence-backfill commit
+`c5b9405befd3029f04b1301f55a8a9c45074dce4` passed run `29518417233`, build job `87689151089`, in
+`1m36s`; the campaign is publicly closed.
 
-**Verdict:** `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING` as
-`KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`.
+**Verdict:** `COMPLETE` as `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`. Forward preservation, threshold nonemptiness/upper-ray structure,
+H6-E/G8, W2/G7, M2/G3, and RH remain open.
 
 ## Candidate H6-Q: improve the upper bound to one fifth
 

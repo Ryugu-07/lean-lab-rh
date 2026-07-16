@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260717-H6-THRESHOLD-CLOSEDNESS-01`
 
 Mode: `LITERATURE`
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Runtime record
 
@@ -73,7 +73,7 @@ Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
   `IsClosed` endpoint.
 - Implementation commit `6322bbd59d25f919befc91cd5a057251bcf94cb4` passed public Lean Action CI
   run `29518062294`, build job `87687972172`, in `2m7s`.
-- `result`: `KNOWN_THEOREM_FORMALIZED`; public implementation verified, evidence backfill pending
+- `result`: `KNOWN_THEOREM_FORMALIZED`; publicly closed after independent evidence CI
 - `rh_frontier_delta`: 0
 - `route_infrastructure_delta`: 1
 - `engineering_delta`: 1
@@ -90,7 +90,9 @@ Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 - `git diff --check`: passed
 - full local build: passed, 8,688 jobs
 - public implementation CI: passed, run `29518062294`, build job `87687972172`, in `2m7s`
-- immutable evidence-backfill commit and its public CI: pending
+- immutable evidence-backfill commit and public CI: passed at commit
+  `c5b9405befd3029f04b1301f55a8a9c45074dce4`, run `29518417233`, build job `87689151089`, in
+  `1m36s`
 
 ## Result
 
@@ -106,7 +108,12 @@ Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
   `isClosed_setOf_deBruijnNewmanAllZerosReal`
 - `failure_or_obstacle`: none at the closedness endpoint; forward preservation is the next deeper
   source theorem and remains unproved
-- `route_selection_decision`: backfill immutable implementation evidence and require that commit's
-  own public CI before campaign closure
-- `campaign_status`: public implementation verified, evidence pending; persistent RH Goal remains
-  active
+- `route_selection_decision`: campaign publicly closed; return to fresh value-ranked route
+  selection after closure CI
+- `preregistration_commit_and_CI`: commit `02758ff243c3f8cd434eb3c007a2a5f6b094fea7`, run
+  `29515723482`, job `87680126242`, passed in `1m56s`
+- `implementation_commit_and_CI`: commit `6322bbd59d25f919befc91cd5a057251bcf94cb4`, run
+  `29518062294`, job `87687972172`, passed in `2m7s`
+- `evidence_commit_and_CI`: commit `c5b9405befd3029f04b1301f55a8a9c45074dce4`, run
+  `29518417233`, job `87689151089`, passed in `1m36s`
+- `campaign_status`: publicly closed; persistent RH Goal remains active

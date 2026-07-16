@@ -1566,3 +1566,20 @@ Together with preregistration run `29512089828` and implementation commit
 strip, and RH/all-real-zero equivalence. `hard_gap_delta=0`; forward preservation, threshold
 existence/closedness, H6-E/G8, W2/G7, M2/G3, and RH remain open. The persistent Goal returns to
 fresh value-ranked route selection; no successor campaign is selected here.
+
+## Public Closure Update: H6 Threshold Closedness
+
+Date: 2026-07-17
+
+Evidence-backfill commit `c5b9405befd3029f04b1301f55a8a9c45074dce4` passed public Lean Action CI
+run `29518417233`, build job `87689151089`, in `1m36s`.
+
+Together with preregistration commit `02758ff243c3f8cd434eb3c007a2a5f6b094fea7`, run
+`29515723482`, and implementation commit `6322bbd59d25f919befc91cd5a057251bcf94cb4`, run
+`29518062294`, campaign `CAMPAIGN-20260717-H6-THRESHOLD-CLOSEDNESS-01` is publicly closed as
+`KNOWN_THEOREM_FORMALIZED`. The reusable gain is exact closedness of the source-normalized
+all-real-zero time set, with arbitrary zero multiplicity, through joint continuity,
+nonvanishing, isolated zeros, and Jensen persistence. `hard_gap_delta=0` and
+`route_infrastructure_delta=1`; forward preservation, threshold nonemptiness/upper-ray structure,
+H6-E/G8, W2/G7, M2/G3, and RH remain open. The persistent Goal returns to fresh value-ranked
+route selection after closure CI; no successor campaign is selected here.

@@ -6,7 +6,7 @@ Campaign: `CAMPAIGN-20260717-H6-THRESHOLD-CLOSEDNESS-01`
 
 Mode: `LITERATURE`
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Route selection
 
@@ -156,6 +156,8 @@ axiom prints compile; every selected declaration uses only `propext`, `Classical
 `git diff --check` passes; and the full 8,688-job build succeeds. Classification is locally
 `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`.
 Implementation commit `6322bbd59d25f919befc91cd5a057251bcf94cb4` passed public Lean Action CI
-run `29518062294`, build job `87687972172`, in `2m7s`. Immutable evidence backfill and its own
-public CI are pending. Forward preservation, nonempty upper-time existence, threshold upper-ray
-structure, H6-E/G8, and RH remain open.
+run `29518062294`, build job `87687972172`, in `2m7s`. Evidence-backfill commit
+`c5b9405befd3029f04b1301f55a8a9c45074dce4` passed public Lean Action CI run `29518417233`, build
+job `87689151089`, in `1m36s`. The campaign is publicly closed as
+`KNOWN_THEOREM_FORMALIZED`. Forward preservation, nonempty upper-time existence, threshold
+upper-ray structure, H6-E/G8, and RH remain open.
