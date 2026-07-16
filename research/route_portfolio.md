@@ -1408,3 +1408,14 @@ for number-field RH, a finite trace spectrum or uniform infinite-tail mechanism 
 exist in the current route. Preregistration commit
 `af15b161049aedd65d46fd1f2af1f27e8dc69d44` passed public CI run `29505635350`, job
 `87645529929`, in `1m56s`; implementation publication and public CI remain pending.
+
+## Public Implementation Update: H10 Finite Spectral Rigidity
+
+Date: 2026-07-17
+
+Implementation commit `2fc3a7e8efff9636735dcdab0055957a7fdf911f` passed public Lean Action CI run
+`29506928654`, build job `87649987984`, in `1m51s`. The independent build verifies both exact
+finite-spectrum clauses, registered witnesses, and the standard-only axiom audit. This remains
+`KNOWN_THEOREM_FORMALIZED` with `hard_gap_delta=0`: no curve point-count bound or number-field
+finite-spectrum/tail bridge has been added. Immutable evidence backfill and its own public CI
+remain before campaign closure.

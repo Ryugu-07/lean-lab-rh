@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `H10_B_LOCAL_COMPLETE`
+Status: `H10_B_PUBLIC_IMPLEMENTATION_COMPLETE`
 
 ## Exact endpoint
 

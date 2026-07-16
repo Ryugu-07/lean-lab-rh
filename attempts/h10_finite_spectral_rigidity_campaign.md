@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260717-H10-FINITE-SPECTRAL-RIGIDITY-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_COMPLETE_EVIDENCE_PENDING`
 
 ## Runtime record
 
@@ -88,7 +88,8 @@ Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
 - witness and source-alignment audit: passed locally; finite spectral theorem is explicitly
   separated from the curve point-count theorem and number-field transfer
 - full `lake build`: passed locally, 8,685 jobs
-- implementation public CI: pending
+- implementation public CI: passed at commit
+  `2fc3a7e8efff9636735dcdab0055957a7fdf911f`, run `29506928654`, job `87649987984`, in `1m51s`
 
 ## Result
 
@@ -109,4 +110,7 @@ Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
   after implementation and evidence commits pass public CI
 - `preregistration_commit_and_CI`: commit `af15b161049aedd65d46fd1f2af1f27e8dc69d44`, run
   `29505635350`, job `87645529929`, passed in `1m56s`
-- `implementation_commit_and_CI`: pending
+- `implementation_commit`: `2fc3a7e8efff9636735dcdab0055957a7fdf911f`
+- `implementation_CI`: public Lean Action run `29506928654`, build job `87649987984`, passed in
+  `1m51s` (`2026-07-16T14:30:56Z` to `2026-07-16T14:32:47Z`)
+- `evidence_commit_and_CI`: pending
