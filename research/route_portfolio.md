@@ -1500,3 +1500,19 @@ nonvanishing, and later critical-line zeros cannot by themselves transfer Li pos
 No statement about the actual theta-kernel zeros was falsified or proved. `hard_gap_delta=0`;
 H6-E/G8, W2/G7, M2/G3, and RH remain open. The persistent Goal returns to fresh value-ranked route
 selection; no successor campaign is selected here.
+
+## Selection Update: H6 Zero-Coordinate Framework
+
+Date: 2026-07-17
+
+Fresh selection compares H1/H2 finite-count partitions, direct M2/G3 and W2/G7 re-entry, H6-Q,
+H6-X, and H6-H2. The count partitions do not shorten a hard gap; the previous M2 projection and
+W2 termwise-prime mechanisms have compiled obstruction records; H6-Q requires a global certified
+zero computation; and H6-X cannot be source-faithful before the exact zero coordinate is fixed.
+
+Campaign `CAMPAIGN-20260717-H6-ZERO-COORDINATE-FRAMEWORK-01` therefore selects the complete
+time-zero coordinate layer: `H_0(z)=0` iff `(1+i*z)/2` is a nontrivial zeta zero, the exact inverse
+`z=-i*(2*s-1)`, the strict strip `-1<Im(z)<1`, and the equivalence between RH and all `H_0` zeros
+being real. This is known-theorem H6-H2 infrastructure with expected `hard_gap_delta=0` and
+`route_infrastructure_delta=1`; forward preservation, threshold existence/closedness, H6-E/G8,
+and RH remain open. Public preregistration CI is required before Lean proof edits.

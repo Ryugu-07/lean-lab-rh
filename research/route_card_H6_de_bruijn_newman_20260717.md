@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `H6_H1_AND_REVERSE_HEAT_LI_PUBLICLY_CLOSED`
+Status: `H6_ZERO_COORDINATE_FRAMEWORK_SELECTED`
 
 ## Endpoint and normalization
 
@@ -116,6 +116,27 @@ prints pass; the latter use only `propext`, `Classical.choice`, and `Quot.sound`
 **Verdict:** `COMPLETE` as `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
 `route_infrastructure_delta=1`. It closes H6-H1 only. The all-real-zero predicate, forward
 preservation, threshold existence/closedness, H6-E, and RH remain open.
+
+## Candidate H6-H2a: exact zero-coordinate framework
+
+**Exact proposition.** Define `AllZerosReal(t)` by quantifying every complex zero of the compiled
+source `H_t`. Under the inverse coordinate `z(s)=-i*(2*s-1)`, prove both directions of the zero
+correspondence, prove every `H_0` zero lies in `-1<Im(z)<1`, and compile
+
+`Mathlib.RiemannHypothesis <-> AllZerosReal(0)`.
+
+**DAG and strength.** This is the definition-alignment subedge of H6-H2. The final equivalence is
+exactly RH-strength, but proving the equivalence does not prove either side. It supplies the fixed
+predicate and coordinate required by forward preservation and threshold work.
+
+**Adversarial tests.** Check `s=0,1`, the sign `Im(z(s))=1-2*Re(s)`, strict strip endpoints,
+surjectivity from an arbitrary nontrivial zero, the nonzero factor `1/8`, and all complex zero
+quantifiers. Do not claim multiplicity transport.
+
+**Verdict:** `SELECTED` as campaign
+`CAMPAIGN-20260717-H6-ZERO-COORDINATE-FRAMEWORK-01`. Exact preregistration is in
+`h6_zero_coordinate_framework_prereg_20260717.md`; proof-source edits wait for public
+preregistration CI.
 
 ## Candidate H6-Q: improve the upper bound to one fifth
 
