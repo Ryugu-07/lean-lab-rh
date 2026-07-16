@@ -14,6 +14,7 @@ import LeanLab.Riemann.WeilFiniteGaussianTestCore
 import LeanLab.Riemann.WeilGaussianQuadraticPositivity
 import LeanLab.Riemann.WeilGaussianPositivityCriterion
 import LeanLab.Riemann.WeilGaussianFixedWidthCriterion
+import LeanLab.Riemann.WeilCompactLaplaceSeparator
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
 import LeanLab.Riemann.BaezDuarteZetaRatio
@@ -49,7 +50,7 @@ example
     RiemannHypothesis :=
   baezDuarteComplexTarget_mem_closure_imp_riemannHypothesis h
 
-open scoped BigOperators ComplexConjugate ENNReal FourierTransform InnerProductSpace Topology
+open scoped BigOperators ComplexConjugate ContDiff ENNReal FourierTransform InnerProductSpace Topology
 
 /-- Name-resolution witness for every `.proven` ledger target with a `leanName`. -/
 def checkedTargetNames : List Lean.Name :=
@@ -76,6 +77,8 @@ def checkedTargetNames : List Lean.Name :=
     ``symmetricGaussianXiPacket_arithmetic_explicit_formula,
     ``RiemannHypothesis.gaussianXiArithmeticQuadratic_re_nonneg,
     ``riemannHypothesis_iff_gaussianXiArithmeticQuadratic_re_nonneg,
+    ``riemannHypothesis_iff_fixedWidth_gaussianXiArithmeticQuadratic_re_nonneg,
+    ``exists_compactSupport_xiDivisor_laplace_tsum_separator,
     ``not_integrableOn_polsonImaginaryFrullaniComponent,
     ``freedmanGreenLift_listedPremises_do_not_force_contraction,
     ``liCoefficientCandidate_one_re_pos,
@@ -934,6 +937,18 @@ example {a0 : ℝ} (ha0 : 0 < a0)
       0 ≤ (gaussianXiArithmeticQuadratic a0 b w 2).re) :
     RiemannHypothesis :=
   riemannHypothesis_of_fixedWidth_gaussianXiArithmeticQuadratic_re_nonneg ha0 hpos
+
+example (p0 : RiemannXiDivisorZeroIndex) {ε : ℝ} (hε : 0 < ε) :
+    ∃ f : ℝ → ℂ,
+      ContDiff ℝ ∞ f ∧
+      HasCompactSupport f ∧
+      compactLaplaceTransform f (riemannXiDivisorZeroValue p0) = 1 ∧
+      Summable (fun p : RiemannXiDivisorZeroIndex ↦
+        ‖compactLaplaceTransform f (riemannXiDivisorZeroValue p)‖) ∧
+      ∑' p : RiemannXiDivisorZeroIndex,
+        (if riemannXiDivisorZeroValue p = riemannXiDivisorZeroValue p0 then 0
+        else ‖compactLaplaceTransform f (riemannXiDivisorZeroValue p)‖) < ε :=
+  exists_compactSupport_xiDivisor_laplace_tsum_separator p0 hε
 
 example {gamma y : ℝ} (hgamma : 0 < gamma) (hy : 2 * gamma ^ 2 < y ^ 2) :
     ¬ MeasureTheory.IntegrableOn

@@ -17,6 +17,7 @@ import LeanLab.Riemann.WeilFiniteGaussianTestCore
 import LeanLab.Riemann.WeilGaussianQuadraticPositivity
 import LeanLab.Riemann.WeilGaussianPositivityCriterion
 import LeanLab.Riemann.WeilGaussianFixedWidthCriterion
+import LeanLab.Riemann.WeilCompactLaplaceSeparator
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
 import LeanLab.Riemann.NymanBeurling
@@ -327,6 +328,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``riemannHypothesis_iff_fixedWidth_gaussianXiArithmeticQuadratic_re_nonneg
       status := .proven
       note := "Campaign CAMPAIGN-20260716-R5-GAUSSIAN-WEIL-FIXED-WIDTH-01 realizes every larger Gaussian width as a dominated limit of finite Rademacher exponential packets at the fixed base width, then combines this transfer with the off-line separator criterion. Implementation commit f56b70478ab552802cac719b8e9af0f56fc44b1d passed public Lean Action CI run 29458594435, build job 87497146736; evidence commit f93e73cbdd71785a28cc2b05f8ef2b0390b358cf passed run 29458788171, build job 87497720018. This strictly compresses an RH-equivalent Gaussian criterion; it does not prove unconditional positivity or RH." },
+    { id := "T2.weil.compact-laplace-xi-divisor-separator"
+      tier := .tier2
+      title := "Separate one xi-divisor value by compact Laplace tests"
+      statement :=
+        "For every selected multiplicity-bearing xi-divisor index and every positive epsilon, construct a smooth compactly supported additive-log test whose bilateral Laplace transform is one at the selected value, is absolutely summable on the complete xi divisor, and has total norm below epsilon over all different zero values."
+      leanName := some ``exists_compactSupport_xiDivisor_laplace_tsum_separator
+      status := .proven
+      note := "Campaign CAMPAIGN-20260716-R5-COMPACT-LAPLACE-SEPARATOR-01 proves twofold integration-by-parts decay, complete xi-divisor summability, finite superlevel annihilation by a real-shift exponential polynomial, and geometric suppression by compact convolution powers. Equal-value multiplicity copies are protected. This compiles one unconditional W1 reverse-separation subedge; the generic explicit formula, Weil positivity, G7/W2, and RH remain open." },
     { id := "T2.audit.polson-ggc-imaginary-tail"
       tier := .tier2
       title := "Audit the imaginary-axis GGC continuation tail"

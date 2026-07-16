@@ -17,6 +17,7 @@ import LeanLab.Riemann.WeilFiniteGaussianTestCore
 import LeanLab.Riemann.WeilGaussianQuadraticPositivity
 import LeanLab.Riemann.WeilGaussianPositivityCriterion
 import LeanLab.Riemann.WeilGaussianFixedWidthCriterion
+import LeanLab.Riemann.WeilCompactLaplaceSeparator
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
 import LeanLab.Riemann.AnalyticLogBranch
@@ -295,6 +296,11 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.fixedWidth_exists_gt_gaussianXiArithmeticQuadratic_re_neg_of_offLine
 #print axioms LeanLab.Riemann.riemannHypothesis_of_fixedWidth_gaussianXiArithmeticQuadratic_re_nonneg
 #print axioms LeanLab.Riemann.riemannHypothesis_iff_fixedWidth_gaussianXiArithmeticQuadratic_re_nonneg
+#print axioms LeanLab.Riemann.compactLaplaceTransform_additiveConvolution
+#print axioms LeanLab.Riemann.norm_compactLaplaceTransform_le_mass_mul_inv_sq
+#print axioms LeanLab.Riemann.summable_norm_compactLaplaceTransform_xiDivisorZero
+#print axioms LeanLab.Riemann.compactLaplaceTransform_polynomialPacket
+#print axioms LeanLab.Riemann.exists_compactSupport_xiDivisor_laplace_tsum_separator
 #print axioms LeanLab.Riemann.polsonImaginaryFrullaniComponent_eq_ofReal
 #print axioms LeanLab.Riemann.not_integrableOn_polsonImaginaryFrullaniIntegrand
 #print axioms LeanLab.Riemann.not_integrableOn_polsonImaginaryFrullaniComponent

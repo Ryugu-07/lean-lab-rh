@@ -898,3 +898,21 @@ This is an unconditional W1 reverse-separation component, not the generic explic
 unconditional Weil positivity, or RH. G6/W1 and G7/W2 remain open and expected hard-gap delta is
 zero. The exact statement, adversarial tests, source boundary, and rejection conditions are fixed
 in `research/r5_compact_laplace_separator_prereg_20260716.md` before Lean proof edits.
+
+## Local Completion Update: R5 Compact Laplace Xi-Divisor Separator
+
+Date: 2026-07-16
+
+The exact endpoint now compiles in `LeanLab/Riemann/WeilCompactLaplaceSeparator.lean`. A fixed
+unit-integral bump is modulated at the protected xi zero; two integrations by parts give a
+strip-uniform reciprocal-square bound and absolute summability over the complete analytic
+divisor. The `norm(F)>=1/2` non-target value set is finite, a positive real exponential shift and
+normalized polynomial annihilate it once, and compact convolution powers suppress every remaining
+term by a geometric factor. Equal-value multiplicity copies are excluded from the tail exactly as
+preregistered.
+
+Targets, exact statement witnesses, selected standard-only axiom prints, repository scans, and the
+full 8,678-job build pass locally. Classify
+as `KNOWN_MECHANISM_RECONSTRUCTED`, with `hard_gap_delta=0`: this supplies an unconditional W1
+reverse-separation component but not the generic explicit formula, unconditional Weil positivity,
+G7/W2, or RH. Publication and public CI remain before campaign closure.

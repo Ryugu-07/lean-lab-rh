@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-COMPACT-LAPLACE-SEPARATOR-01`
 
 Date: 2026-07-16
 
-Status: `ADMITTED`
+Status: `LOCAL_VERIFIED`
 
 Mode: `LITERATURE`
 
@@ -130,3 +130,12 @@ No novelty claim is allowed. Classification on success is at most `BRIDGE_REDUCE
 - `assumption_frontier_after_if_complete`: compact-support xi-divisor separation is available;
   generic explicit-formula integration and unconditional positivity remain unproved
 
+## Local Result
+
+The fixed proposition now compiles exactly as
+`exists_compactSupport_xiDivisor_laplace_tsum_separator` in
+`LeanLab/Riemann/WeilCompactLaplaceSeparator.lean`. The implementation follows the preregistered
+superlevel-first construction. Its geometric estimate is slightly stronger and simpler than the
+planned square-family form: after annihilating the fixed `norm(F)>=1/2` value set, the surviving
+tail is bounded by `B * (1/2)^m * norm(F)`, and the already proved summability of `norm(F)` closes
+the strict `tsum` bound. This changes no endpoint or assumption frontier.
