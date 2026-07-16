@@ -1006,3 +1006,21 @@ compiled `O(R^4)` xi bound and makes the top integral `O(R^(-2))`. Success reduc
 compact zero-side subedge but does not evaluate the arithmetic side, prove W2/G7, or prove RH. The
 exact endpoint and rejection conditions are fixed in
 `research/r5_compact_weil_zero_cutoff_prereg_20260716.md` before Lean proof edits.
+
+## Local Completion Update: R5 Compact Weil Zero Cutoff
+
+Date: 2026-07-16
+
+The exact endpoint now compiles in `LeanLab/Riemann/WeilCompactLaplaceZeroCutoff.lean`. Dominated
+complex differentiation makes the compact Laplace transform entire; two-term reflection
+symmetrization is exact; xi-divisor reflection preserves analytic multiplicity and gives absolute
+summability; and arbitrary compact-support integration by parts supplies sixfold decay on the full
+fixed rectangle strip. This absorbs the compiled fourth-power xi logarithmic-derivative bound and
+makes the selected top integral `O(R^(-2))`.
+
+The 373-line module, exact Targets and TargetChecks, five standard-only axiom prints, empty
+forbidden scans, aggregate import, `git diff --check`, and the full 8,680-job build pass locally.
+Classify as `BRIDGE_REDUCED`, with `hard_gap_delta=1` only at the fixed W1c1 compact zero-side
+subedge. The compact arithmetic explicit formula, W2/G7, and RH remain open. Preregistration
+commit `e70201cb71b0909ae3f7b798336931e0bd9f32ee` passed public CI run `29463597042`;
+implementation publication and public CI remain.

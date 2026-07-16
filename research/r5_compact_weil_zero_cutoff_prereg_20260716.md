@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-COMPACT-WEIL-ZERO-CUTOFF-01`
 
 Date: 2026-07-16
 
-Status: `PREREGISTERED`
+Status: `LOCALLY_COMPLETE`
 
 Mode: `LITERATURE -> PROOF_ATTEMPT_A`
 
@@ -132,3 +132,22 @@ the literature.
 - If sixfold decay or transform differentiability fails under two independent Lean approaches,
   close as `NO_PROGRESS`; do not weaken the endpoint to another helper theorem.
 
+## Local Result
+
+The exact preregistered theorem compiles in
+`LeanLab/Riemann/WeilCompactLaplaceZeroCutoff.lean`. Lean proves whole-plane transform
+differentiability, exact two-term reflection symmetry, complete multiplicity-bearing divisor
+summability, arbitrary iterated compact-support integration by parts, inverse-sixth-power decay on
+the full fixed rectangle strip, the resulting `O(R^(-2))` top-edge estimate, and the final
+selected-height xi right-line limit.
+
+All adversarial boundaries are retained: no evenness premise is added, the wider real strip is
+used, both reflected top-edge arguments are shown nonzero, and analytic divisor multiplicity is
+preserved. The 373-line module is diagnostic-free; exact Targets and TargetChecks, five
+standard-only axiom prints, empty forbidden scans, `git diff --check`, and the full 8,680-job build
+pass locally.
+
+Classification is `BRIDGE_REDUCED`, with `hard_gap_delta=1` only at the fixed W1c1 compact
+zero-side subedge. The compact arithmetic prime, pole, and archimedean evaluation, W2/G7, and RH
+remain open. Preregistration commit `e70201cb71b0909ae3f7b798336931e0bd9f32ee` passed public Lean
+Action CI run `29463597042`, build job `87511970349`; implementation publication remains pending.

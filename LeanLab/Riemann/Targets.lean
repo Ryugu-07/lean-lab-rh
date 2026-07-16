@@ -18,6 +18,7 @@ import LeanLab.Riemann.WeilGaussianQuadraticPositivity
 import LeanLab.Riemann.WeilGaussianPositivityCriterion
 import LeanLab.Riemann.WeilGaussianFixedWidthCriterion
 import LeanLab.Riemann.WeilCompactLaplaceSeparator
+import LeanLab.Riemann.WeilCompactLaplaceZeroCutoff
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -337,6 +338,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``exists_compactSupport_xiDivisor_laplace_tsum_separator
       status := .proven
       note := "Campaign CAMPAIGN-20260716-R5-COMPACT-LAPLACE-SEPARATOR-01 proves twofold integration-by-parts decay, complete xi-divisor summability, finite superlevel annihilation by a real-shift exponential polynomial, and geometric suppression by compact convolution powers. Equal-value multiplicity copies are protected. Implementation commit 6d12bad98b80c34217757df01943509965a64781 passed public Lean Action CI run 29461298466, build job 87505125618; evidence commit 941756c2e7e0b4da8f765dc7187e4be703af36c8 passed run 29461494669, build job 87505716647. This compiles one unconditional W1 reverse-separation subedge; the generic explicit formula, Weil positivity, G7/W2, and RH remain open." },
+    { id := "T2.weil.compact-laplace-zero-cutoff"
+      tier := .tier2
+      title := "Pass compact-smooth Weil weights through the xi zero cutoff"
+      statement :=
+        "For every smooth compactly supported additive-log function and c>1, prove that the selected right-edge integral for its reflection-symmetrized bilateral Laplace transform converges to pi times the complete multiplicity-bearing xi-zero tsum."
+      leanName := some ``tendsto_symmetrizedCompactLaplaceXiRightVerticalIntegral
+      status := .proven
+      note := "Campaign CAMPAIGN-20260716-R5-COMPACT-WEIL-ZERO-CUTOFF-01 proves transform entire-ness by dominated differentiation, reflection symmetry, complete divisor summability, arbitrary iterated integration by parts, and fixed-strip inverse-sixth-power decay. That decay absorbs the compiled fourth-power selected-edge xi logarithmic-derivative bound and closes the compact-smooth zero-side cutoff passage. The generic compact arithmetic evaluation, W2/G7, and RH remain open." },
     { id := "T2.audit.gaussian-prime-kernel-sign"
       tier := .tier2
       title := "Audit the sign of one Gaussian prime-power kernel"

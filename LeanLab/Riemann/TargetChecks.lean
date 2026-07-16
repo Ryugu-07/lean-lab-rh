@@ -15,6 +15,7 @@ import LeanLab.Riemann.WeilGaussianQuadraticPositivity
 import LeanLab.Riemann.WeilGaussianPositivityCriterion
 import LeanLab.Riemann.WeilGaussianFixedWidthCriterion
 import LeanLab.Riemann.WeilCompactLaplaceSeparator
+import LeanLab.Riemann.WeilCompactLaplaceZeroCutoff
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -950,6 +951,18 @@ example (p0 : RiemannXiDivisorZeroIndex) {ε : ℝ} (hε : 0 < ε) :
         (if riemannXiDivisorZeroValue p = riemannXiDivisorZeroValue p0 then 0
         else ‖compactLaplaceTransform f (riemannXiDivisorZeroValue p)‖) < ε :=
   exists_compactSupport_xiDivisor_laplace_tsum_separator p0 hε
+
+example {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {c : ℝ} (hc : 1 < c) :
+    Filter.Tendsto
+      (selectedXiRightVerticalIntegralFor
+        (symmetrizedCompactLaplaceWeight f) c)
+      Filter.atTop
+      (nhds ((Real.pi : ℂ) *
+        ∑' p : RiemannXiDivisorZeroIndex,
+          symmetrizedCompactLaplaceWeight f
+            (riemannXiDivisorZeroValue p))) :=
+  tendsto_symmetrizedCompactLaplaceXiRightVerticalIntegral hf hfsupp hc
 
 example :
     ∃ a : ℝ, ∃ b : Fin 2 → ℝ,
