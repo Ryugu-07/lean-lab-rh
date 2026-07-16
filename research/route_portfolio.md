@@ -1762,3 +1762,16 @@ standard-only axiom prints.
 Classification remains `DISCOVERY_FORMALIZED`, with `hard_gap_delta=0` and
 `route_infrastructure_delta=1`. The fixed finite endpoint is public; immutable evidence-backfill
 CI remains before campaign closure.
+
+## Public Closure Update: H6 Heat-Li Positive Moments
+
+Date: 2026-07-17
+
+Evidence-backfill commit `1a7d3d6d8ef08e7726aeb8dff261372822d49b6e` passed public Lean Action CI
+run `29541519607`, build job `87764575644`, in `2m07s`. Together with preregistration run
+`29539585856` and implementation run `29541314279`, campaign
+`DISCOVERY-20260717-H6-HEAT-LI-MOMENTS-01` is publicly closed as `DISCOVERY_FORMALIZED`.
+
+The reusable result is the exact all-real-time first-two positive theta-moment spine.
+`hard_gap_delta=0` and `route_infrastructure_delta=1`; the persistent RH Goal returns to
+value-ranked route selection.

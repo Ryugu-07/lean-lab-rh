@@ -470,3 +470,7 @@ Targets, the definition-alignment and complete conjunction TargetChecks, seven s
 Implementation commit `2bc304e9fe2473519c398269b26b0b06b715e593` passed public Lean Action CI
 run `29541314279`, build job `87763968249`, in `2m19s`. The fixed endpoint is public;
 evidence-backfill CI remains before campaign closure.
+
+Evidence-backfill commit `1a7d3d6d8ef08e7726aeb8dff261372822d49b6e` passed public Lean Action CI
+run `29541519607`, build job `87764575644`, in `2m07s`. H6-Z is publicly closed as
+`DISCOVERY_FORMALIZED`; the persistent RH Goal returns to value-ranked route selection.

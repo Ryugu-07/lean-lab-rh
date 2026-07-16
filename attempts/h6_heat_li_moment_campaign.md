@@ -2,7 +2,7 @@
 
 Campaign: `DISCOVERY-20260717-H6-HEAT-LI-MOMENTS-01`
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_CI_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Target
 
@@ -91,3 +91,8 @@ Implementation commit `2bc304e9fe2473519c398269b26b0b06b715e593` passed public L
 run `29541314279`, build job `87763968249`, from `2026-07-16T23:05:13Z` to `23:07:32Z`
 (`2m19s`). The independent runner rebuilt the definition-alignment theorems, complete first-two
 endpoint, Targets, TargetChecks, and seven selected standard-only axiom prints.
+
+Evidence-backfill commit `1a7d3d6d8ef08e7726aeb8dff261372822d49b6e` passed public Lean Action CI
+run `29541519607`, build job `87764575644`, from `2026-07-16T23:10:18Z` to `23:12:25Z`
+(`2m07s`). The campaign is publicly closed; the persistent RH Goal returns to value-ranked route
+selection.

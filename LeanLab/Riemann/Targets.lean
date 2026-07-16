@@ -870,7 +870,7 @@ def rhTargets : List ResearchTarget :=
         "For every real heat time, identify the first two Li differential expressions of 8*H_t(-i*(2*s-1)) with explicit positive hyperbolic moments, prove the weighted Cauchy-Schwarz bound B(t)^2 <= A(t)*C(t), and deduce that both expressions are positive real numbers."
       leanName := some ``deBruijnNewmanHeat_firstTwoLi_endpoint
       status := .proven
-      note := "Campaign PROOF-ATTEMPT-20260717-H6-HEAT-LI-MOMENTS-01 proves the theta-specific all-real-time endpoint. The proof derives exact values F_t(1)=8A, F_t'(1)=16B, F_t''(1)=32C and proves B^2<=AC by integrating the nonnegative square W(A*u*tanh(u)-B)^2. This is a finite-index positive-kernel theorem and is strictly weaker than the all-index Li criterion equivalent to RH. Implementation commit 2bc304e9fe2473519c398269b26b0b06b715e593 passed public Lean Action CI run 29541314279, build job 87763968249." },
+      note := "Campaign PROOF-ATTEMPT-20260717-H6-HEAT-LI-MOMENTS-01 proves the theta-specific all-real-time endpoint. The proof derives exact values F_t(1)=8A, F_t'(1)=16B, F_t''(1)=32C and proves B^2<=AC by integrating the nonnegative square W(A*u*tanh(u)-B)^2. This is a finite-index positive-kernel theorem and is strictly weaker than the all-index Li criterion equivalent to RH. Implementation commit 2bc304e9fe2473519c398269b26b0b06b715e593 passed public Lean Action CI run 29541314279, build job 87763968249; evidence commit 1a7d3d6d8ef08e7726aeb8dff261372822d49b6e passed run 29541519607, job 87764575644." },
     { id := "H10.function-field.finite-spectral-rigidity"
       tier := .tier2
       title := "Formalize finite power-sum spectral rigidity"
