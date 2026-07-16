@@ -6,7 +6,7 @@ Campaign: `CAMPAIGN-20260717-H6-UPPER-HALF-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_IMPLEMENTATION_VERIFIED_PUBLIC_IMPLEMENTATION_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Route selection
 
@@ -210,3 +210,11 @@ Local classification is `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
 `route_infrastructure_delta=1`. Threshold nonemptiness and the classical `Lambda <= 1/2` bound
 are now compiled locally. This does not prove `Lambda <= 0`, H6-E/G8, or RH. Public implementation
 CI and evidence-backfill CI remain required before campaign closure.
+
+## Public implementation gate
+
+Implementation commit `8669c2db7577eaa718684e9e9ec052062b5488fa` passed public Lean Action CI
+run `29531232787`, build job `87731748374`, in `2m6s`. The public runner independently rebuilt
+both exact endpoints, their registered witnesses, Targets, TargetChecks, and axiom audit. Campaign
+status is `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`; this evidence backfill and its own
+public CI remain before closure.

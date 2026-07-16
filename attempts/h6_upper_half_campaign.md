@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260717-H6-UPPER-HALF-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_IMPLEMENTATION_VERIFIED_PUBLIC_IMPLEMENTATION_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Runtime record
 
@@ -104,3 +104,11 @@ Status: `LOCAL_IMPLEMENTATION_VERIFIED_PUBLIC_IMPLEMENTATION_CI_PENDING`
   and makes no originality claim.
 - `next_gate`: implementation commit and public Lean Action CI, then immutable evidence backfill
   and closure CI. The persistent RH Goal remains active throughout.
+
+## Public implementation result
+
+Implementation commit `8669c2db7577eaa718684e9e9ec052062b5488fa` passed public Lean Action CI
+run `29531232787`, build job `87731748374`, in `2m6s`. Both fixed endpoints and the complete
+registered proof chain are now independently public-built. The campaign remains active at
+`PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`; immutable evidence backfill and its own public
+CI are required before closure.

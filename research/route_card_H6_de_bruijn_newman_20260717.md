@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `H6_UPPER_HALF_LOCAL_IMPLEMENTATION_VERIFIED_PUBLIC_CI_PENDING`
+Status: `H6_UPPER_HALF_PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Endpoint and normalization
 
@@ -285,9 +285,12 @@ contraction, the finite `1-n*a^2` invariant, and isolating-ball Jensen persisten
 TargetChecks, standard-only axiom audit, forbidden scans, `git diff --check`, and the 8,690-job
 full build pass locally.
 
-**Verdict:** `LOCAL_COMPLETE` as `KNOWN_THEOREM_FORMALIZED`; public implementation and evidence
-CI remain. Threshold nonemptiness and `Lambda<=1/2` are closed locally. H6-E/G8, W2/G7, M2/G3,
-and RH remain open.
+Implementation commit `8669c2db7577eaa718684e9e9ec052062b5488fa` passed public Lean Action CI
+run `29531232787`, build job `87731748374`, in `2m6s`.
+
+**Verdict:** `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING` as
+`KNOWN_THEOREM_FORMALIZED`. Threshold nonemptiness and `Lambda<=1/2` are public-built; immutable
+evidence CI remains. H6-E/G8, W2/G7, M2/G3, and RH remain open.
 
 ## Candidate H6-Q: improve the upper bound to one fifth
 

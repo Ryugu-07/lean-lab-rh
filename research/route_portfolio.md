@@ -1603,3 +1603,16 @@ Classification is `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
 `route_infrastructure_delta=1`. This closes threshold nonemptiness and supplies the classical
 bound `Lambda<=1/2`; it does not prove H6-E/G8 (`Lambda<=0`) or RH. Public implementation CI and
 evidence-backfill CI remain before campaign closure.
+
+## Public Implementation Update: H6 de Bruijn Upper-Half Bound
+
+Date: 2026-07-17
+
+Implementation commit `8669c2db7577eaa718684e9e9ec052062b5488fa` passed public Lean Action CI
+run `29531232787`, build job `87731748374`, in `2m6s`. The independent runner rebuilt the exact
+quadratic strip contraction, unconditional half-time witness, registered intermediate witnesses,
+Targets, TargetChecks, and standard-only axiom audit.
+
+Classification remains `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`. H6-E/G8, W2/G7, M2/G3, and RH remain open. Immutable evidence
+backfill and its own public CI remain before campaign closure.
