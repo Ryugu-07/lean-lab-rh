@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-COMPACT-WEIL-ZERO-CUTOFF-01`
 
 Date: 2026-07-16
 
-Status: `LOCALLY_COMPLETE`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 Mode: `LITERATURE -> PROOF_ATTEMPT_A`
 
@@ -33,7 +33,7 @@ Mode: `LITERATURE -> PROOF_ATTEMPT_A`
   arithmetic prime, pole, and archimedean evaluation, W2/G7, and RH remain open
 - `expected_hard_gap_delta`: 1 at the W1c1 compact zero-side subedge
 - `preregistration_commit_sha`: `e70201cb71b0909ae3f7b798336931e0bd9f32ee`
-- `commit_sha`: pending publication
+- `commit_sha`: `0e6451944ee1edb2d76d67f4fe097de2aa19ad17`
 
 ## Normalized Tuple
 
@@ -76,4 +76,12 @@ top-edge limit, transform differentiability, or divisor summability.
 The module, exact target witness, selected axiom audit, empty forbidden scans, aggregate import,
 `git diff --check`, and the full 8,680-job build pass locally. This closes the compact-smooth
 zero-side cutoff only. The full compact arithmetic explicit formula, W2/G7, and RH remain open.
-Implementation publication and public CI remain before campaign closure.
+Implementation publication and public CI were required before campaign closure; their immutable
+evidence is recorded below.
+
+## Public Implementation Verification
+
+Implementation commit `0e6451944ee1edb2d76d67f4fe097de2aa19ad17` passed public Lean Action CI
+run `29464308480`, build job `87514106839`, in `2m10s`. The exact endpoint is independently
+public-built. Immutable evidence backfill and that commit's own public CI remain before campaign
+closure.

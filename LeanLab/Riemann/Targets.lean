@@ -345,7 +345,7 @@ def rhTargets : List ResearchTarget :=
         "For every smooth compactly supported additive-log function and c>1, prove that the selected right-edge integral for its reflection-symmetrized bilateral Laplace transform converges to pi times the complete multiplicity-bearing xi-zero tsum."
       leanName := some ``tendsto_symmetrizedCompactLaplaceXiRightVerticalIntegral
       status := .proven
-      note := "Campaign CAMPAIGN-20260716-R5-COMPACT-WEIL-ZERO-CUTOFF-01 proves transform entire-ness by dominated differentiation, reflection symmetry, complete divisor summability, arbitrary iterated integration by parts, and fixed-strip inverse-sixth-power decay. That decay absorbs the compiled fourth-power selected-edge xi logarithmic-derivative bound and closes the compact-smooth zero-side cutoff passage. The generic compact arithmetic evaluation, W2/G7, and RH remain open." },
+      note := "Campaign CAMPAIGN-20260716-R5-COMPACT-WEIL-ZERO-CUTOFF-01 proves transform entire-ness by dominated differentiation, reflection symmetry, complete divisor summability, arbitrary iterated integration by parts, and fixed-strip inverse-sixth-power decay. That decay absorbs the compiled fourth-power selected-edge xi logarithmic-derivative bound and closes the compact-smooth zero-side cutoff passage. Implementation commit 0e6451944ee1edb2d76d67f4fe097de2aa19ad17 passed public Lean Action CI run 29464308480, build job 87514106839. The generic compact arithmetic evaluation, W2/G7, and RH remain open." },
     { id := "T2.audit.gaussian-prime-kernel-sign"
       tier := .tier2
       title := "Audit the sign of one Gaussian prime-power kernel"

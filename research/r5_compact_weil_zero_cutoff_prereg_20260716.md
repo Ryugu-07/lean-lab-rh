@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-COMPACT-WEIL-ZERO-CUTOFF-01`
 
 Date: 2026-07-16
 
-Status: `LOCALLY_COMPLETE`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 Mode: `LITERATURE -> PROOF_ATTEMPT_A`
 
@@ -150,4 +150,8 @@ pass locally.
 Classification is `BRIDGE_REDUCED`, with `hard_gap_delta=1` only at the fixed W1c1 compact
 zero-side subedge. The compact arithmetic prime, pole, and archimedean evaluation, W2/G7, and RH
 remain open. Preregistration commit `e70201cb71b0909ae3f7b798336931e0bd9f32ee` passed public Lean
-Action CI run `29463597042`, build job `87511970349`; implementation publication remains pending.
+Action CI run `29463597042`, build job `87511970349`.
+
+Implementation commit `0e6451944ee1edb2d76d67f4fe097de2aa19ad17` passed public Lean Action CI
+run `29464308480`, build job `87514106839`, in `2m10s`. Immutable evidence backfill and its own
+public CI remain before campaign closure.

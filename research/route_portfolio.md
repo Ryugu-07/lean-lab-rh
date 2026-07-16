@@ -1023,4 +1023,9 @@ forbidden scans, aggregate import, `git diff --check`, and the full 8,680-job bu
 Classify as `BRIDGE_REDUCED`, with `hard_gap_delta=1` only at the fixed W1c1 compact zero-side
 subedge. The compact arithmetic explicit formula, W2/G7, and RH remain open. Preregistration
 commit `e70201cb71b0909ae3f7b798336931e0bd9f32ee` passed public CI run `29463597042`;
-implementation publication and public CI remain.
+implementation publication and public CI were the next required evidence gate.
+
+Implementation commit `0e6451944ee1edb2d76d67f4fe097de2aa19ad17` passed public Lean Action CI
+run `29464308480`, build job `87514106839`, in `2m10s`. The exact compact-smooth zero-side
+endpoint is independently public-built. Immutable evidence backfill and its own public CI remain
+before campaign closure; the open arithmetic and positivity frontiers are unchanged.
