@@ -89,6 +89,26 @@ the exact identity above. TargetCheck witnesses and the transitive axiom audit p
 **Verdict:** `COMPLETE`, classified `KNOWN_THEOREM_FORMALIZED`. This closes the H6/M0 bridge with
 `hard_gap_delta=0`; it does not prove any new zero statement.
 
+## Candidate H6-H1: entire heat family and backward heat equation
+
+**Exact proposition.** For every real `t`, the compiled source integral `H_t` is entire in the
+complex spatial variable, differentiable in real time, and satisfies
+
+`partial_t H_t(z) = -partial_z^2 H_t(z)`
+
+for every complex `z`, with both sides equal to the same `u^2`-weighted source integral.
+
+**DAG and strength.** H6 analytic infrastructure between H6-B and the all-real-zero/threshold
+theory. It proves no zero-location statement and has `hard_gap_delta=0`, but H6-X and an honest
+zero-dynamics layer require it.
+
+**Adversarial tests.** Require all real `t`, not only nonnegative or bounded time; require complex
+`z`, not only the real axis; audit the backward sign; and prove neighborhood-uniform domination
+rather than differentiating a merely formal integrand.
+
+**Verdict:** `SELECTED` as `CAMPAIGN-20260717-H6-HEAT-EQUATION-01`. The exact endpoint and failure
+boundary are fixed in `h6_de_bruijn_newman_heat_equation_prereg_20260717.md`.
+
 ## Candidate H6-Q: improve the upper bound to one fifth
 
 **Exact proposition.** Every zero of `H_(1/5)` is real. With the established de Bruijn
@@ -149,6 +169,7 @@ source normalization and analytic hypotheses.
 
 ## Recommendation
 
-H6-B is complete. Return to fresh value-ranked route selection, with the backward heat equation,
-the analytic all-real-zero framework, and H6-X now eligible for reassessment. Keep H6-Q as a later
-`PROOF-ATTEMPT`; the H0-xi bridge alone supplies no evidence for its global zero certificate.
+H6-B is complete and H6-H1 is selected. After H6-H1 stops, return to fresh value-ranked route
+selection before choosing the analytic all-real-zero framework or H6-X. Keep H6-Q as a later
+`PROOF-ATTEMPT`; the H0-xi bridge and heat equation alone supply no evidence for its global zero
+certificate.

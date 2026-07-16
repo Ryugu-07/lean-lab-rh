@@ -1319,3 +1319,20 @@ the theta-Mellin and integration-by-parts lemmas needed to justify that connecti
 location theorem was proved: `hard_gap_delta=0`, while `route_infrastructure_delta=1`. H6-H/H6-E,
 W2/G7, M2/G3, and RH remain open. The persistent Goal returns to fresh independent route
 selection; no successor campaign is selected by this closure record.
+
+## Selection Update: H6 Entire Heat Equation
+
+Date: 2026-07-17
+
+Fresh LITERATURE selection compares H6-H with H6-X, direct H6-E/H6-Q, H1-B, H2-B, H10 census
+work, W2/G7, and M2/G3. Campaign `CAMPAIGN-20260717-H6-HEAT-EQUATION-01` selects the exact source
+analytic interface: for every real `t`, the compiled `H_t` must be entire in complex `z`,
+differentiable in real time, and satisfy `partial_t H_t=-partial_z^2 H_t`, with both derivatives
+identified by the same `u^2`-weighted integral.
+
+The source normalization and H0-xi bridge are already public. The remaining fixed obstacle is
+uniform domination of the source double-exponential series after arbitrary fixed quadratic and
+linear exponential weights. H6-X depends on this interface; H1-B/H2-B have lower immediate
+leverage; H10 remains the next census card; and no materially new W2 or M2 attack angle was found
+in this selection. The exact success and falsification criteria are preregistered before Lean proof
+edits in `research/h6_de_bruijn_newman_heat_equation_prereg_20260717.md`.
