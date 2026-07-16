@@ -474,3 +474,18 @@ evidence-backfill CI remains before campaign closure.
 Evidence-backfill commit `1a7d3d6d8ef08e7726aeb8dff261372822d49b6e` passed public Lean Action CI
 run `29541519607`, build job `87764575644`, in `2m07s`. H6-Z is publicly closed as
 `DISCOVERY_FORMALIZED`; the persistent RH Goal returns to value-ranked route selection.
+
+## Selected H6-AA: positive-cosh third-Li falsification
+
+Campaign `AUDIT-20260717-H6-POSITIVE-COSH-LI3-01` tests the first generic extrapolation suggested
+by H6-Z. It fixes a normalized positive two-atom `cosh` transform at `log 2` and `10*log 2`,
+retains entire-ness, reflection, positive coefficients, and value one at the Li base point, and
+uses the standard first-three logarithmic differential expressions.
+
+The predicted exact sign pattern is positive, positive, negative. If Lean verifies it, ordinary
+positive-kernel and Hankel moment inequalities cannot by themselves extend H6-Z to all Li
+indices; a continuation must exploit quantitative theta-kernel shape or another invariant. This
+is an obstruction audit with expected `hard_gap_delta=0`, not a statement about the actual
+`deBruijnNewmanPhi`. Exact preregistration is in
+`h6_positive_cosh_li3_falsification_prereg_20260717.md`; public preregistration CI precedes proof
+source edits.

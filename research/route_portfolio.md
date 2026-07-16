@@ -1775,3 +1775,20 @@ run `29541519607`, build job `87764575644`, in `2m07s`. Together with preregistr
 The reusable result is the exact all-real-time first-two positive theta-moment spine.
 `hard_gap_delta=0` and `route_infrastructure_delta=1`; the persistent RH Goal returns to
 value-ranked route selection.
+
+## Route Selection: Positive-Cosh Third-Li Falsification
+
+Date: 2026-07-17
+
+Fresh selection after H6-Z tests whether its positive-kernel mechanism has any generic all-order
+continuation before attempting another theta-specific inequality. Select
+`AUDIT-20260717-H6-POSITIVE-COSH-LI3-01` in `FALSIFICATION` mode. The fixed model is a normalized
+positive two-atom `cosh` transform at `log 2` and `10*log 2`, with masses `1/8` and `7/8` at the Li
+base point. Its first two standard Li differential values are predicted strictly positive and
+its third strictly negative, with the last sign certified from Mathlib's rational interval for
+`log 2`.
+
+Success creates `OBS-H6-POSITIVE-COSH-LI3-01`: positive even-transform structure and ordinary
+moment/Hankel positivity alone do not scale the H6-Z Cauchy--Schwarz proof to all indices. The
+actual theta kernel, H6-E/G8, W2/G7, M2/G3, and RH are unchanged. Public preregistration CI must
+pass before any Lean proof-source edit.
