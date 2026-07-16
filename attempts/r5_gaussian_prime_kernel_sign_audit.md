@@ -4,7 +4,7 @@ Audit: `AUDIT-20260716-R5-GAUSSIAN-PRIME-KERNEL-SIGN-01`
 
 Date: 2026-07-16
 
-Status: `IMPLEMENTATION_CI_PASSED`
+Status: `PUBLICLY_CLOSED`
 
 Mode: `DISCOVERY -> FALSIFICATION`
 
@@ -37,6 +37,7 @@ Mode: `DISCOVERY -> FALSIFICATION`
 | 3 | `LEAN_FALSIFICATION_ATTEMPT_A` | Lean rewrites the existing complex von-Mangoldt weight to an exact real kernel, proves the witness width positive, computes the diagonal factor `exp(-4)` and off-diagonal factor `(1+exp(-16))/2`, and proves the latter is strictly larger. The vector `(1,-1)` gives a negative quadratic value while the diagonal is positive. | The actual `n=2` kernel and its negation both fail positive semidefiniteness; classify the termwise local-prime sign branch as eliminated. |
 | 4 | `INDEPENDENT_LOCAL_AUDIT` | The 251-line module, exact Targets and TargetChecks, four standard-only axiom prints, forbidden/scratch/resource scans, `git diff --check`, aggregate import, and full 8,679-job build pass. | Local gate passed; publish the implementation and require independent public CI. |
 | 5 | `IMPLEMENTATION_PUBLIC_CI` | Implementation commit `01ea63517670a81b8c640de1135dec62d44436b9` passed public Lean Action CI run `29462677629`, build job `87509304721`, in `1m54s`. | Backfill immutable evidence, publish it, and require the evidence commit's own CI before closure. |
+| 6 | `PUBLIC_CI_EVIDENCE_AND_CLOSURE` | Evidence commit `af7848aea84287329ce50900d5e425538165baaa` passed public Lean Action CI run `29462828680`, build job `87509738532`, in `1m58s`. The implementation and its evidence are independently public-built. | Close as `BRANCH_ELIMINATED` and return the persistent RH Goal to fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`. |
 
 Preregistration commit `672f965556fbd68f74e9c5e8d322e46b97db7fed` passed public Lean Action CI
 run `29462185050`, build job `87507838744`, before the mathematical implementation was committed.
@@ -52,7 +53,8 @@ run `29462185050`, build job `87507838744`, before the mathematical implementati
   global operator/form identity; no same-sign semidefinite decomposition exists prime term by
   prime term for this Gaussian family
 - `classification`: `BRANCH_ELIMINATED`
-- `next_gate`: evidence-backfill publication and independent public CI
+- `next_gate`: fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`; do not reuse termwise same-sign
+  local-prime assembly without a genuinely global cancellation mechanism
 
 ## Compiled Endpoint
 

@@ -970,3 +970,15 @@ Implementation commit `01ea63517670a81b8c640de1135dec62d44436b9` passed public L
 run `29462677629`, build job `87509304721`, in `1m54s`. The exact arithmetic-kernel obstruction is
 now independently public-built. Immutable evidence backfill and its own public CI remain before
 audit closure; all RH hard gaps are unchanged.
+
+## Public Closure Update: R5 Gaussian Prime-Kernel Sign Audit
+
+Date: 2026-07-16
+
+Evidence commit `af7848aea84287329ce50900d5e425538165baaa` passed public Lean Action CI run
+`29462828680`, build job `87509738532`, in `1m58s`. Together with implementation commit
+`01ea63517670a81b8c640de1135dec62d44436b9` and run `29462677629`, audit
+`AUDIT-20260716-R5-GAUSSIAN-PRIME-KERNEL-SIGN-01` is publicly closed as
+`BRANCH_ELIMINATED`. Do not reuse termwise same-sign local-prime assembly without a genuinely
+global cancellation mechanism. W1c1, W2/G7, and RH remain open, with `hard_gap_delta=0`; return
+the persistent Goal to fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`.

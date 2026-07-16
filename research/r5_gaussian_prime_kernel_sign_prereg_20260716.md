@@ -4,7 +4,7 @@ Audit: `AUDIT-20260716-R5-GAUSSIAN-PRIME-KERNEL-SIGN-01`
 
 Date: 2026-07-16
 
-Status: `IMPLEMENTATION_CI_PASSED`
+Status: `PUBLICLY_CLOSED`
 
 Mode: `DISCOVERY -> FALSIFICATION`
 
@@ -127,3 +127,7 @@ Lean Action CI run `29462185050`, build job `87507838744`, before implementation
 Implementation commit `01ea63517670a81b8c640de1135dec62d44436b9` passed public Lean Action CI
 run `29462677629`, build job `87509304721`, in `1m54s`. Publish the immutable evidence backfill and
 require its own public CI before closing the audit.
+
+Evidence commit `af7848aea84287329ce50900d5e425538165baaa` passed public Lean Action CI run
+`29462828680`, build job `87509738532`, in `1m58s`. The exact audit is publicly closed as
+`BRANCH_ELIMINATED`; implementation and evidence are independently public-built.
