@@ -1746,5 +1746,19 @@ Li differential expressions, and strict positivity of both. The core theta-speci
 The standalone module, Targets, exact TargetChecks, seven standard-only axiom prints, empty
 forbidden/resource scans, `git diff --check`, and the 8,693-job full build pass. Classification is
 `DISCOVERY_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`. This finite
-endpoint does not imply all-index Li positivity; public implementation CI remains before evidence
-closure.
+endpoint does not imply all-index Li positivity; public implementation CI has passed and evidence
+backfill remains before closure.
+
+## Public Implementation Update: H6 Heat-Li Positive Moments
+
+Date: 2026-07-17
+
+Implementation commit `2bc304e9fe2473519c398269b26b0b06b715e593` passed public Lean Action CI
+run `29541314279`, build job `87763968249`, in `2m19s`. The independent runner rebuilt the exact
+reflection and time-zero alignment, Xi-coordinate heat equation, first-two moment formulas,
+weighted Cauchy-Schwarz certificate, strict positivity endpoint, Targets, TargetChecks, and seven
+standard-only axiom prints.
+
+Classification remains `DISCOVERY_FORMALIZED`, with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`. The fixed finite endpoint is public; immutable evidence-backfill
+CI remains before campaign closure.

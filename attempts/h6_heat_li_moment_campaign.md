@@ -2,7 +2,7 @@
 
 Campaign: `DISCOVERY-20260717-H6-HEAT-LI-MOMENTS-01`
 
-Status: `LOCAL_VERIFIED_PUBLIC_IMPLEMENTATION_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_CI_PENDING`
 
 ## Target
 
@@ -82,4 +82,12 @@ Status: `LOCAL_VERIFIED_PUBLIC_IMPLEMENTATION_CI_PENDING`
   before source edits.
 - `preregistration_commit_and_CI`: commit `05b2b57e392ab53c0aeb9488cd7e31d28f9ff8f0`,
   run `29539585856`, job `87758769100`, success.
-- `implementation_commit_and_CI`: pending publication.
+- `implementation_commit_and_CI`: commit `2bc304e9fe2473519c398269b26b0b06b715e593`,
+  run `29541314279`, job `87763968249`, success in `2m19s`.
+
+## Public implementation result
+
+Implementation commit `2bc304e9fe2473519c398269b26b0b06b715e593` passed public Lean Action CI
+run `29541314279`, build job `87763968249`, from `2026-07-16T23:05:13Z` to `23:07:32Z`
+(`2m19s`). The independent runner rebuilt the definition-alignment theorems, complete first-two
+endpoint, Targets, TargetChecks, and seven selected standard-only axiom prints.

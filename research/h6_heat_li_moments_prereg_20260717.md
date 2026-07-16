@@ -6,7 +6,7 @@ Campaign: `DISCOVERY-20260717-H6-HEAT-LI-MOMENTS-01`
 
 Mode: `DISCOVERY`
 
-Status: `LOCAL_VERIFIED_PUBLIC_IMPLEMENTATION_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_CI_PENDING`
 
 ## Exact source definitions
 
@@ -123,4 +123,7 @@ and the Xi-coordinate heat equation with coefficient `1/4`. The exact Cauchy-Sch
 theta weight, not assumed through a generic inequality wrapper. Targets, exact TargetChecks, seven
 selected standard-only axiom prints, forbidden scans, `git diff --check`, and the 8,693-job full
 build pass locally. Classification is `DISCOVERY_FORMALIZED`, with `hard_gap_delta=0` and
-`route_infrastructure_delta=1`. Public implementation CI is pending.
+`route_infrastructure_delta=1`. Public implementation CI has passed; evidence-backfill CI remains.
+
+Implementation commit `2bc304e9fe2473519c398269b26b0b06b715e593` passed public Lean Action CI
+run `29541314279`, build job `87763968249`, in `2m19s`. Immutable evidence-backfill CI remains.

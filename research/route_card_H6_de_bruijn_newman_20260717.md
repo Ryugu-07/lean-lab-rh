@@ -465,4 +465,8 @@ claims, the exact factors `8,16,32`, both `logDeriv` formulas, and `B^2<=A*C` by
 Targets, the definition-alignment and complete conjunction TargetChecks, seven selected axiom prints, forbidden scans,
 `git diff --check`, and the 8,693-job full build pass locally. Every audited theorem uses only
 `propext`, `Classical.choice`, and `Quot.sound`. Classification is `DISCOVERY_FORMALIZED`, with
-`hard_gap_delta=0` and `route_infrastructure_delta=1`; public implementation CI is pending.
+`hard_gap_delta=0` and `route_infrastructure_delta=1`; public implementation CI has passed.
+
+Implementation commit `2bc304e9fe2473519c398269b26b0b06b715e593` passed public Lean Action CI
+run `29541314279`, build job `87763968249`, in `2m19s`. The fixed endpoint is public;
+evidence-backfill CI remains before campaign closure.
