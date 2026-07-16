@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260717-H6-H0-XI-BRIDGE-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_PASSED_EVIDENCE_BACKFILL_PENDING`
 
 ## Runtime record
 
@@ -105,4 +105,8 @@ Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
 - `preregistration_commit`: `0eab341f1ad74b866fc942ccb9d89e77cbe51438`
 - `preregistration_CI`: public Lean Action run `29493974202`, build job `87606471329`, passed in
   `1m55s` (`2026-07-16T11:19:01Z` to `2026-07-16T11:20:56Z`)
-- `commit_and_CI`: preregistration public; implementation commit and public CI pending
+- `implementation_commit`: `b7824a3b3f3d206617f0a23b124959b6edad937d`
+- `implementation_CI`: public Lean Action run `29500096845`, build job `87626587502`, passed in
+  `2m37s` (`2026-07-16T12:56:04Z` to `2026-07-16T12:58:41Z`)
+- `commit_and_CI`: preregistration and implementation are public; immutable evidence backfill and
+  its public CI remain before closure

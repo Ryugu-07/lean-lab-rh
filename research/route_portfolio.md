@@ -1293,3 +1293,13 @@ and the full 8,683-job build pass locally. Classification is `KNOWN_THEOREM_FORM
 `hard_gap_delta=0` and `route_infrastructure_delta=1`. H6-H/H6-E, including the heat-flow zero
 framework and `Lambda <= 0`, remain open together with W2/G7, M2/G3, and RH. Implementation
 commit and public CI evidence are pending.
+
+## Public Implementation Update: H6 Time-Zero Xi Bridge
+
+Date: 2026-07-17
+
+Implementation commit `b7824a3b3f3d206617f0a23b124959b6edad937d` passed public Lean Action CI run
+`29500096845`, build job `87626587502`, in `2m37s`. The independent build verifies the explicit
+theta kernel, completed-zeta Mellin conversion, global integration-by-parts chain, exact Target
+witnesses, and standard-only axiom audit. Immutable evidence backfill and its own public CI remain
+before campaign closure; H6-H/H6-E and RH are unchanged.
