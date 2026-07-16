@@ -86,3 +86,5 @@ Bombieri-Stepanov/function-field transfer-gap card.
 - Public Lean Action CI run: `29493531239`
 - Build job: `87605050960`
 - Result: success in `2m13s`
+- Evidence commit: `746fc1588cd7d217dd31f20f36a434b3bbefd422`
+- Evidence CI run: `29493755735`, build job `87605769894`, success in `2m05s`
