@@ -2,7 +2,7 @@
 
 Sprint: `EXPOSURE-20260716-RH-SPINES-01`
 
-Status: `ENGINEERING_COMPLETE_P2_HUMAN_PENDING`
+Status: `PUBLIC_ENGINEERING_COMPLETE_P2_HUMAN_PENDING`
 
 ## Runtime record
 
@@ -78,3 +78,13 @@ Status: `ENGINEERING_COMPLETE_P2_HUMAN_PENDING`
 - `hard_gap_delta`: zero; no mathematical frontier is claimed changed
 - `next_state`: publish the governance commit, then enter value-ranked route selection while P2
   remains a human-authored external action
+
+## Loop 6: public closure evidence
+
+- Governance commit `5c0a3eec14afbd02767e6b67fd4f7ba5c183a782` is public on `origin/main`.
+- GitHub Lean Action CI run `29491764123`, build job `87599314511`, completed successfully in
+  `2m10s`.
+- `result`: `PUBLIC_EXPOSURE_ENGINEERING_COMPLETE`
+- `hard_gap_delta`: zero; the result is governance, review, and publication infrastructure
+- `next_state`: `ROUTE_SELECTION`; P2 stays pending as a human-authored external action and does
+  not block research
