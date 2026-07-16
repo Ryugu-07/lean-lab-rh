@@ -324,7 +324,7 @@ private theorem eventually_exists_deBruijnNewmanH_zero_mem_closedBall
   rw [hanalytic_abs.circleAverage_log_norm_of_ne_zero hzero_free_abs] at havg_lower
   exact (not_lt_of_ge havg_lower) hcenter_log
 
-private theorem exists_deBruijnNewmanH_isolating_nonreal_closedBall
+theorem exists_deBruijnNewmanH_isolating_nonreal_closedBall
     {t : ℝ} {z₀ : ℂ} (hz₀_im : z₀.im ≠ 0) :
     ∃ R > 0,
       (∀ z ∈ Metric.sphere z₀ R, deBruijnNewmanH t z ≠ 0) ∧

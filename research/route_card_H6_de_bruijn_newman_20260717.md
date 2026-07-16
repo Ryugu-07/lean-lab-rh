@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `H6_FORWARD_PRESERVATION_SELECTED`
+Status: `H6_FORWARD_PRESERVATION_LOCAL_VERIFIED_PUBLIC_CI_PENDING`
 
 ## Endpoint and normalization
 
@@ -190,8 +190,9 @@ Action CI run `29518062294`, build job `87687972172`, in `2m7s`. Evidence-backfi
 `1m36s`; the campaign is publicly closed.
 
 **Verdict:** `COMPLETE` as `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
-`route_infrastructure_delta=1`. Forward preservation, threshold nonemptiness/upper-ray structure,
-H6-E/G8, W2/G7, M2/G3, and RH remain open.
+`route_infrastructure_delta=1`. At this campaign's closure, forward preservation remained open;
+H6-H2c is now locally proved below. Threshold nonemptiness/upper-ray structure, H6-E/G8, W2/G7,
+M2/G3, and RH remain open.
 
 ## Candidate H6-H2c: de Bruijn forward real-zero preservation
 
@@ -223,7 +224,23 @@ polynomial-surrogate weakenings.
 `h6_forward_preservation_prereg_20260717.md`. Public preregistration CI is required before Lean
 proof-source edits.
 
-**Verdict:** `SELECTED_PENDING_PUBLIC_PREREGISTRATION`.
+Preregistration commit `6e10d6eb74f038575e1d6ab4dcde92eb4e58b2ce` passed public Lean Action CI
+run `29520281656`, build job `87695371156`, in `1m51s`.
+
+**Implementation result.** `DeBruijnNewmanForward.lean` proves the exact endpoint through the
+fixed architecture: source order one, genus-one Hadamard factorization, strict shifted-product
+comparison, de Bruijn vertical averages, finite `cosh` multiplier iteration, dominated locally
+uniform convergence to the exact forward heat multiplier, and Jensen persistence of a nonreal
+zero. No simplicity, spacing, finite-degree, bounded-time, or nonnegative-time premise is added.
+
+The exact target and TargetCheck compile. Four registered axiom prints each contain exactly
+`propext`, `Classical.choice`, and `Quot.sound`; forbidden scans and `git diff --check` pass; and
+the full 8,689-job build succeeds under default resource limits.
+
+**Verdict:** `LOCAL_IMPLEMENTATION_VERIFIED_PUBLIC_CI_PENDING`, classified
+`KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`. Public
+implementation CI is still required before campaign closure. Threshold nonemptiness/upper-time
+existence, H6-E/G8, W2/G7, M2/G3, and RH remain open.
 
 ## Candidate H6-Q: improve the upper bound to one fifth
 
@@ -285,10 +302,10 @@ source normalization and analytic hypotheses.
 
 ## Recommendation
 
-H6-B, H6-H1, H6-H2a, and H6-H2b are publicly complete. Execute the selected H6-H2c forward
-preservation campaign through its public preregistration gate. Keep H6-Q as a later
-`PROOF-ATTEMPT`; closedness and forward preservation still require a nonempty good-time witness
-before they produce a threshold interval.
+H6-B, H6-H1, H6-H2a, and H6-H2b are publicly complete. H6-H2c is locally complete and awaits
+public implementation CI. After public closure, value-rank the nonempty good-time/upper-time
+witness needed to turn closedness and forward preservation into a threshold interval against
+direct H6-E/G8, W2/G7, and M2/G3 attacks. Keep H6-Q as a later `PROOF-ATTEMPT`.
 
 ## Candidate H6-Y: reverse-heat Li transfer audit
 

@@ -128,7 +128,19 @@ private theorem norm_deBruijnNewmanPhi_le_heatMajor {u : ℝ} (hu : 0 ≤ u) :
       rw [tsum_mul_right]
       rfl
 
-private theorem integrableOn_dbn_exp_sq_mul_exp_neg_exp
+/-- The source kernel admits a uniform double-exponential bound on the positive half-line. -/
+theorem exists_norm_deBruijnNewmanPhi_le_doubleExp :
+    ∃ A ≥ 0, ∀ {u : ℝ}, 0 ≤ u →
+      ‖deBruijnNewmanPhi u‖ ≤
+        A * Real.exp (9 * u) * Real.exp (-(π / 2) * Real.exp (4 * u)) := by
+  refine ⟨dbnHeatIndexMajorSum, dbnHeatIndexMajorSum_nonneg, ?_⟩
+  intro u hu
+  have hexponent : -(π / 2) * Real.exp (4 * u) =
+      -π * Real.exp (4 * u) / 2 := by ring
+  rw [hexponent]
+  exact norm_deBruijnNewmanPhi_le_heatMajor hu
+
+theorem integrableOn_dbn_exp_sq_mul_exp_neg_exp
     (a : ℝ) (ha : 0 < a) (c : ℝ) (_hc : 0 ≤ c) (d : ℝ) :
     IntegrableOn
       (fun u : ℝ ↦ Real.exp (c * u ^ 2 + d * u) *
@@ -268,7 +280,7 @@ theorem integrableOn_one_add_sq_mul_exp_mul_norm_deBruijnNewmanPhi
                   Real.exp (-π * Real.exp (4 * u) / 2) := by ring
           _ = _ := by rw [hexp]; ring
 
-private theorem aestronglyMeasurable_deBruijnNewmanPhi
+theorem aestronglyMeasurable_deBruijnNewmanPhi
     (μ : Measure ℝ) : AEStronglyMeasurable deBruijnNewmanPhi μ := by
   have hterms : ∀ n : ℕ, AEStronglyMeasurable
       (fun u : ℝ ↦ deBruijnNewmanPhiTerm n u) μ := fun n ↦ by
@@ -340,7 +352,7 @@ private theorem aestronglyMeasurable_dbnHeatSecondMomentIntegrand (t : ℝ) (z :
     (by fun_prop : Continuous (fun u : ℝ ↦ Complex.cos (z * (u : ℂ)))).aestronglyMeasurable
   exact (Complex.continuous_ofReal.comp_aestronglyMeasurable hreal).mul hcos
 
-private theorem integrableOn_dbnHeatCosIntegrand (t : ℝ) (z : ℂ) :
+theorem integrableOn_dbnHeatCosIntegrand (t : ℝ) (z : ℂ) :
     IntegrableOn
       (fun u : ℝ ↦
         (((Real.exp (t * u ^ 2) * deBruijnNewmanPhi u : ℝ) : ℂ) *
@@ -627,6 +639,11 @@ theorem differentiable_deBruijnNewmanH (t : ℝ) :
 theorem deriv_deBruijnNewmanH (t : ℝ) (z : ℂ) :
     deriv (deBruijnNewmanH t) z = deBruijnNewmanHSpatialFirstMoment t z :=
   (hasDerivAt_deBruijnNewmanH_spatial t z).deriv
+
+theorem deriv_deBruijnNewmanH_zero (t : ℝ) :
+    deriv (deBruijnNewmanH t) 0 = 0 := by
+  rw [deriv_deBruijnNewmanH, deBruijnNewmanHSpatialFirstMoment]
+  simp
 
 private theorem hasDerivAt_dbnFirstSpatialFactor (z : ℂ) (u : ℝ) :
     HasDerivAt

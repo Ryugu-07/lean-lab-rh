@@ -3,6 +3,7 @@ import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
+import LeanLab.Riemann.DeBruijnNewmanForward
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiZeroDivisor
@@ -809,7 +810,15 @@ def rhTargets : List ResearchTarget :=
         "For the exact source-normalized family, prove that the set of real times at which every complex zero of H_t is real is closed, without a simple-zero assumption."
       leanName := some ``isClosed_setOf_deBruijnNewmanAllZerosReal
       status := .proven
-      note := "Campaign CAMPAIGN-20260717-H6-THRESHOLD-CLOSEDNESS-01 proves joint time-space continuity, strict positivity at spatial zero, arbitrary-multiplicity zero persistence through Jensen's logarithmic circle mean, and exact closedness. Forward preservation, nonempty upper-time existence, H6-E/G8, and RH remain open." },
+      note := "Campaign CAMPAIGN-20260717-H6-THRESHOLD-CLOSEDNESS-01 proves joint time-space continuity, strict positivity at spatial zero, arbitrary-multiplicity zero persistence through Jensen's logarithmic circle mean, and exact closedness. That campaign did not prove forward preservation; H6-H2c now proves it separately. Nonempty upper-time existence, H6-E/G8, and RH remain open." },
+    { id := "H6.debruijn-newman.forward-preservation"
+      tier := .tier2
+      title := "Prove forward preservation of real zeros"
+      statement :=
+        "For arbitrary real t <= tau, prove that all zeros of H_t being real implies all zeros of H_tau are real, with no extra simplicity, spacing, bounded-time, or nonnegative-time hypothesis."
+      leanName := some ``deBruijnNewmanAllZerosReal_mono
+      status := .proven
+      note := "Campaign CAMPAIGN-20260717-H6-FORWARD-PRESERVATION-01 proves the exact source-normalized two-time implication through order-one Hadamard factorization, de Bruijn vertical-shift averages, scaled cosh heat multipliers, dominated compact-uniform convergence, and Jensen zero persistence. This closes forward preservation only; threshold nonemptiness, H6-E/G8, W2/G7, M2/G3, and RH remain open." },
     { id := "H6.audit.reverse-heat-li-transfer"
       tier := .tier2
       title := "Falsify generic reverse-heat Li transfer"

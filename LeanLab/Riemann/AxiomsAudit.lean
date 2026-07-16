@@ -3,6 +3,7 @@ import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
+import LeanLab.Riemann.DeBruijnNewmanForward
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiZeroDivisor
@@ -368,6 +369,10 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.deBruijnNewmanH_zero_ne_zero
 #print axioms LeanLab.Riemann.continuous_deBruijnNewmanH_joint
 #print axioms LeanLab.Riemann.isClosed_setOf_deBruijnNewmanAllZerosReal
+#print axioms LeanLab.Riemann.deBruijnNewmanH_entireOfOrderAtMost_one
+#print axioms LeanLab.Riemann.exists_deBruijnNewmanH_constant_hadamard_factorization
+#print axioms LeanLab.Riemann.deBruijnNewman_verticalAverage_allZerosReal
+#print axioms LeanLab.Riemann.deBruijnNewmanAllZerosReal_mono
 #print axioms LeanLab.Riemann.norm_le_of_forall_norm_finiteComplexPowerSum_le
 #print axioms LeanLab.Riemann.norm_eq_sqrt_of_powerSum_bound_and_reciprocal
 #print axioms LeanLab.Riemann.h6AuditHeatXiQuadratic_one_allZerosOnCriticalLine

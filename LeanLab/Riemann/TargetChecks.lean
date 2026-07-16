@@ -2,6 +2,7 @@ import LeanLab.Riemann.Targets
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
+import LeanLab.Riemann.DeBruijnNewmanForward
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiSymmetricZeroFormula
@@ -1129,6 +1130,11 @@ example : Continuous (fun p : ℝ × ℂ ↦ deBruijnNewmanH p.1 p.2) :=
 
 example : IsClosed {t : ℝ | deBruijnNewmanAllZerosReal t} :=
   isClosed_setOf_deBruijnNewmanAllZerosReal
+
+example {t tau : ℝ} (htt : t ≤ tau)
+    (ht : deBruijnNewmanAllZerosReal t) :
+    deBruijnNewmanAllZerosReal tau :=
+  deBruijnNewmanAllZerosReal_mono htt ht
 
 example {ι : Type*} [Fintype ι] (alpha : ι → ℂ)
     {R C : ℝ} (hR : 0 < R) (hC : 0 ≤ C)

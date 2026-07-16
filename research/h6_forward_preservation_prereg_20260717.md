@@ -6,7 +6,7 @@ Campaign: `CAMPAIGN-20260717-H6-FORWARD-PRESERVATION-01`
 
 Mode: `LITERATURE`
 
-Status: `SELECTED_PENDING_PUBLIC_PREREGISTRATION`
+Status: `LOCAL_IMPLEMENTATION_VERIFIED_PUBLIC_CI_PENDING`
 
 ## Route selection
 
@@ -162,4 +162,29 @@ No Lean proof source may be edited before this preregistration passes public Lea
 
 ## Public preregistration gate
 
-Pending. Lean proof-source edits begin only after the preregistration commit passes public CI.
+Preregistration commit `6e10d6eb74f038575e1d6ab4dcde92eb4e58b2ce` passed public Lean Action CI
+run `29520281656`, build job `87695371156`, in `1m51s`. Lean proof-source edits may begin from
+this fixed endpoint and architecture.
+
+## Local implementation result
+
+`LeanLab/Riemann/DeBruijnNewmanForward.lean` compiles the exact fixed endpoint
+`deBruijnNewmanAllZerosReal_mono` without additional hypotheses. The implementation proves the
+source order-one bound, genus-one Hadamard factorization with the linear exponent eliminated,
+strict shifted-product comparison, vertical-average real-zero preservation, finite shift
+iteration, the scaled `cosh` heat-multiplier limit with an integrable scalar-error majorant, and
+Jensen persistence of an isolated nonreal zero in the locally uniform limit.
+
+The exact Targets entry and TargetCheck compile. The registered witnesses
+`deBruijnNewmanH_entireOfOrderAtMost_one`,
+`exists_deBruijnNewmanH_constant_hadamard_factorization`,
+`deBruijnNewman_verticalAverage_allZerosReal`, and
+`deBruijnNewmanAllZerosReal_mono` each print exactly the transitive axioms `propext`,
+`Classical.choice`, and `Quot.sound`. The new module has no diagnostics under default resource
+limits; forbidden proof-token, custom-declaration, and resource-relaxation scans are empty;
+`git diff --check` passes; and the full 8,689-job build succeeds.
+
+This is `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`. Public implementation CI remains pending, so the campaign is not
+yet publicly closed. Threshold nonemptiness and upper-time existence, H6-E/G8, W2/G7, M2/G3,
+and RH remain open.
