@@ -1234,3 +1234,19 @@ run `29487332091`, build job `87584836879`, in `1m53s`. The exact arbitrary-fini
 equivalence, constrained compact separator, conjugate-reflection autocorrelation, and complete
 off-line negative arithmetic witness are independently public-built. Immutable evidence backfill
 and its own public CI remain before campaign closure; W2/G7 and RH remain open.
+
+## Public Closure Update: R5 Compact Weil Criterion
+
+Date: 2026-07-16
+
+Evidence-backfill commit `03e1661b077ab8d3e2f8c9b93b19aa63c3c1eebc` passed public Lean Action CI
+run `29487596817`, build job `87585683179`, in `2m6s`. Together with preregistration run
+`29484731600` and implementation commit `d590ee42e37366388800bafda04020a84eee8452`, run
+`29487332091`, campaign `CAMPAIGN-20260716-R5-COMPACT-WEIL-CRITERION-01` is publicly closed as
+`KNOWN_THEOREM_FORMALIZED`.
+
+The source-level compact-support RH-equivalent Weil criterion is complete for arbitrary finite
+zero-free `F` containing `0,1`. This changes one W1/G6 compact-criterion edge only. It does not
+prove the arithmetic quadratic nonnegative unconditionally, so W2/G7 and RH remain open; the
+full-class quotient/completeness and distributional extension also remain open. The persistent RH
+Goal returns to fresh independent route selection.

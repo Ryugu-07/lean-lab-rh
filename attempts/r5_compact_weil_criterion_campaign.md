@@ -2,6 +2,8 @@
 
 Campaign: `CAMPAIGN-20260716-R5-COMPACT-WEIL-CRITERION-01`
 
+Status: `PUBLICLY_CLOSED`
+
 ## Runtime Record
 
 - `model`: Codex, GPT-5 family (exact backend identifier not exposed)
@@ -98,3 +100,15 @@ Campaign: `CAMPAIGN-20260716-R5-COMPACT-WEIL-CRITERION-01`
 - `result`: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 - `hard_gap_delta`: one W1/G6 compact-criterion edge, pending immutable evidence-backfill CI
 - `next_state`: `PUBLIC_EVIDENCE_GATE`
+
+## Loop 7: public evidence and campaign closure
+
+- Evidence-backfill commit `03e1661b077ab8d3e2f8c9b93b19aa63c3c1eebc` passed Lean Action CI run
+  `29487596817`, build job `87585683179`, in `2m6s`.
+- Together with preregistration run `29484731600` and implementation run `29487332091`, the fixed
+  endpoint has independent public preregistration, implementation, and immutable evidence builds.
+- `result`: `KNOWN_THEOREM_FORMALIZED`
+- `hard_gap_delta`: one source-level W1/G6 compact-criterion edge; zero for W2/G7 and RH
+- `remaining_open`: quotient/completeness and full-class regularization in W1/G6; unconditional
+  positivity W2/G7; G3/M2; RH
+- `next_state`: `PUBLIC_CLOSURE_COMMIT -> INDEPENDENT_AUDIT -> ROUTE_SELECTION`
