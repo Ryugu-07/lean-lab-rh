@@ -1040,3 +1040,26 @@ run `29464469804`, build job `87514591845`, in `1m43s`. Together with preregistr
 `29464308480`, campaign `CAMPAIGN-20260716-R5-COMPACT-WEIL-ZERO-CUTOFF-01` is publicly closed as
 `BRIDGE_REDUCED`. Return to fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`; the compact arithmetic
 explicit formula, W2/G7, G3/M2, and RH remain open.
+
+## Selection Update: R5 Compact Weil Arithmetic Formula
+
+Date: 2026-07-16
+
+After public closure of the compact zero-side cutoff, fresh DISCOVERY route selection audits the
+remaining W1c1 arithmetic subedge. Mathlib already turns smooth compact-support functions into
+Schwartz maps and supplies Fourier inversion; the project supplies sixth-order compact decay, the
+generic two-pole residue skeleton, digamma growth, the von-Mangoldt L-series, and the selected xi
+zero-side limit.
+
+Five candidates were screened. Prime inversion alone, generic pole/Gamma helpers alone, and finite
+physical support alone are incomplete endpoints. A new compact RH positivity criterion would
+repeat the compiled Gaussian reverse separator without an unconditional sign mechanism. Campaign
+`CAMPAIGN-20260716-R5-COMPACT-WEIL-ARITHMETIC-FORMULA-01` therefore selects the complete
+compact-smooth formula with an explicit finite von-Mangoldt side.
+
+The fixed endpoint must recover the exact physical weight
+`pi*vonMangoldt(n)*(f(log n)+f(-log n)/n)`, prove its finite natural support, evaluate the pole pair
+as `2*pi*F(1)`, prove GammaR integrability, and assemble these with the complete multiplicity-
+bearing zero sum. Success reduces the fixed W1c1 compact arithmetic subedge but does not prove
+quotient/completeness, regularization, W2/G7, G3/M2, or RH. Exact rejection conditions are fixed in
+`research/r5_compact_weil_arithmetic_formula_prereg_20260716.md` before Lean proof edits.
