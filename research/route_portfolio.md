@@ -1132,3 +1132,24 @@ as a corollary. Success reduces only the W1 compact finite-regularity subedge; q
 full-class regularization, W2/G7, G3/M2, and RH remain open. Exact adversarial and rejection
 conditions are preregistered in
 `research/r5_compact_c6_explicit_formula_prereg_20260716.md` before Lean proof edits.
+
+## Local Completion Update: R5 Compact C6 Explicit Formula
+
+Date: 2026-07-16
+
+The exact preregistered endpoint now compiles as
+`symmetrizedCompactLaplaceXi_arithmetic_explicit_formula_sixContDiff`. The compact zero-cutoff
+module derives the required transform identities and selected top-edge limit from exactly six
+continuous derivatives. The arithmetic module no longer passes through a Schwartz wrapper:
+continuity plus inverse-square Fourier decay proves ordinary Fourier inversion, while inverse-sixth
+decay proves the first absolute Fourier moment needed for the GammaR term.
+
+The old `C-infinity` theorem remains as a compatibility corollary. Independent compilation of both
+analytic modules, exact Targets and TargetChecks, five standard-only axiom prints, empty forbidden
+scans, `git diff --check`, and the full 8,681-job build pass locally. Preregistration commit
+`540b0ddcbf90a219084f8fdcb80a02ddaad5e277` passed public CI run `29467845311`, build job
+`87524663724`.
+
+Classify as `BRIDGE_REDUCED`, with `hard_gap_delta=1` only at `W1c1c2`, the compact finite-
+regularity subedge. Quotient/completeness, full-class regularization, W2/G7, G3/M2, and RH remain
+open. Implementation publication and independent public CI are the next evidence gate.

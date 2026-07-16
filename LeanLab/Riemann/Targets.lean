@@ -355,6 +355,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``symmetrizedCompactLaplaceXi_arithmetic_explicit_formula
       status := .proven
       note := "Campaign CAMPAIGN-20260716-R5-COMPACT-WEIL-ARITHMETIC-FORMULA-01 proves exact two-branch Schwartz Fourier inversion with the 2*pi scaling, the reflected 1/n prime factor, finite physical prime support from compact support, full-line pole and GammaR integrability, and the selected-height arithmetic limit. Implementation 55a6406f235a7548bf7f7d53ae5d30014795e9ce and evidence ed5d03f65bd234f95afb55389b2766d611a3eeab passed public Lean Action CI runs 29466850965 and 29467021669. This closes the W1c1 compact arithmetic subedge only; quotient/completeness, distributional regularization, W2/G7 positivity, and RH remain open." },
+    { id := "T2.weil.compact-c6-arithmetic-formula"
+      tier := .tier2
+      title := "Extend the compact Weil formula to six derivatives"
+      statement :=
+        "For every compactly supported additive-log function with six continuous derivatives and c>1, prove the complete reflection-symmetrized xi explicit formula with the multiplicity-bearing zero tsum, both elementary poles, the GammaR integral, and an explicitly finite von-Mangoldt side."
+      leanName := some ``symmetrizedCompactLaplaceXi_arithmetic_explicit_formula_sixContDiff
+      status := .proven
+      note := "Campaign CAMPAIGN-20260716-R5-COMPACT-C6-EXPLICIT-FORMULA-01 removes the C-infinity Schwartz wrapper from the compact formula. General Fourier inversion is justified by inverse-square Fourier decay, the first absolute moment follows from inverse-sixth decay, and the selected xi top edge uses exactly six continuous derivatives. Independent module checks, exact target checks, standard-only axiom audits, forbidden scans, and the full 8,681-job build pass locally. Preregistration commit 540b0ddcbf90a219084f8fdcb80a02ddaad5e277 passed public CI run 29467845311. This closes only the compact finite-regularity W1 subedge; quotient/completeness, full-class regularization, W2/G7 positivity, and RH remain open. Implementation publication is pending." },
     { id := "T2.audit.gaussian-prime-kernel-sign"
       tier := .tier2
       title := "Audit the sign of one Gaussian prime-power kernel"

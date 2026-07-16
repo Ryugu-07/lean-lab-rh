@@ -26,3 +26,27 @@ Campaign: `CAMPAIGN-20260716-R5-COMPACT-C6-EXPLICIT-FORMULA-01`
 - `hard_gap_delta`: zero during selection
 - `next_state`: `PROOF_ATTEMPT_A`
 
+## Loop 2: finite-order Fourier inversion and exact endpoint
+
+- Generalized the compact zero-cutoff estimates from `ContDiff R infinity` to
+  `ContDiff R 6`, while preserving every old smooth theorem as a compatibility corollary.
+- Proved finite-order transform identities through six derivatives and reused the resulting
+  inverse-sixth decay for the selected xi top edge.
+- Removed the arithmetic proof's Schwartz dependency. General Fourier inversion now follows from
+  continuity and inverse-square Fourier decay; the first absolute Fourier moment follows from
+  inverse-sixth decay.
+- Lean proves the preregistered endpoint
+  `symmetrizedCompactLaplaceXi_arithmetic_explicit_formula_sixContDiff` with the unchanged
+  multiplicity-bearing zero sum, pole term, GammaR integral, and finite von-Mangoldt sum.
+- Both edited analytic modules compile independently without diagnostics. Exact Targets and
+  TargetChecks pass, `git diff --check` passes, forbidden declaration and proof-token scans are
+  empty, and the full 8,681-job project build succeeds.
+- Five selected transitive axiom prints contain only `propext`, `Classical.choice`, and
+  `Quot.sound`.
+- Preregistration commit `540b0ddcbf90a219084f8fdcb80a02ddaad5e277` passed public Lean Action CI
+  run `29467845311`, build job `87524663724`, in approximately `2m3s`.
+- `result`: `LOCAL_ENDPOINT_COMPLETE`
+- `classification`: `BRIDGE_REDUCED`
+- `hard_gap_delta`: one only at the compact finite-regularity edge `W1c1c2`
+- `unchanged_frontier`: quotient/completeness, full-class regularization, W2/G7, G3/M2, and RH
+- `next_state`: `PUBLIC_IMPLEMENTATION_GATE`

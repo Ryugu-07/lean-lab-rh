@@ -10,9 +10,10 @@ set_option linter.style.longLine false
 # The compact-smooth zero side of Weil's explicit formula
 
 This module proves the selected-height xi zero-cutoff passage for the reflection symmetrization of
-the bilateral Laplace transform of every smooth compactly supported function on the logarithmic
-line. Six integrations by parts provide enough decay to absorb the project's coarse fourth-power
-bound for the xi logarithmic derivative on the selected horizontal edges.
+the bilateral Laplace transform of every compactly supported function with six continuous
+derivatives on the logarithmic line. Six integrations by parts provide enough decay to absorb the
+project's coarse fourth-power bound for the xi logarithmic derivative on the selected horizontal
+edges.
 -/
 
 open Complex Filter Function MeasureTheory Set Topology
@@ -141,16 +142,39 @@ theorem compactLaplaceTransform_iterate_deriv {f : ℝ → ℂ}
       rw [pow_succ']
       ring
 
+/-- Repeated integration by parts through the sixth derivative needs only six continuous
+derivatives, rather than a Schwartz-smooth physical function. -/
+theorem compactLaplaceTransform_iterate_deriv_of_le_six {f : ℝ → ℂ}
+    (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f) (s : ℂ) :
+    ∀ n : ℕ, n ≤ 6 →
+      compactLaplaceTransform (deriv^[n] f) s =
+        (-s) ^ n * compactLaplaceTransform f s
+  | 0, _ => by simp
+  | n + 1, hn => by
+      have hn6 : n ≤ 6 := Nat.le_trans (Nat.le_succ n) hn
+      have hnreg : ContDiff ℝ 1 (deriv^[n] f) := by
+        apply ContDiff.iterate_deriv' 1 n
+        apply hf.of_le
+        exact_mod_cast (show 1 + n ≤ 6 by simpa [Nat.add_comm] using hn)
+      rw [Function.iterate_succ_apply',
+        compactLaplaceTransform_deriv hnreg
+          (hasCompactSupport_iterate_deriv hfsupp n) s,
+        compactLaplaceTransform_iterate_deriv_of_le_six hf hfsupp s n hn6]
+      rw [pow_succ']
+      ring
+
 /-- A fixed-strip mass for the sixth derivative of a compactly supported function. -/
 def compactLaplaceSixthDerivativeMass (c : ℝ) (f : ℝ → ℂ) : ℝ :=
   ∫ x : ℝ, Real.exp (c * |x|) * ‖deriv^[6] f x‖
 
 theorem integrable_compactLaplaceSixthDerivativeMajorant
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f) (c : ℝ) :
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f) (c : ℝ) :
     Integrable (fun x : ℝ => Real.exp (c * |x|) * ‖deriv^[6] f x‖) := by
+  have hderiv : ContDiff ℝ 0 (deriv^[6] f) := by
+    simpa using ContDiff.iterate_deriv' 0 6 hf
   apply Continuous.integrable_of_hasCompactSupport
   · exact (Real.continuous_exp.comp
-      (continuous_const.mul continuous_abs)).mul (hf.iterate_deriv 6).continuous.norm
+      (continuous_const.mul continuous_abs)).mul hderiv.continuous.norm
   · exact (hasCompactSupport_iterate_deriv hfsupp 6).norm.mul_left
 
 theorem compactLaplaceSixthDerivativeMass_nonneg (c : ℝ) (f : ℝ → ℂ) :
@@ -172,7 +196,7 @@ theorem norm_compactLaplaceKernel_le_exp_mul_abs
     _ ≤ c * |x| := by gcongr
 
 theorem norm_compactLaplaceTransform_sixthDeriv_le_mass
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     {c : ℝ} {s : ℂ} (hre : |s.re| ≤ c) :
     ‖compactLaplaceTransform (deriv^[6] f) s‖ ≤
       compactLaplaceSixthDerivativeMass c f := by
@@ -183,13 +207,13 @@ theorem norm_compactLaplaceTransform_sixthDeriv_le_mass
 
 /-- Six integrations by parts give inverse-sixth-power decay on every fixed real strip. -/
 theorem norm_compactLaplaceTransform_le_mass_mul_inv_pow_six
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     {c : ℝ} {s : ℂ} (hs0 : s ≠ 0) (hre : |s.re| ≤ c) :
     ‖compactLaplaceTransform f s‖ ≤
       compactLaplaceSixthDerivativeMass c f * (‖s‖⁻¹ ^ (6 : ℕ)) := by
   have hbound := norm_compactLaplaceTransform_sixthDeriv_le_mass hf hfsupp hre
   have hnorm : 0 < ‖s‖ := norm_pos_iff.mpr hs0
-  have hident := compactLaplaceTransform_iterate_deriv hf hfsupp s 6
+  have hident := compactLaplaceTransform_iterate_deriv_of_le_six hf hfsupp s 6 le_rfl
   calc
     ‖compactLaplaceTransform f s‖ =
         ‖compactLaplaceTransform (deriv^[6] f) s‖ * (‖s‖⁻¹ ^ (6 : ℕ)) := by
@@ -201,7 +225,7 @@ theorem norm_compactLaplaceTransform_le_mass_mul_inv_pow_six
 /-- On a selected top edge, reflection-symmetrized compact Laplace weights have uniform
 inverse-sixth-power decay in the height scale. -/
 theorem norm_symmetrizedCompactLaplaceWeight_selectedTopEdge_le
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     {c : ℝ} (hc : 1 < c) (n : ℕ) {x : ℝ} (hx : x ∈ [[1 - c, c]]) :
     ‖symmetrizedCompactLaplaceWeight f
         ((x : ℂ) + gaussianXiSelectedHeight c n * I)‖ ≤
@@ -281,7 +305,7 @@ theorem norm_symmetrizedCompactLaplaceWeight_selectedTopEdge_le
 
 /-- The selected compact-weight top integral is bounded by an inverse square of the height scale. -/
 theorem exists_norm_symmetrizedCompactLaplaceTopHorizontalIntegral_le
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     {c : ℝ} (hc : 1 < c) :
     ∃ B : ℝ, 0 ≤ B ∧ ∀ n : ℕ,
       ‖selectedXiTopHorizontalIntegralFor
@@ -331,7 +355,7 @@ theorem exists_norm_symmetrizedCompactLaplaceTopHorizontalIntegral_le
       ring
 
 theorem tendsto_symmetrizedCompactLaplaceTopHorizontalIntegral
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     {c : ℝ} (hc : 1 < c) :
     Tendsto
       (selectedXiTopHorizontalIntegralFor
@@ -347,10 +371,10 @@ theorem tendsto_symmetrizedCompactLaplaceTopHorizontalIntegral
   · exact Filter.Eventually.of_forall fun n => hbound n
   · simpa using (hinv.pow 2).const_mul B
 
-/-- Every smooth compactly supported logarithmic test function, after explicit reflection
+/-- Every compactly supported `C^6` logarithmic test function, after explicit reflection
 symmetrization, satisfies the complete multiplicity-bearing selected xi zero-cutoff limit. -/
-theorem tendsto_symmetrizedCompactLaplaceXiRightVerticalIntegral
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+theorem tendsto_symmetrizedCompactLaplaceXiRightVerticalIntegral_sixContDiff
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     {c : ℝ} (hc : 1 < c) :
     Tendsto
       (selectedXiRightVerticalIntegralFor
@@ -364,9 +388,24 @@ theorem tendsto_symmetrizedCompactLaplaceXiRightVerticalIntegral
     (differentiable_symmetrizedCompactLaplaceWeight hf.continuous hfsupp)
     (symmetrizedCompactLaplaceWeight_one_sub f)
     (summable_symmetrizedCompactLaplaceWeight_xiDivisorZero
-      (hf.of_le (WithTop.coe_le_coe.mpr (OrderTop.le_top (2 : ℕ∞)))) hfsupp)
+      (hf.of_le (by norm_num)) hfsupp)
     hc
   exact tendsto_symmetrizedCompactLaplaceTopHorizontalIntegral hf hfsupp hc
+
+/-- Compatibility form of the compact zero-cutoff theorem for smooth test functions. -/
+theorem tendsto_symmetrizedCompactLaplaceXiRightVerticalIntegral
+    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {c : ℝ} (hc : 1 < c) :
+    Tendsto
+      (selectedXiRightVerticalIntegralFor
+        (symmetrizedCompactLaplaceWeight f) c)
+      atTop
+      (𝓝 ((Real.pi : ℂ) *
+        ∑' p : RiemannXiDivisorZeroIndex,
+          symmetrizedCompactLaplaceWeight f
+            (riemannXiDivisorZeroValue p))) := by
+  exact tendsto_symmetrizedCompactLaplaceXiRightVerticalIntegral_sixContDiff
+    (hf.of_le (WithTop.coe_le_coe.mpr (OrderTop.le_top (6 : ℕ∞)))) hfsupp hc
 
 end
 

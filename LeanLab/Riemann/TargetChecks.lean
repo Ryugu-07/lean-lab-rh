@@ -965,6 +965,18 @@ example {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport 
             (riemannXiDivisorZeroValue p))) :=
   tendsto_symmetrizedCompactLaplaceXiRightVerticalIntegral hf hfsupp hc
 
+example {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
+    {c : ℝ} (hc : 1 < c) :
+    Filter.Tendsto
+      (selectedXiRightVerticalIntegralFor
+        (symmetrizedCompactLaplaceWeight f) c)
+      Filter.atTop
+      (nhds ((Real.pi : ℂ) *
+        ∑' p : RiemannXiDivisorZeroIndex,
+          symmetrizedCompactLaplaceWeight f
+            (riemannXiDivisorZeroValue p))) :=
+  tendsto_symmetrizedCompactLaplaceXiRightVerticalIntegral_sixContDiff hf hfsupp hc
+
 example {f : ℝ → ℂ} (hfsupp : HasCompactSupport f) :
     Function.HasFiniteSupport (compactSymmetrizedVonMangoldtWeight f) :=
   hasFiniteSupport_compactSymmetrizedVonMangoldtWeight hfsupp
@@ -978,6 +990,16 @@ example {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport 
         compactSymmetrizedXiArchimedeanIntegral f c -
         ∑' n : ℕ, compactSymmetrizedVonMangoldtWeight f n :=
   symmetrizedCompactLaplaceXi_arithmetic_explicit_formula hf hfsupp hc
+
+example {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
+    {c : ℝ} (hc : 1 < c) :
+    (Real.pi : ℂ) * ∑' p : RiemannXiDivisorZeroIndex,
+        symmetrizedCompactLaplaceWeight f
+          (riemannXiDivisorZeroValue p) =
+      2 * (Real.pi : ℂ) * symmetrizedCompactLaplaceWeight f 1 +
+        compactSymmetrizedXiArchimedeanIntegral f c -
+        ∑' n : ℕ, compactSymmetrizedVonMangoldtWeight f n :=
+  symmetrizedCompactLaplaceXi_arithmetic_explicit_formula_sixContDiff hf hfsupp hc
 
 example :
     ∃ a : ℝ, ∃ b : Fin 2 → ℝ,

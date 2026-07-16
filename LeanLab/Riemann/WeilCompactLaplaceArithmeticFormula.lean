@@ -1,5 +1,7 @@
 import LeanLab.Riemann.WeilCompactLaplaceZeroCutoff
 import Mathlib.Analysis.Distribution.SchwartzSpace.Fourier
+import Mathlib.Analysis.SpecialFunctions.JapaneseBracket
+import Mathlib.MeasureTheory.Integral.Asymptotics
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -36,8 +38,8 @@ def compactLaplaceFourierDensity (f : ℝ → ℂ) (c x : ℝ) : ℂ :=
   Complex.exp ((c : ℂ) * (x : ℂ)) * f x
 
 theorem contDiff_compactLaplaceFourierDensity {f : ℝ → ℂ}
-    (hf : ContDiff ℝ ∞ f) (c : ℝ) :
-    ContDiff ℝ ∞ (compactLaplaceFourierDensity f c) := by
+    (hf : ContDiff ℝ 6 f) (c : ℝ) :
+    ContDiff ℝ 6 (compactLaplaceFourierDensity f c) := by
   unfold compactLaplaceFourierDensity
   exact ((contDiff_const.mul Complex.ofRealCLM.contDiff).cexp).mul hf
 
@@ -63,27 +65,138 @@ theorem compactLaplaceTransform_vertical_eq_fourier
   field_simp [Real.pi_ne_zero]
   ring_nf
 
+/-- The Fourier transform of a vertical compact-Laplace density, rewritten at its purely
+imaginary Laplace argument. -/
+theorem fourier_compactLaplaceDensity_eq_compactLaplaceTransform
+    (f : ℝ → ℂ) (c w : ℝ) :
+    𝓕 (compactLaplaceFourierDensity f c) w =
+      compactLaplaceTransform (compactLaplaceFourierDensity f c)
+        (((-2 * Real.pi * w : ℝ) : ℂ) * I) := by
+  have h := compactLaplaceTransform_vertical_eq_fourier
+    (compactLaplaceFourierDensity f c) 0 (-2 * Real.pi * w)
+  have hdensity : compactLaplaceFourierDensity
+      (compactLaplaceFourierDensity f c) 0 = compactLaplaceFourierDensity f c := by
+    funext x
+    simp [compactLaplaceFourierDensity]
+  have hfreq : -(-2 * Real.pi * w) / (2 * Real.pi) = w := by
+    field_simp [Real.pi_ne_zero]
+  rw [hdensity] at h
+  simpa only [ofReal_zero, zero_add, hfreq] using h.symm
+
+/-- A continuous function with inverse-square decay off a compact interval is integrable. -/
+theorem integrable_of_continuous_norm_le_abs_inv_sq
+    {E : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E]
+    {g : ℝ → E} (hg : Continuous g) {C : ℝ} (hC : 0 ≤ C)
+    (hbound : ∀ x : ℝ, 1 < |x| → ‖g x‖ ≤ C * (|x|⁻¹ ^ (2 : ℕ))) :
+    Integrable g := by
+  let j : ℝ → ℝ := fun x => (1 + |x|)⁻¹ ^ (2 : ℕ)
+  have hjRaw : Integrable (fun x : ℝ => (1 + ‖x‖) ^ (-(2 : ℝ))) := by
+    exact integrable_one_add_norm (by norm_num)
+  have hj : Integrable j := by
+    apply hjRaw.congr
+    filter_upwards [] with x
+    have hxpos : 0 < 1 + |x| := by positivity
+    simp only [j, Real.norm_eq_abs, Real.rpow_neg hxpos.le,
+      inv_pow]
+    congr 1
+    exact Real.rpow_natCast _ _
+  have hlarge : ∀ᶠ x : ℝ in cocompact ℝ, 1 < |x| := by
+    filter_upwards [(isCompact_closedBall (0 : ℝ) 1).compl_mem_cocompact] with x hx
+    simpa [Metric.mem_closedBall, Real.dist_eq] using hx
+  have hO : g =O[cocompact ℝ] j := by
+    rw [Asymptotics.isBigO_iff]
+    refine ⟨4 * C, ?_⟩
+    filter_upwards [hlarge] with x hx
+    have hx0 : 0 < |x| := lt_trans zero_lt_one hx
+    have hsum : 1 + |x| ≤ 2 * |x| := by linarith
+    have hinvSum : (2 * |x|)⁻¹ ≤ (1 + |x|)⁻¹ := by
+      simpa only [one_div] using one_div_le_one_div_of_le (by positivity) hsum
+    have hsq : |x|⁻¹ ^ (2 : ℕ) ≤ 4 * ((1 + |x|)⁻¹ ^ (2 : ℕ)) := by
+      calc
+        |x|⁻¹ ^ (2 : ℕ) = 4 * ((2 * |x|)⁻¹ ^ (2 : ℕ)) := by
+          field_simp [hx0.ne']
+          ring
+        _ ≤ 4 * ((1 + |x|)⁻¹ ^ (2 : ℕ)) := by gcongr
+    calc
+      ‖g x‖ ≤ C * (|x|⁻¹ ^ (2 : ℕ)) := hbound x hx
+      _ ≤ C * (4 * ((1 + |x|)⁻¹ ^ (2 : ℕ))) := by gcongr
+      _ = (4 * C) * ‖j x‖ := by
+        rw [Real.norm_of_nonneg]
+        · dsimp only [j]
+          ring
+        · positivity
+  exact hg.locallyIntegrable.integrable_of_isBigO_cocompact
+    hO (hj.integrableAtFilter (cocompact ℝ))
+
+theorem norm_fourier_compactLaplaceDensity_le_abs_inv_sq
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
+    (c : ℝ) (w : ℝ) (hw : 1 < |w|) :
+    ‖𝓕 (compactLaplaceFourierDensity f c) w‖ ≤
+      (compactLaplaceSecondDerivativeMass (compactLaplaceFourierDensity f c) *
+        (2 * Real.pi)⁻¹ ^ (2 : ℕ)) * (|w|⁻¹ ^ (2 : ℕ)) := by
+  let g : ℝ → ℂ := compactLaplaceFourierDensity f c
+  let s : ℂ := (((-2 * Real.pi * w : ℝ) : ℂ) * I)
+  have hg : ContDiff ℝ 2 g :=
+    (contDiff_compactLaplaceFourierDensity hf c).of_le (by norm_num)
+  have hgsupp : HasCompactSupport g :=
+    hasCompactSupport_compactLaplaceFourierDensity hfsupp c
+  have hw0 : w ≠ 0 := by
+    intro h
+    subst w
+    norm_num at hw
+  have hs0 : s ≠ 0 := by
+    dsimp only [s]
+    exact mul_ne_zero (by
+      exact_mod_cast mul_ne_zero (mul_ne_zero (by norm_num) Real.pi_ne_zero) hw0) I_ne_zero
+  have hsre : s.re = 0 := by simp [s]
+  have hsNorm : ‖s‖ = 2 * Real.pi * |w| := by
+    simp [s, abs_of_pos Real.pi_pos]
+  rw [fourier_compactLaplaceDensity_eq_compactLaplaceTransform]
+  change ‖compactLaplaceTransform g s‖ ≤ _
+  calc
+    ‖compactLaplaceTransform g s‖ ≤
+        compactLaplaceSecondDerivativeMass g * (‖s‖⁻¹ ^ (2 : ℕ)) :=
+      norm_compactLaplaceTransform_le_mass_mul_inv_sq hg hgsupp hs0
+        (by rw [hsre]) (by rw [hsre]; norm_num)
+    _ = (compactLaplaceSecondDerivativeMass g *
+          (2 * Real.pi)⁻¹ ^ (2 : ℕ)) * (|w|⁻¹ ^ (2 : ℕ)) := by
+      rw [hsNorm, mul_inv_rev, mul_pow]
+      ring
+
+theorem integrable_fourier_compactLaplaceDensity_of_sixContDiff
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
+    (c : ℝ) :
+    Integrable (𝓕 (compactLaplaceFourierDensity f c)) := by
+  have hdensity : Integrable (compactLaplaceFourierDensity f c) :=
+    (contDiff_compactLaplaceFourierDensity hf c).continuous.integrable_of_hasCompactSupport
+      (hasCompactSupport_compactLaplaceFourierDensity hfsupp c)
+  have hcontinuous : Continuous (𝓕 (compactLaplaceFourierDensity f c)) :=
+    VectorFourier.fourierIntegral_continuous Real.continuous_fourierChar
+      (innerSL ℝ).continuous₂ hdensity
+  apply integrable_of_continuous_norm_le_abs_inv_sq
+    (C := compactLaplaceSecondDerivativeMass (compactLaplaceFourierDensity f c) *
+      (2 * Real.pi)⁻¹ ^ (2 : ℕ)) hcontinuous
+  · exact mul_nonneg (compactLaplaceSecondDerivativeMass_nonneg _)
+      (sq_nonneg _)
+  · intro w hw
+    exact norm_fourier_compactLaplaceDensity_le_abs_inv_sq hf hfsupp c w hw
+
 /-- Fourier inversion for the exponentially weighted compact density, written with the explicit
 real-line phase needed by the prime calculation. -/
 theorem integral_fourier_compactLaplaceDensity_mul_exp
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     (c t : ℝ) :
     (∫ w : ℝ,
       𝓕 (compactLaplaceFourierDensity f c) w *
         Complex.exp (((2 * Real.pi * w * t : ℝ) : ℂ) * I)) =
       compactLaplaceFourierDensity f c t := by
-  let g : SchwartzMap ℝ ℂ :=
-    (hasCompactSupport_compactLaplaceFourierDensity hfsupp c).toSchwartzMap
-      (contDiff_compactLaplaceFourierDensity hf c)
-  have hgcoe : (g : ℝ → ℂ) = compactLaplaceFourierDensity f c := rfl
   have hcont : Continuous (compactLaplaceFourierDensity f c) :=
     (contDiff_compactLaplaceFourierDensity hf c).continuous
   have hint : Integrable (compactLaplaceFourierDensity f c) :=
     hcont.integrable_of_hasCompactSupport
       (hasCompactSupport_compactLaplaceFourierDensity hfsupp c)
   have hfourier : Integrable (𝓕 (compactLaplaceFourierDensity f c)) := by
-    rw [← hgcoe, ← SchwartzMap.fourier_coe]
-    exact (𝓕 g).integrable
+    exact integrable_fourier_compactLaplaceDensity_of_sixContDiff hf hfsupp c
   have hinv := hint.fourierInv_fourier_eq hfourier hcont.continuousAt (v := t)
   rw [Real.fourierInv_eq'] at hinv
   simp only [RCLike.inner_apply, conj_trivial, ofReal_mul, smul_eq_mul] at hinv
@@ -96,18 +209,89 @@ theorem integral_fourier_compactLaplaceDensity_mul_exp
   ring
 
 theorem integrable_fourier_compactLaplaceDensity
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     (c : ℝ) :
     Integrable (𝓕 (compactLaplaceFourierDensity f c)) := by
-  let g : SchwartzMap ℝ ℂ :=
-    (hasCompactSupport_compactLaplaceFourierDensity hfsupp c).toSchwartzMap
-      (contDiff_compactLaplaceFourierDensity hf c)
-  have hgcoe : (g : ℝ → ℂ) = compactLaplaceFourierDensity f c := rfl
-  rw [← hgcoe, ← SchwartzMap.fourier_coe]
-  exact (𝓕 g).integrable
+  exact integrable_fourier_compactLaplaceDensity_of_sixContDiff hf hfsupp c
+
+theorem norm_fourier_compactLaplaceDensity_le_abs_inv_pow_six
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
+    (c : ℝ) (w : ℝ) (hw : 1 < |w|) :
+    ‖𝓕 (compactLaplaceFourierDensity f c) w‖ ≤
+      (compactLaplaceSixthDerivativeMass 0 (compactLaplaceFourierDensity f c) *
+        (2 * Real.pi)⁻¹ ^ (6 : ℕ)) * (|w|⁻¹ ^ (6 : ℕ)) := by
+  let g : ℝ → ℂ := compactLaplaceFourierDensity f c
+  let s : ℂ := (((-2 * Real.pi * w : ℝ) : ℂ) * I)
+  have hg : ContDiff ℝ 6 g := contDiff_compactLaplaceFourierDensity hf c
+  have hgsupp : HasCompactSupport g :=
+    hasCompactSupport_compactLaplaceFourierDensity hfsupp c
+  have hw0 : w ≠ 0 := by
+    intro h
+    subst w
+    norm_num at hw
+  have hs0 : s ≠ 0 := by
+    dsimp only [s]
+    exact mul_ne_zero (by
+      exact_mod_cast mul_ne_zero (mul_ne_zero (by norm_num) Real.pi_ne_zero) hw0) I_ne_zero
+  have hsre : |s.re| ≤ (0 : ℝ) := by simp [s]
+  have hsNorm : ‖s‖ = 2 * Real.pi * |w| := by
+    simp [s, abs_of_pos Real.pi_pos]
+  rw [fourier_compactLaplaceDensity_eq_compactLaplaceTransform]
+  change ‖compactLaplaceTransform g s‖ ≤ _
+  calc
+    ‖compactLaplaceTransform g s‖ ≤
+        compactLaplaceSixthDerivativeMass 0 g * (‖s‖⁻¹ ^ (6 : ℕ)) :=
+      norm_compactLaplaceTransform_le_mass_mul_inv_pow_six hg hgsupp hs0 hsre
+    _ = (compactLaplaceSixthDerivativeMass 0 g *
+          (2 * Real.pi)⁻¹ ^ (6 : ℕ)) * (|w|⁻¹ ^ (6 : ℕ)) := by
+      rw [hsNorm, mul_inv_rev, mul_pow]
+      ring
+
+theorem integrable_abs_mul_norm_fourier_compactLaplaceDensity
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
+    (c : ℝ) :
+    Integrable (fun w : ℝ =>
+      |w| * ‖𝓕 (compactLaplaceFourierDensity f c) w‖) := by
+  let C : ℝ := compactLaplaceSixthDerivativeMass 0
+      (compactLaplaceFourierDensity f c) * (2 * Real.pi)⁻¹ ^ (6 : ℕ)
+  have hdensity : Integrable (compactLaplaceFourierDensity f c) :=
+    (contDiff_compactLaplaceFourierDensity hf c).continuous.integrable_of_hasCompactSupport
+      (hasCompactSupport_compactLaplaceFourierDensity hfsupp c)
+  have hfourier : Continuous (𝓕 (compactLaplaceFourierDensity f c)) :=
+    VectorFourier.fourierIntegral_continuous Real.continuous_fourierChar
+      (innerSL ℝ).continuous₂ hdensity
+  have hcontinuous : Continuous (fun w : ℝ =>
+      |w| * ‖𝓕 (compactLaplaceFourierDensity f c) w‖) :=
+    continuous_abs.mul hfourier.norm
+  have hC : 0 ≤ C := by
+    exact mul_nonneg (compactLaplaceSixthDerivativeMass_nonneg 0 _)
+      (by positivity)
+  apply integrable_of_continuous_norm_le_abs_inv_sq (C := C) hcontinuous
+  · exact hC
+  · intro w hw
+    have hw0 : 0 < |w| := lt_trans zero_lt_one hw
+    have hinv0 : 0 ≤ |w|⁻¹ := inv_nonneg.mpr (abs_nonneg w)
+    have hinv1 : |w|⁻¹ ≤ 1 := by
+      calc
+        |w|⁻¹ ≤ (1 : ℝ)⁻¹ := by
+          simpa only [one_div] using one_div_le_one_div_of_le zero_lt_one hw.le
+        _ = 1 := inv_one
+    have hpow : |w|⁻¹ ^ (5 : ℕ) ≤ |w|⁻¹ ^ (2 : ℕ) :=
+      pow_le_pow_of_le_one hinv0 hinv1 (by norm_num)
+    have hdecay := norm_fourier_compactLaplaceDensity_le_abs_inv_pow_six
+      hf hfsupp c w hw
+    rw [Real.norm_eq_abs, abs_of_nonneg
+      (mul_nonneg (abs_nonneg w) (norm_nonneg _))]
+    calc
+      |w| * ‖𝓕 (compactLaplaceFourierDensity f c) w‖ ≤
+          |w| * (C * (|w|⁻¹ ^ (6 : ℕ))) := by gcongr
+      _ = C * (|w|⁻¹ ^ (5 : ℕ)) := by
+        dsimp only [C]
+        field_simp [hw0.ne']
+      _ ≤ C * (|w|⁻¹ ^ (2 : ℕ)) := by gcongr
 
 theorem integrable_compactLaplaceTransform_vertical_mul_exp_neg
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     (c t : ℝ) :
     Integrable (fun y : ℝ =>
       compactLaplaceTransform f ((c : ℂ) + y * I) *
@@ -139,7 +323,7 @@ theorem integrable_compactLaplaceTransform_vertical_mul_exp_neg
   field_simp [Real.pi_ne_zero]
 
 theorem integrable_compactLaplaceTransform_reflected_vertical_mul_exp_neg
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     (c t : ℝ) :
     Integrable (fun y : ℝ =>
       compactLaplaceTransform f (1 - ((c : ℂ) + y * I)) *
@@ -192,7 +376,7 @@ theorem compactSymmetrizedXiPrimeLineTerm_vertical
   ring
 
 theorem integrable_compactSymmetrizedXiPrimeLineTerm
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     (c : ℝ) (n : ℕ) :
     Integrable (compactSymmetrizedXiPrimeLineTerm f c n) := by
   by_cases hn : n = 0
@@ -224,7 +408,7 @@ theorem integrable_compactSymmetrizedXiPrimeLineTerm
 
 /-- The first vertical Laplace branch has the exact inverse-Fourier normalization `2*pi`. -/
 theorem integral_compactLaplaceTransform_vertical_mul_exp_neg
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     (c t : ℝ) :
     (∫ y : ℝ,
       compactLaplaceTransform f ((c : ℂ) + y * I) *
@@ -263,7 +447,7 @@ theorem integral_compactLaplaceTransform_vertical_mul_exp_neg
 /-- Reflecting the vertical variable evaluates the second Laplace branch at the opposite physical
 point. -/
 theorem integral_compactLaplaceTransform_reflected_vertical_mul_exp_neg
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     (c t : ℝ) :
     (∫ y : ℝ,
       compactLaplaceTransform f (1 - ((c : ℂ) + y * I)) *
@@ -298,7 +482,7 @@ theorem integral_compactLaplaceTransform_reflected_vertical_mul_exp_neg
 
 /-- One positive-index prime term evaluates to the exact two-branch physical weight. -/
 theorem integral_compactSymmetrizedXiPrimeLineTerm
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     (c : ℝ) (n : ℕ) :
     (∫ y : ℝ, compactSymmetrizedXiPrimeLineTerm f c n y) =
       compactSymmetrizedVonMangoldtWeight f n := by
@@ -380,7 +564,7 @@ theorem integral_compactSymmetrizedXiPrimeLineTerm
       ring
 
 theorem integrable_symmetrizedCompactLaplaceWeight_vertical
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     (c : ℝ) :
     Integrable (fun y : ℝ =>
       symmetrizedCompactLaplaceWeight f ((c : ℂ) + y * I)) := by
@@ -430,7 +614,7 @@ theorem summable_integral_norm_compactSymmetrizedXiPrimeLineTerm
 /-- Absolute series/integral interchange identifies the whole compact prime line with its explicit
 physical von-Mangoldt sum. -/
 theorem hasSum_integral_compactSymmetrizedXiPrimeLineTerm
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     {c : ℝ} (hc : 1 < c) :
     HasSum (compactSymmetrizedVonMangoldtWeight f)
       (∫ y : ℝ, ∑' n : ℕ, compactSymmetrizedXiPrimeLineTerm f c n y) := by
@@ -448,13 +632,13 @@ theorem tsum_compactSymmetrizedXiPrimeLineTerm (f : ℝ → ℂ) (c y : ℝ) :
   exact tsum_mul_left
 
 theorem summable_compactSymmetrizedVonMangoldtWeight
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     {c : ℝ} (hc : 1 < c) :
     Summable (compactSymmetrizedVonMangoldtWeight f) :=
   (hasSum_integral_compactSymmetrizedXiPrimeLineTerm hf hfsupp hc).summable
 
 theorem tsum_compactSymmetrizedVonMangoldtWeight_eq_integral
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     {c : ℝ} (hc : 1 < c) :
     (∑' n : ℕ, compactSymmetrizedVonMangoldtWeight f n) =
       ∫ y : ℝ,
@@ -469,7 +653,7 @@ theorem tsum_compactSymmetrizedVonMangoldtWeight_eq_integral
       exact Filter.Eventually.of_forall (tsum_compactSymmetrizedXiPrimeLineTerm f c)
 
 theorem integrable_symmetrizedCompactLaplace_mul_vonMangoldtLSeries
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     {c : ℝ} (hc : 1 < c) :
     Integrable (fun y : ℝ =>
       symmetrizedCompactLaplaceWeight f ((c : ℂ) + y * I) *
@@ -551,7 +735,7 @@ theorem hasFiniteSupport_compactSymmetrizedVonMangoldtWeight
 /-- The elementary pole pair inherits the inverse-sixth selected top-edge decay of the compact
 Laplace weight. -/
 theorem norm_compactSymmetrizedXiPoleTopHorizontalIntegral_le
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     {c : ℝ} (hc : 1 < c) (n : ℕ) :
     ‖selectedXiPoleTopHorizontalIntegralFor
         (symmetrizedCompactLaplaceWeight f) c n‖ ≤
@@ -593,7 +777,7 @@ theorem norm_compactSymmetrizedXiPoleTopHorizontalIntegral_le
       ring
 
 theorem tendsto_compactSymmetrizedXiPoleTopHorizontalIntegral
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     {c : ℝ} (hc : 1 < c) :
     Tendsto (selectedXiPoleTopHorizontalIntegralFor
       (symmetrizedCompactLaplaceWeight f) c) atTop (𝓝 0) := by
@@ -608,7 +792,7 @@ theorem tendsto_compactSymmetrizedXiPoleTopHorizontalIntegral
       (2 * (2 * c - 1) * compactLaplaceSixthDerivativeMass c f)
 
 theorem tendsto_compactSymmetrizedXiPoleRightVerticalIntegral
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     {c : ℝ} (hc : 1 < c) :
     Tendsto (selectedXiPoleRightVerticalIntegralFor
       (symmetrizedCompactLaplaceWeight f) c) atTop
@@ -630,7 +814,7 @@ theorem tendsto_compactSymmetrizedXiPoleRightVerticalIntegral
   simpa only [mul_zero, zero_add, hzero_one, two_mul, add_mul, mul_add] using hright
 
 theorem integrable_compactSymmetrizedXiPolePair
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     {c : ℝ} (hc : 1 < c) :
     Integrable (fun y : ℝ => selectedXiPolePairIntegrandFor
       (symmetrizedCompactLaplaceWeight f) ((c : ℂ) + y * I)) := by
@@ -683,7 +867,7 @@ theorem integrable_compactSymmetrizedXiPolePair
 
 /-- The compact pole pair contributes exactly the two elementary residues. -/
 theorem integral_compactSymmetrizedXiPolePair_eq
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     {c : ℝ} (hc : 1 < c) :
     (∫ y : ℝ, selectedXiPolePairIntegrandFor
       (symmetrizedCompactLaplaceWeight f) ((c : ℂ) + y * I)) =
@@ -695,19 +879,12 @@ theorem integral_compactSymmetrizedXiPolePair_eq
 
 /-- The first absolute moment of every vertical compact Laplace branch is integrable. -/
 theorem integrable_one_add_abs_mul_norm_compactLaplaceTransform_vertical
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f) (c : ℝ) :
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f) (c : ℝ) :
     Integrable (fun y : ℝ =>
       (|y| + 1) * ‖compactLaplaceTransform f ((c : ℂ) + y * I)‖) := by
-  let g : SchwartzMap ℝ ℂ :=
-    (hasCompactSupport_compactLaplaceFourierDensity hfsupp c).toSchwartzMap
-      (contDiff_compactLaplaceFourierDensity hf c)
-  have hgcoe : (g : ℝ → ℂ) = compactLaplaceFourierDensity f c := rfl
   have hfourierWeighted : Integrable (fun w : ℝ =>
       |w| * ‖𝓕 (compactLaplaceFourierDensity f c) w‖) := by
-    rw [← hgcoe, ← SchwartzMap.fourier_coe]
-    apply ((𝓕 g).integrable_pow_mul volume 1).congr
-    filter_upwards [] with w
-    simp [Real.norm_eq_abs]
+    exact integrable_abs_mul_norm_fourier_compactLaplaceDensity hf hfsupp c
   let a : ℝ := -(2 * Real.pi)⁻¹
   have ha : a ≠ 0 := by
     dsimp only [a]
@@ -735,7 +912,7 @@ theorem integrable_one_add_abs_mul_norm_compactLaplaceTransform_vertical
   ring_nf
 
 theorem integrable_one_add_abs_mul_norm_compactLaplaceTransform_reflected_vertical
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f) (c : ℝ) :
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f) (c : ℝ) :
     Integrable (fun y : ℝ =>
       (|y| + 1) * ‖compactLaplaceTransform f (1 - ((c : ℂ) + y * I))‖) := by
   let H : ℝ → ℝ := fun u =>
@@ -758,7 +935,7 @@ theorem integrable_one_add_abs_mul_norm_compactLaplaceTransform_reflected_vertic
 /-- Reflection symmetrization preserves the integrable first absolute moment on every vertical
 line. -/
 theorem integrable_one_add_abs_mul_norm_symmetrizedCompactLaplaceWeight_vertical
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f) (c : ℝ) :
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f) (c : ℝ) :
     Integrable (fun y : ℝ =>
       (|y| + 1) * ‖symmetrizedCompactLaplaceWeight f ((c : ℂ) + y * I)‖) := by
   have hfirst :=
@@ -797,7 +974,7 @@ theorem integrable_one_add_abs_mul_norm_symmetrizedCompactLaplaceWeight_vertical
 /-- The real-place logarithmic derivative is integrable against every reflection-symmetrized
 smooth compact Laplace weight. -/
 theorem integrable_compactSymmetrizedXiArchimedean
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     {c : ℝ} (hc : 1 < c) :
     Integrable (fun y : ℝ =>
       symmetrizedCompactLaplaceWeight f ((c : ℂ) + y * I) *
@@ -880,7 +1057,7 @@ theorem integrable_compactSymmetrizedXiArchimedean
 /-- On every selected finite right edge, the compact xi integral splits into its pole,
 real-place, and von-Mangoldt contributions. -/
 theorem compactSymmetrizedXiRightVerticalIntegral_eq_arithmetic_truncations
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     {c : ℝ} (hc : 1 < c) (n : ℕ) :
     selectedXiRightVerticalIntegralFor (symmetrizedCompactLaplaceWeight f) c n =
       selectedXiPoleRightVerticalIntegralFor
@@ -951,7 +1128,7 @@ theorem compactSymmetrizedXiRightVerticalIntegral_eq_arithmetic_truncations
         intervalIntegral.integral_add hpole harch]
 
 theorem tendsto_selectedCompactSymmetrizedXiArchimedeanIntegral
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     {c : ℝ} (hc : 1 < c) :
     Tendsto
       (fun n : ℕ => ∫ y : ℝ in
@@ -964,7 +1141,7 @@ theorem tendsto_selectedCompactSymmetrizedXiArchimedeanIntegral
       (integrable_compactSymmetrizedXiArchimedean hf hfsupp hc)
 
 theorem tendsto_selectedCompactSymmetrizedXiPrimeIntegral
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f) (hfsupp : HasCompactSupport f)
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f) (hfsupp : HasCompactSupport f)
     {c : ℝ} (hc : 1 < c) :
     Tendsto
       (fun n : ℕ => ∫ y : ℝ in
@@ -976,10 +1153,10 @@ theorem tendsto_selectedCompactSymmetrizedXiPrimeIntegral
   exact tendsto_selectedGaussianXiSymmetricIntervalIntegral
     (integrable_symmetrizedCompactLaplace_mul_vonMangoldtLSeries hf hfsupp hc)
 
-/-- Weil's arithmetic explicit formula for every smooth compactly supported logarithmic test
-function after reflection symmetrization. -/
-theorem symmetrizedCompactLaplaceXi_arithmetic_explicit_formula
-    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f)
+/-- Weil's arithmetic explicit formula for every compactly supported logarithmic test function
+with six continuous derivatives, after reflection symmetrization. -/
+theorem symmetrizedCompactLaplaceXi_arithmetic_explicit_formula_sixContDiff
+    {f : ℝ → ℂ} (hf : ContDiff ℝ 6 f)
     (hfsupp : HasCompactSupport f) {c : ℝ} (hc : 1 < c) :
     (Real.pi : ℂ) * ∑' p : RiemannXiDivisorZeroIndex,
         symmetrizedCompactLaplaceWeight f
@@ -1005,7 +1182,21 @@ theorem symmetrizedCompactLaplaceXi_arithmetic_explicit_formula
       (compactSymmetrizedXiRightVerticalIntegral_eq_arithmetic_truncations
         hf hfsupp hc n).symm
   exact tendsto_nhds_unique
-    (tendsto_symmetrizedCompactLaplaceXiRightVerticalIntegral hf hfsupp hc) hright
+    (tendsto_symmetrizedCompactLaplaceXiRightVerticalIntegral_sixContDiff
+      hf hfsupp hc) hright
+
+/-- Compatibility form of the compact arithmetic explicit formula for smooth test functions. -/
+theorem symmetrizedCompactLaplaceXi_arithmetic_explicit_formula
+    {f : ℝ → ℂ} (hf : ContDiff ℝ ∞ f)
+    (hfsupp : HasCompactSupport f) {c : ℝ} (hc : 1 < c) :
+    (Real.pi : ℂ) * ∑' p : RiemannXiDivisorZeroIndex,
+        symmetrizedCompactLaplaceWeight f
+          (riemannXiDivisorZeroValue p) =
+      2 * (Real.pi : ℂ) * symmetrizedCompactLaplaceWeight f 1 +
+        compactSymmetrizedXiArchimedeanIntegral f c -
+        ∑' n : ℕ, compactSymmetrizedVonMangoldtWeight f n := by
+  exact symmetrizedCompactLaplaceXi_arithmetic_explicit_formula_sixContDiff
+    (hf.of_le (WithTop.coe_le_coe.mpr (OrderTop.le_top (6 : ℕ∞)))) hfsupp hc
 
 end
 
