@@ -1549,3 +1549,20 @@ Classification remains `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
 `route_infrastructure_delta=1`. Forward preservation, threshold existence/closedness, H6-E/G8,
 W2/G7, M2/G3, and RH remain open. Immutable evidence backfill and its own public CI remain before
 campaign closure.
+
+## Public Closure Update: H6 Zero-Coordinate Framework
+
+Date: 2026-07-17
+
+Evidence commit `0848fcaf5050d6cc842d53a4154172d7511619f6` passed public Lean Action CI run
+`29513928275` on attempt 2, build job `87674259193`, in `2m5s`. Attempt 1 failed during Elan
+download with an SSL connection reset before project build; the same commit then completed the
+full Lean Action without source changes.
+
+Together with preregistration run `29512089828` and implementation commit
+`0283db6a11ef452a7241e17c535744677272a7d1`, run `29513380203`, campaign
+`CAMPAIGN-20260717-H6-ZERO-COORDINATE-FRAMEWORK-01` is publicly closed as
+`KNOWN_THEOREM_FORMALIZED`. The reusable gain is the exact H6 time-zero zero coordinate, strict
+strip, and RH/all-real-zero equivalence. `hard_gap_delta=0`; forward preservation, threshold
+existence/closedness, H6-E/G8, W2/G7, M2/G3, and RH remain open. The persistent Goal returns to
+fresh value-ranked route selection; no successor campaign is selected here.

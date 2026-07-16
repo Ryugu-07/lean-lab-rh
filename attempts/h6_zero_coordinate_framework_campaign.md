@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260717-H6-ZERO-COORDINATE-FRAMEWORK-01`
 
 Mode: `LITERATURE`
 
-Status: `PUBLIC_IMPLEMENTATION_COMPLETE_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Runtime record
 
@@ -84,7 +84,11 @@ Status: `PUBLIC_IMPLEMENTATION_COMPLETE_EVIDENCE_PENDING`
 - `git diff --check`: passed before documentation backfill
 - implementation public CI: passed at commit
   `0283db6a11ef452a7241e17c535744677272a7d1`, run `29513380203`, job `87672181193`, in `1m59s`
-- immutable evidence backfill and public CI: pending
+- immutable evidence backfill and public CI: passed at commit
+  `0848fcaf5050d6cc842d53a4154172d7511619f6`, run `29513928275`, attempt 2, job
+  `87674259193`, in `2m5s`
+- evidence CI attempt 1: infrastructure failure before project build during Elan download, SSL
+  connection reset; same commit rerun without source changes
 
 ## Result
 
@@ -103,10 +107,12 @@ Status: `PUBLIC_IMPLEMENTATION_COMPLETE_EVIDENCE_PENDING`
   `deBruijnNewman_zeroCoordinate_framework`
 - `failure_or_obstacle`: no coordinate or boundary obstruction; the next H6 obstacle is the
   global de Bruijn zero-preservation/threshold theory
-- `route_selection_decision`: publish implementation, require public CI, then backfill immutable
-  evidence before closure
+- `route_selection_decision`: campaign publicly closed; return to fresh value-ranked route
+  selection after closure CI
 - `preregistration_commit_and_CI`: commit `8ec051e767319a2a7c6dc40c465e0e9d8b1e2d7e`,
   run `29512089828`, job `87667820977`, passed in `2m17s`
 - `implementation_commit_and_CI`: commit `0283db6a11ef452a7241e17c535744677272a7d1`,
   run `29513380203`, job `87672181193`, passed in `1m59s`
-- `evidence_commit_and_CI`: pending
+- `evidence_commit_and_CI`: commit `0848fcaf5050d6cc842d53a4154172d7511619f6`,
+  run `29513928275`, attempt 2, job `87674259193`, passed in `2m5s`
+- `campaign_status`: publicly closed; persistent RH Goal remains active

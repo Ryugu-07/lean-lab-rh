@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `H6_ZERO_COORDINATE_FRAMEWORK_EVIDENCE_PENDING`
+Status: `H6_ZERO_COORDINATE_FRAMEWORK_PUBLICLY_CLOSED`
 
 ## Endpoint and normalization
 
@@ -147,8 +147,9 @@ axiom prints pass with the standard trust base only.
 **Verdict:** `COMPLETE` as `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
 `route_infrastructure_delta=1`. Implementation commit
 `0283db6a11ef452a7241e17c535744677272a7d1` passed public CI run `29513380203`, build job
-`87672181193`, in `1m59s`. Forward preservation, threshold existence/closedness, H6-E/G8, and RH
-remain open; immutable evidence backfill and its public CI are pending.
+`87672181193`, in `1m59s`. Evidence commit `0848fcaf5050d6cc842d53a4154172d7511619f6`
+passed run `29513928275` on attempt 2, build job `87674259193`, in `2m5s`; the campaign is publicly
+closed. Forward preservation, threshold existence/closedness, H6-E/G8, and RH remain open.
 
 ## Candidate H6-Q: improve the upper bound to one fifth
 

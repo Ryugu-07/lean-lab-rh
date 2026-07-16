@@ -6,7 +6,7 @@ Campaign: `CAMPAIGN-20260717-H6-ZERO-COORDINATE-FRAMEWORK-01`
 
 Mode: `LITERATURE`
 
-Status: `PUBLIC_IMPLEMENTATION_COMPLETE_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Route selection
 
@@ -155,5 +155,8 @@ boundary witnesses, exact TargetCheck, five standard-only axiom prints, empty fo
 `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`.
 Implementation commit `0283db6a11ef452a7241e17c535744677272a7d1` passed public Lean Action CI run
 `29513380203`, build job `87672181193`, in `1m59s` (`2026-07-16T15:56:06Z` to
-`2026-07-16T15:58:05Z`). Immutable evidence backfill and its independent public CI remain before
-closure.
+`2026-07-16T15:58:05Z`). Evidence commit `0848fcaf5050d6cc842d53a4154172d7511619f6`
+passed public Lean Action CI run `29513928275` on attempt 2, build job `87674259193`, in `2m5s`
+(`2026-07-16T16:04:16Z` to `2026-07-16T16:06:21Z`). Attempt 1 failed before project build during
+Elan download because of an SSL connection reset; no source changed before the successful rerun.
+The campaign is publicly closed as `KNOWN_THEOREM_FORMALIZED`.
