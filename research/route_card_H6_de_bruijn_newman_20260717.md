@@ -2,7 +2,7 @@
 
 Date: 2026-07-17
 
-Status: `H6_ZERO_COORDINATE_FRAMEWORK_PUBLICLY_CLOSED`
+Status: `H6_THRESHOLD_CLOSEDNESS_SELECTED`
 
 ## Endpoint and normalization
 
@@ -151,6 +151,32 @@ axiom prints pass with the standard trust base only.
 passed run `29513928275` on attempt 2, build job `87674259193`, in `2m5s`; the campaign is publicly
 closed. Forward preservation, threshold existence/closedness, H6-E/G8, and RH remain open.
 
+## Candidate H6-H2b: closedness of the all-real-zero time set
+
+**Exact proposition.** For the compiled source family and all-complex-zero predicate, prove
+
+`IsClosed {t : R | deBruijnNewmanAllZerosReal t}`.
+
+**Proof architecture.** Prove the family is jointly continuous in time and complex space and is
+never identically zero. Isolate any nonreal zero by a zero-free circle. The zero-free Jensen
+logarithmic circle mean then shows that every sufficiently small parameter perturbation has a zero
+inside that same nonreal ball. Hence the complement of the all-real-zero set is open.
+
+**DAG and strength.** This is threshold infrastructure at H6-H2. It validates passage to a limit
+time once all-real-zero times converge, but does not prove the set is nonempty or upward closed.
+It has expected `hard_gap_delta=0` and `route_infrastructure_delta=1`.
+
+**Adversarial tests.** Require arbitrary zero multiplicity, joint or compact-uniform parameter
+control, a closed ball disjoint from the real axis, a nonzero-family proof at every real time, and
+the exact all-complex-zero predicate. Do not infer threshold existence or forward preservation.
+
+**Campaign gate.** Selected as
+`CAMPAIGN-20260717-H6-THRESHOLD-CLOSEDNESS-01`. Exact preregistration is in
+`h6_threshold_closedness_prereg_20260717.md`. Public preregistration CI is pending; no Lean proof
+source may be edited before it passes.
+
+**Verdict:** `SELECTED_PENDING_PUBLIC_PREREGISTRATION`.
+
 ## Candidate H6-Q: improve the upper bound to one fifth
 
 **Exact proposition.** Every zero of `H_(1/5)` is real. With the established de Bruijn
@@ -211,9 +237,9 @@ source normalization and analytic hypotheses.
 
 ## Recommendation
 
-H6-B and H6-H1 are complete. Return to fresh value-ranked route selection before choosing the
-all-real-zero/threshold framework or H6-X. Keep H6-Q as a later `PROOF-ATTEMPT`; the H0-xi bridge
-and heat equation alone supply no evidence for its global zero certificate.
+H6-B, H6-H1, and H6-H2a are complete. Execute the selected H6-H2b closedness campaign through
+its public preregistration gate. Keep forward preservation as the next deeper H6-H2 edge and H6-Q
+as a later `PROOF-ATTEMPT`; closedness alone supplies no global real-zero certificate.
 
 ## Candidate H6-Y: reverse-heat Li transfer audit
 

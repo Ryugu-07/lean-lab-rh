@@ -10,6 +10,7 @@ output checks, not approval.
 
 ## Current audit
 
+- [H6 threshold closedness campaign](h6_threshold_closedness_campaign.md)
 - [H6 reverse-heat Li transfer falsification](h6_reverse_heat_li_falsification.md)
 - [H6 zero-coordinate framework](h6_zero_coordinate_framework_campaign.md)
 - [RH public exposure sprint (2026-07-16)](rh_exposure_sprint_20260716.md)
