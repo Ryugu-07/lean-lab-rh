@@ -354,7 +354,7 @@ def rhTargets : List ResearchTarget :=
         "For every smooth compactly supported additive-log function and c>1, prove the complete reflection-symmetrized xi explicit formula with the multiplicity-bearing zero tsum, both elementary poles, the GammaR integral, and an explicitly finite von-Mangoldt side."
       leanName := some ``symmetrizedCompactLaplaceXi_arithmetic_explicit_formula
       status := .proven
-      note := "Campaign CAMPAIGN-20260716-R5-COMPACT-WEIL-ARITHMETIC-FORMULA-01 proves exact two-branch Schwartz Fourier inversion with the 2*pi scaling, the reflected 1/n prime factor, finite physical prime support from compact support, full-line pole and GammaR integrability, and the selected-height arithmetic limit. This closes the W1c1 compact arithmetic subedge only; quotient/completeness, distributional regularization, W2/G7 positivity, and RH remain open." },
+      note := "Campaign CAMPAIGN-20260716-R5-COMPACT-WEIL-ARITHMETIC-FORMULA-01 proves exact two-branch Schwartz Fourier inversion with the 2*pi scaling, the reflected 1/n prime factor, finite physical prime support from compact support, full-line pole and GammaR integrability, and the selected-height arithmetic limit. Implementation commit 55a6406f235a7548bf7f7d53ae5d30014795e9ce passed public Lean Action CI run 29466850965, build job 87521708037. This closes the W1c1 compact arithmetic subedge only; quotient/completeness, distributional regularization, W2/G7 positivity, and RH remain open." },
     { id := "T2.audit.gaussian-prime-kernel-sign"
       tier := .tier2
       title := "Audit the sign of one Gaussian prime-power kernel"

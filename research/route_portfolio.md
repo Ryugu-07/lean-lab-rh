@@ -1085,3 +1085,12 @@ Classify as `BRIDGE_REDUCED`, with `hard_gap_delta=1` only at W1c1c1. Quotient/c
 distributional regularization, W2/G7, G3/M2, and RH remain open. Preregistration commit
 `ccebc64b1f3419636461e6fbf968fc55c4f24b8c` passed public CI run `29465070647`; implementation
 publication and public CI remain.
+
+## Public Implementation Update: R5 Compact Weil Arithmetic Formula
+
+Date: 2026-07-16
+
+Implementation commit `55a6406f235a7548bf7f7d53ae5d30014795e9ce` passed public Lean Action CI
+run `29466850965`, build job `87521708037`, in `1m51s`. The exact compact-smooth arithmetic
+formula and its finite physical prime side are independently public-built. Immutable evidence
+backfill and its own public CI remain before campaign closure; all broader hard gaps are unchanged.

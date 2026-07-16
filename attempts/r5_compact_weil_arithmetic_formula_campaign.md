@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-COMPACT-WEIL-ARITHMETIC-FORMULA-01`
 
 Date: 2026-07-16
 
-Status: `LOCAL_COMPLETE_PENDING_PUBLIC_CI`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 Mode: `DISCOVERY -> PROOF_ATTEMPT_A`
 
@@ -33,7 +33,7 @@ Mode: `DISCOVERY -> PROOF_ATTEMPT_A`
   quotient/completeness, distributional regularization, W2/G7, and RH remain open
 - `expected_hard_gap_delta`: 1 at the W1c1 compact arithmetic subedge
 - `preregistration_commit_sha`: `ccebc64b1f3419636461e6fbf968fc55c4f24b8c`
-- `commit_sha`: pending publication
+- `commit_sha`: `55a6406f235a7548bf7f7d53ae5d30014795e9ce`
 
 ## Normalized Tuple
 
@@ -43,8 +43,8 @@ Mode: `DISCOVERY -> PROOF_ATTEMPT_A`
 - `strategy`: Schwartz Fourier inversion with exact `2*pi` scaling, right-half-plane L-series
   interchange, compact sixth-order decay, the compiled generic pole residue skeleton, and GammaR
   logarithmic growth
-- `unresolved_frontier`: exact Fourier normalization for both reflected branches, finite natural
-  support of the physical prime weight, and generic compact pole/GammaR full-line control
+- `unresolved_frontier`: quotient/completeness and continuity for the full admissible test class,
+  distributional regularization, unconditional W2/G7 positivity, and RH
 
 ## Loop Ledger
 
@@ -59,6 +59,7 @@ Mode: `DISCOVERY -> PROOF_ATTEMPT_A`
 | 7 | `PROOF_ATTEMPT_A_ARCHIMEDEAN` | A stronger reusable route than the preregistered coarse tail split was available: the Fourier transform of the compact Schwartz density has an integrable first absolute moment. Reflection preserves this bound, which absorbs the compiled linear digamma majorant and proves full-line GammaR integrability. | Archimedean DAG node discharged with no resource relaxation. |
 | 8 | `PROOF_ATTEMPT_A_ASSEMBLY` | On every selected finite right edge, Lean splits `logDeriv riemannXi` into pole, GammaR, and von-Mangoldt terms with exact signs. All three truncations converge; uniqueness against the compiled zero-side limit proves the fixed endpoint verbatim. | Accept the indivisible endpoint and advance to independent local audit. |
 | 9 | `INDEPENDENT_LOCAL_AUDIT` | The 1,012-line module is diagnostic-free. Exact Targets and TargetChecks compile; five selected axiom prints contain only `propext`, `Classical.choice`, and `Quot.sound`; placeholder, declaration, `native_decide`, unsafe, resource-option, and scratch scans are empty; `git diff --check` passes; the full 8,681-job build succeeds. | Classify as `BRIDGE_REDUCED`, with `hard_gap_delta=1` only at the compact W1c1 arithmetic subedge. Publish implementation and require independent public CI. |
+| 10 | `PUBLIC_IMPLEMENTATION_CI` | Implementation commit `55a6406f235a7548bf7f7d53ae5d30014795e9ce` passed public Lean Action CI run `29466850965`, build job `87521708037`, in `1m51s`. | Backfill immutable evidence and require the evidence commit's own public CI before closure. |
 
 ## Preregistration
 
@@ -94,6 +95,12 @@ divisor retains multiplicity.
 - `git diff --check`: pass
 - full `lake build`: pass, 8,681 jobs
 
-Local classification is `BRIDGE_REDUCED`. Implementation publication and independent public CI
-remain before immutable evidence closure. The broad RH Goal stays active; W2/G7, G3/M2,
+Local classification is `BRIDGE_REDUCED`. The broad RH Goal stays active; W2/G7, G3/M2,
 distributional regularization, and RH are unchanged.
+
+## Public Implementation Verification
+
+Implementation commit `55a6406f235a7548bf7f7d53ae5d30014795e9ce` passed public Lean Action CI
+run `29466850965`, build job `87521708037`, in `1m51s`. The exact theorem and all repository
+checks therefore rebuild from the public commit. Immutable evidence backfill and its own public CI
+remain before campaign closure.

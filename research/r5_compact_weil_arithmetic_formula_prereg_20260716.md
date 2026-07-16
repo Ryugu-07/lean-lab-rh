@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-COMPACT-WEIL-ARITHMETIC-FORMULA-01`
 
 Date: 2026-07-16
 
-Status: `LOCAL_COMPLETE_PENDING_PUBLIC_CI`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 Mode: `DISCOVERY -> PROOF_ATTEMPT_A`
 
@@ -179,4 +179,9 @@ forbidden scans and `git diff --check` pass; and the full 8,681-job build succee
 Classification is `BRIDGE_REDUCED`, with `hard_gap_delta=1` only at the compact W1c1 arithmetic
 subedge. Preregistration commit `ccebc64b1f3419636461e6fbf968fc55c4f24b8c` passed public Lean
 Action CI run `29465070647`, build job `87516408926`, in `1m31s`. Implementation publication and
-independent public CI remain; W2/G7, G3/M2, distributional regularization, and RH remain open.
+independent public verification were the next evidence gates; W2/G7, G3/M2, distributional
+regularization, and RH remain open.
+
+Implementation commit `55a6406f235a7548bf7f7d53ae5d30014795e9ce` passed public Lean Action CI
+run `29466850965`, build job `87521708037`, in `1m51s`. Immutable evidence backfill and its own
+public CI remain before campaign closure.
