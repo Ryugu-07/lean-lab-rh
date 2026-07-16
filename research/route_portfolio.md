@@ -1028,4 +1028,15 @@ implementation publication and public CI were the next required evidence gate.
 Implementation commit `0e6451944ee1edb2d76d67f4fe097de2aa19ad17` passed public Lean Action CI
 run `29464308480`, build job `87514106839`, in `2m10s`. The exact compact-smooth zero-side
 endpoint is independently public-built. Immutable evidence backfill and its own public CI remain
-before campaign closure; the open arithmetic and positivity frontiers are unchanged.
+before campaign closure at that stage; the open arithmetic and positivity frontiers are unchanged.
+
+## Public Closure Update: R5 Compact Weil Zero Cutoff
+
+Date: 2026-07-16
+
+Evidence commit `6c2f3ab912097e4e5b325e9d0c27d43438a29d99` passed public Lean Action CI
+run `29464469804`, build job `87514591845`, in `1m43s`. Together with preregistration run
+`29463597042` and implementation commit `0e6451944ee1edb2d76d67f4fe097de2aa19ad17`, run
+`29464308480`, campaign `CAMPAIGN-20260716-R5-COMPACT-WEIL-ZERO-CUTOFF-01` is publicly closed as
+`BRIDGE_REDUCED`. Return to fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`; the compact arithmetic
+explicit formula, W2/G7, G3/M2, and RH remain open.

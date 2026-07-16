@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-COMPACT-WEIL-ZERO-CUTOFF-01`
 
 Date: 2026-07-16
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 Mode: `LITERATURE -> PROOF_ATTEMPT_A`
 
@@ -154,4 +154,10 @@ Action CI run `29463597042`, build job `87511970349`.
 
 Implementation commit `0e6451944ee1edb2d76d67f4fe097de2aa19ad17` passed public Lean Action CI
 run `29464308480`, build job `87514106839`, in `2m10s`. Immutable evidence backfill and its own
-public CI remain before campaign closure.
+public CI were the remaining closure gates.
+
+Evidence commit `6c2f3ab912097e4e5b325e9d0c27d43438a29d99` passed public Lean Action CI
+run `29464469804`, build job `87514591845`, in `1m43s`. Preregistration, implementation, and
+immutable evidence now each have independent passing public CI. The campaign is publicly closed
+as `BRIDGE_REDUCED`; the broad RH Goal remains active and the compact arithmetic evaluation,
+W2/G7, G3/M2, and RH remain open.

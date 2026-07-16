@@ -4,7 +4,7 @@ Campaign: `CAMPAIGN-20260716-R5-COMPACT-WEIL-ZERO-CUTOFF-01`
 
 Date: 2026-07-16
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 Mode: `LITERATURE -> PROOF_ATTEMPT_A`
 
@@ -54,6 +54,7 @@ Mode: `LITERATURE -> PROOF_ATTEMPT_A`
 | 3 | `FIVE_CANDIDATE_ADVERSARIAL_SCREEN` | Full arithmetic evaluation is a larger successor; prime inversion alone and pole/Gamma helpers are incomplete endpoints; another compact reverse criterion repeats the Gaussian route. Reflection symmetrization avoids an evenness premise, while six integrations by parts should leave an `O(R^(-2))` top integral. | Admit the quantified compact-smooth zero-side endpoint and preregister it before Lean proof edits. |
 | 4 | `LEAN_PROOF_ATTEMPT_A` | `WeilCompactLaplaceZeroCutoff.lean` proves whole-plane differentiability by dominated complex differentiation, exact reflection, multiplicity-bearing divisor summability through the xi reflection equivalence, arbitrary iterated compact-support integration by parts, a fixed-strip inverse-sixth-power estimate, and an `O(R^(-2))` selected top-edge integral. The generic contour theorem then proves the exact preregistered limit. | Accept the exact endpoint without weakening or extra premises and advance to independent local audit. |
 | 5 | `INDEPENDENT_LOCAL_AUDIT` | The 373-line module is diagnostic-free. Exact Targets and TargetChecks compile; five selected transitive axiom prints contain only `propext`, `Classical.choice`, and `Quot.sound`; forbidden declaration, proof-placeholder, resource-option, and scratch scans are empty; `git diff --check` passes; the full 8,680-job build succeeds. | Classify as `BRIDGE_REDUCED`, with `hard_gap_delta=1` only at the fixed W1c1 compact zero-side subedge. Publish implementation and require independent public CI before immutable evidence closure. |
+| 6 | `PUBLIC_CI_CLOSURE` | Preregistration, implementation, and immutable evidence commits each pass independent public Lean Action CI. The public theorem and its exact target registration therefore match the fixed endpoint. | Close this campaign as `BRIDGE_REDUCED` and return the persistent RH Goal to fresh `INDEPENDENT_AUDIT -> ROUTE_SELECTION`; do not reopen the compact zero-side cutoff without a strictly stronger endpoint. |
 
 ## Preregistration
 
@@ -83,5 +84,13 @@ evidence is recorded below.
 
 Implementation commit `0e6451944ee1edb2d76d67f4fe097de2aa19ad17` passed public Lean Action CI
 run `29464308480`, build job `87514106839`, in `2m10s`. The exact endpoint is independently
-public-built. Immutable evidence backfill and that commit's own public CI remain before campaign
-closure.
+public-built. Immutable evidence backfill and that commit's own public CI were the remaining
+closure gates.
+
+## Public Closure
+
+Evidence commit `6c2f3ab912097e4e5b325e9d0c27d43438a29d99` passed public Lean Action CI
+run `29464469804`, build job `87514591845`, in `1m43s`. Together with preregistration run
+`29463597042` and implementation run `29464308480`, the fixed campaign is publicly closed as
+`BRIDGE_REDUCED`. The persistent RH Goal remains active; the next loop must start from fresh route
+selection at the still-open compact arithmetic, W2/G7, G3/M2, or other qualified frontier.
