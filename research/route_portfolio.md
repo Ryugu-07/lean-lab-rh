@@ -1631,3 +1631,22 @@ classical upper bound `Lambda<=1/2`, proved through multiplicity-aware conjugate
 finite strip contraction, and Jensen limit persistence. `hard_gap_delta=0` and
 `route_infrastructure_delta=1`; H6-E/G8, W2/G7, M2/G3, and RH remain open. The persistent RH Goal
 returns to fresh value-ranked route selection; no successor campaign is selected here.
+
+## Local First-Spine Update: H6 Zero Dynamics
+
+Date: 2026-07-17
+
+Campaign `PROOF-ATTEMPT-20260717-H6-ZERO-DYNAMICS-01` remains active against the exact time-zero
+all-real-zero endpoint. Its first fixed formalization loop succeeds locally.
+
+`DeBruijnNewmanDynamics.lean` proves genuine summability of the divisor-regularized genus-one
+force, the exact simple-zero identity `H_t''/(2*H_t')=force`, a strict joint real Frechet derivative
+of the source heat family, and `x'(t)=2*force` along every differentiable simple-zero path. The
+proof handles analytic multiplicity and the complete removed divisor fiber; it does not use a
+principal-value ordering.
+
+The exact module, Targets, five TargetChecks, five standard-only axiom prints, empty forbidden
+scans, `git diff --check`, and the full 8,691-job build pass. Classification is a locally completed
+known first spine with `hard_gap_delta=0` and `route_infrastructure_delta=1`. H6-E/G8, collision
+exclusion, W2/G7, M2/G3, and RH remain open. Next within the same campaign is construction and
+ordering of local real simple-zero trajectories; public implementation CI is pending.

@@ -4,6 +4,7 @@ import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
 import LeanLab.Riemann.DeBruijnNewmanForward
 import LeanLab.Riemann.DeBruijnNewmanUpperHalf
+import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiSymmetricZeroFormula
@@ -1144,6 +1145,40 @@ example {t : ℝ} (ht0 : 0 ≤ t) (hthalf : t ≤ (1 : ℝ) / 2)
 
 example : deBruijnNewmanAllZerosReal ((1 : ℝ) / 2) :=
   deBruijnNewmanAllZerosReal_one_half
+
+example : Continuous
+    (fun p : ℝ × ℂ ↦ deBruijnNewmanHSecondMoment p.1 p.2) :=
+  continuous_deBruijnNewmanHSecondMoment_joint
+
+example (t : ℝ) (r : ℂ) :
+    Summable
+      (fun p : Complex.Hadamard.divisorZeroIndex₀
+          (deBruijnNewmanH t) (Set.univ : Set ℂ) ↦
+        if Complex.Hadamard.divisorZeroIndex₀_val p = r then 0
+        else 1 / (r - Complex.Hadamard.divisorZeroIndex₀_val p) +
+          1 / Complex.Hadamard.divisorZeroIndex₀_val p) :=
+  summable_deBruijnNewman_regularizedZeroForceTerm t r
+
+example {t : ℝ} {r : ℂ}
+    (hr : deBruijnNewmanH t r = 0)
+    (hsimple : deriv (deBruijnNewmanH t) r ≠ 0) :
+    deriv (deriv (deBruijnNewmanH t)) r /
+        (2 * deriv (deBruijnNewmanH t) r) =
+      deBruijnNewmanRegularizedZeroForce t r :=
+  deBruijnNewmanH_second_deriv_div_two_deriv_eq_regularizedZeroForce hr hsimple
+
+example {x : ℝ → ℂ} {t : ℝ} {v : ℂ} (hx : HasDerivAt x v t) :
+    HasDerivAt (fun tau : ℝ ↦ deBruijnNewmanH tau (x tau))
+      (deBruijnNewmanHSecondMoment t (x t) +
+        deriv (deBruijnNewmanH t) (x t) * v) t :=
+  hasDerivAt_deBruijnNewmanH_along hx
+
+example {x : ℝ → ℂ} {t : ℝ} {v : ℂ}
+    (hx : HasDerivAt x v t)
+    (hzero : ∀ tau : ℝ, deBruijnNewmanH tau (x tau) = 0)
+    (hsimple : deriv (deBruijnNewmanH t) (x t) ≠ 0) :
+    v = 2 * deBruijnNewmanRegularizedZeroForce t (x t) :=
+  deBruijnNewman_simpleZeroPath_velocity hx hzero hsimple
 
 example {ι : Type*} [Fintype ι] (alpha : ι → ℂ)
     {R C : ℝ} (hR : 0 < R) (hC : 0 ≤ C)

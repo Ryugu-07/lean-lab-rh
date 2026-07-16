@@ -2,7 +2,7 @@
 
 Campaign: `PROOF-ATTEMPT-20260717-H6-ZERO-DYNAMICS-01`
 
-Status: `PREREGISTERED`
+Status: `ACTIVE`
 
 ## Target
 
@@ -50,19 +50,43 @@ Status: `PREREGISTERED`
 
 ## Attempt log
 
-No proof loop has started. Exact architecture and adversarial checks are in
+Public preregistration passed. Exact architecture and adversarial checks are in
 `research/h6_zero_dynamics_force_prereg_20260717.md`.
+
+### Implementation loop 1: regularized force and path velocity
+
+- Removed the complete multiplicity fiber over `r` from the genus-one canonical product and
+  proved genuine summability of the remaining regularized divisor terms.
+- Proved that a simple zero has divisor-fiber cardinality one, split the global Hadamard product,
+  and rewrote its removed factor as `(z-r)*(-exp(z/r)/r)`.
+- Differentiated the exact factorization twice and proved
+  `H_t''(r)/(2*H_t'(r)) = deBruijnNewmanRegularizedZeroForce t r`.
+- Added joint continuity of the first and second source moments. The two continuous partial
+  derivatives give a strict real Frechet derivative of `(t,z) |-> H_t(z)`.
+- Applied that joint derivative and the backward heat equation to an arbitrary path differentiable
+  at the selected time. Lean proves the exact source sign and factor
+  `x'(t)=2*deBruijnNewmanRegularizedZeroForce t (x t)` at every simple path zero.
+- The force interface is known mathematics and passes the fixed first-spine criterion. It does not
+  construct zero paths, control repeated zeros, exclude collisions, or prove the time-zero target.
+- `result`: first formalization spine locally complete; campaign remains active at architecture
+  step 6 (construct and order local real simple-zero trajectories).
+- `hard_gap_delta`: 0.
+- `route_infrastructure_delta`: 1 locally, pending public implementation CI.
 
 ## Mechanical audit
 
-- exact module compilation: pending preregistration gate.
-- `Targets.lean`: pending implementation.
-- `TargetChecks.lean` exact witness: pending implementation.
-- `AxiomsAudit.lean` and printed axioms: pending implementation.
-- forbidden token/declaration/resource scan: pending implementation.
-- witness audit: pending implementation.
-- definition/source alignment: source equation and normalization preregistered.
-- full `lake build`: pending implementation.
+- exact module compilation: `DeBruijnNewmanDynamics.lean` passes without diagnostics.
+- `Targets.lean`: exact source-force target registered and compiles.
+- `TargetChecks.lean` exact witness: five new exact witnesses compile.
+- `AxiomsAudit.lean` and printed axioms: all five selected declarations use only `propext`,
+  `Classical.choice`, and `Quot.sound`.
+- forbidden token/declaration/resource scan: empty after a syntax-narrow declaration rescan.
+- witness audit: summability, ratio, mixed chain rule, and path velocity statements witnessed.
+- definition/source alignment: the divisor regularization, heat sign, and factor two match the
+  preregistered Rodgers-Tao convention.
+- `git diff --check`: passes.
+- full `lake build`: passes with 8,691 jobs.
+- public implementation CI: pending publication.
 
 ## Runtime record
 
@@ -71,16 +95,21 @@ No proof loop has started. Exact architecture and adversarial checks are in
 - `budget`: no token budget.
 - `compaction_state`: inherited summary detected; canonical recovery files re-read before route
   selection.
-- `commit_and_CI`: pending preregistration commit.
+- `commit_and_CI`: preregistration commit `4405d60c2a33444f8ae43f2406631cc80faff356`;
+  public Lean Action CI run `29532612360`, build job `87736257748`, passed in `2m29s`.
 
 ## Result
 
-- `result_class`: active direct proof attempt, preregistration stage.
-- `assumption_frontier_after`: unchanged.
-- `hard_gap_after`: unchanged.
+- `result_class`: active direct proof attempt; known first spine formalized locally.
+- `assumption_frontier_after`: exact summable divisor force, simple-zero derivative ratio, joint
+  time-space Frechet derivative, and differentiable simple-zero path velocity.
+- `hard_gap_after`: H6-E/G8, W2/G7, M2/G3, and RH remain open.
 - `hard_gap_delta`: 0.
 - `OBS_node`: none yet.
-- `theorem_names`: none yet.
-- `failure_or_obstacle`: open collision estimate identified but not yet reached in Lean.
-- `route_selection_decision`: begin only after public preregistration CI.
-
+- `theorem_names`: `summable_deBruijnNewman_regularizedZeroForceTerm`,
+  `deBruijnNewmanH_second_deriv_div_two_deriv_eq_regularizedZeroForce`,
+  `hasDerivAt_deBruijnNewmanH_along`, `deBruijnNewman_simpleZeroPath_velocity`.
+- `failure_or_obstacle`: the first spine succeeds; local trajectory construction and the first
+  theta-specific collision inequality remain to be attempted, so no obstruction node is yet due.
+- `route_selection_decision`: remain in the fixed H6-E campaign and proceed to local real
+  simple-zero trajectories after public implementation CI.

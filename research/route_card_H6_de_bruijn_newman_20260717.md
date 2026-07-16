@@ -377,3 +377,22 @@ nonzero for all real `t>=0`, so the sign reversal is not caused by crossing a Li
 
 **Verdict:** `BRANCH_FALSIFIED` as `OBS-H6-REVERSE-HEAT-LI-01`, with `hard_gap_delta=0`. The
 actual theta-kernel family, fixed-time H6-X criterion, H6-E/G8, and RH are unchanged.
+
+## Active H6-E proof attempt: divisor-regularized zero dynamics
+
+Campaign `PROOF-ATTEMPT-20260717-H6-ZERO-DYNAMICS-01` fixes the unconditional endpoint
+`deBruijnNewmanAllZerosReal 0`. Its first spine removes the full multiplicity fiber at a simple
+zero from the source genus-one Hadamard product and defines the absolutely convergent force
+
+`1/r + sum'_p [r_p != r] * (1/(r-r_p)+1/r_p)`.
+
+**Local implementation result.** `DeBruijnNewmanDynamics.lean` proves summability, identifies this
+force with `H_t''(r)/(2*H_t'(r))`, proves a strict joint real Frechet derivative for `(t,z) |->
+H_t(z)`, and derives `x'(t)=2*force(t,x(t))` for every path differentiable at the selected simple
+zero. Exact Targets, five TargetChecks, five standard-only axiom prints, forbidden scans,
+`git diff --check`, and the 8,691-job build pass locally.
+
+**DAG verdict.** This is known source dynamics infrastructure with `hard_gap_delta=0` and local
+`route_infrastructure_delta=1`. It does not construct or globally order the real zero paths, handle
+the first collision, or provide a theta-specific gap estimate. The campaign remains active at
+local trajectory construction; public implementation CI is pending.

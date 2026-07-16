@@ -5,6 +5,7 @@ import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
 import LeanLab.Riemann.DeBruijnNewmanForward
 import LeanLab.Riemann.DeBruijnNewmanUpperHalf
+import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiZeroDivisor
@@ -828,6 +829,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanAllZerosReal_one_half
       status := .proven
       note := "Campaign CAMPAIGN-20260717-H6-UPPER-HALF-01 reconstructs de Bruijn's strip contraction through conjugation-preserving multiplicities, paired genus-one factors, finite vertical-average iteration, and Jensen zero persistence. This proves threshold nonemptiness and Lambda <= 1/2 only; H6-E/G8, W2/G7, M2/G3, and RH remain open." },
+    { id := "H6.debruijn-newman.zero-dynamics-force"
+      tier := .tier2
+      title := "Formalize the divisor-regularized simple-zero force law"
+      statement :=
+        "Prove absolute summability of the genus-one divisor force, identify it with H_t''/(2*H_t') at every simple zero, and derive x'(t)=2*force along every differentiable simple-zero path."
+      leanName := some ``deBruijnNewman_simpleZeroPath_velocity
+      status := .proven
+      note := "Campaign PROOF-ATTEMPT-20260717-H6-ZERO-DYNAMICS-01 proves the known source force interface through multiplicity-aware Hadamard fiber removal, joint strict Frechet differentiation, and the backward heat equation. This is route infrastructure only: local trajectory construction, collision exclusion, H6-E/G8, and RH remain open." },
     { id := "H6.audit.reverse-heat-li-transfer"
       tier := .tier2
       title := "Falsify generic reverse-heat Li transfer"

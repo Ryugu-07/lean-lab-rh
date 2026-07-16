@@ -180,3 +180,24 @@ bound will receive a separate conjecture and novelty audit before an originality
   stop leaves the persistent RH Goal active.
 
 No Lean proof source may be edited before this preregistration passes public Lean Action CI.
+
+## Public preregistration gate
+
+Preregistration commit `4405d60c2a33444f8ae43f2406631cc80faff356` passed public Lean Action CI
+run `29532612360`, build job `87736257748`, in `2m29s`. Lean proof-source edits may now begin
+against the fixed target and architecture above.
+
+## Implementation loop 1 local result
+
+The fixed first spine compiles in `DeBruijnNewmanDynamics.lean`. The implementation removes the
+full zero fiber from the genus-one product, proves absolute summability of the regularized force,
+recovers the simple removed factor, and proves the exact derivative ratio. Joint continuity of
+both source moments then supplies a strict real Frechet derivative on `R x C`; the resulting chain
+rule and backward heat equation prove the differentiable simple-zero path velocity with the fixed
+positive sign and factor two.
+
+The standalone module, exact Targets and five TargetChecks, five standard-only axiom prints,
+forbidden scans, and `git diff --check` pass. The full 8,691-job build succeeds locally.
+`hard_gap_delta=0` and `route_infrastructure_delta=1`: this is the known first-spine interface,
+not collision exclusion or RH. The campaign remains active at steps 6-7; public implementation CI
+is pending.

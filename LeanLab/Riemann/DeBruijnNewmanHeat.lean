@@ -296,7 +296,7 @@ def deBruijnNewmanHSecondMoment (t : ℝ) (z : ℂ) : ℂ :=
     (((u ^ 2 * Real.exp (t * u ^ 2) * deBruijnNewmanPhi u : ℝ) : ℂ) *
       Complex.cos (z * (u : ℂ)))
 
-private def deBruijnNewmanHSpatialFirstMoment (t : ℝ) (z : ℂ) : ℂ :=
+def deBruijnNewmanHSpatialFirstMoment (t : ℝ) (z : ℂ) : ℂ :=
   ∫ u : ℝ in Ioi 0,
     (((Real.exp (t * u ^ 2) * deBruijnNewmanPhi u : ℝ) : ℂ) *
       (-(u : ℂ) * Complex.sin (z * (u : ℂ))))
@@ -459,6 +459,165 @@ theorem integrableOn_dbnHeatSecondMomentIntegrand (t : ℝ) (z : ℂ) :
             gcongr
             nlinarith [sq_nonneg u]
           _ = _ := by ring
+
+theorem continuousAt_deBruijnNewmanHSpatialFirstMoment_joint (p : ℝ × ℂ) :
+    ContinuousAt (fun q : ℝ × ℂ ↦ deBruijnNewmanHSpatialFirstMoment q.1 q.2) p := by
+  change Tendsto (fun q : ℝ × ℂ ↦ deBruijnNewmanHSpatialFirstMoment q.1 q.2) (𝓝 p)
+    (𝓝 (deBruijnNewmanHSpatialFirstMoment p.1 p.2))
+  let F : (ℝ × ℂ) → ℝ → ℂ := fun q u ↦
+    (((Real.exp (q.1 * u ^ 2) * deBruijnNewmanPhi u : ℝ) : ℂ) *
+      (-(u : ℂ) * Complex.sin (q.2 * (u : ℂ))))
+  let bound : ℝ → ℝ := fun u ↦
+    (1 + u ^ 2) *
+      Real.exp ((|p.1| + 1) * u ^ 2 + (‖p.2‖ + 1) * u) *
+        ‖deBruijnNewmanPhi u‖
+  have htime : ∀ᶠ q : ℝ × ℂ in 𝓝 p, q.1 ∈ Metric.ball p.1 1 :=
+    continuousAt_fst (Metric.ball_mem_nhds p.1 one_pos)
+  have hspace : ∀ᶠ q : ℝ × ℂ in 𝓝 p, q.2 ∈ Metric.ball p.2 1 :=
+    continuousAt_snd (Metric.ball_mem_nhds p.2 one_pos)
+  have hF_meas : ∀ᶠ q : ℝ × ℂ in 𝓝 p,
+      AEStronglyMeasurable (F q) (volume.restrict (Ioi 0)) := by
+    filter_upwards with q
+    exact aestronglyMeasurable_dbnHeatFirstMomentIntegrand q.1 q.2
+  have h_bound : ∀ᶠ q : ℝ × ℂ in 𝓝 p,
+      ∀ᵐ u ∂volume.restrict (Ioi 0), ‖F q u‖ ≤ bound u := by
+    filter_upwards [htime, hspace] with q hqt hqz
+    filter_upwards [ae_restrict_mem measurableSet_Ioi] with u hu
+    have hu0 : 0 ≤ u := hu.le
+    have hqtAbs : |q.1| ≤ |p.1| + 1 := by
+      calc
+        |q.1| = |p.1 + (q.1 - p.1)| := by congr 1; ring
+        _ ≤ |p.1| + |q.1 - p.1| := abs_add_le _ _
+        _ ≤ |p.1| + 1 := by
+          gcongr
+          simpa only [Real.dist_eq] using hqt.le
+    have hqtUpper : q.1 ≤ |p.1| + 1 := (le_abs_self q.1).trans hqtAbs
+    have hqzNorm : ‖q.2‖ ≤ ‖p.2‖ + 1 := by
+      calc
+        ‖q.2‖ = ‖p.2 + (q.2 - p.2)‖ := by congr 1; ring
+        _ ≤ ‖p.2‖ + ‖q.2 - p.2‖ := norm_add_le _ _
+        _ ≤ ‖p.2‖ + 1 := by
+          gcongr
+          simpa only [Complex.dist_eq] using (Metric.mem_ball.mp hqz).le
+    dsimp only [F, bound]
+    rw [norm_mul, norm_real, Real.norm_eq_abs, abs_mul,
+      abs_of_pos (Real.exp_pos _), ← Real.norm_eq_abs,
+      norm_mul, norm_neg, norm_real]
+    rw [show ‖u‖ = u by rw [Real.norm_eq_abs, abs_of_nonneg hu0]]
+    calc
+      Real.exp (q.1 * u ^ 2) * ‖deBruijnNewmanPhi u‖ *
+          (u * ‖Complex.sin (q.2 * (u : ℂ))‖) ≤
+        Real.exp ((|p.1| + 1) * u ^ 2) * ‖deBruijnNewmanPhi u‖ *
+          (u * Real.exp (‖q.2‖ * u)) := by
+        gcongr
+        exact norm_complex_sin_mul_real_le q.2 hu0
+      _ ≤ Real.exp ((|p.1| + 1) * u ^ 2) * ‖deBruijnNewmanPhi u‖ *
+          (u * Real.exp ((‖p.2‖ + 1) * u)) := by gcongr
+      _ ≤ bound u := by
+        dsimp only [bound]
+        rw [Real.exp_add]
+        have huBound : u ≤ 1 + u ^ 2 := by nlinarith [sq_nonneg (u - 1)]
+        calc
+          Real.exp ((|p.1| + 1) * u ^ 2) * ‖deBruijnNewmanPhi u‖ *
+                (u * Real.exp ((‖p.2‖ + 1) * u)) =
+              u * (Real.exp ((|p.1| + 1) * u ^ 2) *
+                Real.exp ((‖p.2‖ + 1) * u) * ‖deBruijnNewmanPhi u‖) := by ring
+          _ ≤ (1 + u ^ 2) * (Real.exp ((|p.1| + 1) * u ^ 2) *
+                Real.exp ((‖p.2‖ + 1) * u) * ‖deBruijnNewmanPhi u‖) := by gcongr
+          _ = _ := by ring
+  have hbound_int : Integrable bound (volume.restrict (Ioi 0)) :=
+    integrableOn_one_add_sq_mul_exp_mul_norm_deBruijnNewmanPhi
+      (|p.1| + 1) (by positivity) (‖p.2‖ + 1)
+  have h_lim : ∀ᵐ u ∂volume.restrict (Ioi 0),
+      Tendsto (fun q : ℝ × ℂ ↦ F q u) (𝓝 p) (𝓝 (F p u)) := by
+    filter_upwards with u
+    exact (by fun_prop : ContinuousAt (fun q : ℝ × ℂ ↦ F q u) p)
+  have hmain := tendsto_integral_filter_of_dominated_convergence bound hF_meas h_bound
+    hbound_int h_lim
+  simpa only [F, deBruijnNewmanHSpatialFirstMoment] using hmain
+
+theorem continuous_deBruijnNewmanHSpatialFirstMoment_joint :
+    Continuous (fun p : ℝ × ℂ ↦ deBruijnNewmanHSpatialFirstMoment p.1 p.2) :=
+  continuous_iff_continuousAt.mpr continuousAt_deBruijnNewmanHSpatialFirstMoment_joint
+
+theorem continuousAt_deBruijnNewmanHSecondMoment_joint (p : ℝ × ℂ) :
+    ContinuousAt (fun q : ℝ × ℂ ↦ deBruijnNewmanHSecondMoment q.1 q.2) p := by
+  change Tendsto (fun q : ℝ × ℂ ↦ deBruijnNewmanHSecondMoment q.1 q.2) (𝓝 p)
+    (𝓝 (deBruijnNewmanHSecondMoment p.1 p.2))
+  let F : (ℝ × ℂ) → ℝ → ℂ := fun q u ↦
+    (((u ^ 2 * Real.exp (q.1 * u ^ 2) * deBruijnNewmanPhi u : ℝ) : ℂ) *
+      Complex.cos (q.2 * (u : ℂ)))
+  let bound : ℝ → ℝ := fun u ↦
+    (1 + u ^ 2) *
+      Real.exp ((|p.1| + 1) * u ^ 2 + (‖p.2‖ + 1) * u) *
+        ‖deBruijnNewmanPhi u‖
+  have htime : ∀ᶠ q : ℝ × ℂ in 𝓝 p, q.1 ∈ Metric.ball p.1 1 :=
+    continuousAt_fst (Metric.ball_mem_nhds p.1 one_pos)
+  have hspace : ∀ᶠ q : ℝ × ℂ in 𝓝 p, q.2 ∈ Metric.ball p.2 1 :=
+    continuousAt_snd (Metric.ball_mem_nhds p.2 one_pos)
+  have hF_meas : ∀ᶠ q : ℝ × ℂ in 𝓝 p,
+      AEStronglyMeasurable (F q) (volume.restrict (Ioi 0)) := by
+    filter_upwards with q
+    exact aestronglyMeasurable_dbnHeatSecondMomentIntegrand q.1 q.2
+  have h_bound : ∀ᶠ q : ℝ × ℂ in 𝓝 p,
+      ∀ᵐ u ∂volume.restrict (Ioi 0), ‖F q u‖ ≤ bound u := by
+    filter_upwards [htime, hspace] with q hqt hqz
+    filter_upwards [ae_restrict_mem measurableSet_Ioi] with u hu
+    have hu0 : 0 ≤ u := hu.le
+    have hqtAbs : |q.1| ≤ |p.1| + 1 := by
+      calc
+        |q.1| = |p.1 + (q.1 - p.1)| := by congr 1; ring
+        _ ≤ |p.1| + |q.1 - p.1| := abs_add_le _ _
+        _ ≤ |p.1| + 1 := by
+          gcongr
+          simpa only [Real.dist_eq] using hqt.le
+    have hqtUpper : q.1 ≤ |p.1| + 1 := (le_abs_self q.1).trans hqtAbs
+    have hqzNorm : ‖q.2‖ ≤ ‖p.2‖ + 1 := by
+      calc
+        ‖q.2‖ = ‖p.2 + (q.2 - p.2)‖ := by congr 1; ring
+        _ ≤ ‖p.2‖ + ‖q.2 - p.2‖ := norm_add_le _ _
+        _ ≤ ‖p.2‖ + 1 := by
+          gcongr
+          simpa only [Complex.dist_eq] using (Metric.mem_ball.mp hqz).le
+    dsimp only [F, bound]
+    rw [norm_mul, norm_real, Real.norm_eq_abs, abs_mul, abs_mul,
+      abs_of_nonneg (sq_nonneg u), abs_of_pos (Real.exp_pos _), ← Real.norm_eq_abs]
+    calc
+      u ^ 2 * Real.exp (q.1 * u ^ 2) * ‖deBruijnNewmanPhi u‖ *
+          ‖Complex.cos (q.2 * (u : ℂ))‖ ≤
+        u ^ 2 * Real.exp ((|p.1| + 1) * u ^ 2) * ‖deBruijnNewmanPhi u‖ *
+          Real.exp (‖q.2‖ * u) := by
+        gcongr
+        exact norm_complex_cos_mul_real_le q.2 hu0
+      _ ≤ u ^ 2 * Real.exp ((|p.1| + 1) * u ^ 2) * ‖deBruijnNewmanPhi u‖ *
+          Real.exp ((‖p.2‖ + 1) * u) := by gcongr
+      _ ≤ bound u := by
+        dsimp only [bound]
+        rw [Real.exp_add]
+        calc
+          u ^ 2 * Real.exp ((|p.1| + 1) * u ^ 2) * ‖deBruijnNewmanPhi u‖ *
+                Real.exp ((‖p.2‖ + 1) * u) =
+              u ^ 2 * (Real.exp ((|p.1| + 1) * u ^ 2) *
+                Real.exp ((‖p.2‖ + 1) * u) * ‖deBruijnNewmanPhi u‖) := by ring
+          _ ≤ (1 + u ^ 2) * (Real.exp ((|p.1| + 1) * u ^ 2) *
+                Real.exp ((‖p.2‖ + 1) * u) * ‖deBruijnNewmanPhi u‖) := by
+            gcongr
+            nlinarith [sq_nonneg u]
+          _ = _ := by ring
+  have hbound_int : Integrable bound (volume.restrict (Ioi 0)) :=
+    integrableOn_one_add_sq_mul_exp_mul_norm_deBruijnNewmanPhi
+      (|p.1| + 1) (by positivity) (‖p.2‖ + 1)
+  have h_lim : ∀ᵐ u ∂volume.restrict (Ioi 0),
+      Tendsto (fun q : ℝ × ℂ ↦ F q u) (𝓝 p) (𝓝 (F p u)) := by
+    filter_upwards with u
+    exact (by fun_prop : ContinuousAt (fun q : ℝ × ℂ ↦ F q u) p)
+  have hmain := tendsto_integral_filter_of_dominated_convergence bound hF_meas h_bound
+    hbound_int h_lim
+  simpa only [F, deBruijnNewmanHSecondMoment] using hmain
+
+theorem continuous_deBruijnNewmanHSecondMoment_joint :
+    Continuous (fun p : ℝ × ℂ ↦ deBruijnNewmanHSecondMoment p.1 p.2) :=
+  continuous_iff_continuousAt.mpr continuousAt_deBruijnNewmanHSecondMoment_joint
 
 private theorem hasDerivAt_dbnHeatTimeExp (t u : ℝ) :
     HasDerivAt (fun tau : ℝ ↦ Real.exp (tau * u ^ 2))

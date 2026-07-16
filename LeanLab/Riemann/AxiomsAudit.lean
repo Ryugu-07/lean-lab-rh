@@ -5,6 +5,7 @@ import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
 import LeanLab.Riemann.DeBruijnNewmanForward
 import LeanLab.Riemann.DeBruijnNewmanUpperHalf
+import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.LiZeroDivisor
@@ -382,6 +383,11 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.eventually_exists_dbnForwardApprox_zero_mem_closedBall
 #print axioms LeanLab.Riemann.deBruijnNewmanH_zero_im_sq_le_one_sub_two_mul
 #print axioms LeanLab.Riemann.deBruijnNewmanAllZerosReal_one_half
+#print axioms LeanLab.Riemann.continuous_deBruijnNewmanHSecondMoment_joint
+#print axioms LeanLab.Riemann.summable_deBruijnNewman_regularizedZeroForceTerm
+#print axioms LeanLab.Riemann.deBruijnNewmanH_second_deriv_div_two_deriv_eq_regularizedZeroForce
+#print axioms LeanLab.Riemann.hasDerivAt_deBruijnNewmanH_along
+#print axioms LeanLab.Riemann.deBruijnNewman_simpleZeroPath_velocity
 #print axioms LeanLab.Riemann.norm_le_of_forall_norm_finiteComplexPowerSum_le
 #print axioms LeanLab.Riemann.norm_eq_sqrt_of_powerSum_bound_and_reciprocal
 #print axioms LeanLab.Riemann.h6AuditHeatXiQuadratic_one_allZerosOnCriticalLine

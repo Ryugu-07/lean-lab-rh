@@ -11,7 +11,7 @@ hard-gap identifiers used by the v2 loop protocol.
 | G2 | M1 | complete |
 | G3 | M2 | open |
 | G4 | B1 | complete; fixed source frontier F0-F5 publicly Lean-checked |
-| G8 | H6-E | open; exact H0-xi bridge, heat evolution, and classical half-time good witness locally complete; time-zero all-real-zero endpoint unproved |
+| G8 | H6-E | open; exact H0-xi bridge, heat evolution, classical half-time good witness, and simple-zero force/path spine locally complete; collision exclusion and the time-zero all-real-zero endpoint remain unproved |
 
 Future attempt logs must copy `hard_gap_before`, `hard_gap_after`, and `hard_gap_delta` from
 `research/hard_gap_dag.md`, not from self-created local targets.
