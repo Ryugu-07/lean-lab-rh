@@ -1663,3 +1663,27 @@ velocity, Targets, TargetChecks, and standard-only axiom audit.
 The first spine is now public with `hard_gap_delta=0` and `route_infrastructure_delta=1`. Campaign
 `PROOF-ATTEMPT-20260717-H6-ZERO-DYNAMICS-01` remains active at local real trajectory construction;
 collision exclusion, H6-E/G8, and RH remain open.
+
+## Local Loop-2 Update: H6 Zero Trajectories And Pair Remainder
+
+Date: 2026-07-17
+
+The active H6-E campaign now compiles locally unique differentiable real zero trajectories from
+every simple real zero and locally ordered trajectories from every distinct simple pair. This uses
+the product-domain real implicit-function theorem, joint strict Frechet differentiation, and
+conjugation uniqueness.
+
+The same module extracts the mutual interaction from the infinite force. After deleting both
+complete simple-zero divisor fibers, the residual pair force is absolutely summable and
+
+`force(t,s)-force(t,r)=2/(s-r)+pairRemainder(t,r,s)`.
+
+Consequently `(gap^2)'=8+4*gap*Re(pairRemainder)` for real anchored local paths. Exact Targets,
+eleven campaign TargetChecks, twelve standard-only campaign axiom prints, empty forbidden scans,
+`git diff --check`, and the full 8,691-job build pass. This remains route infrastructure with
+`hard_gap_delta=0` and campaign-level `route_infrastructure_delta=1`.
+
+The next proof loop must attack global height-aware continuation and a theta-specific integrated
+bound on the pair remainder through time zero. Local IFT does not handle the first repeated zero,
+and a fixed positive height-uniform gap is not an admissible replacement. The campaign remains
+active; H6-E/G8 and RH remain open.

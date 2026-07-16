@@ -1180,6 +1180,80 @@ example {x : ℝ → ℂ} {t : ℝ} {v : ℂ}
     v = 2 * deBruijnNewmanRegularizedZeroForce t (x t) :=
   deBruijnNewman_simpleZeroPath_velocity hx hzero hsimple
 
+example {x : ℝ → ℂ} {t : ℝ} {v : ℂ}
+    (hx : HasDerivAt x v t)
+    (hzero : ∀ᶠ tau in nhds t, deBruijnNewmanH tau (x tau) = 0)
+    (hsimple : deriv (deBruijnNewmanH t) (x t) ≠ 0) :
+    v = 2 * deBruijnNewmanRegularizedZeroForce t (x t) :=
+  deBruijnNewman_simpleZeroPath_velocity_of_eventually hx hzero hsimple
+
+example {t r : ℝ}
+    (hr : deBruijnNewmanH t (r : ℂ) = 0)
+    (hsimple : deriv (deBruijnNewmanH t) (r : ℂ) ≠ 0) :
+    ∃ x : ℝ → ℂ,
+      x t = (r : ℂ) ∧
+      Filter.Tendsto x (nhds t) (nhds (r : ℂ)) ∧
+      HasDerivAt x (2 * deBruijnNewmanRegularizedZeroForce t (r : ℂ)) t ∧
+      (∀ᶠ tau in nhds t,
+        deBruijnNewmanH tau (x tau) = 0 ∧ (x tau).im = 0) ∧
+      (∀ᶠ p : ℝ × ℂ in nhds (t, (r : ℂ)),
+        deBruijnNewmanH p.1 p.2 = 0 ↔ x p.1 = p.2) :=
+  exists_deBruijnNewman_localRealSimpleZeroPath hr hsimple
+
+example {t r s : ℝ} (hrs : r < s)
+    (hr : deBruijnNewmanH t (r : ℂ) = 0)
+    (hs : deBruijnNewmanH t (s : ℂ) = 0)
+    (hrSimple : deriv (deBruijnNewmanH t) (r : ℂ) ≠ 0)
+    (hsSimple : deriv (deBruijnNewmanH t) (s : ℂ) ≠ 0) :
+    ∃ x y : ℝ → ℂ,
+      x t = (r : ℂ) ∧ y t = (s : ℂ) ∧
+      HasDerivAt x (2 * deBruijnNewmanRegularizedZeroForce t (r : ℂ)) t ∧
+      HasDerivAt y (2 * deBruijnNewmanRegularizedZeroForce t (s : ℂ)) t ∧
+      (∀ᶠ tau in nhds t,
+        deBruijnNewmanH tau (x tau) = 0 ∧
+        (x tau).im = 0 ∧
+        deBruijnNewmanH tau (y tau) = 0 ∧
+        (y tau).im = 0 ∧
+        (x tau).re < (y tau).re) :=
+  exists_deBruijnNewman_orderedLocalRealSimpleZeroPaths hrs hr hs hrSimple hsSimple
+
+example {x y : ℝ → ℂ} {t : ℝ} {vx vy : ℂ}
+    (hx : HasDerivAt x vx t) (hy : HasDerivAt y vy t)
+    (hxZero : ∀ᶠ tau in nhds t, deBruijnNewmanH tau (x tau) = 0)
+    (hyZero : ∀ᶠ tau in nhds t, deBruijnNewmanH tau (y tau) = 0)
+    (hxSimple : deriv (deBruijnNewmanH t) (x t) ≠ 0)
+    (hySimple : deriv (deBruijnNewmanH t) (y t) ≠ 0) :
+    HasDerivAt (fun tau : ℝ ↦ ((y tau).re - (x tau).re) ^ 2)
+      (4 * ((y t).re - (x t).re) *
+        (deBruijnNewmanRegularizedZeroForce t (y t) -
+          deBruijnNewmanRegularizedZeroForce t (x t)).re) t :=
+  hasDerivAt_deBruijnNewman_simpleZeroPath_realGapSq
+    hx hy hxZero hyZero hxSimple hySimple
+
+example {t : ℝ} {r s : ℂ} (hrs : r ≠ s)
+    (hr : deBruijnNewmanH t r = 0)
+    (hs : deBruijnNewmanH t s = 0)
+    (hrSimple : deriv (deBruijnNewmanH t) r ≠ 0)
+    (hsSimple : deriv (deBruijnNewmanH t) s ≠ 0) :
+    deBruijnNewmanRegularizedZeroForce t s -
+        deBruijnNewmanRegularizedZeroForce t r =
+      2 / (s - r) + deBruijnNewmanZeroPairForceRemainder t r s :=
+  deBruijnNewmanRegularizedZeroForce_sub_eq_two_div_add_pairRemainder
+    hrs hr hs hrSimple hsSimple
+
+example {x y : ℝ → ℂ} {t r s : ℝ} {vx vy : ℂ} (hrs : r < s)
+    (hxAnchor : x t = (r : ℂ)) (hyAnchor : y t = (s : ℂ))
+    (hx : HasDerivAt x vx t) (hy : HasDerivAt y vy t)
+    (hxZero : ∀ᶠ tau in nhds t, deBruijnNewmanH tau (x tau) = 0)
+    (hyZero : ∀ᶠ tau in nhds t, deBruijnNewmanH tau (y tau) = 0)
+    (hxSimple : deriv (deBruijnNewmanH t) (x t) ≠ 0)
+    (hySimple : deriv (deBruijnNewmanH t) (y t) ≠ 0) :
+    HasDerivAt (fun tau : ℝ ↦ ((y tau).re - (x tau).re) ^ 2)
+      (8 + 4 * (s - r) *
+        (deBruijnNewmanZeroPairForceRemainder t (r : ℂ) (s : ℂ)).re) t :=
+  hasDerivAt_deBruijnNewman_simpleZeroPath_realGapSq_pairRemainder
+    hrs hxAnchor hyAnchor hx hy hxZero hyZero hxSimple hySimple
+
 example {ι : Type*} [Fintype ι] (alpha : ι → ℂ)
     {R C : ℝ} (hR : 0 < R) (hC : 0 ≤ C)
     (hbound : ∀ n : ℕ, ‖finiteComplexPowerSum alpha n‖ ≤ C * R ^ n) :

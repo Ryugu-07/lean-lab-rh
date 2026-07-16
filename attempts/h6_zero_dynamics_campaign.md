@@ -73,19 +73,47 @@ Public preregistration passed. Exact architecture and adversarial checks are in
 - `hard_gap_delta`: 0.
 - `route_infrastructure_delta`: 1, verified by public implementation CI.
 
+### Implementation loop 2: local trajectories and pair-removed gap dynamics
+
+- Applied Mathlib's product-domain real implicit-function theorem to the compiled joint strict
+  Frechet derivative at an arbitrary simple real zero.
+- Proved a locally unique differentiable complex zero path. Conjugation symmetry maps that path
+  to a second nearby zero path, so local uniqueness forces zero imaginary part near the anchor.
+- Constructed two such paths at distinct simple real zeros and proved that their real parts remain
+  locally ordered.
+- Generalized the velocity theorem from globally zero-valued paths to paths that are zero-valued
+  eventually in the selected time neighbourhood; this is the exact interface needed by the local
+  implicit function.
+- Proved the exact complex-gap, real-gap, and squared-real-gap derivative laws.
+- Removed both complete simple-zero divisor fibers from the force difference and proved the
+  remaining term genuinely summable. Lean verifies
+  `force(t,s)-force(t,r)=2/(s-r)+pairRemainder(t,r,s)`.
+- Substitution into the squared-gap law gives the exact real anchored identity
+  `(gap^2)'=8+4*gap*Re(pairRemainder)`. The constant `8` is the mutual pair interaction, not part
+  of the remainder definition.
+- This completes local trajectory construction and narrows the next attack to global continuation
+  plus a theta-specific integrated estimate on the pair-removed remainder. A height-uniform
+  positive absolute gap is not adopted as a target; shrinking mean zero spacing makes that the
+  wrong global shape.
+- `result`: loop 2 locally complete; campaign remains active and the next loop must attempt the
+  theta-specific remainder estimate rather than another dynamics wrapper.
+- `hard_gap_delta`: 0.
+- `route_infrastructure_delta`: 1 at campaign level; no unconditional collision exclusion yet.
+
 ## Mechanical audit
 
 - exact module compilation: `DeBruijnNewmanDynamics.lean` passes without diagnostics.
-- `Targets.lean`: exact source-force target registered and compiles.
-- `TargetChecks.lean` exact witness: five new exact witnesses compile.
-- `AxiomsAudit.lean` and printed axioms: all five selected declarations use only `propext`,
-  `Classical.choice`, and `Quot.sound`.
+- `Targets.lean`: exact source-force and local-trajectory targets are registered and compile.
+- `TargetChecks.lean`: the five first-spine and six loop-2 exact witnesses compile.
+- `AxiomsAudit.lean` and printed axioms: all five first-spine and seven loop-2 selected declarations
+  use only `propext`, `Classical.choice`, and `Quot.sound`.
 - forbidden token/declaration/resource scan: empty after a syntax-narrow declaration rescan.
-- witness audit: summability, ratio, mixed chain rule, and path velocity statements witnessed.
+- witness audit: summability, ratio, mixed chain rule, path velocity, local uniqueness/reality,
+  local ordering, pair-force decomposition, and pair-remainder squared-gap evolution witnessed.
 - definition/source alignment: the divisor regularization, heat sign, and factor two match the
   preregistered Rodgers-Tao convention.
 - `git diff --check`: passes.
-- full `lake build`: passes with 8,691 jobs.
+- full `lake build`: loop 2 passes with 8,691 jobs; warnings replayed only from pre-existing files.
 - public implementation CI: commit `ce65db1c0379a4accfef579c9e8c08995662dc19` passed Lean
   Action run `29534356022`, build job `87741989620`, in `2m36s`.
 
@@ -103,16 +131,24 @@ Public preregistration passed. Exact architecture and adversarial checks are in
 
 ## Result
 
-- `result_class`: active direct proof attempt; known first spine formalized locally.
+- `result_class`: active direct proof attempt; known local zero-dynamics interface formalized
+  locally through pair-removed squared-gap evolution.
 - `assumption_frontier_after`: exact summable divisor force, simple-zero derivative ratio, joint
-  time-space Frechet derivative, and differentiable simple-zero path velocity.
+  time-space Frechet derivative, locally unique real simple-zero paths, local ordering, and the
+  exact pair-removed squared-gap law.
 - `hard_gap_after`: H6-E/G8, W2/G7, M2/G3, and RH remain open.
 - `hard_gap_delta`: 0.
-- `OBS_node`: none yet.
+- `OBS_node`: none yet; the pair-remainder estimate is the next fixed attack, not yet a failed
+  premise or a completed obstruction audit.
 - `theorem_names`: `summable_deBruijnNewman_regularizedZeroForceTerm`,
   `deBruijnNewmanH_second_deriv_div_two_deriv_eq_regularizedZeroForce`,
-  `hasDerivAt_deBruijnNewmanH_along`, `deBruijnNewman_simpleZeroPath_velocity`.
-- `failure_or_obstacle`: the first spine succeeds; local trajectory construction and the first
-  theta-specific collision inequality remain to be attempted, so no obstruction node is yet due.
-- `route_selection_decision`: remain in the fixed H6-E campaign and proceed to local real
-  simple-zero trajectories after public implementation CI.
+  `hasDerivAt_deBruijnNewmanH_along`, `deBruijnNewman_simpleZeroPath_velocity`,
+  `exists_deBruijnNewman_localRealSimpleZeroPath`,
+  `exists_deBruijnNewman_orderedLocalRealSimpleZeroPaths`,
+  `deBruijnNewmanRegularizedZeroForce_sub_eq_two_div_add_pairRemainder`, and
+  `hasDerivAt_deBruijnNewman_simpleZeroPath_realGapSq_pairRemainder`.
+- `failure_or_obstacle`: both formalization loops succeed. Local IFT does not itself provide a
+  global zero enumeration, continuation through a first repeated zero, or an integrated bound on
+  the pair-removed theta-family remainder from time `1/2` to `0`; those are the exact next attack.
+- `route_selection_decision`: remain in the fixed H6-E campaign and attack the theta-specific
+  pair-remainder estimate after loop-2 public implementation CI.

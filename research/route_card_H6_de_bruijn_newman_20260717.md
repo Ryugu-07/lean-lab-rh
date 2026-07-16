@@ -400,3 +400,23 @@ local trajectory construction.
 Implementation commit `ce65db1c0379a4accfef579c9e8c08995662dc19` passed public Lean Action CI
 run `29534356022`, build job `87741989620`, in `2m36s`. The first spine is public; H6-E/G8 and RH
 remain open.
+
+**Local trajectory and collision-frontier result.** Loop 2 applies the product-domain real
+implicit-function theorem to the joint source derivative. Every simple real zero extends to a
+locally unique differentiable zero path; conjugation and uniqueness force local real-valuedness,
+and two distinct anchors remain locally ordered.
+
+The force difference is no longer left opaque. Lean removes both complete simple-zero fibers,
+proves the residual divisor sum absolutely convergent, and verifies
+
+`force(t,s)-force(t,r)=2/(s-r)+pairRemainder(t,r,s)`.
+
+For real anchored paths this yields `(gap^2)'=8+4*gap*Re(pairRemainder)`. The constant `8` is the
+exact mutual pair interaction. The standalone module, exact Targets/TargetChecks, standard-only
+axiom audit, forbidden scans, `git diff --check`, and the 8,691-job build pass locally.
+
+**Next attack.** H6-E is unchanged. The required new content is global continuation over the
+unbounded zero set and a theta-specific integrated upper control on the displayed derivative
+relative to the terminal gaps, including the first possible repeated zero. A fixed positive
+height-uniform gap is not a viable substitute because zero spacing shrinks with height. The
+campaign remains active and no OBS node is declared before this estimate is actually attempted.

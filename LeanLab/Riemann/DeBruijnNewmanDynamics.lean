@@ -1,5 +1,6 @@
 import LeanLab.Riemann.DeBruijnNewmanUpperHalf
 import PrimeNumberTheoremAnd.Mathlib.Analysis.Complex.DivisorQuotientRemovable
+import Mathlib.Analysis.Calculus.ImplicitFunction.ProdDomain
 
 set_option linter.style.header false
 
@@ -12,7 +13,7 @@ infinite sum is evaluated, so the resulting genus-one sum is absolutely converge
 -/
 
 open Complex Filter Function Set Topology
-open scoped BigOperators Topology
+open scoped BigOperators ComplexConjugate Topology
 
 namespace LeanLab.Riemann
 
@@ -230,6 +231,61 @@ theorem summable_deBruijnNewman_regularizedZeroForceTerm (t : ℝ) (r : ℂ) :
   exact summable_regularizedDivisorForceTerm
     (summable_deBruijnNewmanH_divisorZeroIndex_norm_inv_sq t) r
 
+private def deBruijnNewmanZeroPairForceTerm (t : ℝ) (r s : ℂ)
+    (p : Complex.Hadamard.divisorZeroIndex₀
+      (deBruijnNewmanH t) (Set.univ : Set ℂ)) : ℂ :=
+  if Complex.Hadamard.divisorZeroIndex₀_val p = r ∨
+      Complex.Hadamard.divisorZeroIndex₀_val p = s then 0
+  else 1 / (s - Complex.Hadamard.divisorZeroIndex₀_val p) -
+    1 / (r - Complex.Hadamard.divisorZeroIndex₀_val p)
+
+/-- The absolutely convergent force difference after removing the complete fibers over a selected
+zero pair. -/
+def deBruijnNewmanZeroPairForceRemainder (t : ℝ) (r s : ℂ) : ℂ :=
+  ∑' p : Complex.Hadamard.divisorZeroIndex₀
+      (deBruijnNewmanH t) (Set.univ : Set ℂ),
+    deBruijnNewmanZeroPairForceTerm t r s p
+
+theorem summable_deBruijnNewman_zeroPairForceTerm (t : ℝ) (r s : ℂ) :
+    Summable (deBruijnNewmanZeroPairForceTerm t r s) := by
+  let Ar : Complex.Hadamard.divisorZeroIndex₀
+      (deBruijnNewmanH t) (Set.univ : Set ℂ) → ℂ :=
+    regularizedDivisorForceTerm r
+  let As : Complex.Hadamard.divisorZeroIndex₀
+      (deBruijnNewmanH t) (Set.univ : Set ℂ) → ℂ :=
+    regularizedDivisorForceTerm s
+  have hbase : Summable (fun p ↦ As p - Ar p) :=
+    (summable_regularizedDivisorForceTerm
+      (summable_deBruijnNewmanH_divisorZeroIndex_norm_inv_sq t) s).sub
+      (summable_regularizedDivisorForceTerm
+        (summable_deBruijnNewmanH_divisorZeroIndex_norm_inv_sq t) r)
+  have hfinite : ({p : Complex.Hadamard.divisorZeroIndex₀
+      (deBruijnNewmanH t) (Set.univ : Set ℂ) |
+      Complex.Hadamard.divisorZeroIndex₀_val p = r ∨
+        Complex.Hadamard.divisorZeroIndex₀_val p = s} : Set _).Finite := by
+    let fiberR := Complex.Hadamard.divisorZeroIndex₀_fiberFinset
+      (f := deBruijnNewmanH t) r
+    let fiberS := Complex.Hadamard.divisorZeroIndex₀_fiberFinset
+      (f := deBruijnNewmanH t) s
+    have heq : ({p : Complex.Hadamard.divisorZeroIndex₀
+        (deBruijnNewmanH t) (Set.univ : Set ℂ) |
+        Complex.Hadamard.divisorZeroIndex₀_val p = r ∨
+          Complex.Hadamard.divisorZeroIndex₀_val p = s} : Set _) =
+        (fiberR : Set _) ∪ (fiberS : Set _) := by
+      ext p
+      simp [fiberR, fiberS, Complex.Hadamard.mem_divisorZeroIndex₀_fiberFinset]
+    rw [heq]
+    exact (Finset.finite_toSet fiberR).union (Finset.finite_toSet fiberS)
+  refine hbase.congr_cofinite ?_
+  filter_upwards [hfinite.eventually_cofinite_notMem] with p hp
+  have hp' : ¬(Complex.Hadamard.divisorZeroIndex₀_val p = r ∨
+      Complex.Hadamard.divisorZeroIndex₀_val p = s) := by
+    simpa only [Set.mem_setOf_eq] using hp
+  simp only [deBruijnNewmanZeroPairForceTerm, hp', ↓reduceIte, As, Ar,
+    regularizedDivisorForceTerm]
+  rw [if_neg (fun h ↦ hp' (Or.inr h)), if_neg (fun h ↦ hp' (Or.inl h))]
+  ring
+
 private theorem deBruijnNewman_simpleZero_fiber_card_eq_one
     {t : ℝ} {r : ℂ} (hr : deBruijnNewmanH t r = 0)
     (hsimple : deriv (deBruijnNewmanH t) r ≠ 0) :
@@ -245,6 +301,135 @@ private theorem deBruijnNewman_simpleZero_fiber_card_eq_one
     (differentiable_deBruijnNewmanH t).analyticAt r
       |>.analyticOrderAt_eq_one_of_zero_deriv_ne_zero hr hsimple
   simp [analyticOrderNatAt, horder]
+
+/-- For two distinct simple zeros, their mutual interaction contributes exactly `2 / (s-r)` to
+the regularized force difference. The remaining infinite sum omits both complete zero fibers and
+is absolutely convergent. -/
+theorem deBruijnNewmanRegularizedZeroForce_sub_eq_two_div_add_pairRemainder
+    {t : ℝ} {r s : ℂ} (hrs : r ≠ s)
+    (hr : deBruijnNewmanH t r = 0)
+    (hs : deBruijnNewmanH t s = 0)
+    (hrSimple : deriv (deBruijnNewmanH t) r ≠ 0)
+    (hsSimple : deriv (deBruijnNewmanH t) s ≠ 0) :
+    deBruijnNewmanRegularizedZeroForce t s -
+        deBruijnNewmanRegularizedZeroForce t r =
+      2 / (s - r) + deBruijnNewmanZeroPairForceRemainder t r s := by
+  classical
+  let Z := Complex.Hadamard.divisorZeroIndex₀
+    (deBruijnNewmanH t) (Set.univ : Set ℂ)
+  let fiberR := Complex.Hadamard.divisorZeroIndex₀_fiberFinset
+    (f := deBruijnNewmanH t) r
+  let fiberS := Complex.Hadamard.divisorZeroIndex₀_fiberFinset
+    (f := deBruijnNewmanH t) s
+  have hcardR : fiberR.card = 1 := by
+    simpa only [fiberR] using deBruijnNewman_simpleZero_fiber_card_eq_one hr hrSimple
+  have hcardS : fiberS.card = 1 := by
+    simpa only [fiberS] using deBruijnNewman_simpleZero_fiber_card_eq_one hs hsSimple
+  obtain ⟨pR, hpR⟩ := Finset.card_eq_one.mp hcardR
+  obtain ⟨pS, hpS⟩ := Finset.card_eq_one.mp hcardS
+  have hvalR : Complex.Hadamard.divisorZeroIndex₀_val pR = r := by
+    apply (Complex.Hadamard.mem_divisorZeroIndex₀_fiberFinset
+      (deBruijnNewmanH t) r pR).mp
+    change pR ∈ fiberR
+    rw [hpR]
+    simp
+  have hvalS : Complex.Hadamard.divisorZeroIndex₀_val pS = s := by
+    apply (Complex.Hadamard.mem_divisorZeroIndex₀_fiberFinset
+      (deBruijnNewmanH t) s pS).mp
+    change pS ∈ fiberS
+    rw [hpS]
+    simp
+  have hpSR : pS ≠ pR := by
+    intro heq
+    apply hrs
+    calc
+      r = Complex.Hadamard.divisorZeroIndex₀_val pR := hvalR.symm
+      _ = Complex.Hadamard.divisorZeroIndex₀_val pS := by simp [heq]
+      _ = s := hvalS
+  have hEqR (p : Z) :
+      Complex.Hadamard.divisorZeroIndex₀_val p = r ↔ p = pR := by
+    constructor
+    · intro hp
+      have hmem : p ∈ fiberR := by
+        exact (Complex.Hadamard.mem_divisorZeroIndex₀_fiberFinset
+          (deBruijnNewmanH t) r p).mpr hp
+      rw [hpR] at hmem
+      simpa using hmem
+    · rintro rfl
+      exact hvalR
+  have hEqS (p : Z) :
+      Complex.Hadamard.divisorZeroIndex₀_val p = s ↔ p = pS := by
+    constructor
+    · intro hp
+      have hmem : p ∈ fiberS := by
+        exact (Complex.Hadamard.mem_divisorZeroIndex₀_fiberFinset
+          (deBruijnNewmanH t) s p).mpr hp
+      rw [hpS] at hmem
+      simpa using hmem
+    · rintro rfl
+      exact hvalS
+  let Ar : Z → ℂ := regularizedDivisorForceTerm r
+  let As : Z → ℂ := regularizedDivisorForceTerm s
+  let B : Z → ℂ := fun p ↦ As p - Ar p
+  have hAr : Summable Ar := summable_regularizedDivisorForceTerm
+    (summable_deBruijnNewmanH_divisorZeroIndex_norm_inv_sq t) r
+  have hAs : Summable As := summable_regularizedDivisorForceTerm
+    (summable_deBruijnNewmanH_divisorZeroIndex_norm_inv_sq t) s
+  have hB : Summable B := by
+    simpa only [B] using hAs.sub hAr
+  have hdropR : Summable (fun p : Z ↦ if p = pR then 0 else B p) := by
+    refine hB.congr_cofinite ?_
+    filter_upwards [(Set.finite_singleton pR).eventually_cofinite_notMem] with p hp
+    have hpne : p ≠ pR := by
+      change p ≠ pR at hp
+      exact hp
+    simp [hpne]
+  have htail (p : Z) :
+      (if p = pS then 0 else if p = pR then 0 else B p) =
+        deBruijnNewmanZeroPairForceTerm t r s p := by
+    by_cases hpr : p = pR
+    · subst p
+      simp [hvalR, hrs, deBruijnNewmanZeroPairForceTerm]
+    by_cases hps : p = pS
+    · subst p
+      simp [hvalS, deBruijnNewmanZeroPairForceTerm]
+    have hvalNeR : Complex.Hadamard.divisorZeroIndex₀_val p ≠ r :=
+      fun h ↦ hpr ((hEqR p).mp h)
+    have hvalNeS : Complex.Hadamard.divisorZeroIndex₀_val p ≠ s :=
+      fun h ↦ hps ((hEqS p).mp h)
+    simp [hpr, hps, B, As, Ar, regularizedDivisorForceTerm,
+      deBruijnNewmanZeroPairForceTerm, hvalNeR, hvalNeS]
+  have hsplit :
+      ∑' p : Z, B p = B pR + B pS +
+        ∑' p : Z, deBruijnNewmanZeroPairForceTerm t r s p := by
+    calc
+      ∑' p : Z, B p = B pR + ∑' p : Z, if p = pR then 0 else B p :=
+        hB.tsum_eq_add_tsum_ite pR
+      _ = B pR + ((if pS = pR then 0 else B pS) +
+          ∑' p : Z, if p = pS then 0 else if p = pR then 0 else B p) := by
+        rw [hdropR.tsum_eq_add_tsum_ite pS]
+      _ = B pR + B pS +
+          ∑' p : Z, deBruijnNewmanZeroPairForceTerm t r s p := by
+        rw [if_neg hpSR, tsum_congr htail]
+        ring
+  have hBpR : B pR = 1 / (s - r) + 1 / r := by
+    simp [B, As, Ar, regularizedDivisorForceTerm, hvalR, hrs]
+  have hBpS : B pS = -(1 / (r - s) + 1 / s) := by
+    simp [B, As, Ar, regularizedDivisorForceTerm, hvalS, Ne.symm hrs]
+  have hneg : 1 / (r - s) = -(1 / (s - r)) := by
+    rw [show r - s = -(s - r) by ring]
+    simp only [one_div, inv_neg]
+  change (1 / s + ∑' p : Z, As p) - (1 / r + ∑' p : Z, Ar p) =
+    2 / (s - r) + ∑' p : Z, deBruijnNewmanZeroPairForceTerm t r s p
+  calc
+    (1 / s + ∑' p : Z, As p) - (1 / r + ∑' p : Z, Ar p) =
+        1 / s - 1 / r + ((∑' p : Z, As p) - ∑' p : Z, Ar p) := by ring
+    _ = 1 / s - 1 / r + ∑' p : Z, B p := by
+      rw [hAs.tsum_sub hAr]
+    _ = 2 / (s - r) +
+        ∑' p : Z, deBruijnNewmanZeroPairForceTerm t r s p := by
+      rw [hsplit, hBpR, hBpS, hneg]
+      ring
 
 private theorem deBruijnNewman_simpleZero_fiberPartialProduct_eq
     {t : ℝ} {r : ℂ} (hcard :
@@ -489,17 +674,19 @@ theorem hasDerivAt_deBruijnNewmanH_along
     ContinuousLinearMap.prod_apply, ContinuousLinearMap.comp_apply,
     ContinuousLinearMap.smulRight_apply, one_apply_eq_self, smul_eq_mul] using hcomp.hasDerivAt
 
-/-- Every differentiable path of simple zeros obeys the divisor-regularized de Bruijn-Newman
-velocity law. The sign uses the source convention `∂ₜ H = -∂²_z H`. -/
-theorem deBruijnNewman_simpleZeroPath_velocity
+/-- Every path that is differentiable at `t` and is locally a path of simple zeros obeys the
+divisor-regularized de Bruijn-Newman velocity law. The sign uses the source convention
+`∂ₜ H = -∂²_z H`. -/
+theorem deBruijnNewman_simpleZeroPath_velocity_of_eventually
     {x : ℝ → ℂ} {t : ℝ} {v : ℂ}
     (hx : HasDerivAt x v t)
-    (hzero : ∀ tau : ℝ, deBruijnNewmanH tau (x tau) = 0)
+    (hzero : ∀ᶠ tau in 𝓝 t, deBruijnNewmanH tau (x tau) = 0)
     (hsimple : deriv (deBruijnNewmanH t) (x t) ≠ 0) :
     v = 2 * deBruijnNewmanRegularizedZeroForce t (x t) := by
   have hchain := (hasDerivAt_deBruijnNewmanH_along hx).unique
     (show HasDerivAt (fun tau : ℝ ↦ deBruijnNewmanH tau (x tau)) 0 t by
-      simpa only [hzero] using hasDerivAt_const (x := t) (c := (0 : ℂ)))
+      apply (hasDerivAt_const (x := t) (c := (0 : ℂ))).congr_of_eventuallyEq
+      exact hzero.mono fun tau hz ↦ hz)
   have hmoment : deBruijnNewmanHSecondMoment t (x t) =
       -deriv (deriv (deBruijnNewmanH t)) (x t) := by
     rw [deriv_deriv_deBruijnNewmanH]
@@ -522,7 +709,214 @@ theorem deBruijnNewman_simpleZeroPath_velocity
             field_simp [hsimple]
     _ = 2 * deBruijnNewmanRegularizedZeroForce t (x t) := by
       rw [deBruijnNewmanH_second_deriv_div_two_deriv_eq_regularizedZeroForce
-        (hzero t) hsimple]
+        hzero.self_of_nhds hsimple]
+
+/-- Global-path specialization of the local simple-zero velocity law. -/
+theorem deBruijnNewman_simpleZeroPath_velocity
+    {x : ℝ → ℂ} {t : ℝ} {v : ℂ}
+    (hx : HasDerivAt x v t)
+    (hzero : ∀ tau : ℝ, deBruijnNewmanH tau (x tau) = 0)
+    (hsimple : deriv (deBruijnNewmanH t) (x t) ≠ 0) :
+    v = 2 * deBruijnNewmanRegularizedZeroForce t (x t) :=
+  deBruijnNewman_simpleZeroPath_velocity_of_eventually hx
+    (Filter.Eventually.of_forall hzero) hsimple
+
+private theorem isInvertible_deBruijnNewmanSpatialPartialFDeriv
+    {t : ℝ} {r : ℂ} (hsimple : deriv (deBruijnNewmanH t) r ≠ 0) :
+    (deBruijnNewmanSpatialPartialFDeriv t r).IsInvertible := by
+  let e : ℂ ≃L[ℝ] ℂ :=
+    ContinuousLinearEquiv.smulLeft (Units.mk0 (deriv (deBruijnNewmanH t) r) hsimple)
+  refine ⟨e, ?_⟩
+  ext z
+  simp [e, deBruijnNewmanSpatialPartialFDeriv]
+
+/-- A simple real zero extends to a locally unique differentiable real zero trajectory. The
+trajectory is produced by the real implicit-function theorem on `ℝ × ℂ`; conjugation symmetry and
+local uniqueness force its nearby values back onto the real axis. -/
+theorem exists_deBruijnNewman_localRealSimpleZeroPath
+    {t r : ℝ}
+    (hr : deBruijnNewmanH t (r : ℂ) = 0)
+    (hsimple : deriv (deBruijnNewmanH t) (r : ℂ) ≠ 0) :
+    ∃ x : ℝ → ℂ,
+      x t = (r : ℂ) ∧
+      Tendsto x (𝓝 t) (𝓝 (r : ℂ)) ∧
+      HasDerivAt x (2 * deBruijnNewmanRegularizedZeroForce t (r : ℂ)) t ∧
+      (∀ᶠ tau in 𝓝 t,
+        deBruijnNewmanH tau (x tau) = 0 ∧ (x tau).im = 0) ∧
+      (∀ᶠ p : ℝ × ℂ in 𝓝 (t, (r : ℂ)),
+        deBruijnNewmanH p.1 p.2 = 0 ↔ x p.1 = p.2) := by
+  let D : ℝ × ℂ →L[ℝ] ℂ :=
+    (deBruijnNewmanTimePartialFDeriv t (r : ℂ)).coprod
+      (deBruijnNewmanSpatialPartialFDeriv t (r : ℂ))
+  have hD : HasStrictFDerivAt (fun p : ℝ × ℂ ↦ deBruijnNewmanH p.1 p.2)
+      D (t, (r : ℂ)) := by
+    simpa only [D] using hasStrictFDerivAt_deBruijnNewmanH_joint (t, (r : ℂ))
+  have hinv : (D ∘L ContinuousLinearMap.inr ℝ ℝ ℂ).IsInvertible := by
+    simpa only [D, ContinuousLinearMap.coprod_comp_inr] using
+      isInvertible_deBruijnNewmanSpatialPartialFDeriv hsimple
+  let x : ℝ → ℂ := hD.implicitFunctionOfProdDomain hinv
+  have huniq : ∀ᶠ p : ℝ × ℂ in 𝓝 (t, (r : ℂ)),
+      deBruijnNewmanH p.1 p.2 = deBruijnNewmanH t (r : ℂ) ↔ x p.1 = p.2 := by
+    simpa only [x] using hD.eventually_apply_eq_iff_implicitFunctionOfProdDomain hinv
+  have hanchor : x t = (r : ℂ) := (huniq.self_of_nhds).mp rfl
+  have htend : Tendsto x (𝓝 t) (𝓝 (r : ℂ)) := by
+    simpa only [x] using hD.tendsto_implicitFunctionOfProdDomain hinv
+  have hzero : ∀ᶠ tau in 𝓝 t, deBruijnNewmanH tau (x tau) = 0 := by
+    have h := hD.eventually_apply_implicitFunctionOfProdDomain hinv
+    simpa only [x, hr] using h
+  have hxRaw := (hD.hasStrictFDerivAt_implicitFunctionOfProdDomain hinv).hasFDerivAt.hasDerivAt
+  have hsimplex : deriv (deBruijnNewmanH t) (x t) ≠ 0 := by
+    simpa only [hanchor] using hsimple
+  have hvelocity := deBruijnNewman_simpleZeroPath_velocity_of_eventually
+    hxRaw hzero hsimplex
+  change _ = 2 * deBruijnNewmanRegularizedZeroForce t (x t) at hvelocity
+  rw [hanchor] at hvelocity
+  have hxderiv :
+      HasDerivAt x (2 * deBruijnNewmanRegularizedZeroForce t (r : ℂ)) t :=
+    hxRaw.congr_deriv hvelocity
+  have hconjTend : Tendsto (fun tau : ℝ ↦ conj (x tau)) (𝓝 t) (𝓝 (r : ℂ)) := by
+    change Tendsto (conj ∘ x) (𝓝 t) (𝓝 (r : ℂ))
+    simpa only [conj_ofReal] using Complex.continuous_conj.continuousAt.tendsto.comp htend
+  have hpairConj : Tendsto (fun tau : ℝ ↦ (tau, conj (x tau)))
+      (𝓝 t) (𝓝 (t, (r : ℂ))) :=
+    tendsto_id.prodMk_nhds hconjTend
+  have huniqConj : ∀ᶠ tau in 𝓝 t,
+      deBruijnNewmanH tau (conj (x tau)) = deBruijnNewmanH t (r : ℂ) ↔
+        x tau = conj (x tau) :=
+    hpairConj.eventually huniq
+  have hreal : ∀ᶠ tau in 𝓝 t, (x tau).im = 0 := by
+    filter_upwards [hzero, huniqConj] with tau hzeroTau huniqTau
+    have hconjZero : deBruijnNewmanH tau (conj (x tau)) = 0 := by
+      rw [deBruijnNewmanH_conj, hzeroTau, map_zero]
+    exact Complex.conj_eq_iff_im.mp (huniqTau.mp (by simpa only [hr] using hconjZero)).symm
+  refine ⟨x, hanchor, htend, hxderiv, ?_, ?_⟩
+  · filter_upwards [hzero, hreal] with tau hzeroTau hrealTau
+    exact ⟨hzeroTau, hrealTau⟩
+  · simpa only [hr] using huniq
+
+/-- Two distinct simple real zeros extend to locally ordered real zero trajectories. This is the
+local no-collision interface: any loss of order must occur only after leaving the common
+simple-zero neighbourhood. -/
+theorem exists_deBruijnNewman_orderedLocalRealSimpleZeroPaths
+    {t r s : ℝ} (hrs : r < s)
+    (hr : deBruijnNewmanH t (r : ℂ) = 0)
+    (hs : deBruijnNewmanH t (s : ℂ) = 0)
+    (hrSimple : deriv (deBruijnNewmanH t) (r : ℂ) ≠ 0)
+    (hsSimple : deriv (deBruijnNewmanH t) (s : ℂ) ≠ 0) :
+    ∃ x y : ℝ → ℂ,
+      x t = (r : ℂ) ∧ y t = (s : ℂ) ∧
+      HasDerivAt x (2 * deBruijnNewmanRegularizedZeroForce t (r : ℂ)) t ∧
+      HasDerivAt y (2 * deBruijnNewmanRegularizedZeroForce t (s : ℂ)) t ∧
+      (∀ᶠ tau in 𝓝 t,
+        deBruijnNewmanH tau (x tau) = 0 ∧
+        (x tau).im = 0 ∧
+        deBruijnNewmanH tau (y tau) = 0 ∧
+        (y tau).im = 0 ∧
+        (x tau).re < (y tau).re) := by
+  obtain ⟨x, hxAnchor, hxTend, hxDeriv, hxZeroReal, _⟩ :=
+    exists_deBruijnNewman_localRealSimpleZeroPath hr hrSimple
+  obtain ⟨y, hyAnchor, hyTend, hyDeriv, hyZeroReal, _⟩ :=
+    exists_deBruijnNewman_localRealSimpleZeroPath hs hsSimple
+  have hxReTend : Tendsto (fun tau : ℝ ↦ (x tau).re) (𝓝 t) (𝓝 r) := by
+    change Tendsto (Complex.re ∘ x) (𝓝 t) (𝓝 r)
+    simpa only [ofReal_re] using (Complex.continuous_re.tendsto (r : ℂ)).comp hxTend
+  have hyReTend : Tendsto (fun tau : ℝ ↦ (y tau).re) (𝓝 t) (𝓝 s) := by
+    change Tendsto (Complex.re ∘ y) (𝓝 t) (𝓝 s)
+    simpa only [ofReal_re] using (Complex.continuous_re.tendsto (s : ℂ)).comp hyTend
+  have hordered : ∀ᶠ tau in 𝓝 t, (x tau).re < (y tau).re :=
+    hxReTend.eventually_lt hyReTend hrs
+  refine ⟨x, y, hxAnchor, hyAnchor, hxDeriv, hyDeriv, ?_⟩
+  filter_upwards [hxZeroReal, hyZeroReal, hordered] with tau hxTau hyTau hxyTau
+  exact ⟨hxTau.1, hxTau.2, hyTau.1, hyTau.2, hxyTau⟩
+
+/-- The complex gap between two locally differentiable simple-zero paths has derivative twice the
+difference of their regularized divisor forces. -/
+theorem hasDerivAt_deBruijnNewman_simpleZeroPath_gap
+    {x y : ℝ → ℂ} {t : ℝ} {vx vy : ℂ}
+    (hx : HasDerivAt x vx t) (hy : HasDerivAt y vy t)
+    (hxZero : ∀ᶠ tau in 𝓝 t, deBruijnNewmanH tau (x tau) = 0)
+    (hyZero : ∀ᶠ tau in 𝓝 t, deBruijnNewmanH tau (y tau) = 0)
+    (hxSimple : deriv (deBruijnNewmanH t) (x t) ≠ 0)
+    (hySimple : deriv (deBruijnNewmanH t) (y t) ≠ 0) :
+    HasDerivAt (fun tau : ℝ ↦ y tau - x tau)
+      (2 * (deBruijnNewmanRegularizedZeroForce t (y t) -
+        deBruijnNewmanRegularizedZeroForce t (x t))) t := by
+  have hvxEq := deBruijnNewman_simpleZeroPath_velocity_of_eventually
+    hx hxZero hxSimple
+  have hvyEq := deBruijnNewman_simpleZeroPath_velocity_of_eventually
+    hy hyZero hySimple
+  exact (hy.sub hx).congr_deriv (by rw [hvxEq, hvyEq]; ring)
+
+/-- Real-part form of the exact simple-zero gap velocity. -/
+theorem hasDerivAt_deBruijnNewman_simpleZeroPath_realGap
+    {x y : ℝ → ℂ} {t : ℝ} {vx vy : ℂ}
+    (hx : HasDerivAt x vx t) (hy : HasDerivAt y vy t)
+    (hxZero : ∀ᶠ tau in 𝓝 t, deBruijnNewmanH tau (x tau) = 0)
+    (hyZero : ∀ᶠ tau in 𝓝 t, deBruijnNewmanH tau (y tau) = 0)
+    (hxSimple : deriv (deBruijnNewmanH t) (x t) ≠ 0)
+    (hySimple : deriv (deBruijnNewmanH t) (y t) ≠ 0) :
+    HasDerivAt (fun tau : ℝ ↦ (y tau).re - (x tau).re)
+      (2 * (deBruijnNewmanRegularizedZeroForce t (y t) -
+        deBruijnNewmanRegularizedZeroForce t (x t)).re) t := by
+  have hgap := hasDerivAt_deBruijnNewman_simpleZeroPath_gap
+    hx hy hxZero hyZero hxSimple hySimple
+  have hcomp := Complex.reCLM.hasFDerivAt.comp t hgap.hasFDerivAt
+  simpa [Function.comp_def, Complex.reCLM_apply, ContinuousLinearMap.comp_apply,
+    smul_eq_mul] using hcomp.hasDerivAt
+
+/-- Exact squared-gap evolution for two simple-zero paths. Any global collision exclusion must
+control the real part of the force difference in this identity uniformly over the relevant zero
+pairs and heights. -/
+theorem hasDerivAt_deBruijnNewman_simpleZeroPath_realGapSq
+    {x y : ℝ → ℂ} {t : ℝ} {vx vy : ℂ}
+    (hx : HasDerivAt x vx t) (hy : HasDerivAt y vy t)
+    (hxZero : ∀ᶠ tau in 𝓝 t, deBruijnNewmanH tau (x tau) = 0)
+    (hyZero : ∀ᶠ tau in 𝓝 t, deBruijnNewmanH tau (y tau) = 0)
+    (hxSimple : deriv (deBruijnNewmanH t) (x t) ≠ 0)
+    (hySimple : deriv (deBruijnNewmanH t) (y t) ≠ 0) :
+    HasDerivAt (fun tau : ℝ ↦ ((y tau).re - (x tau).re) ^ 2)
+      (4 * ((y t).re - (x t).re) *
+        (deBruijnNewmanRegularizedZeroForce t (y t) -
+          deBruijnNewmanRegularizedZeroForce t (x t)).re) t := by
+  have hgap := hasDerivAt_deBruijnNewman_simpleZeroPath_realGap
+    hx hy hxZero hyZero hxSimple hySimple
+  exact (hgap.pow 2).congr_deriv (by ring)
+
+/-- Squared-gap evolution with the mutual pair interaction extracted. The positive constant `8`
+is exact; all possible collision-producing behavior is confined to the absolutely convergent
+force remainder over the other zero fibers. -/
+theorem hasDerivAt_deBruijnNewman_simpleZeroPath_realGapSq_pairRemainder
+    {x y : ℝ → ℂ} {t r s : ℝ} {vx vy : ℂ} (hrs : r < s)
+    (hxAnchor : x t = (r : ℂ)) (hyAnchor : y t = (s : ℂ))
+    (hx : HasDerivAt x vx t) (hy : HasDerivAt y vy t)
+    (hxZero : ∀ᶠ tau in nhds t, deBruijnNewmanH tau (x tau) = 0)
+    (hyZero : ∀ᶠ tau in nhds t, deBruijnNewmanH tau (y tau) = 0)
+    (hxSimple : deriv (deBruijnNewmanH t) (x t) ≠ 0)
+    (hySimple : deriv (deBruijnNewmanH t) (y t) ≠ 0) :
+    HasDerivAt (fun tau : ℝ ↦ ((y tau).re - (x tau).re) ^ 2)
+      (8 + 4 * (s - r) *
+        (deBruijnNewmanZeroPairForceRemainder t (r : ℂ) (s : ℂ)).re) t := by
+  have hgap := hasDerivAt_deBruijnNewman_simpleZeroPath_realGapSq
+    hx hy hxZero hyZero hxSimple hySimple
+  have hrsC : (r : ℂ) ≠ (s : ℂ) := by
+    exact_mod_cast hrs.ne
+  have hrZero : deBruijnNewmanH t (r : ℂ) = 0 := by
+    simpa only [hxAnchor] using hxZero.self_of_nhds
+  have hsZero : deBruijnNewmanH t (s : ℂ) = 0 := by
+    simpa only [hyAnchor] using hyZero.self_of_nhds
+  have hrSimple : deriv (deBruijnNewmanH t) (r : ℂ) ≠ 0 := by
+    simpa only [hxAnchor] using hxSimple
+  have hsSimple : deriv (deBruijnNewmanH t) (s : ℂ) ≠ 0 := by
+    simpa only [hyAnchor] using hySimple
+  have hforce := deBruijnNewmanRegularizedZeroForce_sub_eq_two_div_add_pairRemainder
+    hrsC hrZero hsZero hrSimple hsSimple
+  have hmutualRe : (2 / ((s : ℂ) - (r : ℂ))).re = 2 / (s - r) := by
+    norm_cast
+  apply hgap.congr_deriv
+  rw [hxAnchor, hyAnchor, hforce]
+  simp only [ofReal_re, add_re, hmutualRe]
+  field_simp [sub_ne_zero.mpr hrs.ne']
+  ring
 
 end
 

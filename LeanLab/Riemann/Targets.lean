@@ -836,7 +836,15 @@ def rhTargets : List ResearchTarget :=
         "Prove absolute summability of the genus-one divisor force, identify it with H_t''/(2*H_t') at every simple zero, and derive x'(t)=2*force along every differentiable simple-zero path."
       leanName := some ``deBruijnNewman_simpleZeroPath_velocity
       status := .proven
-      note := "Campaign PROOF-ATTEMPT-20260717-H6-ZERO-DYNAMICS-01 proves the known source force interface through multiplicity-aware Hadamard fiber removal, joint strict Frechet differentiation, and the backward heat equation. This is route infrastructure only: local trajectory construction, collision exclusion, H6-E/G8, and RH remain open." },
+      note := "Campaign PROOF-ATTEMPT-20260717-H6-ZERO-DYNAMICS-01 proves the known source force interface through multiplicity-aware Hadamard fiber removal, joint strict Frechet differentiation, and the backward heat equation. This is route infrastructure only: collision exclusion, H6-E/G8, and RH remain open." },
+    { id := "H6.debruijn-newman.local-zero-trajectories"
+      tier := .tier2
+      title := "Construct local real simple-zero trajectories"
+      statement :=
+        "Prove that every simple real zero extends to a locally unique differentiable real zero path, that two distinct such paths remain locally ordered, and that their real squared gap obeys the exact pair-removed regularized-force evolution law with mutual repulsion constant 8."
+      leanName := some ``exists_deBruijnNewman_localRealSimpleZeroPath
+      status := .proven
+      note := "Campaign PROOF-ATTEMPT-20260717-H6-ZERO-DYNAMICS-01 applies the product-domain real implicit-function theorem to the jointly strict-differentiable source family; conjugation and local uniqueness force real-valuedness. The compiled pair-force decomposition removes both complete simple-zero fibers, proves the remainder absolutely convergent, and isolates the remaining global obstacle as theta-specific control of that remainder over all relevant zero pairs and heights. This is route infrastructure, not collision exclusion or RH progress." },
     { id := "H6.audit.reverse-heat-li-transfer"
       tier := .tier2
       title := "Falsify generic reverse-heat Li transfer"

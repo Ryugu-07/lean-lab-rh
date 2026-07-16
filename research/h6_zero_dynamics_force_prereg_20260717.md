@@ -207,3 +207,29 @@ Implementation commit `ce65db1c0379a4accfef579c9e8c08995662dc19` passed public L
 run `29534356022`, build job `87741989620`, in `2m36s`. The first spine is now public and may be
 used by the next loop. The campaign remains active at local trajectory construction; H6-E/G8 and
 RH remain open.
+
+## Implementation loop 2 local result
+
+The product-domain implicit-function step now compiles. Every simple real zero has a locally
+unique differentiable zero trajectory; conjugation plus uniqueness makes it real in a time
+neighbourhood, and two distinct anchors give locally ordered trajectories. The velocity theorem
+has been strengthened to the neighbourhood-local zero hypothesis required by this construction.
+
+The gap calculation is also explicit. The implementation removes both complete simple-zero
+fibers, proves the pair remainder absolutely summable, and derives
+
+`force(t,s)-force(t,r)=2/(s-r)+pairRemainder(t,r,s)`.
+
+For real anchored paths Lean then proves
+
+`(gap^2)'=8+4*gap*Re(pairRemainder)`.
+
+The exact module, two Targets, eleven campaign TargetChecks, twelve campaign axiom prints, empty
+forbidden scans, `git diff --check`, and the 8,691-job full build pass locally. Every selected
+declaration has only `propext`, `Classical.choice`, and `Quot.sound` as transitive axioms.
+`hard_gap_delta=0` and campaign-level `route_infrastructure_delta=1` remain unchanged.
+
+The next mathematical attack is no longer local path construction. It is a theta-specific,
+height-aware integrated control of the pair-removed remainder strong enough to continue all
+relevant real zero pairs from the good time `1/2` to time `0`, together with treatment of the
+first possible repeated zero. No fixed positive height-uniform gap premise is admitted.
