@@ -50,3 +50,14 @@ Campaign: `CAMPAIGN-20260716-R5-COMPACT-C6-EXPLICIT-FORMULA-01`
 - `hard_gap_delta`: one only at the compact finite-regularity edge `W1c1c2`
 - `unchanged_frontier`: quotient/completeness, full-class regularization, W2/G7, G3/M2, and RH
 - `next_state`: `PUBLIC_IMPLEMENTATION_GATE`
+
+## Loop 3: public implementation gate
+
+- Implementation commit `3e3c677495c592096d7843aa4845e861bc393937` passed public Lean Action CI
+  run `29468797210`, build job `87527584998`, in `2m0s`.
+- The clean public checkout independently verifies the exact C6 endpoint, compatibility corollary,
+  target checks, and transitive axiom audit.
+- `result`: `PUBLIC_IMPLEMENTATION_VERIFIED`
+- `classification`: `BRIDGE_REDUCED`
+- `hard_gap_delta`: unchanged at one only for `W1c1c2`
+- `next_state`: `IMMUTABLE_EVIDENCE_BACKFILL`

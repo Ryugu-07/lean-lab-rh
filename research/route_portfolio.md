@@ -1153,3 +1153,13 @@ scans, `git diff --check`, and the full 8,681-job build pass locally. Preregistr
 Classify as `BRIDGE_REDUCED`, with `hard_gap_delta=1` only at `W1c1c2`, the compact finite-
 regularity subedge. Quotient/completeness, full-class regularization, W2/G7, G3/M2, and RH remain
 open. Implementation publication and independent public CI are the next evidence gate.
+
+## Public Implementation Update: R5 Compact C6 Explicit Formula
+
+Date: 2026-07-16
+
+Implementation commit `3e3c677495c592096d7843aa4845e861bc393937` passed public Lean Action CI
+run `29468797210`, build job `87527584998`, in `2m0s`. The exact compact C6 arithmetic formula,
+finite-order Fourier inversion, selected top-edge limit, and old smooth compatibility theorem are
+independently public-built. Immutable evidence backfill and its own public CI remain before
+campaign closure; all broader hard gaps are unchanged.
