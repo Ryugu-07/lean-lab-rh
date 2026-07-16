@@ -1691,7 +1691,7 @@ bound on the pair remainder through time zero. Local IFT does not handle the fir
 and a fixed positive height-uniform gap is not an admissible replacement. The campaign remains
 active; H6-E/G8 and RH remain open.
 
-## Local Loop-3 Update: Adjacent Gap Bound Is Generically Sharp
+## Public Loop-3 Update: Adjacent Gap Bound Is Generically Sharp
 
 Date: 2026-07-17
 
@@ -1708,6 +1708,7 @@ proposed uniform interval. This records `OBS-H6-ADJACENT-GAP-EIGHT-01`: generic 
 geometry is insufficient for height-uniform continuation.
 
 The exact modules, Targets, seven new TargetChecks, seven selected standard-only axiom prints,
-empty forbidden scans, `git diff --check`, and the full 8,692-job build pass locally.
-`hard_gap_delta=0`; H6-E/G8 and RH remain open. Public CI is pending, after which the persistent
-Goal returns to value-ranked route selection for a theta-specific mechanism or a different route.
+empty forbidden scans, `git diff --check`, and the full 8,692-job build pass. Implementation commit
+`ce5b0c405f06078f549c6a27a477df04ccbcfb35` passed public Lean Action CI run `29538670221`, build
+job `87755892757`, in `1m58s`. `hard_gap_delta=0`; H6-E/G8 and RH remain open. The persistent Goal
+returns to value-ranked route selection for a theta-specific mechanism or a different route.

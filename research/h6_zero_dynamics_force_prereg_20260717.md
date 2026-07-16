@@ -281,4 +281,5 @@ This records local obstruction `OBS-H6-ADJACENT-GAP-EIGHT-01`. Generic adjacent-
 insufficient for height-uniform continuation. The result does not rule out theta-specific control
 and does not change H6-E/G8 or RH. Exact Targets, seven loop-3 TargetChecks, seven selected
 standard-only axiom prints, empty forbidden scans, `git diff --check`, and the 8,692-job full build
-pass locally. Public implementation CI is pending.
+pass. Implementation commit `ce5b0c405f06078f549c6a27a477df04ccbcfb35` passed public Lean
+Action CI run `29538670221`, build job `87755892757`, in `1m58s`.

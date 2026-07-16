@@ -2,7 +2,7 @@
 
 Campaign: `PROOF-ATTEMPT-20260717-H6-ZERO-DYNAMICS-01`
 
-Status: `LOCAL_OBSTRUCTION_RECORDED_PUBLIC_CI_PENDING`
+Status: `PUBLIC_OBSTRUCTION_RECORDED`
 
 ## Target
 
@@ -180,7 +180,9 @@ Public preregistration passed. Exact architecture and adversarial checks are in
   passed Lean Action run `29536815968`, build job `87750004173`, in `1m54s`.
 - public loop-2 evidence CI: commit `5debf07e9412255dd86a0ecf8f8c6c12993f1818` passed Lean
   Action run `29537039585`, build job `87750713877`, in `1m47s`.
-- loop-3 implementation and obstruction public CI: pending.
+- public loop-3 implementation and obstruction CI: commit
+  `ce5b0c405f06078f549c6a27a477df04ccbcfb35` passed Lean Action run `29538670221`, build job
+  `87755892757`, in `1m58s`.
 
 ## Runtime record
 
@@ -196,12 +198,14 @@ Public preregistration passed. Exact architecture and adversarial checks are in
   `03ce2ac2ee68b7d9a6d48d56aed37ab40836c30d` passed public run `29536815968`, build job
   `87750004173`, in `1m54s`; loop-2 evidence commit
   `5debf07e9412255dd86a0ecf8f8c6c12993f1818` passed run `29537039585`, build job
-  `87750713877`, in `1m47s`. Loop-3 implementation publication is pending.
+  `87750713877`, in `1m47s`. Loop-3 implementation commit
+  `ce5b0c405f06078f549c6a27a477df04ccbcfb35` passed run `29538670221`, build job
+  `87755892757`, in `1m58s`.
 
 ## Result
 
-- `result_class`: local obstruction recorded; public CI pending. The direct H6-E endpoint remains
-  open and the persistent RH Goal returns to route selection.
+- `result_class`: public obstruction recorded. The direct H6-E endpoint remains open and the
+  persistent RH Goal returns to route selection.
 - `assumption_frontier_after`: exact summable divisor force, simple-zero derivative ratio, joint
   time-space Frechet derivative, locally unique real simple-zero paths, local ordering, and the
   exact pair-removed squared-gap law; at all-real times, adjacent pairs additionally satisfy the

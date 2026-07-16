@@ -435,4 +435,6 @@ This is `OBS-H6-ADJACENT-GAP-EIGHT-01`, locally verified with `hard_gap_delta=0`
 the generic adjacent-gap branch, not the source theta family or H6-E. The next H6 proof attempt
 must introduce a theta-specific height-aware estimate or a different invariant controlling the
 first repeated zero. Exact Targets/TargetChecks, standard-only axiom prints, forbidden scans,
-`git diff --check`, and the 8,692-job build pass; public implementation CI is pending.
+`git diff --check`, and the 8,692-job build pass. Implementation commit
+`ce5b0c405f06078f549c6a27a477df04ccbcfb35` passed public Lean Action CI run `29538670221`, build
+job `87755892757`, in `1m58s`.
