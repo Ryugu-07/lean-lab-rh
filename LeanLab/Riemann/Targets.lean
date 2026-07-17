@@ -890,7 +890,7 @@ def rhTargets : List ResearchTarget :=
         "At pinned external commit 7a89db1, prove that the formal IsLogConcaveOn predicate holds for every function because it concludes only True, and refute the exact no-convergence Hurwitz schema using the zero-free constant sequence F_n=1 and the nonreal-zero target G(z)=z-i."
       leanName := some ``xiKernelLogConcavityExternalAudit_endpoint
       status := .proven
-      note := "Campaign FALSIFICATION-20260717-H6-XI-LOGCONCAVITY-LEAN-01 rejects only the attached external Lean certification chain. The corrected paper v2 leaves TP2 strictly below TP-infinity; actual Xi-kernel log-concavity, H6-E/G8, and RH remain unadjudicated. Public implementation CI evidence is pending." },
+      note := "Campaign FALSIFICATION-20260717-H6-XI-LOGCONCAVITY-LEAN-01 rejects only the attached external Lean certification chain. The corrected paper v2 leaves TP2 strictly below TP-infinity; actual Xi-kernel log-concavity, H6-E/G8, and RH remain unadjudicated. Implementation commit 8ecb002d1591ae93fbc23ba42c7a487c16c8beb5 passed public CI run 29550587517, build job 87792042425." },
     { id := "H6.discovery.theta-third-li-covariance"
       tier := .tier2
       title := "Prove the theta-family third Li coefficient by covariance"

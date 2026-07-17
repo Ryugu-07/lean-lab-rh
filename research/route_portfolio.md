@@ -1933,5 +1933,6 @@ The source's formal log-concavity predicate is separately proved vacuous.
 Exact Targets, TargetChecks, three standard-only axiom prints, forbidden scans, and the full
 8,697-job build pass. Classify as `EXTERNAL_FORMALIZATION_REJECTED_AS_PREMISE`, with
 `hard_gap_delta=0` and `route_infrastructure_delta=0`. Actual Xi-kernel log-concavity remains
-unverified and unrefuted; H6-E/G8 and RH remain open. Public implementation CI and immutable
-evidence closure are pending.
+unverified and unrefuted; H6-E/G8 and RH remain open. Implementation commit
+`8ecb002d1591ae93fbc23ba42c7a487c16c8beb5` passed public Lean Action CI run `29550587517`, build
+job `87792042425`, in `1m50s`; immutable evidence closure remains pending.

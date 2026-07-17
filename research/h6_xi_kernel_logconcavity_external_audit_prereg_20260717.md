@@ -6,7 +6,7 @@ Campaign: `FALSIFICATION-20260717-H6-XI-LOGCONCAVITY-LEAN-01`
 
 Mode: `FALSIFICATION`
 
-Status: `IMPLEMENTED_LOCAL_AUDITED`
+Status: `IMPLEMENTATION_PUBLIC_CI_PASSED_EVIDENCE_PENDING`
 
 ## Source lock
 
@@ -155,5 +155,6 @@ build succeeds.
 
 Local classification is `EXTERNAL_FORMALIZATION_REJECTED_AS_PREMISE`, with `hard_gap_delta=0`
 and `route_infrastructure_delta=0`. Actual Xi-kernel log-concavity remains unverified by this
-project and unrefuted; H6-E/G8 and RH remain open. Public implementation CI and immutable evidence
-closure are pending.
+project and unrefuted; H6-E/G8 and RH remain open. Implementation commit
+`8ecb002d1591ae93fbc23ba42c7a487c16c8beb5` passed public Lean Action CI run `29550587517`, build
+job `87792042425`, in `1m50s`; immutable evidence closure remains pending.
