@@ -1582,4 +1582,8 @@ example {t0 X y0 t1 x y : ℝ} (hy0 : 0 < y0)
   deBruijnNewmanPolymath_firstBadWitness_not_simple
     hy0 hthalf hinit haxis hbarrier hmin hp
 
+example (n : ℕ) (hn : 2 ≤ n) :
+    ∃ z : ℂ, 0 < z.im ∧ (deBruijnNewmanBackwardHermite n).aeval z = 0 :=
+  exists_deBruijnNewmanBackwardHermite_aeval_eq_zero_im_pos n hn
+
 end LeanLab.Riemann

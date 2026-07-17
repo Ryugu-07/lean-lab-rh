@@ -490,3 +490,6 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.deBruijnNewmanPolymath_firstBadWitness_horizontal_escape
 #print axioms LeanLab.Riemann.deBruijnNewmanPolymath_firstBadWitness_force_lt_of_simple_contact
 #print axioms LeanLab.Riemann.deBruijnNewmanPolymath_firstBadWitness_not_simple
+#print axioms LeanLab.Riemann.deBruijnNewmanBackwardHermite_comp_neg_X
+#print axioms LeanLab.Riemann.deBruijnNewmanBackwardHermite_eval_ne_zero_of_ne_zero
+#print axioms LeanLab.Riemann.exists_deBruijnNewmanBackwardHermite_aeval_eq_zero_im_pos

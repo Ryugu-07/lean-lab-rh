@@ -43,6 +43,7 @@ Status: `ACTIVE_PROOF_ATTEMPT`
 | 4 | `PROOF-ATTEMPT` | Proved compactness of the bounded spacetime witness set and its bad-time projection, existence and positivity of the first bad time, exclusion of both vertical sides, and exact contact with the moving lower boundary. The proof uses the exported arbitrary-multiplicity isolating-ball persistence theorem. Compiled both branch consumers: the strict force inequality rules out a simple contact, while minimality rules out `deBruijnNewmanHasBackwardUpperLinearEscape`. Also compiled the strict-canopy-to-strip bridge and exact Table 1 arithmetic to time `1/5`. Full local build and selected axiom audit passed. Implementation commit `b4c2f5e24ab35514dccf0f6d85ff40ce43e026c3` passed public CI run `29576156216`, job `87870943510`, in `3m35s`. | Checkpoint the infrastructure. Attack the force inequality first by averaging the absolutely convergent regularized divisor sum over the `z -> -z` and conjugation orbit; keep Hermite escape as an independent exact obstruction. |
 | 5 | `PROOF-ATTEMPT` | Publicized the multiplicity-preserving conjugation divisor equivalence, proved the corresponding negation equivalence from analytic-order invariance, and exposed the regularized force `tsum`. Proved the abstract quarter-of-four-orbits reindexing identity and specialized it to `deBruijnNewmanRegularizedZeroForce`. For non-contact orbits, regularization cancels exactly; the source cross-multiplication inequality, the two conjugate-pair estimates, the fourfold imaginary nonpositivity theorem, and the strip-or-horizontal-escape geometry all compile. For a contact representative, the exact orbit sum compiles as `-1/(2r) + 1/(r-conj r) + 1/(r+conj r)`. Implementation commit `90fdf2b9039da2a9cdb07758b3a24ab335958018` passed public CI run `29578060529`, job `87876981475`, in `2m55s`. | Isolate the four contact divisor indices using the simple fiber cardinality and their pairwise-distinct values; remove that finite set from the summable imaginary orbit series, prove the complement `tsum` nonpositive, and close the strict force inequality. |
 | 6 | `PROOF-ATTEMPT` | Made the simple-zero divisor fiber cardinality public. Proved the contact symmetry orbit has exactly four indices, the orbit term is invariant under both generators, and its finite sum is four times the contact term. Removed this Finset from the absolutely convergent imaginary `tsum`; every complementary orbit is nonpositive, yielding `deBruijnNewmanRegularizedZeroForce_im_lt_of_simple_contact_escape`. Proved every divisor zero has a first-quadrant symmetry representative. At the earliest bad time, boundary rigidity excludes higher zeros with `|Re|<=X`, while the barrier excludes the following horizontal buffer; this supplies the force theorem's escape premise. The compiled theorem `deBruijnNewmanPolymath_firstBadWitness_not_simple` therefore closes the complete simple-contact branch from the three region certificates. Exact TargetChecks and seven selected axiom prints pass with the standard trust base only. Implementation commit `cedbd4d92dcdd05d76b868a95d6fcb2479a3db96` passed public CI run `29580228443`, job `87883895459`, in `2m33s`. | Keep the campaign active. Attack the sole remaining source interface: repeated-zero backward Hermite splitting strong enough to imply `deBruijnNewmanHasBackwardUpperLinearEscape`; do not claim the final criterion before that interface compiles. |
+| 7 | `PROOF-ATTEMPT` | Added the source-normalized backward Hermite family `P_0=1`, `P_(n+1)=X*P_n+2*P_n'`. Lean proves coefficient nonnegativity, exact degree and monicity, parity vanishing, strict positivity of the even constant and odd linear coefficients, `P_n(-X)=(-1)^n P_n(X)`, positivity on the positive real axis, and exclusion of every nonzero real root. Algebraic closedness then gives a nonzero root directly for even degree and through `P_n.divX` for odd degree; negation places a root strictly in the upper half-plane. The exact theorem `exists_deBruijnNewmanBackwardHermite_aeval_eq_zero_im_pos` compiles for every `n>=2`. Exact TargetCheck and three selected axiom prints pass with only `propext`, `Classical.choice`, and `Quot.sound`. This proves the finite splitting model, not its realization by actual heat-family zeros. | Keep the campaign active. The next exact gate is a compact-uniform `sqrt(t-s)` scaled limit from a repeated source-family zero to a nonzero scalar multiple of `P_m`, followed by a zero-transfer theorem in a small disk around a strict upper-half-plane model root. Only then may the linear-escape interface be claimed. |
 
 ## Exact Remaining Source Interface
 
@@ -50,7 +51,7 @@ The simple-contact force branch is now compiled end to end. In particular,
 `deBruijnNewmanPolymath_firstBadWitness_not_simple` derives repeated contact directly from the
 three region certificates and first-time minimality; it does not assume the force inequality.
 
-The repeated branch must supply the exact theorem shape
+The repeated branch must still supply the exact theorem shape
 
 ```lean
 theorem deBruijnNewmanHasBackwardUpperLinearEscape_of_repeated
@@ -60,9 +61,11 @@ theorem deBruijnNewmanHasBackwardUpperLinearEscape_of_repeated
     deBruijnNewmanHasBackwardUpperLinearEscape t z
 ```
 
-or a stronger Hermite asymptotic theorem implying it. Jensen persistence without a scaled
-Hermite limit is insufficient: it preserves a nearby zero but gives no one-sided imaginary
-displacement.
+or a stronger Hermite asymptotic theorem implying it. Loop 7 has certified the required model
+root for every possible multiplicity `m>=2`. It has not proved that a repeated zero has finite
+multiplicity `m`, the compact-uniform scaled asymptotic, or zero transfer from the model disk.
+Jensen persistence without that scaled limit is insufficient: it preserves a nearby zero but
+gives no one-sided imaginary displacement.
 
 ## Current Accounting
 
@@ -70,6 +73,7 @@ displacement.
 - `hard_gap_after`: unchanged
 - `hard_gap_delta`: 0
 - `classification`: `ACTIVE_PROOF_ATTEMPT_CHECKPOINT`
-- `next_gate`: repeated-zero backward Hermite splitting implying
+- `next_gate`: finite analytic order, compact-uniform square-root-scaled convergence to the
+  compiled backward Hermite polynomial, and zero transfer implying
   `deBruijnNewmanHasBackwardUpperLinearEscape`
 - `persistent_goal`: active

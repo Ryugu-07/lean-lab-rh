@@ -710,3 +710,16 @@ the final exact endpoints compile.
 
 Loop 6 implementation commit `cedbd4d92dcdd05d76b868a95d6fcb2479a3db96` passed public Lean
 Action CI run `29580228443`, build job `87883895459`, in `2m33s`.
+
+Loop 7 certifies the finite backward-splitting model in the new module
+`DeBruijnNewmanHermiteSplitting.lean`. For `P_0=1` and
+`P_(n+1)=X*P_n+2*P_n'`, Lean proves exact degree, monicity, coefficient parity and positivity,
+excludes every nonzero real root, handles the compulsory zero in odd degree through `divX`, and
+uses algebraic closedness plus negation symmetry to obtain a root with strictly positive imaginary
+part for every `n>=2`.
+
+This is not yet a theorem about zeros of `deBruijnNewmanH s`. The remaining source gate is to
+extract the finite analytic multiplicity at a repeated zero, prove compact-uniform convergence of
+the `sqrt(t-s)`-scaled heat family to a nonzero scalar multiple of `P_m`, and transfer the strict
+upper model root to an actual zero. Only that transfer can imply
+`deBruijnNewmanHasBackwardUpperLinearEscape` and close the repeated-contact branch.

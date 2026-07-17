@@ -1,4 +1,5 @@
 import LeanLab.Riemann.DeBruijnNewmanDynamics
+import LeanLab.Riemann.DeBruijnNewmanHermiteSplitting
 import LeanLab.Riemann.DeBruijnNewmanGeneralStrip
 
 set_option linter.style.header false
