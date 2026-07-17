@@ -1859,4 +1859,6 @@ empty forbidden scans, `git diff --check`, and the 8,695-job full build pass. Im
 commit `1b521686d4e8561f01ba98a6ceaa4905ced4d92f` passed public Lean Action CI run `29545583372`,
 build job `87777066173`, in `1m56s`. Classification is `DISCOVERY_FORMALIZED`,
 `hard_gap_delta=0`, and `route_infrastructure_delta=1`. H6-E/G8, W2/G7, M2/G3, and RH remain
-open; immutable evidence closure remains.
+open. Evidence commit `abf5ebf19e3636662a45eed7a5eff9e947c3c3b4` passed public Lean Action CI
+run `29545784893`, build job `87777708775`, in `2m01s`. The campaign is publicly closed; the
+persistent RH Goal returns to value-ranked route selection.
