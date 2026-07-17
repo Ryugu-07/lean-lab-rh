@@ -1938,3 +1938,33 @@ unverified and unrefuted; H6-E/G8 and RH remain open. Implementation commit
 job `87792042425`, in `1m50s`. Evidence commit `131aff89283644bcabd2f620b94f99dc6ae30843`
 passed public Lean Action CI run `29550788159`, build job `87792636844`, in `1m55s`. The campaign
 is publicly closed; the persistent RH Goal returns to value-ranked route selection.
+
+## Heat-Li Time Monotonicity Proof Attempt
+
+Date: 2026-07-17
+
+Campaign `PROOF-ATTEMPT-20260717-H6-HEAT-LI-TIME-MONOTONICITY-01` attacks an RH-strength
+actual-theta conjecture: every heat-Li coefficient tends to zero at negative infinite time and is
+nondecreasing through time zero. Preregistration commit
+`645b4570dfe25bd5bcdcda63168d64a34ba90e24` passed public CI run `29569013156`, job
+`87848139812`, before numerical tooling or proof-source edits.
+
+The numerical falsification gate found no negative actual-theta derivative through index 31 in
+independent 80/120/180-digit scans over 50 times in `[-16,0]`. Extensions through index 63 at 240
+digits and time-zero index 127 at 500 digits also found none. A positive two-atom cosh control has
+robust negative derivatives, so generic kernel positivity cannot prove the candidate. All
+numerical results remain target-selection evidence only.
+
+Lean now freezes both exact all-index assumptions, proves they imply every time-zero heat-Li sign,
+and composes the existing all-index criterion to RH. It also proves the exact function-level
+evolution `(partial_t F)/F=(1/4)*(deriv(logDeriv F)+(logDeriv F)^2)`. The generating-series attack
+stops at an unsigned cross-index convolution requiring a theta-specific all-index inequality. The
+moving-zero attack stops independently because the divisor type varies with time and existing
+simple-zero paths do not supply global collision-compatible transport or differentiated-`tsum`
+domination.
+
+Local classification is `NO_PROGRESS`, with `hard_gap_delta=0`,
+`route_infrastructure_delta=1`, and the global RH Goal active. The conjecture is neither proved nor
+falsified. Exact details are in `attempts/h6_heat_li_time_monotonicity.md`; public implementation
+and evidence identifiers are pending. The standalone module, Targets, exact TargetChecks, selected
+standard-only axiom prints, empty forbidden scans, and the 8,700-job full build pass locally.

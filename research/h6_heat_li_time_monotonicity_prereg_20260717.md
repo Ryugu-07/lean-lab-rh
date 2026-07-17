@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260717-H6-HEAT-LI-TIME-MONOTONICITY-01`
 
 Mode: `PROOF-ATTEMPT`, with mandatory `FALSIFICATION` gate
 
-Status: `PREREGISTRATION_PENDING_PUBLIC_CI`
+Status: `PREREGISTERED_PUBLIC_CI_SUCCESS`
 
 ## Exact mathematical target
 
@@ -130,3 +130,9 @@ Stop after one of:
   obstacle.
 
 Every local stop returns the persistent Goal to value-ranked route selection.
+
+## Public preregistration evidence
+
+- Commit: `645b4570dfe25bd5bcdcda63168d64a34ba90e24`.
+- Lean Action CI run: `29569013156`.
+- Build job: `87848139812`, success in `1m28s`.

@@ -9,6 +9,7 @@ import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
+import LeanLab.Riemann.DeBruijnNewmanHeatLiMonotonicity
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6PositiveCoshLiAudit
@@ -925,6 +926,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanHeat_allIndexLi_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260717-H6-HEAT-LI-ALL-INDEX-01 extracts an abstract Bombieri-Lagarias criterion, reconstructs the full Hadamard derivative-to-zero formula for the heat divisor, and proves the criterion for every real heat time, stronger than the preregistered nonnegative-time endpoint. At t=0 it is theorem-level compatible with both existing RH equivalences. This is a known-criterion specialization with hard_gap_delta=0 and route_infrastructure_delta=1; it does not prove unconditional all-index positivity or RH. Implementation commit 16437075ed7ceb56becff79c77308d3e33bd1c65 passed public CI run 29548736988, build job 87786563205; evidence commit 7e6f4d2e8c78e0c5795842d6ce63169134c1e968 passed run 29548955200, job 87787209694." },
+    { id := "H6.debruijn-newman.heat-li-time-monotonicity-reduction"
+      tier := .tier2
+      title := "Reduce all-index heat-Li time monotonicity to RH"
+      statement :=
+        "Define the all-index negative-time limit and monotonicity assumptions, prove that together they force every time-zero heat-Li coefficient to be nonnegative, compose the exact all-index criterion to RH, and expose the function-level logarithmic heat evolution."
+      leanName := some ``riemannHypothesis_of_heatLi_atBot_zero_and_monotone_assumptions
+      status := .proven
+      note := "Campaign PROOF-ATTEMPT-20260717-H6-HEAT-LI-TIME-MONOTONICITY-01 proves only the exact conditional reduction and the function-level heat-log identity. It does not assert either all-index assumption. Numerical screening did not falsify the actual-theta conjecture, but two proof mechanisms stopped at missing theta-specific all-index sign control. Classification NO_PROGRESS with hard_gap_delta=0 and route_infrastructure_delta=1; H6-E/G8 and RH remain open." },
     { id := "H10.function-field.finite-spectral-rigidity"
       tier := .tier2
       title := "Formalize finite power-sum spectral rigidity"

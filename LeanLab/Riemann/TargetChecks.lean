@@ -8,6 +8,7 @@ import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
+import LeanLab.Riemann.DeBruijnNewmanHeatLiMonotonicity
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6PositiveCoshLiAudit
@@ -63,6 +64,20 @@ examples.
 -/
 
 namespace LeanLab.Riemann
+
+example
+    (hlimit : DeBruijnNewmanHeatLiAtBotZero)
+    (hmonotone : DeBruijnNewmanHeatLiMonotoneToZero) :
+    RiemannHypothesis :=
+  riemannHypothesis_of_heatLi_atBot_zero_and_monotone_assumptions hlimit hmonotone
+
+example (t : Real) (s : Complex) (hs : deBruijnNewmanHeatXi t s ≠ 0) :
+    deriv (fun tau : Real => deBruijnNewmanHeatXi tau s) t /
+        deBruijnNewmanHeatXi t s =
+      (1 / 4 : Complex) *
+        (deriv (logDeriv (deBruijnNewmanHeatXi t)) s +
+          logDeriv (deBruijnNewmanHeatXi t) s ^ 2) :=
+  deBruijnNewmanHeatXi_timeRatio_eq_logDeriv_evolution t s hs
 
 example
     (h : baezDuarteComplexTargetL2 ∈ baezDuarteComplexKernelClosure) :
@@ -144,6 +159,7 @@ def checkedTargetNames : List Lean.Name :=
     ``RiemannHypothesis.baezDuarteNaturalDistance_liminf_ge_fullZeroSum,
     ``deBruijnNewman_zeroCoordinate_framework,
     ``deBruijnNewmanHeat_firstTwoLi_endpoint,
+    ``riemannHypothesis_of_heatLi_atBot_zero_and_monotone_assumptions,
     ``not_isPolyaFrequencyFive_deBruijnNewmanEvenKernel,
     ``riemannHypothesis_iff_nontrivial_zeros_on_line ]
 
