@@ -6,7 +6,7 @@ Campaign: `FALSIFICATION-20260717-H6-XI-KERNEL-PF4-01`
 
 Mode: `FALSIFICATION`
 
-Status: `PREREGISTRATION_PENDING_PUBLIC_CI`
+Status: `PREREGISTERED_PUBLIC_CI_SUCCESS`
 
 ## Source lock
 
@@ -122,3 +122,9 @@ Stop after either (a) the exact full-kernel PF4 counterexample is publicly audit
 preregistered bounded search is exhausted and its strongest candidate or obstruction is logged.
 Do not infer PF4 from a failed search, and do not infer H6-E or RH from either outcome. Return the
 persistent Goal to value-ranked route selection.
+
+## Public preregistration evidence
+
+- Commit: `b7b4ec77654095c93f3a0b980d42e7ad8784a1fe`.
+- Lean Action CI run: `29566305052`.
+- Build job: `87839586304`, success in `2m12s`.

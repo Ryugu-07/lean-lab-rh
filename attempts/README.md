@@ -10,6 +10,8 @@ output checks, not approval.
 
 ## Current audit
 
+- [H6 actual Xi-kernel global PF4 falsification](h6_xi_kernel_pf4_falsification.md)
+- [H6 actual Xi-kernel PF5 falsification](h6_xi_kernel_pf5_falsification.md)
 - [H6 de Bruijn upper-half campaign](h6_upper_half_campaign.md)
 - [H6 forward real-zero preservation campaign](h6_forward_preservation_campaign.md)
 - [H6 threshold closedness campaign](h6_threshold_closedness_campaign.md)
