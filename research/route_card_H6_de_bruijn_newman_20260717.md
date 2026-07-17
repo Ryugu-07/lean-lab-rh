@@ -691,3 +691,6 @@ identity, cancellation of regularization on non-contact orbits, the source geome
 cross-multiplication inequality, and the exact contact-orbit formula. The remaining force gate is
 finite extraction of the four simple contact indices and a nonpositive complement `tsum`; repeated
 contact still independently requires backward Hermite splitting.
+
+The Loop 5 implementation commit `90fdf2b9039da2a9cdb07758b3a24ab335958018` passed public Lean
+Action CI run `29578060529`, build job `87876981475`, in `2m55s`.
