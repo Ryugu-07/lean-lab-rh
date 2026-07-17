@@ -6,6 +6,7 @@ import LeanLab.Riemann.DeBruijnNewmanForward
 import LeanLab.Riemann.DeBruijnNewmanUpperHalf
 import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
+import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6PositiveCoshLiAudit
@@ -1375,6 +1376,34 @@ example (t : ℝ) :
     0 < (deBruijnNewmanHeatLiTwo t).re ∧
     (deBruijnNewmanHeatLiTwo t).im = 0 :=
   deBruijnNewmanHeat_firstTwoLi_endpoint t
+
+example :
+    (∀ t : ℝ, MeasureTheory.IntegrableOn
+      (fun u : ℝ ↦ u ^ 3 * Real.exp (t * u ^ 2) *
+        deBruijnNewmanPhi u * Real.sinh u) (Set.Ioi 0)) ∧
+    (∀ t : ℝ, deriv (deriv (deriv (deBruijnNewmanHeatXi t))) 1 =
+      64 * (deBruijnNewmanHeatLiMomentD t : ℂ)) ∧
+    (∀ t : ℝ, deBruijnNewmanHeatLiMomentB t *
+      deBruijnNewmanHeatLiMomentC t ≤
+      deBruijnNewmanHeatLiMomentA t * deBruijnNewmanHeatLiMomentD t) ∧
+    (∀ t : ℝ, deBruijnNewmanHeatLiThree t =
+      (((6 * deBruijnNewmanHeatLiMomentB t /
+          deBruijnNewmanHeatLiMomentA t +
+        12 * (deBruijnNewmanHeatLiMomentC t /
+          deBruijnNewmanHeatLiMomentA t -
+          (deBruijnNewmanHeatLiMomentB t /
+            deBruijnNewmanHeatLiMomentA t) ^ 2) +
+        4 * deBruijnNewmanHeatLiMomentD t /
+          deBruijnNewmanHeatLiMomentA t -
+        12 * deBruijnNewmanHeatLiMomentB t *
+          deBruijnNewmanHeatLiMomentC t /
+          deBruijnNewmanHeatLiMomentA t ^ 2 +
+        8 * deBruijnNewmanHeatLiMomentB t ^ 3 /
+          deBruijnNewmanHeatLiMomentA t ^ 3 : ℝ) : ℂ))) ∧
+    deBruijnNewmanHeatLiThree 0 = liCoefficientCandidate 2 ∧
+    0 < (liCoefficientCandidate 2).re ∧
+    (liCoefficientCandidate 2).im = 0 :=
+  deBruijnNewmanHeat_thirdLi_covariance_endpoint
 
 example :
     Differentiable ℂ h6PositiveCoshAudit ∧

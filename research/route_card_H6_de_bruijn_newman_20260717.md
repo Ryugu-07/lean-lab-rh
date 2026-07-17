@@ -505,3 +505,26 @@ commit `5fdfc5c7437349735c57552a75838f16b4d63f5e` passed public Lean Action CI r
 build job `87769424525`, in `1m55s`. Evidence-backfill commit
 `61ce528793a9fc04e4a6b26ba83463cf0557bafc` passed run `29543336971`, build job `87770059112`,
 in `2m06s`. This campaign is publicly closed; H6-E and RH remain open.
+
+## Selected H6-AB: actual-theta third-Li covariance
+
+Campaign `DISCOVERY-20260717-H6-THIRD-LI-COVARIANCE-01` follows the positive-cosh obstruction by
+using quantitative structure of the actual theta source. It adds the fourth hyperbolic moment
+`D_t`, targets the ordered covariance `B_t*C_t<=A_t*D_t`, and fixes the full third standard Li
+expression and its candidate-two time-zero identity as an indivisible endpoint.
+
+**Local implementation result.** Preregistration commit
+`6c1c8c0defb2186ef20701ae9e33ca6be95c4daa` passed public Lean Action CI run `29544246770`, build
+job `87772850526`, before proof edits. `DeBruijnNewmanThirdLi.lean` proves `D_t` integrable and
+positive, `F_t'''(1)=64*D_t`, and `B_t*C_t<=A_t*D_t` for every real `t`. The covariance certificate
+integrates `W(u)*(X(u)-X(sqrt(C/A)))*(u^2-C/A)` and cancels the centered terms exactly.
+
+The exact third formula compiles as `6*b+12*(c-b^2)+4*d-12*b*c+8*b^3`. At `t=0`, Lean identifies
+it with `liCoefficientCandidate 2` and proves strict positive real sign from the two compiled
+moment inequalities and `liCoefficientCandidate_zero_re_lt_one`. The complete endpoint is
+`deBruijnNewmanHeat_thirdLi_covariance_endpoint`.
+
+Standalone compilation, exact Targets/TargetChecks, seven standard-only axiom prints, empty
+forbidden scans, `git diff --check`, and the 8,695-job full build pass. Local classification is
+`DISCOVERY_FORMALIZED_LOCAL`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`.
+Implementation public CI and evidence closure remain; H6-E and RH stay open.

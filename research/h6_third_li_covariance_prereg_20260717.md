@@ -6,7 +6,7 @@ Campaign: `DISCOVERY-20260717-H6-THIRD-LI-COVARIANCE-01`
 
 Mode: `DISCOVERY`
 
-Status: `PREREGISTERED_LOCAL`
+Status: `LOCAL_FORMALIZATION_COMPLETE_PUBLIC_IMPLEMENTATION_CI_PENDING`
 
 ## Exact source extension
 
@@ -135,3 +135,14 @@ registered weighted-covariance proof. This is an originality rationale only.
   helper, or another finite coefficient.
 
 No Lean proof source has been edited in this campaign before this preregistration.
+
+## Gate update
+
+Preregistration commit `6c1c8c0defb2186ef20701ae9e33ca6be95c4daa` passed public Lean Action CI
+run `29544246770`, build job `87772850526`, in `1m45s`, before any Lean proof-source edit.
+
+All six fixed endpoint clauses now compile in `DeBruijnNewmanThirdLi.lean`, bundled as
+`deBruijnNewmanHeat_thirdLi_covariance_endpoint`. Exact Targets/TargetChecks, selected
+standard-only axiom prints, empty forbidden scans, `git diff --check`, and the 8,695-job full
+build pass locally. Classification is `DISCOVERY_FORMALIZED_LOCAL`, `hard_gap_delta=0`, and
+`route_infrastructure_delta=1`; implementation public CI and immutable evidence closure remain.

@@ -1834,3 +1834,27 @@ generic obstruction. Exact selection and preregistration are in
 `route_selection_post_h6_positive_cosh_20260717.md` and
 `h6_third_li_covariance_prereg_20260717.md`. Public preregistration CI must pass before Lean proof
 source edits.
+
+## Local Completion Update: Actual Theta Third-Li Covariance
+
+Date: 2026-07-17
+
+Preregistration commit `6c1c8c0defb2186ef20701ae9e33ca6be95c4daa` passed public Lean Action CI
+run `29544246770`, build job `87772850526`, before proof-source edits. The 865-line
+`DeBruijnNewmanThirdLi.lean` module now compiles the complete fixed endpoint.
+
+Lean proves the fourth theta moment is integrable and strictly positive, the exact derivative
+factor `F_t'''(1)=64*D_t`, and the ordered covariance `B_t*C_t<=A_t*D_t` for every real `t`. The
+covariance proof is the preregistered one-integral certificate and uses monotonicity only on the
+positive half-line. The standard third heat-Li expression is exactly
+`6*b+12*(c-b^2)+4*d-12*b*c+8*b^3`.
+
+At time zero, the existing finite Leibniz formula and `F_0=riemannXi` identify this expression
+with `liCoefficientCandidate 2`. Its strict positive real sign follows by rewriting it as
+`6*b+(12-8*b)*(c-b^2)+4*(d-b*c)` and using the compiled variance, covariance, and exact
+`liCoefficientCandidate_zero_re_lt_one` bound. Numerical screening is not a proof premise.
+
+The standalone module, exact Targets/TargetChecks, seven selected standard-only axiom prints,
+empty forbidden scans, `git diff --check`, and the 8,695-job full build pass. Classification is
+`DISCOVERY_FORMALIZED_LOCAL`, `hard_gap_delta=0`, and `route_infrastructure_delta=1`. H6-E/G8,
+W2/G7, M2/G3, and RH remain open; implementation public CI and evidence closure remain.
