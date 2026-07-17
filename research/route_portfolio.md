@@ -1969,4 +1969,6 @@ falsified. Exact details are in `attempts/h6_heat_li_time_monotonicity.md`; publ
 commit `fc2a32e8316f59370471597df9a8a26c02480bdd` passed Lean Action CI run `29570628316`,
 build job `87853282509`, in `2m2s`. The standalone module, Targets, exact TargetChecks, selected
 standard-only axiom prints, empty forbidden scans, and the 8,700-job full build pass. Evidence
-backfill and its public CI are pending.
+commit `f4a26d5a1ee891099003221b766a2f19a39ab07b` passed public CI run `29570843171`, build
+job `87853982402`, in `1m45s`. The campaign is publicly closed as `NO_PROGRESS`; the persistent RH
+Goal returns to value-ranked route selection.

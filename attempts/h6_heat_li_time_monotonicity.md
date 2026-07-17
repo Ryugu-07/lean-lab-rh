@@ -4,7 +4,7 @@ Campaign: `PROOF-ATTEMPT-20260717-H6-HEAT-LI-TIME-MONOTONICITY-01`
 
 Mode: `PROOF-ATTEMPT`, with mandatory `FALSIFICATION` gate
 
-Status: `IMPLEMENTATION_PUBLIC_CI_SUCCESS`
+Status: `PUBLICLY_CLOSED_NO_PROGRESS`
 
 ## Runtime record
 
@@ -136,4 +136,9 @@ transport theorem, not additional finite-index sampling alone.
 - Lean Action CI run: `29570628316`
 - build job: `87853282509`, success in `2m2s`
 
-Evidence backfill commit and its public CI are pending.
+- evidence commit: `f4a26d5a1ee891099003221b766a2f19a39ab07b`
+- Lean Action CI run: `29570843171`
+- build job: `87853982402`, success in `1m45s`
+
+The campaign is publicly closed as `NO_PROGRESS`. The persistent RH Goal remains active and
+returns to value-ranked route selection.
