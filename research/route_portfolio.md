@@ -1966,5 +1966,7 @@ domination.
 Local classification is `NO_PROGRESS`, with `hard_gap_delta=0`,
 `route_infrastructure_delta=1`, and the global RH Goal active. The conjecture is neither proved nor
 falsified. Exact details are in `attempts/h6_heat_li_time_monotonicity.md`; public implementation
-and evidence identifiers are pending. The standalone module, Targets, exact TargetChecks, selected
-standard-only axiom prints, empty forbidden scans, and the 8,700-job full build pass locally.
+commit `fc2a32e8316f59370471597df9a8a26c02480bdd` passed Lean Action CI run `29570628316`,
+build job `87853282509`, in `2m2s`. The standalone module, Targets, exact TargetChecks, selected
+standard-only axiom prints, empty forbidden scans, and the 8,700-job full build pass. Evidence
+backfill and its public CI are pending.

@@ -4,7 +4,7 @@ Campaign: `PROOF-ATTEMPT-20260717-H6-HEAT-LI-TIME-MONOTONICITY-01`
 
 Mode: `PROOF-ATTEMPT`, with mandatory `FALSIFICATION` gate
 
-Status: `LOCAL_NO_PROGRESS_AUDITED`
+Status: `IMPLEMENTATION_PUBLIC_CI_SUCCESS`
 
 ## Runtime record
 
@@ -130,4 +130,10 @@ transport theorem, not additional finite-index sampling alone.
 - `git diff --check`: pass
 - full build: 8,700 jobs, pass
 
-Public implementation evidence: pending.
+## Public implementation evidence
+
+- implementation commit: `fc2a32e8316f59370471597df9a8a26c02480bdd`
+- Lean Action CI run: `29570628316`
+- build job: `87853282509`, success in `2m2s`
+
+Evidence backfill commit and its public CI are pending.
