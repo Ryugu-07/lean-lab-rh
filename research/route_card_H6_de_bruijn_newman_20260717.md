@@ -694,3 +694,16 @@ contact still independently requires backward Hermite splitting.
 
 The Loop 5 implementation commit `90fdf2b9039da2a9cdb07758b3a24ab335958018` passed public Lean
 Action CI run `29578060529`, build job `87876981475`, in `2m55s`.
+
+Loop 6 closes the simple-contact branch. Lean proves the simple fiber has one divisor index, its
+negation/conjugation orbit has exactly four indices, the finite orbit sum is four times the contact
+term, and the complementary imaginary `tsum` is nonpositive. This yields the strict regularized
+force inequality under horizontal escape. A separate first-quadrant symmetry lemma plus earliest-
+contact boundary rigidity and the spacetime barrier derive that escape condition from the three
+region certificates. Consequently
+`deBruijnNewmanPolymath_firstBadWitness_not_simple` compiles without a force premise.
+
+The final criterion and all three regional certificates remain unproved. The sole remaining source
+interface is repeated-zero backward Hermite splitting strong enough to imply
+`deBruijnNewmanHasBackwardUpperLinearEscape`; the campaign stays active until that interface and
+the final exact endpoints compile.

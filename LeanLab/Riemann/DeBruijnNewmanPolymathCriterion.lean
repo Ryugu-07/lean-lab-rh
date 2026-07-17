@@ -83,6 +83,132 @@ theorem deBruijnNewmanHDivisorZeroNegEquiv_value
       -deBruijnNewmanHDivisorZeroValue p := by
   rfl
 
+theorem deBruijnNewmanHDivisorZeroNegEquiv_conjEquiv
+    {t : ℝ} (p : DeBruijnNewmanHDivisorZeroIndex t) :
+    deBruijnNewmanHDivisorZeroNegEquiv t
+        (deBruijnNewmanHDivisorZeroConjEquiv t p) =
+      deBruijnNewmanHDivisorZeroConjEquiv t
+        (deBruijnNewmanHDivisorZeroNegEquiv t p) := by
+  apply Subtype.ext
+  apply Sigma.ext
+  · simp
+  · rw [Fin.heq_ext_iff]
+    · simp [deBruijnNewmanHDivisorZeroNegEquiv,
+        deBruijnNewmanHDivisorZeroConjEquiv, divisorZeroIndexNegEquiv,
+        divisorZeroIndexConjEquiv, divisorZeroIndexNeg, divisorZeroIndexConj]
+    · simp
+
+/-- Every divisor zero can be moved by the source symmetries to the closed first quadrant. -/
+theorem exists_deBruijnNewmanHDivisorZeroIndex_value_eq_abs_cartesian
+    {t : ℝ} (p : DeBruijnNewmanHDivisorZeroIndex t) :
+    ∃ q : DeBruijnNewmanHDivisorZeroIndex t,
+      deBruijnNewmanHDivisorZeroValue q =
+        ((|(deBruijnNewmanHDivisorZeroValue p).re| : ℝ) : ℂ) +
+          ((|(deBruijnNewmanHDivisorZeroValue p).im| : ℝ) : ℂ) * I := by
+  by_cases hre : 0 ≤ (deBruijnNewmanHDivisorZeroValue p).re
+  · by_cases him : 0 ≤ (deBruijnNewmanHDivisorZeroValue p).im
+    · refine ⟨p, ?_⟩
+      apply Complex.ext <;> simp [abs_of_nonneg hre, abs_of_nonneg him]
+    · refine ⟨deBruijnNewmanHDivisorZeroConjEquiv t p, ?_⟩
+      apply Complex.ext <;>
+        simp [abs_of_nonneg hre, abs_of_neg (lt_of_not_ge him)]
+  · by_cases him : 0 ≤ (deBruijnNewmanHDivisorZeroValue p).im
+    · refine ⟨deBruijnNewmanHDivisorZeroNegEquiv t
+          (deBruijnNewmanHDivisorZeroConjEquiv t p), ?_⟩
+      apply Complex.ext <;>
+        simp [abs_of_neg (lt_of_not_ge hre), abs_of_nonneg him]
+    · refine ⟨deBruijnNewmanHDivisorZeroNegEquiv t p, ?_⟩
+      apply Complex.ext <;>
+        simp [abs_of_neg (lt_of_not_ge hre), abs_of_neg (lt_of_not_ge him)]
+
+@[simp]
+theorem deBruijnNewmanHDivisorZeroNegEquiv_apply_apply
+    {t : ℝ} (p : DeBruijnNewmanHDivisorZeroIndex t) :
+    deBruijnNewmanHDivisorZeroNegEquiv t
+        (deBruijnNewmanHDivisorZeroNegEquiv t p) = p := by
+  change divisorZeroIndexNeg
+      (deBruijnNewmanH_entireOfOrderAtMost_one t).differentiable
+      ⟨0, deBruijnNewmanH_zero_ne_zero t⟩ (deBruijnNewmanH_neg t)
+      (divisorZeroIndexNeg
+        (deBruijnNewmanH_entireOfOrderAtMost_one t).differentiable
+        ⟨0, deBruijnNewmanH_zero_ne_zero t⟩ (deBruijnNewmanH_neg t) p) = p
+  exact divisorZeroIndexNeg_involutive
+    (deBruijnNewmanH_entireOfOrderAtMost_one t).differentiable
+    ⟨0, deBruijnNewmanH_zero_ne_zero t⟩ (deBruijnNewmanH_neg t) p
+
+@[simp]
+theorem deBruijnNewmanHDivisorZeroConjEquiv_apply_apply
+    {t : ℝ} (p : DeBruijnNewmanHDivisorZeroIndex t) :
+    deBruijnNewmanHDivisorZeroConjEquiv t
+        (deBruijnNewmanHDivisorZeroConjEquiv t p) = p := by
+  change divisorZeroIndexConj
+      (deBruijnNewmanH_entireOfOrderAtMost_one t).differentiable
+      ⟨0, deBruijnNewmanH_zero_ne_zero t⟩ (deBruijnNewmanH_conj t)
+      (divisorZeroIndexConj
+        (deBruijnNewmanH_entireOfOrderAtMost_one t).differentiable
+        ⟨0, deBruijnNewmanH_zero_ne_zero t⟩ (deBruijnNewmanH_conj t) p) = p
+  exact divisorZeroIndexConj_involutive
+    (deBruijnNewmanH_entireOfOrderAtMost_one t).differentiable
+    ⟨0, deBruijnNewmanH_zero_ne_zero t⟩ (deBruijnNewmanH_conj t) p
+
+/-- The four divisor indices in the negation-conjugation orbit of a selected index. -/
+def deBruijnNewmanHDivisorZeroSymmetryOrbit
+    {t : ℝ} (p : DeBruijnNewmanHDivisorZeroIndex t) :
+    Finset (DeBruijnNewmanHDivisorZeroIndex t) := by
+  classical
+  exact {p, deBruijnNewmanHDivisorZeroNegEquiv t p,
+    deBruijnNewmanHDivisorZeroConjEquiv t p,
+    deBruijnNewmanHDivisorZeroNegEquiv t
+      (deBruijnNewmanHDivisorZeroConjEquiv t p)}
+
+theorem deBruijnNewmanHDivisorZeroSymmetryOrbit_card_eq_four_of_contact
+    {t x Y : ℝ} (p : DeBruijnNewmanHDivisorZeroIndex t)
+    (hx : 0 < x) (hY : 0 < Y)
+    (hp : deBruijnNewmanHDivisorZeroValue p = (x : ℂ) + (Y : ℂ) * I) :
+    (deBruijnNewmanHDivisorZeroSymmetryOrbit p).card = 4 := by
+  classical
+  let n := deBruijnNewmanHDivisorZeroNegEquiv t
+  let c := deBruijnNewmanHDivisorZeroConjEquiv t
+  have hpn : p ≠ n p := by
+    intro h
+    have hv := congrArg (fun q ↦ (deBruijnNewmanHDivisorZeroValue q).im) h
+    simp only [n, deBruijnNewmanHDivisorZeroNegEquiv_value, hp, add_im, ofReal_im,
+      mul_im, ofReal_re, I_re, I_im, mul_zero, mul_one, zero_add, neg_im] at hv
+    linarith
+  have hpc : p ≠ c p := by
+    intro h
+    have hv := congrArg (fun q ↦ (deBruijnNewmanHDivisorZeroValue q).im) h
+    simp only [c, deBruijnNewmanHDivisorZeroConjEquiv_value, hp, add_im, ofReal_im,
+      mul_im, ofReal_re, I_re, I_im, mul_zero, mul_one, zero_add, conj_im] at hv
+    linarith
+  have hpnc : p ≠ n (c p) := by
+    intro h
+    have hv := congrArg (fun q ↦ (deBruijnNewmanHDivisorZeroValue q).re) h
+    simp only [n, c, deBruijnNewmanHDivisorZeroNegEquiv_value,
+      deBruijnNewmanHDivisorZeroConjEquiv_value, hp, neg_re, conj_re, add_re,
+      ofReal_re, mul_re, ofReal_im, I_re, I_im, mul_zero, zero_mul, sub_zero] at hv
+    linarith
+  have hnc : n p ≠ c p := by
+    intro h
+    have hv := congrArg (fun q ↦ (deBruijnNewmanHDivisorZeroValue q).re) h
+    simp only [n, c, deBruijnNewmanHDivisorZeroNegEquiv_value,
+      deBruijnNewmanHDivisorZeroConjEquiv_value, hp, neg_re, conj_re, add_re,
+      ofReal_re, mul_re, ofReal_im, I_re, I_im, mul_zero, zero_mul, sub_zero] at hv
+    linarith
+  have hnnc : n p ≠ n (c p) := by
+    intro h
+    exact hpc ((deBruijnNewmanHDivisorZeroNegEquiv t).injective h)
+  have hcnc : c p ≠ n (c p) := by
+    intro h
+    have hv := congrArg (fun q ↦ (deBruijnNewmanHDivisorZeroValue q).re) h
+    simp only [n, c, deBruijnNewmanHDivisorZeroNegEquiv_value,
+      deBruijnNewmanHDivisorZeroConjEquiv_value, hp, neg_re, conj_re, add_re,
+      ofReal_re, mul_re, ofReal_im, I_re, I_im, mul_zero, zero_mul, sub_zero] at hv
+    linarith
+  apply Finset.card_eq_four.mpr
+  exact ⟨p, n p, c p, n (c p), hpn, hpc, hpnc, hnc, hnnc, hcnc, by
+    rfl⟩
+
 /-- Sum of a term over the four-index orbit generated by two equivalences. -/
 def fourEquivOrbitTerm {Z : Type*} (f : Z → ℂ) (e₁ e₂ : Z ≃ Z) (p : Z) : ℂ :=
   (f p + f (e₁ p)) + f (e₂ p) + f (e₁ (e₂ p))
@@ -137,6 +263,57 @@ def deBruijnNewmanPolymathForceOrbitTerm (t : ℝ) (r : ℂ)
   fourEquivOrbitTerm (deBruijnNewmanPolymathForceTerm t r)
     (deBruijnNewmanHDivisorZeroNegEquiv t)
     (deBruijnNewmanHDivisorZeroConjEquiv t) p
+
+theorem deBruijnNewmanPolymathForceOrbitTerm_negEquiv
+    {t : ℝ} {r : ℂ} (p : DeBruijnNewmanHDivisorZeroIndex t) :
+    deBruijnNewmanPolymathForceOrbitTerm t r
+        (deBruijnNewmanHDivisorZeroNegEquiv t p) =
+      deBruijnNewmanPolymathForceOrbitTerm t r p := by
+  let n := deBruijnNewmanHDivisorZeroNegEquiv t
+  let c := deBruijnNewmanHDivisorZeroConjEquiv t
+  let f := deBruijnNewmanPolymathForceTerm t r
+  have hn : ∀ q, n (n q) = q := by
+    intro q
+    change divisorZeroIndexNeg
+        (deBruijnNewmanH_entireOfOrderAtMost_one t).differentiable
+        ⟨0, deBruijnNewmanH_zero_ne_zero t⟩ (deBruijnNewmanH_neg t)
+        (divisorZeroIndexNeg
+          (deBruijnNewmanH_entireOfOrderAtMost_one t).differentiable
+          ⟨0, deBruijnNewmanH_zero_ne_zero t⟩ (deBruijnNewmanH_neg t) q) = q
+    exact divisorZeroIndexNeg_involutive
+      (deBruijnNewmanH_entireOfOrderAtMost_one t).differentiable
+      ⟨0, deBruijnNewmanH_zero_ne_zero t⟩ (deBruijnNewmanH_neg t) q
+  have hcomm : ∀ q, n (c q) = c (n q) := by
+    intro q
+    exact deBruijnNewmanHDivisorZeroNegEquiv_conjEquiv q
+  change fourEquivOrbitTerm f n c (n p) = fourEquivOrbitTerm f n c p
+  simp only [fourEquivOrbitTerm]
+  rw [hn p, ← hcomm p, hn (c p)]
+  ring
+
+theorem deBruijnNewmanPolymathForceOrbitTerm_conjEquiv
+    {t : ℝ} {r : ℂ} (p : DeBruijnNewmanHDivisorZeroIndex t) :
+    deBruijnNewmanPolymathForceOrbitTerm t r
+        (deBruijnNewmanHDivisorZeroConjEquiv t p) =
+      deBruijnNewmanPolymathForceOrbitTerm t r p := by
+  let n := deBruijnNewmanHDivisorZeroNegEquiv t
+  let c := deBruijnNewmanHDivisorZeroConjEquiv t
+  let f := deBruijnNewmanPolymathForceTerm t r
+  have hc : ∀ q, c (c q) = q := by
+    intro q
+    change divisorZeroIndexConj
+        (deBruijnNewmanH_entireOfOrderAtMost_one t).differentiable
+        ⟨0, deBruijnNewmanH_zero_ne_zero t⟩ (deBruijnNewmanH_conj t)
+        (divisorZeroIndexConj
+          (deBruijnNewmanH_entireOfOrderAtMost_one t).differentiable
+          ⟨0, deBruijnNewmanH_zero_ne_zero t⟩ (deBruijnNewmanH_conj t) q) = q
+    exact divisorZeroIndexConj_involutive
+      (deBruijnNewmanH_entireOfOrderAtMost_one t).differentiable
+      ⟨0, deBruijnNewmanH_zero_ne_zero t⟩ (deBruijnNewmanH_conj t) q
+  change fourEquivOrbitTerm f n c (c p) = fourEquivOrbitTerm f n c p
+  simp only [fourEquivOrbitTerm]
+  rw [hc p]
+  ring
 
 theorem summable_deBruijnNewmanPolymathForceOrbitTerm (t : ℝ) (r : ℂ) :
     Summable (deBruijnNewmanPolymathForceOrbitTerm t r) := by
@@ -410,6 +587,261 @@ theorem deBruijnNewmanPolymathForceOrbitTerm_eq_of_value_eq_contact
     simpa only [sub_eq_add_neg] using hcancel
   rw [hcancel']
   ring
+
+theorem sum_deBruijnNewmanPolymathForceOrbitTerm_symmetryOrbit_eq_four_mul
+    {t x Y : ℝ} (p : DeBruijnNewmanHDivisorZeroIndex t)
+    (hx : 0 < x) (hY : 0 < Y)
+    (hp : deBruijnNewmanHDivisorZeroValue p = (x : ℂ) + (Y : ℂ) * I) :
+    ∑ q ∈ deBruijnNewmanHDivisorZeroSymmetryOrbit p,
+        deBruijnNewmanPolymathForceOrbitTerm t ((x : ℂ) + (Y : ℂ) * I) q =
+      4 * deBruijnNewmanPolymathForceOrbitTerm t ((x : ℂ) + (Y : ℂ) * I) p := by
+  classical
+  let n := deBruijnNewmanHDivisorZeroNegEquiv t
+  let c := deBruijnNewmanHDivisorZeroConjEquiv t
+  let s := deBruijnNewmanHDivisorZeroSymmetryOrbit p
+  let f := deBruijnNewmanPolymathForceOrbitTerm t ((x : ℂ) + (Y : ℂ) * I)
+  have hcard : s.card = 4 := by
+    simpa only [s] using
+      deBruijnNewmanHDivisorZeroSymmetryOrbit_card_eq_four_of_contact p hx hY hp
+  have hconst : ∀ q ∈ s, f q = f p := by
+    intro q hq
+    have hcases : q = p ∨ q = n p ∨ q = c p ∨ q = n (c p) := by
+      simpa only [s, n, c, deBruijnNewmanHDivisorZeroSymmetryOrbit,
+        Finset.mem_insert, Finset.mem_singleton] using hq
+    rcases hcases with h | h | h | h
+    · exact congrArg f h
+    · rw [h]
+      exact deBruijnNewmanPolymathForceOrbitTerm_negEquiv p
+    · rw [h]
+      exact deBruijnNewmanPolymathForceOrbitTerm_conjEquiv p
+    · rw [h]
+      exact (deBruijnNewmanPolymathForceOrbitTerm_negEquiv (c p)).trans
+        (deBruijnNewmanPolymathForceOrbitTerm_conjEquiv p)
+  change ∑ q ∈ s, f q = 4 * f p
+  calc
+    ∑ q ∈ s, f q = ∑ _q ∈ s, f p := by
+      exact Finset.sum_congr rfl fun q hq ↦ hconst q hq
+    _ = 4 * f p := by simp [hcard]
+
+theorem deBruijnNewmanPolymathForceOrbitTerm_im_eq_of_value_eq_contact
+    {t x Y : ℝ} (p : DeBruijnNewmanHDivisorZeroIndex t)
+    (hx : 0 < x) (hY : 0 < Y)
+    (hp : deBruijnNewmanHDivisorZeroValue p = (x : ℂ) + (Y : ℂ) * I) :
+    (deBruijnNewmanPolymathForceOrbitTerm t ((x : ℂ) + (Y : ℂ) * I) p).im =
+      Y / (2 * (x ^ 2 + Y ^ 2)) - 1 / (2 * Y) := by
+  let r : ℂ := (x : ℂ) + (Y : ℂ) * I
+  have hr0 : r ≠ 0 := by
+    intro h
+    have him := congrArg Complex.im h
+    simp only [r, add_im, ofReal_im, mul_im, ofReal_re, I_re, I_im, mul_zero,
+      mul_one, zero_add, zero_im] at him
+    linarith
+  have hinv : (1 / r).im = -Y / (x ^ 2 + Y ^ 2) := by
+    simpa only [r, sub_zero, ofReal_zero, zero_mul, add_zero] using
+      one_div_sub_cartesian_im x Y 0 0
+  have htwo : 1 / (2 * r) = (1 / 2 : ℂ) * (1 / r) := by
+    field_simp [hr0]
+  have hfirst : (-(1 / (2 * r))).im = Y / (2 * (x ^ 2 + Y ^ 2)) := by
+    rw [htwo, neg_im, mul_im, hinv]
+    norm_num
+    have hden : x ^ 2 + Y ^ 2 ≠ 0 := by positivity
+    field_simp [hden]
+  have hconjPoint :
+      ((x : ℂ) + (-Y : ℂ) * I) = conj r := by
+    apply Complex.ext <;> simp [r]
+  have hsecondRaw := one_div_sub_cartesian_im x Y x (-Y)
+  simp only [ofReal_neg] at hsecondRaw
+  rw [hconjPoint] at hsecondRaw
+  have hsecond : (1 / (r - conj r)).im = -1 / (2 * Y) := by
+    rw [hsecondRaw]
+    field_simp [hY.ne']
+    ring
+  have hrealSum : r + conj r = (2 * x : ℝ) := by
+    apply Complex.ext
+    · simp [r]
+      ring
+    · simp [r]
+  have hthird : (1 / (r + conj r)).im = 0 := by
+    rw [hrealSum]
+    simp
+  rw [deBruijnNewmanPolymathForceOrbitTerm_eq_of_value_eq_contact p hx hY hp]
+  change (-(1 / (2 * r)) + 1 / (r - conj r) + 1 / (r + conj r)).im = _
+  rw [add_im, add_im, hfirst, hsecond, hthird]
+  ring
+
+/-- The Polymath geometry gives the strict vertical force inequality at any simple upper-right
+contact. The horizontal-escape premise is the exact first-contact consequence used separately
+below. -/
+theorem deBruijnNewmanRegularizedZeroForce_im_lt_of_simple_contact_escape
+    {t x X Y : ℝ} (ht0 : 0 ≤ t) (hthalf : t ≤ (1 : ℝ) / 2)
+    (hx : 0 < x) (hxX : x ≤ X) (hY : 0 < Y) (hY1 : Y ≤ 1)
+    (hzero : deBruijnNewmanH t ((x : ℂ) + (Y : ℂ) * I) = 0)
+    (hsimple : deriv (deBruijnNewmanH t) ((x : ℂ) + (Y : ℂ) * I) ≠ 0)
+    (hescape : ∀ p : DeBruijnNewmanHDivisorZeroIndex t,
+      Y < |(deBruijnNewmanHDivisorZeroValue p).im| →
+        X + Real.sqrt (1 - Y ^ 2) ≤
+          |(deBruijnNewmanHDivisorZeroValue p).re|) :
+    (2 * deBruijnNewmanRegularizedZeroForce t
+      ((x : ℂ) + (Y : ℂ) * I)).im < -1 / Y := by
+  classical
+  let r : ℂ := (x : ℂ) + (Y : ℂ) * I
+  let Z := DeBruijnNewmanHDivisorZeroIndex t
+  let n := deBruijnNewmanHDivisorZeroNegEquiv t
+  let c := deBruijnNewmanHDivisorZeroConjEquiv t
+  let orbitTerm : Z → ℂ := deBruijnNewmanPolymathForceOrbitTerm t r
+  let fiber := Complex.Hadamard.divisorZeroIndex₀_fiberFinset
+    (f := deBruijnNewmanH t) r
+  have hfiberCard : fiber.card = 1 := by
+    simpa only [fiber, r] using
+      deBruijnNewman_simpleZero_fiber_card_eq_one hzero hsimple
+  obtain ⟨p0, hfiber⟩ := Finset.card_eq_one.mp hfiberCard
+  have hp0mem : p0 ∈ fiber := by simp [hfiber]
+  have hp0val : deBruijnNewmanHDivisorZeroValue p0 = r := by
+    apply (Complex.Hadamard.mem_divisorZeroIndex₀_fiberFinset
+      (deBruijnNewmanH t) r p0).mp
+    exact hp0mem
+  have hvalUnique : ∀ q : Z, deBruijnNewmanHDivisorZeroValue q = r → q = p0 := by
+    intro q hq
+    have hqmem : q ∈ fiber := by
+      apply (Complex.Hadamard.mem_divisorZeroIndex₀_fiberFinset
+        (deBruijnNewmanH t) r q).mpr
+      exact hq
+    rw [hfiber] at hqmem
+    simpa using hqmem
+  let s := deBruijnNewmanHDivisorZeroSymmetryOrbit p0
+  have hp0val' : deBruijnNewmanHDivisorZeroValue p0 =
+      (x : ℂ) + (Y : ℂ) * I := by simpa only [r] using hp0val
+  have hsumOrbit : Summable orbitTerm := by
+    simpa only [orbitTerm, r] using
+      summable_deBruijnNewmanPolymathForceOrbitTerm t r
+  have hsumIm : Summable (fun q : Z ↦ (orbitTerm q).im) :=
+    Complex.imCLM.summable hsumOrbit
+  have hcomplement :
+      ∑' q : (sᶜ : Set Z), (orbitTerm q.1).im ≤ 0 := by
+    apply tsum_nonpos
+    intro q
+    have hqnotSet : q.1 ∉ (s : Set Z) := q.2
+    have hqnot : q.1 ∉ s := hqnotSet
+    have h₀ : deBruijnNewmanHDivisorZeroValue q.1 ≠ r := by
+      intro h
+      apply hqnot
+      rw [hvalUnique q.1 h]
+      simp [s, deBruijnNewmanHDivisorZeroSymmetryOrbit]
+    have hneg : -deBruijnNewmanHDivisorZeroValue q.1 ≠ r := by
+      intro h
+      have hnval : deBruijnNewmanHDivisorZeroValue (n q.1) = r := by
+        simpa only [n, deBruijnNewmanHDivisorZeroNegEquiv_value] using h
+      have hnEq := hvalUnique (n q.1) hnval
+      have hqEq : q.1 = n p0 := by
+        have := congrArg n hnEq
+        simpa only [n, deBruijnNewmanHDivisorZeroNegEquiv_apply_apply] using this
+      apply hqnot
+      rw [hqEq]
+      simp [s, n, deBruijnNewmanHDivisorZeroSymmetryOrbit]
+    have hconj : conj (deBruijnNewmanHDivisorZeroValue q.1) ≠ r := by
+      intro h
+      have hcval : deBruijnNewmanHDivisorZeroValue (c q.1) = r := by
+        simpa only [c, deBruijnNewmanHDivisorZeroConjEquiv_value] using h
+      have hcEq := hvalUnique (c q.1) hcval
+      have hqEq : q.1 = c p0 := by
+        have := congrArg c hcEq
+        simpa only [c, deBruijnNewmanHDivisorZeroConjEquiv_apply_apply] using this
+      apply hqnot
+      rw [hqEq]
+      simp [s, c, deBruijnNewmanHDivisorZeroSymmetryOrbit]
+    have hnegConj : -conj (deBruijnNewmanHDivisorZeroValue q.1) ≠ r := by
+      intro h
+      have hncval : deBruijnNewmanHDivisorZeroValue (n (c q.1)) = r := by
+        simpa only [n, c, deBruijnNewmanHDivisorZeroNegEquiv_value,
+          deBruijnNewmanHDivisorZeroConjEquiv_value] using h
+      have hncEq := hvalUnique (n (c q.1)) hncval
+      have hcEq : c q.1 = n p0 := by
+        have := congrArg n hncEq
+        simpa only [n, deBruijnNewmanHDivisorZeroNegEquiv_apply_apply] using this
+      have hqEq : q.1 = n (c p0) := by
+        have hqc : q.1 = c (n p0) := by
+          have := congrArg c hcEq
+          simpa only [c, deBruijnNewmanHDivisorZeroConjEquiv_apply_apply] using this
+        calc
+          q.1 = c (n p0) := hqc
+          _ = n (c p0) := by
+            simpa only [n, c] using
+              (deBruijnNewmanHDivisorZeroNegEquiv_conjEquiv p0).symm
+      apply hqnot
+      rw [hqEq]
+      simp [s, n, c, deBruijnNewmanHDivisorZeroSymmetryOrbit]
+    have hvalueZero := deBruijnNewmanH_divisorZeroIndex₀_val_eq_zero t q.1
+    have hstripBase := deBruijnNewmanH_zero_im_sq_le_one_sub_two_mul
+      ht0 hthalf hvalueZero
+    have hstrip : (deBruijnNewmanHDivisorZeroValue q.1).im ^ 2 ≤ 1 := by
+      linarith
+    exact deBruijnNewmanPolymathForceOrbitTerm_im_nonpos_of_escape
+      q.1 hx.le hxX hY hY1 hstrip (hescape q.1) h₀ hneg hconj hnegConj
+  have hfiniteIm :
+      ∑ q ∈ s, (orbitTerm q).im = 4 * (orbitTerm p0).im := by
+    have hsum := sum_deBruijnNewmanPolymathForceOrbitTerm_symmetryOrbit_eq_four_mul
+      p0 hx hY hp0val'
+    have him := congrArg Complex.im hsum
+    norm_num at him
+    simpa only [s, orbitTerm, r, map_sum] using him
+  have horbitImLe : (∑' q : Z, (orbitTerm q).im) ≤ 4 * (orbitTerm p0).im := by
+    calc
+      (∑' q : Z, (orbitTerm q).im) =
+          (∑ q ∈ s, (orbitTerm q).im) +
+            ∑' q : (sᶜ : Set Z), (orbitTerm q.1).im :=
+        hsumIm.sum_add_tsum_compl.symm
+      _ ≤ 4 * (orbitTerm p0).im := by rw [hfiniteIm]; linarith
+  have hp0OrbitIm :=
+    deBruijnNewmanPolymathForceOrbitTerm_im_eq_of_value_eq_contact p0 hx hY hp0val'
+  have hforceEq := deBruijnNewmanRegularizedZeroForce_eq_quarter_orbit_tsum t r
+  have hforceIm :
+      (deBruijnNewmanRegularizedZeroForce t r).im =
+        -Y / (x ^ 2 + Y ^ 2) +
+          (1 / 4) * ∑' q : Z, (orbitTerm q).im := by
+    have htsumIm :
+        (∑' q : Z, orbitTerm q).im = ∑' q : Z, (orbitTerm q).im :=
+      Complex.im_tsum hsumOrbit
+    rw [hforceEq, add_im, mul_im, htsumIm]
+    simp only [r, orbitTerm, one_div, inv_im, normSq_apply, add_re, ofReal_re,
+      mul_re, ofReal_im, I_re, I_im, mul_zero, sub_zero, add_im,
+      mul_im, mul_one, zero_add]
+    norm_num
+    ring
+  have hden : 0 < x ^ 2 + Y ^ 2 := by positivity
+  rw [mul_im, hforceIm]
+  norm_num
+  rw [hp0OrbitIm] at horbitImLe
+  have hstrict : 0 < Y / (x ^ 2 + Y ^ 2) := div_pos hY hden
+  have horbitImLe' :
+      (∑' q : Z, (orbitTerm q).im) ≤
+        2 * (Y / (x ^ 2 + Y ^ 2)) - 2 * (1 / Y) := by
+    calc
+      (∑' q : Z, (orbitTerm q).im) ≤
+          4 * (Y / (2 * (x ^ 2 + Y ^ 2)) - 1 / (2 * Y)) := horbitImLe
+      _ = 2 * (Y / (x ^ 2 + Y ^ 2)) - 2 * (1 / Y) := by
+        field_simp [hden.ne', hY.ne']
+        ring
+  have hforceLe :
+      2 * (-Y / (x ^ 2 + Y ^ 2) +
+        1 / 4 * ∑' q : Z, (orbitTerm q).im) ≤
+          -Y / (x ^ 2 + Y ^ 2) - 1 / Y := by
+    calc
+      2 * (-Y / (x ^ 2 + Y ^ 2) +
+          1 / 4 * ∑' q : Z, (orbitTerm q).im) =
+          -2 * (Y / (x ^ 2 + Y ^ 2)) +
+            (1 / 2) * ∑' q : Z, (orbitTerm q).im := by ring
+      _ ≤ -2 * (Y / (x ^ 2 + Y ^ 2)) +
+          (1 / 2) * (2 * (Y / (x ^ 2 + Y ^ 2)) - 2 * (1 / Y)) := by
+        gcongr
+      _ = -Y / (x ^ 2 + Y ^ 2) - 1 / Y := by ring
+  have hnegative : -Y / (x ^ 2 + Y ^ 2) < 0 :=
+    div_neg_of_neg_of_pos (neg_lt_zero.mpr hY) hden
+  have htarget : -Y / (x ^ 2 + Y ^ 2) - 1 / Y < -1 / Y := by
+    calc
+      -Y / (x ^ 2 + Y ^ 2) - 1 / Y < 0 - 1 / Y :=
+        sub_lt_sub_right hnegative _
+      _ = -1 / Y := by ring
+  exact lt_of_le_of_lt hforceLe htarget
 
 /-- Compact spacetime witnesses to failure of the moving zero-free region. -/
 def deBruijnNewmanPolymathBadWitnesses (t0 X y0 : ℝ) :
@@ -737,6 +1169,72 @@ theorem deBruijnNewmanPolymathBarrierRegionZeroFree.above
   rw [him] at hstrip
   exact (not_lt_of_ge hstrip) hySq
 
+/-- At a first contact, every divisor zero strictly above the contact height has escaped beyond
+the horizontal buffer. -/
+theorem deBruijnNewmanPolymath_firstBadWitness_horizontal_escape
+    {t0 X y0 t1 x y : ℝ} (hthalf : t0 ≤ (1 : ℝ) / 2)
+    (hinit : deBruijnNewmanPolymathInitialRegionZeroFree t0 X y0)
+    (haxis : ∀ t y : ℝ, deBruijnNewmanH t ((y : ℂ) * I) ≠ 0)
+    (hbarrier : deBruijnNewmanPolymathBarrierRegionZeroFree t0 X y0)
+    (hmin : ∀ t ∈ deBruijnNewmanPolymathBadTimes t0 X y0, t1 ≤ t)
+    (hp : ((t1, x), y) ∈ deBruijnNewmanPolymathBadWitnesses t0 X y0)
+    (p : DeBruijnNewmanHDivisorZeroIndex t1)
+    (hpAbove : y < |(deBruijnNewmanHDivisorZeroValue p).im|) :
+    X + Real.sqrt (1 - y ^ 2) ≤
+      |(deBruijnNewmanHDivisorZeroValue p).re| := by
+  rcases mem_deBruijnNewmanPolymathBadWitnesses_iff.mp hp with
+    ⟨ht10, ht1t0, _hx0, _hxX, _hy0, _hy1, _hheight, _hzero⟩
+  have hcontact := deBruijnNewmanPolymath_firstBadWitness_im_eq_boundary
+    hthalf hinit haxis hbarrier hmin hp
+  let u : ℝ := |(deBruijnNewmanHDivisorZeroValue p).re|
+  let v : ℝ := |(deBruijnNewmanHDivisorZeroValue p).im|
+  obtain ⟨q, hqval⟩ :=
+    exists_deBruijnNewmanHDivisorZeroIndex_value_eq_abs_cartesian p
+  have hqzero := deBruijnNewmanH_divisorZeroIndex₀_val_eq_zero t1 q
+  have hzeroAbs : deBruijnNewmanH t1 ((u : ℂ) + (v : ℂ) * I) = 0 := by
+    rw [← hqval]
+    exact hqzero
+  have hu0 : 0 ≤ u := by simp [u]
+  have hv0 : 0 ≤ v := by simp [v]
+  have hstrip := deBruijnNewmanH_zero_im_sq_le_one_sub_two_mul
+    ht10 (ht1t0.trans hthalf) hzeroAbs
+  have hvSq : v ^ 2 ≤ 1 := by
+    have him : (((u : ℂ) + (v : ℂ) * I).im) = v := by simp
+    rw [him] at hstrip
+    linarith
+  have hv1 : v ≤ 1 := by nlinarith
+  have hheight : deBruijnNewmanPolymathBoundaryHeight t0 y0 t1 ≤ v := by
+    rw [← hcontact]
+    simpa only [v] using hpAbove.le
+  have hXu : X < u := by
+    by_contra hnot
+    have huX : u ≤ X := le_of_not_gt hnot
+    have hpAbs : ((t1, u), v) ∈ deBruijnNewmanPolymathBadWitnesses t0 X y0 := by
+      rw [mem_deBruijnNewmanPolymathBadWitnesses_iff]
+      exact ⟨ht10, ht1t0, hu0, huX, hv0, hv1, hheight, hzeroAbs⟩
+    have hvBoundary := deBruijnNewmanPolymath_firstBadWitness_im_eq_boundary
+      hthalf hinit haxis hbarrier hmin hpAbs
+    have hvEq : v = y := hvBoundary.trans hcontact.symm
+    exact (ne_of_gt hpAbove) (by simpa only [v] using hvEq)
+  have hbuffer : X + Real.sqrt (1 - y0 ^ 2) < u := by
+    by_contra hnot
+    have huUpper : u ≤ X + Real.sqrt (1 - y0 ^ 2) := le_of_not_gt hnot
+    exact (hbarrier.above ht10 ht1t0 (ht1t0.trans hthalf)
+      hXu.le huUpper hheight) hzeroAbs
+  have hrad : 0 ≤ y0 ^ 2 + 2 * (t0 - t1) := by
+    nlinarith [sq_nonneg y0]
+  have hySq : y ^ 2 = y0 ^ 2 + 2 * (t0 - t1) := by
+    rw [hcontact, deBruijnNewmanPolymathBoundaryHeight]
+    exact Real.sq_sqrt hrad
+  have hwidth : Real.sqrt (1 - y ^ 2) ≤ Real.sqrt (1 - y0 ^ 2) := by
+    apply Real.sqrt_le_sqrt
+    rw [hySq]
+    linarith
+  calc
+    X + Real.sqrt (1 - y ^ 2) ≤ X + Real.sqrt (1 - y0 ^ 2) := by
+      linarith
+    _ ≤ u := hbuffer.le
+
 section
 
 private abbrev PolymathHasDerivAt (f : ℝ → ℝ) (f' x : ℝ) : Prop :=
@@ -865,6 +1363,65 @@ theorem deBruijnNewmanPolymath_firstBadWitness_not_simple_of_force_lt
   have htBad : t ∈ deBruijnNewmanPolymathBadTimes t0 X y0 :=
     ⟨((t, (z t).re), (z t).im), htWitness, rfl⟩
   exact (not_lt_of_ge (hmin t htBad)) htt1
+
+/-- The three Polymath region certificates imply the strict force inequality at a simple first
+contact. -/
+theorem deBruijnNewmanPolymath_firstBadWitness_force_lt_of_simple_contact
+    {t0 X y0 t1 x y : ℝ} (hy0 : 0 < y0)
+    (hthalf : t0 ≤ (1 : ℝ) / 2)
+    (hinit : deBruijnNewmanPolymathInitialRegionZeroFree t0 X y0)
+    (haxis : ∀ t y : ℝ, deBruijnNewmanH t ((y : ℂ) * I) ≠ 0)
+    (hbarrier : deBruijnNewmanPolymathBarrierRegionZeroFree t0 X y0)
+    (hmin : ∀ t ∈ deBruijnNewmanPolymathBadTimes t0 X y0, t1 ≤ t)
+    (hp : ((t1, x), y) ∈ deBruijnNewmanPolymathBadWitnesses t0 X y0)
+    (hsimple : deriv (deBruijnNewmanH t1) ((x : ℂ) + (y : ℂ) * I) ≠ 0) :
+    (2 * deBruijnNewmanRegularizedZeroForce t1
+      ((x : ℂ) + (y : ℂ) * I)).im < -1 / y := by
+  rcases mem_deBruijnNewmanPolymathBadWitnesses_iff.mp hp with
+    ⟨ht10, ht1t0, _hx0, _hxX, _hyNonneg, hy1, _hheight, hzero⟩
+  have hxInterior :=
+    deBruijnNewmanPolymathBadWitness_re_mem_Ioo hthalf haxis hbarrier hp
+  have hcontact := deBruijnNewmanPolymath_firstBadWitness_im_eq_boundary
+    hthalf hinit haxis hbarrier hmin hp
+  have hrad : 0 < y0 ^ 2 + 2 * (t0 - t1) := by
+    nlinarith [sq_pos_of_pos hy0]
+  have hboundaryPos :
+      0 < deBruijnNewmanPolymathBoundaryHeight t0 y0 t1 := by
+    simpa only [deBruijnNewmanPolymathBoundaryHeight] using Real.sqrt_pos.2 hrad
+  have hyPos : 0 < y := by rw [hcontact]; exact hboundaryPos
+  apply deBruijnNewmanRegularizedZeroForce_im_lt_of_simple_contact_escape
+    ht10 (ht1t0.trans hthalf) hxInterior.1 hxInterior.2.le hyPos hy1 hzero hsimple
+  intro p hpAbove
+  exact deBruijnNewmanPolymath_firstBadWitness_horizontal_escape
+    hthalf hinit haxis hbarrier hmin hp p hpAbove
+
+/-- A first contact satisfying the three Polymath region certificates cannot be simple. -/
+theorem deBruijnNewmanPolymath_firstBadWitness_not_simple
+    {t0 X y0 t1 x y : ℝ} (hy0 : 0 < y0)
+    (hthalf : t0 ≤ (1 : ℝ) / 2)
+    (hinit : deBruijnNewmanPolymathInitialRegionZeroFree t0 X y0)
+    (haxis : ∀ t y : ℝ, deBruijnNewmanH t ((y : ℂ) * I) ≠ 0)
+    (hbarrier : deBruijnNewmanPolymathBarrierRegionZeroFree t0 X y0)
+    (hmin : ∀ t ∈ deBruijnNewmanPolymathBadTimes t0 X y0, t1 ≤ t)
+    (hp : ((t1, x), y) ∈ deBruijnNewmanPolymathBadWitnesses t0 X y0) :
+    deriv (deBruijnNewmanH t1) ((x : ℂ) + (y : ℂ) * I) = 0 := by
+  have ht1Bad : t1 ∈ deBruijnNewmanPolymathBadTimes t0 X y0 :=
+    ⟨((t1, x), y), hp, rfl⟩
+  have ht1Pos := deBruijnNewmanPolymathBadTime_pos_of_initial hinit ht1Bad
+  have hxInterior :=
+    deBruijnNewmanPolymathBadWitness_re_mem_Ioo hthalf haxis hbarrier hp
+  have hcontact := deBruijnNewmanPolymath_firstBadWitness_im_eq_boundary
+    hthalf hinit haxis hbarrier hmin hp
+  by_contra hsimple
+  have hforce := deBruijnNewmanPolymath_firstBadWitness_force_lt_of_simple_contact
+    hy0 hthalf hinit haxis hbarrier hmin hp hsimple
+  have hforceBoundary :
+      (2 * deBruijnNewmanRegularizedZeroForce t1
+        ((x : ℂ) + (y : ℂ) * I)).im <
+          -1 / deBruijnNewmanPolymathBoundaryHeight t0 y0 t1 := by
+    simpa only [hcontact] using hforce
+  exact hsimple (deBruijnNewmanPolymath_firstBadWitness_not_simple_of_force_lt
+    hy0 ht1Pos hthalf hmin hp hxInterior hcontact hforceBoundary)
 
 /-- The weak consequence of backward Hermite splitting needed at a repeated first contact. The
 square-root displacement from the source theorem dominates every fixed linear speed. -/

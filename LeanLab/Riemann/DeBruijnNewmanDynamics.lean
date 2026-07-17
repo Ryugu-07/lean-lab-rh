@@ -398,7 +398,8 @@ theorem deBruijnNewmanZeroPairForceRemainder_re_nonpos
   exact tsum_nonpos fun p ↦
     deBruijnNewmanZeroPairForceTerm_re_nonpos_of_adjacent hall hadj p
 
-private theorem deBruijnNewman_simpleZero_fiber_card_eq_one
+/-- A simple nonzero source-family zero has exactly one multiplicity-bearing divisor index. -/
+theorem deBruijnNewman_simpleZero_fiber_card_eq_one
     {t : ℝ} {r : ℂ} (hr : deBruijnNewmanH t r = 0)
     (hsimple : deriv (deBruijnNewmanH t) r ≠ 0) :
     (Complex.Hadamard.divisorZeroIndex₀_fiberFinset

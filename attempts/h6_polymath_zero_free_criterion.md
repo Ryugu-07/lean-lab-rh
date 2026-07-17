@@ -22,9 +22,9 @@ Status: `ACTIVE_PROOF_ATTEMPT`
   `t0`, `X`, and `y0`; standard Mathlib analysis and compiled source-normalized H6 infrastructure
 - `strategy`: compact first-contact time, repeated-zero backward Hermite splitting,
   arbitrary-complex simple-zero force geometry, and general strip contraction
-- `known_obstacle`: the arbitrary-complex simple-zero path and the complete compact first-contact
-  consumer now compile. The two remaining source dependencies are the divisor-orbit proof of the
-  strict imaginary force inequality and repeated-zero backward Hermite splitting.
+- `known_obstacle`: the arbitrary-complex simple-zero path, compact first contact, divisor-orbit
+  strict imaginary force inequality, and complete simple-contact contradiction now compile. The
+  sole remaining source dependency is repeated-zero backward Hermite splitting.
 - `nearest_primary_source`: Polymath arXiv `1904.12438`, Proposition 3.3, Theorem 1.2, and Table 1;
   Platt--Trudgian arXiv `2004.09765`, Corollary 2
 - `nearest_project_attempt`: H6-H2e supplies only the final strip contraction; the zero-dynamics
@@ -42,20 +42,13 @@ Status: `ACTIVE_PROOF_ATTEMPT`
 | 3 | `PROOF-ATTEMPT` | Exported `exists_deBruijnNewman_localComplexSimpleZeroPath` from the existing product-domain implicit-function proof and refactored the real path through it. Defined all three closed Polymath regions. Proved strict positivity and nonvanishing on the entire imaginary axis, and proved that the source strip bound removes all three regional upper-height clauses. | Continue to a compact first-contact construction; do not introduce a global zero enumeration. |
 | 4 | `PROOF-ATTEMPT` | Proved compactness of the bounded spacetime witness set and its bad-time projection, existence and positivity of the first bad time, exclusion of both vertical sides, and exact contact with the moving lower boundary. The proof uses the exported arbitrary-multiplicity isolating-ball persistence theorem. Compiled both branch consumers: the strict force inequality rules out a simple contact, while minimality rules out `deBruijnNewmanHasBackwardUpperLinearEscape`. Also compiled the strict-canopy-to-strip bridge and exact Table 1 arithmetic to time `1/5`. Full local build and selected axiom audit passed. Implementation commit `b4c2f5e24ab35514dccf0f6d85ff40ce43e026c3` passed public CI run `29576156216`, job `87870943510`, in `3m35s`. | Checkpoint the infrastructure. Attack the force inequality first by averaging the absolutely convergent regularized divisor sum over the `z -> -z` and conjugation orbit; keep Hermite escape as an independent exact obstruction. |
 | 5 | `PROOF-ATTEMPT` | Publicized the multiplicity-preserving conjugation divisor equivalence, proved the corresponding negation equivalence from analytic-order invariance, and exposed the regularized force `tsum`. Proved the abstract quarter-of-four-orbits reindexing identity and specialized it to `deBruijnNewmanRegularizedZeroForce`. For non-contact orbits, regularization cancels exactly; the source cross-multiplication inequality, the two conjugate-pair estimates, the fourfold imaginary nonpositivity theorem, and the strip-or-horizontal-escape geometry all compile. For a contact representative, the exact orbit sum compiles as `-1/(2r) + 1/(r-conj r) + 1/(r+conj r)`. Implementation commit `90fdf2b9039da2a9cdb07758b3a24ab335958018` passed public CI run `29578060529`, job `87876981475`, in `2m55s`. | Isolate the four contact divisor indices using the simple fiber cardinality and their pairwise-distinct values; remove that finite set from the summable imaginary orbit series, prove the complement `tsum` nonpositive, and close the strict force inequality. |
+| 6 | `PROOF-ATTEMPT` | Made the simple-zero divisor fiber cardinality public. Proved the contact symmetry orbit has exactly four indices, the orbit term is invariant under both generators, and its finite sum is four times the contact term. Removed this Finset from the absolutely convergent imaginary `tsum`; every complementary orbit is nonpositive, yielding `deBruijnNewmanRegularizedZeroForce_im_lt_of_simple_contact_escape`. Proved every divisor zero has a first-quadrant symmetry representative. At the earliest bad time, boundary rigidity excludes higher zeros with `|Re|<=X`, while the barrier excludes the following horizontal buffer; this supplies the force theorem's escape premise. The compiled theorem `deBruijnNewmanPolymath_firstBadWitness_not_simple` therefore closes the complete simple-contact branch from the three region certificates. Exact TargetChecks and seven selected axiom prints pass with the standard trust base only. | Keep the campaign active. Attack the sole remaining source interface: repeated-zero backward Hermite splitting strong enough to imply `deBruijnNewmanHasBackwardUpperLinearEscape`; do not claim the final criterion before that interface compiles. |
 
-## Exact Remaining Source Interfaces
+## Exact Remaining Source Interface
 
-The force branch must prove, from the first-contact zero layout and the simple-zero hypothesis,
-
-```lean
-(2 * deBruijnNewmanRegularizedZeroForce t (x + y * I)).im < -1 / y
-```
-
-with `0 < x < X`, `y=Y(t)`, the global upper strip, and every zero above `y` forced outside the
-Polymath horizontal barrier. The planned proof averages the summable regularized divisor term over
-the order-four orbit generated by negation and conjugation. The orbit containing the contact gives
-the strict `-1/y` contribution; every other orbit must be nonpositive by the source geometric
-inequality.
+The simple-contact force branch is now compiled end to end. In particular,
+`deBruijnNewmanPolymath_firstBadWitness_not_simple` derives repeated contact directly from the
+three region certificates and first-time minimality; it does not assume the force inequality.
 
 The repeated branch must supply the exact theorem shape
 
@@ -77,6 +70,6 @@ displacement.
 - `hard_gap_after`: unchanged
 - `hard_gap_delta`: 0
 - `classification`: `ACTIVE_PROOF_ATTEMPT_CHECKPOINT`
-- `next_gate`: finite four-contact-index extraction from the orbit `tsum`, followed by the strict
-  first-contact force inequality
+- `next_gate`: repeated-zero backward Hermite splitting implying
+  `deBruijnNewmanHasBackwardUpperLinearEscape`
 - `persistent_goal`: active

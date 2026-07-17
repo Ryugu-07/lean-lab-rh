@@ -1558,4 +1558,28 @@ example {t x Y : ℝ} (p : DeBruijnNewmanHDivisorZeroIndex t)
           conj ((x : ℂ) + (Y : ℂ) * Complex.I)) :=
   deBruijnNewmanPolymathForceOrbitTerm_eq_of_value_eq_contact p hx hY hp
 
+example {t x X Y : ℝ} (ht0 : 0 ≤ t) (hthalf : t ≤ (1 : ℝ) / 2)
+    (hx : 0 < x) (hxX : x ≤ X) (hY : 0 < Y) (hY1 : Y ≤ 1)
+    (hzero : deBruijnNewmanH t ((x : ℂ) + (Y : ℂ) * Complex.I) = 0)
+    (hsimple : deriv (deBruijnNewmanH t) ((x : ℂ) + (Y : ℂ) * Complex.I) ≠ 0)
+    (hescape : ∀ p : DeBruijnNewmanHDivisorZeroIndex t,
+      Y < |(deBruijnNewmanHDivisorZeroValue p).im| →
+        X + Real.sqrt (1 - Y ^ 2) ≤
+          |(deBruijnNewmanHDivisorZeroValue p).re|) :
+    (2 * deBruijnNewmanRegularizedZeroForce t
+      ((x : ℂ) + (Y : ℂ) * Complex.I)).im < -1 / Y :=
+  deBruijnNewmanRegularizedZeroForce_im_lt_of_simple_contact_escape
+    ht0 hthalf hx hxX hY hY1 hzero hsimple hescape
+
+example {t0 X y0 t1 x y : ℝ} (hy0 : 0 < y0)
+    (hthalf : t0 ≤ (1 : ℝ) / 2)
+    (hinit : deBruijnNewmanPolymathInitialRegionZeroFree t0 X y0)
+    (haxis : ∀ t y : ℝ, deBruijnNewmanH t ((y : ℂ) * Complex.I) ≠ 0)
+    (hbarrier : deBruijnNewmanPolymathBarrierRegionZeroFree t0 X y0)
+    (hmin : ∀ t ∈ deBruijnNewmanPolymathBadTimes t0 X y0, t1 ≤ t)
+    (hp : ((t1, x), y) ∈ deBruijnNewmanPolymathBadWitnesses t0 X y0) :
+    deriv (deBruijnNewmanH t1) ((x : ℂ) + (y : ℂ) * Complex.I) = 0 :=
+  deBruijnNewmanPolymath_firstBadWitness_not_simple
+    hy0 hthalf hinit haxis hbarrier hmin hp
+
 end LeanLab.Riemann
