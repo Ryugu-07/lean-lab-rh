@@ -1900,3 +1900,24 @@ Lean Action CI run `29548736988`, build job `87786563205`, in `1m59s`. Evidence 
 `7e6f4d2e8c78e0c5795842d6ce63169134c1e968` passed public Lean Action CI run `29548955200`, build
 job `87787209694`, in `2m13s`. The campaign is publicly closed; the persistent RH Goal remains
 active and returns to value-ranked route selection after this requested rest round.
+
+## Route Selection: Xi-Kernel Log-Concavity External Lean Audit
+
+Date: 2026-07-17
+
+After the requested rest round, fresh comparison of M2/G3, W2/G7, H6-E/G8, and H10 selects
+`FALSIFICATION-20260717-H6-XI-LOGCONCAVITY-LEAN-01`. The trigger is the 2026-06-29 v2 preprint
+*On the Log-Concavity of the Riemann Xi Kernel*, whose attached Lean repository is directly
+relevant to the missing theta-specific H6 shape input.
+
+The paper's corrected v2 scope distinguishes TP2 from the RH-equivalent TP-infinity endpoint, but
+the pinned external repository does not certify its advertised full-kernel theorem. The formal
+log-concavity predicate concludes `True`; the full-kernel endpoints also conclude `True`; decisive
+perturbation bounds are custom axioms; and the numerical script omits the infinite tail after its
+first five terms. Its Hurwitz axiom additionally omits all analyticity and convergence hypotheses
+and is false for the constant sequence `F_n=1` and target `G(z)=z-i`.
+
+The fixed endpoint is a K0 counterexample to that exact Hurwitz schema plus a proof that the
+external log-concavity predicate is vacuous. Success rejects only the external Lean certification
+chain. It neither refutes actual Xi-kernel log-concavity nor changes TP2, H6-E/G8, or RH. No proof
+source edit may begin before the preregistration commit passes public Lean Action CI.
