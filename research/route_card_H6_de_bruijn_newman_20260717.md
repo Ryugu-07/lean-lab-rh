@@ -582,3 +582,20 @@ not change H6-E/G8 or RH. Implementation commit `8ecb002d1591ae93fbc23ba42c7a487
 passed public Lean Action CI run `29550587517`, build job `87792042425`, in `1m50s`. Evidence
 commit `131aff89283644bcabd2f620b94f99dc6ae30843` passed public CI run `29550788159`, build job
 `87792636844`, in `1m55s`; the campaign is publicly closed.
+
+## Active H6-X6: actual Xi-kernel strict TP2
+
+Campaign `LITERATURE-20260717-H6-XI-KERNEL-TP2-01` targets the actual compiled theta kernel, not
+the rejected external Lean predicate. Its indivisible endpoint proves all-real-point first and
+second derivative series and the full strict numerator
+
+`Phi''(u)*Phi(u)-Phi'(u)^2<0` for every `u>=0`.
+
+The primary source is Csordas-Varga (1988), which proves the stronger strict concavity of
+`log Phi(sqrt t)` and uses exactly the project's normalization; Coffey-Csordas (2013) is the
+secondary source. This corrects the 2026 preprint's novelty claim. The 2026 perturbation prose is
+not a premise because its decisive derivative-tail and monotonicity bounds are not proved.
+
+Exact preregistration is in `h6_xi_kernel_tp2_prereg_20260717.md`. Public preregistration CI must
+pass before any Lean proof-source edit. Success is `KNOWN_THEOREM_FORMALIZED` with expected
+`hard_gap_delta=0`; TP-infinity, H6-E/G8, and RH remain open.
