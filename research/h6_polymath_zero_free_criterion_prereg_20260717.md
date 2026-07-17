@@ -6,7 +6,16 @@ Campaign: `LITERATURE-20260717-H6-POLYMATH-ZERO-FREE-CRITERION-01`
 
 Mode: `LITERATURE`
 
-Status: `PREREGISTERED_CI_PENDING`
+Status: `PREREGISTERED_CI_PASSED`
+
+Public preregistration evidence:
+
+- commit: `8f9425edd6257011b4beea644196053d9ca86d73`
+- workflow: `Lean Action CI`
+- run: `29573972608`
+- job: `87864082110`
+- duration: `2m02s`
+- conclusion: `success`
 
 ## Exact source predicates
 

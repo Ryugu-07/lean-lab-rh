@@ -831,6 +831,52 @@ private theorem isInvertible_deBruijnNewmanSpatialPartialFDeriv
   ext z
   simp [e, deBruijnNewmanSpatialPartialFDeriv]
 
+/-- A simple complex zero extends to a locally unique differentiable complex zero trajectory.
+The derivative is the exact divisor-regularized de Bruijn-Newman force. -/
+theorem exists_deBruijnNewman_localComplexSimpleZeroPath
+    {t : ℝ} {r : ℂ}
+    (hr : deBruijnNewmanH t r = 0)
+    (hsimple : deriv (deBruijnNewmanH t) r ≠ 0) :
+    ∃ x : ℝ → ℂ,
+      x t = r ∧
+      Tendsto x (𝓝 t) (𝓝 r) ∧
+      HasDerivAt x (2 * deBruijnNewmanRegularizedZeroForce t r) t ∧
+      (∀ᶠ tau in 𝓝 t, deBruijnNewmanH tau (x tau) = 0) ∧
+      (∀ᶠ p : ℝ × ℂ in 𝓝 (t, r),
+        deBruijnNewmanH p.1 p.2 = 0 ↔ x p.1 = p.2) := by
+  let D : ℝ × ℂ →L[ℝ] ℂ :=
+    (deBruijnNewmanTimePartialFDeriv t r).coprod
+      (deBruijnNewmanSpatialPartialFDeriv t r)
+  have hD : HasStrictFDerivAt (fun p : ℝ × ℂ ↦ deBruijnNewmanH p.1 p.2)
+      D (t, r) := by
+    simpa only [D] using hasStrictFDerivAt_deBruijnNewmanH_joint (t, r)
+  have hinv : (D ∘L ContinuousLinearMap.inr ℝ ℝ ℂ).IsInvertible := by
+    simpa only [D, ContinuousLinearMap.coprod_comp_inr] using
+      isInvertible_deBruijnNewmanSpatialPartialFDeriv hsimple
+  let x : ℝ → ℂ := hD.implicitFunctionOfProdDomain hinv
+  have huniq : ∀ᶠ p : ℝ × ℂ in 𝓝 (t, r),
+      deBruijnNewmanH p.1 p.2 = deBruijnNewmanH t r ↔ x p.1 = p.2 := by
+    simpa only [x] using hD.eventually_apply_eq_iff_implicitFunctionOfProdDomain hinv
+  have hanchor : x t = r := (huniq.self_of_nhds).mp rfl
+  have htend : Tendsto x (𝓝 t) (𝓝 r) := by
+    simpa only [x] using hD.tendsto_implicitFunctionOfProdDomain hinv
+  have hzero : ∀ᶠ tau in 𝓝 t, deBruijnNewmanH tau (x tau) = 0 := by
+    have h := hD.eventually_apply_implicitFunctionOfProdDomain hinv
+    simpa only [x, hr] using h
+  have hxRaw :=
+    (hD.hasStrictFDerivAt_implicitFunctionOfProdDomain hinv).hasFDerivAt.hasDerivAt
+  have hsimplex : deriv (deBruijnNewmanH t) (x t) ≠ 0 := by
+    simpa only [hanchor] using hsimple
+  have hvelocity := deBruijnNewman_simpleZeroPath_velocity_of_eventually
+    hxRaw hzero hsimplex
+  change _ = 2 * deBruijnNewmanRegularizedZeroForce t (x t) at hvelocity
+  rw [hanchor] at hvelocity
+  have hxderiv :
+      HasDerivAt x (2 * deBruijnNewmanRegularizedZeroForce t r) t :=
+    hxRaw.congr_deriv hvelocity
+  refine ⟨x, hanchor, htend, hxderiv, hzero, ?_⟩
+  simpa only [hr] using huniq
+
 /-- A simple real zero extends to a locally unique differentiable real zero trajectory. The
 trajectory is produced by the real implicit-function theorem on `ℝ × ℂ`; conjugation symmetry and
 local uniqueness force its nearby values back onto the real axis. -/
@@ -846,35 +892,8 @@ theorem exists_deBruijnNewman_localRealSimpleZeroPath
         deBruijnNewmanH tau (x tau) = 0 ∧ (x tau).im = 0) ∧
       (∀ᶠ p : ℝ × ℂ in 𝓝 (t, (r : ℂ)),
         deBruijnNewmanH p.1 p.2 = 0 ↔ x p.1 = p.2) := by
-  let D : ℝ × ℂ →L[ℝ] ℂ :=
-    (deBruijnNewmanTimePartialFDeriv t (r : ℂ)).coprod
-      (deBruijnNewmanSpatialPartialFDeriv t (r : ℂ))
-  have hD : HasStrictFDerivAt (fun p : ℝ × ℂ ↦ deBruijnNewmanH p.1 p.2)
-      D (t, (r : ℂ)) := by
-    simpa only [D] using hasStrictFDerivAt_deBruijnNewmanH_joint (t, (r : ℂ))
-  have hinv : (D ∘L ContinuousLinearMap.inr ℝ ℝ ℂ).IsInvertible := by
-    simpa only [D, ContinuousLinearMap.coprod_comp_inr] using
-      isInvertible_deBruijnNewmanSpatialPartialFDeriv hsimple
-  let x : ℝ → ℂ := hD.implicitFunctionOfProdDomain hinv
-  have huniq : ∀ᶠ p : ℝ × ℂ in 𝓝 (t, (r : ℂ)),
-      deBruijnNewmanH p.1 p.2 = deBruijnNewmanH t (r : ℂ) ↔ x p.1 = p.2 := by
-    simpa only [x] using hD.eventually_apply_eq_iff_implicitFunctionOfProdDomain hinv
-  have hanchor : x t = (r : ℂ) := (huniq.self_of_nhds).mp rfl
-  have htend : Tendsto x (𝓝 t) (𝓝 (r : ℂ)) := by
-    simpa only [x] using hD.tendsto_implicitFunctionOfProdDomain hinv
-  have hzero : ∀ᶠ tau in 𝓝 t, deBruijnNewmanH tau (x tau) = 0 := by
-    have h := hD.eventually_apply_implicitFunctionOfProdDomain hinv
-    simpa only [x, hr] using h
-  have hxRaw := (hD.hasStrictFDerivAt_implicitFunctionOfProdDomain hinv).hasFDerivAt.hasDerivAt
-  have hsimplex : deriv (deBruijnNewmanH t) (x t) ≠ 0 := by
-    simpa only [hanchor] using hsimple
-  have hvelocity := deBruijnNewman_simpleZeroPath_velocity_of_eventually
-    hxRaw hzero hsimplex
-  change _ = 2 * deBruijnNewmanRegularizedZeroForce t (x t) at hvelocity
-  rw [hanchor] at hvelocity
-  have hxderiv :
-      HasDerivAt x (2 * deBruijnNewmanRegularizedZeroForce t (r : ℂ)) t :=
-    hxRaw.congr_deriv hvelocity
+  obtain ⟨x, hanchor, htend, hxderiv, hzero, huniq⟩ :=
+    exists_deBruijnNewman_localComplexSimpleZeroPath hr hsimple
   have hconjTend : Tendsto (fun tau : ℝ ↦ conj (x tau)) (𝓝 t) (𝓝 (r : ℂ)) := by
     change Tendsto (conj ∘ x) (𝓝 t) (𝓝 (r : ℂ))
     simpa only [conj_ofReal] using Complex.continuous_conj.continuousAt.tendsto.comp htend
@@ -882,18 +901,17 @@ theorem exists_deBruijnNewman_localRealSimpleZeroPath
       (𝓝 t) (𝓝 (t, (r : ℂ))) :=
     tendsto_id.prodMk_nhds hconjTend
   have huniqConj : ∀ᶠ tau in 𝓝 t,
-      deBruijnNewmanH tau (conj (x tau)) = deBruijnNewmanH t (r : ℂ) ↔
-        x tau = conj (x tau) :=
+      deBruijnNewmanH tau (conj (x tau)) = 0 ↔ x tau = conj (x tau) :=
     hpairConj.eventually huniq
   have hreal : ∀ᶠ tau in 𝓝 t, (x tau).im = 0 := by
     filter_upwards [hzero, huniqConj] with tau hzeroTau huniqTau
     have hconjZero : deBruijnNewmanH tau (conj (x tau)) = 0 := by
       rw [deBruijnNewmanH_conj, hzeroTau, map_zero]
-    exact Complex.conj_eq_iff_im.mp (huniqTau.mp (by simpa only [hr] using hconjZero)).symm
+    exact Complex.conj_eq_iff_im.mp (huniqTau.mp hconjZero).symm
   refine ⟨x, hanchor, htend, hxderiv, ?_, ?_⟩
   · filter_upwards [hzero, hreal] with tau hzeroTau hrealTau
     exact ⟨hzeroTau, hrealTau⟩
-  · simpa only [hr] using huniq
+  · exact huniq
 
 /-- Two distinct simple real zeros extend to locally ordered real zero trajectories. This is the
 local no-collision interface: any loss of order must occur only after leaving the common

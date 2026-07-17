@@ -7,6 +7,7 @@ import LeanLab.Riemann.DeBruijnNewmanForward
 import LeanLab.Riemann.DeBruijnNewmanUpperHalf
 import LeanLab.Riemann.DeBruijnNewmanGeneralStrip
 import LeanLab.Riemann.DeBruijnNewmanDynamics
+import LeanLab.Riemann.DeBruijnNewmanPolymathCriterion
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -464,3 +465,14 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.eventually_exists_dbnForwardApprox_zero_mem_closedBall_of
 #print axioms LeanLab.Riemann.deBruijnNewmanH_zero_im_sq_le_sub_two_mul
 #print axioms LeanLab.Riemann.deBruijnNewmanAllZerosReal_add_half_sq
+#print axioms LeanLab.Riemann.eventually_exists_deBruijnNewmanH_zero_mem_closedBall
+#print axioms LeanLab.Riemann.exists_deBruijnNewmanH_isolating_closedBall_subset
+#print axioms LeanLab.Riemann.exists_deBruijnNewman_localComplexSimpleZeroPath
+#print axioms LeanLab.Riemann.deBruijnNewmanH_mul_I_re_pos
+#print axioms LeanLab.Riemann.exists_deBruijnNewmanPolymath_firstBadTime
+#print axioms LeanLab.Riemann.deBruijnNewmanPolymath_firstBadWitness_im_eq_boundary
+#print axioms LeanLab.Riemann.deBruijnNewmanPolymath_firstBadWitness_not_simple_of_force_lt
+#print axioms LeanLab.Riemann.deBruijnNewmanPolymath_firstBadWitness_not_backwardUpperLinearEscape
+#print axioms LeanLab.Riemann.deBruijnNewmanPolymath_firstBadWitness_repeated_obstruction_of_force_lt
+#print axioms LeanLab.Riemann.deBruijnNewmanAllZerosReal_add_half_sq_of_im_abs_lt
+#print axioms LeanLab.Riemann.deBruijnNewmanAllZerosReal_one_fifth_of_polymath_table_endpoint

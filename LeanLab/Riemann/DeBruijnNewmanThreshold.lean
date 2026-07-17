@@ -236,7 +236,9 @@ theorem continuous_deBruijnNewmanH_joint :
     Continuous (fun p : ℝ × ℂ ↦ deBruijnNewmanH p.1 p.2) :=
   continuous_iff_continuousAt.mpr continuousAt_deBruijnNewmanH_joint
 
-private theorem eventually_exists_deBruijnNewmanH_zero_mem_closedBall
+/-- Any zero of the source heat family persists in an isolating closed ball for all sufficiently
+nearby heat times. No simplicity or fixed multiplicity assumption is required. -/
+theorem eventually_exists_deBruijnNewmanH_zero_mem_closedBall
     {t : ℝ} {z₀ : ℂ} {R : ℝ} (hR : 0 < R)
     (hz₀ : deBruijnNewmanH t z₀ = 0)
     (hboundary : ∀ z ∈ Metric.sphere z₀ R, deBruijnNewmanH t z ≠ 0) :
@@ -323,6 +325,35 @@ private theorem eventually_exists_deBruijnNewmanH_zero_mem_closedBall
     simpa [abs_of_pos hR] using hzero_free
   rw [hanalytic_abs.circleAverage_log_norm_of_ne_zero hzero_free_abs] at havg_lower
   exact (not_lt_of_ge havg_lower) hcenter_log
+
+/-- An isolating closed ball can be chosen inside any prescribed neighborhood of a source-family
+zero. This packages analytic zero isolation without assuming that the zero is simple. -/
+theorem exists_deBruijnNewmanH_isolating_closedBall_subset
+    {t : ℝ} {z0 : ℂ} (_hz0 : deBruijnNewmanH t z0 = 0)
+    {U : Set ℂ} (hU : U ∈ 𝓝 z0) :
+    ∃ R > 0,
+      (∀ z ∈ Metric.sphere z0 R, deBruijnNewmanH t z ≠ 0) ∧
+      Metric.closedBall z0 R ⊆ U := by
+  have hanalytic : AnalyticOnNhd ℂ (deBruijnNewmanH t) (Set.univ : Set ℂ) :=
+    fun z _ ↦ (differentiable_deBruijnNewmanH t).analyticAt z
+  have hnotLocalZero : ¬deBruijnNewmanH t =ᶠ[𝓝 z0] 0 := by
+    intro hlocal
+    have hglobal := hanalytic.eqOn_zero_of_preconnected_of_eventuallyEq_zero
+      isPreconnected_univ (mem_univ z0) hlocal
+    exact deBruijnNewmanH_zero_ne_zero t (hglobal (mem_univ 0))
+  have hisolated : ∀ᶠ z in 𝓝[≠] z0, deBruijnNewmanH t z ≠ 0 :=
+    ((hanalytic z0 (mem_univ z0)).eventually_eq_zero_or_eventually_ne_zero).resolve_left
+      hnotLocalZero
+  have hnearNonzero : ∀ᶠ z in 𝓝 z0, z ≠ z0 → deBruijnNewmanH t z ≠ 0 :=
+    eventually_nhdsWithin_iff.mp hisolated
+  have hcombined : ∀ᶠ z in 𝓝 z0,
+      (z ≠ z0 → deBruijnNewmanH t z ≠ 0) ∧ z ∈ U :=
+    hnearNonzero.and hU
+  obtain ⟨R, hR, hsubset⟩ := Metric.nhds_basis_closedBall.mem_iff.mp hcombined
+  refine ⟨R, hR, ?_, fun z hz ↦ (hsubset hz).2⟩
+  intro z hz
+  exact (hsubset (Metric.sphere_subset_closedBall hz)).1
+    (Metric.ne_of_mem_sphere hz hR.ne')
 
 theorem exists_deBruijnNewmanH_isolating_nonreal_closedBall
     {t : ℝ} {z₀ : ℂ} (hz₀_im : z₀.im ≠ 0) :

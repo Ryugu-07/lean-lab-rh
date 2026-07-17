@@ -6,6 +6,7 @@ import LeanLab.Riemann.DeBruijnNewmanForward
 import LeanLab.Riemann.DeBruijnNewmanUpperHalf
 import LeanLab.Riemann.DeBruijnNewmanGeneralStrip
 import LeanLab.Riemann.DeBruijnNewmanDynamics
+import LeanLab.Riemann.DeBruijnNewmanPolymathCriterion
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1523,5 +1524,20 @@ example {t y : ℝ} (hy : 0 ≤ y)
     (hstrip : ∀ z : ℂ, deBruijnNewmanH t z = 0 → z.im ^ 2 ≤ y ^ 2) :
     deBruijnNewmanAllZerosReal (t + y ^ 2 / 2) :=
   deBruijnNewmanAllZerosReal_add_half_sq hy hstrip
+
+example (t y : ℝ) :
+    0 < (deBruijnNewmanH t ((y : ℂ) * Complex.I)).re :=
+  deBruijnNewmanH_mul_I_re_pos t y
+
+example {t y : ℝ} (hy : 0 < y)
+    (hcanopy : ∀ z : ℂ, deBruijnNewmanH t z = 0 → |z.im| < y) :
+    deBruijnNewmanAllZerosReal (t + y ^ 2 / 2) :=
+  deBruijnNewmanAllZerosReal_add_half_sq_of_im_abs_lt hy hcanopy
+
+example
+    (hall : deBruijnNewmanAllZerosReal
+      ((93 : ℝ) / 500 + ((16733 : ℝ) / 100000) ^ 2 / 2)) :
+    deBruijnNewmanAllZerosReal ((1 : ℝ) / 5) :=
+  deBruijnNewmanAllZerosReal_one_fifth_of_polymath_table_endpoint hall
 
 end LeanLab.Riemann

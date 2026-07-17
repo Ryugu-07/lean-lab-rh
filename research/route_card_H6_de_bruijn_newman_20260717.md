@@ -666,3 +666,17 @@ dependency is repeated-zero backward Hermite splitting at a first canopy contact
 complex simple-zero path and the global force geometry must also be completed. Success has
 `hard_gap_delta=0` and exposes the certified-computation frontier immediately before the known
 `Lambda<=0.2` result.
+
+### H6-H2f active proof checkpoint
+
+`DeBruijnNewmanPolymathCriterion.lean` now compiles the three exact closed region predicates,
+arbitrary-complex simple-zero continuation, imaginary-axis positivity, removal of all three
+strip-redundant upper bounds, the compact earliest-contact construction, strict exclusion of both
+vertical sides, and equality with the moving lower boundary. It also compiles the complete
+consumers of the simple and repeated branches, the strict-canopy strip bridge, and exact Table 1
+arithmetic.
+
+No regional certificate or final criterion is proved. The exact remaining source interfaces are
+the strict imaginary force inequality for a simple first contact and repeated-zero backward
+Hermite splitting strong enough to imply `deBruijnNewmanHasBackwardUpperLinearEscape`. The next
+attack is the force inequality via an absolutely convergent fourfold divisor-orbit average.
