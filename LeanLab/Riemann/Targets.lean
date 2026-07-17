@@ -13,6 +13,7 @@ import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6PositiveCoshLiAudit
 import LeanLab.Riemann.H6ReverseHeatLiAudit
+import LeanLab.Riemann.XiKernelLogConcavityAudit
 import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula
@@ -882,6 +883,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``h6PositiveCoshAudit_falsifies_allOrder_positiveKernelLi
       status := .proven
       note := "Audit AUDIT-20260717-H6-POSITIVE-COSH-LI3-01 uses atoms at log 2 and 10*log 2 with normalized masses 1/8 and 7/8. Exact hyperbolic values and Mathlib's certified rational interval for log 2 prove the (+,+,-) sign pattern. This eliminates only a generic positive-kernel/Hankel extrapolation from the first-two theta moment theorem; the actual theta kernel, H6-E/G8, W2/G7, M2/G3, and RH remain open. Implementation commit 5fdfc5c7437349735c57552a75838f16b4d63f5e passed public CI run 29543145545, job 87769424525; evidence commit 61ce528793a9fc04e4a6b26ba83463cf0557bafc passed run 29543336971, job 87770059112." },
+    { id := "H6.audit.xi-kernel-logconcavity-external-lean"
+      tier := .tier2
+      title := "Audit the external Xi-kernel log-concavity Lean certificate"
+      statement :=
+        "At pinned external commit 7a89db1, prove that the formal IsLogConcaveOn predicate holds for every function because it concludes only True, and refute the exact no-convergence Hurwitz schema using the zero-free constant sequence F_n=1 and the nonreal-zero target G(z)=z-i."
+      leanName := some ``xiKernelLogConcavityExternalAudit_endpoint
+      status := .proven
+      note := "Campaign FALSIFICATION-20260717-H6-XI-LOGCONCAVITY-LEAN-01 rejects only the attached external Lean certification chain. The corrected paper v2 leaves TP2 strictly below TP-infinity; actual Xi-kernel log-concavity, H6-E/G8, and RH remain unadjudicated. Public implementation CI evidence is pending." },
     { id := "H6.discovery.theta-third-li-covariance"
       tier := .tier2
       title := "Prove the theta-family third Li coefficient by covariance"

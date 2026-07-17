@@ -6,7 +6,7 @@ Campaign: `FALSIFICATION-20260717-H6-XI-LOGCONCAVITY-LEAN-01`
 
 Mode: `FALSIFICATION`
 
-Status: `PREREGISTERED_LOCAL`
+Status: `IMPLEMENTED_LOCAL_AUDITED`
 
 ## Source lock
 
@@ -140,3 +140,20 @@ After the exact formal schema is falsified and the source evidence is logged, st
 Do not silently expand it into a proof of full Xi-kernel log-concavity. A later campaign may attack
 that theorem only after a fresh preregistration with an actual definition of `Phi`, complete
 infinite-tail bounds, and a nontrivial derivative statement.
+
+## Local outcome
+
+The preregistration commit `def8b00d309ef5acc6a0f44a7eb0b47c0db25b01` passed public Lean
+Action CI run `29549982781`, build job `87790283637`, in `1m32s` before proof-source edits.
+
+`XiKernelLogConcavityAudit.lean` now compiles the exact constant-sequence/linear-target
+counterexample, proves that the reconstructed external log-concavity predicate holds for every
+function, and bundles both facts in `xiKernelLogConcavityExternalAudit_endpoint`. Exact
+TargetChecks and all three selected transitive axiom prints pass; the latter contain only
+`propext`, `Classical.choice`, and `Quot.sound`. Forbidden scans are empty and the full 8,697-job
+build succeeds.
+
+Local classification is `EXTERNAL_FORMALIZATION_REJECTED_AS_PREMISE`, with `hard_gap_delta=0`
+and `route_infrastructure_delta=0`. Actual Xi-kernel log-concavity remains unverified by this
+project and unrefuted; H6-E/G8 and RH remain open. Public implementation CI and immutable evidence
+closure are pending.

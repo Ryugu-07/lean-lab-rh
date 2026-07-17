@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260717-H6-XI-LOGCONCAVITY-LEAN-01`
 
 Mode: `FALSIFICATION`
 
-Status: `PREREGISTERED_LOCAL`
+Status: `LOCAL_IMPLEMENTATION_AUDITED`
 
 ## Runtime record
 
@@ -41,14 +41,49 @@ Status: `PREREGISTERED_LOCAL`
 
 ## Pending gates
 
-- preregistration commit, push, and public Lean Action CI
-- exact Lean countermodel and aggregate endpoint
-- Targets, TargetChecks, AxiomsAudit, scans, and full build
+- preregistration commit, push, and public Lean Action CI: passed
+- exact Lean countermodel and aggregate endpoint: passed locally
+- Targets, TargetChecks, AxiomsAudit, scans, and full build: passed locally
 - implementation/evidence public CI closure
 
 ## Current result
 
-- `result`: `LOCAL_PREREGISTRATION_COMPLETE`
+- `result`: `EXTERNAL_FORMALIZATION_REJECTED_AS_PREMISE_LOCAL`
 - `hard_gap_delta`: 0
 - `route_infrastructure_delta`: 0
-- `proof_source_edits`: none
+- `proof_source_edits`: `LeanLab/Riemann/XiKernelLogConcavityAudit.lean`
+
+## Loop record: exact formal counterexample
+
+1. The preregistration commit `def8b00d309ef5acc6a0f44a7eb0b47c0db25b01` passed public Lean
+   Action CI run `29549982781`, build job `87790283637`, in `1m32s` before proof edits.
+2. The source was pinned again at `7a89db1d546257d8dabefe1ac8b8d4769298a355`. A complete scan
+   finds thirteen explicit custom `axiom` declarations across `Basic.lean`, `ExpBound.lean`,
+   `Analytic.lean`, and `Polya.lean`.
+3. Lean proves every constant function `F_n(z)=1` has only real zeros vacuously, while
+   `G(z)=z-i` is nonzero at `0` and has the nonreal zero `i`.
+4. These witnesses refute the exact external Hurwitz proposition, which has neither analyticity
+   nor compact-uniform convergence among its premises.
+5. Lean separately proves the exact reconstructed `IsLogConcaveOn` shape for every real function,
+   because its conclusion is only `True`.
+6. `xiKernelLogConcavityExternalAudit_endpoint` bundles the vacuous predicate, both witness facts,
+   the nonreal-zero conclusion, and the schema negation.
+
+## Mechanical audit
+
+- standalone new-module compile: diagnostic-free
+- dedicated Lake build: 782 jobs, success
+- exact Targets and TargetChecks: diagnostic-free
+- selected axiom prints: only `propext`, `Classical.choice`, and `Quot.sound`
+- forbidden placeholder/declaration/resource scans: empty
+- full build: 8,697 jobs, success
+- `git diff --check`: pass
+- implementation public CI: pending
+
+## Assumption frontier
+
+The campaign rejects only the pinned external machine-verification chain. It does not prove the
+full kernel is not log-concave, and it does not challenge the v2 paper's corrected statement that
+TP2 is weaker than TP-infinity. A future proof of actual Xi-kernel log-concavity needs a real
+`Phi`, derivative definitions, a complete infinite-tail estimate, and no custom axioms. H6-E/G8,
+W2/G7, M2/G3, and RH remain open.

@@ -1921,3 +1921,17 @@ The fixed endpoint is a K0 counterexample to that exact Hurwitz schema plus a pr
 external log-concavity predicate is vacuous. Success rejects only the external Lean certification
 chain. It neither refutes actual Xi-kernel log-concavity nor changes TP2, H6-E/G8, or RH. No proof
 source edit may begin before the preregistration commit passes public Lean Action CI.
+
+### Local audited result
+
+The preregistration gate passed at commit `def8b00d309ef5acc6a0f44a7eb0b47c0db25b01`, public Lean
+Action CI run `29549982781`, build job `87790283637`, in `1m32s`. The complete K0-local endpoint
+now compiles in `XiKernelLogConcavityAudit.lean`: every constant `F_n=1` is zero-free, the target
+`G(z)=z-i` is nonzero but has a nonreal zero, and the exact no-convergence Hurwitz schema is false.
+The source's formal log-concavity predicate is separately proved vacuous.
+
+Exact Targets, TargetChecks, three standard-only axiom prints, forbidden scans, and the full
+8,697-job build pass. Classify as `EXTERNAL_FORMALIZATION_REJECTED_AS_PREMISE`, with
+`hard_gap_delta=0` and `route_infrastructure_delta=0`. Actual Xi-kernel log-concavity remains
+unverified and unrefuted; H6-E/G8 and RH remain open. Public implementation CI and immutable
+evidence closure are pending.

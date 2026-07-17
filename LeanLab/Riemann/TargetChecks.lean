@@ -12,6 +12,7 @@ import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6PositiveCoshLiAudit
 import LeanLab.Riemann.H6ReverseHeatLiAudit
+import LeanLab.Riemann.XiKernelLogConcavityAudit
 import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
 import LeanLab.Riemann.LiWeilGram
@@ -1457,5 +1458,19 @@ example :
     0 < h6PositiveCoshAuditLiTwo.re ∧ h6PositiveCoshAuditLiTwo.im = 0 ∧
     h6PositiveCoshAuditLiThree.re < 0 ∧ h6PositiveCoshAuditLiThree.im = 0 :=
   h6PositiveCoshAudit_falsifies_allOrder_positiveKernelLi
+
+example : ¬ xiLogConcavityAuditHurwitzSchema :=
+  not_xiLogConcavityAuditHurwitzSchema
+
+example (K : ℝ → ℝ) : xiLogConcavityAuditIsLogConcaveOn K :=
+  xiLogConcavityAudit_isLogConcaveOn_trivial K
+
+example :
+    (∀ K : ℝ → ℝ, xiLogConcavityAuditIsLogConcaveOn K) ∧
+    (∀ n, xiLogConcavityAuditHasOnlyRealZeros (xiLogConcavityAuditConstantSequence n)) ∧
+    (∃ z, xiLogConcavityAuditLinearTarget z ≠ 0) ∧
+    ¬ xiLogConcavityAuditHasOnlyRealZeros xiLogConcavityAuditLinearTarget ∧
+    ¬ xiLogConcavityAuditHurwitzSchema :=
+  xiKernelLogConcavityExternalAudit_endpoint
 
 end LeanLab.Riemann

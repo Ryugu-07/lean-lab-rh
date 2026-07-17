@@ -562,3 +562,20 @@ is proved. Implementation commit `16437075ed7ceb56becff79c77308d3e33bd1c65` pass
 Action CI run `29548736988`, build job `87786563205`, in `1m59s`. Evidence commit
 `7e6f4d2e8c78e0c5795842d6ce63169134c1e968` passed public Lean Action CI run `29548955200`, build
 job `87787209694`, in `2m13s`; the campaign is publicly closed.
+
+## Candidate H6-X5: external Xi-kernel log-concavity Lean audit
+
+The 2026-06-29 Gershon v2 preprint claims strict TP2 log-concavity of the actual Xi kernel and
+correctly leaves the TP2/TP-infinity gap open. Its attached Lean repository at pinned commit
+`7a89db1d546257d8dabefe1ac8b8d4769298a355` does not certify that theorem: the principal
+predicates and endpoints conclude `True`, decisive perturbation bounds are custom axioms, and its
+five-term numerical enclosure has no infinite-tail theorem.
+
+`XiKernelLogConcavityAudit.lean` reconstructs and refutes the repository's exact omitted-premise
+Hurwitz schema with `F_n=1` and `G(z)=z-i`; it also proves the source's formal log-concavity shape
+is vacuous. The exact TargetChecks and standard-only axiom audit pass, as does the 8,697-job full
+build.
+
+**Verdict:** `EXTERNAL_FORMALIZATION_REJECTED_AS_PREMISE`, `hard_gap_delta=0`, and
+`route_infrastructure_delta=0`. This is not a refutation of actual Xi-kernel log-concavity and does
+not change H6-E/G8 or RH. Public implementation CI and evidence closure remain.

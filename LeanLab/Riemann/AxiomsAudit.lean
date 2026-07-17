@@ -13,6 +13,7 @@ import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6PositiveCoshLiAudit
 import LeanLab.Riemann.H6ReverseHeatLiAudit
+import LeanLab.Riemann.XiKernelLogConcavityAudit
 import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula
@@ -439,3 +440,6 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.h6PositiveCoshAuditLiThree_eq
 #print axioms LeanLab.Riemann.h6PositiveCoshAuditLiThree_re_neg
 #print axioms LeanLab.Riemann.h6PositiveCoshAudit_falsifies_allOrder_positiveKernelLi
+#print axioms LeanLab.Riemann.xiLogConcavityAudit_isLogConcaveOn_trivial
+#print axioms LeanLab.Riemann.not_xiLogConcavityAuditHurwitzSchema
+#print axioms LeanLab.Riemann.xiKernelLogConcavityExternalAudit_endpoint
