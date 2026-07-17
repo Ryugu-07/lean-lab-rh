@@ -1816,3 +1816,21 @@ job `87769424525`, in `1m55s`. Evidence-backfill commit
 `61ce528793a9fc04e4a6b26ba83463cf0557bafc` passed run `29543336971`, build job `87770059112`,
 in `2m06s`. The campaign is publicly closed; the persistent RH Goal returns to value-ranked route
 selection.
+
+## Route Selection: Actual Theta Third-Li Covariance
+
+Date: 2026-07-17
+
+After the generic positive-cosh obstruction, fresh comparison of W2/G7, M2/G3, H1/H2 counting,
+and H6 selects `DISCOVERY-20260717-H6-THIRD-LI-COVARIANCE-01`. The fixed endpoint is not another
+generic positive-kernel claim. It must prove the exact theta-source covariance `B*C<=A*D`, derive
+the complete third logarithmic formula, identify time zero with `liCoefficientCandidate 2`, and
+prove its positive real sign using the already compiled exact bound `liCoefficientCandidate 0<1`.
+
+The algebraic mechanism is `Li3 >= 6*b+(12-8*b)*(c-b^2)` from ordered covariance and variance,
+with `b=B/A`. Numerical integration only selected the target. This finite coefficient has
+`hard_gap_delta=0`; its value is to test the first theta-specific cumulant mechanism beyond the
+generic obstruction. Exact selection and preregistration are in
+`route_selection_post_h6_positive_cosh_20260717.md` and
+`h6_third_li_covariance_prereg_20260717.md`. Public preregistration CI must pass before Lean proof
+source edits.
