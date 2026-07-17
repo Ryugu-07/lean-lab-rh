@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260717-H6-XI-KERNEL-TP2-01`
 
 Mode: `LITERATURE`
 
-Status: `PREREGISTRATION_PENDING_PUBLIC_CI`
+Status: `CLOSED_SUCCESS`
 
 ## Source lock and priority correction
 
@@ -148,3 +148,42 @@ prefix nor reuses the vacuous external predicate.
 After the exact TP2 endpoint is proved and audited, stop. Do not claim TP3, TP-infinity,
 `deBruijnNewmanAllZerosReal 0`, or RH. The next route selection must decide whether the compiled
 shape inequality can support a genuinely higher-order theta determinant or collision invariant.
+
+## Closure result
+
+The campaign closed as `KNOWN_THEOREM_FORMALIZED`. The actual compiled endpoints are:
+
+```lean
+theorem hasDerivAt_deBruijnNewmanPhi (u : Real) :
+    HasDerivAt deBruijnNewmanPhi (deBruijnNewmanPhiDeriv u) u
+
+theorem hasDerivAt_deBruijnNewmanPhiDeriv (u : Real) :
+    HasDerivAt deBruijnNewmanPhiDeriv (deBruijnNewmanPhiSecondDeriv u) u
+
+theorem deBruijnNewmanPhiSecond_mul_phi_sub_deriv_sq_neg
+    {u : Real} (hu : 0 <= u) :
+    deBruijnNewmanPhiSecondDeriv u * deBruijnNewmanPhi u -
+      deBruijnNewmanPhiDeriv u ^ 2 < 0
+```
+
+The implementation uses the preregistered all-real local-majorant argument for both derivative
+series. For the strict sign it replaces the source's interval decomposition by an exact finite
+weighted log-concavity identity plus a uniform infinite-tail estimate. Relative to the first
+summand, the weighted slope-variance tail is bounded by a geometric series of ratio `4/125` and
+total `63/605 < 1/8`; this is strictly dominated by the first summand's negative log-curvature.
+The uniform finite-prefix inequality then passes to the three full `tsum`s.
+
+Evidence:
+
+- preregistration commit `36bad715a056e1c626b3ccc8fefae458ddec4110` passed public Lean Action
+  CI run `29552030474`, build job `87796448768`;
+- implementation commit `1c0c21076d8752c1c9fd623198fb2434fe6cc453` passed public Lean Action
+  CI run `29560492371`, build job `87821686793`, in `2m51s`;
+- the new module compiles with no diagnostics, exact TargetChecks pass, the forbidden-token scan
+  is empty, `git diff --check` passes, and the full 8,698-job build succeeds;
+- all three selected endpoint prints contain exactly `propext`, `Classical.choice`, and
+  `Quot.sound`.
+
+The hard frontier is unchanged: strict TP2 does not imply TP-infinity, all-real zeros, or RH.
+Therefore `hard_gap_delta=0` and `route_infrastructure_delta=1`; the persistent RH Goal remains
+active and returns to value-ranked route selection.

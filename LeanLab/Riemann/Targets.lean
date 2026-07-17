@@ -899,7 +899,7 @@ def rhTargets : List ResearchTarget :=
         "Differentiate the exact source-normalized de Bruijn-Newman kernel series twice on the full real axis and prove Phi''(u)*Phi(u)-Phi'(u)^2 < 0 for every u >= 0."
       leanName := some ``deBruijnNewmanPhiSecond_mul_phi_sub_deriv_sq_neg
       status := .proven
-      note := "Campaign LITERATURE-20260717-H6-XI-KERNEL-TP2-01 formalizes the known Csordas-Varga strict log-concavity theorem in the project normalization. The compiled proof establishes both all-real derivative series and controls the infinite weighted-variance tail by an explicit first-term/geometric estimate. Classification KNOWN_THEOREM_FORMALIZED; hard_gap_delta=0 and route_infrastructure_delta=1. It does not establish total positivity of all orders or RH." },
+      note := "Campaign LITERATURE-20260717-H6-XI-KERNEL-TP2-01 formalizes the known Csordas-Varga strict log-concavity theorem in the project normalization. The compiled proof establishes both all-real derivative series and controls the infinite weighted-variance tail by an explicit first-term/geometric estimate. Classification KNOWN_THEOREM_FORMALIZED; hard_gap_delta=0 and route_infrastructure_delta=1. It does not establish total positivity of all orders or RH. Implementation commit 1c0c21076d8752c1c9fd623198fb2434fe6cc453 passed public Lean Action CI run 29560492371, build job 87821686793." },
     { id := "H6.discovery.theta-third-li-covariance"
       tier := .tier2
       title := "Prove the theta-family third Li coefficient by covariance"

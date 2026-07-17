@@ -583,7 +583,7 @@ passed public Lean Action CI run `29550587517`, build job `87792042425`, in `1m5
 commit `131aff89283644bcabd2f620b94f99dc6ae30843` passed public CI run `29550788159`, build job
 `87792636844`, in `1m55s`; the campaign is publicly closed.
 
-## Active H6-X6: actual Xi-kernel strict TP2
+## Closed H6-X6: actual Xi-kernel strict TP2
 
 Campaign `LITERATURE-20260717-H6-XI-KERNEL-TP2-01` targets the actual compiled theta kernel, not
 the rejected external Lean predicate. Its indivisible endpoint proves all-real-point first and
@@ -599,3 +599,21 @@ not a premise because its decisive derivative-tail and monotonicity bounds are n
 Exact preregistration is in `h6_xi_kernel_tp2_prereg_20260717.md`. Public preregistration CI must
 pass before any Lean proof-source edit. Success is `KNOWN_THEOREM_FORMALIZED` with expected
 `hard_gap_delta=0`; TP-infinity, H6-E/G8, and RH remain open.
+
+### H6-X6 local audited result
+
+The full endpoint now compiles in `XiKernelStrictLogConcavity.lean`. Both explicit derivative
+series are identified at every real point. For `u>=0`, a finite weighted log-concavity identity
+reduces the strict sign to domination of the inter-summand slope variance by the first summand's
+negative log-curvature. A proved geometric `tsum` estimate gives normalized tail
+`<63/605<1/8`, uniformly closes every finite prefix, and passes to the full three-series limit.
+
+The new module is diagnostic-free; exact checks and the 8,698-job full build pass. The three
+selected theorem audits use only `propext`, `Classical.choice`, and `Quot.sound`. Implementation
+commit `1c0c21076d8752c1c9fd623198fb2434fe6cc453` passed public Lean Action CI run
+`29560492371`, build job `87821686793`, in `2m51s`.
+
+Classification is `KNOWN_THEOREM_FORMALIZED`, `hard_gap_delta=0`, and
+`route_infrastructure_delta=1`. The 1988 priority correction is retained; the 2026 preprint is not
+a proof premise. TP-infinity, H6-E/G8, and RH remain open, so the persistent Goal returns to
+value-ranked route selection.
