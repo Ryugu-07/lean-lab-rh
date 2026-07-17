@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260717-H6-XI-KERNEL-PF5-01`
 
 Mode: `FALSIFICATION`
 
-Status: `PREREGISTRATION_PENDING_PUBLIC_CI`
+Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
 
 ## Runtime record
 
@@ -50,3 +50,36 @@ Only the exact full-`tsum` negative determinant plus the ordered `not PF5` witne
 success. External interval output, decimal evaluation, an abstract determinant lemma, or a finite
 kernel prefix is insufficient. On failure, record the first exact enclosure or arithmetic
 normalization that Lean cannot close and return the persistent Goal to route selection.
+
+## Lean implementation record
+
+- Module: `LeanLab/Riemann/XiKernelPF5Falsification.lean`.
+- `pf5ExpTaylor_sub_error_le_exp` and `pf5Exp_le_taylor_add_error` specialize Mathlib's
+  `Real.exp_bound` to rational lower and upper certificates; no decimal or external interval is a
+  proof premise.
+- `pf5_first_three_term_bounds` encloses the first three exact theta summands at all nine witness
+  arguments. `pf5_phi_tail_term_le_geometric` and `pf5_phi_tail_tsum_lt` prove the complete
+  omitted infinite tail is below `10^-12` at each argument.
+- `pf5_phi_bounds` therefore encloses each full `deBruijnNewmanPhi` `tsum`; the center error is
+  strictly below `3*10^-12` entrywise.
+- Lean checks an explicit rational LU factorization of the center matrix and proves
+  `xiKernelPF5CenterMatrix_det_lt`, with bound `det(C) < -9/5000000000`.
+- A five-factor telescoping lemma and the full 120-term Leibniz formula prove
+  `xiKernelPF5_det_center_error`, bounding the determinant perturbation by `1/5000000000`.
+- `xiKernelPF5ToeplitzMatrix_det_neg` proves the exact full-series source matrix has negative
+  determinant. The ordered witnesses `x_i=1/200+i/20` and `y_j=-1/200+j/20` then prove
+  `not_isPolyaFrequencyFive_deBruijnNewmanEvenKernel` for the source-faithful quantified PF5
+  predicate.
+
+## Local audit
+
+- Standalone module compilation is diagnostic-free.
+- Exact Targets and TargetChecks build and resolve the endpoint name and statement witnesses.
+- AxiomsAudit reports only `propext`, `Classical.choice`, and `Quot.sound` for the full-kernel
+  enclosure, center determinant, exact determinant, and PF5-negation endpoint.
+- The forbidden placeholder/declaration/resource scan is empty, `git diff --check` passes, and the
+  root `lake build` passes all 8,699 jobs.
+- Classification: `ACTUAL_KERNEL_PF5_FORMALLY_FALSIFIED`.
+- `hard_gap_delta=0`, `route_infrastructure_delta=1`, `obstruction_map_delta=1`.
+- Scope: this refutes PF5, hence PF-infinity, for the physical Xi kernel. It does not decide global
+  PF4, H6-E/G8, or RH.

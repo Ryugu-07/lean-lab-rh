@@ -15,6 +15,7 @@ import LeanLab.Riemann.H6PositiveCoshLiAudit
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.XiKernelLogConcavityAudit
 import LeanLab.Riemann.XiKernelStrictLogConcavity
+import LeanLab.Riemann.XiKernelPF5Falsification
 import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula
@@ -900,6 +901,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanPhiSecond_mul_phi_sub_deriv_sq_neg
       status := .proven
       note := "Campaign LITERATURE-20260717-H6-XI-KERNEL-TP2-01 formalizes the known Csordas-Varga strict log-concavity theorem in the project normalization. The compiled proof establishes both all-real derivative series and controls the infinite weighted-variance tail by an explicit first-term/geometric estimate. Classification KNOWN_THEOREM_FORMALIZED; hard_gap_delta=0 and route_infrastructure_delta=1. It does not establish total positivity of all orders or RH. Implementation commit 1c0c21076d8752c1c9fd623198fb2434fe6cc453 passed public Lean Action CI run 29560492371, build job 87821686793." },
+    { id := "H6.falsification.xi-kernel-pf5"
+      tier := .tier2
+      title := "Falsify order-five Polya frequency for the exact Xi kernel"
+      statement :=
+        "For the exact infinite de Bruijn-Newman theta kernel, prove the preregistered five-by-five Toeplitz determinant at u0=1/100 and h=1/20 is negative, and derive the source-faithful negation of PF5 from strictly increasing witnesses."
+      leanName := some ``not_isPolyaFrequencyFive_deBruijnNewmanEvenKernel
+      status := .proven
+      note := "Campaign FALSIFICATION-20260717-H6-XI-KERNEL-PF5-01 independently certifies all nine full-tsum kernel entries, a negative exact determinant, and the ordered PF5 counterexample. Classification ACTUAL_KERNEL_PF5_FORMALLY_FALSIFIED; hard_gap_delta=0, route_infrastructure_delta=1, obstruction_map_delta=1. This blocks only PF5/PF-infinity physical-kernel strategies; global PF4, H6-E/G8, and RH remain open. Public CI evidence pending." },
     { id := "H6.discovery.theta-third-li-covariance"
       tier := .tier2
       title := "Prove the theta-family third Li coefficient by covariance"

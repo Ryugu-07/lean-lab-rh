@@ -618,7 +618,7 @@ Classification is `KNOWN_THEOREM_FORMALIZED`, `hard_gap_delta=0`, and
 a proof premise. TP-infinity, H6-E/G8, and RH remain open, so the persistent Goal returns to
 value-ranked route selection.
 
-## Active H6-X7: actual Xi-kernel PF5 falsification
+## H6-X7: actual Xi-kernel PF5 falsification
 
 Campaign `FALSIFICATION-20260717-H6-XI-KERNEL-PF5-01` targets the exact source matrix
 
@@ -628,6 +628,19 @@ Michałowski's 2026 preprint and pinned external interval code report `det(M)<0`
 certificate has been reproduced for target selection but is not a proof premise. Lean must
 independently enclose all nine actual full-series values, prove the determinant negative, align a
 PF5 predicate with the source definition, and derive the explicit ordered witness.
+
+**Local result.** `XiKernelPF5Falsification.lean` now proves the indivisible endpoint. The first
+three exact theta summands are enclosed by rational Taylor certificates, the complete remaining
+`tsum` tail is below `10^-12`, and every full kernel entry is within `3*10^-12` of its rational
+center. Lean checks an exact LU center factorization with determinant below `-1.8*10^-9`; the
+full 120-term determinant perturbation is below `0.2*10^-9`. Consequently
+`xiKernelPF5ToeplitzMatrix_det_neg` and the source-faithful
+`not_isPolyaFrequencyFive_deBruijnNewmanEvenKernel` both compile.
+
+The local classification is `ACTUAL_KERNEL_PF5_FORMALLY_FALSIFIED`, with `hard_gap_delta=0`,
+`route_infrastructure_delta=1`, and `obstruction_map_delta=1`. This blocks PF5/PF-infinity
+physical-kernel arguments only. Global PF4, H6-E/G8, and RH remain open. Public implementation CI
+and evidence backfill remain before campaign closure.
 
 This attack is materially different from H6-X5: it is a nontrivial statement about the actual
 theta kernel, not an audit of vacuous formal predicates. Success would formally block order-five

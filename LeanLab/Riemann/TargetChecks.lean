@@ -14,6 +14,7 @@ import LeanLab.Riemann.H6PositiveCoshLiAudit
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.XiKernelLogConcavityAudit
 import LeanLab.Riemann.XiKernelStrictLogConcavity
+import LeanLab.Riemann.XiKernelPF5Falsification
 import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
 import LeanLab.Riemann.LiWeilGram
@@ -143,6 +144,7 @@ def checkedTargetNames : List Lean.Name :=
     ``RiemannHypothesis.baezDuarteNaturalDistance_liminf_ge_fullZeroSum,
     ``deBruijnNewman_zeroCoordinate_framework,
     ``deBruijnNewmanHeat_firstTwoLi_endpoint,
+    ``not_isPolyaFrequencyFive_deBruijnNewmanEvenKernel,
     ``riemannHypothesis_iff_nontrivial_zeros_on_line ]
 
 example :
@@ -1486,5 +1488,11 @@ example {u : ℝ} (hu : 0 ≤ u) :
     deBruijnNewmanPhiSecondDeriv u * deBruijnNewmanPhi u -
       deBruijnNewmanPhiDeriv u ^ 2 < 0 :=
   deBruijnNewmanPhiSecond_mul_phi_sub_deriv_sq_neg hu
+
+example : Matrix.det xiKernelPF5ToeplitzMatrix < 0 :=
+  xiKernelPF5ToeplitzMatrix_det_neg
+
+example : ¬ IsPolyaFrequencyFive deBruijnNewmanEvenKernel :=
+  not_isPolyaFrequencyFive_deBruijnNewmanEvenKernel
 
 end LeanLab.Riemann

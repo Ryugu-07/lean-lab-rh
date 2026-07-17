@@ -15,6 +15,7 @@ import LeanLab.Riemann.H6PositiveCoshLiAudit
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.XiKernelLogConcavityAudit
 import LeanLab.Riemann.XiKernelStrictLogConcavity
+import LeanLab.Riemann.XiKernelPF5Falsification
 import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula
@@ -447,3 +448,7 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.hasDerivAt_deBruijnNewmanPhi
 #print axioms LeanLab.Riemann.hasDerivAt_deBruijnNewmanPhiDeriv
 #print axioms LeanLab.Riemann.deBruijnNewmanPhiSecond_mul_phi_sub_deriv_sq_neg
+#print axioms LeanLab.Riemann.pf5_phi_bounds
+#print axioms LeanLab.Riemann.xiKernelPF5CenterMatrix_det_lt
+#print axioms LeanLab.Riemann.xiKernelPF5ToeplitzMatrix_det_neg
+#print axioms LeanLab.Riemann.not_isPolyaFrequencyFive_deBruijnNewmanEvenKernel
