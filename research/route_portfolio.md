@@ -1862,3 +1862,25 @@ build job `87777066173`, in `1m56s`. Classification is `DISCOVERY_FORMALIZED`,
 open. Evidence commit `abf5ebf19e3636662a45eed7a5eff9e947c3c3b4` passed public Lean Action CI
 run `29545784893`, build job `87777708775`, in `2m01s`. The campaign is publicly closed; the
 persistent RH Goal returns to value-ranked route selection.
+
+## Route Selection: Nonnegative-Time Heat-Li All-Index Criterion
+
+Date: 2026-07-17
+
+After the public theta third-Li closure, fresh comparison rejects another finite coefficient,
+re-entry into the exhausted generic gap mechanism, M2 without a new residual estimate, and W2
+without a new prime-side sign mechanism. H6 selects
+`LITERATURE-20260717-H6-HEAT-LI-ALL-INDEX-01`.
+
+The fixed endpoint defines every heat-family Li coefficient and proves, for every `t>=0`, that all
+zeros of `H_t` are real exactly when every coefficient has nonnegative real part. It must also
+prove pointwise equality with `liCoefficientCandidate` at `t=0`. The restriction `t>=0` is
+substantive: the compiled strip contraction and half-time all-real theorem supply the weighted zero
+summability there, while no negative-time strip theorem is currently available.
+
+This is a known Bombieri-Lagarias criterion specialized to the exact source heat family. At time
+zero it is RH-equivalent, but it supplies no unconditional all-index sign. Expected
+`hard_gap_delta=0` and `route_infrastructure_delta=1`; full preregistration and candidate comparison
+are in `route_selection_post_h6_third_li_20260717.md` and
+`h6_heat_li_all_index_prereg_20260717.md`. Public preregistration CI must pass before Lean source
+edits.

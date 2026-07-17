@@ -531,3 +531,20 @@ job `87777066173`, in `1m56s`. Classification is `DISCOVERY_FORMALIZED`, with `h
 and `route_infrastructure_delta=1`. Evidence commit
 `abf5ebf19e3636662a45eed7a5eff9e947c3c3b4` passed public Lean Action CI run `29545784893`, build
 job `87777708775`, in `2m01s`. The campaign is publicly closed; H6-E and RH stay open.
+
+## Selected H6-X4: nonnegative-time all-index heat-Li criterion
+
+Campaign `LITERATURE-20260717-H6-HEAT-LI-ALL-INDEX-01` moves from finite coefficients to the exact
+all-index criterion. It fixes the derivative convention for `heatLi(t,n)`, requires pointwise
+time-zero equality with the project candidates, and targets
+
+`deBruijnNewmanAllZerosReal t <-> forall n, 0 <= Re(heatLi(t,n))`
+
+for every `t>=0`.
+
+The nonnegative-time boundary is deliberate. Existing Lean supplies a bounded zero strip through
+half time and unconditional all-real zeros thereafter; these are the weighted-summability inputs
+for Bombieri-Lagarias. The xi-specific zero-formula and reverse modules cannot be reused by name
+without extracting or reconstructing their generic content. Generic helpers, one direction, or a
+finite prefix do not close the campaign. Exact preregistration is in
+`h6_heat_li_all_index_prereg_20260717.md`; proof-source edits wait for public preregistration CI.
