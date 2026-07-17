@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260717-H6-HEAT-LI-ALL-INDEX-01`
 
 Mode: `LITERATURE`
 
-Status: `IMPLEMENTATION_PUBLIC_CI_PASSED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Runtime record
 
@@ -32,23 +32,17 @@ Status: `IMPLEMENTATION_PUBLIC_CI_PASSED_EVIDENCE_PENDING`
   reflected off-line pair at `rho=1/4+i` produces a negative coefficient in the first 100 indices.
   This screen is not a proof premise.
 
-## Gate status
-
-- preregistration commit, push, and public Lean Action CI: passed
-- complete Lean endpoint without a hidden negative-time or strip hypothesis: passed locally
-- exact registry, axiom, definition-alignment, forbidden-scan, and full-build gates: passed locally
-- implementation public CI: passed
-- evidence backfill commit and public CI: pending
-- final public closure log update: pending
-
 ## Public implementation evidence
 
 - implementation commit `16437075ed7ceb56becff79c77308d3e33bd1c65`
 - public Lean Action CI run `29548736988`, build job `87786563205`, passed in `1m59s`
+- evidence commit `7e6f4d2e8c78e0c5795842d6ce63169134c1e968`
+- public Lean Action CI run `29548955200`, build job `87787209694`, passed in `2m13s`
 
 ## Current result
 
-- `result`: `KNOWN_CRITERION_HEAT_FAMILY_SPECIALIZATION_PUBLIC_IMPLEMENTATION`
+- `result`: `KNOWN_CRITERION_HEAT_FAMILY_SPECIALIZATION`
+- `closure`: `PUBLICLY_CLOSED`
 - `hard_gap_delta`: 0
 - `route_infrastructure_delta`: 1
 - `proof_source_edits`: `LeanLab/Riemann/DeBruijnNewmanLiCriterion.lean`
@@ -83,7 +77,7 @@ Status: `IMPLEMENTATION_PUBLIC_CI_PASSED_EVIDENCE_PENDING`
 - `git diff --check`: pass
 - full build: `8696` jobs, success
 - implementation public CI: run `29548736988`, build job `87786563205`, passed in `1m59s`
-- immutable evidence closure: pending
+- evidence public CI: run `29548955200`, build job `87787209694`, passed in `2m13s`
 
 ## Assumption frontier
 

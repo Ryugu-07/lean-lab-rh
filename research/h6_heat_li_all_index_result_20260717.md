@@ -4,7 +4,7 @@ Date: 2026-07-17
 
 Campaign: `LITERATURE-20260717-H6-HEAT-LI-ALL-INDEX-01`
 
-Status: `IMPLEMENTATION_PUBLIC_CI_PASSED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Compiled endpoint
 
@@ -50,4 +50,6 @@ for every `t`. The complete criterion therefore holds on all of `Real`.
 `KNOWN_CRITERION_HEAT_FAMILY_SPECIALIZATION`; `hard_gap_delta=0`,
 `route_infrastructure_delta=1`. This does not prove unconditional all-index positivity or RH.
 Implementation commit `16437075ed7ceb56becff79c77308d3e33bd1c65` passed public Lean Action CI run
-`29548736988`, build job `87786563205`, in `1m59s`. Immutable evidence closure remains pending.
+`29548736988`, build job `87786563205`, in `1m59s`. Evidence commit
+`7e6f4d2e8c78e0c5795842d6ce63169134c1e968` passed public CI run `29548955200`, build job
+`87787209694`, in `2m13s`; the campaign is publicly closed.

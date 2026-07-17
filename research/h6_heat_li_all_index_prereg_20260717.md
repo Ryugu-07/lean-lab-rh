@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260717-H6-HEAT-LI-ALL-INDEX-01`
 
 Mode: `LITERATURE`
 
-Status: `IMPLEMENTATION_PUBLIC_CI_PASSED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Exact definitions
 
@@ -146,7 +146,8 @@ composition preserves order at most one, so the heat-Xi divisor has square-recip
 at every real time. The preregistered nonnegative-time aggregate remains an explicit theorem.
 
 Implementation commit `16437075ed7ceb56becff79c77308d3e33bd1c65` passed public Lean Action CI run
-`29548736988`, build job `87786563205`, in `1m59s`. Classification is
+`29548736988`, build job `87786563205`, in `1m59s`. Evidence commit
+`7e6f4d2e8c78e0c5795842d6ce63169134c1e968` passed public CI run `29548955200`, build job
+`87787209694`, in `2m13s`. The campaign is publicly closed as
 `KNOWN_CRITERION_HEAT_FAMILY_SPECIALIZATION`, with `hard_gap_delta=0` and
-`route_infrastructure_delta=1`. No unconditional all-index sign or RH proof is claimed. Immutable
-evidence closure remains pending.
+`route_infrastructure_delta=1`. No unconditional all-index sign or RH proof is claimed.
