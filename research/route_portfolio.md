@@ -1972,3 +1972,20 @@ standard-only axiom prints, empty forbidden scans, and the 8,700-job full build 
 commit `f4a26d5a1ee891099003221b766a2f19a39ab07b` passed public CI run `29570843171`, build
 job `87853982402`, in `1m45s`. The campaign is publicly closed as `NO_PROGRESS`; the persistent RH
 Goal returns to value-ranked route selection.
+
+## Route Selection: General de Bruijn Strip Contraction
+
+Date: 2026-07-17
+
+Primary-source review after the heat-Li time-monotonicity `NO_PROGRESS` closure corrects the H6
+quantitative frontier: Platt--Trudgian Corollary 2 already proves `Lambda<=0.2`, so the former
+H6-Q one-fifth candidate is known mathematics rather than an open improvement over `0.22`.
+
+Fresh comparison finds no new W2 global cancellation mechanism or M2 residual estimate. A strict
+bound below `0.2` remains only a conjecture candidate because the current verified height does not
+automatically supply fresh barrier and far-region certificates. Select
+`CAMPAIGN-20260717-H6-GENERAL-STRIP-CONTRACTION-01` (`LITERATURE`) as the current exposure edge.
+It must prove arbitrary-base squared-strip contraction and the exact `t+y^2/2` all-real endpoint.
+This is known source infrastructure with expected `hard_gap_delta=0`; it exposes the remaining
+Polymath canopy certificate and does not prove `Lambda<=0.2`, H6-E/G8, or RH. Public
+preregistration CI is required before Lean proof edits.

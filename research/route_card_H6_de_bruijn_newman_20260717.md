@@ -32,8 +32,14 @@ not merely another upper-bound improvement.
   [*Effective approximation of heat flow evolution of the Riemann xi function*](https://arxiv.org/abs/1904.12438),
   proves the unconditional upper bound `Lambda <= 0.22` using effective estimates and certified
   numerical work.
+- D. Platt and T. Trudgian,
+  [*The Riemann hypothesis is true up to 3*10^12*](https://arxiv.org/abs/2004.09765),
+  combine their rigorous zero verification with the second conditional row of the Polymath
+  barrier table to prove `Lambda <= 0.2` (Corollary 2).
 
-Thus the audited interval is `0 <= Lambda <= 0.22`.
+Thus the audited interval is `0 <= Lambda <= 0.2`. This correction was recorded on 2026-07-17
+after checking the primary Platt--Trudgian paper; earlier project records that call `0.2` an open
+improvement are historical and must not be used for current route selection.
 
 ## First open edge and false-progress patterns
 
@@ -295,30 +301,30 @@ run `29531495280`, build job `87732612433`, in `1m47s`.
 `Lambda<=1/2` are publicly closed with `hard_gap_delta=0` and `route_infrastructure_delta=1`.
 H6-E/G8, W2/G7, M2/G3, and RH remain open.
 
-## Candidate H6-Q: improve the upper bound to one fifth
+## Candidate H6-Q: formalize the known one-fifth upper bound
 
 **Exact proposition.** Every zero of `H_(1/5)` is real. With the established de Bruijn
 monotonicity theorem this gives `Lambda <= 1/5`.
 
-**Proposed Lean statement.** After the H6 definition and zero predicate exist:
+**Proposed Lean statement.** With the compiled source family and zero predicate:
 
 ```lean
-def AllZerosReal (f : Complex -> Complex) : Prop :=
-  forall z, f z = 0 -> z.im = 0
-
-def DeBruijnNewmanOneFifth : Prop :=
-  AllZerosReal (deBruijnNewmanH (1 / 5))
+theorem deBruijnNewmanAllZerosReal_one_fifth :
+  deBruijnNewmanAllZerosReal ((1 : Real) / 5)
 ```
 
-**DAG and strength.** This would improve `0.22` to `0.2`, but remains strictly short of RH and
-`Lambda = 0`.
+**DAG and strength.** Platt--Trudgian already proved this endpoint in 2020. Lean formalization
+would reconstruct known mathematics and expose the barrier, asymptotic nonvanishing, and rigorous
+zero-verification dependencies; it would not be a new upper-bound improvement and remains
+strictly short of RH and `Lambda = 0`.
 
 **Adversarial tests.** Search for nonreal zeros near the certified region boundary; audit all
 floating-point enclosures; require a global tail nonvanishing proof; verify monotonicity uses the
 same heat-sign convention.
 
-**Verdict:** `OPEN_CANDIDATE`. It has a crisp falsification surface but depends on substantial
-analytic and interval-arithmetic infrastructure.
+**Verdict:** `KNOWN_THEOREM_UNFORMALIZED`. It has a crisp verification surface but depends on
+substantial analytic and interval-arithmetic infrastructure. A target with time strictly below
+`1/5` would be a genuinely new quantitative candidate and requires a fresh exact preregistration.
 
 ## Candidate H6-X: heat-deformed Li criterion
 

@@ -20,7 +20,7 @@ be preregistered to test it.
 | H2-Q | quantitative | density exponent `2*(1-sigma)+epsilon` | RH-implied, weaker than RH | `OPEN_CANDIDATE` | Canonical density hypothesis; does not exclude an exceptional zero. |
 | H2-X | cross H2-H4 | density hypothesis implies all Li coefficients nonnegative | conclusion is RH-equivalent | `REJECTED` | Any finite off-line orbit survives an asymptotic density bound and defeats the conclusion. |
 | H6-B | bridge | `H_0(z)=(1/8)xi((1+iz)/2)` | exact definition bridge to RH | `SHORTLIST_CANDIDATE` | Bounded M0-style task and prerequisite for every honest H6 campaign. |
-| H6-Q | quantitative | all zeros of `H_(1/5)` are real | gives `Lambda<=0.2`, weaker than RH | `OPEN_CANDIDATE` | Crisp improvement over `0.22`, but analytically and computationally large. |
+| H6-Q | quantitative | all zeros of `H_(1/5)` are real | gives `Lambda<=0.2`, weaker than RH | `KNOWN_THEOREM_UNFORMALIZED` | Platt--Trudgian Corollary 2 already proves this from their verified height and the Polymath barrier table; Lean reconstruction remains analytically and computationally large. |
 | H6-X | cross H6-H4 | all-real zeros of `H_t` iff heat-Li coefficients are nonnegative | RH-equivalent at `t=0` | `SHORTLIST_CANDIDATE` | Reuses compiled Li infrastructure after exact heat-family alignment; analytic hypotheses must remain explicit. |
 
 ## Three-delta accounting
@@ -30,6 +30,10 @@ be preregistered to test it.
 - `engineering_delta = 0`
 
 No Lean declaration was added, no candidate passed proof status, and no RH progress is claimed.
+
+The H6-Q row was corrected on 2026-07-17 after primary-source verification of Platt--Trudgian,
+arXiv `2004.09765`. The original census classification of this endpoint as an open improvement
+over `0.22` is superseded.
 
 ## Route recommendation
 
