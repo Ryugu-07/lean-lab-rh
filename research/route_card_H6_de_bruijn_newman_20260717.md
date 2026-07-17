@@ -723,3 +723,6 @@ extract the finite analytic multiplicity at a repeated zero, prove compact-unifo
 the `sqrt(t-s)`-scaled heat family to a nonzero scalar multiple of `P_m`, and transfer the strict
 upper model root to an actual zero. Only that transfer can imply
 `deBruijnNewmanHasBackwardUpperLinearEscape` and close the repeated-contact branch.
+
+Loop 7 implementation commit `7ac27aa86cd176ef6172b79b3b854724b1243f7a` passed public Lean
+Action CI run `29582740550`, build job `87892131096`, in `2m05s`.
