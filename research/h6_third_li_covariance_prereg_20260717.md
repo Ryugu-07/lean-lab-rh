@@ -6,7 +6,7 @@ Campaign: `DISCOVERY-20260717-H6-THIRD-LI-COVARIANCE-01`
 
 Mode: `DISCOVERY`
 
-Status: `LOCAL_FORMALIZATION_COMPLETE_PUBLIC_IMPLEMENTATION_CI_PENDING`
+Status: `IMPLEMENTATION_PUBLIC_CI_PASSED_EVIDENCE_PENDING`
 
 ## Exact source extension
 
@@ -144,5 +144,7 @@ run `29544246770`, build job `87772850526`, in `1m45s`, before any Lean proof-so
 All six fixed endpoint clauses now compile in `DeBruijnNewmanThirdLi.lean`, bundled as
 `deBruijnNewmanHeat_thirdLi_covariance_endpoint`. Exact Targets/TargetChecks, selected
 standard-only axiom prints, empty forbidden scans, `git diff --check`, and the 8,695-job full
-build pass locally. Classification is `DISCOVERY_FORMALIZED_LOCAL`, `hard_gap_delta=0`, and
-`route_infrastructure_delta=1`; implementation public CI and immutable evidence closure remain.
+build pass locally. Implementation commit `1b521686d4e8561f01ba98a6ceaa4905ced4d92f` passed public
+Lean Action CI run `29545583372`, build job `87777066173`, in `1m56s`. Classification is
+`DISCOVERY_FORMALIZED`, `hard_gap_delta=0`, and `route_infrastructure_delta=1`; immutable evidence
+closure remains.

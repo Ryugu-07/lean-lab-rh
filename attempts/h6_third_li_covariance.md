@@ -4,7 +4,7 @@ Campaign: `DISCOVERY-20260717-H6-THIRD-LI-COVARIANCE-01`
 
 Mode: `DISCOVERY`
 
-Status: `LOCAL_FORMALIZATION_COMPLETE_PUBLIC_CI_PENDING`
+Status: `IMPLEMENTATION_PUBLIC_CI_PASSED_EVIDENCE_PENDING`
 
 ## Runtime record
 
@@ -67,13 +67,17 @@ Status: `LOCAL_FORMALIZATION_COMPLETE_PUBLIC_CI_PENDING`
 
 ## Pending gates
 
-- immutable implementation commit and public Lean Action CI
 - evidence backfill commit and public Lean Action CI
 - final public closure log update
 
+## Public implementation evidence
+
+- implementation commit `1b521686d4e8561f01ba98a6ceaa4905ced4d92f`
+- public Lean Action CI run `29545583372`, build job `87777066173`, passed in `1m56s`
+
 ## Current result
 
-- `result`: `DISCOVERY_FORMALIZED_LOCAL`
+- `result`: `DISCOVERY_FORMALIZED_PUBLIC_IMPLEMENTATION`
 - `rh_frontier_delta`: 0
 - `hard_gap_delta`: 0
 - `route_infrastructure_delta`: 1

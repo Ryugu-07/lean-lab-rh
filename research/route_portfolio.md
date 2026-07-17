@@ -1855,6 +1855,8 @@ with `liCoefficientCandidate 2`. Its strict positive real sign follows by rewrit
 `liCoefficientCandidate_zero_re_lt_one` bound. Numerical screening is not a proof premise.
 
 The standalone module, exact Targets/TargetChecks, seven selected standard-only axiom prints,
-empty forbidden scans, `git diff --check`, and the 8,695-job full build pass. Classification is
-`DISCOVERY_FORMALIZED_LOCAL`, `hard_gap_delta=0`, and `route_infrastructure_delta=1`. H6-E/G8,
-W2/G7, M2/G3, and RH remain open; implementation public CI and evidence closure remain.
+empty forbidden scans, `git diff --check`, and the 8,695-job full build pass. Implementation
+commit `1b521686d4e8561f01ba98a6ceaa4905ced4d92f` passed public Lean Action CI run `29545583372`,
+build job `87777066173`, in `1m56s`. Classification is `DISCOVERY_FORMALIZED`,
+`hard_gap_delta=0`, and `route_infrastructure_delta=1`. H6-E/G8, W2/G7, M2/G3, and RH remain
+open; immutable evidence closure remains.

@@ -525,6 +525,7 @@ moment inequalities and `liCoefficientCandidate_zero_re_lt_one`. The complete en
 `deBruijnNewmanHeat_thirdLi_covariance_endpoint`.
 
 Standalone compilation, exact Targets/TargetChecks, seven standard-only axiom prints, empty
-forbidden scans, `git diff --check`, and the 8,695-job full build pass. Local classification is
-`DISCOVERY_FORMALIZED_LOCAL`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`.
-Implementation public CI and evidence closure remain; H6-E and RH stay open.
+forbidden scans, `git diff --check`, and the 8,695-job full build pass. Implementation commit
+`1b521686d4e8561f01ba98a6ceaa4905ced4d92f` passed public Lean Action CI run `29545583372`, build
+job `87777066173`, in `1m56s`. Classification is `DISCOVERY_FORMALIZED`, with `hard_gap_delta=0`
+and `route_infrastructure_delta=1`. Evidence closure remains; H6-E and RH stay open.
