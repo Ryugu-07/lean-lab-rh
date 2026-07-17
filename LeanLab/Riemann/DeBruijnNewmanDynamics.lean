@@ -221,6 +221,17 @@ def deBruijnNewmanRegularizedZeroForce (t : ℝ) (r : ℂ) : ℂ :=
         (deBruijnNewmanH t) (Set.univ : Set ℂ),
       regularizedDivisorForceTerm r p
 
+/-- Explicit absolutely convergent divisor-sum expansion of the regularized zero force. -/
+theorem deBruijnNewmanRegularizedZeroForce_eq_divisor_tsum (t : ℝ) (r : ℂ) :
+    deBruijnNewmanRegularizedZeroForce t r =
+      1 / r +
+        ∑' p : Complex.Hadamard.divisorZeroIndex₀
+            (deBruijnNewmanH t) (Set.univ : Set ℂ),
+          if Complex.Hadamard.divisorZeroIndex₀_val p = r then 0
+          else 1 / (r - Complex.Hadamard.divisorZeroIndex₀_val p) +
+            1 / Complex.Hadamard.divisorZeroIndex₀_val p := by
+  rfl
+
 theorem summable_deBruijnNewman_regularizedZeroForceTerm (t : ℝ) (r : ℂ) :
     Summable
       (fun p : Complex.Hadamard.divisorZeroIndex₀

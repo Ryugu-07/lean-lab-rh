@@ -684,3 +684,10 @@ attack is the force inequality via an absolutely convergent fourfold divisor-orb
 The active-checkpoint implementation commit
 `b4c2f5e24ab35514dccf0f6d85ff40ce43e026c3` passed public Lean Action CI run `29576156216`,
 build job `87870943510`, in `3m35s`. This is implementation evidence only and does not close H6-H2f.
+
+Loop 5 compiles the complete summation/legal-reindexing layer of the simple-contact force branch:
+multiplicity-preserving negation and conjugation divisor equivalences, the quarter-of-four-orbits
+identity, cancellation of regularization on non-contact orbits, the source geometric
+cross-multiplication inequality, and the exact contact-orbit formula. The remaining force gate is
+finite extraction of the four simple contact indices and a nonpositive complement `tsum`; repeated
+contact still independently requires backward Hermite splitting.

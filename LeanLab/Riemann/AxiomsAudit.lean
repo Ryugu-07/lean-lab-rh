@@ -476,3 +476,10 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.deBruijnNewmanPolymath_firstBadWitness_repeated_obstruction_of_force_lt
 #print axioms LeanLab.Riemann.deBruijnNewmanAllZerosReal_add_half_sq_of_im_abs_lt
 #print axioms LeanLab.Riemann.deBruijnNewmanAllZerosReal_one_fifth_of_polymath_table_endpoint
+#print axioms LeanLab.Riemann.analyticOrderNatAt_neg_eq
+#print axioms LeanLab.Riemann.divisorZeroIndexNegEquiv_val
+#print axioms LeanLab.Riemann.deBruijnNewmanRegularizedZeroForce_eq_divisor_tsum
+#print axioms LeanLab.Riemann.tsum_eq_quarter_tsum_equiv_orbit
+#print axioms LeanLab.Riemann.deBruijnNewmanRegularizedZeroForce_eq_quarter_orbit_tsum
+#print axioms LeanLab.Riemann.deBruijnNewmanPolymathForceOrbitTerm_im_nonpos_of_escape
+#print axioms LeanLab.Riemann.deBruijnNewmanPolymathForceOrbitTerm_eq_of_value_eq_contact

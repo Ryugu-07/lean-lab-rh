@@ -77,7 +77,7 @@ theorem analyticOrderNatAt_conj_eq
   rw [horder_conj] at hcast_conj
   exact_mod_cast hcast_conj
 
-private theorem divisor_conj_eq
+theorem divisor_conj_eq
     {F : ℂ → ℂ} (hF : Differentiable ℂ F) (hnot : ∃ z : ℂ, F z ≠ 0)
     (hconj : ∀ z : ℂ, F (conj z) = conj (F z)) (z : ℂ) :
     MeromorphicOn.divisor F (Set.univ : Set ℂ) (conj z) =
@@ -86,7 +86,7 @@ private theorem divisor_conj_eq
     Complex.Hadamard.divisor_univ_eq_analyticOrderNatAt_int hF,
     analyticOrderNatAt_conj_eq hF hnot hconj]
 
-private def divisorZeroIndexConj
+def divisorZeroIndexConj
     {F : ℂ → ℂ} (hF : Differentiable ℂ F) (hnot : ∃ z : ℂ, F z ≠ 0)
     (hconj : ∀ z : ℂ, F (conj z) = conj (F z))
     (p : Complex.Hadamard.divisorZeroIndex₀ F (Set.univ : Set ℂ)) :
@@ -96,7 +96,7 @@ private def divisorZeroIndexConj
   simp
 
 @[simp]
-private theorem divisorZeroIndexConj_val
+theorem divisorZeroIndexConj_val
     {F : ℂ → ℂ} (hF : Differentiable ℂ F) (hnot : ∃ z : ℂ, F z ≠ 0)
     (hconj : ∀ z : ℂ, F (conj z) = conj (F z))
     (p : Complex.Hadamard.divisorZeroIndex₀ F (Set.univ : Set ℂ)) :
@@ -104,7 +104,7 @@ private theorem divisorZeroIndexConj_val
       conj (Complex.Hadamard.divisorZeroIndex₀_val p) := by
   rfl
 
-private theorem divisorZeroIndexConj_involutive
+theorem divisorZeroIndexConj_involutive
     {F : ℂ → ℂ} (hF : Differentiable ℂ F) (hnot : ∃ z : ℂ, F z ≠ 0)
     (hconj : ∀ z : ℂ, F (conj z) = conj (F z)) :
     Function.Involutive (divisorZeroIndexConj hF hnot hconj) := by
@@ -116,7 +116,7 @@ private theorem divisorZeroIndexConj_involutive
     · simp [divisorZeroIndexConj]
     · simp [divisorZeroIndexConj]
 
-private def divisorZeroIndexConjEquiv
+def divisorZeroIndexConjEquiv
     {F : ℂ → ℂ} (hF : Differentiable ℂ F) (hnot : ∃ z : ℂ, F z ≠ 0)
     (hconj : ∀ z : ℂ, F (conj z) = conj (F z)) :
     Complex.Hadamard.divisorZeroIndex₀ F (Set.univ : Set ℂ) ≃
@@ -127,13 +127,101 @@ private def divisorZeroIndexConjEquiv
   right_inv := divisorZeroIndexConj_involutive hF hnot hconj
 
 @[simp]
-private theorem divisorZeroIndexConjEquiv_val
+theorem divisorZeroIndexConjEquiv_val
     {F : ℂ → ℂ} (hF : Differentiable ℂ F) (hnot : ∃ z : ℂ, F z ≠ 0)
     (hconj : ∀ z : ℂ, F (conj z) = conj (F z))
     (p : Complex.Hadamard.divisorZeroIndex₀ F (Set.univ : Set ℂ)) :
     Complex.Hadamard.divisorZeroIndex₀_val
         (divisorZeroIndexConjEquiv hF hnot hconj p) =
       conj (Complex.Hadamard.divisorZeroIndex₀_val p) := by
+  rfl
+
+/-- An even entire function has the same analytic multiplicity at opposite points. -/
+theorem analyticOrderNatAt_neg_eq
+    {F : ℂ → ℂ} (hF : Differentiable ℂ F) (hnot : ∃ z : ℂ, F z ≠ 0)
+    (heven : ∀ z : ℂ, F (-z) = F z) (z : ℂ) :
+    analyticOrderNatAt F (-z) = analyticOrderNatAt F z := by
+  let negMap : ℂ → ℂ := fun w ↦ -w
+  have hnegAnalytic : AnalyticAt ℂ negMap z := by fun_prop
+  have hnegDeriv : deriv negMap z ≠ 0 := by
+    simp [negMap]
+  have hcomp :
+      analyticOrderAt (F ∘ negMap) z = analyticOrderAt F (-z) := by
+    simpa only [negMap] using
+      (analyticOrderAt_comp_of_deriv_ne_zero hnegAnalytic hnegDeriv)
+  have hfunctional : analyticOrderAt (F ∘ negMap) z = analyticOrderAt F z := by
+    apply analyticOrderAt_congr
+    exact Filter.Eventually.of_forall fun w ↦ by
+      simpa only [negMap, Function.comp_apply] using heven w
+  have horder : analyticOrderAt F (-z) = analyticOrderAt F z := hcomp.symm.trans hfunctional
+  have htop : ∀ w : ℂ, analyticOrderAt F w ≠ ⊤ :=
+    Complex.Hadamard.analyticOrderAt_ne_top_of_exists_ne_zero hF hnot
+  have hcastNeg : ((analyticOrderNatAt F (-z) : ℕ) : ℕ∞) = analyticOrderAt F (-z) :=
+    Nat.cast_analyticOrderNatAt (htop (-z))
+  have hcast : ((analyticOrderNatAt F z : ℕ) : ℕ∞) = analyticOrderAt F z :=
+    Nat.cast_analyticOrderNatAt (htop z)
+  rw [horder, ← hcast] at hcastNeg
+  exact_mod_cast hcastNeg
+
+theorem divisor_neg_eq
+    {F : ℂ → ℂ} (hF : Differentiable ℂ F) (hnot : ∃ z : ℂ, F z ≠ 0)
+    (heven : ∀ z : ℂ, F (-z) = F z) (z : ℂ) :
+    MeromorphicOn.divisor F (Set.univ : Set ℂ) (-z) =
+      MeromorphicOn.divisor F (Set.univ : Set ℂ) z := by
+  rw [Complex.Hadamard.divisor_univ_eq_analyticOrderNatAt_int hF,
+    Complex.Hadamard.divisor_univ_eq_analyticOrderNatAt_int hF,
+    analyticOrderNatAt_neg_eq hF hnot heven]
+
+/-- Negation acts on the multiplicity-bearing nonzero divisor of an even entire function. -/
+def divisorZeroIndexNeg
+    {F : ℂ → ℂ} (hF : Differentiable ℂ F) (hnot : ∃ z : ℂ, F z ≠ 0)
+    (heven : ∀ z : ℂ, F (-z) = F z)
+    (p : Complex.Hadamard.divisorZeroIndex₀ F (Set.univ : Set ℂ)) :
+    Complex.Hadamard.divisorZeroIndex₀ F (Set.univ : Set ℂ) := by
+  let hdiv := divisor_neg_eq hF hnot heven p.1.1
+  refine ⟨⟨-p.1.1, Fin.cast (congrArg Int.toNat hdiv).symm p.1.2⟩, ?_⟩
+  simp
+
+@[simp]
+theorem divisorZeroIndexNeg_val
+    {F : ℂ → ℂ} (hF : Differentiable ℂ F) (hnot : ∃ z : ℂ, F z ≠ 0)
+    (heven : ∀ z : ℂ, F (-z) = F z)
+    (p : Complex.Hadamard.divisorZeroIndex₀ F (Set.univ : Set ℂ)) :
+    Complex.Hadamard.divisorZeroIndex₀_val (divisorZeroIndexNeg hF hnot heven p) =
+      -Complex.Hadamard.divisorZeroIndex₀_val p := by
+  rfl
+
+theorem divisorZeroIndexNeg_involutive
+    {F : ℂ → ℂ} (hF : Differentiable ℂ F) (hnot : ∃ z : ℂ, F z ≠ 0)
+    (heven : ∀ z : ℂ, F (-z) = F z) :
+    Function.Involutive (divisorZeroIndexNeg hF hnot heven) := by
+  intro p
+  apply Subtype.ext
+  apply Sigma.ext
+  · simp [divisorZeroIndexNeg]
+  · rw [Fin.heq_ext_iff]
+    · simp [divisorZeroIndexNeg]
+    · simp [divisorZeroIndexNeg]
+
+/-- Negation as an equivalence of the multiplicity-bearing nonzero divisor. -/
+def divisorZeroIndexNegEquiv
+    {F : ℂ → ℂ} (hF : Differentiable ℂ F) (hnot : ∃ z : ℂ, F z ≠ 0)
+    (heven : ∀ z : ℂ, F (-z) = F z) :
+    Complex.Hadamard.divisorZeroIndex₀ F (Set.univ : Set ℂ) ≃
+      Complex.Hadamard.divisorZeroIndex₀ F (Set.univ : Set ℂ) where
+  toFun := divisorZeroIndexNeg hF hnot heven
+  invFun := divisorZeroIndexNeg hF hnot heven
+  left_inv := divisorZeroIndexNeg_involutive hF hnot heven
+  right_inv := divisorZeroIndexNeg_involutive hF hnot heven
+
+@[simp]
+theorem divisorZeroIndexNegEquiv_val
+    {F : ℂ → ℂ} (hF : Differentiable ℂ F) (hnot : ∃ z : ℂ, F z ≠ 0)
+    (heven : ∀ z : ℂ, F (-z) = F z)
+    (p : Complex.Hadamard.divisorZeroIndex₀ F (Set.univ : Set ℂ)) :
+    Complex.Hadamard.divisorZeroIndex₀_val
+        (divisorZeroIndexNegEquiv hF hnot heven p) =
+      -Complex.Hadamard.divisorZeroIndex₀_val p := by
   rfl
 
 theorem norm_weierstrassFactor_pair_sub_I_lt_add_I

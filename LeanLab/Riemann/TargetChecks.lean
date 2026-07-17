@@ -1540,4 +1540,22 @@ example
     deBruijnNewmanAllZerosReal ((1 : ℝ) / 5) :=
   deBruijnNewmanAllZerosReal_one_fifth_of_polymath_table_endpoint hall
 
+example (t : ℝ) (r : ℂ) :
+    deBruijnNewmanRegularizedZeroForce t r =
+      1 / r + (1 / 4 : ℂ) *
+        ∑' p : DeBruijnNewmanHDivisorZeroIndex t,
+          deBruijnNewmanPolymathForceOrbitTerm t r p :=
+  deBruijnNewmanRegularizedZeroForce_eq_quarter_orbit_tsum t r
+
+example {t x Y : ℝ} (p : DeBruijnNewmanHDivisorZeroIndex t)
+    (hx : 0 < x) (hY : 0 < Y)
+    (hp : deBruijnNewmanHDivisorZeroValue p = (x : ℂ) + (Y : ℂ) * Complex.I) :
+    deBruijnNewmanPolymathForceOrbitTerm t ((x : ℂ) + (Y : ℂ) * Complex.I) p =
+      -(1 / (2 * ((x : ℂ) + (Y : ℂ) * Complex.I))) +
+        1 / (((x : ℂ) + (Y : ℂ) * Complex.I) -
+          conj ((x : ℂ) + (Y : ℂ) * Complex.I)) +
+        1 / (((x : ℂ) + (Y : ℂ) * Complex.I) +
+          conj ((x : ℂ) + (Y : ℂ) * Complex.I)) :=
+  deBruijnNewmanPolymathForceOrbitTerm_eq_of_value_eq_contact p hx hY hp
+
 end LeanLab.Riemann
