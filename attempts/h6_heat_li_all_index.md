@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260717-H6-HEAT-LI-ALL-INDEX-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_IMPLEMENTATION_AUDITED`
+Status: `IMPLEMENTATION_PUBLIC_CI_PASSED_EVIDENCE_PENDING`
 
 ## Runtime record
 
@@ -37,11 +37,18 @@ Status: `LOCAL_IMPLEMENTATION_AUDITED`
 - preregistration commit, push, and public Lean Action CI: passed
 - complete Lean endpoint without a hidden negative-time or strip hypothesis: passed locally
 - exact registry, axiom, definition-alignment, forbidden-scan, and full-build gates: passed locally
-- implementation/evidence public CI closure: pending
+- implementation public CI: passed
+- evidence backfill commit and public CI: pending
+- final public closure log update: pending
+
+## Public implementation evidence
+
+- implementation commit `16437075ed7ceb56becff79c77308d3e33bd1c65`
+- public Lean Action CI run `29548736988`, build job `87786563205`, passed in `1m59s`
 
 ## Current result
 
-- `result`: `KNOWN_THEOREM_FORMALIZED_LOCAL`
+- `result`: `KNOWN_CRITERION_HEAT_FAMILY_SPECIALIZATION_PUBLIC_IMPLEMENTATION`
 - `hard_gap_delta`: 0
 - `route_infrastructure_delta`: 1
 - `proof_source_edits`: `LeanLab/Riemann/DeBruijnNewmanLiCriterion.lean`
@@ -75,7 +82,8 @@ Status: `LOCAL_IMPLEMENTATION_AUDITED`
 - forbidden placeholder/declaration/resource scans: empty
 - `git diff --check`: pass
 - full build: `8696` jobs, success
-- implementation public CI: pending
+- implementation public CI: run `29548736988`, build job `87786563205`, passed in `1m59s`
+- immutable evidence closure: pending
 
 ## Assumption frontier
 

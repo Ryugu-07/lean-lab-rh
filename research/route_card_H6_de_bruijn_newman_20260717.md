@@ -558,4 +558,6 @@ exact all-index paired zero formula, pointwise time-zero equality, and RH theore
 
 Classification is `KNOWN_CRITERION_HEAT_FAMILY_SPECIALIZATION`, `hard_gap_delta=0`, and
 `route_infrastructure_delta=1`. H6-E/G8 and RH remain open because no unconditional all-index sign
-is proved. Public implementation CI and immutable evidence backfill are pending.
+is proved. Implementation commit `16437075ed7ceb56becff79c77308d3e33bd1c65` passed public Lean
+Action CI run `29548736988`, build job `87786563205`, in `1m59s`; immutable evidence closure
+remains pending.

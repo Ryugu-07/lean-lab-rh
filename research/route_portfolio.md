@@ -1895,4 +1895,6 @@ existing project coefficients and with both RH equivalences.
 
 This closes only H6-X4 as `KNOWN_CRITERION_HEAT_FAMILY_SPECIALIZATION`, with
 `hard_gap_delta=0` and `route_infrastructure_delta=1`. Unconditional all-index positivity, H6-E/G8,
-and RH remain open. Public implementation CI and evidence backfill are pending.
+and RH remain open. Implementation commit `16437075ed7ceb56becff79c77308d3e33bd1c65` passed public
+Lean Action CI run `29548736988`, build job `87786563205`, in `1m59s`; immutable evidence closure
+remains pending.
