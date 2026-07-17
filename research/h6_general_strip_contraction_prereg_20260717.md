@@ -6,7 +6,7 @@ Campaign: `CAMPAIGN-20260717-H6-GENERAL-STRIP-CONTRACTION-01`
 
 Mode: `LITERATURE`
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Exact mathematical endpoint
 
@@ -167,3 +167,15 @@ Implementation commit `9ddee42657933ccd94533affa25f83a75392a1ea` passed public L
 run `29572752471`, build job `87860124993`, in `2m11s`. The public runner independently rebuilt
 both exact endpoints, their TargetChecks, Target registration, and transitive axiom audit. The
 campaign remains open until this immutable evidence backfill passes its own public CI.
+
+## Public evidence and closure gate
+
+Evidence-backfill commit `307b5e29ed65b909e8efffb126787b9176c93453` passed public Lean Action CI
+run `29572973709`, build job `87860860348`, in `2m7s`. Together with preregistration commit
+`2685003e8f6617add0701a2b1680328ca8c4943f` and implementation commit
+`9ddee42657933ccd94533affa25f83a75392a1ea`, all three required public gates pass.
+
+Campaign `CAMPAIGN-20260717-H6-GENERAL-STRIP-CONTRACTION-01` is closed as
+`KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`. The exact
+remaining H6 quantitative premise is a source-aligned canopy/barrier certificate. H6-E/G8 and RH
+remain open, and the persistent RH Goal returns to fresh value-ranked route selection.

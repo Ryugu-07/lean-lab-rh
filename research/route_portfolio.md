@@ -2017,3 +2017,8 @@ Implementation commit `9ddee42657933ccd94533affa25f83a75392a1ea` passed public L
 run `29572752471`, build job `87860124993`, in `2m11s`. The exact known theorem is now
 independently public-built. Campaign status is `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`;
 immutable evidence-backfill CI remains before closure.
+
+Evidence-backfill commit `307b5e29ed65b909e8efffb126787b9176c93453` passed public Lean Action CI
+run `29572973709`, build job `87860860348`, in `2m7s`. The campaign is publicly closed as
+`KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`. The
+persistent RH Goal remains active and returns to fresh value-ranked route selection.
