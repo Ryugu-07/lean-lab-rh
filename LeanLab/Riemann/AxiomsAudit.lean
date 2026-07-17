@@ -8,6 +8,7 @@ import LeanLab.Riemann.DeBruijnNewmanUpperHalf
 import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
+import LeanLab.Riemann.DeBruijnNewmanLiCriterion
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6PositiveCoshLiAudit
@@ -426,6 +427,13 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.deBruijnNewmanHeatLiThree_zero_eq_candidate_two
 #print axioms LeanLab.Riemann.liCoefficientCandidate_two_re_pos
 #print axioms LeanLab.Riemann.deBruijnNewmanHeat_thirdLi_covariance_endpoint
+#print axioms LeanLab.Riemann.deBruijnNewmanHeatXi_entireOfOrderAtMost_one
+#print axioms LeanLab.Riemann.all_values_on_line_iff_forall_coefficient_re_nonneg
+#print axioms LeanLab.Riemann.deBruijnNewmanHeatLiCoefficient_eq_tsum_pairedLiZeroTerm
+#print axioms LeanLab.Riemann.deBruijnNewmanAllZerosReal_iff_forall_heatLiCoefficient_re_nonneg
+#print axioms LeanLab.Riemann.deBruijnNewmanHeatLiCoefficient_zero_eq
+#print axioms LeanLab.Riemann.riemannHypothesis_iff_forall_deBruijnNewmanHeatLiCoefficient_zero_re_nonneg
+#print axioms LeanLab.Riemann.deBruijnNewmanHeat_allIndexLi_endpoint
 #print axioms LeanLab.Riemann.h6PositiveCoshAudit_entire
 #print axioms LeanLab.Riemann.h6PositiveCoshAudit_coefficients_pos
 #print axioms LeanLab.Riemann.h6PositiveCoshAuditLiThree_eq

@@ -1884,3 +1884,15 @@ zero it is RH-equivalent, but it supplies no unconditional all-index sign. Expec
 are in `route_selection_post_h6_third_li_20260717.md` and
 `h6_heat_li_all_index_prereg_20260717.md`. Public preregistration CI must pass before Lean source
 edits.
+
+### Local audited closure
+
+The full all-index implementation compiles locally and strengthens the time range from `t>=0` to
+all real `t`. A new abstract reflected-divisor Bombieri-Lagarias theorem supplies both directions;
+the heat specialization proves affine order one, square-reciprocal divisor summability, the exact
+paired zero formula, and functional-equation cancellation. Time zero aligns pointwise with the
+existing project coefficients and with both RH equivalences.
+
+This closes only H6-X4 as `KNOWN_CRITERION_HEAT_FAMILY_SPECIALIZATION`, with
+`hard_gap_delta=0` and `route_infrastructure_delta=1`. Unconditional all-index positivity, H6-E/G8,
+and RH remain open. Public implementation CI and evidence backfill are pending.

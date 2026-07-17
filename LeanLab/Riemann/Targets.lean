@@ -8,6 +8,7 @@ import LeanLab.Riemann.DeBruijnNewmanUpperHalf
 import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
+import LeanLab.Riemann.DeBruijnNewmanLiCriterion
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6PositiveCoshLiAudit
@@ -889,6 +890,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanHeat_thirdLi_covariance_endpoint
       status := .proven
       note := "Campaign DISCOVERY-20260717-H6-THIRD-LI-COVARIANCE-01 proves the theta-specific ordered covariance using the nonnegative one-integral certificate W(u)*(X(u)-X(r))*(u^2-C/A), then combines it with B^2<=AC and the compiled bound liCoefficientCandidate_zero_re_lt_one. The resulting candidate-two sign is an unconditional finite necessary condition for RH; hard_gap_delta=0 and route_infrastructure_delta=1. Implementation commit 1b521686d4e8561f01ba98a6ceaa4905ced4d92f passed public CI run 29545583372, build job 87777066173; evidence commit abf5ebf19e3636662a45eed7a5eff9e947c3c3b4 passed run 29545784893, job 87777708775." },
+    { id := "H6.debruijn-newman.heat-li-all-index"
+      tier := .tier2
+      title := "Formalize the all-index heat-family Li criterion"
+      statement :=
+        "Define every derivative-indexed Li coefficient of the source-normalized heat-Xi family, prove its exact reflection-paired multiplicity-bearing zero formula, characterize all-real source zeros by nonnegative real parts of every coefficient, and align every time-zero coefficient with liCoefficientCandidate."
+      leanName := some ``deBruijnNewmanHeat_allIndexLi_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260717-H6-HEAT-LI-ALL-INDEX-01 extracts an abstract Bombieri-Lagarias criterion, reconstructs the full Hadamard derivative-to-zero formula for the heat divisor, and proves the criterion for every real heat time, stronger than the preregistered nonnegative-time endpoint. At t=0 it is theorem-level compatible with both existing RH equivalences. This is a known-criterion specialization with hard_gap_delta=0 and route_infrastructure_delta=1; it does not prove unconditional all-index positivity or RH." },
     { id := "H10.function-field.finite-spectral-rigidity"
       tier := .tier2
       title := "Formalize finite power-sum spectral rigidity"

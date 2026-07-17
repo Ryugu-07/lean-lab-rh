@@ -7,6 +7,7 @@ import LeanLab.Riemann.DeBruijnNewmanUpperHalf
 import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
+import LeanLab.Riemann.DeBruijnNewmanLiCriterion
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6PositiveCoshLiAudit
@@ -1404,6 +1405,34 @@ example :
     0 < (liCoefficientCandidate 2).re ∧
     (liCoefficientCandidate 2).im = 0 :=
   deBruijnNewmanHeat_thirdLi_covariance_endpoint
+
+example (t : ℝ) (n : ℕ) :
+    deBruijnNewmanHeatLiCoefficient t n =
+      ∑' p : DeBruijnNewmanHeatXiDivisorZeroIndex t,
+        pairedLiZeroTerm (fun q : DeBruijnNewmanHeatXiDivisorZeroIndex t =>
+          deBruijnNewmanHeatXiDivisorZeroValue q) n p :=
+  deBruijnNewmanHeatLiCoefficient_eq_tsum_pairedLiZeroTerm t n
+
+example (t : ℝ) :
+    deBruijnNewmanAllZerosReal t ↔
+      ∀ n : ℕ, 0 ≤ (deBruijnNewmanHeatLiCoefficient t n).re :=
+  deBruijnNewmanAllZerosReal_iff_forall_heatLiCoefficient_re_nonneg t
+
+example (n : ℕ) :
+    deBruijnNewmanHeatLiCoefficient 0 n = liCoefficientCandidate n :=
+  deBruijnNewmanHeatLiCoefficient_zero_eq n
+
+example :
+    RiemannHypothesis ↔
+      ∀ n : ℕ, 0 ≤ (deBruijnNewmanHeatLiCoefficient 0 n).re :=
+  riemannHypothesis_iff_forall_deBruijnNewmanHeatLiCoefficient_zero_re_nonneg
+
+example :
+    (∀ n, deBruijnNewmanHeatLiCoefficient 0 n = liCoefficientCandidate n) ∧
+    (∀ t : ℝ, 0 ≤ t →
+      (deBruijnNewmanAllZerosReal t ↔
+        ∀ n, 0 ≤ (deBruijnNewmanHeatLiCoefficient t n).re)) :=
+  deBruijnNewmanHeat_allIndexLi_endpoint
 
 example :
     Differentiable ℂ h6PositiveCoshAudit ∧

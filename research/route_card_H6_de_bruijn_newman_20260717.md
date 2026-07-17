@@ -548,3 +548,14 @@ for Bombieri-Lagarias. The xi-specific zero-formula and reverse modules cannot b
 without extracting or reconstructing their generic content. Generic helpers, one direction, or a
 finite prefix do not close the campaign. Exact preregistration is in
 `h6_heat_li_all_index_prereg_20260717.md`; proof-source edits wait for public preregistration CI.
+
+### H6-X4 local audited result
+
+The complete endpoint now compiles in `DeBruijnNewmanLiCriterion.lean`. The implementation proves
+the iff for every real time, stronger than the preregistered `t>=0` range, because affine finite
+order gives divisor reciprocal-square summability without a zero-strip premise. It also proves the
+exact all-index paired zero formula, pointwise time-zero equality, and RH theorem compatibility.
+
+Classification is `KNOWN_CRITERION_HEAT_FAMILY_SPECIALIZATION`, `hard_gap_delta=0`, and
+`route_infrastructure_delta=1`. H6-E/G8 and RH remain open because no unconditional all-index sign
+is proved. Public implementation CI and immutable evidence backfill are pending.

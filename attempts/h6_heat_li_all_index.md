@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260717-H6-HEAT-LI-ALL-INDEX-01`
 
 Mode: `LITERATURE`
 
-Status: `PREREGISTERED_LOCAL`
+Status: `LOCAL_IMPLEMENTATION_AUDITED`
 
 ## Runtime record
 
@@ -32,16 +32,53 @@ Status: `PREREGISTERED_LOCAL`
   reflected off-line pair at `rho=1/4+i` produces a negative coefficient in the first 100 indices.
   This screen is not a proof premise.
 
-## Pending gates
+## Gate status
 
-- preregistration commit, push, and public Lean Action CI
-- complete Lean endpoint without a hidden negative-time or strip hypothesis
-- exact registry, axiom, definition-alignment, forbidden-scan, and full-build gates
-- implementation/evidence public CI closure
+- preregistration commit, push, and public Lean Action CI: passed
+- complete Lean endpoint without a hidden negative-time or strip hypothesis: passed locally
+- exact registry, axiom, definition-alignment, forbidden-scan, and full-build gates: passed locally
+- implementation/evidence public CI closure: pending
 
 ## Current result
 
-- `result`: `LOCAL_PREREGISTRATION_COMPLETE`
+- `result`: `KNOWN_THEOREM_FORMALIZED_LOCAL`
 - `hard_gap_delta`: 0
-- `route_infrastructure_delta`: 0
-- `proof_source_edits`: none
+- `route_infrastructure_delta`: 1
+- `proof_source_edits`: `LeanLab/Riemann/DeBruijnNewmanLiCriterion.lean`
+
+## Loop record: complete all-index implementation
+
+1. The preregistration commit
+   `e8b611c4e3ab82df78925265c95e4c89ef6d1e29` passed public Lean Action CI run
+   `29546924877`, job `87781127750`, before proof-source edits.
+2. The derivative definition and time-zero pointwise equality compiled first, followed by the
+   exact coordinate iff between real `H_t` zeros and critical-line heat-Xi zeros.
+3. Affine input scaling, translation, and output scaling were proved to preserve entire order at
+   most one. This yields heat-Xi divisor reciprocal-square summability for every real `t`, removing
+   the anticipated need for a negative-time zero strip.
+4. The Bombieri-Lagarias large-index argument was extracted to an abstract reflected divisor. Its
+   reverse direction uses a finite orbit-radius superlevel, simultaneous phase recurrence, and a
+   reciprocal-square tail bound; an off-line zero forces a negative coefficient.
+5. The analytic bridge reconstructs the genus-one Hadamard factorization, locally uniform
+   termwise differentiation at `s=1`, the compensated zero formula, reflection averaging, and
+   functional-equation cancellation of the degree-at-most-one polynomial contribution.
+6. Lean proves, for every real `t`,
+   `deBruijnNewmanAllZerosReal t <-> forall n, 0 <= Re(heatLi(t,n))`, and for every `n` the exact
+   equality `heatLi(0,n)=liCoefficientCandidate n`. The preregistered `t>=0` aggregate and the
+   time-zero RH compatibility theorem also compile.
+
+## Mechanical audit
+
+- standalone new-module compile: diagnostic-free
+- exact TargetChecks: diagnostic-free
+- selected axiom prints: only `propext`, `Classical.choice`, and `Quot.sound`
+- forbidden placeholder/declaration/resource scans: empty
+- `git diff --check`: pass
+- full build: `8696` jobs, success
+- implementation public CI: pending
+
+## Assumption frontier
+
+The campaign closes the criterion specialization only. At `t=0`, proving all coefficient real
+parts nonnegative remains equivalent to RH. No unconditional sign beyond the already compiled
+finite prefix is added, so RH, H6-E/G8, W2/G7, and M2/G3 remain open.
