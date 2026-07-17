@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260717-H6-XI-KERNEL-PF4-01`
 
 Mode: `FALSIFICATION`
 
-Status: `NO_PROGRESS_LOCAL_AUDIT_COMPLETE`
+Status: `PUBLICLY_CLOSED`
 
 ## Runtime record
 
@@ -131,4 +131,8 @@ remain open. After closure CI, return the persistent Goal to value-ranked route 
   declaration was added; existing selected audits retain only `propext`, `Classical.choice`, and
   `Quot.sound`.
 - Root `lake build` succeeds for all 8,699 jobs.
-- Closure commit and public CI evidence: pending.
+- Closure commit: `503b83e35761e87b35fe7db3fb49feab8ea372de`.
+- Lean Action CI run: `29567807097`.
+- Build job: `87844319595`, success in `1m43s`.
+- The local campaign is publicly closed as `NO_PROGRESS`. The persistent RH Goal remains active
+  and returns to value-ranked route selection.
