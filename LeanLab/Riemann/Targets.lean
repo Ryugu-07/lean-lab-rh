@@ -908,7 +908,7 @@ def rhTargets : List ResearchTarget :=
         "For the exact infinite de Bruijn-Newman theta kernel, prove the preregistered five-by-five Toeplitz determinant at u0=1/100 and h=1/20 is negative, and derive the source-faithful negation of PF5 from strictly increasing witnesses."
       leanName := some ``not_isPolyaFrequencyFive_deBruijnNewmanEvenKernel
       status := .proven
-      note := "Campaign FALSIFICATION-20260717-H6-XI-KERNEL-PF5-01 independently certifies all nine full-tsum kernel entries, a negative exact determinant, and the ordered PF5 counterexample. Classification ACTUAL_KERNEL_PF5_FORMALLY_FALSIFIED; hard_gap_delta=0, route_infrastructure_delta=1, obstruction_map_delta=1. This blocks only PF5/PF-infinity physical-kernel strategies; global PF4, H6-E/G8, and RH remain open. Public CI evidence pending." },
+      note := "Campaign FALSIFICATION-20260717-H6-XI-KERNEL-PF5-01 independently certifies all nine full-tsum kernel entries, a negative exact determinant, and the ordered PF5 counterexample. Classification ACTUAL_KERNEL_PF5_FORMALLY_FALSIFIED; hard_gap_delta=0, route_infrastructure_delta=1, obstruction_map_delta=1. This blocks only PF5/PF-infinity physical-kernel strategies; global PF4, H6-E/G8, and RH remain open. Implementation commit 7bdf2b9ab08f2b298d1565921158ff9a199c867a passed public Lean Action CI run 29565362144, build job 87836632525." },
     { id := "H6.discovery.theta-third-li-covariance"
       tier := .tier2
       title := "Prove the theta-family third Li coefficient by covariance"

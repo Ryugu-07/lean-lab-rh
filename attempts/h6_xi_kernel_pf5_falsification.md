@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260717-H6-XI-KERNEL-PF5-01`
 
 Mode: `FALSIFICATION`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Runtime record
 
@@ -83,3 +83,11 @@ normalization that Lean cannot close and return the persistent Goal to route sel
 - `hard_gap_delta=0`, `route_infrastructure_delta=1`, `obstruction_map_delta=1`.
 - Scope: this refutes PF5, hence PF-infinity, for the physical Xi kernel. It does not decide global
   PF4, H6-E/G8, or RH.
+
+## Public evidence
+
+- Implementation commit: `7bdf2b9ab08f2b298d1565921158ff9a199c867a`.
+- Public Lean Action CI run: `29565362144`.
+- Build job: `87836632525`, success in `2m39s`.
+- The local campaign is closed. The persistent RH Goal remains active and returns to value-ranked
+  route selection.

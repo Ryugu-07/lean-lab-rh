@@ -640,7 +640,8 @@ full 120-term determinant perturbation is below `0.2*10^-9`. Consequently
 The local classification is `ACTUAL_KERNEL_PF5_FORMALLY_FALSIFIED`, with `hard_gap_delta=0`,
 `route_infrastructure_delta=1`, and `obstruction_map_delta=1`. This blocks PF5/PF-infinity
 physical-kernel arguments only. Global PF4, H6-E/G8, and RH remain open. Public implementation CI
-and evidence backfill remain before campaign closure.
+run `29565362144`, build job `87836632525`, passed in `2m39s` for implementation commit
+`7bdf2b9ab08f2b298d1565921158ff9a199c867a`; the campaign is publicly closed.
 
 This attack is materially different from H6-X5: it is a nontrivial statement about the actual
 theta kernel, not an audit of vacuous formal predicates. Success would formally block order-five
