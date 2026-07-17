@@ -680,3 +680,7 @@ No regional certificate or final criterion is proved. The exact remaining source
 the strict imaginary force inequality for a simple first contact and repeated-zero backward
 Hermite splitting strong enough to imply `deBruijnNewmanHasBackwardUpperLinearEscape`. The next
 attack is the force inequality via an absolutely convergent fourfold divisor-orbit average.
+
+The active-checkpoint implementation commit
+`b4c2f5e24ab35514dccf0f6d85ff40ce43e026c3` passed public Lean Action CI run `29576156216`,
+build job `87870943510`, in `3m35s`. This is implementation evidence only and does not close H6-H2f.
