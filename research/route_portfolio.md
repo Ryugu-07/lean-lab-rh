@@ -2012,3 +2012,8 @@ Both exact TargetChecks, the Target entry, five standard-only axiom prints, all 
 remaining Polymath input is a quantitative canopy/barrier certificate; `Lambda<=0.2`, any strict
 improvement, H6-E/G8, and RH are unchanged. Public implementation CI and immutable evidence
 backfill remain before campaign closure.
+
+Implementation commit `9ddee42657933ccd94533affa25f83a75392a1ea` passed public Lean Action CI
+run `29572752471`, build job `87860124993`, in `2m11s`. The exact known theorem is now
+independently public-built. Campaign status is `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`;
+immutable evidence-backfill CI remains before closure.

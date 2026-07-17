@@ -6,7 +6,7 @@ Campaign: `CAMPAIGN-20260717-H6-GENERAL-STRIP-CONTRACTION-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Exact mathematical endpoint
 
@@ -160,3 +160,10 @@ Local classification is `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
 certificate. It does not itself prove `Lambda<=0.2`, a strict improvement below `0.2`, H6-E/G8,
 or RH. Public implementation CI and immutable evidence-backfill CI remain required before local
 campaign closure.
+
+## Public implementation gate
+
+Implementation commit `9ddee42657933ccd94533affa25f83a75392a1ea` passed public Lean Action CI
+run `29572752471`, build job `87860124993`, in `2m11s`. The public runner independently rebuilt
+both exact endpoints, their TargetChecks, Target registration, and transitive axiom audit. The
+campaign remains open until this immutable evidence backfill passes its own public CI.
