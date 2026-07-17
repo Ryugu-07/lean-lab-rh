@@ -5,6 +5,7 @@ import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
 import LeanLab.Riemann.DeBruijnNewmanForward
 import LeanLab.Riemann.DeBruijnNewmanUpperHalf
+import LeanLab.Riemann.DeBruijnNewmanGeneralStrip
 import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
@@ -838,6 +839,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanAllZerosReal_one_half
       status := .proven
       note := "Campaign CAMPAIGN-20260717-H6-UPPER-HALF-01 reconstructs de Bruijn's strip contraction through conjugation-preserving multiplicities, paired genus-one factors, finite vertical-average iteration, and Jensen zero persistence. This proves threshold nonemptiness and Lambda <= 1/2 only; H6-E/G8, W2/G7, M2/G3, and RH remain open." },
+    { id := "H6.debruijn-newman.general-strip-contraction"
+      tier := .tier2
+      title := "Generalize de Bruijn strip contraction to arbitrary base time"
+      statement :=
+        "If every zero of H_t satisfies Im(z)^2 <= muSq and 0 <= 2*delta <= muSq, prove every zero of H_(t+delta) satisfies Im(z)^2 <= muSq-2*delta; deduce that a strip of half-width y becomes all-real after exactly y^2/2 additional heat time."
+      leanName := some ``deBruijnNewmanAllZerosReal_add_half_sq
+      status := .proven
+      note := "Campaign CAMPAIGN-20260717-H6-GENERAL-STRIP-CONTRACTION-01 reconstructs de Bruijn's arbitrary-base source theorem through finite vertical-average strip contraction, compact-uniform heat approximation, and multiplicity-free Jensen zero persistence. This is known route infrastructure with hard_gap_delta=0. It exposes the canopy certificate needed by the Polymath upper-bound criterion and does not prove Lambda <= 0.2, H6-E/G8, or RH." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

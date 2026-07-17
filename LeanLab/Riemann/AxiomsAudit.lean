@@ -5,6 +5,7 @@ import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
 import LeanLab.Riemann.DeBruijnNewmanForward
 import LeanLab.Riemann.DeBruijnNewmanUpperHalf
+import LeanLab.Riemann.DeBruijnNewmanGeneralStrip
 import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
@@ -458,3 +459,8 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.xiKernelPF5CenterMatrix_det_lt
 #print axioms LeanLab.Riemann.xiKernelPF5ToeplitzMatrix_det_neg
 #print axioms LeanLab.Riemann.not_isPolyaFrequencyFive_deBruijnNewmanEvenKernel
+#print axioms LeanLab.Riemann.dbnCoshApprox_zero_im_sq_le_of
+#print axioms LeanLab.Riemann.dbnForwardApprox_zero_im_sq_le_of
+#print axioms LeanLab.Riemann.eventually_exists_dbnForwardApprox_zero_mem_closedBall_of
+#print axioms LeanLab.Riemann.deBruijnNewmanH_zero_im_sq_le_sub_two_mul
+#print axioms LeanLab.Riemann.deBruijnNewmanAllZerosReal_add_half_sq

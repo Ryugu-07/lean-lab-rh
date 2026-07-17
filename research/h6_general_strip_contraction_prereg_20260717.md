@@ -6,7 +6,7 @@ Campaign: `CAMPAIGN-20260717-H6-GENERAL-STRIP-CONTRACTION-01`
 
 Mode: `LITERATURE`
 
-Status: `PREREGISTERED_CI_PENDING`
+Status: `LOCAL_IMPLEMENTATION_COMPLETE_PUBLIC_CI_PENDING`
 
 ## Exact mathematical endpoint
 
@@ -134,3 +134,29 @@ return to route selection. Helper-only closure is not campaign success. The pers
 remains active in every local outcome.
 
 No Lean proof source may be edited before this preregistration passes public Lean Action CI.
+
+## Public preregistration gate
+
+Preregistration commit `2685003e8f6617add0701a2b1680328ca8c4943f` passed public Lean Action CI
+run `29571892273`, build job `87857388857`, in `2m2s`. Lean proof-source edits began only after
+this gate passed.
+
+## Local implementation gate
+
+`LeanLab/Riemann/DeBruijnNewmanGeneralStrip.lean` compiles both exact preregistered endpoints. The
+finite theorem subtracts one squared vertical-shift width per iteration; positive-index forward
+approximants therefore satisfy the exact `muSq-2*delta` strip. Compact-uniform convergence and a
+Jensen circle-mean argument preserve a limit zero inside any isolating closed ball, closing the
+arbitrary-base theorem without a simple-zero or multiplicity assumption. Specializing
+`delta=y^2/2` forces the remaining imaginary square to zero.
+
+The exact module, Targets, both TargetChecks, AxiomsAudit, and the total project import compile.
+All five selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`.
+Placeholder, custom-declaration, unsafe, native-decision, and resource-relaxation scans are empty;
+`git diff --check` passes; and the full 8,701-job build succeeds under default limits.
+
+Local classification is `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`. This exposes the exact source step consuming a future canopy
+certificate. It does not itself prove `Lambda<=0.2`, a strict improvement below `0.2`, H6-E/G8,
+or RH. Public implementation CI and immutable evidence-backfill CI remain required before local
+campaign closure.

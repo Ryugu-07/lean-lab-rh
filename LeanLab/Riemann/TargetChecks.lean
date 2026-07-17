@@ -4,6 +4,7 @@ import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
 import LeanLab.Riemann.DeBruijnNewmanForward
 import LeanLab.Riemann.DeBruijnNewmanUpperHalf
+import LeanLab.Riemann.DeBruijnNewmanGeneralStrip
 import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
@@ -1510,5 +1511,17 @@ example : Matrix.det xiKernelPF5ToeplitzMatrix < 0 :=
 
 example : ¬ IsPolyaFrequencyFive deBruijnNewmanEvenKernel :=
   not_isPolyaFrequencyFive_deBruijnNewmanEvenKernel
+
+example {t delta muSq : ℝ} (hdelta : 0 ≤ delta)
+    (hbudget : 2 * delta ≤ muSq)
+    (hstrip : ∀ z : ℂ, deBruijnNewmanH t z = 0 → z.im ^ 2 ≤ muSq)
+    {z : ℂ} (hz : deBruijnNewmanH (t + delta) z = 0) :
+    z.im ^ 2 ≤ muSq - 2 * delta :=
+  deBruijnNewmanH_zero_im_sq_le_sub_two_mul hdelta hbudget hstrip hz
+
+example {t y : ℝ} (hy : 0 ≤ y)
+    (hstrip : ∀ z : ℂ, deBruijnNewmanH t z = 0 → z.im ^ 2 ≤ y ^ 2) :
+    deBruijnNewmanAllZerosReal (t + y ^ 2 / 2) :=
+  deBruijnNewmanAllZerosReal_add_half_sq hy hstrip
 
 end LeanLab.Riemann

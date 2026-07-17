@@ -1989,3 +1989,26 @@ It must prove arbitrary-base squared-strip contraction and the exact `t+y^2/2` a
 This is known source infrastructure with expected `hard_gap_delta=0`; it exposes the remaining
 Polymath canopy certificate and does not prove `Lambda<=0.2`, H6-E/G8, or RH. Public
 preregistration CI is required before Lean proof edits.
+
+### Local implementation update
+
+Preregistration commit `2685003e8f6617add0701a2b1680328ca8c4943f` passed public Lean Action CI
+run `29571892273`, build job `87857388857`, in `2m2s`, before proof-source edits. The new
+`DeBruijnNewmanGeneralStrip.lean` module now compiles the exact arbitrary-base contraction
+
+```text
+Im(z)^2 <= muSq  at time t
+  -> Im(z)^2 <= muSq-2*delta  at time t+delta
+```
+
+for `0<=2*delta<=muSq`, and the exact all-real endpoint at `t+y^2/2`. The proof carries the
+arbitrary strip through finite vertical averages and forward heat approximants, then uses an
+isolating ball and Jensen circle averages to transfer the closed strip to the limit without any
+simple-zero assumption.
+
+Both exact TargetChecks, the Target entry, five standard-only axiom prints, all forbidden scans,
+`git diff --check`, and the 8,701-job full build pass. Local classification is
+`KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`. The
+remaining Polymath input is a quantitative canopy/barrier certificate; `Lambda<=0.2`, any strict
+improvement, H6-E/G8, and RH are unchanged. Public implementation CI and immutable evidence
+backfill remain before campaign closure.
