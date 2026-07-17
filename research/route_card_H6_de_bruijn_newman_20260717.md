@@ -579,5 +579,6 @@ build.
 **Verdict:** `EXTERNAL_FORMALIZATION_REJECTED_AS_PREMISE`, `hard_gap_delta=0`, and
 `route_infrastructure_delta=0`. This is not a refutation of actual Xi-kernel log-concavity and does
 not change H6-E/G8 or RH. Implementation commit `8ecb002d1591ae93fbc23ba42c7a487c16c8beb5`
-passed public Lean Action CI run `29550587517`, build job `87792042425`, in `1m50s`; immutable
-evidence closure remains.
+passed public Lean Action CI run `29550587517`, build job `87792042425`, in `1m50s`. Evidence
+commit `131aff89283644bcabd2f620b94f99dc6ae30843` passed public CI run `29550788159`, build job
+`87792636844`, in `1m55s`; the campaign is publicly closed.

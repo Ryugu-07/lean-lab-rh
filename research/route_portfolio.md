@@ -1935,4 +1935,6 @@ Exact Targets, TargetChecks, three standard-only axiom prints, forbidden scans, 
 `hard_gap_delta=0` and `route_infrastructure_delta=0`. Actual Xi-kernel log-concavity remains
 unverified and unrefuted; H6-E/G8 and RH remain open. Implementation commit
 `8ecb002d1591ae93fbc23ba42c7a487c16c8beb5` passed public Lean Action CI run `29550587517`, build
-job `87792042425`, in `1m50s`; immutable evidence closure remains pending.
+job `87792042425`, in `1m50s`. Evidence commit `131aff89283644bcabd2f620b94f99dc6ae30843`
+passed public Lean Action CI run `29550788159`, build job `87792636844`, in `1m55s`. The campaign
+is publicly closed; the persistent RH Goal returns to value-ranked route selection.

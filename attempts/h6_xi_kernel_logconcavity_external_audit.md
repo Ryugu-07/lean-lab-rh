@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260717-H6-XI-LOGCONCAVITY-LEAN-01`
 
 Mode: `FALSIFICATION`
 
-Status: `IMPLEMENTATION_PUBLIC_CI_PASSED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Runtime record
 
@@ -39,23 +39,17 @@ Status: `IMPLEMENTATION_PUBLIC_CI_PASSED_EVIDENCE_PENDING`
 - Python verification omits the `n>=6` tail and the global Region-B decrease proof
 - repository contains no `LICENSE` file; no code is copied
 
-## Pending gates
-
-- preregistration commit, push, and public Lean Action CI: passed
-- exact Lean countermodel and aggregate endpoint: passed locally
-- Targets, TargetChecks, AxiomsAudit, scans, and full build: passed locally
-- implementation public CI: passed
-- evidence backfill commit and public CI: pending
-- final public closure log update: pending
-
 ## Public implementation evidence
 
 - implementation commit `8ecb002d1591ae93fbc23ba42c7a487c16c8beb5`
 - public Lean Action CI run `29550587517`, build job `87792042425`, passed in `1m50s`
+- evidence commit `131aff89283644bcabd2f620b94f99dc6ae30843`
+- public Lean Action CI run `29550788159`, build job `87792636844`, passed in `1m55s`
 
 ## Current result
 
-- `result`: `EXTERNAL_FORMALIZATION_REJECTED_AS_PREMISE_PUBLIC_IMPLEMENTATION`
+- `result`: `EXTERNAL_FORMALIZATION_REJECTED_AS_PREMISE`
+- `closure`: `PUBLICLY_CLOSED`
 - `hard_gap_delta`: 0
 - `route_infrastructure_delta`: 0
 - `proof_source_edits`: `LeanLab/Riemann/XiKernelLogConcavityAudit.lean`
@@ -86,7 +80,7 @@ Status: `IMPLEMENTATION_PUBLIC_CI_PASSED_EVIDENCE_PENDING`
 - full build: 8,697 jobs, success
 - `git diff --check`: pass
 - implementation public CI: run `29550587517`, build job `87792042425`, passed in `1m50s`
-- immutable evidence closure: pending
+- evidence public CI: run `29550788159`, build job `87792636844`, passed in `1m55s`
 
 ## Assumption frontier
 

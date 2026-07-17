@@ -4,7 +4,7 @@ Date: 2026-07-17
 
 Campaign: `FALSIFICATION-20260717-H6-XI-LOGCONCAVITY-LEAN-01`
 
-Status: `IMPLEMENTATION_PUBLIC_CI_PASSED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Pinned source
 
@@ -57,5 +57,6 @@ MIT label.
 `EXTERNAL_FORMALIZATION_REJECTED_AS_PREMISE`; `hard_gap_delta=0`,
 `route_infrastructure_delta=0`. This does not refute actual Xi-kernel log-concavity and does not
 change H6-E/G8 or RH. Implementation commit `8ecb002d1591ae93fbc23ba42c7a487c16c8beb5`
-passed public Lean Action CI run `29550587517`, build job `87792042425`, in `1m50s`; immutable
-evidence closure remains pending.
+passed public Lean Action CI run `29550587517`, build job `87792042425`, in `1m50s`. Evidence
+commit `131aff89283644bcabd2f620b94f99dc6ae30843` passed public CI run `29550788159`, build job
+`87792636844`, in `1m55s`; the campaign is publicly closed.
