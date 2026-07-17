@@ -653,3 +653,16 @@ This attack is materially different from H6-X5: it is a nontrivial statement abo
 theta kernel, not an audit of vacuous formal predicates. Success would formally block order-five
 and total-positivity physical-kernel routes while leaving global PF4, H6-E/G8, and RH open. Exact
 preregistration is in `h6_xi_kernel_pf5_falsification_prereg_20260717.md`.
+
+## H6-H2f: selected Polymath zero-free-region criterion
+
+After public closure of the arbitrary-base strip theorem, route selection chooses
+`LITERATURE-20260717-H6-POLYMATH-ZERO-FREE-CRITERION-01`. The fixed endpoint is Polymath
+Proposition 3.3 composed with the compiled strip theorem, together with the exact Table 1 second
+row corollary at time `1/5` under the three explicit region certificates.
+
+The campaign does not assume or prove those numerical certificates. Its first missing source
+dependency is repeated-zero backward Hermite splitting at a first canopy contact; an arbitrary
+complex simple-zero path and the global force geometry must also be completed. Success has
+`hard_gap_delta=0` and exposes the certified-computation frontier immediately before the known
+`Lambda<=0.2` result.

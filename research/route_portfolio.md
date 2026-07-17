@@ -2022,3 +2022,24 @@ Evidence-backfill commit `307b5e29ed65b909e8efffb126787b9176c93453` passed publi
 run `29572973709`, build job `87860860348`, in `2m7s`. The campaign is publicly closed as
 `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`. The
 persistent RH Goal remains active and returns to fresh value-ranked route selection.
+
+## Route Selection: Polymath Zero-Free-Region Criterion
+
+Date: 2026-07-17
+
+Fresh selection after the general-strip closure compares the full known `0.2` reconstruction,
+strict improvement below `0.2`, W2/G7, M2/G3, H1/H2 count infrastructure, and H10. The selected
+campaign is `LITERATURE-20260717-H6-POLYMATH-ZERO-FREE-CRITERION-01`.
+
+Its indivisible endpoint is Polymath Proposition 3.3 with all three closed zero-free regions,
+composed with the exact `t0+y0^2/2` strip endpoint, plus the Table 1 second-row corollary at time
+`1/5`. This is not a wrapper: the source proof requires compact first contact, repeated-zero
+backward Hermite splitting, and arbitrary-complex simple-zero force geometry. Existing project
+code supplies only the simple-real path and the final global-strip contraction.
+
+This is known route infrastructure with expected `hard_gap_delta=0` and
+`route_infrastructure_delta=1`. It does not prove the three numerical/analytic region
+certificates, the unconditional `0.2` bound, H6-E/G8, or RH. Exact selection and preregistration
+are in `route_selection_post_h6_general_strip_20260717.md` and
+`h6_polymath_zero_free_criterion_prereg_20260717.md`. Public preregistration CI must pass before
+Lean proof-source edits.
