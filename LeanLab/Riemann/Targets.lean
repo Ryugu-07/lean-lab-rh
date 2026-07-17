@@ -14,6 +14,7 @@ import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6PositiveCoshLiAudit
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.XiKernelLogConcavityAudit
+import LeanLab.Riemann.XiKernelStrictLogConcavity
 import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula
@@ -891,6 +892,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``xiKernelLogConcavityExternalAudit_endpoint
       status := .proven
       note := "Campaign FALSIFICATION-20260717-H6-XI-LOGCONCAVITY-LEAN-01 rejects only the attached external Lean certification chain. The corrected paper v2 leaves TP2 strictly below TP-infinity; actual Xi-kernel log-concavity, H6-E/G8, and RH remain unadjudicated. Implementation commit 8ecb002d1591ae93fbc23ba42c7a487c16c8beb5 passed public CI run 29550587517, build job 87792042425; evidence commit 131aff89283644bcabd2f620b94f99dc6ae30843 passed run 29550788159, job 87792636844." },
+    { id := "H6.xi-kernel.strict-logconcavity"
+      tier := .tier2
+      title := "Formalize strict log-concavity of the source Xi kernel"
+      statement :=
+        "Differentiate the exact source-normalized de Bruijn-Newman kernel series twice on the full real axis and prove Phi''(u)*Phi(u)-Phi'(u)^2 < 0 for every u >= 0."
+      leanName := some ``deBruijnNewmanPhiSecond_mul_phi_sub_deriv_sq_neg
+      status := .proven
+      note := "Campaign LITERATURE-20260717-H6-XI-KERNEL-TP2-01 formalizes the known Csordas-Varga strict log-concavity theorem in the project normalization. The compiled proof establishes both all-real derivative series and controls the infinite weighted-variance tail by an explicit first-term/geometric estimate. Classification KNOWN_THEOREM_FORMALIZED; hard_gap_delta=0 and route_infrastructure_delta=1. It does not establish total positivity of all orders or RH." },
     { id := "H6.discovery.theta-third-li-covariance"
       tier := .tier2
       title := "Prove the theta-family third Li coefficient by covariance"

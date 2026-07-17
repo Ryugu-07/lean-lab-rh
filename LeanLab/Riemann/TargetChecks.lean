@@ -13,6 +13,7 @@ import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6PositiveCoshLiAudit
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.XiKernelLogConcavityAudit
+import LeanLab.Riemann.XiKernelStrictLogConcavity
 import LeanLab.Riemann.LiSymmetricZeroFormula
 import LeanLab.Riemann.LiReverseCriterion
 import LeanLab.Riemann.LiWeilGram
@@ -1472,5 +1473,18 @@ example :
     ¬ xiLogConcavityAuditHasOnlyRealZeros xiLogConcavityAuditLinearTarget ∧
     ¬ xiLogConcavityAuditHurwitzSchema :=
   xiKernelLogConcavityExternalAudit_endpoint
+
+example (u : ℝ) :
+    HasDerivAt deBruijnNewmanPhi (deBruijnNewmanPhiDeriv u) u :=
+  hasDerivAt_deBruijnNewmanPhi u
+
+example (u : ℝ) :
+    HasDerivAt deBruijnNewmanPhiDeriv (deBruijnNewmanPhiSecondDeriv u) u :=
+  hasDerivAt_deBruijnNewmanPhiDeriv u
+
+example {u : ℝ} (hu : 0 ≤ u) :
+    deBruijnNewmanPhiSecondDeriv u * deBruijnNewmanPhi u -
+      deBruijnNewmanPhiDeriv u ^ 2 < 0 :=
+  deBruijnNewmanPhiSecond_mul_phi_sub_deriv_sq_neg hu
 
 end LeanLab.Riemann

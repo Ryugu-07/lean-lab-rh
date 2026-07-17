@@ -14,6 +14,7 @@ import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6PositiveCoshLiAudit
 import LeanLab.Riemann.H6ReverseHeatLiAudit
 import LeanLab.Riemann.XiKernelLogConcavityAudit
+import LeanLab.Riemann.XiKernelStrictLogConcavity
 import LeanLab.Riemann.LiZeroDivisor
 import LeanLab.Riemann.LiHadamard
 import LeanLab.Riemann.LiZeroFormula
@@ -443,3 +444,6 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.xiLogConcavityAudit_isLogConcaveOn_trivial
 #print axioms LeanLab.Riemann.not_xiLogConcavityAuditHurwitzSchema
 #print axioms LeanLab.Riemann.xiKernelLogConcavityExternalAudit_endpoint
+#print axioms LeanLab.Riemann.hasDerivAt_deBruijnNewmanPhi
+#print axioms LeanLab.Riemann.hasDerivAt_deBruijnNewmanPhiDeriv
+#print axioms LeanLab.Riemann.deBruijnNewmanPhiSecond_mul_phi_sub_deriv_sq_neg
