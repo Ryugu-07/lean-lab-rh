@@ -2555,3 +2555,6 @@ This gives `rh_frontier_delta=0`, `route_infrastructure_delta=1`, and `engineeri
 Global continuation, global injectivity, adjacent `2*pi*i` saddle images, and Boyd equation `(15)`
 remain open. The next exact gate is the real-ray monotonicity and inverse/change-of-variables
 interface, followed by an explicit location of the first complex branch obstruction.
+
+Implementation commit `016fc4fd71e6b63c142714058547f8b2501fd3a5` passed public Lean Action CI
+run `29663109048`, build job `88128987815`, in `1m53s`.

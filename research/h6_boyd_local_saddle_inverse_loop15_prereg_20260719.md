@@ -6,7 +6,7 @@ Campaign: `FORMALIZATION-20260719-H6-BOYD-LOCAL-SADDLE-INVERSE-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_COMPILED; PUBLIC_IMPLEMENTATION_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_PASSED; CLOSURE_EVIDENCE_PENDING`
 
 ## Exact target
 
@@ -190,3 +190,6 @@ edited.
 - `reasoning_effort`: not exposed.
 - `loop_budget`: V4.1 has no numerical quota; serving token budget not exposed.
 - `global_goal`: H6-Q1 and the persistent RH Goal remain active.
+
+Implementation commit `016fc4fd71e6b63c142714058547f8b2501fd3a5` passed public Lean Action CI
+run `29663109048`, build job `88128987815`, in `1m53s`.
