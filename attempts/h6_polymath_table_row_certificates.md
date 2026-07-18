@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_9_IMPLEMENTATION_PUBLIC_CI_GREEN`
+Status: `ACTIVE_ROUTE_SELECTION_AFTER_LOOP_9`
 
 ## Target
 
@@ -53,7 +53,7 @@ output is imported. Every numerical fact must be independently re-proved in Lean
 | 6 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean inducts the adjacent raw shift to the exact finite identity and transports it through the source Gamma prefactor to `R_(0,0)=sum r_(0,n)+R_(0,N)`. Exact witnesses, standard-only axiom prints, scans, full build, and public implementation CI pass. | Attack the actual Titchmarsh `(2.10.1)--(2.10.6)` recurrence, Mellin, and analytic-continuation chain for `(xio)`; no abstract recurrence or half-plane substitute. |
 | 7 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves the full noninteger-domain `(xio)` identity from the actual `Phi(a)` contour, recurrences, slanted-ray Mellin/Fubini calculation, Gamma--zeta constants, logarithmic Gaussian parameter bounds, and identity-theorem continuation. Six witnesses, standard-only axiom prints, scans, full build, and public implementation CI pass. | Compose public `(htz)`, `(xio)`, and the finite source decomposition into exact Polymath equation `(39)`, including separate integrability and reflection transport. |
 | 8 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves tunable horizontal bounds for the raw contour and Gamma prefactor, separate Gaussian integrability of every actual residue and remainder term, centered-Gaussian sign symmetry, heat-evolution/Schwarz-reflection commutation, and the exact two-sum, two-remainder equation `(39)` for every `t>0`, `z.re!=0`, and `N`. Six exact witnesses, five selected standard-only axiom prints, scans, full build, public implementation CI, and public evidence CI pass. | Before the next proof attack, satisfy the outstanding contribution-self-report governance deliverables. Then attack the source contour shifts `(rtn-def)` and `(RTN-def)` before the effective estimates. |
-| 9 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves a uniform closed-strip bound for the actual raw contour, Gamma-prefactored residue, and remainder; kills both finite-rectangle vertical sides; passes both horizontal sides to Bochner full-line integrals; removes the real contour displacement by translation; and compiles the exact variance-two `(rtn-def)` and `(RTN-def)` endpoints for arbitrary complex shifts in the strict same-half-plane domain. Exact witnesses, standard-only axiom prints, scans, the full 8,714-job build, and public implementation CI pass. | Record evidence and closure CI, then attack the explicit term and remainder estimates in Polymath Propositions 6.1 and 6.3. The numerical certificates, H6-E/G8, and RH remain open. |
+| 9 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves a uniform closed-strip bound for the actual raw contour, Gamma-prefactored residue, and remainder; kills both finite-rectangle vertical sides; passes both horizontal sides to Bochner full-line integrals; removes the real contour displacement by translation; and compiles the exact variance-two `(rtn-def)` and `(RTN-def)` endpoints for arbitrary complex shifts in the strict same-half-plane domain. Exact witnesses, standard-only axiom prints, scans, the full 8,714-job build, public implementation CI, and public evidence CI pass. | Audit the exact statements and dependency order of Polymath Propositions 6.1 and 6.3, preregister one source-exact quantitative subedge, and require its public CI before new proof-source edits. The numerical certificates, H6-E/G8, and RH remain open. |
 
 ## Loop 4 preregistration
 
@@ -552,6 +552,8 @@ No Loop 9 proof source may be edited before this preregistration passes public L
   `lake build` passes all 8,714 jobs
 - `public_implementation_evidence`: commit `74946858f75e27b306cbf43042df74c447b18740`
   passed public CI run `29654348324`, build job `88105922988`, in `2m16s`
+- `public_evidence_backfill`: commit `03ccacba97674a8adabf5e2f5b9b6f810539000e`
+  passed public CI run `29654669529`, build job `88106762342`, in `1m35s`
 - `next_exact_gate`: audit and preregister the source-exact quantitative endpoints of Polymath
   Propositions 6.1 and 6.3, then prove the term and remainder estimates without replacing them by
   an abstract asymptotic statement

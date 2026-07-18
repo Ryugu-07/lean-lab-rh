@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_9_IMPLEMENTATION_PUBLIC_CI_GREEN`
+Status: `ACTIVE_ROUTE_SELECTION_AFTER_LOOP_9`
 
 ## Exact mathematical endpoint
 
@@ -764,3 +764,7 @@ Classification is `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=1` and
 gate is the quantitative term/remainder estimate pair in Propositions 6.1 and 6.3. Strict
 finite-sum certificates, finite RH through `3*10^12`, compact barrier winding, H6-E/G8, and RH
 remain open; the persistent RH Goal remains active.
+
+Evidence commit `03ccacba97674a8adabf5e2f5b9b6f810539000e` passed public Lean Action CI
+run `29654669529`, build job `88106762342`, in `1m35s`. Loop 9 is publicly checked and enters
+route selection for the Proposition 6.1/6.3 quantitative edge; H6-Q1 and the RH Goal remain active.

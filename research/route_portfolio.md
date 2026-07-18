@@ -2330,3 +2330,8 @@ scans, diff checks, and the full 8,714-job build pass. Implementation commit
 `hard_gap_delta=1` and `route_infrastructure_delta=1`. The next source gate is the explicit term
 and remainder estimate pair in Propositions 6.1 and 6.3; strict finite-sum certificates, finite RH,
 compact barrier winding, H6-E/G8, and RH remain open. H6-Q1 and the global RH Goal remain active.
+
+Evidence commit `03ccacba97674a8adabf5e2f5b9b6f810539000e` passed public CI run
+`29654669529`, build job `88106762342`, in `1m35s`. Loop 9 is publicly checked; the portfolio now
+selects the source-exact Proposition 6.1/6.3 quantitative edge while H6-Q1 and the RH Goal remain
+active.
