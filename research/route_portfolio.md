@@ -2261,3 +2261,15 @@ equation `(39)`; it is not started in this loop.
 
 Implementation commit `4be468094a7295778eb50082459f9927f8d0a484` passed public Lean Action CI
 run `29648023167`, build job `88089442767`, in `2m46s`.
+
+Loop 8 is preregistered as a `PROOF-ATTEMPT` on exact Polymath equation `(39)`. It defines the
+paper's heat-evolved residue and remainder terms as variance-two Gaussian integrals with shift
+`sqrt(t)*y/2`, and fixes the full two-sum, two-remainder expansion for every `t>0`, `z.re!=0`, and
+natural `N`. The proof must compose public `(htz)`, `(xio)`, and the finite decomposition, while
+separately proving horizontal Gaussian integrability and exact Schwarz-reflection transport.
+
+The first analytic risk is the missing subgaussian horizontal growth theorem for the actual
+Gamma-prefactored `r_(0,n)` and `R_(0,N)` functions; fixed-parameter contour integrability does not
+replace it. The next source gate after success is the pair of complex Gaussian contour shifts
+`(rtn-def)` and `(RTN-def)`. Public preregistration CI is required before any Loop 8 proof-source
+edit; H6-Q1 and the RH Goal remain active.

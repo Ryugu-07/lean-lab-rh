@@ -364,6 +364,66 @@ No Loop 7 proof source may be edited before this preregistration passes public L
 - `public_implementation_evidence`: commit `4be468094a7295778eb50082459f9927f8d0a484`
   passed public Lean Action CI run `29648023167`, build job `88089442767`, in `2m46s`
 
+## Loop 8 preregistration
+
+- `mode`: `PROOF-ATTEMPT`
+- `selection_basis`: Loop 7's declared `next_exact_gate`; Polymath equation `(39)` is the first
+  uncancelled source dependency after public `(htz)`, `(xio)`, and the finite `R_(0,0)`
+  decomposition, and it exposes the actual heat-evolved terms consumed by the effective estimates
+- `source_audit`: D.H.J. Polymath, arXiv `1904.12438v2`, source lines 487--524; local source
+  archive `/tmp/Polymath1904.12438v2.tar`, SHA-256
+  `1be3bc38d203ad0142f1c97c267c7deaa06b84c97716c9a1ec1f56456d826863`, and audited
+  `debruijn.tex`, SHA-256
+  `560a28fe31bec92dd793820222e9e73a1fc6958a08344033a946b2ccaba225e5`
+- `fixed_definitions`: with `gamma_2=gaussianReal(0,2)` and
+  `a_t(y)=((sqrt(t)/2*y : R) : C)`, define
+  `E_t(F)(s)=integral_y F(s+a_t(y)) d gamma_2(y)`,
+  `r_(t,n)=E_t(r_(0,n))`, and `R_(t,N)=E_t(R_(0,N))`; Schwarz reflection remains the compiled
+  `F^*(s)=conj(F(conj(s)))`
+- `fixed_endpoint`: for every real `t>0`, complex `z` with `z.re != 0`, and natural `N`, prove
+  `H_t(z)=sum_(n=1)^N r_(t,n)((1+i*z)/2)
+  +sum_(n=1)^N r_(t,n)^*((1-i*z)/2)
+  +R_(t,N)((1+i*z)/2)+R_(t,N)^*((1-i*z)/2)`
+- `proposed_lean_endpoint`: `deBruijnNewmanH_riemannSiegel_finite_expansion`, using exact
+  `Finset.range N` indexing and the source functions rather than an abstract decomposition
+- `forced_proof_spine`: use `(htz)` to expose the xi Gaussian integral; prove every shifted
+  parameter is noninteger from `z.re != 0`; rewrite pointwise by `(xio)` and both finite
+  decompositions; establish horizontal Gaussian integrability for every `r_(0,n)` and
+  `R_(0,N)` at fixed nonzero imaginary part; commute finite sums with the Bochner integral; then
+  prove that Gaussian heat evolution commutes with Schwarz reflection using conjugation and the
+  measure-preserving substitution `y -> -y`
+- `success_criterion`: the exact definitions, horizontal-integrability milestones,
+  reflection-commutation theorem, and fixed endpoint compile without target-equivalent premises,
+  with exact witnesses, selected standard-only axiom prints, empty forbidden scans, full build,
+  and public implementation/evidence CI
+- `falsification_criterion`: the variance-two change of variables produces a shift other than
+  `sqrt(t)*y/2`; the reflected arguments differ from `(1-i*z)/2`; pointwise `(xio)` crosses an
+  integer despite `z.re != 0`; one of the displayed source terms is not separately Gaussian
+  integrable; or the resulting finite expression differs from source equation `(39)`
+- `known_obstacles`: the public contour modules prove fixed-parameter integrability and parameter
+  holomorphy but not the required horizontal subgaussian growth; the Gamma prefactor must be
+  controlled in both real directions away from its integer poles; and reflection transport needs
+  an exact Gaussian negation/change-of-variables argument before integral conjugation is usable
+- `nearest_prior_attempt`: Loops 3, 6, and 7 separately proved `(htz)`, the finite source
+  decomposition, and `(xio)`; no prior theorem defines or proves integrability of the actual
+  `r_(t,n)` or `R_(t,N)` terms
+- `assumption_frontier_before`: `(htz)`, `(xio)` for every noninteger parameter, and the finite
+  `R_(0,0)` decomposition are public K0; equation `(39)`, horizontal Gaussian integrability, and
+  every effective estimate remain open
+- `anti_substitution_rule`: a theorem about the integral of the combined right-hand side, an
+  abstract heat-evolution operator supplied with integrability, a statement only at `N=0` or
+  `t=0`, or a theorem assuming equation `(39)` is not Loop 8 success
+- `proper_prefix_rule`: if the endpoint does not compile, retain only the strongest source-aligned
+  growth, integrability, or reflection milestone and record the first uncancelled dependency as
+  `PARTIAL / BLOCKER_EXPOSED`; helper theorem count is not success
+- `next_if_success`: attack the source contour-shift identities `(rtn-def)` and `(RTN-def)` for
+  the exact heat-evolved terms before the effective estimates in Propositions 6.1 and 6.3
+- `next_if_blocked`: record the first failed horizontal-growth, Gamma, reflection, or Bochner
+  interchange obligation and choose the next attack from that obstruction; H6-Q1 and the global
+  RH Goal remain active
+
+No Loop 8 proof source may be edited before this preregistration passes public Lean Action CI.
+
 ## Loop 3 preregistration
 
 - `mode`: `LITERATURE`

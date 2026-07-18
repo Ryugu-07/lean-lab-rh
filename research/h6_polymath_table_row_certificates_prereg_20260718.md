@@ -610,3 +610,53 @@ finite `R_(0,0)` decomposition, and `(htz)` into equation `(39)`.
 
 Implementation commit `4be468094a7295778eb50082459f9927f8d0a484` passed public Lean Action CI
 run `29648023167`, build job `88089442767`, in `2m46s`.
+
+## Loop 8 fixed Polymath equation `(39)` edge
+
+Loop 8 is a `PROOF-ATTEMPT` at Loop 7's declared next exact gate. The primary source is D.H.J.
+Polymath arXiv `1904.12438v2`, source lines 487--524. The local source archive
+`/tmp/Polymath1904.12438v2.tar` has SHA-256
+`1be3bc38d203ad0142f1c97c267c7deaa06b84c97716c9a1ec1f56456d826863`; its audited
+`debruijn.tex` has SHA-256
+`560a28fe31bec92dd793820222e9e73a1fc6958a08344033a946b2ccaba225e5`.
+
+Write `gamma_2=gaussianReal(0,2)`, `a_t(y)=sqrt(t)*y/2`, and
+
+```text
+E_t(F)(s) = integral_y F(s+a_t(y)) d gamma_2(y).
+```
+
+The fixed definitions are `r_(t,n)=E_t(r_(0,n))` and `R_(t,N)=E_t(R_(0,N))`, with the already
+compiled Schwarz reflection. For every `t>0`, `z.re!=0`, and natural `N`, the fixed endpoint is
+
+```text
+H_t(z) = sum_(n=1)^N r_(t,n)((1+i*z)/2)
+       + sum_(n=1)^N r_(t,n)^*((1-i*z)/2)
+       + R_(t,N)((1+i*z)/2) + R_(t,N)^*((1-i*z)/2).
+```
+
+This is source equation `(39)` after the paper's Gaussian variable is changed by `Y=2v`. The
+proposed Lean endpoint is `deBruijnNewmanH_riemannSiegel_finite_expansion`, with exact
+`Finset.range N` indexing.
+
+The mandatory proof starts from public `(htz)`, proves all horizontally shifted parameters are
+noninteger using `z.re!=0`, applies public `(xio)` and both public finite decompositions pointwise,
+and then justifies every integral split. In particular, it must prove separate horizontal
+Gaussian integrability of the actual `r_(0,n)` and `R_(0,N)` functions at fixed nonzero imaginary
+part. The reflected terms must be identified as the Schwarz reflections of the heat-evolved
+functions by conjugating the integral and using the exact measure-preserving substitution
+`y -> -y`.
+
+The first known obstacle is not finite algebra: existing modules prove fixed-parameter contour
+integrability and holomorphy, but no horizontal subgaussian bound for the Gamma-prefactored source
+terms. The proof must control the Gamma factor in both real directions away from its poles and
+combine it with the raw contour bound. A combined-integrand substitute, assumed integrability,
+`N=0`, `t=0`, or equation `(39)` as a premise is rejected.
+
+Success requires the exact endpoint and its growth, integrability, and reflection milestones,
+exact witnesses, standard-only axiom prints, clean forbidden scans, a full build, and public
+implementation/evidence CI. If blocked, only the strongest compiled source prefix is retained and
+the first uncancelled dependency is recorded. If successful, the next exact gate is the source
+contour-shift formulae `(rtn-def)` and `(RTN-def)` before Propositions 6.1 and 6.3. H6-Q1 and the
+persistent RH Goal remain active. No Loop 8 proof source may be edited before this preregistration
+passes public Lean Action CI.
