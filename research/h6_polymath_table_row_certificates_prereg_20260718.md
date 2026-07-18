@@ -979,3 +979,15 @@ global RH Goal remain active.
 Implementation commit `604199086831750112f5cbf189786860e8137755` passed public Lean Action CI
 run `29661356249`, build job `88124459774`, in `1m56s`. Loop 13 is publicly closed as
 `KNOWN_THEOREM_FORMALIZED`.
+
+Closure-evidence commit `ca039c09d2e241e6ff36900d2285dea90fd598d1` passed public Lean Action CI
+run `29661467295`, build job `88124766580`, in `1m34s`.
+
+## Loop 14 logarithmic-coordinate registration
+
+Loop 14 fixes the global substitution `t=exp(u)`: prove integrability on `R` of the phase kernel
+`exp(-x*(exp(u)-u-1))` for every `x>0` and rewrite the exact project scaled-Gamma integral in this
+coordinate. The implementation must use the audited one-dimensional Jacobian image theorem on
+`univ`, not assume endpoint convergence separately. Full details are in
+`research/h6_boyd_log_saddle_loop14_prereg_20260719.md`. H6-Q1 and the global RH Goal remain
+active.

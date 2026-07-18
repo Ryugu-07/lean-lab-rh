@@ -891,6 +891,25 @@ run `29660772447`, build job `88122935390`, in `1m56s`. Loop 13 proof-source wor
   Action CI run `29661356249`, build job `88124459774`, in `1m56s`. Loop 13 is publicly closed as
   `KNOWN_THEOREM_FORMALIZED`.
 
+## Loop 14 preregistration
+
+- `campaign`: `FORMALIZATION-20260719-H6-BOYD-LOG-SADDLE-INTEGRAL-01`
+- `mode`: `LITERATURE`
+- `fixed_subedge`: for every real `x>0`, prove integrability on the full real line of
+  `exp(-x*(exp(u)-u-1))` and rewrite the Loop 13 project scaled-Gamma integral in this coordinate.
+- `success_criterion`: use mathlib's one-dimensional Jacobian theorem globally with `f=exp` and
+  `s=univ`; compile exact checks, standard-only axiom audit, full build, and public CI.
+- `falsification_criterion`: the Jacobian weight/image or integrability transport leaves an
+  unproved endpoint premise.
+- `new_attack_angle`: use the measurable-image Jacobian identity directly, rather than manually
+  splitting the real axis and exchanging two improper limits.
+- `anti_substitution_rule`: equation `(15)`, effective `R2`, inverse-saddle analyticity, contour
+  rotation, unspecified asymptotics, and replacement Gamma functions remain forbidden premises.
+- `full_preregistration`: `research/h6_boyd_log_saddle_loop14_prereg_20260719.md`.
+- `global_goal`: H6-Q1 and the persistent RH Goal remain active.
+
+No Loop 14 proof source may be edited before this preregistration passes public Lean Action CI.
+
 ## Loop 3 preregistration
 
 - `mode`: `LITERATURE`

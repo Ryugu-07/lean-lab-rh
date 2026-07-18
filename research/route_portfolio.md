@@ -2510,3 +2510,12 @@ open and was not used. The next selected source-faithful edge is the logarithmic
 
 Implementation commit `604199086831750112f5cbf189786860e8137755` passed public Lean Action CI
 run `29661356249`, build job `88124459774`, in `1m56s`. Loop 13 is publicly closed.
+
+### Loop 14 logarithmic saddle-integral preregistration
+
+The next fixed edge is the global substitution `t=exp(u)`. For every `x>0`, it must prove
+integrability of `exp(-x*(exp(u)-u-1))` on the full real line and rewrite the exact Loop 13
+scaled-Gamma formula in that coordinate. The audited implementation path applies mathlib's
+one-dimensional Jacobian theorem on `univ`; this transports integrability and the integral itself
+without a manual two-endpoint limit exchange. Full preregistration is in
+`research/h6_boyd_log_saddle_loop14_prereg_20260719.md`.
