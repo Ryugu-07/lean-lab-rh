@@ -338,6 +338,30 @@ admitted.
 
 No Loop 7 proof source may be edited before this preregistration passes public Lean Action CI.
 
+## Loop 7 local accounting
+
+- `classification`: `KNOWN_THEOREM_FORMALIZED`
+- `compiled_endpoint`: `deBruijnNewmanRiemannSiegel_xio` proves, for every noninteger complex
+  `s`, the exact source identity
+  `(1/8)*riemannXi(s)=R_(0,0)(s)+R_(0,0)^*(1-s)`
+- `compiled_spine`: the actual Titchmarsh `Phi(a)` contour, `(2.10.2)--(2.10.4)`, the specialized
+  closed form, slanted-ray Mellin/Fubini and Gamma--zeta identification, the half-plane identity,
+  local-uniform logarithmic Gaussian domination, parameter differentiation of the raw contour,
+  and identity-theorem continuation on `C` minus the integers are all proved in Lean
+- `assumption_frontier_after`: `(xio)` is K0 for every noninteger `s`; no contour recurrence,
+  Mellin decomposition, analytic continuation, or equivalent form of the target is assumed
+- `hard_gap_after`: exact Polymath equation `(39)`, its effective remainder estimate, strict
+  finite-sum certificate, finite RH computation, compact barrier certificate, H6-E/G8, and RH
+  remain open
+- `hard_gap_delta`: 1
+- `route_infrastructure_delta`: 1
+- `local_audit`: the standalone endpoint module, six exact TargetChecks witnesses, and six
+  selected axiom prints pass; each selected theorem depends only on `propext`,
+  `Classical.choice`, and `Quot.sound`; forbidden scans and `git diff --check` are clean; the full
+  8,712-job build passes
+- `next_exact_gate`: combine public `(xio)`, the public finite decomposition, and public `(htz)`
+  into exact finite Polymath equation `(39)` before attacking the effective remainder estimate
+
 ## Loop 3 preregistration
 
 - `mode`: `LITERATURE`

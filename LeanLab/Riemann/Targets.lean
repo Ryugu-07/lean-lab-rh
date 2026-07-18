@@ -15,6 +15,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathHeatKernel
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelContour
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelShift
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelSum
+import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelXioContinuation
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -958,6 +959,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanRiemannSiegelR0N_finite_decomposition
       status := .proven
       note := "Loop 6 known-source finite algebra. Lean inducts from the public adjacent contour shift with exact Finset.range indexing and distributes the compiled completed-zeta prefactor. Titchmarsh (xio), the effective approximation, numerical certificates, H6-E/G8, and RH remain open; hard_gap_delta=0 and route_infrastructure_delta=1. Implementation 7ea4238b1f1159d5e59850406fa5b8d3bbebbca4 passed public CI run 29637745080, build job 88062926702, in 1m51s." },
+    { id := "H6.debruijn-newman.polymath-titchmarsh-xio"
+      tier := .tier2
+      title := "Prove the Titchmarsh--Polymath Riemann--Siegel identity"
+      statement :=
+        "For every noninteger complex s, prove (1/8)*riemannXi(s)=R_(0,0)(s)+R_(0,0)^*(1-s) from the actual Phi contour, Titchmarsh recurrences, slanted-ray Mellin/Fubini identity, exact Gamma constants, and analytic continuation."
+      leanName := some ``deBruijnNewmanRiemannSiegel_xio
+      status := .proven
+      note := "Loop 7 known-source formalization. Lean reconstructs Titchmarsh (2.10.1)--(2.10.6), proves local-uniform logarithmic Gaussian domination for parameter differentiation of the raw contour, and continues the half-plane identity on C minus the integers. This closes (xio), not the effective approximation, numerical certificates, Lambda<=1/5, H6-E/G8, or RH; hard_gap_delta=1 and route_infrastructure_delta=1." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

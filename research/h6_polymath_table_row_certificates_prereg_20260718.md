@@ -590,3 +590,20 @@ it is not Loop 7 success or RH progress. If successful, the next loop composes `
 finite decomposition, and `(htz)` into the exact Polymath equation (39). The H6-Q1 campaign and
 persistent RH Goal remain active. No Loop 7 proof source may be edited before this preregistration
 passes public Lean Action CI.
+
+## Loop 7 local checkpoint
+
+The fixed endpoint now compiles as `deBruijnNewmanRiemannSiegel_xio` for every noninteger complex
+`s`. The proof constructs Titchmarsh's actual `Phi(a)` contour and derives `(2.10.2)--(2.10.4)`,
+the specialized closed form, the slanted-ray Mellin/Fubini identity and Gamma--zeta factors, and
+the half-plane form of `(xio)`. It then proves a locally uniform logarithmic Gaussian majorant,
+differentiates the raw fixed contour in the complex parameter, establishes analyticity on the
+noninteger domain, and applies the identity theorem to obtain the requested global statement.
+
+Six exact witnesses pass. Six selected axiom prints contain only `propext`, `Classical.choice`,
+and `Quot.sound`; the forbidden scans and `git diff --check` are empty, and the full 8,712-job
+build passes. This is `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=1` and
+`route_infrastructure_delta=1`: the previously open source edge `(xio)` is now K0, while exact
+Polymath equation `(39)`, its effective remainder estimate, numerical certificates, H6-E/G8, and
+RH remain open. The next exact gate is the source-aligned composition of public `(xio)`, the
+finite `R_(0,0)` decomposition, and `(htz)` into equation `(39)`.

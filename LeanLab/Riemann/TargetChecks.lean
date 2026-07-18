@@ -14,6 +14,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathHeatKernel
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelContour
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelShift
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelSum
+import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelXioContinuation
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1972,5 +1973,50 @@ example (N : ℕ) (s : ℂ) :
       (∑ k ∈ Finset.range N, deBruijnNewmanRiemannSiegelR0Term (k + 1) s) +
         deBruijnNewmanRiemannSiegelR0N N s :=
   deBruijnNewmanRiemannSiegelR0N_finite_decomposition N s
+
+example (a : ℂ) :
+    deBruijnNewmanTitchmarshPhi (a + 1) -
+        deBruijnNewmanTitchmarshPhi a =
+      2 * Real.pi *
+        Complex.exp (Complex.I * Real.pi * (a ^ 2 + 1 / 4)) :=
+  deBruijnNewmanTitchmarshPhi_add_one_sub a
+
+example (a : ℂ) :
+    -Complex.exp (-2 * Real.pi * Complex.I * a) *
+        deBruijnNewmanTitchmarshPhi (a + 1) -
+      deBruijnNewmanTitchmarshPhi a =
+        2 * (Real.pi : ℂ) * Complex.I :=
+  deBruijnNewmanTitchmarshPhi_one_residue a
+
+example (a : ℂ) :
+    (1 + Complex.exp (-2 * Real.pi * Complex.I * a)) *
+        deBruijnNewmanTitchmarshPhi a =
+      -(2 * (Real.pi : ℂ) * Complex.I +
+        Complex.exp (-2 * Real.pi * Complex.I * a) *
+          (2 * Real.pi *
+            Complex.exp (Complex.I * Real.pi * (a ^ 2 + 1 / 4)))) :=
+  deBruijnNewmanTitchmarshPhi_eliminated a
+
+example {s : ℂ} (hs : 1 < s.re) :
+    Complex.Gamma s *
+        deBruijnNewmanRiemannSiegelReflect
+          (deBruijnNewmanRiemannSiegelRawIntegral 0) s =
+      Complex.Gamma s * riemannZeta s -
+        ∫ r : ℝ in Set.Ioi 0,
+          deBruijnNewmanTitchmarshMellinRemainderRayIntegrand s r :=
+  deBruijnNewmanTitchmarshMellin_two_contours hs
+
+example (N : ℕ) (s : ℂ) :
+    HasDerivAt (deBruijnNewmanRiemannSiegelRawIntegral N)
+      (∫ v : ℝ,
+        deBruijnNewmanRiemannSiegelLineIntegrandDerivative N s v) s :=
+  deBruijnNewmanRiemannSiegelRawIntegral_hasDerivAt N s
+
+example {s : ℂ} (hs : deBruijnNewmanRiemannSiegelIsNoninteger s) :
+    (1 / 8) * riemannXi s =
+      deBruijnNewmanRiemannSiegelR0N 0 s +
+        deBruijnNewmanRiemannSiegelReflect
+          (deBruijnNewmanRiemannSiegelR0N 0) (1 - s) :=
+  deBruijnNewmanRiemannSiegel_xio hs
 
 end LeanLab.Riemann

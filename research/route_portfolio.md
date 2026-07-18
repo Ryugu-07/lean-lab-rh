@@ -2241,3 +2241,20 @@ definitions. Titchmarsh `(2.10.1)--(2.10.6)` supplies a mandatory chain through 
 Mellin/Fubini on `1<re(s)`, and analytic continuation. A half-plane-only result or an abstract
 recurrence is only a proper prefix. Public preregistration CI is required before proof-source
 edits; the H6-Q1 campaign and RH Goal remain active.
+
+### Loop 7 local Titchmarsh--Polymath `(xio)` checkpoint
+
+Lean now proves `deBruijnNewmanRiemannSiegel_xio`, the exact identity
+`(1/8)*riemannXi(s)=R_(0,0)(s)+R_(0,0)^*(1-s)` for every noninteger complex `s`. The proof starts
+from Titchmarsh's actual `Phi(a)` contour, derives the two contour recurrences and eliminated form,
+specializes it, proves slanted-ray Mellin/Fubini and the exact Gamma--zeta constants on
+`1<re(s)`, and obtains the half-plane identity. A locally uniform logarithmic Gaussian bound then
+supports parameter differentiation of the raw contour; analyticity and the identity theorem on
+`C` minus the integers finish the continuation.
+
+Six exact witnesses, six selected standard-only axiom prints, forbidden scans,
+`git diff --check`, and the full 8,712-job build pass. This is `KNOWN_THEOREM_FORMALIZED`, with
+`hard_gap_delta=1` and `route_infrastructure_delta=1`. It closes the fixed `(xio)` source edge,
+not the effective approximation, numerical certificates, H6-E/G8, or RH. The next exact gate is
+the composition of public `(xio)`, the finite decomposition, and `(htz)` into finite Polymath
+equation `(39)`; it is not started in this loop.
