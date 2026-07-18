@@ -12,6 +12,7 @@ import LeanLab.Riemann.DeBruijnNewmanTableRowCertificates
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegel
 import LeanLab.Riemann.DeBruijnNewmanPolymathHeatKernel
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelContour
+import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelShift
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1925,5 +1926,38 @@ example (N : ℕ) (s : ℂ) :
           (nhdsWithin (n : ℂ) ({(n : ℂ)} : Set ℂ)ᶜ)
           (nhds ((n : ℂ) ^ (-s) / (2 * (Real.pi : ℂ) * Complex.I))) :=
   deBruijnNewmanRiemannSiegelContour_prefix N s
+
+example (N : ℕ) (s : ℂ) :
+    deBruijnNewmanRiemannSiegelPullbackCore N s 0 =
+      ((N + 1 : ℕ) : ℂ) ^ (-s) / (2 * (Real.pi : ℂ) * Complex.I) :=
+  deBruijnNewmanRiemannSiegelPullbackCore_zero N s
+
+example (N : ℕ) (s : ℂ) {T : ℝ}
+    (hT : deBruijnNewmanRiemannSiegelRotatedHalfWidth < T) :
+    (∫ v : ℝ in -T..T, deBruijnNewmanRiemannSiegelLineIntegrand N s v) -
+      (∫ v : ℝ in
+        deBruijnNewmanRiemannSiegelParameterStagger - T..
+          deBruijnNewmanRiemannSiegelParameterStagger + T,
+        deBruijnNewmanRiemannSiegelLineIntegrand (N + 1) s v) +
+      deBruijnNewmanRiemannSiegelRightEndIntegral N s T -
+      deBruijnNewmanRiemannSiegelLeftEndIntegral N s T =
+        ((N + 1 : ℕ) : ℂ) ^ (-s) :=
+  deBruijnNewmanRiemannSiegel_finite_adjacent_shift N s hT
+
+example (N : ℕ) (s : ℂ) :
+    Filter.Tendsto (deBruijnNewmanRiemannSiegelRightEndIntegral N s)
+      Filter.atTop (nhds 0) :=
+  tendsto_deBruijnNewmanRiemannSiegelRightEndIntegral N s
+
+example (N : ℕ) (s : ℂ) :
+    Filter.Tendsto (deBruijnNewmanRiemannSiegelLeftEndIntegral N s)
+      Filter.atTop (nhds 0) :=
+  tendsto_deBruijnNewmanRiemannSiegelLeftEndIntegral N s
+
+example (N : ℕ) (s : ℂ) :
+    deBruijnNewmanRiemannSiegelRawIntegral N s =
+      ((N + 1 : ℕ) : ℂ) ^ (-s) +
+        deBruijnNewmanRiemannSiegelRawIntegral (N + 1) s :=
+  deBruijnNewmanRiemannSiegelRawIntegral_adjacent_shift N s
 
 end LeanLab.Riemann

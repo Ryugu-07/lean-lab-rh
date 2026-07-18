@@ -465,3 +465,29 @@ passes public Lean Action CI.
 
 Loop 5 preregistration commit `25f6f43132acec6c3fc066cd800933b0f877455e` passed public Lean Action CI
 run `29635161693`, build job `88056094834`, in `2m15s`. Loop 5 proof-source edits are now admitted.
+
+## Loop 5 local checkpoint
+
+`DeBruijnNewmanPolymathRiemannSiegelShift.lean` now proves the fixed infinite endpoint
+
+```text
+I_N(s) = (N+1)^(-s) + I_(N+1)(s).
+```
+
+The proof pulls the source plane back by `w=(N+1)+d*z`. In these coordinates the crossed pole is
+at zero, the denominator's divided slope is nonzero throughout the open band, and a second
+`dslope` supplies a holomorphic removable remainder. The boundary integral splits into the exact
+principal part and a zero removable contribution.
+
+The implemented finite contour is an axis-aligned pullback rectangle. Consequently the upper
+source-line interval is staggered by `sqrt(2)/2` rather than using the literal equal-parameter
+parallelogram in the preregistration. Lean proves both fixed-length short-side integrals tend to
+zero by a uniform `exp(-pi*x^2/2)` bound, and proves both the symmetric lower interval and the
+staggered upper interval tend to their full-line Bochner integrals. Thus the fixed infinite
+endpoint is unchanged and exact; the finite-geometry deviation is recorded explicitly.
+
+Five exact witnesses, five selected standard-only axiom prints, forbidden scans,
+`git diff --check`, and the full 8,708-job build pass. The finite summation/prefactor
+decomposition, Titchmarsh `(xio)`, effective approximation, numerical certificates, H6-E/G8, and
+RH remain open. Classification is `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`.

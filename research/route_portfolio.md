@@ -2187,3 +2187,19 @@ Loop 5 proof-source edits.
 
 Loop 5 preregistration commit `25f6f43132acec6c3fc066cd800933b0f877455e` passed public CI run
 `29635161693`, build job `88056094834`, in `2m15s`; its fixed proof-source attack is now admitted.
+
+### Loop 5 local adjacent-shift checkpoint
+
+Lean now proves `deBruijnNewmanRiemannSiegelRawIntegral_adjacent_shift`, the exact identity
+`I_N(s)=(N+1)^(-s)+I_(N+1)(s)` for the actual source integrals. The complex-linear pullback centers
+the crossed integer, `dslope` constructs the holomorphic removable remainder, and the principal
+part contributes exactly one residue term. A pure Gaussian majorant kills the two short sides
+separately, while absolute integrability handles both long-side limits.
+
+The finite implementation uses a pullback rectangle and therefore a fixed stagger on the upper
+source interval, rather than the literal equal-parameter parallelogram named in preregistration.
+The stagger has no effect on the full-line limit; this geometric deviation is logged rather than
+hidden. The theorem is known-source infrastructure with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`. Five exact witnesses, five standard-only axiom prints, forbidden
+scans, `git diff --check`, and the full 8,708-job build pass locally. The next exact source edge is finite induction plus prefactor
+transport; `(xio)`, effective approximation, numerical certificates, H6-E/G8, and RH stay open.

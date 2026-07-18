@@ -49,6 +49,7 @@ output is imported. Every numerical fact must be independently re-proved in Lean
 | 2 | `LITERATURE` | Formalized the exact Theorem 1.3 normalization: source arguments, `log M_0`, `M_0`, both formulas for `alpha`, `M_t`, `B_t`, `b_n^t`, `N`, `gamma`, `s_*`, `kappa`, `f_t`, the displayed `e_A+e_B` and `e_C0` upper bounds, and their total. Lean proves the branch derivative on the lower half-plane, `exp(log M_0)=M_0`, `B_t!=0` for `x>0`, exact inclusion of the second-row final region in the theorem's parameter region, Corollary 1.4, and both general and exact-row final-region certificate consumers. Definition witnesses, seven theorem witnesses, seven standard-only axiom prints, forbidden scans, and the full 8,705-job build pass locally. The deterministic approximation inequality remains an unproved `Prop`. | Keep the campaign active. Loop 3 attacks the paper's first analytic identity `H_t(z)=integral H_0(z-i*sqrt(t)*Y) d gamma_2(Y)` and its exact xi-coordinate form. The existing compiled Gaussian theorem averages real translations and moves time backward; it cannot discharge this imaginary-shift forward representation. |
 | 3 | `LITERATURE` | Proved the exact complex MGF and absolute-exponential moment control for `gaussianReal(0,2)`, the imaginary-shift cosine multiplier `exp((r*u)^2)`, full product integrability, the general identity `integral H_t(z-i*r*Y)=H_(t+r^2)(z)`, the `r=sqrt(t)` reconstruction from `H_0`, and the exact `(htz)` xi-coordinate form. Five exact witnesses, five standard-only axiom prints, forbidden scans, and the full 8,706-job build pass locally. | Keep the campaign active. Loop 4 must confront the next source edge rather than add another heat wrapper: define the fixed `5*pi/4` infinite-line contour `R_(0,N)`, prove its integrability and residue shift, and reconstruct Titchmarsh `(xio)`/the finite `R_(0,0)` decomposition. The effective approximation and all numerical certificates remain open. |
 | 4 | `LITERATURE / PROOF-ATTEMPT` | `PARTIAL / BLOCKER_EXPOSED`. Lean now fixes the source direction and midpoint lines, proves branch-cut and integer-pole avoidance, a uniform denominator lower bound, exact Gaussian decay, a global integrable majorant for the actual raw line integrand, and the exact punctured-neighborhood residue `n^(-s)/(2*pi*i)` at every positive integer. The aggregate `deBruijnNewmanRiemannSiegelContour_prefix` compiles with five exact witnesses, five standard-only axiom prints, empty forbidden scans, and the full 8,707-job local build. The finite residue shift and `(xio)` were not proved, so this is route infrastructure with `hard_gap_delta=0`, not closure of Loop 4 or an RH progress claim. | Keep the campaign and RH Goal active. The first unclosed dependency is a continuous removable extension of the single-pole-subtracted kernel on each affine strip; then apply the Poincare homotopy theorem to a finite nonorthogonal parallelogram and prove its end-segment integrals vanish. Only after the finite residue shift closes should the attack advance to Titchmarsh's auxiliary recurrence and analytic continuation for `(xio)`. |
+| 5 | `LITERATURE / PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED` locally. Lean constructs the derivative-supplied removable pole subtraction, proves the exact finite one-pole contour identity, separately sends both fixed-length short sides to zero by a compiled Gaussian majorant, passes both long sides to the full Bochner integrals, and proves `deBruijnNewmanRiemannSiegelRawIntegral_adjacent_shift`. Five exact witnesses and five standard-only axiom prints pass. The finite contour uses a complex-linear pullback and a staggered upper truncation, not the literal equal-parameter parallelogram named in preregistration; both upper truncations have the same full-line limit, so the fixed infinite endpoint is unchanged. | Keep the campaign and RH Goal active. Next induct the adjacent identity to `I_0=sum_(1..N)n^(-s)+I_N`, transport it through the exact prefactor to `R_(0,0)=sum r_(0,n)+R_(0,N)`, and then attack the auxiliary recurrence and analytic continuation needed for `(xio)`. No Table 1 certificate or RH consequence is claimed. |
 
 ## Loop 4 preregistration
 
@@ -191,6 +192,35 @@ No Loop 5 proof source may be edited before this preregistration passes public L
 
 Loop 5 preregistration commit `25f6f43132acec6c3fc066cd800933b0f877455e` passed public Lean Action CI
 run `29635161693`, build job `88056094834`, in `2m15s`. Loop 5 proof-source edits are now admitted.
+
+## Loop 5 local accounting
+
+- `classification`: `KNOWN_THEOREM_FORMALIZED`
+- `compiled_endpoint`:
+  `deBruijnNewmanRiemannSiegelRawIntegral_adjacent_shift`, proving for every natural `N` and
+  complex `s` that `I_N(s)=(N+1)^(-s)+I_(N+1)(s)`
+- `compiled_spine`: the pullback denominator has only the crossed zero in the open band; `dslope`
+  supplies a nonvanishing divided denominator and a holomorphic removable remainder; the exact
+  principal part has coefficient `(N+1)^(-s)/(2*pi*i)`; the finite boundary integral is
+  `(N+1)^(-s)`; both short ends tend to zero under a pure Gaussian majorant; symmetric and
+  staggered long intervals both converge to the existing raw integrals
+- `finite_geometry_deviation`: instead of the literal equal-parameter affine parallelogram in the
+  preregistration, the conformal coordinate `w=(N+1)+d*z` uses an axis-aligned rectangle. This
+  staggers the upper source parameter by `sqrt(2)/2`. The stagger disappears in the full-line
+  limit, and the preregistered infinite identity is proved exactly. The deviation is retained here
+  for audit rather than silently described as the original finite contour.
+- `assumption_frontier_after`: the exact adjacent infinite shift is K0; no residue theorem,
+  abstract holomorphic remainder, tail limit, finite decomposition, or `(xio)` identity is assumed
+- `hard_gap_after`: finite induction and prefactor transport, Titchmarsh `(xio)`, the effective
+  approximation, strict finite-sum certificate, finite RH computation, compact barrier,
+  H6-E/G8, and RH remain open
+- `hard_gap_delta`: 0
+- `route_infrastructure_delta`: 1
+- `local_audit`: standalone module, Targets, five exact TargetChecks, and five selected axiom
+  prints pass; every selected theorem depends only on `propext`, `Classical.choice`, and
+  `Quot.sound`; forbidden scans and `git diff --check` are clean; the full 8,708-job build passes
+- `next_exact_gate`: prove the finite adjacent-shift induction and exact source-prefactor
+  decomposition before attempting Titchmarsh `(2.10.1)--(2.10.6)`
 
 ## Loop 3 preregistration
 

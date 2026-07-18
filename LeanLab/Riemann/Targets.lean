@@ -13,6 +13,7 @@ import LeanLab.Riemann.DeBruijnNewmanTableRowCertificates
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegel
 import LeanLab.Riemann.DeBruijnNewmanPolymathHeatKernel
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelContour
+import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelShift
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -940,6 +941,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanRiemannSiegelContour_prefix
       status := .proven
       note := "Loop 4 proper prefix of the known Titchmarsh--Polymath contour route. The fixed 5*pi/4 line geometry, branch control, uniform denominator bound, Gaussian majorant, absolute integrability, and exact punctured-neighborhood residue limits compile. The finite nonorthogonal contour shift, vanishing end segments, Titchmarsh equation (xio), Riemann--Siegel expansion, numerical final-region certificate, Lambda <= 0.2, H6-E/G8, and RH remain open. This is source infrastructure with hard_gap_delta=0. Implementation 7bb3101bc9ecc4698416ec6bfa5d296494a07a46 passed public CI run 29634900588, build job 88055411542, in 1m51s; evidence 0fcfbd510180161f82cd3ee2cc7b5f0e17c45fe0 passed run 29635011657, job 88055710345, in 1m52s." },
+    { id := "H6.debruijn-newman.polymath-riemann-siegel-adjacent-shift"
+      tier := .tier2
+      title := "Prove the adjacent infinite Riemann--Siegel contour shift"
+      statement :=
+        "For every natural N and complex s, prove the exact source identity I_N(s)=(N+1)^(-s)+I_(N+1)(s) by removable pole subtraction, a finite contour identity, Gaussian decay of both short ends, and absolute-integral limits on both long sides."
+      leanName := some ``deBruijnNewmanRiemannSiegelRawIntegral_adjacent_shift
+      status := .proven
+      note := "Loop 5 known-source contour infrastructure. A complex-linear pullback turns the crossed pole into c/z and the staggered finite source contour into an axis-aligned rectangle. Lean proves holomorphy of the dslope-supplied removable remainder, the exact finite one-pole identity, separate Gaussian vanishing of both short sides, and the infinite adjacent shift. The finite summation/prefactor transport, Titchmarsh (xio), effective approximation, numerical certificates, H6-E/G8, and RH remain open; hard_gap_delta=0 and route_infrastructure_delta=1." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

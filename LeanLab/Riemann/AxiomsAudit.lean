@@ -13,6 +13,7 @@ import LeanLab.Riemann.DeBruijnNewmanTableRowCertificates
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegel
 import LeanLab.Riemann.DeBruijnNewmanPolymathHeatKernel
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelContour
+import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelShift
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -533,3 +534,8 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.integrable_deBruijnNewmanRiemannSiegelLineIntegrand
 #print axioms LeanLab.Riemann.deBruijnNewmanRiemannSiegelKernel_hasResidue
 #print axioms LeanLab.Riemann.deBruijnNewmanRiemannSiegelContour_prefix
+#print axioms LeanLab.Riemann.deBruijnNewmanRiemannSiegelPullbackCore_zero
+#print axioms LeanLab.Riemann.deBruijnNewmanRiemannSiegel_finite_adjacent_shift
+#print axioms LeanLab.Riemann.tendsto_deBruijnNewmanRiemannSiegelRightEndIntegral
+#print axioms LeanLab.Riemann.tendsto_deBruijnNewmanRiemannSiegelLeftEndIntegral
+#print axioms LeanLab.Riemann.deBruijnNewmanRiemannSiegelRawIntegral_adjacent_shift
