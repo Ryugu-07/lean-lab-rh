@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_10_PREREGISTERED`
+Status: `ACTIVE_LOOP_10_PARTIAL_LOCAL`
 
 ## Exact mathematical endpoint
 
@@ -816,3 +816,46 @@ actual base-term, alpha/Taylor, or Gaussian theorem may survive a failed full at
 `PARTIAL / BLOCKER_EXPOSED`, with the first remaining dependency named. No Loop 10 proof source may
 be edited before this preregistration passes public Lean Action CI. H6-Q1 and the RH Goal remain
 active.
+
+## Loop 10 local result
+
+The preregistration gate passed at commit `5a9d4ac09317314feba6e9d6482c2336ec941480`, public Lean
+Action CI run `29655041718`, build job `88107737514`, in `1m40s`, before proof-source edits.
+
+Loop 10 closes locally as `PARTIAL / BLOCKER_EXPOSED`, not as Proposition 6.1. The new production
+module proves the unconditional alpha derivative bound `norm(alpha'(s))<=1/(2*Im(s)-6)`, the exact
+`Im(alpha_n)>=-0.15` certificate, the same-open-half-plane condition, the uniform Taylor-segment
+bound, and
+
+```text
+norm(log M_0(s+d)-log M_0(s)-alpha(s)*d) <= norm(d)^2/(4*(T-3.08)).
+```
+
+It also identifies the exact central term
+`M_t(s)*b_n^t/n^(s+(t/2)*alpha(s))`, bounds the displacement square, evaluates the variance-two
+Gaussian quadratic exponential, and compiles source equation `(ax)` with denominator `T-3.33`.
+
+For the remaining prefactor, Lean proves the exact identity
+
+```text
+R_2(z) = Gamma(z)/GammaStirlingMain(z) - 1 - 1/(12*z)
+```
+
+and every subsequent branch and arithmetic conversion from
+
+```text
+norm(R_2(z)) <= (41/2000)/norm(z)^2
+```
+
+to the source relative-error constant `0.246` and logarithmic-error constant `0.33`. The displayed
+Boyd effective remainder itself remains unproved and is now the single first open analytic
+obligation. Therefore the full `deBruijnNewmanRiemannSiegelHeatTerm_effective_estimate` endpoint,
+Proposition 6.1, and all Table 1 certificates remain open. No conditional consumer of the Boyd
+bound is promoted to an unconditional premise.
+
+The exact TargetChecks, ten selected axiom prints, forbidden-token scan, `git diff --check`, and
+the full 8,715-job build pass. The selected declarations depend only on `propext`,
+`Classical.choice`, and `Quot.sound`. The local inventory found Gamma recurrence, integrals,
+holomorphy, coarse strip bounds, and a digamma series, but no existing effective `0.0205` complex
+Stirling remainder. Loop 11 must preregister a direct proof of that inequality from an explicit
+Boyd-type remainder representation. H6-Q1 and the global RH Goal remain active.

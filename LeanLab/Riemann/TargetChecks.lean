@@ -17,6 +17,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelSum
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelXioContinuation
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatExpansion
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatContourShift
+import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatTermEstimate
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2094,5 +2095,38 @@ example (n : ℕ) (hn : 0 < n) {t : ℝ} (ht : 0 < t) (alpha s : ℂ)
                 (((t / 2 : ℝ) : ℂ) * alpha))
           ∂ProbabilityTheory.gaussianReal 0 2 :=
   deBruijnNewmanRiemannSiegelHeatTerm_contour_shift n hn ht alpha s hhalf
+
+example {s : ℂ} (hs : 3 < s.im) :
+    ‖deBruijnNewmanPolymathAlphaPrime s‖ ≤ 1 / (2 * s.im - 6) :=
+  deBruijnNewmanPolymathAlphaPrime_norm_le hs
+
+example (sigma T t : ℝ) (n : ℕ) (y : ℝ)
+    (hT : 10 ≤ T) (ht0 : 0 ≤ t) (ht1 : t ≤ 1 / 2) :
+    ‖deBruijnNewmanPolymathLogM0
+          (deBruijnNewmanPolymathTermLinePoint sigma T t n y 1) -
+        deBruijnNewmanPolymathLogM0
+          (deBruijnNewmanPolymathTermPoint sigma T) -
+        deBruijnNewmanPolymathAlpha
+            (deBruijnNewmanPolymathTermPoint sigma T) *
+          deBruijnNewmanPolymathTermDisplacement sigma T t n y‖ ≤
+      ‖deBruijnNewmanPolymathTermDisplacement sigma T t n y‖ ^ 2 /
+        (4 * (T - 77 / 25)) :=
+  deBruijnNewmanPolymathTerm_logM0_taylor_remainder_le
+    sigma T t n y hT ht0 ht1
+
+example {t T : ℝ} (ht0 : 0 ≤ t) (ht1 : t ≤ 1 / 2) (hT : 10 ≤ T) :
+    (∫ y : ℝ,
+        Real.exp (t * y ^ 2 / (8 * (T - 77 / 25)))
+          ∂ProbabilityTheory.gaussianReal 0 2) ≤
+      Real.exp (t / (4 * (T - 333 / 100))) :=
+  deBruijnNewmanPolymathTerm_gaussian_error_le ht0 ht1 hT
+
+example {z : ℂ} (hzNorm : 1 ≤ ‖z‖)
+    (hR2 : ‖deBruijnNewmanPolymathGammaStirlingR2 z‖ ≤
+      (41 / 2000 : ℝ) / ‖z‖ ^ 2) :
+    ∃ e : ℂ,
+      Complex.Gamma z / deBruijnNewmanPolymathGammaStirlingMain z = 1 + e ∧
+      ‖e‖ ≤ 1 / (12 * (‖z‖ - 123 / 500)) :=
+  deBruijnNewmanPolymath_relative_stirling_of_R2_bound hzNorm hR2
 
 end LeanLab.Riemann

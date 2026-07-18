@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_10_PREREGISTERED`
+Status: `ACTIVE_LOOP_10_PARTIAL_LOCAL`
 
 ## Target
 
@@ -54,7 +54,7 @@ output is imported. Every numerical fact must be independently re-proved in Lean
 | 7 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves the full noninteger-domain `(xio)` identity from the actual `Phi(a)` contour, recurrences, slanted-ray Mellin/Fubini calculation, Gamma--zeta constants, logarithmic Gaussian parameter bounds, and identity-theorem continuation. Six witnesses, standard-only axiom prints, scans, full build, and public implementation CI pass. | Compose public `(htz)`, `(xio)`, and the finite source decomposition into exact Polymath equation `(39)`, including separate integrability and reflection transport. |
 | 8 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves tunable horizontal bounds for the raw contour and Gamma prefactor, separate Gaussian integrability of every actual residue and remainder term, centered-Gaussian sign symmetry, heat-evolution/Schwarz-reflection commutation, and the exact two-sum, two-remainder equation `(39)` for every `t>0`, `z.re!=0`, and `N`. Six exact witnesses, five selected standard-only axiom prints, scans, full build, public implementation CI, and public evidence CI pass. | Before the next proof attack, satisfy the outstanding contribution-self-report governance deliverables. Then attack the source contour shifts `(rtn-def)` and `(RTN-def)` before the effective estimates. |
 | 9 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves a uniform closed-strip bound for the actual raw contour, Gamma-prefactored residue, and remainder; kills both finite-rectangle vertical sides; passes both horizontal sides to Bochner full-line integrals; removes the real contour displacement by translation; and compiles the exact variance-two `(rtn-def)` and `(RTN-def)` endpoints for arbitrary complex shifts in the strict same-half-plane domain. Exact witnesses, standard-only axiom prints, scans, the full 8,714-job build, public implementation CI, and public evidence CI pass. | Audit the exact statements and dependency order of Polymath Propositions 6.1 and 6.3, preregister one source-exact quantitative subedge, and require its public CI before new proof-source edits. The numerical certificates, H6-E/G8, and RH remain open. |
-| 10 | `PROOF-ATTEMPT` | Preregistered the exact Proposition 6.1 relative-error estimate for the actual positive-index heat residue at arbitrary real `sigma`, `T>10`, and `0<t<=1/2`. The source epsilon, multiplicative error witness, complex power, and actual project functions are fixed. Source audit identifies the explicit complex Stirling remainder as the first missing dependency. | Commit only the preregistration and require public CI. After green CI, attack Lemma 5.1(v) and the actual `r_(0,n)`-to-`M_0 n^(-s)` relative error before Taylor/Gaussian closure. |
+| 10 | `PROOF-ATTEMPT` | `PARTIAL / BLOCKER_EXPOSED` locally. Lean proves the upper-half-plane alpha derivative and sharp norm bound, `Im(alpha_n)>=-0.15`, legal same-half-plane transport, the exact second-order `log M_0` Taylor bound, the displacement-square estimate, the source main-term identity, equation `(ax)`, and every branch conversion from a Boyd `R_2` bound through the `0.246` relative-error and `0.33` logarithmic-error constants. The full Proposition 6.1 endpoint is not proved. | Publicly check the retained prefix, close Loop 10 without a Proposition 6.1 claim, and preregister Loop 11 on the single remaining first obligation `norm R_2(z)<=0.0205/norm(z)^2`. |
 
 ## Loop 4 preregistration
 
@@ -614,6 +614,49 @@ No Loop 9 proof source may be edited before this preregistration passes public L
   H6-Q1 obstruction map and change the attack angle without pausing the global RH Goal
 
 No Loop 10 proof source may be edited before this preregistration passes public Lean Action CI.
+
+## Loop 10 local accounting
+
+- `preregistration_gate`: commit `5a9d4ac09317314feba6e9d6482c2336ec941480` passed public Lean
+  Action CI run `29655041718`, build job `88107737514`, in `1m40s`, before proof-source edits
+- `classification`: `PARTIAL / BLOCKER_EXPOSED`
+- `success_criterion_result`: failed; the actual
+  `deBruijnNewmanRiemannSiegelHeatTerm_effective_estimate` endpoint does not compile because the
+  Boyd effective `R_2` estimate has not been proved
+- `compiled_alpha_prefix`: `deBruijnNewmanPolymathAlphaPrime_norm_le`,
+  `deBruijnNewmanPolymathAlphaN_im_ge_neg_three_twentieths`,
+  `deBruijnNewmanPolymathTerm_sameOpenHalfPlane`, and the uniform line-segment alpha-prime and
+  alpha-difference bounds
+- `compiled_taylor_prefix`: `deBruijnNewmanPolymathTerm_logM0_taylor_remainder_le` gives the exact
+  source factor `norm(d)^2/(4*(T-3.08))`; the factor `1/2` is obtained from interval integration
+- `compiled_term_prefix`: `deBruijnNewmanPolymathTermDisplacement_norm_sq_le` and
+  `deBruijnNewmanPolymathTermMain_eq` identify the exact source displacement and central
+  `M_t*b_n^t/n^(s+(t/2)*alpha(s))` factor
+- `compiled_gaussian_prefix`: `integral_exp_sq_gaussianReal_two`,
+  `inv_sqrt_one_sub_le_exp`, and `deBruijnNewmanPolymathTerm_gaussian_error_le` prove source
+  equation `(ax)` with `T-3.33` in the project's variance-two normalization
+- `compiled_stirling_reduction`: the actual Riemann--Siegel prefactor is
+  `M_0(s)*exp(prefactorError(s))`; its ratio is exactly
+  `Gamma(s/2)/GammaStirlingMain(s/2)`. Lean proves the complete conditional chain
+  `norm R_2(z)<=0.0205/norm(z)^2 -> relative radius 1/(12*(norm(z)-0.246)) -> logarithmic radius
+  1/(6*(norm(s)-0.66))`
+- `first_open_obligation`: prove, on the source region needed at `z=s/2`,
+  `norm (Gamma(z)/GammaStirlingMain(z)-1-1/(12*z)) <= (41/2000)/norm(z)^2`; this is the Boyd
+  effective steepest-descent remainder, not a branch or elementary-arithmetic obligation
+- `local_inventory_result`: Mathlib and the vendored Gamma files provide recurrence, integral,
+  holomorphy, coarse strip bounds, and a digamma series, but no theorem with this effective
+  `0.0205` remainder
+- `assumption_frontier_after`: no theorem requiring the unproved `R_2` inequality is admitted as
+  K0; only the unconditional prefix and explicit conditional reduction may be reused
+- `hard_gap_delta`: 0
+- `route_infrastructure_delta`: 1
+- `local_mechanical_audit`: standalone module, production import, exact TargetChecks, ten selected
+  axiom prints, forbidden-token scan, `git diff --check`, and the full 8,715-job build pass;
+  selected declarations depend only on `propext`, `Classical.choice`, and `Quot.sound`
+- `next_exact_gate`: Loop 11 must preregister and attack the displayed Boyd `R_2` inequality from
+  an explicit integral or steepest-descent remainder representation; a theorem assuming that
+  inequality, an asymptotic expansion without constants, or a real-axis-only bound is not success
+- `global_goal`: active
 
 ## Loop 3 preregistration
 

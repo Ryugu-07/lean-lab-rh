@@ -2356,3 +2356,29 @@ deferred because it additionally depends on the absent Arias de Reyna Propositio
 named quantitative dependency and is recorded as `PARTIAL / BLOCKER_EXPOSED`. Public
 preregistration CI is required before proof-source edits; H6-Q1 and the global RH Goal remain
 active.
+
+### Loop 10 local Proposition 6.1 checkpoint
+
+The preregistration commit `5a9d4ac09317314feba6e9d6482c2336ec941480` passed public CI run
+`29655041718`, build job `88107737514`, before source edits. The full Proposition 6.1 endpoint did
+not compile, so the result is `PARTIAL / BLOCKER_EXPOSED` with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`.
+
+The retained production prefix is source-exact. Lean proves the upper-half-plane alpha derivative
+and `1/(2*Im(s)-6)` norm bound, `Im(alpha_n)>=-0.15`, legal use of `(rtn-def)`, the full
+line-segment alpha bound, the second-order `log M_0` Taylor remainder with denominator
+`4*(T-3.08)`, the displacement-square estimate, and the exact source central term. It also proves
+the exact variance-two Gaussian quadratic moment and equation `(ax)` with denominator `T-3.33`.
+
+The actual Riemann--Siegel prefactor is identified as `M_0(s)*exp(error(s))`, with ratio exactly
+`Gamma(s/2)/GammaStirlingMain(s/2)`. Every conversion after Boyd is compiled: the bound
+`norm R_2(z)<=0.0205/norm(z)^2` gives the source relative-error radius with `0.246`, then the
+principal-log radius with `0.33`. The Boyd bound itself is not proved and no theorem conditional on
+it is treated as K0. Exact TargetChecks, ten selected standard-only axiom prints, clean scans and
+diff check, and the full 8,715-job build pass.
+
+The next route is a direct `PROOF-ATTEMPT` on that one displayed `R_2` inequality, using an explicit
+effective integral or steepest-descent remainder representation. Existing local Gamma recurrence,
+integral, holomorphy, strip-bound, and digamma-series files do not supply the required constant.
+Proposition 6.1, Proposition 6.3, the Table 1 certificates, H6-E/G8, and RH remain open; H6-Q1 and
+the global RH Goal remain active.
