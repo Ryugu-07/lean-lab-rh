@@ -289,6 +289,55 @@ admitted.
 - `public_implementation_evidence`: commit `7ea4238b1f1159d5e59850406fa5b8d3bbebbca4`
   passed public Lean Action CI run `29637745080`, build job `88062926702`, in `1m51s`
 
+## Loop 7 preregistration
+
+- `mode`: `PROOF-ATTEMPT`
+- `selection_basis`: Loop 6's declared `next_exact_gate`; Titchmarsh `(2.10.1)--(2.10.6)` is the
+  first uncancelled source dependency between the public finite `R_(0,0)` decomposition and the
+  Polymath heat expansion
+- `source_audit`: Titchmarsh--Heath-Brown, second edition, Section 2.10, pages 25--27, local audit
+  copy `/tmp/TitchmarshZeta.pdf`, SHA-256
+  `ee495ba7e6b7af4722317baa79087881c16f648cb8af72843eb869c7497a03d0`; Polymath arXiv
+  `1904.12438`, equation (36) and definitions (37)--(38), local audit copy
+  `/tmp/Polymath1904.12438.pdf`, SHA-256
+  `60d0d2d381227d32f98535a5c43dedb86e333a9006d6819f0bdebdd734085603`
+- `fixed_endpoint`: for every noninteger complex `s`, prove the exact project/source identity
+  `(1/8)*riemannXi(s) = R_(0,0)(s) + R_(0,0)^*(1-s)`, where `R_(0,0)`, Schwarz reflection,
+  principal complex power, line orientation, and every prefactor are the already compiled source
+  definitions
+- `forced_source_spine`: define Titchmarsh's actual `Phi(a)` contour from `(2.10.1)`; prove its
+  Gaussian integrability, the translation identity `(2.10.2)`, the one-period contour/residue
+  identity `(2.10.3)`, and the eliminated closed form `(2.10.4)`; specialize
+  `a=i*z/(2*pi)+1/2`; justify the slanted-ray Mellin integral and Fubini for `1<re(s)`; identify
+  the Gamma and zeta factors; then prove the analytic dependence and continuation needed to reach
+  every noninteger `s`
+- `success_criterion`: the exact source-aligned theorem
+  `deBruijnNewmanRiemannSiegel_xio` compiles without carrying `(xio)` or an equivalent contour
+  decomposition as a premise, with exact milestone witnesses, selected standard-only axiom
+  prints, empty forbidden scans, full build, and public implementation/evidence CI
+- `falsification_criterion`: the Titchmarsh-to-Polymath change of variables gives a different line
+  orientation, branch, sign, or `1/8` normalization; the residue relation has the opposite sign;
+  the Mellin/Fubini integral fails on `1<re(s)`; or the two sides cannot be shown analytic on a
+  domain supporting the required continuation without assuming the target
+- `known_obstacles`: Mathlib has no packaged residue theorem; the slanted double integral needs a
+  source-specific integrable majorant; analytic dependence of the infinite raw contour integral
+  requires a locally uniform logarithmic Gaussian bound; and the final domain excludes all
+  integers because the two separately presented Gamma-prefactored terms are meromorphic there
+- `anti_substitution_rule`: an abstract `Phi` satisfying the recurrences, an assumed contour
+  shift, an assumed Mellin identity, a theorem only for `1<re(s)`, a detached functional-equation
+  restatement, or a theorem assuming `(xio)` is not Loop 7 success
+- `proper_prefix_rule`: if the full endpoint does not compile, retain only the strongest source-
+  aligned milestone actually proved by Lean and record the first uncancelled dependency; such a
+  result is `PARTIAL / BLOCKER_EXPOSED`, never Loop 7 success or RH progress
+- `next_if_success`: combine `(xio)` with the public finite decomposition and the public heat
+  kernel `(htz)` to prove the exact finite Polymath equation (39) before attacking its effective
+  remainder estimate
+- `next_if_blocked`: record the first failed contour, Fubini, Mellin, or analytic-continuation
+  obligation and choose the next attack from that exact obstruction; the H6-Q1 campaign and
+  persistent RH Goal remain active
+
+No Loop 7 proof source may be edited before this preregistration passes public Lean Action CI.
+
 ## Loop 3 preregistration
 
 - `mode`: `LITERATURE`

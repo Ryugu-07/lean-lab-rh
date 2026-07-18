@@ -2232,3 +2232,12 @@ certificates, H6-E/G8, and RH remain open.
 
 Implementation commit `7ea4238b1f1159d5e59850406fa5b8d3bbebbca4` passed public CI run
 `29637745080`, build job `88062926702`, in `1m51s`.
+
+Loop 7 is preregistered as a `PROOF-ATTEMPT` on the full Titchmarsh--Polymath `(xio)` identity,
+not on a free-standing helper. Its fixed endpoint is
+`(1/8)*riemannXi(s)=R_(0,0)(s)+R_(0,0)^*(1-s)` for every noninteger `s`, using the public source
+definitions. Titchmarsh `(2.10.1)--(2.10.6)` supplies a mandatory chain through the actual
+`Phi(a)` contour, two source-derived recurrences, the specialized closed form, slanted-ray
+Mellin/Fubini on `1<re(s)`, and analytic continuation. A half-plane-only result or an abstract
+recurrence is only a proper prefix. Public preregistration CI is required before proof-source
+edits; the H6-Q1 campaign and RH Goal remain active.

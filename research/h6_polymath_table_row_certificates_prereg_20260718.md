@@ -547,3 +547,46 @@ source auxiliary recurrence and analytic-continuation chain for `(xio)`.
 
 Implementation commit `7ea4238b1f1159d5e59850406fa5b8d3bbebbca4` passed public Lean Action CI
 run `29637745080`, build job `88062926702`, in `1m51s`.
+
+## Loop 7 fixed Titchmarsh--Polymath `(xio)` edge
+
+Loop 7 is a `PROOF-ATTEMPT` at the first uncancelled dependency after the public finite contour
+decomposition. The authoritative source audit uses Titchmarsh--Heath-Brown, second edition,
+Section 2.10, pages 25--27 (`/tmp/TitchmarshZeta.pdf`, SHA-256
+`ee495ba7e6b7af4722317baa79087881c16f648cb8af72843eb869c7497a03d0`) and Polymath arXiv
+`1904.12438`, equation (36) and definitions (37)--(38) (`/tmp/Polymath1904.12438.pdf`, SHA-256
+`60d0d2d381227d32f98535a5c43dedb86e333a9006d6819f0bdebdd734085603`).
+
+The fixed endpoint is the actual project/source statement, for every noninteger complex `s`,
+
+```text
+(1/8) * riemannXi(s) = R_(0,0)(s) + R_(0,0)^*(1-s).
+```
+
+Here `R_(0,0)`, principal complex power, the `5*pi/4` line orientation, Schwarz reflection, Gamma
+factor, and `1/8` normalization are the already compiled definitions. Binder presentation for
+"noninteger" and helper theorem names may change, but none of these mathematical data may change.
+
+Titchmarsh's source proof fixes the mandatory spine. Define the actual contour integral `Phi(a)`
+from `(2.10.1)`. Prove its Gaussian integrability, the translation recurrence `(2.10.2)`, the
+parallel-line one-residue relation `(2.10.3)`, and the eliminated formula `(2.10.4)`. Specialize
+`a=i*z/(2*pi)+1/2`, multiply by `z^(s-1)`, and integrate on the source ray of argument `-pi/4`.
+For `1<re(s)`, prove the double-integral majorant, Fubini inversion, ray Gamma identity, and zeta
+Mellin identity. Finally prove the locally uniform logarithmic Gaussian bounds needed for analytic
+dependence of the raw contour terms and perform the source analytic continuation to every
+noninteger `s`.
+
+Success is the exact theorem `deBruijnNewmanRiemannSiegel_xio`, exact milestone witnesses,
+selected standard-only axiom prints, empty forbidden scans, a full build, and public
+implementation/evidence CI. An abstract `Phi` supplied with its recurrences, any assumed contour
+shift or Mellin identity, a half-plane-only theorem, a detached functional-equation restatement,
+or `(xio)` as a premise is rejected. If a line orientation, branch, sign, residue, Mellin domain,
+normalization, or continuation condition disagrees with the source, that falsifies the proposed
+implementation route and must be recorded.
+
+A compiler-checked source milestone may be retained as a proper prefix if the full endpoint does
+not close, but it is then `PARTIAL / BLOCKER_EXPOSED`, with the first remaining dependency named;
+it is not Loop 7 success or RH progress. If successful, the next loop composes `(xio)`, the public
+finite decomposition, and `(htz)` into the exact Polymath equation (39). The H6-Q1 campaign and
+persistent RH Goal remain active. No Loop 7 proof source may be edited before this preregistration
+passes public Lean Action CI.
