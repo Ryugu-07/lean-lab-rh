@@ -743,5 +743,8 @@ and the full 8,703-job build pass. This is local closure pending public CI. The 
 region certificates, unconditional `Lambda<=0.2`, H6-E/G8, and RH remain open.
 
 Loop 10 implementation commit `8be7521652bc46d5f047c8d80fee7f908c04ec56` passed public Lean
-Action CI run `29628757912`, build job `88038314365`, in `2m26s`. Evidence backfill CI remains
-pending.
+Action CI run `29628757912`, build job `88038314365`, in `2m26s`.
+
+Evidence commit `3eed3f7f201a9e5cb78fb8aa13b1ef2fa4e56838` passed public Lean Action CI run
+`29628894145`, build job `88038690608`, in `2m21s`. H6-H2f is publicly closed as
+`KNOWN_THEOREM_FORMALIZED`; the persistent RH Goal returns to value-ranked route selection.

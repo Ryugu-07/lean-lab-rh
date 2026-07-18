@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260717-H6-POLYMATH-ZERO-FREE-CRITERION-01`
 
 Date: 2026-07-17
 
-Status: `PUBLIC_IMPLEMENTATION_CI_PASSED_PENDING_EVIDENCE_CI`
+Status: `PUBLICLY_CLOSED_KNOWN_THEOREM_FORMALIZED`
 
 ## Runtime Record
 
@@ -53,7 +53,10 @@ axiom prints, forbidden placeholder/declaration/resource/scratch scans, `git dif
 full 8,703-job build. Every selected new declaration depends only on `propext`,
 `Classical.choice`, and `Quot.sound`. Implementation commit
 `8be7521652bc46d5f047c8d80fee7f908c04ec56` passed public Lean Action CI run `29628757912`, build
-job `88038314365`, in `2m26s`. Evidence backfill CI remains pending.
+job `88038314365`, in `2m26s`.
+Evidence commit `3eed3f7f201a9e5cb78fb8aa13b1ef2fa4e56838` passed public Lean Action CI
+run `29628894145`, build job `88038690608`, in `2m21s`. The campaign is publicly closed as
+`KNOWN_THEOREM_FORMALIZED`; the persistent RH Goal remains active.
 
 Loop 9 local gates passed for the source module, Targets, exact TargetChecks, four selected axiom
 prints, forbidden scans, `git diff --check`, and the full 8,703-job build. The selected declarations
@@ -95,7 +98,6 @@ silently imported.
 - `hard_gap_after`: unchanged
 - `hard_gap_delta`: 0
 - `classification`: `KNOWN_THEOREM_FORMALIZED_LOCAL_SUCCESS`
-- `next_gate`: full local gates, public implementation CI, evidence backfill CI, then return to
-  value-ranked RH route selection; the three numerical region certificates remain independent
-  open candidates
+- `next_gate`: return to value-ranked RH route selection; the three numerical region certificates
+  remain independent open candidates
 - `persistent_goal`: active

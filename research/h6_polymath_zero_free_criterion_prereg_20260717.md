@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260717-H6-POLYMATH-ZERO-FREE-CRITERION-01`
 
 Mode: `LITERATURE`
 
-Status: `PUBLIC_IMPLEMENTATION_CI_PASSED_PENDING_EVIDENCE_CI`
+Status: `PUBLICLY_CLOSED_KNOWN_THEOREM_FORMALIZED`
 
 Public preregistration evidence:
 
@@ -248,4 +248,8 @@ implementation/evidence CI. It does not prove any of the three region predicates
 `Lambda<=0.2`, H6-E/G8, or RH.
 
 Implementation commit `8be7521652bc46d5f047c8d80fee7f908c04ec56` passed public Lean Action CI
-run `29628757912`, build job `88038314365`, in `2m26s`. Evidence backfill CI remains pending.
+run `29628757912`, build job `88038314365`, in `2m26s`.
+
+Evidence commit `3eed3f7f201a9e5cb78fb8aa13b1ef2fa4e56838` passed public Lean Action CI run
+`29628894145`, build job `88038690608`, in `2m21s`. The campaign is publicly closed as
+`KNOWN_THEOREM_FORMALIZED`; the persistent RH Goal remains active.
