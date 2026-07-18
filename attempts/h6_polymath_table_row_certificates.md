@@ -224,6 +224,42 @@ run `29635161693`, build job `88056094834`, in `2m15s`. Loop 5 proof-source edit
 - `public_implementation_evidence`: commit `580bc73436b1571bb6096d2c85071562481598d0`
   passed public Lean Action CI run `29637266988`, build job `88061673433`, in `2m2s`
 
+## Loop 6 preregistration
+
+- `mode`: `LITERATURE`
+- `selection_basis`: Loop 5's declared `next_exact_gate`; finite induction and source-prefactor
+  transport are the first uncancelled dependencies between the public adjacent contour shift and
+  Titchmarsh `(2.10.1)--(2.10.6)`
+- `fixed_raw_endpoint`: for every natural `N` and complex `s`, prove on the actual source
+  integrals
+  `I_0(s) = (sum k in Finset.range N, (k+1)^(-s)) + I_N(s)`
+- `fixed_prefactor_endpoint`: for every natural `N` and complex `s`, prove on the actual source
+  remainder and residue terms
+  `R_(0,0)(s) = (sum k in Finset.range N, r_(0,k+1)(s)) + R_(0,N)(s)`
+- `proof_obligations`: induct only from
+  `deBruijnNewmanRiemannSiegelRawIntegral_adjacent_shift`, close the `N=0` endpoint exactly, use
+  `Finset.sum_range_succ` for the successor indexing, and distribute the already defined exact
+  prefactor through the finite sum without introducing a new normalization
+- `success_criterion`: both exact identities compile under the expected theorem names
+  `deBruijnNewmanRiemannSiegelRawIntegral_finite_shift` and
+  `deBruijnNewmanRiemannSiegelR0N_finite_decomposition`, with exact TargetChecks witnesses,
+  selected standard-only axiom prints, empty forbidden scans, full build, and public
+  implementation/evidence CI
+- `falsification_criterion`: either the `N=0` or `N=1` specialization has an index/sign mismatch,
+  or the source definitions make the displayed prefactor decomposition false
+- `known_obstacles`: no analytic input remains on this edge; the remaining risks are natural-to-
+  complex casts, `Finset.range` successor normalization, and distribution of a complex scalar
+  through the finite sum
+- `anti_substitution_rule`: an abstract telescoping lemma, a theorem assuming either finite
+  identity, a detached `Finset` equality, or a raw-integral theorem without the exact
+  `R_(0,N)`/`r_(0,n)` transport is not Loop 6 success
+- `next_if_success`: attack the source auxiliary recurrence and analytic-continuation chain in
+  Titchmarsh `(2.10.1)--(2.10.6)` needed for equation `(xio)`
+- `next_if_blocked`: record the first exact cast, indexing, or normalization obstruction and the
+  strongest compiler-checked prefix; the H6-Q1 campaign and persistent RH Goal remain active
+
+No Loop 6 proof source may be edited before this preregistration passes public Lean Action CI.
+
 ## Loop 3 preregistration
 
 - `mode`: `LITERATURE`

@@ -494,3 +494,36 @@ RH remain open. Classification is `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_del
 
 Implementation commit `580bc73436b1571bb6096d2c85071562481598d0` passed public Lean Action CI
 run `29637266988`, build job `88061673433`, in `2m2s`.
+
+## Loop 6 fixed finite-decomposition edge
+
+Loop 6 follows Loop 5's declared next exact gate. It does not select a theorem by size or theorem
+count: finite summation and exact prefactor transport are the first uncancelled source dependencies
+between the public adjacent contour shift and Titchmarsh `(2.10.1)--(2.10.6)`.
+
+For every natural `N` and complex `s`, prove both actual-source identities
+
+```text
+I_0(s) = (sum k in Finset.range N, (k+1)^(-s)) + I_N(s),
+R_(0,0)(s) = (sum k in Finset.range N, r_(0,k+1)(s)) + R_(0,N)(s).
+```
+
+The proof must induct from `deBruijnNewmanRiemannSiegelRawIntegral_adjacent_shift`, close the
+`N=0` endpoint exactly, use the source indexing at the successor step, and transport the result
+through the already defined completed-zeta prefactor. An assumed finite shift, an abstract
+telescoping theorem detached from the source definitions, or the raw identity without the exact
+`R_(0,N)` decomposition does not count.
+
+Success requires the exact theorems
+`deBruijnNewmanRiemannSiegelRawIntegral_finite_shift` and
+`deBruijnNewmanRiemannSiegelR0N_finite_decomposition`, exact witnesses, selected standard-only
+axiom prints, empty forbidden scans, a full build, and public implementation/evidence CI.
+Falsification is an index or sign mismatch visible at `N=0` or `N=1`, or a mismatch between the
+displayed finite decomposition and the compiled source prefactor normalization. The known risks
+are casts, `Finset.range` successor normalization, and scalar distribution; no analytic premise is
+left on this edge.
+
+If successful, the next loop attacks the source auxiliary recurrence and analytic-continuation
+chain for Titchmarsh `(xio)`. If blocked, it records the first exact obstruction and strongest
+compiled prefix. The H6-Q1 campaign and persistent RH Goal remain active. No Loop 6 proof source
+may be edited before this preregistration passes public Lean Action CI.

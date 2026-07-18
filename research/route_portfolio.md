@@ -2206,3 +2206,12 @@ transport; `(xio)`, effective approximation, numerical certificates, H6-E/G8, an
 
 Implementation commit `580bc73436b1571bb6096d2c85071562481598d0` passed public CI run
 `29637266988`, build job `88061673433`, in `2m2s`.
+
+Loop 6 is preregistered at Loop 5's declared next exact gate. Its fixed endpoints are the actual
+finite source identities
+`I_0(s)=sum_(k<N)(k+1)^(-s)+I_N(s)` and
+`R_(0,0)(s)=sum_(k<N)r_(0,k+1)(s)+R_(0,N)(s)`. The proof must induct from the public adjacent
+shift and distribute the compiled exact prefactor; an abstract telescoping substitute or a raw
+identity without prefactor transport is rejected. Public preregistration CI is required before
+proof-source edits. Success opens the Titchmarsh `(2.10.1)--(2.10.6)` auxiliary recurrence and
+analytic-continuation edge for `(xio)`; the H6-Q1 campaign and RH Goal remain active.
