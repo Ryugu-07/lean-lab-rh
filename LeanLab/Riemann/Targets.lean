@@ -9,6 +9,7 @@ import LeanLab.Riemann.DeBruijnNewmanGeneralStrip
 import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanHermiteSplitting
 import LeanLab.Riemann.DeBruijnNewmanPolymathCriterion
+import LeanLab.Riemann.DeBruijnNewmanTableRowCertificates
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -889,6 +890,21 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanAllZerosReal_one_fifth_of_polymath_table_row
       status := .proven
       note := "Loop 10 closes the known Polymath Proposition 3.3 route end to end. The compact first-contact argument handles simple contacts by the divisor-regularized force inequality and repeated contacts by compiler-checked backward Hermite escape. The strict canopy, arbitrary-parameter all-real endpoint, and exact Table 1 second-row corollary at time 1/5 compile. This theorem remains conditional on the three explicitly stated region predicates; those numerical certificates, Lambda <= 0.2, H6-E/G8, and RH remain open. Implementation commit 8be7521652bc46d5f047c8d80fee7f908c04ec56 passed public Lean Action CI run 29628757912, build job 88038314365, in 2m26s. Evidence commit 3eed3f7f201a9e5cb78fb8aa13b1ef2fa4e56838 passed run 29628894145, build job 88038690608, in 2m21s." },
+    { id := "H6.debruijn-newman.polymath-table-row-certificates"
+      tier := .tier2
+      title := "Kernel-check the Polymath one-fifth table row"
+      statement :=
+        "Prove without hypotheses the initial, final, and barrier zero-free predicates at t0=93/500, X=5*10^12+194858, y0=16733/100000, and derive that every zero at time 1/5 is real."
+      status := .inProgress
+      note := "Campaign LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01 fixes the full known Lambda <= 0.2 reconstruction. The external Arb output is navigation evidence only. The finite RH computation, final-region Riemann-Siegel certificate, barrier certificate, H6-E/G8, and RH remain open." },
+    { id := "H6.debruijn-newman.polymath-initial-region-finite-rh-bridge"
+      tier := .tier2
+      title := "Transport finite-height RH to the Polymath initial region"
+      statement :=
+        "Prove that finite-height RH through T and X/2<=T imply the exact initial zero-free region, handle x=0 by imaginary-axis positivity, and instantiate the second Table 1 row using T=3*10^12."
+      leanName := some ``deBruijnNewmanPolymathInitialRegionZeroFree_table_row_of_rh_up_to_three_trillion
+      status := .proven
+      note := "Loop 1 compiles the exact H_0-to-xi coordinate and rational height coverage. This is a conditional source bridge only. It does not assert or import the Platt--Trudgian finite computation and does not prove any unconditional Table 1 region, Lambda <= 0.2, H6-E/G8, or RH." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `PREREGISTERED_PENDING_PUBLIC_CI`
+Status: `ACTIVE_LOOP_1_LOCAL_CHECKPOINT`
 
 ## Exact mathematical endpoint
 
@@ -149,3 +149,25 @@ architectures are recorded. It does not pause the persistent RH Goal.
 - `expected_route_infrastructure_delta`: 1
 
 No Lean proof source may be edited before this preregistration passes public Lean Action CI.
+
+## Preregistration evidence
+
+Commit `652c816cca25c6517fee9654511335ce912ac132` passed public Lean Action CI run
+`29629630395`, build job `88040634155`, in `2m16s`. Lean proof-source work began only after this
+gate passed.
+
+## Loop 1 local checkpoint
+
+`DeBruijnNewmanTableRowCertificates.lean` now compiles the exact finite-height predicate, full-RH
+projection, general initial-region transport, and the second-row specialization through
+`3*10^12`. The proof treats `x=0` by the existing imaginary-axis nonvanishing theorem and treats
+`x>0` through the exact `H_0`/xi coordinate, so no zero-ordinate case is hidden in the finite RH
+premise.
+
+The standalone module, `Targets.lean`, four exact `TargetChecks.lean` witnesses, three selected
+axiom prints, forbidden scans, and the full 8,704-job build pass locally. The selected axiom prints
+contain only `propext`, `Classical.choice`, and `Quot.sound`.
+
+This checkpoint is conditional. It does not prove `riemannHypothesisUpTo (3*10^12)`, any
+unconditional Table 1 region, `deBruijnNewmanAllZerosReal (1/5)`, H6-E/G8, or RH. Campaign status
+remains active; implementation and immutable evidence CI are pending.

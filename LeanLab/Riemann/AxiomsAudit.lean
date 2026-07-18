@@ -9,6 +9,7 @@ import LeanLab.Riemann.DeBruijnNewmanGeneralStrip
 import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanPolymathCriterion
 import LeanLab.Riemann.DeBruijnNewmanHermiteSplitting
+import LeanLab.Riemann.DeBruijnNewmanTableRowCertificates
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -508,3 +509,6 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.deBruijnNewmanH_zero_im_abs_lt_of_polymath_regions
 #print axioms LeanLab.Riemann.deBruijnNewmanAllZerosReal_add_half_sq_of_polymath_regions
 #print axioms LeanLab.Riemann.deBruijnNewmanAllZerosReal_one_fifth_of_polymath_table_row
+#print axioms LeanLab.Riemann.RiemannHypothesis.riemannHypothesisUpTo
+#print axioms LeanLab.Riemann.deBruijnNewmanPolymathInitialRegionZeroFree_of_riemannHypothesisUpTo
+#print axioms LeanLab.Riemann.deBruijnNewmanPolymathInitialRegionZeroFree_table_row_of_rh_up_to_three_trillion

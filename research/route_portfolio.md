@@ -2065,3 +2065,16 @@ Loop 1 attacks the exact finite-height-RH-to-initial-region transport, including
 requires all three unconditional certificates and the no-hypothesis `1/5` endpoint. Details are
 in `route_selection_post_h6_polymath_criterion_20260718.md` and
 `h6_polymath_table_row_certificates_prereg_20260718.md`.
+
+### Loop 1 local implementation checkpoint
+
+Preregistration commit `652c816cca25c6517fee9654511335ce912ac132` passed public Lean Action CI
+run `29629630395`. The exact finite-height predicate, full-RH projection, general initial-region
+transport, and second-row specialization through `3*10^12` now compile. The proof handles `x=0`
+using imaginary-axis nonvanishing and maps `x>0` to zeta ordinate `x/2` without assuming an
+external computation.
+
+The standalone module, exact target witnesses, selected axiom audit, forbidden scans, and full
+8,704-job build pass locally. This adds a conditional K0 bridge with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`; the finite RH certificate, final region, barrier, unconditional
+`Lambda<=1/5`, H6-E/G8, and RH remain open. Public implementation and evidence CI are pending.

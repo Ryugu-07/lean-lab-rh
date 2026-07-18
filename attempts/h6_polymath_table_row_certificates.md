@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `PREREGISTERED_PENDING_PUBLIC_CI`
+Status: `ACTIVE_LOOP_1_LOCAL_CHECKPOINT`
 
 ## Target
 
@@ -45,17 +45,40 @@ output is imported. Every numerical fact must be independently re-proved in Lean
 | loop | mode | result | next decision |
 | --- | --- | --- | --- |
 | 0 | `ROUTE_SELECTION / LITERATURE` | Fixed the full hypothesis-free Table 1 endpoint after source and external-artifact audit. Identified the three independent certificate layers and the exact first subedge from finite-height RH to the initial region. No proof source edited. | Commit and publicly build the preregistration. Only after green CI, begin Loop 1 on the exact finite-height transport; do not assert the external computation. |
+| 1 | `LITERATURE` | Compiled `riemannHypothesisUpTo`, the general finite-height-RH transport, and the exact Table 1 specialization through height `3*10^12`. The `x=0` boundary uses `deBruijnNewmanH_mul_I_ne_zero`; the positive branch derives the exact `x/2` zeta ordinate and contradicts the positive lower `y` boundary. Standalone checks, exact witnesses, standard-only axiom prints, forbidden scans, and the full 8,704-job build pass locally. This is conditional on `riemannHypothesisUpTo (3*10^12)` and proves no unconditional region. | Keep the campaign active. Loop 2 should attack the source-normalized effective Riemann--Siegel approximation and error consumer needed by the final and barrier certificates; do not build interval infrastructure detached from an exact `H_t` statement. The finite RH computation, final region, and barrier remain open. |
 
 ## Mechanical audit
 
-- exact module compilation: pending proof-source phase
-- `Targets.lean`: pending
-- `TargetChecks.lean` exact witness: pending
-- `AxiomsAudit.lean` and printed axioms: pending
-- forbidden token/declaration/resource scan: pending
+- exact module compilation: passed for `DeBruijnNewmanTableRowCertificates.lean`
+- `Targets.lean`: passed with one in-progress campaign target and one proven conditional subedge
+- `TargetChecks.lean` exact witness: four exact witnesses passed
+- `AxiomsAudit.lean` and printed axioms: the three new theorem prints contain only
+  `propext`, `Classical.choice`, and `Quot.sound`
+- forbidden token/declaration/resource scan: empty
 - witness audit: external numerical outputs rejected as witnesses
-- definition/source alignment: preregistered against Polymath and Platt--Trudgian
-- full `lake build`: pending preregistration commit CI
+- definition/source alignment: exact `H_0`/xi coordinate, positive ordinate, and Table 1 height
+  arithmetic compiled; Platt--Trudgian remains an unproved external computational theorem
+- full `lake build`: passed locally, 8,704 jobs
+
+## Loop 1 accounting
+
+- `compiled_theorems`:
+  `RiemannHypothesis.riemannHypothesisUpTo`,
+  `deBruijnNewmanPolymathInitialRegionZeroFree_of_riemannHypothesisUpTo`, and
+  `deBruijnNewmanPolymathInitialRegionZeroFree_table_row_of_rh_up_to_three_trillion`
+- `assumption_frontier_after`: the transport from finite RH through `3*10^12` to the Table 1
+  initial predicate is K0; the finite RH premise itself is not K0
+- `hard_gap_after`: all three unconditional Table 1 certificates, H6-E/G8, and RH remain open
+- `hard_gap_delta`: 0
+- `route_infrastructure_delta`: 1
+- `obstacle_record`: no finite-zero certificate or Turing completeness proof was obtained; the
+  final-region approximation and compact barrier certificate were not attacked in Loop 1
+
+## Public evidence
+
+- preregistration commit `652c816cca25c6517fee9654511335ce912ac132` passed public Lean Action CI
+  run `29629630395`, build job `88040634155`, in `2m16s`
+- implementation commit and public CI: pending
 
 ## Runtime record
 

@@ -8,6 +8,7 @@ import LeanLab.Riemann.DeBruijnNewmanGeneralStrip
 import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanPolymathCriterion
 import LeanLab.Riemann.DeBruijnNewmanHermiteSplitting
+import LeanLab.Riemann.DeBruijnNewmanTableRowCertificates
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1681,5 +1682,28 @@ example
     deBruijnNewmanAllZerosReal (1 / 5) :=
   deBruijnNewmanAllZerosReal_one_fifth_of_polymath_table_row
     hinit hfinal hbarrier
+
+example (T : ℝ) :
+    riemannHypothesisUpTo T ↔
+      ∀ s : ℂ, IsNontrivialZero s → 0 < s.im → s.im ≤ T → OnCriticalLine s :=
+  Iff.rfl
+
+example (hRH : RiemannHypothesis) (T : ℝ) :
+    riemannHypothesisUpTo T :=
+  RiemannHypothesis.riemannHypothesisUpTo hRH T
+
+example {t0 X y0 T : ℝ}
+    (hT : X / 2 ≤ T)
+    (hrad : 0 < y0 ^ 2 + 2 * t0)
+    (hfinite : riemannHypothesisUpTo T) :
+    deBruijnNewmanPolymathInitialRegionZeroFree t0 X y0 :=
+  deBruijnNewmanPolymathInitialRegionZeroFree_of_riemannHypothesisUpTo
+    hT hrad hfinite
+
+example
+    (hfinite : riemannHypothesisUpTo ((3 : ℝ) * 10 ^ 12)) :
+    deBruijnNewmanPolymathInitialRegionZeroFree
+      ((93 : ℝ) / 500) ((5 : ℝ) * 10 ^ 12 + 194858) ((16733 : ℝ) / 100000) :=
+  deBruijnNewmanPolymathInitialRegionZeroFree_table_row_of_rh_up_to_three_trillion hfinite
 
 end LeanLab.Riemann
