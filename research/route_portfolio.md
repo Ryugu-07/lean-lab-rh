@@ -2077,4 +2077,6 @@ external computation.
 The standalone module, exact target witnesses, selected axiom audit, forbidden scans, and full
 8,704-job build pass locally. This adds a conditional K0 bridge with `hard_gap_delta=0` and
 `route_infrastructure_delta=1`; the finite RH certificate, final region, barrier, unconditional
-`Lambda<=1/5`, H6-E/G8, and RH remain open. Public implementation and evidence CI are pending.
+`Lambda<=1/5`, H6-E/G8, and RH remain open. Implementation commit
+`ac96523034b36e2bfafdb007d6dcd95d8e89b625` passed public Lean Action CI run `29630082237`, build
+job `88041893271`, in `1m52s`; immutable evidence CI is pending.
