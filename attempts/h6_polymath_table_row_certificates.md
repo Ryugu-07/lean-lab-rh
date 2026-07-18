@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_11_PREREGISTERED`
+Status: `LOOP_11_LOCAL_PARTIAL_GLOBAL_GOAL_ACTIVE`
 
 ## Target
 
@@ -55,7 +55,7 @@ output is imported. Every numerical fact must be independently re-proved in Lean
 | 8 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves tunable horizontal bounds for the raw contour and Gamma prefactor, separate Gaussian integrability of every actual residue and remainder term, centered-Gaussian sign symmetry, heat-evolution/Schwarz-reflection commutation, and the exact two-sum, two-remainder equation `(39)` for every `t>0`, `z.re!=0`, and `N`. Six exact witnesses, five selected standard-only axiom prints, scans, full build, public implementation CI, and public evidence CI pass. | Before the next proof attack, satisfy the outstanding contribution-self-report governance deliverables. Then attack the source contour shifts `(rtn-def)` and `(RTN-def)` before the effective estimates. |
 | 9 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves a uniform closed-strip bound for the actual raw contour, Gamma-prefactored residue, and remainder; kills both finite-rectangle vertical sides; passes both horizontal sides to Bochner full-line integrals; removes the real contour displacement by translation; and compiles the exact variance-two `(rtn-def)` and `(RTN-def)` endpoints for arbitrary complex shifts in the strict same-half-plane domain. Exact witnesses, standard-only axiom prints, scans, the full 8,714-job build, public implementation CI, and public evidence CI pass. | Audit the exact statements and dependency order of Polymath Propositions 6.1 and 6.3, preregister one source-exact quantitative subedge, and require its public CI before new proof-source edits. The numerical certificates, H6-E/G8, and RH remain open. |
 | 10 | `PROOF-ATTEMPT` | `PARTIAL / BLOCKER_EXPOSED` locally. Lean proves the upper-half-plane alpha derivative and sharp norm bound, `Im(alpha_n)>=-0.15`, legal same-half-plane transport, the exact second-order `log M_0` Taylor bound, the displacement-square estimate, the source main-term identity, equation `(ax)`, and every branch conversion from a Boyd `R_2` bound through the `0.246` relative-error and `0.33` logarithmic-error constants. The full Proposition 6.1 endpoint is not proved. | Publicly check the retained prefix, close Loop 10 without a Proposition 6.1 claim, and preregister Loop 11 on the single remaining first obligation `norm R_2(z)<=0.0205/norm(z)^2`. |
-| 11 | `PROOF-ATTEMPT` | Preregistered the direct Boyd effective Stirling remainder on the full Polymath source domain `abs(Im z)>=1 or Re z>=1`, with the actual project `Gamma`, principal-power Stirling main term, `R_2`, and rational constant `41/2000`. The attack must derive a Boyd/Nemes integral or resurgence representation and its two half-plane bounds; the Loop 10 conditional consumer cannot be reused as the missing premise. | Commit only closure evidence and preregistration, require public CI, then attack the source-exact `R_2` theorem. No Loop 11 proof-source edit is allowed before green CI. |
+| 11 | `PROOF-ATTEMPT` | `PARTIAL / BLOCKER_EXPOSED` locally. Compiled the principal-branch scaled-Gamma continuation, exact imaginary-axis boundary norm, right-half-plane differentiability, conditional Phragmen--Lindelof propagation, mirror-ray/Stokes transfer, denominator bounds, and the strict `41/2000` constant comparison. The actual Boyd/Nemes `R_2` resurgence representation and contour rotation are not yet proved. | Retain the source-exact prefix after public CI. Next preregister equation `(15)` with absolute integrability/contour rotation as the first edge; separately close the Stieltjes inputs for the reciprocal scaled-Gamma growth hypothesis. |
 
 ## Loop 4 preregistration
 
@@ -714,6 +714,34 @@ No Loop 10 proof source may be edited before this preregistration passes public 
   active
 
 No Loop 11 proof source may be edited before this preregistration passes public Lean Action CI.
+
+Preregistration commit `14bdc45fa1a0e70a26e00e57b4bc8325d73d8ad5` passed public Lean Action CI
+run `29657566566`, build job `88114535307`, in `2m10s`. Loop 11 proof-source work is admitted.
+
+## Loop 11 local result
+
+- `classification`: `PARTIAL / BLOCKER_EXPOSED`
+- `source_audit`: Nemes arXiv `1310.0166` TeX SHA-256
+  `2ed05322fda9c874cc2f83e67ba1e5e59ef6bb342866eb112be05f943aec34d8`; equations `(15)`,
+  `(28)` and Lemma 2/Theorem 3 were checked against the implementation.
+- `compiled_prefix`: project-normalized scaled-Gamma conjugation and continuation; exact
+  imaginary-axis norm square and reciprocal boundary bound; differentiability in the open right
+  half-plane; continuity-on-closure reduction to the origin; mathlib Phragmen--Lindelof application
+  conditional only on origin continuity, subquadratic exponential growth, and eventual positive-real
+  boundedness; mirror-ray/Stokes transfer; `399/400` denominator separation; and the exact Boyd
+  majorant `<41/2000`.
+- `anti_substitution_audit`: no theorem assumes the target `R_2` bound, an equivalent effective
+  Stirling estimate, an unspecified big O, or a replacement Gamma function.
+- `first_remaining_edge`: prove Boyd/Nemes equation `(15)` as an absolutely integrable identity for
+  the actual `deBruijnNewmanPolymathGammaStirlingR2`, then justify the rotated contour used in
+  Theorem 3. The ray subproof additionally needs Stieltjes equation `(13)` to discharge the three
+  reciprocal scaled-Gamma growth interfaces.
+- `mechanical_audit`: standalone, exact TargetChecks, selected axiom prints, forbidden scan,
+  `git diff --check`, and the 8,716-job full build pass. Selected declarations use only `propext`,
+  `Classical.choice`, and `Quot.sound`.
+- `hard_gap_delta`: 0
+- `route_infrastructure_delta`: 1
+- `public_state`: implementation CI pending; H6-Q1 and the persistent RH Goal remain active.
 
 ## Loop 3 preregistration
 

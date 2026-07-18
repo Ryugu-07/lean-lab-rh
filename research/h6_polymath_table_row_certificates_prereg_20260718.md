@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_11_PREREGISTERED`
+Status: `LOOP_11_LOCAL_PARTIAL_GLOBAL_GOAL_ACTIVE`
 
 ## Exact mathematical endpoint
 
@@ -901,3 +901,25 @@ domain and must pass exact TargetChecks, standard-only axiom audit, forbidden sc
 and public implementation/evidence CI. A failed endpoint may retain only a source-exact prefix
 that removes one named analytic obligation. No Loop 11 proof source may be edited before this
 preregistration passes public Lean Action CI. H6-Q1 and the global RH Goal remain active.
+
+Preregistration commit `14bdc45fa1a0e70a26e00e57b4bc8325d73d8ad5` passed public Lean Action CI
+run `29657566566`, build job `88114535307`, in `2m10s`. Loop 11 proof-source work is admitted.
+
+## Loop 11 local outcome
+
+The full unconditional `deBruijnNewmanPolymathGammaStirlingR2_norm_le` endpoint did not compile.
+The retained source-exact module proves Nemes equation `(28)` in the project's principal branch,
+the exact imaginary-axis scaled-Gamma norm, the full imaginary-axis reciprocal bound, open
+right-half-plane differentiability, a conditional application of mathlib's right-half-plane
+Phragmen--Lindelof theorem, the reflected left-ray/Stokes estimate, the `399/400` denominator
+separation, and the final Boyd majorant `<41/2000`.
+
+This is `PARTIAL / BLOCKER_EXPOSED`, not the Boyd `R_2` theorem. The next exact source edge is
+Boyd/Nemes equation `(15)` as an absolutely integrable representation of the actual project
+remainder, followed by the Theorem 3 contour rotation. The conditional ray bound is also waiting
+on Stieltjes equation `(13)` to prove origin continuity, subquadratic growth, and eventual
+positive-real boundedness for `1/Gamma*`. No target-equivalent premise was introduced.
+
+The new module, exact TargetChecks, selected standard-only axiom prints, clean forbidden scan,
+`git diff --check`, and the full 8,716-job build pass locally. Public implementation CI is pending;
+H6-Q1 and the global RH Goal remain active.

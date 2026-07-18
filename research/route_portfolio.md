@@ -2410,3 +2410,27 @@ The preregistration cites Boyd equations `(1.13)`, `(3.1)`, `(3.14)`, `(3.15)` t
 Public preregistration CI is required before proof-source edits. On success, the next attack is the
 full Proposition 6.1 composition; on blockage, only a source-exact representation or sector-bound
 prefix that removes a named obligation may survive. H6-Q1 and the global RH Goal remain active.
+
+Preregistration commit `14bdc45fa1a0e70a26e00e57b4bc8325d73d8ad5` passed public CI run
+`29657566566`, build job `88114535307`, in `2m10s`. Loop 11 proof-source work is admitted.
+
+### Loop 11 local Boyd/Nemes checkpoint
+
+Loop 11 closes locally as `PARTIAL / BLOCKER_EXPOSED`, not as the effective `R_2` theorem. The
+project now compiles the principal-branch scaled-Gamma reflection/continuation formula, exact
+imaginary-axis norm and reciprocal boundary bound, right-half-plane differentiability, closure
+continuity reduction to `z=0`, the application of mathlib's Phragmen--Lindelof theorem under three
+explicit growth interfaces, and the reflected left-ray bound with the exact Stokes denominator.
+The rational denominator and Boyd constants then compile through
+`deBruijnNewmanPolymathBoydR2Majorant_lt`.
+
+The shortest remaining route begins with Boyd/Nemes equation `(15)`: identify the actual project
+`R_2` with the two scaled-Gamma integrals, prove absolute integrability, and justify the rotated
+contour in Theorem 3. The ray estimate's conditional growth interfaces should be discharged from
+Stieltjes equation `(13)`: continuity at the origin, subquadratic exponential growth in the right
+half-plane, and eventual boundedness on the positive real axis. These are strictly upstream
+analytic statements, not a disguised `R_2` hypothesis.
+
+Local exact checks, standard-only axiom audit, forbidden scan, diff check, and the 8,716-job full
+build pass. `hard_gap_delta=0`, `route_infrastructure_delta=1`; implementation CI is pending.
+H6-Q1, Proposition 6.1/6.3, H6-E/G8, and RH remain open, and the persistent Goal remains active.

@@ -18,6 +18,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelXioContinuation
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatExpansion
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatContourShift
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatTermEstimate
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydStirlingRemainder
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2128,5 +2129,31 @@ example {z : ℂ} (hzNorm : 1 ≤ ‖z‖)
       Complex.Gamma z / deBruijnNewmanPolymathGammaStirlingMain z = 1 + e ∧
       ‖e‖ ≤ 1 / (12 * (‖z‖ - 123 / 500)) :=
   deBruijnNewmanPolymath_relative_stirling_of_R2_bound hzNorm hR2
+
+example {z : ℂ} (hz : 0 < z.im) :
+    deBruijnNewmanPolymathScaledGamma z *
+        deBruijnNewmanPolymathScaledGamma (-z) =
+      1 / (1 - Complex.exp (2 * Real.pi * Complex.I * z)) :=
+  deBruijnNewmanPolymathScaledGamma_mul_neg hz
+
+example {y : ℝ} (hy : 0 < y) :
+    ‖deBruijnNewmanPolymathScaledGamma ((y : ℂ) * Complex.I)‖ ^ 2 =
+      1 / (1 - Real.exp (-2 * Real.pi * y)) :=
+  deBruijnNewmanPolymathScaledGamma_norm_sq_I hy
+
+example (y : ℝ) :
+    ‖(1 : ℂ) / deBruijnNewmanPolymathScaledGamma
+        ((y : ℂ) * Complex.I)‖ ≤ 1 :=
+  deBruijnNewmanPolymathScaledGamma_inv_norm_mul_I_le_one y
+
+example {z : ℂ} (hz : 0 < z.im)
+    (hinv : ‖(1 : ℂ) /
+      deBruijnNewmanPolymathScaledGamma (-conj z)‖ ≤ 1) :
+    ‖deBruijnNewmanPolymathScaledGamma z‖ ≤
+      1 / (1 - Real.exp (-2 * Real.pi * z.im)) :=
+  deBruijnNewmanPolymathScaledGamma_norm_le_ray_of_mirror_inv hz hinv
+
+example : deBruijnNewmanPolymathBoydR2Majorant < 41 / 2000 :=
+  deBruijnNewmanPolymathBoydR2Majorant_lt
 
 end LeanLab.Riemann
