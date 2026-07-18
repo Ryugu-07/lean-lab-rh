@@ -17,6 +17,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelShift
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelSum
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelXioContinuation
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatExpansion
+import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatContourShift
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -976,6 +977,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanH_riemannSiegel_finite_expansion
       status := .proven
       note := "Loop 8 known-source formalization combines (htz), (xio), and the finite source decomposition. Lean proves tunable horizontal contour and Gamma bounds, Gaussian integrability of every source term and remainder, centered-Gaussian sign symmetry, and commutation of heat evolution with Schwarz reflection. This closes source equation (39), not the contour-shift formulas (rtn-def)/(RTN-def), the effective approximation, numerical certificates, Lambda<=1/5, H6-E/G8, or RH; hard_gap_delta=1 and route_infrastructure_delta=1. Implementation af6c80c42c0abdfb1cf91147e74a8b88263b20ea passed public CI run 29651603027; evidence 7cf65e6d19afb963e9bb910a1a0e763a5f234344 passed run 29651774163." },
+    { id := "H6.debruijn-newman.polymath-riemann-siegel-heat-contour-shifts"
+      tier := .tier2
+      title := "Prove the Riemann--Siegel heat contour-shift formulas"
+      statement :=
+        "For t>0, prove Polymath source identities (rtn-def) for every positive residue index and (RTN-def) for every remainder index, under the exact condition that the initial and shifted arguments lie in the same open half-plane."
+      leanName := some ``deBruijnNewmanRiemannSiegelHeatRemainder_contour_shift
+      status := .proven
+      note := "Loop 9 known-source formalization. Lean proves uniform pole-free strip bounds, holomorphy of the actual R0N and positive-index R0Term source functions, a finite rectangular Cauchy identity, Gaussian decay of both vertical sides, convergence of both horizontal sides, real translation invariance, variance-two Gaussian density conversion, and the completed-square factors. This closes (rtn-def)/(RTN-def), not the effective approximation, numerical certificates, Lambda<=1/5, H6-E/G8, or RH; hard_gap_delta=1 and route_infrastructure_delta=1." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

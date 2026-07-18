@@ -16,6 +16,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelShift
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelSum
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelXioContinuation
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatExpansion
+import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatContourShift
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2067,5 +2068,31 @@ example {t : ℝ} (ht : 0 < t) {z : ℂ} (hz : z.re ≠ 0) (N : ℕ) :
         (deBruijnNewmanRiemannSiegelHeatRemainder t N)
         ((1 - Complex.I * z) / 2) :=
   deBruijnNewmanH_riemannSiegel_finite_expansion ht hz N
+
+example (N : ℕ) {t : ℝ} (ht : 0 < t) (beta s : ℂ)
+    (hhalf : deBruijnNewmanRiemannSiegelSameOpenHalfPlane s
+      (s + (((t / 2 : ℝ) : ℂ) * beta))) :
+    deBruijnNewmanRiemannSiegelHeatRemainder t N s =
+      Complex.exp (-((t : ℂ) * beta ^ 2) / 4) *
+        ∫ y : ℝ,
+          Complex.exp (-(deBruijnNewmanRiemannSiegelHeatShift t y * beta)) *
+            deBruijnNewmanRiemannSiegelR0N N
+              (s + deBruijnNewmanRiemannSiegelHeatShift t y +
+                (((t / 2 : ℝ) : ℂ) * beta))
+          ∂ProbabilityTheory.gaussianReal 0 2 :=
+  deBruijnNewmanRiemannSiegelHeatRemainder_contour_shift N ht beta s hhalf
+
+example (n : ℕ) (hn : 0 < n) {t : ℝ} (ht : 0 < t) (alpha s : ℂ)
+    (hhalf : deBruijnNewmanRiemannSiegelSameOpenHalfPlane s
+      (s + (((t / 2 : ℝ) : ℂ) * alpha))) :
+    deBruijnNewmanRiemannSiegelHeatTerm t n s =
+      Complex.exp (-((t : ℂ) * alpha ^ 2) / 4) *
+        ∫ y : ℝ,
+          Complex.exp (-(deBruijnNewmanRiemannSiegelHeatShift t y * alpha)) *
+            deBruijnNewmanRiemannSiegelR0Term n
+              (s + deBruijnNewmanRiemannSiegelHeatShift t y +
+                (((t / 2 : ℝ) : ℂ) * alpha))
+          ∂ProbabilityTheory.gaussianReal 0 2 :=
+  deBruijnNewmanRiemannSiegelHeatTerm_contour_shift n hn ht alpha s hhalf
 
 end LeanLab.Riemann
