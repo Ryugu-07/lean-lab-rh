@@ -361,6 +361,8 @@ No Loop 7 proof source may be edited before this preregistration passes public L
   8,712-job build passes
 - `next_exact_gate`: combine public `(xio)`, the public finite decomposition, and public `(htz)`
   into exact finite Polymath equation `(39)` before attacking the effective remainder estimate
+- `public_implementation_evidence`: commit `4be468094a7295778eb50082459f9927f8d0a484`
+  passed public Lean Action CI run `29648023167`, build job `88089442767`, in `2m46s`
 
 ## Loop 3 preregistration
 
