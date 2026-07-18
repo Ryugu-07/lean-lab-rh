@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `LOOP_11_LOCAL_PARTIAL_GLOBAL_GOAL_ACTIVE`
+Status: `LOOP_11_PARTIAL_GLOBAL_GOAL_ACTIVE`
 
 ## Target
 
@@ -741,7 +741,9 @@ run `29657566566`, build job `88114535307`, in `2m10s`. Loop 11 proof-source wor
   `Classical.choice`, and `Quot.sound`.
 - `hard_gap_delta`: 0
 - `route_infrastructure_delta`: 1
-- `public_state`: implementation CI pending; H6-Q1 and the persistent RH Goal remain active.
+- `public_state`: implementation commit `3409b7175eb24f1e0f01377795334a08e5f80384` passed public
+  Lean Action CI run `29659089400`, build job `88118485517`, in `2m19s`; this accounting update is
+  the Loop 11 closure evidence. H6-Q1 and the persistent RH Goal remain active.
 
 ## Loop 3 preregistration
 

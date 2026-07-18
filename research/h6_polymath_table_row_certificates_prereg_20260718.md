@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `LOOP_11_LOCAL_PARTIAL_GLOBAL_GOAL_ACTIVE`
+Status: `LOOP_11_PARTIAL_GLOBAL_GOAL_ACTIVE`
 
 ## Exact mathematical endpoint
 
@@ -921,5 +921,6 @@ on Stieltjes equation `(13)` to prove origin continuity, subquadratic growth, an
 positive-real boundedness for `1/Gamma*`. No target-equivalent premise was introduced.
 
 The new module, exact TargetChecks, selected standard-only axiom prints, clean forbidden scan,
-`git diff --check`, and the full 8,716-job build pass locally. Public implementation CI is pending;
-H6-Q1 and the global RH Goal remain active.
+`git diff --check`, and the full 8,716-job build pass locally. Implementation commit
+`3409b7175eb24f1e0f01377795334a08e5f80384` passed public Lean Action CI run `29659089400`, build
+job `88118485517`, in `2m19s`. H6-Q1 and the global RH Goal remain active.

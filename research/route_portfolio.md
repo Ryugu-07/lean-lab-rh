@@ -2432,5 +2432,7 @@ half-plane, and eventual boundedness on the positive real axis. These are strict
 analytic statements, not a disguised `R_2` hypothesis.
 
 Local exact checks, standard-only axiom audit, forbidden scan, diff check, and the 8,716-job full
-build pass. `hard_gap_delta=0`, `route_infrastructure_delta=1`; implementation CI is pending.
-H6-Q1, Proposition 6.1/6.3, H6-E/G8, and RH remain open, and the persistent Goal remains active.
+build pass. Implementation commit `3409b7175eb24f1e0f01377795334a08e5f80384` passed public Lean
+Action CI run `29659089400`, build job `88118485517`, in `2m19s`.
+`hard_gap_delta=0`, `route_infrastructure_delta=1`; H6-Q1, Proposition 6.1/6.3, H6-E/G8, and RH
+remain open, and the persistent Goal remains active.
