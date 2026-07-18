@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `LOOP_11_PARTIAL_GLOBAL_GOAL_ACTIVE`
+Status: `ACTIVE_LOOP_12_PREREGISTERED`
 
 ## Exact mathematical endpoint
 
@@ -924,3 +924,15 @@ The new module, exact TargetChecks, selected standard-only axiom prints, clean f
 `git diff --check`, and the full 8,716-job build pass locally. Implementation commit
 `3409b7175eb24f1e0f01377795334a08e5f80384` passed public Lean Action CI run `29659089400`, build
 job `88118485517`, in `2m19s`. H6-Q1 and the global RH Goal remain active.
+
+## Loop 12 equation `(15)` registration
+
+Loop 11 closure-evidence commit `ee6a6fcd1130203ec84ee4450b952277e9290db4` passed public Lean
+Action CI run `29659211122`, build job `88118794823`, in `1m35s`.
+
+Loop 12 now fixes the first remaining edge as the `N=2` Boyd/Nemes equation `(15)` representation
+for the actual project remainder on `Re z>0`, together with absolute integrability of both source
+kernels. The full exact statement, source signs, assumption frontier, falsification criteria, and
+anti-substitution rule are in `research/h6_boyd_r2_loop12_prereg_20260719.md`. No Loop 12 proof
+source may be edited before the preregistration commit passes public CI. H6-Q1 and the global RH
+Goal remain active.

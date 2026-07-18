@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `LOOP_11_PARTIAL_GLOBAL_GOAL_ACTIVE`
+Status: `ACTIVE_LOOP_12_PREREGISTERED`
 
 ## Target
 
@@ -744,6 +744,40 @@ run `29657566566`, build job `88114535307`, in `2m10s`. Loop 11 proof-source wor
 - `public_state`: implementation commit `3409b7175eb24f1e0f01377795334a08e5f80384` passed public
   Lean Action CI run `29659089400`, build job `88118485517`, in `2m19s`; this accounting update is
   the Loop 11 closure evidence. H6-Q1 and the persistent RH Goal remain active.
+
+## Loop 12 preregistration
+
+- `campaign`: `PROOF-ATTEMPT-20260719-H6-BOYD-R2-EQ15-01`
+- `mode`: `PROOF-ATTEMPT`
+- `fixed_subedge`: the `N=2` Boyd/Nemes equation `(15)` integral representation for the actual
+  project `deBruijnNewmanPolymathGammaStirlingR2` on `Re z > 0`, including absolute integrability
+  of both kernels.
+- `proposed_Lean_endpoint`:
+  `deBruijnNewmanPolymathGammaStirlingR2_eq_boyd_integrals`
+- `success_criterion`: both source kernels are Bochner integrable on `Ioi 0`, the exact equality
+  compiles for every `0<z.re`, and exact checks, standard-only axiom audit, full build, and public
+  implementation/evidence CI pass.
+- `falsification_criterion`: branch, coefficient, sign, sector, endpoint-integrability, or contour
+  alignment fails against the project definitions.
+- `assumption_frontier_before`: all Loop 11 scaled-Gamma branch/boundary/Stokes/constant results are
+  public K0; equation `(15)` and every effective `R2` estimate remain absent.
+- `known_obstacles`: neither mathlib nor the project packages Binet/Stieltjes or Boyd resurgence;
+  Nemes states equation `(15)` by citation to Boyd.
+- `nearest_primary_source`: Nemes arXiv `1310.0166`, equation `(15)`, cross-checked with Boyd 1994.
+- `nearest_project_attempt`: Loop 11 compiled the exact imaginary-axis scaled-Gamma norm and the
+  downstream reflection/Stokes chain but did not connect `R2` to an integral.
+- `new_attack_angle`: specialize to `N=2`, retain the source two-integral signs, prove kernel
+  integrability from the compiled imaginary-axis norm, derive the positive-real identity from the
+  Euler Gamma integral/contour decomposition, and extend holomorphically to `Re z>0`.
+- `anti_substitution_rule`: equation `(15)`, the target remainder bound, equivalent effective
+  Stirling estimates, abstract remainders, replacement Gamma functions, and unspecified big O are
+  forbidden as premises.
+- `full_preregistration`: `research/h6_boyd_r2_loop12_prereg_20260719.md`.
+- `prior_public_evidence`: Loop 11 closure-evidence commit
+  `ee6a6fcd1130203ec84ee4450b952277e9290db4` passed public CI run `29659211122`, build job
+  `88118794823`, in `1m35s`.
+
+No Loop 12 proof source may be edited before this preregistration passes public Lean Action CI.
 
 ## Loop 3 preregistration
 

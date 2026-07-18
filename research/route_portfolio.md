@@ -2436,3 +2436,21 @@ build pass. Implementation commit `3409b7175eb24f1e0f01377795334a08e5f80384` pas
 Action CI run `29659089400`, build job `88118485517`, in `2m19s`.
 `hard_gap_delta=0`, `route_infrastructure_delta=1`; H6-Q1, Proposition 6.1/6.3, H6-E/G8, and RH
 remain open, and the persistent Goal remains active.
+
+### Loop 12 Boyd/Nemes equation `(15)` preregistration
+
+Loop 11 closure-evidence commit `ee6a6fcd1130203ec84ee4450b952277e9290db4` passed public CI run
+`29659211122`, build job `88118794823`, in `1m35s`. The selected next edge is not another branch or
+constant lemma: it is the missing identity connecting the actual project `R_2` to Boyd's
+resurgence integrals.
+
+Loop 12 specializes Nemes equation `(15)` immediately to `N=2`. It must prove both source kernels
+Bochner integrable on `(0,infinity)` and compile the exact equality for every `Re z>0`, retaining
+the source's two coefficients and signs. This angle materially differs from Loop 11: the existing
+imaginary-axis scaled-Gamma norm now supplies a direct endpoint majorant, while arbitrary Stirling
+coefficients and abstract remainders are omitted. The equality itself is attacked from Euler's
+Gamma integral on the positive real axis plus holomorphic extension; a failed contour
+decomposition will be recorded exactly and will trigger the Stieltjes/Binet upstream route.
+
+Full preregistration: `research/h6_boyd_r2_loop12_prereg_20260719.md`. No proof-source edits occur
+before green public preregistration CI. H6-Q1 and the persistent RH Goal remain active.
