@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_5_PREREGISTERED_CI_PENDING`
+Status: `ACTIVE_LOOP_5_PREREGISTRATION_PUBLIC_CI_PASSED`
 
 ## Target
 
@@ -188,6 +188,9 @@ run `29633356952`, build job `88051178220`, in `1m51s`, before Loop 4 proof-sour
   strongest compiler-checked proper prefix; the campaign and RH Goal remain active
 
 No Loop 5 proof source may be edited before this preregistration passes public Lean Action CI.
+
+Loop 5 preregistration commit `25f6f43132acec6c3fc066cd800933b0f877455e` passed public Lean Action CI
+run `29635161693`, build job `88056094834`, in `2m15s`. Loop 5 proof-source edits are now admitted.
 
 ## Loop 3 preregistration
 

@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_5_PREREGISTERED_CI_PENDING`
+Status: `ACTIVE_LOOP_5_PREREGISTRATION_PUBLIC_CI_PASSED`
 
 ## Exact mathematical endpoint
 
@@ -462,3 +462,6 @@ ends. If successful, the following loop will induct over adjacent lines and tran
 sum through the source prefactor. If blocked, record the first missing derivative or end estimate
 and the strongest compiled prefix. No Loop 5 proof source may be edited before this preregistration
 passes public Lean Action CI.
+
+Loop 5 preregistration commit `25f6f43132acec6c3fc066cd800933b0f877455e` passed public Lean Action CI
+run `29635161693`, build job `88056094834`, in `2m15s`. Loop 5 proof-source edits are now admitted.

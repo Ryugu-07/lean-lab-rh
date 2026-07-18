@@ -2184,3 +2184,6 @@ single-pole subtraction, apply Poincare to the finite affine parallelogram with 
 orientations, and prove both end-segment integrals vanish. Only after that identity is public may
 the route induct to the finite `R_(0,0)` decomposition. Public preregistration CI is required before
 Loop 5 proof-source edits.
+
+Loop 5 preregistration commit `25f6f43132acec6c3fc066cd800933b0f877455e` passed public CI run
+`29635161693`, build job `88056094834`, in `2m15s`; its fixed proof-source attack is now admitted.
