@@ -221,3 +221,6 @@ strict upper-half-plane model root, followed by transfer of an actual heat-famil
 theorem `deBruijnNewmanHasBackwardUpperLinearEscape_of_repeated`. This checkpoint does not prove
 that escape theorem, any of the three region certificates, the Polymath criterion, `Lambda<=0.2`,
 H6-E/G8, or RH.
+
+Implementation commit `5e90f7ee9648a55fd10c2ea244741e2fc3254039` passed public Lean Action CI
+run `29627444553`, build job `88034514707`, in `2m15s`.
