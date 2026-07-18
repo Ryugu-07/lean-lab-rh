@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_4_PARTIAL_EVIDENCE_CI_PENDING`
+Status: `ACTIVE_LOOP_5_PREREGISTERED_CI_PENDING`
 
 ## Exact mathematical endpoint
 
@@ -424,4 +424,41 @@ postulated, and the full Loop 4 endpoint, numerical Table 1 certificates, H6-E/G
 open.
 
 Implementation commit `7bb3101bc9ecc4698416ec6bfa5d296494a07a46` passed public Lean Action CI
-run `29634900588`, build job `88055411542`, in `1m51s`. Evidence CI is pending.
+run `29634900588`, build job `88055411542`, in `1m51s`. Evidence commit
+`0fcfbd510180161f82cd3ee2cc7b5f0e17c45fe0` passed run `29635011657`, build job
+`88055710345`, in `1m52s`. Loop 4 is publicly checked as a proper prefix; its full endpoint remains
+open.
+
+## Loop 5 fixed subedge
+
+The next target is selected from Loop 4's first uncancelled dependency, not from theorem count.
+For every natural `N` and complex `s`, prove the exact adjacent-line identity
+
+```text
+I_N(s) = (N+1)^(-s) + I_(N+1)(s).
+```
+
+Use the already defined source lines and raw integrals. At finite truncation height `T`, the proof
+must use the nonorthogonal affine parallelogram between `L_N([-T,T])` and
+`L_(N+1)([-T,T])`, with both end segments and all orientations explicit. Subtract the exact
+principal part
+
+```text
+(N+1)^(-s) / (2*pi*i*(w-(N+1)))
+```
+
+and define its removable value at `w=N+1` from the derivative-level limit. The extended one-form
+must satisfy the continuity and within-domain derivative premise of Mathlib's Poincare homotopy
+theorem. The resulting finite contour equality must then be combined with proved Gaussian bounds
+that send both end-segment integrals to zero and with the compiled absolute integrability of the
+long sides.
+
+Success is the exact infinite adjacent shift, plus exact witnesses, selected standard-only axiom
+prints, empty forbidden scans, a full build, and public implementation/evidence CI. An assumed
+residue theorem, an abstract holomorphic remainder, the already compiled local residue alone, or a
+finite contour equality without the tail limit does not count. Falsification is an incompatible
+removable derivative, opposite source orientation, or failure of the proved bounds to kill both
+ends. If successful, the following loop will induct over adjacent lines and transport the finite
+sum through the source prefactor. If blocked, record the first missing derivative or end estimate
+and the strongest compiled prefix. No Loop 5 proof source may be edited before this preregistration
+passes public Lean Action CI.

@@ -2174,4 +2174,13 @@ auxiliary contour recurrence and analytic continuation. No contour-shift or `(xi
 introduced, and the campaign remains active.
 
 Implementation commit `7bb3101bc9ecc4698416ec6bfa5d296494a07a46` passed public CI run
-`29634900588`, build job `88055411542`, in `1m51s`. Evidence CI is pending.
+`29634900588`, build job `88055411542`, in `1m51s`. Evidence commit
+`0fcfbd510180161f82cd3ee2cc7b5f0e17c45fe0` passed run `29635011657`, build job
+`88055710345`, in `1m52s`.
+
+Loop 5 is preregistered at the first exposed dependency. Its fixed endpoint is the exact adjacent
+source-line shift `I_N(s)=(N+1)^(-s)+I_(N+1)(s)`. The proof must construct the removable
+single-pole subtraction, apply Poincare to the finite affine parallelogram with explicit
+orientations, and prove both end-segment integrals vanish. Only after that identity is public may
+the route induct to the finite `R_(0,0)` decomposition. Public preregistration CI is required before
+Loop 5 proof-source edits.

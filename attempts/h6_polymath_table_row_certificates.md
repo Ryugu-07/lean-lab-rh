@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_4_PARTIAL_EVIDENCE_CI_PENDING`
+Status: `ACTIVE_LOOP_5_PREREGISTERED_CI_PENDING`
 
 ## Target
 
@@ -144,9 +144,50 @@ run `29633356952`, build job `88051178220`, in `1m51s`, before Loop 4 proof-sour
 - full `lake build`: passed, 8,707 jobs
 - implementation commit `7bb3101bc9ecc4698416ec6bfa5d296494a07a46` passed public CI run
   `29634900588`, build job `88055411542`, in `1m51s`
-- public evidence CI: pending
+- evidence commit `0fcfbd510180161f82cd3ee2cc7b5f0e17c45fe0` passed public CI run
+  `29635011657`, build job `88055710345`, in `1m52s`
 - Loop 4's full preregistered endpoint remains open; the campaign and persistent RH Goal remain
   active
+
+## Loop 5 preregistration
+
+- `mode`: `PROOF-ATTEMPT`
+- `selection_basis`: Loop 4's first uncancelled dependency on H6-Q1; this is the shortest graph
+  edge from the compiled local residue and line-integrability spine to the finite `R_(0,N)` shift
+- `fixed_subedge`: prove the adjacent-line source identity
+  `I_N(s)=(N+1)^(-s)+I_(N+1)(s)` for every natural `N` and complex `s`, using the actual raw
+  integrals already defined
+- `finite_geometry`: for truncation height `T`, use the affine parallelogram whose long sides are
+  the oriented source lines `L_N` and `L_(N+1)` restricted to `[-T,T]`; state both short end
+  segments explicitly with their source orientations
+- `pole_removal`: subtract the exact principal part
+  `(N+1)^(-s)/(2*pi*i*(w-(N+1)))`, define its value at the pole by the derivative-level limit,
+  and prove the resulting one-form has the continuity and within-domain derivative required by
+  Mathlib's Poincare homotopy theorem
+- `finite_shift`: derive the finite-truncation contour equality with the exact orientation and
+  residue normalization; an assumed residue theorem or contour equality is forbidden
+- `tail_limit`: prove both short end-segment integrals tend to zero and pass the two long sides to
+  the already compiled Bochner integrals, yielding the adjacent infinite-line shift
+- `success_criterion`: the removable extension, finite affine-parallelogram identity, end-segment
+  limits, and exact adjacent-line infinite shift compile with exact witnesses, selected
+  standard-only axiom prints, empty forbidden scans, full build, and public implementation/evidence
+  CI
+- `falsification_criterion`: the pole-subtracted kernel does not admit the required derivative at
+  the crossed integer, the Poincare orientation produces the opposite residue sign, or the proved
+  Gaussian bounds do not force both end segments to zero
+- `known_obstacles`: Mathlib's Poincare theorem is stated for a smooth homotopy and requires a
+  derivative on the whole image; the principal `cpow` branch and the pole-removal value must be
+  controlled simultaneously, and the short segments have truncation-dependent real and imaginary
+  coordinates
+- `anti_substitution_rule`: a theorem assuming the adjacent shift, an abstract holomorphic
+  remainder, only a local residue statement, or a finite contour identity without the infinite
+  tail limit is not Loop 5 success
+- `next_if_success`: induct the adjacent shift to the finite
+  `I_0(s)=sum_(n=1)^N n^(-s)+I_N(s)` identity and transport it through the exact source prefactor
+- `next_if_blocked`: record the first missing derivative or end-segment estimate and retain the
+  strongest compiler-checked proper prefix; the campaign and RH Goal remain active
+
+No Loop 5 proof source may be edited before this preregistration passes public Lean Action CI.
 
 ## Loop 3 preregistration
 
