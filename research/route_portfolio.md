@@ -2079,4 +2079,6 @@ The standalone module, exact target witnesses, selected axiom audit, forbidden s
 `route_infrastructure_delta=1`; the finite RH certificate, final region, barrier, unconditional
 `Lambda<=1/5`, H6-E/G8, and RH remain open. Implementation commit
 `ac96523034b36e2bfafdb007d6dcd95d8e89b625` passed public Lean Action CI run `29630082237`, build
-job `88041893271`, in `1m52s`; immutable evidence CI is pending.
+job `88041893271`, in `1m52s`. Evidence commit `0cd4c215d59c4e37949c09160ad65789bd1fe61d`
+passed run `29630173782`, build job `88042132339`, in `1m49s`. Loop 1 is publicly checked; the
+campaign remains active.

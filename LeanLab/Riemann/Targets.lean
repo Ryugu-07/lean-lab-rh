@@ -904,7 +904,7 @@ def rhTargets : List ResearchTarget :=
         "Prove that finite-height RH through T and X/2<=T imply the exact initial zero-free region, handle x=0 by imaginary-axis positivity, and instantiate the second Table 1 row using T=3*10^12."
       leanName := some ``deBruijnNewmanPolymathInitialRegionZeroFree_table_row_of_rh_up_to_three_trillion
       status := .proven
-      note := "Loop 1 compiles the exact H_0-to-xi coordinate and rational height coverage. This is a conditional source bridge only. It does not assert or import the Platt--Trudgian finite computation and does not prove any unconditional Table 1 region, Lambda <= 0.2, H6-E/G8, or RH. Implementation ac965230 passed public CI run 29630082237; immutable evidence CI is pending." },
+      note := "Loop 1 compiles the exact H_0-to-xi coordinate and rational height coverage. This is a conditional source bridge only. It does not assert or import the Platt--Trudgian finite computation and does not prove any unconditional Table 1 region, Lambda <= 0.2, H6-E/G8, or RH. Implementation ac965230 and evidence 0cd4c215 passed public CI runs 29630082237 and 29630173782." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

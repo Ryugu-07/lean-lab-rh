@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_1_PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `ACTIVE_LOOP_1_PUBLICLY_CHECKED`
 
 ## Target
 
@@ -80,7 +80,9 @@ output is imported. Every numerical fact must be independently re-proved in Lean
   run `29629630395`, build job `88040634155`, in `2m16s`
 - implementation commit `ac96523034b36e2bfafdb007d6dcd95d8e89b625` passed public Lean Action CI
   run `29630082237`, build job `88041893271`, in `1m52s`
-- immutable evidence-backfill CI: pending
+- evidence commit `0cd4c215d59c4e37949c09160ad65789bd1fe61d` passed public Lean Action CI
+  run `29630173782`, build job `88042132339`, in `1m49s`
+- Loop 1 is publicly checked; the campaign and persistent RH Goal remain active
 
 ## Runtime record
 

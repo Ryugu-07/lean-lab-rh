@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_1_PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `ACTIVE_LOOP_1_PUBLICLY_CHECKED`
 
 ## Exact mathematical endpoint
 
@@ -171,4 +171,6 @@ contain only `propext`, `Classical.choice`, and `Quot.sound`.
 This checkpoint is conditional. It does not prove `riemannHypothesisUpTo (3*10^12)`, any
 unconditional Table 1 region, `deBruijnNewmanAllZerosReal (1/5)`, H6-E/G8, or RH. Implementation
 commit `ac96523034b36e2bfafdb007d6dcd95d8e89b625` passed public Lean Action CI run `29630082237`,
-build job `88041893271`, in `1m52s`. The campaign remains active; immutable evidence CI is pending.
+build job `88041893271`, in `1m52s`. Evidence commit
+`0cd4c215d59c4e37949c09160ad65789bd1fe61d` passed run `29630173782`, build job `88042132339`, in
+`1m49s`. Loop 1 is publicly checked; the campaign and persistent RH Goal remain active.
