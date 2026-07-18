@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260719-H6-BOYD-R2-EQ15-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PREREGISTERED`
+Status: `PARTIAL / BLOCKER_EXPOSED`
 
 ## Exact target
 
@@ -130,3 +130,35 @@ signs, domain, and project functions are fixed by this preregistration.
 - `global_goal`: remains active regardless of this local result.
 
 No Loop 12 proof source may be edited before this preregistration passes public Lean Action CI.
+
+Preregistration commit `00be4a5bfa3c614482aa4374a177fa73fa3bd131` passed public Lean Action CI
+run `29659498616`, build job `88119559667`, in `1m31s`. Loop 12 proof-source work is admitted.
+
+## Local outcome
+
+The kernel-integrability half of the success criterion compiles in the 453-line production module
+`LeanLab/Riemann/DeBruijnNewmanPolymathBoydR2Integral.lean`. Lean proves the exact positive-ray
+weight norm square and the global domination
+
+```text
+|s*exp(-2*pi*s)*GammaStar(i*s)| <= sqrt(s)*exp(-pi*s),  s>0,
+```
+
+then proves continuity and Bochner integrability of both actual kernels after establishing the
+right-half-plane denominator bounds. The source-exact RHS is defined without changing signs or
+coefficients, normalized algebraically, and reduced on the positive real axis to one integral
+imaginary part by compiled conjugation.
+
+The equality with the actual project `R2` remains open. Nemes states equation `(15)` by citation to
+Boyd; the available Euler Gamma integral does not include Boyd's global saddle-coordinate inverse
+and Cauchy/resurgence decomposition, and no equivalent theorem exists in mathlib or the project.
+`deBruijnNewmanPolymathBoydR2RepresentationAt` is only the name of this open proposition and is not
+a theorem or premise. Thus Loop 12 closes as `PARTIAL / BLOCKER_EXPOSED`, with
+`hard_gap_delta=0` and `route_infrastructure_delta=1`.
+
+Standalone compilation, exact Targets and three new TargetChecks, selected standard-only axiom
+prints, forbidden scan, `git diff --check`, and the full 8,717-job build pass locally.
+
+The next selected upstream edge is the exact positive-real saddle integral obtained from Euler's
+Gamma integral by `t=x*exp(u)`. It is a source-faithful first step toward Boyd's steepest-descent
+derivation and does not assume equation `(15)`. The global RH Goal remains active.

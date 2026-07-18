@@ -19,6 +19,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatExpansion
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatContourShift
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatTermEstimate
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydStirlingRemainder
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydR2Integral
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2155,5 +2156,26 @@ example {z : ℂ} (hz : 0 < z.im)
 
 example : deBruijnNewmanPolymathBoydR2Majorant < 41 / 2000 :=
   deBruijnNewmanPolymathBoydR2Majorant_lt
+
+example {z : ℂ} (hz : 0 < z.re) :
+    MeasureTheory.IntegrableOn
+        (deBruijnNewmanPolymathBoydR2PlusIntegrand z) (Set.Ioi 0) ∧
+      MeasureTheory.IntegrableOn
+        (deBruijnNewmanPolymathBoydR2MinusIntegrand z) (Set.Ioi 0) :=
+  deBruijnNewmanPolymathBoydR2_integrableOn hz
+
+example (z : ℂ) :
+    deBruijnNewmanPolymathBoydR2Integral z =
+      ((∫ s : ℝ in Set.Ioi 0, deBruijnNewmanPolymathBoydR2MinusIntegrand z s) -
+        (∫ s : ℝ in Set.Ioi 0, deBruijnNewmanPolymathBoydR2PlusIntegrand z s)) /
+          (2 * Real.pi * Complex.I * z ^ 2) :=
+  deBruijnNewmanPolymathBoydR2Integral_eq z
+
+example (x : ℝ) :
+    deBruijnNewmanPolymathBoydR2Integral (x : ℂ) =
+      -(((∫ s : ℝ in Set.Ioi 0,
+          deBruijnNewmanPolymathBoydR2PlusIntegrand (x : ℂ) s).im : ℝ) : ℂ) /
+        (Real.pi * (x : ℂ) ^ 2) :=
+  deBruijnNewmanPolymathBoydR2Integral_ofReal x
 
 end LeanLab.Riemann

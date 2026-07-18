@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_12_PREREGISTERED`
+Status: `LOOP_12_LOCAL_PARTIAL`
 
 ## Target
 
@@ -778,6 +778,46 @@ run `29657566566`, build job `88114535307`, in `2m10s`. Loop 11 proof-source wor
   `88118794823`, in `1m35s`.
 
 No Loop 12 proof source may be edited before this preregistration passes public Lean Action CI.
+
+Preregistration commit `00be4a5bfa3c614482aa4374a177fa73fa3bd131` passed public Lean Action CI
+run `29659498616`, build job `88119559667`, in `1m31s`. Loop 12 proof-source work is admitted.
+
+## Loop 12 local result
+
+- `classification`: `PARTIAL / BLOCKER_EXPOSED`
+- `compiled_module`: `LeanLab/Riemann/DeBruijnNewmanPolymathBoydR2Integral.lean` (453 lines)
+- `success_criterion_part_1`: passed. For every `0<z.re`, both actual source kernels are Bochner
+  integrable on `Ioi 0` in
+  `deBruijnNewmanPolymathBoydR2_integrableOn`.
+- `compiled_prefix`: exact denominator quotient identities, right-half-plane lower bounds and
+  bounded inverses; scaled-Gamma differentiability on the slit plane; continuity of both
+  imaginary rays; exact positive-ray weight norm square; the global elementary bound
+  `|s*exp(-2*pi*s)*GammaStar(i*s)| <= sqrt(s)*exp(-pi*s)`; positive/negative-ray integrability;
+  the source-exact two-integral RHS and its algebraic normalization; pointwise and integral
+  conjugacy on the positive real axis; and reduction of the Boyd RHS to one integral imaginary
+  part there.
+- `success_criterion_part_2`: open. No theorem proves
+  `deBruijnNewmanPolymathGammaStirlingR2 z = deBruijnNewmanPolymathBoydR2Integral z`.
+- `first_failed_obligation`: Nemes explicitly introduces equation `(15)` as Boyd's resurgence
+  formula by citation. Euler's Gamma integral does not by itself provide the required global
+  saddle-coordinate inverse/Cauchy decomposition across the adjacent `2*pi*i` saddle images.
+  Mathlib and the project contain no Boyd resurgence, Binet/Stieltjes remainder, or equivalent
+  bridge. The representation was therefore recorded only as
+  `deBruijnNewmanPolymathBoydR2RepresentationAt`, never assumed.
+- `anti_substitution_audit`: equation `(15)`, the target `R2` estimate, an equivalent effective
+  Stirling theorem, unspecified asymptotics, and replacement Gamma functions are absent from all
+  premises.
+- `hard_gap_delta`: 0
+- `route_infrastructure_delta`: 1
+- `local_mechanical_audit`: standalone module, exact Targets and three new TargetChecks pass;
+  selected axiom prints use only `propext`, `Classical.choice`, and `Quot.sound`; forbidden scan is
+  empty; `git diff --check` and the full 8,717-job build pass. Public-CI evidence is recorded after
+  the implementation commit.
+- `next_exact_gate`: preregister the positive-real saddle integral
+  `GammaStar(x)=sqrt(x/(2*pi))*integral_R exp(-x*(exp(u)-u-1)) du` for `x>0`, derived from Euler's
+  Gamma integral by the exact substitution `t=x*exp(u)`. This is the first source-faithful Boyd
+  steepest-descent input and introduces no equation `(15)` premise.
+- `global_goal`: H6-Q1 and the persistent RH Goal remain active.
 
 ## Loop 3 preregistration
 

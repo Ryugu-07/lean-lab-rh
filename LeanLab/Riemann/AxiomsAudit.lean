@@ -20,6 +20,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatExpansion
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatContourShift
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatTermEstimate
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydStirlingRemainder
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydR2Integral
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -577,3 +578,6 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.deBruijnNewmanPolymathScaledGamma_inv_norm_rightHalfPlane_le_one_of_zero_growth
 #print axioms LeanLab.Riemann.deBruijnNewmanPolymathScaledGamma_norm_le_ray_of_mirror_inv
 #print axioms LeanLab.Riemann.deBruijnNewmanPolymathBoydR2Majorant_lt
+#print axioms LeanLab.Riemann.deBruijnNewmanPolymathBoydR2_weight_norm_le
+#print axioms LeanLab.Riemann.deBruijnNewmanPolymathBoydR2_integrableOn
+#print axioms LeanLab.Riemann.deBruijnNewmanPolymathBoydR2Integral_ofReal

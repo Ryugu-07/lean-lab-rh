@@ -18,6 +18,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelSum
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelXioContinuation
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatExpansion
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatContourShift
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydR2Integral
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -985,6 +986,21 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanRiemannSiegelHeatRemainder_contour_shift
       status := .proven
       note := "Loop 9 known-source formalization. Lean proves uniform pole-free strip bounds, holomorphy of the actual R0N and positive-index R0Term source functions, a finite rectangular Cauchy identity, Gaussian decay of both vertical sides, convergence of both horizontal sides, real translation invariance, variance-two Gaussian density conversion, and the completed-square factors. This closes (rtn-def)/(RTN-def), not the effective approximation, numerical certificates, Lambda<=1/5, H6-E/G8, or RH; hard_gap_delta=1 and route_infrastructure_delta=1." },
+    { id := "H6.debruijn-newman.boyd-r2-integrable-kernels"
+      tier := .tier2
+      title := "Prove integrability of the actual Boyd R2 kernels"
+      statement :=
+        "For every complex z with positive real part, prove that both N=2 Boyd--Nemes equation (15) kernels built from the project's actual scaled Gamma function are Bochner integrable on the positive real ray."
+      leanName := some ``deBruijnNewmanPolymathBoydR2_integrableOn
+      status := .proven
+      note := "Loop 12 proper prefix. Lean proves right-half-plane denominator separation and bounded inverses, the exact imaginary-axis weight norm square, the global bound |s*exp(-2*pi*s)*GammaStar(i*s)| <= sqrt(s)*exp(-pi*s), continuity of both rays, and Bochner integrability of both actual kernels. It also defines the source-exact Boyd RHS and reduces it on the positive real axis to one integral imaginary part. The Boyd resurgence identity itself, its derivation from steepest descent, the subsequent contour rotation, Proposition 6.1/6.3, the Table 1 certificates, H6-E/G8, and RH remain open." },
+    { id := "H6.debruijn-newman.boyd-r2-equation-15"
+      tier := .tier2
+      title := "Prove Boyd equation (15) for the actual R2"
+      statement :=
+        "For every complex z with positive real part, prove that the project's actual second scaled-Gamma Stirling remainder equals the source-exact two-ray Boyd--Nemes integral expression."
+      status := .inProgress
+      note := "Loop 12 exposes the exact remaining edge after proving both kernels integrable. Nemes states equation (15) by citation to Boyd; neither mathlib nor the project contains the required steepest-descent resurgence theorem or an equivalent Binet/Stieltjes remainder formula. No equation-(15) premise is admitted." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

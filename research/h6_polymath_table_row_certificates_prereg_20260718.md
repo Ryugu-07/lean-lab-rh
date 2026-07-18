@@ -936,3 +936,18 @@ kernels. The full exact statement, source signs, assumption frontier, falsificat
 anti-substitution rule are in `research/h6_boyd_r2_loop12_prereg_20260719.md`. No Loop 12 proof
 source may be edited before the preregistration commit passes public CI. H6-Q1 and the global RH
 Goal remain active.
+
+## Loop 12 local outcome
+
+The actual `N=2` positive- and negative-ray kernels now compile as Bochner integrable for every
+`Re z>0` in `DeBruijnNewmanPolymathBoydR2Integral.lean`. Lean proves the exact ray-weight norm
+square, a global `sqrt(s)*exp(-pi*s)` majorant, denominator inverse bounds, both continuity
+statements, the source-exact RHS normalization, and positive-real conjugacy reduction.
+
+The exact equation `(15)` identity with the project's `GammaStirlingR2` remains open. Nemes cites
+Boyd for this resurgence formula; no global saddle-coordinate/Cauchy decomposition or equivalent
+Binet/Stieltjes remainder theorem is available locally. No representation or target bound is
+assumed. Loop 12 is therefore `PARTIAL / BLOCKER_EXPOSED`, with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`. The next upstream gate is the exact positive-real scaled-Gamma
+saddle integral obtained from Euler's Gamma integral by `t=x*exp(u)`. H6-Q1 and the global RH Goal
+remain active.

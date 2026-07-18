@@ -2454,3 +2454,23 @@ decomposition will be recorded exactly and will trigger the Stieltjes/Binet upst
 
 Full preregistration: `research/h6_boyd_r2_loop12_prereg_20260719.md`. No proof-source edits occur
 before green public preregistration CI. H6-Q1 and the persistent RH Goal remain active.
+
+### Loop 12 local Boyd/Nemes checkpoint
+
+Loop 12 closes locally as `PARTIAL / BLOCKER_EXPOSED`. The actual positive- and negative-ray
+`N=2` kernels are Bochner integrable for every `Re z>0`. The proof combines denominator geometry
+with the exact Loop 11 imaginary-axis scaled-Gamma norm and the global majorant
+`sqrt(s)*exp(-pi*s)`. It also compiles the source-exact RHS, preserves Boyd's two signs and
+coefficients, proves ray conjugacy, and reduces the RHS on positive real arguments to one integral
+imaginary part.
+
+The hard edge did not close: there is no theorem identifying the project's actual `R_2` with that
+RHS. Nemes states equation `(15)` by citation to Boyd, and neither mathlib nor the project contains
+the global saddle inverse/Cauchy resurgence decomposition or an equivalent Binet/Stieltjes
+remainder. The open representation is named as a `Prop` only and is never imported as a premise.
+Thus `hard_gap_delta=0`, `route_infrastructure_delta=1`.
+
+Route selection keeps the direct Boyd attack but moves one exact edge upstream: for `x>0`, derive
+the scaled-Gamma saddle integral with phase `exp(u)-u-1` from Euler's Gamma integral under
+`t=x*exp(u)`. This gives a kernel-checked entry to Boyd's steepest-descent geometry without
+assuming equation `(15)`. H6-Q1 and the persistent RH Goal remain active.
