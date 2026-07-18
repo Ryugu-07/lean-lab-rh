@@ -204,3 +204,20 @@ Polymath criterion endpoint, `Lambda<=0.2`, H6-E/G8, and RH remain open.
 
 Implementation commit `549b35e736b9a2de02282bd8ac41bf010b858196` passed public Lean Action CI
 run `29626216475`, build job `88031047702`, in `2m15s`.
+
+## Loop 9 proof-source checkpoint (2026-07-18)
+
+The Gaussian polynomial is now identified exactly: for every natural `n` and complex `xi`, the
+variance-two Gaussian integral of `(xi+y)^n` is the compiled backward Hermite polynomial `P_n(xi)`.
+The proof is compiler-checked from the closed complex MGF and iterated Leibniz rule.
+
+The source family and every global entire residual factor from the repeated-zero factorization are
+now uniformly bounded on fixed horizontal strips. This supplies a polynomial Gaussian majorant,
+proves joint continuity of the scaled residual integral at every `(0,xi)`, and yields the exact
+pointwise limit `P_m(xi)*g(z)` as the real scale tends to zero.
+
+The remaining preregistered source interface is compact-uniform convergence on a disk around a
+strict upper-half-plane model root, followed by transfer of an actual heat-family zero and the
+theorem `deBruijnNewmanHasBackwardUpperLinearEscape_of_repeated`. This checkpoint does not prove
+that escape theorem, any of the three region certificates, the Polymath criterion, `Lambda<=0.2`,
+H6-E/G8, or RH.

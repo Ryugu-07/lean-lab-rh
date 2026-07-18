@@ -434,6 +434,374 @@ theorem deBruijnNewmanBackwardHermite_succ (n : ℕ) :
       X * deBruijnNewmanBackwardHermite n +
         C 2 * (deBruijnNewmanBackwardHermite n).derivative := rfl
 
+/-- The exponential generating function for the backward Hermite family, expressed directly as
+an identity of iterated complex derivatives. -/
+theorem iteratedDeriv_cexp_mul_add_sq_eq_deBruijnNewmanBackwardHermite
+    (n : ℕ) (xi z : ℂ) :
+    iteratedDeriv n (fun s : ℂ => Complex.exp (s * xi + s ^ 2)) z =
+      (deBruijnNewmanBackwardHermite n).aeval (xi + 2 * z) *
+        Complex.exp (z * xi + z ^ 2) := by
+  induction n generalizing z with
+  | zero => simp [deBruijnNewmanBackwardHermite]
+  | succ n ih =>
+      rw [iteratedDeriv_succ, funext (fun w => ih w)]
+      have hinner0 :=
+        (hasDerivAt_const z xi).add ((hasDerivAt_id z).const_mul (2 : ℂ))
+      have hinner := hinner0.congr_of_eventuallyEq
+        (show (fun w : ℂ => xi + 2 * w) =ᶠ[nhds z]
+            ((fun _ : ℂ => xi) + fun w : ℂ => 2 * id w) from by
+          filter_upwards with w
+          rfl)
+      have hp :=
+        ((deBruijnNewmanBackwardHermite n).hasDerivAt_aeval (xi + 2 * z)).comp z hinner
+      have hquad0 :=
+        ((hasDerivAt_id z).mul_const xi).add ((hasDerivAt_id z).pow 2)
+      have hquad1 := hquad0.congr_of_eventuallyEq
+        (show (fun w : ℂ => w * xi + w ^ 2) =ᶠ[nhds z]
+            ((fun w : ℂ => id w * xi) + id ^ 2) from by
+          filter_upwards with w
+          rfl)
+      have hquad := hquad1.congr_deriv
+        (show 1 * xi + (2 : ℂ) * id z ^ (2 - 1) * 1 = xi + 2 * z by
+          simp only [id_eq, one_mul, Nat.reduceSubDiff, pow_one, mul_one])
+      have hexp := Complex.hasDerivAt_exp (z * xi + z ^ 2) |>.comp z hquad
+      have hderiv :
+          deriv (fun w : ℂ =>
+            (deBruijnNewmanBackwardHermite n).aeval (xi + 2 * w) *
+              Complex.exp (w * xi + w ^ 2)) z =
+            ((deBruijnNewmanBackwardHermite n).derivative.aeval (xi + 2 * z) * 2) *
+                Complex.exp (z * xi + z ^ 2) +
+              (deBruijnNewmanBackwardHermite n).aeval (xi + 2 * z) *
+                (Complex.exp (z * xi + z ^ 2) * (xi + 2 * z)) := by
+        have hfun :
+            (((fun x : ℂ => (deBruijnNewmanBackwardHermite n).aeval x) ∘
+                fun w : ℂ => xi + 2 * w) *
+              Complex.exp ∘ fun w : ℂ => w * xi + w ^ 2) =
+              fun w : ℂ => (deBruijnNewmanBackwardHermite n).aeval (xi + 2 * w) *
+                Complex.exp (w * xi + w ^ 2) := by
+          funext w
+          rfl
+        rw [← hfun]
+        simpa only [Function.comp_apply, Pi.mul_apply, zero_add, mul_one] using
+          hp.mul hexp |>.deriv
+      rw [hderiv]
+      simp only [deBruijnNewmanBackwardHermite_succ, aeval_add, aeval_mul, aeval_X,
+        aeval_C]
+      norm_num
+      ring
+
+theorem integral_pow_gaussianReal_zero_two_eq_deBruijnNewmanBackwardHermite_zero
+    (n : ℕ) :
+    ∫ y : ℝ, (y : ℂ) ^ n ∂ProbabilityTheory.gaussianReal 0 2 =
+      (deBruijnNewmanBackwardHermite n).aeval 0 := by
+  have hmgf := ProbabilityTheory.iteratedDeriv_complexMGF
+    (X := id) (μ := ProbabilityTheory.gaussianReal 0 2) (z := 0) (by simp) n
+  have hfun :
+      ProbabilityTheory.complexMGF id (ProbabilityTheory.gaussianReal 0 2) =
+        fun z : ℂ => Complex.exp (z ^ 2) := by
+    funext z
+    rw [ProbabilityTheory.complexMGF_id_gaussianReal]
+    norm_num
+  rw [hfun] at hmgf
+  have hderiv :=
+    iteratedDeriv_cexp_mul_add_sq_eq_deBruijnNewmanBackwardHermite n 0 0
+  norm_num at hderiv
+  rw [hderiv] at hmgf
+  simpa only [id_eq, zero_mul, Complex.exp_zero, mul_one, ofReal_pow] using hmgf.symm
+
+private theorem deBruijnNewmanBackwardHermite_aeval_eq_gaussian_sum
+    (n : ℕ) (xi : ℂ) :
+    (deBruijnNewmanBackwardHermite n).aeval xi =
+      ∑ i ∈ Finset.range (n + 1),
+        n.choose i * xi ^ i *
+          (deBruijnNewmanBackwardHermite (n - i)).aeval 0 := by
+  have hleibniz := iteratedDeriv_mul (n := n) (x := (0 : ℂ))
+    (f := fun z : ℂ => Complex.exp (xi * z))
+    (g := fun z : ℂ => Complex.exp (z ^ 2)) (by fun_prop) (by fun_prop)
+  have hproduct :
+      ((fun z : ℂ => Complex.exp (xi * z)) *
+          fun z : ℂ => Complex.exp (z ^ 2)) =
+        fun z : ℂ => Complex.exp (z * xi + z ^ 2) := by
+    funext z
+    change Complex.exp (xi * z) * Complex.exp (z ^ 2) =
+      Complex.exp (z * xi + z ^ 2)
+    rw [← Complex.exp_add]
+    congr 1
+    ring
+  rw [hproduct,
+    iteratedDeriv_cexp_mul_add_sq_eq_deBruijnNewmanBackwardHermite n xi 0] at hleibniz
+  simp only [iteratedDeriv_cexp_const_mul] at hleibniz
+  have hquad (k : ℕ) :
+      iteratedDeriv k (fun z : ℂ => Complex.exp (z ^ 2)) 0 =
+        (deBruijnNewmanBackwardHermite k).aeval 0 := by
+    have h := iteratedDeriv_cexp_mul_add_sq_eq_deBruijnNewmanBackwardHermite k 0 0
+    norm_num at h
+    exact h
+  simp_rw [hquad] at hleibniz
+  simpa using hleibniz
+
+theorem integrable_pow_gaussianReal_zero_two (n : ℕ) :
+    MeasureTheory.Integrable (fun y : ℝ => (y : ℂ) ^ n)
+      (ProbabilityTheory.gaussianReal 0 2) := by
+  have h :=
+    ProbabilityTheory.integrable_pow_mul_cexp_of_re_mem_interior_integrableExpSet
+      (X := id) (μ := ProbabilityTheory.gaussianReal 0 2) (z := 0) (by simp) n
+  simpa only [id_eq, zero_mul, Complex.exp_zero, mul_one, ofReal_pow] using h
+
+/-- The shifted moments of the centered variance-two Gaussian are exactly the backward Hermite
+polynomials. This identifies the polynomial part of the repeated-zero heat scaling. -/
+theorem integral_add_pow_gaussianReal_zero_two_eq_deBruijnNewmanBackwardHermite
+    (n : ℕ) (xi : ℂ) :
+    ∫ y : ℝ, (xi + (y : ℂ)) ^ n ∂ProbabilityTheory.gaussianReal 0 2 =
+      (deBruijnNewmanBackwardHermite n).aeval xi := by
+  let μ := ProbabilityTheory.gaussianReal 0 2
+  calc
+    (∫ y : ℝ, (xi + (y : ℂ)) ^ n ∂μ) =
+        ∫ y : ℝ, ∑ i ∈ Finset.range (n + 1),
+          xi ^ i * (y : ℂ) ^ (n - i) * n.choose i ∂μ := by
+      apply MeasureTheory.integral_congr_ae
+      apply MeasureTheory.ae_of_all
+      intro y
+      exact add_pow xi (y : ℂ) n
+    _ = ∑ i ∈ Finset.range (n + 1),
+          ∫ y : ℝ, xi ^ i * (y : ℂ) ^ (n - i) * n.choose i ∂μ := by
+      rw [MeasureTheory.integral_finsetSum]
+      intro i hi
+      exact ((integrable_pow_gaussianReal_zero_two (n - i)).const_mul
+        (xi ^ i)).mul_const (n.choose i : ℂ)
+    _ = ∑ i ∈ Finset.range (n + 1),
+          n.choose i * xi ^ i *
+            (deBruijnNewmanBackwardHermite (n - i)).aeval 0 := by
+      apply Finset.sum_congr rfl
+      intro i hi
+      rw [MeasureTheory.integral_mul_const, MeasureTheory.integral_const_mul,
+        integral_pow_gaussianReal_zero_two_eq_deBruijnNewmanBackwardHermite_zero]
+      ring
+    _ = (deBruijnNewmanBackwardHermite n).aeval xi :=
+      (deBruijnNewmanBackwardHermite_aeval_eq_gaussian_sum n xi).symm
+
+/-- The heat family is uniformly bounded on every closed horizontal strip. The bound depends on
+the strip and time, but not on the real part. -/
+theorem exists_norm_deBruijnNewmanH_le_of_abs_im_le (t B : ℝ) :
+    ∃ C : ℝ, ∀ w : ℂ, |w.im| ≤ B → ‖deBruijnNewmanH t w‖ ≤ C := by
+  let μ : MeasureTheory.Measure ℝ := MeasureTheory.volume.restrict (Ioi 0)
+  let M : ℝ → ℝ := fun u ↦
+    (1 + u ^ 2) * Real.exp (|t| * u ^ 2 + B * u) * ‖deBruijnNewmanPhi u‖
+  have hM : MeasureTheory.Integrable M μ := by
+    simpa only [M, μ, MeasureTheory.IntegrableOn] using
+      integrableOn_one_add_sq_mul_exp_mul_norm_deBruijnNewmanPhi |t| (abs_nonneg t) B
+  refine ⟨∫ u : ℝ, M u ∂μ, ?_⟩
+  intro w hw
+  rw [deBruijnNewmanH]
+  apply MeasureTheory.norm_integral_le_of_norm_le hM
+  rw [MeasureTheory.ae_restrict_iff' measurableSet_Ioi]
+  filter_upwards with u hu
+  have hu0 : 0 ≤ u := hu.le
+  have hcos : ‖Complex.cos (w * (u : ℂ))‖ ≤ Real.exp (B * u) := by
+    refine (norm_complex_cos_le_exp_abs_im _).trans ?_
+    apply Real.exp_le_exp.mpr
+    have him : (w * (u : ℂ)).im = w.im * u := by simp
+    rw [him, abs_mul, abs_of_nonneg hu0]
+    exact mul_le_mul_of_nonneg_right hw hu0
+  rw [norm_mul, norm_real, Real.norm_eq_abs, abs_mul,
+    abs_of_pos (Real.exp_pos _), ← Real.norm_eq_abs]
+  calc
+    Real.exp (t * u ^ 2) * ‖deBruijnNewmanPhi u‖ *
+          ‖Complex.cos (w * (u : ℂ))‖ ≤
+        Real.exp (|t| * u ^ 2) * ‖deBruijnNewmanPhi u‖ *
+          Real.exp (B * u) := by
+      gcongr
+      exact le_abs_self t
+    _ ≤ M u := by
+      dsimp [M]
+      rw [Real.exp_add]
+      calc
+        Real.exp (|t| * u ^ 2) * ‖deBruijnNewmanPhi u‖ * Real.exp (B * u) =
+            1 * (Real.exp (|t| * u ^ 2) * Real.exp (B * u) *
+              ‖deBruijnNewmanPhi u‖) := by ring
+        _ ≤ (1 + u ^ 2) *
+            (Real.exp (|t| * u ^ 2) * Real.exp (B * u) *
+              ‖deBruijnNewmanPhi u‖) := by
+          gcongr
+          nlinarith [sq_nonneg u]
+        _ = _ := by
+          rw [Real.norm_eq_abs]
+          ring
+
+/-- An entire residual factor in a global zero factorization of `H_t` inherits uniform boundedness
+on every horizontal strip. Near the divided-out zero this is compactness; away from it the
+factorization and the strip bound for `H_t` apply. -/
+theorem exists_norm_deBruijnNewmanH_entire_factor_le_of_abs_im_le
+    {t : ℝ} {z : ℂ} {m : ℕ} {g : ℂ → ℂ}
+    (hgdiff : Differentiable ℂ g)
+    (hfactor : ∀ w, deBruijnNewmanH t w = (w - z) ^ m * g w)
+    (B : ℝ) :
+    ∃ C : ℝ, ∀ w : ℂ, |w.im| ≤ B → ‖g w‖ ≤ C := by
+  obtain ⟨C0, hC0⟩ := (isCompact_closedBall z 1).exists_bound_of_continuousOn
+    hgdiff.continuous.continuousOn
+  obtain ⟨C1, hC1⟩ := exists_norm_deBruijnNewmanH_le_of_abs_im_le t B
+  refine ⟨max C0 C1, ?_⟩
+  intro w hw
+  by_cases hnear : ‖w - z‖ ≤ 1
+  · exact (hC0 w (by simpa [Metric.mem_closedBall, dist_eq_norm] using hnear)).trans
+      (le_max_left _ _)
+  · have hpow : 1 ≤ ‖w - z‖ ^ m := one_le_pow₀ (le_of_not_ge hnear)
+    calc
+      ‖g w‖ = 1 * ‖g w‖ := by ring
+      _ ≤ ‖w - z‖ ^ m * ‖g w‖ :=
+        mul_le_mul_of_nonneg_right hpow (norm_nonneg _)
+      _ = ‖deBruijnNewmanH t w‖ := by rw [hfactor, norm_mul, norm_pow]
+      _ ≤ C1 := hC1 w hw
+      _ ≤ max C0 C1 := le_max_right _ _
+
+theorem integrable_one_add_abs_pow_gaussianReal_zero_two (m : ℕ) :
+    MeasureTheory.Integrable (fun y : ℝ => (1 + |y|) ^ m)
+      (ProbabilityTheory.gaussianReal 0 2) := by
+  rw [show (fun y : ℝ => (1 + |y|) ^ m) = fun y : ℝ =>
+      ∑ i ∈ Finset.range (m + 1), 1 ^ i * |y| ^ (m - i) * m.choose i by
+    funext y
+    exact add_pow 1 |y| m]
+  apply MeasureTheory.integrable_finsetSum
+  intro i hi
+  have hpow := (integrable_pow_gaussianReal_zero_two (m - i)).norm
+  have habs : MeasureTheory.Integrable (fun y : ℝ => |y| ^ (m - i))
+      (ProbabilityTheory.gaussianReal 0 2) := by
+    simpa only [norm_pow, norm_real, Complex.norm_real, Real.norm_eq_abs] using hpow
+  simpa only [one_pow, one_mul] using habs.mul_const (m.choose i : ℝ)
+
+/-- Joint continuity at zero scale of the Gaussian residual-factor integral. The proof uses the
+horizontal-strip bound inherited from the source heat family, not unrestricted entire growth. -/
+theorem continuousAt_deBruijnNewman_gaussian_scaled_factor_integral
+    {t : ℝ} {z : ℂ} {m : ℕ} {g : ℂ → ℂ}
+    (hgdiff : Differentiable ℂ g)
+    (hfactor : ∀ w, deBruijnNewmanH t w = (w - z) ^ m * g w)
+    (xi : ℂ) :
+    ContinuousAt
+      (fun p : ℝ × ℂ =>
+        ∫ y : ℝ, (p.2 + (y : ℂ)) ^ m *
+          g (z + (p.1 : ℂ) * (p.2 + (y : ℂ)))
+          ∂ProbabilityTheory.gaussianReal 0 2)
+      (0, xi) := by
+  let μ := ProbabilityTheory.gaussianReal 0 2
+  let A : ℝ := ‖xi‖ + 2
+  let B : ℝ := |z.im| + (‖xi‖ + 1)
+  obtain ⟨C, hC⟩ := exists_norm_deBruijnNewmanH_entire_factor_le_of_abs_im_le
+    (t := t) (z := z) (m := m) (g := g) hgdiff hfactor B
+  have hC0 : 0 ≤ C := by
+    exact (norm_nonneg (g z)).trans (hC z (by
+      dsimp [B]
+      linarith [norm_nonneg xi]))
+  let bound : ℝ → ℝ := fun y => (A * (1 + |y|)) ^ m * C
+  have hbound : MeasureTheory.Integrable bound μ := by
+    have h := (integrable_one_add_abs_pow_gaussianReal_zero_two m).const_mul
+      (A ^ m * C)
+    apply h.congr
+    apply MeasureTheory.ae_of_all
+    intro y
+    dsimp [bound]
+    rw [mul_pow]
+    ring
+  apply MeasureTheory.continuousAt_of_dominated
+  · filter_upwards with p
+    have hpoly : Continuous (fun y : ℝ => (p.2 + (y : ℂ)) ^ m) := by fun_prop
+    have harg : Continuous (fun y : ℝ => z + (p.1 : ℂ) * (p.2 + (y : ℂ))) := by
+      fun_prop
+    exact (hpoly.mul (hgdiff.continuous.comp harg)).aestronglyMeasurable
+  · have hr : ∀ᶠ p : ℝ × ℂ in 𝓝 (0, xi), p.1 ∈ Metric.ball (0 : ℝ) 1 :=
+      continuous_fst.continuousAt (Metric.ball_mem_nhds 0 zero_lt_one)
+    have hxi : ∀ᶠ p : ℝ × ℂ in 𝓝 (0, xi), p.2 ∈ Metric.ball xi 1 :=
+      continuous_snd.continuousAt (Metric.ball_mem_nhds xi zero_lt_one)
+    filter_upwards [hr, hxi] with p hpR hpXi
+    apply MeasureTheory.ae_of_all
+    intro y
+    have hrabs : |p.1| ≤ 1 := by
+      simpa [Real.dist_eq] using le_of_lt (Metric.mem_ball.mp hpR)
+    have hxiSub : ‖p.2 - xi‖ ≤ 1 := by
+      simpa [dist_eq_norm] using le_of_lt (Metric.mem_ball.mp hpXi)
+    have hxiNorm : ‖p.2‖ ≤ ‖xi‖ + 1 := by
+      calc
+        ‖p.2‖ = ‖(p.2 - xi) + xi‖ := by ring_nf
+        _ ≤ ‖p.2 - xi‖ + ‖xi‖ := norm_add_le _ _
+        _ ≤ ‖xi‖ + 1 := by linarith
+    have himArg :
+        |(z + (p.1 : ℂ) * (p.2 + (y : ℂ))).im| ≤ B := by
+      have him :
+          (z + (p.1 : ℂ) * (p.2 + (y : ℂ))).im = z.im + p.1 * p.2.im := by
+        simp
+      rw [him]
+      dsimp [B]
+      calc
+        |z.im + p.1 * p.2.im| ≤ |z.im| + |p.1 * p.2.im| := abs_add_le _ _
+        _ ≤ |z.im| + (‖xi‖ + 1) := by
+          gcongr
+          rw [abs_mul]
+          calc
+            |p.1| * |p.2.im| ≤ 1 * ‖p.2‖ := by
+              gcongr
+              exact abs_im_le_norm p.2
+            _ ≤ ‖xi‖ + 1 := by simpa using hxiNorm
+    have hsum : ‖p.2 + (y : ℂ)‖ ≤ A * (1 + |y|) := by
+      calc
+        ‖p.2 + (y : ℂ)‖ ≤ ‖p.2‖ + ‖(y : ℂ)‖ := norm_add_le _ _
+        _ ≤ (‖xi‖ + 1) + |y| := by
+          simpa using add_le_add_right hxiNorm |y|
+        _ ≤ A * (1 + |y|) := by
+          dsimp [A]
+          nlinarith [norm_nonneg xi, abs_nonneg y]
+    rw [norm_mul, norm_pow]
+    calc
+      ‖p.2 + (y : ℂ)‖ ^ m *
+          ‖g (z + (p.1 : ℂ) * (p.2 + (y : ℂ)))‖ ≤
+        (A * (1 + |y|)) ^ m * C := by
+          gcongr
+          exact hC _ himArg
+      _ = bound y := rfl
+  · exact hbound
+  · apply MeasureTheory.ae_of_all
+    intro y
+    have hpoly : ContinuousAt (fun p : ℝ × ℂ => (p.2 + (y : ℂ)) ^ m) (0, xi) := by
+      fun_prop
+    have harg : ContinuousAt
+        (fun p : ℝ × ℂ => z + (p.1 : ℂ) * (p.2 + (y : ℂ))) (0, xi) := by
+      fun_prop
+    have hgarg : ContinuousAt
+        (fun p : ℝ × ℂ => g (z + (p.1 : ℂ) * (p.2 + (y : ℂ)))) (0, xi) :=
+      by simpa only [Function.comp_apply] using
+        hgdiff.continuous.continuousAt.comp' harg
+    exact hpoly.mul hgarg
+
+/-- At every fixed scaled coordinate, the exact repeated-zero Gaussian integral converges to the
+backward Hermite model times the nonzero residual factor. -/
+theorem tendsto_deBruijnNewman_gaussian_scaled_factor_integral
+    {t : ℝ} {z : ℂ} {m : ℕ} {g : ℂ → ℂ}
+    (hgdiff : Differentiable ℂ g)
+    (hfactor : ∀ w, deBruijnNewmanH t w = (w - z) ^ m * g w)
+    (xi : ℂ) :
+    Tendsto
+      (fun r : ℝ =>
+        ∫ y : ℝ, (xi + (y : ℂ)) ^ m *
+          g (z + (r : ℂ) * (xi + (y : ℂ)))
+          ∂ProbabilityTheory.gaussianReal 0 2)
+      (𝓝 0)
+      (𝓝 ((deBruijnNewmanBackwardHermite m).aeval xi * g z)) := by
+  have hcont := continuousAt_deBruijnNewman_gaussian_scaled_factor_integral
+    hgdiff hfactor xi
+  have hpath : Tendsto (fun r : ℝ => (r, xi)) (𝓝 0) (𝓝 (0, xi)) := by
+    exact (continuous_id.prodMk continuous_const).tendsto 0
+  have h := hcont.tendsto.comp hpath
+  change Tendsto
+    (fun r : ℝ =>
+      ∫ y : ℝ, (xi + (y : ℂ)) ^ m *
+        g (z + (r : ℂ) * (xi + (y : ℂ)))
+        ∂ProbabilityTheory.gaussianReal 0 2)
+    (𝓝 0)
+    (𝓝 (∫ y : ℝ, (xi + (y : ℂ)) ^ m *
+      g (z + ((0 : ℝ) : ℂ) * (xi + (y : ℂ)))
+      ∂ProbabilityTheory.gaussianReal 0 2)) at h
+  simpa only [zero_mul, ofReal_zero, add_zero,
+    MeasureTheory.integral_mul_const,
+    integral_add_pow_gaussianReal_zero_two_eq_deBruijnNewmanBackwardHermite] using h
+
 theorem deBruijnNewmanBackwardHermite_coeff_nonneg :
     ∀ n k : ℕ, 0 ≤ (deBruijnNewmanBackwardHermite n).coeff k := by
   intro n

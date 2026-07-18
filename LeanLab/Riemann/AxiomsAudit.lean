@@ -498,3 +498,7 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.integrable_deBruijnNewmanH_gaussian_shift_kernel
 #print axioms LeanLab.Riemann.integral_deBruijnNewmanH_gaussian_shift
 #print axioms LeanLab.Riemann.exists_deBruijnNewmanH_repeated_zero_gaussian_scaling
+#print axioms LeanLab.Riemann.iteratedDeriv_cexp_mul_add_sq_eq_deBruijnNewmanBackwardHermite
+#print axioms LeanLab.Riemann.integral_add_pow_gaussianReal_zero_two_eq_deBruijnNewmanBackwardHermite
+#print axioms LeanLab.Riemann.continuousAt_deBruijnNewman_gaussian_scaled_factor_integral
+#print axioms LeanLab.Riemann.tendsto_deBruijnNewman_gaussian_scaled_factor_integral

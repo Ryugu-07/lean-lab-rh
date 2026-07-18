@@ -864,6 +864,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``exists_deBruijnNewmanH_repeated_zero_gaussian_scaling
       status := .proven
       note := "Loop 8 of campaign LITERATURE-20260717-H6-POLYMATH-ZERO-FREE-CRITERION-01 uses analytic order and iterated divided slopes for the global factorization, a horizontal-strip complex-cosine bound for product integrability, the variance-two Gaussian characteristic function, and Fubini to prove integral_deBruijnNewmanH_gaussian_shift. The resulting scaling identity is exact for every real scale r and complex xi. Identification of its r->0 limit with the compiled backward Hermite polynomial, compact-uniform convergence, and zero transfer remain open, so backward upper linear escape, the Polymath criterion, Lambda <= 0.2, and RH are not claimed. Implementation commit 549b35e736b9a2de02282bd8ac41bf010b858196 passed public Lean Action CI run 29626216475, build job 88031047702, in 2m15s." },
+    { id := "H6.debruijn-newman.gaussian-hermite-pointwise-limit"
+      tier := .tier2
+      title := "Identify the repeated-zero Gaussian scaling limit"
+      statement :=
+        "Prove that every shifted variance-two Gaussian moment is the source-normalized backward Hermite polynomial, establish horizontal-strip bounds for the entire residual factor, and prove pointwise convergence of the exact scaled integral to P_m(xi)*g(z) as the real scale tends to zero."
+      leanName := some ``tendsto_deBruijnNewman_gaussian_scaled_factor_integral
+      status := .proven
+      note := "Loop 9 of campaign LITERATURE-20260717-H6-POLYMATH-ZERO-FREE-CRITERION-01 derives the Gaussian moments from the closed complex MGF and iterated Leibniz formula, proves the unrestricted-real-part strip bound inherited by the residual factor, and applies dominated continuity to the two-parameter scaled integral. This is a pointwise model-limit theorem. Compact-uniform convergence on a model-root disk and zero transfer remain open, so backward upper linear escape, the Polymath criterion, Lambda <= 0.2, H6-E/G8, and RH are not claimed." },
     { id := "H6.debruijn-newman.polymath-zero-free-criterion"
       tier := .tier2
       title := "Formalize the Polymath three-region zero-free criterion"
@@ -871,7 +879,7 @@ def rhTargets : List ResearchTarget :=
         "From the initial, final, and barrier zero-free regions, prove the strict time-t0 canopy, the resulting all-real endpoint at t0+y0^2/2, and the exact Table 1 second-row corollary at time 1/5."
       leanName := none
       status := .inProgress
-      note := "The compact first-contact construction and complete simple-contact force contradiction compile. The repeated-contact consumer, finite backward Hermite upper root, finite analytic multiplicity, global entire residual factor, exact Gaussian backward heat evolution, and exact square-root-scale integral representation now compile. The remaining source interface is identification and compact-uniform convergence of that integral to the backward Hermite model, followed by zero transfer strong enough to prove deBruijnNewmanHasBackwardUpperLinearEscape_of_repeated. The three region certificates, criterion endpoint, Lambda <= 0.2, H6-E/G8, and RH remain open." },
+      note := "The compact first-contact construction and complete simple-contact force contradiction compile. The repeated-contact consumer, finite backward Hermite upper root, finite analytic multiplicity, global entire residual factor, exact Gaussian backward heat evolution, exact square-root-scale integral representation, Gaussian moment identification, residual-factor strip domination, and pointwise model limit now compile. The remaining source interface is compact-uniform convergence on a model-root disk and zero transfer strong enough to prove deBruijnNewmanHasBackwardUpperLinearEscape_of_repeated. The three region certificates, criterion endpoint, Lambda <= 0.2, H6-E/G8, and RH remain open." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

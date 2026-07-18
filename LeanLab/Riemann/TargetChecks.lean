@@ -1610,4 +1610,26 @@ example {t : ℝ} {z : ℂ} (hz : deBruijnNewmanH t z = 0)
               ∂ProbabilityTheory.gaussianReal 0 2 :=
   exists_deBruijnNewmanH_repeated_zero_gaussian_scaling hz hrepeated
 
+example (n : ℕ) (xi : ℂ) :
+    ∫ y : ℝ, (xi + (y : ℂ)) ^ n ∂ProbabilityTheory.gaussianReal 0 2 =
+      (deBruijnNewmanBackwardHermite n).aeval xi :=
+  integral_add_pow_gaussianReal_zero_two_eq_deBruijnNewmanBackwardHermite n xi
+
+example (t B : ℝ) :
+    ∃ C : ℝ, ∀ w : ℂ, |w.im| ≤ B → ‖deBruijnNewmanH t w‖ ≤ C :=
+  exists_norm_deBruijnNewmanH_le_of_abs_im_le t B
+
+example {t : ℝ} {z : ℂ} {m : ℕ} {g : ℂ → ℂ}
+    (hgdiff : Differentiable ℂ g)
+    (hfactor : ∀ w, deBruijnNewmanH t w = (w - z) ^ m * g w)
+    (xi : ℂ) :
+    Filter.Tendsto
+      (fun r : ℝ =>
+        ∫ y : ℝ, (xi + (y : ℂ)) ^ m *
+          g (z + (r : ℂ) * (xi + (y : ℂ)))
+          ∂ProbabilityTheory.gaussianReal 0 2)
+      (𝓝 0)
+      (𝓝 ((deBruijnNewmanBackwardHermite m).aeval xi * g z)) :=
+  tendsto_deBruijnNewman_gaussian_scaled_factor_integral hgdiff hfactor xi
+
 end LeanLab.Riemann
