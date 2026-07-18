@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_1_PUBLICLY_CHECKED`
+Status: `ACTIVE_LOOP_2_PREREGISTERED_PENDING_PUBLIC_CI`
 
 ## Target
 
@@ -46,6 +46,35 @@ output is imported. Every numerical fact must be independently re-proved in Lean
 | --- | --- | --- | --- |
 | 0 | `ROUTE_SELECTION / LITERATURE` | Fixed the full hypothesis-free Table 1 endpoint after source and external-artifact audit. Identified the three independent certificate layers and the exact first subedge from finite-height RH to the initial region. No proof source edited. | Commit and publicly build the preregistration. Only after green CI, begin Loop 1 on the exact finite-height transport; do not assert the external computation. |
 | 1 | `LITERATURE` | Compiled `riemannHypothesisUpTo`, the general finite-height-RH transport, and the exact Table 1 specialization through height `3*10^12`. The `x=0` boundary uses `deBruijnNewmanH_mul_I_ne_zero`; the positive branch derives the exact `x/2` zeta ordinate and contradicts the positive lower `y` boundary. Standalone checks, exact witnesses, standard-only axiom prints, forbidden scans, and the full 8,704-job build pass locally. This is conditional on `riemannHypothesisUpTo (3*10^12)` and proves no unconditional region. | Keep the campaign active. Loop 2 should attack the source-normalized effective Riemann--Siegel approximation and error consumer needed by the final and barrier certificates; do not build interval infrastructure detached from an exact `H_t` statement. The finite RH computation, final region, and barrier remain open. |
+
+## Loop 2 preregistration
+
+- `mode`: `LITERATURE`
+- `fixed_subedge`: formalize the exact source normalization in Polymath Theorem 1.3 and compile
+  Corollary 1.4 all the way to the Table 1 final-region predicate
+- `definitions`: source `log M_0`, `M_0`, `alpha`, `M_t`, `B_t`, `b_n^t`, `N`, `gamma`,
+  `s_*`, `kappa`, and `f_t`, with the paper's principal complex logarithm and exact signs
+- `analytic_statement`: on the strict lower half-plane, the derivative of source `log M_0` is
+  the explicit `alpha`; `M_0`, `M_t`, and `B_t(x+iy)` are nonzero when `x>0`
+- `certificate_statement`: if
+  `norm (H_t(x+iy) / B_t(x+iy) - f_t(x+iy)) <= e_A+e_B+e_C0` and the nonnegative error sum is
+  strictly below `norm (f_t(x+iy))`, then `H_t(x+iy) != 0`
+- `region_statement`: pointwise certificates on every point of the exact second-row final region
+  imply `deBruijnNewmanPolymathFinalRegionZeroFree` at
+  `(93/500,5*10^12+194858,16733/100000)`
+- `success_criterion`: all source definitions and the derivative, nonvanishing, pointwise, general
+  final-region, and exact-row consumer theorems compile with exact witnesses and standard-only
+  axiom prints
+- `falsification_criterion`: any source sign, conjugation, branch-domain, floor convention, or
+  final-region endpoint fails exact alignment, or the claimed consumer cannot be derived from the
+  stated norm bound without an additional premise
+- `known_obstacles`: this loop does not yet prove the effective approximation inequality or its
+  explicit error bounds; the paper's full proof still requires the heat convolution,
+  Riemann--Siegel expansion, contour shifts, saddle-point remainders, and large finite sums
+- `anti-substitution_rule`: a generic interval or abstract norm lemma detached from the exact
+  source `H_t/B_t-f_t` expression is not Loop 2 success
+
+No Lean proof source may be edited for Loop 2 before this preregistration passes public CI.
 
 ## Mechanical audit
 

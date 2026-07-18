@@ -2082,3 +2082,14 @@ The standalone module, exact target witnesses, selected axiom audit, forbidden s
 job `88041893271`, in `1m52s`. Evidence commit `0cd4c215d59c4e37949c09160ad65789bd1fe61d`
 passed run `29630173782`, build job `88042132339`, in `1m49s`. Loop 1 is publicly checked; the
 campaign remains active.
+
+### Loop 2 source-normalization preregistration
+
+Loop 2 fixes Polymath Theorem 1.3 and Corollary 1.4 as the next source edge. It will define the
+paper's exact `log M_0`, `M_0`, `alpha`, `M_t`, `B_t`, coefficient, cutoff, phase, shifted exponent,
+and Dirichlet polynomial, prove the branch-domain derivative and normalizer nonvanishing, and
+compile the strict error criterion through the existing exact Table 1 final-region predicate.
+
+The effective approximation inequality and explicit error estimates remain open after this
+structural subedge. Generic interval machinery or an abstract norm lemma disconnected from the
+source expression is not success. The campaign endpoint and hard gaps are unchanged.

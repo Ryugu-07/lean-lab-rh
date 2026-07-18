@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_1_PUBLICLY_CHECKED`
+Status: `ACTIVE_LOOP_2_PREREGISTERED_PENDING_PUBLIC_CI`
 
 ## Exact mathematical endpoint
 
@@ -174,3 +174,46 @@ commit `ac96523034b36e2bfafdb007d6dcd95d8e89b625` passed public Lean Action CI r
 build job `88041893271`, in `1m52s`. Evidence commit
 `0cd4c215d59c4e37949c09160ad65789bd1fe61d` passed run `29630173782`, build job `88042132339`, in
 `1m49s`. Loop 1 is publicly checked; the campaign and persistent RH Goal remain active.
+
+## Loop 2 fixed subedge
+
+Polymath Theorem 1.3 is normalized by the exact functions
+
+```text
+log M_0, M_0, alpha, M_t, B_t, b_n^t, N, gamma, s_*, kappa, f_t.
+```
+
+Loop 2 must define each quantity from equations (M-def), (logM), (alpha-form), (Mt-def),
+(bo-def), and (ft-def)--(N-def-main), using the principal complex logarithm. It must prove the
+following source-facing interfaces:
+
+```lean
+theorem deBruijnNewmanPolymathLogM0_hasDerivAt
+    {s : Complex} (hs : s.im < 0) :
+    HasDerivAt deBruijnNewmanPolymathLogM0
+      (deBruijnNewmanPolymathAlpha s) s
+
+theorem deBruijnNewmanPolymathB_ne_zero
+    {t x y : Real} (hx : 0 < x) :
+    deBruijnNewmanPolymathB t x y != 0
+
+theorem deBruijnNewmanH_ne_zero_of_polymathEffectiveApproximation
+    {t x y eA eB eC0 : Real}
+    (hx : 0 < x) (hA : 0 <= eA) (hB : 0 <= eB) (hC : 0 <= eC0)
+    (happrox : norm (deBruijnNewmanH t (x + y*I) /
+      deBruijnNewmanPolymathB t x y - deBruijnNewmanPolymathF t x y)
+      <= eA + eB + eC0)
+    (hstrict : eA + eB + eC0 < norm (deBruijnNewmanPolymathF t x y)) :
+    deBruijnNewmanH t (x + y*I) != 0
+```
+
+The exact binder presentation may change, but the source expression may not be replaced by an
+abstract function. A general final-region consumer and the exact Table 1 second-row specialization
+must also compile: pointwise certificates over the full unbounded final region must imply the
+existing `deBruijnNewmanPolymathFinalRegionZeroFree` predicate.
+
+This subedge exposes the exact input expected from the eventual effective Riemann--Siegel proof;
+it does not assert Theorem 1.3, any explicit error bound, or any external numerical output. Loop 2
+success requires exact TargetChecks, selected axiom prints, forbidden scans, a full build, and
+public implementation/evidence CI. Failure records the first source normalization or branch-domain
+mismatch and does not weaken the campaign endpoint.
