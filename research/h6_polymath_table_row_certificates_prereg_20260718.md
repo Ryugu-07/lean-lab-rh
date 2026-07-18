@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_10_PARTIAL_PUBLIC`
+Status: `ACTIVE_LOOP_11_PREREGISTERED`
 
 ## Exact mathematical endpoint
 
@@ -864,3 +864,40 @@ Implementation commit `814083d6c831c4ed18acaf291ce0d64b6199f1da` passed public L
 run `29657235672`, build job `88113679693`, in `2m4s`. Loop 10's retained prefix is therefore
 publicly checked; its `PARTIAL / BLOCKER_EXPOSED` classification and the open Boyd obligation are
 unchanged.
+
+Evidence commit `d656c643194d0685c085f871b1d3c4a159d2f73e` passed public Lean Action CI
+run `29657362457`, build job `88114009920`, in `1m30s`. Loop 10 is publicly closed as
+`PARTIAL / BLOCKER_EXPOSED`; the global Goal remains active.
+
+## Loop 11 direct Boyd `R_2` attack
+
+Loop 11 is a `PROOF-ATTEMPT` on the single first obligation exposed by Loop 10. Its source endpoint
+is Polymath Lemma 5.1(v): for every complex `z` with `abs(z.im)>=1` or `z.re>=1`, prove
+
+```text
+norm(Gamma(z)/GammaStirlingMain(z)-1-1/(12*z))
+  <= (41/2000)/norm(z)^2.
+```
+
+The proposed Lean theorem is
+`deBruijnNewmanPolymathGammaStirlingR2_norm_le`, using the existing actual `Complex.Gamma`,
+principal-power `deBruijnNewmanPolymathGammaStirlingMain`, and
+`deBruijnNewmanPolymathGammaStirlingR2`. The domain may not be narrowed to the positive real axis.
+
+The primary source is Boyd, Proc. R. Soc. A 447 (1994), 609--630, DOI
+`10.1098/rspa.1994.0158`, equations `(1.13)`, `(3.1)`, `(3.14)`, and `(3.15)` as cited by the
+audited Polymath source. Nemes arXiv `1310.0166` is a secondary primary-paper cross-check for the
+resurgence representation and effective bounds.
+
+The mandatory proof chain is an exact remainder representation with branch alignment and absolute
+integrability; Boyd's right-half-plane bound; his left-half-plane bound with denominator
+`norm(1-exp(2*pi*i*z))`; the lower bound `1-exp(-2*pi)` when `z.im>=1`; conjugation for the lower
+half-plane; and a Lean proof that the resulting explicit constant is at most `41/2000`. Assuming
+the target inequality or an equivalent effective Gamma estimate, using unspecified asymptotics,
+introducing a replacement Gamma function, or proving only sampled/positive-real cases is rejected.
+
+Success also makes the existing Loop 10 prefactor-error consumer unconditional on the source
+domain and must pass exact TargetChecks, standard-only axiom audit, forbidden scans, the full build,
+and public implementation/evidence CI. A failed endpoint may retain only a source-exact prefix
+that removes one named analytic obligation. No Loop 11 proof source may be edited before this
+preregistration passes public Lean Action CI. H6-Q1 and the global RH Goal remain active.

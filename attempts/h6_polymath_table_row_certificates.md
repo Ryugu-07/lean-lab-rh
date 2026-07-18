@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_10_PARTIAL_PUBLIC`
+Status: `ACTIVE_LOOP_11_PREREGISTERED`
 
 ## Target
 
@@ -55,6 +55,7 @@ output is imported. Every numerical fact must be independently re-proved in Lean
 | 8 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves tunable horizontal bounds for the raw contour and Gamma prefactor, separate Gaussian integrability of every actual residue and remainder term, centered-Gaussian sign symmetry, heat-evolution/Schwarz-reflection commutation, and the exact two-sum, two-remainder equation `(39)` for every `t>0`, `z.re!=0`, and `N`. Six exact witnesses, five selected standard-only axiom prints, scans, full build, public implementation CI, and public evidence CI pass. | Before the next proof attack, satisfy the outstanding contribution-self-report governance deliverables. Then attack the source contour shifts `(rtn-def)` and `(RTN-def)` before the effective estimates. |
 | 9 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves a uniform closed-strip bound for the actual raw contour, Gamma-prefactored residue, and remainder; kills both finite-rectangle vertical sides; passes both horizontal sides to Bochner full-line integrals; removes the real contour displacement by translation; and compiles the exact variance-two `(rtn-def)` and `(RTN-def)` endpoints for arbitrary complex shifts in the strict same-half-plane domain. Exact witnesses, standard-only axiom prints, scans, the full 8,714-job build, public implementation CI, and public evidence CI pass. | Audit the exact statements and dependency order of Polymath Propositions 6.1 and 6.3, preregister one source-exact quantitative subedge, and require its public CI before new proof-source edits. The numerical certificates, H6-E/G8, and RH remain open. |
 | 10 | `PROOF-ATTEMPT` | `PARTIAL / BLOCKER_EXPOSED` locally. Lean proves the upper-half-plane alpha derivative and sharp norm bound, `Im(alpha_n)>=-0.15`, legal same-half-plane transport, the exact second-order `log M_0` Taylor bound, the displacement-square estimate, the source main-term identity, equation `(ax)`, and every branch conversion from a Boyd `R_2` bound through the `0.246` relative-error and `0.33` logarithmic-error constants. The full Proposition 6.1 endpoint is not proved. | Publicly check the retained prefix, close Loop 10 without a Proposition 6.1 claim, and preregister Loop 11 on the single remaining first obligation `norm R_2(z)<=0.0205/norm(z)^2`. |
+| 11 | `PROOF-ATTEMPT` | Preregistered the direct Boyd effective Stirling remainder on the full Polymath source domain `abs(Im z)>=1 or Re z>=1`, with the actual project `Gamma`, principal-power Stirling main term, `R_2`, and rational constant `41/2000`. The attack must derive a Boyd/Nemes integral or resurgence representation and its two half-plane bounds; the Loop 10 conditional consumer cannot be reused as the missing premise. | Commit only closure evidence and preregistration, require public CI, then attack the source-exact `R_2` theorem. No Loop 11 proof-source edit is allowed before green CI. |
 
 ## Loop 4 preregistration
 
@@ -655,10 +656,64 @@ No Loop 10 proof source may be edited before this preregistration passes public 
   selected declarations depend only on `propext`, `Classical.choice`, and `Quot.sound`
 - `public_implementation_evidence`: commit `814083d6c831c4ed18acaf291ce0d64b6199f1da` passed
   public Lean Action CI run `29657235672`, build job `88113679693`, in `2m4s`
+- `public_evidence_backfill`: commit `d656c643194d0685c085f871b1d3c4a159d2f73e` passed public
+  Lean Action CI run `29657362457`, build job `88114009920`, in `1m30s`
 - `next_exact_gate`: Loop 11 must preregister and attack the displayed Boyd `R_2` inequality from
   an explicit integral or steepest-descent remainder representation; a theorem assuming that
   inequality, an asymptotic expansion without constants, or a real-axis-only bound is not success
 - `global_goal`: active
+
+## Loop 11 preregistration
+
+- `mode`: `PROOF-ATTEMPT`
+- `fixed_subedge`: Boyd's effective second Gamma/Stirling remainder used in Polymath Lemma 5.1(v)
+- `primary_sources`: W. G. C. Boyd, *Gamma Function Asymptotics by an Extension of the Method of
+  Steepest Descents*, Proc. R. Soc. A 447 (1994), 609--630, DOI
+  `10.1098/rspa.1994.0158`, especially equations `(1.13)`, `(3.1)`, `(3.14)`, `(3.15)` as cited by
+  Polymath; G. Nemes, arXiv `1310.0166`, for a modernized resurgence representation and error-bound
+  cross-check
+- `source_domain`: arbitrary `z : C` satisfying `1<=abs(Im z)` or `1<=Re z`; this is the exact
+  domain of Polymath Lemma 5.1(v), not a positive-real-axis surrogate
+- `fixed_definitions`: use the existing project
+  `deBruijnNewmanPolymathGammaStirlingMain z` and
+  `deBruijnNewmanPolymathGammaStirlingR2 z =
+  Gamma(z)/GammaStirlingMain(z)-1-1/(12*z)` with Mathlib's `Complex.Gamma` and principal `cpow`
+- `proposed_Lean_endpoint`:
+  `deBruijnNewmanPolymathGammaStirlingR2_norm_le`
+- `statement_shape`: for every source-domain `z`, prove
+  `norm (deBruijnNewmanPolymathGammaStirlingR2 z) <=
+  (41/2000)/norm(z)^2` without an analytic remainder premise
+- `mandatory_milestones`: construct and prove the exact Boyd/Nemes remainder representation in
+  project normalization; prove absolute integrability and branch agreement; obtain the
+  `(2*sqrt(2)+1)*C_2*Gamma(2)/(2*pi)^3` right-half-plane bound; obtain the corresponding
+  left-half-plane bound with `norm(1-exp(2*pi*i*z))` in the denominator; prove its
+  `1-exp(-2*pi)` lower bound when `Im z>=1`; use Gamma conjugation for `Im z<=-1`; and close the
+  rational `41/2000` constant comparison in Lean
+- `success_criterion`: the exact full-domain endpoint compiles, the Loop 10 source-form
+  prefactor-error theorem becomes unconditional on the Lemma 5.1(v) domain, exact witnesses and
+  standard-only axiom prints pass, scans and full build pass, and implementation/evidence commits
+  pass public CI
+- `falsification_criterion`: Boyd's cited representation does not match the project's principal
+  complex power, requires an omitted sector or pole-avoidance hypothesis, the left-half-plane
+  denominator estimate fails on the registered domain, or the explicit constant does not prove
+  `41/2000`
+- `anti_substitution_rule`: no theorem may assume the displayed `R_2` inequality, an equivalent
+  relative Gamma error, or a prepackaged effective Stirling bound; an asymptotic `O`, a new Gamma
+  definition, an abstract remainder predicate, a numerical sample, or a positive-real-only theorem
+  is not Loop 11 success
+- `proper_prefix_rule`: if the endpoint does not compile, retain only a source-exact theorem that
+  removes one named representation, integrability, sector, denominator, conjugation, or constant
+  obligation and record the first remaining one as `PARTIAL / BLOCKER_EXPOSED`
+- `selection_reason`: Loop 10 reduced the entire Proposition 6.1 chain to this one first analytic
+  obligation; proving it immediately activates the already compiled `0.0205 -> 0.246 -> 0.33`
+  conversion and actual Riemann--Siegel prefactor bound
+- `next_if_success`: compose the unconditional base-term error, public contour shift, Taylor bound,
+  displacement estimate, and Gaussian `(ax)` into the full Proposition 6.1 witness
+- `next_if_blocked`: log the exact failed Boyd representation or sector bound, then compare the
+  Nemes integral representation or derive Binet's formula directly; the global RH Goal remains
+  active
+
+No Loop 11 proof source may be edited before this preregistration passes public Lean Action CI.
 
 ## Loop 3 preregistration
 

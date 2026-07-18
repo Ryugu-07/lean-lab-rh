@@ -2386,3 +2386,27 @@ the global RH Goal remain active.
 Implementation commit `814083d6c831c4ed18acaf291ce0d64b6199f1da` passed public CI run
 `29657235672`, build job `88113679693`, in `2m4s`. Loop 10's source-exact prefix is publicly
 checked; the route remains selected at the Boyd `R_2` inequality.
+
+Evidence commit `d656c643194d0685c085f871b1d3c4a159d2f73e` passed public CI run
+`29657362457`, build job `88114009920`, in `1m30s`. Loop 10 is publicly closed as
+`PARTIAL / BLOCKER_EXPOSED`.
+
+### Loop 11 Boyd `R_2` preregistration
+
+The next `PROOF-ATTEMPT` fixes the actual project remainder
+`Gamma(z)/GammaStirlingMain(z)-1-1/(12*z)` and the exact source domain
+`abs(Im z)>=1 or Re z>=1`. Its endpoint is the unconditional bound
+`norm R_2(z)<=(41/2000)/norm(z)^2`; this is the one first obligation left by Loop 10.
+
+The proof must formalize a Boyd/Nemes effective remainder representation in the project's
+principal-power normalization. It must separately derive the right-half-plane estimate and the
+left-half-plane estimate containing `norm(1-exp(2*pi*i*z))`, lower-bound that denominator at
+`Im z>=1`, transport by Gamma conjugation to `Im z<=-1`, and certify the final explicit constant.
+No assumed effective Stirling theorem, equivalent relative-error premise, asymptotic big O,
+replacement Gamma, numeric sampling, or positive-real-only result can close the loop.
+
+The preregistration cites Boyd equations `(1.13)`, `(3.1)`, `(3.14)`, `(3.15)` through DOI
+`10.1098/rspa.1994.0158`, with Nemes arXiv `1310.0166` as a modern representation cross-check.
+Public preregistration CI is required before proof-source edits. On success, the next attack is the
+full Proposition 6.1 composition; on blockage, only a source-exact representation or sector-bound
+prefix that removes a named obligation may survive. H6-Q1 and the global RH Goal remain active.
