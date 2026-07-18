@@ -1044,3 +1044,21 @@ derivative, and compile the exact Gaussian-Jacobian form of the Loop 14 scaled-G
 also identifies the nonzero integer saddles `2*pi*i*n` as complex critical points and records their
 coordinate squares, without a global complex branch or equation `(15)` premise. Full details are
 in `research/h6_boyd_real_saddle_diffeomorphism_loop16_prereg_20260719.md`.
+
+## Loop 16 local result
+
+`LeanLab/Riemann/DeBruijnNewmanPolymathBoydRealSaddleDiffeomorphism.lean` now compiles the complete
+real-axis orientation-preserving order isomorphism, its positive inverse derivative, the exact
+Gaussian-Jacobian scaled-Gamma integral, and analytic criticality with coordinate square
+`-4*pi*i*n` at every nonzero integer source saddle. Exact Targets and TargetChecks, sixteen
+selected standard-only axiom prints, empty forbidden scans, and the full 8,721-job build pass.
+
+This is K0 route infrastructure with `rh_frontier_delta=0`, `hard_gap_delta=0`,
+`route_infrastructure_delta=1`, and `obstruction_map_delta=1`. The inverse-Jacobian Cauchy
+coefficient representation, adjacent-saddle decomposition, equation `(15)`, effective `R2`, the
+unconditional Table 1 certificates, H6-E/G8, and RH remain open.
+
+Preregistration commit `e21951ecbbf91bfaa7f654027de4e671a45ab525` passed public Lean Action CI
+run `29663980567`; implementation commit `59d58270504f26555d6f8771e8a101bda4a115c5` passed run
+`29664724249`; closure-evidence commit `8e75db36287768ae8521dc85fdcf101a6b173ffd` passed run
+`29664938202`. Loop 16 is publicly closed.

@@ -6,7 +6,7 @@ Campaign: `FORMALIZATION-20260719-H6-BOYD-REAL-SADDLE-DIFFEO-01`
 
 Mode: `LITERATURE`
 
-Status: `IMPLEMENTATION_PUBLIC; CLOSURE_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Exact target
 
@@ -253,6 +253,8 @@ No Loop 16 proof source may be edited before this preregistration passes public 
   Action CI run `29663980567`, build job `88131219843`, in `1m33s` before proof-source editing.
 - `public_implementation`: commit `59d58270504f26555d6f8771e8a101bda4a115c5` passed public Lean
   Action CI run `29664724249`, build job `88133120232`, in `2m24s`.
+- `public_closure`: evidence commit `8e75db36287768ae8521dc85fdcf101a6b173ffd` passed public Lean
+  Action CI run `29664938202`, build job `88133668363`, in `1m30s`. Loop 16 is publicly closed.
 - `next_exact_gate`: derive a Cauchy coefficient representation for the real inverse Jacobian near
   zero, with its radius controlled by the `n=+/-1` critical images, and determine how those images
   generate the two adjacent-saddle terms without assuming equation `(15)`.

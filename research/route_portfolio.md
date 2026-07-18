@@ -2593,4 +2593,5 @@ equation `(15)` premise.
 Preregistration commit `e21951ecbbf91bfaa7f654027de4e671a45ab525` passed public Lean Action CI
 run `29663980567`, build job `88131219843`, in `1m33s`. Implementation commit
 `59d58270504f26555d6f8771e8a101bda4a115c5` passed run `29664724249`, build job `88133120232`,
-in `2m24s`. Closure-evidence CI is pending.
+in `2m24s`. Closure-evidence commit `8e75db36287768ae8521dc85fdcf101a6b173ffd` passed run
+`29664938202`, build job `88133668363`, in `1m30s`. Loop 16 is publicly closed.
