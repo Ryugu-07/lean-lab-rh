@@ -21,6 +21,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatTermEstimate
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydStirlingRemainder
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydR2Integral
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydSaddleIntegral
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLogSaddleIntegral
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2190,5 +2191,16 @@ example {x : ℝ} (hx : 0 < x) :
         (∫ t : ℝ in Set.Ioi 0,
           deBruijnNewmanPolymathBoydSaddleIntegrand x t) : ℝ) : ℂ) :=
   deBruijnNewmanPolymathScaledGamma_ofReal_eq_boydSaddleIntegral hx
+
+example {x : ℝ} (hx : 0 < x) :
+    MeasureTheory.Integrable
+      (deBruijnNewmanPolymathBoydLogSaddleIntegrand x) :=
+  deBruijnNewmanPolymathBoydLogSaddleIntegrand_integrable hx
+
+example {x : ℝ} (hx : 0 < x) :
+    deBruijnNewmanPolymathScaledGamma (x : ℂ) =
+      ((Real.sqrt (x / (2 * Real.pi)) *
+        (∫ u : ℝ, deBruijnNewmanPolymathBoydLogSaddleIntegrand x u) : ℝ) : ℂ) :=
+  deBruijnNewmanPolymathScaledGamma_ofReal_eq_boydLogSaddleIntegral hx
 
 end LeanLab.Riemann

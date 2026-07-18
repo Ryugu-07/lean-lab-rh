@@ -20,6 +20,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatExpansion
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatContourShift
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydR2Integral
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydSaddleIntegral
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLogSaddleIntegral
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1010,6 +1011,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanPolymathScaledGamma_ofReal_eq_boydSaddleIntegral
       status := .proven
       note := "Loop 13 compiles this exact upstream edge from Euler's real Gamma integral and positive scaling only. Lean proves integrability, exact phase algebra, the positive-real principal-log Stirling main term, the square-root normalization, and the final project-scaled-Gamma equality. The logarithmic coordinate, global inverse-saddle resurgence decomposition, Boyd equation (15), effective R2, Proposition 6.1/6.3, Table 1 certificates, H6-E/G8, and RH remain open." },
+    { id := "H6.debruijn-newman.boyd-log-saddle-integral"
+      tier := .tier2
+      title := "Derive the full-real logarithmic saddle integral"
+      statement :=
+        "For every positive real x, prove the project's actual scaled Gamma equals sqrt(x/(2*pi)) times the full-real integral of exp(-x*(exp(u)-u-1)), including integrability of the transformed saddle integrand."
+      leanName := some ``deBruijnNewmanPolymathScaledGamma_ofReal_eq_boydLogSaddleIntegral
+      status := .proven
+      note := "Loop 14 applies mathlib's global one-dimensional Jacobian theorem with t=exp(u). Lean transports Loop 13 integrability from Ioi 0 to the full real line and proves the exact integral identity in one measurable-image step. The analytic inverse of w^2/2=exp(u)-u-1, adjacent saddle images, Boyd equation (15), effective R2, Proposition 6.1/6.3, Table 1 certificates, H6-E/G8, and RH remain open." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

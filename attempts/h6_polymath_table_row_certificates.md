@@ -910,6 +910,38 @@ run `29660772447`, build job `88122935390`, in `1m56s`. Loop 13 proof-source wor
 
 No Loop 14 proof source may be edited before this preregistration passes public Lean Action CI.
 
+Preregistration commit `4d21765574a4e43174a8ace7939ea9d585395d9a` passed public Lean Action CI
+run `29661631696`, build job `88125198144`, in `1m31s`.
+
+## Loop 14 local outcome
+
+- `classification`: `KNOWN_THEOREM_FORMALIZED`
+- `production_module`:
+  `LeanLab/Riemann/DeBruijnNewmanPolymathBoydLogSaddleIntegral.lean`
+- `compiled_theorems`:
+  `deBruijnNewmanPolymathBoyd_exp_image_univ`,
+  `deBruijnNewmanPolymathBoydLogSaddleIntegrand_eq_jacobian`,
+  `deBruijnNewmanPolymathBoydLogSaddleIntegrand_integrable`,
+  `integral_deBruijnNewmanPolymathBoydLogSaddleIntegrand`, and
+  `deBruijnNewmanPolymathScaledGamma_ofReal_eq_boydLogSaddleIntegral`.
+- `result`: the global exponential Jacobian transports both integrability and the exact Loop 13
+  integral to the full-real kernel `exp(-x*(exp(u)-u-1))` for every `x>0`.
+- `assumption_frontier_after`: the logarithmic saddle integral is K0. The normalized analytic
+  square-root coordinate, local inverse, adjacent saddle images, Boyd equation `(15)`, effective
+  `R2`, Proposition 6.1/6.3, strict finite-sum certificates, and RH remain open.
+- `rh_frontier_delta`: 0
+- `route_infrastructure_delta`: 1
+- `engineering_delta`: 0
+- `local_mechanical_audit`: standalone and module builds, exact Targets, both TargetChecks layers,
+  selected standard-only axiom prints, empty forbidden scan, and the full 8,719-job build pass.
+- `next_exact_gate`: construct the normalized local analytic coordinate
+  `w(u)=u*q(u)`, `q(0)=1`, satisfying `w(u)^2/2=exp(u)-u-1`, then prove its local inverse.
+- `compaction_state`: no new compaction detected in Loop 14.
+- `model`: Codex, GPT-5 family; exact serving variant not exposed.
+- `reasoning_effort`: not exposed.
+- `loop_budget`: no V4.1 numerical quota; serving token budget not exposed.
+- `global_goal`: H6-Q1 and the persistent RH Goal remain active.
+
 ## Loop 3 preregistration
 
 - `mode`: `LITERATURE`

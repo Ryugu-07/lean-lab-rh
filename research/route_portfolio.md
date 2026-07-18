@@ -2519,3 +2519,15 @@ scaled-Gamma formula in that coordinate. The audited implementation path applies
 one-dimensional Jacobian theorem on `univ`; this transports integrability and the integral itself
 without a manual two-endpoint limit exchange. Full preregistration is in
 `research/h6_boyd_log_saddle_loop14_prereg_20260719.md`.
+
+### Loop 14 local outcome
+
+Loop 14 closes locally as `KNOWN_THEOREM_FORMALIZED`. The production module
+`DeBruijnNewmanPolymathBoydLogSaddleIntegral.lean` proves the full-real phase kernel integrable and
+derives the exact project scaled-Gamma integral by a single global exponential-Jacobian identity.
+No endpoint convergence premise, equation `(15)`, or effective `R2` estimate is assumed.
+
+This gives `rh_frontier_delta=0`, `route_infrastructure_delta=1`, and `engineering_delta=0`. The
+next selected edge is the genuinely analytic one: remove the double zero of `exp(u)-u-1`, choose
+the normalized local analytic square root, and invert `w(u)=u*q(u)` at the origin before making
+any global branch or adjacent-saddle claim.

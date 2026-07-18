@@ -991,3 +991,15 @@ coordinate. The implementation must use the audited one-dimensional Jacobian ima
 `univ`, not assume endpoint convergence separately. Full details are in
 `research/h6_boyd_log_saddle_loop14_prereg_20260719.md`. H6-Q1 and the global RH Goal remain
 active.
+
+Preregistration commit `4d21765574a4e43174a8ace7939ea9d585395d9a` passed public Lean Action CI
+run `29661631696`, build job `88125198144`, in `1m31s`.
+
+## Loop 14 local outcome
+
+Loop 14 closes locally as `KNOWN_THEOREM_FORMALIZED`. The new production module
+`DeBruijnNewmanPolymathBoydLogSaddleIntegral.lean` uses the global exponential Jacobian to prove
+full-real integrability of `exp(-x*(exp(u)-u-1))` and the exact project scaled-Gamma representation
+for every `x>0`. Exact checks, selected standard-only axiom prints, the forbidden scan, and the
+full 8,719-job build pass. The next fixed edge is the normalized local analytic square-root
+coordinate and inverse at the double saddle. H6-Q1 and the global RH Goal remain active.

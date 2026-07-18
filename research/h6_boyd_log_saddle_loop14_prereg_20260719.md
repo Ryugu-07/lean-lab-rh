@@ -6,7 +6,7 @@ Campaign: `FORMALIZATION-20260719-H6-BOYD-LOG-SADDLE-INTEGRAL-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE`
+Status: `LOCAL_SUCCESS / KNOWN_THEOREM_FORMALIZED`
 
 ## Exact target
 
@@ -103,3 +103,40 @@ performs the change of variables in one kernel-checked step.
 - `global_goal`: H6-Q1 and the persistent RH Goal remain active.
 
 No Loop 14 proof source may be edited before this preregistration passes public Lean Action CI.
+
+Preregistration commit `4d21765574a4e43174a8ace7939ea9d585395d9a` passed public Lean Action CI
+run `29661631696`, build job `88125198144`, in `1m31s`. Loop 14 proof-source work was admitted.
+
+## Local outcome
+
+- `classification`: `KNOWN_THEOREM_FORMALIZED`
+- `production_module`:
+  `LeanLab/Riemann/DeBruijnNewmanPolymathBoydLogSaddleIntegral.lean`
+- `compiled_spine`:
+  `deBruijnNewmanPolymathBoyd_exp_image_univ`,
+  `deBruijnNewmanPolymathBoydLogSaddleIntegrand_eq_jacobian`,
+  `deBruijnNewmanPolymathBoydLogSaddleIntegrand_integrable`,
+  `integral_deBruijnNewmanPolymathBoydLogSaddleIntegrand`, and
+  `deBruijnNewmanPolymathScaledGamma_ofReal_eq_boydLogSaddleIntegral`.
+- `assumption_frontier_after`: for every real `x>0`, the exact project scaled-Gamma function now
+  has the full-real saddle representation with phase `exp(u)-u-1` as K0. The normalized analytic
+  square-root coordinate, its local inverse, adjacent saddle images, equation `(15)`, effective
+  `R2`, and all unconditional Table 1 certificates remain open.
+- `rh_frontier_delta`: 0
+- `route_infrastructure_delta`: 1
+- `engineering_delta`: 0
+- `anti_substitution_audit`: no equation `(15)`, `R2` bound, inverse-saddle premise, contour
+  rotation, unspecified asymptotic, or replacement Gamma function occurs as a premise.
+- `local_mechanical_audit`: standalone compilation, module build, exact Targets, both TargetChecks
+  layers, selected axiom prints, empty forbidden scan, and the full 8,719-job build pass. The
+  selected declarations depend only on `propext`, `Classical.choice`, and `Quot.sound`.
+- `next_exact_gate`: factor the complex phase `exp(u)-u-1` through its double zero at `u=0`,
+  construct a local analytic square-root factor `q` with `q(0)=1`, set `w(u)=u*q(u)` so that
+  `w(u)^2/2=exp(u)-u-1`, and prove the normalized local analytic inverse at the origin. No global
+  branch or adjacent-saddle claim is included yet.
+- `compaction_state`: no new compaction detected during Loop 14; the inherited-summary recovery
+  audit was completed in Loop 13 and current canonical files remained in context.
+- `model`: Codex, GPT-5 family; exact serving variant not exposed.
+- `reasoning_effort`: not exposed.
+- `loop_budget`: no numerical quota under V4.1; serving token budget not exposed.
+- `global_goal`: H6-Q1 and the persistent RH Goal remain active.
