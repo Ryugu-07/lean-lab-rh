@@ -10,6 +10,7 @@ import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanHermiteSplitting
 import LeanLab.Riemann.DeBruijnNewmanPolymathCriterion
 import LeanLab.Riemann.DeBruijnNewmanTableRowCertificates
+import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegel
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -905,6 +906,22 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanPolymathInitialRegionZeroFree_table_row_of_rh_up_to_three_trillion
       status := .proven
       note := "Loop 1 compiles the exact H_0-to-xi coordinate and rational height coverage. This is a conditional source bridge only. It does not assert or import the Platt--Trudgian finite computation and does not prove any unconditional Table 1 region, Lambda <= 0.2, H6-E/G8, or RH. Implementation ac965230 and evidence 0cd4c215 passed public CI runs 29630082237 and 29630173782." },
+    { id := "H6.debruijn-newman.polymath-riemann-siegel-normalization"
+      tier := .tier2
+      title := "Align the Polymath effective Riemann--Siegel normalization"
+      statement :=
+        "Define the exact source log M_0, M_0, alpha, M_t, B_t, b_n^t, N, gamma, s_*, kappa, f_t, and displayed error upper bounds; prove the branch derivative, both alpha formulas, exp(log M_0)=M_0, and B_t nonvanishing on positive x."
+      leanName := some ``deBruijnNewmanPolymath_exp_logM0_eq_M0
+      status := .proven
+      note := "Loop 2 source infrastructure. The displayed deterministic approximation remains an unproved Prop; no error bound, numerical certificate, unconditional Table 1 region, Lambda <= 0.2, H6-E/G8, or RH is asserted." },
+    { id := "H6.debruijn-newman.polymath-final-region-explicit-certificate-consumer"
+      tier := .tier2
+      title := "Consume explicit Polymath final-region certificates"
+      statement :=
+        "Prove the exact second Table 1 final region from pointwise strict certificates comparing the displayed Theorem 1.3 upper error to the source Dirichlet polynomial."
+      leanName := some ``deBruijnNewmanPolymathFinalRegionZeroFree_table_row_of_explicitCertificates
+      status := .proven
+      note := "This is a conditional certificate consumer. The pointwise explicit approximation and strict finite-sum inequalities remain open, so the final region itself is not proved unconditionally." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

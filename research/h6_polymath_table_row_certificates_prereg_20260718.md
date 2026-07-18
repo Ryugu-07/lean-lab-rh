@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_2_PREREGISTERED_PENDING_PUBLIC_CI`
+Status: `ACTIVE_LOOP_2_LOCAL_CHECKPOINT`
 
 ## Exact mathematical endpoint
 
@@ -217,3 +217,27 @@ it does not assert Theorem 1.3, any explicit error bound, or any external numeri
 success requires exact TargetChecks, selected axiom prints, forbidden scans, a full build, and
 public implementation/evidence CI. Failure records the first source normalization or branch-domain
 mismatch and does not weaken the campaign endpoint.
+
+Preregistration commit `be2167f3dda7f7b43aec34a1ac0acce270df7337` passed public Lean Action CI
+run `29630529731`, build job `88043072197`, in `1m53s`, before Loop 2 proof-source edits.
+
+## Loop 2 local result
+
+The complete displayed source interface now compiles in
+`DeBruijnNewmanPolymathRiemannSiegel.lean`. In addition to the preregistered definitions, the
+module defines the displayed upper bounds for `e_A+e_B` and `e_C0`, their deterministic total,
+the exact unproved approximation proposition, and the strict explicit certificate consumed by the
+final-region theorem.
+
+Lean proves the source branch derivative, equivalence of the two displayed `alpha` formulas,
+`exp(log M_0)=M_0`, nonvanishing of `M_0`, `M_t`, and `B_t`, exact inclusion of every second-row
+final-region point in the Theorem 1.3 parameter region, pointwise nonvanishing, and the exact
+second-row final-region consumer. Source-definition witnesses and seven theorem witnesses compile;
+the seven selected axiom prints contain only `propext`, `Classical.choice`, and `Quot.sound`.
+Forbidden scans and the full 8,705-job build pass locally.
+
+This does not prove `deBruijnNewmanPolymathExplicitApproximation`, any strict numerical
+certificate, the final region unconditionally, the other two regions, `Lambda<=1/5`, H6-E/G8, or
+RH. The next exact source edge is equation (htz): the imaginary Gaussian heat-kernel representation
+and its xi-coordinate form. The existing real-shift Gaussian semigroup moves time backward and is
+not a substitute.

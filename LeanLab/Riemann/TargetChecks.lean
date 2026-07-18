@@ -9,6 +9,7 @@ import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanPolymathCriterion
 import LeanLab.Riemann.DeBruijnNewmanHermiteSplitting
 import LeanLab.Riemann.DeBruijnNewmanTableRowCertificates
+import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegel
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1705,5 +1706,155 @@ example
     deBruijnNewmanPolymathInitialRegionZeroFree
       ((93 : ℝ) / 500) ((5 : ℝ) * 10 ^ 12 + 194858) ((16733 : ℝ) / 100000) :=
   deBruijnNewmanPolymathInitialRegionZeroFree_table_row_of_rh_up_to_three_trillion hfinite
+
+example (s : ℂ) :
+    deBruijnNewmanPolymathLogM0 s =
+      Complex.log s + Complex.log (s - 1) -
+          s / 2 * (Real.log Real.pi : ℂ) +
+        Complex.log (((Real.sqrt (2 * Real.pi) / 16 : ℝ) : ℂ)) +
+          (s / 2 - 1 / 2) * Complex.log (s / 2) - s / 2 :=
+  rfl
+
+example (s : ℂ) :
+    deBruijnNewmanPolymathAlpha s =
+      1 / s + 1 / (s - 1) - (Real.log Real.pi : ℂ) / 2 +
+        Complex.log (s / 2) / 2 - 1 / (2 * s) :=
+  rfl
+
+example (s : ℂ) :
+    deBruijnNewmanPolymathM0 s =
+      (1 / 8 : ℂ) * (s * (s - 1) / 2) *
+          Complex.exp (-(s / 2) * (Real.log Real.pi : ℂ)) *
+        (Real.sqrt (2 * Real.pi) : ℂ) *
+          Complex.exp ((s / 2 - 1 / 2) * Complex.log (s / 2) - s / 2) :=
+  rfl
+
+example (t : ℝ) (s : ℂ) :
+    deBruijnNewmanPolymathM t s =
+      Complex.exp (((t : ℂ) / 4) * deBruijnNewmanPolymathAlpha s ^ 2) *
+        deBruijnNewmanPolymathM0 s :=
+  rfl
+
+example (t x y : ℝ) :
+    deBruijnNewmanPolymathB t x y =
+      deBruijnNewmanPolymathM t
+        ((((1 + y : ℝ) : ℂ) - (x : ℂ) * Complex.I) / 2) :=
+  by simp only [deBruijnNewmanPolymathB, deBruijnNewmanPolymathBArgument]
+
+example (t x : ℝ) :
+    deBruijnNewmanPolymathN t x =
+      ⌊Real.sqrt (x / (4 * Real.pi) + t / 16)⌋₊ :=
+  rfl
+
+example (t x y : ℝ) :
+    deBruijnNewmanPolymathGamma t x y =
+      deBruijnNewmanPolymathM t
+          ((((1 - y : ℝ) : ℂ) + (x : ℂ) * Complex.I) / 2) /
+        deBruijnNewmanPolymathB t x y :=
+  by simp only [deBruijnNewmanPolymathGamma,
+    deBruijnNewmanPolymathReflectedArgument]
+
+example (t x y : ℝ) :
+    deBruijnNewmanPolymathSStar t x y =
+      deBruijnNewmanPolymathBArgument x y +
+        ((t : ℂ) / 2) *
+          deBruijnNewmanPolymathAlpha (deBruijnNewmanPolymathBArgument x y) :=
+  rfl
+
+example (t x y : ℝ) :
+    deBruijnNewmanPolymathKappa t x y =
+      ((t : ℂ) / 2) *
+        (deBruijnNewmanPolymathAlpha
+            (deBruijnNewmanPolymathReflectedArgument x y) -
+          deBruijnNewmanPolymathAlpha
+            (deBruijnNewmanPolymathUpperArgument x y)) :=
+  rfl
+
+example (t x y : ℝ) :
+    deBruijnNewmanPolymathF t x y =
+      (∑ n ∈ Finset.Icc 1 (deBruijnNewmanPolymathN t x),
+          (deBruijnNewmanPolymathBWeight t n : ℂ) /
+            deBruijnNewmanPolymathNatPow n
+              (deBruijnNewmanPolymathSStar t x y)) +
+        deBruijnNewmanPolymathGamma t x y *
+          ∑ n ∈ Finset.Icc 1 (deBruijnNewmanPolymathN t x),
+            (deBruijnNewmanPolymathNatPow n (y : ℂ) *
+                (deBruijnNewmanPolymathBWeight t n : ℂ)) /
+              deBruijnNewmanPolymathNatPow n
+                (starRingEnd ℂ (deBruijnNewmanPolymathSStar t x y) +
+                  deBruijnNewmanPolymathKappa t x y) :=
+  rfl
+
+example (t x y : ℝ) :
+    deBruijnNewmanPolymathEABUpper t x y =
+      ∑ n ∈ Finset.Icc 1 (deBruijnNewmanPolymathN t x),
+        (1 + ‖deBruijnNewmanPolymathGamma t x y‖ *
+              (deBruijnNewmanPolymathN t x : ℝ) ^
+                ‖deBruijnNewmanPolymathKappa t x y‖ *
+              (n : ℝ) ^ y) *
+          deBruijnNewmanPolymathBWeight t n /
+            (n : ℝ) ^ (deBruijnNewmanPolymathSStar t x y).re *
+          (Real.exp
+              ((t ^ 2 / 16 *
+                    Real.log (x / (4 * Real.pi * (n : ℝ) ^ 2)) ^ 2 + 313 / 500) /
+                (x - 333 / 50)) - 1) :=
+  rfl
+
+example (t x y : ℝ) :
+    deBruijnNewmanPolymathEC0Upper t x y =
+      (x / (4 * Real.pi)) ^ (-(1 + y) / 4) *
+        Real.exp
+          (-t / 16 * Real.log (x / (4 * Real.pi)) ^ 2 +
+            (31 / 25) * ((3 : ℝ) ^ y + (3 : ℝ) ^ (-y)) /
+              ((deBruijnNewmanPolymathN t x : ℝ) - 1 / 8) +
+            (3 * ‖((Real.log (x / (4 * Real.pi)) : ℝ) : ℂ) +
+                  (Real.pi / 2 : ℝ) * Complex.I‖ + 261 / 25) /
+              (x - 12)) :=
+  by simp only [deBruijnNewmanPolymathEC0Upper]
+
+example {s : ℂ} (hs : s.im < 0) :
+    HasDerivAt deBruijnNewmanPolymathLogM0
+      (deBruijnNewmanPolymathAlpha s) s :=
+  deBruijnNewmanPolymathLogM0_hasDerivAt hs
+
+example {s : ℂ} (hs : s.im < 0) :
+    deBruijnNewmanPolymathAlpha s =
+      1 / (2 * s) + 1 / (s - 1) +
+        Complex.log (s / (2 * Real.pi)) / 2 :=
+  deBruijnNewmanPolymathAlpha_eq_compact hs
+
+example {s : ℂ} (hs : s.im < 0) :
+    Complex.exp (deBruijnNewmanPolymathLogM0 s) =
+      deBruijnNewmanPolymathM0 s :=
+  deBruijnNewmanPolymath_exp_logM0_eq_M0 hs
+
+example {t x y : ℝ} (hx : 0 < x) :
+    deBruijnNewmanPolymathB t x y ≠ 0 :=
+  deBruijnNewmanPolymathB_ne_zero hx
+
+example {x y : ℝ}
+    (hx : ((5 : ℝ) * 10 ^ 12 + 194858) +
+        Real.sqrt (1 - ((16733 : ℝ) / 100000) ^ 2) ≤ x)
+    (hy0 : ((16733 : ℝ) / 100000) ≤ y)
+    (hy1 : y ≤ Real.sqrt (1 - 2 * ((93 : ℝ) / 500))) :
+    deBruijnNewmanPolymathEffectiveRegion ((93 : ℝ) / 500) x y :=
+  deBruijnNewmanPolymath_table_row_final_mem_effectiveRegion hx hy0 hy1
+
+example {t x y : ℝ} (hx : 0 < x)
+    (hcert : deBruijnNewmanPolymathExplicitCertificate t x y) :
+    deBruijnNewmanH t ((x : ℂ) + (y : ℂ) * Complex.I) ≠ 0 :=
+  deBruijnNewmanH_ne_zero_of_polymathExplicitCertificate
+    (t := t) (x := x) (y := y) hx hcert
+
+example
+    (hcert : ∀ x y : ℝ,
+      ((5 : ℝ) * 10 ^ 12 + 194858) +
+          Real.sqrt (1 - ((16733 : ℝ) / 100000) ^ 2) ≤ x →
+      ((16733 : ℝ) / 100000) ≤ y →
+      y ≤ Real.sqrt (1 - 2 * ((93 : ℝ) / 500)) →
+      deBruijnNewmanPolymathExplicitCertificate ((93 : ℝ) / 500) x y) :
+    deBruijnNewmanPolymathFinalRegionZeroFree
+      ((93 : ℝ) / 500) ((5 : ℝ) * 10 ^ 12 + 194858) ((16733 : ℝ) / 100000) :=
+  deBruijnNewmanPolymathFinalRegionZeroFree_table_row_of_explicitCertificates hcert
 
 end LeanLab.Riemann

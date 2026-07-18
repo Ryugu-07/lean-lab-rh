@@ -10,6 +10,7 @@ import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanPolymathCriterion
 import LeanLab.Riemann.DeBruijnNewmanHermiteSplitting
 import LeanLab.Riemann.DeBruijnNewmanTableRowCertificates
+import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegel
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -512,3 +513,11 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.RiemannHypothesis.riemannHypothesisUpTo
 #print axioms LeanLab.Riemann.deBruijnNewmanPolymathInitialRegionZeroFree_of_riemannHypothesisUpTo
 #print axioms LeanLab.Riemann.deBruijnNewmanPolymathInitialRegionZeroFree_table_row_of_rh_up_to_three_trillion
+
+#print axioms LeanLab.Riemann.deBruijnNewmanPolymathLogM0_hasDerivAt
+#print axioms LeanLab.Riemann.deBruijnNewmanPolymathAlpha_eq_compact
+#print axioms LeanLab.Riemann.deBruijnNewmanPolymath_exp_logM0_eq_M0
+#print axioms LeanLab.Riemann.deBruijnNewmanPolymathB_ne_zero
+#print axioms LeanLab.Riemann.deBruijnNewmanPolymath_table_row_final_mem_effectiveRegion
+#print axioms LeanLab.Riemann.deBruijnNewmanH_ne_zero_of_polymathExplicitCertificate
+#print axioms LeanLab.Riemann.deBruijnNewmanPolymathFinalRegionZeroFree_table_row_of_explicitCertificates

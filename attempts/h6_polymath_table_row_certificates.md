@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_2_PREREGISTERED_PENDING_PUBLIC_CI`
+Status: `ACTIVE_LOOP_2_LOCAL_CHECKPOINT`
 
 ## Target
 
@@ -46,6 +46,7 @@ output is imported. Every numerical fact must be independently re-proved in Lean
 | --- | --- | --- | --- |
 | 0 | `ROUTE_SELECTION / LITERATURE` | Fixed the full hypothesis-free Table 1 endpoint after source and external-artifact audit. Identified the three independent certificate layers and the exact first subedge from finite-height RH to the initial region. No proof source edited. | Commit and publicly build the preregistration. Only after green CI, begin Loop 1 on the exact finite-height transport; do not assert the external computation. |
 | 1 | `LITERATURE` | Compiled `riemannHypothesisUpTo`, the general finite-height-RH transport, and the exact Table 1 specialization through height `3*10^12`. The `x=0` boundary uses `deBruijnNewmanH_mul_I_ne_zero`; the positive branch derives the exact `x/2` zeta ordinate and contradicts the positive lower `y` boundary. Standalone checks, exact witnesses, standard-only axiom prints, forbidden scans, and the full 8,704-job build pass locally. This is conditional on `riemannHypothesisUpTo (3*10^12)` and proves no unconditional region. | Keep the campaign active. Loop 2 should attack the source-normalized effective Riemann--Siegel approximation and error consumer needed by the final and barrier certificates; do not build interval infrastructure detached from an exact `H_t` statement. The finite RH computation, final region, and barrier remain open. |
+| 2 | `LITERATURE` | Formalized the exact Theorem 1.3 normalization: source arguments, `log M_0`, `M_0`, both formulas for `alpha`, `M_t`, `B_t`, `b_n^t`, `N`, `gamma`, `s_*`, `kappa`, `f_t`, the displayed `e_A+e_B` and `e_C0` upper bounds, and their total. Lean proves the branch derivative on the lower half-plane, `exp(log M_0)=M_0`, `B_t!=0` for `x>0`, exact inclusion of the second-row final region in the theorem's parameter region, Corollary 1.4, and both general and exact-row final-region certificate consumers. Definition witnesses, seven theorem witnesses, seven standard-only axiom prints, forbidden scans, and the full 8,705-job build pass locally. The deterministic approximation inequality remains an unproved `Prop`. | Keep the campaign active. Loop 3 attacks the paper's first analytic identity `H_t(z)=integral H_0(z-i*sqrt(t)*Y) d gamma_2(Y)` and its exact xi-coordinate form. The existing compiled Gaussian theorem averages real translations and moves time backward; it cannot discharge this imaginary-shift forward representation. |
 
 ## Loop 2 preregistration
 
@@ -75,6 +76,43 @@ output is imported. Every numerical fact must be independently re-proved in Lean
   source `H_t/B_t-f_t` expression is not Loop 2 success
 
 No Lean proof source may be edited for Loop 2 before this preregistration passes public CI.
+
+## Loop 2 accounting
+
+- `compiled_theorems`:
+  `deBruijnNewmanPolymathLogM0_hasDerivAt`,
+  `deBruijnNewmanPolymathAlpha_eq_compact`,
+  `deBruijnNewmanPolymath_exp_logM0_eq_M0`,
+  `deBruijnNewmanPolymathB_ne_zero`,
+  `deBruijnNewmanPolymath_table_row_final_mem_effectiveRegion`,
+  `deBruijnNewmanH_ne_zero_of_polymathExplicitCertificate`, and
+  `deBruijnNewmanPolymathFinalRegionZeroFree_table_row_of_explicitCertificates`
+- `assumption_frontier_after`: the complete source normalization and exact displayed-error
+  consumer are K0; `deBruijnNewmanPolymathExplicitApproximation` is only a definition of the next
+  unproved proposition and is not a premise
+- `hard_gap_after`: the effective approximation inequality, strict finite-sum certificate,
+  unconditional final region, initial finite computation, barrier, H6-E/G8, and RH remain open
+- `hard_gap_delta`: 0
+- `route_infrastructure_delta`: 1
+- `first_analytic_obstacle`: the paper uses an imaginary Gaussian shift to reconstruct positive
+  heat time from `H_0`; the compiled project semigroup theorem uses real shifts and moves time
+  backward. A new product-integrability/Fubini proof is required.
+- `next_exact_gate`: for `0<t<=1/2`, prove
+  `H_t(z)=integral H_0(z-sqrt(t)*Y*I) d gaussianReal(0,2)(Y)` and then rewrite the integrand as
+  `(1/8)*xi((1+i*z)/2+(sqrt(t)/2)*Y)`
+
+## Loop 2 local mechanical audit
+
+- standalone source module: passed
+- `Targets.lean`: passed with two honest proven infrastructure/consumer targets
+- `TargetChecks.lean`: all source-definition and seven theorem witnesses passed at default
+  resource limits
+- `AxiomsAudit.lean`: all seven selected declarations print only `propext`,
+  `Classical.choice`, and `Quot.sound`
+- forbidden proof-token, custom declaration, and resource-relaxation scans: empty
+- `git diff --check`: passed
+- full `lake build`: passed, 8,705 jobs
+- public implementation/evidence CI: pending
 
 ## Mechanical audit
 

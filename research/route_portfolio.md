@@ -2093,3 +2093,17 @@ compile the strict error criterion through the existing exact Table 1 final-regi
 The effective approximation inequality and explicit error estimates remain open after this
 structural subedge. Generic interval machinery or an abstract norm lemma disconnected from the
 source expression is not success. The campaign endpoint and hard gaps are unchanged.
+
+### Loop 2 local source-normalization checkpoint
+
+Lean now contains every displayed Theorem 1.3 normalization and upper-error expression, proves the
+principal-branch derivative and both `alpha` formulas, identifies `exp(log M_0)` with `M_0`, proves
+`B_t` nonzero for positive `x`, and verifies that the exact second-row final region lies in the
+theorem's parameter domain. Corollary 1.4 and the exact final-region certificate consumer compile
+against the deterministic displayed error, with no abstract substitute.
+
+Definition witnesses, seven theorem witnesses, selected axiom prints, forbidden scans, and the
+full 8,705-job build pass locally. The actual effective approximation and all numerical strict
+inequalities remain open, so `hard_gap_delta=0` and `route_infrastructure_delta=1`. Source audit
+selects equation (htz), the imaginary Gaussian reconstruction of `H_t` from `H_0`, as Loop 3's
+exact analytic gate; the existing real-shift semigroup theorem has the opposite time direction.
