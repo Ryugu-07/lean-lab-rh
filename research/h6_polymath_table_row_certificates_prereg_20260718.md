@@ -1018,4 +1018,14 @@ and principal square-root coordinate for `exp(u)-u-1`, prove the global square i
 derivative at the origin, and compile the analytic local inverse with both eventual inverse laws.
 Global branch continuation, adjacent saddle images, equation `(15)`, and effective `R2` are not
 premises. Full details are in `research/h6_boyd_local_saddle_inverse_loop15_prereg_20260719.md`.
+
+## Loop 15 local result
+
+`LeanLab/Riemann/DeBruijnNewmanPolymathBoydLocalSaddleInverse.lean` now compiles the exact
+order-three Taylor removal, normalized principal square-root coordinate, global phase-square
+identity, unit derivative at zero, and a defined analytic local inverse with both eventual inverse
+laws. Exact target witnesses, selected standard-only axiom prints, forbidden scans, and the full
+8,720-job build pass. This is K0 route infrastructure with `rh_frontier_delta=0` and
+`route_infrastructure_delta=1`; global continuation, adjacent saddle images, equation `(15)`,
+effective `R2`, the unconditional Table 1 certificates, H6-E/G8, and RH remain open.
 H6-Q1 and the global RH Goal remain active.

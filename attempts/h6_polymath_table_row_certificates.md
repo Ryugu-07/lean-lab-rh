@@ -965,6 +965,39 @@ run `29661631696`, build job `88125198144`, in `1m31s`.
 - `loop_budget`: no V4.1 numerical quota; serving token budget not exposed.
 - `global_goal`: H6-Q1 and the persistent RH Goal remain active.
 
+## Loop 15 local outcome
+
+- `campaign`: `FORMALIZATION-20260719-H6-BOYD-LOCAL-SADDLE-INVERSE-01`
+- `classification`: `KNOWN_THEOREM_FORMALIZED`
+- `production_module`:
+  `LeanLab/Riemann/DeBruijnNewmanPolymathBoydLocalSaddleInverse.lean`
+- `compiled_theorems`: `exists_deBruijnNewmanPolymathBoydComplexSaddleTaylorFactor`,
+  `deBruijnNewmanPolymathBoydComplexSaddleFactor_analyticAt_zero`,
+  `deBruijnNewmanPolymathBoydComplexSaddleCoordinate_sq`,
+  `deriv_deBruijnNewmanPolymathBoydComplexSaddleCoordinate_zero`,
+  `deBruijnNewmanPolymathBoydComplexSaddleLocalInverse_analyticAt_zero`, and both
+  `deBruijnNewmanPolymathBoydComplexSaddleLocalInverse_eventually_left` and
+  `deBruijnNewmanPolymathBoydComplexSaddleLocalInverse_eventually_right`.
+- `result`: the double zero of `exp(u)-u-1` is removed by an exact analytic Taylor factor; the
+  principal square-root coordinate satisfies `w(u)^2/2=exp(u)-u-1` globally, is analytic with
+  derivative one at zero, and has a defined analytic local inverse with both neighborhood laws.
+- `assumption_frontier_after`: the normalized local branch is K0; no global property of the
+  total local-inverse representative is inferred beyond the proved origin neighborhoods.
+- `rh_frontier_delta`: 0
+- `route_infrastructure_delta`: 1
+- `engineering_delta`: 0
+- `local_mechanical_audit`: source, exact Targets, TargetChecks, AxiomsAudit, forbidden scans,
+  diff check, and the full 8,720-job build pass. The selected axiom prints contain only
+  `propext`, `Classical.choice`, and `Quot.sound`.
+- `next_exact_gate`: prove the real-ray monotonicity and inverse/change-of-variables interface,
+  then identify the first complex continuation obstruction before adjacent `2*pi*i` images.
+- `compaction_state`: one inherited compaction summary was present at proof-work resumption and
+  the active source, frontier, and APIs were re-audited.
+- `model`: Codex, GPT-5 family; exact serving variant not exposed.
+- `reasoning_effort`: not exposed.
+- `loop_budget`: no V4.1 numerical quota; serving token budget not exposed.
+- `global_goal`: H6-Q1 and the persistent RH Goal remain active.
+
 ## Loop 3 preregistration
 
 - `mode`: `LITERATURE`

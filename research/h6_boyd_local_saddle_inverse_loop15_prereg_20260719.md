@@ -6,7 +6,7 @@ Campaign: `FORMALIZATION-20260719-H6-BOYD-LOCAL-SADDLE-INVERSE-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE`
+Status: `LOCAL_COMPILED; PUBLIC_IMPLEMENTATION_PENDING`
 
 ## Exact target
 
@@ -150,3 +150,43 @@ inverse theorems at the nonzero derivative `1`.
 - `global_goal`: H6-Q1 and the persistent RH Goal remain active.
 
 No Loop 15 proof source may be edited before this preregistration passes public Lean Action CI.
+
+## Preregistration evidence
+
+Preregistration commit `8868906756560d3118e5f1d65cbae72dbca1b98c` passed public Lean Action CI
+run `29662388346`, build job `88127139991`, in `1m57s`, before the Loop 15 production source was
+edited.
+
+## Local outcome
+
+- `classification`: `KNOWN_THEOREM_FORMALIZED`
+- `production_module`:
+  `LeanLab/Riemann/DeBruijnNewmanPolymathBoydLocalSaddleInverse.lean`
+- `compiled_spine`: exact complex phase and first two derivatives at zero; an order-three
+  analytic Taylor factor; the piecewise removable factor and its analyticity at zero; the
+  normalized principal square-root factor; the coordinate square identity, origin analyticity,
+  and unit derivative; a defined local inverse with origin analyticity and both eventual inverse
+  laws.
+- `assumption_frontier_after`: the normalized local branch at the double saddle is K0. The
+  inverse is represented by a total Lean function, but only its origin-neighborhood analytic and
+  inverse laws are claimed.
+- `hard_gap_after`: global branch continuation, global injectivity, adjacent `2*pi*i` saddle
+  images, the Cauchy/resurgence decomposition behind Boyd equation `(15)`, effective `R2`,
+  Proposition 6.1/6.3, Table 1 certificates, H6-E/G8, and RH remain open.
+- `rh_frontier_delta`: 0
+- `route_infrastructure_delta`: 1
+- `engineering_delta`: 0
+- `local_mechanical_audit`: standalone source compilation has no diagnostics; `Targets.lean`,
+  `TargetChecks.lean`, and `AxiomsAudit.lean` compile; the five selected declarations print only
+  `propext`, `Classical.choice`, and `Quot.sound`; all three forbidden scans and
+  `git diff --check` are empty; full `lake build` passes with 8,720 jobs.
+- `next_exact_gate`: continue the normalized coordinate along the two real saddle rays, prove the
+  exact real monotonicity/inverse interface needed for a saddle change of variables, and locate
+  the first complex branch obstruction before any adjacent-saddle claim.
+- `compaction_state`: one inherited compaction summary was present when Loop 15 proof work
+  resumed; the active source, preregistration, governance frontier, and mathlib APIs were
+  rechecked before editing.
+- `model`: Codex, GPT-5 family; exact serving variant not exposed.
+- `reasoning_effort`: not exposed.
+- `loop_budget`: V4.1 has no numerical quota; serving token budget not exposed.
+- `global_goal`: H6-Q1 and the persistent RH Goal remain active.

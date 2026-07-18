@@ -22,6 +22,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydStirlingRemainder
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydR2Integral
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydSaddleIntegral
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLogSaddleIntegral
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLocalSaddleInverse
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2202,5 +2203,30 @@ example {x : ℝ} (hx : 0 < x) :
       ((Real.sqrt (x / (2 * Real.pi)) *
         (∫ u : ℝ, deBruijnNewmanPolymathBoydLogSaddleIntegrand x u) : ℝ) : ℂ) :=
   deBruijnNewmanPolymathScaledGamma_ofReal_eq_boydLogSaddleIntegral hx
+
+example (u : ℂ) :
+    deBruijnNewmanPolymathBoydComplexSaddleCoordinate u ^ 2 / 2 =
+      deBruijnNewmanPolymathBoydComplexSaddlePhase u :=
+  deBruijnNewmanPolymathBoydComplexSaddleCoordinate_sq u
+
+example :
+    deriv deBruijnNewmanPolymathBoydComplexSaddleCoordinate 0 = 1 :=
+  deriv_deBruijnNewmanPolymathBoydComplexSaddleCoordinate_zero
+
+example :
+    AnalyticAt ℂ deBruijnNewmanPolymathBoydComplexSaddleLocalInverse 0 :=
+  deBruijnNewmanPolymathBoydComplexSaddleLocalInverse_analyticAt_zero
+
+example :
+    ∀ᶠ u in 𝓝 0,
+      deBruijnNewmanPolymathBoydComplexSaddleLocalInverse
+        (deBruijnNewmanPolymathBoydComplexSaddleCoordinate u) = u :=
+  deBruijnNewmanPolymathBoydComplexSaddleLocalInverse_eventually_left
+
+example :
+    ∀ᶠ z in 𝓝 0,
+      deBruijnNewmanPolymathBoydComplexSaddleCoordinate
+        (deBruijnNewmanPolymathBoydComplexSaddleLocalInverse z) = z :=
+  deBruijnNewmanPolymathBoydComplexSaddleLocalInverse_eventually_right
 
 end LeanLab.Riemann

@@ -21,6 +21,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatContourShift
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydR2Integral
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydSaddleIntegral
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLogSaddleIntegral
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLocalSaddleInverse
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1018,7 +1019,15 @@ def rhTargets : List ResearchTarget :=
         "For every positive real x, prove the project's actual scaled Gamma equals sqrt(x/(2*pi)) times the full-real integral of exp(-x*(exp(u)-u-1)), including integrability of the transformed saddle integrand."
       leanName := some ``deBruijnNewmanPolymathScaledGamma_ofReal_eq_boydLogSaddleIntegral
       status := .proven
-      note := "Loop 14 applies mathlib's global one-dimensional Jacobian theorem with t=exp(u). Lean transports Loop 13 integrability from Ioi 0 to the full real line and proves the exact integral identity in one measurable-image step. The analytic inverse of w^2/2=exp(u)-u-1, adjacent saddle images, Boyd equation (15), effective R2, Proposition 6.1/6.3, Table 1 certificates, H6-E/G8, and RH remain open." },
+      note := "Loop 14 applies mathlib's global one-dimensional Jacobian theorem with t=exp(u). Lean transports Loop 13 integrability from Ioi 0 to the full real line and proves the exact integral identity in one measurable-image step. At Loop 14 close the analytic inverse of w^2/2=exp(u)-u-1 remained open; the next ledger target closes its normalized local branch only. Adjacent saddle images, Boyd equation (15), effective R2, Proposition 6.1/6.3, Table 1 certificates, H6-E/G8, and RH remain open." },
+    { id := "H6.debruijn-newman.boyd-local-saddle-inverse"
+      tier := .tier2
+      title := "Construct the normalized analytic local saddle inverse"
+      statement :=
+        "For the complex phase exp(u)-u-1, remove its double zero at the origin, construct a normalized analytic coordinate w with w(0)=0, w'(0)=1 and w(u)^2/2=exp(u)-u-1, and define an analytic inverse branch satisfying both local inverse laws."
+      leanName := some ``deBruijnNewmanPolymathBoydComplexSaddleLocalInverse_eventually_right
+      status := .proven
+      note := "Loop 15 uses the analytic Taylor remainder to prove that the piecewise factor 2*(exp(u)-u-1)/u^2 has a removable analytic value 1 at zero. Lean then composes the principal complex square root near 1, proves the global square identity for the normalized coordinate, computes derivative 1 at zero, and instantiates mathlib's analytic inverse-function theorem with eventual left and right inverse laws. This is the normalized local branch only: no global continuation, global injectivity, adjacent 2*pi*i saddle images, Boyd equation (15), effective R2, Proposition 6.1/6.3, Table 1 certificates, H6-E/G8, or RH is claimed." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

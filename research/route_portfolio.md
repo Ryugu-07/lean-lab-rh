@@ -2543,3 +2543,15 @@ global identity `w(u)^2/2=exp(u)-u-1` and derivative `w'(0)=1`, then compile the
 inverse and both neighborhood inverse laws. This is local only: global branch continuation,
 adjacent saddle images, and Boyd equation `(15)` remain outside the target. Full preregistration
 is in `research/h6_boyd_local_saddle_inverse_loop15_prereg_20260719.md`.
+
+Loop 15 now closes locally as `KNOWN_THEOREM_FORMALIZED`. The production module
+`DeBruijnNewmanPolymathBoydLocalSaddleInverse.lean` removes the double zero with an exact
+order-three Taylor remainder, proves the normalized principal square-root coordinate satisfies
+`w(u)^2/2=exp(u)-u-1` for every complex `u`, computes `w'(0)=1`, and instantiates an analytic local
+inverse with both neighborhood inverse laws. The exact Targets, TargetChecks, selected
+standard-only axiom audit, forbidden scans, and full 8,720-job build pass.
+
+This gives `rh_frontier_delta=0`, `route_infrastructure_delta=1`, and `engineering_delta=0`.
+Global continuation, global injectivity, adjacent `2*pi*i` saddle images, and Boyd equation `(15)`
+remain open. The next exact gate is the real-ray monotonicity and inverse/change-of-variables
+interface, followed by an explicit location of the first complex branch obstruction.
