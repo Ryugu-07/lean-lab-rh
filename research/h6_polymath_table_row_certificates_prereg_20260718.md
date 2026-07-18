@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_5_PREREGISTRATION_PUBLIC_CI_PASSED`
+Status: `ACTIVE_LOOP_8_IMPLEMENTATION_LOCAL_AUDIT_PASSED`
 
 ## Exact mathematical endpoint
 
@@ -660,3 +660,24 @@ the first uncancelled dependency is recorded. If successful, the next exact gate
 contour-shift formulae `(rtn-def)` and `(RTN-def)` before Propositions 6.1 and 6.3. H6-Q1 and the
 persistent RH Goal remain active. No Loop 8 proof source may be edited before this preregistration
 passes public Lean Action CI.
+
+Loop 8 preregistration commit `a726d2c84395d0c7795ba176f6a884d759749cbb` passed public Lean Action CI
+run `29648603372`, build job `88090965556`, in `1m48s`, before Loop 8 proof-source edits.
+
+## Loop 8 local checkpoint
+
+The fixed endpoint now compiles as `deBruijnNewmanH_riemannSiegel_finite_expansion` for every
+`t>0`, `z.re!=0`, and natural `N`. Lean proves a tunable horizontal bound for the actual raw
+contour, transports Gamma control across both real directions, and obtains separate
+variance-two Gaussian integrability for every source residue and remainder. It also proves exact
+centered-Gaussian negation invariance and uses it to commute heat evolution with Schwarz
+reflection. Public `(htz)`, `(xio)`, and the finite decomposition then compose to the exact
+two-sum, two-remainder equation `(39)`.
+
+Six exact witnesses and five selected axiom prints pass locally; every selected declaration
+depends only on `propext`, `Classical.choice`, and `Quot.sound`. Classification is
+`KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=1` and `route_infrastructure_delta=1`. This closes
+equation `(39)`, not `(rtn-def)`/`(RTN-def)`, the effective approximation, numerical certificates,
+H6-E/G8, or RH. Forbidden scans and `git diff --check` are clean, and the full 8,713-job build
+passes. Public implementation/evidence CI remains to be recorded. The next exact source gate is
+`(rtn-def)` and `(RTN-def)`.

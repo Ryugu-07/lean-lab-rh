@@ -2273,3 +2273,20 @@ Gamma-prefactored `r_(0,n)` and `R_(0,N)` functions; fixed-parameter contour int
 replace it. The next source gate after success is the pair of complex Gaussian contour shifts
 `(rtn-def)` and `(RTN-def)`. Public preregistration CI is required before any Loop 8 proof-source
 edit; H6-Q1 and the RH Goal remain active.
+
+### Loop 8 local equation `(39)` checkpoint
+
+The preregistration gate passed at commit `a726d2c84395d0c7795ba176f6a884d759749cbb`, public CI
+run `29648603372`, build job `88090965556`. Lean now proves the exact endpoint
+`deBruijnNewmanH_riemannSiegel_finite_expansion` for every `t>0`, `z.re!=0`, and natural `N`.
+The proof establishes tunable horizontal subgaussian bounds for the raw contour and Gamma
+prefactor, separate Gaussian integrability of every actual residue and remainder, exact
+centered-Gaussian sign symmetry, and heat-evolution/Schwarz-reflection commutation before
+composing public `(htz)`, `(xio)`, and the finite decomposition.
+
+Classification is `KNOWN_THEOREM_FORMALIZED`, `hard_gap_delta=1`, and
+`route_infrastructure_delta=1`. Six exact witnesses and five selected standard-only axiom prints
+pass locally; forbidden scans and `git diff --check` are clean, and the full 8,713-job build
+passes. Public implementation/evidence CI is pending. The next source gate is the
+complex-Gaussian contour-shift pair `(rtn-def)`/`(RTN-def)`; the effective estimates, numerical
+certificates, H6-E/G8, and RH remain open.

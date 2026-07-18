@@ -15,6 +15,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelContour
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelShift
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelSum
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelXioContinuation
+import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatExpansion
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2018,5 +2019,53 @@ example {s : ℂ} (hs : deBruijnNewmanRiemannSiegelIsNoninteger s) :
         deBruijnNewmanRiemannSiegelReflect
           (deBruijnNewmanRiemannSiegelR0N 0) (1 - s) :=
   deBruijnNewmanRiemannSiegel_xio hs
+
+example (t : ℝ) (F : ℂ → ℂ) (s : ℂ) :
+    deBruijnNewmanRiemannSiegelHeatEvolve t F s =
+      ∫ y : ℝ, F (s + deBruijnNewmanRiemannSiegelHeatShift t y)
+        ∂ProbabilityTheory.gaussianReal 0 2 := rfl
+
+example (N : ℕ) (a : ℝ) (s : ℂ) :
+    MeasureTheory.Integrable
+      (fun y : ℝ =>
+        deBruijnNewmanRiemannSiegelRawIntegral N (s + (a * y : ℝ)))
+      (ProbabilityTheory.gaussianReal 0 2) :=
+  deBruijnNewmanRiemannSiegel_integrable_rawIntegral_horizontal N a s
+
+example (N : ℕ) (a : ℝ) {s : ℂ} (hs : s.im ≠ 0) :
+    MeasureTheory.Integrable
+      (fun y : ℝ => deBruijnNewmanRiemannSiegelR0N N (s + (a * y : ℝ)))
+      (ProbabilityTheory.gaussianReal 0 2) :=
+  deBruijnNewmanRiemannSiegel_integrable_R0N_horizontal N a hs
+
+example (N : ℕ) (a : ℝ) {s : ℂ} (hs : s.im ≠ 0) :
+    MeasureTheory.Integrable
+      (fun y : ℝ =>
+        deBruijnNewmanRiemannSiegelR0Term (N + 1) (s + (a * y : ℝ)))
+      (ProbabilityTheory.gaussianReal 0 2) :=
+  deBruijnNewmanRiemannSiegel_integrable_R0Term_horizontal N a hs
+
+example (t : ℝ) (F : ℂ → ℂ) (s : ℂ) :
+    deBruijnNewmanRiemannSiegelHeatEvolve t
+        (deBruijnNewmanRiemannSiegelReflect F) s =
+      deBruijnNewmanRiemannSiegelReflect
+        (deBruijnNewmanRiemannSiegelHeatEvolve t F) s :=
+  deBruijnNewmanRiemannSiegelHeatEvolve_reflect t F s
+
+example {t : ℝ} (ht : 0 < t) {z : ℂ} (hz : z.re ≠ 0) (N : ℕ) :
+    deBruijnNewmanH t z =
+      (∑ k ∈ Finset.range N,
+        deBruijnNewmanRiemannSiegelHeatTerm t (k + 1)
+          ((1 + Complex.I * z) / 2)) +
+      (∑ k ∈ Finset.range N,
+        deBruijnNewmanRiemannSiegelReflect
+          (deBruijnNewmanRiemannSiegelHeatTerm t (k + 1))
+          ((1 - Complex.I * z) / 2)) +
+      deBruijnNewmanRiemannSiegelHeatRemainder t N
+        ((1 + Complex.I * z) / 2) +
+      deBruijnNewmanRiemannSiegelReflect
+        (deBruijnNewmanRiemannSiegelHeatRemainder t N)
+        ((1 - Complex.I * z) / 2) :=
+  deBruijnNewmanH_riemannSiegel_finite_expansion ht hz N
 
 end LeanLab.Riemann

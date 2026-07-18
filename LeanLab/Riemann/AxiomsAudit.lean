@@ -16,6 +16,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelContour
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelShift
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelSum
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelXioContinuation
+import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatExpansion
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -549,3 +550,8 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.deBruijnNewmanTitchmarshMellin_two_contours
 #print axioms LeanLab.Riemann.deBruijnNewmanRiemannSiegelRawIntegral_hasDerivAt
 #print axioms LeanLab.Riemann.deBruijnNewmanRiemannSiegel_xio
+#print axioms LeanLab.Riemann.deBruijnNewmanRiemannSiegel_norm_Gamma_horizontal_le
+#print axioms LeanLab.Riemann.deBruijnNewmanRiemannSiegel_integrable_R0N_horizontal
+#print axioms LeanLab.Riemann.deBruijnNewmanRiemannSiegel_integrable_R0Term_horizontal
+#print axioms LeanLab.Riemann.deBruijnNewmanRiemannSiegelHeatEvolve_reflect
+#print axioms LeanLab.Riemann.deBruijnNewmanH_riemannSiegel_finite_expansion

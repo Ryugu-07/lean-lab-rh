@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_5_PREREGISTRATION_PUBLIC_CI_PASSED`
+Status: `ACTIVE_LOOP_8_IMPLEMENTATION_LOCAL_AUDIT_PASSED`
 
 ## Target
 
@@ -50,6 +50,9 @@ output is imported. Every numerical fact must be independently re-proved in Lean
 | 3 | `LITERATURE` | Proved the exact complex MGF and absolute-exponential moment control for `gaussianReal(0,2)`, the imaginary-shift cosine multiplier `exp((r*u)^2)`, full product integrability, the general identity `integral H_t(z-i*r*Y)=H_(t+r^2)(z)`, the `r=sqrt(t)` reconstruction from `H_0`, and the exact `(htz)` xi-coordinate form. Five exact witnesses, five standard-only axiom prints, forbidden scans, and the full 8,706-job build pass locally. | Keep the campaign active. Loop 4 must confront the next source edge rather than add another heat wrapper: define the fixed `5*pi/4` infinite-line contour `R_(0,N)`, prove its integrability and residue shift, and reconstruct Titchmarsh `(xio)`/the finite `R_(0,0)` decomposition. The effective approximation and all numerical certificates remain open. |
 | 4 | `LITERATURE / PROOF-ATTEMPT` | `PARTIAL / BLOCKER_EXPOSED`. Lean now fixes the source direction and midpoint lines, proves branch-cut and integer-pole avoidance, a uniform denominator lower bound, exact Gaussian decay, a global integrable majorant for the actual raw line integrand, and the exact punctured-neighborhood residue `n^(-s)/(2*pi*i)` at every positive integer. The aggregate `deBruijnNewmanRiemannSiegelContour_prefix` compiles with five exact witnesses, five standard-only axiom prints, empty forbidden scans, and the full 8,707-job local build. The finite residue shift and `(xio)` were not proved, so this is route infrastructure with `hard_gap_delta=0`, not closure of Loop 4 or an RH progress claim. | Keep the campaign and RH Goal active. The first unclosed dependency is a continuous removable extension of the single-pole-subtracted kernel on each affine strip; then apply the Poincare homotopy theorem to a finite nonorthogonal parallelogram and prove its end-segment integrals vanish. Only after the finite residue shift closes should the attack advance to Titchmarsh's auxiliary recurrence and analytic continuation for `(xio)`. |
 | 5 | `LITERATURE / PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED` locally. Lean constructs the derivative-supplied removable pole subtraction, proves the exact finite one-pole contour identity, separately sends both fixed-length short sides to zero by a compiled Gaussian majorant, passes both long sides to the full Bochner integrals, and proves `deBruijnNewmanRiemannSiegelRawIntegral_adjacent_shift`. Five exact witnesses and five standard-only axiom prints pass. The finite contour uses a complex-linear pullback and a staggered upper truncation, not the literal equal-parameter parallelogram named in preregistration; both upper truncations have the same full-line limit, so the fixed infinite endpoint is unchanged. | Keep the campaign and RH Goal active. Next induct the adjacent identity to `I_0=sum_(1..N)n^(-s)+I_N`, transport it through the exact prefactor to `R_(0,0)=sum r_(0,n)+R_(0,N)`, and then attack the auxiliary recurrence and analytic continuation needed for `(xio)`. No Table 1 certificate or RH consequence is claimed. |
+| 6 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean inducts the adjacent raw shift to the exact finite identity and transports it through the source Gamma prefactor to `R_(0,0)=sum r_(0,n)+R_(0,N)`. Exact witnesses, standard-only axiom prints, scans, full build, and public implementation CI pass. | Attack the actual Titchmarsh `(2.10.1)--(2.10.6)` recurrence, Mellin, and analytic-continuation chain for `(xio)`; no abstract recurrence or half-plane substitute. |
+| 7 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves the full noninteger-domain `(xio)` identity from the actual `Phi(a)` contour, recurrences, slanted-ray Mellin/Fubini calculation, Gamma--zeta constants, logarithmic Gaussian parameter bounds, and identity-theorem continuation. Six witnesses, standard-only axiom prints, scans, full build, and public implementation CI pass. | Compose public `(htz)`, `(xio)`, and the finite source decomposition into exact Polymath equation `(39)`, including separate integrability and reflection transport. |
+| 8 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED` locally. Lean proves tunable horizontal bounds for the raw contour and Gamma prefactor, separate Gaussian integrability of every actual residue and remainder term, centered-Gaussian sign symmetry, heat-evolution/Schwarz-reflection commutation, and the exact two-sum, two-remainder equation `(39)` for every `t>0`, `z.re!=0`, and `N`. Six exact witnesses and five selected standard-only axiom prints pass. | Finish the full mechanical and public CI audit. Then attack the source contour shifts `(rtn-def)` and `(RTN-def)` before the effective estimates; first satisfy the outstanding contribution-self-report governance deliverables. |
 
 ## Loop 4 preregistration
 
@@ -423,6 +426,39 @@ No Loop 7 proof source may be edited before this preregistration passes public L
   RH Goal remain active
 
 No Loop 8 proof source may be edited before this preregistration passes public Lean Action CI.
+
+Loop 8 preregistration commit `a726d2c84395d0c7795ba176f6a884d759749cbb` passed public Lean Action CI
+run `29648603372`, build job `88090965556`, in `1m48s`, before Loop 8 proof-source edits.
+
+## Loop 8 local accounting
+
+- `classification`: `KNOWN_THEOREM_FORMALIZED`
+- `compiled_endpoint`: `deBruijnNewmanH_riemannSiegel_finite_expansion` proves exact Polymath
+  equation `(39)` for every real `t>0`, complex `z` with `z.re!=0`, and natural `N`
+- `compiled_spine`: a tunable raw-contour horizontal bound; right-half-plane Gamma control and
+  recurrence transport to the left; a tunable Gamma horizontal subgaussian bound; Gaussian
+  integrability of every actual `R_(0,N)` and `r_(0,n)` term; centered-Gaussian negation
+  invariance; heat-evolution/Schwarz-reflection commutation; and the exact composition of public
+  `(htz)`, `(xio)`, and both finite decompositions
+- `assumption_frontier_after`: equation `(39)` and every separate Bochner integrability premise
+  used by its finite split are K0; no effective remainder estimate, contour-shift identity, or
+  numerical certificate is assumed
+- `hard_gap_after`: `(rtn-def)` and `(RTN-def)`, the effective estimates in Propositions 6.1 and
+  6.3, strict finite-sum certificates, the finite RH computation through `3*10^12`, compact
+  barrier winding, H6-E/G8, and RH remain open
+- `hard_gap_delta`: 1
+- `route_infrastructure_delta`: 1
+- `local_audit`: the production module, six exact `TargetChecks` witnesses, and five selected
+  `#print axioms` checks pass; each selected declaration depends only on `propext`,
+  `Classical.choice`, and `Quot.sound`; forbidden proof-token, custom declaration, and
+  resource-relaxation scans are empty; `git diff --check` passes; the full 8,713-job build passes
+- `preregistration_public_evidence`: commit `a726d2c84395d0c7795ba176f6a884d759749cbb`
+  passed public CI run `29648603372`, build job `88090965556`, in `1m48s`
+- `public_implementation_evidence`: pending
+- `next_exact_gate`: prove the source complex-Gaussian contour shifts `(rtn-def)` and `(RTN-def)`
+  for the now concrete heat-evolved terms, before attempting their effective estimates
+- `governance_before_next_research_loop`: produce the outstanding `CONTRIBUTIONS.md`, plain-language
+  summary, and `VERIFYING.md` deliverables recorded by the sixth architecture audit
 
 ## Loop 3 preregistration
 
