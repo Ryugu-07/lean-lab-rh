@@ -2335,3 +2335,24 @@ Evidence commit `03ccacba97674a8adabf5e2f5b9b6f810539000e` passed public CI run
 `29654669529`, build job `88106762342`, in `1m35s`. Loop 9 is publicly checked; the portfolio now
 selects the source-exact Proposition 6.1/6.3 quantitative edge while H6-Q1 and the RH Goal remain
 active.
+
+Closure commit `f51a3563cd2fdc19170385fe099d78e3cb0c5b49` passed public CI run
+`29654773659`, build job `88107035901`, in `1m34s`.
+
+### Loop 10 Proposition 6.1 preregistration
+
+Source audit selects the exact positive-term estimate before the remainder estimate. For every
+real `sigma`, `T>10`, positive `n`, and `0<t<=1/2`, the endpoint must express the actual
+`r_(t,n)(sigma+iT)` as the source main term
+`M_t(s)*b_n^t/n^(s+(t/2)*alpha(s))` times `1+e`, with an explicit complex witness satisfying the
+exact `(eps-def)` norm bound. This is the quantitative input for both `e_A` and `e_B`.
+
+The shortest honest dependency path starts with source Lemma 5.1(v), Boyd's effective complex
+Stirling remainder, which mathlib does not currently package. It then proves the upper-half-plane
+alpha derivative bound, `Im(alpha_n)>=-0.15`, the legal public `(rtn-def)` instantiation, the
+line-segment Taylor remainder, and the final Gaussian perturbation inequality. Proposition 6.3 is
+deferred because it additionally depends on the absent Arias de Reyna Proposition 6.2
+`C_k`/`RS_K` apparatus. A full Proposition 6.1 theorem is success; a proper prefix must remove one
+named quantitative dependency and is recorded as `PARTIAL / BLOCKER_EXPOSED`. Public
+preregistration CI is required before proof-source edits; H6-Q1 and the global RH Goal remain
+active.

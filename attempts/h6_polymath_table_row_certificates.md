@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_ROUTE_SELECTION_AFTER_LOOP_9`
+Status: `ACTIVE_LOOP_10_PREREGISTERED`
 
 ## Target
 
@@ -54,6 +54,7 @@ output is imported. Every numerical fact must be independently re-proved in Lean
 | 7 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves the full noninteger-domain `(xio)` identity from the actual `Phi(a)` contour, recurrences, slanted-ray Mellin/Fubini calculation, Gamma--zeta constants, logarithmic Gaussian parameter bounds, and identity-theorem continuation. Six witnesses, standard-only axiom prints, scans, full build, and public implementation CI pass. | Compose public `(htz)`, `(xio)`, and the finite source decomposition into exact Polymath equation `(39)`, including separate integrability and reflection transport. |
 | 8 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves tunable horizontal bounds for the raw contour and Gamma prefactor, separate Gaussian integrability of every actual residue and remainder term, centered-Gaussian sign symmetry, heat-evolution/Schwarz-reflection commutation, and the exact two-sum, two-remainder equation `(39)` for every `t>0`, `z.re!=0`, and `N`. Six exact witnesses, five selected standard-only axiom prints, scans, full build, public implementation CI, and public evidence CI pass. | Before the next proof attack, satisfy the outstanding contribution-self-report governance deliverables. Then attack the source contour shifts `(rtn-def)` and `(RTN-def)` before the effective estimates. |
 | 9 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves a uniform closed-strip bound for the actual raw contour, Gamma-prefactored residue, and remainder; kills both finite-rectangle vertical sides; passes both horizontal sides to Bochner full-line integrals; removes the real contour displacement by translation; and compiles the exact variance-two `(rtn-def)` and `(RTN-def)` endpoints for arbitrary complex shifts in the strict same-half-plane domain. Exact witnesses, standard-only axiom prints, scans, the full 8,714-job build, public implementation CI, and public evidence CI pass. | Audit the exact statements and dependency order of Polymath Propositions 6.1 and 6.3, preregister one source-exact quantitative subedge, and require its public CI before new proof-source edits. The numerical certificates, H6-E/G8, and RH remain open. |
+| 10 | `PROOF-ATTEMPT` | Preregistered the exact Proposition 6.1 relative-error estimate for the actual positive-index heat residue at arbitrary real `sigma`, `T>10`, and `0<t<=1/2`. The source epsilon, multiplicative error witness, complex power, and actual project functions are fixed. Source audit identifies the explicit complex Stirling remainder as the first missing dependency. | Commit only the preregistration and require public CI. After green CI, attack Lemma 5.1(v) and the actual `r_(0,n)`-to-`M_0 n^(-s)` relative error before Taylor/Gaussian closure. |
 
 ## Loop 4 preregistration
 
@@ -558,6 +559,61 @@ No Loop 9 proof source may be edited before this preregistration passes public L
   Propositions 6.1 and 6.3, then prove the term and remainder estimates without replacing them by
   an abstract asymptotic statement
 - `global_goal`: active
+
+## Loop 10 preregistration
+
+- `mode`: `PROOF-ATTEMPT`
+- `fixed_subedge`: Polymath Proposition 6.1, the effective estimate for the actual
+  `r_(t,n)(sigma+iT)`; Proposition 6.3 is not bundled into this loop
+- `primary_source`: D.H.J. Polymath arXiv `1904.12438v2`, `debruijn.tex` lines 621--678, with
+  elementary Lemma 5.1(v) at lines 542--606 and the alpha derivative bound at lines 608--615
+- `source_hashes`: archive SHA-256
+  `1be3bc38d203ad0142f1c97c267c7deaa06b84c97716c9a1ec1f56456d826863`; TeX SHA-256
+  `560a28fe31bec92dd793820222e9e73a1fc6958a08344033a946b2ccaba225e5`
+- `parameters`: arbitrary `sigma : R`, `T : R` with `10<T`, positive natural `n`, and real `t`
+  with `0<t` and `t<=1/2`; put `s=sigma+i*T` and
+  `alpha_n=deBruijnNewmanPolymathAlpha s-log n`
+- `exact_error`:
+  `epsilon=exp(((t^2/8)*norm(alpha_n)^2+t/4+1/6)/(T-333/100))-1`
+- `proposed_Lean_endpoint`:
+  `deBruijnNewmanRiemannSiegelHeatTerm_effective_estimate`
+- `statement_shape`: there exists `e : C` with `norm e<=epsilon` such that the actual public
+  `deBruijnNewmanRiemannSiegelHeatTerm t n s` equals
+  `deBruijnNewmanPolymathM t s * b_n^t / n^(s+(t/2)*alpha(s)) * (1+e)`; the existential witness is
+  the exact kernel-checkable meaning of the source's `1+O_<=(epsilon)`
+- `relation_to_RH`: strict route infrastructure toward the effective `A+B-C` approximation and
+  Table 1 final/barrier certificates; weaker than RH and not itself a zero-free theorem
+- `success_criterion`: the exact endpoint compiles for all source parameters, with no assumed
+  Stirling estimate, Taylor remainder, contour shift, or Gaussian perturbation; exact witness,
+  standard-only axiom print, forbidden scan, full build, and public implementation/evidence CI pass
+- `falsification_criterion`: the source bound fails under the project's exact Gamma/power branch
+  normalization, the stated epsilon cannot dominate the rigorously derived remainder on the full
+  source domain, or a source constant requires an omitted hypothesis
+- `known_obstacles`: mathlib has no effective complex Stirling theorem. The source invokes Boyd to
+  obtain Lemma 5.1(v), including `1/(12*(abs z-0.33))`; the project also lacks the upper-half-plane
+  `log M_0` Taylor remainder, the exact `Im alpha_n>=-0.15` certificate, and the final parameterized
+  Gaussian perturbation estimate
+- `mandatory_milestones`: prove the upper-half-plane alpha derivative and bound; prove source
+  Lemma 5.1(v) or the exact actual-function consequence
+  `r_(0,n)=M_0*n^(-s)*exp(error)` with the displayed norm bound; prove the same-half-plane condition;
+  prove the line-segment Taylor remainder; close the source Gaussian integral inequality
+- `anti_substitution_rule`: an asymptotic `IsEquivalent`, a theorem with an assumed Gamma/Stirling
+  error, an unspecified big-O constant, a special `sigma`/`n`/`t`, or a generic perturbation lemma
+  without the actual heat term is not Loop 10 success
+- `proper_prefix_rule`: if the final endpoint does not compile, retain only a source-exact theorem
+  that removes one named Stirling, alpha, Taylor, or Gaussian obligation and classify the loop
+  `PARTIAL / BLOCKER_EXPOSED`; helper count alone is not progress
+- `selection_reason`: Proposition 6.1 directly supplies both finite-sum errors `e_A` and `e_B` and
+  reuses public `(rtn-def)`. Proposition 6.3 additionally depends on the entirely absent Arias de
+  Reyna Proposition 6.2 coefficient/remainder apparatus, so 6.1 has the shorter dependency path and
+  creates shared quantitative infrastructure
+- `next_if_success`: preregister Proposition 6.2/6.3's exact Arias de Reyna remainder edge, or if
+  the aggregate consumer needs it first, compose Proposition 6.1 into the exact finite-sum
+  `e_A/e_B` bound
+- `next_if_blocked`: add the first failed Boyd/Stirling, branch, Taylor, or Gaussian constant to the
+  H6-Q1 obstruction map and change the attack angle without pausing the global RH Goal
+
+No Loop 10 proof source may be edited before this preregistration passes public Lean Action CI.
 
 ## Loop 3 preregistration
 

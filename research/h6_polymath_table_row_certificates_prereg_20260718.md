@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_ROUTE_SELECTION_AFTER_LOOP_9`
+Status: `ACTIVE_LOOP_10_PREREGISTERED`
 
 ## Exact mathematical endpoint
 
@@ -768,3 +768,51 @@ remain open; the persistent RH Goal remains active.
 Evidence commit `03ccacba97674a8adabf5e2f5b9b6f810539000e` passed public Lean Action CI
 run `29654669529`, build job `88106762342`, in `1m35s`. Loop 9 is publicly checked and enters
 route selection for the Proposition 6.1/6.3 quantitative edge; H6-Q1 and the RH Goal remain active.
+
+Loop 9 closure commit `f51a3563cd2fdc19170385fe099d78e3cb0c5b49` passed public Lean Action CI
+run `29654773659`, build job `88107035901`, in `1m34s`.
+
+## Loop 10 exact Proposition 6.1 `r_(t,n)` estimate
+
+Loop 10 is a `PROOF-ATTEMPT` at the first quantitative edge after `(rtn-def)`. The primary source is
+D.H.J. Polymath arXiv `1904.12438v2`, `debruijn.tex` lines 621--678, together with Lemma 5.1(v)
+at lines 542--606 and the alpha derivative estimate at lines 608--615. The audited archive and TeX
+hashes remain respectively
+`1be3bc38d203ad0142f1c97c267c7deaa06b84c97716c9a1ec1f56456d826863` and
+`560a28fe31bec92dd793820222e9e73a1fc6958a08344033a946b2ccaba225e5`.
+
+For arbitrary real `sigma`, `T>10`, positive natural `n`, and `0<t<=1/2`, set
+
+```text
+s = sigma + i*T,
+alpha_n = alpha(s) - log n,
+epsilon = exp(((t^2/8)*|alpha_n|^2 + t/4 + 1/6)/(T-3.33)) - 1.
+```
+
+The fixed Lean endpoint `deBruijnNewmanRiemannSiegelHeatTerm_effective_estimate` must produce an
+actual complex witness `e` with `norm e<=epsilon` and the exact equality
+
+```text
+r_(t,n)(s) = M_t(s) * b_n^t / n^(s+(t/2)*alpha(s)) * (1+e).
+```
+
+This existential equality is the formal meaning of the source's multiplicative
+`1+O_<=(epsilon)`. An unspecified big-O term is not accepted.
+
+The proof must derive, rather than assume, four quantitative layers: the upper-half-plane alpha
+derivative and `1/(2*Im(s)-6)` bound; Boyd's effective complex Stirling remainder in Lemma 5.1(v)
+and its actual `r_(0,n)` consequence; `Im(alpha_n)>=-0.15` and the resulting legal `(rtn-def)`
+shift; and the line-segment Taylor plus exact Gaussian perturbation bound producing `T-3.33`.
+Mathlib currently has complex Gamma definitions, recurrence, holomorphy, and integral formulae, but
+no effective complex Stirling theorem with this remainder. That is the first registered obstacle.
+
+Proposition 6.1 is selected before Proposition 6.3 because it directly feeds both `e_A` and `e_B`
+and reuses the public contour shift. Proposition 6.3 additionally requires Proposition 6.2's absent
+Arias de Reyna `C_k(p,sigma)` and `RS_K(s)` expansion, including a measurable truncation order.
+
+Success is only the full actual-function endpoint with exact witness, standard-only axiom audit,
+clean forbidden scan, full build, and public implementation/evidence CI. A source-exact Stirling,
+actual base-term, alpha/Taylor, or Gaussian theorem may survive a failed full attempt only as
+`PARTIAL / BLOCKER_EXPOSED`, with the first remaining dependency named. No Loop 10 proof source may
+be edited before this preregistration passes public Lean Action CI. H6-Q1 and the RH Goal remain
+active.
