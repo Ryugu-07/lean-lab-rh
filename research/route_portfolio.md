@@ -2154,3 +2154,21 @@ non-orthogonal parallelogram Cauchy step after removable extension. The full suc
 also includes `(1/8)*xi(s)=R_(0,0)(s)+R_(0,0)^*(1-s)` and its finite decomposition. Any compiled
 proper prefix is route infrastructure only and must be accompanied by the first remaining source
 dependency.
+
+### Loop 4 local fixed-contour checkpoint
+
+The preregistration gate passed at commit `80ac70759296e9823a5b55f4ec12afda109364b5`, public CI
+run `29633356952`, job `88051178220`. The attempted full edge did not close. Lean now defines the
+actual fixed source kernel and proves its absolute integrability on every midpoint line, including
+principal-branch control, a uniform denominator bound, and a pure Gaussian majorant. It also
+proves the exact local residue limit `n^(-s)/(2*pi*i)` at every positive integer. The aggregate
+`deBruijnNewmanRiemannSiegelContour_prefix`, five exact witnesses, five standard-only axiom prints,
+empty forbidden scans, and the full 8,707-job build pass locally.
+
+Classification is `PARTIAL / BLOCKER_EXPOSED`, `hard_gap_delta=0`,
+`route_infrastructure_delta=1`. The first remaining dependency is a derivative-compatible
+removable extension of the pole-subtracted kernel on one affine strip. That extension feeds the
+Poincare homotopy theorem; finite end-segment decay and an induction over adjacent strips then feed
+the finite residue shift. Titchmarsh `(xio)` remains a separate downstream step requiring the
+auxiliary contour recurrence and analytic continuation. No contour-shift or `(xio)` premise was
+introduced, and the campaign remains active.

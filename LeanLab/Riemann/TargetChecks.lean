@@ -11,6 +11,7 @@ import LeanLab.Riemann.DeBruijnNewmanHermiteSplitting
 import LeanLab.Riemann.DeBruijnNewmanTableRowCertificates
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegel
 import LeanLab.Riemann.DeBruijnNewmanPolymathHeatKernel
+import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelContour
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1896,5 +1897,33 @@ example {t : ℝ} (ht : 0 ≤ t) (z : ℂ) :
           ((Real.sqrt t / 2 * y : ℝ) : ℂ))
         ∂ProbabilityTheory.gaussianReal 0 2 :=
   deBruijnNewmanH_eq_gaussian_riemannXi ht z
+
+example : deBruijnNewmanRiemannSiegelDirection ^ 2 = Complex.I :=
+  deBruijnNewmanRiemannSiegelDirection_sq
+
+example (N : ℕ) (v : ℝ) :
+    2 ≤ ‖deBruijnNewmanRiemannSiegelDenominator
+      (deBruijnNewmanRiemannSiegelLine N v)‖ :=
+  two_le_norm_deBruijnNewmanRiemannSiegelDenominator N v
+
+example (N : ℕ) (s : ℂ) :
+    MeasureTheory.Integrable (deBruijnNewmanRiemannSiegelLineIntegrand N s) :=
+  integrable_deBruijnNewmanRiemannSiegelLineIntegrand N s
+
+example {n : ℕ} (hn : 0 < n) (s : ℂ) :
+    Filter.Tendsto
+      (fun w : ℂ ↦ (w - n) * deBruijnNewmanRiemannSiegelKernel s w)
+      (nhdsWithin (n : ℂ) ({(n : ℂ)} : Set ℂ)ᶜ)
+      (nhds ((n : ℂ) ^ (-s) / (2 * (Real.pi : ℂ) * Complex.I))) :=
+  deBruijnNewmanRiemannSiegelKernel_hasResidue hn s
+
+example (N : ℕ) (s : ℂ) :
+    MeasureTheory.Integrable (deBruijnNewmanRiemannSiegelLineIntegrand N s) ∧
+      ∀ n : ℕ, 0 < n →
+        Filter.Tendsto
+          (fun w : ℂ ↦ (w - n) * deBruijnNewmanRiemannSiegelKernel s w)
+          (nhdsWithin (n : ℂ) ({(n : ℂ)} : Set ℂ)ᶜ)
+          (nhds ((n : ℂ) ^ (-s) / (2 * (Real.pi : ℂ) * Complex.I))) :=
+  deBruijnNewmanRiemannSiegelContour_prefix N s
 
 end LeanLab.Riemann

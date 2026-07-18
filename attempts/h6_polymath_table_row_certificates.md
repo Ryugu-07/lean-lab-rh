@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_4_PREREGISTERED_CI_PENDING`
+Status: `ACTIVE_LOOP_4_PARTIAL_IMPLEMENTATION_CI_PENDING`
 
 ## Target
 
@@ -48,6 +48,7 @@ output is imported. Every numerical fact must be independently re-proved in Lean
 | 1 | `LITERATURE` | Compiled `riemannHypothesisUpTo`, the general finite-height-RH transport, and the exact Table 1 specialization through height `3*10^12`. The `x=0` boundary uses `deBruijnNewmanH_mul_I_ne_zero`; the positive branch derives the exact `x/2` zeta ordinate and contradicts the positive lower `y` boundary. Standalone checks, exact witnesses, standard-only axiom prints, forbidden scans, and the full 8,704-job build pass locally. This is conditional on `riemannHypothesisUpTo (3*10^12)` and proves no unconditional region. | Keep the campaign active. Loop 2 should attack the source-normalized effective Riemann--Siegel approximation and error consumer needed by the final and barrier certificates; do not build interval infrastructure detached from an exact `H_t` statement. The finite RH computation, final region, and barrier remain open. |
 | 2 | `LITERATURE` | Formalized the exact Theorem 1.3 normalization: source arguments, `log M_0`, `M_0`, both formulas for `alpha`, `M_t`, `B_t`, `b_n^t`, `N`, `gamma`, `s_*`, `kappa`, `f_t`, the displayed `e_A+e_B` and `e_C0` upper bounds, and their total. Lean proves the branch derivative on the lower half-plane, `exp(log M_0)=M_0`, `B_t!=0` for `x>0`, exact inclusion of the second-row final region in the theorem's parameter region, Corollary 1.4, and both general and exact-row final-region certificate consumers. Definition witnesses, seven theorem witnesses, seven standard-only axiom prints, forbidden scans, and the full 8,705-job build pass locally. The deterministic approximation inequality remains an unproved `Prop`. | Keep the campaign active. Loop 3 attacks the paper's first analytic identity `H_t(z)=integral H_0(z-i*sqrt(t)*Y) d gamma_2(Y)` and its exact xi-coordinate form. The existing compiled Gaussian theorem averages real translations and moves time backward; it cannot discharge this imaginary-shift forward representation. |
 | 3 | `LITERATURE` | Proved the exact complex MGF and absolute-exponential moment control for `gaussianReal(0,2)`, the imaginary-shift cosine multiplier `exp((r*u)^2)`, full product integrability, the general identity `integral H_t(z-i*r*Y)=H_(t+r^2)(z)`, the `r=sqrt(t)` reconstruction from `H_0`, and the exact `(htz)` xi-coordinate form. Five exact witnesses, five standard-only axiom prints, forbidden scans, and the full 8,706-job build pass locally. | Keep the campaign active. Loop 4 must confront the next source edge rather than add another heat wrapper: define the fixed `5*pi/4` infinite-line contour `R_(0,N)`, prove its integrability and residue shift, and reconstruct Titchmarsh `(xio)`/the finite `R_(0,0)` decomposition. The effective approximation and all numerical certificates remain open. |
+| 4 | `LITERATURE / PROOF-ATTEMPT` | `PARTIAL / BLOCKER_EXPOSED`. Lean now fixes the source direction and midpoint lines, proves branch-cut and integer-pole avoidance, a uniform denominator lower bound, exact Gaussian decay, a global integrable majorant for the actual raw line integrand, and the exact punctured-neighborhood residue `n^(-s)/(2*pi*i)` at every positive integer. The aggregate `deBruijnNewmanRiemannSiegelContour_prefix` compiles with five exact witnesses, five standard-only axiom prints, empty forbidden scans, and the full 8,707-job local build. The finite residue shift and `(xio)` were not proved, so this is route infrastructure with `hard_gap_delta=0`, not closure of Loop 4 or an RH progress claim. | Keep the campaign and RH Goal active. The first unclosed dependency is a continuous removable extension of the single-pole-subtracted kernel on each affine strip; then apply the Poincare homotopy theorem to a finite nonorthogonal parallelogram and prove its end-segment integrals vanish. Only after the finite residue shift closes should the attack advance to Titchmarsh's auxiliary recurrence and analytic continuation for `(xio)`. |
 
 ## Loop 4 preregistration
 
@@ -98,6 +99,52 @@ uncancelled analytic dependency and the strongest compiled proper prefix. A prop
 infrastructure, not a successful closure of Loop 4 or an RH progress claim.
 
 No Lean proof source may be edited for Loop 4 before this preregistration passes public CI.
+
+Preregistration commit `80ac70759296e9823a5b55f4ec12afda109364b5` passed public Lean Action CI
+run `29633356952`, build job `88051178220`, in `1m51s`, before Loop 4 proof-source edits.
+
+## Loop 4 accounting
+
+- `classification`: `PARTIAL / BLOCKER_EXPOSED`
+- `compiled_aggregate`: `deBruijnNewmanRiemannSiegelContour_prefix`
+- `compiled_geometry`: exact `5*pi/4` direction coordinates, `d^2=i`, `norm d=1`, line real and
+  imaginary coordinates, slit-plane membership, and avoidance of every integer
+- `compiled_denominator`: exact complex-sine formula, denominator nonvanishing, and the uniform
+  lower bound `2 <= norm denominator` on every fixed midpoint line
+- `compiled_integrability`: principal-`cpow` norm control, exact Gaussian real exponent,
+  completion-of-the-square majorant, majorant integrability, continuity, and absolute
+  integrability of the actual source line integrand for every `N` and `s`
+- `compiled_residue`: exact denominator derivative at each natural integer, exact numerator sign,
+  residue coefficient `n^(-s)/(2*pi*i)`, and the corresponding punctured-neighborhood limit for
+  every positive `n`
+- `assumption_frontier_after`: fixed-line integrability and local residue normalization are K0;
+  no contour-shift equality or `(xio)` premise has been introduced
+- `hard_gap_after`: removable extension on the crossed strips, finite affine-parallelogram Cauchy
+  identity, vanishing truncation ends, finite residue shift, Titchmarsh `(xio)`, the effective
+  approximation, every numerical region certificate, finite RH computation, barrier, H6-E/G8,
+  and RH remain open
+- `hard_gap_delta`: 0
+- `route_infrastructure_delta`: 1
+- `first_uncancelled_dependency`: define the single-pole-subtracted kernel at each crossed integer
+  by its derivative-level limit and prove the extension has the within-domain derivative needed by
+  `ContinuousMap.Homotopy.curveIntegral_add_curveIntegral_eq_of_hasFDerivWithinAt`
+- `next_exact_gate`: close one finite strip shift between adjacent midpoint lines, including both
+  finite end segments and their limit; then induct over `N` to obtain
+  `I_0(s)=sum_(n=1)^N n^(-s)+I_N(s)`
+
+## Loop 4 local mechanical audit
+
+- standalone source module: passed; only a non-blocking flexible-`simp` linter note is emitted
+- `Targets.lean`: passed with the honest proven proper-prefix target
+- `TargetChecks.lean`: five exact statement witnesses passed at default resource limits
+- `AxiomsAudit.lean`: all five selected declarations print only `propext`,
+  `Classical.choice`, and `Quot.sound`
+- forbidden proof-token, custom declaration, unsafe/opaque, and resource-relaxation scans: empty
+- `git diff --check`: passed
+- full `lake build`: passed, 8,707 jobs
+- public implementation and evidence CI: pending
+- Loop 4's full preregistered endpoint remains open; the campaign and persistent RH Goal remain
+  active
 
 ## Loop 3 preregistration
 

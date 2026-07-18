@@ -12,6 +12,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathCriterion
 import LeanLab.Riemann.DeBruijnNewmanTableRowCertificates
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegel
 import LeanLab.Riemann.DeBruijnNewmanPolymathHeatKernel
+import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelContour
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -931,6 +932,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanH_eq_gaussian_riemannXi
       status := .proven
       note := "Loop 3 known source infrastructure. Five exact witnesses, five standard-only axiom prints, forbidden scans, and the full 8,706-job build pass; implementation 0601c75a and evidence c6754490 passed public CI runs 29632643337 and 29632785404. The proof uses the exact Gaussian complex MGF, a kernel-checked exponential-moment majorant, the compiled super-Gaussian Phi tail bound, and Fubini. This establishes equation (htz) but not Titchmarsh (xio), the subsequent Riemann-Siegel expansion, deterministic approximation bound, numerical final region, Lambda <= 0.2, H6-E/G8, or RH." },
+    { id := "H6.debruijn-newman.polymath-riemann-siegel-contour-prefix"
+      tier := .tier2
+      title := "Kernel-check the fixed Riemann--Siegel contour prefix"
+      statement :=
+        "For every midpoint line indexed by N and every complex s, prove absolute integrability of the actual Riemann--Siegel source kernel and prove that its residue at every positive integer n is exactly n^(-s)/(2*pi*i)."
+      leanName := some ``deBruijnNewmanRiemannSiegelContour_prefix
+      status := .proven
+      note := "Loop 4 proper prefix of the known Titchmarsh--Polymath contour route. The fixed 5*pi/4 line geometry, branch control, uniform denominator bound, Gaussian majorant, absolute integrability, and exact punctured-neighborhood residue limits compile. The finite nonorthogonal contour shift, vanishing end segments, Titchmarsh equation (xio), Riemann--Siegel expansion, numerical final-region certificate, Lambda <= 0.2, H6-E/G8, and RH remain open. This is source infrastructure with hard_gap_delta=0." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

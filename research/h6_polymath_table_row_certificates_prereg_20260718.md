@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_4_PREREGISTERED_CI_PENDING`
+Status: `ACTIVE_LOOP_4_PARTIAL_IMPLEMENTATION_CI_PENDING`
 
 ## Exact mathematical endpoint
 
@@ -389,3 +389,36 @@ input is
 `ContinuousMap.Homotopy.curveIntegral_add_curveIntegral_eq_of_hasFDerivWithinAt`.
 
 No Lean proof source may be edited before this Loop 4 preregistration passes public Lean Action CI.
+
+Preregistration commit `80ac70759296e9823a5b55f4ec12afda109364b5` passed public Lean Action CI
+run `29633356952`, build job `88051178220`, in `1m51s`, before proof-source edits.
+
+## Loop 4 local checkpoint
+
+Loop 4 reached a compiler-checked proper prefix but not its full success criterion. The new module
+`DeBruijnNewmanPolymathRiemannSiegelContour.lean` defines the actual source direction, midpoint
+lines, raw kernel, line integrand, raw integral, prefactor, `R_(0,N)`, residue terms, reflection,
+and Gaussian majorant. Lean proves the fixed lines avoid both the principal-power branch cut and
+all integer poles, the source denominator has norm at least `2`, and the line integrand is
+absolutely integrable for every natural `N` and complex `s`.
+
+At every positive integer `n`, Lean also computes the exact denominator derivative and numerator
+sign and proves the punctured-neighborhood limit
+
+```text
+(w-n) K_s(w) -> n^(-s)/(2*pi*i).
+```
+
+These two outputs are bundled in `deBruijnNewmanRiemannSiegelContour_prefix`. Five exact witnesses,
+five standard-only axiom prints, empty forbidden scans, `git diff --check`, and the full 8,707-job
+build pass locally. Classification is `PARTIAL / BLOCKER_EXPOSED`, with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`.
+
+The first unclosed dependency is the removable extension of the pole-subtracted kernel on an
+adjacent affine strip. It must supply the within-domain derivative premise for Mathlib's Poincare
+homotopy theorem. The next steps are the finite nonorthogonal parallelogram identity, vanishing of
+both end segments as the truncation grows, and induction of the finite residue shift. Titchmarsh
+`(xio)` remains downstream and additionally requires the auxiliary contour recurrence and
+analytic-continuation step in `(2.10.1)--(2.10.6)`. No contour identity or `(xio)` premise was
+postulated, and the full Loop 4 endpoint, numerical Table 1 certificates, H6-E/G8, and RH remain
+open.
