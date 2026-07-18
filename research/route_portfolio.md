@@ -2572,3 +2572,25 @@ locate every nonzero integer saddle `2*pi*i*n` as a critical point with coordina
 `-4*pi*i*n`, thereby naming the first complex branch obstructions without assuming a global
 complex inverse or resurgence contour. Full details are in
 `research/h6_boyd_real_saddle_diffeomorphism_loop16_prereg_20260719.md`.
+
+### Loop 16 local outcome
+
+Loop 16 closes locally as `KNOWN_THEOREM_FORMALIZED`. The production module
+`DeBruijnNewmanPolymathBoydRealSaddleDiffeomorphism.lean` proves that the Loop 15 principal
+coordinate restricts to an orientation-preserving order isomorphism `R ~=o R`, computes the
+positive derivative of its global inverse, and uses the monotone one-dimensional Jacobian theorem
+to derive the exact Gaussian-phase scaled-Gamma integral. It also computes the normalized factor
+at each nonzero source saddle as `i/(pi*n)`, proves principal-square-root analyticity there, and
+certifies derivative zero and coordinate square `-4*pi*i*n`.
+
+This gives `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_infrastructure_delta=1`, and
+`obstruction_map_delta=1`. Global complex continuation, the inverse-Jacobian Cauchy coefficient
+representation, adjacent-saddle decomposition, Boyd--Nemes equation `(15)`, and effective `R2`
+remain open. The next exact gate is to place the inverse Jacobian's first singularities at the
+compiled `n=+/-1` critical images and derive the adjacent-saddle coefficient mechanism without an
+equation `(15)` premise.
+
+Preregistration commit `e21951ecbbf91bfaa7f654027de4e671a45ab525` passed public Lean Action CI
+run `29663980567`, build job `88131219843`, in `1m33s`. Implementation commit
+`59d58270504f26555d6f8771e8a101bda4a115c5` passed run `29664724249`, build job `88133120232`,
+in `2m24s`. Closure-evidence CI is pending.

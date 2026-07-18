@@ -1026,6 +1026,44 @@ run `29661631696`, build job `88125198144`, in `1m31s`.
 
 No Loop 16 proof source may be edited before this preregistration passes public Lean Action CI.
 
+## Loop 16 local outcome
+
+- `campaign`: `FORMALIZATION-20260719-H6-BOYD-REAL-SADDLE-DIFFEO-01`
+- `classification`: `KNOWN_THEOREM_FORMALIZED`
+- `production_module`:
+  `LeanLab/Riemann/DeBruijnNewmanPolymathBoydRealSaddleDiffeomorphism.lean`
+- `compiled_spine`: real/complex coordinate restriction, positive real factor, exact phase-square
+  identity, everywhere-positive derivative, strict monotonicity, both infinite-end limits, global
+  real order isomorphism and inverse derivative, Gaussian-Jacobian integrability and integral
+  identity, exact scaled-Gamma endpoint, and analytic criticality with square `-4*pi*i*n` at every
+  nonzero integer source saddle.
+- `result`: the complete real steepest-descent normalization is K0 and the first nonreal critical
+  images are compiler-located. The campaign did not construct or assume a global complex inverse.
+- `assumption_frontier_after`: Loop 14's full-real phase integral can now be transported to a
+  Gaussian phase through an actual global real inverse. Complex continuation beyond local
+  neighborhoods still has no admitted branch or contour premise.
+- `rh_frontier_delta`: 0
+- `hard_gap_delta`: 0
+- `route_infrastructure_delta`: 1
+- `obstruction_map_delta`: 1
+- `local_mechanical_audit`: the 614-line production module, exact Targets and TargetChecks,
+  sixteen selected axiom prints, empty forbidden scans, diff check, and the full 8,721-job build
+  pass. The selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`.
+- `next_exact_gate`: obtain the local Cauchy/Taylor coefficient representation of the inverse
+  Jacobian and connect its first critical images to the two adjacent-saddle contributions without
+  using Boyd--Nemes equation `(15)` as a premise.
+- `compaction_state`: this proof run inherited one compaction summary; canonical governance,
+  current frontier, source definitions, logs, and mathlib APIs were re-audited before editing.
+- `model`: Codex, GPT-5 family; exact serving variant not exposed.
+- `reasoning_effort`: not exposed.
+- `loop_budget`: no V4.1 numerical quota; serving token budget not exposed.
+- `global_goal`: H6-Q1 and the persistent RH Goal remain active.
+- `public_preregistration`: commit `e21951ecbbf91bfaa7f654027de4e671a45ab525` passed public Lean
+  Action CI run `29663980567`, build job `88131219843`, in `1m33s` before proof-source editing.
+- `public_implementation`: commit `59d58270504f26555d6f8771e8a101bda4a115c5` passed public Lean
+  Action CI run `29664724249`, build job `88133120232`, in `2m24s`.
+- `public_closure`: pending closure-evidence CI.
+
 ## Loop 3 preregistration
 
 - `mode`: `LITERATURE`

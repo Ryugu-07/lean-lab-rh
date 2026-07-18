@@ -6,7 +6,7 @@ Campaign: `FORMALIZATION-20260719-H6-BOYD-REAL-SADDLE-DIFFEO-01`
 
 Mode: `LITERATURE`
 
-Status: `PREREGISTERED; PUBLIC_CI_PENDING`
+Status: `IMPLEMENTATION_PUBLIC; CLOSURE_EVIDENCE_PENDING`
 
 ## Exact target
 
@@ -226,3 +226,34 @@ fixed.
 - `global_goal`: H6-Q1 and the persistent RH Goal remain active.
 
 No Loop 16 proof source may be edited before this preregistration passes public Lean Action CI.
+
+## Implementation outcome
+
+- `classification`: `KNOWN_THEOREM_FORMALIZED`
+- `production_module`:
+  `LeanLab/Riemann/DeBruijnNewmanPolymathBoydRealSaddleDiffeomorphism.lean`
+- `result`: every fixed real-axis, inverse-derivative, Gaussian-Jacobian, scaled-Gamma, and
+  nonzero-integer complex critical-saddle declaration in the exact target compiles.
+- `closed_subobligations`: the principal coordinate's complete real restriction is an
+  orientation-preserving order isomorphism; its inverse has the certified reciprocal derivative;
+  the Loop 14 integral has the exact Gaussian-Jacobian form; and the critical images of all source
+  saddles `2*pi*i*n`, `n != 0`, are located.
+- `remaining_hard_gap`: no global complex inverse branch, Cauchy coefficient representation,
+  adjacent-saddle resurgence decomposition, Boyd--Nemes equation `(15)`, or effective `R2` estimate
+  has been proved.
+- `rh_frontier_delta`: 0
+- `hard_gap_delta`: 0
+- `route_infrastructure_delta`: 1
+- `obstruction_map_delta`: 1
+- `local_audit`: exact source and aggregate imports, two Targets, TargetChecks, sixteen selected
+  standard-only axiom prints, empty forbidden scans, `git diff --check`, and the 8,721-job full
+  build pass. The selected declarations depend only on `propext`, `Classical.choice`, and
+  `Quot.sound`.
+- `public_preregistration`: commit `e21951ecbbf91bfaa7f654027de4e671a45ab525` passed public Lean
+  Action CI run `29663980567`, build job `88131219843`, in `1m33s` before proof-source editing.
+- `public_implementation`: commit `59d58270504f26555d6f8771e8a101bda4a115c5` passed public Lean
+  Action CI run `29664724249`, build job `88133120232`, in `2m24s`.
+- `next_exact_gate`: derive a Cauchy coefficient representation for the real inverse Jacobian near
+  zero, with its radius controlled by the `n=+/-1` critical images, and determine how those images
+  generate the two adjacent-saddle terms without assuming equation `(15)`.
+- `global_goal`: H6-Q1 and the persistent RH Goal remain active.
