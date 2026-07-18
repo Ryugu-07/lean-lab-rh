@@ -221,6 +221,8 @@ run `29635161693`, build job `88056094834`, in `2m15s`. Loop 5 proof-source edit
   `Quot.sound`; forbidden scans and `git diff --check` are clean; the full 8,708-job build passes
 - `next_exact_gate`: prove the finite adjacent-shift induction and exact source-prefactor
   decomposition before attempting Titchmarsh `(2.10.1)--(2.10.6)`
+- `public_implementation_evidence`: commit `580bc73436b1571bb6096d2c85071562481598d0`
+  passed public Lean Action CI run `29637266988`, build job `88061673433`, in `2m2s`
 
 ## Loop 3 preregistration
 
