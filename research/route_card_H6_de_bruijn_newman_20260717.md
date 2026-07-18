@@ -741,3 +741,7 @@ endpoint, and the exact Table 1 second-row corollary at `1/5` compile. Both sour
 Targets and TargetChecks, selected standard-only axiom prints, forbidden scans, `git diff --check`,
 and the full 8,703-job build pass. This is local closure pending public CI. The three numerical
 region certificates, unconditional `Lambda<=0.2`, H6-E/G8, and RH remain open.
+
+Loop 10 implementation commit `8be7521652bc46d5f047c8d80fee7f908c04ec56` passed public Lean
+Action CI run `29628757912`, build job `88038314365`, in `2m26s`. Evidence backfill CI remains
+pending.

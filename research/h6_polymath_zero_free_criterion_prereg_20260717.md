@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260717-H6-POLYMATH-ZERO-FREE-CRITERION-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_SUCCESS_PENDING_PUBLIC_CI`
+Status: `PUBLIC_IMPLEMENTATION_CI_PASSED_PENDING_EVIDENCE_CI`
 
 Public preregistration evidence:
 
@@ -246,3 +246,6 @@ Both source modules, Targets, exact TargetChecks, six new selected axiom prints,
 only on `propext`, `Classical.choice`, and `Quot.sound`. This is local proof closure pending public
 implementation/evidence CI. It does not prove any of the three region predicates, unconditional
 `Lambda<=0.2`, H6-E/G8, or RH.
+
+Implementation commit `8be7521652bc46d5f047c8d80fee7f908c04ec56` passed public Lean Action CI
+run `29628757912`, build job `88038314365`, in `2m26s`. Evidence backfill CI remains pending.

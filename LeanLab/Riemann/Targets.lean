@@ -880,7 +880,7 @@ def rhTargets : List ResearchTarget :=
         "Prove compact-uniform convergence of the repeated-zero Gaussian scaling to the backward Hermite model, transfer a zero in a fixed upper-half-plane disk for every small nonzero scale, and derive backward upper linear escape for every repeated source-family zero."
       leanName := some ``deBruijnNewmanHasBackwardUpperLinearEscape_of_repeated
       status := .proven
-      note := "Loop 10 of campaign LITERATURE-20260717-H6-POLYMATH-ZERO-FREE-CRITERION-01 proves compact-uniform convergence from continuity along the compact zero-scale fiber, isolates a strict upper-half-plane Hermite root, and uses a compiler-checked Jensen minimum-modulus argument to transfer actual zeros. The resulting square-root displacement dominates every fixed linear speed. This closes the repeated-contact source interface; it does not prove any of the three numerical region certificates, Lambda <= 0.2, H6-E/G8, or RH." },
+      note := "Loop 10 of campaign LITERATURE-20260717-H6-POLYMATH-ZERO-FREE-CRITERION-01 proves compact-uniform convergence from continuity along the compact zero-scale fiber, isolates a strict upper-half-plane Hermite root, and uses a compiler-checked Jensen minimum-modulus argument to transfer actual zeros. The resulting square-root displacement dominates every fixed linear speed. This closes the repeated-contact source interface; it does not prove any of the three numerical region certificates, Lambda <= 0.2, H6-E/G8, or RH. Implementation commit 8be7521652bc46d5f047c8d80fee7f908c04ec56 passed public Lean Action CI run 29628757912, build job 88038314365, in 2m26s." },
     { id := "H6.debruijn-newman.polymath-zero-free-criterion"
       tier := .tier2
       title := "Formalize the Polymath three-region zero-free criterion"
@@ -888,7 +888,7 @@ def rhTargets : List ResearchTarget :=
         "From the initial, final, and barrier zero-free regions, prove the strict time-t0 canopy, the resulting all-real endpoint at t0+y0^2/2, and the exact Table 1 second-row corollary at time 1/5."
       leanName := some ``deBruijnNewmanAllZerosReal_one_fifth_of_polymath_table_row
       status := .proven
-      note := "Loop 10 closes the known Polymath Proposition 3.3 route end to end. The compact first-contact argument handles simple contacts by the divisor-regularized force inequality and repeated contacts by compiler-checked backward Hermite escape. The strict canopy, arbitrary-parameter all-real endpoint, and exact Table 1 second-row corollary at time 1/5 compile. This theorem remains conditional on the three explicitly stated region predicates; those numerical certificates, Lambda <= 0.2, H6-E/G8, and RH remain open." },
+      note := "Loop 10 closes the known Polymath Proposition 3.3 route end to end. The compact first-contact argument handles simple contacts by the divisor-regularized force inequality and repeated contacts by compiler-checked backward Hermite escape. The strict canopy, arbitrary-parameter all-real endpoint, and exact Table 1 second-row corollary at time 1/5 compile. This theorem remains conditional on the three explicitly stated region predicates; those numerical certificates, Lambda <= 0.2, H6-E/G8, and RH remain open. Implementation commit 8be7521652bc46d5f047c8d80fee7f908c04ec56 passed public Lean Action CI run 29628757912, build job 88038314365, in 2m26s." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

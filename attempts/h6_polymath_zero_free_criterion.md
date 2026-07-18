@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260717-H6-POLYMATH-ZERO-FREE-CRITERION-01`
 
 Date: 2026-07-17
 
-Status: `LOCAL_SUCCESS_PENDING_PUBLIC_CI`
+Status: `PUBLIC_IMPLEMENTATION_CI_PASSED_PENDING_EVIDENCE_CI`
 
 ## Runtime Record
 
@@ -51,7 +51,9 @@ Status: `LOCAL_SUCCESS_PENDING_PUBLIC_CI`
 Loop 10 local gates passed for both source modules, Targets, exact TargetChecks, six new selected
 axiom prints, forbidden placeholder/declaration/resource/scratch scans, `git diff --check`, and the
 full 8,703-job build. Every selected new declaration depends only on `propext`,
-`Classical.choice`, and `Quot.sound`. Public implementation and evidence CI remain pending.
+`Classical.choice`, and `Quot.sound`. Implementation commit
+`8be7521652bc46d5f047c8d80fee7f908c04ec56` passed public Lean Action CI run `29628757912`, build
+job `88038314365`, in `2m26s`. Evidence backfill CI remains pending.
 
 Loop 9 local gates passed for the source module, Targets, exact TargetChecks, four selected axiom
 prints, forbidden scans, `git diff --check`, and the full 8,703-job build. The selected declarations
