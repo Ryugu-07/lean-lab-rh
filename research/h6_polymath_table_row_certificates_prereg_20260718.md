@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_2_PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `ACTIVE_LOOP_2_PUBLICLY_CHECKED`
 
 ## Exact mathematical endpoint
 
@@ -237,7 +237,9 @@ the seven selected axiom prints contain only `propext`, `Classical.choice`, and 
 Forbidden scans and the full 8,705-job build pass locally.
 
 Implementation commit `3339ea0f0d6b44f656afd99c388ad313f6b18ed1` passed public Lean Action CI
-run `29631298328`, build job `88045278213`, in `1m57s`. Immutable evidence-backfill CI is pending.
+run `29631298328`, build job `88045278213`, in `1m57s`. Evidence commit
+`ba361a944fca85ecafde771761c03f3c0e6f3e05` passed run `29631407988`, build job `88045594759`, in
+`2m11s`. Loop 2 is publicly checked; the campaign and persistent RH Goal remain active.
 
 This does not prove `deBruijnNewmanPolymathExplicitApproximation`, any strict numerical
 certificate, the final region unconditionally, the other two regions, `Lambda<=1/5`, H6-E/G8, or

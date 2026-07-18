@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_2_PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `ACTIVE_LOOP_2_PUBLICLY_CHECKED`
 
 ## Target
 
@@ -116,7 +116,9 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   `29630529731`, build job `88043072197`, in `1m53s`
 - implementation commit `3339ea0f0d6b44f656afd99c388ad313f6b18ed1` passed public CI run
   `29631298328`, build job `88045278213`, in `1m57s`
-- immutable evidence-backfill CI: pending
+- evidence commit `ba361a944fca85ecafde771761c03f3c0e6f3e05` passed public CI run
+  `29631407988`, build job `88045594759`, in `2m11s`
+- Loop 2 is publicly checked; the campaign and persistent RH Goal remain active
 
 ## Mechanical audit
 
