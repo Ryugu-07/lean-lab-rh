@@ -166,3 +166,7 @@ derivation and does not assume equation `(15)`. The global RH Goal remains activ
 Implementation commit `75d39360af35c3fc65ef357b3e4d1aa498c32602` passed public Lean Action CI
 run `29660452525`, build job `88122109932`, in `2m17s`. The retained proper prefix is publicly
 checked; this evidence update does not change the `PARTIAL / BLOCKER_EXPOSED` classification.
+
+Closure-evidence commit `9e8cafdbf9e853d3c811d83dd5ef8eb66d0def69` passed public Lean Action CI
+run `29660573269`, build job `88122426325`, in `1m29s`. Loop 12 is publicly closed; the global RH
+Goal remains active.

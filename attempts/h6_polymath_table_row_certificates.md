@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `LOOP_12_EVIDENCE_PENDING_CI`
+Status: `ACTIVE_LOOP_13_PREREGISTERED`
 
 ## Target
 
@@ -820,6 +820,34 @@ run `29659498616`, build job `88119559667`, in `1m31s`. Loop 12 proof-source wor
 - `global_goal`: H6-Q1 and the persistent RH Goal remain active.
 - `public_implementation`: commit `75d39360af35c3fc65ef357b3e4d1aa498c32602` passed public
   Lean Action CI run `29660452525`, build job `88122109932`, in `2m17s`.
+- `public_closure_evidence`: commit `9e8cafdbf9e853d3c811d83dd5ef8eb66d0def69` passed public
+  Lean Action CI run `29660573269`, build job `88122426325`, in `1m29s`. Loop 12 is publicly
+  closed as `PARTIAL / BLOCKER_EXPOSED`.
+
+## Loop 13 preregistration
+
+- `campaign`: `PROOF-ATTEMPT-20260719-H6-BOYD-SADDLE-INTEGRAL-01`
+- `mode`: `PROOF-ATTEMPT`
+- `fixed_subedge`: for every real `x>0`, prove the actual project scaled Gamma equals
+  `sqrt(x/(2*pi))` times the positive-real saddle integral with phase `t-1-log(t)`, and prove the
+  saddle integrand Bochner integrable on `Ioi 0`.
+- `success_criterion`: exact integrability and scaled-Gamma equality compile from Euler's real
+  Gamma integral, positive scaling `y=x*t`, and the actual project principal-branch Stirling main
+  term; exact checks, standard-only axiom audit, full build, and public implementation/evidence CI
+  pass.
+- `falsification_criterion`: the phase/factor differs, positive-real branch alignment fails, or an
+  endpoint is nonintegrable.
+- `assumption_frontier_before`: both actual Boyd equation `(15)` kernels are public K0 as
+  integrable objects; equation `(15)` itself and every effective `R2` estimate remain open.
+- `new_attack_angle`: stop before the global `t=exp(u)` improper substitution and first compile the
+  standard `t`-domain saddle integral using mathlib's existing `integral_comp_mul_left_Ioi`.
+- `anti_substitution_rule`: equation `(15)`, `R2` bounds, equivalent effective Stirling estimates,
+  unspecified asymptotics, and replacement Gamma functions are forbidden as premises.
+- `full_preregistration`:
+  `research/h6_boyd_scaled_gamma_saddle_loop13_prereg_20260719.md`.
+- `global_goal`: H6-Q1 and the persistent RH Goal remain active.
+
+No Loop 13 proof source may be edited before this preregistration passes public Lean Action CI.
 
 ## Loop 3 preregistration
 

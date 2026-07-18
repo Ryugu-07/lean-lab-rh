@@ -2478,3 +2478,18 @@ assuming equation `(15)`. H6-Q1 and the persistent RH Goal remain active.
 Implementation commit `75d39360af35c3fc65ef357b3e4d1aa498c32602` passed public Lean Action CI
 run `29660452525`, build job `88122109932`, in `2m17s`. Loop 12's proper prefix is publicly
 checked; the equation `(15)` edge remains selected and open.
+
+Closure-evidence commit `9e8cafdbf9e853d3c811d83dd5ef8eb66d0def69` passed public CI run
+`29660573269`, build job `88122426325`, in `1m29s`.
+
+### Loop 13 positive-real saddle-integral preregistration
+
+The next fixed edge is the exact positive-real scaled-Gamma saddle representation with phase
+`t-1-log(t)`. It is derived only from Euler's real Gamma integral, the scaling `y=x*t`, and the
+project's positive-real principal-branch Stirling main term. Integrability of the actual saddle
+integrand is mandatory.
+
+This route deliberately stops before `t=exp(u)`: mathlib directly covers positive scaling on
+`Ioi 0`, while the global logarithmic coordinate requires a separate improper change-of-variables
+proof. Equation `(15)`, effective `R2`, and any equivalent Stirling premise remain forbidden.
+Full preregistration is in `research/h6_boyd_scaled_gamma_saddle_loop13_prereg_20260719.md`.

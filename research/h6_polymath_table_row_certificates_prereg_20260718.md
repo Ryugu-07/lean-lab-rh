@@ -955,3 +955,10 @@ remain active.
 Implementation commit `75d39360af35c3fc65ef357b3e4d1aa498c32602` passed public Lean Action CI
 run `29660452525`, build job `88122109932`, in `2m17s`. Loop 12 remains
 `PARTIAL / BLOCKER_EXPOSED`; H6-Q1 and the global RH Goal remain active.
+
+Closure-evidence commit `9e8cafdbf9e853d3c811d83dd5ef8eb66d0def69` passed public Lean Action CI
+run `29660573269`, build job `88122426325`, in `1m29s`. Loop 13 now preregisters the exact
+positive-real scaled-Gamma saddle integral with phase `t-1-log(t)` and its integrability, derived
+from Euler's Gamma integral and positive scaling only. Full details are in
+`research/h6_boyd_scaled_gamma_saddle_loop13_prereg_20260719.md`. No Loop 13 proof source may be
+edited before public preregistration CI passes. H6-Q1 and the global RH Goal remain active.

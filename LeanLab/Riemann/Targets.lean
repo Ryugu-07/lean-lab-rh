@@ -1001,6 +1001,13 @@ def rhTargets : List ResearchTarget :=
         "For every complex z with positive real part, prove that the project's actual second scaled-Gamma Stirling remainder equals the source-exact two-ray Boyd--Nemes integral expression."
       status := .inProgress
       note := "Loop 12 exposes the exact remaining edge after proving both kernels integrable. Nemes states equation (15) by citation to Boyd; neither mathlib nor the project contains the required steepest-descent resurgence theorem or an equivalent Binet/Stieltjes remainder formula. No equation-(15) premise is admitted." },
+    { id := "H6.debruijn-newman.boyd-positive-real-saddle-integral"
+      tier := .tier2
+      title := "Derive the positive-real scaled-Gamma saddle integral"
+      statement :=
+        "For every positive real x, prove the project's actual scaled Gamma equals sqrt(x/(2*pi)) times the positive-real integral of exp(-x*(t-1-log(t)))/t, including integrability of that saddle integrand."
+      status := .inProgress
+      note := "Loop 13 preregisters this exact upstream edge. It uses Euler's real Gamma integral and positive scaling only. The logarithmic coordinate, global inverse-saddle resurgence decomposition, Boyd equation (15), effective R2, Proposition 6.1/6.3, Table 1 certificates, H6-E/G8, and RH remain open." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"
