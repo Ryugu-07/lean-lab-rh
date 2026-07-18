@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_3_PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `ACTIVE_LOOP_3_PUBLICLY_CHECKED`
 
 ## Exact mathematical endpoint
 
@@ -311,7 +311,9 @@ axiom prints, forbidden scans, and the full 8,706-job build pass locally. The se
 depend only on `propext`, `Classical.choice`, and `Quot.sound`. This is
 `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`.
 Implementation commit `0601c75a42e0f5218541ef5833f9687fb850c5f2` passed public CI run
-`29632643337`, build job `88049238613`, in `2m18s`; immutable evidence-backfill CI is pending.
+`29632643337`, build job `88049238613`, in `2m18s`. Evidence commit
+`c6754490e2037a4d867dedee9878943bdad87016` passed run `29632785404`, build job `88049632427`, in
+`1m43s`. Loop 3 is publicly checked; the campaign and persistent RH Goal remain active.
 
 Equation `(htz)` is now K0, but Titchmarsh `(xio)`, the infinite diagonal contour `R_(0,N)`, its
 residue expansion, the effective approximation, every numerical region certificate,

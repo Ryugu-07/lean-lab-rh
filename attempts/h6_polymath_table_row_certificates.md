@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_3_PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `ACTIVE_LOOP_3_PUBLICLY_CHECKED`
 
 ## Target
 
@@ -121,7 +121,9 @@ run `29631894291`, build job `88047126110`, in `1m50s`, before Loop 3 proof-sour
 - full `lake build`: passed, 8,706 jobs
 - implementation commit `0601c75a42e0f5218541ef5833f9687fb850c5f2` passed public CI run
   `29632643337`, build job `88049238613`, in `2m18s`
-- immutable evidence-backfill CI: pending
+- evidence commit `c6754490e2037a4d867dedee9878943bdad87016` passed public CI run
+  `29632785404`, build job `88049632427`, in `1m43s`
+- Loop 3 is publicly checked; the campaign and persistent RH Goal remain active
 
 ## Loop 2 preregistration
 

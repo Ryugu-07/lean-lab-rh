@@ -2138,7 +2138,9 @@ Five exact witnesses, five selected standard-only axiom prints, forbidden scans,
 8,706-job build pass locally. Classification is `KNOWN_THEOREM_FORMALIZED`, with
 `hard_gap_delta=0` and `route_infrastructure_delta=1`. Implementation commit
 `0601c75a42e0f5218541ef5833f9687fb850c5f2` passed public CI run `29632643337`, build job
-`88049238613`, in `2m18s`; immutable evidence-backfill CI is pending. The next source obstruction
-is Titchmarsh `(xio)`: no packaged Riemann--Siegel contour formula exists, so Loop 4 must define
-the fixed `5*pi/4` infinite line, prove its integrability and residue shift, and recover the finite
-`R_(0,0)` decomposition rather than postulate it.
+`88049238613`, in `2m18s`. Evidence commit `c6754490e2037a4d867dedee9878943bdad87016`
+passed run `29632785404`, build job `88049632427`, in `1m43s`. Loop 3 is publicly checked and the
+campaign remains active. The next source obstruction is Titchmarsh `(xio)`: no packaged
+Riemann--Siegel contour formula exists, so Loop 4 must define the fixed `5*pi/4` infinite line,
+prove its integrability and residue shift, and recover the finite `R_(0,0)` decomposition rather
+than postulate it.
