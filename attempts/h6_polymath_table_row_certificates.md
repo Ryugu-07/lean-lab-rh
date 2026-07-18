@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_10_PARTIAL_LOCAL`
+Status: `ACTIVE_LOOP_10_PARTIAL_PUBLIC`
 
 ## Target
 
@@ -653,6 +653,8 @@ No Loop 10 proof source may be edited before this preregistration passes public 
 - `local_mechanical_audit`: standalone module, production import, exact TargetChecks, ten selected
   axiom prints, forbidden-token scan, `git diff --check`, and the full 8,715-job build pass;
   selected declarations depend only on `propext`, `Classical.choice`, and `Quot.sound`
+- `public_implementation_evidence`: commit `814083d6c831c4ed18acaf291ce0d64b6199f1da` passed
+  public Lean Action CI run `29657235672`, build job `88113679693`, in `2m4s`
 - `next_exact_gate`: Loop 11 must preregister and attack the displayed Boyd `R_2` inequality from
   an explicit integral or steepest-descent remainder representation; a theorem assuming that
   inequality, an asymptotic expansion without constants, or a real-axis-only bound is not success

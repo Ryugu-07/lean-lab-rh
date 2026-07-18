@@ -2382,3 +2382,7 @@ effective integral or steepest-descent remainder representation. Existing local 
 integral, holomorphy, strip-bound, and digamma-series files do not supply the required constant.
 Proposition 6.1, Proposition 6.3, the Table 1 certificates, H6-E/G8, and RH remain open; H6-Q1 and
 the global RH Goal remain active.
+
+Implementation commit `814083d6c831c4ed18acaf291ce0d64b6199f1da` passed public CI run
+`29657235672`, build job `88113679693`, in `2m4s`. Loop 10's source-exact prefix is publicly
+checked; the route remains selected at the Boyd `R_2` inequality.

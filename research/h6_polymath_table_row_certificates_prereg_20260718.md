@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_10_PARTIAL_LOCAL`
+Status: `ACTIVE_LOOP_10_PARTIAL_PUBLIC`
 
 ## Exact mathematical endpoint
 
@@ -859,3 +859,8 @@ the full 8,715-job build pass. The selected declarations depend only on `propext
 holomorphy, coarse strip bounds, and a digamma series, but no existing effective `0.0205` complex
 Stirling remainder. Loop 11 must preregister a direct proof of that inequality from an explicit
 Boyd-type remainder representation. H6-Q1 and the global RH Goal remain active.
+
+Implementation commit `814083d6c831c4ed18acaf291ce0d64b6199f1da` passed public Lean Action CI
+run `29657235672`, build job `88113679693`, in `2m4s`. Loop 10's retained prefix is therefore
+publicly checked; its `PARTIAL / BLOCKER_EXPOSED` classification and the open Boyd obligation are
+unchanged.
