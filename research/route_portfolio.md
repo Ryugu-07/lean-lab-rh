@@ -2112,3 +2112,16 @@ Implementation commit `3339ea0f0d6b44f656afd99c388ad313f6b18ed1` passed public L
 run `29631298328`, build job `88045278213`, in `1m57s`. Evidence commit
 `ba361a944fca85ecafde771761c03f3c0e6f3e05` passed run `29631407988`, build job `88045594759`, in
 `2m11s`. Loop 2 is publicly checked; the campaign remains active.
+
+### Loop 3 imaginary Gaussian preregistration
+
+Loop 3 fixes Polymath equation `(htz)` as the next indivisible analytic edge. In the project's
+normalization `Y` has Gaussian variance two, and the required identity averages
+`H_t(z-i*r*Y)` to `H_(t+r^2)(z)`. The source specialization uses `r=sqrt(t)` and rewrites `H_0`
+as `(1/8)*xi((1+i*z)/2+(sqrt(t)/2)*Y)`.
+
+The existing real-shift theorem is not a substitute: it produces `exp(-(r*u)^2)` and moves time
+backward. This attack instead proves product integrability for the growing imaginary shift using
+the exact Gaussian MGF and the compiled super-Gaussian `Phi` bound. Pointwise MGF alone, assumed
+Fubini, or an abstract semigroup wrapper is rejected. Public preregistration CI must pass before
+proof-source edits.

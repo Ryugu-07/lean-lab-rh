@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_2_PUBLICLY_CHECKED`
+Status: `ACTIVE_LOOP_3_PREREGISTERED_CI_PENDING`
 
 ## Target
 
@@ -47,6 +47,37 @@ output is imported. Every numerical fact must be independently re-proved in Lean
 | 0 | `ROUTE_SELECTION / LITERATURE` | Fixed the full hypothesis-free Table 1 endpoint after source and external-artifact audit. Identified the three independent certificate layers and the exact first subedge from finite-height RH to the initial region. No proof source edited. | Commit and publicly build the preregistration. Only after green CI, begin Loop 1 on the exact finite-height transport; do not assert the external computation. |
 | 1 | `LITERATURE` | Compiled `riemannHypothesisUpTo`, the general finite-height-RH transport, and the exact Table 1 specialization through height `3*10^12`. The `x=0` boundary uses `deBruijnNewmanH_mul_I_ne_zero`; the positive branch derives the exact `x/2` zeta ordinate and contradicts the positive lower `y` boundary. Standalone checks, exact witnesses, standard-only axiom prints, forbidden scans, and the full 8,704-job build pass locally. This is conditional on `riemannHypothesisUpTo (3*10^12)` and proves no unconditional region. | Keep the campaign active. Loop 2 should attack the source-normalized effective Riemann--Siegel approximation and error consumer needed by the final and barrier certificates; do not build interval infrastructure detached from an exact `H_t` statement. The finite RH computation, final region, and barrier remain open. |
 | 2 | `LITERATURE` | Formalized the exact Theorem 1.3 normalization: source arguments, `log M_0`, `M_0`, both formulas for `alpha`, `M_t`, `B_t`, `b_n^t`, `N`, `gamma`, `s_*`, `kappa`, `f_t`, the displayed `e_A+e_B` and `e_C0` upper bounds, and their total. Lean proves the branch derivative on the lower half-plane, `exp(log M_0)=M_0`, `B_t!=0` for `x>0`, exact inclusion of the second-row final region in the theorem's parameter region, Corollary 1.4, and both general and exact-row final-region certificate consumers. Definition witnesses, seven theorem witnesses, seven standard-only axiom prints, forbidden scans, and the full 8,705-job build pass locally. The deterministic approximation inequality remains an unproved `Prop`. | Keep the campaign active. Loop 3 attacks the paper's first analytic identity `H_t(z)=integral H_0(z-i*sqrt(t)*Y) d gamma_2(Y)` and its exact xi-coordinate form. The existing compiled Gaussian theorem averages real translations and moves time backward; it cannot discharge this imaginary-shift forward representation. |
+
+## Loop 3 preregistration
+
+- `mode`: `LITERATURE`
+- `fixed_subedge`: formalize Polymath equation `(htz)` by proving the imaginary Gaussian
+  reconstruction of the source-normalized heat family and its exact xi-coordinate form
+- `general_statement`: for all real `t,r` and complex `z`, prove
+  `integral H_t(z-i*r*Y) d gaussianReal(0,2)(Y) = H_(t+r^2)(z)`
+- `source_statement`: for `0<=t`, specialize `r=sqrt(t)` to prove
+  `H_t(z)=integral H_0(z-i*sqrt(t)*Y) d gaussianReal(0,2)(Y)`
+- `xi_statement`: rewrite the preceding integrand exactly as
+  `(1/8)*xi((1+i*z)/2+(sqrt(t)/2)*Y)`, matching the paper after the change of variables
+  `Y=2v`
+- `success_criterion`: the pointwise complex-cosine Gaussian moment, product integrability,
+  Fubini exchange, general heat-shift identity, nonnegative-time specialization, and xi form all
+  compile with exact statement witnesses and standard-only axiom prints
+- `falsification_criterion`: the variance-two normalization yields a scale other than `r^2`, the
+  `Y=2v` xi coordinate does not match the source, or joint integrability requires an analytic
+  premise not supplied by the compiled `Phi` majorant
+- `known_obstacles`: the imaginary shift makes the cosine grow exponentially in `Y`; unlike the
+  existing real-shift theorem, its product majorant must integrate that growth to
+  `exp(r^2*u^2)` before applying the super-Gaussian `Phi` bound
+- `nearest_primary_source`: Polymath arXiv `1904.12438`, Section 4, equation `(htz)`
+- `nearest_project_attempt`: `integral_deBruijnNewmanH_gaussian_shift`, which averages real
+  translations and gives time `t-r^2`
+- `new_attack_angle`: use Mathlib's exact Gaussian MGF and the compiled all-quadratic-exponent
+  `Phi` integrability theorem to prove the missing imaginary-shift Fubini hypothesis directly
+- `anti_substitution_rule`: a pointwise MGF identity, a theorem assuming product integrability,
+  or an abstract heat-semigroup wrapper without the exact `H_0` and xi integrands is not success
+
+No Lean proof source may be edited for Loop 3 before this preregistration passes public CI.
 
 ## Loop 2 preregistration
 

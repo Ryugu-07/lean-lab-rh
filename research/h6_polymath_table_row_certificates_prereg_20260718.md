@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_2_PUBLICLY_CHECKED`
+Status: `ACTIVE_LOOP_3_PREREGISTERED_CI_PENDING`
 
 ## Exact mathematical endpoint
 
@@ -246,3 +246,42 @@ certificate, the final region unconditionally, the other two regions, `Lambda<=1
 RH. The next exact source edge is equation (htz): the imaginary Gaussian heat-kernel representation
 and its xi-coordinate form. The existing real-shift Gaussian semigroup moves time backward and is
 not a substitute.
+
+## Loop 3 fixed subedge
+
+Section 4 of Polymath arXiv `1904.12438` derives equation `(htz)` from the variance-one-half
+Gaussian density. In the project's probability normalization, set `Y=2v`, so
+`Y ~ gaussianReal(0,2)`. Loop 3 must prove the following exact source chain without an assumed
+integrability premise:
+
+```lean
+theorem integral_deBruijnNewmanH_imaginary_gaussian_shift (t r : Real) (z : Complex) :
+    integral (fun y => deBruijnNewmanH t (z - (r*y)*I)) (gaussianReal 0 2) =
+      deBruijnNewmanH (t + r^2) z
+
+theorem deBruijnNewmanH_eq_gaussian_zero_imaginary_shift
+    {t : Real} (ht : 0 <= t) (z : Complex) :
+    deBruijnNewmanH t z =
+      integral (fun y => deBruijnNewmanH 0 (z - (sqrt t*y)*I)) (gaussianReal 0 2)
+
+theorem deBruijnNewmanH_eq_gaussian_riemannXi
+    {t : Real} (ht : 0 <= t) (z : Complex) :
+    deBruijnNewmanH t z =
+      integral (fun y => (1/8) * riemannXi
+        ((1+I*z)/2 + (sqrt t/2)*y)) (gaussianReal 0 2)
+```
+
+Exact binder and cast presentation may vary. The mathematical expressions, variance, signs, and
+scales may not. Success also requires the pointwise complex-cosine MGF, the full product-space
+integrability theorem that licenses Fubini, exact witnesses, selected standard-only axiom prints,
+forbidden scans, full build, and public implementation/evidence CI.
+
+The nearest compiled theorem is `integral_deBruijnNewmanH_gaussian_shift`; it uses real
+translations and gives `t-r^2`. Loop 3 is materially different because the imaginary translation
+grows like `exp(|r*u*Y|)`. The proposed proof integrates this growth with Mathlib's exact Gaussian
+MGF, obtaining `exp(r^2*u^2)`, and then invokes the existing super-Gaussian `Phi` majorant.
+
+Failure means recording the first normalization or product-integrability obstruction. A pointwise
+Gaussian identity without Fubini, an abstract wrapper, or a theorem carrying the needed
+integrability as a hypothesis does not satisfy this subedge. No Lean proof source may be edited
+before this preregistration passes public Lean Action CI.
