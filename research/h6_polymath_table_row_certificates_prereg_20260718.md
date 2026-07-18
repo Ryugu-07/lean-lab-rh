@@ -1035,3 +1035,12 @@ run `29663109048`, build job `88128987815`, in `1m53s`.
 Closure-evidence commit `60ff744dc89d39980be8460162f4e9a319e0faca` passed public Lean Action CI
 run `29663259192`, build job `88129384030`, in `2m17s`. Loop 15 is publicly closed.
 H6-Q1 and the global RH Goal remain active.
+
+## Loop 16 real saddle diffeomorphism registration
+
+Loop 16 fixes the whole-real extension of the normalized Boyd coordinate: prove global strict
+monotonicity and both infinite-end limits, construct the order-isomorphic inverse, compute its
+derivative, and compile the exact Gaussian-Jacobian form of the Loop 14 scaled-Gamma integral. It
+also identifies the nonzero integer saddles `2*pi*i*n` as complex critical points and records their
+coordinate squares, without a global complex branch or equation `(15)` premise. Full details are
+in `research/h6_boyd_real_saddle_diffeomorphism_loop16_prereg_20260719.md`.

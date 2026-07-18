@@ -1002,6 +1002,30 @@ run `29661631696`, build job `88125198144`, in `1m31s`.
 - `public_closure`: evidence commit `60ff744dc89d39980be8460162f4e9a319e0faca` passed public Lean
   Action CI run `29663259192`, build job `88129384030`, in `2m17s`. Loop 15 is publicly closed.
 
+## Loop 16 preregistration
+
+- `campaign`: `FORMALIZATION-20260719-H6-BOYD-REAL-SADDLE-DIFFEO-01`
+- `mode`: `LITERATURE`
+- `fixed_subedge`: extend the Loop 15 normalized coordinate over the complete real axis, prove it
+  is an orientation-preserving order isomorphism, compute its global inverse derivative, and
+  transform the Loop 14 integral into the exact Gaussian phase with Jacobian. Also locate the
+  nonzero integer source saddles `2*pi*i*n` as critical points and record their coordinate squares.
+- `success_criterion`: the global real diffeomorphism, inverse derivative, transformed integrability,
+  exact integral and scaled-Gamma identities, all nonzero-integer critical-saddle statements,
+  exact checks, standard-only axiom audit, full build, and public CI pass.
+- `falsification_criterion`: branch mismatch, nonpositive derivative, failed end limit, missing
+  Jacobian premise, or square-root slit membership at a nonzero integer saddle.
+- `new_attack_angle`: use derivative positivity plus both end limits to obtain a genuine global
+  order isomorphism, then apply mathlib's monotone one-dimensional Jacobian to the inverse rather
+  than postulating inverse branches in the complex plane.
+- `anti_substitution_rule`: global complex inverse/injectivity, equation `(15)`, resurgence contour
+  decomposition, effective `R2`, and unspecified continuation remain forbidden premises.
+- `full_preregistration`:
+  `research/h6_boyd_real_saddle_diffeomorphism_loop16_prereg_20260719.md`.
+- `global_goal`: H6-Q1 and the persistent RH Goal remain active.
+
+No Loop 16 proof source may be edited before this preregistration passes public Lean Action CI.
+
 ## Loop 3 preregistration
 
 - `mode`: `LITERATURE`

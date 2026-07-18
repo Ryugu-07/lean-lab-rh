@@ -2561,3 +2561,14 @@ run `29663109048`, build job `88128987815`, in `1m53s`.
 
 Closure-evidence commit `60ff744dc89d39980be8460162f4e9a319e0faca` passed public Lean Action CI
 run `29663259192`, build job `88129384030`, in `2m17s`. Loop 15 is publicly closed.
+
+### Loop 16 real saddle diffeomorphism preregistration
+
+The next selected edge is the whole-real continuation of the normalized saddle coordinate. It
+must prove that the principal Loop 15 coordinate restricts to a strictly increasing surjection
+`R -> R`, package its inverse as an order isomorphism, compute the inverse derivative, and turn
+the Loop 14 phase integral into an exact Gaussian phase with its Jacobian. The same campaign will
+locate every nonzero integer saddle `2*pi*i*n` as a critical point with coordinate square
+`-4*pi*i*n`, thereby naming the first complex branch obstructions without assuming a global
+complex inverse or resurgence contour. Full details are in
+`research/h6_boyd_real_saddle_diffeomorphism_loop16_prereg_20260719.md`.
