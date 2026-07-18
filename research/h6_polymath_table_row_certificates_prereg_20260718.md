@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_8_PUBLICLY_CHECKED`
+Status: `ACTIVE_LOOP_9_PREREGISTERED`
 
 ## Exact mathematical endpoint
 
@@ -684,3 +684,51 @@ Action CI run `29651603027`, build job `88098754302`, in `2m41s`. The next exact
 `(rtn-def)` and `(RTN-def)`. Evidence commit `7cf65e6d19afb963e9bb910a1a0e763a5f234344`
 passed public CI run `29651774163`, build job `88099210841`, in `1m55s`; Loop 8 is publicly
 checked and the H6-Q1 campaign and RH Goal remain active.
+
+## Loop 9 exact `(rtn-def)` / `(RTN-def)` contour-shift edge
+
+Loop 9 is a `PROOF-ATTEMPT` at Loop 8's declared next gate. The exact primary-source text is
+D.H.J. Polymath arXiv `1904.12438v2`, `debruijn.tex` lines 528--536. The audited source archive
+has SHA-256 `1be3bc38d203ad0142f1c97c267c7deaa06b84c97716c9a1ec1f56456d826863`; the extracted source
+has SHA-256 `560a28fe31bec92dd793820222e9e73a1fc6958a08344033a946b2ccaba225e5`.
+
+In the project's variance-two normalization, write `a_t(Y)=sqrt(t)*Y/2`. For every `t>0`, positive
+natural `n`, arbitrary natural `N`, and arbitrary complex `alpha,beta,s`, the fixed endpoints are
+
+```text
+r_(t,n)(s) = exp(-t*alpha^2/4)
+  * integral_Y exp(-a_t(Y)*alpha)
+      * r_(0,n)(s+a_t(Y)+t*alpha/2) d gaussianReal(0,2)(Y),
+
+R_(t,N)(s) = exp(-t*beta^2/4)
+  * integral_Y exp(-a_t(Y)*beta)
+      * R_(0,N)(s+a_t(Y)+t*beta/2) d gaussianReal(0,2)(Y).
+```
+
+The first formula assumes `s` and `s+t*alpha/2` have imaginary parts of the same strict sign;
+the second uses the analogous condition for `beta`. Proposed Lean endpoints are
+`deBruijnNewmanRiemannSiegelHeatTerm_contour_shift` and
+`deBruijnNewmanRiemannSiegelHeatRemainder_contour_shift`.
+
+The mandatory proof sets `q=sqrt(t)*alpha` and
+`g(w)=exp(-w^2/4)*F(s+(sqrt(t)/2)*w)`. It must prove one subgaussian bound uniform over the closed
+imaginary strip, use noninteger-domain holomorphy on finite rectangles, send both vertical sides
+to zero, pass both long sides to full-line integrals, remove the real part of `q` by Lebesgue
+translation, and verify the complete-square factors exactly. The strict half-plane hypothesis is
+used to produce a positive lower bound on the imaginary part across the strip, which is needed by
+the Gamma recurrence estimate.
+
+Loop 8's one-horizontal-line bounds and integrability are not enough by themselves: the rectangle
+ends require constants uniform in the strip parameter. A generic contour theorem alone, a theorem
+assuming the desired equality, a real-only or special-parameter shift, `t=0`, or a statement only
+for the combined equation `(39)` is rejected. Generic machinery counts only if both actual source
+functions are instantiated.
+
+Success requires both exact endpoints, exact statement witnesses, selected standard-only axiom
+prints, empty forbidden scans, a full build, and public implementation/evidence CI. A proper prefix
+must remove a named strip-bound, rectangle, vertical-decay, or limit obligation and be recorded as
+`PARTIAL / BLOCKER_EXPOSED`. On success, the next source gate is the explicit term and remainder
+estimates in Propositions 6.1 and 6.3. On blockage, the first failed obligation becomes an H6-Q1
+obstruction-map node. The global RH Goal remains active in either case.
+
+No Loop 9 proof source may be edited before this preregistration passes public Lean Action CI.

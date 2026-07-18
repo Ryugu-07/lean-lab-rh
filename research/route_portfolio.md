@@ -2295,3 +2295,19 @@ H6-E/G8, and RH remain open.
 Evidence commit `7cf65e6d19afb963e9bb910a1a0e763a5f234344` passed public CI run
 `29651774163`, build job `88099210841`, in `1m55s`. Loop 8 is publicly checked; H6-Q1 and the RH
 Goal remain active.
+
+### Loop 9 `(rtn-def)` / `(RTN-def)` preregistration
+
+The next H6-Q1 attack is the source's complex-Gaussian contour shift for both actual heat-evolved
+functions. For `t>0` and arbitrary complex `alpha` or `beta`, it fixes the exact factors
+`exp(-t*alpha^2/4)`, `exp(-sqrt(t)*Y*alpha/2)`, and the argument shift `t*alpha/2` in the project's
+`gaussianReal(0,2)` normalization. The source's strict same-sign condition on the two endpoint
+imaginary parts is part of the theorem, not an informal side condition.
+
+Writing `q=sqrt(t)*alpha` turns the weighted right side into the full-line integral of
+`g(Y+q)`, where `g(w)=exp(-w^2/4)F(s+(sqrt(t)/2)w)`. The attack removes `q.re` by real translation
+and shifts the remaining horizontal contour with finite rectangles. Its first unresolved input is
+a uniform closed-strip bound for the actual Gamma-prefactored residue and remainder, strong enough
+to send both vertical sides to zero. A generic contour theorem without the two actual source
+instantiations does not close the loop. Public preregistration CI is required before proof-source
+edits; H6-Q1 and the global RH Goal remain active.

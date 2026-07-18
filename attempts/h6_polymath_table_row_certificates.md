@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_8_PUBLICLY_CHECKED`
+Status: `ACTIVE_LOOP_9_PREREGISTERED`
 
 ## Target
 
@@ -53,6 +53,7 @@ output is imported. Every numerical fact must be independently re-proved in Lean
 | 6 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean inducts the adjacent raw shift to the exact finite identity and transports it through the source Gamma prefactor to `R_(0,0)=sum r_(0,n)+R_(0,N)`. Exact witnesses, standard-only axiom prints, scans, full build, and public implementation CI pass. | Attack the actual Titchmarsh `(2.10.1)--(2.10.6)` recurrence, Mellin, and analytic-continuation chain for `(xio)`; no abstract recurrence or half-plane substitute. |
 | 7 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves the full noninteger-domain `(xio)` identity from the actual `Phi(a)` contour, recurrences, slanted-ray Mellin/Fubini calculation, Gamma--zeta constants, logarithmic Gaussian parameter bounds, and identity-theorem continuation. Six witnesses, standard-only axiom prints, scans, full build, and public implementation CI pass. | Compose public `(htz)`, `(xio)`, and the finite source decomposition into exact Polymath equation `(39)`, including separate integrability and reflection transport. |
 | 8 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves tunable horizontal bounds for the raw contour and Gamma prefactor, separate Gaussian integrability of every actual residue and remainder term, centered-Gaussian sign symmetry, heat-evolution/Schwarz-reflection commutation, and the exact two-sum, two-remainder equation `(39)` for every `t>0`, `z.re!=0`, and `N`. Six exact witnesses, five selected standard-only axiom prints, scans, full build, public implementation CI, and public evidence CI pass. | Before the next proof attack, satisfy the outstanding contribution-self-report governance deliverables. Then attack the source contour shifts `(rtn-def)` and `(RTN-def)` before the effective estimates. |
+| 9 | `PROOF-ATTEMPT` | Preregistered the exact complex-Gaussian contour shifts `(rtn-def)` and `(RTN-def)` for the actual heat-evolved residue and remainder. The source normalization, arbitrary complex shift, strict same-half-plane domain, mandatory strip bounds, finite rectangles, vanishing vertical sides, and complete-square algebra are fixed before proof edits. | Commit only this preregistration and require public CI. After it is green, attack the uniform closed-strip subgaussian bound first; a generic contour theorem without both actual source instantiations is not success. |
 
 ## Loop 4 preregistration
 
@@ -462,6 +463,66 @@ run `29648603372`, build job `88090965556`, in `1m48s`, before Loop 8 proof-sour
   for the now concrete heat-evolved terms, before attempting their effective estimates
 - `governance_before_next_research_loop`: produce the outstanding `CONTRIBUTIONS.md`, plain-language
   summary, and `VERIFYING.md` deliverables recorded by the sixth architecture audit
+
+## Loop 9 preregistration
+
+- `mode`: `PROOF-ATTEMPT`
+- `fixed_subedge`: prove Polymath equations `(rtn-def)` and `(RTN-def)` for the actual public
+  `deBruijnNewmanRiemannSiegelHeatTerm` and
+  `deBruijnNewmanRiemannSiegelHeatRemainder`, before attempting Propositions 6.1 and 6.3
+- `primary_source`: D.H.J. Polymath arXiv `1904.12438v2`, `debruijn.tex` lines 528--536;
+  source archive SHA-256
+  `1be3bc38d203ad0142f1c97c267c7deaa06b84c97716c9a1ec1f56456d826863` and extracted source
+  SHA-256 `560a28fe31bec92dd793820222e9e73a1fc6958a08344033a946b2ccaba225e5`
+- `source_normalization`: under `Y=2v`, with `a_t(Y)=sqrt(t)*Y/2`, prove for arbitrary complex
+  `alpha` and `beta`
+  `E_t(r_(0,n))(s)=exp(-t*alpha^2/4) * integral exp(-a_t(Y)*alpha) *
+  r_(0,n)(s+a_t(Y)+t*alpha/2) d gaussianReal(0,2)(Y)` and the identical formula with
+  `R_(0,N)` and `beta`
+- `domain`: `t>0`, `n>0`, arbitrary `N`, and the source condition that `s` and
+  `s+t*alpha/2` (respectively `s+t*beta/2`) lie in the same strict open half-plane; this keeps
+  the entire interpolation strip away from every integer pole
+- `proposed_endpoints`:
+  `deBruijnNewmanRiemannSiegelHeatTerm_contour_shift` and
+  `deBruijnNewmanRiemannSiegelHeatRemainder_contour_shift`
+- `mandatory_proof_spine`: set `q=sqrt(t)*alpha` and
+  `g(w)=exp(-w^2/4)*F(s+(sqrt(t)/2)*w)`; prove a uniform subgaussian bound for the actual `F`
+  throughout the closed strip between the two source arguments; prove differentiability of `g`
+  on each finite rectangle; send both vertical-side integrals to zero; pass both horizontal
+  intervals to their Bochner integrals; remove `q.re` by Lebesgue translation; and finish by the
+  exact identity `exp(-(Y+q)^2/4)=exp(-q^2/4)*exp(-Y*q/2)*exp(-Y^2/4)`
+- `success_criterion`: both exact source endpoints compile for all stated parameters, with no
+  contour-shift premise; exact `TargetChecks`, selected standard-only `#print axioms`, empty
+  forbidden scans, full build, and public implementation/evidence CI pass
+- `falsification_criterion`: the variance-two conversion gives any coefficient other than
+  `-t*alpha^2/4`, `-sqrt(t)*Y*alpha/2`, or `t*alpha/2`; the strict same-half-plane condition does
+  not keep the interpolation strip in the noninteger domain; or the existing growth estimates
+  cannot be strengthened enough to make both finite vertical sides vanish
+- `known_obstacle`: Loop 8 bounds one fixed horizontal line at a time. The contour proof needs one
+  bound uniform over the whole compact imaginary strip. For `R_(0,N)` this requires a strip-uniform
+  raw-contour bound and Gamma recurrence bound with a positive lower distance from the real-axis
+  poles; pointwise horizontal integrability alone does not control the rectangle ends
+- `nearest_prior_attempt`: Loop 5 proves a different one-pole contour shift for the raw
+  Riemann--Siegel integration variable. Loop 8 proves actual heat-term integrability but performs
+  no complex translation in the `s` variable
+- `assumption_frontier_before`: exact `(htz)`, `(xio)`, the finite `R_(0,0)` decomposition,
+  equation `(39)`, actual horizontal Gaussian integrability, and noninteger-domain holomorphy of
+  `R_(0,N)` are public K0; no `(rtn-def)`, `(RTN-def)`, effective remainder estimate, or numerical
+  certificate is assumed
+- `anti_substitution_rule`: a generic contour theorem with growth and holomorphy hypotheses, a
+  theorem that assumes either desired contour equality, a result only for real shifts, only for a
+  special `alpha`/`beta`, only for `t=0`, or only for the combined equation `(39)` is not Loop 9
+  success. A generic theorem may be used only when both actual source functions are instantiated
+- `proper_prefix_rule`: if both endpoints do not compile, retain only a source-aligned uniform
+  strip bound, finite rectangle identity, or vertical-side limit that removes a named dependency;
+  record the first remaining obligation as `PARTIAL / BLOCKER_EXPOSED`
+- `next_if_success`: use the two source contour shifts to attack the explicit term and remainder
+  estimates in Polymath Propositions 6.1 and 6.3
+- `next_if_blocked`: add the first failed strip-Gamma, raw-contour, rectangle-orientation,
+  vertical-decay, or full-line-limit obligation to the H6-Q1 obstruction map and change the attack
+  angle without pausing the global RH Goal
+
+No Loop 9 proof source may be edited before this preregistration passes public Lean Action CI.
 
 ## Loop 3 preregistration
 
