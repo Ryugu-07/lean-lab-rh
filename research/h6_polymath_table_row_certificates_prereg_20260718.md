@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_8_IMPLEMENTATION_LOCAL_AUDIT_PASSED`
+Status: `ACTIVE_LOOP_8_IMPLEMENTATION_PUBLIC_CI_PASSED`
 
 ## Exact mathematical endpoint
 
@@ -679,5 +679,6 @@ depends only on `propext`, `Classical.choice`, and `Quot.sound`. Classification 
 `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=1` and `route_infrastructure_delta=1`. This closes
 equation `(39)`, not `(rtn-def)`/`(RTN-def)`, the effective approximation, numerical certificates,
 H6-E/G8, or RH. Forbidden scans and `git diff --check` are clean, and the full 8,713-job build
-passes. Public implementation/evidence CI remains to be recorded. The next exact source gate is
-`(rtn-def)` and `(RTN-def)`.
+passes. Implementation commit `af6c80c42c0abdfb1cf91147e74a8b88263b20ea` passed public Lean
+Action CI run `29651603027`, build job `88098754302`, in `2m41s`. The next exact source gate is
+`(rtn-def)` and `(RTN-def)`; the evidence backfill commit remains to be publicly checked.

@@ -2287,6 +2287,7 @@ composing public `(htz)`, `(xio)`, and the finite decomposition.
 Classification is `KNOWN_THEOREM_FORMALIZED`, `hard_gap_delta=1`, and
 `route_infrastructure_delta=1`. Six exact witnesses and five selected standard-only axiom prints
 pass locally; forbidden scans and `git diff --check` are clean, and the full 8,713-job build
-passes. Public implementation/evidence CI is pending. The next source gate is the
-complex-Gaussian contour-shift pair `(rtn-def)`/`(RTN-def)`; the effective estimates, numerical
-certificates, H6-E/G8, and RH remain open.
+passes. Implementation commit `af6c80c42c0abdfb1cf91147e74a8b88263b20ea` passed public CI run
+`29651603027`, build job `88098754302`, in `2m41s`. The next source gate is the complex-Gaussian
+contour-shift pair `(rtn-def)`/`(RTN-def)`; the effective estimates, numerical certificates,
+H6-E/G8, and RH remain open.

@@ -975,7 +975,7 @@ def rhTargets : List ResearchTarget :=
         "For every t>0, z with nonzero real part, and natural N, prove Polymath equation (39): H_t(z) is the sum of N heat-evolved source residues, their Schwarz-reflected partners, and the two heat-evolved source remainders."
       leanName := some ``deBruijnNewmanH_riemannSiegel_finite_expansion
       status := .proven
-      note := "Loop 8 known-source formalization combines (htz), (xio), and the finite source decomposition. Lean proves tunable horizontal contour and Gamma bounds, Gaussian integrability of every source term and remainder, centered-Gaussian sign symmetry, and commutation of heat evolution with Schwarz reflection. This closes source equation (39), not the contour-shift formulas (rtn-def)/(RTN-def), the effective approximation, numerical certificates, Lambda<=1/5, H6-E/G8, or RH; hard_gap_delta=1 and route_infrastructure_delta=1. Public implementation and evidence CI references are pending." },
+      note := "Loop 8 known-source formalization combines (htz), (xio), and the finite source decomposition. Lean proves tunable horizontal contour and Gamma bounds, Gaussian integrability of every source term and remainder, centered-Gaussian sign symmetry, and commutation of heat evolution with Schwarz reflection. This closes source equation (39), not the contour-shift formulas (rtn-def)/(RTN-def), the effective approximation, numerical certificates, Lambda<=1/5, H6-E/G8, or RH; hard_gap_delta=1 and route_infrastructure_delta=1. Implementation af6c80c42c0abdfb1cf91147e74a8b88263b20ea passed public CI run 29651603027, build job 88098754302." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"
