@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_9_PREREGISTERED`
+Status: `ACTIVE_LOOP_9_IMPLEMENTATION_PUBLIC_CI_GREEN`
 
 ## Exact mathematical endpoint
 
@@ -732,3 +732,35 @@ estimates in Propositions 6.1 and 6.3. On blockage, the first failed obligation 
 obstruction-map node. The global RH Goal remains active in either case.
 
 No Loop 9 proof source may be edited before this preregistration passes public Lean Action CI.
+
+## Loop 9 compiled result
+
+Preregistration commit `9f42efc9c53c40ad6a8c001a3a9bced3a427290d` passed public Lean Action
+CI run `29652764442`, build job `88101787571`; proof-source editing was then admitted.
+
+`DeBruijnNewmanPolymathRiemannSiegelHeatContourShift.lean` compiles the two fixed endpoints
+`deBruijnNewmanRiemannSiegelHeatTerm_contour_shift` and
+`deBruijnNewmanRiemannSiegelHeatRemainder_contour_shift`. They cover arbitrary `t>0`, arbitrary
+complex shifts and source parameter, every natural remainder index, every positive term index,
+and the exact strict same-open-half-plane source condition. The variance-two outside factor,
+inside linear exponential, and `t*q/2` argument displacement agree exactly with `(rtn-def)` and
+`(RTN-def)`.
+
+The compiled proof removes every preregistered analytic obligation. It proves a uniform `1/64`
+raw-contour bound over the closed interpolation strip, a uniform `1/128` Gamma bound away from
+real-axis integer poles, and actual `3/128` residue/remainder bounds. Combined with the
+`-29/128` Gaussian exponent this sends both rectangle ends to zero. A finite Cauchy rectangle,
+Bochner limits on both long sides, real translation, variance-two Gaussian density conversion,
+and exact completed-square algebra establish the generic shift, which is then instantiated to both
+actual source functions.
+
+Exact witnesses and selected axiom prints pass; the final endpoints depend only on `propext`,
+`Classical.choice`, and `Quot.sound`. Forbidden scans and diff checks are clean, and the complete
+8,714-job build passes. Implementation commit `74946858f75e27b306cbf43042df74c447b18740`
+passed public Lean Action CI run `29654348324`, build job `88105922988`, in `2m16s`.
+
+Classification is `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=1` and
+`route_infrastructure_delta=1`. This closes only `(rtn-def)` and `(RTN-def)`. The next exact source
+gate is the quantitative term/remainder estimate pair in Propositions 6.1 and 6.3. Strict
+finite-sum certificates, finite RH through `3*10^12`, compact barrier winding, H6-E/G8, and RH
+remain open; the persistent RH Goal remains active.

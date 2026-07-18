@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_9_PREREGISTERED`
+Status: `ACTIVE_LOOP_9_IMPLEMENTATION_PUBLIC_CI_GREEN`
 
 ## Target
 
@@ -53,7 +53,7 @@ output is imported. Every numerical fact must be independently re-proved in Lean
 | 6 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean inducts the adjacent raw shift to the exact finite identity and transports it through the source Gamma prefactor to `R_(0,0)=sum r_(0,n)+R_(0,N)`. Exact witnesses, standard-only axiom prints, scans, full build, and public implementation CI pass. | Attack the actual Titchmarsh `(2.10.1)--(2.10.6)` recurrence, Mellin, and analytic-continuation chain for `(xio)`; no abstract recurrence or half-plane substitute. |
 | 7 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves the full noninteger-domain `(xio)` identity from the actual `Phi(a)` contour, recurrences, slanted-ray Mellin/Fubini calculation, Gamma--zeta constants, logarithmic Gaussian parameter bounds, and identity-theorem continuation. Six witnesses, standard-only axiom prints, scans, full build, and public implementation CI pass. | Compose public `(htz)`, `(xio)`, and the finite source decomposition into exact Polymath equation `(39)`, including separate integrability and reflection transport. |
 | 8 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves tunable horizontal bounds for the raw contour and Gamma prefactor, separate Gaussian integrability of every actual residue and remainder term, centered-Gaussian sign symmetry, heat-evolution/Schwarz-reflection commutation, and the exact two-sum, two-remainder equation `(39)` for every `t>0`, `z.re!=0`, and `N`. Six exact witnesses, five selected standard-only axiom prints, scans, full build, public implementation CI, and public evidence CI pass. | Before the next proof attack, satisfy the outstanding contribution-self-report governance deliverables. Then attack the source contour shifts `(rtn-def)` and `(RTN-def)` before the effective estimates. |
-| 9 | `PROOF-ATTEMPT` | Preregistered the exact complex-Gaussian contour shifts `(rtn-def)` and `(RTN-def)` for the actual heat-evolved residue and remainder. The source normalization, arbitrary complex shift, strict same-half-plane domain, mandatory strip bounds, finite rectangles, vanishing vertical sides, and complete-square algebra are fixed before proof edits. | Commit only this preregistration and require public CI. After it is green, attack the uniform closed-strip subgaussian bound first; a generic contour theorem without both actual source instantiations is not success. |
+| 9 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves a uniform closed-strip bound for the actual raw contour, Gamma-prefactored residue, and remainder; kills both finite-rectangle vertical sides; passes both horizontal sides to Bochner full-line integrals; removes the real contour displacement by translation; and compiles the exact variance-two `(rtn-def)` and `(RTN-def)` endpoints for arbitrary complex shifts in the strict same-half-plane domain. Exact witnesses, standard-only axiom prints, scans, the full 8,714-job build, and public implementation CI pass. | Record evidence and closure CI, then attack the explicit term and remainder estimates in Polymath Propositions 6.1 and 6.3. The numerical certificates, H6-E/G8, and RH remain open. |
 
 ## Loop 4 preregistration
 
@@ -523,6 +523,39 @@ run `29648603372`, build job `88090965556`, in `1m48s`, before Loop 8 proof-sour
   angle without pausing the global RH Goal
 
 No Loop 9 proof source may be edited before this preregistration passes public Lean Action CI.
+
+## Loop 9 result
+
+- `preregistration_evidence`: commit `9f42efc9c53c40ad6a8c001a3a9bced3a427290d` passed public CI
+  run `29652764442`, build job `88101787571`
+- `result`: `KNOWN_THEOREM_FORMALIZED`
+- `compiled_endpoints`:
+  `deBruijnNewmanRiemannSiegelHeatTerm_contour_shift` and
+  `deBruijnNewmanRiemannSiegelHeatRemainder_contour_shift`
+- `source_coverage`: arbitrary `t>0`, arbitrary complex `alpha`/`beta`/`s`, arbitrary natural
+  `N`, positive natural `n`, and the exact strict same-open-half-plane condition for `s` and the
+  translated endpoint
+- `proof_spine`: uniform `1/64` raw-contour strip bound; uniform `1/128` Gamma bound away from
+  real-axis integer poles; actual residue/remainder `3/128` strip bounds; Gaussian exponent
+  `-29/128`; vanishing of both finite-rectangle vertical sides; finite Cauchy identity; Bochner
+  limits on both horizontal sides; real translation; variance-two density conversion; exact
+  completed-square algebra; instantiation to both actual source functions
+- `assumption_frontier_after`: exact `(rtn-def)` and `(RTN-def)` are K0 and may be used as premises;
+  no effective estimate, numerical certificate, finite-RH computation, or barrier winding premise
+  is introduced
+- `hard_gap_after`: explicit term/remainder estimates in Propositions 6.1 and 6.3, strict finite-sum
+  certificates, finite RH through `3*10^12`, compact barrier winding, H6-E/G8, and RH remain open
+- `hard_gap_delta`: 1
+- `route_infrastructure_delta`: 1
+- `verification`: exact Targets and TargetChecks pass; selected axiom prints are exactly
+  `propext`, `Classical.choice`, and `Quot.sound`; forbidden scan and diff checks are clean; full
+  `lake build` passes all 8,714 jobs
+- `public_implementation_evidence`: commit `74946858f75e27b306cbf43042df74c447b18740`
+  passed public CI run `29654348324`, build job `88105922988`, in `2m16s`
+- `next_exact_gate`: audit and preregister the source-exact quantitative endpoints of Polymath
+  Propositions 6.1 and 6.3, then prove the term and remainder estimates without replacing them by
+  an abstract asymptotic statement
+- `global_goal`: active
 
 ## Loop 3 preregistration
 

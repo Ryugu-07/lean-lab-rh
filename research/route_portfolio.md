@@ -2311,3 +2311,22 @@ a uniform closed-strip bound for the actual Gamma-prefactored residue and remain
 to send both vertical sides to zero. A generic contour theorem without the two actual source
 instantiations does not close the loop. Public preregistration CI is required before proof-source
 edits; H6-Q1 and the global RH Goal remain active.
+
+### Loop 9 local `(rtn-def)` / `(RTN-def)` checkpoint
+
+Preregistration commit `9f42efc9c53c40ad6a8c001a3a9bced3a427290d` passed public CI run
+`29652764442`, build job `88101787571`. Lean now compiles
+`deBruijnNewmanRiemannSiegelHeatTerm_contour_shift` and
+`deBruijnNewmanRiemannSiegelHeatRemainder_contour_shift` for arbitrary complex shifts under the
+source's strict same-open-half-plane condition. The proof supplies the previously missing uniform
+closed-strip raw-contour and Gamma-prefactor bounds, kills both vertical sides of finite Cauchy
+rectangles, passes both horizontal sides to full-line Bochner integrals, and then performs the real
+translation, variance-two density conversion, and exact complete-square algebra.
+
+Both actual source instantiations, exact witnesses, selected standard-only axiom prints, forbidden
+scans, diff checks, and the full 8,714-job build pass. Implementation commit
+`74946858f75e27b306cbf43042df74c447b18740` passed public CI run `29654348324`, build job
+`88105922988`, in `2m16s`. Classification is `KNOWN_THEOREM_FORMALIZED`, with
+`hard_gap_delta=1` and `route_infrastructure_delta=1`. The next source gate is the explicit term
+and remainder estimate pair in Propositions 6.1 and 6.3; strict finite-sum certificates, finite RH,
+compact barrier winding, H6-E/G8, and RH remain open. H6-Q1 and the global RH Goal remain active.
