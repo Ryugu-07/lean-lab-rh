@@ -1065,6 +1065,42 @@ No Loop 16 proof source may be edited before this preregistration passes public 
 - `public_closure`: evidence commit `8e75db36287768ae8521dc85fdcf101a6b173ffd` passed public Lean
   Action CI run `29664938202`, build job `88133668363`, in `1m30s`. Loop 16 is publicly closed.
 
+## Loop 17 preregistration
+
+- `campaign`: `PROOF-ATTEMPT-20260719-H6-BOYD-ADJACENT-SADDLE-01`
+- `mode`: `PROOF-ATTEMPT`
+- `fixed_subedge`: construct the origin inverse branch on the centered disk of radius
+  `2*sqrt(pi)`, prove its two adjacent-saddle radial landing statements, obtain Cauchy series for
+  its Jacobian on every smaller disk, and prove that the adjacent images are the exact centered
+  continuation barrier.
+- `success_criterion`: the disk-wide branch, local agreement, phase identity, both landing limits,
+  inverse-Jacobian Cauchy representation, and no-larger-disk theorem all compile and pass the full
+  mechanical/public audit.
+- `falsification_criterion`: a smaller singularity, failed principal continuation, different
+  landing preimage, or an analytic inverse continuation through an adjacent critical image.
+- `proper_prefix_rule`: only the complete exact-image-norm, no-differentiable-local-inverse,
+  generic phase-identity, and explicit-landing radius-obstruction spine may survive a blocked full
+  construction. Isolated coefficients or generic API wrappers do not qualify.
+- `known_obstacle`: mathlib has local analytic inversion and Cauchy series but no packaged
+  monodromy/Lambert-W continuation for this phase; proving the actual branch and its landing is the
+  fixed hard layer.
+- `nearest_primary_source`: Boyd 1994, DOI `10.1098/rspa.1994.0158`, equations `(2.14)` and `(4.2)`
+  as cited by Nemes; Nemes arXiv `1310.0166`, equation `(15)`.
+- `nearest_project_attempt`: Loop 16's public real diffeomorphism and critical-image certificates.
+- `new_attack_angle`: replace the previously unspecified continuation step by a concrete disk,
+  radial landing tests, and an exact compiler-checkable radius obstruction.
+- `full_preregistration`:
+  `research/h6_boyd_adjacent_saddle_cauchy_loop17_prereg_20260719.md`.
+- `compaction_state`: this loop inherited a compaction summary and then re-read canonical
+  governance, HANDOFF, Targets, the current attempt log, hard-gap DAG, Loop 16 preregistration,
+  source definitions, Nemes equation `(15)`, and relevant mathlib APIs.
+- `model`: Codex, GPT-5 family; exact serving variant not exposed.
+- `reasoning_effort`: not exposed.
+- `loop_budget`: no V4.1 numerical quota; serving token budget not exposed.
+- `global_goal`: H6-Q1 and the persistent RH Goal remain active.
+
+No Loop 17 Lean proof source may be edited before this preregistration passes public Lean Action CI.
+
 ## Loop 3 preregistration
 
 - `mode`: `LITERATURE`

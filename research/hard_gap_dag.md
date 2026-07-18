@@ -394,3 +394,14 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   displayed premises do not force contraction; a concrete surrounding-map norm estimate or exact
   energy identity could still repair the Volterra route. G6/W1, G7/W2, G3/M2, and RH are
   unchanged.
+
+## 2026-07-19 H6-Q1 Loop 17 status update
+
+- `H6-Q1`: open; selected; Loop 17 preregistered.
+- `fixed_edge`: construct the origin inverse branch on the centered disk of radius `2*sqrt(pi)`,
+  prove radial landing at the two adjacent saddles, and obtain the inverse-Jacobian Cauchy series.
+- `fallback_obstruction`: exact critical-image norms and the no-differentiable-inverse/radius
+  obstruction may be retained only as the complete preregistered proper prefix.
+- `still_open`: disk-wide complex continuation, adjacent-saddle landing and decomposition,
+  Boyd--Nemes equation `(15)`, effective `R2`, all unconditional Table 1 certificates, H6-E/G8,
+  and RH.

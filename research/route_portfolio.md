@@ -2595,3 +2595,19 @@ run `29663980567`, build job `88131219843`, in `1m33s`. Implementation commit
 `59d58270504f26555d6f8771e8a101bda4a115c5` passed run `29664724249`, build job `88133120232`,
 in `2m24s`. Closure-evidence commit `8e75db36287768ae8521dc85fdcf101a6b173ffd` passed run
 `29664938202`, build job `88133668363`, in `1m30s`. Loop 16 is publicly closed.
+
+### Loop 17 adjacent-saddle Cauchy branch preregistration
+
+Route selection keeps H6-Q1 active and promotes the formerly unspecified complex-continuation
+step to a fixed `PROOF-ATTEMPT`. The full endpoint is the origin inverse branch on the centered
+disk of radius `2*sqrt(pi)`, its phase identity, radial landing at both adjacent saddles, Cauchy
+power-series representations of the inverse Jacobian on every smaller disk, and a proof that no
+landing-preserving origin branch extends to a larger centered disk.
+
+The allowed blocked prefix is deliberately substantive: exact adjacent-image norms, impossibility
+of a differentiable local left inverse at every nonzero saddle, disk-wide phase propagation by the
+identity theorem, and the radius obstruction under an explicit landing condition. The campaign
+must record branch construction or radial landing as the exact obstruction if it cannot remove
+that condition. Full details are in
+`research/h6_boyd_adjacent_saddle_cauchy_loop17_prereg_20260719.md`. No Loop 17 proof source may
+be edited before green public preregistration CI.
