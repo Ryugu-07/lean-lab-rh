@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_2_LOCAL_CHECKPOINT`
+Status: `ACTIVE_LOOP_2_PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Exact mathematical endpoint
 
@@ -235,6 +235,9 @@ final-region point in the Theorem 1.3 parameter region, pointwise nonvanishing, 
 second-row final-region consumer. Source-definition witnesses and seven theorem witnesses compile;
 the seven selected axiom prints contain only `propext`, `Classical.choice`, and `Quot.sound`.
 Forbidden scans and the full 8,705-job build pass locally.
+
+Implementation commit `3339ea0f0d6b44f656afd99c388ad313f6b18ed1` passed public Lean Action CI
+run `29631298328`, build job `88045278213`, in `1m57s`. Immutable evidence-backfill CI is pending.
 
 This does not prove `deBruijnNewmanPolymathExplicitApproximation`, any strict numerical
 certificate, the final region unconditionally, the other two regions, `Lambda<=1/5`, H6-E/G8, or

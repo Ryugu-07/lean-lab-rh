@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_2_LOCAL_CHECKPOINT`
+Status: `ACTIVE_LOOP_2_PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Target
 
@@ -112,7 +112,11 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 - forbidden proof-token, custom declaration, and resource-relaxation scans: empty
 - `git diff --check`: passed
 - full `lake build`: passed, 8,705 jobs
-- public implementation/evidence CI: pending
+- preregistration commit `be2167f3dda7f7b43aec34a1ac0acce270df7337` passed public CI run
+  `29630529731`, build job `88043072197`, in `1m53s`
+- implementation commit `3339ea0f0d6b44f656afd99c388ad313f6b18ed1` passed public CI run
+  `29631298328`, build job `88045278213`, in `1m57s`
+- immutable evidence-backfill CI: pending
 
 ## Mechanical audit
 
