@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_3_LOCAL_IMPLEMENTATION_VERIFIED_PUBLIC_CI_PENDING`
+Status: `ACTIVE_LOOP_3_PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Exact mathematical endpoint
 
@@ -309,8 +309,9 @@ H_t(z) = integral (1/8)*xi((1+i*z)/2+(sqrt(t)/2)*Y)
 The standalone module, `Targets.lean`, five exact `TargetChecks.lean` witnesses, five selected
 axiom prints, forbidden scans, and the full 8,706-job build pass locally. The selected declarations
 depend only on `propext`, `Classical.choice`, and `Quot.sound`. This is
-`KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`; public
-implementation CI is pending.
+`KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`.
+Implementation commit `0601c75a42e0f5218541ef5833f9687fb850c5f2` passed public CI run
+`29632643337`, build job `88049238613`, in `2m18s`; immutable evidence-backfill CI is pending.
 
 Equation `(htz)` is now K0, but Titchmarsh `(xio)`, the infinite diagonal contour `R_(0,N)`, its
 residue expansion, the effective approximation, every numerical region certificate,

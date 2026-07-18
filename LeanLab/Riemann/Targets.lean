@@ -930,7 +930,7 @@ def rhTargets : List ResearchTarget :=
         "Prove full product integrability and the exact variance-two identity integrating H_t(z-i*r*Y) to H_(t+r^2)(z); specialize at r=sqrt(t) and rewrite H_0 as the precise xi integrand in Polymath equation (htz)."
       leanName := some ``deBruijnNewmanH_eq_gaussian_riemannXi
       status := .proven
-      note := "Loop 3 known source infrastructure, locally verified with five exact witnesses, five standard-only axiom prints, forbidden scans, and the full 8,706-job build; public implementation CI is pending. The proof uses the exact Gaussian complex MGF, a kernel-checked exponential-moment majorant, the compiled super-Gaussian Phi tail bound, and Fubini. This establishes equation (htz) but not Titchmarsh (xio), the subsequent Riemann-Siegel expansion, deterministic approximation bound, numerical final region, Lambda <= 0.2, H6-E/G8, or RH." },
+      note := "Loop 3 known source infrastructure. Five exact witnesses, five standard-only axiom prints, forbidden scans, and the full 8,706-job build pass; implementation 0601c75a passed public CI run 29632643337 and immutable evidence CI is pending. The proof uses the exact Gaussian complex MGF, a kernel-checked exponential-moment majorant, the compiled super-Gaussian Phi tail bound, and Fubini. This establishes equation (htz) but not Titchmarsh (xio), the subsequent Riemann-Siegel expansion, deterministic approximation bound, numerical final region, Lambda <= 0.2, H6-E/G8, or RH." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_3_LOCAL_IMPLEMENTATION_VERIFIED_PUBLIC_CI_PENDING`
+Status: `ACTIVE_LOOP_3_PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
 
 ## Target
 
@@ -119,7 +119,9 @@ run `29631894291`, build job `88047126110`, in `1m50s`, before Loop 3 proof-sour
 - forbidden proof-token, custom declaration, and resource-relaxation scans: empty
 - `git diff --check`: passed
 - full `lake build`: passed, 8,706 jobs
-- public implementation CI: pending
+- implementation commit `0601c75a42e0f5218541ef5833f9687fb850c5f2` passed public CI run
+  `29632643337`, build job `88049238613`, in `2m18s`
+- immutable evidence-backfill CI: pending
 
 ## Loop 2 preregistration
 
