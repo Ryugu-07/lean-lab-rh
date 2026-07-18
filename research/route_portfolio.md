@@ -2611,3 +2611,24 @@ must record branch construction or radial landing as the exact obstruction if it
 that condition. Full details are in
 `research/h6_boyd_adjacent_saddle_cauchy_loop17_prereg_20260719.md`. No Loop 17 proof source may
 be edited before green public preregistration CI.
+
+### Loop 17 local outcome and route decision
+
+Loop 17 retains the complete preregistered proper prefix as compiled route infrastructure. The
+new module determines every integer critical-image norm, proves the adjacent radius, classifies
+the whole phase critical locus, excludes smaller nonzero critical values, propagates the phase
+identity across any analytic origin disk, provides Cauchy expansions for its Jacobian, and proves
+the exact radius obstruction under explicit adjacent landing.
+
+The full branch and landing endpoint was not reached. The newly named
+`OBS-H6-BOYD-COVERING-CERTIFICATE-01` is geometric rather than a missing differentiation API:
+one must verify the Boyd origin saddle component's unique path lifting, absence of asymptotic
+singularities over the target disk, and adjacent-contour boundary landing at `+/-2*pi*i`.
+Boyd's 1995 Conditions 2.1 expose exactly this source premise. Critical-point enumeration alone
+cannot close it.
+
+Classification is `PARTIAL / OBSTRUCTION_RECORDED`, with `rh_frontier_delta=0`,
+`hard_gap_delta=0`, `route_infrastructure_delta=1`, and `obstruction_map_delta=1`. The next route
+selection should compare a directly preregistered proof of this geometric certificate with the
+independent direct-Stieltjes route to `GammaStar`; re-entering the same branch merely to compute
+more local coefficients or critical points has no new attack angle.

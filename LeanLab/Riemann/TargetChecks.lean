@@ -24,6 +24,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydSaddleIntegral
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLogSaddleIntegral
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLocalSaddleInverse
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydRealSaddleDiffeomorphism
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentSaddleCauchy
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2306,5 +2307,56 @@ example (n : ℤ) :
         (deBruijnNewmanPolymathBoydComplexSaddlePoint n) ^ 2 =
       -4 * (Real.pi : ℂ) * Complex.I * (n : ℂ) :=
   deBruijnNewmanPolymathBoydComplexSaddleCoordinate_sq_saddle_explicit n
+
+example (n : ℤ) :
+    ‖deBruijnNewmanPolymathBoydComplexSaddleImage n‖ ^ 2 =
+      4 * Real.pi * |(n : ℝ)| :=
+  norm_deBruijnNewmanPolymathBoydComplexSaddleImage_sq n
+
+example :
+    ‖deBruijnNewmanPolymathBoydComplexSaddleImage 1‖ =
+      2 * Real.sqrt Real.pi :=
+  norm_deBruijnNewmanPolymathBoydComplexSaddleImage_one
+
+example (u : ℂ) :
+    deriv deBruijnNewmanPolymathBoydComplexSaddlePhase u = 0 ↔
+      ∃ n : ℤ, u = deBruijnNewmanPolymathBoydComplexSaddlePoint n :=
+  deriv_deBruijnNewmanPolymathBoydComplexSaddlePhase_eq_zero_iff u
+
+example {u : ℂ} (hu : u ≠ 0)
+    (hvalue : ‖deBruijnNewmanPolymathBoydComplexSaddlePhase u‖ < 2 * Real.pi) :
+    deriv deBruijnNewmanPolymathBoydComplexSaddlePhase u ≠ 0 :=
+  deriv_deBruijnNewmanPolymathBoydComplexSaddlePhase_ne_zero_of_norm_lt_two_pi hu hvalue
+
+example {n : ℤ} (hn : n ≠ 0) (U : ℂ → ℂ)
+    (hleft :
+      (U ∘ deBruijnNewmanPolymathBoydComplexSaddleCoordinate) =ᶠ[
+        𝓝 (deBruijnNewmanPolymathBoydComplexSaddlePoint n)] id) :
+    ¬DifferentiableAt ℂ U (deBruijnNewmanPolymathBoydComplexSaddleImage n) :=
+  not_differentiableAt_leftInverse_at_boydComplexSaddle hn U hleft
+
+example {U : ℂ → ℂ} {R : ℝ} (hR : 0 < R)
+    (hU : AnalyticOnNhd ℂ U (Metric.ball 0 R))
+    (hlocal : U =ᶠ[𝓝 0] deBruijnNewmanPolymathBoydComplexSaddleLocalInverse) :
+    Set.EqOn
+      (fun z => deBruijnNewmanPolymathBoydComplexSaddlePhase (U z))
+      (fun z : ℂ => z ^ 2 / 2) (Metric.ball 0 R) :=
+  deBruijnNewmanPolymathBoydOriginInverseBranch_phaseOn_ball hR hU hlocal
+
+example {U : ℂ → ℂ} {R : ℝ}
+    (hU : AnalyticOnNhd ℂ U (Metric.ball 0 R))
+    {r : NNReal} (hr0 : 0 < r) (hr : (r : ℝ) < R) :
+    HasFPowerSeriesOnBall (deriv U)
+      (cauchyPowerSeries (deriv U) 0 r) 0 r :=
+  deBruijnNewmanPolymathBoydOriginInverseJacobian_hasCauchyPowerSeriesOnBall hU hr0 hr
+
+example {U : ℂ → ℂ} {R : ℝ} {n : ℤ} (hn : n = 1 ∨ n = -1) (hR : 0 < R)
+    (hU : AnalyticOnNhd ℂ U (Metric.ball 0 R))
+    (hlocal : U =ᶠ[𝓝 0] deBruijnNewmanPolymathBoydComplexSaddleLocalInverse)
+    (hlands : U (deBruijnNewmanPolymathBoydComplexSaddleImage n) =
+      deBruijnNewmanPolymathBoydComplexSaddlePoint n) :
+    R ≤ 2 * Real.sqrt Real.pi :=
+  deBruijnNewmanPolymathBoydOriginInverseBranch_radius_le_adjacent
+    hn hR hU hlocal hlands
 
 end LeanLab.Riemann

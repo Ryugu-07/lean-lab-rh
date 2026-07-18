@@ -23,6 +23,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydSaddleIntegral
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLogSaddleIntegral
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLocalSaddleInverse
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydRealSaddleDiffeomorphism
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentSaddleCauchy
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1045,6 +1046,22 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanPolymathBoydComplexSaddleCoordinate_critical
       status := .proven
       note := "Loop 16 computes the normalized factor at 2*pi*i*n as i/(pi*n), proves that it lies in the principal square-root slit plane, and differentiates the global phase-square identity to certify every nonzero integer saddle as a critical point. In particular n=1 and n=-1 locate the first adjacent critical images. This records the branch obstruction but does not construct a global complex inverse, a Cauchy coefficient representation, a resurgence contour, Boyd equation (15), effective R2, or RH." },
+    { id := "H6.debruijn-newman.boyd-adjacent-saddle-radius-obstruction"
+      tier := .tier2
+      title := "Certify the adjacent Boyd saddle radius obstruction"
+      statement :=
+        "Compute every critical-image norm, exclude hidden phase critical points below the first nonzero critical value, propagate the inverse phase equation across any analytic origin disk, obtain Cauchy power series for its Jacobian on every smaller disk, and prove that a branch landing at either adjacent saddle has radius at most 2*sqrt(pi)."
+      leanName := some ``deBruijnNewmanPolymathBoydOriginInverseBranch_radius_le_adjacent
+      status := .proven
+      note := "Loop 17 proves the exact squared norm 4*pi*|n| of every integer-saddle image, classifies all phase critical points, excludes nonzero critical points over the open phase disk of radius 2*pi, rules out differentiable local left inverses at nonzero saddles, propagates the phase identity by the analytic identity principle, and supplies mathlib's Cauchy power series for the inverse Jacobian on every smaller disk. The final radius theorem is conditional on an explicit adjacent-saddle landing hypothesis. It does not construct the disk-wide analytic branch or prove that landing; the missing certificate is recorded by the next target." },
+    { id := "H6.debruijn-newman.boyd-origin-disk-branch"
+      tier := .tier2
+      title := "Construct the Boyd origin inverse branch up to adjacent saddles"
+      statement :=
+        "Construct a single-valued analytic inverse branch of the normalized Boyd coordinate on the disk of radius 2*sqrt(pi), prove agreement with the local origin branch and radial landing at both adjacent saddles, and thereby make the Loop 17 Cauchy and radius certificates unconditional."
+      leanName := none
+      status := .inProgress
+      note := "Loop 17 isolates the missing input as a phase-specific covering or monodromy certificate for the Boyd origin saddle domain, including unique continuation and the adjacent-contour boundary/landing facts corresponding to Boyd's steepest-descent conditions. The local inverse, all critical values, the conditional disk identity, Cauchy expansions, and the exact conditional radius obstruction compile; global continuation and landing remain open." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

@@ -1101,6 +1101,36 @@ No Loop 16 proof source may be edited before this preregistration passes public 
 
 No Loop 17 Lean proof source may be edited before this preregistration passes public Lean Action CI.
 
+## Loop 17 local outcome
+
+- `campaign`: `PROOF-ATTEMPT-20260719-H6-BOYD-ADJACENT-SADDLE-01`.
+- `result`: `PARTIAL / OBSTRUCTION_RECORDED`; the preregistered proper prefix compiles, but the
+  actual centered-disk branch and both radial landing statements do not.
+- `compiled_spine`: exact critical-image norm squared `4*pi*|n|`; adjacent norm
+  `2*sqrt(pi)`; all phase critical points exactly `2*pi*i*n`; no nonzero critical point over the
+  open phase disk of radius `2*pi`; no differentiable local coordinate left inverse at a nonzero
+  saddle; phase propagation for every analytic origin branch; Cauchy power series for its
+  Jacobian on every smaller disk; and radius at most `2*sqrt(pi)` under explicit adjacent landing.
+- `obstruction`: `OBS-H6-BOYD-COVERING-CERTIFICATE-01`. A phase-specific covering/path-lifting
+  theorem, exclusion of asymptotic singularities, and Boyd adjacent-contour boundary/landing
+  geometry remain missing. Abstract monodromy APIs and critical-value exclusion do not supply
+  these premises.
+- `primary_source_check`: Boyd's open 1995 treatment makes unique steepest-descent paths and
+  adjacent-contour boundaries explicit in Conditions 2.1, and its Gamma section selects the
+  `+1` and `-1` saddles as adjacent. Nemes source equation `(15)` was checked directly but was not
+  used as a premise.
+- `targets_and_audit`: one proven conditional-obstruction target and one in-progress actual-branch
+  target were added; exact statement witnesses compile; seven selected axiom prints contain only
+  `propext`, `Classical.choice`, and `Quot.sound`.
+- `classification`: obstruction plus route infrastructure;
+  `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `public_preregistration`: commit `43ffadd881b96aca92ab3f4684612833f9aa15cc` passed CI run
+  `29665357300`, build job `88134769245`, in `1m57s` before source editing.
+- `runtime`: Codex, GPT-5 family; exact serving variant, reasoning effort, and serving token budget
+  are not exposed; V4.1 imposes no numerical quota. Two inherited compaction summaries were
+  followed by canonical-file re-audits. H6-Q1 and the persistent RH Goal remain active.
+
 ## Loop 3 preregistration
 
 - `mode`: `LITERATURE`

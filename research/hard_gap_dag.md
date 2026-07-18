@@ -405,3 +405,24 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `still_open`: disk-wide complex continuation, adjacent-saddle landing and decomposition,
   Boyd--Nemes equation `(15)`, effective `R2`, all unconditional Table 1 certificates, H6-E/G8,
   and RH.
+
+## 2026-07-19 H6-Q1 Loop 17 outcome
+
+- `H6-Q1`: open; Loop 17 proper prefix compiled; actual branch remains in progress.
+- `K0-H6-BOYD-ADJACENT-RADIUS-01`: proven. Exact critical-image norms, complete phase critical
+  locus, critical-value-free open disk, conditional disk phase identity and Cauchy expansion, and
+  the explicit-landing radius obstruction are kernel checked.
+- `OBS-H6-BOYD-COVERING-CERTIFICATE-01`: open. Prove that the phase over the Boyd origin saddle
+  component has the path-lifting/covering and no-asymptotic-singularity properties needed for a
+  single-valued inverse on `ball 0 (2*sqrt(pi))`; prove that the two relevant boundary lifts land
+  at `2*pi*i` and `-2*pi*i` along the adjacent contours.
+- `why_critical_values_are_insufficient`: a transcendental phase may have inverse singularities
+  not represented by finite critical points. The compiled absence of smaller nonzero critical
+  values therefore cannot by itself construct the branch.
+- `source_anchor`: Boyd 1995 Conditions 2.1 (unique descent path and adjacent-contour domain) and
+  its Gamma adjacent-saddle classification. Nemes equation `(15)` remains downstream.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `still_open`: `OBS-H6-BOYD-COVERING-CERTIFICATE-01`, adjacent-saddle decomposition,
+  Boyd--Nemes equation `(15)`, effective `R2`, unconditional Table 1 certificates, H6-E/G8, and
+  RH.

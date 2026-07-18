@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260719-H6-BOYD-ADJACENT-SADDLE-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PREREGISTERED`
+Status: `PARTIAL / OBSTRUCTION_RECORDED`
 
 ## Exact target
 
@@ -196,3 +196,64 @@ statement. The production declarations will use the corresponding Lean `Eventual
 - `global_goal`: H6-Q1 and the persistent RH Goal remain active.
 
 No Loop 17 Lean proof source may be edited before this preregistration passes public Lean Action CI.
+
+## Loop 17 outcome
+
+- `result`: `PARTIAL / OBSTRUCTION_RECORDED`.
+- `proper_prefix`: passed exactly as preregistered, with additional classification of every phase
+  critical point and exclusion of all nonzero critical points over the open phase disk of radius
+  `2*pi`.
+- `production_module`:
+  `LeanLab/Riemann/DeBruijnNewmanPolymathBoydAdjacentSaddleCauchy.lean`.
+- `compiled_declarations`:
+  `norm_deBruijnNewmanPolymathBoydComplexSaddleImage_sq`,
+  `norm_deBruijnNewmanPolymathBoydComplexSaddleImage_one`,
+  `norm_deBruijnNewmanPolymathBoydComplexSaddleImage_neg_one`,
+  `deBruijnNewmanPolymathBoydComplexSaddleImage_ne_zero`,
+  `deriv_deBruijnNewmanPolymathBoydComplexSaddlePhase_eq_zero_iff`,
+  `two_pi_le_norm_deBruijnNewmanPolymathBoydComplexSaddlePhase_of_critical`,
+  `deriv_deBruijnNewmanPolymathBoydComplexSaddlePhase_ne_zero_of_norm_lt_two_pi`,
+  `not_differentiableAt_leftInverse_at_boydComplexSaddle`,
+  `deBruijnNewmanPolymathBoydOriginInverseBranch_phaseOn_ball`,
+  `deBruijnNewmanPolymathBoydOriginInverseJacobian_hasCauchyPowerSeriesOnBall`, and
+  `deBruijnNewmanPolymathBoydOriginInverseBranch_radius_le_adjacent`.
+- `assumption_frontier_after`: K0 now includes the exact norm formula for all integer critical
+  images, the complete phase-critical-point classification, absence of hidden nonzero critical
+  points above values of norm below `2*pi`, the generic disk phase identity, Cauchy expansions of
+  any analytic branch Jacobian on smaller disks, and the exact adjacent radius bound conditional
+  only on explicit landing. No branch, covering map, or landing premise was introduced as an
+  axiom or definition.
+- `full_target_missing`: no actual disk-wide `U` and no radial landing theorem were constructed.
+  The radius theorem therefore remains conditional on the explicit endpoint equality.
+- `obstruction`: `OBS-H6-BOYD-COVERING-CERTIFICATE-01`. Critical-value exclusion alone does not
+  establish a global inverse for the transcendental phase. The missing theorem must certify the
+  origin saddle component as a phase-specific covering/path-lifting domain, rule out asymptotic
+  singularities over the target disk, and identify its two adjacent boundary contours and radial
+  limits at `2*pi*i` and `-2*pi*i`.
+- `source_refinement`: Boyd's open 1995 primary exposition states its steepest-descent Conditions
+  2.1 in terms of a unique descent path and a domain bounded by adjacent contours; its Gamma
+  specialization identifies only the `+1` and `-1` saddles as adjacent. This is precisely the
+  geometric certificate absent from the current Lean graph. Nemes equation `(15)` remains a
+  downstream consequence candidate, not a premise.
+- `source_links`: Boyd 1995 primary PDF,
+  `https://intlpress.com/site/pub/files/_fulltext/journals/maa/1995/0002/0004/MAA-1995-0002-0004-a007.pdf`;
+  Nemes source text `/Users/karasuakamatsu/Downloads/1310.0166-source/2013155.tex`.
+- `mechanical_audit`: the production module, `Targets.lean`, and exact `TargetChecks.lean`
+  witnesses compile. Seven selected `#print axioms` entries contain only `propext`,
+  `Classical.choice`, and `Quot.sound`.
+- `classification`: obstruction plus route infrastructure; no RH progress claim.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `next_route_decision`: do not continue by merely enumerating more critical points. Route
+  selection should compare a direct proof of Boyd Conditions 2.1/path lifting against a direct
+  Stieltjes representation of `GammaStar`; any return to this branch must preregister the exact
+  geometric certificate it removes.
+- `public_preregistration`: commit `43ffadd881b96aca92ab3f4684612833f9aa15cc` passed public Lean
+  Action CI run `29665357300`, build job `88134769245`, in `1m57s` before proof-source editing.
+- `compaction_state`: this loop inherited a compaction summary, re-read canonical governance and
+  all required frontier files, then inherited a subsequent summary and repeated the canonical
+  audit before closure.
+- `model`: Codex, GPT-5 family; exact serving variant not exposed.
+- `reasoning_effort`: not exposed.
+- `loop_budget`: no V4.1 numerical quota; serving token budget not exposed.
+- `global_goal`: H6-Q1 and the persistent RH Goal remain active.
