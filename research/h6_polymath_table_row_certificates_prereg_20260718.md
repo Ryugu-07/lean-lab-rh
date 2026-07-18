@@ -962,3 +962,16 @@ positive-real scaled-Gamma saddle integral with phase `t-1-log(t)` and its integ
 from Euler's Gamma integral and positive scaling only. Full details are in
 `research/h6_boyd_scaled_gamma_saddle_loop13_prereg_20260719.md`. No Loop 13 proof source may be
 edited before public preregistration CI passes. H6-Q1 and the global RH Goal remain active.
+
+## Loop 13 local outcome
+
+Loop 13 closes locally as `KNOWN_THEOREM_FORMALIZED`. The new production module
+`DeBruijnNewmanPolymathBoydSaddleIntegral.lean` proves the exact positive-real saddle identity for
+the project's scaled Gamma and integrability of the `t-1-log(t)` kernel for every `x>0`. It uses
+Euler's real Gamma integral, positive scaling, and the actual principal-branch Stirling main term;
+it does not assume Boyd/Nemes equation `(15)` or an effective `R2` estimate.
+
+Exact Targets, both TargetChecks layers, selected standard-only axiom prints, the forbidden scan,
+and the full 8,718-job build pass. The next fixed edge is the global logarithmic-coordinate formula
+with phase `exp(u)-u-1`, followed by the analytic inverse of `w^2/2=exp(u)-u-1`. H6-Q1 and the
+global RH Goal remain active.

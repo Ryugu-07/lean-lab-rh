@@ -2493,3 +2493,17 @@ This route deliberately stops before `t=exp(u)`: mathlib directly covers positiv
 `Ioi 0`, while the global logarithmic coordinate requires a separate improper change-of-variables
 proof. Equation `(15)`, effective `R2`, and any equivalent Stirling premise remain forbidden.
 Full preregistration is in `research/h6_boyd_scaled_gamma_saddle_loop13_prereg_20260719.md`.
+
+### Loop 13 local outcome
+
+Loop 13 closes locally as `KNOWN_THEOREM_FORMALIZED`. The production module
+`DeBruijnNewmanPolymathBoydSaddleIntegral.lean` proves that the actual `t-1-log(t)` saddle
+integrand is integrable on `(0,infinity)` for every `x>0`, evaluates its integral from Euler's
+Gamma formula, aligns the positive-real principal branch of the project Stirling main term, and
+derives the exact project scaled-Gamma representation.
+
+This changes the route inventory, not the RH frontier: `rh_frontier_delta=0`,
+`route_infrastructure_delta=1`, and `engineering_delta=0`. Boyd/Nemes equation `(15)` is still
+open and was not used. The next selected source-faithful edge is the logarithmic substitution
+`t=exp(u)`, giving the all-real-axis phase `exp(u)-u-1`; after that comes the analytic inverse of
+`w^2/2=exp(u)-u-1` and the adjacent saddle-image decomposition.

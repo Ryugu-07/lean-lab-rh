@@ -21,6 +21,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatContourShift
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelHeatTermEstimate
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydStirlingRemainder
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydR2Integral
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydSaddleIntegral
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -581,3 +582,5 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.deBruijnNewmanPolymathBoydR2_weight_norm_le
 #print axioms LeanLab.Riemann.deBruijnNewmanPolymathBoydR2_integrableOn
 #print axioms LeanLab.Riemann.deBruijnNewmanPolymathBoydR2Integral_ofReal
+#print axioms LeanLab.Riemann.deBruijnNewmanPolymathBoydSaddleIntegrand_integrableOn
+#print axioms LeanLab.Riemann.deBruijnNewmanPolymathScaledGamma_ofReal_eq_boydSaddleIntegral

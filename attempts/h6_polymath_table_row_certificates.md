@@ -849,6 +849,45 @@ run `29659498616`, build job `88119559667`, in `1m31s`. Loop 12 proof-source wor
 
 No Loop 13 proof source may be edited before this preregistration passes public Lean Action CI.
 
+Preregistration commit `b7cbdac1eba3ddfef0e1dbc12004210e9e411643` passed public Lean Action CI
+run `29660772447`, build job `88122935390`, in `1m56s`. Loop 13 proof-source work is admitted.
+
+## Loop 13 local outcome
+
+- `classification`: `KNOWN_THEOREM_FORMALIZED`
+- `production_module`:
+  `LeanLab/Riemann/DeBruijnNewmanPolymathBoydSaddleIntegral.lean`
+- `compiled_theorems`:
+  `deBruijnNewmanPolymathBoydSaddleIntegrand_eq`,
+  `deBruijnNewmanPolymathBoydSaddleIntegrand_integrableOn`,
+  `integral_deBruijnNewmanPolymathBoydSaddleIntegrand`,
+  `deBruijnNewmanPolymathGammaStirlingMain_ofReal`,
+  `deBruijnNewmanPolymathBoydSaddle_normalization_factor`, and
+  `deBruijnNewmanPolymathScaledGamma_ofReal_eq_boydSaddleIntegral`.
+- `result`: for every real `x>0`, the actual project scaled Gamma is exactly
+  `sqrt(x/(2*pi))` times the Bochner-integrable positive-real saddle integral with phase
+  `t-1-log(t)`.
+- `assumption_frontier_after`: the `t`-domain saddle identity is K0. Equation `(15)`, logarithmic
+  coordinates, inverse-saddle continuation, contour rotation, effective `R2`, Proposition 6.1/6.3,
+  strict finite-sum certificates, and RH remain open.
+- `anti_substitution_audit`: no equation `(15)`, target `R2` estimate, equivalent effective
+  Stirling theorem, unspecified asymptotic, or replacement Gamma function was introduced.
+- `rh_frontier_delta`: 0
+- `route_infrastructure_delta`: 1
+- `engineering_delta`: 0
+- `local_mechanical_audit`: standalone module, exact Targets, both TargetChecks layers, selected
+  axiom prints, empty forbidden scan, and the full 8,718-job build pass. The selected declarations
+  use only `propext`, `Classical.choice`, and `Quot.sound`.
+- `next_exact_gate`: the all-real-axis identity
+  `GammaStar(x)=sqrt(x/(2*pi))*integral_R exp(-x*(exp(u)-u-1)) du`, obtained by `t=exp(u)`;
+  afterward attack the analytic inverse of `w^2/2=exp(u)-u-1`.
+- `compaction_state`: resumed from an inherited summary and reread the canonical governance,
+  HANDOFF, Targets, TargetChecks, AxiomsAudit, this attempt record, and the active preregistration.
+- `model`: Codex, GPT-5 family; exact serving variant not exposed.
+- `reasoning_effort`: not exposed.
+- `loop_budget`: no V4.1 numerical quota; serving token budget not exposed.
+- `global_goal`: H6-Q1 and the persistent RH Goal remain active.
+
 ## Loop 3 preregistration
 
 - `mode`: `LITERATURE`

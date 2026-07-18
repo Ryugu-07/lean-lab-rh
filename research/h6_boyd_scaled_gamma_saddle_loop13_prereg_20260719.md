@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260719-H6-BOYD-SADDLE-INTEGRAL-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PREREGISTERED / CI_GATE_PENDING`
+Status: `LOCAL_SUCCESS / KNOWN_THEOREM_FORMALIZED`
 
 ## Exact target
 
@@ -118,3 +118,41 @@ global inverse-saddle resurgence decomposition are not part of this loop.
 - `global_goal`: remains active regardless of this local result.
 
 No Loop 13 proof source may be edited before this preregistration passes public Lean Action CI.
+
+Preregistration commit `b7cbdac1eba3ddfef0e1dbc12004210e9e411643` passed public Lean Action CI
+run `29660772447`, build job `88122935390`, in `1m56s`. Loop 13 proof-source work is admitted.
+
+## Local outcome
+
+- `classification`: `KNOWN_THEOREM_FORMALIZED`
+- `production_module`:
+  `LeanLab/Riemann/DeBruijnNewmanPolymathBoydSaddleIntegral.lean`
+- `compiled_spine`:
+  `deBruijnNewmanPolymathBoydSaddleIntegrand_eq`,
+  `deBruijnNewmanPolymathBoydSaddleIntegrand_integrableOn`,
+  `integral_deBruijnNewmanPolymathBoydSaddleIntegrand`,
+  `deBruijnNewmanPolymathGammaStirlingMain_ofReal`,
+  `deBruijnNewmanPolymathBoydSaddle_normalization_factor`, and
+  `deBruijnNewmanPolymathScaledGamma_ofReal_eq_boydSaddleIntegral`.
+- `assumption_frontier_after`: for every real `x>0`, the exact project scaled-Gamma function now
+  has the positive-real `t-1-log(t)` saddle representation as K0. Boyd/Nemes equation `(15)`, the
+  logarithmic-coordinate substitution, the inverse saddle, contour rotation, effective `R2`, and
+  every unconditional Table 1 certificate remain open.
+- `rh_frontier_delta`: 0
+- `route_infrastructure_delta`: 1
+- `engineering_delta`: 0
+- `anti_substitution_audit`: no equation `(15)`, `R2` bound, equivalent effective Stirling
+  estimate, unspecified asymptotic, or replacement Gamma function occurs as a premise.
+- `local_mechanical_audit`: standalone compilation, exact Targets, both TargetChecks witnesses,
+  selected axiom prints, empty forbidden scan, and the full 8,718-job build pass. The selected
+  declarations depend only on `propext`, `Classical.choice`, and `Quot.sound`.
+- `next_exact_gate`: preregister and prove, for `x>0`, the logarithmic-coordinate representation
+  `GammaStar(x)=sqrt(x/(2*pi))*integral_R exp(-x*(exp(u)-u-1)) du`; then isolate the analytic
+  inverse-saddle edge `w^2/2=exp(u)-u-1` and its adjacent `2*pi*i` saddle images.
+- `compaction_state`: implementation resumed from an inherited summary; the canonical governance,
+  HANDOFF, target/check/audit files, current attempt log, and preregistration were reread before
+  closure.
+- `model`: Codex, GPT-5 family; exact serving variant not exposed.
+- `reasoning_effort`: not exposed.
+- `loop_budget`: no numerical quota under V4.1; serving token budget not exposed.
+- `global_goal`: H6-Q1 and the persistent RH Goal remain active.
