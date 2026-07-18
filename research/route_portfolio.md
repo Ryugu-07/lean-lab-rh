@@ -2531,3 +2531,6 @@ This gives `rh_frontier_delta=0`, `route_infrastructure_delta=1`, and `engineeri
 next selected edge is the genuinely analytic one: remove the double zero of `exp(u)-u-1`, choose
 the normalized local analytic square root, and invert `w(u)=u*q(u)` at the origin before making
 any global branch or adjacent-saddle claim.
+
+Implementation commit `7578728f6b16544d983f53d68ea0c10f0beb3d42` passed public Lean Action CI
+run `29661915485`, build job `88125929156`, in `2m3s`. Loop 14 is publicly closed.

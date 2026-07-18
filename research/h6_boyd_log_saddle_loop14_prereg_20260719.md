@@ -6,7 +6,7 @@ Campaign: `FORMALIZATION-20260719-H6-BOYD-LOG-SADDLE-INTEGRAL-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_SUCCESS / KNOWN_THEOREM_FORMALIZED`
+Status: `PUBLICLY_CLOSED / KNOWN_THEOREM_FORMALIZED`
 
 ## Exact target
 
@@ -140,3 +140,5 @@ run `29661631696`, build job `88125198144`, in `1m31s`. Loop 14 proof-source wor
 - `reasoning_effort`: not exposed.
 - `loop_budget`: no numerical quota under V4.1; serving token budget not exposed.
 - `global_goal`: H6-Q1 and the persistent RH Goal remain active.
+- `public_implementation`: commit `7578728f6b16544d983f53d68ea0c10f0beb3d42` passed public Lean
+  Action CI run `29661915485`, build job `88125929156`, in `2m3s`.

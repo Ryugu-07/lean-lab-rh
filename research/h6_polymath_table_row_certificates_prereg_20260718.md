@@ -1003,3 +1003,7 @@ full-real integrability of `exp(-x*(exp(u)-u-1))` and the exact project scaled-G
 for every `x>0`. Exact checks, selected standard-only axiom prints, the forbidden scan, and the
 full 8,719-job build pass. The next fixed edge is the normalized local analytic square-root
 coordinate and inverse at the double saddle. H6-Q1 and the global RH Goal remain active.
+
+Implementation commit `7578728f6b16544d983f53d68ea0c10f0beb3d42` passed public Lean Action CI
+run `29661915485`, build job `88125929156`, in `2m3s`. Loop 14 is publicly closed as
+`KNOWN_THEOREM_FORMALIZED`.
