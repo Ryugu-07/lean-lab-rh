@@ -2144,3 +2144,13 @@ campaign remains active. The next source obstruction is Titchmarsh `(xio)`: no p
 Riemann--Siegel contour formula exists, so Loop 4 must define the fixed `5*pi/4` infinite line,
 prove its integrability and residue shift, and recover the finite `R_(0,0)` decomposition rather
 than postulate it.
+
+Loop 4 is now preregistered, with public CI required before proof-source edits. The source audit
+adds Titchmarsh `(2.10.1)--(2.10.6)` to the fixed edge and does not permit `(xio)` as a premise.
+The contour geometry is `L_N(v)=N+1/2+exp(5*pi*i/4)*v`; the finite shift must come from explicit
+subtraction of the enclosed integer principal parts and vanishing end segments. Mathlib's
+`ContinuousMap.Homotopy.curveIntegral_add_curveIntegral_eq_of_hasFDerivWithinAt` supplies the
+non-orthogonal parallelogram Cauchy step after removable extension. The full success criterion
+also includes `(1/8)*xi(s)=R_(0,0)(s)+R_(0,0)^*(1-s)` and its finite decomposition. Any compiled
+proper prefix is route infrastructure only and must be accompanied by the first remaining source
+dependency.

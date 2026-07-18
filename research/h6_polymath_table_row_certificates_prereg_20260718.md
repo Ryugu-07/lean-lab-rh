@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_3_PUBLICLY_CHECKED`
+Status: `ACTIVE_LOOP_4_PREREGISTERED_CI_PENDING`
 
 ## Exact mathematical endpoint
 
@@ -320,3 +320,72 @@ residue expansion, the effective approximation, every numerical region certifica
 `Lambda<=1/5`, H6-E/G8, and RH remain open. The next exact source gate starts with a fixed
 `5*pi/4` parameterization of `N swarrow N+1`, absolute integrability, and the finite residue shift;
 an unproved contour identity or abstract `R_(0,N)` premise is not a substitute.
+
+## Loop 4 fixed subedge
+
+Titchmarsh Section 2.10 and Polymath Section 4 fix the next source edge. Set
+
+```text
+d = exp(5*pi*i/4),
+L_N(v) = (N+1/2) + d*v,
+K_s(w) = w^(-s) exp(i*pi*w^2) / (exp(pi*i*w)-exp(-pi*i*w)).
+```
+
+The power is the principal complex power and increasing `v` gives the source orientation. Loop 4
+must define the actual parameterized integral `I_N(s)=integral K_s(L_N(v))*d dv`, prove its
+absolute integrability, and prove the exact finite shift
+
+```text
+I_0(s) = sum (n=1..N) n^(-s) + I_N(s).
+```
+
+After multiplying by
+
+```text
+(1/8) * (s*(s-1)/2) * pi^(-s/2) * Gamma(s/2),
+```
+
+this must yield the source definitions `r_(0,n)`, `R_(0,N)` and
+
+```text
+R_(0,0)(s) = sum (n=1..N) r_(0,n)(s) + R_(0,N)(s).
+```
+
+Loop 4 must also attack the upstream Titchmarsh identity rather than assume it. With
+`F^*(s)=conj(F(conj(s)))`, prove on the source domain excluding integer `s`
+
+```text
+(1/8) * riemannXi(s) = R_(0,0)(s) + R_(0,0)^*(1-s),
+```
+
+and compose it with the finite shift to expose the exact finite xi decomposition required by
+Polymath `(htz-expand)`. Binder presentation and helper names may change, but the fixed line,
+principal branch, orientation, prefactor, residue `n^(-s)`, reflection, and xi normalization may
+not.
+
+The contour proof must establish denominator nonvanishing, branch-cut avoidance, Gaussian tail
+decay, explicit subtraction of the enclosed integer poles, vanishing truncation end segments, and
+the affine-parallelogram Cauchy identity. Mathlib has no packaged residue theorem; the intended
+route is its Poincare curve-integral theorem for a smooth affine homotopy, applied after extending
+the pole-subtracted remainder continuously across the integers.
+
+Success requires the definitions, integrability, finite residue shift, `(xio)`, composed finite xi
+decomposition, exact TargetChecks, selected standard-only axiom prints, empty forbidden scans,
+standalone/full builds, and public implementation/evidence CI. Definitions alone, an assumed
+contour identity, an abstract remainder, a pointwise residue calculation, or a theorem carrying
+`(xio)` as a premise is not success.
+
+Falsification means the fixed midpoint line meets a pole or forbidden branch, the orientation or
+residue normalization disagrees with the source, the proved tail bounds do not kill the end
+segments, or Titchmarsh `(2.10.6)` cannot be connected to project `riemannXi` without a new
+analytic-continuation theorem. If the full edge remains open, record the first such dependency and
+the strongest compiled proper prefix as infrastructure; do not label the loop closed or claim RH
+progress.
+
+Nearest sources: Titchmarsh, *The Theory of the Riemann Zeta-function*, second edition,
+`(2.10.1)--(2.10.6)`; Polymath arXiv `1904.12438`, equations `(xio)`, `(ron-def)`, and
+`(RON-def)`. The nearest local pole-removal pattern is `TruncatedPerron.lean`; the new geometric
+input is
+`ContinuousMap.Homotopy.curveIntegral_add_curveIntegral_eq_of_hasFDerivWithinAt`.
+
+No Lean proof source may be edited before this Loop 4 preregistration passes public Lean Action CI.

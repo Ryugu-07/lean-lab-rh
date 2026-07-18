@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_3_PUBLICLY_CHECKED`
+Status: `ACTIVE_LOOP_4_PREREGISTERED_CI_PENDING`
 
 ## Target
 
@@ -48,6 +48,56 @@ output is imported. Every numerical fact must be independently re-proved in Lean
 | 1 | `LITERATURE` | Compiled `riemannHypothesisUpTo`, the general finite-height-RH transport, and the exact Table 1 specialization through height `3*10^12`. The `x=0` boundary uses `deBruijnNewmanH_mul_I_ne_zero`; the positive branch derives the exact `x/2` zeta ordinate and contradicts the positive lower `y` boundary. Standalone checks, exact witnesses, standard-only axiom prints, forbidden scans, and the full 8,704-job build pass locally. This is conditional on `riemannHypothesisUpTo (3*10^12)` and proves no unconditional region. | Keep the campaign active. Loop 2 should attack the source-normalized effective Riemann--Siegel approximation and error consumer needed by the final and barrier certificates; do not build interval infrastructure detached from an exact `H_t` statement. The finite RH computation, final region, and barrier remain open. |
 | 2 | `LITERATURE` | Formalized the exact Theorem 1.3 normalization: source arguments, `log M_0`, `M_0`, both formulas for `alpha`, `M_t`, `B_t`, `b_n^t`, `N`, `gamma`, `s_*`, `kappa`, `f_t`, the displayed `e_A+e_B` and `e_C0` upper bounds, and their total. Lean proves the branch derivative on the lower half-plane, `exp(log M_0)=M_0`, `B_t!=0` for `x>0`, exact inclusion of the second-row final region in the theorem's parameter region, Corollary 1.4, and both general and exact-row final-region certificate consumers. Definition witnesses, seven theorem witnesses, seven standard-only axiom prints, forbidden scans, and the full 8,705-job build pass locally. The deterministic approximation inequality remains an unproved `Prop`. | Keep the campaign active. Loop 3 attacks the paper's first analytic identity `H_t(z)=integral H_0(z-i*sqrt(t)*Y) d gamma_2(Y)` and its exact xi-coordinate form. The existing compiled Gaussian theorem averages real translations and moves time backward; it cannot discharge this imaginary-shift forward representation. |
 | 3 | `LITERATURE` | Proved the exact complex MGF and absolute-exponential moment control for `gaussianReal(0,2)`, the imaginary-shift cosine multiplier `exp((r*u)^2)`, full product integrability, the general identity `integral H_t(z-i*r*Y)=H_(t+r^2)(z)`, the `r=sqrt(t)` reconstruction from `H_0`, and the exact `(htz)` xi-coordinate form. Five exact witnesses, five standard-only axiom prints, forbidden scans, and the full 8,706-job build pass locally. | Keep the campaign active. Loop 4 must confront the next source edge rather than add another heat wrapper: define the fixed `5*pi/4` infinite-line contour `R_(0,N)`, prove its integrability and residue shift, and reconstruct Titchmarsh `(xio)`/the finite `R_(0,0)` decomposition. The effective approximation and all numerical certificates remain open. |
+
+## Loop 4 preregistration
+
+- `mode`: `LITERATURE`
+- `fixed_subedge`: formalize the Riemann--Siegel contour identity used between Polymath equations
+  `(htz)` and `(htz-expand)`, including the actual infinite diagonal integral, its finite residue
+  shift, and the xi decomposition `(xio)`
+- `fixed_geometry`: set `d=exp(5*pi*I/4)` and parameterize
+  `L_N(v)=(N+1/2)+d*v`, oriented by increasing real `v`; no arbitrary contour premise may
+  replace this line
+- `raw_kernel`: use the principal complex power in
+  `w^(-s)*exp(I*pi*w^2)/(exp(pi*I*w)-exp(-pi*I*w))`; prove the denominator is nonzero on every
+  `L_N`, the branch cut is avoided, and the parameterized kernel is integrable on `R`
+- `residue_statement`: for every natural `N`, prove the unscaled finite shift
+  `I_0(s)=sum_(n=1)^N n^(-s)+I_N(s)`, then multiply by the exact source prefactor to obtain
+  `R_(0,0)(s)=sum_(n=1)^N r_(0,n)(s)+R_(0,N)(s)`
+- `xio_statement`: define reflection by `F^*(s)=conj(F(conj(s)))` and prove, at least on the
+  source domain excluding integer `s`,
+  `(1/8)*riemannXi(s)=R_(0,0)(s)+R_(0,0)^*(1-s)`; compose this with the residue statement to
+  expose the exact finite xi decomposition consumed by `(htz-expand)`
+- `success_criterion`: fixed-line definitions, Gaussian decay/integrability, explicit removable
+  pole subtraction, vanishing finite-truncation end segments, the finite residue shift, `(xio)`,
+  and the composed finite xi decomposition all compile with exact witnesses and standard-only
+  axiom prints
+- `falsification_criterion`: the fixed midpoint line meets a denominator zero or forbidden branch,
+  the explicit residue has a normalization or orientation different from `n^(-s)`, end segments
+  do not vanish under the proved bounds, or Titchmarsh `(2.10.6)` cannot be connected to the
+  project's `riemannXi` without an additional unformalized analytic-continuation theorem
+- `known_obstacles`: Mathlib has no packaged residue theorem or Riemann--Siegel formula. The
+  required contour strip is a non-orthogonal parallelogram, principal `cpow` must be controlled on
+  both tails, and `(xio)` additionally needs Titchmarsh's auxiliary contour recurrence and
+  analytic-continuation argument
+- `nearest_primary_source`: Titchmarsh, *The Theory of the Riemann Zeta-function*, second edition,
+  Section 2.10, especially `(2.10.1)--(2.10.6)`; Polymath arXiv `1904.12438`, Section 4,
+  equations `(xio)`, `(ron-def)`, and `(RON-def)`
+- `nearest_project_attempt`: `TruncatedPerron.lean` removes a simple pole before applying a
+  rectangle Cauchy theorem, but only for axis-aligned rectangles
+- `new_attack_angle`: use `ContinuousMap.Homotopy.curveIntegral_add_curveIntegral_eq_of_`
+  `hasFDerivWithinAt` from Mathlib's Poincare curve-integral API for the affine
+  parallelogram; subtract the finite sum of explicit `1/(w-n)` principal parts so the remaining
+  one-form extends continuously across all enclosed integers
+- `anti_substitution_rule`: definitions alone, an assumed contour-shift equality, a theorem whose
+  premise is `(xio)`, an abstract `R_(0,N)`, or only a pointwise residue calculation is not Loop 4
+  success
+
+If the full success criterion is not reached, the loop must still attempt it and record the first
+uncancelled analytic dependency and the strongest compiled proper prefix. A proper prefix is
+infrastructure, not a successful closure of Loop 4 or an RH progress claim.
+
+No Lean proof source may be edited for Loop 4 before this preregistration passes public CI.
 
 ## Loop 3 preregistration
 
