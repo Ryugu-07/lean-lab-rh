@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260717-H6-POLYMATH-ZERO-FREE-CRITERION-01`
 
 Mode: `LITERATURE`
 
-Status: `PREREGISTERED_CI_PASSED`
+Status: `LOCAL_SUCCESS_PENDING_PUBLIC_CI`
 
 Public preregistration evidence:
 
@@ -224,3 +224,25 @@ H6-E/G8, or RH.
 
 Implementation commit `5e90f7ee9648a55fd10c2ea244741e2fc3254039` passed public Lean Action CI
 run `29627444553`, build job `88034514707`, in `2m15s`.
+
+## Loop 10 local closure (2026-07-18)
+
+Lean now proves compact-uniform convergence of the scaled residual integral on every compact set.
+An upper backward-Hermite root is isolated in a closed disk with a uniform positive imaginary
+margin. A generic Jensen minimum-modulus argument transfers a zero to every sufficiently small
+nonzero scale, and the exact scaling identity converts it to a source-family zero. With
+`r=sqrt(t-s)`, the square-root displacement dominates every fixed linear speed, proving
+`deBruijnNewmanHasBackwardUpperLinearEscape_of_repeated` with the exact preregistered quantifiers.
+
+The repeated-contact contradiction and the already compiled simple-contact contradiction now
+close all three exact endpoints:
+
+- `deBruijnNewmanH_zero_im_abs_lt_of_polymath_regions`;
+- `deBruijnNewmanAllZerosReal_add_half_sq_of_polymath_regions`;
+- `deBruijnNewmanAllZerosReal_one_fifth_of_polymath_table_row`.
+
+Both source modules, Targets, exact TargetChecks, six new selected axiom prints, forbidden scans,
+`git diff --check`, and the full 8,703-job build pass locally. The selected declarations depend
+only on `propext`, `Classical.choice`, and `Quot.sound`. This is local proof closure pending public
+implementation/evidence CI. It does not prove any of the three region predicates, unconditional
+`Lambda<=0.2`, H6-E/G8, or RH.

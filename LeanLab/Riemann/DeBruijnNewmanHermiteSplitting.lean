@@ -5,6 +5,8 @@ import Mathlib.Probability.Distributions.Gaussian.Real
 
 set_option linter.style.header false
 
+open scoped Uniformity
+
 /-!
 # Backward Hermite splitting for the de Bruijn-Newman heat family
 
@@ -802,6 +804,54 @@ theorem tendsto_deBruijnNewman_gaussian_scaled_factor_integral
     MeasureTheory.integral_mul_const,
     integral_add_pow_gaussianReal_zero_two_eq_deBruijnNewmanBackwardHermite] using h
 
+/-- The scaled residual-factor integrals converge uniformly to the backward Hermite model on every
+compact set of scaled coordinates. -/
+theorem tendstoUniformlyOn_deBruijnNewman_gaussian_scaled_factor_integral
+    {t : ℝ} {z : ℂ} {m : ℕ} {g : ℂ → ℂ} {K : Set ℂ}
+    (hgdiff : Differentiable ℂ g)
+    (hfactor : ∀ w, deBruijnNewmanH t w = (w - z) ^ m * g w)
+    (hK : IsCompact K) :
+    TendstoUniformlyOn
+      (fun r : ℝ => fun xi : ℂ =>
+        ∫ y : ℝ, (xi + (y : ℂ)) ^ m *
+          g (z + (r : ℂ) * (xi + (y : ℂ)))
+          ∂ProbabilityTheory.gaussianReal 0 2)
+      (fun xi : ℂ => (deBruijnNewmanBackwardHermite m).aeval xi * g z)
+      (𝓝 0) K := by
+  rw [Metric.tendstoUniformlyOn_iff]
+  intro ε hε
+  let F : ℝ × ℂ → ℂ := fun p =>
+    ∫ y : ℝ, (p.2 + (y : ℂ)) ^ m *
+      g (z + (p.1 : ℂ) * (p.2 + (y : ℂ)))
+      ∂ProbabilityTheory.gaussianReal 0 2
+  let S : Set (ℝ × ℂ) := ({0} : Set ℝ) ×ˢ K
+  have hS : IsCompact S := isCompact_singleton.prod hK
+  have hcont : ∀ p ∈ S, ContinuousAt F p := by
+    rintro ⟨r, xi⟩ ⟨hr, hxi⟩
+    have hr0 : r = 0 := by simpa using hr
+    subst r
+    exact continuousAt_deBruijnNewman_gaussian_scaled_factor_integral
+      hgdiff hfactor xi
+  let u : Set (ℂ × ℂ) := {q | dist q.1 q.2 < ε}
+  have hu : u ∈ 𝓤 ℂ := Metric.dist_mem_uniformity hε
+  have huniform := hS.uniformContinuousAt_of_continuousAt F hcont hu
+  rcases Metric.mem_uniformity_dist.1 huniform with ⟨δ, hδ, hδsub⟩
+  filter_upwards [Metric.ball_mem_nhds (0 : ℝ) hδ] with r hr
+  intro xi hxi
+  have hpair : dist ((0 : ℝ), xi) (r, xi) < δ := by
+    simpa only [dist_prod_same_right, dist_comm] using (Metric.mem_ball.mp hr)
+  have himage := hδsub hpair (show ((0 : ℝ), xi) ∈ S from ⟨by simp, hxi⟩)
+  change dist
+    ((deBruijnNewmanBackwardHermite m).aeval xi * g z)
+    (F (r, xi)) < ε
+  have hzero :
+      F (0, xi) = (deBruijnNewmanBackwardHermite m).aeval xi * g z := by
+    dsimp only [F]
+    simp only [Complex.ofReal_zero, zero_mul, add_zero, MeasureTheory.integral_mul_const,
+      integral_add_pow_gaussianReal_zero_two_eq_deBruijnNewmanBackwardHermite]
+  rw [← hzero]
+  exact himage
+
 theorem deBruijnNewmanBackwardHermite_coeff_nonneg :
     ∀ n k : ℕ, 0 ≤ (deBruijnNewmanBackwardHermite n).coeff k := by
   intro n
@@ -1059,6 +1109,230 @@ theorem exists_deBruijnNewmanBackwardHermite_aeval_eq_zero_im_pos
     have hidentity := congrArg (fun p : ℝ[X] ↦ p.aeval z)
       (deBruijnNewmanBackwardHermite_comp_neg_X n)
     simpa [aeval_comp, hz] using hidentity
+
+/-- An analytic function whose norm at the center is below a positive threshold while its norm on
+the boundary is above that threshold has a zero in the closed ball. -/
+theorem exists_zero_mem_closedBall_of_analyticOnNhd_of_norm_lt_boundary
+    {f : ℂ → ℂ} {z0 : ℂ} {R ε : ℝ}
+    (hR : 0 < R) (hε : 0 < ε)
+    (hanalytic : AnalyticOnNhd ℂ f (Metric.closedBall z0 R))
+    (hcenter : ‖f z0‖ < ε)
+    (hboundary : ∀ z ∈ Metric.sphere z0 R, ε < ‖f z‖) :
+    ∃ z ∈ Metric.closedBall z0 R, f z = 0 := by
+  by_contra hexists
+  have hzeroFree : ∀ z ∈ Metric.closedBall z0 R, f z ≠ 0 := by
+    intro z hz hzero
+    exact hexists ⟨z, hz, hzero⟩
+  have hanalyticAbs : AnalyticOnNhd ℂ f (Metric.closedBall z0 |R|) := by
+    simpa [abs_of_pos hR] using hanalytic
+  have hcircle : CircleIntegrable (fun z : ℂ => Real.log ‖f z‖) z0 R :=
+    (hanalyticAbs.mono Metric.sphere_subset_closedBall).meromorphicOn
+      |>.circleIntegrable_log_norm
+  have hlogBoundary : ∀ z ∈ Metric.sphere z0 |R|,
+      Real.log ε ≤ Real.log ‖f z‖ := by
+    intro z hz
+    have hz' : z ∈ Metric.sphere z0 R := by simpa [abs_of_pos hR] using hz
+    have hnorm := hboundary z hz'
+    have hnormPos : 0 < ‖f z‖ := hε.trans hnorm
+    exact Real.strictMonoOn_log.monotoneOn hε hnormPos hnorm.le
+  have havgLower : Real.log ε ≤
+      circleAverage (fun z : ℂ => Real.log ‖f z‖) z0 R := by
+    calc
+      Real.log ε = circleAverage (fun _ : ℂ => Real.log ε) z0 R :=
+        (circleAverage_const _ _ _).symm
+      _ ≤ circleAverage (fun z : ℂ => Real.log ‖f z‖) z0 R :=
+        circleAverage_mono (circleIntegrable_const _ _ _) hcircle hlogBoundary
+  have hcenterNe : f z0 ≠ 0 :=
+    hzeroFree z0 (Metric.mem_closedBall_self hR.le)
+  have hcenterLog : Real.log ‖f z0‖ < Real.log ε :=
+    Real.log_lt_log (norm_pos_iff.mpr hcenterNe) hcenter
+  have hzeroFreeAbs : ∀ z ∈ Metric.closedBall z0 |R|, f z ≠ 0 := by
+    simpa [abs_of_pos hR] using hzeroFree
+  rw [hanalyticAbs.circleAverage_log_norm_of_ne_zero hzeroFreeAbs] at havgLower
+  exact (not_lt_of_ge havgLower) hcenterLog
+
+/-- A nontrivial entire function has an isolating closed ball at each point, contained in any
+prescribed neighborhood of that point. -/
+theorem exists_isolating_closedBall_subset_of_analyticOnNhd
+    {f : ℂ → ℂ} {z0 : ℂ} {U : Set ℂ}
+    (hanalytic : AnalyticOnNhd ℂ f (Set.univ : Set ℂ))
+    (hnotLocalZero : ¬f =ᶠ[𝓝 z0] 0)
+    (hU : U ∈ 𝓝 z0) :
+    ∃ R > 0, (∀ z ∈ Metric.sphere z0 R, f z ≠ 0) ∧
+      Metric.closedBall z0 R ⊆ U := by
+  have hisolated : ∀ᶠ z in 𝓝[≠] z0, f z ≠ 0 :=
+    ((hanalytic z0 (mem_univ z0)).eventually_eq_zero_or_eventually_ne_zero).resolve_left
+      hnotLocalZero
+  have hnearNonzero : ∀ᶠ z in 𝓝 z0, z ≠ z0 → f z ≠ 0 :=
+    eventually_nhdsWithin_iff.mp hisolated
+  have hcombined : ∀ᶠ z in 𝓝 z0, (z ≠ z0 → f z ≠ 0) ∧ z ∈ U :=
+    hnearNonzero.and hU
+  obtain ⟨R, hR, hsubset⟩ := Metric.nhds_basis_closedBall.mem_iff.mp hcombined
+  refine ⟨R, hR, ?_, fun z hz => (hsubset hz).2⟩
+  intro z hz
+  exact (hsubset (Metric.sphere_subset_closedBall hz)).1
+    (Metric.ne_of_mem_sphere hz hR.ne')
+
+/-- A positive-imaginary root of the backward Hermite polynomial admits an isolating closed ball
+whose imaginary parts have a uniform positive lower bound. -/
+theorem exists_deBruijnNewmanBackwardHermite_isolating_upper_closedBall
+    (n : ℕ) (hn : 2 ≤ n) :
+    ∃ rho : ℂ, ∃ R : ℝ,
+      0 < rho.im ∧ 0 < R ∧
+      (deBruijnNewmanBackwardHermite n).aeval rho = 0 ∧
+      (∀ xi ∈ Metric.sphere rho R,
+        (deBruijnNewmanBackwardHermite n).aeval xi ≠ 0) ∧
+      (∀ xi ∈ Metric.closedBall rho R, rho.im / 2 < xi.im) := by
+  obtain ⟨rho, hrhoIm, hrhoZero⟩ :=
+    exists_deBruijnNewmanBackwardHermite_aeval_eq_zero_im_pos n hn
+  let p : ℝ[X] := deBruijnNewmanBackwardHermite n
+  let f : ℂ → ℂ := fun xi => p.aeval xi
+  have hanalytic : AnalyticOnNhd ℂ f (Set.univ : Set ℂ) := by
+    intro xi hxi
+    exact p.differentiable_aeval.analyticAt xi
+  have hnotLocalZero : ¬f =ᶠ[𝓝 rho] 0 := by
+    intro hlocal
+    have hglobal := hanalytic.eqOn_zero_of_preconnected_of_eventuallyEq_zero
+      isPreconnected_univ (mem_univ rho) hlocal
+    have hmapZero : p.map (algebraMap ℝ ℂ) = 0 := by
+      apply Polynomial.funext
+      intro xi
+      rw [Polynomial.eval_zero]
+      simpa only [f, Polynomial.aeval_def, Polynomial.eval_map, Pi.zero_apply] using
+        hglobal (mem_univ xi)
+    have hpNe : p ≠ 0 := deBruijnNewmanBackwardHermite_monic n |>.ne_zero
+    exact (Polynomial.map_ne_zero_iff
+      (FaithfulSMul.algebraMap_injective ℝ ℂ)).2 hpNe hmapZero
+  let U : Set ℂ := {xi | rho.im / 2 < xi.im}
+  have hUOpen : IsOpen U := isOpen_lt continuous_const Complex.continuous_im
+  have hU : U ∈ 𝓝 rho := hUOpen.mem_nhds (by dsimp [U]; linarith)
+  obtain ⟨R, hR, hboundary, hball⟩ :=
+    exists_isolating_closedBall_subset_of_analyticOnNhd
+      hanalytic hnotLocalZero hU
+  refine ⟨rho, R, hrhoIm, hR, hrhoZero, ?_, ?_⟩
+  · simpa only [f, p] using hboundary
+  · intro xi hxi
+    exact hball hxi
+
+/-- Exact square-root-scale representation supplied by any entire factorization at the source
+time. -/
+theorem deBruijnNewmanH_gaussian_scaling_of_factor
+    {t : ℝ} {z : ℂ} {m : ℕ} {g : ℂ → ℂ}
+    (hfactor : ∀ w, deBruijnNewmanH t w = (w - z) ^ m * g w)
+    (r : ℝ) (xi : ℂ) :
+    deBruijnNewmanH (t - r ^ 2) (z + (r : ℂ) * xi) =
+      (r : ℂ) ^ m *
+        ∫ y : ℝ, (xi + (y : ℂ)) ^ m *
+          g (z + (r : ℂ) * (xi + (y : ℂ)))
+          ∂ProbabilityTheory.gaussianReal 0 2 := by
+  rw [← integral_deBruijnNewmanH_gaussian_shift t r (z + (r : ℂ) * xi)]
+  calc
+    (∫ y : ℝ, deBruijnNewmanH t
+          (z + (r : ℂ) * xi + (r * y : ℝ))
+          ∂ProbabilityTheory.gaussianReal 0 2) =
+        ∫ y : ℝ, (r : ℂ) ^ m *
+          ((xi + (y : ℂ)) ^ m *
+            g (z + (r : ℂ) * (xi + (y : ℂ))))
+          ∂ProbabilityTheory.gaussianReal 0 2 := by
+      apply MeasureTheory.integral_congr_ae
+      apply MeasureTheory.ae_of_all
+      intro y
+      have harg :
+          z + (r : ℂ) * xi + (r * y : ℝ) =
+            z + (r : ℂ) * (xi + (y : ℂ)) := by
+        push_cast
+        ring
+      simp only
+      rw [harg, hfactor]
+      simp only [add_sub_cancel_left, mul_pow]
+      ring
+    _ = (r : ℂ) ^ m *
+          ∫ y : ℝ, (xi + (y : ℂ)) ^ m *
+            g (z + (r : ℂ) * (xi + (y : ℂ)))
+            ∂ProbabilityTheory.gaussianReal 0 2 := by
+      rw [MeasureTheory.integral_const_mul]
+
+/-- For every sufficiently small nonzero scale, the residual-factor integral has a zero in one
+fixed upper-half-plane disk around a backward Hermite root. -/
+theorem eventually_exists_gaussian_scaled_factor_integral_zero_upper
+    {t : ℝ} {z : ℂ} {m : ℕ} {g : ℂ → ℂ}
+    (hm : 2 ≤ m) (hgdiff : Differentiable ℂ g) (hgzero : g z ≠ 0)
+    (hfactor : ∀ w, deBruijnNewmanH t w = (w - z) ^ m * g w) :
+    ∃ rho : ℂ, ∃ R : ℝ,
+      0 < rho.im ∧ 0 < R ∧
+      ∀ᶠ r : ℝ in 𝓝 0, r ≠ 0 →
+        ∃ xi ∈ Metric.closedBall rho R,
+          (∫ y : ℝ, (xi + (y : ℂ)) ^ m *
+            g (z + (r : ℂ) * (xi + (y : ℂ)))
+            ∂ProbabilityTheory.gaussianReal 0 2) = 0 ∧
+          rho.im / 2 < xi.im := by
+  obtain ⟨rho, R, hrhoIm, hR, hrhoZero, hpolyBoundary, hupperBall⟩ :=
+    exists_deBruijnNewmanBackwardHermite_isolating_upper_closedBall m hm
+  let model : ℂ → ℂ := fun xi =>
+    (deBruijnNewmanBackwardHermite m).aeval xi * g z
+  have hmodelBoundary : ∀ xi ∈ Metric.sphere rho R, model xi ≠ 0 := by
+    intro xi hxi
+    exact mul_ne_zero (hpolyBoundary xi hxi) hgzero
+  have hsphereNonempty : (Metric.sphere rho R).Nonempty :=
+    NormedSpace.sphere_nonempty.mpr hR.le
+  have hnormContinuous : ContinuousOn (fun xi : ℂ => ‖model xi‖)
+      (Metric.sphere rho R) := by
+    fun_prop
+  obtain ⟨x, hx, hxmin⟩ :=
+    (isCompact_sphere rho R).exists_isMinOn hsphereNonempty hnormContinuous
+  let M : ℝ := ‖model x‖
+  have hM : 0 < M := norm_pos_iff.mpr (hmodelBoundary x hx)
+  have huniform :=
+    tendstoUniformlyOn_deBruijnNewman_gaussian_scaled_factor_integral
+      hgdiff hfactor (isCompact_closedBall rho R)
+  rw [Metric.tendstoUniformlyOn_iff] at huniform
+  have hclose := huniform (M / 2) (half_pos hM)
+  refine ⟨rho, R, hrhoIm, hR, ?_⟩
+  filter_upwards [hclose] with r hr
+  intro hr0
+  let F : ℂ → ℂ := fun xi =>
+    ∫ y : ℝ, (xi + (y : ℂ)) ^ m *
+      g (z + (r : ℂ) * (xi + (y : ℂ)))
+      ∂ProbabilityTheory.gaussianReal 0 2
+  have hcenter : ‖F rho‖ < M / 2 := by
+    have h := hr rho (Metric.mem_closedBall_self hR.le)
+    simpa only [model, hrhoZero, zero_mul, dist_zero_left] using h
+  have hboundary : ∀ xi ∈ Metric.sphere rho R, M / 2 < ‖F xi‖ := by
+    intro xi hxi
+    have hmin : M ≤ ‖model xi‖ := hxmin hxi
+    have htriangle : ‖model xi‖ ≤ dist (model xi) (F xi) + ‖F xi‖ := by
+      rw [dist_eq_norm]
+      calc
+        ‖model xi‖ = ‖(model xi - F xi) + F xi‖ := by congr 1; ring
+        _ ≤ ‖model xi - F xi‖ + ‖F xi‖ := norm_add_le _ _
+    have hcloseBoundary := hr xi (Metric.sphere_subset_closedBall hxi)
+    nlinarith
+  have hrComplex : (r : ℂ) ≠ 0 := Complex.ofReal_ne_zero.mpr hr0
+  have hrPow : (r : ℂ) ^ m ≠ 0 := pow_ne_zero _ hrComplex
+  have hFEq : F = fun xi => ((r : ℂ) ^ m)⁻¹ *
+      deBruijnNewmanH (t - r ^ 2) (z + (r : ℂ) * xi) := by
+    funext xi
+    have hscale := deBruijnNewmanH_gaussian_scaling_of_factor hfactor r xi
+    change deBruijnNewmanH (t - r ^ 2) (z + (r : ℂ) * xi) =
+      (r : ℂ) ^ m * F xi at hscale
+    calc
+      F xi = 1 * F xi := by rw [one_mul]
+      _ = ((r : ℂ) ^ m)⁻¹ * ((r : ℂ) ^ m) * F xi := by
+        rw [inv_mul_cancel₀ hrPow]
+      _ = ((r : ℂ) ^ m)⁻¹ * deBruijnNewmanH (t - r ^ 2)
+          (z + (r : ℂ) * xi) := by rw [hscale]; ring
+  have hFdiff : Differentiable ℂ F := by
+    rw [hFEq]
+    have hHdiff : Differentiable ℂ (fun xi =>
+        deBruijnNewmanH (t - r ^ 2) (z + (r : ℂ) * xi)) :=
+      (differentiable_deBruijnNewmanH (t - r ^ 2)).comp (by fun_prop)
+    exact (differentiable_const (c := ((r : ℂ) ^ m)⁻¹)).mul hHdiff
+  have hFanalytic : AnalyticOnNhd ℂ F (Metric.closedBall rho R) :=
+    fun xi hxi => hFdiff.analyticAt xi
+  obtain ⟨xi, hxi, hxiZero⟩ :=
+    exists_zero_mem_closedBall_of_analyticOnNhd_of_norm_lt_boundary
+      hR (half_pos hM) hFanalytic hcenter hboundary
+  exact ⟨xi, hxi, hxiZero, hupperBall xi hxi⟩
 
 end
 

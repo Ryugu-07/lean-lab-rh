@@ -726,3 +726,18 @@ upper model root to an actual zero. Only that transfer can imply
 
 Loop 7 implementation commit `7ac27aa86cd176ef6172b79b3b854724b1243f7a` passed public Lean
 Action CI run `29582740550`, build job `87892131096`, in `2m05s`.
+
+### H6-H2f Loop 10 local closure
+
+Loops 8-10 close the repeated-contact source interface. Lean extracts finite analytic
+multiplicity, proves exact Gaussian backward heat scaling, identifies the backward Hermite model,
+upgrades the scaled residual integral to compact-uniform convergence, and transfers a strict
+upper-half-plane model root by a Jensen minimum-modulus argument. The exact theorem
+`deBruijnNewmanHasBackwardUpperLinearEscape_of_repeated` now compiles.
+
+Combining that theorem with the complete simple-contact force branch closes the conditional
+Polymath criterion end to end. The strict canopy, the arbitrary-parameter `t0+y0^2/2` all-real
+endpoint, and the exact Table 1 second-row corollary at `1/5` compile. Both source modules, exact
+Targets and TargetChecks, selected standard-only axiom prints, forbidden scans, `git diff --check`,
+and the full 8,703-job build pass. This is local closure pending public CI. The three numerical
+region certificates, unconditional `Lambda<=0.2`, H6-E/G8, and RH remain open.

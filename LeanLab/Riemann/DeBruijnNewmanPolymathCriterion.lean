@@ -1431,6 +1431,97 @@ def deBruijnNewmanHasBackwardUpperLinearEscape (t : ℝ) (z : ℂ) : Prop :=
     ∀ᶠ s in 𝓝[<] t,
       ∃ w ∈ U, deBruijnNewmanH s w = 0 ∧ z.im + C * (t - s) < w.im
 
+/-- A repeated zero has zeros at all sufficiently close earlier times whose positive square-root
+imaginary displacement dominates every fixed linear speed. -/
+theorem deBruijnNewmanHasBackwardUpperLinearEscape_of_repeated
+    {t : ℝ} {z : ℂ}
+    (hz : deBruijnNewmanH t z = 0)
+    (hrepeated : deriv (deBruijnNewmanH t) z = 0) :
+    deBruijnNewmanHasBackwardUpperLinearEscape t z := by
+  obtain ⟨m, g, hm, hgdiff, hgzero, hfactor⟩ :=
+    exists_deBruijnNewmanH_repeated_zero_entire_factor hz hrepeated
+  obtain ⟨rho, R, hrhoIm, hR, hevent⟩ :=
+    eventually_exists_gaussian_scaled_factor_integral_zero_upper
+      hm hgdiff hgzero hfactor
+  intro C hC U hU
+  obtain ⟨ε, hε, hballU⟩ := Metric.nhds_basis_ball.mem_iff.mp hU
+  let a : ℝ := rho.im / 2
+  have ha : 0 < a := by dsimp [a]; linarith
+  let B : ℝ := ‖rho‖ + R
+  have hB : 0 < B := by dsimp [B]; linarith [norm_nonneg rho]
+  let δ : ℝ := min (ε / (B + 1)) (a / C)
+  have hδ : 0 < δ := by
+    dsimp [δ]
+    exact lt_min (div_pos hε (by linarith)) (div_pos ha hC)
+  have hsqrtCont : ContinuousAt (fun s : ℝ => Real.sqrt (t - s)) t := by
+    fun_prop
+  have hsqrtNhds : Tendsto (fun s : ℝ => Real.sqrt (t - s)) (𝓝 t) (𝓝 0) := by
+    have hraw : Tendsto (fun s : ℝ => Real.sqrt (t - s)) (𝓝 t)
+        (𝓝 (Real.sqrt (t - t))) := hsqrtCont
+    convert hraw using 1
+    norm_num
+  have hsqrt : Tendsto (fun s : ℝ => Real.sqrt (t - s)) (𝓝[<] t) (𝓝 0) :=
+    hsqrtNhds.mono_left inf_le_left
+  have heventS := hsqrt.eventually hevent
+  have hsmallS := hsqrt.eventually (Metric.ball_mem_nhds (0 : ℝ) hδ)
+  have hleft : ∀ᶠ s : ℝ in 𝓝[<] t, s ∈ Iio t := self_mem_nhdsWithin
+  filter_upwards [heventS, hsmallS, hleft] with s hs hsmall hst
+  let r : ℝ := Real.sqrt (t - s)
+  have hts : 0 < t - s := sub_pos.mpr hst
+  have hrPos : 0 < r := Real.sqrt_pos.2 hts
+  have hrNonneg : 0 ≤ r := hrPos.le
+  have hrNe : r ≠ 0 := hrPos.ne'
+  obtain ⟨xi, hxiBall, hxiZero, hxiLower⟩ := hs hrNe
+  have hxiNorm : ‖xi‖ ≤ B := by
+    have hdist : dist xi rho ≤ R := Metric.mem_closedBall.mp hxiBall
+    calc
+      ‖xi‖ = ‖(xi - rho) + rho‖ := by congr 1; ring
+      _ ≤ ‖xi - rho‖ + ‖rho‖ := norm_add_le _ _
+      _ = dist xi rho + ‖rho‖ := by rw [Complex.dist_eq]
+      _ ≤ B := by dsimp [B]; linarith
+  have hrLt : r < δ := by
+    simpa only [r, Real.dist_eq, sub_zero, abs_of_nonneg (Real.sqrt_nonneg _)] using
+      (Metric.mem_ball.mp hsmall)
+  have hrLtU : r < ε / (B + 1) :=
+    hrLt.trans_le (min_le_left _ _)
+  have hrLtSpeed : r < a / C :=
+    hrLt.trans_le (min_le_right _ _)
+  let w : ℂ := z + (r : ℂ) * xi
+  have hdisp : r * ‖xi‖ < ε := by
+    calc
+      r * ‖xi‖ ≤ r * B := mul_le_mul_of_nonneg_left hxiNorm hrNonneg
+      _ < r * (B + 1) := mul_lt_mul_of_pos_left (by linarith) hrPos
+      _ < ε := (lt_div_iff₀ (by linarith : 0 < B + 1)).mp hrLtU
+  have hwBall : w ∈ Metric.ball z ε := by
+    apply Metric.mem_ball.mpr
+    dsimp only [w]
+    rw [Complex.dist_eq, add_sub_cancel_left, norm_mul, norm_real, Real.norm_eq_abs,
+      abs_of_nonneg hrNonneg]
+    exact hdisp
+  have htime : t - r ^ 2 = s := by
+    have hsquare : r ^ 2 = t - s := by
+      exact Real.sq_sqrt hts.le
+    rw [hsquare]
+    ring
+  have hscale := deBruijnNewmanH_gaussian_scaling_of_factor hfactor r xi
+  rw [hxiZero, mul_zero] at hscale
+  have hwZero : deBruijnNewmanH s w = 0 := by
+    simpa only [w, htime] using hscale
+  have hCr : C * r < a := by
+    have h := (lt_div_iff₀ hC).mp hrLtSpeed
+    nlinarith
+  have hCxi : C * r < xi.im := hCr.trans hxiLower
+  have hquadratic : r * (C * r) < r * xi.im :=
+    mul_lt_mul_of_pos_left hCxi hrPos
+  have hwEscape : z.im + C * (t - s) < w.im := by
+    have hsquare : r ^ 2 = t - s := Real.sq_sqrt hts.le
+    rw [← hsquare]
+    dsimp only [w]
+    simp only [Complex.add_im, Complex.mul_im, Complex.ofReal_re, Complex.ofReal_im,
+      zero_mul, add_zero]
+    nlinarith
+  exact ⟨w, hballU hwBall, hwZero, hwEscape⟩
+
 /-- A first-contact zero cannot have the backward upper-escape property supplied by repeated-zero
 Hermite splitting. This closes the full topological consumer of the repeated branch. -/
 theorem deBruijnNewmanPolymath_firstBadWitness_not_backwardUpperLinearEscape
@@ -1584,6 +1675,135 @@ theorem deBruijnNewmanAllZerosReal_one_fifth_of_polymath_table_endpoint
     (93 : ℝ) / 500 + ((16733 : ℝ) / 100000) ^ 2 / 2) (tau := (1 : ℝ) / 5)
   · norm_num
   · exact hall
+
+/-- Every source-family zero can be moved to the closed first quadrant by evenness and conjugation
+symmetry. -/
+theorem deBruijnNewmanH_abs_cartesian_eq_zero
+    {t : ℝ} {z : ℂ} (hz : deBruijnNewmanH t z = 0) :
+    deBruijnNewmanH t
+      (((|z.re| : ℝ) : ℂ) + ((|z.im| : ℝ) : ℂ) * I) = 0 := by
+  by_cases hre : 0 ≤ z.re
+  · by_cases him : 0 ≤ z.im
+    · have hpoint : (((|z.re| : ℝ) : ℂ) + ((|z.im| : ℝ) : ℂ) * I) = z := by
+        apply Complex.ext <;> simp [abs_of_nonneg hre, abs_of_nonneg him]
+      simpa only [hpoint] using hz
+    · have hpoint : (((|z.re| : ℝ) : ℂ) + ((|z.im| : ℝ) : ℂ) * I) = conj z := by
+        apply Complex.ext <;>
+          simp [abs_of_nonneg hre, abs_of_neg (lt_of_not_ge him)]
+      rw [hpoint, deBruijnNewmanH_conj, hz, map_zero]
+  · by_cases him : 0 ≤ z.im
+    · have hpoint : (((|z.re| : ℝ) : ℂ) + ((|z.im| : ℝ) : ℂ) * I) = -conj z := by
+        apply Complex.ext <;>
+          simp [abs_of_neg (lt_of_not_ge hre), abs_of_nonneg him]
+      rw [hpoint, deBruijnNewmanH_neg, deBruijnNewmanH_conj, hz, map_zero]
+    · have hpoint : (((|z.re| : ℝ) : ℂ) + ((|z.im| : ℝ) : ℂ) * I) = -z := by
+        apply Complex.ext <;>
+          simp [abs_of_neg (lt_of_not_ge hre), abs_of_neg (lt_of_not_ge him)]
+      rw [hpoint, deBruijnNewmanH_neg, hz]
+
+/-- The three exact Polymath regions force every time-`t0` zero into the strict terminal canopy. -/
+theorem deBruijnNewmanH_zero_im_abs_lt_of_polymath_regions
+    {t0 X y0 : ℝ} (ht0 : 0 < t0) (_hX : 0 < X)
+    (hy0 : 0 < y0) (_hy1 : y0 ≤ 1)
+    (hinit : deBruijnNewmanPolymathInitialRegionZeroFree t0 X y0)
+    (hfinal : deBruijnNewmanPolymathFinalRegionZeroFree t0 X y0)
+    (hbarrier : deBruijnNewmanPolymathBarrierRegionZeroFree t0 X y0)
+    {z : ℂ} (hz : deBruijnNewmanH t0 z = 0) :
+    |z.im| < y0 := by
+  by_cases hhalf : (1 : ℝ) / 2 ≤ t0
+  · have hall := deBruijnNewmanAllZerosReal_mono hhalf
+      deBruijnNewmanAllZerosReal_one_half
+    have himZero := hall z hz
+    simp only [himZero, abs_zero]
+    exact hy0
+  have hthalf : t0 ≤ (1 : ℝ) / 2 := le_of_not_ge hhalf
+  have hnoBad : ¬(deBruijnNewmanPolymathBadWitnesses t0 X y0).Nonempty := by
+    intro hbad
+    obtain ⟨t1, ht1, hmin⟩ := exists_deBruijnNewmanPolymath_firstBadTime hbad
+    rcases ht1 with ⟨⟨⟨t', x⟩, y⟩, hp, ht'⟩
+    simp only at ht'
+    subst t'
+    have hpData := mem_deBruijnNewmanPolymathBadWitnesses_iff.mp hp
+    rcases hpData with
+      ⟨ht10, ht1t0, hx0, hxX, hyNonneg, hyOne, hheight, hzero⟩
+    have ht1Bad : t1 ∈ deBruijnNewmanPolymathBadTimes t0 X y0 :=
+      ⟨((t1, x), y), hp, rfl⟩
+    have ht1Pos := deBruijnNewmanPolymathBadTime_pos_of_initial hinit ht1Bad
+    have hxInterior := deBruijnNewmanPolymathBadWitness_re_mem_Ioo
+      hthalf deBruijnNewmanH_mul_I_ne_zero hbarrier hp
+    have hcontact := deBruijnNewmanPolymath_firstBadWitness_im_eq_boundary
+      hthalf hinit deBruijnNewmanH_mul_I_ne_zero hbarrier hmin hp
+    have hrepeated := deBruijnNewmanPolymath_firstBadWitness_not_simple
+      hy0 hthalf hinit deBruijnNewmanH_mul_I_ne_zero hbarrier hmin hp
+    have hescape := deBruijnNewmanHasBackwardUpperLinearEscape_of_repeated
+      hzero hrepeated
+    have hnoEscape :=
+      deBruijnNewmanPolymath_firstBadWitness_not_backwardUpperLinearEscape
+        hy0 ht1Pos hthalf hmin hp hxInterior hcontact
+    exact hnoEscape hescape
+  by_contra himNot
+  let x : ℝ := |z.re|
+  let y : ℝ := |z.im|
+  have hy : y0 ≤ y := by
+    dsimp only [y]
+    exact le_of_not_gt himNot
+  have hx0 : 0 ≤ x := by dsimp [x]; positivity
+  have hyNonneg : 0 ≤ y := by dsimp [y]; positivity
+  have hzero : deBruijnNewmanH t0 ((x : ℂ) + (y : ℂ) * I) = 0 := by
+    simpa only [x, y] using deBruijnNewmanH_abs_cartesian_eq_zero hz
+  have hstrip := deBruijnNewmanH_zero_im_sq_le_one_sub_two_mul
+    ht0.le hthalf hzero
+  have himPoint : (((x : ℂ) + (y : ℂ) * I).im) = y := by simp
+  rw [himPoint] at hstrip
+  have hradTop : 0 ≤ 1 - 2 * t0 := by linarith
+  have hyTop : y ≤ Real.sqrt (1 - 2 * t0) := by
+    nlinarith [Real.sq_sqrt hradTop, Real.sqrt_nonneg (1 - 2 * t0)]
+  have hyOne : y ≤ 1 := by
+    nlinarith [sq_nonneg (y - 1)]
+  have hheight : deBruijnNewmanPolymathBoundaryHeight t0 y0 t0 ≤ y := by
+    simpa only [deBruijnNewmanPolymathBoundaryHeight, sub_self, mul_zero, add_zero,
+      Real.sqrt_sq_eq_abs, abs_of_pos hy0] using hy
+  have hxX : x ≤ X := by
+    by_contra hxNot
+    have hXx : X < x := lt_of_not_ge hxNot
+    by_cases hxBuffer : x ≤ X + Real.sqrt (1 - y0 ^ 2)
+    · exact (hbarrier t0 x y ht0.le le_rfl hXx.le hxBuffer hheight hyTop) hzero
+    · have hfar : X + Real.sqrt (1 - y0 ^ 2) ≤ x :=
+        (lt_of_not_ge hxBuffer).le
+      exact (hfinal x y hfar hy hyTop) hzero
+  have hp : ((t0, x), y) ∈ deBruijnNewmanPolymathBadWitnesses t0 X y0 := by
+    rw [mem_deBruijnNewmanPolymathBadWitnesses_iff]
+    exact ⟨ht0.le, le_rfl, hx0, hxX, hyNonneg, hyOne, hheight, hzero⟩
+  exact hnoBad ⟨((t0, x), y), hp⟩
+
+/-- The exact Polymath canopy composes with arbitrary-base strip contraction. -/
+theorem deBruijnNewmanAllZerosReal_add_half_sq_of_polymath_regions
+    {t0 X y0 : ℝ} (ht0 : 0 < t0) (hX : 0 < X)
+    (hy0 : 0 < y0) (hy1 : y0 ≤ 1)
+    (hinit : deBruijnNewmanPolymathInitialRegionZeroFree t0 X y0)
+    (hfinal : deBruijnNewmanPolymathFinalRegionZeroFree t0 X y0)
+    (hbarrier : deBruijnNewmanPolymathBarrierRegionZeroFree t0 X y0) :
+    deBruijnNewmanAllZerosReal (t0 + y0 ^ 2 / 2) := by
+  apply deBruijnNewmanAllZerosReal_add_half_sq_of_im_abs_lt hy0
+  intro z hz
+  exact deBruijnNewmanH_zero_im_abs_lt_of_polymath_regions
+    ht0 hX hy0 hy1 hinit hfinal hbarrier hz
+
+/-- The exact second row of Polymath Table 1 reaches the public `1/5` endpoint. -/
+theorem deBruijnNewmanAllZerosReal_one_fifth_of_polymath_table_row
+    (hinit : deBruijnNewmanPolymathInitialRegionZeroFree
+      (93 / 500) (5 * 10 ^ 12 + 194858) (16733 / 100000))
+    (hfinal : deBruijnNewmanPolymathFinalRegionZeroFree
+      (93 / 500) (5 * 10 ^ 12 + 194858) (16733 / 100000))
+    (hbarrier : deBruijnNewmanPolymathBarrierRegionZeroFree
+      (93 / 500) (5 * 10 ^ 12 + 194858) (16733 / 100000)) :
+    deBruijnNewmanAllZerosReal (1 / 5) := by
+  have hall := deBruijnNewmanAllZerosReal_add_half_sq_of_polymath_regions
+    (t0 := (93 : ℝ) / 500) (X := (5 : ℝ) * 10 ^ 12 + 194858)
+    (y0 := (16733 : ℝ) / 100000)
+    (by norm_num) (by positivity) (by norm_num) (by norm_num)
+    hinit hfinal hbarrier
+  exact deBruijnNewmanAllZerosReal_one_fifth_of_polymath_table_endpoint hall
 
 end
 

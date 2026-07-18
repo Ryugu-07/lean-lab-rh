@@ -8,6 +8,7 @@ import LeanLab.Riemann.DeBruijnNewmanUpperHalf
 import LeanLab.Riemann.DeBruijnNewmanGeneralStrip
 import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanHermiteSplitting
+import LeanLab.Riemann.DeBruijnNewmanPolymathCriterion
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -871,15 +872,23 @@ def rhTargets : List ResearchTarget :=
         "Prove that every shifted variance-two Gaussian moment is the source-normalized backward Hermite polynomial, establish horizontal-strip bounds for the entire residual factor, and prove pointwise convergence of the exact scaled integral to P_m(xi)*g(z) as the real scale tends to zero."
       leanName := some ``tendsto_deBruijnNewman_gaussian_scaled_factor_integral
       status := .proven
-      note := "Loop 9 of campaign LITERATURE-20260717-H6-POLYMATH-ZERO-FREE-CRITERION-01 derives the Gaussian moments from the closed complex MGF and iterated Leibniz formula, proves the unrestricted-real-part strip bound inherited by the residual factor, and applies dominated continuity to the two-parameter scaled integral. This is a pointwise model-limit theorem. Compact-uniform convergence on a model-root disk and zero transfer remain open, so backward upper linear escape, the Polymath criterion, Lambda <= 0.2, H6-E/G8, and RH are not claimed. Implementation commit 5e90f7ee9648a55fd10c2ea244741e2fc3254039 passed public Lean Action CI run 29627444553, build job 88034514707, in 2m15s." },
+      note := "Loop 9 of campaign LITERATURE-20260717-H6-POLYMATH-ZERO-FREE-CRITERION-01 derives the Gaussian moments from the closed complex MGF and iterated Leibniz formula, proves the unrestricted-real-part strip bound inherited by the residual factor, and applies dominated continuity to the two-parameter scaled integral. Loop 10 subsequently upgrades this theorem to compact-uniform convergence and completes zero transfer. Implementation commit 5e90f7ee9648a55fd10c2ea244741e2fc3254039 passed public Lean Action CI run 29627444553, build job 88034514707, in 2m15s." },
+    { id := "H6.debruijn-newman.gaussian-hermite-compact-uniform-limit"
+      tier := .tier2
+      title := "Transfer a backward Hermite upper root to source heat zeros"
+      statement :=
+        "Prove compact-uniform convergence of the repeated-zero Gaussian scaling to the backward Hermite model, transfer a zero in a fixed upper-half-plane disk for every small nonzero scale, and derive backward upper linear escape for every repeated source-family zero."
+      leanName := some ``deBruijnNewmanHasBackwardUpperLinearEscape_of_repeated
+      status := .proven
+      note := "Loop 10 of campaign LITERATURE-20260717-H6-POLYMATH-ZERO-FREE-CRITERION-01 proves compact-uniform convergence from continuity along the compact zero-scale fiber, isolates a strict upper-half-plane Hermite root, and uses a compiler-checked Jensen minimum-modulus argument to transfer actual zeros. The resulting square-root displacement dominates every fixed linear speed. This closes the repeated-contact source interface; it does not prove any of the three numerical region certificates, Lambda <= 0.2, H6-E/G8, or RH." },
     { id := "H6.debruijn-newman.polymath-zero-free-criterion"
       tier := .tier2
       title := "Formalize the Polymath three-region zero-free criterion"
       statement :=
         "From the initial, final, and barrier zero-free regions, prove the strict time-t0 canopy, the resulting all-real endpoint at t0+y0^2/2, and the exact Table 1 second-row corollary at time 1/5."
-      leanName := none
-      status := .inProgress
-      note := "The compact first-contact construction and complete simple-contact force contradiction compile. The repeated-contact consumer, finite backward Hermite upper root, finite analytic multiplicity, global entire residual factor, exact Gaussian backward heat evolution, exact square-root-scale integral representation, Gaussian moment identification, residual-factor strip domination, and pointwise model limit now compile. The remaining source interface is compact-uniform convergence on a model-root disk and zero transfer strong enough to prove deBruijnNewmanHasBackwardUpperLinearEscape_of_repeated. The three region certificates, criterion endpoint, Lambda <= 0.2, H6-E/G8, and RH remain open." },
+      leanName := some ``deBruijnNewmanAllZerosReal_one_fifth_of_polymath_table_row
+      status := .proven
+      note := "Loop 10 closes the known Polymath Proposition 3.3 route end to end. The compact first-contact argument handles simple contacts by the divisor-regularized force inequality and repeated contacts by compiler-checked backward Hermite escape. The strict canopy, arbitrary-parameter all-real endpoint, and exact Table 1 second-row corollary at time 1/5 compile. This theorem remains conditional on the three explicitly stated region predicates; those numerical certificates, Lambda <= 0.2, H6-E/G8, and RH remain open." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

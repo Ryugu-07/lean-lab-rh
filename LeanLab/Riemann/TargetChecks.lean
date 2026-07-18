@@ -1632,4 +1632,54 @@ example {t : ℝ} {z : ℂ} {m : ℕ} {g : ℂ → ℂ}
       (𝓝 ((deBruijnNewmanBackwardHermite m).aeval xi * g z)) :=
   tendsto_deBruijnNewman_gaussian_scaled_factor_integral hgdiff hfactor xi
 
+example {t : ℝ} {z : ℂ} {m : ℕ} {g : ℂ → ℂ} {K : Set ℂ}
+    (hgdiff : Differentiable ℂ g)
+    (hfactor : ∀ w, deBruijnNewmanH t w = (w - z) ^ m * g w)
+    (hK : IsCompact K) :
+    TendstoUniformlyOn
+      (fun r : ℝ => fun xi : ℂ =>
+        ∫ y : ℝ, (xi + (y : ℂ)) ^ m *
+          g (z + (r : ℂ) * (xi + (y : ℂ)))
+          ∂ProbabilityTheory.gaussianReal 0 2)
+      (fun xi : ℂ => (deBruijnNewmanBackwardHermite m).aeval xi * g z)
+      (𝓝 0) K :=
+  tendstoUniformlyOn_deBruijnNewman_gaussian_scaled_factor_integral
+    hgdiff hfactor hK
+
+example {t : ℝ} {z : ℂ}
+    (hz : deBruijnNewmanH t z = 0)
+    (hrepeated : deriv (deBruijnNewmanH t) z = 0) :
+    deBruijnNewmanHasBackwardUpperLinearEscape t z :=
+  deBruijnNewmanHasBackwardUpperLinearEscape_of_repeated hz hrepeated
+
+example {t0 X y0 : ℝ} (ht0 : 0 < t0) (hX : 0 < X)
+    (hy0 : 0 < y0) (hy1 : y0 ≤ 1)
+    (hinit : deBruijnNewmanPolymathInitialRegionZeroFree t0 X y0)
+    (hfinal : deBruijnNewmanPolymathFinalRegionZeroFree t0 X y0)
+    (hbarrier : deBruijnNewmanPolymathBarrierRegionZeroFree t0 X y0)
+    {z : ℂ} (hz : deBruijnNewmanH t0 z = 0) :
+    |z.im| < y0 :=
+  deBruijnNewmanH_zero_im_abs_lt_of_polymath_regions
+    ht0 hX hy0 hy1 hinit hfinal hbarrier hz
+
+example {t0 X y0 : ℝ} (ht0 : 0 < t0) (hX : 0 < X)
+    (hy0 : 0 < y0) (hy1 : y0 ≤ 1)
+    (hinit : deBruijnNewmanPolymathInitialRegionZeroFree t0 X y0)
+    (hfinal : deBruijnNewmanPolymathFinalRegionZeroFree t0 X y0)
+    (hbarrier : deBruijnNewmanPolymathBarrierRegionZeroFree t0 X y0) :
+    deBruijnNewmanAllZerosReal (t0 + y0 ^ 2 / 2) :=
+  deBruijnNewmanAllZerosReal_add_half_sq_of_polymath_regions
+    ht0 hX hy0 hy1 hinit hfinal hbarrier
+
+example
+    (hinit : deBruijnNewmanPolymathInitialRegionZeroFree
+      (93 / 500) (5 * 10 ^ 12 + 194858) (16733 / 100000))
+    (hfinal : deBruijnNewmanPolymathFinalRegionZeroFree
+      (93 / 500) (5 * 10 ^ 12 + 194858) (16733 / 100000))
+    (hbarrier : deBruijnNewmanPolymathBarrierRegionZeroFree
+      (93 / 500) (5 * 10 ^ 12 + 194858) (16733 / 100000)) :
+    deBruijnNewmanAllZerosReal (1 / 5) :=
+  deBruijnNewmanAllZerosReal_one_fifth_of_polymath_table_row
+    hinit hfinal hbarrier
+
 end LeanLab.Riemann
