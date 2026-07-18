@@ -890,6 +890,26 @@ run `29660772447`, build job `88122935390`, in `1m56s`. Loop 13 proof-source wor
 - `public_implementation`: commit `7578728f6b16544d983f53d68ea0c10f0beb3d42` passed public Lean
   Action CI run `29661915485`, build job `88125929156`, in `2m3s`. Loop 14 is publicly closed as
   `KNOWN_THEOREM_FORMALIZED`.
+
+## Loop 15 preregistration
+
+- `campaign`: `FORMALIZATION-20260719-H6-BOYD-LOCAL-SADDLE-INVERSE-01`
+- `mode`: `LITERATURE`
+- `fixed_subedge`: remove the double zero of the complex phase `exp(u)-u-1`, construct the
+  normalized analytic coordinate `w(u)=u*sqrt(factor(u))`, prove `w^2/2=phase` and `w'(0)=1`, and
+  compile its analytic local inverse with both neighborhood inverse laws.
+- `success_criterion`: the removable factor, coordinate identity, derivative normalization,
+  analytic inverse, exact checks, standard-only axiom audit, full build, and public CI all pass.
+- `falsification_criterion`: the normalized principal sqrt is not analytic near `1`, its
+  derivative normalization differs, or the inverse theorem needs an extra premise.
+- `new_attack_angle`: use the order-three analytic Taylor remainder to define the removable factor
+  exactly, avoiding division-by-zero limits and avoiding any global branch claim.
+- `anti_substitution_rule`: global inverse/injectivity, adjacent saddle images, equation `(15)`,
+  effective `R2`, contour rotation, and unspecified continuation remain forbidden premises.
+- `full_preregistration`: `research/h6_boyd_local_saddle_inverse_loop15_prereg_20260719.md`.
+- `global_goal`: H6-Q1 and the persistent RH Goal remain active.
+
+No Loop 15 proof source may be edited before this preregistration passes public Lean Action CI.
 - `public_implementation`: commit `604199086831750112f5cbf189786860e8137755` passed public Lean
   Action CI run `29661356249`, build job `88124459774`, in `1m56s`. Loop 13 is publicly closed as
   `KNOWN_THEOREM_FORMALIZED`.

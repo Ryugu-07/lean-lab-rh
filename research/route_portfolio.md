@@ -2534,3 +2534,12 @@ any global branch or adjacent-saddle claim.
 
 Implementation commit `7578728f6b16544d983f53d68ea0c10f0beb3d42` passed public Lean Action CI
 run `29661915485`, build job `88125929156`, in `2m3s`. Loop 14 is publicly closed.
+
+### Loop 15 normalized local saddle-inverse preregistration
+
+The next fixed edge removes the double zero of `exp(u)-u-1` by an exact order-three analytic
+Taylor factor. It must construct the normalized coordinate `w(u)=u*sqrt(factor(u))`, prove the
+global identity `w(u)^2/2=exp(u)-u-1` and derivative `w'(0)=1`, then compile the analytic local
+inverse and both neighborhood inverse laws. This is local only: global branch continuation,
+adjacent saddle images, and Boyd equation `(15)` remain outside the target. Full preregistration
+is in `research/h6_boyd_local_saddle_inverse_loop15_prereg_20260719.md`.

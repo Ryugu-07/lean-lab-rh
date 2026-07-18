@@ -1007,3 +1007,15 @@ coordinate and inverse at the double saddle. H6-Q1 and the global RH Goal remain
 Implementation commit `7578728f6b16544d983f53d68ea0c10f0beb3d42` passed public Lean Action CI
 run `29661915485`, build job `88125929156`, in `2m3s`. Loop 14 is publicly closed as
 `KNOWN_THEOREM_FORMALIZED`.
+
+Closure-evidence commit `9724002c25905b4e03cc3db5ccbc34508c1f4f97` passed public Lean Action CI
+run `29662032198`, build job `88126225464`, in `1m28s`.
+
+## Loop 15 normalized local-inverse registration
+
+Loop 15 fixes the first complex saddle-coordinate edge: construct the normalized analytic factor
+and principal square-root coordinate for `exp(u)-u-1`, prove the global square identity and unit
+derivative at the origin, and compile the analytic local inverse with both eventual inverse laws.
+Global branch continuation, adjacent saddle images, equation `(15)`, and effective `R2` are not
+premises. Full details are in `research/h6_boyd_local_saddle_inverse_loop15_prereg_20260719.md`.
+H6-Q1 and the global RH Goal remain active.
