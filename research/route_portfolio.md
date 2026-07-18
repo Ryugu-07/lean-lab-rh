@@ -2172,3 +2172,6 @@ Poincare homotopy theorem; finite end-segment decay and an induction over adjace
 the finite residue shift. Titchmarsh `(xio)` remains a separate downstream step requiring the
 auxiliary contour recurrence and analytic continuation. No contour-shift or `(xio)` premise was
 introduced, and the campaign remains active.
+
+Implementation commit `7bb3101bc9ecc4698416ec6bfa5d296494a07a46` passed public CI run
+`29634900588`, build job `88055411542`, in `1m51s`. Evidence CI is pending.

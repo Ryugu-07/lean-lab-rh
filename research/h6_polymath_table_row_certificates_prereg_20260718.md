@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_4_PARTIAL_IMPLEMENTATION_CI_PENDING`
+Status: `ACTIVE_LOOP_4_PARTIAL_EVIDENCE_CI_PENDING`
 
 ## Exact mathematical endpoint
 
@@ -422,3 +422,6 @@ both end segments as the truncation grows, and induction of the finite residue s
 analytic-continuation step in `(2.10.1)--(2.10.6)`. No contour identity or `(xio)` premise was
 postulated, and the full Loop 4 endpoint, numerical Table 1 certificates, H6-E/G8, and RH remain
 open.
+
+Implementation commit `7bb3101bc9ecc4698416ec6bfa5d296494a07a46` passed public Lean Action CI
+run `29634900588`, build job `88055411542`, in `1m51s`. Evidence CI is pending.

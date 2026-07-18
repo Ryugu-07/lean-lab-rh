@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_4_PARTIAL_IMPLEMENTATION_CI_PENDING`
+Status: `ACTIVE_LOOP_4_PARTIAL_EVIDENCE_CI_PENDING`
 
 ## Target
 
@@ -142,7 +142,9 @@ run `29633356952`, build job `88051178220`, in `1m51s`, before Loop 4 proof-sour
 - forbidden proof-token, custom declaration, unsafe/opaque, and resource-relaxation scans: empty
 - `git diff --check`: passed
 - full `lake build`: passed, 8,707 jobs
-- public implementation and evidence CI: pending
+- implementation commit `7bb3101bc9ecc4698416ec6bfa5d296494a07a46` passed public CI run
+  `29634900588`, build job `88055411542`, in `1m51s`
+- public evidence CI: pending
 - Loop 4's full preregistered endpoint remains open; the campaign and persistent RH Goal remain
   active
 
