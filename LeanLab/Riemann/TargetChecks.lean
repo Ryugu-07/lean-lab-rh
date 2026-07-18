@@ -13,6 +13,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegel
 import LeanLab.Riemann.DeBruijnNewmanPolymathHeatKernel
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelContour
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelShift
+import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelSum
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1959,5 +1960,17 @@ example (N : ℕ) (s : ℂ) :
       ((N + 1 : ℕ) : ℂ) ^ (-s) +
         deBruijnNewmanRiemannSiegelRawIntegral (N + 1) s :=
   deBruijnNewmanRiemannSiegelRawIntegral_adjacent_shift N s
+
+example (N : ℕ) (s : ℂ) :
+    deBruijnNewmanRiemannSiegelRawIntegral 0 s =
+      (∑ k ∈ Finset.range N, ((k + 1 : ℕ) : ℂ) ^ (-s)) +
+        deBruijnNewmanRiemannSiegelRawIntegral N s :=
+  deBruijnNewmanRiemannSiegelRawIntegral_finite_shift N s
+
+example (N : ℕ) (s : ℂ) :
+    deBruijnNewmanRiemannSiegelR0N 0 s =
+      (∑ k ∈ Finset.range N, deBruijnNewmanRiemannSiegelR0Term (k + 1) s) +
+        deBruijnNewmanRiemannSiegelR0N N s :=
+  deBruijnNewmanRiemannSiegelR0N_finite_decomposition N s
 
 end LeanLab.Riemann

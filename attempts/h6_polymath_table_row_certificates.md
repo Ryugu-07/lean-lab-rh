@@ -260,6 +260,33 @@ run `29635161693`, build job `88056094834`, in `2m15s`. Loop 5 proof-source edit
 
 No Loop 6 proof source may be edited before this preregistration passes public Lean Action CI.
 
+Loop 6 preregistration commit `0e6ce9b44f72d81ddad115e2a953198bd43c50fd` passed public Lean Action
+CI run `29637526635`, build job `88062338513`, in `1m32s`. Loop 6 proof-source edits were then
+admitted.
+
+## Loop 6 local accounting
+
+- `classification`: `KNOWN_THEOREM_FORMALIZED`
+- `compiled_endpoints`:
+  `deBruijnNewmanRiemannSiegelRawIntegral_finite_shift` proves
+  `I_0(s)=sum_(k<N)(k+1)^(-s)+I_N(s)`, and
+  `deBruijnNewmanRiemannSiegelR0N_finite_decomposition` proves
+  `R_(0,0)(s)=sum_(k<N)r_(0,k+1)(s)+R_(0,N)(s)`
+- `compiled_spine`: natural-number induction uses only the public adjacent shift and
+  `Finset.sum_range_succ`; scalar distribution uses the compiled exact source definitions,
+  `mul_add`, and `Finset.mul_sum`
+- `assumption_frontier_after`: both finite decompositions are K0; no finite shift, abstract
+  telescoping identity, alternative prefactor, or `(xio)` statement is assumed
+- `hard_gap_after`: Titchmarsh `(2.10.1)--(2.10.6)` and `(xio)`, effective approximation, strict
+  finite-sum certificate, finite RH computation, compact barrier, H6-E/G8, and RH remain open
+- `hard_gap_delta`: 0
+- `route_infrastructure_delta`: 1
+- `local_audit`: standalone module, both exact TargetChecks witnesses, and both selected axiom
+  prints pass; the selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`;
+  forbidden scans and `git diff --check` are clean; the full 8,709-job build passes
+- `next_exact_gate`: preregister and attack the source auxiliary recurrence and analytic-
+  continuation chain in Titchmarsh `(2.10.1)--(2.10.6)` required for equation `(xio)`
+
 ## Loop 3 preregistration
 
 - `mode`: `LITERATURE`

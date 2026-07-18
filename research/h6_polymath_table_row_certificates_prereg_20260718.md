@@ -527,3 +527,20 @@ If successful, the next loop attacks the source auxiliary recurrence and analyti
 chain for Titchmarsh `(xio)`. If blocked, it records the first exact obstruction and strongest
 compiled prefix. The H6-Q1 campaign and persistent RH Goal remain active. No Loop 6 proof source
 may be edited before this preregistration passes public Lean Action CI.
+
+Loop 6 preregistration commit `0e6ce9b44f72d81ddad115e2a953198bd43c50fd` passed public Lean Action
+CI run `29637526635`, build job `88062338513`, in `1m32s`. Proof-source edits were then admitted.
+
+## Loop 6 local checkpoint
+
+`DeBruijnNewmanPolymathRiemannSiegelSum.lean` proves both fixed endpoints. The raw theorem inducts
+directly from the public adjacent contour shift, and the remainder theorem unfolds the exact
+source definitions and distributes the completed-zeta prefactor. The `N=0` base case and
+`Finset.range` successor term are compiler checked; no analytic premise remains or was added.
+
+Both exact witnesses pass. Both selected axiom prints contain only `propext`,
+`Classical.choice`, and `Quot.sound`; the forbidden scans and `git diff --check` are empty, and the
+full 8,709-job build passes. This is `KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`. Titchmarsh `(2.10.1)--(2.10.6)` and `(xio)`, the effective
+approximation, numerical certificates, H6-E/G8, and RH remain open. The next exact gate is the
+source auxiliary recurrence and analytic-continuation chain for `(xio)`.

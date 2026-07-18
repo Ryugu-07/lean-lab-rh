@@ -14,6 +14,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegel
 import LeanLab.Riemann.DeBruijnNewmanPolymathHeatKernel
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelContour
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelShift
+import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegelSum
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -949,6 +950,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanRiemannSiegelRawIntegral_adjacent_shift
       status := .proven
       note := "Loop 5 known-source contour infrastructure. A complex-linear pullback turns the crossed pole into c/z and the staggered finite source contour into an axis-aligned rectangle. Lean proves holomorphy of the dslope-supplied removable remainder, the exact finite one-pole identity, separate Gaussian vanishing of both short sides, and the infinite adjacent shift. The finite summation/prefactor transport, Titchmarsh (xio), effective approximation, numerical certificates, H6-E/G8, and RH remain open; hard_gap_delta=0 and route_infrastructure_delta=1. Implementation 580bc73436b1571bb6096d2c85071562481598d0 passed public CI run 29637266988, build job 88061673433, in 2m2s." },
+    { id := "H6.debruijn-newman.polymath-riemann-siegel-finite-decomposition"
+      tier := .tier2
+      title := "Telescope the finite Riemann--Siegel source decomposition"
+      statement :=
+        "For every natural N and complex s, prove I_0(s)=sum_(k<N)(k+1)^(-s)+I_N(s) and transport this identity exactly to R_(0,0)(s)=sum_(k<N)r_(0,k+1)(s)+R_(0,N)(s)."
+      leanName := some ``deBruijnNewmanRiemannSiegelR0N_finite_decomposition
+      status := .proven
+      note := "Loop 6 known-source finite algebra. Lean inducts from the public adjacent contour shift with exact Finset.range indexing and distributes the compiled completed-zeta prefactor. Titchmarsh (xio), the effective approximation, numerical certificates, H6-E/G8, and RH remain open; hard_gap_delta=0 and route_infrastructure_delta=1." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

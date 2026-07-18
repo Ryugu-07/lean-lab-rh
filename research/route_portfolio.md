@@ -2215,3 +2215,17 @@ shift and distribute the compiled exact prefactor; an abstract telescoping subst
 identity without prefactor transport is rejected. Public preregistration CI is required before
 proof-source edits. Success opens the Titchmarsh `(2.10.1)--(2.10.6)` auxiliary recurrence and
 analytic-continuation edge for `(xio)`; the H6-Q1 campaign and RH Goal remain active.
+
+Loop 6 preregistration commit `0e6ce9b44f72d81ddad115e2a953198bd43c50fd` passed public CI run
+`29637526635`, build job `88062338513`, in `1m32s`.
+
+### Loop 6 local finite-decomposition checkpoint
+
+Lean now proves the exact raw finite shift and the exact source-prefactor decomposition. The first
+is a natural-number induction from the public adjacent shift; the second unfolds `R_(0,N)` and
+`r_(0,n)` and distributes the compiled prefactor over the finite sum. Both exact witnesses and
+both selected standard-only axiom prints pass, the forbidden scans are empty, and the full
+8,709-job build succeeds. This is known-source infrastructure with `hard_gap_delta=0` and
+`route_infrastructure_delta=1`. The first remaining source edge is the Titchmarsh auxiliary
+recurrence and analytic-continuation chain for `(xio)`; the downstream effective approximation,
+certificates, H6-E/G8, and RH remain open.
