@@ -1,0 +1,151 @@
+# H6 Polymath Table-Row Certificates Preregistration
+
+Date: 2026-07-18
+
+Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
+
+Mode: `LITERATURE`
+
+Status: `PREREGISTERED_PENDING_PUBLIC_CI`
+
+## Exact mathematical endpoint
+
+For
+
+```text
+t0 = 93/500,  X = 5*10^12 + 194858,  y0 = 16733/100000,
+```
+
+prove unconditionally the time-zero initial region, the time-`t0` final region, and the full
+intermediate-time barrier region from Polymath Table 1. Compose them with the already compiled
+Polymath criterion to prove that every zero of `H_(1/5)` is real.
+
+## Proposed Lean statements
+
+```lean
+theorem deBruijnNewmanPolymathInitialRegionZeroFree_table_row :
+    deBruijnNewmanPolymathInitialRegionZeroFree
+      (93 / 500) (5 * 10 ^ 12 + 194858) (16733 / 100000)
+
+theorem deBruijnNewmanPolymathFinalRegionZeroFree_table_row :
+    deBruijnNewmanPolymathFinalRegionZeroFree
+      (93 / 500) (5 * 10 ^ 12 + 194858) (16733 / 100000)
+
+theorem deBruijnNewmanPolymathBarrierRegionZeroFree_table_row :
+    deBruijnNewmanPolymathBarrierRegionZeroFree
+      (93 / 500) (5 * 10 ^ 12 + 194858) (16733 / 100000)
+
+theorem deBruijnNewmanAllZerosReal_one_fifth :
+    deBruijnNewmanAllZerosReal (1 / 5)
+```
+
+All displayed numerals are real. Binder order and final names may change, but the three closed
+regions, all intermediate times, the full unbounded final region, and the hypothesis-free final
+theorem may not be weakened.
+
+## Loop 1 fixed subedge
+
+Define a source-aligned finite-height RH predicate using project `IsNontrivialZero`, positive
+imaginary ordinate, and the critical line. Prove the general transport theorem and its exact
+Table 1 specialization:
+
+```lean
+def riemannHypothesisUpTo (T : Real) : Prop :=
+  forall s : Complex, IsNontrivialZero s ->
+    0 < s.im -> s.im <= T -> OnCriticalLine s
+
+theorem deBruijnNewmanPolymathInitialRegionZeroFree_of_riemannHypothesisUpTo
+    {t0 X y0 T : Real}
+    (hT : X / 2 <= T) (hrad : 0 < y0^2 + 2*t0)
+    (hfinite : riemannHypothesisUpTo T) :
+    deBruijnNewmanPolymathInitialRegionZeroFree t0 X y0
+
+theorem deBruijnNewmanPolymathInitialRegionZeroFree_table_row_of_rh_up_to_three_trillion
+    (hfinite : riemannHypothesisUpTo (3 * 10^12)) :
+    deBruijnNewmanPolymathInitialRegionZeroFree
+      (93 / 500) (5 * 10^12 + 194858) (16733 / 100000)
+```
+
+The `x=0` boundary must be discharged by the compiled positivity/nonvanishing of `H_t(i*y)`, not
+by silently strengthening the finite-height predicate from `0<Im(s)` to `0<=Im(s)`.
+
+This Loop 1 subedge is not campaign success and does not assert the Platt--Trudgian computation.
+
+## Source alignment
+
+- Polymath Theorem 1.2(i) requires no zeta zeros in the specified finite rectangle. Under
+  `H_0(z)=(1/8)xi((1+i*z)/2)`, a point `z=x+i*y` has zeta ordinate `x/2`; the exact Table 1 bound
+  is therefore covered by `X/2 < 3*10^12`.
+- The lower imaginary boundary is `sqrt(y0^2+2*t0)>0`, so a transform zero in the initial region
+  would map to a finite-height nontrivial zero off the critical line.
+- Platt--Trudgian's finite-height result is a computational theorem to be reconstructed by a
+  kernel-checkable certificate. It is not imported as an axiom or accepted because a paper says
+  that the computation ran.
+- Polymath Theorem 1.3 and Corollary 1.4 are the fixed source for the final and barrier
+  nonvanishing calculations. The public Arb output at external commit `5fde84e` is never a
+  premise.
+
+## Fixed proof architecture
+
+1. Compile the exact finite-height RH-to-initial-region transport and specialized rational
+   arithmetic.
+2. Define proof-producing rational interval certificates for the real and complex elementary
+   functions required by the Polymath approximation. Certificate checking must reduce to kernel
+   computation and proved Taylor/remainder bounds; `native_decide` and trusted foreign calls are
+   forbidden.
+3. Formalize the source-normalized effective Riemann--Siegel approximation and its explicit
+   `e_A+e_B+e_C` error bound on `0<t<=1/2`, `0<=y<=1`, `x>=200`.
+4. Certify the unbounded final region by a finite lower-range certificate plus a proved analytic
+   tail. A sampled finite grid without derivative/remainder control is failure.
+5. Certify the closed spacetime barrier by a finite rectangle cover, boundary nonvanishing,
+   derivative bounds, and an argument-principle or Rouche theorem connecting each exact
+   certificate to zero-freeness of the whole rectangle.
+6. Reconstruct the finite RH computation up to `3*10^12`, including zero location and complete
+   zero count, or an independently checkable equivalent certificate.
+7. Compose the three unconditional predicates with
+   `deBruijnNewmanAllZerosReal_one_fifth_of_polymath_table_row`.
+
+The order of steps 2--6 may change according to dependency discovery. None may be replaced by an
+unproved numerical premise.
+
+## Success and falsification
+
+Success requires all four hypothesis-free statements above, exact TargetChecks, selected
+transitive axiom prints, empty forbidden scans, standalone and full builds, and public
+implementation/evidence CI.
+
+Falsification means an exact table boundary is not covered by the cited computation, a published
+error or derivative bound is false in the compiled normalization, a stored winding output does
+not imply zero-freeness under its documented assumptions, or a kernel-checked counterexample is
+found. Record the exact witness and an `OBS` node rather than weakening the endpoint.
+
+Local stop or pivot is allowed after the exact first unsupported source step and failed proof
+architectures are recorded. It does not pause the persistent RH Goal.
+
+## Known obstacles
+
+- The finite RH verification covers trillions of height and needs a completeness/Turing count,
+  not merely a list of approximate zeros.
+- The final-region approximation uses up to `N=630783` terms and transcendental expressions.
+- The barrier output contains hundreds of time rectangles and millions of mesh evaluations; the
+  text summary is not itself a certificate.
+- The public computational repository has no usable license grant, so its implementation cannot
+  be vendored. The mathematical formulas may be independently reimplemented from the paper.
+- Mathlib has no ready-made proof-producing Arb bridge or general certified complex interval
+  tactic for this workload.
+
+## DAG and accounting
+
+- `node_id`: H6-Q1
+- `relation_to_RH`: strict positive-time upper bound, weaker than RH
+- `assumption_frontier_before`: exact source `H_t`, time-zero xi bridge, all-real-zero framework,
+  forward preservation, closedness, strip contraction, and the complete conditional Polymath
+  three-region criterion are K0
+- `hard_gap_before`: all three Table 1 certificates, H6-E/G8, and RH are open in Lean
+- `hard_gap_after_on_success`: the known unconditional theorem `Lambda<=1/5` is K0; H6-E/G8 and
+  RH remain open
+- `expected_hard_gap_delta`: 0 for H6-E/G8 and RH; this reconstructs a known theorem
+- `expected_certified_upper_frontier_delta`: 1
+- `expected_route_infrastructure_delta`: 1
+
+No Lean proof source may be edited before this preregistration passes public Lean Action CI.

@@ -2043,3 +2043,25 @@ certificates, the unconditional `0.2` bound, H6-E/G8, or RH. Exact selection and
 are in `route_selection_post_h6_general_strip_20260717.md` and
 `h6_polymath_zero_free_criterion_prereg_20260717.md`. Public preregistration CI must pass before
 Lean proof-source edits.
+
+## Route Selection: Polymath Table 1 Certificates
+
+Date: 2026-07-18
+
+The conditional Polymath criterion is now publicly closed with both simple and repeated first
+contacts covered. Fresh selection therefore chooses
+`LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01` and freezes the unconditional second
+Table 1 row as one campaign endpoint: prove all three specialized region predicates and then
+`deBruijnNewmanAllZerosReal (1/5)` without hypotheses.
+
+The source audit separates three genuine certificate layers: finite-height RH through
+`3*10^12`, an effective Riemann--Siegel lower-bound certificate for the final region, and a
+closed-spacetime winding/mesh certificate for the barrier. The external Arb repository at commit
+`5fde84e11ba80adad5c225a4eaa0a28b68dc925d` supplies navigation evidence but grants no software
+license and no kernel-checkable proof object. Its output is not a premise.
+
+Loop 1 attacks the exact finite-height-RH-to-initial-region transport, including `x=0`, the
+`x/2` ordinate, and exact Table 1 height arithmetic. This is a checkpoint only; campaign success
+requires all three unconditional certificates and the no-hypothesis `1/5` endpoint. Details are
+in `route_selection_post_h6_polymath_criterion_20260718.md` and
+`h6_polymath_table_row_certificates_prereg_20260718.md`.
