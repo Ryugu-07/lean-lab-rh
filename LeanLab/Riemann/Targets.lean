@@ -856,6 +856,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``exists_deBruijnNewmanBackwardHermite_aeval_eq_zero_im_pos
       status := .proven
       note := "Loop 7 of campaign LITERATURE-20260717-H6-POLYMATH-ZERO-FREE-CRITERION-01 proves coefficient nonnegativity, exact degree and parity, strict positivity on the positive real axis, exclusion of nonzero real roots, and the even/odd algebraic-closedness split. This validates the finite Hermite model only. Compact-uniform scaled convergence and zero transfer to the actual source heat family remain open, so it does not yet prove backward upper linear escape, the Polymath criterion, Lambda <= 0.2, or RH. Implementation commit 7ac27aa86cd176ef6172b79b3b854724b1243f7a passed public Lean Action CI run 29582740550, build job 87892131096." },
+    { id := "H6.debruijn-newman.repeated-zero-gaussian-scaling"
+      tier := .tier2
+      title := "Represent repeated-zero backward scaling by Gaussian convolution"
+      statement :=
+        "Prove that a repeated zero has finite multiplicity at least two and a global nonvanishing entire residual factor, prove exact Gaussian backward heat evolution, and derive the exact square-root-scale integral representation at the repeated zero."
+      leanName := some ``exists_deBruijnNewmanH_repeated_zero_gaussian_scaling
+      status := .proven
+      note := "Loop 8 of campaign LITERATURE-20260717-H6-POLYMATH-ZERO-FREE-CRITERION-01 uses analytic order and iterated divided slopes for the global factorization, a horizontal-strip complex-cosine bound for product integrability, the variance-two Gaussian characteristic function, and Fubini to prove integral_deBruijnNewmanH_gaussian_shift. The resulting scaling identity is exact for every real scale r and complex xi. Identification of its r->0 limit with the compiled backward Hermite polynomial, compact-uniform convergence, and zero transfer remain open, so backward upper linear escape, the Polymath criterion, Lambda <= 0.2, and RH are not claimed." },
     { id := "H6.debruijn-newman.polymath-zero-free-criterion"
       tier := .tier2
       title := "Formalize the Polymath three-region zero-free criterion"
@@ -863,7 +871,7 @@ def rhTargets : List ResearchTarget :=
         "From the initial, final, and barrier zero-free regions, prove the strict time-t0 canopy, the resulting all-real endpoint at t0+y0^2/2, and the exact Table 1 second-row corollary at time 1/5."
       leanName := none
       status := .inProgress
-      note := "The compact first-contact construction and complete simple-contact force contradiction compile. The repeated-contact consumer also compiles, and the finite backward Hermite model now has a certified strict upper-half-plane zero. The remaining source interface is compact-uniform square-root-scaled convergence with zero transfer, strong enough to prove deBruijnNewmanHasBackwardUpperLinearEscape_of_repeated. The three region certificates, criterion endpoint, Lambda <= 0.2, H6-E/G8, and RH remain open." },
+      note := "The compact first-contact construction and complete simple-contact force contradiction compile. The repeated-contact consumer, finite backward Hermite upper root, finite analytic multiplicity, global entire residual factor, exact Gaussian backward heat evolution, and exact square-root-scale integral representation now compile. The remaining source interface is identification and compact-uniform convergence of that integral to the backward Hermite model, followed by zero transfer strong enough to prove deBruijnNewmanHasBackwardUpperLinearEscape_of_repeated. The three region certificates, criterion endpoint, Lambda <= 0.2, H6-E/G8, and RH remain open." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

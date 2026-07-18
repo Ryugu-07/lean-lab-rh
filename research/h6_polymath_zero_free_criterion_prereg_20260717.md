@@ -189,3 +189,15 @@ and failed proof architectures in `attempts/` and the obstruction map, then retu
 selection. The persistent RH Goal remains active in every local outcome.
 
 No Lean proof source may be edited before this preregistration passes public Lean Action CI.
+
+## Loop 8 proof-source checkpoint (2026-07-18)
+
+The repeated-contact branch now has compiler-checked finite analytic multiplicity, a global entire
+residual factor, exact variance-two Gaussian backward heat evolution, and an exact all-scale
+square-root representation. The remaining preregistered source interface is narrower but still
+open: identify the Gaussian moment polynomial with the compiled backward Hermite model, prove the
+required compact-uniform limit, transfer a strict upper-half-plane model root to an actual heat
+zero, and derive `deBruijnNewmanHasBackwardUpperLinearEscape_of_repeated`.
+
+This checkpoint does not satisfy campaign success. The three source region certificates, the
+Polymath criterion endpoint, `Lambda<=0.2`, H6-E/G8, and RH remain open.

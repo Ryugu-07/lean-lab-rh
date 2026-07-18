@@ -44,6 +44,7 @@ Status: `ACTIVE_PROOF_ATTEMPT`
 | 5 | `PROOF-ATTEMPT` | Publicized the multiplicity-preserving conjugation divisor equivalence, proved the corresponding negation equivalence from analytic-order invariance, and exposed the regularized force `tsum`. Proved the abstract quarter-of-four-orbits reindexing identity and specialized it to `deBruijnNewmanRegularizedZeroForce`. For non-contact orbits, regularization cancels exactly; the source cross-multiplication inequality, the two conjugate-pair estimates, the fourfold imaginary nonpositivity theorem, and the strip-or-horizontal-escape geometry all compile. For a contact representative, the exact orbit sum compiles as `-1/(2r) + 1/(r-conj r) + 1/(r+conj r)`. Implementation commit `90fdf2b9039da2a9cdb07758b3a24ab335958018` passed public CI run `29578060529`, job `87876981475`, in `2m55s`. | Isolate the four contact divisor indices using the simple fiber cardinality and their pairwise-distinct values; remove that finite set from the summable imaginary orbit series, prove the complement `tsum` nonpositive, and close the strict force inequality. |
 | 6 | `PROOF-ATTEMPT` | Made the simple-zero divisor fiber cardinality public. Proved the contact symmetry orbit has exactly four indices, the orbit term is invariant under both generators, and its finite sum is four times the contact term. Removed this Finset from the absolutely convergent imaginary `tsum`; every complementary orbit is nonpositive, yielding `deBruijnNewmanRegularizedZeroForce_im_lt_of_simple_contact_escape`. Proved every divisor zero has a first-quadrant symmetry representative. At the earliest bad time, boundary rigidity excludes higher zeros with `|Re|<=X`, while the barrier excludes the following horizontal buffer; this supplies the force theorem's escape premise. The compiled theorem `deBruijnNewmanPolymath_firstBadWitness_not_simple` therefore closes the complete simple-contact branch from the three region certificates. Exact TargetChecks and seven selected axiom prints pass with the standard trust base only. Implementation commit `cedbd4d92dcdd05d76b868a95d6fcb2479a3db96` passed public CI run `29580228443`, job `87883895459`, in `2m33s`. | Keep the campaign active. Attack the sole remaining source interface: repeated-zero backward Hermite splitting strong enough to imply `deBruijnNewmanHasBackwardUpperLinearEscape`; do not claim the final criterion before that interface compiles. |
 | 7 | `PROOF-ATTEMPT` | Added the source-normalized backward Hermite family `P_0=1`, `P_(n+1)=X*P_n+2*P_n'`. Lean proves coefficient nonnegativity, exact degree and monicity, parity vanishing, strict positivity of the even constant and odd linear coefficients, `P_n(-X)=(-1)^n P_n(X)`, positivity on the positive real axis, and exclusion of every nonzero real root. Algebraic closedness then gives a nonzero root directly for even degree and through `P_n.divX` for odd degree; negation places a root strictly in the upper half-plane. The exact theorem `exists_deBruijnNewmanBackwardHermite_aeval_eq_zero_im_pos` compiles for every `n>=2`. Exact TargetCheck and three selected axiom prints pass with only `propext`, `Classical.choice`, and `Quot.sound`. This proves the finite splitting model, not its realization by actual heat-family zeros. Implementation commit `7ac27aa86cd176ef6172b79b3b854724b1243f7a` passed public CI run `29582740550`, job `87892131096`, in `2m05s`. | Keep the campaign active. The next exact gate is a compact-uniform `sqrt(t-s)` scaled limit from a repeated source-family zero to a nonzero scalar multiple of `P_m`, followed by a zero-transfer theorem in a small disk around a strict upper-half-plane model root. Only then may the linear-escape interface be claimed. |
+| 8 | `PROOF-ATTEMPT` | Lean now extracts a finite analytic multiplicity `m>=2` at every repeated source zero and upgrades the local Taylor factor to a global entire factor `H_t(w)=(w-z)^m g(w)` with `g(z)!=0`, using iterated `dslope` and the analytic identity theorem. A new sharp strip estimate `norm(cos w)<=exp(abs(w.im))`, the variance-two Gaussian characteristic function, and the existing theta-kernel majorant prove product integrability and the exact semigroup identity `integral H_t(w+r*y) d gaussianReal(0,2)=H_(t-r^2)(w)`. Combining both gives the exact all-scale representation `H_(t-r^2)(z+r*xi)=r^m integral (xi+y)^m g(z+r*(xi+y)) d gaussianReal(0,2)`. The source file, exact TargetChecks, four selected axiom prints, forbidden scans, `git diff --check`, and the full 8,703-job build pass locally; all selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`. Public implementation CI is pending at this checkpoint. | Keep the campaign active. The former local-factor/Fubini gap is closed. Next prove that the Gaussian moment polynomial is exactly the compiled backward Hermite `P_m`, establish compact-uniform convergence of the residual factor to `g(z)`, and transfer one strict upper-half-plane model root to an actual zero. Do not claim backward upper linear escape before that transfer compiles. |
 
 ## Exact Remaining Source Interface
 
@@ -61,11 +62,13 @@ theorem deBruijnNewmanHasBackwardUpperLinearEscape_of_repeated
     deBruijnNewmanHasBackwardUpperLinearEscape t z
 ```
 
-or a stronger Hermite asymptotic theorem implying it. Loop 7 has certified the required model
-root for every possible multiplicity `m>=2`. It has not proved that a repeated zero has finite
-multiplicity `m`, the compact-uniform scaled asymptotic, or zero transfer from the model disk.
-Jensen persistence without that scaled limit is insufficient: it preserves a nearby zero but
-gives no one-sided imaginary displacement.
+or a stronger Hermite asymptotic theorem implying it. Loop 7 certified the required model root for
+every possible multiplicity `m>=2`. Loop 8 has now proved finite multiplicity, a global entire
+residual factor, exact Gaussian backward heat evolution, and the exact all-scale integral
+representation. It has not yet identified the Gaussian moment integral with `P_m`, proved the
+compact-uniform residual-factor limit, or transferred a zero from the model disk. Jensen
+persistence without that scaled limit is insufficient: it preserves a nearby zero but gives no
+one-sided imaginary displacement.
 
 ## Current Accounting
 
@@ -73,7 +76,7 @@ gives no one-sided imaginary displacement.
 - `hard_gap_after`: unchanged
 - `hard_gap_delta`: 0
 - `classification`: `ACTIVE_PROOF_ATTEMPT_CHECKPOINT`
-- `next_gate`: finite analytic order, compact-uniform square-root-scaled convergence to the
-  compiled backward Hermite polynomial, and zero transfer implying
+- `next_gate`: identify the Gaussian moment polynomial with the compiled backward Hermite
+  polynomial, prove compact-uniform residual-factor convergence, and transfer a zero to imply
   `deBruijnNewmanHasBackwardUpperLinearEscape`
 - `persistent_goal`: active

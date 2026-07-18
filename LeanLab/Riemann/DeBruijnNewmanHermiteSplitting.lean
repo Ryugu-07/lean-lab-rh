@@ -1,6 +1,7 @@
 import LeanLab.Riemann.DeBruijnNewmanDynamics
 import Mathlib.Analysis.Complex.Polynomial.Basic
 import Mathlib.FieldTheory.IsAlgClosed.Basic
+import Mathlib.Probability.Distributions.Gaussian.Real
 
 set_option linter.style.header false
 
@@ -19,6 +20,403 @@ namespace LeanLab.Riemann
 noncomputable section
 
 open Polynomial
+
+theorem analyticOnNhd_deBruijnNewmanH (t : ℝ) :
+    AnalyticOnNhd ℂ (deBruijnNewmanH t) (Set.univ : Set ℂ) :=
+  analyticOnNhd_univ_iff_differentiable.mpr (differentiable_deBruijnNewmanH t)
+
+theorem analyticOrderAt_deBruijnNewmanH_ne_top (t : ℝ) (z : ℂ) :
+    analyticOrderAt (deBruijnNewmanH t) z ≠ ⊤ := by
+  intro htop
+  have hlocal : deBruijnNewmanH t =ᶠ[nhds z] (0 : ℂ → ℂ) := by
+    filter_upwards [analyticOrderAt_eq_top.mp htop] with w hw
+    simpa using hw
+  have hglobal : deBruijnNewmanH t = (0 : ℂ → ℂ) :=
+    (analyticOnNhd_deBruijnNewmanH t).eq_of_eventuallyEq analyticOnNhd_const hlocal
+  have hzero := congrFun hglobal 0
+  exact deBruijnNewmanH_zero_ne_zero t (by simpa using hzero)
+
+/-- A repeated source-family zero has finite analytic multiplicity at least two and an analytic
+nonvanishing residual factor. This is the local input for the square-root heat scaling. -/
+theorem exists_deBruijnNewmanH_repeated_zero_factor
+    {t : ℝ} {z : ℂ} (hz : deBruijnNewmanH t z = 0)
+    (hrepeated : deriv (deBruijnNewmanH t) z = 0) :
+    ∃ (m : ℕ) (g : ℂ → ℂ), 2 ≤ m ∧ AnalyticAt ℂ g z ∧ g z ≠ 0 ∧
+      deBruijnNewmanH t =ᶠ[nhds z] fun w ↦ (w - z) ^ m * g w := by
+  have hanalytic : AnalyticAt ℂ (deBruijnNewmanH t) z :=
+    (differentiable_deBruijnNewmanH t).analyticAt z
+  have hfinite := analyticOrderAt_deBruijnNewmanH_ne_top t z
+  let m := analyticOrderNatAt (deBruijnNewmanH t) z
+  have horder : ((2 : ℕ) : ℕ∞) ≤ analyticOrderAt (deBruijnNewmanH t) z := by
+    rw [natCast_le_analyticOrderAt_iff_iteratedDeriv_eq_zero hanalytic]
+    intro i hi
+    interval_cases i
+    · simpa using hz
+    · simpa [iteratedDeriv_one] using hrepeated
+  have hm : 2 ≤ m := by
+    have hcast := Nat.cast_analyticOrderNatAt hfinite
+    rw [← hcast] at horder
+    exact_mod_cast horder
+  obtain ⟨g, hganalytic, hgzero, hfactor⟩ :=
+    (hanalytic.analyticOrderNatAt_eq_iff hfinite).mp (show m = m from rfl)
+  exact ⟨m, g, hm, hganalytic, hgzero, hfactor⟩
+
+/-- A repeated source-family zero admits a global entire residual factor. The iterated divided
+difference gives a canonical extension through the zero, so the factorization remains valid away
+from the local Taylor neighborhood as well. -/
+theorem exists_deBruijnNewmanH_repeated_zero_entire_factor
+    {t : ℝ} {z : ℂ} (hz : deBruijnNewmanH t z = 0)
+    (hrepeated : deriv (deBruijnNewmanH t) z = 0) :
+    ∃ (m : ℕ) (g : ℂ → ℂ), 2 ≤ m ∧ Differentiable ℂ g ∧ g z ≠ 0 ∧
+      ∀ w, deBruijnNewmanH t w = (w - z) ^ m * g w := by
+  obtain ⟨p, hp⟩ : ∃ p : FormalMultilinearSeries ℂ ℂ ℂ,
+      HasFPowerSeriesAt (deBruijnNewmanH t) p z :=
+    (differentiable_deBruijnNewmanH t).analyticAt z
+  have hpne : p ≠ 0 := by
+    intro hpzero
+    have hlocal : deBruijnNewmanH t =ᶠ[nhds z] (0 : ℂ → ℂ) := by
+      filter_upwards [hp.locally_zero_iff.mpr hpzero] with w hw
+      simpa using hw
+    have hglobal : deBruijnNewmanH t = (0 : ℂ → ℂ) :=
+      (analyticOnNhd_deBruijnNewmanH t).eq_of_eventuallyEq analyticOnNhd_const hlocal
+    have hzero := congrFun hglobal 0
+    exact deBruijnNewmanH_zero_ne_zero t (by simpa using hzero)
+  have hm : 2 ≤ p.order := by
+    by_contra hnot
+    have hlt : p.order < 2 := Nat.lt_of_not_ge hnot
+    interval_cases horder : p.order
+    · have hp0 : p 0 = 0 := by
+        rw [← FormalMultilinearSeries.coeff_eq_zero]
+        rw [FormalMultilinearSeries.coeff, hp.coeff_zero]
+        exact hz
+      exact p.apply_order_ne_zero hpne (horder ▸ hp0)
+    · have hp1 : p 1 = 0 := by
+        rw [← FormalMultilinearSeries.coeff_eq_zero]
+        change p 1 (fun _ ↦ 1) = 0
+        rw [← hp.deriv]
+        exact hrepeated
+      exact p.apply_order_ne_zero hpne (horder ▸ hp1)
+  let g : ℂ → ℂ := (Function.swap dslope z)^[p.order] (deBruijnNewmanH t)
+  have hgdiff : Differentiable ℂ g := by
+    have hiterate : ∀ (n : ℕ) (f : ℂ → ℂ), Differentiable ℂ f →
+        Differentiable ℂ ((Function.swap dslope z)^[n] f) := by
+      intro n
+      induction n with
+      | zero => simpa
+      | succ n ih =>
+          intro f hf
+          rw [Function.iterate_succ_apply']
+          rw [← differentiableOn_univ]
+          exact (differentiableOn_dslope (s := Set.univ) univ_mem).mpr
+            (by simpa [differentiableOn_univ] using ih f hf)
+    exact hiterate p.order (deBruijnNewmanH t) (differentiable_deBruijnNewmanH t)
+  refine ⟨p.order, g, hm, hgdiff, ?_, ?_⟩
+  · exact hp.iterate_dslope_fslope_ne_zero hpne
+  · intro w
+    simpa [g, smul_eq_mul] using hp.eq_pow_order_mul_iterate_dslope w
+
+/-- The complex cosine grows only with the imaginary part of its argument. This horizontal-strip
+bound is the domination input for averaging the heat family over real Gaussian translations. -/
+theorem norm_complex_cos_le_exp_abs_im (w : ℂ) :
+    ‖Complex.cos w‖ ≤ Real.exp |w.im| := by
+  have hsum : 2 * ‖Complex.cos w‖ ≤ Real.exp (-w.im) + Real.exp w.im := by
+    calc
+      2 * ‖Complex.cos w‖ = ‖2 * Complex.cos w‖ := by simp
+      _ = ‖Complex.exp (w * I) + Complex.exp (-w * I)‖ := by
+        rw [Complex.two_cos]
+      _ ≤ ‖Complex.exp (w * I)‖ + ‖Complex.exp (-w * I)‖ := norm_add_le _ _
+      _ = Real.exp (-w.im) + Real.exp w.im := by
+        simp [Complex.norm_exp]
+  have hneg : Real.exp (-w.im) ≤ Real.exp |w.im| :=
+    Real.exp_le_exp.mpr (neg_le_abs w.im)
+  have hpos : Real.exp w.im ≤ Real.exp |w.im| :=
+    Real.exp_le_exp.mpr (le_abs_self w.im)
+  linarith
+
+/-- The centered Gaussian of variance two has Fourier transform `exp (-a²)`. -/
+theorem integral_cexp_mul_I_gaussianReal_zero_two (a : ℝ) :
+    ∫ y : ℝ, Complex.exp (a * y * I) ∂ProbabilityTheory.gaussianReal 0 2 =
+      Complex.exp (-(a : ℂ) ^ 2) := by
+  rw [← MeasureTheory.charFun_apply_real,
+    ProbabilityTheory.charFun_gaussianReal]
+  congr 1
+  push_cast
+  ring
+
+theorem integrable_cexp_mul_I_gaussianReal_zero_two (a : ℝ) :
+    MeasureTheory.Integrable (fun y : ℝ ↦ Complex.exp (a * y * I))
+      (ProbabilityTheory.gaussianReal 0 2) := by
+  have h := BoundedContinuousFunction.integrable (ProbabilityTheory.gaussianReal 0 2)
+    (BoundedContinuousFunction.innerProbChar a)
+  apply h.congr
+  filter_upwards with y
+  simp only [BoundedContinuousFunction.innerProbChar_apply]
+  congr 1
+  rw [Real.inner_apply]
+  push_cast
+  ring
+
+/-- Real cosine and sine averages under the centered variance-two Gaussian. -/
+theorem integral_cos_gaussianReal_zero_two (a : ℝ) :
+    ∫ y : ℝ, Real.cos (a * y) ∂ProbabilityTheory.gaussianReal 0 2 =
+      Real.exp (-a ^ 2) := by
+  have hre :
+      (∫ y : ℝ, (Complex.exp (a * y * I)).re
+          ∂ProbabilityTheory.gaussianReal 0 2) =
+        (∫ y : ℝ, Complex.exp (a * y * I)
+          ∂ProbabilityTheory.gaussianReal 0 2).re :=
+    integral_re (integrable_cexp_mul_I_gaussianReal_zero_two a)
+  rw [integral_cexp_mul_I_gaussianReal_zero_two] at hre
+  have hleft (y : ℝ) : (Complex.exp (a * y * I)).re = Real.cos (a * y) := by
+    have harg : (a : ℂ) * y * I = ((a * y : ℝ) : ℂ) * I := by
+      push_cast
+      rfl
+    rw [harg]
+    exact Complex.exp_ofReal_mul_I_re (a * y)
+  have hright : (Complex.exp (-(a : ℂ) ^ 2)).re = Real.exp (-a ^ 2) := by
+    have harg : -(a : ℂ) ^ 2 = ((-a ^ 2 : ℝ) : ℂ) := by
+      push_cast
+      rfl
+    rw [harg]
+    exact Complex.exp_ofReal_re (-a ^ 2)
+  simpa only [hleft, hright] using hre
+
+theorem integral_sin_gaussianReal_zero_two (a : ℝ) :
+    ∫ y : ℝ, Real.sin (a * y) ∂ProbabilityTheory.gaussianReal 0 2 = 0 := by
+  have him :
+      (∫ y : ℝ, (Complex.exp (a * y * I)).im
+          ∂ProbabilityTheory.gaussianReal 0 2) =
+        (∫ y : ℝ, Complex.exp (a * y * I)
+          ∂ProbabilityTheory.gaussianReal 0 2).im :=
+    integral_im (integrable_cexp_mul_I_gaussianReal_zero_two a)
+  rw [integral_cexp_mul_I_gaussianReal_zero_two] at him
+  have hleft (y : ℝ) : (Complex.exp (a * y * I)).im = Real.sin (a * y) := by
+    have harg : (a : ℂ) * y * I = ((a * y : ℝ) : ℂ) * I := by
+      push_cast
+      rfl
+    rw [harg]
+    exact Complex.exp_ofReal_mul_I_im (a * y)
+  have hright : (Complex.exp (-(a : ℂ) ^ 2)).im = 0 := by
+    have harg : -(a : ℂ) ^ 2 = ((-a ^ 2 : ℝ) : ℂ) := by
+      push_cast
+      rfl
+    rw [harg]
+    exact Complex.exp_ofReal_im (-a ^ 2)
+  simpa only [hleft, hright] using him
+
+/-- Gaussian averaging of a complex cosine after a real translation. -/
+theorem integral_complex_cos_gaussianReal_shift (w : ℂ) (r u : ℝ) :
+    ∫ y : ℝ, Complex.cos ((w + (r * y : ℝ)) * (u : ℂ))
+        ∂ProbabilityTheory.gaussianReal 0 2 =
+      (Real.exp (-(r * u) ^ 2) : ℂ) * Complex.cos (w * (u : ℂ)) := by
+  let μ := ProbabilityTheory.gaussianReal 0 2
+  let a := r * u
+  have hexp := integrable_cexp_mul_I_gaussianReal_zero_two a
+  have hcos_point (y : ℝ) :
+      (Complex.exp (a * y * I)).re = Real.cos (a * y) := by
+    have harg : (a : ℂ) * y * I = ((a * y : ℝ) : ℂ) * I := by
+      push_cast
+      rfl
+    rw [harg]
+    exact Complex.exp_ofReal_mul_I_re (a * y)
+  have hsin_point (y : ℝ) :
+      (Complex.exp (a * y * I)).im = Real.sin (a * y) := by
+    have harg : (a : ℂ) * y * I = ((a * y : ℝ) : ℂ) * I := by
+      push_cast
+      rfl
+    rw [harg]
+    exact Complex.exp_ofReal_mul_I_im (a * y)
+  have hcosR : MeasureTheory.Integrable (fun y : ℝ ↦ Real.cos (a * y)) μ :=
+    hexp.re.congr (MeasureTheory.ae_of_all μ hcos_point)
+  have hsinR : MeasureTheory.Integrable (fun y : ℝ ↦ Real.sin (a * y)) μ :=
+    hexp.im.congr (MeasureTheory.ae_of_all μ hsin_point)
+  have hcosC : MeasureTheory.Integrable (fun y : ℝ ↦ (Real.cos (a * y) : ℂ)) μ :=
+    hcosR.ofReal
+  have hsinC : MeasureTheory.Integrable (fun y : ℝ ↦ (Real.sin (a * y) : ℂ)) μ :=
+    hsinR.ofReal
+  have hpoint (y : ℝ) :
+      Complex.cos ((w + (r * y : ℝ)) * (u : ℂ)) =
+        Complex.cos (w * (u : ℂ)) * (Real.cos (a * y) : ℂ) -
+          Complex.sin (w * (u : ℂ)) * (Real.sin (a * y) : ℂ) := by
+    have harg :
+        (w + (r * y : ℝ)) * (u : ℂ) =
+          w * (u : ℂ) + ((a * y : ℝ) : ℂ) := by
+      dsimp [a]
+      push_cast
+      ring
+    rw [harg, Complex.cos_add, ← Complex.ofReal_cos, ← Complex.ofReal_sin]
+  rw [MeasureTheory.integral_congr_ae (MeasureTheory.ae_of_all μ hpoint)]
+  rw [MeasureTheory.integral_sub (hcosC.const_mul _) (hsinC.const_mul _),
+    MeasureTheory.integral_const_mul, MeasureTheory.integral_const_mul]
+  have hcosIntegral :
+      (∫ y : ℝ, (Real.cos (a * y) : ℂ) ∂μ) =
+        (Real.exp (-a ^ 2) : ℂ) := by
+    rw [integral_complex_ofReal, integral_cos_gaussianReal_zero_two]
+  have hsinIntegral :
+      (∫ y : ℝ, (Real.sin (a * y) : ℂ) ∂μ) = 0 := by
+    rw [integral_complex_ofReal, integral_sin_gaussianReal_zero_two]
+    norm_num
+  rw [hcosIntegral, hsinIntegral]
+  dsimp [a]
+  ring
+
+/-- The defining kernel of `H_t`, with an additional real Gaussian translation in `z`, is
+integrable on the product space. The sharper horizontal-strip cosine bound makes the majorant
+independent of the Gaussian variable. -/
+theorem integrable_deBruijnNewmanH_gaussian_shift_kernel (t r : ℝ) (w : ℂ) :
+    MeasureTheory.Integrable
+      (fun p : ℝ × ℝ ↦
+        (((Real.exp (t * p.2 ^ 2) * deBruijnNewmanPhi p.2 : ℝ) : ℂ) *
+          Complex.cos ((w + (r * p.1 : ℝ)) * (p.2 : ℂ))))
+      ((ProbabilityTheory.gaussianReal 0 2).prod
+        (MeasureTheory.volume.restrict (Ioi 0))) := by
+  let μ := ProbabilityTheory.gaussianReal 0 2
+  let ν : MeasureTheory.Measure ℝ := MeasureTheory.volume.restrict (Ioi 0)
+  let M : ℝ → ℝ := fun u ↦
+    (1 + u ^ 2) * Real.exp (|t| * u ^ 2 + |w.im| * u) *
+      ‖deBruijnNewmanPhi u‖
+  have hmajor : MeasureTheory.Integrable M ν := by
+    simpa only [M, ν, MeasureTheory.IntegrableOn] using
+      integrableOn_one_add_sq_mul_exp_mul_norm_deBruijnNewmanPhi
+        |t| (abs_nonneg t) |w.im|
+  have hmajorProd : MeasureTheory.Integrable (fun p : ℝ × ℝ ↦ M p.2) (μ.prod ν) :=
+    hmajor.comp_snd μ
+  apply MeasureTheory.Integrable.mono' hmajorProd
+  · have hscalar : MeasureTheory.AEStronglyMeasurable
+        (fun p : ℝ × ℝ ↦ Real.exp (t * p.2 ^ 2) * deBruijnNewmanPhi p.2)
+        (μ.prod ν) := by
+      have hexp : MeasureTheory.AEStronglyMeasurable
+          (fun p : ℝ × ℝ ↦ Real.exp (t * p.2 ^ 2)) (μ.prod ν) :=
+        (by fun_prop : Continuous (fun p : ℝ × ℝ ↦ Real.exp (t * p.2 ^ 2))).aestronglyMeasurable
+      have hphi :=
+        (aestronglyMeasurable_deBruijnNewmanPhi ν).comp_snd (μ := μ)
+      exact hexp.mul hphi
+    have hcos : MeasureTheory.AEStronglyMeasurable
+        (fun p : ℝ × ℝ ↦
+          Complex.cos ((w + (r * p.1 : ℝ)) * (p.2 : ℂ))) (μ.prod ν) :=
+      (by fun_prop : Continuous (fun p : ℝ × ℝ ↦
+        Complex.cos ((w + (r * p.1 : ℝ)) * (p.2 : ℂ)))).aestronglyMeasurable
+    exact (Complex.continuous_ofReal.comp_aestronglyMeasurable hscalar).mul hcos
+  · have hu : ∀ᵐ p ∂μ.prod ν, p.2 ∈ Ioi (0 : ℝ) :=
+      (MeasureTheory.Measure.quasiMeasurePreserving_snd (μ := μ) (ν := ν)).ae
+        (MeasureTheory.ae_restrict_mem measurableSet_Ioi)
+    filter_upwards [hu] with p hp
+    have hu0 : 0 ≤ p.2 := hp.le
+    have hcos :
+        ‖Complex.cos ((w + (r * p.1 : ℝ)) * (p.2 : ℂ))‖ ≤
+          Real.exp (|w.im| * p.2) := by
+      refine (norm_complex_cos_le_exp_abs_im _).trans_eq ?_
+      congr 1
+      simp [abs_mul, abs_of_nonneg hu0]
+    rw [norm_mul, norm_real, Real.norm_eq_abs, abs_mul,
+      abs_of_pos (Real.exp_pos _), ← Real.norm_eq_abs]
+    calc
+      Real.exp (t * p.2 ^ 2) * ‖deBruijnNewmanPhi p.2‖ *
+          ‖Complex.cos ((w + (r * p.1 : ℝ)) * (p.2 : ℂ))‖ ≤
+        Real.exp (|t| * p.2 ^ 2) * ‖deBruijnNewmanPhi p.2‖ *
+          Real.exp (|w.im| * p.2) := by
+        gcongr
+        exact le_abs_self t
+      _ ≤ M p.2 := by
+        dsimp [M]
+        rw [Real.exp_add]
+        calc
+          Real.exp (|t| * p.2 ^ 2) * ‖deBruijnNewmanPhi p.2‖ *
+                Real.exp (|w.im| * p.2) =
+              1 * (Real.exp (|t| * p.2 ^ 2) * Real.exp (|w.im| * p.2) *
+                ‖deBruijnNewmanPhi p.2‖) := by ring
+          _ ≤ (1 + p.2 ^ 2) *
+              (Real.exp (|t| * p.2 ^ 2) * Real.exp (|w.im| * p.2) *
+                ‖deBruijnNewmanPhi p.2‖) := by
+            gcongr
+            nlinarith [sq_nonneg p.2]
+          _ = _ := by
+            rw [Real.norm_eq_abs]
+            ring
+
+/-- Averaging `H_t` over a centered real Gaussian translation of size `r` exactly moves the heat
+parameter backwards by `r²`. -/
+theorem integral_deBruijnNewmanH_gaussian_shift (t r : ℝ) (w : ℂ) :
+    ∫ y : ℝ, deBruijnNewmanH t (w + (r * y : ℝ))
+        ∂ProbabilityTheory.gaussianReal 0 2 =
+      deBruijnNewmanH (t - r ^ 2) w := by
+  have hswap :
+      (∫ y : ℝ, (∫ u : ℝ in Ioi 0,
+          (((Real.exp (t * u ^ 2) * deBruijnNewmanPhi u : ℝ) : ℂ) *
+            Complex.cos ((w + (r * y : ℝ)) * (u : ℂ))))
+          ∂ProbabilityTheory.gaussianReal 0 2) =
+        ∫ u : ℝ in Ioi 0, (∫ y : ℝ,
+          (((Real.exp (t * u ^ 2) * deBruijnNewmanPhi u : ℝ) : ℂ) *
+            Complex.cos ((w + (r * y : ℝ)) * (u : ℂ)))
+          ∂ProbabilityTheory.gaussianReal 0 2) :=
+    MeasureTheory.integral_integral_swap
+      (integrable_deBruijnNewmanH_gaussian_shift_kernel t r w)
+  simp_rw [deBruijnNewmanH]
+  rw [hswap]
+  apply MeasureTheory.integral_congr_ae
+  apply MeasureTheory.ae_of_all
+  intro u
+  simp only
+  rw [MeasureTheory.integral_const_mul,
+    integral_complex_cos_gaussianReal_shift]
+  have hexp :
+      Real.exp (t * u ^ 2) * Real.exp (-(r * u) ^ 2) =
+        Real.exp ((t - r ^ 2) * u ^ 2) := by
+    rw [← Real.exp_add]
+    congr 1
+    ring
+  calc
+    ((Real.exp (t * u ^ 2) * deBruijnNewmanPhi u : ℝ) : ℂ) *
+          ((Real.exp (-(r * u) ^ 2) : ℂ) * Complex.cos (w * (u : ℂ))) =
+        (((Real.exp (t * u ^ 2) * Real.exp (-(r * u) ^ 2)) *
+          deBruijnNewmanPhi u : ℝ) : ℂ) * Complex.cos (w * (u : ℂ)) := by
+      push_cast
+      ring
+    _ = (((Real.exp ((t - r ^ 2) * u ^ 2) * deBruijnNewmanPhi u : ℝ) : ℂ) *
+        Complex.cos (w * (u : ℂ))) := by rw [hexp]
+
+/-- Exact square-root-scale representation around a repeated zero. This is the pre-limit identity
+whose Gaussian polynomial part becomes the backward Hermite model as `r → 0`. -/
+theorem exists_deBruijnNewmanH_repeated_zero_gaussian_scaling
+    {t : ℝ} {z : ℂ} (hz : deBruijnNewmanH t z = 0)
+    (hrepeated : deriv (deBruijnNewmanH t) z = 0) :
+    ∃ (m : ℕ) (g : ℂ → ℂ), 2 ≤ m ∧ Differentiable ℂ g ∧ g z ≠ 0 ∧
+      ∀ (r : ℝ) (ξ : ℂ),
+        deBruijnNewmanH (t - r ^ 2) (z + (r : ℂ) * ξ) =
+          (r : ℂ) ^ m *
+            ∫ y : ℝ, (ξ + (y : ℂ)) ^ m *
+              g (z + (r : ℂ) * (ξ + (y : ℂ)))
+              ∂ProbabilityTheory.gaussianReal 0 2 := by
+  obtain ⟨m, g, hm, hgdiff, hgzero, hfactor⟩ :=
+    exists_deBruijnNewmanH_repeated_zero_entire_factor hz hrepeated
+  refine ⟨m, g, hm, hgdiff, hgzero, ?_⟩
+  intro r ξ
+  rw [← integral_deBruijnNewmanH_gaussian_shift t r (z + (r : ℂ) * ξ)]
+  calc
+    (∫ y : ℝ, deBruijnNewmanH t
+          (z + (r : ℂ) * ξ + (r * y : ℝ))
+          ∂ProbabilityTheory.gaussianReal 0 2) =
+        ∫ y : ℝ, (r : ℂ) ^ m *
+          ((ξ + (y : ℂ)) ^ m *
+            g (z + (r : ℂ) * (ξ + (y : ℂ))))
+          ∂ProbabilityTheory.gaussianReal 0 2 := by
+      apply MeasureTheory.integral_congr_ae
+      apply MeasureTheory.ae_of_all
+      intro y
+      have harg :
+          z + (r : ℂ) * ξ + (r * y : ℝ) =
+            z + (r : ℂ) * (ξ + (y : ℂ)) := by
+        push_cast
+        ring
+      simp only
+      rw [harg, hfactor]
+      simp only [add_sub_cancel_left, mul_pow]
+      ring
+    _ = (r : ℂ) ^ m *
+          ∫ y : ℝ, (ξ + (y : ℂ)) ^ m *
+            g (z + (r : ℂ) * (ξ + (y : ℂ)))
+            ∂ProbabilityTheory.gaussianReal 0 2 := by
+      rw [MeasureTheory.integral_const_mul]
 
 /-- The monomial obtained after one unit of backward heat evolution, in the normalization used by
 the local `sqrt (t-s)` blow-up. -/

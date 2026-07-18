@@ -8,6 +8,7 @@ import LeanLab.Riemann.DeBruijnNewmanUpperHalf
 import LeanLab.Riemann.DeBruijnNewmanGeneralStrip
 import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanPolymathCriterion
+import LeanLab.Riemann.DeBruijnNewmanHermiteSplitting
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -493,3 +494,7 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.deBruijnNewmanBackwardHermite_comp_neg_X
 #print axioms LeanLab.Riemann.deBruijnNewmanBackwardHermite_eval_ne_zero_of_ne_zero
 #print axioms LeanLab.Riemann.exists_deBruijnNewmanBackwardHermite_aeval_eq_zero_im_pos
+#print axioms LeanLab.Riemann.exists_deBruijnNewmanH_repeated_zero_entire_factor
+#print axioms LeanLab.Riemann.integrable_deBruijnNewmanH_gaussian_shift_kernel
+#print axioms LeanLab.Riemann.integral_deBruijnNewmanH_gaussian_shift
+#print axioms LeanLab.Riemann.exists_deBruijnNewmanH_repeated_zero_gaussian_scaling

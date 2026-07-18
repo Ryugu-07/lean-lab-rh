@@ -7,6 +7,7 @@ import LeanLab.Riemann.DeBruijnNewmanUpperHalf
 import LeanLab.Riemann.DeBruijnNewmanGeneralStrip
 import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanPolymathCriterion
+import LeanLab.Riemann.DeBruijnNewmanHermiteSplitting
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1585,5 +1586,28 @@ example {t0 X y0 t1 x y : ℝ} (hy0 : 0 < y0)
 example (n : ℕ) (hn : 2 ≤ n) :
     ∃ z : ℂ, 0 < z.im ∧ (deBruijnNewmanBackwardHermite n).aeval z = 0 :=
   exists_deBruijnNewmanBackwardHermite_aeval_eq_zero_im_pos n hn
+
+example {t : ℝ} {z : ℂ} (hz : deBruijnNewmanH t z = 0)
+    (hrepeated : deriv (deBruijnNewmanH t) z = 0) :
+    ∃ (m : ℕ) (g : ℂ → ℂ), 2 ≤ m ∧ Differentiable ℂ g ∧ g z ≠ 0 ∧
+      ∀ w, deBruijnNewmanH t w = (w - z) ^ m * g w :=
+  exists_deBruijnNewmanH_repeated_zero_entire_factor hz hrepeated
+
+example (t r : ℝ) (w : ℂ) :
+    ∫ y : ℝ, deBruijnNewmanH t (w + (r * y : ℝ))
+        ∂ProbabilityTheory.gaussianReal 0 2 =
+      deBruijnNewmanH (t - r ^ 2) w :=
+  integral_deBruijnNewmanH_gaussian_shift t r w
+
+example {t : ℝ} {z : ℂ} (hz : deBruijnNewmanH t z = 0)
+    (hrepeated : deriv (deBruijnNewmanH t) z = 0) :
+    ∃ (m : ℕ) (g : ℂ → ℂ), 2 ≤ m ∧ Differentiable ℂ g ∧ g z ≠ 0 ∧
+      ∀ (r : ℝ) (ξ : ℂ),
+        deBruijnNewmanH (t - r ^ 2) (z + (r : ℂ) * ξ) =
+          (r : ℂ) ^ m *
+            ∫ y : ℝ, (ξ + (y : ℂ)) ^ m *
+              g (z + (r : ℂ) * (ξ + (y : ℂ)))
+              ∂ProbabilityTheory.gaussianReal 0 2 :=
+  exists_deBruijnNewmanH_repeated_zero_gaussian_scaling hz hrepeated
 
 end LeanLab.Riemann
