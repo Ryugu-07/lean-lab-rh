@@ -957,7 +957,7 @@ def rhTargets : List ResearchTarget :=
         "For every natural N and complex s, prove I_0(s)=sum_(k<N)(k+1)^(-s)+I_N(s) and transport this identity exactly to R_(0,0)(s)=sum_(k<N)r_(0,k+1)(s)+R_(0,N)(s)."
       leanName := some ``deBruijnNewmanRiemannSiegelR0N_finite_decomposition
       status := .proven
-      note := "Loop 6 known-source finite algebra. Lean inducts from the public adjacent contour shift with exact Finset.range indexing and distributes the compiled completed-zeta prefactor. Titchmarsh (xio), the effective approximation, numerical certificates, H6-E/G8, and RH remain open; hard_gap_delta=0 and route_infrastructure_delta=1." },
+      note := "Loop 6 known-source finite algebra. Lean inducts from the public adjacent contour shift with exact Finset.range indexing and distributes the compiled completed-zeta prefactor. Titchmarsh (xio), the effective approximation, numerical certificates, H6-E/G8, and RH remain open; hard_gap_delta=0 and route_infrastructure_delta=1. Implementation 7ea4238b1f1159d5e59850406fa5b8d3bbebbca4 passed public CI run 29637745080, build job 88062926702, in 1m51s." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

@@ -286,6 +286,8 @@ admitted.
   forbidden scans and `git diff --check` are clean; the full 8,709-job build passes
 - `next_exact_gate`: preregister and attack the source auxiliary recurrence and analytic-
   continuation chain in Titchmarsh `(2.10.1)--(2.10.6)` required for equation `(xio)`
+- `public_implementation_evidence`: commit `7ea4238b1f1159d5e59850406fa5b8d3bbebbca4`
+  passed public Lean Action CI run `29637745080`, build job `88062926702`, in `1m51s`
 
 ## Loop 3 preregistration
 
