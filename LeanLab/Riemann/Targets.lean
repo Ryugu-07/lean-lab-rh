@@ -22,6 +22,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydR2Integral
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydSaddleIntegral
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLogSaddleIntegral
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLocalSaddleInverse
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydRealSaddleDiffeomorphism
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1028,6 +1029,22 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanPolymathBoydComplexSaddleLocalInverse_eventually_right
       status := .proven
       note := "Loop 15 uses the analytic Taylor remainder to prove that the piecewise factor 2*(exp(u)-u-1)/u^2 has a removable analytic value 1 at zero. Lean then composes the principal complex square root near 1, proves the global square identity for the normalized coordinate, computes derivative 1 at zero, and instantiates mathlib's analytic inverse-function theorem with eventual left and right inverse laws. This is the normalized local branch only: no global continuation, global injectivity, adjacent 2*pi*i saddle images, Boyd equation (15), effective R2, Proposition 6.1/6.3, Table 1 certificates, H6-E/G8, or RH is claimed." },
+    { id := "H6.debruijn-newman.boyd-real-saddle-diffeomorphism"
+      tier := .tier2
+      title := "Construct the global real Boyd saddle diffeomorphism"
+      statement :=
+        "Prove that the normalized principal Boyd coordinate restricts to a strictly increasing real surjection with positive derivative, construct its global inverse and inverse derivative, and transform the full-real scaled-Gamma phase integral into the exact Gaussian phase with Jacobian."
+      leanName := some ``deBruijnNewmanPolymathScaledGamma_ofReal_eq_boydGaussianSaddleIntegral
+      status := .proven
+      note := "Loop 16 proves the real/complex restriction bridge, positivity of the removable factor, the exact phase-square identity, derivative positivity including the removable origin, both infinite-end limits, the resulting real order isomorphism, its positive inverse derivative, Gaussian-Jacobian integrability, the exact whole-line change of variables, and the project-scaled-Gamma endpoint. This is the complete real steepest-descent normalization. A global complex inverse, adjacent-saddle Cauchy decomposition, Boyd equation (15), effective R2, Proposition 6.1/6.3, Table 1 certificates, H6-E/G8, and RH remain open." },
+    { id := "H6.debruijn-newman.boyd-complex-critical-saddles"
+      tier := .tier2
+      title := "Locate the nonzero integer Boyd critical saddles"
+      statement :=
+        "For every nonzero integer n, prove that the normalized principal Boyd coordinate is analytic at 2*pi*i*n, has derivative zero there, and has coordinate square -4*pi*i*n."
+      leanName := some ``deBruijnNewmanPolymathBoydComplexSaddleCoordinate_critical
+      status := .proven
+      note := "Loop 16 computes the normalized factor at 2*pi*i*n as i/(pi*n), proves that it lies in the principal square-root slit plane, and differentiates the global phase-square identity to certify every nonzero integer saddle as a critical point. In particular n=1 and n=-1 locate the first adjacent critical images. This records the branch obstruction but does not construct a global complex inverse, a Cauchy coefficient representation, a resurgence contour, Boyd equation (15), effective R2, or RH." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

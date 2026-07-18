@@ -23,6 +23,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydR2Integral
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydSaddleIntegral
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLogSaddleIntegral
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLocalSaddleInverse
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydRealSaddleDiffeomorphism
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2228,5 +2229,82 @@ example :
       deBruijnNewmanPolymathBoydComplexSaddleCoordinate
         (deBruijnNewmanPolymathBoydComplexSaddleLocalInverse z) = z :=
   deBruijnNewmanPolymathBoydComplexSaddleLocalInverse_eventually_right
+
+example (u : ℝ) :
+    deBruijnNewmanPolymathBoydComplexSaddleCoordinate (u : ℂ) =
+      (deBruijnNewmanPolymathBoydRealSaddleCoordinate u : ℂ) :=
+  deBruijnNewmanPolymathBoydComplexSaddleCoordinate_ofReal u
+
+example (u : ℝ) :
+    0 < deBruijnNewmanPolymathBoydRealSaddleFactor u :=
+  deBruijnNewmanPolymathBoydRealSaddleFactor_pos u
+
+example (u : ℝ) :
+    deBruijnNewmanPolymathBoydRealSaddleCoordinate u ^ 2 / 2 =
+      deBruijnNewmanPolymathBoydRealSaddlePhase u :=
+  deBruijnNewmanPolymathBoydRealSaddleCoordinate_sq u
+
+example (u : ℝ) :
+    0 < deriv deBruijnNewmanPolymathBoydRealSaddleCoordinate u :=
+  deriv_deBruijnNewmanPolymathBoydRealSaddleCoordinate_pos u
+
+example : StrictMono deBruijnNewmanPolymathBoydRealSaddleCoordinate :=
+  deBruijnNewmanPolymathBoydRealSaddleCoordinate_strictMono
+
+example : Filter.Tendsto deBruijnNewmanPolymathBoydRealSaddleCoordinate
+    Filter.atTop Filter.atTop :=
+  tendsto_deBruijnNewmanPolymathBoydRealSaddleCoordinate_atTop
+
+example : Filter.Tendsto deBruijnNewmanPolymathBoydRealSaddleCoordinate
+    Filter.atBot Filter.atBot :=
+  tendsto_deBruijnNewmanPolymathBoydRealSaddleCoordinate_atBot
+
+example (u : ℝ) :
+    deBruijnNewmanPolymathBoydRealSaddleInverse
+        (deBruijnNewmanPolymathBoydRealSaddleCoordinate u) = u :=
+  deBruijnNewmanPolymathBoydRealSaddleInverse_coordinate u
+
+example (w : ℝ) :
+    deBruijnNewmanPolymathBoydRealSaddleCoordinate
+        (deBruijnNewmanPolymathBoydRealSaddleInverse w) = w :=
+  deBruijnNewmanPolymathBoydRealSaddleCoordinate_inverse w
+
+example (w : ℝ) :
+    HasDerivAt deBruijnNewmanPolymathBoydRealSaddleInverse
+      (deriv deBruijnNewmanPolymathBoydRealSaddleCoordinate
+        (deBruijnNewmanPolymathBoydRealSaddleInverse w))⁻¹ w :=
+  hasDerivAt_deBruijnNewmanPolymathBoydRealSaddleInverse w
+
+example {x : ℝ} (hx : 0 < x) :
+    MeasureTheory.Integrable
+      (deBruijnNewmanPolymathBoydGaussianSaddleIntegrand x) :=
+  deBruijnNewmanPolymathBoydGaussianSaddleIntegrand_integrable hx
+
+example (x : ℝ) :
+    (∫ w : ℝ, deBruijnNewmanPolymathBoydGaussianSaddleIntegrand x w) =
+      ∫ u : ℝ, deBruijnNewmanPolymathBoydLogSaddleIntegrand x u :=
+  integral_deBruijnNewmanPolymathBoydGaussianSaddleIntegrand x
+
+example {x : ℝ} (hx : 0 < x) :
+    deBruijnNewmanPolymathScaledGamma (x : ℂ) =
+      ((Real.sqrt (x / (2 * Real.pi)) *
+        (∫ w : ℝ, deBruijnNewmanPolymathBoydGaussianSaddleIntegrand x w) : ℝ) : ℂ) :=
+  deBruijnNewmanPolymathScaledGamma_ofReal_eq_boydGaussianSaddleIntegral hx
+
+example {n : ℤ} (hn : n ≠ 0) :
+    AnalyticAt ℂ deBruijnNewmanPolymathBoydComplexSaddleCoordinate
+        (deBruijnNewmanPolymathBoydComplexSaddlePoint n) ∧
+      deriv deBruijnNewmanPolymathBoydComplexSaddleCoordinate
+          (deBruijnNewmanPolymathBoydComplexSaddlePoint n) = 0 ∧
+      deBruijnNewmanPolymathBoydComplexSaddleCoordinate
+          (deBruijnNewmanPolymathBoydComplexSaddlePoint n) ^ 2 =
+        -2 * deBruijnNewmanPolymathBoydComplexSaddlePoint n :=
+  deBruijnNewmanPolymathBoydComplexSaddleCoordinate_critical hn
+
+example (n : ℤ) :
+    deBruijnNewmanPolymathBoydComplexSaddleCoordinate
+        (deBruijnNewmanPolymathBoydComplexSaddlePoint n) ^ 2 =
+      -4 * (Real.pi : ℂ) * Complex.I * (n : ℂ) :=
+  deBruijnNewmanPolymathBoydComplexSaddleCoordinate_sq_saddle_explicit n
 
 end LeanLab.Riemann
