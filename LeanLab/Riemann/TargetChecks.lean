@@ -10,6 +10,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathCriterion
 import LeanLab.Riemann.DeBruijnNewmanHermiteSplitting
 import LeanLab.Riemann.DeBruijnNewmanTableRowCertificates
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegel
+import LeanLab.Riemann.DeBruijnNewmanPolymathHeatKernel
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1856,5 +1857,44 @@ example
     deBruijnNewmanPolymathFinalRegionZeroFree
       ((93 : ℝ) / 500) ((5 : ℝ) * 10 ^ 12 + 194858) ((16733 : ℝ) / 100000) :=
   deBruijnNewmanPolymathFinalRegionZeroFree_table_row_of_explicitCertificates hcert
+
+example (w : ℂ) (r u : ℝ) :
+    ∫ y : ℝ, Complex.cos
+        ((w - (r * y : ℝ) * Complex.I) * (u : ℂ))
+        ∂ProbabilityTheory.gaussianReal 0 2 =
+      (Real.exp ((r * u) ^ 2) : ℂ) * Complex.cos (w * (u : ℂ)) :=
+  integral_complex_cos_imaginary_gaussian_shift w r u
+
+example (t r : ℝ) (w : ℂ) :
+    MeasureTheory.Integrable
+      (fun p : ℝ × ℝ ↦
+        (((Real.exp (t * p.2 ^ 2) * deBruijnNewmanPhi p.2 : ℝ) : ℂ) *
+          Complex.cos
+            ((w - (r * p.1 : ℝ) * Complex.I) * (p.2 : ℂ))))
+      ((ProbabilityTheory.gaussianReal 0 2).prod
+        (MeasureTheory.volume.restrict (Set.Ioi 0))) :=
+  integrable_deBruijnNewmanH_imaginary_gaussian_shift_kernel t r w
+
+example (t r : ℝ) (w : ℂ) :
+    ∫ y : ℝ, deBruijnNewmanH t
+        (w - (r * y : ℝ) * Complex.I)
+        ∂ProbabilityTheory.gaussianReal 0 2 =
+      deBruijnNewmanH (t + r ^ 2) w :=
+  integral_deBruijnNewmanH_imaginary_gaussian_shift t r w
+
+example {t : ℝ} (ht : 0 ≤ t) (z : ℂ) :
+    deBruijnNewmanH t z =
+      ∫ y : ℝ, deBruijnNewmanH 0
+        (z - (Real.sqrt t * y : ℝ) * Complex.I)
+        ∂ProbabilityTheory.gaussianReal 0 2 :=
+  deBruijnNewmanH_eq_gaussian_zero_imaginary_shift ht z
+
+example {t : ℝ} (ht : 0 ≤ t) (z : ℂ) :
+    deBruijnNewmanH t z =
+      ∫ y : ℝ, (1 / 8 : ℂ) * riemannXi
+        ((1 + Complex.I * z) / 2 +
+          ((Real.sqrt t / 2 * y : ℝ) : ℂ))
+        ∂ProbabilityTheory.gaussianReal 0 2 :=
+  deBruijnNewmanH_eq_gaussian_riemannXi ht z
 
 end LeanLab.Riemann

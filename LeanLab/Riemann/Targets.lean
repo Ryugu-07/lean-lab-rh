@@ -11,6 +11,7 @@ import LeanLab.Riemann.DeBruijnNewmanHermiteSplitting
 import LeanLab.Riemann.DeBruijnNewmanPolymathCriterion
 import LeanLab.Riemann.DeBruijnNewmanTableRowCertificates
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegel
+import LeanLab.Riemann.DeBruijnNewmanPolymathHeatKernel
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -922,6 +923,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanPolymathFinalRegionZeroFree_table_row_of_explicitCertificates
       status := .proven
       note := "This is a conditional certificate consumer. The pointwise explicit approximation and strict finite-sum inequalities remain open, so the final region itself is not proved unconditionally. Implementation 3339ea0f and evidence ba361a94 passed public CI runs 29631298328 and 29631407988." },
+    { id := "H6.debruijn-newman.polymath-imaginary-gaussian-htz"
+      tier := .tier2
+      title := "Formalize the Polymath imaginary Gaussian heat kernel"
+      statement :=
+        "Prove full product integrability and the exact variance-two identity integrating H_t(z-i*r*Y) to H_(t+r^2)(z); specialize at r=sqrt(t) and rewrite H_0 as the precise xi integrand in Polymath equation (htz)."
+      leanName := some ``deBruijnNewmanH_eq_gaussian_riemannXi
+      status := .proven
+      note := "Loop 3 known source infrastructure, locally verified with five exact witnesses, five standard-only axiom prints, forbidden scans, and the full 8,706-job build; public implementation CI is pending. The proof uses the exact Gaussian complex MGF, a kernel-checked exponential-moment majorant, the compiled super-Gaussian Phi tail bound, and Fubini. This establishes equation (htz) but not Titchmarsh (xio), the subsequent Riemann-Siegel expansion, deterministic approximation bound, numerical final region, Lambda <= 0.2, H6-E/G8, or RH." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

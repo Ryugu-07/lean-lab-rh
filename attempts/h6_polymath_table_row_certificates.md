@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_3_PREREGISTERED_CI_PENDING`
+Status: `ACTIVE_LOOP_3_LOCAL_IMPLEMENTATION_VERIFIED_PUBLIC_CI_PENDING`
 
 ## Target
 
@@ -47,6 +47,7 @@ output is imported. Every numerical fact must be independently re-proved in Lean
 | 0 | `ROUTE_SELECTION / LITERATURE` | Fixed the full hypothesis-free Table 1 endpoint after source and external-artifact audit. Identified the three independent certificate layers and the exact first subedge from finite-height RH to the initial region. No proof source edited. | Commit and publicly build the preregistration. Only after green CI, begin Loop 1 on the exact finite-height transport; do not assert the external computation. |
 | 1 | `LITERATURE` | Compiled `riemannHypothesisUpTo`, the general finite-height-RH transport, and the exact Table 1 specialization through height `3*10^12`. The `x=0` boundary uses `deBruijnNewmanH_mul_I_ne_zero`; the positive branch derives the exact `x/2` zeta ordinate and contradicts the positive lower `y` boundary. Standalone checks, exact witnesses, standard-only axiom prints, forbidden scans, and the full 8,704-job build pass locally. This is conditional on `riemannHypothesisUpTo (3*10^12)` and proves no unconditional region. | Keep the campaign active. Loop 2 should attack the source-normalized effective Riemann--Siegel approximation and error consumer needed by the final and barrier certificates; do not build interval infrastructure detached from an exact `H_t` statement. The finite RH computation, final region, and barrier remain open. |
 | 2 | `LITERATURE` | Formalized the exact Theorem 1.3 normalization: source arguments, `log M_0`, `M_0`, both formulas for `alpha`, `M_t`, `B_t`, `b_n^t`, `N`, `gamma`, `s_*`, `kappa`, `f_t`, the displayed `e_A+e_B` and `e_C0` upper bounds, and their total. Lean proves the branch derivative on the lower half-plane, `exp(log M_0)=M_0`, `B_t!=0` for `x>0`, exact inclusion of the second-row final region in the theorem's parameter region, Corollary 1.4, and both general and exact-row final-region certificate consumers. Definition witnesses, seven theorem witnesses, seven standard-only axiom prints, forbidden scans, and the full 8,705-job build pass locally. The deterministic approximation inequality remains an unproved `Prop`. | Keep the campaign active. Loop 3 attacks the paper's first analytic identity `H_t(z)=integral H_0(z-i*sqrt(t)*Y) d gamma_2(Y)` and its exact xi-coordinate form. The existing compiled Gaussian theorem averages real translations and moves time backward; it cannot discharge this imaginary-shift forward representation. |
+| 3 | `LITERATURE` | Proved the exact complex MGF and absolute-exponential moment control for `gaussianReal(0,2)`, the imaginary-shift cosine multiplier `exp((r*u)^2)`, full product integrability, the general identity `integral H_t(z-i*r*Y)=H_(t+r^2)(z)`, the `r=sqrt(t)` reconstruction from `H_0`, and the exact `(htz)` xi-coordinate form. Five exact witnesses, five standard-only axiom prints, forbidden scans, and the full 8,706-job build pass locally. | Keep the campaign active. Loop 4 must confront the next source edge rather than add another heat wrapper: define the fixed `5*pi/4` infinite-line contour `R_(0,N)`, prove its integrability and residue shift, and reconstruct Titchmarsh `(xio)`/the finite `R_(0,0)` decomposition. The effective approximation and all numerical certificates remain open. |
 
 ## Loop 3 preregistration
 
@@ -78,6 +79,47 @@ output is imported. Every numerical fact must be independently re-proved in Lean
   or an abstract heat-semigroup wrapper without the exact `H_0` and xi integrands is not success
 
 No Lean proof source may be edited for Loop 3 before this preregistration passes public CI.
+
+Preregistration commit `38dfa81b2918bf86495954f487cb11a71a89895e` passed public Lean Action CI
+run `29631894291`, build job `88047126110`, in `1m50s`, before Loop 3 proof-source edits.
+
+## Loop 3 accounting
+
+- `classification`: `KNOWN_THEOREM_FORMALIZED`
+- `compiled_theorems`:
+  `integral_cexp_mul_gaussianReal_zero_two`,
+  `integral_rexp_mul_abs_gaussianReal_zero_two_le`,
+  `integral_complex_cos_imaginary_gaussian_shift`,
+  `integrable_deBruijnNewmanH_imaginary_gaussian_shift_kernel`,
+  `integral_deBruijnNewmanH_imaginary_gaussian_shift`,
+  `deBruijnNewmanH_eq_gaussian_zero_imaginary_shift`, and
+  `deBruijnNewmanH_eq_gaussian_riemannXi`
+- `assumption_frontier_after`: equation `(htz)` is K0 for every nonnegative heat time and every
+  complex spatial argument; product integrability is proved rather than assumed
+- `hard_gap_after`: Titchmarsh `(xio)`, the `R_(0,N)` contour and residue expansion, the
+  deterministic Riemann--Siegel approximation, strict finite-sum certificate, unconditional final
+  region, finite RH computation, barrier, H6-E/G8, and RH remain open
+- `hard_gap_delta`: 0
+- `route_infrastructure_delta`: 1
+- `normalization_check`: the paper's density `exp(-v^2)/sqrt(pi)` becomes
+  `gaussianReal(0,2)` under `Y=2v`; the shift is `-i*sqrt(t)*Y` and the xi increment is
+  `(sqrt(t)/2)*Y`
+- `next_exact_gate`: parameterize the source line `N swarrow N+1` in direction `exp(5*pi*i/4)`,
+  prove absolute integrability and the finite residue shift
+  `R_(0,0)(s)=sum_(n=1)^N r_(0,n)(s)+R_(0,N)(s)`, then reconstruct `(xio)` without an assumed
+  contour identity
+
+## Loop 3 local mechanical audit
+
+- standalone source module: passed without new diagnostics
+- `Targets.lean`: passed with one honest proven known-source target
+- `TargetChecks.lean`: five exact theorem witnesses passed at default resource limits
+- `AxiomsAudit.lean`: all five selected declarations print only `propext`,
+  `Classical.choice`, and `Quot.sound`
+- forbidden proof-token, custom declaration, and resource-relaxation scans: empty
+- `git diff --check`: passed
+- full `lake build`: passed, 8,706 jobs
+- public implementation CI: pending
 
 ## Loop 2 preregistration
 

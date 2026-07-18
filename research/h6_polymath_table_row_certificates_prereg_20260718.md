@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_3_PREREGISTERED_CI_PENDING`
+Status: `ACTIVE_LOOP_3_LOCAL_IMPLEMENTATION_VERIFIED_PUBLIC_CI_PENDING`
 
 ## Exact mathematical endpoint
 
@@ -285,3 +285,35 @@ Failure means recording the first normalization or product-integrability obstruc
 Gaussian identity without Fubini, an abstract wrapper, or a theorem carrying the needed
 integrability as a hypothesis does not satisfy this subedge. No Lean proof source may be edited
 before this preregistration passes public Lean Action CI.
+
+Preregistration commit `38dfa81b2918bf86495954f487cb11a71a89895e` passed public Lean Action CI
+run `29631894291`, build job `88047126110`, in `1m50s`, before proof-source edits.
+
+## Loop 3 local result
+
+`DeBruijnNewmanPolymathHeatKernel.lean` now proves the exact variance-two complex MGF,
+absolute-exponential Gaussian domination, the pointwise imaginary-shift cosine multiplier, and
+full product integrability against the source `Phi` kernel. Fubini then yields
+
+```text
+integral H_t(z-i*r*Y) d gaussianReal(0,2)(Y) = H_(t+r^2)(z).
+```
+
+For `0<=t`, Lean specializes `r=sqrt(t)` and rewrites `H_0` to obtain exactly
+
+```text
+H_t(z) = integral (1/8)*xi((1+i*z)/2+(sqrt(t)/2)*Y)
+  d gaussianReal(0,2)(Y).
+```
+
+The standalone module, `Targets.lean`, five exact `TargetChecks.lean` witnesses, five selected
+axiom prints, forbidden scans, and the full 8,706-job build pass locally. The selected declarations
+depend only on `propext`, `Classical.choice`, and `Quot.sound`. This is
+`KNOWN_THEOREM_FORMALIZED`, with `hard_gap_delta=0` and `route_infrastructure_delta=1`; public
+implementation CI is pending.
+
+Equation `(htz)` is now K0, but Titchmarsh `(xio)`, the infinite diagonal contour `R_(0,N)`, its
+residue expansion, the effective approximation, every numerical region certificate,
+`Lambda<=1/5`, H6-E/G8, and RH remain open. The next exact source gate starts with a fixed
+`5*pi/4` parameterization of `N swarrow N+1`, absolute integrability, and the finite residue shift;
+an unproved contour identity or abstract `R_(0,N)` premise is not a substitute.

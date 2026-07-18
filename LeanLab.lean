@@ -13,6 +13,7 @@ import LeanLab.Riemann.DeBruijnNewmanDynamics
 import LeanLab.Riemann.DeBruijnNewmanPolymathCriterion
 import LeanLab.Riemann.DeBruijnNewmanTableRowCertificates
 import LeanLab.Riemann.DeBruijnNewmanPolymathRiemannSiegel
+import LeanLab.Riemann.DeBruijnNewmanPolymathHeatKernel
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion

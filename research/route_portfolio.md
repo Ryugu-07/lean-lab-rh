@@ -2125,3 +2125,18 @@ backward. This attack instead proves product integrability for the growing imagi
 the exact Gaussian MGF and the compiled super-Gaussian `Phi` bound. Pointwise MGF alone, assumed
 Fubini, or an abstract semigroup wrapper is rejected. Public preregistration CI must pass before
 proof-source edits.
+
+### Loop 3 local imaginary Gaussian checkpoint
+
+Lean now proves the exact complex Gaussian MGF, the `exp(|r*u*Y|)` domination estimate, full
+product integrability, and
+`integral H_t(z-i*r*Y) d gaussianReal(0,2)(Y)=H_(t+r^2)(z)`. The `r=sqrt(t)` specialization and
+the exact `(htz)` xi-coordinate expression also compile. This closes the first analytic identity
+used in the Polymath effective approximation without an assumed Fubini premise.
+
+Five exact witnesses, five selected standard-only axiom prints, forbidden scans, and the full
+8,706-job build pass locally. Classification is `KNOWN_THEOREM_FORMALIZED`, with
+`hard_gap_delta=0` and `route_infrastructure_delta=1`; public implementation CI is pending. The
+next source obstruction is Titchmarsh `(xio)`: no packaged Riemann--Siegel contour formula exists,
+so Loop 4 must define the fixed `5*pi/4` infinite line, prove its integrability and residue shift,
+and recover the finite `R_(0,0)` decomposition rather than postulate it.
