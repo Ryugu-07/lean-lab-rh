@@ -887,6 +887,9 @@ run `29660772447`, build job `88122935390`, in `1m56s`. Loop 13 proof-source wor
 - `reasoning_effort`: not exposed.
 - `loop_budget`: no V4.1 numerical quota; serving token budget not exposed.
 - `global_goal`: H6-Q1 and the persistent RH Goal remain active.
+- `public_implementation`: commit `604199086831750112f5cbf189786860e8137755` passed public Lean
+  Action CI run `29661356249`, build job `88124459774`, in `1m56s`. Loop 13 is publicly closed as
+  `KNOWN_THEOREM_FORMALIZED`.
 
 ## Loop 3 preregistration
 

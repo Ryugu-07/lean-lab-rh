@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260719-H6-BOYD-SADDLE-INTEGRAL-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `LOCAL_SUCCESS / KNOWN_THEOREM_FORMALIZED`
+Status: `PUBLICLY_CLOSED / KNOWN_THEOREM_FORMALIZED`
 
 ## Exact target
 
@@ -156,3 +156,5 @@ run `29660772447`, build job `88122935390`, in `1m56s`. Loop 13 proof-source wor
 - `reasoning_effort`: not exposed.
 - `loop_budget`: no numerical quota under V4.1; serving token budget not exposed.
 - `global_goal`: H6-Q1 and the persistent RH Goal remain active.
+- `public_implementation`: commit `604199086831750112f5cbf189786860e8137755` passed public Lean
+  Action CI run `29661356249`, build job `88124459774`, in `1m56s`.

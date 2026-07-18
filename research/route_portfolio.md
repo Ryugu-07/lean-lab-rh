@@ -2507,3 +2507,6 @@ This changes the route inventory, not the RH frontier: `rh_frontier_delta=0`,
 open and was not used. The next selected source-faithful edge is the logarithmic substitution
 `t=exp(u)`, giving the all-real-axis phase `exp(u)-u-1`; after that comes the analytic inverse of
 `w^2/2=exp(u)-u-1` and the adjacent saddle-image decomposition.
+
+Implementation commit `604199086831750112f5cbf189786860e8137755` passed public Lean Action CI
+run `29661356249`, build job `88124459774`, in `1m56s`. Loop 13 is publicly closed.
