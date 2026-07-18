@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `LOOP_12_LOCAL_PARTIAL`
+Status: `LOOP_12_EVIDENCE_PENDING_CI`
 
 ## Target
 
@@ -818,6 +818,8 @@ run `29659498616`, build job `88119559667`, in `1m31s`. Loop 12 proof-source wor
   Gamma integral by the exact substitution `t=x*exp(u)`. This is the first source-faithful Boyd
   steepest-descent input and introduces no equation `(15)` premise.
 - `global_goal`: H6-Q1 and the persistent RH Goal remain active.
+- `public_implementation`: commit `75d39360af35c3fc65ef357b3e4d1aa498c32602` passed public
+  Lean Action CI run `29660452525`, build job `88122109932`, in `2m17s`.
 
 ## Loop 3 preregistration
 

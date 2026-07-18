@@ -162,3 +162,7 @@ prints, forbidden scan, `git diff --check`, and the full 8,717-job build pass lo
 The next selected upstream edge is the exact positive-real saddle integral obtained from Euler's
 Gamma integral by `t=x*exp(u)`. It is a source-faithful first step toward Boyd's steepest-descent
 derivation and does not assume equation `(15)`. The global RH Goal remains active.
+
+Implementation commit `75d39360af35c3fc65ef357b3e4d1aa498c32602` passed public Lean Action CI
+run `29660452525`, build job `88122109932`, in `2m17s`. The retained proper prefix is publicly
+checked; this evidence update does not change the `PARTIAL / BLOCKER_EXPOSED` classification.

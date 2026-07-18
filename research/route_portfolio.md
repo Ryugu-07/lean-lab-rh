@@ -2474,3 +2474,7 @@ Route selection keeps the direct Boyd attack but moves one exact edge upstream: 
 the scaled-Gamma saddle integral with phase `exp(u)-u-1` from Euler's Gamma integral under
 `t=x*exp(u)`. This gives a kernel-checked entry to Boyd's steepest-descent geometry without
 assuming equation `(15)`. H6-Q1 and the persistent RH Goal remain active.
+
+Implementation commit `75d39360af35c3fc65ef357b3e4d1aa498c32602` passed public Lean Action CI
+run `29660452525`, build job `88122109932`, in `2m17s`. Loop 12's proper prefix is publicly
+checked; the equation `(15)` edge remains selected and open.
