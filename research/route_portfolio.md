@@ -2291,3 +2291,7 @@ passes. Implementation commit `af6c80c42c0abdfb1cf91147e74a8b88263b20ea` passed 
 `29651603027`, build job `88098754302`, in `2m41s`. The next source gate is the complex-Gaussian
 contour-shift pair `(rtn-def)`/`(RTN-def)`; the effective estimates, numerical certificates,
 H6-E/G8, and RH remain open.
+
+Evidence commit `7cf65e6d19afb963e9bb910a1a0e763a5f234344` passed public CI run
+`29651774163`, build job `88099210841`, in `1m55s`. Loop 8 is publicly checked; H6-Q1 and the RH
+Goal remain active.

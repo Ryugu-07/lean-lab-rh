@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
 Mode: `LITERATURE`
 
-Status: `ACTIVE_LOOP_8_IMPLEMENTATION_PUBLIC_CI_PASSED`
+Status: `ACTIVE_LOOP_8_PUBLICLY_CHECKED`
 
 ## Exact mathematical endpoint
 
@@ -681,4 +681,6 @@ equation `(39)`, not `(rtn-def)`/`(RTN-def)`, the effective approximation, numer
 H6-E/G8, or RH. Forbidden scans and `git diff --check` are clean, and the full 8,713-job build
 passes. Implementation commit `af6c80c42c0abdfb1cf91147e74a8b88263b20ea` passed public Lean
 Action CI run `29651603027`, build job `88098754302`, in `2m41s`. The next exact source gate is
-`(rtn-def)` and `(RTN-def)`; the evidence backfill commit remains to be publicly checked.
+`(rtn-def)` and `(RTN-def)`. Evidence commit `7cf65e6d19afb963e9bb910a1a0e763a5f234344`
+passed public CI run `29651774163`, build job `88099210841`, in `1m55s`; Loop 8 is publicly
+checked and the H6-Q1 campaign and RH Goal remain active.

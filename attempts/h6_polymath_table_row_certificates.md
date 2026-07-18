@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260718-H6-POLYMATH-TABLE-ROW-CERTIFICATES-01`
 
-Status: `ACTIVE_LOOP_8_IMPLEMENTATION_PUBLIC_CI_PASSED`
+Status: `ACTIVE_LOOP_8_PUBLICLY_CHECKED`
 
 ## Target
 
@@ -52,7 +52,7 @@ output is imported. Every numerical fact must be independently re-proved in Lean
 | 5 | `LITERATURE / PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED` locally. Lean constructs the derivative-supplied removable pole subtraction, proves the exact finite one-pole contour identity, separately sends both fixed-length short sides to zero by a compiled Gaussian majorant, passes both long sides to the full Bochner integrals, and proves `deBruijnNewmanRiemannSiegelRawIntegral_adjacent_shift`. Five exact witnesses and five standard-only axiom prints pass. The finite contour uses a complex-linear pullback and a staggered upper truncation, not the literal equal-parameter parallelogram named in preregistration; both upper truncations have the same full-line limit, so the fixed infinite endpoint is unchanged. | Keep the campaign and RH Goal active. Next induct the adjacent identity to `I_0=sum_(1..N)n^(-s)+I_N`, transport it through the exact prefactor to `R_(0,0)=sum r_(0,n)+R_(0,N)`, and then attack the auxiliary recurrence and analytic continuation needed for `(xio)`. No Table 1 certificate or RH consequence is claimed. |
 | 6 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean inducts the adjacent raw shift to the exact finite identity and transports it through the source Gamma prefactor to `R_(0,0)=sum r_(0,n)+R_(0,N)`. Exact witnesses, standard-only axiom prints, scans, full build, and public implementation CI pass. | Attack the actual Titchmarsh `(2.10.1)--(2.10.6)` recurrence, Mellin, and analytic-continuation chain for `(xio)`; no abstract recurrence or half-plane substitute. |
 | 7 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves the full noninteger-domain `(xio)` identity from the actual `Phi(a)` contour, recurrences, slanted-ray Mellin/Fubini calculation, Gamma--zeta constants, logarithmic Gaussian parameter bounds, and identity-theorem continuation. Six witnesses, standard-only axiom prints, scans, full build, and public implementation CI pass. | Compose public `(htz)`, `(xio)`, and the finite source decomposition into exact Polymath equation `(39)`, including separate integrability and reflection transport. |
-| 8 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves tunable horizontal bounds for the raw contour and Gamma prefactor, separate Gaussian integrability of every actual residue and remainder term, centered-Gaussian sign symmetry, heat-evolution/Schwarz-reflection commutation, and the exact two-sum, two-remainder equation `(39)` for every `t>0`, `z.re!=0`, and `N`. Six exact witnesses, five selected standard-only axiom prints, scans, full build, and public implementation CI pass. | Close the loop with a public evidence commit. Then attack the source contour shifts `(rtn-def)` and `(RTN-def)` before the effective estimates; first satisfy the outstanding contribution-self-report governance deliverables. |
+| 8 | `PROOF-ATTEMPT` | `KNOWN_THEOREM_FORMALIZED`. Lean proves tunable horizontal bounds for the raw contour and Gamma prefactor, separate Gaussian integrability of every actual residue and remainder term, centered-Gaussian sign symmetry, heat-evolution/Schwarz-reflection commutation, and the exact two-sum, two-remainder equation `(39)` for every `t>0`, `z.re!=0`, and `N`. Six exact witnesses, five selected standard-only axiom prints, scans, full build, public implementation CI, and public evidence CI pass. | Before the next proof attack, satisfy the outstanding contribution-self-report governance deliverables. Then attack the source contour shifts `(rtn-def)` and `(RTN-def)` before the effective estimates. |
 
 ## Loop 4 preregistration
 
@@ -456,6 +456,8 @@ run `29648603372`, build job `88090965556`, in `1m48s`, before Loop 8 proof-sour
   passed public CI run `29648603372`, build job `88090965556`, in `1m48s`
 - `public_implementation_evidence`: commit `af6c80c42c0abdfb1cf91147e74a8b88263b20ea`
   passed public CI run `29651603027`, build job `88098754302`, in `2m41s`
+- `public_evidence_backfill`: commit `7cf65e6d19afb963e9bb910a1a0e763a5f234344`
+  passed public CI run `29651774163`, build job `88099210841`, in `1m55s`
 - `next_exact_gate`: prove the source complex-Gaussian contour shifts `(rtn-def)` and `(RTN-def)`
   for the now concrete heat-evolved terms, before attempting their effective estimates
 - `governance_before_next_research_loop`: produce the outstanding `CONTRIBUTIONS.md`, plain-language
