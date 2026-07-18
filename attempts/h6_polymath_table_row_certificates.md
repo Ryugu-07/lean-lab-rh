@@ -999,6 +999,8 @@ run `29661631696`, build job `88125198144`, in `1m31s`.
 - `global_goal`: H6-Q1 and the persistent RH Goal remain active.
 - `public_implementation`: commit `016fc4fd71e6b63c142714058547f8b2501fd3a5` passed public Lean
   Action CI run `29663109048`, build job `88128987815`, in `1m53s`.
+- `public_closure`: evidence commit `60ff744dc89d39980be8460162f4e9a319e0faca` passed public Lean
+  Action CI run `29663259192`, build job `88129384030`, in `2m17s`. Loop 15 is publicly closed.
 
 ## Loop 3 preregistration
 

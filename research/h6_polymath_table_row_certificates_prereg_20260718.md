@@ -1031,4 +1031,7 @@ effective `R2`, the unconditional Table 1 certificates, H6-E/G8, and RH remain o
 
 Implementation commit `016fc4fd71e6b63c142714058547f8b2501fd3a5` passed public Lean Action CI
 run `29663109048`, build job `88128987815`, in `1m53s`.
+
+Closure-evidence commit `60ff744dc89d39980be8460162f4e9a319e0faca` passed public Lean Action CI
+run `29663259192`, build job `88129384030`, in `2m17s`. Loop 15 is publicly closed.
 H6-Q1 and the global RH Goal remain active.
