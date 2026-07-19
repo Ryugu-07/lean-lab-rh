@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260719-H6-BOYD-PHASE-DOMAIN-CONNECTEDNESS-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PREREGISTERED / PUBLIC_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_CHECKED / CLOSURE_EVIDENCE_PENDING`
 
 ## Target
 
@@ -168,7 +168,8 @@ CI.
 - `classification`: source-specific hard-gap reduction plus route infrastructure;
   `rh_frontier_delta=0`, `hard_gap_delta=1`, `route_infrastructure_delta=1`,
   `obstruction_map_delta=1`.
-- `public_implementation`: pending.
+- `public_implementation`: commit `838e07a2c6d0b2ed10194b3c03170a5a99f375a0` passed public Lean
+  Action CI run `29670331447`, build job `88148019006`, in `2m16s`.
 - `runtime`: one inherited compaction summary at Loop 21 start; no later compaction. Exact serving
   model variant, reasoning effort, and serving budget remain unexposed. H6-Q1 and the persistent RH
   Goal remain active.

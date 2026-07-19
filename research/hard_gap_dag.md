@@ -564,7 +564,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `obstruction_map_delta=1`.
 - `public_preregistration`: commit `23e977591546a0962562405515a02979e1881b4e`, CI run
   `29669918676`, build job `88146935055`, passed in `2m1s` before proof-source editing.
-- `public_implementation`: pending.
+- `public_implementation`: commit `838e07a2c6d0b2ed10194b3c03170a5a99f375a0`, CI run
+  `29670331447`, build job `88148019006`, passed in `2m16s`.
 - `still_open`: branched degree two and normalized-coordinate inverse layers of
   `OBS-H6-BOYD-COVERING-CERTIFICATE-01`, adjacent-saddle decomposition, Boyd--Nemes equation
   `(15)`, effective `R2`, unconditional Table 1 certificates, H6-E/G8, and RH.

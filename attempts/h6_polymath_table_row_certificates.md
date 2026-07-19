@@ -1502,8 +1502,7 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 
 - `campaign`: `PROOF-ATTEMPT-20260719-H6-BOYD-PHASE-DOMAIN-CONNECTEDNESS-01`
 - `mode`: `PROOF-ATTEMPT`
-- `result`: `PROVED / HARD_GAP_REDUCED`; local implementation complete, public implementation CI
-  pending
+- `result`: `PROVED / HARD_GAP_REDUCED`; public implementation checked, closure evidence pending
 - `target`: classify the unique phase zero in `|Im u|<2*pi`, prove the actual Loop 20 subtype map
   open, use open+proper-closed plus the singleton zero fiber to prove the source domain connected,
   and prove the phase map surjective onto the open disk
@@ -1533,7 +1532,8 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   full build; selected declarations depend only on `propext`, `Classical.choice`, `Quot.sound`
 - `public_preregistration`: commit `23e977591546a0962562405515a02979e1881b4e`, CI run
   `29669918676`, build job `88146935055`, passed in `2m1s` before proof-source editing
-- `public_implementation`: pending
+- `public_implementation`: commit `838e07a2c6d0b2ed10194b3c03170a5a99f375a0`, CI run
+  `29670331447`, build job `88148019006`, passed in `2m16s`
 - `next_exact_gate`: prove the phase map has branched degree two, not just a double zero at one
   fiber, then lift through the normalized coordinate to the disk-wide analytic inverse and its
   Cauchy Jacobian
