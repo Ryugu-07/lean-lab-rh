@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260719-H6-BOYD-PHASE-DOMAIN-CONNECTEDNESS-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PUBLIC_IMPLEMENTATION_CHECKED / CLOSURE_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED / HARD_GAP_REDUCED`
 
 ## Target
 
@@ -170,6 +170,9 @@ CI.
   `obstruction_map_delta=1`.
 - `public_implementation`: commit `838e07a2c6d0b2ed10194b3c03170a5a99f375a0` passed public Lean
   Action CI run `29670331447`, build job `88148019006`, in `2m16s`.
+- `public_closure`: evidence commit `1579ae7a1d82726b0975c2742fcb87753e74ef92` passed public Lean
+  Action CI run `29670422956`, build job `88148267994`, in `1m51s`. Loop 21 is publicly closed;
+  the final ledger commit records this immutable evidence.
 - `runtime`: one inherited compaction summary at Loop 21 start; no later compaction. Exact serving
   model variant, reasoning effort, and serving budget remain unexposed. H6-Q1 and the persistent RH
   Goal remain active.
