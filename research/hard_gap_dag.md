@@ -531,3 +531,18 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `still_open`: connected-origin-component and degree-two covering layers of
   `OBS-H6-BOYD-COVERING-CERTIFICATE-01`, adjacent-saddle decomposition, Boyd--Nemes equation
   `(15)`, effective `R2`, unconditional Table 1 certificates, H6-E/G8, and RH.
+
+## 2026-07-19 H6-Q1 Loop 21 selection
+
+- `OBS-H6-BOYD-COVERING-CERTIFICATE-01`: open; selected connected-origin-component and
+  surjectivity subedge.
+- `fixed_edge`: prove the phase has unique zero in `|Im u|<2*pi`, prove the actual proper subtype
+  map open, use its singleton zero fiber to prove the Loop 20 source domain connected, and prove
+  surjectivity onto the full open phase disk.
+- `material_difference_from_loop20`: properness alone only prevents escape. Loop 21 combines the
+  source-specific zero equations with open/closed-map connected-component cardinality to identify
+  the source as one component and force the full target range.
+- `remaining_after_success`: compute branched degree two, construct the normalized-coordinate
+  disk inverse, and derive the inverse-Jacobian adjacent-saddle decomposition without assuming
+  Boyd--Nemes equation `(15)`.
+- `gate`: no Loop 21 Lean proof-source edit before the preregistration commit passes public CI.

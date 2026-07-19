@@ -1497,3 +1497,29 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
 - `budget`: no V4.1 numerical quota and no exposed serving token budget
 - `persistent_goal`: H6-Q1 and the global RH Goal remain active
+
+## Loop 21 Boyd phase-domain connectedness preregistration
+
+- `campaign`: `PROOF-ATTEMPT-20260719-H6-BOYD-PHASE-DOMAIN-CONNECTEDNESS-01`
+- `mode`: `PROOF-ATTEMPT`
+- `status`: preregistered; public preregistration CI pending; no Loop 21 Lean proof source edited
+- `target`: classify the unique phase zero in `|Im u|<2*pi`, prove the actual Loop 20 subtype map
+  open, use open+proper-closed plus the singleton zero fiber to prove the source domain connected,
+  and prove the phase map surjective onto the open disk
+- `material_difference_from_loop20`: Loop 20 controls compact inverse images. Loop 21 uses a
+  source-specific zero classification and the connected-components cardinal theorem to determine
+  the number of source components and the full target range.
+- `anti_substitution`: no assumed connectedness, surjectivity, degree, fiber count, global square-
+  root branch, inverse, or Boyd--Nemes equation `(15)`
+- `full_preregistration`:
+  `research/h6_boyd_phase_domain_connectedness_loop21_prereg_20260719.md`
+- `next_after_success`: compute the proper holomorphic phase map's branched degree as two and lift
+  it through the normalized coordinate; do not infer degree two merely from the double zero
+- `compaction_state`: inherited one summary after Loop 20, then re-read canonical governance,
+  HANDOFF, Targets/TargetChecks, current attempts, hard-gap DAG, Loop 20 source/preregistration,
+  and relevant mathlib APIs
+- `downloads_patch_check`: the Downloads V4 zip exactly matches the already adapted import record;
+  V4.1 remains authoritative
+- `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
+- `budget`: no V4.1 numerical quota and no exposed serving token budget
+- `persistent_goal`: H6-Q1 and the global RH Goal remain active
