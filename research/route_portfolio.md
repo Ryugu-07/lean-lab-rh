@@ -2637,3 +2637,19 @@ Implementation commit `159ec6c565a3f69cdd4cce5c60fe78d11bab7038` passed public L
 run `29666112428`, build job `88136696208`, in `2m18s` after a local 8,722-job full build.
 Closure-evidence commit `851c9664d9ed92aada42450cfb9b49dcd79955cf` passed run `29666217582`,
 build job `88136964270`, in `1m30s`. Loop 17 is publicly closed.
+
+### Loop 18 adjacent-contour selection
+
+Route selection re-enters H6-Q1 with a materially different geometric target. Instead of trying
+to infer a disk inverse from the critical-value list, Loop 18 explicitly parameterizes the upper
+zero-real-phase contour as `x(y)+i*y`, where `x(y)` is the unique root in `[-2,0]` of
+`exp(x)*cos(y)=x+1`. The fixed endpoint is a continuous path from `0` to `2*pi*i` whose phase
+height is strictly decreasing from `0` to `-2*pi`; conjugation supplies the lower path.
+
+The derivative identity makes this a promising attack on Boyd Conditions 2.1:
+`x'(y)=exp(x(y))*sin(y)/x(y)` and
+`q'(y)=(x(y)^2+exp(2*x(y))*sin(y)^2)/x(y)<0` in the open interval. Endpoint degeneracy of the
+implicit equation is the preregistered obstacle. Success removes the adjacent-boundary/landing
+part of `OBS-H6-BOYD-COVERING-CERTIFICATE-01`, while the two-dimensional covering and exclusion
+of asymptotic singularities remain separate open layers. Full details are in
+`research/h6_boyd_adjacent_contour_loop18_prereg_20260719.md`.

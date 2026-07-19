@@ -1137,6 +1137,37 @@ No Loop 17 Lean proof source may be edited before this preregistration passes pu
   are not exposed; V4.1 imposes no numerical quota. Two inherited compaction summaries were
   followed by canonical-file re-audits. H6-Q1 and the persistent RH Goal remain active.
 
+## Loop 18 preregistration
+
+- `campaign`: `PROOF-ATTEMPT-20260719-H6-BOYD-ADJACENT-CONTOUR-01`.
+- `mode`: `PROOF-ATTEMPT`.
+- `fixed_subedge`: construct the unique real graph `x(y)+i*y` of the positive zero-real-phase
+  contour from `0` to `2*pi*i`, prove strict decrease of its phase height from `0` to `-2*pi`,
+  construct the unique phase lift, and obtain the conjugate negative landing.
+- `success_criterion`: unique bounded root, continuity, interior implicit derivative, exact
+  complex phase identity, strict phase-height monotonicity, unique interval inverse and both
+  landing statements compile and pass all mechanical/public gates.
+- `falsification_criterion`: nonunique root, discontinuity, wrong derivative sign or normalization,
+  failed strict monotonicity, or wrong endpoint.
+- `proper_prefix_rule`: only the complete root-continuity, exact contour, endpoint and strict
+  phase-height monotonicity spine may survive a blocked interval inverse; root bounds or isolated
+  trigonometry do not qualify.
+- `known_obstacle`: the implicit `x` derivative equals `x` at a root and vanishes at both endpoint
+  saddles. Interior IFT is available, but endpoint continuity requires compact uniqueness or an
+  exact continuous-root theorem.
+- `nearest_primary_source`: Boyd 1995 Conditions 2.1 and its Gamma adjacent-saddle section; Boyd
+  1994 DOI `10.1098/rspa.1994.0158`; Nemes arXiv `1310.0166`, equation `(15)`.
+- `nearest_project_attempt`: Loop 17 and `OBS-H6-BOYD-COVERING-CERTIFICATE-01`.
+- `new_attack_angle`: use the explicit zero-real-phase graph and the negative derivative identity
+  instead of another critical-value calculation or an abstract covering premise.
+- `full_preregistration`:
+  `research/h6_boyd_adjacent_contour_loop18_prereg_20260719.md`.
+- `runtime`: Codex, GPT-5 family; exact serving variant, reasoning effort and serving token budget
+  not exposed; no V4.1 numerical quota; inherited summary followed by canonical re-audit.
+- `global_goal`: H6-Q1 and the persistent RH Goal remain active.
+
+No Loop 18 Lean proof source may be edited before this preregistration passes public Lean Action CI.
+
 ## Loop 3 preregistration
 
 - `mode`: `LITERATURE`

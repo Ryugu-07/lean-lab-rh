@@ -430,3 +430,16 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `still_open`: `OBS-H6-BOYD-COVERING-CERTIFICATE-01`, adjacent-saddle decomposition,
   Boyd--Nemes equation `(15)`, effective `R2`, unconditional Table 1 certificates, H6-E/G8, and
   RH.
+
+## 2026-07-19 H6-Q1 Loop 18 selection
+
+- `OBS-H6-BOYD-COVERING-CERTIFICATE-01`: open; selected one-dimensional contour subedge.
+- `fixed_edge`: prove that the unique `x in [-2,0]` satisfying
+  `exp(x)*cos(y)=x+1` gives a continuous adjacent contour from `0` to `2*pi*i`, with phase height
+  strictly decreasing from `0` to `-2*pi`; obtain the conjugate lower contour.
+- `material_difference_from_loop17`: Loop 17 classified critical points and recorded the missing
+  covering geometry. Loop 18 constructs the actual adjacent boundary lift and attacks source
+  Conditions 2.1 directly; it does not repeat critical-point enumeration.
+- `remaining_after_success`: extend the two boundary lifts to a two-dimensional origin saddle
+  domain, exclude asymptotic singularities over the target disk, and prove the disk covering and
+  analytic inverse.
