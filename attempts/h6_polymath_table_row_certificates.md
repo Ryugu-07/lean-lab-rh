@@ -1457,7 +1457,7 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 
 - `campaign`: `PROOF-ATTEMPT-20260719-H6-BOYD-STRIP-PROPERNESS-01`
 - `mode`: `PROOF-ATTEMPT`
-- `result`: `PROVED / HARD_GAP_REDUCED`; public implementation verified, closure evidence pending
+- `result`: `PROVED / HARD_GAP_REDUCED`; publicly closed
 - `target`: prove the actual phase map from
   `{u | |Im u|<2*pi and norm(exp(u)-u-1)<2*pi}` to the open phase disk is proper
 - `material_difference_from_loop19`: Loop 19 certifies two boundary rays. Loop 20 controls the
@@ -1486,6 +1486,8 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   `29668684962`, build job `88143662554`, passed in `2m11s` before proof-source editing
 - `public_implementation`: commit `0ba680319f11c9bcd8647a1c9501002987ea61ec`, CI run
   `29669163075`, build job `88144972286`, passed in `2m17s`
+- `public_closure`: evidence commit `7691e3353161c8f9ead1f726517900adf8ec7018`, CI run
+  `29669268220`, build job `88145255930`, passed in `1m47s`
 - `next_exact_gate`: prove connectedness of the actual source phase domain and uniqueness of the
   phase zero in the strip, then use properness plus holomorphic openness to establish surjectivity
   and compute the branched covering degree rather than adding further boundary identities

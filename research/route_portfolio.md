@@ -2744,4 +2744,5 @@ alone must not be relabeled as covering or injectivity.
 Preregistration commit `0aa33d4a8a3cd1a78de7a46faf90e9d4d87d8fa4` passed public Lean Action CI
 run `29668684962`, build job `88143662554`, in `2m11s`. Implementation commit
 `0ba680319f11c9bcd8647a1c9501002987ea61ec` passed run `29669163075`, build job `88144972286`,
-in `2m17s`; public closure evidence is pending.
+in `2m17s`. Closure-evidence commit `7691e3353161c8f9ead1f726517900adf8ec7018` passed run
+`29669268220`, build job `88145255930`, in `1m47s`. Loop 20 is publicly closed.

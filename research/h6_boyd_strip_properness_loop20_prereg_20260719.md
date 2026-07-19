@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260719-H6-BOYD-STRIP-PROPERNESS-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED / CLOSURE_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED / HARD_GAP_REDUCED`
 
 ## Target
 
@@ -184,6 +184,9 @@ CI.
   Action CI run `29668684962`, build job `88143662554`, in `2m11s`, before proof-source editing.
 - `public_implementation`: commit `0ba680319f11c9bcd8647a1c9501002987ea61ec` passed public Lean
   Action CI run `29669163075`, build job `88144972286`, in `2m17s`.
+- `public_closure`: evidence commit `7691e3353161c8f9ead1f726517900adf8ec7018` passed public Lean
+  Action CI run `29669268220`, build job `88145255930`, in `1m47s`. Loop 20 is publicly closed;
+  the final ledger commit records this immutable evidence.
 - `runtime`: one inherited compaction summary at Loop 20 start; no later compaction. Exact serving
   model variant, reasoning effort, and serving budget remain unexposed. H6-Q1 and the persistent
   RH Goal remain active.
