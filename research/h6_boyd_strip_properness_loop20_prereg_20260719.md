@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260719-H6-BOYD-STRIP-PROPERNESS-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `LOCAL_IMPLEMENTATION_VERIFIED / PUBLIC_IMPLEMENTATION_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED / CLOSURE_EVIDENCE_PENDING`
 
 ## Target
 
@@ -182,7 +182,8 @@ CI.
   `obstruction_map_delta=1`.
 - `public_preregistration`: commit `0aa33d4a8a3cd1a78de7a46faf90e9d4d87d8fa4` passed public Lean
   Action CI run `29668684962`, build job `88143662554`, in `2m11s`, before proof-source editing.
-- `public_implementation`: pending.
+- `public_implementation`: commit `0ba680319f11c9bcd8647a1c9501002987ea61ec` passed public Lean
+  Action CI run `29669163075`, build job `88144972286`, in `2m17s`.
 - `runtime`: one inherited compaction summary at Loop 20 start; no later compaction. Exact serving
   model variant, reasoning effort, and serving budget remain unexposed. H6-Q1 and the persistent
   RH Goal remain active.
