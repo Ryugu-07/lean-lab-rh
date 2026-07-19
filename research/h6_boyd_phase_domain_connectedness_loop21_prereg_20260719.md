@@ -143,3 +143,32 @@ Lean syntax.
 
 No Loop 21 Lean proof source may be edited before this preregistration passes public Lean Action
 CI.
+
+## Local outcome
+
+- `result`: `PROVED / HARD_GAP_REDUCED`. Every preregistered endpoint compiles.
+- `public_preregistration`: commit `23e977591546a0962562405515a02979e1881b4e` passed public Lean
+  Action CI run `29669918676`, build job `88146935055`, in `2m1s`, before proof-source editing.
+- `implementation`: the 258-line production module
+  `LeanLab/Riemann/DeBruijnNewmanPolymathBoydPhaseDomainConnectedness.lean` proves the exact first-
+  strip zero classification, global and subtype open-map theorems, the singleton zero fiber,
+  connectedness of the Loop 20 source domain, and surjectivity onto the complete target disk.
+- `proof_mechanism`: the unique-zero proof uses only the real and imaginary phase equations,
+  trigonometric sign intervals, `Real.lt_tan`, `Real.sin_lt`, conjugation, and strict exponential
+  convexity. The topology proof uses the complex open mapping theorem, Loop 20 properness/closedness,
+  `IsOpenMap.enatCard_connectedComponents_le_encard_preimage_singleton`, and the singleton zero
+  fiber; no path, degree, or covering premise is introduced.
+- `mechanical_audit`: the production module, exact Targets, six exact TargetChecks, six selected
+  axiom prints, three forbidden scans, and the 8,726-job full build pass. Every selected theorem
+  depends only on `propext`, `Classical.choice`, and `Quot.sound`.
+- `obstruction_after`: the connected-origin-component and phase-surjectivity layers of
+  `OBS-H6-BOYD-COVERING-CERTIFICATE-01` are closed. The residual node is to prove branched degree
+  two, lift the phase through the normalized square-root coordinate to a single-valued analytic
+  inverse, and derive the adjacent-saddle inverse-Jacobian decomposition.
+- `classification`: source-specific hard-gap reduction plus route infrastructure;
+  `rh_frontier_delta=0`, `hard_gap_delta=1`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `public_implementation`: pending.
+- `runtime`: one inherited compaction summary at Loop 21 start; no later compaction. Exact serving
+  model variant, reasoning effort, and serving budget remain unexposed. H6-Q1 and the persistent RH
+  Goal remain active.

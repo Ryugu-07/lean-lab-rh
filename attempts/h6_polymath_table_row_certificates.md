@@ -1502,7 +1502,8 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 
 - `campaign`: `PROOF-ATTEMPT-20260719-H6-BOYD-PHASE-DOMAIN-CONNECTEDNESS-01`
 - `mode`: `PROOF-ATTEMPT`
-- `status`: preregistered; public preregistration CI pending; no Loop 21 Lean proof source edited
+- `result`: `PROVED / HARD_GAP_REDUCED`; local implementation complete, public implementation CI
+  pending
 - `target`: classify the unique phase zero in `|Im u|<2*pi`, prove the actual Loop 20 subtype map
   open, use open+proper-closed plus the singleton zero fiber to prove the source domain connected,
   and prove the phase map surjective onto the open disk
@@ -1515,6 +1516,27 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   `research/h6_boyd_phase_domain_connectedness_loop21_prereg_20260719.md`
 - `next_after_success`: compute the proper holomorphic phase map's branched degree as two and lift
   it through the normalized coordinate; do not infer degree two merely from the double zero
+- `compiled_theorems`:
+  `deBruijnNewmanPolymathBoydComplexSaddlePhase_eq_zero_iff_of_abs_im_lt_two_pi`,
+  `isOpenMap_deBruijnNewmanPolymathBoydComplexSaddlePhase`,
+  `isOpenMap_deBruijnNewmanPolymathBoydPhaseOnOriginDomain`,
+  `deBruijnNewmanPolymathBoydPhaseOnOriginDomain_preimage_zero`,
+  `isConnected_deBruijnNewmanPolymathBoydOriginPhaseDomain`, and
+  `surjective_deBruijnNewmanPolymathBoydPhaseOnOriginDomain`
+- `assumption_frontier_after`: phase properness, openness, singleton first-strip zero fiber,
+  connected source domain, and full target-disk surjectivity are K0; no degree, simple-connectedness,
+  normalized-coordinate global inverse, or Boyd--Nemes equation `(15)` premise is introduced
+- `classification_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`,
+  `route_infrastructure_delta=1`, `obstruction_map_delta=1`
+- `local_mechanical_audit`: 258-line production module, exact Targets, six TargetChecks, six
+  selected standard-only axiom prints, empty forbidden scans, `git diff --check`, and the 8,726-job
+  full build; selected declarations depend only on `propext`, `Classical.choice`, `Quot.sound`
+- `public_preregistration`: commit `23e977591546a0962562405515a02979e1881b4e`, CI run
+  `29669918676`, build job `88146935055`, passed in `2m1s` before proof-source editing
+- `public_implementation`: pending
+- `next_exact_gate`: prove the phase map has branched degree two, not just a double zero at one
+  fiber, then lift through the normalized coordinate to the disk-wide analytic inverse and its
+  Cauchy Jacobian
 - `compaction_state`: inherited one summary after Loop 20, then re-read canonical governance,
   HANDOFF, Targets/TargetChecks, current attempts, hard-gap DAG, Loop 20 source/preregistration,
   and relevant mathlib APIs

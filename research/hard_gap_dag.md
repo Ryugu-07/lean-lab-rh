@@ -546,3 +546,25 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   disk inverse, and derive the inverse-Jacobian adjacent-saddle decomposition without assuming
   Boyd--Nemes equation `(15)`.
 - `gate`: no Loop 21 Lean proof-source edit before the preregistration commit passes public CI.
+
+## 2026-07-19 H6-Q1 Loop 21 outcome
+
+- `H6-Q1`: open; the connected-origin-component and phase-surjectivity subedge is proven locally.
+- `K0-H6-BOYD-PHASE-DOMAIN-CONNECTEDNESS-01`: proven locally. The phase has only its origin zero
+  in `|Im u|<2*pi`; the actual proper subtype phase map is open; its source domain is connected;
+  and it is surjective onto the full open target disk.
+- `OBS-H6-BOYD-COVERING-CERTIFICATE-01`: reduced but open. Its adjacent boundaries, radial
+  coordinate lifts, no-asymptotic-escape layer, connected source component, and target
+  surjectivity are now K0. The residual certificate must compute branched degree two and lift the
+  phase map through the normalized square-root coordinate to the disk-wide analytic inverse.
+- `why_surjectivity_is_not_degree`: the singleton zero fiber is a double analytic zero, but one
+  ramified fiber does not by itself prove that every regular fiber has two points counted with
+  multiplicity. A degree or argument-principle computation remains mandatory.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `public_preregistration`: commit `23e977591546a0962562405515a02979e1881b4e`, CI run
+  `29669918676`, build job `88146935055`, passed in `2m1s` before proof-source editing.
+- `public_implementation`: pending.
+- `still_open`: branched degree two and normalized-coordinate inverse layers of
+  `OBS-H6-BOYD-COVERING-CERTIFICATE-01`, adjacent-saddle decomposition, Boyd--Nemes equation
+  `(15)`, effective `R2`, unconditional Table 1 certificates, H6-E/G8, and RH.

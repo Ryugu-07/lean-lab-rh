@@ -28,6 +28,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentSaddleCauchy
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentContour
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydCoordinateRays
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydStripProperness
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydPhaseDomainConnectedness
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2478,5 +2479,27 @@ example {K : Set deBruijnNewmanPolymathBoydOpenPhaseDisk} (hK : IsCompact K) :
 
 example : IsProperMap deBruijnNewmanPolymathBoydPhaseOnOriginDomain :=
   isProperMap_deBruijnNewmanPolymathBoydPhaseOnOriginDomain
+
+example {u : ℂ} (hu : |u.im| < 2 * Real.pi) :
+    deBruijnNewmanPolymathBoydComplexSaddlePhase u = 0 ↔ u = 0 :=
+  deBruijnNewmanPolymathBoydComplexSaddlePhase_eq_zero_iff_of_abs_im_lt_two_pi hu
+
+example : IsOpenMap deBruijnNewmanPolymathBoydComplexSaddlePhase :=
+  isOpenMap_deBruijnNewmanPolymathBoydComplexSaddlePhase
+
+example : IsOpenMap deBruijnNewmanPolymathBoydPhaseOnOriginDomain :=
+  isOpenMap_deBruijnNewmanPolymathBoydPhaseOnOriginDomain
+
+example :
+    deBruijnNewmanPolymathBoydPhaseOnOriginDomain ⁻¹'
+        {deBruijnNewmanPolymathBoydOpenPhaseDiskZero} =
+      {deBruijnNewmanPolymathBoydOriginPhaseDomainZero} :=
+  deBruijnNewmanPolymathBoydPhaseOnOriginDomain_preimage_zero
+
+example : IsConnected deBruijnNewmanPolymathBoydOriginPhaseDomain :=
+  isConnected_deBruijnNewmanPolymathBoydOriginPhaseDomain
+
+example : Function.Surjective deBruijnNewmanPolymathBoydPhaseOnOriginDomain :=
+  surjective_deBruijnNewmanPolymathBoydPhaseOnOriginDomain
 
 end LeanLab.Riemann

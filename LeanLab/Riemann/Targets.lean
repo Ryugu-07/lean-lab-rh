@@ -27,6 +27,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentSaddleCauchy
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentContour
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydCoordinateRays
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydStripProperness
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydPhaseDomainConnectedness
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1089,6 +1090,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``isProperMap_deBruijnNewmanPolymathBoydPhaseOnOriginDomain
       status := .proven
       note := "Loop 20 proves the phase norm is at least 2*pi on both strip boundaries, obtains explicit real-part bounds for every closed-strip phase sublevel, and applies Heine--Borel to make those sublevels compact. Maximizing the ambient norm on an arbitrary compact subset of the open target disk then yields a strict sublevel margin and a compact full inverse image, packaged as an actual IsProperMap theorem between subtypes. This closes the interior asymptotic-escape layer of the Loop 17 covering obstruction. It does not prove connectedness or simple connectedness of the source domain, compute the phase degree, construct the disk-wide normalized-coordinate inverse, derive equation (15), or prove RH." },
+    { id := "H6.debruijn-newman.boyd-phase-domain-connectedness"
+      tier := .tier2
+      title := "Identify the connected Boyd phase domain and prove phase surjectivity"
+      statement :=
+        "Prove that exp(u)-u-1 has only its origin zero in the strip |Im u|<2*pi, that the proper phase map on the first-strip phase domain is open, that this source domain is connected, and that the phase map is surjective onto the full open disk of radius 2*pi."
+      leanName := some ``surjective_deBruijnNewmanPolymathBoydPhaseOnOriginDomain
+      status := .proven
+      note := "Loop 21 proves the strip zero classification by the real and imaginary phase equations, then applies the complex open mapping theorem to the actual subtype map. Loop 20 properness supplies closedness; mathlib's open-and-closed-map connected-component bound and the singleton zero fiber force the source component type to be subsingleton. The source is therefore connected, and its nonempty clopen range is the full connected target disk. This closes the connected-origin-component and surjectivity layers of the Loop 17 obstruction. It does not compute branched degree two, prove simple connectedness, construct the normalized-coordinate disk inverse, derive equation (15), or prove RH." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"
