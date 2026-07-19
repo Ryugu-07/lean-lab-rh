@@ -250,6 +250,9 @@ No Loop 17 Lean proof source may be edited before this preregistration passes pu
   geometric certificate it removes.
 - `public_preregistration`: commit `43ffadd881b96aca92ab3f4684612833f9aa15cc` passed public Lean
   Action CI run `29665357300`, build job `88134769245`, in `1m57s` before proof-source editing.
+- `public_implementation`: commit `159ec6c565a3f69cdd4cce5c60fe78d11bab7038` passed public Lean
+  Action CI run `29666112428`, build job `88136696208`, in `2m18s`.
+- `local_full_build`: passed with 8,722 jobs before the implementation commit.
 - `compaction_state`: this loop inherited a compaction summary, re-read canonical governance and
   all required frontier files, then inherited a subsequent summary and repeated the canonical
   audit before closure.

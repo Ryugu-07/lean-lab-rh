@@ -1127,6 +1127,9 @@ No Loop 17 Lean proof source may be edited before this preregistration passes pu
   `obstruction_map_delta=1`.
 - `public_preregistration`: commit `43ffadd881b96aca92ab3f4684612833f9aa15cc` passed CI run
   `29665357300`, build job `88134769245`, in `1m57s` before source editing.
+- `public_implementation`: commit `159ec6c565a3f69cdd4cce5c60fe78d11bab7038` passed CI run
+  `29666112428`, build job `88136696208`, in `2m18s`; the preceding local full build passed 8,722
+  jobs.
 - `runtime`: Codex, GPT-5 family; exact serving variant, reasoning effort, and serving token budget
   are not exposed; V4.1 imposes no numerical quota. Two inherited compaction summaries were
   followed by canonical-file re-audits. H6-Q1 and the persistent RH Goal remain active.
