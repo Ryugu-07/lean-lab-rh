@@ -2713,5 +2713,6 @@ certificate. More boundary algebra or endpoint normalization would no longer be 
 attack.
 
 Preregistration commit `17000cb4a3a9b1eabada3fd35ea4d744fe5520fb` passed public Lean Action CI
-run `29667732245`, build job `88141103415`, in `1m35s`. Implementation and closure CI evidence are
-pending.
+run `29667732245`, build job `88141103415`, in `1m35s`. Implementation commit
+`7efc4496c89badf7182f6fc6fe81734bb8782924` passed run `29668228884`, build job `88142434731`,
+in `2m22s`. Closure CI evidence is pending.
