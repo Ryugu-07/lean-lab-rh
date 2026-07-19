@@ -203,6 +203,8 @@ No Loop 19 Lean proof source may be edited before this preregistration passes pu
   Action CI run `29667732245`, build job `88141103415`, in `1m35s`, before source editing.
 - `public_implementation`: commit `7efc4496c89badf7182f6fc6fe81734bb8782924` passed public Lean
   Action CI run `29668228884`, build job `88142434731`, in `2m22s`.
+- `public_closure`: evidence commit `54aaea3800d7eb39f49f3eb7c7183969af3f0253` passed public Lean
+  Action CI run `29668328534`, build job `88142709051`, in `1m47s`.
 - `runtime`: no new compaction. Exact serving model variant, reasoning effort, and serving budget
   remain unexposed; V4.1 imposes no numerical quota.
 - `global_goal`: H6-Q1 and the persistent RH Goal remain active.

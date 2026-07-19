@@ -1251,6 +1251,9 @@ No Loop 19 Lean proof source may be edited before this preregistration passes pu
   `29667732245`, build job `88141103415`, in `1m35s` before source editing.
 - `public_implementation`: commit `7efc4496c89badf7182f6fc6fe81734bb8782924` passed public Lean
   Action CI run `29668228884`, build job `88142434731`, in `2m22s`.
+- `public_closure`: evidence commit `54aaea3800d7eb39f49f3eb7c7183969af3f0253` passed public Lean
+  Action CI run `29668328534`, build job `88142709051`, in `1m47s`. Loop 19 is publicly closed;
+  H6-Q1 and the persistent RH Goal remain active.
 - `runtime`: Codex, GPT-5 family; exact serving variant, reasoning effort, and serving token budget
   are not exposed; V4.1 has no numerical quota; no new compaction. H6-Q1 and the persistent RH Goal
   remain active.
