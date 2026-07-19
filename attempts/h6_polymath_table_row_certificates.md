@@ -1189,7 +1189,8 @@ No Loop 18 Lean proof source may be edited before this preregistration passes pu
   `obstruction_map_delta=1`.
 - `public_preregistration`: commit `54d120eab46217730506e334e24d27aea25da472` passed CI run
   `29666526948`, build job `88137742671`, in about `2m12s` before source editing.
-- `public_implementation`: pending implementation push and public Lean Action CI.
+- `public_implementation`: commit `3b2e050eaab55c41a2f9dc5fffa88e173b284f89` passed public Lean
+  Action CI run `29667229566`, build job `88139688107`, in `2m22s`.
 - `runtime`: Codex, GPT-5 family; exact serving variant, reasoning effort, and serving token budget
   are not exposed; V4.1 has no numerical quota. A second inherited compaction summary during
   integration was followed by a canonical-file re-audit. H6-Q1 and the persistent RH Goal remain
