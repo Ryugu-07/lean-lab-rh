@@ -468,3 +468,17 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `still_open`: residual `OBS-H6-BOYD-COVERING-CERTIFICATE-01`, adjacent-saddle decomposition,
   Boyd--Nemes equation `(15)`, effective `R2`, unconditional Table 1 certificates, H6-E/G8, and
   RH.
+
+## 2026-07-19 H6-Q1 Loop 19 selection
+
+- `OBS-H6-BOYD-COVERING-CERTIFICATE-01`: open; selected normalized-coordinate boundary-lift
+  subedge.
+- `fixed_edge`: prove the principal removable factor stays in the closed right half-plane along
+  both Loop 18 contours, then prove the actual normalized coordinate maps them exactly onto radial
+  segments from zero to the `n=+/-1` critical images.
+- `material_difference_from_loop18`: Loop 18 controls the phase only, so the normalized coordinate
+  is determined only up to sign. Loop 19 audits the principal square-root branch and proves the
+  sign cannot switch.
+- `remaining_after_success`: identify the two-dimensional component between the boundary lifts,
+  exclude interior asymptotic escape over the target disk, and prove covering/path lifting for the
+  disk-wide analytic inverse.

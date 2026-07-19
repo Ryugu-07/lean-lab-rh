@@ -1199,6 +1199,35 @@ No Loop 18 Lean proof source may be edited before this preregistration passes pu
   integration was followed by a canonical-file re-audit. H6-Q1 and the persistent RH Goal remain
   active.
 
+## Loop 19 preregistration
+
+- `campaign`: `PROOF-ATTEMPT-20260719-H6-BOYD-COORDINATE-RAYS-01`.
+- `mode`: `PROOF-ATTEMPT`.
+- `fixed_subedge`: prove the Loop 18 phase contours are exact radial lifts for the actual
+  normalized principal Boyd coordinate, ending at the compiled critical images for `n=+/-1`.
+- `success_criterion`: factor closed-right-half-plane certificates, continuity of both coordinate
+  lifts, common-square and endpoint identities, and both full radial formulas compile and pass
+  every mechanical/public gate.
+- `falsification_criterion`: factor entry into the negative real cut, coordinate discontinuity,
+  a square-root sign switch, or failure of either endpoint normalization.
+- `proper_prefix_rule`: both factor and continuity certificates plus common-square/endpoint data
+  are the minimum blocked prefix; phase squares alone repeat Loop 18 and are not retained.
+- `known_obstacle`: the global principal complex square root is discontinuous on its negative-real
+  cut, while the radial candidate vanishes at the origin.
+- `nearest_primary_source`: Boyd 1995 Conditions 2.1 and its Gamma adjacent-saddle section; Boyd
+  1994 DOI `10.1098/rspa.1994.0158`; Nemes arXiv `1310.0166`, equation `(15)`.
+- `nearest_project_attempt`: Loops 17 and 18 and residual
+  `OBS-H6-BOYD-COVERING-CERTIFICATE-01`.
+- `new_attack_angle`: prove factor half-plane control from the exact contour quotient, then use
+  `IsPreconnected.eq_of_sq_eq` with the actual critical image as endpoint sign witness.
+- `full_preregistration`:
+  `research/h6_boyd_coordinate_rays_loop19_prereg_20260719.md`.
+- `runtime`: Codex, GPT-5 family; exact serving variant, reasoning effort, and serving token budget
+  not exposed; no V4.1 numerical quota; no new compaction after Loop 18 closure.
+- `global_goal`: H6-Q1 and the persistent RH Goal remain active.
+
+No Loop 19 Lean proof source may be edited before this preregistration passes public Lean Action CI.
+
 ## Loop 3 preregistration
 
 - `mode`: `LITERATURE`

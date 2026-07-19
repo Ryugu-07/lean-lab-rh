@@ -2676,3 +2676,19 @@ run `29666526948`, build job `88137742671`, in about `2m12s`. Implementation com
 `3b2e050eaab55c41a2f9dc5fffa88e173b284f89` passed run `29667229566`, build job `88139688107`,
 in `2m22s`. Closure-evidence commit `b2d868b60f4510c00f84578af6c61f31a1034188` passed run
 `29667324379`, build job `88139957737`, in `1m33s`. Loop 18 is publicly closed.
+
+### Loop 19 normalized-coordinate radial-lift selection
+
+Route selection keeps the residual Boyd covering certificate active and strengthens the Loop 18
+boundary data from phase level to the actual normalized principal coordinate. For each phase
+magnitude `t` in `[0,2*pi]`, the target is an exact formula expressing the upper and lower
+coordinate lifts as the radial scaling `sqrt(t)/sqrt(2*pi)` of the compiled `n=+/-1` critical
+images.
+
+The material issue is branch consistency. Equality of squares permits a hidden sign switch because
+the global principal complex square root is discontinuous across the negative real axis. Loop 19
+therefore first proves that the removable factor stays in the closed right half-plane along both
+contours and obtains continuity of the composed coordinate lifts. The endpoint sign can then be
+propagated on connected intervals by `IsPreconnected.eq_of_sq_eq`. Full preregistration is in
+`research/h6_boyd_coordinate_rays_loop19_prereg_20260719.md`; no proof source may be edited before
+green public preregistration CI.
