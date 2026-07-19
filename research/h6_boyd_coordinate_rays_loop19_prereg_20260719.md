@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260719-H6-BOYD-COORDINATE-RAYS-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PREREGISTERED`
+Status: `PROVED / KNOWN_THEOREM_FORMALIZED`
 
 ## Target
 
@@ -175,3 +175,33 @@ will use exact Lean syntax.
   build job `88140167965`, in `1m31s`.
 
 No Loop 19 Lean proof source may be edited before this preregistration passes public Lean Action CI.
+
+## Outcome
+
+- `result`: `PROVED / KNOWN_THEOREM_FORMALIZED`. The complete preregistered endpoint compiles.
+- `implementation`: the 378-line production module
+  `LeanLab/Riemann/DeBruijnNewmanPolymathBoydCoordinateRays.lean` proves the generic identity
+  `re(factor(u))=4*s*re(u)*im(u)/normSq(u^2)` when `phase(u)=s*i`, then combines it with the
+  Loop 18 contour signs.
+- `compiled_spine`: factor real part nonnegative along both contour lifts; continuity of the actual
+  principal coordinate on both closed intervals; exact common-square formulas; exact origin and
+  adjacent-critical-image endpoints; nonvanishing radial candidates away from zero; preconnected
+  sign propagation; both radial identities; and both norm-square formulas `norm^2=2*t`.
+- `mechanical_audit`: the source, `Targets.lean`, eight exact `TargetChecks.lean` witnesses, and
+  eight selected `AxiomsAudit.lean` prints compile. Every selected print contains only `propext`,
+  `Classical.choice`, and `Quot.sound`; forbidden-token, custom-declaration, and resource-option
+  scans are empty; `git diff --check` passes; the full build passes 8,724 jobs.
+- `obstruction_after`: the normalized-coordinate branch-consistency and boundary radial-lift layer
+  of `OBS-H6-BOYD-COVERING-CERTIFICATE-01` is closed. The residual obstruction is entirely
+  two-dimensional: define the origin saddle component bounded by these lifts, rule out interior
+  escape/asymptotic singularities over the open target disk, and prove proper covering/path
+  lifting for the disk-wide analytic inverse.
+- `classification`: known theorem formalized plus route infrastructure;
+  `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `public_preregistration`: commit `17000cb4a3a9b1eabada3fd35ea4d744fe5520fb` passed public Lean
+  Action CI run `29667732245`, build job `88141103415`, in `1m35s`, before source editing.
+- `public_implementation`: pending implementation push and public Lean Action CI.
+- `runtime`: no new compaction. Exact serving model variant, reasoning effort, and serving budget
+  remain unexposed; V4.1 imposes no numerical quota.
+- `global_goal`: H6-Q1 and the persistent RH Goal remain active.

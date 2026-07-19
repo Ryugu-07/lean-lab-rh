@@ -1228,6 +1228,32 @@ No Loop 18 Lean proof source may be edited before this preregistration passes pu
 
 No Loop 19 Lean proof source may be edited before this preregistration passes public Lean Action CI.
 
+## Loop 19 local outcome
+
+- `campaign`: `PROOF-ATTEMPT-20260719-H6-BOYD-COORDINATE-RAYS-01`.
+- `result`: `PROVED / KNOWN_THEOREM_FORMALIZED`; the complete preregistered branch-consistency and
+  radial-lift endpoint compiles.
+- `compiled_spine`: the generic factor real-part quotient, upper/lower contour sign transport,
+  closed-right-half-plane factor certificates, continuity of both principal-coordinate lifts,
+  common-square and endpoint formulas, nonzero radial candidates on positive subintervals,
+  preconnected sign propagation, both exact radial identities, and both norm-square identities.
+- `obstruction_after`: normalized-coordinate branch consistency and the two boundary radial lifts
+  are discharged. Residual `OBS-H6-BOYD-COVERING-CERTIFICATE-01` now consists of the
+  two-dimensional origin saddle component, properness/no asymptotic singularities, and the disk
+  covering/path-lifting theorem.
+- `targets_and_audit`: one proven target, eight exact statement witnesses, and eight selected axiom
+  prints compile; the latter contain only `propext`, `Classical.choice`, and `Quot.sound`.
+  Forbidden scans and `git diff --check` are empty; the full build passes 8,724 jobs.
+- `classification`: known theorem formalized plus route infrastructure;
+  `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `public_preregistration`: commit `17000cb4a3a9b1eabada3fd35ea4d744fe5520fb` passed CI run
+  `29667732245`, build job `88141103415`, in `1m35s` before source editing.
+- `public_implementation`: pending implementation push and public Lean Action CI.
+- `runtime`: Codex, GPT-5 family; exact serving variant, reasoning effort, and serving token budget
+  are not exposed; V4.1 has no numerical quota; no new compaction. H6-Q1 and the persistent RH Goal
+  remain active.
+
 ## Loop 3 preregistration
 
 - `mode`: `LITERATURE`

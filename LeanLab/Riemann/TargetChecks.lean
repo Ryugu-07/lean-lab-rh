@@ -26,6 +26,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLocalSaddleInverse
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydRealSaddleDiffeomorphism
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentSaddleCauchy
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentContour
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydCoordinateRays
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2412,5 +2413,43 @@ example :
       (𝓝[Set.Iio (2 * Real.pi)] (2 * Real.pi))
       (𝓝 (deBruijnNewmanPolymathBoydComplexSaddlePoint (-1))) :=
   tendsto_deBruijnNewmanPolymathBoydAdjacentContourNegativePhaseLift_at_two_pi
+
+example {t : ℝ} (ht : t ∈ Set.Icc 0 (2 * Real.pi)) :
+    0 ≤ (deBruijnNewmanPolymathBoydComplexSaddleFactor
+      (deBruijnNewmanPolymathBoydAdjacentContourPhaseLift (-t))).re :=
+  deBruijnNewmanPolymathBoydAdjacentContourUpper_factor_re_nonneg ht
+
+example {t : ℝ} (ht : t ∈ Set.Icc 0 (2 * Real.pi)) :
+    0 ≤ (deBruijnNewmanPolymathBoydComplexSaddleFactor
+      (deBruijnNewmanPolymathBoydAdjacentContourNegativePhaseLift t)).re :=
+  deBruijnNewmanPolymathBoydAdjacentContourLower_factor_re_nonneg ht
+
+example :
+    ContinuousOn deBruijnNewmanPolymathBoydAdjacentContourUpperCoordinateLift
+      (Set.Icc 0 (2 * Real.pi)) :=
+  continuousOn_deBruijnNewmanPolymathBoydAdjacentContourUpperCoordinateLift
+
+example :
+    ContinuousOn deBruijnNewmanPolymathBoydAdjacentContourLowerCoordinateLift
+      (Set.Icc 0 (2 * Real.pi)) :=
+  continuousOn_deBruijnNewmanPolymathBoydAdjacentContourLowerCoordinateLift
+
+example {t : ℝ} (ht : t ∈ Set.Icc 0 (2 * Real.pi)) :
+    deBruijnNewmanPolymathBoydAdjacentContourUpperCoordinateLift t =
+      deBruijnNewmanPolymathBoydAdjacentSaddleRadialRay 1 t :=
+  deBruijnNewmanPolymathBoydAdjacentContourUpperCoordinateLift_eq_radialRay ht
+
+example {t : ℝ} (ht : t ∈ Set.Icc 0 (2 * Real.pi)) :
+    deBruijnNewmanPolymathBoydAdjacentContourLowerCoordinateLift t =
+      deBruijnNewmanPolymathBoydAdjacentSaddleRadialRay (-1) t :=
+  deBruijnNewmanPolymathBoydAdjacentContourLowerCoordinateLift_eq_radialRay ht
+
+example {t : ℝ} (ht : t ∈ Set.Icc 0 (2 * Real.pi)) :
+    ‖deBruijnNewmanPolymathBoydAdjacentContourUpperCoordinateLift t‖ ^ 2 = 2 * t :=
+  norm_deBruijnNewmanPolymathBoydAdjacentContourUpperCoordinateLift_sq ht
+
+example {t : ℝ} (ht : t ∈ Set.Icc 0 (2 * Real.pi)) :
+    ‖deBruijnNewmanPolymathBoydAdjacentContourLowerCoordinateLift t‖ ^ 2 = 2 * t :=
+  norm_deBruijnNewmanPolymathBoydAdjacentContourLowerCoordinateLift_sq ht
 
 end LeanLab.Riemann

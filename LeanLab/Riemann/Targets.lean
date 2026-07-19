@@ -25,6 +25,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLocalSaddleInverse
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydRealSaddleDiffeomorphism
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentSaddleCauchy
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentContour
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydCoordinateRays
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1071,6 +1072,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``tendsto_deBruijnNewmanPolymathBoydAdjacentContourNegativePhaseLift_at_two_pi
       status := .proven
       note := "Loop 18 represents the contour root through the order isomorphism h(x)=(x+1)*exp(-x) from (-infinity,0] onto (-infinity,1]. This gives global root continuity without postulating endpoint implicit regularity. Lean proves the unique root in [-2,0], its interior derivative, the exact complex phase identity, the manifestly negative phase-height derivative, strict antitonicity, both phase-lift order isomorphisms and both one-sided adjacent-saddle landing limits. This removes the adjacent-boundary-lift layer of the Loop 17 obstruction. It does not prove that these contours bound a two-dimensional covering domain, exclude asymptotic singularities, construct the disk-wide analytic inverse, derive equation (15), or prove RH." },
+    { id := "H6.debruijn-newman.boyd-coordinate-rays"
+      tier := .tier2
+      title := "Lift the adjacent Boyd contours to normalized coordinate rays"
+      statement :=
+        "Prove that the principal normalized Boyd coordinate is continuous along both adjacent phase contours and maps them exactly onto the radial segments from zero to the n=+/-1 critical images, with phase-radius norm squared 2*t."
+      leanName := some ``deBruijnNewmanPolymathBoydAdjacentContourLowerCoordinateLift_eq_radialRay
+      status := .proven
+      note := "Loop 19 proves from the exact quotient 2*phase(u)/u^2 that the principal square-root factor stays in the closed right half-plane along both Loop 18 contours. Lean therefore obtains continuity of the actual coordinate lifts, proves their squares agree with radial scalings of the compiled adjacent critical images, and uses preconnected interval sign propagation from t=2*pi to get both exact radial identities. This supplies the two boundary inverse lifts in normalized-coordinate space. It does not identify the two-dimensional origin saddle component, exclude interior asymptotic singularities, construct the disk-wide inverse, derive equation (15), or prove RH." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

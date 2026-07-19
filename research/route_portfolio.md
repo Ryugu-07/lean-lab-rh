@@ -2692,3 +2692,26 @@ contours and obtains continuity of the composed coordinate lifts. The endpoint s
 propagated on connected intervals by `IsPreconnected.eq_of_sq_eq`. Full preregistration is in
 `research/h6_boyd_coordinate_rays_loop19_prereg_20260719.md`; no proof source may be edited before
 green public preregistration CI.
+
+### Loop 19 local outcome and route decision
+
+Loop 19 closes locally as `PROVED / KNOWN_THEOREM_FORMALIZED`. The production module
+`DeBruijnNewmanPolymathBoydCoordinateRays.lean` computes the real part of the removable factor
+directly from the imaginary phase and contour coordinates, proving that both paths avoid the
+principal square-root cut. This makes the actual normalized-coordinate lifts continuous.
+
+Their squares match radial scalings of the compiled `n=+/-1` critical images. On every positive
+subinterval, the radial candidate is nonzero; equality at `2*pi` and preconnectedness therefore
+force equality on the entire interval, with the origin handled separately. Lean also proves the
+exact phase-radius law `norm^2=2*t` on both lifts.
+
+This closes the normalized-coordinate boundary branch layer, with `rh_frontier_delta=0`,
+`hard_gap_delta=0`, `route_infrastructure_delta=1`, and `obstruction_map_delta=1`. The next route
+must attack the genuinely two-dimensional issue: define the origin saddle component between the
+compiled boundary lifts and prove phase/coordinate properness or another no-asymptotic-escape
+certificate. More boundary algebra or endpoint normalization would no longer be a materially new
+attack.
+
+Preregistration commit `17000cb4a3a9b1eabada3fd35ea4d744fe5520fb` passed public Lean Action CI
+run `29667732245`, build job `88141103415`, in `1m35s`. Implementation and closure CI evidence are
+pending.

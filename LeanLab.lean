@@ -27,6 +27,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLocalSaddleInverse
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydRealSaddleDiffeomorphism
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentSaddleCauchy
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentContour
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydCoordinateRays
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion

@@ -482,3 +482,24 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `remaining_after_success`: identify the two-dimensional component between the boundary lifts,
   exclude interior asymptotic escape over the target disk, and prove covering/path lifting for the
   disk-wide analytic inverse.
+
+## 2026-07-19 H6-Q1 Loop 19 outcome
+
+- `H6-Q1`: open; the selected normalized-coordinate boundary-lift subedge is proven.
+- `K0-H6-BOYD-COORDINATE-RAYS-01`: proven. The principal factor remains in the closed right
+  half-plane on both adjacent contours; the actual normalized coordinate is continuous there and
+  maps each contour exactly onto the radial segment ending at its compiled adjacent critical image.
+- `OBS-H6-BOYD-COVERING-CERTIFICATE-01`: narrowed but open. Both boundary curves and their exact
+  coordinate lifts are K0. The residual node is the two-dimensional component/properness theorem:
+  exclude interior asymptotic escape and prove a covering of the open coordinate disk.
+- `why_boundary_lifts_are_insufficient`: explicit inverse paths for two boundary rays do not give
+  path lifting for arbitrary disk paths or compactness of all inverse fibers; an interior path may
+  still escape to infinity without approaching either boundary curve.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `public_preregistration`: commit `17000cb4a3a9b1eabada3fd35ea4d744fe5520fb`, CI run
+  `29667732245`, build job `88141103415`, passed in `1m35s`.
+- `public_implementation`: pending implementation push and public CI.
+- `still_open`: residual `OBS-H6-BOYD-COVERING-CERTIFICATE-01`, adjacent-saddle decomposition,
+  Boyd--Nemes equation `(15)`, effective `R2`, unconditional Table 1 certificates, H6-E/G8, and
+  RH.
