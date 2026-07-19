@@ -2635,3 +2635,5 @@ more local coefficients or critical points has no new attack angle.
 
 Implementation commit `159ec6c565a3f69cdd4cce5c60fe78d11bab7038` passed public Lean Action CI
 run `29666112428`, build job `88136696208`, in `2m18s` after a local 8,722-job full build.
+Closure-evidence commit `851c9664d9ed92aada42450cfb9b49dcd79955cf` passed run `29666217582`,
+build job `88136964270`, in `1m30s`. Loop 17 is publicly closed.

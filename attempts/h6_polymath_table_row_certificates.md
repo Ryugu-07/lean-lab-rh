@@ -1130,6 +1130,9 @@ No Loop 17 Lean proof source may be edited before this preregistration passes pu
 - `public_implementation`: commit `159ec6c565a3f69cdd4cce5c60fe78d11bab7038` passed CI run
   `29666112428`, build job `88136696208`, in `2m18s`; the preceding local full build passed 8,722
   jobs.
+- `public_closure`: evidence commit `851c9664d9ed92aada42450cfb9b49dcd79955cf` passed CI run
+  `29666217582`, build job `88136964270`, in `1m30s`. Loop 17 is publicly closed; H6-Q1 and the
+  persistent RH Goal remain active.
 - `runtime`: Codex, GPT-5 family; exact serving variant, reasoning effort, and serving token budget
   are not exposed; V4.1 imposes no numerical quota. Two inherited compaction summaries were
   followed by canonical-file re-audits. H6-Q1 and the persistent RH Goal remain active.
