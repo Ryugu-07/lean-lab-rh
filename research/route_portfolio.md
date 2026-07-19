@@ -2674,4 +2674,5 @@ escape/asymptotic singularities rather than repeat one-dimensional contour algeb
 Preregistration commit `54d120eab46217730506e334e24d27aea25da472` passed public Lean Action CI
 run `29666526948`, build job `88137742671`, in about `2m12s`. Implementation commit
 `3b2e050eaab55c41a2f9dc5fffa88e173b284f89` passed run `29667229566`, build job `88139688107`,
-in `2m22s`. Closure CI evidence is pending.
+in `2m22s`. Closure-evidence commit `b2d868b60f4510c00f84578af6c61f31a1034188` passed run
+`29667324379`, build job `88139957737`, in `1m33s`. Loop 18 is publicly closed.

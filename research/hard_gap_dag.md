@@ -463,6 +463,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `29666526948`, build job `88137742671`, passed in about `2m12s`.
 - `public_implementation`: commit `3b2e050eaab55c41a2f9dc5fffa88e173b284f89`, CI run
   `29667229566`, build job `88139688107`, passed in `2m22s`.
+- `public_closure`: evidence commit `b2d868b60f4510c00f84578af6c61f31a1034188`, CI run
+  `29667324379`, build job `88139957737`, passed in `1m33s`.
 - `still_open`: residual `OBS-H6-BOYD-COVERING-CERTIFICATE-01`, adjacent-saddle decomposition,
   Boyd--Nemes equation `(15)`, effective `R2`, unconditional Table 1 certificates, H6-E/G8, and
   RH.
