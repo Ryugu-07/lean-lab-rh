@@ -25,6 +25,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLogSaddleIntegral
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLocalSaddleInverse
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydRealSaddleDiffeomorphism
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentSaddleCauchy
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentContour
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2358,5 +2359,58 @@ example {U : ℂ → ℂ} {R : ℝ} {n : ℤ} (hn : n = 1 ∨ n = -1) (hR : 0 < 
     R ≤ 2 * Real.sqrt Real.pi :=
   deBruijnNewmanPolymathBoydOriginInverseBranch_radius_le_adjacent
     hn hR hU hlocal hlands
+
+example (y : ℝ) :
+    ∃! x : ℝ, x ∈ Set.Icc (-2) 0 ∧ Real.exp x * Real.cos y = x + 1 :=
+  existsUnique_deBruijnNewmanPolymathBoydAdjacentContourRealPart y
+
+example : Continuous deBruijnNewmanPolymathBoydAdjacentContourRealPart :=
+  continuous_deBruijnNewmanPolymathBoydAdjacentContourRealPart
+
+example {y : ℝ} (hy0 : 0 < y) (hy2pi : y < 2 * Real.pi) :
+    HasDerivAt deBruijnNewmanPolymathBoydAdjacentContourRealPart
+      (Real.exp (deBruijnNewmanPolymathBoydAdjacentContourRealPart y) * Real.sin y /
+        deBruijnNewmanPolymathBoydAdjacentContourRealPart y) y :=
+  hasDerivAt_deBruijnNewmanPolymathBoydAdjacentContourRealPart hy0 hy2pi
+
+example (y : ℝ) :
+    deBruijnNewmanPolymathBoydComplexSaddlePhase
+        (deBruijnNewmanPolymathBoydAdjacentContourPlus y) =
+      (deBruijnNewmanPolymathBoydAdjacentContourPhaseHeight y : ℂ) * Complex.I :=
+  deBruijnNewmanPolymathBoydComplexSaddlePhase_adjacentContourPlus y
+
+example :
+    StrictAntiOn deBruijnNewmanPolymathBoydAdjacentContourPhaseHeight
+      (Set.Icc 0 (2 * Real.pi)) :=
+  deBruijnNewmanPolymathBoydAdjacentContourPhaseHeight_strictAntiOn
+
+example {s : ℝ} (hs : s ∈ Set.Icc (-2 * Real.pi) 0) :
+    ∃! y : ℝ, y ∈ Set.Icc 0 (2 * Real.pi) ∧
+      deBruijnNewmanPolymathBoydAdjacentContourPhaseHeight y = s :=
+  existsUnique_deBruijnNewmanPolymathBoydAdjacentContourPhaseLift hs
+
+example {s : ℝ} (hs : s ∈ Set.Icc (-2 * Real.pi) 0) :
+    deBruijnNewmanPolymathBoydComplexSaddlePhase
+        (deBruijnNewmanPolymathBoydAdjacentContourPhaseLift s) =
+      (s : ℂ) * Complex.I :=
+  deBruijnNewmanPolymathBoydComplexSaddlePhase_adjacentContourPhaseLift hs
+
+example :
+    Filter.Tendsto deBruijnNewmanPolymathBoydAdjacentContourPhaseLift
+      (𝓝[Set.Ioi (-2 * Real.pi)] (-2 * Real.pi))
+      (𝓝 (deBruijnNewmanPolymathBoydComplexSaddlePoint 1)) :=
+  tendsto_deBruijnNewmanPolymathBoydAdjacentContourPhaseLift_at_neg_two_pi
+
+example {s : ℝ} (hs : s ∈ Set.Icc 0 (2 * Real.pi)) :
+    deBruijnNewmanPolymathBoydComplexSaddlePhase
+        (deBruijnNewmanPolymathBoydAdjacentContourNegativePhaseLift s) =
+      (s : ℂ) * Complex.I :=
+  deBruijnNewmanPolymathBoydComplexSaddlePhase_adjacentContourNegativePhaseLift hs
+
+example :
+    Filter.Tendsto deBruijnNewmanPolymathBoydAdjacentContourNegativePhaseLift
+      (𝓝[Set.Iio (2 * Real.pi)] (2 * Real.pi))
+      (𝓝 (deBruijnNewmanPolymathBoydComplexSaddlePoint (-1))) :=
+  tendsto_deBruijnNewmanPolymathBoydAdjacentContourNegativePhaseLift_at_two_pi
 
 end LeanLab.Riemann

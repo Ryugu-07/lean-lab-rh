@@ -1168,6 +1168,33 @@ No Loop 17 Lean proof source may be edited before this preregistration passes pu
 
 No Loop 18 Lean proof source may be edited before this preregistration passes public Lean Action CI.
 
+## Loop 18 local outcome
+
+- `campaign`: `PROOF-ATTEMPT-20260719-H6-BOYD-ADJACENT-CONTOUR-01`.
+- `result`: `PROVED / KNOWN_THEOREM_FORMALIZED`; the full preregistered contour and landing
+  endpoint compiles.
+- `compiled_spine`: unique root in `[-2,0]`, global continuity via the carrier order isomorphism,
+  exact interior root derivative, exact upper phase identity, negative phase-height derivative,
+  strict antitonicity on `[0,2*pi]`, endpoints, unique phase lift, upper adjacent landing, and the
+  conjugate lower lift and landing.
+- `obstruction_after`: the one-dimensional boundary/landing part of
+  `OBS-H6-BOYD-COVERING-CERTIFICATE-01` is discharged. The residual obstruction is the
+  two-dimensional origin saddle component, phase properness/no asymptotic singularities, and the
+  covering/path-lifting theorem required for a disk-wide analytic inverse.
+- `targets_and_audit`: one proven target, ten exact statement witnesses, and nine selected axiom
+  prints compile; the latter contain only `propext`, `Classical.choice`, and `Quot.sound`.
+  Forbidden scans and `git diff --check` are empty; the full build passes 8,723 jobs.
+- `classification`: known theorem formalized plus route infrastructure;
+  `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `public_preregistration`: commit `54d120eab46217730506e334e24d27aea25da472` passed CI run
+  `29666526948`, build job `88137742671`, in about `2m12s` before source editing.
+- `public_implementation`: pending implementation push and public Lean Action CI.
+- `runtime`: Codex, GPT-5 family; exact serving variant, reasoning effort, and serving token budget
+  are not exposed; V4.1 has no numerical quota. A second inherited compaction summary during
+  integration was followed by a canonical-file re-audit. H6-Q1 and the persistent RH Goal remain
+  active.
+
 ## Loop 3 preregistration
 
 - `mode`: `LITERATURE`

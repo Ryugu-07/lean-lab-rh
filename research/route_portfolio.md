@@ -2653,3 +2653,24 @@ implicit equation is the preregistered obstacle. Success removes the adjacent-bo
 part of `OBS-H6-BOYD-COVERING-CERTIFICATE-01`, while the two-dimensional covering and exclusion
 of asymptotic singularities remain separate open layers. Full details are in
 `research/h6_boyd_adjacent_contour_loop18_prereg_20260719.md`.
+
+### Loop 18 local outcome and route decision
+
+Loop 18 closes locally as `PROVED / KNOWN_THEOREM_FORMALIZED`. The production module
+`DeBruijnNewmanPolymathBoydAdjacentContour.lean` packages the scalar equation through the order
+isomorphism induced by `h(x)=(x+1)*exp(-x)`, proving the selected root globally continuous despite
+endpoint degeneracy. Lean then proves the exact upper phase identity, the strictly negative
+phase-height derivative, strict decrease from `0` to `-2*pi`, the unique phase lift and landing at
+`2*pi*i`; conjugation supplies the lower contour and landing at `-2*pi*i`.
+
+This discharges the adjacent-boundary/landing layer exposed by Loop 17, but it does not yet produce
+the two-dimensional Boyd saddle domain or a proper covering of the target disk. Classification is
+known theorem formalized plus route infrastructure, with `rh_frontier_delta=0`,
+`hard_gap_delta=0`, `route_infrastructure_delta=1`, and `obstruction_map_delta=1`. The next route
+selection should compare a proof that these contours bound a phase-proper origin component with a
+direct coordinate identity along radial lifts; either attack must explicitly address interior
+escape/asymptotic singularities rather than repeat one-dimensional contour algebra.
+
+Preregistration commit `54d120eab46217730506e334e24d27aea25da472` passed public Lean Action CI
+run `29666526948`, build job `88137742671`, in about `2m12s`. Implementation and closure CI
+evidence are pending.

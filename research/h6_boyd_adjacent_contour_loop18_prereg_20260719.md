@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260719-H6-BOYD-ADJACENT-CONTOUR-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PREREGISTERED`
+Status: `PROVED / KNOWN_THEOREM_FORMALIZED`
 
 ## Target
 
@@ -218,3 +218,35 @@ an order anti-isomorphism.
   build job `88137224007`, in `1m30s`.
 
 No Loop 18 Lean proof source may be edited before this preregistration passes public Lean Action CI.
+
+## Outcome
+
+- `result`: `PROVED / KNOWN_THEOREM_FORMALIZED`. The complete preregistered endpoint compiles.
+- `implementation`: the 673-line production module
+  `LeanLab/Riemann/DeBruijnNewmanPolymathBoydAdjacentContour.lean` represents the root by the
+  inverse of the strict carrier `h(x)=(x+1)*exp(-x)` on `x<=0`. This proves global continuity
+  without assuming endpoint implicit regularity.
+- `compiled_spine`: unique root in `[-2,0]`, global root continuity, exact interior root
+  derivative, exact upper complex phase identity, the manifestly negative phase-height
+  derivative, strict antitonicity on `[0,2*pi]`, endpoint values, a unique interval phase lift,
+  the upper landing at `2*pi*i`, and the conjugate lower lift and landing at `-2*pi*i`.
+- `mechanical_audit`: the source, `Targets.lean`, ten exact `TargetChecks.lean` witnesses, and
+  nine selected `AxiomsAudit.lean` prints compile. Every selected print contains only `propext`,
+  `Classical.choice`, and `Quot.sound`; forbidden-token, custom-declaration, and resource-option
+  scans are empty; `git diff --check` passes; the full build passes 8,723 jobs.
+- `obstruction_after`: the adjacent-boundary and one-dimensional landing layer of
+  `OBS-H6-BOYD-COVERING-CERTIFICATE-01` is closed. The residual obstruction is two-dimensional:
+  prove that the two contours bound the origin saddle component, establish phase-specific path
+  lifting/properness with no asymptotic singularities over the target disk, and construct the
+  disk-wide analytic inverse.
+- `classification`: known theorem formalized plus route infrastructure;
+  `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `public_preregistration`: commit `54d120eab46217730506e334e24d27aea25da472` passed public Lean
+  Action CI run `29666526948`, build job `88137742671`, in about `2m12s`, before source editing.
+- `public_implementation`: pending the implementation push and public Lean Action CI.
+- `runtime`: a second inherited compaction summary occurred during integration; canonical
+  governance, HANDOFF, Targets, TargetChecks, this attempt, the hard-gap DAG, and this
+  preregistration were re-read afterward. Exact serving model variant, reasoning effort, and
+  serving budget remain unexposed; V4.1 imposes no numerical quota.
+- `global_goal`: H6-Q1 and the persistent RH Goal remain active.

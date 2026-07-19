@@ -24,6 +24,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLogSaddleIntegral
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydLocalSaddleInverse
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydRealSaddleDiffeomorphism
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentSaddleCauchy
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentContour
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1062,6 +1063,14 @@ def rhTargets : List ResearchTarget :=
       leanName := none
       status := .inProgress
       note := "Loop 17 isolates the missing input as a phase-specific covering or monodromy certificate for the Boyd origin saddle domain, including unique continuation and the adjacent-contour boundary/landing facts corresponding to Boyd's steepest-descent conditions. The local inverse, all critical values, the conditional disk identity, Cauchy expansions, and the exact conditional radius obstruction compile; global continuation and landing remain open." },
+    { id := "H6.debruijn-newman.boyd-adjacent-contours"
+      tier := .tier2
+      title := "Construct both adjacent Boyd phase contours"
+      statement :=
+        "Construct the unique upper zero-real-phase contour from 0 to 2*pi*i as a continuous real graph, prove its phase height decreases strictly from 0 to -2*pi with the exact implicit derivative, construct the unique interval phase lift and its landing, and obtain the lower contour and landing at -2*pi*i by conjugation."
+      leanName := some ``tendsto_deBruijnNewmanPolymathBoydAdjacentContourNegativePhaseLift_at_two_pi
+      status := .proven
+      note := "Loop 18 represents the contour root through the order isomorphism h(x)=(x+1)*exp(-x) from (-infinity,0] onto (-infinity,1]. This gives global root continuity without postulating endpoint implicit regularity. Lean proves the unique root in [-2,0], its interior derivative, the exact complex phase identity, the manifestly negative phase-height derivative, strict antitonicity, both phase-lift order isomorphisms and both one-sided adjacent-saddle landing limits. This removes the adjacent-boundary-lift layer of the Loop 17 obstruction. It does not prove that these contours bound a two-dimensional covering domain, exclude asymptotic singularities, construct the disk-wide analytic inverse, derive equation (15), or prove RH." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

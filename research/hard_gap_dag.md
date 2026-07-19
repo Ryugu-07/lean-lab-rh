@@ -443,3 +443,25 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `remaining_after_success`: extend the two boundary lifts to a two-dimensional origin saddle
   domain, exclude asymptotic singularities over the target disk, and prove the disk covering and
   analytic inverse.
+
+## 2026-07-19 H6-Q1 Loop 18 outcome
+
+- `H6-Q1`: open; the selected one-dimensional adjacent-contour subedge is proven.
+- `K0-H6-BOYD-ADJACENT-CONTOURS-01`: proven. The upper and lower zero-real-phase contours have
+  globally continuous real graphs, exact phase parameterizations, unique phase lifts, and
+  kernel-checked landing at the adjacent saddles `+/-2*pi*i`.
+- `OBS-H6-BOYD-COVERING-CERTIFICATE-01`: narrowed but open. Its adjacent-boundary/landing layer is
+  discharged. The residual certificate must identify the two-dimensional origin saddle component,
+  prove phase properness or otherwise exclude asymptotic singularities above the target disk, and
+  establish the covering/path-lifting property that yields the single-valued analytic inverse.
+- `why_contours_are_insufficient`: two explicit boundary paths do not by themselves prove that the
+  region between them maps properly or covers the centered phase disk without an interior escape
+  to infinity.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `public_preregistration`: commit `54d120eab46217730506e334e24d27aea25da472`, CI run
+  `29666526948`, build job `88137742671`, passed in about `2m12s`.
+- `public_implementation`: pending implementation push and public CI.
+- `still_open`: residual `OBS-H6-BOYD-COVERING-CERTIFICATE-01`, adjacent-saddle decomposition,
+  Boyd--Nemes equation `(15)`, effective `R2`, unconditional Table 1 certificates, H6-E/G8, and
+  RH.
