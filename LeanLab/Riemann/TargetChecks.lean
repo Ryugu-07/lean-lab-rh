@@ -27,6 +27,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydRealSaddleDiffeomorphism
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentSaddleCauchy
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentContour
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydCoordinateRays
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydStripProperness
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2451,5 +2452,31 @@ example {t : ℝ} (ht : t ∈ Set.Icc 0 (2 * Real.pi)) :
 example {t : ℝ} (ht : t ∈ Set.Icc 0 (2 * Real.pi)) :
     ‖deBruijnNewmanPolymathBoydAdjacentContourLowerCoordinateLift t‖ ^ 2 = 2 * t :=
   norm_deBruijnNewmanPolymathBoydAdjacentContourLowerCoordinateLift_sq ht
+
+example {u : ℂ} (hu : |u.im| = 2 * Real.pi) :
+    2 * Real.pi ≤ ‖deBruijnNewmanPolymathBoydComplexSaddlePhase u‖ :=
+  deBruijnNewmanPolymathBoydComplexSaddlePhase_norm_ge_two_pi_of_abs_im_eq hu
+
+example {r : ℝ} (hr : 0 ≤ r) :
+    IsCompact {u : ℂ | |u.im| ≤ 2 * Real.pi ∧
+      ‖deBruijnNewmanPolymathBoydComplexSaddlePhase u‖ ≤ r} :=
+  isCompact_deBruijnNewmanPolymathBoyd_closedStripPhaseSublevel hr
+
+example {r : ℝ} (hr : r < 2 * Real.pi) :
+    {u : ℂ | |u.im| ≤ 2 * Real.pi ∧
+      ‖deBruijnNewmanPolymathBoydComplexSaddlePhase u‖ ≤ r} ⊆
+      deBruijnNewmanPolymathBoydOriginPhaseStrip :=
+  deBruijnNewmanPolymathBoyd_closedStripPhaseSublevel_subset_originStrip hr
+
+example {K : Set deBruijnNewmanPolymathBoydOpenPhaseDisk} (hK : IsCompact K) :
+    IsCompact (deBruijnNewmanPolymathBoydAmbientPhasePreimage K) :=
+  isCompact_deBruijnNewmanPolymathBoydAmbientPhasePreimage hK
+
+example {K : Set deBruijnNewmanPolymathBoydOpenPhaseDisk} (hK : IsCompact K) :
+    IsCompact (deBruijnNewmanPolymathBoydPhaseOnOriginDomain ⁻¹' K) :=
+  isCompact_preimage_deBruijnNewmanPolymathBoydPhaseOnOriginDomain hK
+
+example : IsProperMap deBruijnNewmanPolymathBoydPhaseOnOriginDomain :=
+  isProperMap_deBruijnNewmanPolymathBoydPhaseOnOriginDomain
 
 end LeanLab.Riemann

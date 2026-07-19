@@ -1452,3 +1452,45 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   `HANDOFF.md`, hard-gap DAG, route atlas, current attempt, exact Lean predicates, and primary
   source text before selection
 - `persistent_goal`: active
+
+## Loop 20 Boyd strip-phase properness
+
+- `campaign`: `PROOF-ATTEMPT-20260719-H6-BOYD-STRIP-PROPERNESS-01`
+- `mode`: `PROOF-ATTEMPT`
+- `result`: `PROVED / HARD_GAP_REDUCED` locally; public implementation CI pending
+- `target`: prove the actual phase map from
+  `{u | |Im u|<2*pi and norm(exp(u)-u-1)<2*pi}` to the open phase disk is proper
+- `material_difference_from_loop19`: Loop 19 certifies two boundary rays. Loop 20 controls the
+  full two-dimensional inverse image of every compact target set and directly excludes interior
+  asymptotic escape.
+- `compiled_theorems`:
+  `deBruijnNewmanPolymathBoydComplexSaddlePhase_norm_ge_two_pi_of_abs_im_eq`,
+  `isCompact_deBruijnNewmanPolymathBoyd_closedStripPhaseSublevel`,
+  `deBruijnNewmanPolymathBoyd_closedStripPhaseSublevel_subset_originStrip`,
+  `isCompact_deBruijnNewmanPolymathBoydAmbientPhasePreimage`,
+  `isCompact_preimage_deBruijnNewmanPolymathBoydPhaseOnOriginDomain`, and
+  `isProperMap_deBruijnNewmanPolymathBoydPhaseOnOriginDomain`
+- `assumption_frontier_after`: the full no-asymptotic-escape/properness statement over the first
+  phase disk is K0; no connectedness, degree, covering, square-root branch, or inverse premise is
+  introduced
+- `hard_gap_after`: prove the source domain is the connected origin component, classify its phase
+  fibers/degree as two, and lift the proper branched phase map to the normalized-coordinate
+  analytic inverse; equation `(15)`, effective `R2`, Table 1 certificates, H6-E/G8, and RH remain
+  open
+- `classification_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`,
+  `route_infrastructure_delta=1`, `obstruction_map_delta=1`
+- `local_mechanical_audit`: 247-line source module, exact Targets, six TargetChecks, six selected
+  axiom prints, forbidden scans, `git diff --check`, and the 8,725-job full build pass; selected
+  declarations depend only on `propext`, `Classical.choice`, and `Quot.sound`
+- `public_preregistration`: commit `0aa33d4a8a3cd1a78de7a46faf90e9d4d87d8fa4`, CI run
+  `29668684962`, build job `88143662554`, passed in `2m11s` before proof-source editing
+- `public_implementation`: pending
+- `next_exact_gate`: prove connectedness of the actual source phase domain and uniqueness of the
+  phase zero in the strip, then use properness plus holomorphic openness to establish surjectivity
+  and compute the branched covering degree rather than adding further boundary identities
+- `compaction_state`: inherited one summary at Loop 20 start and re-read the canonical governance,
+  HANDOFF, Targets/TargetChecks, attempts, hard-gap DAG, relevant preregistrations, production
+  sources, and mathlib proper-map APIs; no later compaction
+- `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
+- `budget`: no V4.1 numerical quota and no exposed serving token budget
+- `persistent_goal`: H6-Q1 and the global RH Goal remain active

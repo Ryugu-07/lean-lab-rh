@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260719-H6-BOYD-STRIP-PROPERNESS-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PREREGISTERED`
+Status: `LOCAL_IMPLEMENTATION_VERIFIED / PUBLIC_IMPLEMENTATION_CI_PENDING`
 
 ## Target
 
@@ -157,3 +157,32 @@ will use exact Lean syntax.
 No Loop 20 Lean proof source may be edited before this preregistration passes public Lean Action
 CI.
 
+## Local outcome
+
+- `result`: `PROVED / HARD_GAP_REDUCED`. The full preregistered proper-map endpoint compiles.
+- `implementation`: the 247-line production module
+  `LeanLab/Riemann/DeBruijnNewmanPolymathBoydStripProperness.lean` defines the open source strip,
+  the first phase-value domain, the open target disk, and the actual subtype-valued phase map.
+- `compiled_spine`: exact phase-norm lower bound `2*pi` on both strip boundaries; explicit lower
+  and upper real-part bounds for every nonnegative closed-strip phase sublevel; Heine--Borel
+  compactness of those sublevels; strict boundary exclusion below `2*pi`; compact ambient and
+  subtype inverse images for every compact target set; and
+  `IsProperMap deBruijnNewmanPolymathBoydPhaseOnOriginDomain`.
+- `mechanical_audit`: standalone/module compilation, exact Targets, six exact TargetChecks,
+  six selected axiom prints, forbidden-token/custom-declaration/resource-option scans, and
+  `git diff --check` pass. Every selected print contains only `propext`, `Classical.choice`, and
+  `Quot.sound`; the full build passes 8,725 jobs.
+- `obstruction_after`: the interior asymptotic-escape layer of
+  `OBS-H6-BOYD-COVERING-CERTIFICATE-01` is closed. The residual obstruction is to prove the source
+  phase domain is the connected origin component, compute the proper holomorphic map's degree as
+  two using the double zero at the origin, and lift that branched cover to a single-valued
+  normalized-coordinate inverse.
+- `classification`: source-specific hard-gap reduction plus route infrastructure;
+  `rh_frontier_delta=0`, `hard_gap_delta=1`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `public_preregistration`: commit `0aa33d4a8a3cd1a78de7a46faf90e9d4d87d8fa4` passed public Lean
+  Action CI run `29668684962`, build job `88143662554`, in `2m11s`, before proof-source editing.
+- `public_implementation`: pending.
+- `runtime`: one inherited compaction summary at Loop 20 start; no later compaction. Exact serving
+  model variant, reasoning effort, and serving budget remain unexposed. H6-Q1 and the persistent
+  RH Goal remain active.

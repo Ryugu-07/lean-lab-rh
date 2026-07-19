@@ -26,6 +26,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydRealSaddleDiffeomorphism
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentSaddleCauchy
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentContour
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydCoordinateRays
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydStripProperness
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1080,6 +1081,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanPolymathBoydAdjacentContourLowerCoordinateLift_eq_radialRay
       status := .proven
       note := "Loop 19 proves from the exact quotient 2*phase(u)/u^2 that the principal square-root factor stays in the closed right half-plane along both Loop 18 contours. Lean therefore obtains continuity of the actual coordinate lifts, proves their squares agree with radial scalings of the compiled adjacent critical images, and uses preconnected interval sign propagation from t=2*pi to get both exact radial identities. This supplies the two boundary inverse lifts in normalized-coordinate space. It does not identify the two-dimensional origin saddle component, exclude interior asymptotic singularities, construct the disk-wide inverse, derive equation (15), or prove RH." },
+    { id := "H6.debruijn-newman.boyd-strip-phase-properness"
+      tier := .tier2
+      title := "Prove properness of the Boyd phase on its first saddle strip"
+      statement :=
+        "Restrict exp(u)-u-1 to the points with |Im u|<2*pi and phase norm <2*pi, viewed as a map to the open phase disk of radius 2*pi, and prove that this subtype-valued map is proper."
+      leanName := some ``isProperMap_deBruijnNewmanPolymathBoydPhaseOnOriginDomain
+      status := .proven
+      note := "Loop 20 proves the phase norm is at least 2*pi on both strip boundaries, obtains explicit real-part bounds for every closed-strip phase sublevel, and applies Heine--Borel to make those sublevels compact. Maximizing the ambient norm on an arbitrary compact subset of the open target disk then yields a strict sublevel margin and a compact full inverse image, packaged as an actual IsProperMap theorem between subtypes. This closes the interior asymptotic-escape layer of the Loop 17 covering obstruction. It does not prove connectedness or simple connectedness of the source domain, compute the phase degree, construct the disk-wide normalized-coordinate inverse, derive equation (15), or prove RH." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

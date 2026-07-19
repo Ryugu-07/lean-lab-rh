@@ -506,3 +506,25 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `still_open`: residual `OBS-H6-BOYD-COVERING-CERTIFICATE-01`, adjacent-saddle decomposition,
   Boyd--Nemes equation `(15)`, effective `R2`, unconditional Table 1 certificates, H6-E/G8, and
   RH.
+
+## 2026-07-19 H6-Q1 Loop 20 outcome
+
+- `H6-Q1`: open; the selected two-dimensional no-asymptotic-escape subedge is proven locally.
+- `K0-H6-BOYD-STRIP-PHASE-PROPERNESS-01`: proven locally. The phase is at least `2*pi` in norm on
+  both boundaries `|Im u|=2*pi`; every bounded closed-strip phase sublevel is compact; and the
+  phase map from `{|Im u|<2*pi, |phase u|<2*pi}` to the open phase disk is an actual proper map.
+- `OBS-H6-BOYD-COVERING-CERTIFICATE-01`: reduced but open. Interior asymptotic escape over compact
+  subsets of the first phase disk is now impossible. The residual certificate must identify the
+  source domain as the connected origin component, prove the proper holomorphic map has degree
+  two with sole branch point at the origin, and construct the normalized-coordinate lift/inverse.
+- `why_properness_is_not_yet_covering`: properness controls escape and makes fibers compact, but it
+  neither proves the source domain connected nor computes fiber cardinality or the global
+  square-root branch. Those are the next nonformal geometric inputs.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `public_preregistration`: commit `0aa33d4a8a3cd1a78de7a46faf90e9d4d87d8fa4`, CI run
+  `29668684962`, build job `88143662554`, passed in `2m11s` before proof-source editing.
+- `public_implementation`: pending.
+- `still_open`: connected-origin-component and degree-two covering layers of
+  `OBS-H6-BOYD-COVERING-CERTIFICATE-01`, adjacent-saddle decomposition, Boyd--Nemes equation
+  `(15)`, effective `R2`, unconditional Table 1 certificates, H6-E/G8, and RH.

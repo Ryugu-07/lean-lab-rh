@@ -2717,3 +2717,29 @@ run `29667732245`, build job `88141103415`, in `1m35s`. Implementation commit
 `7efc4496c89badf7182f6fc6fe81734bb8782924` passed run `29668228884`, build job `88142434731`,
 in `2m22s`. Closure-evidence commit `54aaea3800d7eb39f49f3eb7c7183969af3f0253` passed run
 `29668328534`, build job `88142709051`, in `1m47s`. Loop 19 is publicly closed.
+
+### Loop 20 strip-phase properness selection and local outcome
+
+Route selection keeps H6-Q1 active and attacks the genuinely two-dimensional layer named by
+Loops 17--19. The source domain is the full phase sublevel inside the horizontal strip
+`|Im u|<2*pi`, not either distinguished boundary ray. The exact endpoint is a proper subtype map
+from that domain to the open phase disk of radius `2*pi`.
+
+The production proof obtains a sharp boundary exclusion from the imaginary phase and explicit
+real-part bounds from the inequalities `exp(x)<=1` on the left and
+`1+x+x^2/2<=exp(x)` on the right. Thus every closed-strip bounded phase sublevel is compact. A
+compact target set has a strict norm maximum below `2*pi`, so its entire source inverse image is a
+closed subset of one such compact sublevel. Mathlib then packages the result as `IsProperMap`.
+
+This is a substantive reduction of `OBS-H6-BOYD-COVERING-CERTIFICATE-01`: inverse paths cannot
+escape internally while their phase remains in a compact subdisk. Classification is
+`PROVED / HARD_GAP_REDUCED`, with `rh_frontier_delta=0`, `hard_gap_delta=1`,
+`route_infrastructure_delta=1`, and `obstruction_map_delta=1`.
+
+The next route must prove that the source domain is the connected origin component and compute the
+proper holomorphic phase map's degree as two from its unique double zero. Only then can the
+normalized coordinate remove the branch and produce a disk-wide analytic inverse. Properness
+alone must not be relabeled as covering or injectivity.
+
+Preregistration commit `0aa33d4a8a3cd1a78de7a46faf90e9d4d87d8fa4` passed public Lean Action CI
+run `29668684962`, build job `88143662554`, in `2m11s`; public implementation CI is pending.
