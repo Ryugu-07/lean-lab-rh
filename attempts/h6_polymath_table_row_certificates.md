@@ -1664,3 +1664,67 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
 - `budget`: no V4.1 numerical quota and no exposed serving token budget
 - `persistent_goal`: H6-Q1 and the global RH Goal remain active
+
+## Loop 24 Boyd adjacent landing and inverse Jacobian
+
+- `campaign`: `PROOF-ATTEMPT-20260720-H6-BOYD-ADJACENT-LANDING-JACOBIAN-01`
+- `mode`: `PROOF-ATTEMPT`
+- `result`: `PROVED / HARD_GAP_REDUCED`; local success pending public implementation CI
+- `target`: instantiate the actual Loop 23 inverse Jacobian and its Cauchy series, identify the
+  global coordinate with both Loop 19 contour rays, prove the actual inverse lands at both
+  adjacent saddles, and remove the explicit landing premise from the Loop 17 maximal-radius bound
+- `material_difference_from_loop17`: Loop 17 had only a generic analytic branch interface and a
+  radius theorem conditional on endpoint landing. Loop 24 starts from the compiled Loop 23 global
+  homeomorphism and discharges the landing premise using the independently compiled Loop 18/19
+  contours.
+- `full_preregistration`:
+  `research/h6_boyd_adjacent_landing_jacobian_loop24_prereg_20260720.md`
+- `proof_mechanism`: the actual inverse phase and derivative laws follow from the Loop 23 inverse
+  identities and the analytic chain rule. Both contours stay in the open source domain for
+  `0<=t<2*pi`. The global and principal coordinates have equal squares; a strictly positive
+  anchor extracted from their origin germ equality lets `IsPreconnected.eq_of_sq_eq` fix the sign
+  along each contour. The homeomorphism inverse gives exact radial lifts, and the Loop 18 endpoint
+  continuity gives both saddle limits. A hypothetical larger branch agrees with the actual branch
+  by analytic identity and hence lands at the critical saddle, contradicting the Loop 17
+  derivative obstruction.
+- `compiled_theorems`:
+  `deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_analyticOnNhd`,
+  `deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_phase`,
+  `deriv_deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_mul`,
+  `deBruijnNewmanPolymathBoydNormalizedCoordinateInverseJacobian_phase`,
+  `deriv_deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_zero`,
+  `deBruijnNewmanPolymathBoydNormalizedCoordinateInverseJacobian_hasCauchyPowerSeriesOnBall`,
+  `deBruijnNewmanPolymathBoydGlobalCoordinate_adjacentContour_upper`,
+  `deBruijnNewmanPolymathBoydGlobalCoordinate_adjacentContour_lower`,
+  `deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_radialRay_upper`,
+  `deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_radialRay_lower`,
+  `tendsto_deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_radialRay_upper`,
+  `tendsto_deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_radialRay_lower`,
+  `deBruijnNewmanPolymathBoydOriginInverseBranch_radius_le_adjacent_unconditional`, and
+  `deBruijnNewmanPolymathBoydAdjacentLandingJacobianCertificate`
+- `assumption_frontier_after`: the actual origin branch, its phase and inverse-Jacobian identities,
+  every smaller-disk Cauchy expansion, both adjacent radial landings, and the exact maximal centered
+  continuation radius are K0 locally. No endpoint value of the ambient outside-disk extension,
+  Boyd--Nemes equation `(15)`, Stieltjes representation, contour rotation, or effective `R_2`
+  estimate is introduced.
+- `classification_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`,
+  `route_infrastructure_delta=1`, `obstruction_map_delta=0`
+- `local_mechanical_audit`: 691-line production module, updated proven Target, exact statement
+  witnesses, eighteen selected standard-only axiom prints, three empty forbidden scans,
+  `git diff --check`, and the 8,729-task full build pass. Every selected declaration depends only
+  on `propext`, `Classical.choice`, and `Quot.sound`.
+- `public_preregistration`: commit `a0443b921a48072d889402737c6d38a468eeab71`, CI run
+  `29725851711`, build job `88298656245`, passed in `1m56s` before proof-source editing
+- `public_implementation`: pending
+- `next_exact_gate`: derive the two adjacent singular contributions of the inverse Jacobian and
+  prove the source-exact Boyd--Nemes equation `(15)` at `N=2`; do not assume that equation or an
+  effective `R_2` bound
+- `compaction_state`: inherited one summary after Loop 23, then re-read canonical governance,
+  HANDOFF, Targets/TargetChecks, the current attempt, hard-gap DAG, Loop 17/23 preregistrations,
+  relevant production sources, and analytic/covering interfaces. A second inherited summary
+  arrived during integration after the local build and initial log edits; canonical governance,
+  HANDOFF, Targets/TargetChecks, AxiomsAudit, this attempt, hard-gap DAG, and the Loop 24
+  preregistration were re-read again before the implementation commit.
+- `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
+- `budget`: no V4.1 numerical quota and no exposed serving token budget
+- `persistent_goal`: H6-Q1 and the global RH Goal remain active

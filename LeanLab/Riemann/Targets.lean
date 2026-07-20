@@ -30,6 +30,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydStripProperness
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydPhaseDomainConnectedness
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBranchedDegreeTwo
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydNormalizedCoordinate
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentLandingJacobian
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1065,9 +1066,9 @@ def rhTargets : List ResearchTarget :=
       title := "Construct the Boyd origin inverse branch up to adjacent saddles"
       statement :=
         "Construct a single-valued analytic inverse branch of the normalized Boyd coordinate on the disk of radius 2*sqrt(pi), prove agreement with the local origin branch and radial landing at both adjacent saddles, and thereby make the Loop 17 Cauchy and radius certificates unconditional."
-      leanName := none
-      status := .inProgress
-      note := "Loops 18--22 now compile both adjacent contour landings and normalized boundary rays, phase properness, connectedness and surjectivity of the source domain, and the exact branched degree-two covering certificate. The remaining input is no longer phase fiber counting: one must compare this covering with the punctured square-map covering, extend the normalized local coordinate/inverse globally across the origin, and prove the actual disk-wide analytic inverse. No global lift or Boyd--Nemes equation (15) premise is admitted." },
+      leanName := some ``deBruijnNewmanPolymathBoydAdjacentLandingJacobianCertificate
+      status := .proven
+      note := "Loop 23 constructs the global analytic homeomorphism and actual disk inverse. Loop 24 proves that this global coordinate has the Loop 19 principal sign along both adjacent contours, identifies the actual inverse on both radial rays, and derives its one-sided limits at the n=+/-1 saddles. Lean also compiles the inverse derivative identities, the Cauchy series for its Jacobian on every smaller disk, and an unconditional theorem that every centered analytic continuation of the origin germ has radius at most 2*sqrt(pi). This completes the Loop 17 branch/landing/radius endpoint without assuming Boyd--Nemes equation (15). The adjacent-saddle Jacobian decomposition, equation (15), effective R2, H6-E/G8, and RH remain open." },
     { id := "H6.debruijn-newman.boyd-adjacent-contours"
       tier := .tier2
       title := "Construct both adjacent Boyd phase contours"

@@ -31,6 +31,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydStripProperness
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydPhaseDomainConnectedness
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBranchedDegreeTwo
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydNormalizedCoordinate
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentLandingJacobian
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2581,5 +2582,90 @@ example : deBruijnNewmanPolymathBoydNormalizedCoordinateInverse =ᶠ[𝓝 0]
   deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_eventually_eq_local
 
 example := deBruijnNewmanPolymathBoydNormalizedCoordinateGlobalCertificate
+
+example : AnalyticOnNhd ℂ deBruijnNewmanPolymathBoydNormalizedCoordinateInverse
+    deBruijnNewmanPolymathBoydOpenCoordinateDisk :=
+  deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_analyticOnNhd
+
+example {w : ℂ} (hw : w ∈ deBruijnNewmanPolymathBoydOpenCoordinateDisk) :
+    deBruijnNewmanPolymathBoydNormalizedCoordinateInverse w ∈
+      deBruijnNewmanPolymathBoydOriginPhaseDomain :=
+  deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_mem_originPhaseDomain hw
+
+example {w : ℂ} (hw : w ∈ deBruijnNewmanPolymathBoydOpenCoordinateDisk) :
+    deBruijnNewmanPolymathBoydComplexSaddlePhase
+        (deBruijnNewmanPolymathBoydNormalizedCoordinateInverse w) = w ^ 2 / 2 :=
+  deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_phase hw
+
+example {w : ℂ} (hw : w ∈ deBruijnNewmanPolymathBoydOpenCoordinateDisk) :
+    deriv deBruijnNewmanPolymathBoydGlobalSaddleCoordinate
+          (deBruijnNewmanPolymathBoydNormalizedCoordinateInverse w) *
+        deriv deBruijnNewmanPolymathBoydNormalizedCoordinateInverse w = 1 :=
+  deriv_deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_mul hw
+
+example {w : ℂ} (hw : w ∈ deBruijnNewmanPolymathBoydOpenCoordinateDisk) :
+    (Complex.exp (deBruijnNewmanPolymathBoydNormalizedCoordinateInverse w) - 1) *
+        deriv deBruijnNewmanPolymathBoydNormalizedCoordinateInverse w = w :=
+  deBruijnNewmanPolymathBoydNormalizedCoordinateInverseJacobian_phase hw
+
+example : deriv deBruijnNewmanPolymathBoydNormalizedCoordinateInverse 0 = 1 :=
+  deriv_deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_zero
+
+example {r : NNReal} (hr0 : 0 < r)
+    (hr : (r : ℝ) < 2 * Real.sqrt Real.pi) :
+    HasFPowerSeriesOnBall
+      (deriv deBruijnNewmanPolymathBoydNormalizedCoordinateInverse)
+      (cauchyPowerSeries
+        (deriv deBruijnNewmanPolymathBoydNormalizedCoordinateInverse) 0 r)
+      0 r :=
+  deBruijnNewmanPolymathBoydNormalizedCoordinateInverseJacobian_hasCauchyPowerSeriesOnBall
+    hr0 hr
+
+example {t : ℝ} (ht0 : 0 ≤ t) (ht : t < 2 * Real.pi) :
+    deBruijnNewmanPolymathBoydGlobalSaddleCoordinate
+        (deBruijnNewmanPolymathBoydAdjacentContourPhaseLift (-t)) =
+      deBruijnNewmanPolymathBoydAdjacentSaddleRadialRay 1 t :=
+  deBruijnNewmanPolymathBoydGlobalCoordinate_adjacentContour_upper ht0 ht
+
+example {t : ℝ} (ht0 : 0 ≤ t) (ht : t < 2 * Real.pi) :
+    deBruijnNewmanPolymathBoydGlobalSaddleCoordinate
+        (deBruijnNewmanPolymathBoydAdjacentContourNegativePhaseLift t) =
+      deBruijnNewmanPolymathBoydAdjacentSaddleRadialRay (-1) t :=
+  deBruijnNewmanPolymathBoydGlobalCoordinate_adjacentContour_lower ht0 ht
+
+example {t : ℝ} (ht0 : 0 ≤ t) (ht : t < 2 * Real.pi) :
+    deBruijnNewmanPolymathBoydNormalizedCoordinateInverse
+        (deBruijnNewmanPolymathBoydAdjacentSaddleRadialRay 1 t) =
+      deBruijnNewmanPolymathBoydAdjacentContourPhaseLift (-t) :=
+  deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_radialRay_upper ht0 ht
+
+example {t : ℝ} (ht0 : 0 ≤ t) (ht : t < 2 * Real.pi) :
+    deBruijnNewmanPolymathBoydNormalizedCoordinateInverse
+        (deBruijnNewmanPolymathBoydAdjacentSaddleRadialRay (-1) t) =
+      deBruijnNewmanPolymathBoydAdjacentContourNegativePhaseLift t :=
+  deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_radialRay_lower ht0 ht
+
+example : Filter.Tendsto
+    (fun t : ℝ => deBruijnNewmanPolymathBoydNormalizedCoordinateInverse
+      (deBruijnNewmanPolymathBoydAdjacentSaddleRadialRay 1 t))
+    (𝓝[Set.Iio (2 * Real.pi)] (2 * Real.pi))
+    (𝓝 (deBruijnNewmanPolymathBoydComplexSaddlePoint 1)) :=
+  tendsto_deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_radialRay_upper
+
+example : Filter.Tendsto
+    (fun t : ℝ => deBruijnNewmanPolymathBoydNormalizedCoordinateInverse
+      (deBruijnNewmanPolymathBoydAdjacentSaddleRadialRay (-1) t))
+    (𝓝[Set.Iio (2 * Real.pi)] (2 * Real.pi))
+    (𝓝 (deBruijnNewmanPolymathBoydComplexSaddlePoint (-1))) :=
+  tendsto_deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_radialRay_lower
+
+example {V : ℂ → ℂ} {R : ℝ} (hR : 0 < R)
+    (hV : AnalyticOnNhd ℂ V (Metric.ball 0 R))
+    (hlocal : V =ᶠ[𝓝 0] deBruijnNewmanPolymathBoydComplexSaddleLocalInverse) :
+    R ≤ 2 * Real.sqrt Real.pi :=
+  deBruijnNewmanPolymathBoydOriginInverseBranch_radius_le_adjacent_unconditional
+    hR hV hlocal
+
+example := deBruijnNewmanPolymathBoydAdjacentLandingJacobianCertificate
 
 end LeanLab.Riemann

@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260720-H6-BOYD-ADJACENT-LANDING-JACOBIAN-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PREREGISTERED / PROOF SOURCE FROZEN PENDING PUBLIC CI`
+Status: `LOCAL_SUCCESS / PUBLIC IMPLEMENTATION CI PENDING`
 
 ## Opening
 
@@ -272,3 +272,44 @@ the Loop 17 conditional obstruction.
 - `next_if_blocked`: record the first failed equality or continuation step with its exact Lean
   type, then compare direct boundary-germ/Stieltjes extraction with a repaired contour argument.
 - `global_goal`: the persistent RH Goal remains active in every local outcome.
+
+## Local outcome
+
+- `result`: `PROVED / HARD_GAP_REDUCED`. Every preregistered mathematical endpoint compiles.
+- `production_module`:
+  `LeanLab/Riemann/DeBruijnNewmanPolymathBoydAdjacentLandingJacobian.lean`, 691 lines.
+- `actual_branch`: the Loop 23 ambient inverse is analytic on the complete coordinate disk,
+  satisfies `phase(U(w))=w^2/2`, and has both the global-coordinate inverse derivative identity
+  and `(exp(U(w))-1)*U'(w)=w`; Lean also proves `U'(0)=1`.
+- `cauchy_domain`: the generic Loop 17 theorem is instantiated without a new premise, giving the
+  Cauchy power series of `U'` on every radius `0<r<2*sqrt(pi)`.
+- `sign_and_landing`: both Loop 18 contours lie strictly in the source phase domain before their
+  terminal parameter. The Loop 23 global coordinate and Loop 19 principal coordinate have equal
+  squares; germ equality supplies a positive anchor, and `IsPreconnected.eq_of_sq_eq` propagates
+  the sign on every compact nonzero interval. The homeomorphism inverse then identifies both
+  radial lifts and proves their one-sided limits at `s_1` and `s_-1`.
+- `maximal_radius`: any larger centered analytic continuation agrees with `U` on the first disk by
+  the analytic identity theorem. Continuity along the upper radial ray forces its boundary value
+  to be `s_1`, so the Loop 17 critical-derivative obstruction gives the contradiction. The final
+  radius theorem has no landing premise.
+- `aggregate_certificate`:
+  `deBruijnNewmanPolymathBoydAdjacentLandingJacobianCertificate`.
+- `mechanical_audit`: the production module, `Targets.lean`, exact `TargetChecks.lean`, and
+  `AxiomsAudit.lean` compile. Eighteen selected new declarations use only `propext`,
+  `Classical.choice`, and `Quot.sound`. Placeholder, custom-declaration, and resource-relaxation
+  scans are empty; `git diff --check` passes; the full build passes all 8,729 tasks.
+- `classification`: source-specific hard-gap reduction plus route infrastructure;
+  `rh_frontier_delta=0`, `hard_gap_delta=1`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=0`.
+- `public_preregistration`: commit `a0443b921a48072d889402737c6d38a468eeab71` passed public Lean
+  Action CI run `29725851711`, build job `88298656245`, in `1m56s` before proof-source editing.
+- `public_implementation`: pending.
+- `next_exact_gate`: derive the two adjacent inverse-Jacobian singular contributions and prove the
+  source-exact Boyd--Nemes equation `(15)` at `N=2`; equation `(15)` and effective `R_2` remain
+  unproved and are not premises.
+- `runtime`: one inherited compaction summary at Loop 24 start followed by the required canonical
+  reread, and a second inherited summary during integration after the local build and initial log
+  edits. Canonical governance, `HANDOFF.md`, Targets/TargetChecks, AxiomsAudit, the current attempt,
+  hard-gap DAG, and this preregistration were re-read again before the implementation commit.
+  Exact serving model variant, reasoning effort, and serving budget remain unexposed. H6-Q1 and
+  the persistent RH Goal remain active.
