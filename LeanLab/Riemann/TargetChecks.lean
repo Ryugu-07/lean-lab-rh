@@ -29,6 +29,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentContour
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydCoordinateRays
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydStripProperness
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydPhaseDomainConnectedness
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBranchedDegreeTwo
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2501,5 +2502,47 @@ example : IsConnected deBruijnNewmanPolymathBoydOriginPhaseDomain :=
 
 example : Function.Surjective deBruijnNewmanPolymathBoydPhaseOnOriginDomain :=
   surjective_deBruijnNewmanPolymathBoydPhaseOnOriginDomain
+
+example {u : ℂ} {r : ℝ} (hu : |u.im| < 2 * Real.pi) (hr : 0 < r)
+    (hphase : deBruijnNewmanPolymathBoydComplexSaddlePhase u = (r : ℂ)) :
+    u.im = 0 :=
+  deBruijnNewmanPolymathBoydComplexSaddlePhase_im_eq_zero_of_eq_posReal hu hr hphase
+
+example :
+    deBruijnNewmanPolymathBoydPhaseOnOriginDomain ⁻¹'
+        {deBruijnNewmanPolymathBoydOpenPhaseDiskOne} =
+      {deBruijnNewmanPolymathBoydOriginPhaseDomainNegativeOnePreimage,
+        deBruijnNewmanPolymathBoydOriginPhaseDomainPositiveOnePreimage} :=
+  deBruijnNewmanPolymathBoydPhaseOnOriginDomain_preimage_one
+
+example : IsCoveringMapOn deBruijnNewmanPolymathBoydPhaseOnOriginDomain
+    {deBruijnNewmanPolymathBoydOpenPhaseDiskZero}ᶜ :=
+  isCoveringMapOn_deBruijnNewmanPolymathBoydPhaseOnOriginDomain_away_zero
+
+example : IsCoveringMap deBruijnNewmanPolymathBoydPhaseOnNonzeroOriginDomain :=
+  isCoveringMap_deBruijnNewmanPolymathBoydPhaseOnNonzeroOriginDomain
+
+example : IsPathConnected deBruijnNewmanPolymathBoydPuncturedOpenPhaseDisk :=
+  isPathConnected_deBruijnNewmanPolymathBoydPuncturedOpenPhaseDisk
+
+example (z : deBruijnNewmanPolymathBoydOpenPhaseDisk)
+    (hz : z ≠ deBruijnNewmanPolymathBoydOpenPhaseDiskZero) :
+    Nat.card (deBruijnNewmanPolymathBoydPhaseOnOriginDomain ⁻¹' {z}) = 2 :=
+  natCard_preimage_deBruijnNewmanPolymathBoydPhaseOnOriginDomain_eq_two_of_ne_zero z hz
+
+example :
+    (deBruijnNewmanPolymathBoydComplexSaddlePhase 0 = 0 ∧
+        deriv deBruijnNewmanPolymathBoydComplexSaddlePhase 0 = 0 ∧
+        deriv (deriv deBruijnNewmanPolymathBoydComplexSaddlePhase) 0 = 1) ∧
+      deBruijnNewmanPolymathBoydPhaseOnOriginDomain ⁻¹'
+          {deBruijnNewmanPolymathBoydOpenPhaseDiskZero} =
+        {deBruijnNewmanPolymathBoydOriginPhaseDomainZero} ∧
+      (∀ u : deBruijnNewmanPolymathBoydOriginPhaseDomain,
+        deriv deBruijnNewmanPolymathBoydComplexSaddlePhase u = 0 ↔
+          u = deBruijnNewmanPolymathBoydOriginPhaseDomainZero) ∧
+      ∀ z : deBruijnNewmanPolymathBoydOpenPhaseDisk,
+        z ≠ deBruijnNewmanPolymathBoydOpenPhaseDiskZero →
+          Nat.card (deBruijnNewmanPolymathBoydPhaseOnOriginDomain ⁻¹' {z}) = 2 :=
+  deBruijnNewmanPolymathBoydPhaseOnOriginDomain_branchedDegreeTwoCertificate
 
 end LeanLab.Riemann

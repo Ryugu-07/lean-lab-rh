@@ -571,3 +571,27 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `still_open`: branched degree two and normalized-coordinate inverse layers of
   `OBS-H6-BOYD-COVERING-CERTIFICATE-01`, adjacent-saddle decomposition, Boyd--Nemes equation
   `(15)`, effective `R2`, unconditional Table 1 certificates, H6-E/G8, and RH.
+
+## 2026-07-20 H6-Q1 Loop 22 outcome
+
+- `H6-Q1`: open; the selected branched-degree subedge is proven locally.
+- `K0-H6-BOYD-BRANCHED-DEGREE-TWO-01`: proven locally. The actual phase map is a covering over the
+  punctured first phase disk. Its phase-one fiber is exactly the two distinct global-real-
+  coordinate inverse points at `+/-sqrt(2)`, and covering monodromy proves every nonzero target
+  fiber has cardinality two.
+- `OBS-H6-BOYD-COVERING-CERTIFICATE-01`: reduced to its final normalized-coordinate lift layer.
+  Properness, source connectedness, surjectivity, unique branch point, branched degree two,
+  adjacent contour landings, and boundary coordinate rays are K0. The residual certificate must
+  compare the phase covering with the punctured square-map covering, globalize the normalized local
+  branch across the origin, and prove the disk-wide analytic inverse.
+- `why_degree_is_not_yet_the_inverse`: a degree-two map with a unique double branch fiber does not
+  by itself choose a single-valued square-root coordinate or prove that the project's principal
+  removable-factor formula is analytic on the complete source domain. A covering equivalence or
+  global lift, together with agreement at the origin, remains mandatory.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `public_preregistration`: commit `79ec959`, CI run `29719851304`, build job `88280405198`, passed
+  in `1m44s` before proof-source editing.
+- `still_open`: normalized-coordinate global lift/inverse, adjacent-saddle inverse-Jacobian
+  decomposition, Boyd--Nemes equation `(15)`, effective `R2`, unconditional Table 1 certificates,
+  H6-E/G8, and RH.

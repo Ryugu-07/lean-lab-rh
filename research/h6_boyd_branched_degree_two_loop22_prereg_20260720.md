@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260720-H6-BOYD-BRANCHED-DEGREE-TWO-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PREREGISTERED / AWAITING_PUBLIC_CI`
+Status: `LOCAL_PROVED / PUBLIC_IMPLEMENTATION_PENDING`
 
 ## Target
 
@@ -154,3 +154,38 @@ aggregate theorem.
 
 No Loop 22 Lean proof source may be edited before this preregistration passes public Lean Action
 CI.
+
+## Local outcome
+
+- `result`: `PROVED / HARD_GAP_REDUCED`. Every preregistered endpoint compiles.
+- `public_preregistration`: commit `79ec959` passed public Lean Action CI run `29719851304`, build
+  job `88280405198`, in `1m44s`, before proof-source editing.
+- `implementation`: the 535-line production module
+  `LeanLab/Riemann/DeBruijnNewmanPolymathBoydBranchedDegreeTwo.lean` constructs actual local open
+  partial homeomorphisms for `Phi : D -> B` at every nonzero source point, proves regular fibers
+  compact and discrete, and obtains both `IsCoveringMapOn Phi ({0}^c)` and the corresponding
+  punctured-subtype `IsCoveringMap`.
+- `baseline_fiber`: Lean proves that a positive real phase in the first strip has only real
+  preimages. It then uses the Loop 16 real coordinate order isomorphism to rewrite the full phase-
+  one fiber as exactly the distinct inverse-coordinate points at `-sqrt(2)` and `sqrt(2)`.
+- `degree_transport`: an explicit homeomorphism transports path connectedness from
+  `C \ {0}` to the punctured target disk. Covering monodromy and exact original/restricted fiber
+  equivalences then prove `Nat.card (Phi^-1({z})) = 2` for every nonzero `z in B`.
+- `aggregate_certificate`:
+  `deBruijnNewmanPolymathBoydPhaseOnOriginDomain_branchedDegreeTwoCertificate` packages the
+  analytic double zero at the origin, singleton zero fiber, sole critical source point, and exact
+  cardinal-two regular fibers.
+- `mechanical_audit`: the production module, exact Targets, seven exact TargetChecks, six selected
+  axiom prints, three forbidden scans, and `git diff --check` pass. Every selected theorem depends
+  only on `propext`, `Classical.choice`, and `Quot.sound`. The full-project build passes all 8,727
+  tasks; public implementation/evidence CI remain to be recorded.
+- `obstruction_after`: the degree layer of `OBS-H6-BOYD-COVERING-CERTIFICATE-01` is closed. The
+  residual node is to compare the compiled phase covering with the punctured square-map covering,
+  extend the normalized local coordinate/inverse globally across the origin, and prove the actual
+  disk-wide analytic inverse. No such lift is claimed in Loop 22.
+- `classification`: source-specific hard-gap reduction plus route infrastructure;
+  `rh_frontier_delta=0`, `hard_gap_delta=1`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `runtime`: one inherited compaction summary at Loop 22 start; no later compaction. Exact serving
+  model variant, reasoning effort, and serving budget remain unexposed. H6-Q1 and the persistent RH
+  Goal remain active.

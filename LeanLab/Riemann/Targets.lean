@@ -28,6 +28,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentContour
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydCoordinateRays
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydStripProperness
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydPhaseDomainConnectedness
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBranchedDegreeTwo
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1065,7 +1066,7 @@ def rhTargets : List ResearchTarget :=
         "Construct a single-valued analytic inverse branch of the normalized Boyd coordinate on the disk of radius 2*sqrt(pi), prove agreement with the local origin branch and radial landing at both adjacent saddles, and thereby make the Loop 17 Cauchy and radius certificates unconditional."
       leanName := none
       status := .inProgress
-      note := "Loop 17 isolates the missing input as a phase-specific covering or monodromy certificate for the Boyd origin saddle domain, including unique continuation and the adjacent-contour boundary/landing facts corresponding to Boyd's steepest-descent conditions. The local inverse, all critical values, the conditional disk identity, Cauchy expansions, and the exact conditional radius obstruction compile; global continuation and landing remain open." },
+      note := "Loops 18--22 now compile both adjacent contour landings and normalized boundary rays, phase properness, connectedness and surjectivity of the source domain, and the exact branched degree-two covering certificate. The remaining input is no longer phase fiber counting: one must compare this covering with the punctured square-map covering, extend the normalized local coordinate/inverse globally across the origin, and prove the actual disk-wide analytic inverse. No global lift or Boyd--Nemes equation (15) premise is admitted." },
     { id := "H6.debruijn-newman.boyd-adjacent-contours"
       tier := .tier2
       title := "Construct both adjacent Boyd phase contours"
@@ -1098,6 +1099,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``surjective_deBruijnNewmanPolymathBoydPhaseOnOriginDomain
       status := .proven
       note := "Loop 21 proves the strip zero classification by the real and imaginary phase equations, then applies the complex open mapping theorem to the actual subtype map. Loop 20 properness supplies closedness; mathlib's open-and-closed-map connected-component bound and the singleton zero fiber force the source component type to be subsingleton. The source is therefore connected, and its nonempty clopen range is the full connected target disk. This closes the connected-origin-component and surjectivity layers of the Loop 17 obstruction. It does not compute branched degree two, prove simple connectedness, construct the normalized-coordinate disk inverse, derive equation (15), or prove RH." },
+    { id := "H6.debruijn-newman.boyd-phase-branched-degree-two"
+      tier := .tier2
+      title := "Compute the branched degree of the first-strip Boyd phase"
+      statement :=
+        "Prove that the proper Boyd phase is a covering away from zero, compute one regular fiber exactly, and prove that every nonzero target in the first phase disk has exactly two preimages while zero is the sole branch value with a double origin fiber."
+      leanName := some ``deBruijnNewmanPolymathBoydPhaseOnOriginDomain_branchedDegreeTwoCertificate
+      status := .proven
+      note := "Loop 22 restricts the analytic inverse-function theorem through the actual source and target subtypes, combines proper compact fibers with local discreteness, and obtains an actual covering over the punctured phase disk. Lean excludes nonreal preimages of positive real phase one, computes that fiber as the two global real-coordinate inverse points at +/-sqrt(2), proves the punctured target disk path connected, and transports the exact cardinal two to every regular fiber by covering monodromy. Together with the compiled singleton zero fiber and second derivative one at the origin, this is the exact branched degree-two certificate. It does not yet construct the global normalized-coordinate inverse, derive Boyd--Nemes equation (15), prove the effective R2 bound, or prove RH." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

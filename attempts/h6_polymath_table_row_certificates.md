@@ -1547,3 +1547,53 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
 - `budget`: no V4.1 numerical quota and no exposed serving token budget
 - `persistent_goal`: H6-Q1 and the global RH Goal remain active
+
+## Loop 22 Boyd phase branched degree two
+
+- `campaign`: `PROOF-ATTEMPT-20260720-H6-BOYD-BRANCHED-DEGREE-TWO-01`
+- `mode`: `PROOF-ATTEMPT`
+- `result`: `PROVED / HARD_GAP_REDUCED`; local closure complete, public implementation pending
+- `target`: prove the actual proper phase map is a covering away from zero, compute one complete
+  regular fiber, and transport its exact cardinal two to every nonzero target in the first phase
+  disk
+- `material_difference_from_loop21`: Loop 21 proves connectedness and surjectivity but deliberately
+  does not infer degree from the double zero. Loop 22 constructs the regular covering and performs
+  an independent regular-fiber computation plus monodromy transport.
+- `full_preregistration`:
+  `research/h6_boyd_branched_degree_two_loop22_prereg_20260720.md`
+- `compiled_theorems`:
+  `deBruijnNewmanPolymathBoydComplexSaddlePhase_im_eq_zero_of_eq_posReal`,
+  `deBruijnNewmanPolymathBoydPhaseOnOriginDomain_preimage_one`,
+  `isCoveringMapOn_deBruijnNewmanPolymathBoydPhaseOnOriginDomain_away_zero`,
+  `isCoveringMap_deBruijnNewmanPolymathBoydPhaseOnNonzeroOriginDomain`,
+  `isPathConnected_deBruijnNewmanPolymathBoydPuncturedOpenPhaseDisk`,
+  `natCard_preimage_deBruijnNewmanPolymathBoydPhaseOnOriginDomain_eq_two_of_ne_zero`, and
+  `deBruijnNewmanPolymathBoydPhaseOnOriginDomain_branchedDegreeTwoCertificate`
+- `proof_mechanism`: analytic inverse-function neighborhoods are restricted through the actual
+  `D -> B` subtypes; proper compact fibers plus local discreteness yield finite fibers and the
+  closed-map covering criterion. The phase-one imaginary equation excludes nonreal preimages, the
+  global real saddle coordinate supplies the two inverse points at `+/-sqrt(2)`, an open-ball
+  homeomorphism proves the punctured target path connected, and covering monodromy transports the
+  exact two-point fiber.
+- `assumption_frontier_after`: the origin analytic double zero, singleton zero fiber, sole critical
+  point in `D`, punctured regular covering, and exact cardinal-two nonzero fibers are K0. No global
+  normalized-coordinate branch, disk inverse, adjacent-saddle decomposition, or Boyd--Nemes
+  equation `(15)` premise is introduced.
+- `classification_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`,
+  `route_infrastructure_delta=1`, `obstruction_map_delta=1`
+- `local_mechanical_audit`: 535-line production module, exact Targets, seven TargetChecks, six
+  selected axiom prints, three empty forbidden scans, and `git diff --check` pass; selected
+  declarations depend only on `propext`, `Classical.choice`, and `Quot.sound`; the full build passes
+  all 8,727 tasks
+- `public_preregistration`: commit `79ec959`, CI run `29719851304`, build job `88280405198`, passed
+  in `1m44s` before proof-source editing
+- `next_exact_gate`: compare the phase covering with the degree-two punctured square-map covering,
+  construct the globally normalized coordinate lift agreeing with the Loop 15 local branch, extend
+  across zero, and prove its disk-wide analytic inverse
+- `compaction_state`: inherited one summary after Loop 21, then re-read canonical governance,
+  HANDOFF, Targets/TargetChecks, the current attempt, hard-gap DAG, Loop 21 preregistration/source,
+  and the relevant mathlib covering, monodromy, open-ball, compact-discrete, and path-connected APIs;
+  no later compaction
+- `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
+- `budget`: no V4.1 numerical quota and no exposed serving token budget
+- `persistent_goal`: H6-Q1 and the global RH Goal remain active
