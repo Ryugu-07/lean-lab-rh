@@ -1552,7 +1552,7 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 
 - `campaign`: `PROOF-ATTEMPT-20260720-H6-BOYD-BRANCHED-DEGREE-TWO-01`
 - `mode`: `PROOF-ATTEMPT`
-- `result`: `PROVED / HARD_GAP_REDUCED`; public implementation passed, closure evidence pending
+- `result`: `PROVED / HARD_GAP_REDUCED`; publicly closed
 - `target`: prove the actual proper phase map is a covering away from zero, compute one complete
   regular fiber, and transport its exact cardinal two to every nonzero target in the first phase
   disk
@@ -1589,6 +1589,8 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   in `1m44s` before proof-source editing
 - `public_implementation`: commit `3768a0cc4ac8e3f1138ed9f958fe5c5dbac4b983`, CI run
   `29721424614`, build job `88285064009`, passed in `2m0s`
+- `public_closure`: evidence commit `12fcc3b1aa7437e74083123bfb15ea43fe72bc8e`, CI run
+  `29721623535`, build job `88285645538`, passed in `1m49s`
 - `next_exact_gate`: compare the phase covering with the degree-two punctured square-map covering,
   construct the globally normalized coordinate lift agreeing with the Loop 15 local branch, extend
   across zero, and prove its disk-wide analytic inverse

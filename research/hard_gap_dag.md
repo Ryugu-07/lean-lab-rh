@@ -594,6 +594,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   in `1m44s` before proof-source editing.
 - `public_implementation`: commit `3768a0cc4ac8e3f1138ed9f958fe5c5dbac4b983`, CI run
   `29721424614`, build job `88285064009`, passed in `2m0s`.
+- `public_closure`: evidence commit `12fcc3b1aa7437e74083123bfb15ea43fe72bc8e`, CI run
+  `29721623535`, build job `88285645538`, passed in `1m49s`.
 - `still_open`: normalized-coordinate global lift/inverse, adjacent-saddle inverse-Jacobian
   decomposition, Boyd--Nemes equation `(15)`, effective `R2`, unconditional Table 1 certificates,
   H6-E/G8, and RH.

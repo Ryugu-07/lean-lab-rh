@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260720-H6-BOYD-BRANCHED-DEGREE-TWO-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PUBLIC_IMPLEMENTATION_PASSED / CLOSURE_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED / HARD_GAP_REDUCED`
 
 ## Target
 
@@ -162,6 +162,8 @@ CI.
   job `88280405198`, in `1m44s`, before proof-source editing.
 - `public_implementation`: commit `3768a0cc4ac8e3f1138ed9f958fe5c5dbac4b983` passed public Lean
   Action CI run `29721424614`, build job `88285064009`, in `2m0s`.
+- `public_closure`: evidence commit `12fcc3b1aa7437e74083123bfb15ea43fe72bc8e` passed public Lean
+  Action CI run `29721623535`, build job `88285645538`, in `1m49s`.
 - `implementation`: the 535-line production module
   `LeanLab/Riemann/DeBruijnNewmanPolymathBoydBranchedDegreeTwo.lean` constructs actual local open
   partial homeomorphisms for `Phi : D -> B` at every nonzero source point, proves regular fibers
@@ -180,7 +182,7 @@ CI.
 - `mechanical_audit`: the production module, exact Targets, seven exact TargetChecks, six selected
   axiom prints, three forbidden scans, and `git diff --check` pass. Every selected theorem depends
   only on `propext`, `Classical.choice`, and `Quot.sound`. The full-project build passes all 8,727
-  tasks. Public implementation CI passes; closure-evidence CI remains to be recorded.
+  tasks. Public implementation and closure-evidence CI both pass.
 - `obstruction_after`: the degree layer of `OBS-H6-BOYD-COVERING-CERTIFICATE-01` is closed. The
   residual node is to compare the compiled phase covering with the punctured square-map covering,
   extend the normalized local coordinate/inverse globally across the origin, and prove the actual
