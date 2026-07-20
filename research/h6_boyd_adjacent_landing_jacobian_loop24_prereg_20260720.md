@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260720-H6-BOYD-ADJACENT-LANDING-JACOBIAN-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `LOCAL_SUCCESS / PUBLIC IMPLEMENTATION CI PENDING`
+Status: `PUBLIC IMPLEMENTATION PASSED / CLOSURE EVIDENCE PENDING`
 
 ## Opening
 
@@ -303,7 +303,8 @@ the Loop 17 conditional obstruction.
   `obstruction_map_delta=0`.
 - `public_preregistration`: commit `a0443b921a48072d889402737c6d38a468eeab71` passed public Lean
   Action CI run `29725851711`, build job `88298656245`, in `1m56s` before proof-source editing.
-- `public_implementation`: pending.
+- `public_implementation`: commit `e8ee2a1997a66289459fa7bb0ee1ac7eec3bcef9` passed public
+  Lean Action CI run `29727609529`, build job `88304224149`, in `1m58s`.
 - `next_exact_gate`: derive the two adjacent inverse-Jacobian singular contributions and prove the
   source-exact Boyd--Nemes equation `(15)` at `N=2`; equation `(15)` and effective `R_2` remain
   unproved and are not premises.
