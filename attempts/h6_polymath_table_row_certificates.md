@@ -1731,3 +1731,72 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
 - `budget`: no V4.1 numerical quota and no exposed serving token budget
 - `persistent_goal`: H6-Q1 and the global RH Goal remain active
+
+## Loop 25 Boyd R2 Jacobian remainder and exact contour reduction
+
+- `campaign`: `PROOF-ATTEMPT-20260720-H6-BOYD-R2-JACOBIAN-REMAINDER-01`
+- `mode`: `PROOF-ATTEMPT`
+- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; local audit complete, public implementation
+  evidence pending
+- `target`: prove the actual Boyd--Nemes equation `(15)` at `N=2`, retaining only an exact actual
+  `R2` Jacobian prefix, certified coefficients, and a theorem-level first contour gap on partial
+  closure
+- `material_difference_from_loop12`: Loops 13--24 now supply the real Gaussian saddle inverse,
+  disk-wide complex inverse, Cauchy Jacobian, exact adjacent radial landings, and maximal centered
+  radius; Loop 12 had only integrable source kernels
+- `compiled_positive_real_endpoint`:
+  `deBruijnNewmanPolymathGammaStirlingR2_ofReal_eq_boydJacobianRemainder` rewrites the actual
+  project remainder for every `x>0` as the normalized whole-real Gaussian integral of the actual
+  inverse Jacobian minus `1-w/3+w^2/12`
+- `coefficient_mechanism`: normalized Gaussian moments are proved exactly as `1`, `0`, and `1/x`.
+  Differentiating `(exp(U)-1)*U'=w` at zero gives `U'(0)=1`, `U''(0)=-1/3`, and `U'''(0)=1/6`,
+  so the polynomial is mechanically the degree-two inverse-Jacobian Taylor polynomial
+- `holomorphy_mechanism`: rewrite each source denominator as `z/(z-/+i*s)`, differentiate under
+  the positive-ray integral, and dominate locally on `ball(z,z.re/2)` by a constant times
+  `s^(3/2)*exp(-pi*s)`. Both Stieltjes ray integrals and the actual Boyd RHS are differentiable on
+  `Re z>0`; the actual Stirling remainder is independently differentiable there
+- `exact_contour_gate`: the complex identity theorem proves
+  `deBruijnNewmanPolymathGammaStirlingR2_eq_boyd_iff_positiveRealContourEquality`. The remaining
+  positive-real equality is also exactly equivalent to a one-ray real scalar identity by
+  `deBruijnNewmanPolymathBoydR2_positiveRealContourEquality_iff_scalar`
+- `failed_adjacent_ray_mechanism`: the current complex inverse is analytic only in the first
+  coordinate disk, while the Gaussian remainder integrates over the full real coordinate line.
+  The two radial landing limits do not furnish exterior cut-plane continuation or jump formulas,
+  so deforming the whole contour would require the missing theorem itself
+- `failed_binet_mechanism`: mathlib has Euler's Gamma integral but no Binet/Stieltjes
+  Stirling-remainder formula. The source-faithful Euler reconstruction returns the compiled
+  Jacobian integral and does not derive the two Boyd ray jumps; Paris's unproved alternative
+  contour equivalence is not used
+- `new_obstruction`: `OBS-H6-BOYD-R2-POSITIVE-REAL-CONTOUR-01`: construct a cut-plane continuation
+  of the actual inverse Jacobian with its two adjacent-saddle boundary jumps, or independently
+  formalize a source-faithful Binet formula implying the exact scalar contour equality
+- `assumption_frontier_after`: the real actual-R2 Jacobian identity, exact first three
+  inverse-Jacobian coefficients, both Stieltjes kernel derivatives, right-half-plane holomorphy,
+  and positive-ray-to-half-plane identity propagation are K0. Equation `(15)`, any Binet formula,
+  any exterior inverse continuation, effective `R2`, and Table 1 remain unassumed
+- `compiled_theorems`: `deBruijnNewmanPolymathBoyd_normalizedGaussian_secondMoment`,
+  `deBruijnNewmanPolymathGammaStirlingR2_ofReal_eq_boydJacobianRemainder`,
+  `deriv_deriv_deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_zero`,
+  `deriv_deriv_deriv_deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_zero`,
+  `deBruijnNewmanPolymathBoydR2JacobianPolynomial_eq_inverseJacobianTaylor`,
+  `deBruijnNewmanPolymathBoydR2Integral_differentiableOn_rightHalfPlane`,
+  `deBruijnNewmanPolymathBoydR2_positiveRealContourEquality_iff_scalar`, and
+  `deBruijnNewmanPolymathGammaStirlingR2_eq_boyd_iff_positiveRealContourEquality`
+- `classification_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`,
+  `route_infrastructure_delta=1`, `obstruction_map_delta=1`
+- `local_mechanical_audit`: 1,125-line production module, nine exact TargetChecks, eight selected
+  standard-only axiom prints, three empty forbidden scans, `git diff --check`, and the full
+  8,730-task build pass; selected declarations depend only on `propext`, `Classical.choice`, and
+  `Quot.sound`
+- `public_preregistration`: commit `cfc705ad1f4bfedd6973b08226f80b1204791024`, CI run
+  `29729188057`, build job `88309340646`, passed in `2m9s` before proof-source editing
+- `public_implementation`: pending
+- `public_closure`: pending
+- `compaction_state`: two inherited summaries during Loop 25; the canonical authority and all
+  required frontier files were re-read after each before proof or publication work
+- `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
+- `budget`: no V4.1 numerical quota and no exposed serving token budget
+- `next_route_decision`: retain the exact contour obstruction, then value-rank a cut-plane
+  inverse-Jacobian jump campaign against the fixed route atlas; do not repeat denominator
+  integrability or local disk Taylor work
+- `persistent_goal`: H6-Q1 and the global RH Goal remain active

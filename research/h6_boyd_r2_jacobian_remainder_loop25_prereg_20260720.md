@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260720-H6-BOYD-R2-JACOBIAN-REMAINDER-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PREREGISTERED / PUBLIC BASELINE CI PENDING`
+Status: `MEANINGFUL PARTIAL / HARD GAP REDUCED / PUBLIC IMPLEMENTATION CI PENDING`
 
 ## Opening
 
@@ -229,3 +229,51 @@ identity, not the already exhausted denominator-majorant mechanism.
   prefix, and compare the adjacent-ray route with a source-faithful Binet reconstruction before
   route selection.
 - `global_goal`: the persistent RH Goal remains active in every local outcome.
+
+## Loop 25 local outcome
+
+- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`. The complete Boyd--Nemes equation `(15)`
+  was not proved and remains open.
+- `compiled_positive_real_prefix`: for every `x>0`, the actual project
+  `deBruijnNewmanPolymathGammaStirlingR2 (x:C)` is exactly the normalized Gaussian integral of
+  `deriv U_R(w) - (1-w/3+w^2/12)`. The integrand is proved integrable.
+- `coefficient_certificate`: Lean differentiates the actual inverse equation
+  `(exp(U)-1)*U'=w` at zero and proves `U'(0)=1`, `U''(0)=-1/3`, and `U'''(0)=1/6`; hence the
+  subtraction polynomial is exactly the degree-two Taylor polynomial of the inverse Jacobian.
+- `holomorphy_prefix`: both Boyd kernels are rewritten as Stieltjes kernels. Their parameter
+  derivatives are dominated locally by an integrable multiple of
+  `s^(3/2)*exp(-pi*s)`. Lean proves the two ray integrals, the complete Boyd RHS, and the actual
+  project `R2` differentiable on `Re z>0`.
+- `exact_reduction`: the identity theorem compiles a strict equivalence between the complete
+  all-right-half-plane equation `(15)` and one positive-real contour equality. Conjugacy reduces
+  that equality further to a single real scalar identity involving the imaginary part of the
+  positive Boyd ray.
+- `first_missing_theorem`: `deBruijnNewmanPolymathBoydR2PositiveRealContourEquality`. It asks for
+  equality of the compiled whole-real inverse-Jacobian Gaussian remainder and the compiled Boyd
+  two-ray expression, with no hidden contour or decay premise.
+- `adjacent_ray_attempt`: the compiled complex inverse and its Cauchy Jacobian are available only
+  on the first coordinate disk. The whole-real Gaussian integral uses every real coordinate.
+  Radial landing at the two boundary saddles does not supply analytic continuation on the exterior
+  cut plane or the two boundary jump formulas, so a contour deformation cannot yet be stated from
+  the available K0 interface without introducing the missing conclusion as a premise.
+- `binet_attempt`: a source-faithful inventory found Euler's Gamma integral in mathlib but no
+  Binet/Stieltjes Stirling-remainder formula. Reapplying the Euler integral and the compiled saddle
+  changes of variables returns the already proved Jacobian remainder; it does not produce the
+  Boyd ray jumps. No alternative-contour equivalence from Paris is used.
+- `new_obstruction`: `OBS-H6-BOYD-R2-POSITIVE-REAL-CONTOUR-01`, requiring a cut-plane analytic
+  continuation and adjacent-saddle jump certificate for the inverse Jacobian, or an independently
+  formalized source-faithful Binet representation proving the same scalar equality.
+- `classification_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`,
+  `route_infrastructure_delta=1`, `obstruction_map_delta=1`.
+- `local_mechanical_audit`: 1,125-line production module, nine exact TargetChecks, eight selected
+  standard-only axiom prints, three empty forbidden scans, `git diff --check`, and the full
+  8,730-task build pass. Selected declarations depend only on `propext`, `Classical.choice`, and
+  `Quot.sound`.
+- `compaction_state`: two inherited summaries occurred during Loop 25. After each, canonical
+  governance, `HANDOFF.md`, Targets/TargetChecks, the current attempt, hard-gap DAG, and this
+  preregistration were re-read before further proof or publication work.
+- `model`: Codex, GPT-5 family; exact serving variant and reasoning effort are not exposed.
+- `budget`: V4.1 has no numerical quota; no serving token budget is exposed.
+- `persistent_goal`: H6-Q1 and the global RH Goal remain active.
+- `public_implementation`: pending.
+- `public_closure`: pending.

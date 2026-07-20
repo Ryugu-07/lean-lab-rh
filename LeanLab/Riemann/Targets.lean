@@ -31,6 +31,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydPhaseDomainConnectedness
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBranchedDegreeTwo
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydNormalizedCoordinate
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentLandingJacobian
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydR2JacobianRemainder
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1012,7 +1013,15 @@ def rhTargets : List ResearchTarget :=
       statement :=
         "For every complex z with positive real part, prove that the project's actual second scaled-Gamma Stirling remainder equals the source-exact two-ray Boyd--Nemes integral expression."
       status := .inProgress
-      note := "Loop 12 exposes the exact remaining edge after proving both kernels integrable. Nemes states equation (15) by citation to Boyd; neither mathlib nor the project contains the required steepest-descent resurgence theorem or an equivalent Binet/Stieltjes remainder formula. No equation-(15) premise is admitted." },
+      note := "Loop 25 proves the actual R2 is exactly the normalized Gaussian integral of the real inverse-Jacobian remainder after subtracting the mechanically certified Taylor polynomial 1-w/3+w^2/12. It proves both Boyd ray integrals and the actual R2 holomorphic on Re z>0, and compiles an iff reducing all of equation (15) to one exact positive-real contour equality, also expressed as a one-ray real scalar identity. The remaining theorem must analytically continue the inverse Jacobian beyond its first-saddle disk to the appropriate cut plane and compute its two adjacent-saddle jumps, or reconstruct the same equality from a source-faithful Binet formula. Neither statement is assumed; equation (15) remains open." },
+    { id := "H6.debruijn-newman.boyd-r2-jacobian-reduction"
+      tier := .tier2
+      title := "Reduce Boyd equation (15) to one positive-real Jacobian contour equality"
+      statement :=
+        "For every positive real x, rewrite the project's actual second Stirling remainder as the normalized Gaussian integral of the actual real Boyd inverse Jacobian minus its degree-two Taylor polynomial; derive the polynomial coefficients from the disk inverse germ; prove both sides of equation (15) holomorphic on the right half-plane; and prove the full equation equivalent to one exact positive-real contour equality."
+      leanName := some ``deBruijnNewmanPolymathGammaStirlingR2_eq_boyd_iff_positiveRealContourEquality
+      status := .proven
+      note := "Loop 25 meaningful prefix. Lean proves the normalized Gaussian moments 1, 0, and 1/x, the exact actual-project R2 Jacobian remainder identity, and derives inverse-Jacobian coefficients 1, -1/3, and 1/12 by differentiating the actual equation (exp(U)-1)U'=w. It rewrites both Boyd denominators as Stieltjes kernels, proves parameter differentiation under each improper integral with an s^(3/2)*exp(-pi*s) majorant, and uses the complex identity theorem to reduce all Re z>0 to the positive real ray. Direct adjacent-ray deformation stops because the compiled inverse is analytic only on the first coordinate disk while the Gaussian integral ranges over the full real line; mathlib contains Euler's Gamma integral but no Binet/Stieltjes Stirling-remainder formula. Classification HARD_GAP_REDUCED; equation (15), effective R2, Table 1 certificates, H6-E/G8, and RH remain open." },
     { id := "H6.debruijn-newman.boyd-positive-real-saddle-integral"
       tier := .tier2
       title := "Derive the positive-real scaled-Gamma saddle integral"

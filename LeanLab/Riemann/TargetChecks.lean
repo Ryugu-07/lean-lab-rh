@@ -32,6 +32,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydPhaseDomainConnectedness
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBranchedDegreeTwo
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydNormalizedCoordinate
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentLandingJacobian
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydR2JacobianRemainder
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2667,5 +2668,58 @@ example {V : ℂ → ℂ} {R : ℝ} (hR : 0 < R)
     hR hV hlocal
 
 example := deBruijnNewmanPolymathBoydAdjacentLandingJacobianCertificate
+
+example {x : ℝ} (hx : 0 < x) :
+    MeasureTheory.Integrable
+      (deBruijnNewmanPolymathBoydR2JacobianRemainderIntegrand x) :=
+  deBruijnNewmanPolymathBoydR2JacobianRemainderIntegrand_integrable hx
+
+example {x : ℝ} (hx : 0 < x) :
+    Real.sqrt (x / (2 * Real.pi)) *
+        (∫ w : ℝ, w ^ 2 * Real.exp (-x * w ^ 2 / 2)) = 1 / x :=
+  deBruijnNewmanPolymathBoyd_normalizedGaussian_secondMoment hx
+
+example {x : ℝ} (hx : 0 < x) :
+    deBruijnNewmanPolymathGammaStirlingR2 (x : ℂ) =
+      ((Real.sqrt (x / (2 * Real.pi)) *
+        (∫ w : ℝ, deBruijnNewmanPolymathBoydR2JacobianRemainderIntegrand x w) : ℝ) : ℂ) :=
+  deBruijnNewmanPolymathGammaStirlingR2_ofReal_eq_boydJacobianRemainder hx
+
+example (w : ℝ) :
+    (deBruijnNewmanPolymathBoydR2JacobianPolynomial w : ℂ) =
+      deriv deBruijnNewmanPolymathBoydNormalizedCoordinateInverse 0 +
+        deriv (deriv deBruijnNewmanPolymathBoydNormalizedCoordinateInverse) 0 * (w : ℂ) +
+        deriv (deriv (deriv deBruijnNewmanPolymathBoydNormalizedCoordinateInverse)) 0 /
+          2 * (w : ℂ) ^ 2 :=
+  deBruijnNewmanPolymathBoydR2JacobianPolynomial_eq_inverseJacobianTaylor w
+
+example :
+    DifferentiableOn ℂ deBruijnNewmanPolymathBoydR2Integral {z : ℂ | 0 < z.re} :=
+  deBruijnNewmanPolymathBoydR2Integral_differentiableOn_rightHalfPlane
+
+example :
+    DifferentiableOn ℂ deBruijnNewmanPolymathGammaStirlingR2 {z : ℂ | 0 < z.re} :=
+  deBruijnNewmanPolymathGammaStirlingR2_differentiableOn_rightHalfPlane
+
+example :
+    deBruijnNewmanPolymathBoydR2PositiveRealContourEquality ↔
+      deBruijnNewmanPolymathBoydR2PositiveRealScalarContourEquality :=
+  deBruijnNewmanPolymathBoydR2_positiveRealContourEquality_iff_scalar
+
+example
+    (hreal : ∀ x : ℝ, 0 < x →
+      deBruijnNewmanPolymathGammaStirlingR2 (x : ℂ) =
+        deBruijnNewmanPolymathBoydR2Integral (x : ℂ))
+    {z : ℂ} (hz : 0 < z.re) :
+    deBruijnNewmanPolymathGammaStirlingR2 z =
+      deBruijnNewmanPolymathBoydR2Integral z :=
+  deBruijnNewmanPolymathGammaStirlingR2_eq_boyd_of_forall_pos_ofReal hreal hz
+
+example :
+    (∀ z : ℂ, 0 < z.re →
+      deBruijnNewmanPolymathGammaStirlingR2 z =
+        deBruijnNewmanPolymathBoydR2Integral z) ↔
+      deBruijnNewmanPolymathBoydR2PositiveRealContourEquality :=
+  deBruijnNewmanPolymathGammaStirlingR2_eq_boyd_iff_positiveRealContourEquality
 
 end LeanLab.Riemann

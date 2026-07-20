@@ -658,3 +658,41 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   preregistration were re-read before proof selection or publication.
 - `still_open`: adjacent-saddle inverse-Jacobian decomposition, Boyd--Nemes equation `(15)`,
   effective `R_2`, unconditional Table 1 certificates, H6-E/G8, and RH.
+
+## 2026-07-20 H6-Q1 Loop 25 local outcome
+
+- `H6-Q1`: open; the actual positive-real `R2` Jacobian reduction and half-plane propagation
+  subedges are proven locally.
+- `K0-H6-BOYD-R2-JACOBIAN-REDUCTION-01`: the actual project remainder equals the normalized
+  Gaussian integral of the global real inverse Jacobian after subtracting the exact polynomial
+  `1-w/3+w^2/12`; all three coefficients are derived from the actual complex inverse equation.
+- `K0-H6-BOYD-R2-HOLOMORPHY-01`: both Boyd Stieltjes ray integrals, the complete Boyd RHS, and the
+  actual project `R2` are holomorphic on `Re z>0`. Equality on every positive real parameter
+  therefore propagates to the complete half-plane by the identity theorem.
+- `K0-H6-BOYD-R2-CONTOUR-REDUCTION-01`: full equation `(15)` is equivalent to
+  `deBruijnNewmanPolymathBoydR2PositiveRealContourEquality`, itself equivalent to the one-positive-
+  ray scalar imaginary-part identity. This is a reduction, not a proof of either side.
+- `OBS-H6-BOYD-R2-POSITIVE-REAL-CONTOUR-01`: open. Construct an analytic continuation of the
+  actual inverse Jacobian from the first disk to the relevant cut coordinate plane, prove its
+  upper and lower adjacent-saddle boundary values and jumps, and justify the whole-real Gaussian
+  contour deformation. An independently formalized source-faithful Binet/Stieltjes remainder
+  identity proving the exact scalar equality is an alternative closure.
+- `why_loop24_landings_are_insufficient`: Loop 24 controls the inverse inside the first disk and
+  its two radial endpoint limits. The whole-real Jacobian integral includes coordinates outside
+  that disk; endpoint landing alone gives neither exterior analyticity nor boundary jumps or decay
+  on the unbounded deformation pieces.
+- `binet_inventory`: mathlib has Euler's Gamma integral but no Binet/Stieltjes or Stirling-
+  remainder representation. Repeating the Euler saddle change of variables returns the K0
+  Jacobian identity. Paris's explicitly unproved alternative-contour equivalence remains excluded.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `local_audit`: exact Targets and nine witnesses, eight standard-only axiom prints, empty
+  forbidden scans, `git diff --check`, and the full 8,730-task build passed.
+- `public_preregistration`: commit `cfc705ad1f4bfedd6973b08226f80b1204791024`, CI run
+  `29729188057`, build job `88309340646`, passed before proof-source editing.
+- `public_implementation`: pending.
+- `public_closure`: pending.
+- `compaction_state`: two inherited summaries; all canonical frontier files were re-read after
+  each before continuing.
+- `still_open`: `OBS-H6-BOYD-R2-POSITIVE-REAL-CONTOUR-01`, equation `(15)`, effective `R2`,
+  unconditional Table 1 certificates, H6-E/G8, and RH.
