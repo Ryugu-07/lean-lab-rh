@@ -1806,8 +1806,8 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 
 - `campaign`: `PROOF-ATTEMPT-20260720-H6-BOYD-ADJACENT-PUISEUX-JUMP-01`
 - `mode`: `PROOF-ATTEMPT`
-- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; locally verified, public implementation CI
-  pending
+- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; public implementation verified,
+  closure-evidence CI pending
 - `target`: prove the two first-adjacent analytic Puiseux sheets, their exact phase-Jacobians and
   jump, the regularized singular coefficient two, and actual Loop 24 upper/lower radial-sheet
   selection; then attempt the complete cut deformation required by equation `(15)`
@@ -1840,7 +1840,8 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   `propext`, `Classical.choice`, and `Quot.sound`
 - `public_preregistration`: commit `92d945958e1f19ea139227e5226d3aae720e4c7a`, CI run
   `29734964368`, build job `88328014471`, passed in `1m52s` before proof-source editing
-- `public_implementation`: pending
+- `public_implementation`: commit `17bae76ae4a4471cc5ca9cc02f59cc6ff39458b1`, CI run
+  `29737649314`, build job `88336694128`, passed in `2m40s`
 - `compaction_state`: two inherited summaries during Loop 26; the complete canonical frontier was
   re-read after each before proof or publication work
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
