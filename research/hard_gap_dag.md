@@ -649,6 +649,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `29725851711`, build job `88298656245`, passed in `1m56s` before proof-source editing.
 - `public_implementation`: commit `e8ee2a1997a66289459fa7bb0ee1ac7eec3bcef9`, CI run
   `29727609529`, build job `88304224149`, passed in `1m58s`.
+- `public_closure`: evidence commit `fc4b716a537448d0630d939cfec44335f6eaaa58`, CI run
+  `29727795315`, build job `88304816776`, passed in `2m6s`.
 - `local_audit`: 691-line production module, exact TargetChecks, eighteen selected standard-only
   axiom prints, three empty forbidden scans, `git diff --check`, and the full 8,729-task build pass.
 - `compaction_state`: two inherited summaries during Loop 24; after each, canonical governance,

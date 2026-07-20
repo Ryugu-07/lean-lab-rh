@@ -1669,7 +1669,7 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 
 - `campaign`: `PROOF-ATTEMPT-20260720-H6-BOYD-ADJACENT-LANDING-JACOBIAN-01`
 - `mode`: `PROOF-ATTEMPT`
-- `result`: `PROVED / HARD_GAP_REDUCED`; public implementation passed, closure evidence pending
+- `result`: `PROVED / HARD_GAP_REDUCED`; publicly closed
 - `target`: instantiate the actual Loop 23 inverse Jacobian and its Cauchy series, identify the
   global coordinate with both Loop 19 contour rays, prove the actual inverse lands at both
   adjacent saddles, and remove the explicit landing premise from the Loop 17 maximal-radius bound
@@ -1717,6 +1717,8 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   `29725851711`, build job `88298656245`, passed in `1m56s` before proof-source editing
 - `public_implementation`: commit `e8ee2a1997a66289459fa7bb0ee1ac7eec3bcef9`, CI run
   `29727609529`, build job `88304224149`, passed in `1m58s`
+- `public_closure`: evidence commit `fc4b716a537448d0630d939cfec44335f6eaaa58`, CI run
+  `29727795315`, build job `88304816776`, passed in `2m6s`
 - `next_exact_gate`: derive the two adjacent singular contributions of the inverse Jacobian and
   prove the source-exact Boyd--Nemes equation `(15)` at `N=2`; do not assume that equation or an
   effective `R_2` bound
