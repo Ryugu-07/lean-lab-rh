@@ -690,7 +690,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   forbidden scans, `git diff --check`, and the full 8,730-task build passed.
 - `public_preregistration`: commit `cfc705ad1f4bfedd6973b08226f80b1204791024`, CI run
   `29729188057`, build job `88309340646`, passed before proof-source editing.
-- `public_implementation`: pending.
+- `public_implementation`: commit `31b9760e86ddac273caf51f74a34bf8b2a779891`, CI run
+  `29733410692`, build job `88322989401`, passed in `2m1s`.
 - `public_closure`: pending.
 - `compaction_state`: two inherited summaries; all canonical frontier files were re-read after
   each before continuing.

@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260720-H6-BOYD-R2-JACOBIAN-REMAINDER-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `MEANINGFUL PARTIAL / HARD GAP REDUCED / PUBLIC IMPLEMENTATION CI PENDING`
+Status: `MEANINGFUL PARTIAL / HARD GAP REDUCED / PUBLIC IMPLEMENTATION CI PASSED`
 
 ## Opening
 
@@ -275,5 +275,6 @@ identity, not the already exhausted denominator-majorant mechanism.
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort are not exposed.
 - `budget`: V4.1 has no numerical quota; no serving token budget is exposed.
 - `persistent_goal`: H6-Q1 and the global RH Goal remain active.
-- `public_implementation`: pending.
+- `public_implementation`: commit `31b9760e86ddac273caf51f74a34bf8b2a779891`, CI run
+  `29733410692`, build job `88322989401`, passed in `2m1s`.
 - `public_closure`: pending.
