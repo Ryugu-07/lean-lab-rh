@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260720-H6-BOYD-ADJACENT-PUISEUX-JUMP-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PUBLIC IMPLEMENTATION VERIFIED / EVIDENCE CI PENDING`
+Status: `PUBLICLY CLOSED / MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`
 
 ## Opening
 
@@ -299,6 +299,8 @@ statements, not only the algebraic phase and jump formulas.
   `29734964368`, build job `88328014471`, passed in `1m52s` before proof-source editing.
 - `public_implementation`: commit `17bae76ae4a4471cc5ca9cc02f59cc6ff39458b1`, Lean Action run
   `29737649314`, build job `88336694128`, passed in `2m40s`.
+- `public_closure`: evidence commit `10be66751465a1c3eebffac127b9242dc71d2ae2`, Lean Action run
+  `29737921486`, build job `88337545005`, passed in `2m18s`.
 - `compaction_state_after`: two inherited compactions during Loop 26. After each, canonical
   governance, HANDOFF, Targets/TargetChecks, the current H6 attempt, hard-gap DAG, full
   preregistration, and relevant production certificate were re-read before further proof or

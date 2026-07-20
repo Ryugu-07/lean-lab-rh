@@ -727,6 +727,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `29734964368`, build job `88328014471`, passed before proof-source editing.
 - `public_implementation`: commit `17bae76ae4a4471cc5ca9cc02f59cc6ff39458b1`, CI run
   `29737649314`, build job `88336694128`, passed in `2m40s`.
+- `public_closure`: evidence commit `10be66751465a1c3eebffac127b9242dc71d2ae2`, CI run
+  `29737921486`, build job `88337545005`, passed in `2m18s`.
 - `compaction_state`: two inherited summaries; all canonical frontier files were re-read after
   each before continuing.
 - `still_open`: `OBS-H6-BOYD-R2-GLOBAL-CUT-STITCHING-01`, parent positive-real contour equality,
