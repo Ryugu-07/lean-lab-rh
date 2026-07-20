@@ -618,6 +618,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `obstruction_map_delta=1`.
 - `public_preregistration`: commit `02ff528c5ce2a4c63cdd32f8c65238ec795d08d3`, CI run
   `29722372082`, build job `88287886054`, passed in `1m32s` before proof-source editing.
+- `public_implementation`: commit `ddf586efa892d4406908cce4fd8db591b87dbbe4`, CI run
+  `29724881068`, build job `88295578003`, passed in `1m57s`.
 - `local_audit`: 1,184-line production module, eight exact TargetChecks, eight selected
   standard-only axiom prints, empty production-source forbidden scans, `git diff --check`, and the
   full 8,728-task build pass.
