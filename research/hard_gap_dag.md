@@ -620,6 +620,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `29722372082`, build job `88287886054`, passed in `1m32s` before proof-source editing.
 - `public_implementation`: commit `ddf586efa892d4406908cce4fd8db591b87dbbe4`, CI run
   `29724881068`, build job `88295578003`, passed in `1m57s`.
+- `public_closure`: evidence commit `6ec48e0250b7e9abba3cd63888a9692fbd3dedc1`, CI run
+  `29725055352`, build job `88296112617`, passed in `1m28s`.
 - `local_audit`: 1,184-line production module, eight exact TargetChecks, eight selected
   standard-only axiom prints, empty production-source forbidden scans, `git diff --check`, and the
   full 8,728-task build pass.

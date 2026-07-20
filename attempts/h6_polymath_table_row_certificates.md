@@ -1606,8 +1606,7 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 
 - `campaign`: `PROOF-ATTEMPT-20260720-H6-BOYD-NORMALIZED-COORDINATE-01`
 - `mode`: `PROOF-ATTEMPT`
-- `result`: `PROVED / HARD_GAP_REDUCED`; public implementation verified, closure-evidence CI
-  pending
+- `result`: `PROVED / HARD_GAP_REDUCED`; publicly closed
 - `target`: construct a normalized analytic square root on the actual first Boyd phase domain,
   prove its coordinate is a homeomorphism onto the natural coordinate disk, and prove the inverse
   is analytic and extends the Loop 15 local inverse germ
@@ -1654,6 +1653,8 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   `29722372082`, build job `88287886054`, passed in `1m32s` before proof-source editing
 - `public_implementation`: commit `ddf586efa892d4406908cce4fd8db591b87dbbe4`, CI run
   `29724881068`, build job `88295578003`, passed in `1m57s`
+- `public_closure`: evidence commit `6ec48e0250b7e9abba3cd63888a9692fbd3dedc1`, CI run
+  `29725055352`, build job `88296112617`, passed in `1m28s`
 - `next_exact_gate`: differentiate the disk inverse, derive its Cauchy/inverse-Jacobian
   representation up to the adjacent critical images, and turn the two adjacent singular
   contributions into the source-exact Boyd--Nemes equation `(15)` rather than assuming it

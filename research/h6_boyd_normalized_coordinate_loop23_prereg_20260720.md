@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260720-H6-BOYD-NORMALIZED-COORDINATE-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED / CLOSURE_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Opening
 
@@ -141,6 +141,8 @@ following, with theorem names allowed to change only for type-correct local desi
   Action CI run `29722372082`, build job `88287886054`, in `1m32s`, before proof-source editing.
 - `public_implementation`: commit `ddf586efa892d4406908cce4fd8db591b87dbbe4` passed public Lean
   Action CI run `29724881068`, build job `88295578003`, in `1m57s`.
+- `public_closure`: evidence commit `6ec48e0250b7e9abba3cd63888a9692fbd3dedc1` passed public Lean
+  Action CI run `29725055352`, build job `88296112617`, in `1m28s`.
 - `implementation`: the 1,184-line production module
   `LeanLab/Riemann/DeBruijnNewmanPolymathBoydNormalizedCoordinate.lean` first compiles the complete
   conditional principal-square-root chain under the exact slit-plane premise, then removes that
