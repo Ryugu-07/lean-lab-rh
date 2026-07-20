@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260720-H6-BOYD-ADJACENT-PUISEUX-JUMP-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PREREGISTERED / PUBLIC CI PENDING`
+Status: `LOCAL IMPLEMENTATION VERIFIED / PUBLIC IMPLEMENTATION CI PENDING`
 
 ## Opening
 
@@ -259,3 +259,49 @@ statements, not only the algebraic phase and jump formulas.
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort are not exposed.
 - `budget`: V4.1 has no numerical quota; no serving token budget is exposed.
 - `global_goal`: the persistent RH Goal remains active.
+
+## Local outcome
+
+- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`.
+- `success_criterion`: not met. The positive-real contour equality and Boyd--Nemes equation
+  `(15)` remain open and were not used as premises.
+- `minimum_hard_gap_reduction`: met as one aggregate Lean certificate. Both first-adjacent
+  translated sheets are analytic, solve the same phase equation, are exchanged by `eta -> -eta`,
+  have the exact chain-rule phase-Jacobians and jump, and satisfy the punctured regularized limit
+  `eta * (K^+ - K^-) -> 2`. The actual upper and lower Loop 24 radial branches select the positive
+  sheets through the compiler-defined global coordinate; their uniformizers tend to zero and are
+  eventually nonzero.
+- `compiled_endpoint`:
+  `deBruijnNewmanPolymathBoydAdjacentPuiseuxJumpCertificate` proves
+  `deBruijnNewmanPolymathBoydAdjacentPuiseuxJumpCertificateStatement`.
+- `additional_continuation_probe`: the principal square-root uniformizer gives analytic positive
+  and negative continuation candidates wherever its radicand lies in `Complex.slitPlane` and the
+  uniformizer stays in the first coordinate disk. Both solve the exact original phase equation
+  `h(V)=w^2/2` there.
+- `boundary_contact`: Lean proves at `w=0`, for both `n=1` and `n=-1`, that the principal
+  uniformizer has norm exactly `2*sqrt(pi)`, the boundary of the available open disk. Thus this
+  first adjacent chart certificate alone does not supply continuation through the origin
+  coordinate, much less over the whole unbounded real Gaussian contour.
+- `new_obstruction`: `OBS-H6-BOYD-R2-GLOBAL-CUT-STITCHING-01`. Construct compatible adjacent or
+  exterior inverse charts beyond the first disk, prove exact upper/lower cut boundary values and
+  jumps, and certify the unbounded contour homology and decay needed by the Loop 25 equality.
+- `assumption_frontier_after`: the local adjacent Puiseux sheets, their involution, phase laws,
+  Jacobian jump, coefficient two, actual radial sign selection, and principal-chart boundary
+  contact are K0 locally. No exterior inverse, global cut boundary value, contour deformation,
+  equation `(15)`, effective `R2`, or Table 1 certificate is introduced.
+- `classification_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`,
+  `route_infrastructure_delta=1`, `obstruction_map_delta=1`.
+- `local_mechanical_audit`: 840-line production module, proven Target, eight exact
+  TargetChecks, ten selected axiom prints, empty placeholder/custom-declaration/resource-limit
+  scans, `git diff --check`, and the full 8,731-job build pass. Every selected declaration depends
+  only on `propext`, `Classical.choice`, and `Quot.sound`.
+- `public_preregistration`: commit `92d945958e1f19ea139227e5226d3aae720e4c7a`, Lean Action run
+  `29734964368`, build job `88328014471`, passed in `1m52s` before proof-source editing.
+- `public_implementation`: pending commit and CI.
+- `compaction_state_after`: two inherited compactions during Loop 26. After each, canonical
+  governance, HANDOFF, Targets/TargetChecks, the current H6 attempt, hard-gap DAG, full
+  preregistration, and relevant production certificate were re-read before further proof or
+  publication work.
+- `model`: Codex, GPT-5 family; exact serving variant and reasoning effort are not exposed.
+- `budget`: V4.1 has no numerical quota; no serving token budget is exposed.
+- `persistent_goal`: H6-Q1 and the global RH Goal remain active.

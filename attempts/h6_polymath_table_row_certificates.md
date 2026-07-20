@@ -1801,3 +1801,51 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   inverse-Jacobian jump campaign against the fixed route atlas; do not repeat denominator
   integrability or local disk Taylor work
 - `persistent_goal`: H6-Q1 and the global RH Goal remain active
+
+## Loop 26 Boyd adjacent Puiseux sheets and Jacobian jump
+
+- `campaign`: `PROOF-ATTEMPT-20260720-H6-BOYD-ADJACENT-PUISEUX-JUMP-01`
+- `mode`: `PROOF-ATTEMPT`
+- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; locally verified, public implementation CI
+  pending
+- `target`: prove the two first-adjacent analytic Puiseux sheets, their exact phase-Jacobians and
+  jump, the regularized singular coefficient two, and actual Loop 24 upper/lower radial-sheet
+  selection; then attempt the complete cut deformation required by equation `(15)`
+- `material_difference_from_loop25`: Loop 25 isolated the exact positive-real contour equality
+  but had no exterior complex inverse. Loop 26 moves the actual inverse germ to both first
+  adjacent saddles and computes the compiler-checked local branch jump rather than repeating the
+  centered Taylor or kernel-integrability work.
+- `compiled_endpoint`: `deBruijnNewmanPolymathBoydAdjacentPuiseuxJumpCertificate` packages
+  analyticity of both sheets, their common translated phase, the `eta -> -eta` involution, exact
+  chain-rule Jacobians, exact and regularized jump formulas, punctured limit two, and actual upper
+  and lower radial-sheet identification with eventually nonzero uniformizers.
+- `principal_chart_probe`: `deBruijnNewmanPolymathBoydAdjacentPrincipalContinuations_analyticAt`
+  and `deBruijnNewmanPolymathBoydAdjacentPrincipalContinuations_phase` provide a slit-plane chart
+  only while the principal uniformizer remains inside the first coordinate disk.
+- `compiled_boundary_contact`:
+  `norm_deBruijnNewmanPolymathBoydAdjacentPrincipalUniformizer_one_zero` and its `-1` analogue
+  prove exact norm `2*sqrt(pi)` at coordinate `w=0`, so the available first-adjacent disk chart
+  reaches its open-domain boundary there and cannot alone cover the unbounded Gaussian contour.
+- `new_obstruction`: `OBS-H6-BOYD-R2-GLOBAL-CUT-STITCHING-01`: build compatible adjacent/exterior
+  inverse charts, exact full-cut boundary values and jumps, and the unbounded contour homology and
+  decay theorem, or independently formalize a source-faithful Binet/Stieltjes closure.
+- `assumption_frontier_after`: all local Puiseux, jump, radial selection, and boundary-contact
+  facts above are K0. Equation `(15)`, the positive-real contour equality, any exterior inverse,
+  effective `R2`, and Table 1 remain unassumed.
+- `classification_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`,
+  `route_infrastructure_delta=1`, `obstruction_map_delta=1`
+- `local_mechanical_audit`: 840-line production module, exact proven Target, eight exact
+  TargetChecks, ten selected standard-only axiom prints, three empty forbidden scans,
+  `git diff --check`, and the full 8,731-job build pass; selected declarations depend only on
+  `propext`, `Classical.choice`, and `Quot.sound`
+- `public_preregistration`: commit `92d945958e1f19ea139227e5226d3aae720e4c7a`, CI run
+  `29734964368`, build job `88328014471`, passed in `1m52s` before proof-source editing
+- `public_implementation`: pending
+- `compaction_state`: two inherited summaries during Loop 26; the complete canonical frontier was
+  re-read after each before proof or publication work
+- `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
+- `budget`: no V4.1 numerical quota and no exposed serving token budget
+- `next_route_decision`: retain H6-Q1 and attack the new global cut-stitching node by explicit
+  chart overlaps and boundary-value compatibility; do not infer global continuation from the
+  local coefficient-two jump
+- `persistent_goal`: H6-Q1 and the global RH Goal remain active

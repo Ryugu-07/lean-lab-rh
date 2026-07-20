@@ -32,6 +32,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBranchedDegreeTwo
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydNormalizedCoordinate
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentLandingJacobian
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydR2JacobianRemainder
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentPuiseuxJump
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1022,6 +1023,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanPolymathGammaStirlingR2_eq_boyd_iff_positiveRealContourEquality
       status := .proven
       note := "Loop 25 meaningful prefix. Lean proves the normalized Gaussian moments 1, 0, and 1/x, the exact actual-project R2 Jacobian remainder identity, and derives inverse-Jacobian coefficients 1, -1/3, and 1/12 by differentiating the actual equation (exp(U)-1)U'=w. It rewrites both Boyd denominators as Stieltjes kernels, proves parameter differentiation under each improper integral with an s^(3/2)*exp(-pi*s) majorant, and uses the complex identity theorem to reduce all Re z>0 to the positive real ray. Direct adjacent-ray deformation stops because the compiled inverse is analytic only on the first coordinate disk while the Gaussian integral ranges over the full real line; mathlib contains Euler's Gamma integral but no Binet/Stieltjes Stirling-remainder formula. Classification HARD_GAP_REDUCED; equation (15), effective R2, Table 1 certificates, H6-E/G8, and RH remain open." },
+    { id := "H6.debruijn-newman.boyd-adjacent-puiseux-jump"
+      tier := .tier2
+      title := "Construct the first adjacent Puiseux sheets and Jacobian jump"
+      statement :=
+        "At both first adjacent Gamma saddles, construct the two analytic translated inverse sheets, prove their exact common phase equation and phase-Jacobians, compute the regularized jump coefficient two, and identify the actual upper and lower Loop 24 radial branches with the compiler-selected positive sheets."
+      leanName := some ``deBruijnNewmanPolymathBoydAdjacentPuiseuxJumpCertificate
+      status := .proven
+      note := "Loop 26 hard-gap reduction. Lean translates the actual disk inverse to both adjacent saddles, proves the two analytic Puiseux sheets solve the same translated phase equation, computes their exact chain-rule phase-Jacobians and jump, and proves eta times the jump tends to 2. The actual upper and lower radial branches generate uniformizers that enter the disk, tend to zero, remain nonzero before landing, and select the positive sheets without an arbitrary square-root sign. A principal slit-plane coordinate chart is analytic and solves the original w^2/2 phase equation, but its uniformizer already meets the first disk boundary at w=0. Thus equation (15) remains open: the next obstruction is a multi-chart or exterior inverse continuation with certified cut boundary values, unbounded contour homology, and decay. Classification HARD_GAP_REDUCED; effective R2, Table 1, H6-E/G8, and RH remain open." },
     { id := "H6.debruijn-newman.boyd-positive-real-saddle-integral"
       tier := .tier2
       title := "Derive the positive-real scaled-Gamma saddle integral"

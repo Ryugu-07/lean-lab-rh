@@ -698,3 +698,35 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   each before continuing.
 - `still_open`: `OBS-H6-BOYD-R2-POSITIVE-REAL-CONTOUR-01`, equation `(15)`, effective `R2`,
   unconditional Table 1 certificates, H6-E/G8, and RH.
+
+## 2026-07-20 H6-Q1 Loop 26 local outcome
+
+- `H6-Q1`: open; the selected first-adjacent local branch and jump subedge is proven locally.
+- `K0-H6-BOYD-ADJACENT-PUISEUX-JUMP-01`: the actual inverse germ translated to both saddles
+  `+/-2*pi*i` gives two analytic sheets with equal translated phase, involution under
+  `eta -> -eta`, exact phase-Jacobians, jump, and regularized coefficient two. The actual Loop 24
+  upper and lower radial branches select the positive sheets through the global coordinate.
+- `K0-H6-BOYD-ADJACENT-PRINCIPAL-BOUNDARY-01`: the principal slit-plane continuation candidates
+  solve `h(V)=w^2/2` while their uniformizer stays in the first disk. At `w=0`, both first-adjacent
+  principal uniformizers have exact norm `2*sqrt(pi)`, so this certificate reaches the disk
+  boundary and does not furnish a single global cut chart.
+- `OBS-H6-BOYD-R2-GLOBAL-CUT-STITCHING-01`: open child of
+  `OBS-H6-BOYD-R2-POSITIVE-REAL-CONTOUR-01`. Construct and compatibly glue adjacent or exterior
+  inverse charts, identify exact upper/lower boundary values and Jacobian jumps along the full
+  relevant cuts, and prove the unbounded contour homology and decay needed to transform the
+  whole-real Gaussian integral into the two Boyd rays.
+- `why_local_jump_is_insufficient`: coefficient two controls only the first local square-root
+  singularity. It does not identify boundary values away from the endpoint, continue through the
+  infinite saddle lattice, or show that the arcs introduced by an unbounded contour deformation
+  vanish.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `local_audit`: 840-line module, eight exact TargetChecks, ten selected standard-only axiom
+  prints, empty forbidden scans, `git diff --check`, and the full 8,731-job build pass.
+- `public_preregistration`: commit `92d945958e1f19ea139227e5226d3aae720e4c7a`, CI run
+  `29734964368`, build job `88328014471`, passed before proof-source editing.
+- `public_implementation`: pending.
+- `compaction_state`: two inherited summaries; all canonical frontier files were re-read after
+  each before continuing.
+- `still_open`: `OBS-H6-BOYD-R2-GLOBAL-CUT-STITCHING-01`, parent positive-real contour equality,
+  equation `(15)`, effective `R2`, unconditional Table 1 certificates, H6-E/G8, and RH.

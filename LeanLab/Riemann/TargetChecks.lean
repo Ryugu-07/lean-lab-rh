@@ -33,6 +33,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBranchedDegreeTwo
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydNormalizedCoordinate
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentLandingJacobian
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydR2JacobianRemainder
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentPuiseuxJump
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2721,5 +2722,60 @@ example :
         deBruijnNewmanPolymathBoydR2Integral z) ↔
       deBruijnNewmanPolymathBoydR2PositiveRealContourEquality :=
   deBruijnNewmanPolymathGammaStirlingR2_eq_boyd_iff_positiveRealContourEquality
+
+example : deBruijnNewmanPolymathBoydAdjacentPuiseuxJumpCertificateStatement :=
+  deBruijnNewmanPolymathBoydAdjacentPuiseuxJumpCertificate
+
+example (n : ℤ) {eta : ℂ}
+    (heta : eta ∈ deBruijnNewmanPolymathBoydOpenCoordinateDisk) :
+    deBruijnNewmanPolymathBoydComplexSaddlePhase
+        (deBruijnNewmanPolymathBoydAdjacentPuiseuxPlus n eta) =
+          deBruijnNewmanPolymathBoydComplexSaddlePhase
+              (deBruijnNewmanPolymathBoydComplexSaddlePoint n) + eta ^ 2 / 2 ∧
+      deBruijnNewmanPolymathBoydComplexSaddlePhase
+        (deBruijnNewmanPolymathBoydAdjacentPuiseuxMinus n eta) =
+          deBruijnNewmanPolymathBoydComplexSaddlePhase
+              (deBruijnNewmanPolymathBoydComplexSaddlePoint n) + eta ^ 2 / 2 :=
+  deBruijnNewmanPolymathBoydAdjacentPuiseux_phase n heta
+
+example (n : ℤ) (eta : ℂ) :
+    deBruijnNewmanPolymathBoydAdjacentPuiseuxPlus n (-eta) =
+        deBruijnNewmanPolymathBoydAdjacentPuiseuxMinus n eta ∧
+      deBruijnNewmanPolymathBoydAdjacentPuiseuxMinus n (-eta) =
+        deBruijnNewmanPolymathBoydAdjacentPuiseuxPlus n eta :=
+  deBruijnNewmanPolymathBoydAdjacentPuiseux_involution n eta
+
+example {eta : ℂ} (heta : eta ≠ 0) :
+    deBruijnNewmanPolymathBoydAdjacentPhaseJacobianPlus eta -
+        deBruijnNewmanPolymathBoydAdjacentPhaseJacobianMinus eta =
+      (deriv deBruijnNewmanPolymathBoydNormalizedCoordinateInverse eta +
+        deriv deBruijnNewmanPolymathBoydNormalizedCoordinateInverse (-eta)) / eta :=
+  deBruijnNewmanPolymathBoydAdjacentPhaseJacobian_jump heta
+
+example : Filter.Tendsto
+    (fun eta : ℂ => eta *
+      (deBruijnNewmanPolymathBoydAdjacentPhaseJacobianPlus eta -
+        deBruijnNewmanPolymathBoydAdjacentPhaseJacobianMinus eta))
+    (𝓝[≠] 0) (𝓝 2) :=
+  tendsto_deBruijnNewmanPolymathBoydAdjacentPhaseJacobian_regularizedJump
+
+example (n : ℤ) {w : ℂ}
+    (hdisk : deBruijnNewmanPolymathBoydAdjacentPrincipalUniformizer n w ∈
+      deBruijnNewmanPolymathBoydOpenCoordinateDisk) :
+    deBruijnNewmanPolymathBoydComplexSaddlePhase
+        (deBruijnNewmanPolymathBoydAdjacentPrincipalContinuationPlus n w) = w ^ 2 / 2 ∧
+      deBruijnNewmanPolymathBoydComplexSaddlePhase
+        (deBruijnNewmanPolymathBoydAdjacentPrincipalContinuationMinus n w) = w ^ 2 / 2 :=
+  deBruijnNewmanPolymathBoydAdjacentPrincipalContinuations_phase n hdisk
+
+example :
+    ‖deBruijnNewmanPolymathBoydAdjacentPrincipalUniformizer 1 0‖ =
+      2 * Real.sqrt Real.pi :=
+  norm_deBruijnNewmanPolymathBoydAdjacentPrincipalUniformizer_one_zero
+
+example :
+    ‖deBruijnNewmanPolymathBoydAdjacentPrincipalUniformizer (-1) 0‖ =
+      2 * Real.sqrt Real.pi :=
+  norm_deBruijnNewmanPolymathBoydAdjacentPrincipalUniformizer_neg_one_zero
 
 end LeanLab.Riemann
