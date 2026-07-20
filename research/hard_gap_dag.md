@@ -692,8 +692,9 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `29729188057`, build job `88309340646`, passed before proof-source editing.
 - `public_implementation`: commit `31b9760e86ddac273caf51f74a34bf8b2a779891`, CI run
   `29733410692`, build job `88322989401`, passed in `2m1s`.
-- `public_closure`: pending.
-- `compaction_state`: two inherited summaries; all canonical frontier files were re-read after
+- `public_closure`: evidence commit `69711553db4ce035bf56df2c2b3cbc4fc94b0dee`, CI run
+  `29733618787`, build job `88323666807`, passed in `1m55s`.
+- `compaction_state`: three inherited summaries; all canonical frontier files were re-read after
   each before continuing.
 - `still_open`: `OBS-H6-BOYD-R2-POSITIVE-REAL-CONTOUR-01`, equation `(15)`, effective `R2`,
   unconditional Table 1 certificates, H6-E/G8, and RH.

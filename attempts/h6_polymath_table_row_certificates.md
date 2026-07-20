@@ -1736,8 +1736,7 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 
 - `campaign`: `PROOF-ATTEMPT-20260720-H6-BOYD-R2-JACOBIAN-REMAINDER-01`
 - `mode`: `PROOF-ATTEMPT`
-- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; local audit complete, public implementation
-  evidence pending
+- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; publicly closed
 - `target`: prove the actual Boyd--Nemes equation `(15)` at `N=2`, retaining only an exact actual
   `R2` Jacobian prefix, certified coefficients, and a theorem-level first contour gap on partial
   closure
@@ -1792,8 +1791,9 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   `29729188057`, build job `88309340646`, passed in `2m9s` before proof-source editing
 - `public_implementation`: commit `31b9760e86ddac273caf51f74a34bf8b2a779891`, CI run
   `29733410692`, build job `88322989401`, passed in `2m1s`
-- `public_closure`: pending
-- `compaction_state`: two inherited summaries during Loop 25; the canonical authority and all
+- `public_closure`: evidence commit `69711553db4ce035bf56df2c2b3cbc4fc94b0dee`, CI run
+  `29733618787`, build job `88323666807`, passed in `1m55s`
+- `compaction_state`: three inherited summaries during Loop 25; the canonical authority and all
   required frontier files were re-read after each before proof or publication work
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
 - `budget`: no V4.1 numerical quota and no exposed serving token budget

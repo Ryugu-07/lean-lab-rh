@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260720-H6-BOYD-R2-JACOBIAN-REMAINDER-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `MEANINGFUL PARTIAL / HARD GAP REDUCED / PUBLIC IMPLEMENTATION CI PASSED`
+Status: `MEANINGFUL PARTIAL / HARD GAP REDUCED / PUBLICLY CLOSED`
 
 ## Opening
 
@@ -269,7 +269,7 @@ identity, not the already exhausted denominator-majorant mechanism.
   standard-only axiom prints, three empty forbidden scans, `git diff --check`, and the full
   8,730-task build pass. Selected declarations depend only on `propext`, `Classical.choice`, and
   `Quot.sound`.
-- `compaction_state`: two inherited summaries occurred during Loop 25. After each, canonical
+- `compaction_state`: three inherited summaries occurred during Loop 25. After each, canonical
   governance, `HANDOFF.md`, Targets/TargetChecks, the current attempt, hard-gap DAG, and this
   preregistration were re-read before further proof or publication work.
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort are not exposed.
@@ -277,4 +277,5 @@ identity, not the already exhausted denominator-majorant mechanism.
 - `persistent_goal`: H6-Q1 and the global RH Goal remain active.
 - `public_implementation`: commit `31b9760e86ddac273caf51f74a34bf8b2a779891`, CI run
   `29733410692`, build job `88322989401`, passed in `2m1s`.
-- `public_closure`: pending.
+- `public_closure`: evidence commit `69711553db4ce035bf56df2c2b3cbc4fc94b0dee`, CI run
+  `29733618787`, build job `88323666807`, passed in `1m55s`.
