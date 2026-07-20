@@ -592,6 +592,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `obstruction_map_delta=1`.
 - `public_preregistration`: commit `79ec959`, CI run `29719851304`, build job `88280405198`, passed
   in `1m44s` before proof-source editing.
+- `public_implementation`: commit `3768a0cc4ac8e3f1138ed9f958fe5c5dbac4b983`, CI run
+  `29721424614`, build job `88285064009`, passed in `2m0s`.
 - `still_open`: normalized-coordinate global lift/inverse, adjacent-saddle inverse-Jacobian
   decomposition, Boyd--Nemes equation `(15)`, effective `R2`, unconditional Table 1 certificates,
   H6-E/G8, and RH.
