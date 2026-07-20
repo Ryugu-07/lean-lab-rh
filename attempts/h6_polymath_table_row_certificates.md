@@ -1601,3 +1601,63 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
 - `budget`: no V4.1 numerical quota and no exposed serving token budget
 - `persistent_goal`: H6-Q1 and the global RH Goal remain active
+
+## Loop 23 Boyd normalized coordinate and global inverse
+
+- `campaign`: `PROOF-ATTEMPT-20260720-H6-BOYD-NORMALIZED-COORDINATE-01`
+- `mode`: `PROOF-ATTEMPT`
+- `result`: `PROVED / HARD_GAP_REDUCED`; local implementation complete, public implementation CI
+  pending
+- `target`: construct a normalized analytic square root on the actual first Boyd phase domain,
+  prove its coordinate is a homeomorphism onto the natural coordinate disk, and prove the inverse
+  is analytic and extends the Loop 15 local inverse germ
+- `material_difference_from_loop22`: Loop 22 computes the phase covering degree. Loop 23 selects a
+  single normalized square-root lift and proves that lift is globally one-to-one with an analytic
+  inverse.
+- `full_preregistration`:
+  `research/h6_boyd_normalized_coordinate_loop23_prereg_20260720.md`
+- `attempted_conditional_route`: the principal square-root coordinate was carried through
+  continuity, local homeomorphism, properness, covering, global homeomorphism, and analytic inverse
+  under the exact premise that the factor lies in `Complex.slitPlane` throughout the phase domain.
+  This strict conditional chain compiles, but the premise was not promoted or assumed.
+- `successful_route`: the factor is analytic and zero-free on the whole convex strip
+  `|Im u|<2*pi`. The simply connected analytic-log theorem supplies a holomorphic logarithm; half
+  its exponential gives a square root, and multiplication by its origin value chooses the sign
+  `root(0)=1`. The coordinate derivative cannot vanish in the actual domain because differentiating
+  `coordinate^2/2=phase` would contradict the compiled classification of phase critical points.
+- `topological_closure`: inherited phase properness makes the coordinate proper through the square
+  map. Analytic inverse-function charts make fibers discrete, hence finite, and the resulting
+  covering over the contractible disk has a unique lift of the identity. This lift supplies a
+  two-sided continuous inverse and therefore a global homeomorphism.
+- `analytic_closure`: at every disk point, the analytic inverse-function branch at the global
+  preimage agrees locally with the homeomorphism inverse by injectivity; the ambient inverse is
+  therefore analytic throughout the disk.
+- `compiled_theorems`:
+  `exists_deBruijnNewmanPolymathBoydNormalizedSqrtFactor`,
+  `deriv_deBruijnNewmanPolymathBoydGlobalSaddleCoordinate_ne_zero_of_mem_originPhaseDomain`,
+  `isCoveringMap_deBruijnNewmanPolymathBoydGlobalCoordinate`,
+  `deBruijnNewmanPolymathBoydNormalizedCoordinateHomeomorph`,
+  `deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_analyticAt`,
+  `deBruijnNewmanPolymathBoydGlobalSaddleCoordinate_eventually_eq_local`,
+  `deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_eventually_eq_local`, and
+  `deBruijnNewmanPolymathBoydNormalizedCoordinateGlobalCertificate`
+- `assumption_frontier_after`: the global branch, homeomorphism, inverse identities, analytic
+  inverse, and Loop 15 germ compatibility are K0 locally. No principal no-cut premise,
+  adjacent-saddle decomposition, Boyd--Nemes equation `(15)`, or effective `R2` premise is
+  introduced.
+- `classification_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`,
+  `route_infrastructure_delta=1`, `obstruction_map_delta=1`
+- `local_mechanical_audit`: 1,184-line production module, exact Targets, eight TargetChecks, eight
+  selected axiom prints, forbidden scans, `git diff --check`, and the full 8,728-task build pass;
+  selected declarations depend only on `propext`, `Classical.choice`, and `Quot.sound`
+- `public_preregistration`: commit `02ff528c5ce2a4c63cdd32f8c65238ec795d08d3`, CI run
+  `29722372082`, build job `88287886054`, passed in `1m32s` before proof-source editing
+- `next_exact_gate`: differentiate the disk inverse, derive its Cauchy/inverse-Jacobian
+  representation up to the adjacent critical images, and turn the two adjacent singular
+  contributions into the source-exact Boyd--Nemes equation `(15)` rather than assuming it
+- `compaction_state`: inherited one summary after Loop 22 and re-read the authoritative frontier,
+  preregistration, production sources, and relevant analytic-log, inverse-function, proper-map,
+  covering, and lifting APIs; no later compaction
+- `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
+- `budget`: no V4.1 numerical quota and no exposed serving token budget
+- `persistent_goal`: H6-Q1 and the global RH Goal remain active

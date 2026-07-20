@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260720-H6-BOYD-NORMALIZED-COORDINATE-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PREREGISTERED / PUBLIC_BASELINE_PENDING`
+Status: `LOCAL_OUTCOME_PROVED / PUBLIC_IMPLEMENTATION_PENDING`
 
 ## Opening
 
@@ -133,3 +133,41 @@ following, with theorem names allowed to change only for type-correct local desi
 - `budget`: V4.1 has no numerical quota; no serving token budget is exposed.
 - `persistent_goal`: H6-Q1 and the global RH Goal remain active.
 
+## Local outcome
+
+- `result`: `PROVED / HARD_GAP_REDUCED`. Every preregistered endpoint compiles without a
+  placeholder.
+- `public_preregistration`: commit `02ff528c5ce2a4c63cdd32f8c65238ec795d08d3` passed public Lean
+  Action CI run `29722372082`, build job `88287886054`, in `1m32s`, before proof-source editing.
+- `implementation`: the 1,184-line production module
+  `LeanLab/Riemann/DeBruijnNewmanPolymathBoydNormalizedCoordinate.lean` first compiles the complete
+  conditional principal-square-root chain under the exact slit-plane premise, then removes that
+  premise from the promoted result.
+- `global_branch`: Lean proves the removable factor analytic and zero-free on the convex strip
+  `|Im u| < 2*pi`. A holomorphic logarithm on this simply connected strip yields a square root
+  normalized to one at the origin. Its coordinate squares to the phase and has nonzero derivative
+  on the actual phase domain.
+- `global_inverse`: local inverse charts and inherited phase properness make the coordinate a
+  covering of the natural coordinate disk. A unique covering lift over the contractible disk gives
+  a global homeomorphism. The ambient inverse is analytic at every disk point by comparison with
+  the local analytic inverse-function branch.
+- `germ_compatibility`: the strip square root and the Loop 15 principal square root have the same
+  square and value one at zero, so Lean proves they agree eventually at zero. Injectivity of the
+  global homeomorphism then proves that the disk inverse agrees eventually with the Loop 15 local
+  inverse.
+- `aggregate_certificate`:
+  `deBruijnNewmanPolymathBoydNormalizedCoordinateGlobalCertificate` packages the square identity,
+  both homeomorphism inverse identities, disk-wide analytic inverse, and both germ agreements.
+- `mechanical_audit`: the production module, exact Targets, eight exact TargetChecks, eight selected
+  axiom prints, forbidden scans, and `git diff --check` pass. Every selected declaration depends
+  only on `propext`, `Classical.choice`, and `Quot.sound`. The full project build passes all 8,728
+  tasks.
+- `obstruction_after`: `OBS-H6-BOYD-COVERING-CERTIFICATE-01` is closed locally. The next exact
+  gate is to use the disk-wide analytic inverse and its derivative to derive the inverse-Jacobian
+  adjacent-saddle decomposition upstream of Boyd--Nemes equation `(15)`.
+- `classification`: source-specific hard-gap reduction plus route infrastructure;
+  `rh_frontier_delta=0`, `hard_gap_delta=1`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `runtime`: one inherited compaction summary at Loop 23 start; no later compaction. Exact serving
+  model variant, reasoning effort, and serving budget remain unexposed. H6-Q1 and the persistent RH
+  Goal remain active.

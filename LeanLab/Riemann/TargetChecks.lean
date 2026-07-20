@@ -30,6 +30,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydCoordinateRays
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydStripProperness
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydPhaseDomainConnectedness
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBranchedDegreeTwo
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydNormalizedCoordinate
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2544,5 +2545,41 @@ example :
         z ≠ deBruijnNewmanPolymathBoydOpenPhaseDiskZero →
           Nat.card (deBruijnNewmanPolymathBoydPhaseOnOriginDomain ⁻¹' {z}) = 2 :=
   deBruijnNewmanPolymathBoydPhaseOnOriginDomain_branchedDegreeTwoCertificate
+
+example :
+    ∃ root : ℂ → ℂ,
+      DifferentiableOn ℂ root deBruijnNewmanPolymathBoydOriginPhaseStrip ∧
+      root 0 = 1 ∧
+      ∀ u ∈ deBruijnNewmanPolymathBoydOriginPhaseStrip,
+        root u ^ 2 = deBruijnNewmanPolymathBoydComplexSaddleFactor u :=
+  exists_deBruijnNewmanPolymathBoydNormalizedSqrtFactor
+
+example : IsLocalHomeomorph
+    deBruijnNewmanPolymathBoydGlobalCoordinateOnOriginPhaseDomain :=
+  isLocalHomeomorph_deBruijnNewmanPolymathBoydGlobalCoordinate
+
+example : IsProperMap deBruijnNewmanPolymathBoydGlobalCoordinateOnOriginPhaseDomain :=
+  isProperMap_deBruijnNewmanPolymathBoydGlobalCoordinate
+
+example : IsCoveringMap deBruijnNewmanPolymathBoydGlobalCoordinateOnOriginPhaseDomain :=
+  isCoveringMap_deBruijnNewmanPolymathBoydGlobalCoordinate
+
+noncomputable example : deBruijnNewmanPolymathBoydOriginPhaseDomain ≃ₜ
+    deBruijnNewmanPolymathBoydOpenCoordinateDisk :=
+  deBruijnNewmanPolymathBoydNormalizedCoordinateHomeomorph
+
+example {w : ℂ} (hw : w ∈ deBruijnNewmanPolymathBoydOpenCoordinateDisk) :
+    AnalyticAt ℂ deBruijnNewmanPolymathBoydNormalizedCoordinateInverse w :=
+  deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_analyticAt hw
+
+example : deBruijnNewmanPolymathBoydGlobalSaddleCoordinate =ᶠ[𝓝 0]
+    deBruijnNewmanPolymathBoydComplexSaddleCoordinate :=
+  deBruijnNewmanPolymathBoydGlobalSaddleCoordinate_eventually_eq_local
+
+example : deBruijnNewmanPolymathBoydNormalizedCoordinateInverse =ᶠ[𝓝 0]
+    deBruijnNewmanPolymathBoydComplexSaddleLocalInverse :=
+  deBruijnNewmanPolymathBoydNormalizedCoordinateInverse_eventually_eq_local
+
+example := deBruijnNewmanPolymathBoydNormalizedCoordinateGlobalCertificate
 
 end LeanLab.Riemann

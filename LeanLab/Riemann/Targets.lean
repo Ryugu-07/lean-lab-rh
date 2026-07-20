@@ -29,6 +29,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydCoordinateRays
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydStripProperness
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydPhaseDomainConnectedness
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBranchedDegreeTwo
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydNormalizedCoordinate
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1107,6 +1108,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanPolymathBoydPhaseOnOriginDomain_branchedDegreeTwoCertificate
       status := .proven
       note := "Loop 22 restricts the analytic inverse-function theorem through the actual source and target subtypes, combines proper compact fibers with local discreteness, and obtains an actual covering over the punctured phase disk. Lean excludes nonreal preimages of positive real phase one, computes that fiber as the two global real-coordinate inverse points at +/-sqrt(2), proves the punctured target disk path connected, and transports the exact cardinal two to every regular fiber by covering monodromy. Together with the compiled singleton zero fiber and second derivative one at the origin, this is the exact branched degree-two certificate. It does not yet construct the global normalized-coordinate inverse, derive Boyd--Nemes equation (15), prove the effective R2 bound, or prove RH." },
+    { id := "H6.debruijn-newman.boyd-normalized-coordinate-global-inverse"
+      tier := .tier2
+      title := "Globalize the normalized Boyd coordinate and analytic inverse"
+      statement :=
+        "Construct a normalized holomorphic square root of the removable Boyd phase factor on the first saddle strip, prove that its coordinate is a homeomorphism from the actual first phase domain to the natural coordinate disk, and prove that the disk inverse is analytic and extends the origin local inverse germ."
+      leanName := some ``deBruijnNewmanPolymathBoydNormalizedCoordinateGlobalCertificate
+      status := .proven
+      note := "Loop 23 proves the removable factor is analytic and zero-free on the convex strip |Im u|<2*pi, uses a holomorphic logarithm to construct a normalized global square root, and derives a coordinate whose square is the Boyd phase. Its derivative is nonzero on the actual phase domain; local inverse charts plus inherited phase properness make it a covering of the natural coordinate disk. Contractibility of that disk supplies a global inverse lift, yielding an unconditional homeomorphism and a disk-wide analytic ambient inverse. Lean also proves that both the coordinate and inverse agree near zero with the Loop 15 principal germs. This closes OBS-H6-BOYD-COVERING-CERTIFICATE-01, but does not yet derive the inverse-Jacobian adjacent-saddle decomposition, Boyd--Nemes equation (15), the effective R2 bound, or RH." },
     { id := "H6.debruijn-newman.zero-dynamics-force"
       tier := .tier2
       title := "Formalize the divisor-regularized simple-zero force law"

@@ -599,3 +599,27 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `still_open`: normalized-coordinate global lift/inverse, adjacent-saddle inverse-Jacobian
   decomposition, Boyd--Nemes equation `(15)`, effective `R2`, unconditional Table 1 certificates,
   H6-E/G8, and RH.
+
+## 2026-07-20 H6-Q1 Loop 23 outcome
+
+- `H6-Q1`: open; the selected global normalized-coordinate subedge is proven locally.
+- `K0-H6-BOYD-NORMALIZED-COORDINATE-01`: proven locally. The removable phase factor has a
+  normalized holomorphic square root on the full first saddle strip. The resulting coordinate is
+  an unconditional homeomorphism from the actual first phase domain to the natural coordinate
+  disk, with a disk-wide analytic ambient inverse.
+- `OBS-H6-BOYD-COVERING-CERTIFICATE-01`: closed locally. The global coordinate and inverse both
+  agree near zero with the Loop 15 principal local germs, so no untracked sign choice remains.
+- `route_change`: the attempted principal slit-plane route compiled conditionally but was not
+  needed. Zero-freeness on the convex strip gave a holomorphic logarithm and hence a normalized
+  square root directly; this removes the no-cut statement from the promoted theorem interface.
+- `next_obstruction`: derive the inverse-Jacobian adjacent-saddle decomposition from the compiled
+  disk inverse, then connect it to Boyd--Nemes equation `(15)` and the effective `R2` estimate.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `public_preregistration`: commit `02ff528c5ce2a4c63cdd32f8c65238ec795d08d3`, CI run
+  `29722372082`, build job `88287886054`, passed in `1m32s` before proof-source editing.
+- `local_audit`: 1,184-line production module, eight exact TargetChecks, eight selected
+  standard-only axiom prints, empty production-source forbidden scans, `git diff --check`, and the
+  full 8,728-task build pass.
+- `still_open`: inverse-Jacobian adjacent-saddle decomposition, Boyd--Nemes equation `(15)`,
+  effective `R2`, unconditional Table 1 certificates, H6-E/G8, and RH.
