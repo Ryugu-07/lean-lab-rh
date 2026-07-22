@@ -6,11 +6,15 @@ Campaign: `FALSIFICATION-20260723-H2-HALF-ISOLATED-BOW-01`
 
 Selected node: `H2-HALF-ISOLATED-BOW-GEOMETRY-01`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_CI_PASSED / EVIDENCE_COMMIT_REQUIRED`
 
 Preregistration commit `1475d90b96f6a5aabf9a6afea72a56575f11dc61` passed public Lean Action
 run `29958359541`, build job `89053021275`, in `1m48s`. Proof-source editing began only after this
 gate passed.
+
+Frozen implementation commit `2cac0b4813435dffe468cd87f888d9f2763263d9` passed public Lean
+Action run `29959216007`, build job `89055884594`, in `2m11s`. Lean proof source is frozen;
+immutable-evidence publication and its own public CI are the next gate.
 
 ## Selection reason
 

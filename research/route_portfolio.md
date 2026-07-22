@@ -3261,3 +3261,9 @@ a right off-line point but no right-side half-isolated point; its nearby lower b
 displacement strictly between the two source thresholds. Two Targets, seven exact TargetChecks,
 and six selected standard-only axiom audits compile. The finite bow is not an actual zeta zero set;
 actual bow exclusion, the analytic detector, zero-density estimates, and RH remain open.
+
+Frozen implementation commit `2cac0b4813435dffe468cd87f888d9f2763263d9` passed public Lean
+Action run `29959216007`, build job `89055884594`, in `2m11s`. The proof source is now frozen;
+immutable evidence and its own public CI remain before this local H2 geometry audit returns to the
+unfinished historical atlas. The analytic detector, actual-zeta bow exclusion, zero-density
+estimates, H2, and RH remain open.

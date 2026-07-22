@@ -1354,5 +1354,7 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `claim_boundary`: finite geometry cannot assert that actual zeta bows exist or fail. Public
   preregistration commit `1475d90b96f6a5aabf9a6afea72a56575f11dc61` passed run `29958359541`,
   job `89053021275`, in `1m48s`. The local implementation proves the positive finite-line
-  criterion and a reflection-symmetric bow countermodel; implementation CI remains.
+  criterion and a reflection-symmetric bow countermodel. Frozen implementation commit
+  `2cac0b4813435dffe468cd87f888d9f2763263d9` passed run `29959216007`, job `89055884594`, in
+  `2m11s`; immutable-evidence CI remains before local closure.
   `rh_frontier_delta=0`; persistent RH Goal active.

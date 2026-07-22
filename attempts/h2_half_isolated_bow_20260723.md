@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260723-H2-HALF-ISOLATED-BOW-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_CI_PASSED / EVIDENCE_COMMIT_REQUIRED`
 
 ## Runtime record
 
@@ -43,6 +43,7 @@ symmetry alone admits a finite bow with off-line points but no right-side half-i
 | 7 | `LEAN_POSITIVE_GEOMETRY` | Lean proves the full half-isolation disjunction from a discrete vertical gap and a bottom point on the rightmost line. | Confirm that the source's finite-real-part rigidity has exact geometric content. |
 | 8 | `LEAN_BOW_FALSIFICATION` | A finite three-point set is critical-reflection invariant, has a right off-line point, and uses a nearby lower blocker with intermediate real displacement to make every right off-line point non-half-isolated. | Reject promotion from functional-equation reflection symmetry alone to half-isolated off-line detection. |
 | 9 | `INTEGRATION_AUDIT` | The aggregate endpoint, two Targets, seven exact TargetChecks, and six selected axiom prints compile. Selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`. | Classify as an H2 mechanism/obstruction-map correction; leave actual bow exclusion, analytic detectors, density estimates, and RH open. |
+| 10 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation commit `2cac0b4813435dffe468cd87f888d9f2763263d9` passed public Lean Action run `29959216007`, build job `89055884594`, in `2m11s`. | Keep Lean proof source frozen; publish immutable implementation evidence and require that evidence commit's own public CI. |
 
 ## Assumption and gap accounting
 
@@ -58,5 +59,8 @@ symmetry alone admits a finite bow with off-line points but no right-side half-i
 - `route_map_delta`: `1`; the omitted half-isolated detector/bow branch is now represented.
 - `obstruction_map_delta`: `1`; the symmetry-only bow witness is kernel-checked.
 - `rh_frontier_delta`: `0`.
-- `next_gate`: implementation commit and public CI, followed by immutable evidence and final ledger.
+- `public_implementation_evidence`: frozen implementation commit
+  `2cac0b4813435dffe468cd87f888d9f2763263d9` passed Lean Action run `29959216007`, build job
+  `89055884594`, in `2m11s`.
+- `next_gate`: immutable-evidence commit and public CI, followed by final ledger.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.
