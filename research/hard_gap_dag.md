@@ -1129,3 +1129,25 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `expected_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`,
   `route_infrastructure_delta=1`, `source_sufficiency_audit_delta=1` on success.
 - `global_goal`: active; preregistration public CI precedes every Lean proof-source edit.
+
+## 2026-07-22 H1 short-mollifier variational local outcome
+
+- `K0-H1-WEIGHTED-HARDY-QUARTER-01`: locally closed. Lean proves the exact completion identity
+  with the additional positive `integral h^2/cosh` term and hence the source threshold `1/4`.
+- `H1-SHORT-MOLLIFIER-VARIATIONAL-01`: locally closed as
+  `PROVED / KNOWN_ANALYSIS_FORMALIZED / SOURCE_SUFFICIENCY_CERTIFIED`. Source equation `(58)` is
+  aligned exactly with the normalized energy; weighted equation `(63)` cancels the full linear
+  variation; `c<1/4`, `R>0`, and fixed endpoints give strict positivity for every distinct C1
+  competitor and therefore unique global minimality.
+- `source_audit_value`: the bounded source audit did not locate a separate stationarity-to-global
+  sufficiency proof. The compiled theorem supplies that logical link without using the displayed
+  hypergeometric formula, Mathematica, or a numerical proportion.
+- `OBS-H1-LONG-MEAN-VALUE-01`: unchanged. The mollified mean-value asymptotic needed to turn the
+  optimized functional into a zeta-zero theorem remains outside the formalization.
+- `OBS-H1-SPARSE-EXCEPTION-01`: unchanged. A critical-line proportion result, even proportion one,
+  does not by itself rule out finitely many or a density-zero set of off-line zero orbits.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_infrastructure_delta=1`,
+  `source_sufficiency_audit_delta=1`.
+- `local_audit`: 374-line production module, six exact TargetChecks, six selected standard-only
+  axiom prints, forbidden scan, `git diff --check`, and full 8,740-job build pass.
+- `global_goal`: active; implementation publication and CI are the next gate.

@@ -71,6 +71,7 @@ import LeanLab.Riemann.WeilCompactLaplaceArithmeticFormula
 import LeanLab.Riemann.WeilGroundStateAlignment
 import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
+import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -3238,5 +3239,69 @@ example {N : ℕ}
     (hAT : Aᵀ = A) (hAR : ∀ i j, A i.rev j.rev = A i j) :
     WeilFiniteEvenSimpleGroundState A mu xi :=
   h.evenSimpleGroundState hAT hAR
+
+example (R beta c c1 : ℝ) (S dS : ℝ → ℝ) :
+    shortMollifierSourceEnergy R beta (-c * c1) c1 S dS =
+      c1 * shortMollifierNormalizedEnergy R beta c S dS :=
+  shortMollifierSourceEnergy_eq_mul_normalized R beta c c1 S dS
+
+example {R : ℝ} {h dh : ℝ → ℝ}
+    (hh : ∀ t ∈ Set.uIcc 0 R, HasDerivAt h (dh t) t)
+    (hdh : ContinuousOn dh (Set.uIcc 0 R))
+    (h0 : h 0 = 0) (hR : h R = 0) :
+    (∫ t in 0..R, Real.cosh t * (dh t + Real.tanh t / 2 * h t) ^ 2) =
+      (∫ t in 0..R, Real.cosh t * dh t ^ 2) -
+        (1 / 4 : ℝ) * (∫ t in 0..R, Real.cosh t * h t ^ 2) -
+          (1 / 4 : ℝ) * (∫ t in 0..R, h t ^ 2 / Real.cosh t) :=
+  shortMollifierWeightedHardyIdentity hh hdh h0 hR
+
+example {R : ℝ} (hRnonneg : 0 ≤ R) {h dh : ℝ → ℝ}
+    (hh : ∀ t ∈ Set.uIcc 0 R, HasDerivAt h (dh t) t)
+    (hdh : ContinuousOn dh (Set.uIcc 0 R))
+    (h0 : h 0 = 0) (hR : h R = 0) :
+    (1 / 4 : ℝ) * (∫ t in 0..R, Real.cosh t * h t ^ 2) ≤
+      ∫ t in 0..R, Real.cosh t * dh t ^ 2 :=
+  shortMollifierWeightedHardy_quarter_le hRnonneg hh hdh h0 hR
+
+example {R beta c : ℝ} {S dS T dT : ℝ → ℝ}
+    (hS : ∀ t ∈ Set.uIcc 0 R, HasDerivAt S (dS t) t)
+    (hdS : ContinuousOn dS (Set.uIcc 0 R))
+    (hT : ∀ t ∈ Set.uIcc 0 R, HasDerivAt T (dT t) t)
+    (hdT : ContinuousOn dT (Set.uIcc 0 R))
+    (h0 : T 0 = S 0) (hR : T R = S R)
+    (hEL : ∀ t ∈ Set.uIcc 0 R,
+      HasDerivAt (fun x => Real.cosh x * dS x)
+        (-c * Real.cosh t * S t + c * beta * Real.exp (-t) / 2) t) :
+    shortMollifierNormalizedEnergy R beta c T dT -
+        shortMollifierNormalizedEnergy R beta c S dS =
+      2 * ∫ t in 0..R, Real.cosh t *
+        ((dT t - dS t) ^ 2 - c * (T t - S t) ^ 2) :=
+  shortMollifierNormalizedEnergy_gap_of_eulerLagrange hS hdS hT hdT h0 hR hEL
+
+example {R c : ℝ} (hRpos : 0 < R) (hc : c < 1 / 4) {h dh : ℝ → ℝ}
+    (hh : ∀ t ∈ Set.uIcc 0 R, HasDerivAt h (dh t) t)
+    (hdh : ContinuousOn dh (Set.uIcc 0 R))
+    (h0 : h 0 = 0) (hR : h R = 0)
+    (hne : ∃ t ∈ Set.Icc 0 R, h t ≠ 0) :
+    0 < ∫ t in 0..R, Real.cosh t * (dh t ^ 2 - c * h t ^ 2) :=
+  shortMollifierWeightedVariation_pos hRpos hc hh hdh h0 hR hne
+
+example {R beta c c1 : ℝ} (hRpos : 0 < R) (hc : c < 1 / 4) (hc1 : 0 < c1)
+    {S dS T dT : ℝ → ℝ}
+    (hS : ∀ t ∈ Set.uIcc 0 R, HasDerivAt S (dS t) t)
+    (hdS : ContinuousOn dS (Set.uIcc 0 R))
+    (hT : ∀ t ∈ Set.uIcc 0 R, HasDerivAt T (dT t) t)
+    (hdT : ContinuousOn dT (Set.uIcc 0 R))
+    (h0 : T 0 = S 0) (hR : T R = S R)
+    (hEL : ∀ t ∈ Set.uIcc 0 R,
+      HasDerivAt (fun x => Real.cosh x * dS x)
+        (-c * Real.cosh t * S t + c * beta * Real.exp (-t) / 2) t) :
+    shortMollifierSourceEnergy R beta (-c * c1) c1 S dS ≤
+        shortMollifierSourceEnergy R beta (-c * c1) c1 T dT ∧
+      ((∃ t ∈ Set.Icc 0 R, T t ≠ S t) →
+        shortMollifierSourceEnergy R beta (-c * c1) c1 S dS <
+          shortMollifierSourceEnergy R beta (-c * c1) c1 T dT) :=
+  shortMollifierSourceEnergy_unique_minimizer hRpos hc hc1
+    hS hdS hT hdT h0 hR hEL
 
 end LeanLab.Riemann

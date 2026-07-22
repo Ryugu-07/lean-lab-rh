@@ -2938,3 +2938,18 @@ inequality with threshold `1/4`, and use it to derive an exact energy gap and un
 certificate. It does not assume the mollified mean-value theorem, optimize a reported decimal,
 claim proportion one, remove sparse off-line zeros, or advance RH. Public preregistration CI is
 required before proof-source editing.
+
+## H1 Short-Mollifier Variational Local Outcome
+
+The fixed structural endpoint compiles. `ShortMollifierVariational.lean` proves the exact source
+normalization, a `cosh`-weighted completion identity with threshold `1/4`, the exact
+Euler-Lagrange energy gap, strict coercivity for `c<1/4`, and unique global minimality for the
+original source functional when `c1>0`. Strictness is proved over a positive-length interval for
+every continuously differentiable fixed-endpoint competitor that differs at some point.
+
+Classification is `PROVED / KNOWN_ANALYSIS_FORMALIZED / SOURCE_SUFFICIENCY_CERTIFIED`, with
+`rh_frontier_delta=0`, `hard_gap_delta=0`, `route_infrastructure_delta=1`, and
+`source_sufficiency_audit_delta=1`. Six exact TargetChecks and six selected standard-only axiom
+prints pass; the forbidden scan and `git diff --check` are clean; the full 8,740-job build passes.
+This closes the variational sufficiency question only. The mollified mean-value input and the
+sparse-exception obstruction remain the H1 barriers. Public implementation CI is next.

@@ -76,6 +76,7 @@ import LeanLab.Riemann.WeilCompactPositivityCriterion
 import LeanLab.Riemann.WeilGroundStateAlignment
 import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
+import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -783,3 +784,9 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.WeilFiniteOddHerglotzCertificate.strict_odd
 #print axioms LeanLab.Riemann.WeilFiniteOddHerglotzCertificate.parityRayleighCertificate
 #print axioms LeanLab.Riemann.WeilFiniteOddHerglotzCertificate.evenSimpleGroundState
+#print axioms LeanLab.Riemann.shortMollifierSourceEnergy_eq_mul_normalized
+#print axioms LeanLab.Riemann.shortMollifierWeightedHardyIdentity
+#print axioms LeanLab.Riemann.shortMollifierWeightedHardy_quarter_le
+#print axioms LeanLab.Riemann.shortMollifierNormalizedEnergy_gap_of_eulerLagrange
+#print axioms LeanLab.Riemann.shortMollifierWeightedVariation_pos
+#print axioms LeanLab.Riemann.shortMollifierSourceEnergy_unique_minimizer

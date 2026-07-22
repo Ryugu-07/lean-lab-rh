@@ -74,6 +74,7 @@ import LeanLab.Riemann.WeilCompactPositivityCriterion
 import LeanLab.Riemann.WeilGroundStateAlignment
 import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
+import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -1311,6 +1312,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``weilFiniteOddRankOneStrict_iff_resolvent
       status := .proven
       note := "Campaign LITERATURE-20260722-H7-WEIL-HERGLOTZ-CRITERION-01 kernel-checks the exact finite completion-of-squares reduction. The generic iff does not need the source assumption that S is odd; oddness of the resolvent vector u suffices. The source-aligned certificate retains odd_S, while the arithmetic scalar inequality, uniformity in both cutoffs, the true ground-state limit, and RH remain open. Classification is known finite linear-algebra infrastructure with rh_frontier_delta=0." },
+    { id := "H1.short-mollifier.variational-global-minimizer"
+      tier := .tier2
+      title := "Certify the short-mollifier variational minimizer"
+      statement :=
+        "For the general short-mollifier functional in source equation (58), prove that fixed endpoints, the weighted Euler-Lagrange equation, c<1/4, and c1>0 make the stationary path the unique global minimizer among the represented continuously differentiable paths."
+      leanName := some ``shortMollifierSourceEnergy_unique_minimizer
+      status := .proven
+      note := "Campaign LITERATURE-20260722-H1-SHORT-MOLLIFIER-VARIATIONAL-01 proves an exact cosh-weighted Hardy completion identity, aligns the source and normalized energies, derives the exact second variation, and kernel-checks strict global minimality. This is a structural sufficiency audit of equations (58)-(63), not a mollified mean-value theorem, a numerical proportion improvement, an exceptional-zero eliminator, or a proof of RH. Classification is known-analysis formalization with rh_frontier_delta=0 and hard_gap_delta=0." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"
