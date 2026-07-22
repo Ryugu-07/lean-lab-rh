@@ -4,7 +4,7 @@ Date: 2026-07-22
 
 Campaign: `LITERATURE-20260722-HISTORICAL-DOOR-SURVEY-01`
 
-Status: `ATLAS_COMPLETE / H8_FALSIFICATION_CLOSED / D9_SUZUKI_AUDIT_PREREGISTERED`
+Status: `ATLAS_COMPLETE / H8_FALSIFICATION_CLOSED / D9_SUZUKI_AUDIT_LOCAL_COMPLETE`
 
 ## Claim boundary
 
@@ -582,6 +582,12 @@ logarithmic derivatives can have nonremovable poles at nonzero critical points. 
 `FALSIFICATION-20260723-D9-SUZUKI-RECIPROCAL-LIMIT-01` audits both interpretations with generic
 Lean countermodels before any attempt at the actual operator limit. This does not refute the
 source's unconditional finite theorem or a possible meromorphic reformulation.
+
+The local Lean implementation proves the literal countermodel with the standard
+`TendstoUniformlyOn` predicate on every set and proves the finite-extension obstruction with an
+exact symmetric quartic derivative calculation. These results close only the two generic
+interpretation tests. The actual canonical-system limit remains open, and any meromorphic repair
+must specify convergence away from poles plus a valid zero-transfer theorem.
 
 ## D10. Arithmetic criteria, character sums, and Speiser derivatives
 

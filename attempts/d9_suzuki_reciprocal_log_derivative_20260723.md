@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260723-D9-SUZUKI-RECIPROCAL-LIMIT-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_IMPLEMENTATION_COMPLETE / IMPLEMENTATION_CI_REQUIRED`
 
 ## Runtime record
 
@@ -21,6 +21,8 @@ Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
 - `parent_public_ci`: run `29951256366`, build job `89029220136`, passed in `1m53s`.
 - `selected_node`: `D9-SUZUKI-RECIPROCAL-LIMIT-REGULARITY-01`.
 - `preregistration`: `research/d9_suzuki_reciprocal_log_derivative_prereg_20260723.md`.
+- `preregistration_commit`: `b455391bf7211e0136a98b082f1264fee4cac1ca`.
+- `preregistration_public_ci`: run `29952313617`, build job `89032753680`, passed in `1m54s`.
 
 ## Preregistered endpoint
 
@@ -38,6 +40,10 @@ global reciprocal-log-derivative extension.
 | 3 | `SOURCE_UPDATE` | Suzuki 2026 proves finite-interval characteristic functions have only real zeros and proposes a compact-uniform limit to `z^2*xi/xi'`; this source was absent from the registry. | Audit the exact limit topology and normalization before attempting the operator limit. |
 | 4 | `STATEMENT_AUDIT` | The displayed corollary gives no regularity condition on `phi`; adding holomorphy makes the proposed target's possible derivative poles relevant. | Split the audit into literal finite-valued and natural entire-normalization interpretations. |
 | 5 | `FALSIFICATION_DESIGN` | A punctured nowhere-zero sequence gives all-set uniform convergence to `z-I`; a symmetric real-rooted quartic has an uncancelled nonzero derivative critical point. | Preregister both parameter-free Lean witnesses before proof-source editing. |
+| 6 | `PREREGISTRATION_GATE` | Commit `b455391bf7211e0136a98b082f1264fee4cac1ca` passed public Lean Action run `29952313617`, job `89032753680`, in `1m54s`. | Open the proof-source gate with the endpoint and claim boundary unchanged. |
+| 7 | `LEAN_LITERAL_BRANCH` | A direct proof of `TendstoUniformlyOn` exceeded default heartbeats during elaboration. Factoring it through an abstract scalar error-bound lemma compiled in seconds without changing the standard convergence predicate. | Keep the all-set endpoint and record the timeout as an implementation obstruction, not a mathematical weakening. |
+| 8 | `LEAN_ENTIRE_BRANCH` | Lean proves the quartic has only real zeros, has derivative `4*z^3-4*z`, and at `z=1` has zero derivative but nonzero value. | Reject a finite global `z^2*f/f'` extension for this generic symmetric real-rooted model. |
+| 9 | `INTEGRATION_AUDIT` | The aggregate endpoint, two Targets, nine exact TargetChecks, and seven selected axiom prints compile. Selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`. | Classify as generic route-boundary progress; leave the actual Suzuki limit, meromorphic repair, and RH open. |
 
 ## Assumption and gap accounting
 
@@ -50,8 +56,9 @@ global reciprocal-log-derivative extension.
   location through uniform limits.
 - `candidate_obstruction_2`: reciprocal logarithmic derivatives can have nonremovable poles at
   nonzero critical points even when the original symmetric function has only real zeros.
-- `expected_hard_gap_delta`: `0` for generic models.
-- `expected_rh_frontier_delta`: `0` unless an actual-xi theorem unexpectedly compiles.
-- `expected_route_map_delta`: `1`.
-- `next_gate`: preregistration commit and public CI; no Lean proof-source editing beforehand.
+- `hard_gap_delta`: `0`; neither actual source limit nor RH premise was proved.
+- `rh_frontier_delta`: `0`.
+- `route_map_delta`: `1`; literal, entire, and meromorphic interpretations are now separated.
+- `obstruction_map_delta`: `1`; both generic failure modes have kernel-checked witnesses.
+- `next_gate`: implementation commit and public CI, followed by immutable evidence and final ledger.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

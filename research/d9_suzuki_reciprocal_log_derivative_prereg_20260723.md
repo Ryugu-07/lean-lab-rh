@@ -6,7 +6,11 @@ Campaign: `FALSIFICATION-20260723-D9-SUZUKI-RECIPROCAL-LIMIT-01`
 
 Selected node: `D9-SUZUKI-RECIPROCAL-LIMIT-REGULARITY-01`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_IMPLEMENTATION_COMPLETE / IMPLEMENTATION_CI_REQUIRED`
+
+Preregistration commit `b455391bf7211e0136a98b082f1264fee4cac1ca` passed public Lean Action
+run `29952313617`, build job `89032753680`, in `1m54s`. Proof-source editing began only after this
+gate passed.
 
 ## Selection reason
 

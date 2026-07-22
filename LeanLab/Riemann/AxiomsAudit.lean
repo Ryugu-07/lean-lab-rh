@@ -1,5 +1,6 @@
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.DeBruijnNewman
+import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -816,3 +817,10 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.jensenSingleDefect_degree_two
 #print axioms LeanLab.Riemann.not_jensenSingleDefect_all_hasOnlyRealRoots
 #print axioms LeanLab.Riemann.exists_eventually_realRooted_not_all_realRooted
+#print axioms LeanLab.Riemann.suzukiAuditPuncturedApproximation_ne_zero
+#print axioms LeanLab.Riemann.suzukiAuditPuncturedApproximation_tendstoUniformlyOn
+#print axioms LeanLab.Riemann.not_suzukiAuditFiniteNormalizationZeroPersistenceSchema
+#print axioms LeanLab.Riemann.suzukiAuditQuartic_hasOnlyRealZeros
+#print axioms LeanLab.Riemann.hasDerivAt_suzukiAuditQuartic
+#print axioms LeanLab.Riemann.not_exists_suzukiAuditQuartic_reciprocalLogDerivativeExtension
+#print axioms LeanLab.Riemann.suzukiReciprocalLogDerivativeAudit_endpoint

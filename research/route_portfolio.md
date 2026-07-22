@@ -3174,5 +3174,12 @@ symmetric all-real-zero quartic whose reciprocal logarithmic derivative has an u
 nonzero critical-point pole.
 
 These are generic route-boundary models, not the source `W` or actual xi. A meromorphic
-reformulation may survive but needs a different convergence and zero-transfer theorem. Public
-preregistration CI is required before proof-source editing; persistent RH Goal active.
+reformulation may survive but needs a different convergence and zero-transfer theorem.
+
+Preregistration commit `b455391bf7211e0136a98b082f1264fee4cac1ca` passed public Lean Action run
+`29952313617`, build job `89032753680`, in `1m54s`. The local implementation now compiles both
+registered witnesses, the aggregate endpoint, exact Targets and TargetChecks, and selected
+standard-only axiom audits. Literal finite-valued zero persistence is generically false; a finite
+global entire extension is generically obstructed at nonzero critical points; the actual Suzuki
+operator limit and a meromorphic repair remain open. Implementation publication and CI are the
+next gate; persistent RH Goal active.

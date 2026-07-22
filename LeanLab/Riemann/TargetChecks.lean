@@ -1,6 +1,7 @@
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.JensenEventualHyperbolicity
+import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -3415,5 +3416,55 @@ example :
         JensenHasOnlyRealRoots (jensenPolynomial a d n)) ∧
       ¬ ∀ d n : ℕ, JensenHasOnlyRealRoots (jensenPolynomial a d n) :=
   exists_eventually_realRooted_not_all_realRooted
+
+example (n : ℕ) (z : ℂ) :
+    suzukiAuditPuncturedApproximation n z ≠ 0 :=
+  suzukiAuditPuncturedApproximation_ne_zero n z
+
+example (K : Set ℂ) :
+    TendstoUniformlyOn
+      (fun n : ℕ => fun z : ℂ => suzukiAuditPuncturedApproximation n z)
+      (fun z : ℂ => suzukiAuditLinearTarget z) (Filter.atTop : Filter ℕ) K :=
+  suzukiAuditPuncturedApproximation_tendstoUniformlyOn K
+
+example (n : ℕ) (z : ℂ) :
+    Complex.exp (suzukiAuditFinitePhi n z) * suzukiAuditFiniteW n z =
+      suzukiAuditPuncturedApproximation n z :=
+  suzukiAuditFiniteNormalization_eq n z
+
+example (K : Set ℂ) :
+    TendstoUniformlyOn
+      (fun n z => Complex.exp (suzukiAuditFinitePhi n z) * suzukiAuditFiniteW n z)
+      suzukiAuditLinearTarget Filter.atTop K :=
+  suzukiAuditFiniteNormalization_tendstoUniformlyOn K
+
+example : ¬ suzukiAuditFiniteNormalizationZeroPersistenceSchema :=
+  not_suzukiAuditFiniteNormalizationZeroPersistenceSchema
+
+example : suzukiAuditHasOnlyRealZeros suzukiAuditQuartic :=
+  suzukiAuditQuartic_hasOnlyRealZeros
+
+example (z : ℂ) :
+    HasDerivAt suzukiAuditQuartic (suzukiAuditQuarticDerivative z) z :=
+  hasDerivAt_suzukiAuditQuartic z
+
+example :
+    ¬ SuzukiAuditHasFiniteReciprocalLogDerivativeExtension
+      suzukiAuditQuartic suzukiAuditQuarticDerivative :=
+  not_exists_suzukiAuditQuartic_reciprocalLogDerivativeExtension
+
+example :
+    (∀ n, suzukiAuditHasOnlyRealZeros (suzukiAuditFiniteW n)) ∧
+    (∀ K : Set ℂ,
+      TendstoUniformlyOn
+        (fun n z => Complex.exp (suzukiAuditFinitePhi n z) * suzukiAuditFiniteW n z)
+        suzukiAuditLinearTarget Filter.atTop K) ∧
+    ¬ suzukiAuditHasOnlyRealZeros suzukiAuditLinearTarget ∧
+    ¬ suzukiAuditFiniteNormalizationZeroPersistenceSchema ∧
+    suzukiAuditHasOnlyRealZeros suzukiAuditQuartic ∧
+    (∀ z, HasDerivAt suzukiAuditQuartic (suzukiAuditQuarticDerivative z) z) ∧
+    ¬ SuzukiAuditHasFiniteReciprocalLogDerivativeExtension
+      suzukiAuditQuartic suzukiAuditQuarticDerivative :=
+  suzukiReciprocalLogDerivativeAudit_endpoint
 
 end LeanLab.Riemann

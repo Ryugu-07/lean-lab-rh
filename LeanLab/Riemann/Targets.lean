@@ -79,6 +79,7 @@ import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.JensenEventualHyperbolicity
+import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -1377,6 +1378,21 @@ def rhTargets : List ResearchTarget :=
         "For the source-normalized Taylor coefficient sequence of the Riemann xi function, prove that every Jensen polynomial of every degree and every shift has only real roots, with the exact bridge to Mathlib.RiemannHypothesis."
       status := .inProgress
       note := "Fixed-degree eventual hyperbolicity leaves finitely many exceptional shifts for every degree and supplies no degree-uniform cutoff. Duran's Brenke-polynomial criteria add equivalent polynomial families but no all-index proof. The generic single-defect model prevents using eventuality or finite certificates as this premise." },
+    { id := "D9.suzuki.reciprocal-limit-regularity-audit"
+      tier := .tier2
+      title := "Audit Suzuki's reciprocal-log-derivative limit regularity"
+      statement :=
+        "Construct a source-shaped finite-valued exponential normalization of zero-free functions that converges uniformly on every set to a function with a nonreal zero, and construct a symmetric real-rooted quartic whose nonzero critical point prevents a finite global scaled reciprocal-log-derivative extension."
+      leanName := some ``suzukiReciprocalLogDerivativeAudit_endpoint
+      status := .proven
+      note := "Campaign FALSIFICATION-20260723-D9-SUZUKI-RECIPROCAL-LIMIT-01 separates two unstated regularity boundaries in Suzuki 2026, Corollary 6. The compiled witnesses are generic: they do not instantiate the source characteristic function W(a,theta;z), the Riemann xi function, or a meromorphic convergence topology. They therefore falsify only an unrestricted zero-persistence inference and a universal finite-extension interpretation; the actual canonical-system limit and RH remain open." },
+    { id := "D9.suzuki.actual-canonical-system-limit"
+      tier := .tier2
+      title := "Construct Suzuki's actual canonical-system limit"
+      statement :=
+        "For Suzuki's operator-built finite-interval characteristic functions, specify a regular normalization and convergence topology, prove convergence to the scaled xi reciprocal logarithmic derivative with every pole handled explicitly, and derive the source's RH implication."
+      status := .inProgress
+      note := "The finite-interval real-zero theorem is unconditional, but the infinite-interval normalization and convergence are conjectural. A holomorphic interpretation must resolve nonzero critical-point poles; a meromorphic interpretation needs its own topology and zero-transfer theorem. The generic audit determines these requirements without deciding whether the source construction can meet them." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"
