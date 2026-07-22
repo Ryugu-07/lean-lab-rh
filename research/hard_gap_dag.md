@@ -1153,4 +1153,7 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `public_implementation`: commit `bc1a4004979d12406f2bd415b4a44c6ba6269754` passed Lean Action
   run `29936756654`, build job `88980205237`, in `2m2s`; immutable evidence and final-ledger CI
   remain.
-- `global_goal`: active; immutable evidence publication and CI are the next gate.
+- `public_closure_evidence`: commit `e4a45a430170d7398792f18a6e2105109e568aee` passed Lean Action
+  run `29937092592`, build job `88981336680`, in `1m32s`. The variational node is publicly closed;
+  only final-ledger CI remains before route selection.
+- `global_goal`: active; final-ledger publication and CI are the next gate.

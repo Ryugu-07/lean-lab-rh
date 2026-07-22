@@ -2957,3 +2957,7 @@ sparse-exception obstruction remain the H1 barriers. Public implementation CI is
 Implementation commit `bc1a4004979d12406f2bd415b4a44c6ba6269754` passed public Lean Action
 run `29936756654`, build job `88980205237`, in `2m2s`. Lean proof source is frozen; immutable
 evidence backfill and its independent public CI are next.
+
+Evidence commit `e4a45a430170d7398792f18a6e2105109e568aee` passed public Lean Action run
+`29937092592`, build job `88981336680`, in `1m32s`. The structural source-sufficiency endpoint is
+publicly closed; final-ledger CI remains before fresh historical route selection.

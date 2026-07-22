@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260722-H1-SHORT-MOLLIFIER-VARIATIONAL-01`
 
 Mode: `LITERATURE`
 
-Status: `PUBLIC_IMPLEMENTATION_GREEN / EVIDENCE_BACKFILL_REQUIRED`
+Status: `PUBLICLY_CLOSED / FINAL_LEDGER_CI_REQUIRED`
 
 ## Baseline and cross-route selection
 
@@ -151,3 +151,14 @@ Commit only this preregistration, its attempt record, the H7 final-CI backfill, 
 research ledgers first. Public Lean Action CI must pass before
 `ShortMollifierVariational.lean`, Targets, TargetChecks, AxiomsAudit, or aggregate imports are
 edited.
+
+## Public evidence
+
+- `preregistration_commit`: `678156be63cd1c3215747972a3e412da395a0703`, Lean Action run
+  `29934948204`, build job `88973990612`, passed in `1m33s`.
+- `implementation_commit`: `bc1a4004979d12406f2bd415b4a44c6ba6269754`, Lean Action run
+  `29936756654`, build job `88980205237`, passed in `2m2s`.
+- `public_closure_evidence`: commit `e4a45a430170d7398792f18a6e2105109e568aee`, Lean Action run
+  `29937092592`, build job `88981336680`, passed in `1m32s`.
+- `final_ledger`: this campaign is stopped at its registered success endpoint; final-ledger commit
+  and public CI remain before fresh route selection.
