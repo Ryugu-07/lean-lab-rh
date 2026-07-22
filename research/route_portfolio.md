@@ -3308,3 +3308,9 @@ individual automorphic or p-adic transfer, H13, and RH remain open.
 Frozen implementation commit `ab45b1bd8ba5c8cdbe5fb2bd9cd87c222131bb91` passed public Lean
 Action run `29961388807`, build job `89062966415`, in `2m18s`. Lean proof source is frozen;
 immutable evidence and its own public CI remain before final-ledger closure.
+
+Immutable-evidence commit `cb19d46bd1b62eb15dbd2ff41efe5ddf820c4505` passed public Lean
+Action run `29961677975`, build job `89063888150`, in `2m17s`. The local campaign stops at the
+registered inclusion/directionality endpoint; proof source remains frozen. Final-ledger CI is the
+last publication gate before fresh cross-family selection. This stop does not close H13,
+generalized RH, actual individual-zeta transfer, or RH.

@@ -1385,4 +1385,6 @@ closed. `H2-HALF-ISOLATED-ANALYTIC-DETECTOR-01`, `H2-BOW-EXCLUSION-01`, H2, and 
   Action run `29960700375`, build job `89060685988`, in `2m2s`; this opened proof-source editing.
 - `implementation_gate`: frozen commit `ab45b1bd8ba5c8cdbe5fb2bd9cd87c222131bb91` passed public Lean
   Action run `29961388807`, build job `89062966415`, in `2m18s`. Lean proof source is frozen;
-  immutable evidence and its own CI remain.
+  immutable-evidence commit `cb19d46bd1b62eb15dbd2ff41efe5ddf820c4505` passed run
+  `29961677975`, job `89063888150`, in `2m17s`. The transfer-logic node is publicly closed at its
+  fixed endpoint; final-ledger CI remains. `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01` stays open.

@@ -6,7 +6,7 @@ Campaign: `FALSIFICATION-20260723-H13-DIRICHLET-FAMILY-INCLUSION-01`
 
 Selected node: `H13-DIRICHLET-FAMILY-INCLUSION-01`
 
-Status: `IMPLEMENTATION_CI_PASSED / EVIDENCE_CI_REQUIRED`
+Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`
 
 Preregistration commit `e001e3afb37818918e42b08d76c18b6490062ac7` passed public Lean Action
 run `29960700375`, build job `89060685988`, in `2m2s`. Proof-source editing began only after this
@@ -20,6 +20,11 @@ implementation state before public verification.
 Frozen implementation commit `ab45b1bd8ba5c8cdbe5fb2bd9cd87c222131bb91` passed public Lean
 Action run `29961388807`, build job `89062966415`, in `2m18s`. Lean proof source is frozen;
 immutable evidence and its own public CI are the next gate.
+
+Immutable-evidence commit `cb19d46bd1b62eb15dbd2ff41efe5ddf820c4505` passed public Lean
+Action run `29961677975`, build job `89063888150`, in `2m17s`. The registered transfer-logic
+endpoint has reached its local stop. Final-ledger publication and CI precede fresh historical-route
+selection; generalized RH, actual individual-zeta transfer, H13, and RH remain open.
 
 ## Selection reason
 
