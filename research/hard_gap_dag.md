@@ -875,6 +875,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   prints, empty forbidden scans, `git diff --check`, and the full 8,735-job build pass.
 - `public_preregistration`: commit `c56a9cc62744b06b2d82a323b4fc208cb370fe9c`, CI run
   `29891398740`, build job `88832391759`, passed in `2m9s` before proof-source editing.
+- `public_implementation`: commit `0abfc639e17512316ba2468fbda7f6e84388210e`, CI run
+  `29892793629`, build job `88836454324`, passed in `2m29s`.
 - `compaction_state`: one recovery; all canonical frontier files and the complete in-progress
   source were re-read before continuing. The old V4 archive's proof freeze was audited as
   superseded by V4.1.

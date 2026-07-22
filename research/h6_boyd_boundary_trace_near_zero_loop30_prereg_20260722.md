@@ -242,5 +242,6 @@ and RH remain open and unassumed.
 
 Targets, eight exact TargetChecks, nine selected standard-only axiom prints, three forbidden
 scans, `git diff --check`, and the full 8,735-job build pass. Every selected declaration depends
-only on `propext`, `Classical.choice`, and `Quot.sound`. Public implementation and closure evidence
-are pending.
+only on `propext`, `Classical.choice`, and `Quot.sound`. Implementation commit
+`0abfc639e17512316ba2468fbda7f6e84388210e` passed public Lean Action run `29892793629`, build job
+`88836454324`, in `2m29s`. Closure evidence is pending.
