@@ -1916,8 +1916,7 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 
 - `campaign`: `PROOF-ATTEMPT-20260722-H6-BOYD-BOUNDARY-TRACE-01`
 - `mode`: `PROOF-ATTEMPT`
-- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; public implementation verified, closure
-  evidence pending
+- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; publicly closed
 - `target`: prove the third Loop 27 dispersion-limit clause by taking the canonical finite inner
   projections to the already compiled Boyd boundary-jump projection
 - `material_difference_from_loop27`: Loop 27 exposed the inner trace as one of three undischarged
@@ -1960,7 +1959,8 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   `29887021780`, build job `88819539208`, passed in `2m23s` before proof-source editing
 - `public_implementation`: commit `d7f23c7caa40c14d5f3682722720f863dd3e6438`, CI run
   `29888125681`, build job `88822893952`, passed in `2m28s`
-- `public_closure`: pending
+- `public_closure`: evidence commit `ea2524465f48fa29a1afd73cc2ac4e30b7588de5`, CI run
+  `29888372846`, build job `88823638427`, passed in `2m2s`
 - `compaction_state`: one compaction recovery after the initial proof module was created; the full
   canonical frontier and new source were re-read before compiling or extending the proof
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed

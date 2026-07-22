@@ -210,8 +210,7 @@ iff. If the full discrepancy limit compiles, include it and discharge the third 
 
 ## Local outcome
 
-- `status`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; public implementation verified, closure
-  evidence pending.
+- `status`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; publicly closed.
 - `compiled_endpoint`: `deBruijnNewmanPolymathBoydBoundaryTraceCertificate` packages the canonical
   height limit, exact source-jump truncation limit, both shifted-line interval-integrability
   certificates, the paired finite-projection representation, nonzero-boundary pointwise
@@ -228,6 +227,8 @@ iff. If the full discrepancy limit compiles, include it and discharge the third 
   axiom prints, forbidden scans, `git diff --check`, and the full 8,733-job build pass.
 - `public_implementation`: commit `d7f23c7caa40c14d5f3682722720f863dd3e6438`, CI run
   `29888125681`, build job `88822893952`, passed in `2m28s`.
+- `public_closure`: evidence commit `ea2524465f48fa29a1afd73cc2ac4e30b7588de5`, CI run
+  `29888372846`, build job `88823638427`, passed in `2m2s`.
 - `compaction_state`: one recovery after initial source creation; all canonical frontier files and
   the complete new module were re-read before continuing.
 - `global_goal`: H6-Q1 and the persistent RH Goal remain active.
