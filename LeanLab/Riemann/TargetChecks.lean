@@ -1,5 +1,6 @@
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
+import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -3375,5 +3376,44 @@ example {s : ℂ} (hs : IsNontrivialZero s) :
 
 example (hexact : PccExactHorizontalPairCountCofinal) : RiemannHypothesis :=
   riemannHypothesis_of_exactHorizontalPairCountCofinal hexact
+
+example {a b : ℕ → ℝ} {d n : ℕ}
+    (h : ∀ j ≤ d, a (n + j) = b (n + j)) :
+    jensenPolynomial a d n = jensenPolynomial b d n :=
+  jensenPolynomial_congr h
+
+example (m d n : ℕ) (hnd : n + d ≤ m) :
+    jensenPolynomial (jensenSingleDefectCoefficients m) d n =
+      (1 + Polynomial.X) ^ d :=
+  jensenSingleDefect_finiteWedge_eq m d n hnd
+
+example (m d n : ℕ) (hnd : n + d ≤ m) :
+    JensenHasOnlyRealRoots
+      (jensenPolynomial (jensenSingleDefectCoefficients m) d n) :=
+  jensenSingleDefect_finiteWedge m d n hnd
+
+example (m d : ℕ) :
+    ∀ᶠ n in Filter.atTop,
+      JensenHasOnlyRealRoots
+        (jensenPolynomial (jensenSingleDefectCoefficients m) d n) :=
+  jensenSingleDefect_eventually_hasOnlyRealRoots m d
+
+example (m : ℕ) :
+    jensenPolynomial (jensenSingleDefectCoefficients m) 2 m =
+      1 + Polynomial.X ^ 2 :=
+  jensenSingleDefect_degree_two m
+
+example (m : ℕ) :
+    ¬ ∀ d n : ℕ,
+      JensenHasOnlyRealRoots
+        (jensenPolynomial (jensenSingleDefectCoefficients m) d n) :=
+  not_jensenSingleDefect_all_hasOnlyRealRoots m
+
+example :
+    ∃ a : ℕ → ℝ,
+      (∀ d : ℕ, ∀ᶠ n in Filter.atTop,
+        JensenHasOnlyRealRoots (jensenPolynomial a d n)) ∧
+      ¬ ∀ d n : ℕ, JensenHasOnlyRealRoots (jensenPolynomial a d n) :=
+  exists_eventually_realRooted_not_all_realRooted
 
 end LeanLab.Riemann

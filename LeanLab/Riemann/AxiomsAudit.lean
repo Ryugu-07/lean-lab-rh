@@ -80,6 +80,7 @@ import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
+import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -809,3 +810,9 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.pccExceptional_has_offLine
 #print axioms LeanLab.Riemann.burnolZetaZeroMultiplicity_eq_riemannXiZeroMultiplicity
 #print axioms LeanLab.Riemann.riemannHypothesis_of_exactHorizontalPairCountCofinal
+#print axioms LeanLab.Riemann.jensenPolynomial_const_one
+#print axioms LeanLab.Riemann.jensenSingleDefect_finiteWedge
+#print axioms LeanLab.Riemann.jensenSingleDefect_eventually_hasOnlyRealRoots
+#print axioms LeanLab.Riemann.jensenSingleDefect_degree_two
+#print axioms LeanLab.Riemann.not_jensenSingleDefect_all_hasOnlyRealRoots
+#print axioms LeanLab.Riemann.exists_eventually_realRooted_not_all_realRooted

@@ -78,6 +78,7 @@ import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
+import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -1361,6 +1362,21 @@ def rhTargets : List ResearchTarget :=
         "Prove an arithmetic mechanism that turns one off-line zeta orbit into a horizontal-multiplicity excess incompatible with PCC, or otherwise prove PccExactHorizontalPairCountCofinal without assuming RH."
       status := .inProgress
       note := "Goldston-Lee-Schettler-Suriajaya v4 conditionally obtains density one of simple critical zeros from PCC. The compiled persistent-exception model proves that reflection symmetry and normalized count convergence alone cannot remove a finite or density-zero defect; any successful amplification needs additional zeta arithmetic or an absolute-error statistic." },
+    { id := "H8.jensen.eventual-not-global-falsification"
+      tier := .tier2
+      title := "Separate fixed-degree eventual Jensen hyperbolicity from all-index hyperbolicity"
+      statement :=
+        "Construct a coefficient sequence whose Jensen polynomials have only real roots for every fixed degree at all sufficiently large shifts and on every prescribed finite initial wedge, while one explicit degree-two shift has the nonreal root I."
+      leanName := some ``exists_eventually_realRooted_not_all_realRooted
+      status := .proven
+      note := "Campaign FALSIFICATION-20260723-H8-JENSEN-EVENTUAL-HYPERBOLICITY-01 kernel-checks the exact quantifier obstruction behind the source asymptotics. The sequence is generic and is not the xi Taylor sequence, so this falsifies only promotion from finite or fixed-degree eventual checks to the all-degree/all-shift criterion. It does not refute the Jensen-Polya equivalence or prove RH." },
+    { id := "H8.jensen.xi-all-index-hyperbolicity"
+      tier := .tier2
+      title := "Prove all-index Jensen hyperbolicity for xi"
+      statement :=
+        "For the source-normalized Taylor coefficient sequence of the Riemann xi function, prove that every Jensen polynomial of every degree and every shift has only real roots, with the exact bridge to Mathlib.RiemannHypothesis."
+      status := .inProgress
+      note := "Fixed-degree eventual hyperbolicity leaves finitely many exceptional shifts for every degree and supplies no degree-uniform cutoff. Duran's Brenke-polynomial criteria add equivalent polynomial families but no all-index proof. The generic single-defect model prevents using eventuality or finite certificates as this premise." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

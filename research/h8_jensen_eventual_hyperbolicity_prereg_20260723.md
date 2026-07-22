@@ -6,7 +6,7 @@ Campaign: `FALSIFICATION-20260723-H8-JENSEN-EVENTUAL-HYPERBOLICITY-01`
 
 Selected node: `H8-JENSEN-EVENTUAL-NOT-GLOBAL-01`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_IMPLEMENTATION_COMPLETE / IMPLEMENTATION_CI_REQUIRED`
 
 ## Selection reason
 
@@ -136,3 +136,22 @@ Stop this local campaign at `FULL_SUCCESS`, `MEANINGFUL_PARTIAL` at an exact API
 the persistent RH Goal to the unfinished historical atlas. H8 remains open unless an actual
 all-index xi theorem is proved or the route is mathematically ruled out. Original conjecture and
 direct RH attempts remain open throughout.
+
+## Implementation result
+
+Preregistration commit `0275ab15b83a253b9a4eb9fcfa4a575943b89b33` passed public Lean Action
+run `29949869070`, build job `89024569873`, in `1m54s` before proof-source editing.
+
+All six fixed endpoint blocks are locally complete in
+`LeanLab/Riemann/JensenEventualHyperbolicity.lean`. The combined theorem
+`exists_eventually_realRooted_not_all_realRooted` supplies one coefficient sequence with
+fixed-degree eventual real-rootedness but failure of the all-degree/all-shift property. Separate
+theorems preserve the arbitrary finite-wedge equality and the exact `1+X^2` witness.
+
+Two Targets, seven exact TargetChecks, and six selected axiom prints compile. The selected axioms
+are only `propext`, `Classical.choice`, and `Quot.sound`. This is full success at the registered
+generic falsification endpoint, with `rh_frontier_delta=0` and `route_infrastructure_delta=1`.
+Actual-xi all-index hyperbolicity and RH remain open. Full mechanical audit and implementation
+public CI remain required. The production forbidden scan is empty, `git diff --check` passes, the
+H8 module has no local warning, and the full `8,744`-job build passes. Implementation public CI is
+the next gate.

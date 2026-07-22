@@ -1114,18 +1114,19 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 
 ## 2026-07-23 H8 Jensen eventual-hyperbolicity launch
 
-- `H8-A-JENSEN-WINDOW-LOCALITY-01`: `PREREGISTERED`. Define generic Jensen polynomials and prove
-  that a degree/shift pair depends only on its finite coefficient window.
-- `H8-B-FINITE-WEDGE-BLINDNESS-01`: `PREREGISTERED / FALSIFICATION`. For an arbitrary cutoff,
-  construct a later one-coefficient defect while every earlier window remains exactly the
-  all-one hyperbolic polynomial `(1+X)^d`.
-- `H8-C-EVENTUAL-NOT-GLOBAL-01`: `PREREGISTERED / FALSIFICATION`. Prove every fixed degree is
-  hyperbolic at all sufficiently large shifts, but one degree-two window is `1+X^2` and has root
-  `I`. This isolates the quantifier gap between source asymptotics and the RH-bearing criterion.
+- `H8-A-JENSEN-WINDOW-LOCALITY-01`: `CLOSED / GENERIC_INTERFACE_COMPILED`. A degree/shift pair
+  depends only on its finite coefficient window, and the all-one sequence gives `(1+X)^d`.
+- `H8-B-FINITE-WEDGE-BLINDNESS-01`: `CLOSED / FALSIFICATION`. For an arbitrary cutoff, a later
+  one-coefficient defect leaves every earlier window exactly equal to `(1+X)^d`.
+- `H8-C-EVENTUAL-NOT-GLOBAL-01`: `CLOSED / FALSIFICATION`. Every fixed degree is real-rooted at
+  all sufficiently large shifts, but one degree-two window is exactly `1+X^2` and has the nonreal
+  root `I`. The generic promotion from source-shaped eventuality to all-index hyperbolicity fails.
 - `H8-D-XI-ALL-INDEX-01`: `OPEN / RH_STRENGTH`. Prove all required Jensen polynomials for the
   actual xi coefficients are hyperbolic. No generic coefficient countermodel discharges this.
 - `source_update`: Duran 2024 adds Brenke-polynomial RH equivalences but no uniform all-index
-  mechanism. Preregistration public CI is required before proof-source editing.
+  mechanism. The generic quantifier obstruction is locally compiled; full build and public
+  implementation CI remain. The forbidden scan, diff check, and full `8,744`-job build pass.
+  `rh_frontier_delta=0`, `route_infrastructure_delta=1`.
 
 ## 2026-07-23 H1 closure and H9 Conrey rationality-gap launch
 

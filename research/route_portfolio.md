@@ -3121,3 +3121,24 @@ yet has one explicit `1+X^2` window with nonreal root `I`.
 The model will not be identified with xi coefficients and will not falsify the source theorems.
 It tests exactly whether fixed-degree eventuality or finite certificates can be promoted to the
 all-degree/all-shift statement. Public preregistration CI is required before proof-source editing.
+
+## H8 Jensen Eventual-Hyperbolicity Local Result
+
+Preregistration commit `0275ab15b83a253b9a4eb9fcfa4a575943b89b33` passed public Lean Action
+run `29949869070`, build job `89024569873`, in `1m54s`. The fixed generic falsification endpoint is
+locally complete:
+
+- Jensen polynomials are represented by their exact finite coefficient windows;
+- every initial window before a movable single defect is exactly `(1+X)^d`;
+- after that defect, every fixed degree is eventually exactly `(1+X)^d` again;
+- the degree-two window crossing the defect is exactly `1+X^2`, and Lean checks its nonreal root
+  `I`;
+- one combined theorem witnesses fixed-degree eventual real-rootedness without all-index
+  real-rootedness.
+
+This is a generic quantifier countermodel, not an xi-coefficient theorem. It validates the source
+warning that eventual fixed-degree hyperbolicity cannot be promoted without a uniform exceptional
+window mechanism. Two Targets, seven exact TargetChecks, and six selected standard-only axiom
+prints pass locally. The forbidden scan is empty, `git diff --check` passes, and the full
+`8,744`-job build passes. Public implementation CI remains; `rh_frontier_delta=0` and
+`route_infrastructure_delta=1`.
