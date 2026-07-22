@@ -3183,3 +3183,8 @@ standard-only axiom audits. Literal finite-valued zero persistence is genericall
 global entire extension is generically obstructed at nonzero critical points; the actual Suzuki
 operator limit and a meromorphic repair remain open. Implementation publication and CI are the
 next gate; persistent RH Goal active.
+
+Frozen implementation commit `8442a4ac2b71886efbc11fb90d78a91a8cbdbcdb` passed public Lean
+Action run `29954158019`, build job `89038905667`, in `2m37s`. The proof source is now frozen;
+immutable evidence and its own public CI remain before this local D9 audit returns to the
+unfinished historical atlas. The actual source limit, any meromorphic repair, and RH remain open.

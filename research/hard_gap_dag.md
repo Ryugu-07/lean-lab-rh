@@ -1312,5 +1312,7 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `source_update`: Suzuki 2026 proves the finite self-adjoint-extension real-zero theorem but leaves
   the infinite operator/function limit conjectural. Literal, entire, and meromorphic readings must
   remain separate. Preregistration commit `b455391bf7211e0136a98b082f1264fee4cac1ca` passed public
-  CI run `29952313617`, job `89032753680`; local implementation now awaits implementation CI.
+  CI run `29952313617`, job `89032753680`. Frozen implementation commit
+  `8442a4ac2b71886efbc11fb90d78a91a8cbdbcdb` passed run `29954158019`, job `89038905667`, in
+  `2m37s`; immutable-evidence CI remains before local closure.
   `rh_frontier_delta=0`; persistent RH Goal active.

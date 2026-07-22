@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260723-D9-SUZUKI-RECIPROCAL-LIMIT-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_CI_PASSED / EVIDENCE_COMMIT_REQUIRED`
 
 ## Runtime record
 
@@ -44,6 +44,7 @@ global reciprocal-log-derivative extension.
 | 7 | `LEAN_LITERAL_BRANCH` | A direct proof of `TendstoUniformlyOn` exceeded default heartbeats during elaboration. Factoring it through an abstract scalar error-bound lemma compiled in seconds without changing the standard convergence predicate. | Keep the all-set endpoint and record the timeout as an implementation obstruction, not a mathematical weakening. |
 | 8 | `LEAN_ENTIRE_BRANCH` | Lean proves the quartic has only real zeros, has derivative `4*z^3-4*z`, and at `z=1` has zero derivative but nonzero value. | Reject a finite global `z^2*f/f'` extension for this generic symmetric real-rooted model. |
 | 9 | `INTEGRATION_AUDIT` | The aggregate endpoint, two Targets, nine exact TargetChecks, and seven selected axiom prints compile. Selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`. | Classify as generic route-boundary progress; leave the actual Suzuki limit, meromorphic repair, and RH open. |
+| 10 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation commit `8442a4ac2b71886efbc11fb90d78a91a8cbdbcdb` passed public Lean Action run `29954158019`, build job `89038905667`, in `2m37s`. | Keep Lean proof source frozen; publish immutable implementation evidence and require that evidence commit's own public CI. |
 
 ## Assumption and gap accounting
 
@@ -60,5 +61,8 @@ global reciprocal-log-derivative extension.
 - `rh_frontier_delta`: `0`.
 - `route_map_delta`: `1`; literal, entire, and meromorphic interpretations are now separated.
 - `obstruction_map_delta`: `1`; both generic failure modes have kernel-checked witnesses.
-- `next_gate`: implementation commit and public CI, followed by immutable evidence and final ledger.
+- `public_implementation_evidence`: frozen implementation commit
+  `8442a4ac2b71886efbc11fb90d78a91a8cbdbcdb` passed Lean Action run `29954158019`, build job
+  `89038905667`, in `2m37s`.
+- `next_gate`: immutable-evidence commit and public CI, followed by final ledger.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.
