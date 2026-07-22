@@ -35,6 +35,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydR2JacobianRemainder
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentPuiseuxJump
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryDispersion
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryTrace
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryTraceTwoScale
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1049,6 +1050,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanPolymathBoydBoundaryTraceCertificate
       status := .proven
       note := "Loop 28 meaningful hard-gap reduction. Lean proves the canonical heights tend to infinity and both already integrable source jump rays converge to the full boundary projection. It verifies finite-interval integrability on both offset lines and combines the Loop 27 projection into one paired integral. For Re z>0 and every nonzero boundary coordinate, Lean proves pointwise convergence to the exact scaled-Gamma reflection jump; the Re z>0 hypothesis corrects an omitted helper quantifier in the preregistration while leaving the parent inner-trace target unchanged. The desired inner trace is then equivalent to one named discrepancy tending to zero. That limit is not assumed or proved: it requires uniform integrability on growing intervals, including control near zero and on the tails, unavailable from the current noncircular Gamma facts. Classification HARD_GAP_REDUCED; both outer-edge limits, equation (15), effective R2, Table 1, H6-E/G8, and RH remain open." },
+    { id := "H6.debruijn-newman.boyd-boundary-trace-two-scale"
+      tier := .tier2
+      title := "Reduce the Boyd boundary trace to near-zero and shifted-tail residuals"
+      statement :=
+        "For every z with positive real part, prove uniform convergence of the paired offset kernel on every compact annulus away from zero, prove the corresponding middle integrals vanish, split the canonical trace discrepancy exactly into near, middle, and tail residuals, and prove the full discrepancy limit equivalent to the near-plus-tail limit."
+      leanName := some ``deBruijnNewmanPolymathBoydBoundaryTraceTwoScaleCertificate
+      status := .proven
+      note := "Loop 29 meaningful hard-gap reduction. Lean identifies the exact symmetric boundary-axis kernel, proves joint continuity on a pole-free epsilon slab times every compact annulus, and applies Heine--Cantor to obtain uniform convergence there. Both fixed middle integrals and their canonical sequence tend to zero. The Loop 28 discrepancy is exactly partitioned into near-zero, middle, and shifted-tail residuals, yielding an iff that removes the middle regime completely. A further exact normal form cancels both explicit 1/(12*w) terms into one epsilon/6 rational correction. The remaining near-zero scaled-Gamma boundary bounds and shifted-tail control are not assumed or proved. Both outer-edge limits, equation (15), effective R2, Table 1, H6-E/G8, and RH remain open." },
     { id := "H6.debruijn-newman.boyd-positive-real-saddle-integral"
       tier := .tier2
       title := "Derive the positive-real scaled-Gamma saddle integral"

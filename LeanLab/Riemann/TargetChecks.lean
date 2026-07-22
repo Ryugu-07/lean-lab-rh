@@ -36,6 +36,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydR2JacobianRemainder
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentPuiseuxJump
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryDispersion
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryTrace
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryTraceTwoScale
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2886,5 +2887,77 @@ example {z : ℂ} (hz : 0 < z.re) :
       Filter.Tendsto (deBruijnNewmanPolymathBoydBoundaryTraceDiscrepancy z)
         Filter.atTop (𝓝 0)) :=
   deBruijnNewmanPolymathBoydBoundaryTrace_tendsto_iff_discrepancy hz
+
+example : deBruijnNewmanPolymathBoydBoundaryTraceTwoScaleCertificateStatement :=
+  deBruijnNewmanPolymathBoydBoundaryTraceTwoScaleCertificate
+
+example {z : ℂ} (hz : 0 < z.re) {delta A : ℝ}
+    (hdelta : 0 < delta) (hdeltaA : delta ≤ A) :
+    TendstoUniformlyOn
+      (fun epsilon y =>
+        deBruijnNewmanPolymathBoydShiftedBoundaryPairIntegrand z epsilon y)
+      (deBruijnNewmanPolymathBoydBoundaryAxisPairIntegrand z)
+      (𝓝 0)
+      (deBruijnNewmanPolymathBoydBoundaryMiddleSet delta A) :=
+  deBruijnNewmanPolymathBoydShiftedBoundaryPairIntegrand_tendstoUniformlyOn_middle
+    hz hdelta hdeltaA
+
+example {z : ℂ} (hz : 0 < z.re) {delta A : ℝ}
+    (hdelta : 0 < delta) (hdeltaA : delta ≤ A) :
+    Filter.Tendsto
+      (fun n : ℕ => deBruijnNewmanPolymathBoydBoundaryMiddleResidual z
+        (deBruijnNewmanPolymathBoydBoundaryEpsilon z n) delta A)
+      Filter.atTop (𝓝 0) :=
+  deBruijnNewmanPolymathBoydBoundaryMiddleResidual_tendsto_canonical
+    hz hdelta hdeltaA
+
+example {z : ℂ} (hz : 0 < z.re) {T : ℝ} (hT : 0 ≤ T) :
+    deBruijnNewmanPolymathBoydTruncatedBoundaryJumpProjection z T =
+      -(1 / (2 * Real.pi * Complex.I * z)) *
+        (∫ y : ℝ in -T..T,
+          deBruijnNewmanPolymathBoydBoundaryAxisPairIntegrand z y) :=
+  deBruijnNewmanPolymathBoydTruncatedBoundaryJumpProjection_eq_axisIntegral hz hT
+
+example {z : ℂ} {epsilon y : ℝ} (hepsilon : 0 < epsilon)
+    (hepsilonz : epsilon < z.re) :
+    let w : ℂ := (epsilon : ℂ) + (y : ℂ) * Complex.I
+    let q : ℂ := -(epsilon : ℂ) + (y : ℂ) * Complex.I
+    deBruijnNewmanPolymathBoydShiftedBoundaryPairIntegrand z epsilon y =
+      Complex.I *
+        (((w * deBruijnNewmanPolymathScaledGamma w - w) / (w - z)) -
+          ((q / deBruijnNewmanPolymathScaledGamma (-q) - q) / (q - z)) +
+          (epsilon : ℂ) / (6 * (w - z) * (q - z))) :=
+  deBruijnNewmanPolymathBoydShiftedBoundaryPairIntegrand_eq_nearZeroRegularized
+    hepsilon hepsilonz
+
+example {z : ℂ} (hz : 0 < z.re) {n : ℕ} {delta A : ℝ}
+    (hdelta : 0 < delta) (hdeltaA : delta ≤ A)
+    (hAT : A ≤ deBruijnNewmanPolymathBoydBoundaryHeight z n) :
+    deBruijnNewmanPolymathBoydBoundaryTraceDiscrepancy z n =
+      deBruijnNewmanPolymathBoydBoundaryNearResidual z
+          (deBruijnNewmanPolymathBoydBoundaryEpsilon z n) delta +
+        deBruijnNewmanPolymathBoydBoundaryMiddleResidual z
+          (deBruijnNewmanPolymathBoydBoundaryEpsilon z n) delta A +
+        deBruijnNewmanPolymathBoydBoundaryTailResidual z
+          (deBruijnNewmanPolymathBoydBoundaryEpsilon z n) A
+          (deBruijnNewmanPolymathBoydBoundaryHeight z n) :=
+  deBruijnNewmanPolymathBoydBoundaryTraceDiscrepancy_eq_threeScale
+    hz hdelta hdeltaA hAT
+
+example {z : ℂ} (hz : 0 < z.re) {delta A : ℝ}
+    (hdelta : 0 < delta) (hdeltaA : delta ≤ A) :
+    (Filter.Tendsto
+        (deBruijnNewmanPolymathBoydBoundaryTraceDiscrepancy z)
+        Filter.atTop (𝓝 0) ↔
+      Filter.Tendsto
+        (fun n : ℕ =>
+          deBruijnNewmanPolymathBoydBoundaryNearResidual z
+              (deBruijnNewmanPolymathBoydBoundaryEpsilon z n) delta +
+            deBruijnNewmanPolymathBoydBoundaryTailResidual z
+              (deBruijnNewmanPolymathBoydBoundaryEpsilon z n) A
+              (deBruijnNewmanPolymathBoydBoundaryHeight z n))
+        Filter.atTop (𝓝 0)) :=
+  deBruijnNewmanPolymathBoydBoundaryTrace_tendsto_iff_near_add_tail
+    hz hdelta hdeltaA
 
 end LeanLab.Riemann
