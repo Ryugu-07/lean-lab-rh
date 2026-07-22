@@ -2915,3 +2915,8 @@ remain open.
 Implementation commit `21dabbcd2a14c306738af5019924475cde1e5238` passed public Lean Action
 run `29933348708`, build job `88968461122`, in `2m5s`. Lean source is frozen; immutable evidence
 backfill and its independent public CI are next.
+
+Evidence commit `552c7716673fb2cddd02efc1a1e6a83423a3ef48` passed public Lean Action run
+`29933695505`, build job `88969645422`, in `2m2s`. The finite iff campaign stops on its
+registered success endpoint after final-ledger publication. Fresh selection must compare other
+historical families rather than treating further H7 scalar-bound optimization as automatic.

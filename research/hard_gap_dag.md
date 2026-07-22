@@ -1107,4 +1107,7 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `public_implementation`: commit `21dabbcd2a14c306738af5019924475cde1e5238` passed Lean Action
   run `29933348708`, build job `88968461122`, in `2m5s`; immutable evidence and final-ledger CI
   remain.
-- `global_goal`: active; immutable evidence publication and CI are the next gate.
+- `public_closure_evidence`: commit `552c7716673fb2cddd02efc1a1e6a83423a3ef48` passed Lean Action
+  run `29933695505`, build job `88969645422`, in `2m2s`. The finite Herglotz node is publicly
+  closed; only final-ledger CI remains before cross-route selection.
+- `global_goal`: active; final-ledger publication and CI are the next gate.

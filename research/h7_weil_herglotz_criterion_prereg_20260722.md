@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260722-H7-WEIL-HERGLOTZ-CRITERION-01`
 
 Mode: `LITERATURE`
 
-Status: `PUBLIC_IMPLEMENTATION_GREEN / CLOSURE_EVIDENCE_PENDING`
+Status: `PUBLIC_CLOSURE_EVIDENCE_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Baseline and value-ranked route decision
 
@@ -173,5 +173,7 @@ imports are edited.
   `obstruction_map_delta=1`, `source_assumption_weakening_delta=1`.
 - `public_implementation`: commit `21dabbcd2a14c306738af5019924475cde1e5238` passed Lean Action
   run `29933348708`, build job `88968461122`, in `2m5s`.
-- `next_gate`: freeze Lean source, publish immutable implementation evidence, and require its own
-  public Lean Action CI before local closure or route selection.
+- `public_closure_evidence`: commit `552c7716673fb2cddd02efc1a1e6a83423a3ef48` passed Lean Action
+  run `29933695505`, build job `88969645422`, in `2m2s`.
+- `next_gate`: publish the final ledger and require public Lean Action CI, then stop this local
+  campaign at its registered finite endpoint and return to cross-route historical selection.
