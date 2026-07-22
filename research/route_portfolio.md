@@ -3066,3 +3066,26 @@ formalize the finite source inequality, the exact-count last-exception consumer,
 persistent-exception model whose critical proportion tends to one. It then attempts an actual
 multiplicity-bearing zeta cutoff adapter. Public preregistration CI is required before any Lean
 proof-source edit.
+
+## H11 Pair-Correlation Horizontal-Multiplicity Local Result
+
+Preregistration commit `10c016f9395b7bd3c2c2d4e99c4148471540f31f` passed public Lean Action
+run `29945736404`, build job `89010521220`, in `1m35s`. The fixed implementation endpoint is
+locally complete:
+
+- the source finite inequality `2*N <= N_simple_critical + N_circ` compiles for a general finite
+  multiplicity-copy population with same-height reflection;
+- exact pair-count equality forces every horizontal fiber to be singleton and critical;
+- one fixed reflected off-line pair plus `n` simple critical points has pair and critical ratios
+  tending to one, so normalized convergence alone cannot imply RH;
+- actual positive-height zeta zeros are represented with analytic multiplicity, and the xi-based
+  copy count is proved equal to zeta multiplicity through a nonvanishing local analytic unit;
+- exact cofinal horizontal pair-count equality conditionally implies `Mathlib.RiemannHypothesis`.
+
+PCC, exact cofinal equality, sparse-exception amplification, and RH remain unproved. The surviving
+H11 research question is arithmetic: can one actual off-line orbit be forced to generate
+non-sparse equal-ordinate excess, or can another statistic detect the last exception? Six exact
+TargetChecks and six selected standard-only axiom prints pass locally. Classification is
+`FULL_SUCCESS_AT_REGISTERED_ENDPOINT / CONDITIONAL_CONSUMER_AND_FALSIFICATION_MODEL`, with
+`rh_frontier_delta=0` and `route_infrastructure_delta=1`. The forbidden scan is empty,
+`git diff --check` passes, and the full `8,743`-job build passes; implementation public CI remains.

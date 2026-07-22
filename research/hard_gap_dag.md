@@ -1188,21 +1188,29 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `29944572919`, build job `89006584781`, in `2m26s`. The H12 consumer campaign is publicly
   closed; H12-D/H12-E remain open.
 
-## 2026-07-23 H11 pair-correlation horizontal-multiplicity launch
+## 2026-07-23 H11 pair-correlation horizontal-multiplicity implementation
 
-- `H11-A-HORIZONTAL-FINITE-COUNT-01`: `PREREGISTERED`. Reconstruct the source finite inequality
-  `2*N <= N_simple_critical + N_circ` under exact reflection and multiplicity-copy hypotheses.
-- `H11-B-EXACT-LAST-EXCEPTION-01`: `PREREGISTERED`. Prove exact horizontal pair count equality
-  forces every finite fiber to be singleton and critical, then consume cofinal actual-zeta equality
-  into RH.
-- `H11-C-SPARSE-EXCEPTION-MODEL-01`: `PREREGISTERED / FALSIFICATION`. Build one persistent
-  reflected off-line pair plus a growing critical population and prove the relevant proportions
-  tend to one.
+- `H11-A-HORIZONTAL-FINITE-COUNT-01`: `CLOSED / SOURCE_HINGE_COMPILED`. Lean proves the source
+  finite inequality `2*N <= N_simple_critical + N_circ` under exact reflection and
+  multiplicity-copy hypotheses.
+- `H11-B-EXACT-LAST-EXCEPTION-01`: `CLOSED / CONDITIONAL_CONSUMER`. Exact horizontal pair count
+  equality forces every finite fiber to be singleton and critical. The actual zeta cutoff adapter
+  compiles, and cofinal exact equality implies RH. Exact cofinal equality itself remains unproved.
+- `H11-C-SPARSE-EXCEPTION-MODEL-01`: `CLOSED / FALSIFICATION`. A reflected family with one
+  persistent off-line pair has total count `n+2`, pair count `n+4`, simple critical count `n`, and
+  both normalized ratios tending to one. Reflection plus density one cannot remove the last
+  sparse exception.
 - `H11-D-PCC-ANALYTIC-01`: `OPEN / EXTERNAL_ANALYTIC`. Prove the actual PCC asymptotic. Even this
   source conjecture yields density one rather than universal line location without H11-B or an
   arithmetic amplification theorem.
+- `H11-E-SPARSE-EXCEPTION-AMPLIFICATION-01`: `OPEN / ARITHMETIC`. Prove that one actual off-line
+  zeta orbit forces non-sparse horizontal excess incompatible with PCC, or prove exact cofinal
+  horizontal pair-count equality by another route. The finite reflected model proves that
+  functional-equation symmetry and normalized count convergence alone are insufficient.
 - `route_map_correction`: arXiv:2503.15449v4 supersedes the older claim that pair correlation
-  gives no horizontal information. Preregistration public CI is required before proof-source edits.
+  gives no horizontal information. The finite hinge, actual zeta definition adapter, conditional
+  exact consumer, and sparse-exception countermodel are locally compiled; implementation public
+  CI remains required. `rh_frontier_delta=0`, `route_infrastructure_delta=1`.
 
 ## 2026-07-22 H7 closure and H1 short-mollifier launch
 

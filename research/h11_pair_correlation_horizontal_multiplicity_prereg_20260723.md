@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260723-H11-PCC-HORIZONTAL-MULTIPLICITY-01`
 
 Selected node: `H11-PCC-HORIZONTAL-MULTIPLICITY-01`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_IMPLEMENTATION_COMPLETE / IMPLEMENTATION_CI_REQUIRED`
 
 ## Selection reason
 
@@ -153,3 +153,25 @@ Stop this local campaign at the first of:
 Local stop returns the persistent RH Goal to cross-family historical omission search. The H11
 family remains open unless the route itself is mathematically ruled out. Original conjecture and
 direct RH attempts remain open throughout.
+
+## Implementation result
+
+The preregistration commit `10c016f9395b7bd3c2c2d4e99c4148471540f31f` passed public Lean
+Action run `29945736404`, build job `89010521220`, in `1m35s` before proof-source editing.
+
+All five fixed endpoint blocks are locally complete in
+`LeanLab/Riemann/PairCorrelationHorizontalMultiplicity.lean`:
+
+1. the finite multiplicity-copy definitions and source inequality compile;
+2. exact pair-count equality forces singleton critical fibers;
+3. the persistent off-line-pair model has pair and critical ratios tending to one;
+4. the actual positive-height zeta cutoff and reflection permutation compile;
+5. zeta and xi analytic multiplicities are proved equal locally, and exact cofinal equality
+   conditionally implies `Mathlib.RiemannHypothesis`.
+
+Six exact TargetChecks compile. The six selected axiom prints contain only `propext`,
+`Classical.choice`, and `Quot.sound`. This is `FULL_SUCCESS` at the registered infrastructure and
+falsification endpoint, with `rh_frontier_delta=0` and `route_infrastructure_delta=1`. PCC, sparse
+exception amplification, exact cofinal equality, and RH remain open. The production forbidden
+scan is empty, `git diff --check` passes, the H11 module build has no local warning, and the full
+`8,743`-job build passes. Public implementation CI is the next gate.

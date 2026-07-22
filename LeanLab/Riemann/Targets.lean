@@ -77,6 +77,7 @@ import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
+import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -1345,6 +1346,21 @@ def rhTargets : List ResearchTarget :=
         "Prove LevinsonMontgomeryLogCountBound and LevinsonMontgomeryCountDichotomy for the actual multiplicity-bearing zeta and zeta-derivative rectangle counts, including the functional-equation zero sum, Gamma estimates, low-height boundary sign, indented critical-line contour, and argument-principle bookkeeping."
       status := .inProgress
       note := "This is the first exact external analytic obstruction exposed by the H12 reconstruction. Mathlib supplies analyticity, divisors, Jensen's formula, and complex integration, while the project supplies an xi rectangle argument principle; no generic meromorphic indented-rectangle argument principle or specialized Levinson-Montgomery boundary theorem is currently available." },
+    { id := "H11.pcc.horizontal-multiplicity-consumer"
+      tier := .tier2
+      title := "Formalize pair-correlation horizontal multiplicity"
+      statement :=
+        "Reconstruct the multiplicity-copy horizontal count inequality, prove exact horizontal pair-count equality is a last-exception localizer, instantiate it on finite positive-height zeta zeros, and kernel-check a reflected family with one persistent off-line pair whose critical and pair-count proportions both tend to one."
+      leanName := some ``riemannHypothesis_of_exactHorizontalPairCountCofinal
+      status := .proven
+      note := "Campaign LITERATURE-20260723-H11-PCC-HORIZONTAL-MULTIPLICITY-01 corrects the stale route-map claim that pair correlation has no horizontal information. The compiled endpoint is a conditional exact-count consumer plus an unconditional sparse-exception countermodel; it does not prove PCC, exact cofinal equality, or RH. Zeta and xi analytic multiplicities are proved equal at every nontrivial zero." },
+    { id := "H11.pcc.sparse-exception-amplification"
+      tier := .tier2
+      title := "Eliminate sparse horizontal-multiplicity exceptions"
+      statement :=
+        "Prove an arithmetic mechanism that turns one off-line zeta orbit into a horizontal-multiplicity excess incompatible with PCC, or otherwise prove PccExactHorizontalPairCountCofinal without assuming RH."
+      status := .inProgress
+      note := "Goldston-Lee-Schettler-Suriajaya v4 conditionally obtains density one of simple critical zeros from PCC. The compiled persistent-exception model proves that reflection symmetry and normalized count convergence alone cannot remove a finite or density-zero defect; any successful amplification needs additional zeta arithmetic or an absolute-error statistic." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

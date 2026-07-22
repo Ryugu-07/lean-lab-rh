@@ -1,4 +1,5 @@
 import LeanLab.Riemann.Targets
+import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -3351,5 +3352,28 @@ example (hlogBound : LevinsonMontgomeryLogCountBound)
     RiemannHypothesis ↔ SpeiserDerivativeZeroFree :=
   riemannHypothesis_iff_speiserDerivativeZeroFree_of_levinsonMontgomeryTheoremOne
     hlogBound hdichotomy
+
+example {ι : Type*} [Fintype ι] [DecidableEq ι]
+    {z : ι → ℂ} {r : Equiv.Perm ι} (hreflect : IsCriticalReflection z r) :
+    2 * Fintype.card ι ≤ simpleCriticalCount z + horizontalPairCount z :=
+  two_mul_card_le_simpleCriticalCount_add_horizontalPairCount hreflect
+
+example (n : ℕ) :
+    horizontalPairCount (pccExceptionalValue n) = n + 4 :=
+  pccExceptional_horizontalPairCount n
+
+example : Filter.Tendsto pccExceptionalPairRatio Filter.atTop (nhds 1) :=
+  pccExceptional_pairRatio_tendsto_one
+
+example (n : ℕ) :
+    ∃ i : PccExceptionalIndex n, (pccExceptionalValue n i).re ≠ 1 / 2 :=
+  pccExceptional_has_offLine n
+
+example {s : ℂ} (hs : IsNontrivialZero s) :
+    burnolZetaZeroMultiplicity s = riemannXiZeroMultiplicity s :=
+  burnolZetaZeroMultiplicity_eq_riemannXiZeroMultiplicity hs
+
+example (hexact : PccExactHorizontalPairCountCofinal) : RiemannHypothesis :=
+  riemannHypothesis_of_exactHorizontalPairCountCofinal hexact
 
 end LeanLab.Riemann

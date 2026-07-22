@@ -79,6 +79,7 @@ import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
+import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -802,3 +803,9 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.finite_speiserUpperLeftDerivZeroSet
 #print axioms LeanLab.Riemann.levinsonMontgomeryCountDifferenceSublinear_of_logCountBound
 #print axioms LeanLab.Riemann.riemannHypothesis_iff_speiserDerivativeZeroFree_of_levinsonMontgomeryTheoremOne
+#print axioms LeanLab.Riemann.two_mul_card_le_simpleCriticalCount_add_horizontalPairCount
+#print axioms LeanLab.Riemann.pccExceptional_horizontalPairCount
+#print axioms LeanLab.Riemann.pccExceptional_pairRatio_tendsto_one
+#print axioms LeanLab.Riemann.pccExceptional_has_offLine
+#print axioms LeanLab.Riemann.burnolZetaZeroMultiplicity_eq_riemannXiZeroMultiplicity
+#print axioms LeanLab.Riemann.riemannHypothesis_of_exactHorizontalPairCountCofinal
