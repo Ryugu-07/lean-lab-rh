@@ -136,6 +136,8 @@ negative Li coefficient by the dominant-transform mechanism formalized in
 
 Campaign `FALSIFICATION-20260723-H2-HALF-ISOLATED-BOW-01` now takes priority over H2-B. It audits
 whether the Maynard--Pratt finite-vertical-line geometry can be replaced by functional-equation
-symmetry, using an exact positive extremum lemma and a finite bow countermodel. Keep H2-Q as a
-canonical open benchmark and `MONITOR` the large-value literature; do not report exponent
-improvements or half-isolated-zero sparsity as RH closure.
+symmetry. The local implementation proves the exact positive extremum lemma and a finite
+critical-reflection-symmetric bow countermodel; implementation publication and CI remain. The
+actual analytic short detector and bow exclusion stay open. Keep H2-Q as a canonical open
+benchmark and `MONITOR` the large-value literature; do not report exponent improvements or
+half-isolated-zero sparsity as RH closure.

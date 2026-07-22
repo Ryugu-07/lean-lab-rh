@@ -1352,5 +1352,7 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   a detector that remains effective on them and forces zero witnesses to be absent rather than
   sparse.
 - `claim_boundary`: finite geometry cannot assert that actual zeta bows exist or fail. Public
-  preregistration CI is required before Lean proof-source edits. `rh_frontier_delta=0`; persistent
-  RH Goal active.
+  preregistration commit `1475d90b96f6a5aabf9a6afea72a56575f11dc61` passed run `29958359541`,
+  job `89053021275`, in `1m48s`. The local implementation proves the positive finite-line
+  criterion and a reflection-symmetric bow countermodel; implementation CI remains.
+  `rh_frontier_delta=0`; persistent RH Goal active.

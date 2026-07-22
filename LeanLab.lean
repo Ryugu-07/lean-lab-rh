@@ -69,6 +69,7 @@ import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
+import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit

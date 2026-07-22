@@ -6,7 +6,11 @@ Campaign: `FALSIFICATION-20260723-H2-HALF-ISOLATED-BOW-01`
 
 Selected node: `H2-HALF-ISOLATED-BOW-GEOMETRY-01`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_IMPLEMENTATION_COMPLETE / IMPLEMENTATION_CI_REQUIRED`
+
+Preregistration commit `1475d90b96f6a5aabf9a6afea72a56575f11dc61` passed public Lean Action
+run `29958359541`, build job `89053021275`, in `1m48s`. Proof-source editing began only after this
+gate passed.
 
 ## Selection reason
 

@@ -3252,3 +3252,12 @@ critical-reflection-symmetric bow with off-line points but no right-side half-is
 This is a mechanism audit, not exponent optimization. It does not model actual zeta zeros or prove
 the analytic detector, density hypothesis, bow exclusion, or RH. Public preregistration CI is
 required before proof-source editing; persistent RH Goal active.
+
+Preregistration commit `1475d90b96f6a5aabf9a6afea72a56575f11dc61` passed public Lean Action
+run `29958359541`, build job `89053021275`, in `1m48s`. The local module now compiles both locked
+branches. Discrete vertical gaps plus a rightmost-bottom point imply the full source half-isolation
+disjunction. Conversely, a concrete finite set invariant under critical-line reflection contains
+a right off-line point but no right-side half-isolated point; its nearby lower blocker has real
+displacement strictly between the two source thresholds. Two Targets, seven exact TargetChecks,
+and six selected standard-only axiom audits compile. The finite bow is not an actual zeta zero set;
+actual bow exclusion, the analytic detector, zero-density estimates, and RH remain open.

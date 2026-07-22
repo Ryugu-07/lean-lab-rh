@@ -79,6 +79,7 @@ import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
+import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
@@ -1409,6 +1410,21 @@ def rhTargets : List ResearchTarget :=
         "For Suzuki's operator-built finite-interval characteristic functions, specify a regular normalization and convergence topology, prove convergence to the scaled xi reciprocal logarithmic derivative with every pole handled explicitly, and derive the source's RH implication."
       status := .inProgress
       note := "The finite-interval real-zero theorem is unconditional, but the infinite-interval normalization and convergence are conjectural. A holomorphic interpretation must resolve nonzero critical-point poles; a meromorphic interpretation needs its own topology and zero-transfer theorem. The generic audit determines these requirements without deciding whether the source construction can meet them." },
+    { id := "H2.density.half-isolated-bow-geometry"
+      tier := .tier2
+      title := "Audit finite-line rigidity in the half-isolated-zero method"
+      statement :=
+        "Formalize the Maynard-Pratt local half-isolation disjunction, prove that a rightmost bottom point on discretely separated vertical lines is half-isolated, and construct a finite critical-reflection-invariant bow with off-line points but no right-side half-isolated point."
+      leanName := some ``halfIsolatedBowAudit_endpoint
+      status := .proven
+      note := "Campaign FALSIFICATION-20260723-H2-HALF-ISOLATED-BOW-01 isolates the geometric role of Maynard-Pratt's finite-real-part Hypothesis F. The compiled bow is a generic finite set, not an actual zeta zero set; it falsifies only promotion from functional-equation reflection symmetry to half-isolated off-line detection. It does not reprove the analytic short detector, a zero-density estimate, bow exclusion, or RH." },
+    { id := "H2.density.actual-zeta-bow-exclusion"
+      tier := .tier2
+      title := "Exclude actual-zeta bow configurations"
+      statement :=
+        "Prove that the actual zeta zero divisor cannot form the slowly bending bow configurations that obstruct Maynard-Pratt's local power-sum detector, or construct a source-valid detector effective on such bows whose quantitative bound forces every off-line witness to be absent."
+      status := .inProgress
+      note := "Maynard-Pratt prove short detectors and density bounds for half-isolated zeros, but Section 8 leaves bows as the obstruction to removing finite-real-part rigidity. The finite symmetry countermodel shows that functional-equation reflection alone cannot discharge this analytic and arithmetic gap." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

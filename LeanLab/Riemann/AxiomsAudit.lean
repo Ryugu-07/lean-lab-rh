@@ -2,6 +2,7 @@ import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.InfiniteReciprocalTraceAudit
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
+import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -832,3 +833,9 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.not_ordinaryPowerTrace_of_reciprocalPairing
 #print axioms LeanLab.Riemann.finiteReciprocalPairingWitness
 #print axioms LeanLab.Riemann.infiniteReciprocalTraceAudit_endpoint
+#print axioms LeanLab.Riemann.halfIsolatedIn_of_rightmost_bottom_and_verticalGap
+#print axioms LeanLab.Riemann.finiteBow_is_reflectionInvariant
+#print axioms LeanLab.Riemann.finiteBow_blocker_intermediate_displacement
+#print axioms LeanLab.Riemann.finiteBow_no_right_offLine_halfIsolated
+#print axioms LeanLab.Riemann.finiteBow_concreteCounterexample
+#print axioms LeanLab.Riemann.halfIsolatedBowAudit_endpoint

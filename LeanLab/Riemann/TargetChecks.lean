@@ -1,5 +1,6 @@
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
+import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.DeBruijnNewmanHeat
@@ -3513,5 +3514,77 @@ example :
     ¬ SuzukiAuditHasFiniteReciprocalLogDerivativeExtension
       suzukiAuditQuartic suzukiAuditQuarticDerivative :=
   suzukiReciprocalLogDerivativeAudit_endpoint
+
+example {zeros : Set ℂ} {nearRadius similarWidth leftGap : ℝ} {rho0 : ℂ}
+    (hsimilar : 0 ≤ similarWidth)
+    (hverticalGap :
+      ∀ rho ∈ zeros, rho.re = rho0.re ∨ rho.re ≤ rho0.re - leftGap)
+    (hbottom :
+      ∀ rho ∈ zeros, rho.re = rho0.re → rho0.im ≤ rho.im) :
+    halfIsolatedIn zeros nearRadius similarWidth leftGap rho0 :=
+  halfIsolatedIn_of_rightmost_bottom_and_verticalGap hsimilar hverticalGap hbottom
+
+example (step rise : ℝ) (rho : ℂ) :
+    rho ∈ finiteBow step rise ↔ criticalLineReflect rho ∈ finiteBow step rise :=
+  finiteBow_is_reflectionInvariant step rise rho
+
+example {step rise similarWidth leftGap : ℝ}
+    (hstep : 0 < step) (hsmall : similarWidth < step) (hlarge : step < leftGap) :
+    similarWidth < |finiteBowBase.re - (finiteBowRight step rise).re| ∧
+      (finiteBowRight step rise).re - leftGap < finiteBowBase.re :=
+  finiteBow_blocker_intermediate_displacement hstep hsmall hlarge
+
+example {step rise : ℝ} (hstep : 0 < step) :
+    (1 / 2 : ℝ) < (finiteBowRight step rise).re :=
+  finiteBowRight_offLine hstep
+
+example {step rise nearRadius similarWidth leftGap : ℝ}
+    (hstep : 0 < step) (hrise : 0 < rise)
+    (hnear : dist finiteBowBase (finiteBowRight step rise) ≤ nearRadius)
+    (hlarge : step < leftGap) :
+    ∀ rho ∈ finiteBow step rise, (1 / 2 : ℝ) < rho.re →
+      ¬ halfIsolatedIn (finiteBow step rise) nearRadius similarWidth leftGap rho :=
+  finiteBow_no_right_offLine_halfIsolated hstep hrise hnear hlarge
+
+example :
+    (finiteBow (1 : ℝ) 1).Finite ∧
+    (∀ rho, rho ∈ finiteBow (1 : ℝ) 1 ↔
+      criticalLineReflect rho ∈ finiteBow (1 : ℝ) 1) ∧
+    (∃ rho ∈ finiteBow (1 : ℝ) 1, (1 / 2 : ℝ) < rho.re) ∧
+    finiteBowBase.im < (finiteBowRight (1 : ℝ) 1).im ∧
+    (0 : ℝ) < |finiteBowBase.re - (finiteBowRight (1 : ℝ) 1).re| ∧
+    (finiteBowRight (1 : ℝ) 1).re - 2 < finiteBowBase.re ∧
+    (∀ rho ∈ finiteBow (1 : ℝ) 1, (1 / 2 : ℝ) < rho.re →
+      ¬ halfIsolatedIn (finiteBow (1 : ℝ) 1)
+        (dist finiteBowBase (finiteBowRight (1 : ℝ) 1)) 0 2 rho) :=
+  finiteBow_concreteCounterexample
+
+example :
+    (∀ (zeros : Set ℂ) (nearRadius similarWidth leftGap : ℝ) (rho0 : ℂ),
+      0 ≤ similarWidth →
+      (∀ rho ∈ zeros, rho.re = rho0.re ∨ rho.re ≤ rho0.re - leftGap) →
+      (∀ rho ∈ zeros, rho.re = rho0.re → rho0.im ≤ rho.im) →
+      halfIsolatedIn zeros nearRadius similarWidth leftGap rho0) ∧
+    (∀ step rise nearRadius similarWidth leftGap : ℝ,
+      0 < step → 0 < rise →
+      dist finiteBowBase (finiteBowRight step rise) ≤ nearRadius →
+      similarWidth < step →
+      step < leftGap →
+      (∀ rho, rho ∈ finiteBow step rise ↔
+        criticalLineReflect rho ∈ finiteBow step rise) ∧
+      (∃ rho ∈ finiteBow step rise, (1 / 2 : ℝ) < rho.re) ∧
+      finiteBowBase.im < (finiteBowRight step rise).im ∧
+      similarWidth < |finiteBowBase.re - (finiteBowRight step rise).re| ∧
+      (finiteBowRight step rise).re - leftGap < finiteBowBase.re ∧
+      (∀ rho ∈ finiteBow step rise, (1 / 2 : ℝ) < rho.re →
+        ¬ halfIsolatedIn (finiteBow step rise) nearRadius similarWidth leftGap rho)) ∧
+    (finiteBow (1 : ℝ) 1).Finite ∧
+    (∀ rho, rho ∈ finiteBow (1 : ℝ) 1 ↔
+      criticalLineReflect rho ∈ finiteBow (1 : ℝ) 1) ∧
+    (∃ rho ∈ finiteBow (1 : ℝ) 1, (1 / 2 : ℝ) < rho.re) ∧
+    (∀ rho ∈ finiteBow (1 : ℝ) 1, (1 / 2 : ℝ) < rho.re →
+      ¬ halfIsolatedIn (finiteBow (1 : ℝ) 1)
+        (dist finiteBowBase (finiteBowRight (1 : ℝ) 1)) 0 2 rho) :=
+  halfIsolatedBowAudit_endpoint
 
 end LeanLab.Riemann
