@@ -81,6 +81,7 @@ import LeanLab.Riemann.WeilCompactPositivityCriterion
 import LeanLab.Riemann.WeilGroundStateAlignment
 import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
+import LeanLab.Riemann.WeilGroundStateRayleighGap
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
@@ -856,3 +857,14 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.finiteHeightAuditOrbit_has_high_offLine
 #print axioms LeanLab.Riemann.exists_finiteHeightAuditOrbit
 #print axioms LeanLab.Riemann.finiteHeightPromotionAudit_endpoint
+#print axioms LeanLab.Riemann.weilGroundLineRemainder_orthogonal
+#print axioms LeanLab.Riemann.weilGroundLine_decomposition
+#print axioms LeanLab.Riemann.weilGroundLineRemainder_dot_self
+#print axioms LeanLab.Riemann.weilRayleighExcess_smul_eigen_add_orthogonal
+#print axioms LeanLab.Riemann.WeilQuantitativeGroundStateCertificate.gap_mul_projectiveDefect_le
+#print axioms LeanLab.Riemann.WeilQuantitativeGroundStateCertificate.projectiveDefect_le_ratio
+#print axioms LeanLab.Riemann.WeilQuantitativeGroundStateCertificate.gap_mul_one_sub_groundCoefficient_sq_le
+#print axioms LeanLab.Riemann.WeilQuantitativeGroundStateCertificate.one_sub_groundCoefficient_sq_le_ratio
+#print axioms LeanLab.Riemann.tendsto_projectiveDefect_zero_of_le_ratio
+#print axioms LeanLab.Riemann.weilCollapsingGapCertificate
+#print axioms LeanLab.Riemann.weilCollapsingGapAudit_endpoint

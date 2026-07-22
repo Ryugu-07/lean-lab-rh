@@ -3380,3 +3380,22 @@ No locked source states this ratio theorem. The actual arithmetic entries and pr
 are not yet project objects, so the candidate is not a premise and generic success is not RH
 progress. Public preregistration CI is required before proof-source editing; persistent RH Goal
 active.
+
+## H7 Prolate Rayleigh-Gap Local Result
+
+Preregistration commit `38d57244841b2afec22a77b4ffeb07ce51db018a` passed public Lean Action
+run `29964304967`, build job `89072278256`, in `1m37s`. The fixed endpoint now compiles in
+`LeanLab/Riemann/WeilGroundStateRayleighGap.lean`: orthogonal projection gives the exact Rayleigh
+excess identity, and a positive certified ground-state gap bounds projective defect by excess
+divided by the gap.
+
+The falsification half is equally important. For `diag(0,epsilon_n)` with `epsilon_n -> 0`, Lean
+proves that absolute excess tends to zero while projective defect and the excess/gap ratio both
+remain one. Therefore the source bridge cannot be closed by an unscaled energy estimate.
+
+This is generic variational and obstruction-map progress only. The actual arithmetic matrix,
+prolate coefficients, source double limit, coherent ground-state orientation, transform
+convergence, and real-zero transfer remain open. One proven and one open Target, twelve exact
+TargetChecks, and eleven standard-only axiom prints pass locally. The production scan is empty and
+the full `8,750`-job build passes; public implementation CI is the next gate. Persistent RH Goal
+active.

@@ -6,7 +6,7 @@ Campaign: `DISCOVERY-20260723-H7-PROLATE-RAYLEIGH-GAP-01`
 
 Selected node: `H7-WEIL-GROUNDSTATE-QUANTITATIVE-APPROX-01`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `PREREGISTRATION_CI_PASSED / LOCAL_IMPLEMENTATION_COMPLETE`
 
 ## Baseline
 
@@ -131,3 +131,17 @@ direct Weil/Li/closure, and other conjecture-pool nodes. Persistent RH Goal rema
   closure, H7 alignment, finite matrix, Herglotz records, and the three locked primary sources
   were re-read before this selection.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.
+
+## Preregistration public gate
+
+- `commit`: `38d57244841b2afec22a77b4ffeb07ce51db018a`.
+- `public_ci`: Lean Action run `29964304967`, build job `89072278256`, passed in `1m37s`.
+- `effect`: the fixed proof-source endpoint opened before
+  `LeanLab/Riemann/WeilGroundStateRayleighGap.lean` was created.
+
+## Local endpoint result
+
+The generic consumer, ratio form, abstract sequence squeeze, and exact collapsing-gap witness now
+compile. This is `FULL_SUCCESS_AT_GENERIC_ENDPOINT` locally. The production scan is empty and the
+full `8,750`-job build passes; public implementation CI remains. The concrete
+arithmetic/prolate source ratio is still open and has no `leanName`.

@@ -78,6 +78,7 @@ import LeanLab.Riemann.WeilCompactLaplaceArithmeticFormula
 import LeanLab.Riemann.WeilGroundStateAlignment
 import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
+import LeanLab.Riemann.WeilGroundStateRayleighGap
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
@@ -210,6 +211,7 @@ def checkedTargetNames : List Lean.Name :=
     ``deBruijnNewmanHeat_firstTwoLi_endpoint,
     ``riemannHypothesis_of_heatLi_atBot_zero_and_monotone_assumptions,
     ``not_isPolyaFrequencyFive_deBruijnNewmanEvenKernel,
+    ``WeilQuantitativeGroundStateCertificate.gap_mul_one_sub_groundCoefficient_sq_le,
     ``dirichletFamilyInclusionAudit_endpoint,
     ``finiteHeightPromotionAudit_endpoint,
     ``riemannHypothesis_iff_nontrivial_zeros_on_line ]
@@ -3688,5 +3690,83 @@ example :
         verifiedOnCriticalLineUpTo zeros T ∧
         ∃ rho ∈ zeros, ¬ OnCriticalLine rho ∧ T < |rho.im| :=
   finiteHeightPromotionAudit_endpoint
+
+example {ι : Type*} [Fintype ι] (xi x : ι → ℝ)
+    (hxi : xi ⬝ᵥ xi = 1) :
+    xi ⬝ᵥ weilGroundLineRemainder xi x = 0 :=
+  weilGroundLineRemainder_orthogonal xi x hxi
+
+example {ι : Type*} [Fintype ι] (xi x : ι → ℝ) :
+    x = (xi ⬝ᵥ x) • xi + weilGroundLineRemainder xi x :=
+  weilGroundLine_decomposition xi x
+
+example {ι : Type*} [Fintype ι] (xi x : ι → ℝ)
+    (hxi : xi ⬝ᵥ xi = 1) :
+    weilGroundLineRemainder xi x ⬝ᵥ weilGroundLineRemainder xi x =
+      weilProjectiveDefect xi x :=
+  weilGroundLineRemainder_dot_self xi x hxi
+
+example {ι : Type*} [Fintype ι]
+    (A : Matrix ι ι ℝ) (hAT : Aᵀ = A) (mu : ℝ) (xi y : ι → ℝ)
+    (heigen : A *ᵥ xi = mu • xi) (horth : xi ⬝ᵥ y = 0) (c : ℝ) :
+    weilRayleighExcess A mu (c • xi + y) = weilRayleighExcess A mu y :=
+  weilRayleighExcess_smul_eigen_add_orthogonal A hAT mu xi y heigen horth c
+
+example {ι : Type*} [Fintype ι]
+    {A : Matrix ι ι ℝ} {mu delta : ℝ} {xi : ι → ℝ}
+    (h : WeilQuantitativeGroundStateCertificate A mu xi delta) (x : ι → ℝ) :
+    weilRayleighExcess A mu x =
+      weilRayleighExcess A mu (weilGroundLineRemainder xi x) :=
+  h.rayleighExcess_eq_remainder x
+
+example {ι : Type*} [Fintype ι]
+    {A : Matrix ι ι ℝ} {mu delta : ℝ} {xi : ι → ℝ}
+    (h : WeilQuantitativeGroundStateCertificate A mu xi delta) (x : ι → ℝ) :
+    delta * weilProjectiveDefect xi x ≤ weilRayleighExcess A mu x :=
+  h.gap_mul_projectiveDefect_le x
+
+example {ι : Type*} [Fintype ι]
+    {A : Matrix ι ι ℝ} {mu delta : ℝ} {xi : ι → ℝ}
+    (h : WeilQuantitativeGroundStateCertificate A mu xi delta) (x : ι → ℝ) :
+    weilProjectiveDefect xi x ≤ weilRayleighExcess A mu x / delta :=
+  h.projectiveDefect_le_ratio x
+
+example {ι : Type*} [Fintype ι]
+    {A : Matrix ι ι ℝ} {mu delta : ℝ} {xi : ι → ℝ}
+    (h : WeilQuantitativeGroundStateCertificate A mu xi delta)
+    (x : ι → ℝ) (hx : x ⬝ᵥ x = 1) :
+    delta * (1 - (xi ⬝ᵥ x) ^ 2) ≤ weilRayleighExcess A mu x :=
+  h.gap_mul_one_sub_groundCoefficient_sq_le x hx
+
+example {ι : Type*} [Fintype ι]
+    {A : Matrix ι ι ℝ} {mu delta : ℝ} {xi : ι → ℝ}
+    (h : WeilQuantitativeGroundStateCertificate A mu xi delta)
+    (x : ι → ℝ) (hx : x ⬝ᵥ x = 1) :
+    1 - (xi ⬝ᵥ x) ^ 2 ≤ weilRayleighExcess A mu x / delta :=
+  h.one_sub_groundCoefficient_sq_le_ratio x hx
+
+example (defect ratio : ℕ → ℝ)
+    (hdefect : ∀ n, 0 ≤ defect n) (hle : ∀ n, defect n ≤ ratio n)
+    (hratio : Filter.Tendsto ratio Filter.atTop (nhds 0)) :
+    Filter.Tendsto defect Filter.atTop (nhds 0) :=
+  tendsto_projectiveDefect_zero_of_le_ratio defect ratio hdefect hle hratio
+
+example (epsilon : ℝ) (hepsilon : 0 < epsilon) :
+    WeilQuantitativeGroundStateCertificate
+      (weilCollapsingGapMatrix epsilon) 0 weilCollapsingGapGround epsilon :=
+  weilCollapsingGapCertificate epsilon hepsilon
+
+example :
+    Filter.Tendsto
+        (fun n : ℕ => weilRayleighExcess
+          (weilCollapsingGapMatrix (weilCollapsingGapScale n)) 0 weilCollapsingGapTest)
+        Filter.atTop (nhds 0) ∧
+      (∀ _n : ℕ,
+        weilProjectiveDefect weilCollapsingGapGround weilCollapsingGapTest = 1) ∧
+      (∀ n : ℕ,
+        weilRayleighExcess
+            (weilCollapsingGapMatrix (weilCollapsingGapScale n)) 0 weilCollapsingGapTest /
+          weilCollapsingGapScale n = 1) :=
+  weilCollapsingGapAudit_endpoint
 
 end LeanLab.Riemann

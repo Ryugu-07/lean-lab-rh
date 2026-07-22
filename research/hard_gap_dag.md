@@ -1441,3 +1441,22 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `expected_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_map_delta=1`,
   `obstruction_map_delta=1` at the generic endpoint.
 - `global_goal`: active; preregistration public CI precedes every new Lean proof-source edit.
+
+## 2026-07-23 H7 prolate Rayleigh-gap local result
+
+- `K0-H7-RAYLEIGH-GAP-CONSUMER-01`: locally closed. A normalized finite ground eigenline with
+  positive orthogonal Rayleigh gap satisfies `delta * projective_defect <= rayleigh_excess`;
+  division and one-parameter limit consumers compile.
+- `OBS-H7-COLLAPSING-GAP-01`: locally closed. The exact family `diag(0,epsilon_n)` has excess
+  tending to zero while defect and excess/gap remain one, so absolute excess alone cannot close
+  the source comparison.
+- `H7-WEIL-GROUNDSTATE-SOURCE-RATIO-01`: open original candidate. Instantiate the true finite-prime
+  Weil matrix and normalized prolate vector and prove excess/gap tends to zero in the prescribed
+  Galerkin and prime-cutoff limit.
+- `H7-WEIL-GROUNDSTATE-ORIENTATION-01`: open downstream edge. Convert convergence to the ground
+  line into coherently normalized function convergence and transfer through the Fourier-Mellin
+  transform.
+- `source_boundary`: no prime, digamma, pole, or prolate entries are instantiated by the generic
+  module. No source ratio, simple-even theorem, transform limit, or RH conclusion is proved.
+- `local_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_map_delta=1`,
+  `obstruction_map_delta=1`; persistent RH Goal active.

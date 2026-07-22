@@ -75,6 +75,7 @@ import LeanLab.Riemann.WeilCompactPositivityCriterion
 import LeanLab.Riemann.WeilGroundStateAlignment
 import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
+import LeanLab.Riemann.WeilGroundStateRayleighGap
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
@@ -1336,6 +1337,21 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``weilFiniteOddRankOneStrict_iff_resolvent
       status := .proven
       note := "Campaign LITERATURE-20260722-H7-WEIL-HERGLOTZ-CRITERION-01 kernel-checks the exact finite completion-of-squares reduction. The generic iff does not need the source assumption that S is odd; oddness of the resolvent vector u suffices. The source-aligned certificate retains odd_S, while the arithmetic scalar inequality, uniformity in both cutoffs, the true ground-state limit, and RH remain open. Classification is known finite linear-algebra infrastructure with rh_frontier_delta=0." },
+    { id := "H7.weil-ground-state.rayleigh-gap-consumer"
+      tier := .tier2
+      title := "Control ground-line defect by Rayleigh excess over the spectral gap"
+      statement :=
+        "For a finite real symmetric matrix with a normalized ground eigenvector and positive orthogonal-complement gap delta, prove delta times the squared projective defect is at most the Rayleigh excess; derive the ratio and sequence consumers, and exhibit a collapsing-gap family showing that absolute excess tending to zero is insufficient."
+      leanName := some ``WeilQuantitativeGroundStateCertificate.gap_mul_one_sub_groundCoefficient_sq_le
+      status := .proven
+      note := "Campaign DISCOVERY-20260723-H7-PROLATE-RAYLEIGH-GAP-01 compiles a generic finite-dimensional variational consumer and an exact two-dimensional falsification model. For normalized test vectors the generalized defect is 1-<xi,x>^2. The result does not instantiate the arithmetic Weil matrix, the prolate vector, either source cutoff limit, the simple-even theorem, or RH; hard_gap_delta=0." },
+    { id := "H7.weil-ground-state.prolate-source-rayleigh-gap-ratio"
+      tier := .tier2
+      title := "Prove the arithmetic prolate Rayleigh-excess-to-gap ratio tends to zero"
+      statement :=
+        "Instantiate the exact finite-prime Weil matrix, its normalized true ground vector and gap, and the normalized prolate coefficient vector, then prove that Rayleigh excess divided by the certified gap tends to zero in the source-prescribed Galerkin and prime-cutoff limit."
+      status := .inProgress
+      note := "This is an original open candidate suggested by the quantitative consumer, not a theorem stated in the locked Connes sources. No current Lean declaration defines all prime, archimedean, pole, and prolate entries. It has no leanName and is unavailable as a premise." },
     { id := "H1.short-mollifier.variational-global-minimizer"
       tier := .tier2
       title := "Certify the short-mollifier variational minimizer"
