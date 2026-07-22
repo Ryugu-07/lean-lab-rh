@@ -37,6 +37,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentPuiseuxJump
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryDispersion
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryTrace
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryTraceTwoScale
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryTraceNearZero
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2959,5 +2960,55 @@ example {z : ℂ} (hz : 0 < z.re) {delta A : ℝ}
         Filter.atTop (𝓝 0)) :=
   deBruijnNewmanPolymathBoydBoundaryTrace_tendsto_iff_near_add_tail
     hz hdelta hdeltaA
+
+example : deBruijnNewmanPolymathBoydBoundaryTraceNearZeroCertificateStatement :=
+  deBruijnNewmanPolymathBoydBoundaryTraceNearZeroCertificate
+
+example (w : ℂ) :
+    w * deBruijnNewmanPolymathScaledGamma w =
+      Complex.Gamma (w + 1) * deBruijnNewmanPolymathScaledGammaZeroFactor w :=
+  deBruijnNewmanPolymath_self_mul_scaledGamma_eq_zeroFactor w
+
+example (w : ℂ) :
+    (1 : ℂ) / deBruijnNewmanPolymathScaledGamma w =
+      (Real.sqrt (2 * Real.pi) : ℂ) * Complex.sqrt w *
+        Complex.exp (w * Complex.log w - w) / Complex.Gamma (w + 1) :=
+  deBruijnNewmanPolymath_inv_scaledGamma_eq_zeroFactor w
+
+example : ContinuousAt
+    (fun w : ℂ => w * deBruijnNewmanPolymathScaledGamma w) 0 :=
+  deBruijnNewmanPolymath_self_mul_scaledGamma_continuousAt_zero
+
+example : ContinuousAt
+    (fun w : ℂ => (1 : ℂ) / deBruijnNewmanPolymathScaledGamma w) 0 :=
+  deBruijnNewmanPolymath_inv_scaledGamma_continuousAt_zero
+
+example {z : ℂ} (hz : 0 < z.re) {delta : ℝ} (hdelta : 0 < delta) :
+    TendstoUniformlyOn
+      (fun epsilon y =>
+        deBruijnNewmanPolymathBoydShiftedBoundaryPairIntegrand z epsilon y)
+      (deBruijnNewmanPolymathBoydBoundaryAxisPairIntegrand z)
+      (𝓝[Set.Ici 0] 0)
+      (Set.Icc (-delta) delta) :=
+  deBruijnNewmanPolymathBoydShiftedBoundaryPairIntegrand_tendstoUniformlyOn_near
+    hz hdelta
+
+example {z : ℂ} (hz : 0 < z.re) {delta : ℝ} (hdelta : 0 < delta) :
+    Filter.Tendsto
+      (fun n : ℕ => deBruijnNewmanPolymathBoydBoundaryNearResidual z
+        (deBruijnNewmanPolymathBoydBoundaryEpsilon z n) delta)
+      Filter.atTop (𝓝 0) :=
+  deBruijnNewmanPolymathBoydBoundaryNearResidual_tendsto_canonical hz hdelta
+
+example {z : ℂ} (hz : 0 < z.re) {A : ℝ} (hA : 0 < A) :
+    (Filter.Tendsto
+        (deBruijnNewmanPolymathBoydBoundaryTraceDiscrepancy z)
+        Filter.atTop (𝓝 0) ↔
+      Filter.Tendsto
+        (fun n : ℕ => deBruijnNewmanPolymathBoydBoundaryTailResidual z
+          (deBruijnNewmanPolymathBoydBoundaryEpsilon z n) A
+          (deBruijnNewmanPolymathBoydBoundaryHeight z n))
+        Filter.atTop (𝓝 0)) :=
+  deBruijnNewmanPolymathBoydBoundaryTrace_tendsto_iff_tail hz hA
 
 end LeanLab.Riemann

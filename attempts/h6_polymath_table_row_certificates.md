@@ -1974,7 +1974,7 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 
 - `campaign`: `PROOF-ATTEMPT-20260722-H6-BOYD-BOUNDARY-TRACE-TWO-SCALE-01`
 - `mode`: `PROOF-ATTEMPT`
-- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; publicly closed, final ledger CI pending
+- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; publicly closed, final ledger CI passed
 - `target`: prove the Loop 28 canonical trace discrepancy tends to zero by separating its
   near-zero cancellation, fixed compact-annulus, and shifted-tail regimes
 - `material_difference_from_loop28`: Loop 28 supplied pointwise convergence away from zero but no
@@ -2017,6 +2017,8 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   `29890689402`, build job `88830378785`, passed in `2m16s`
 - `public_closure`: evidence commit `ea0c2cec523adbc394af69e3a93674517c765aa4`, CI run
   `29890883349`, build job `88830937245`, passed in `2m23s`
+- `public_final_ledger`: commit `eeb6ee4d0a9f04148b36590c8bdd1ed63e4c1c2c`, CI run
+  `29891040964`, build job `88831388930`, passed in `1m28s`
 - `compaction_state`: two compaction recoveries during Loop 29; the complete canonical frontier
   and new source were re-read after each before proof or publication work resumed
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
@@ -2024,4 +2026,73 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 - `next_route_decision`: locally stop after the preregistered exact reduction. After public
   closure, value-rank the two refined children against the still-open outer-edge limits and other
   DAG edges; do not promote either estimate to a premise.
+- `persistent_goal`: H6-Q1 and the global RH Goal remain active
+
+## Loop 30 Boyd boundary-trace near-zero elimination
+
+- `campaign`: `PROOF-ATTEMPT-20260722-H6-BOYD-BOUNDARY-TRACE-NEAR-ZERO-01`
+- `mode`: `PROOF-ATTEMPT`
+- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; locally verified, public implementation CI
+  pending
+- `target`: prove the complete canonical trace discrepancy limit by first removing the actual
+  scaled-Gamma singularity at the boundary origin, eliminating the canonical near residual, and
+  reducing the trace exactly to the shifted tail alone
+- `material_difference_from_loop29`: Loop 29 cancelled only the explicit `1/(12*w)` pair and left
+  both the true scaled-Gamma origin behavior and the shifted tail open. Loop 30 derives the local
+  behavior globally from Gamma recurrence, the principal logarithm, and the principal square root;
+  it does not assume a near bound or alter the registered boundary kernels.
+- `compiled_removable_chain`: `continuousAt_complex_self_mul_log_zero` proves `w*log(w) -> 0` in
+  the complex plane. The global totalized identities
+  `deBruijnNewmanPolymath_self_mul_scaledGamma_eq_zeroFactor` and
+  `deBruijnNewmanPolymath_inv_scaledGamma_eq_zeroFactor` expose the exact principal `sqrt(w)` zero
+  factor for `w*GammaStar(w)` and `1/GammaStar(w)`, including at `w=0`. Both functions are
+  continuous at zero and throughout the closed right half-plane.
+- `compiled_uniform_chain`:
+  `deBruijnNewmanPolymathBoydNearZeroRegularizedPairIntegrand_continuousOn_slab_near` proves joint
+  continuity on every compact right-offset slab. Heine--Cantor and the exact local equality with
+  the original pair give
+  `deBruijnNewmanPolymathBoydShiftedBoundaryPairIntegrand_tendstoUniformlyOn_near` on every
+  `[-delta,delta]` along the mandatory right-sided filter `nhdsWithin 0 (Ici 0)`.
+- `compiled_integral_chain`: the fixed near residual tends to zero along the right-sided filter,
+  the canonical positive offsets tend into that filter, and
+  `deBruijnNewmanPolymathBoydBoundaryNearResidual_tendsto_canonical` removes the near term from the
+  Loop 29 reduction. The aggregate theorem is
+  `deBruijnNewmanPolymathBoydBoundaryTraceNearZeroCertificate`.
+- `compiled_exact_reduction`:
+  `deBruijnNewmanPolymathBoydBoundaryTrace_tendsto_iff_tail` proves, for every `Re z>0` and `A>0`,
+  that the full canonical discrepancy tends to zero iff the canonical shifted-tail residual beyond
+  `A` tends to zero. The near-zero obstruction is closed rather than assumed.
+- `tail_attack_audit`: a bounded source/API attack found exact imaginary-axis modulus identities,
+  conditional Phragmen--Lindelof propagation, and lemmas deriving later bounds from an assumed
+  `R2` estimate, but no unconditional complex second-order Stirling estimate on the required
+  closed half-plane. Uniform boundedness of `GammaStar` and its inverse is insufficient: after the
+  Cauchy weights, tail integrability requires the first Stirling cancellation, for example a
+  uniform direct/inverse `R2 = O((1+y^2)^-1)` bound on the two vanishing-offset lines. Deriving that
+  bound from Boyd equation `(15)` would be circular.
+- `remaining_obstruction`: retain
+  `OBS-H6-BOYD-R2-BOUNDARY-TRACE-SHIFTED-TAIL-01`, now the sole exact child of the Loop 28 inner
+  trace. Prove a noncircular uniform second-order complex Stirling bound strong enough to make the
+  canonical tail residual vanish. Both Loop 27 outer-edge limits remain independent.
+- `assumption_frontier_after`: global removable identities, closed-right-half-plane continuity,
+  right-offset near uniform convergence, fixed and canonical near-residual convergence, and the
+  tail-only iff are K0. The tail limit, complete discrepancy limit, inner trace, both outer-edge
+  limits, equation `(15)`, effective `R2`, Table 1, H6-E/G8, and RH remain open and unassumed.
+- `classification_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`,
+  `route_infrastructure_delta=1`, `obstruction_map_delta=0`
+- `local_mechanical_audit`: 613-line production module, exact proven Target, eight exact
+  TargetChecks, nine selected standard-only axiom prints, three empty forbidden scans,
+  `git diff --check`, and the full 8,735-job build pass; every selected declaration depends only
+  on `propext`, `Classical.choice`, and `Quot.sound`
+- `public_preregistration`: commit `c56a9cc62744b06b2d82a323b4fc208cb370fe9c`, CI run
+  `29891398740`, build job `88832391759`, passed in `2m9s` before proof-source editing
+- `compaction_state`: one inherited compaction during the joint-continuity proof; current
+  governance, HANDOFF, relevant Targets/TargetChecks, the Loop29 outcome, hard-gap DAG, complete
+  Loop30 preregistration and source, AxiomsAudit tail, external ledger, and git status were re-read
+  before resuming. The user-supplied V4 archive was also inspected; its input-side proof freeze is
+  historical and explicitly superseded by V4.1.
+- `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
+- `budget`: no V4.1 numerical quota and no exposed serving token budget
+- `next_route_decision`: locally stop at the preregistered minimum hard-gap reduction. After public
+  closure, value-rank a direct shifted-tail complex-Stirling campaign against the two Loop 27
+  outer-edge limits and other open DAG edges; do not promote any conditional `R2` estimate.
 - `persistent_goal`: H6-Q1 and the global RH Goal remain active

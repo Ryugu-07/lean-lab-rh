@@ -842,3 +842,41 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   after each before continuing.
 - `still_open`: both refined trace children, both outer-edge limits, the global cut-stitching
   route, equation `(15)`, effective `R2`, unconditional Table 1 certificates, H6-E/G8, and RH.
+
+## 2026-07-22 H6-Q1 Loop 30 local outcome
+
+- `H6-Q1`: open; the boundary-origin child is proven locally and the inner trace is reduced to the
+  shifted tail alone.
+- `K0-H6-BOYD-R2-BOUNDARY-TRACE-SCALED-GAMMA-REMOVABLE-01`: globally, including the totalized
+  origin, `w*GammaStar(w)` and `1/GammaStar(w)` equal explicit products with the principal
+  `sqrt(w)` zero factor. Their continuity at zero follows from the independently compiled complex
+  limit `w*log(w) -> 0` and Gamma recurrence.
+- `K0-H6-BOYD-R2-BOUNDARY-TRACE-NEAR-UNIFORM-01`: the exact pole-free pair is jointly continuous on
+  compact closed right-offset slabs, agrees with the original pair for nonnegative offsets below
+  `Re z`, and converges uniformly to the registered axis kernel on every `[-delta,delta]` along
+  `nhdsWithin 0 (Ici 0)`.
+- `K0-H6-BOYD-R2-BOUNDARY-TRACE-NEAR-ZERO-01`: the fixed and canonical near residuals tend to zero.
+  Consequently the full trace discrepancy tends to zero iff the canonical shifted-tail residual
+  alone tends to zero for every positive cutoff.
+- `CLOSED-OBS-H6-BOYD-R2-BOUNDARY-TRACE-NEAR-ZERO-SCALED-GAMMA-01`: discharged by the preceding
+  removable-factor, uniform-convergence, and canonical-integral chain; no local estimate is
+  assumed.
+- `OBS-H6-BOYD-R2-BOUNDARY-TRACE-SHIFTED-TAIL-01`: now the sole inner-trace child. Prove a uniform
+  direct and inverse second-order complex Stirling bound on the two vanishing-offset lines, for
+  example `R2 = O((1+y^2)^-1)` uniformly outside a fixed cutoff, strong enough to make the
+  canonical tail residual vanish. Current K0 has only exact imaginary-axis modulus facts,
+  conditional half-plane propagation, and consequences of an already assumed `R2` bound.
+- `relation_to_loop27_obstruction`: this closes the near-origin part of the third Loop 27 limit
+  only. The shifted tail and both outer-edge decay limits remain independent, so equation `(15)`
+  is still open.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=0`.
+- `local_audit`: 613-line module, eight exact TargetChecks, nine selected standard-only axiom
+  prints, empty forbidden scans, `git diff --check`, and the full 8,735-job build pass.
+- `public_preregistration`: commit `c56a9cc62744b06b2d82a323b4fc208cb370fe9c`, CI run
+  `29891398740`, build job `88832391759`, passed in `2m9s` before proof-source editing.
+- `compaction_state`: one recovery; all canonical frontier files and the complete in-progress
+  source were re-read before continuing. The old V4 archive's proof freeze was audited as
+  superseded by V4.1.
+- `still_open`: the shifted-tail child, both outer-edge limits, the global cut-stitching route,
+  equation `(15)`, effective `R2`, unconditional Table 1 certificates, H6-E/G8, and RH.

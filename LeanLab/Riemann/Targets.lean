@@ -36,6 +36,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentPuiseuxJump
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryDispersion
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryTrace
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryTraceTwoScale
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryTraceNearZero
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1058,6 +1059,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanPolymathBoydBoundaryTraceTwoScaleCertificate
       status := .proven
       note := "Loop 29 meaningful hard-gap reduction. Lean identifies the exact symmetric boundary-axis kernel, proves joint continuity on a pole-free epsilon slab times every compact annulus, and applies Heine--Cantor to obtain uniform convergence there. Both fixed middle integrals and their canonical sequence tend to zero. The Loop 28 discrepancy is exactly partitioned into near-zero, middle, and shifted-tail residuals, yielding an iff that removes the middle regime completely. A further exact normal form cancels both explicit 1/(12*w) terms into one epsilon/6 rational correction. The remaining near-zero scaled-Gamma boundary bounds and shifted-tail control are not assumed or proved. Both outer-edge limits, equation (15), effective R2, Table 1, H6-E/G8, and RH remain open." },
+    { id := "H6.debruijn-newman.boyd-boundary-trace-near-zero"
+      tier := .tier2
+      title := "Eliminate the Boyd boundary-trace near-zero residual"
+      statement :=
+        "Globally remove the scaled-Gamma pole through the principal square-root factor, prove right-offset uniform convergence of the paired boundary kernel across the origin on every fixed near interval, prove the canonical near residual vanishes, and reduce the complete trace discrepancy exactly to the shifted-tail residual alone."
+      leanName := some ``deBruijnNewmanPolymathBoydBoundaryTraceNearZeroCertificate
+      status := .proven
+      note := "Loop 30 meaningful hard-gap reduction. Lean proves w*log(w) is continuous at zero and derives global totalized identities for w*GammaStar(w) and 1/GammaStar(w), each with the exact principal sqrt(w) zero factor. These identities make the pole-free paired kernel jointly continuous on compact right-offset slabs crossing the boundary origin. Heine--Cantor gives uniform convergence on every [-delta,delta] specifically along the right-sided filter, the fixed and canonical near residuals tend to zero, and the full discrepancy limit is equivalent to the canonical shifted-tail residual alone. A bounded tail audit found no unconditional closed-half-plane second-order complex Stirling estimate in mathlib or the project; the existing R2 estimates require that bound as a premise or depend downstream on Boyd equation (15). The shifted tail, both outer-edge limits, equation (15), effective R2, Table 1, H6-E/G8, and RH remain open and unassumed. Classification HARD_GAP_REDUCED." },
     { id := "H6.debruijn-newman.boyd-positive-real-saddle-integral"
       tier := .tier2
       title := "Derive the positive-real scaled-Gamma saddle integral"

@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260722-H6-BOYD-BOUNDARY-TRACE-NEAR-ZERO-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PREREGISTERED`
+Status: `LOCALLY_VERIFIED / MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`
 
 ## Opening
 
@@ -221,3 +221,26 @@ unconditional discrepancy limit and close the Loop 28 inner trace.
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort are not exposed.
 - `budget`: V4.1 has no numerical quota; no serving token budget is exposed.
 - `global_goal`: the persistent RH Goal remains active.
+
+## Local outcome
+
+The preregistered minimum hard-gap reduction compiled in full. The 613-line production module
+proves both global totalized scaled-Gamma removable identities, their zero continuity, joint
+continuity of the exact pole-free pair on closed right-offset slabs, right-sided uniform
+convergence on every fixed near interval, fixed and canonical near-residual convergence, and the
+exact tail-only trace iff. The aggregate theorem is
+`deBruijnNewmanPolymathBoydBoundaryTraceNearZeroCertificate`.
+
+The full success criterion was not reached. A bounded tail attack found no unconditional
+closed-half-plane second-order complex Stirling estimate in mathlib or current K0. Existing
+half-plane bounds retain growth hypotheses, and existing effective consequences assume the `R2`
+bound that this route must prove. Thus
+`OBS-H6-BOYD-R2-BOUNDARY-TRACE-NEAR-ZERO-SCALED-GAMMA-01` is closed, while
+`OBS-H6-BOYD-R2-BOUNDARY-TRACE-SHIFTED-TAIL-01` remains the sole inner-trace child. The
+discrepancy limit, inner trace, outer edges, equation `(15)`, effective `R2`, Table 1, H6-E/G8,
+and RH remain open and unassumed.
+
+Targets, eight exact TargetChecks, nine selected standard-only axiom prints, three forbidden
+scans, `git diff --check`, and the full 8,735-job build pass. Every selected declaration depends
+only on `propext`, `Classical.choice`, and `Quot.sound`. Public implementation and closure evidence
+are pending.
