@@ -1147,6 +1147,21 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   passed run `29940351313`, build job `88992322443`, in `1m48s`. The campaign stops locally;
   final-ledger CI remains before route selection.
 
+## 2026-07-23 H9 closure and H12 Speiser counting-equivalence launch
+
+- `H9-CONREY-RATIONALITY-FLAT-INTERVAL-01`: publicly closed at final-ledger commit
+  `418a1b3e469a0a71e67ba39ac22eb0dd974d37f3`, run `29940746044`, build job `88993661951`.
+- `H12-SPEISER-LEVINSON-MONTGOMERY-COUNT-01`: selected known-theorem reconstruction and
+  cross-route localizer. Exact endpoint is
+  `RiemannHypothesis iff zeta' has no upper-left-strip zero`.
+- `logical_hinge`: asymptotic count agreement with `O(log T)` error permits finite exceptions;
+  exact equality of multiplicity-bearing counts on an unbounded height sequence is decisive.
+- `analytic_gap`: construct the `zeta'` divisor, then prove the source indented-rectangle boundary
+  sign and argument-principle theorem producing exact count equality. No part is assumed.
+- `cross_route_role`: H1/H2 would need a theorem forcing the derivative count below one at
+  unbounded heights; no such theorem is currently known.
+- `global_goal`: active; preregistration public CI precedes proof-source editing.
+
 ## 2026-07-22 H7 closure and H1 short-mollifier launch
 
 - `H7-WEIL-GROUNDSTATE-HERGLOTZ-01`: finite criterion campaign fully public-green at final-ledger

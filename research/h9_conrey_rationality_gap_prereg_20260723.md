@@ -166,4 +166,7 @@ Targets, TargetChecks, AxiomsAudit, or aggregate imports are edited.
   `1m48s`.
 - `local_stop`: reached at the registered success endpoint. The actual-character flat-prefix
   exclusion remains an open source obligation.
-- `next_gate`: final-ledger commit and public CI, then historical route selection.
+- `final_ledger_commit`: `418a1b3e469a0a71e67ba39ac22eb0dd974d37f3`.
+- `final_ledger_public_ci`: Lean Action run `29940746044`, build job `88993661951`, passed in
+  `1m30s`.
+- `next_gate`: complete; H12 Speiser counting equivalence is selected independently.

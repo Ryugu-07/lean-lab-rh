@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260723-H9-CONREY-RATIONALITY-GAP-01`
 
 Mode: `FALSIFICATION`
 
-Status: `EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
+Status: `PUBLICLY_CLOSED`
 
 ## Runtime record
 
@@ -43,6 +43,7 @@ certifies one.
 | 4 | `LEAN_IMPLEMENTATION` | Compiled the exact finite weighted-prefix identity, proved that zero first moment makes the prefix constant in its scale, proved the exhaustive flat-or-explicit-rational dichotomy, and checked a rational-parameter `sqrt(2)` countermodel. Five exact TargetChecks and five selected axiom prints pass; the full 8,741-job build passes. | Classify the generic rationality inference as formally falsified while keeping the actual quadratic-character Proposition 1 open. Publish the frozen implementation and require public CI. |
 | 5 | `IMPLEMENTATION_CI` | Implementation commit `4c9939496e6a508c2f5e631ad3fa5ede9f5a69aa` passed Lean Action run `29940099631`, build job `88991480954`, in `1m56s`. | Freeze Lean proof source. Publish immutable implementation evidence and require its own public CI. |
 | 6 | `EVIDENCE_CI` | Evidence commit `3f6eee393a262582f3d52a54f5e18bf07e6dd143` passed Lean Action run `29940351313`, build job `88992322443`, in `1m48s`. | Stop at the registered local success endpoint. Publish the final ledger, require its CI, then return the persistent RH Goal to historical route selection. |
+| 7 | `FINAL_LEDGER_CI` | Final-ledger commit `418a1b3e469a0a71e67ba39ac22eb0dd974d37f3` passed Lean Action run `29940746044`, build job `88993661951`, in `1m30s`. | Campaign publicly closed. Select H12 Speiser/Levinson-Montgomery as the next cross-route historical audit. |
 
 ## Compiled declarations
 
@@ -81,5 +82,8 @@ Definition alignment is recorded in
 - `local_stop`: reached at the preregistered corrected-dichotomy and countermodel endpoint.
 - `remaining_source_obligation`: prove that every actual relevant quadratic-character prefix
   excludes `B_m=0,A_m=H`, or replace Proposition 1's proof by an independent argument.
-- `next_gate`: final-ledger commit and public CI; then `ROUTE_SELECTION`.
+- `final_ledger_commit`: `418a1b3e469a0a71e67ba39ac22eb0dd974d37f3`.
+- `final_ledger_public_ci`: Lean Action run `29940746044`, build job `88993661951`, passed in
+  `1m30s`.
+- `next_gate`: complete; successor campaign is H12 Speiser counting equivalence.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

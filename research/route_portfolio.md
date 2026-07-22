@@ -3000,3 +3000,20 @@ Evidence commit `3f6eee393a262582f3d52a54f5e18bf07e6dd143` passed public Lean Ac
 `29940351313`, build job `88992322443`, in `1m48s`. The campaign reaches its registered local stop.
 Final-ledger CI remains; the actual-character flat-prefix exclusion stays open for future
 cross-route comparison rather than being silently assumed.
+
+## H12 Speiser Counting-Equivalence Launch
+
+H9 final-ledger commit `418a1b3e469a0a71e67ba39ac22eb0dd974d37f3` passed public Lean Action
+run `29940746044`, build job `88993661951`, in `1m30s`. Fresh comparison selects
+`LITERATURE-20260723-H12-SPEISER-COUNTING-EQUIVALENCE-01`.
+
+The route is valuable because Speiser's derivative-zero condition is the exact kind of
+single-exception localizer missing from H1 critical-line proportions and H2 zero density. The
+formal target is the full upper-left-strip equivalence, not another finite count estimate.
+Levinson-Montgomery's exact equal-count subsequence is the decisive source step; their
+`O(log T)` count comparison alone remains compatible with finite exceptions.
+
+The 1935 Speiser geometry is historical motivation only because its level-curve proof has known
+rigor gaps. The proof spine uses the rigorous 1974 count theorem and will expose every functional
+equation, Gamma estimate, low-height verification, contour indentation, and argument-principle
+obligation. Public preregistration CI is required before Lean proof-source editing.
