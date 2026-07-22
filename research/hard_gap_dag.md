@@ -1059,5 +1059,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `obstruction_map_delta=1`.
 - `local_audit`: 556-line production module, nine exact TargetChecks, nine selected standard-only
   axiom prints, empty forbidden scans, `git diff --check`, and full 8,738-job build.
+- `public_implementation`: commit `77ab09b17d371787a8a2d043fd866056de061003` passed Lean Action
+  run `29930107842`, build job `88957270851`, in `2m26s`; immutable evidence and final-ledger CI
+  remain.
 - `still_open`: arithmetic Herglotz inequality, uniform simple-even structure, the actual
   ground-state-to-`k_lambda` comparison, W2/G7, M2/G3, H6-E/G8, and RH.

@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260722-H7-WEIL-FINITE-MATRIX-PARITY-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED / EVIDENCE_BACKFILL_PENDING`
 
 ## Baseline and route decision
 
@@ -204,3 +204,11 @@ checkerboard positive. The property holds in some small cells but fails for fixe
 the band grows, including robust failures at `(c,N)=(2,8),(3,8),(5,8),(7,6)`. Therefore the
 universal checkerboard-inverse Perron conjecture is rejected as a route candidate. This is
 numerical screening, not a Lean counterexample and not a falsification of source even-simplicity.
+
+## Public implementation evidence
+
+- `implementation_commit`: `77ab09b17d371787a8a2d043fd866056de061003`.
+- `public_ci`: Lean Action run `29930107842`, build job `88957270851`, passed in `2m26s`.
+- `evidence_state`: the public implementation commit independently rebuilds the exact module,
+  target witnesses, axiom audit, aggregate import, and synchronized historical-route records.
+- `next_gate`: immutable evidence-backfill commit and its own public CI; no Lean source changes.

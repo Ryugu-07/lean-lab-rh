@@ -2868,3 +2868,7 @@ premise or Lean falsification.
 Nine exact TargetChecks and nine selected standard-only axiom prints pass; forbidden scans and
 `git diff --check` are empty; the full 8,738-job build succeeds. Public implementation CI,
 immutable evidence backfill, and final closure remain before fresh route selection.
+
+Implementation commit `77ab09b17d371787a8a2d043fd866056de061003` passed public Lean Action run
+`29930107842`, build job `88957270851`, in `2m26s`. Lean source is frozen; immutable evidence
+backfill and its independent public CI are next.
