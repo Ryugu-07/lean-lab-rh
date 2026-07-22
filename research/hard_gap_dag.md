@@ -1444,7 +1444,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 
 ## 2026-07-23 H7 prolate Rayleigh-gap local result
 
-- `K0-H7-RAYLEIGH-GAP-CONSUMER-01`: locally closed. A normalized finite ground eigenline with
+- `K0-H7-RAYLEIGH-GAP-CONSUMER-01`: `IMPLEMENTATION_CI_PASSED / EVIDENCE_REQUIRED`. A normalized finite ground eigenline with
   positive orthogonal Rayleigh gap satisfies `delta * projective_defect <= rayleigh_excess`;
   division and one-parameter limit consumers compile.
 - `OBS-H7-COLLAPSING-GAP-01`: locally closed. The exact family `diag(0,epsilon_n)` has excess
@@ -1460,3 +1460,6 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   module. No source ratio, simple-even theorem, transform limit, or RH conclusion is proved.
 - `local_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_map_delta=1`,
   `obstruction_map_delta=1`; persistent RH Goal active.
+- `public_implementation`: frozen commit `4404a93e92777c904563cda68120e9a1057e084e` passed Lean Action
+  run `29965379529`, build job `89075616914`, in `2m36s`; proof source is frozen.
+- `next_gate`: publish immutable evidence without changing Lean source and require its public CI.

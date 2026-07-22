@@ -3399,3 +3399,8 @@ convergence, and real-zero transfer remain open. One proven and one open Target,
 TargetChecks, and eleven standard-only axiom prints pass locally. The production scan is empty and
 the full `8,750`-job build passes; public implementation CI is the next gate. Persistent RH Goal
 active.
+
+Frozen implementation commit `4404a93e92777c904563cda68120e9a1057e084e` passed public Lean
+Action run `29965379529`, build job `89075616914`, in `2m36s`. Lean proof source is frozen;
+immutable evidence and its own public CI remain before final-ledger closure. The concrete source
+ratio, H7, and RH remain open.

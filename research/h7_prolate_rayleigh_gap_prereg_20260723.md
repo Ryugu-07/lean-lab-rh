@@ -6,7 +6,7 @@ Campaign: `DISCOVERY-20260723-H7-PROLATE-RAYLEIGH-GAP-01`
 
 Selected node: `H7-WEIL-GROUNDSTATE-QUANTITATIVE-APPROX-01`
 
-Status: `PREREGISTRATION_CI_PASSED / LOCAL_IMPLEMENTATION_COMPLETE`
+Status: `IMPLEMENTATION_CI_PASSED / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Baseline
 
@@ -145,3 +145,7 @@ The generic consumer, ratio form, abstract sequence squeeze, and exact collapsin
 compile. This is `FULL_SUCCESS_AT_GENERIC_ENDPOINT` locally. The production scan is empty and the
 full `8,750`-job build passes; public implementation CI remains. The concrete
 arithmetic/prolate source ratio is still open and has no `leanName`.
+
+Frozen implementation commit `4404a93e92777c904563cda68120e9a1057e084e` passed public Lean
+Action run `29965379529`, build job `89075616914`, in `2m36s`. Lean proof source is frozen;
+immutable evidence and its own public CI are the next gate. The source ratio remains open.

@@ -4,7 +4,7 @@ Campaign: `DISCOVERY-20260723-H7-PROLATE-RAYLEIGH-GAP-01`
 
 Mode: `DISCOVERY / FALSIFICATION`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_CI_PASSED / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Baseline
 
@@ -29,6 +29,7 @@ Status: `LOCAL_IMPLEMENTATION_COMPLETE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 | 9 | `COLLAPSING_GAP_FALSIFICATION` | For `diag(0,epsilon_n)`, excess tends to zero while projective defect and excess/gap both remain one. | Reject absolute-error-only promotion; require relative gap control or a uniform source gap. |
 | 10 | `TARGET_AND_AXIOM_GATES` | One proven and one open Target, twelve exact TargetChecks, and eleven selected axiom prints compile. All selected theorems use only the standard three axioms. | Run the forbidden scan, diff checks, full build, and public implementation CI. |
 | 11 | `LOCAL_MECHANICAL_GATES` | Production forbidden scan and `git diff --check` are empty; direct compiles pass; the full `8,750`-job build passes with only pre-existing replay warnings. | Freeze the implementation commit and require independent public Lean Action CI. |
+| 12 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation commit `4404a93e92777c904563cda68120e9a1057e084e` passed run `29965379529`, build job `89075616914`, in `2m36s`. | Keep Lean proof source frozen; publish immutable evidence and require its own public CI. |
 
 ## Assumption and gap accounting
 
@@ -46,5 +47,9 @@ Status: `LOCAL_IMPLEMENTATION_COMPLETE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 - `source_candidate_outcome`: still open; no source object or limit is assumed.
 - `hard_gap_after`: unchanged. The ratio conjecture, source instantiation, double-limit order,
   coherent ground-state orientation, transform convergence, and real-zero transfer remain open.
-- `next_gate`: implementation commit and public Lean Action CI.
+- `public_implementation_evidence`: frozen implementation commit
+  `4404a93e92777c904563cda68120e9a1057e084e` passed Lean Action run `29965379529`, build job
+  `89075616914`, in `2m36s`.
+- `next_gate`: publish immutable evidence without changing Lean proof source and require the
+  evidence commit's own public Lean Action CI.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.
