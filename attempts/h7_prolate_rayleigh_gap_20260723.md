@@ -4,7 +4,7 @@ Campaign: `DISCOVERY-20260723-H7-PROLATE-RAYLEIGH-GAP-01`
 
 Mode: `DISCOVERY / FALSIFICATION`
 
-Status: `IMPLEMENTATION_CI_PASSED / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`
 
 ## Baseline
 
@@ -30,6 +30,7 @@ Status: `IMPLEMENTATION_CI_PASSED / IMMUTABLE_EVIDENCE_REQUIRED`
 | 10 | `TARGET_AND_AXIOM_GATES` | One proven and one open Target, twelve exact TargetChecks, and eleven selected axiom prints compile. All selected theorems use only the standard three axioms. | Run the forbidden scan, diff checks, full build, and public implementation CI. |
 | 11 | `LOCAL_MECHANICAL_GATES` | Production forbidden scan and `git diff --check` are empty; direct compiles pass; the full `8,750`-job build passes with only pre-existing replay warnings. | Freeze the implementation commit and require independent public Lean Action CI. |
 | 12 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation commit `4404a93e92777c904563cda68120e9a1057e084e` passed run `29965379529`, build job `89075616914`, in `2m36s`. | Keep Lean proof source frozen; publish immutable evidence and require its own public CI. |
+| 13 | `EVIDENCE_PUBLIC_CI` | Immutable-evidence commit `1e0c560293e189a4f02c5fc67f6de2758a239b28` passed run `29965651199`, build job `89076440184`, in `1m45s`. | Stop the generic consumer/falsification campaign at its registered endpoint; publish the final ledger before route reselection. |
 
 ## Assumption and gap accounting
 
@@ -50,6 +51,11 @@ Status: `IMPLEMENTATION_CI_PASSED / IMMUTABLE_EVIDENCE_REQUIRED`
 - `public_implementation_evidence`: frozen implementation commit
   `4404a93e92777c904563cda68120e9a1057e084e` passed Lean Action run `29965379529`, build job
   `89075616914`, in `2m36s`.
-- `next_gate`: publish immutable evidence without changing Lean proof source and require the
-  evidence commit's own public Lean Action CI.
+- `public_closure_evidence`: immutable-evidence commit
+  `1e0c560293e189a4f02c5fc67f6de2758a239b28` passed Lean Action run `29965651199`, build job
+  `89076440184`, in `1m45s`.
+- `local_stop`: the generic Rayleigh-gap consumer and collapsing-gap falsification endpoint are
+  compiled. The source-ratio conjecture and every downstream H7 edge remain open.
+- `next_gate`: publish the final campaign ledger and require public Lean Action CI, then return to
+  value-ranked historical-route and conjecture-pool selection.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

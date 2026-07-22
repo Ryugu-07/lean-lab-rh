@@ -3404,3 +3404,9 @@ Frozen implementation commit `4404a93e92777c904563cda68120e9a1057e084e` passed p
 Action run `29965379529`, build job `89075616914`, in `2m36s`. Lean proof source is frozen;
 immutable evidence and its own public CI remain before final-ledger closure. The concrete source
 ratio, H7, and RH remain open.
+
+Immutable-evidence commit `1e0c560293e189a4f02c5fc67f6de2758a239b28` passed public Lean
+Action run `29965651199`, build job `89076440184`, in `1m45s`. The local campaign stops at the
+registered generic Rayleigh-gap consumer and collapsing-gap falsification endpoint; proof source
+remains frozen. Final-ledger CI is the last publication gate before value-ranked historical-route
+and conjecture-pool selection. The concrete source ratio, H7, and RH remain open.

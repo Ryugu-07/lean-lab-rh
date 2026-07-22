@@ -1444,8 +1444,9 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 
 ## 2026-07-23 H7 prolate Rayleigh-gap local result
 
-- `K0-H7-RAYLEIGH-GAP-CONSUMER-01`: `IMPLEMENTATION_CI_PASSED / EVIDENCE_REQUIRED`. A normalized finite ground eigenline with
-  positive orthogonal Rayleigh gap satisfies `delta * projective_defect <= rayleigh_excess`;
+- `K0-H7-RAYLEIGH-GAP-CONSUMER-01`: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`. A normalized
+  finite ground eigenline with positive orthogonal Rayleigh gap satisfies
+  `delta * projective_defect <= rayleigh_excess`;
   division and one-parameter limit consumers compile.
 - `OBS-H7-COLLAPSING-GAP-01`: locally closed. The exact family `diag(0,epsilon_n)` has excess
   tending to zero while defect and excess/gap remain one, so absolute excess alone cannot close
@@ -1462,4 +1463,6 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   `obstruction_map_delta=1`; persistent RH Goal active.
 - `public_implementation`: frozen commit `4404a93e92777c904563cda68120e9a1057e084e` passed Lean Action
   run `29965379529`, build job `89075616914`, in `2m36s`; proof source is frozen.
-- `next_gate`: publish immutable evidence without changing Lean source and require its public CI.
+- `public_closure_evidence`: commit `1e0c560293e189a4f02c5fc67f6de2758a239b28` passed Lean Action
+  run `29965651199`, build job `89076440184`, in `1m45s`; only final-ledger CI remains.
+- `next_gate`: publish the final ledger, then return to historical-route/conjecture-pool selection.

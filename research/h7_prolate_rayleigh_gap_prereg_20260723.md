@@ -6,7 +6,7 @@ Campaign: `DISCOVERY-20260723-H7-PROLATE-RAYLEIGH-GAP-01`
 
 Selected node: `H7-WEIL-GROUNDSTATE-QUANTITATIVE-APPROX-01`
 
-Status: `IMPLEMENTATION_CI_PASSED / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`
 
 ## Baseline
 
@@ -149,3 +149,8 @@ arithmetic/prolate source ratio is still open and has no `leanName`.
 Frozen implementation commit `4404a93e92777c904563cda68120e9a1057e084e` passed public Lean
 Action run `29965379529`, build job `89075616914`, in `2m36s`. Lean proof source is frozen;
 immutable evidence and its own public CI are the next gate. The source ratio remains open.
+
+Immutable-evidence commit `1e0c560293e189a4f02c5fc67f6de2758a239b28` passed public Lean
+Action run `29965651199`, build job `89076440184`, in `1m45s`. The registered generic endpoint
+has reached its local stop. Final-ledger publication and CI precede route reselection; the source
+ratio, H7, and RH remain open.
