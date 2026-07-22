@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260722-H7-WEIL-GROUNDSTATE-ALIGN-01`
 
 Mode: `LITERATURE`
 
-Status: `IMPLEMENTATION_PUBLIC_CI_PASSED / EVIDENCE_COMMIT_PENDING`
+Status: `PUBLIC_CLOSURE_EVIDENCE_PASSED / FINAL_LEDGER_CI_PENDING`
 
 ## Baseline and route decision
 
@@ -160,3 +160,7 @@ build passed with `8,737` jobs; public implementation evidence remains pending.
 Implementation commit `0ed05ba49605c7de621f16193ff73dd63a7bbabb` passed public Lean Action run
 `29924570570`, build job `88938283725`, in `1m56s`. Immutable evidence backfill and its own public
 CI remain before local campaign closure.
+
+Evidence commit `b2c752d730a48d76fadfc5ff1165f3e1240feed6` passed public Lean Action run
+`29924847974`, build job `88939252739`, in `1m39s`. The registered meaningful-partial endpoint is
+publicly evidenced; only the final-ledger commit and its CI remain.

@@ -4,7 +4,7 @@ Date: 2026-07-22
 
 Campaign: `LITERATURE-20260722-H7-WEIL-GROUNDSTATE-ALIGN-01`
 
-Status: `IMPLEMENTATION_PUBLIC_CI_PASSED / EVIDENCE_COMMIT_PENDING`
+Status: `PUBLIC_CLOSURE_EVIDENCE_PASSED / FINAL_LEDGER_CI_PENDING`
 
 Classification:
 `MEANINGFUL_PARTIAL / WEIGHTED_COORDINATE_ALIGNMENT_COMPILED /
@@ -118,5 +118,7 @@ closure extension.
 - Full project build: passed locally with `8,737` jobs.
 - Public implementation CI: commit `0ed05ba49605c7de621f16193ff73dd63a7bbabb` passed run
   `29924570570`, build job `88938283725`, in `1m56s`.
-- Evidence backfill CI: pending at this checkpoint.
+- Evidence backfill CI: commit `b2c752d730a48d76fadfc5ff1165f3e1240feed6` passed run
+  `29924847974`, build job `88939252739`, in `1m39s`.
+- Final-ledger CI: pending at this checkpoint.
 - Persistent RH Goal: active.

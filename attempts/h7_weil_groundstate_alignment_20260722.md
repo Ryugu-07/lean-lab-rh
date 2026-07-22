@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260722-H7-WEIL-GROUNDSTATE-ALIGN-01`
 
 Mode: `LITERATURE`
 
-Status: `IMPLEMENTATION_PUBLIC_CI_PASSED / EVIDENCE_COMMIT_PENDING`
+Status: `PUBLIC_CLOSURE_EVIDENCE_PASSED / FINAL_LEDGER_CI_PENDING`
 
 ## Runtime record
 
@@ -29,6 +29,7 @@ Status: `IMPLEMENTATION_PUBLIC_CI_PASSED / EVIDENCE_COMMIT_PENDING`
 | 2 | `PREREGISTRATION_PUBLIC_CI` | Commit `0e1941d05c2f0a9faa166170e93a017f121fe9f6` passed run `29922818186`, build job `88932298080`, in `1m33s`. | Begin the itemized alignment and weighted-coordinate Lean bridge. |
 | 3 | `M0_ALIGNMENT / LEAN_BRIDGE` | Completed all fourteen rows in `research/h7_weil_groundstate_alignment_20260722.md`. Lean compiles the weighted involution, autocorrelation, positive-sign transform, source negative-sign coordinate `s=1/2-i*z`, and both source pole moments. Exact witnesses and selected axiom prints pass. | Classify `MEANINGFUL_PARTIAL`: algebraic alignment succeeds, while the source Galerkin class cannot directly instantiate the project's globally smooth compact criterion. Close this campaign after full build/public CI; make finite matrix/parity formalization and spectral falsification a separate child. |
 | 4 | `IMPLEMENTATION_PUBLIC_CI` | Implementation commit `0ed05ba49605c7de621f16193ff73dd63a7bbabb` passed run `29924570570`, build job `88938283725`, in `1m56s`. | Backfill immutable evidence without changing Lean source; require the evidence commit to pass its own public CI. |
+| 5 | `CLOSURE_EVIDENCE_PUBLIC_CI` | Evidence commit `b2c752d730a48d76fadfc5ff1165f3e1240feed6` passed run `29924847974`, build job `88939252739`, in `1m39s`. | Submit the final ledger and stop this local campaign at its registered meaningful-partial endpoint. Persistent RH Goal remains active. |
 
 ## Initial correction and exact risk
 
@@ -56,7 +57,11 @@ Status: `IMPLEMENTATION_PUBLIC_CI_PASSED / EVIDENCE_COMMIT_PENDING`
   only `propext`, `Classical.choice`, and `Quot.sound`.
 - Full project build passed with `8,737` jobs. Implementation commit
   `0ed05ba49605c7de621f16193ff73dd63a7bbabb` passed public run `29924570570`, build job
-  `88938283725`, in `1m56s`. Evidence backfill and final ledger remain.
+  `88938283725`, in `1m56s`. Evidence commit `b2c752d730a48d76fadfc5ff1165f3e1240feed6`
+  passed run `29924847974`, build job `88939252739`, in `1m39s`. Only final-ledger CI remains.
 - Proposed independent child after closure: formalize the exact source finite matrix and parity
   blocks, then run `FALSIFICATION` against simple/even ground-state uniformity before an infinite
   spectral proof attempt.
+- `local_stop`: reached. No further theorem is manufactured inside this alignment campaign.
+  Persistent RH Goal remains active and route selection may start the independent child after the
+  final ledger passes public CI.

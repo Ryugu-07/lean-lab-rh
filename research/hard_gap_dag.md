@@ -1009,6 +1009,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_infrastructure_delta=1`,
   `obstruction_map_delta=1`.
 - `public_implementation`: commit `0ed05ba49605c7de621f16193ff73dd63a7bbabb` passed Lean Action
-  run `29924570570`, build job `88938283725`, in `1m56s`; evidence backfill remains.
+  run `29924570570`, build job `88938283725`, in `1m56s`.
+- `public_closure_evidence`: commit `b2c752d730a48d76fadfc5ff1165f3e1240feed6` passed Lean Action
+  run `29924847974`, build job `88939252739`, in `1m39s`; final-ledger CI remains.
 - `global_goal`: active; H7 spectral and true-ground-state limit nodes, W2/G7, M2/G3, H6-E/G8,
   and RH remain open.
