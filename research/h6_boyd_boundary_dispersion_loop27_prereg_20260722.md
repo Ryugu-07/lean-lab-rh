@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260722-H6-BOYD-BOUNDARY-DISPERSION-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED_EVIDENCE_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Opening
 
@@ -268,6 +268,8 @@ or prove the right-half-plane statement directly.
   `29884574692`, build job `88812386449`, passed in `1m52s` before source editing.
 - `public_implementation`: commit `526f7221dc11f15f8d48a98f02f102a4bce507d2`, Lean Action run
   `29886280505`, build job `88817383080`, passed in `2m19s`.
+- `public_closure`: evidence commit `2db6acedf415f0588813f2b8155a3d1d7c1fa2de`, Lean Action run
+  `29886447528`, build job `88817871887`, passed in `1m53s`.
 - `compaction_state_after`: two compaction recoveries occurred in Loop 27; authoritative files were
   re-read after each.
 - `persistent_goal`: H6-Q1 and the global RH Goal remain active. Local stop returns to value-ranked

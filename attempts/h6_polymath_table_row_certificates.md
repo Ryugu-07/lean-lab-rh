@@ -1856,8 +1856,7 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 
 - `campaign`: `PROOF-ATTEMPT-20260722-H6-BOYD-BOUNDARY-DISPERSION-01`
 - `mode`: `PROOF-ATTEMPT`
-- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; public implementation verified, immutable
-  evidence backfill pending
+- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; publicly closed
 - `target`: prove Boyd--Nemes equation `(15)` by rewriting its two exponentially weighted scaled-
   Gamma rays as one boundary jump, splitting that jump across the right and left half-planes, and
   evaluating the resulting Cauchy projection
@@ -1902,6 +1901,8 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   `29884574692`, build job `88812386449`, passed in `1m52s` before proof-source editing
 - `public_implementation`: commit `526f7221dc11f15f8d48a98f02f102a4bce507d2`, CI run
   `29886280505`, build job `88817383080`, passed in `2m19s`
+- `public_closure`: evidence commit `2db6acedf415f0588813f2b8155a3d1d7c1fa2de`, CI run
+  `29886447528`, build job `88817871887`, passed in `1m53s`
 - `compaction_state`: two compaction recoveries during Loop 27; the complete canonical frontier
   was re-read after each before proof or publication work
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
