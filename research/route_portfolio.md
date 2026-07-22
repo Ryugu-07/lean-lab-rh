@@ -3042,3 +3042,8 @@ Frozen implementation commit `2a6290a27fd7675db409f884679d1a554c13b72d` passed p
 Action run `29943873685`, build job `89004249306`, in `2m6s`. Lean source is frozen;
 immutable-evidence CI and final-ledger CI remain before this local campaign returns the persistent
 RH Goal to historical-route omission search.
+
+Immutable-evidence commit `eeca9f7fc910b323df7aaaec00f3258c92063483` passed public Lean
+Action run `29944285692`, build job `89005620974`, in `1m33s`. Only final-ledger CI remains for
+this local consumer campaign. The analytic H12-D/H12-E nodes are retained as open route work;
+stopping this campaign does not close the Speiser family.

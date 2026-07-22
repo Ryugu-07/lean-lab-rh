@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260723-H12-SPEISER-COUNTING-EQUIVALENCE-01`
 
 Mode: `LITERATURE`
 
-Status: `MEANINGFUL_PARTIAL / EVIDENCE_CI_REQUIRED`
+Status: `MEANINGFUL_PARTIAL / FINAL_LEDGER_CI_REQUIRED`
 
 ## Runtime record
 
@@ -45,6 +45,7 @@ unproved Lean premise.
 | 9 | `CONDITIONAL_EQUIVALENCE` | `riemannHypothesis_iff_speiserDerivativeZeroFree_of_levinsonMontgomeryTheoremOne` compiles from the literal logarithmic bound and count dichotomy. | Register it as a conditional source consumer, not as completion of Speiser's theorem. |
 | 10 | `MECHANICAL_AUDIT` | Five exact TargetChecks pass; five selected axiom prints contain only `propext`, `Classical.choice`, and `Quot.sound`; forbidden scan and `git diff --check` are clean; full `lake build` passes 8,742 jobs. | Stop locally at the first exact external analytic obstruction and require implementation CI. |
 | 11 | `IMPLEMENTATION_CI` | Implementation commit `2a6290a27fd7675db409f884679d1a554c13b72d` passed Lean Action run `29943873685`, build job `89004249306`, in `2m6s`. | Freeze all Lean proof source. Publish immutable implementation evidence and require its own public CI. |
+| 12 | `EVIDENCE_CI` | Evidence commit `eeca9f7fc910b323df7aaaec00f3258c92063483` passed Lean Action run `29944285692`, build job `89005620974`, in `1m33s`. | Record the local stop in the final ledger, require its public CI, then return the persistent RH Goal to fresh historical-route selection. |
 
 ## Compiled declarations
 
@@ -86,5 +87,9 @@ unproved Lean premise.
 - `implementation_public_ci`: Lean Action run `29943873685`, build job `89004249306`, passed in
   `2m6s`.
 - `proof_source_state`: frozen at the implementation commit.
-- `next_gate`: immutable evidence commit and public CI; then final ledger.
+- `evidence_commit`: `eeca9f7fc910b323df7aaaec00f3258c92063483`.
+- `evidence_public_ci`: Lean Action run `29944285692`, build job `89005620974`, passed in `1m33s`.
+- `local_stop`: reached at the conditional count consumer; H12-D and H12-E remain open and may be
+  resumed when their analytic prerequisites outrank other historical-route audits.
+- `next_gate`: final ledger commit and public CI; then fresh historical-route selection.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

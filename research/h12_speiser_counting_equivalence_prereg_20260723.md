@@ -166,7 +166,7 @@ source, Targets, TargetChecks, AxiomsAudit, or aggregate imports.
 - `preregistration_commit`: `178d86eaa7d02d8eb88421171bee8964c722fb0e`.
 - `preregistration_public_ci`: Lean Action run `29941747166`, build job `88997067033`, passed in
   `1m33s`.
-- `result`: `MEANINGFUL_PARTIAL / EVIDENCE_CI_REQUIRED`.
+- `result`: `MEANINGFUL_PARTIAL / FINAL_LEDGER_CI_REQUIRED`.
 - The 465-line production module constructs the actual derivative divisor and both finite
   multiplicity-bearing counts. It proves the exact count consumer, the real-axis base fact by
   cross-route H6 positivity, and the full conditional equivalence from the two source-faithful
@@ -180,4 +180,6 @@ source, Targets, TargetChecks, AxiomsAudit, or aggregate imports.
 - Five exact TargetChecks and five selected standard-only axiom prints pass. Full `lake build`
   passes 8,742 jobs. Implementation commit `2a6290a27fd7675db409f884679d1a554c13b72d`
   passed public Lean Action run `29943873685`, build job `89004249306`, in `2m6s`; Lean proof
-  source is frozen and immutable-evidence CI is next.
+  source is frozen. Evidence commit `eeca9f7fc910b323df7aaaec00f3258c92063483` passed run
+  `29944285692`, build job `89005620974`, in `1m33s`. Final-ledger CI is the remaining local gate;
+  H12-D/H12-E and RH remain open after this campaign stops.

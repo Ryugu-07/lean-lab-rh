@@ -1181,6 +1181,9 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `public_implementation_evidence`: frozen implementation commit
   `2a6290a27fd7675db409f884679d1a554c13b72d` passed Lean Action run `29943873685`, build job
   `89004249306`, in `2m6s`; immutable-evidence commit CI remains before local closure.
+- `public_closure_evidence`: evidence commit `eeca9f7fc910b323df7aaaec00f3258c92063483`
+  passed Lean Action run `29944285692`, build job `89005620974`, in `1m33s`. Final-ledger CI
+  remains; H12-D and H12-E stay open after the consumer campaign stops.
 
 ## 2026-07-22 H7 closure and H1 short-mollifier launch
 
