@@ -3147,3 +3147,9 @@ Frozen implementation commit `ca656cb6e24b5084b403d53e5a3763dc34b642be` passed p
 Action run `29950744385`, build job `89027520728`, in `2m4s`. The proof source is now frozen;
 immutable evidence and its own public CI remain before this local falsification campaign returns
 to historical-route omission search. Actual-xi all-index hyperbolicity and RH remain open.
+
+Immutable-evidence commit `c567b96b0315121c3df10c4088422121f8f866a9` passed public Lean Action
+run `29951025462`, build job `89028448900`, in `1m37s`. The local campaign stops at the registered
+generic quantifier-falsification endpoint; proof source remains frozen. Final-ledger CI is the last
+publication gate before fresh cross-family selection. This stop does not close H8: the actual-xi
+all-index theorem and RH remain open.

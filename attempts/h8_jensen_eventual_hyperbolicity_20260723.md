@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260723-H8-JENSEN-EVENTUAL-HYPERBOLICITY-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `IMPLEMENTATION_CI_PASSED / EVIDENCE_COMMIT_REQUIRED`
+Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`
 
 ## Runtime record
 
@@ -43,6 +43,7 @@ eventual-hyperbolicity theorems.
 | 8 | `PROJECT_INTEGRATION` | The module, two Targets, seven exact TargetChecks, and six selected axiom prints compile. Selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`. | Record definition alignment, then run forbidden scan, diff check, module build, and full build. |
 | 9 | `FULL_LOCAL_BUILD` | The production forbidden scan is empty, `git diff --check` passes, the H8 module has no local warning, and the full `8,744`-job build passes. | Freeze the implementation in a scoped commit and require independent public CI. |
 | 10 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation commit `ca656cb6e24b5084b403d53e5a3763dc34b642be` passed public Lean Action run `29950744385`, build job `89027520728`, in `2m4s`. | Keep Lean proof source frozen; publish immutable implementation evidence and require that evidence commit's own public CI. |
+| 11 | `EVIDENCE_PUBLIC_CI` | Immutable-evidence commit `c567b96b0315121c3df10c4088422121f8f866a9` passed public Lean Action run `29951025462`, build job `89028448900`, in `1m37s`. | Stop the local falsification campaign at its registered endpoint; publish the final ledger and return the active RH Goal to historical-route omission search. |
 
 ## Assumption and gap accounting
 
@@ -62,5 +63,10 @@ eventual-hyperbolicity theorems.
 - `public_implementation_evidence`: frozen implementation commit
   `ca656cb6e24b5084b403d53e5a3763dc34b642be` passed Lean Action run `29950744385`, build job
   `89027520728`, in `2m4s`.
-- `next_gate`: immutable-evidence commit and public CI.
+- `public_closure_evidence`: immutable-evidence commit
+  `c567b96b0315121c3df10c4088422121f8f866a9` passed Lean Action run `29951025462`, build job
+  `89028448900`, in `1m37s`.
+- `local_stop`: the registered generic falsification endpoint is publicly closed. H8 actual-xi
+  all-index hyperbolicity and RH remain open.
+- `next_gate`: final-ledger commit and public CI, then fresh historical-route selection.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

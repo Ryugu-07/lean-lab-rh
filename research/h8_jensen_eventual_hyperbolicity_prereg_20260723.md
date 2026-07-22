@@ -6,7 +6,7 @@ Campaign: `FALSIFICATION-20260723-H8-JENSEN-EVENTUAL-HYPERBOLICITY-01`
 
 Selected node: `H8-JENSEN-EVENTUAL-NOT-GLOBAL-01`
 
-Status: `IMPLEMENTATION_CI_PASSED / EVIDENCE_COMMIT_REQUIRED`
+Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`
 
 ## Selection reason
 
@@ -155,4 +155,7 @@ Actual-xi all-index hyperbolicity and RH remain open. The production forbidden s
 `git diff --check` passes, the H8 module has no local warning, and the full `8,744`-job build
 passes. Frozen implementation commit `ca656cb6e24b5084b403d53e5a3763dc34b642be` passed public Lean
 Action run `29950744385`, build job `89027520728`, in `2m4s`. Lean proof source is frozen;
-immutable-evidence publication and its own public CI are the next gate.
+immutable-evidence commit `c567b96b0315121c3df10c4088422121f8f866a9` then passed public Lean
+Action run `29951025462`, build job `89028448900`, in `1m37s`. The generic falsification campaign
+has reached its registered local stop. Final-ledger publication and CI precede fresh historical-
+route selection; actual-xi all-index hyperbolicity and RH remain open.

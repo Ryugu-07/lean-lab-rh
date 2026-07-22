@@ -1131,6 +1131,10 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `ca656cb6e24b5084b403d53e5a3763dc34b642be` passed Lean Action run `29950744385`, build job
   `89027520728`, in `2m4s`. Lean proof source is frozen; immutable-evidence CI remains before local
   closure. `H8-D-XI-ALL-INDEX-01` and RH remain open.
+- `public_closure_evidence`: immutable-evidence commit
+  `c567b96b0315121c3df10c4088422121f8f866a9` passed Lean Action run `29951025462`, build job
+  `89028448900`, in `1m37s`. The generic promotion countermodel is publicly closed at its fixed
+  endpoint; final-ledger CI remains. `H8-D-XI-ALL-INDEX-01` and RH remain open.
 
 ## 2026-07-23 H1 closure and H9 Conrey rationality-gap launch
 
