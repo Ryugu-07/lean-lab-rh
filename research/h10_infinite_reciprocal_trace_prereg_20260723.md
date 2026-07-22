@@ -6,11 +6,15 @@ Campaign: `FALSIFICATION-20260723-H10-INFINITE-RECIPROCAL-TRACE-01`
 
 Selected node: `H10-INFINITE-ORDINARY-TRACE-RECIPROCITY-01`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_CI_PASSED / EVIDENCE_COMMIT_REQUIRED`
 
 Preregistration commit `8077a2558142a1968b283296e9fc196da02bda93` passed public Lean Action
 run `29955908591`, build job `89044796394`, in `2m32s`. Proof-source editing began only after this
 gate passed.
+
+Frozen implementation commit `34b307baaca52e043d05668894abe4cceb9a3c2a` passed public Lean
+Action run `29956666496`, build job `89047355398`, in `2m25s`. Lean proof source is frozen;
+immutable-evidence publication and its own public CI are the next gate.
 
 ## Selection reason
 

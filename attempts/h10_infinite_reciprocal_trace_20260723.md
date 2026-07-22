@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260723-H10-INFINITE-RECIPROCAL-TRACE-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_CI_PASSED / EVIDENCE_COMMIT_REQUIRED`
 
 ## Runtime record
 
@@ -42,6 +42,7 @@ constant reciprocal pairing with ordinary summability of any positive power sequ
 | 6 | `LEAN_INFINITE_OBSTRUCTION` | Lean proves summability is preserved by permutation reindexing, both positive-power sequences tend to zero, and reciprocal pairing forces `q=0`. | Deduce nonzero `q` prevents every positive ordinary power trace. |
 | 7 | `FINITE_CONTRAST` | The one-point spectrum `alpha=1`, identity pairing, and `q=1` has every finite power family summable. | Attribute the obstruction to countably infinite ordinary summation, not reciprocal pairing alone. |
 | 8 | `INTEGRATION_AUDIT` | The aggregate endpoint, two Targets, seven exact TargetChecks, and seven selected axiom prints compile. Selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`. | Classify as generic transfer-boundary progress; leave regularized traces, actual zeta spectra, and RH open. |
+| 9 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation commit `34b307baaca52e043d05668894abe4cceb9a3c2a` passed public Lean Action run `29956666496`, build job `89047355398`, in `2m25s`. | Keep Lean proof source frozen; publish immutable implementation evidence and require that evidence commit's own public CI. |
 
 ## Assumption and gap accounting
 
@@ -57,5 +58,8 @@ constant reciprocal pairing with ordinary summability of any positive power sequ
 - `route_map_delta`: `1`; ordinary and regularized infinite traces are now separated.
 - `obstruction_map_delta`: `1`; the literal ordinary-trace transfer has a kernel-checked
   contradiction.
-- `next_gate`: implementation commit and public CI, followed by immutable evidence and final ledger.
+- `public_implementation_evidence`: frozen implementation commit
+  `34b307baaca52e043d05668894abe4cceb9a3c2a` passed Lean Action run `29956666496`, build job
+  `89047355398`, in `2m25s`.
+- `next_gate`: immutable-evidence commit and public CI, followed by final ledger.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

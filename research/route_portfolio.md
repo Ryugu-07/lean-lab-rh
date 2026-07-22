@@ -3220,4 +3220,10 @@ ordinary summability of any positive power and its permutation reindexing forces
 zero, contradicting a nonzero constant reciprocal product. A one-point finite witness verifies
 that finite reciprocal spectra retain ordinary traces. Two Targets, seven exact TargetChecks, and
 seven selected standard-only axiom audits compile. The actual regularized number-field trace,
-zeta spectral construction, and RH remain open; implementation publication and CI are next.
+zeta spectral construction, and RH remain open.
+
+Frozen implementation commit `34b307baaca52e043d05668894abe4cceb9a3c2a` passed public Lean
+Action run `29956666496`, build job `89047355398`, in `2m25s`. The proof source is now frozen;
+immutable evidence and its own public CI remain before this local H10-C audit returns to the
+unfinished historical atlas. Regularized traces, an actual zeta spectral construction, and RH
+remain open.
