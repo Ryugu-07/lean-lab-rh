@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260722-H1-SHORT-MOLLIFIER-VARIATIONAL-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_SUCCESS / IMPLEMENTATION_COMMIT_REQUIRED`
+Status: `PUBLIC_IMPLEMENTATION_GREEN / EVIDENCE_BACKFILL_REQUIRED`
 
 ## Runtime record
 
@@ -65,4 +65,9 @@ numerical premises.
   `OBS-H1-SPARSE-EXCEPTION-01`. The theorem does not prove the source mean-value asymptotic,
   proportion one, or exclusion of a finite/density-zero off-line orbit.
 - `next_gate`: implementation commit and public CI, followed by immutable evidence backfill.
+- `implementation_commit`: `bc1a4004979d12406f2bd415b4a44c6ba6269754`.
+- `implementation_public_ci`: Lean Action run `29936756654`, build job `88980205237`, passed in
+  `2m2s`.
+- `next_gate_after_public_implementation`: immutable evidence commit and its independent public
+  CI; Lean proof source is frozen.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

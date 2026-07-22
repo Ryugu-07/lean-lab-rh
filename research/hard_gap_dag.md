@@ -1150,4 +1150,7 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `source_sufficiency_audit_delta=1`.
 - `local_audit`: 374-line production module, six exact TargetChecks, six selected standard-only
   axiom prints, forbidden scan, `git diff --check`, and full 8,740-job build pass.
-- `global_goal`: active; implementation publication and CI are the next gate.
+- `public_implementation`: commit `bc1a4004979d12406f2bd415b4a44c6ba6269754` passed Lean Action
+  run `29936756654`, build job `88980205237`, in `2m2s`; immutable evidence and final-ledger CI
+  remain.
+- `global_goal`: active; immutable evidence publication and CI are the next gate.

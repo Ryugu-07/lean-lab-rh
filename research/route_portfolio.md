@@ -2953,3 +2953,7 @@ Classification is `PROVED / KNOWN_ANALYSIS_FORMALIZED / SOURCE_SUFFICIENCY_CERTI
 prints pass; the forbidden scan and `git diff --check` are clean; the full 8,740-job build passes.
 This closes the variational sufficiency question only. The mollified mean-value input and the
 sparse-exception obstruction remain the H1 barriers. Public implementation CI is next.
+
+Implementation commit `bc1a4004979d12406f2bd415b4a44c6ba6269754` passed public Lean Action
+run `29936756654`, build job `88980205237`, in `2m2s`. Lean proof source is frozen; immutable
+evidence backfill and its independent public CI are next.
