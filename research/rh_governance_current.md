@@ -15,6 +15,8 @@ protocols and attempt records remain historical evidence but cannot reintroduce 
   [`rh_governance_sol_claude_audit_20260717.md`](rh_governance_sol_claude_audit_20260717.md).
 - Current route source:
   [`rh_route_atlas_and_conjecture_factory_20260717.md`](rh_route_atlas_and_conjecture_factory_20260717.md).
+- Current user route-priority ruling:
+  [`historical_door_survey_current_20260722.md`](historical_door_survey_current_20260722.md).
 - Imported Sol census: [`historical_route_census.md`](historical_route_census.md), with H0-H14
   coverage and the requested H1/H2/H6 Batch A definitions.
 - Imported Sol progress audit:
@@ -130,6 +132,14 @@ The function-field Bombieri-Stepanov line should receive the next census source 
 research tasks do not restrict direct attacks on other open nodes. The original Batch A
 deliverable remains recorded in
 [`next_route_census_instruction_20260716.md`](next_route_census_instruction_20260716.md).
+
+After the public Loop 31 checkpoint, the user parked further H6/Polymath numerical upper-bound
+optimization and selected an omission-seeking Historical Door Survey as the current research main
+line. The survey must test whether documented historical obstacles remain valid, whether failed
+premises can be weakened, and whether different routes supply each other's missing input. This is
+a route-priority decision, not a claim that H6 is false and not a restoration of V4 input-side
+proof freezes. Precise conjecture proposal, falsification, numerical screening, and Lean testing
+remain open at every time under the standing conjecture gates.
 
 Exposure remains the current first priority: maintain the README, complete bounded novelty and
 definition review, split mathlib-ready components, and assemble human-owned publication evidence.

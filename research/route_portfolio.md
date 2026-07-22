@@ -2746,3 +2746,23 @@ run `29668684962`, build job `88143662554`, in `2m11s`. Implementation commit
 `0ba680319f11c9bcd8647a1c9501002987ea61ec` passed run `29669163075`, build job `88144972286`,
 in `2m17s`. Closure-evidence commit `7691e3353161c8f9ead1f726517900adf8ec7018` passed run
 `29669268220`, build job `88145255930`, in `1m47s`. Loop 20 is publicly closed.
+
+## Portfolio Update: Historical Door Survey selected
+
+Date: 2026-07-22
+
+After Loops 21--31 completed the Boyd phase, boundary-dispersion, Stieltjes, and equation `(15)`
+chain, the user parked the numerical H6/Polymath upper-bound successor. The status applies to
+effective-`R2`/constant optimization and the remaining unconditional Table 1 certificate assembly:
+`PARKED_BY_USER_DIRECTIVE_20260722`. It does not invalidate the public theorems, erase the
+obstruction map, park H6-E/G8, or declare the route impossible.
+
+The selected main line is campaign `LITERATURE-20260722-HISTORICAL-DOOR-SURVEY-01`. Its purpose is
+not to summarize mathematical history but to search every admitted route for a possibly missed
+opening: an old obstacle that is no longer valid, an unnecessarily strong failed premise, mature
+modern machinery not applied to the exact RH edge, or a cross-route composition absent from the
+literature. Ranking must follow exact missing-object and obstacle evidence rather than formal ease.
+
+Conjecture generation and validation remain open throughout the survey. A precise candidate may
+receive falsification, numerical, or Lean probes under the standing gates, but an easy or novel
+candidate may not displace unfinished high-value door cards without evidence.
