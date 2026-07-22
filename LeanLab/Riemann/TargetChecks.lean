@@ -3769,4 +3769,76 @@ example :
           weilCollapsingGapScale n = 1) :=
   weilCollapsingGapAudit_endpoint
 
+example {x : ℝ} (hx : 1 < x) {n : ℕ} (hn : 1 ≤ n) :
+    farmerLogTaper x n = 1 - Real.log n / Real.log x :=
+  farmerLogTaper_eq_one_sub hx hn
+
+example {N : ℕ} (hN : 2 ≤ N) {x : ℝ}
+    (hNx : (N : ℝ) ≤ x) (hxN : x ≤ N + 1) :
+    farmerCutoffBlend N x ∈ Set.Icc (0 : ℝ) 1 :=
+  farmerCutoffBlend_mem_Icc hN hNx hxN
+
+example (a : ℕ → ℂ) {N : ℕ} (hN : 2 ≤ N)
+    {x : ℝ} (hNx : (N : ℝ) ≤ x) (hxN : x ≤ N + 1) (s : ℂ) :
+    farmerMollifierCore a N x s =
+      farmerCutoffBlend N x * farmerMollifierCore a N N s +
+        (1 - farmerCutoffBlend N x) * farmerMollifierCore a N (N + 1) s :=
+  farmerMollifierCore_interpolate a hN hNx hxN s
+
+example {N : ℕ} (hN : 2 ≤ N) {x : ℝ}
+    (hNx : (N : ℝ) ≤ x) (hxN : x ≤ N + 1) (s : ℂ) :
+    farmerMollifier x s =
+      farmerCutoffBlend N x * farmerMollifier N s +
+        (1 - farmerCutoffBlend N x) * farmerMollifier (N + 1) s :=
+  farmerMollifier_interpolate hN hNx hxN s
+
+example {u : ℝ} (hu0 : 0 ≤ u) (hu1 : u ≤ 1) (z w : ℂ) :
+    Complex.normSq ((u : ℂ) * z + ((1 - u : ℝ) : ℂ) * w) ≤
+      u * Complex.normSq z + (1 - u) * Complex.normSq w :=
+  complex_normSq_convex hu0 hu1 z w
+
+example {N : ℕ} (hN : 2 ≤ N)
+    {x : ℝ} (hNx : (N : ℝ) ≤ x) (hxN : x ≤ N + 1) (s z : ℂ) :
+    Complex.normSq (farmerMollifier x s * z) ≤
+      farmerCutoffBlend N x * Complex.normSq (farmerMollifier N s * z) +
+        (1 - farmerCutoffBlend N x) *
+          Complex.normSq (farmerMollifier (N + 1) s * z) :=
+  farmerMollifier_mul_normSq_le hN hNx hxN s z
+
+example {N : ℕ} (hN : 2 ≤ N)
+    {x T1 T2 : ℝ} (hNx : (N : ℝ) ≤ x) (hxN : x ≤ N + 1) (hT : T1 ≤ T2) :
+    farmerMollifiedMoment x T1 T2 ≤
+      farmerCutoffBlend N x * farmerMollifiedMoment N T1 T2 +
+        (1 - farmerCutoffBlend N x) * farmerMollifiedMoment (N + 1) T1 T2 :=
+  farmerMollifiedMoment_interpolate hN hNx hxN hT
+
+example {theta beta : ℝ} (htheta : 0 < theta)
+    (hpower : BettinGonekPowerObstruction theta beta) :
+    beta ≤ 1 / 2 + 1 / (2 * theta) :=
+  beta_le_of_bettinGonekPowerObstruction htheta hpower
+
+example {theta : ℝ} (htheta : 0 < theta)
+    (hpower : ∀ rho : ℂ, IsNontrivialZero rho →
+      BettinGonekPowerObstruction theta rho.re)
+    {s : ℂ} (hs : 1 / 2 + 1 / (2 * theta) < s.re) :
+    riemannZeta s ≠ 0 :=
+  riemannZeta_ne_zero_of_bettinGonekPowerObstructions htheta hpower hs
+
+example
+    (hpower : ∀ theta : ℝ, 0 < theta → ∀ rho : ℂ, IsNontrivialZero rho →
+      BettinGonekPowerObstruction theta rho.re) :
+    RiemannHypothesis :=
+  riemannHypothesis_of_all_bettinGonekPowerObstructions hpower
+
+example (hmoment : FarmerThetaInfinityConjecture)
+    (hbridge : ∀ theta : ℝ, 0 < theta → BettinGonekMomentToPowerBridge theta) :
+    RiemannHypothesis :=
+  farmerThetaInfinityConjecture_implies_riemannHypothesis hmoment hbridge
+
+example {theta : ℝ} (htheta : 0 < theta) :
+    1 / 2 < bettinGonekFixedThetaWitness theta ∧
+      bettinGonekFixedThetaWitness theta < 1 / 2 + 1 / (2 * theta) :=
+  ⟨bettinGonekFixedThetaWitness_off_line htheta,
+    bettinGonekFixedThetaWitness_below_boundary htheta⟩
+
 end LeanLab.Riemann

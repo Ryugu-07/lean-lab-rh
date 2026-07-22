@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260723-H1-THETA-INFINITY-CONSUMER-01`
 
 Selected node: `H1-FARMER-BETTIN-GONEK-THETA-INFINITY-01`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `PREREGISTRATION_CI_PASSED / PROOF_SOURCE_GATE_OPEN`
 
 ## Baseline
 
@@ -126,3 +126,19 @@ remains active; original conjectures and direct attacks remain open.
   card, prior H1 attempt, Bettin--Gonek paper, current door directive, Targets, and relevant zeta
   APIs were re-read before selection.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.
+
+## Preregistration public gate
+
+- `commit`: `1cb89557a3630778270da171ba59d87b1fa1f132`.
+- `public_ci`: Lean Action run `29966502725`, build job `89079059819`, passed in `1m56s`.
+- `effect`: the fixed proof-source endpoint is open. No production Lean source was created before
+  this gate passed.
+
+## Local endpoint result
+
+The exact source definitions, real-cutoff interpolation, pointwise and moment convexity, final
+power-exponent barrier, fixed-theta zeta zero-free consumer, all-theta RH consumer, and fixed-theta
+boundary witness compile without warnings. This is `FULL_SUCCESS_AT_CONSUMER_ENDPOINT` locally:
+the production scan is empty, diff checks pass, and the full `8,751`-job build succeeds. Public
+implementation CI remains. The Mellin/residue moment-to-power bridge and Farmer's theta-infinity
+moment conjecture remain open with no proving declaration.

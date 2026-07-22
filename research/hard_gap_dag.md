@@ -1488,3 +1488,22 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `expected_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_map_delta=1`, and
   `source_consumer_delta=2` at the registered endpoint.
 - `global_goal`: active; preregistration public CI precedes Lean proof-source editing.
+- `preregistration_gate`: commit `1cb89557a3630778270da171ba59d87b1fa1f132` passed public Lean
+  Action run `29966502725`, build job `89079059819`, in `1m56s`; the fixed proof-source gate is
+  open.
+
+## 2026-07-23 H1 theta-infinity consumer local result
+
+- `H1-FARMER-REAL-CUTOFF-INTERPOLATION-01`: `LOCALLY_PROVEN / SOURCE_ALIGNMENT`. Exact affine
+  cutoff interpolation, pointwise norm-square convexity, continuity, interval integrability, and
+  the source moment comparison compile.
+- `H1-BETTIN-GONEK-POWER-CONSUMER-01`: `LOCALLY_PROVEN / LITERATURE`. The exact exponent boundary,
+  fixed-theta zeta zero-free half-plane, all-theta RH consumer, and fixed-theta boundary witness
+  compile.
+- `H1-BETTIN-GONEK-MOMENT-TO-POWER-01`: remains `OPEN / PUBLISHED_ANALYTIC_BRIDGE`.
+- `H1-FARMER-THETA-INFINITY-MOMENT-01`: remains `OPEN / RH_STRENGTH`.
+- `local_gates`: 12 exact TargetChecks and 12 selected standard-only axiom prints pass; production
+  forbidden scan is empty, diff checks pass, and the full `8,751`-job build succeeds. Public
+  implementation CI remains.
+- `local_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_map_delta=1`,
+  `source_consumer_delta=2`.

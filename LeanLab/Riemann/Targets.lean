@@ -77,6 +77,7 @@ import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.WeilGroundStateRayleighGap
 import LeanLab.Riemann.ShortMollifierVariational
+import LeanLab.Riemann.ThetaInfinityMollifier
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
@@ -1360,6 +1361,36 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``shortMollifierSourceEnergy_unique_minimizer
       status := .proven
       note := "Campaign LITERATURE-20260722-H1-SHORT-MOLLIFIER-VARIATIONAL-01 proves an exact cosh-weighted Hardy completion identity, aligns the source and normalized energies, derives the exact second variation, and kernel-checks strict global minimality. This is a structural sufficiency audit of equations (58)-(63), not a mollified mean-value theorem, a numerical proportion improvement, an exceptional-zero eliminator, or a proof of RH. Classification is known-analysis formalization with rh_frontier_delta=0 and hard_gap_delta=0." },
+    { id := "H1.theta-infinity.real-cutoff-interpolation"
+      tier := .tier2
+      title := "Interpolate Farmer mollifiers between integer cutoffs"
+      statement :=
+        "For the exact logarithmically tapered Mobius mollifier, prove that every real cutoff between N and N+1 is an affine combination of the two integer cutoffs in the coordinate 1/log x, and lift squared-norm convexity to the source mollified second moment."
+      leanName := some ``farmerMollifiedMoment_interpolate
+      status := .proven
+      note := "Campaign LITERATURE-20260723-H1-THETA-INFINITY-CONSUMER-01 closes the integer-to-real cutoff quantifier used when Bettin--Gonek integrate I_y over real y. The result is exact source-object and convexity infrastructure; it proves no long-mollifier estimate, selected-zero residue lower bound, zero-free region, or RH." },
+    { id := "H1.theta-infinity.power-obstruction-consumer"
+      tier := .tier2
+      title := "Convert every theta power obstruction into RH"
+      statement :=
+        "Prove that T^(2*beta*theta) is eventually bounded by C*T^(1+epsilon+theta) for every positive epsilon only if beta<=1/2+1/(2*theta), derive the fixed-theta zeta zero-free half-plane, and use functional-equation reflection to show that the corresponding obstruction for every positive theta and every nontrivial zero implies RH."
+      leanName := some ``riemannHypothesis_of_all_bettinGonekPowerObstructions
+      status := .proven
+      note := "This compiles the final exponent and reflection consumer in Bettin--Gonek Theorem 1. The predicate is not assumed true for zeta: deriving it from the exact mollified-moment hypothesis remains an open analytic Target. The conditional FarmerThetaInfinityConjecture implication displays that bridge as an explicit premise, so rh_frontier_delta=0." },
+    { id := "H1.theta-infinity.moment-to-power-bridge"
+      tier := .tier2
+      title := "Formalize the Bettin--Gonek selected-zero residue bridge"
+      statement :=
+        "From the exact uniform mollified second-moment bound through length T^theta, derive for every nontrivial zero rho the power obstruction T^(2*Re(rho)*theta) <<_epsilon T^(1+epsilon+theta), including Mellin inversion, auxiliary-transform decay, contour shifting, the selected-zero residue, Cauchy--Schwarz, the zeta second-moment lower bound, and uniform constants."
+      status := .inProgress
+      note := "Bettin--Gonek prove this analytic bridge in equations (2.1)-(2.5), but it is not compiled. The project definition BettinGonekMomentToPowerBridge names the exact unavailable premise and has no theorem establishing it; it may not be used in unconditional work." },
+    { id := "H1.theta-infinity.arbitrary-length-moment"
+      tier := .tier2
+      title := "Prove Farmer's theta-infinity mollified moment conjecture"
+      statement :=
+        "For every positive theta and epsilon, prove a uniform T^(1+epsilon) upper bound for I_N(0,T) simultaneously over every integer 2<=N<=T^theta."
+      status := .inProgress
+      note := "This is Farmer's open arbitrary-length mollifier conjecture in the exact uniform-bound form. Together with the separately compiled Bettin--Gonek analytic bridge and power consumer it would imply RH, so it is unavailable as a premise." },
     { id := "H9.conrey-character-sum.rationality-flat-branch"
       tier := .tier2
       title := "Audit the flat branch in Conrey's character-sum rationality step"

@@ -3294,6 +3294,25 @@ insert an off-line zero. This does not prove any generalized RH, model a Dedekin
 L-function, or create a p-adic/archimedean zero map. Public preregistration CI is required before
 proof-source editing; persistent RH Goal active.
 
+Preregistration commit `1cb89557a3630778270da171ba59d87b1fa1f132` passed public Lean Action
+run `29966502725`, build job `89079059819`, in `1m56s`. The fixed proof-source gate is open; the
+moment-to-power bridge and arbitrary-length moment conjecture remain unavailable as premises.
+
+## H1 Theta-Infinity Consumer Local Result
+
+The source-aligned module now compiles the exact real-cutoff mollifier and moment. Between adjacent
+integer cutoffs, Lean proves convex interpolation in `1/log x`, including the vanishing endpoint
+coefficient, pointwise complex norm-square convexity, continuity, interval integrability, and the
+moment inequality. Thus the source proof's integer-to-real cutoff passage is valid rather than an
+omitted counterexample.
+
+The final Bettin--Gonek exponent consumer also compiles: the selected-zero power obstruction forces
+`beta<=1/2+1/(2*theta)`, fixed theta gives the advertised zeta zero-free half-plane, and all theta
+plus functional-equation reflection gives RH. A fixed-theta off-line witness remains below that
+boundary, preserving the quasi-RH distinction. These are conditional/source-consumer results only.
+The actual Mellin/residue moment-to-power bridge and Farmer's arbitrary-length moment conjecture
+remain open. Eleven exact witnesses and twelve standard-only axiom prints pass; full build is next.
+
 Preregistration commit `e001e3afb37818918e42b08d76c18b6490062ac7` passed public Lean Action
 run `29960700375`, build job `89060685988`, in `2m2s`. The fixed proof-source gate is open; no
 actual generalized-RH input or p-adic/archimedean zero map has been added.
@@ -3430,3 +3449,19 @@ transform decay, contour shift, residue lower bound, and arbitrary-length moment
 open and unavailable as premises. This is an individual-zero historical mechanism audit, not
 another optimization of a zero percentage. Public preregistration CI is required before Lean
 proof-source editing; persistent RH Goal active.
+
+## H1 Theta-Infinity Consumer Local Result
+
+Preregistration commit `1cb89557a3630778270da171ba59d87b1fa1f132` passed public Lean Action
+run `29966502725`, build job `89079059819`, in `1m56s`. The 482-line production module then proves
+the source real-cutoff interpolation, its pointwise and integral norm-square convexity, the exact
+power-exponent boundary, the fixed-theta zero-free consumer, and the all-positive-theta RH
+consumer. A strict off-line witness below one fixed-theta boundary prevents quasi-RH from being
+reported as RH.
+
+The integer-to-real cutoff transition is therefore source-valid. The Bettin--Gonek
+Mellin/contour/residue bridge and Farmer arbitrary-length moment remain explicit open Targets with
+no proving declaration and are unavailable as premises. Two proven and two open Targets, twelve
+exact TargetChecks, twelve selected standard-only axiom prints, an empty production scan, diff
+checks, and the full `8,751`-job build pass locally. `rh_frontier_delta=0`; public implementation
+CI is the next gate, and the persistent RH Goal remains active.

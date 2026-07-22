@@ -5,6 +5,7 @@ import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
+import LeanLab.Riemann.ThetaInfinityMollifier
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -868,3 +869,15 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.tendsto_projectiveDefect_zero_of_le_ratio
 #print axioms LeanLab.Riemann.weilCollapsingGapCertificate
 #print axioms LeanLab.Riemann.weilCollapsingGapAudit_endpoint
+#print axioms LeanLab.Riemann.farmerLogTaper_eq_one_sub
+#print axioms LeanLab.Riemann.farmerMollifierCore_interpolate
+#print axioms LeanLab.Riemann.farmerMollifier_interpolate
+#print axioms LeanLab.Riemann.complex_normSq_convex
+#print axioms LeanLab.Riemann.farmerMollifier_mul_normSq_le
+#print axioms LeanLab.Riemann.intervalIntegrable_farmerMollifiedIntegrand
+#print axioms LeanLab.Riemann.farmerMollifiedMoment_interpolate
+#print axioms LeanLab.Riemann.beta_le_of_bettinGonekPowerObstruction
+#print axioms LeanLab.Riemann.riemannZeta_ne_zero_of_bettinGonekPowerObstructions
+#print axioms LeanLab.Riemann.riemannHypothesis_of_all_bettinGonekPowerObstructions
+#print axioms LeanLab.Riemann.farmerThetaInfinityConjecture_implies_riemannHypothesis
+#print axioms LeanLab.Riemann.bettinGonekFixedThetaWitness_below_boundary
