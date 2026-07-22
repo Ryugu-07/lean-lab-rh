@@ -1104,4 +1104,7 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `obstruction_map_delta=1`, `source_assumption_weakening_delta=1`.
 - `local_audit`: 171-line production module, six exact TargetChecks, six standard-only axiom
   prints, empty forbidden scan, `git diff --check`, and full 8,739-job build.
-- `global_goal`: active; public implementation CI is the next gate.
+- `public_implementation`: commit `21dabbcd2a14c306738af5019924475cde1e5238` passed Lean Action
+  run `29933348708`, build job `88968461122`, in `2m5s`; immutable evidence and final-ledger CI
+  remain.
+- `global_goal`: active; immutable evidence publication and CI are the next gate.

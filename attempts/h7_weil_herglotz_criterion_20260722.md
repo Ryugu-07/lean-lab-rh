@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260722-H7-WEIL-HERGLOTZ-CRITERION-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_ENDPOINT_PROVED / PUBLIC_IMPLEMENTATION_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_GREEN / CLOSURE_EVIDENCE_PENDING`
 
 ## Runtime record
 
@@ -40,6 +40,7 @@ the arithmetic scalar bound.
 | 2 | `PREREGISTRATION` | Fixed the completion-of-square identity, strict-positivity iff, certificate consumer, source sign, threshold, assumptions, and local stop. No Lean proof source was edited. | Publish preregistration alone and require public CI before implementation. |
 | 3 | `LITERATURE / LEAN_IMPLEMENTATION` | Lean proves the exact completion-of-squares identity and both directions of the rank-one strict-positivity iff, then constructs the previous parity Rayleigh certificate and simple-even endpoint. The kernel proof exposes that oddness of `S` is unnecessary for the generic iff; oddness of `u` alone keeps the shifted test vector in the odd sector. | Record the weaker generic theorem while retaining `odd_S` in the source-aligned certificate. Do not infer the arithmetic scalar inequality. |
 | 4 | `INDEPENDENT_LOCAL_AUDIT` | The 171-line module, Targets, six exact TargetChecks, six selected standard-only axiom prints, empty production forbidden scan, `git diff --check`, and the full 8,739-job build pass. | Classify as finite source infrastructure plus one checked assumption weakening, with no RH or hard-gap delta. Publish implementation and require public CI. |
+| 5 | `PUBLIC_IMPLEMENTATION_CI` | Implementation commit `21dabbcd2a14c306738af5019924475cde1e5238` passed Lean Action run `29933348708`, build job `88968461122`, in `2m5s`. | Freeze Lean source. Commit immutable evidence backfills and require their independent CI before closure. |
 
 ## Compiled declarations
 
@@ -68,5 +69,5 @@ All six selected declarations print only `propext`, `Classical.choice`, and `Quo
 - `source_assumption_weakening_delta`: `1` for deletion of `odd_S` from the generic iff only.
 - `still_open`: prove or falsify the arithmetic scalar inequality uniformly in the actual Weil
   matrices; prove uniform simple-even structure and the true ground-state limit; prove RH.
-- `next_gate`: implementation commit and public CI.
+- `next_gate`: immutable evidence commit and public CI.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

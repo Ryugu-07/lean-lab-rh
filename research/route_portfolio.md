@@ -2911,3 +2911,7 @@ SOURCE_ASSUMPTION_WEAKENED / FINITE_CERTIFICATE_CONSUMER`, with `rh_frontier_del
 prints, the forbidden scan, `git diff --check`, and the full 8,739-job build pass. Public
 implementation CI is next; the arithmetic scalar inequality and the historical H7 limit chain
 remain open.
+
+Implementation commit `21dabbcd2a14c306738af5019924475cde1e5238` passed public Lean Action
+run `29933348708`, build job `88968461122`, in `2m5s`. Lean source is frozen; immutable evidence
+backfill and its independent public CI are next.
