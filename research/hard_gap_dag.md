@@ -836,6 +836,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `29889067030`, build job `88825688680`, passed in `1m49s` before proof-source editing.
 - `public_implementation`: commit `6f34d60701ac696d99b694132d231dc2ab931b62`, CI run
   `29890689402`, build job `88830378785`, passed in `2m16s`.
+- `public_closure`: evidence commit `ea0c2cec523adbc394af69e3a93674517c765aa4`, CI run
+  `29890883349`, build job `88830937245`, passed in `2m23s`.
 - `compaction_state`: two recoveries; all canonical frontier files and the new source were re-read
   after each before continuing.
 - `still_open`: both refined trace children, both outer-edge limits, the global cut-stitching

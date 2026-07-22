@@ -1974,8 +1974,7 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 
 - `campaign`: `PROOF-ATTEMPT-20260722-H6-BOYD-BOUNDARY-TRACE-TWO-SCALE-01`
 - `mode`: `PROOF-ATTEMPT`
-- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; public implementation verified, closure
-  evidence pending
+- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; publicly closed, final ledger CI pending
 - `target`: prove the Loop 28 canonical trace discrepancy tends to zero by separating its
   near-zero cancellation, fixed compact-annulus, and shifted-tail regimes
 - `material_difference_from_loop28`: Loop 28 supplied pointwise convergence away from zero but no
@@ -2016,6 +2015,8 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   `29889067030`, build job `88825688680`, passed in `1m49s` before proof-source editing
 - `public_implementation`: commit `6f34d60701ac696d99b694132d231dc2ab931b62`, CI run
   `29890689402`, build job `88830378785`, passed in `2m16s`
+- `public_closure`: evidence commit `ea0c2cec523adbc394af69e3a93674517c765aa4`, CI run
+  `29890883349`, build job `88830937245`, passed in `2m23s`
 - `compaction_state`: two compaction recoveries during Loop 29; the complete canonical frontier
   and new source were re-read after each before proof or publication work resumed
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
