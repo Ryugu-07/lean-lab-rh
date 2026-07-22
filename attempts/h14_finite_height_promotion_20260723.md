@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260723-H14-FINITE-HEIGHT-PROMOTION-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `IMPLEMENTATION_CI_PASSED / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`
 
 ## Runtime record
 
@@ -46,6 +46,7 @@ strictly above the checked height.
 | 9 | `HIGH_OFFLINE_WITNESS` | The base point has real part `1/4`, is off the critical line, and satisfies `T < abs rho.im`; the aggregate universal endpoint compiles. | Register the result as a generic promotion obstruction, not a zeta theorem. |
 | 10 | `LOCAL_KERNEL_AUDIT` | Ten exact TargetChecks, eight standard-only axiom prints, an empty production forbidden scan, direct compiles, and the full `8,749`-job build pass. | Publish the frozen implementation commit and require public CI. |
 | 11 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation commit `8c61ef5d87ecf9ba5ffb923dabada87080b89f81` passed public Lean Action run `29963329369`, build job `89069216973`, in `2m42s`. | Keep Lean proof source frozen; publish immutable implementation evidence and require its own public CI. |
+| 12 | `EVIDENCE_PUBLIC_CI` | Immutable-evidence commit `0931f90f08905c0609854788725d151d4ace9632` passed public Lean Action run `29963630200`, build job `89070175938`, in `1m34s`. | Stop the generic promotion audit at its registered endpoint; publish the final ledger before route reselection. |
 
 ## Assumption and gap accounting
 
@@ -70,6 +71,11 @@ strictly above the checked height.
 - `public_implementation_evidence`: frozen implementation commit
   `8c61ef5d87ecf9ba5ffb923dabada87080b89f81` passed Lean Action run `29963329369`, build job
   `89069216973`, in `2m42s`.
-- `next_gate`: publish immutable evidence without changing Lean proof source and require the
-  evidence commit's own public Lean Action CI.
+- `public_closure_evidence`: immutable-evidence commit
+  `0931f90f08905c0609854788725d151d4ace9632` passed Lean Action run `29963630200`, build job
+  `89070175938`, in `1m34s`.
+- `local_stop`: the fixed generic finite-height promotion endpoint is compiled. Actual-zeta
+  global-tail reduction remains open.
+- `next_gate`: publish the final campaign ledger and require public Lean Action CI, then return to
+  value-ranked comparison of the admitted historical atlas and conjecture pool.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

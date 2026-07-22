@@ -1409,7 +1409,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 
 ## 2026-07-23 H14 finite-height promotion local result
 
-- `H14-FINITE-HEIGHT-PROMOTION-01`: `IMPLEMENTATION_CI_PASSED / EVIDENCE_REQUIRED`.
+- `H14-FINITE-HEIGHT-PROMOTION-01`: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`.
   `finiteHeightPromotionAudit_endpoint` constructs the registered finite nonempty orbit for every
   `T >= 0`, with both symmetries, open-strip membership, finite-height verification, and a strict
   above-height off-line witness.
@@ -1421,4 +1421,6 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   `obstruction_map_delta=1`.
 - `public_implementation`: frozen commit `8c61ef5d87ecf9ba5ffb923dabada87080b89f81` passed Lean Action
   run `29963329369`, build job `89069216973`, in `2m42s`; proof source is frozen.
-- `next_gate`: publish immutable evidence without changing Lean source and require its public CI.
+- `public_closure_evidence`: commit `0931f90f08905c0609854788725d151d4ace9632` passed Lean Action
+  run `29963630200`, build job `89070175938`, in `1m34s`; only final-ledger CI remains.
+- `next_gate`: publish the final ledger, then return to atlas/conjecture-pool route selection.

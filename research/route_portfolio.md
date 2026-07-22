@@ -3353,3 +3353,9 @@ implementation CI is the next gate.
 Frozen implementation commit `8c61ef5d87ecf9ba5ffb923dabada87080b89f81` passed public Lean
 Action run `29963329369`, build job `89069216973`, in `2m42s`. Lean proof source is frozen;
 immutable evidence and its own public CI remain before final-ledger closure.
+
+Immutable-evidence commit `0931f90f08905c0609854788725d151d4ace9632` passed public Lean
+Action run `29963630200`, build job `89070175938`, in `1m34s`. The local campaign stops at the
+registered generic finite-height promotion endpoint; proof source remains frozen. Final-ledger CI
+is the last publication gate before value-ranked comparison of the admitted historical atlas and
+the conjecture pool. The actual-zeta global-tail edge, H14 support use, and RH remain open.
