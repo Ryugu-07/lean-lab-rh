@@ -6,7 +6,7 @@ Campaign: `FALSIFICATION-20260723-H8-JENSEN-EVENTUAL-HYPERBOLICITY-01`
 
 Selected node: `H8-JENSEN-EVENTUAL-NOT-GLOBAL-01`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_CI_PASSED / EVIDENCE_COMMIT_REQUIRED`
 
 ## Selection reason
 
@@ -151,7 +151,8 @@ theorems preserve the arbitrary finite-wedge equality and the exact `1+X^2` witn
 Two Targets, seven exact TargetChecks, and six selected axiom prints compile. The selected axioms
 are only `propext`, `Classical.choice`, and `Quot.sound`. This is full success at the registered
 generic falsification endpoint, with `rh_frontier_delta=0` and `route_infrastructure_delta=1`.
-Actual-xi all-index hyperbolicity and RH remain open. Full mechanical audit and implementation
-public CI remain required. The production forbidden scan is empty, `git diff --check` passes, the
-H8 module has no local warning, and the full `8,744`-job build passes. Implementation public CI is
-the next gate.
+Actual-xi all-index hyperbolicity and RH remain open. The production forbidden scan is empty,
+`git diff --check` passes, the H8 module has no local warning, and the full `8,744`-job build
+passes. Frozen implementation commit `ca656cb6e24b5084b403d53e5a3763dc34b642be` passed public Lean
+Action run `29950744385`, build job `89027520728`, in `2m4s`. Lean proof source is frozen;
+immutable-evidence publication and its own public CI are the next gate.

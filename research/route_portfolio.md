@@ -3142,3 +3142,8 @@ window mechanism. Two Targets, seven exact TargetChecks, and six selected standa
 prints pass locally. The forbidden scan is empty, `git diff --check` passes, and the full
 `8,744`-job build passes. Public implementation CI remains; `rh_frontier_delta=0` and
 `route_infrastructure_delta=1`.
+
+Frozen implementation commit `ca656cb6e24b5084b403d53e5a3763dc34b642be` passed public Lean
+Action run `29950744385`, build job `89027520728`, in `2m4s`. The proof source is now frozen;
+immutable evidence and its own public CI remain before this local falsification campaign returns
+to historical-route omission search. Actual-xi all-index hyperbolicity and RH remain open.

@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260723-H8-JENSEN-EVENTUAL-HYPERBOLICITY-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_CI_PASSED / EVIDENCE_COMMIT_REQUIRED`
 
 ## Runtime record
 
@@ -42,6 +42,7 @@ eventual-hyperbolicity theorems.
 | 7 | `EXPLICIT_NONREAL_ROOT` | Lean proves the defect window at degree two and shift `m` is `1+X^2`; direct evaluation at `I` proves it does not have only real roots. | Combine the witnesses into `exists_eventually_realRooted_not_all_realRooted`. |
 | 8 | `PROJECT_INTEGRATION` | The module, two Targets, seven exact TargetChecks, and six selected axiom prints compile. Selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`. | Record definition alignment, then run forbidden scan, diff check, module build, and full build. |
 | 9 | `FULL_LOCAL_BUILD` | The production forbidden scan is empty, `git diff --check` passes, the H8 module has no local warning, and the full `8,744`-job build passes. | Freeze the implementation in a scoped commit and require independent public CI. |
+| 10 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation commit `ca656cb6e24b5084b403d53e5a3763dc34b642be` passed public Lean Action run `29950744385`, build job `89027520728`, in `2m4s`. | Keep Lean proof source frozen; publish immutable implementation evidence and require that evidence commit's own public CI. |
 
 ## Assumption and gap accounting
 
@@ -58,5 +59,8 @@ eventual-hyperbolicity theorems.
   quantifier boundary now has a compiled generic countermodel.
 - `definition_alignment`:
   `research/h8_jensen_eventual_hyperbolicity_definition_alignment_20260723.md`.
-- `next_gate`: implementation commit and public CI.
+- `public_implementation_evidence`: frozen implementation commit
+  `ca656cb6e24b5084b403d53e5a3763dc34b642be` passed Lean Action run `29950744385`, build job
+  `89027520728`, in `2m4s`.
+- `next_gate`: immutable-evidence commit and public CI.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

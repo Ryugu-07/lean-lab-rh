@@ -1124,9 +1124,13 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `H8-D-XI-ALL-INDEX-01`: `OPEN / RH_STRENGTH`. Prove all required Jensen polynomials for the
   actual xi coefficients are hyperbolic. No generic coefficient countermodel discharges this.
 - `source_update`: Duran 2024 adds Brenke-polynomial RH equivalences but no uniform all-index
-  mechanism. The generic quantifier obstruction is locally compiled; full build and public
-  implementation CI remain. The forbidden scan, diff check, and full `8,744`-job build pass.
+  mechanism. The generic quantifier obstruction is compiled and implementation-public-green. The
+  forbidden scan, diff check, and full `8,744`-job build pass.
   `rh_frontier_delta=0`, `route_infrastructure_delta=1`.
+- `public_implementation_evidence`: frozen implementation commit
+  `ca656cb6e24b5084b403d53e5a3763dc34b642be` passed Lean Action run `29950744385`, build job
+  `89027520728`, in `2m4s`. Lean proof source is frozen; immutable-evidence CI remains before local
+  closure. `H8-D-XI-ALL-INDEX-01` and RH remain open.
 
 ## 2026-07-23 H1 closure and H9 Conrey rationality-gap launch
 
