@@ -3304,3 +3304,7 @@ extra-factor obstruction. One proven and one open Target, eight exact TargetChec
 selected standard-only axiom prints pass; the full `8,748`-job build passes. This closes only the
 transfer-logic node. Implementation publication and public CI are the next gate; generalized RH,
 individual automorphic or p-adic transfer, H13, and RH remain open.
+
+Frozen implementation commit `ab45b1bd8ba5c8cdbe5fb2bd9cd87c222131bb91` passed public Lean
+Action run `29961388807`, build job `89062966415`, in `2m18s`. Lean proof source is frozen;
+immutable evidence and its own public CI remain before final-ledger closure.

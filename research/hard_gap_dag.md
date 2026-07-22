@@ -1382,4 +1382,7 @@ closed. `H2-HALF-ISOLATED-ANALYTIC-DETECTOR-01`, `H2-BOW-EXCLUSION-01`, H2, and 
 - `expected_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_map_delta=1`,
   `obstruction_map_delta=1` on success; persistent RH Goal active.
 - `preregistration_gate`: commit `e001e3afb37818918e42b08d76c18b6490062ac7` passed public Lean
-  Action run `29960700375`, build job `89060685988`, in `2m2s`; proof-source editing is open.
+  Action run `29960700375`, build job `89060685988`, in `2m2s`; this opened proof-source editing.
+- `implementation_gate`: frozen commit `ab45b1bd8ba5c8cdbe5fb2bd9cd87c222131bb91` passed public Lean
+  Action run `29961388807`, build job `89062966415`, in `2m18s`. Lean proof source is frozen;
+  immutable evidence and its own CI remain.

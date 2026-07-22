@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260723-H13-DIRICHLET-FAMILY-INCLUSION-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_CI_PASSED / EVIDENCE_CI_REQUIRED`
 
 ## Runtime record
 
@@ -45,6 +45,7 @@ L-function target preserves an RH-equivalent zero set.
 | 8 | `LEAN_PRODUCT_TRANSFER` | Critical-strip zero control for `zeta*g` implies zeta zero control and hence RH for every function `g`. | Retain this as a valid one-way consumer for genuine factorizations. |
 | 9 | `LEAN_EXTRA_FACTOR_FALSIFICATION` | The product with factor `s-1/4` has an exact strip zero at `1/4`, away from the critical line. | Reject reverse-equivalence promotion for unconstrained extra factors. |
 | 10 | `INTEGRATION_AUDIT` | One proven and one open Target, eight exact TargetChecks, seven selected standard-only axiom prints, an empty production forbidden scan, and the full `8,748`-job build pass. | Publish the implementation and require independent public CI; generalized RH, H13, and RH remain open. |
+| 11 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation commit `ab45b1bd8ba5c8cdbe5fb2bd9cd87c222131bb91` passed public Lean Action run `29961388807`, build job `89062966415`, in `2m18s`. | Keep Lean proof source frozen; publish immutable implementation evidence and require that evidence commit's own public CI. |
 
 ## Assumption and gap accounting
 
@@ -63,8 +64,11 @@ L-function target preserves an RH-equivalent zero set.
 - `route_map_delta`: `1`; H13 now has an exact theorem-producing inclusion/transfer boundary.
 - `obstruction_map_delta`: `1`; unconstrained extra-factor reverse promotion is kernel-refuted.
 - `rh_frontier_delta`: `0`.
+- `public_implementation_evidence`: frozen implementation commit
+  `ab45b1bd8ba5c8cdbe5fb2bd9cd87c222131bb91` passed Lean Action run `29961388807`, build job
+  `89062966415`, in `2m18s`.
 - `local_stop`: the fixed transfer-logic endpoint is compiled. Actual automorphic, family, or
   p-adic individual-zeta transfer remains open.
-- `next_gate`: publish the implementation commit and require public CI, then freeze Lean proof
-  source and publish immutable evidence.
+- `next_gate`: publish immutable evidence without changing Lean proof source and require that
+  evidence commit's own public CI.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.
