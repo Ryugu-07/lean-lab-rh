@@ -1184,6 +1184,25 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `public_closure_evidence`: evidence commit `eeca9f7fc910b323df7aaaec00f3258c92063483`
   passed Lean Action run `29944285692`, build job `89005620974`, in `1m33s`. Final-ledger CI
   remains; H12-D and H12-E stay open after the consumer campaign stops.
+- `final_ledger`: commit `100bc02d691b6a69cf2ca903f8a0aa9f6c99dca1` passed Lean Action run
+  `29944572919`, build job `89006584781`, in `2m26s`. The H12 consumer campaign is publicly
+  closed; H12-D/H12-E remain open.
+
+## 2026-07-23 H11 pair-correlation horizontal-multiplicity launch
+
+- `H11-A-HORIZONTAL-FINITE-COUNT-01`: `PREREGISTERED`. Reconstruct the source finite inequality
+  `2*N <= N_simple_critical + N_circ` under exact reflection and multiplicity-copy hypotheses.
+- `H11-B-EXACT-LAST-EXCEPTION-01`: `PREREGISTERED`. Prove exact horizontal pair count equality
+  forces every finite fiber to be singleton and critical, then consume cofinal actual-zeta equality
+  into RH.
+- `H11-C-SPARSE-EXCEPTION-MODEL-01`: `PREREGISTERED / FALSIFICATION`. Build one persistent
+  reflected off-line pair plus a growing critical population and prove the relevant proportions
+  tend to one.
+- `H11-D-PCC-ANALYTIC-01`: `OPEN / EXTERNAL_ANALYTIC`. Prove the actual PCC asymptotic. Even this
+  source conjecture yields density one rather than universal line location without H11-B or an
+  arithmetic amplification theorem.
+- `route_map_correction`: arXiv:2503.15449v4 supersedes the older claim that pair correlation
+  gives no horizontal information. Preregistration public CI is required before proof-source edits.
 
 ## 2026-07-22 H7 closure and H1 short-mollifier launch
 

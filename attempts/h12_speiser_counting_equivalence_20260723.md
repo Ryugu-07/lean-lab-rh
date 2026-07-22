@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260723-H12-SPEISER-COUNTING-EQUIVALENCE-01`
 
 Mode: `LITERATURE`
 
-Status: `MEANINGFUL_PARTIAL / FINAL_LEDGER_CI_REQUIRED`
+Status: `MEANINGFUL_PARTIAL / PUBLICLY_CLOSED`
 
 ## Runtime record
 
@@ -46,6 +46,7 @@ unproved Lean premise.
 | 10 | `MECHANICAL_AUDIT` | Five exact TargetChecks pass; five selected axiom prints contain only `propext`, `Classical.choice`, and `Quot.sound`; forbidden scan and `git diff --check` are clean; full `lake build` passes 8,742 jobs. | Stop locally at the first exact external analytic obstruction and require implementation CI. |
 | 11 | `IMPLEMENTATION_CI` | Implementation commit `2a6290a27fd7675db409f884679d1a554c13b72d` passed Lean Action run `29943873685`, build job `89004249306`, in `2m6s`. | Freeze all Lean proof source. Publish immutable implementation evidence and require its own public CI. |
 | 12 | `EVIDENCE_CI` | Evidence commit `eeca9f7fc910b323df7aaaec00f3258c92063483` passed Lean Action run `29944285692`, build job `89005620974`, in `1m33s`. | Record the local stop in the final ledger, require its public CI, then return the persistent RH Goal to fresh historical-route selection. |
+| 13 | `FINAL_LEDGER_CI` | Final-ledger commit `100bc02d691b6a69cf2ca903f8a0aa9f6c99dca1` passed Lean Action run `29944572919`, build job `89006584781`, in `2m26s`. | Campaign publicly closed. Select H11 pair-correlation horizontal multiplicity after finding a post-atlas source correction. |
 
 ## Compiled declarations
 
@@ -91,5 +92,8 @@ unproved Lean premise.
 - `evidence_public_ci`: Lean Action run `29944285692`, build job `89005620974`, passed in `1m33s`.
 - `local_stop`: reached at the conditional count consumer; H12-D and H12-E remain open and may be
   resumed when their analytic prerequisites outrank other historical-route audits.
-- `next_gate`: final ledger commit and public CI; then fresh historical-route selection.
+- `final_ledger_commit`: `100bc02d691b6a69cf2ca903f8a0aa9f6c99dca1`.
+- `final_ledger_public_ci`: Lean Action run `29944572919`, build job `89006584781`, passed in
+  `2m26s`.
+- `next_gate`: complete; successor campaign is H11 pair-correlation horizontal multiplicity.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

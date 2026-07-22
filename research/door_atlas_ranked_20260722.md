@@ -4,7 +4,7 @@ Date: 2026-07-22
 
 Campaign: `LITERATURE-20260722-HISTORICAL-DOOR-SURVEY-01`
 
-Status: `ATLAS_COMPLETE / PUBLICLY_CLOSED / FINAL_LEDGER_CI_PENDING`
+Status: `ATLAS_COMPLETE / PUBLICLY_CLOSED / POST_SURVEY_H11_CORRECTION_ACTIVE`
 
 ## Claim boundary
 
@@ -76,7 +76,7 @@ mathematically weak route.
 | 7 | D2 heat flow/zero dynamics | Prove `Lambda <= 0`, for example through an actual-theta all-index invariant or collision-compatible continuation. | `OPEN`; several generic mechanisms are formally obstructed. | Low after deep project exploration, though exact direct endpoint remains legitimate. | Keep open; H6 numerical upper-bound successor remains parked. |
 | 8 | D9 de Branges/canonical systems | Build a valid zeta canonical system whose required positivity survives the Conrey-Li tests and implies the full zero correspondence. | Original positivity condition fails; repaired systems are `OPEN`. | Low-to-moderate if D6 supplies a natural ground-state system. | Re-enter only through an exact D6 consumer. |
 | 9 | D8 Laguerre-Polya/Jensen | Prove all degrees and all shifts hyperbolic, including the finite exceptional region. | `OPEN`, but eventual fixed-degree hyperbolicity is asymptotically universal and does not control the exceptions. | Low; the apparent progress is concentrated away from the RH-bearing indices. | `HEURISTIC_ONLY` unless a finite-exception mechanism appears. |
-| 10 | D5 zero statistics/random matrices | Derive real-part localization, not merely ordinate spacings or simplicity. | Present methods explicitly provide no on/off-line information. | Low for direct RH; useful as a falsification model. | `HEURISTIC_ONLY / FALSIFICATION`. |
+| 10 (under review) | D5 zero statistics/random matrices | Upgrade the 2026 horizontal-multiplicity density-one theorem to exclusion of every sparse off-line orbit. | PCC now conditionally gives density one on the line, but its normalized error permits finite or density-zero exceptions. | Moderate post-survey omission evidence: the source explicitly corrects the older no-horizontal-information claim. | `LITERATURE / FALSIFICATION` active at H11. |
 | 11 | D11 generalized/automorphic/Iwasawa | Find a theorem that transfers a proved family or p-adic mechanism to the individual archimedean zeta zero set. | `OPEN`; no direct p-adic RH analogue, and family laws do not decide one member. | Low. | `MONITOR`; use for mechanism stress tests. |
 | 12 | D12 certified computation | Pair finite verification with a proved uniform global tail that excludes all higher off-line zeros. | Tail is the whole unresolved global edge. | Low as a standalone route; high as a certificate component. | `SUPPORTING`; no finite-to-global promotion. |
 | control | D13 countermodels/failed mechanisms | Not a proof endpoint. | Several mechanisms are decisively false. | High negative value: prevents repeated false routes. | Maintain as mandatory regression suite. |
@@ -300,24 +300,31 @@ scope control: its authors state that the method neither requires nor provides i
 whether the zeros are on the critical line. Its simplicity conclusion still uses a thin-box or
 strong density hypothesis.
 
+Post-survey correction, 2026-07-23: the authors later explicitly withdrew that scope statement.
+[Goldston-Lee-Schettler-Suriajaya v4](https://arxiv.org/abs/2503.15449v4) prove that PCC, without
+assuming RH, implies asymptotically 100 percent of the zeros are simple and on the critical line.
+The mechanism counts same-ordinate reflected pairs through horizontal multiplicity. This is a
+conditional horizontal-location theorem, not an RH theorem.
+
 ### Exact missing object
 
-A theorem must connect a statistical law to the real parts of every zero, with enough rigidity to
-exclude even one exceptional off-line zero. Pair correlation of ordinates alone does not contain
-that datum.
+A theorem must upgrade the horizontal-multiplicity excess from `o(N(T))` to zero, or otherwise
+exclude every exceptional off-line orbit. The revised PCC mechanism detects off-line reflected
+pairs at density scale, but not the last finite or sparse exceptions.
 
 ### Obstacle validity
 
-The obstacle is current and explicit in the modern primary source. GUE agreement, simplicity,
-and repulsion do not imply line location. A sparse exceptional orbit has asymptotically negligible
-effect on the usual pair statistics.
+The older statement that the method gives no line-location information is superseded. The current
+obstacle is narrower and still exact: density one does not imply universal line location. A finite
+or sufficiently sparse reflected orbit has asymptotically negligible horizontal excess.
 
 ### Unused machinery and omission audit
 
-Random-matrix ensembles remain valuable adversarial generators for moment and Li conjectures.
-No overlooked direct implication to RH was found. A viable upgrade would need a joint statistic
-that includes horizontal displacement and is proved unconditionally, not another ordinate-only
-law.
+The horizontal-multiplicity diagonal is a genuine overlooked mechanism in the first atlas. A
+viable upgrade now needs a last-exception localizer, an absolute-error form of the statistic, or an
+arithmetic theorem amplifying one off-line orbit to nonzero horizontal density. The H11 campaign
+tests the exact finite count logic and a persistent-exception countermodel before any such
+amplification conjecture is admitted.
 
 Formalization fit: `2/5`. Machine-task fit: `4/5` for finite ensembles and countermodels, `1/5`
 for the analytic limit.
