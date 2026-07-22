@@ -1409,7 +1409,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 
 ## 2026-07-23 H14 finite-height promotion local result
 
-- `H14-FINITE-HEIGHT-PROMOTION-01`: `LOCALLY_PROVEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`.
+- `H14-FINITE-HEIGHT-PROMOTION-01`: `IMPLEMENTATION_CI_PASSED / EVIDENCE_REQUIRED`.
   `finiteHeightPromotionAudit_endpoint` constructs the registered finite nonempty orbit for every
   `T >= 0`, with both symmetries, open-strip membership, finite-height verification, and a strict
   above-height off-line witness.
@@ -1419,4 +1419,6 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   scan, direct compiles, and a full `8,749`-job build pass.
 - `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_map_delta=1`,
   `obstruction_map_delta=1`.
-- `next_gate`: publish the frozen implementation commit and require public Lean Action CI.
+- `public_implementation`: frozen commit `8c61ef5d87ecf9ba5ffb923dabada87080b89f81` passed Lean Action
+  run `29963329369`, build job `89069216973`, in `2m42s`; proof source is frozen.
+- `next_gate`: publish immutable evidence without changing Lean source and require its public CI.

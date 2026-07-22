@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260723-H14-FINITE-HEIGHT-PROMOTION-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_CI_PASSED / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Runtime record
 
@@ -45,6 +45,7 @@ strictly above the checked height.
 | 8 | `EXACT_HEIGHT` | Every orbit point has exact absolute ordinate `T+1` for `T >= 0`, so every below-height implication is discharged without weakening `<= T`. | Construct the explicit high off-line witness. |
 | 9 | `HIGH_OFFLINE_WITNESS` | The base point has real part `1/4`, is off the critical line, and satisfies `T < abs rho.im`; the aggregate universal endpoint compiles. | Register the result as a generic promotion obstruction, not a zeta theorem. |
 | 10 | `LOCAL_KERNEL_AUDIT` | Ten exact TargetChecks, eight standard-only axiom prints, an empty production forbidden scan, direct compiles, and the full `8,749`-job build pass. | Publish the frozen implementation commit and require public CI. |
+| 11 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation commit `8c61ef5d87ecf9ba5ffb923dabada87080b89f81` passed public Lean Action run `29963329369`, build job `89069216973`, in `2m42s`. | Keep Lean proof source frozen; publish immutable implementation evidence and require its own public CI. |
 
 ## Assumption and gap accounting
 
@@ -66,6 +67,9 @@ strictly above the checked height.
 - `production_module`: `LeanLab/Riemann/FiniteHeightPromotionAudit.lean`, `127` lines.
 - `definition_alignment`:
   `research/h14_finite_height_promotion_definition_alignment_20260723.md`.
-- `next_gate`: publish the frozen implementation commit and require public Lean Action CI before
-  accepting immutable evidence.
+- `public_implementation_evidence`: frozen implementation commit
+  `8c61ef5d87ecf9ba5ffb923dabada87080b89f81` passed Lean Action run `29963329369`, build job
+  `89069216973`, in `2m42s`.
+- `next_gate`: publish immutable evidence without changing Lean proof source and require the
+  evidence commit's own public Lean Action CI.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

@@ -6,7 +6,7 @@ Campaign: `FALSIFICATION-20260723-H14-FINITE-HEIGHT-PROMOTION-01`
 
 Selected node: `H14-FINITE-HEIGHT-PROMOTION-01`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_CI_PASSED / IMMUTABLE_EVIDENCE_REQUIRED`
 
 Preregistration commit `39ba83974d338cffc563945be9a829d0f73018ba` passed public Lean Action run
 `29962435935`, build job `89066333032`, in `1m54s`. Proof-source editing began only after this
@@ -15,7 +15,11 @@ gate passed.
 The fixed endpoint is now implemented locally in
 `LeanLab/Riemann/FiniteHeightPromotionAudit.lean`. All exact checks, selected axiom prints,
 forbidden scan, direct compiles, definition alignment, and the full `8,749`-job build pass.
-Public implementation CI remains required before evidence may be frozen.
+This was the local implementation state before public verification.
+
+Frozen implementation commit `8c61ef5d87ecf9ba5ffb923dabada87080b89f81` passed public Lean
+Action run `29963329369`, build job `89069216973`, in `2m42s`. Lean proof source is frozen;
+immutable evidence and its own public CI are the next gate.
 
 ## Selection reason
 

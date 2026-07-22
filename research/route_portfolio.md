@@ -3349,3 +3349,7 @@ gap, does not weaken the value of certified computation, and does not optimize a
 TargetChecks, eight standard-only axiom prints, an empty forbidden scan, direct compiles, and the
 full `8,749`-job build pass locally. `H14-GLOBAL-TAIL-REDUCTION-01` and RH remain open; public
 implementation CI is the next gate.
+
+Frozen implementation commit `8c61ef5d87ecf9ba5ffb923dabada87080b89f81` passed public Lean
+Action run `29963329369`, build job `89069216973`, in `2m42s`. Lean proof source is frozen;
+immutable evidence and its own public CI remain before final-ledger closure.
