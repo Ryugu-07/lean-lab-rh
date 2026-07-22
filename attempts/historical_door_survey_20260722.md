@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260722-HISTORICAL-DOOR-SURVEY-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_SUCCESS / IMPLEMENTATION_PUBLIC_CI_PENDING`
+Status: `IMPLEMENTATION_PUBLIC_CI_PASSED / EVIDENCE_PUBLIC_CI_PENDING`
 
 ## Runtime record
 
@@ -35,6 +35,7 @@ Preregistration commit `6aae2d066cddb8978f40b0ec0a8d4a6e7c7bd2ad` passed public 
 | 3 | `OMISSION_AUDIT` | Found a precise 2025-2026 finite-prime Weil ground-state program: a source theorem gives real zeros for admissible ground-state transforms, while simple-even structure and convergence to xi remain open. | Rank H5/H7 alignment first; treat numerical zero agreement as navigation only. |
 | 4 | `ADVERSARIAL_RANKING` | Retained long-mean-value and sparse-exception barriers for H1/H2; retained Conrey-Li, Jensen universality, function-field transfer, pair-correlation real-part, and finite-height barriers. | Rank 2025 short-mollifier derivative optimization second, with explicit reversal evidence. |
 | 5 | `LOCAL_LEDGER_AUDIT` | Completed the 793-line atlas, source registry additions, census/DAG/portfolio/HANDOFF synchronization, and this attempt log. No mathematical Lean declaration was added. | Publish implementation and require public CI before evidence backfill. |
+| 6 | `IMPLEMENTATION_PUBLIC_CI` | Commit `62c813f51020b2c012a4770c204ea97b3893d87e` passed Lean Action run `29921175166`, build job `88926780992`, in `1m49s`. | Publish immutable evidence and require its own public CI. |
 
 ## Outcome and accounting
 
@@ -57,3 +58,5 @@ Preregistration commit `6aae2d066cddb8978f40b0ec0a8d4a6e7c7bd2ad` passed public 
   language summary remain untouched and unstaged.
 - `next_gate`: implementation commit and public CI, immutable evidence backfill, evidence CI, then
   final ledger CI. The recommended M0 campaign cannot begin before this survey closes publicly.
+- `implementation_commit`: `62c813f51020b2c012a4770c204ea97b3893d87e`.
+- `implementation_public_ci`: run `29921175166`, build job `88926780992`, success in `1m49s`.

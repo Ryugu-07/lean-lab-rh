@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260722-HISTORICAL-DOOR-SURVEY-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_SUCCESS / IMPLEMENTATION_PUBLIC_CI_PENDING`
+Status: `IMPLEMENTATION_PUBLIC_CI_PASSED / EVIDENCE_PUBLIC_CI_PENDING`
 
 ## Baseline and route decision
 
@@ -135,3 +135,7 @@ existing research-log pattern.
   before substantive work.
 - `next_gate`: publish the atlas implementation commit, require public CI, then backfill immutable
   evidence before opening the recommended M0 alignment campaign.
+- `implementation_commit`: `62c813f51020b2c012a4770c204ea97b3893d87e`.
+- `implementation_public_ci`: run `29921175166`, build job `88926780992`, passed in `1m49s`.
+- `next_gate_after_implementation`: publish this immutable evidence backfill and require its own
+  public CI.
