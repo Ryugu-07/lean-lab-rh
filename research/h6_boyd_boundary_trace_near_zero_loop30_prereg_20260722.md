@@ -246,4 +246,6 @@ only on `propext`, `Classical.choice`, and `Quot.sound`. Implementation commit
 `0abfc639e17512316ba2468fbda7f6e84388210e` passed public Lean Action run `29892793629`, build job
 `88836454324`, in `2m29s`. Closure-evidence commit
 `f7bea1f2d721e085fd901e5cef7cdd6d5e1b3b78` passed run `29892965990`, build job `88836961122`, in
-`1m39s`. Loop 30 is publicly closed; the final ledger commit and its CI remain for turn closure.
+`1m39s`. Final ledger commit `eed4a6fc3640582cfb52e39c67642b46a14fcfed` passed run
+`29893099154`, build job `88837366066`, in `1m49s`. Loop 30 is publicly closed with all four
+public CI stages green.
