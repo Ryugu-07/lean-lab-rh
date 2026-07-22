@@ -141,6 +141,13 @@ a route-priority decision, not a claim that H6 is false and not a restoration of
 proof freezes. Precise conjecture proposal, falsification, numerical screening, and Lean testing
 remain open at every time under the standing conjecture gates.
 
+The survey is an omission search, not only a literature inventory: reconstruct every major
+documented route far enough to expose its decisive inference and ask whether a neglected branch,
+weakened premise, or cross-route input closes it. Until the major historical families have received
+this treatment, omission-seeking route coverage remains the default main line. If that coverage
+finds no viable repair, the project may shift most effort to original routes; original conjectures,
+their falsification, and direct proof attempts remain admissible throughout the survey.
+
 Exposure remains the current first priority: maintain the README, complete bounded novelty and
 definition review, split mathlib-ready components, and assemble human-owned publication evidence.
 P1/P2/P3 describe release readiness; none blocks proof campaigns.

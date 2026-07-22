@@ -2961,3 +2961,21 @@ evidence backfill and its independent public CI are next.
 Evidence commit `e4a45a430170d7398792f18a6e2105109e568aee` passed public Lean Action run
 `29937092592`, build job `88981336680`, in `1m32s`. The structural source-sufficiency endpoint is
 publicly closed; final-ledger CI remains before fresh historical route selection.
+
+## H9 Conrey Rationality-Gap Launch
+
+H1 final-ledger commit `02e8f746a1afacf87d74196883e909f0053a8618` passed public Lean Action
+run `29937476151`, build job `88982651332`, in `2m9s`. Fresh ranking selects
+`FALSIFICATION-20260723-H9-CONREY-RATIONALITY-GAP-01`, the first theorem-producing probe of the
+atlas's D10 arithmetic/Speiser door.
+
+The peer-reviewed Conrey source claims that `f_q(x)=0` forces `x` rational. On a fixed prefix its
+proof uses `A-B/(q*x)=H`. This determines `x` when `B!=0`; when `B=0` it only forces `A=H` and is
+independent of `x`. The paper later records this exact flat alternative and calls it unlikely
+without excluding it.
+
+The campaign will compile the corrected dichotomy and a generic irrational countermodel to the
+omitted inference. It will not call the actual quadratic-character proposition false without a
+kernel-checked flat-prefix witness. Exact finite scans found no such witness below the recorded
+bounds and remain navigation evidence only. Public preregistration CI is required before
+proof-source editing.

@@ -40,6 +40,7 @@ numerical premises.
 | 4 | `STRICTNESS / MECHANICAL AUDIT` | Proved strict positivity for `c<1/4`, then both normalized and source-functional unique-global-minimizer certificates. The 374-line module, six exact TargetChecks, six standard-only axiom prints, forbidden scan, `git diff --check`, and full 8,740-job build pass. | Local success. Publish the implementation commit and require public CI; retain the long-mean-value and sparse-exception nodes as the actual H1 barriers. |
 | 5 | `PUBLIC_IMPLEMENTATION_CI` | Implementation commit `bc1a4004979d12406f2bd415b4a44c6ba6269754` passed Lean Action run `29936756654`, build job `88980205237`, in `2m2s`. | Freeze Lean proof source. Publish immutable evidence and require independent CI. |
 | 6 | `PUBLIC_CLOSURE_EVIDENCE` | Evidence commit `e4a45a430170d7398792f18a6e2105109e568aee` passed Lean Action run `29937092592`, build job `88981336680`, in `1m32s`. | Stop at the registered structural endpoint after final-ledger publication. Return to value-ranked historical route selection. |
+| 7 | `FINAL_LEDGER_CI` | Final-ledger commit `02e8f746a1afacf87d74196883e909f0053a8618` passed Lean Action run `29937476151`, build job `88982651332`, in `2m9s`. | Campaign publicly closed. Select across the remaining historical doors. |
 
 ## Assumption and gap accounting
 
@@ -74,6 +75,8 @@ numerical premises.
 - `closure_evidence_commit`: `e4a45a430170d7398792f18a6e2105109e568aee`.
 - `closure_evidence_public_ci`: Lean Action run `29937092592`, build job `88981336680`, passed in
   `1m32s`.
-- `next_gate`: final-ledger commit and public CI; then `ROUTE_SELECTION` begins a separate
-  campaign.
+- `final_ledger_commit`: `02e8f746a1afacf87d74196883e909f0053a8618`.
+- `final_ledger_public_ci`: Lean Action run `29937476151`, build job `88982651332`, passed in
+  `2m9s`.
+- `next_gate`: complete; `ROUTE_SELECTION` chooses a separate campaign.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

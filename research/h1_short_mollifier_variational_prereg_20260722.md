@@ -160,5 +160,5 @@ edited.
   `29936756654`, build job `88980205237`, passed in `2m2s`.
 - `public_closure_evidence`: commit `e4a45a430170d7398792f18a6e2105109e568aee`, Lean Action run
   `29937092592`, build job `88981336680`, passed in `1m32s`.
-- `final_ledger`: this campaign is stopped at its registered success endpoint; final-ledger commit
-  and public CI remain before fresh route selection.
+- `final_ledger`: commit `02e8f746a1afacf87d74196883e909f0053a8618` passed Lean Action run
+  `29937476151`, build job `88982651332`, in `2m9s`; the campaign is fully publicly closed.

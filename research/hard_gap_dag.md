@@ -1112,6 +1112,23 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   closed; only final-ledger CI remains before cross-route selection.
 - `global_goal`: active; final-ledger publication and CI are the next gate.
 
+## 2026-07-23 H1 closure and H9 Conrey rationality-gap launch
+
+- `H1-SHORT-MOLLIFIER-VARIATIONAL-01`: fully public-green at final-ledger commit
+  `02e8f746a1afacf87d74196883e909f0053a8618`, run `29937476151`, build job `88982651332`.
+- `H9-CONREY-RATIONALITY-FLAT-INTERVAL-01`: selected falsification node. The source reduces a zero
+  of `f_q` on a fixed prefix to `A-B/(q*x)=H`; the printed rationality inference does not handle
+  `B=0`, while a later source paragraph explicitly leaves `A=H,B=0` unproved.
+- `exact_endpoint`: compile the weighted-prefix identity, corrected flat-or-rational dichotomy,
+  and an irrational countermodel to the omitted generic inference.
+- `claim_boundary`: no actual quadratic-character flat interval has been found or assumed. The
+  published Proposition 1 is `PROOF_GAP_CANDIDATE`, not `FALSIFIED`.
+- `numerical_navigation`: exact formula checks found no sign mismatch for 120 permitted prime
+  pairs below 300; squarefree scans below 20,000 found no negative, zero, or flat prefix.
+- `expected_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`,
+  `source_proof_gap_delta=1`, `obstruction_map_delta=1` on success.
+- `global_goal`: active; preregistration public CI precedes every Lean proof-source edit.
+
 ## 2026-07-22 H7 closure and H1 short-mollifier launch
 
 - `H7-WEIL-GROUNDSTATE-HERGLOTZ-01`: finite criterion campaign fully public-green at final-ledger
