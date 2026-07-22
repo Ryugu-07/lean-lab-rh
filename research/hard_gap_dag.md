@@ -1143,6 +1143,9 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   scan, diff check, and full `8,741`-job build pass locally. Public implementation CI remains.
 - `public_implementation_evidence`: commit `4c9939496e6a508c2f5e631ad3fa5ede9f5a69aa`
   passed Lean Action run `29940099631`, build job `88991480954`, in `1m56s`; proof source frozen.
+- `public_closure_evidence`: evidence commit `3f6eee393a262582f3d52a54f5e18bf07e6dd143`
+  passed run `29940351313`, build job `88992322443`, in `1m48s`. The campaign stops locally;
+  final-ledger CI remains before route selection.
 
 ## 2026-07-22 H7 closure and H1 short-mollifier launch
 

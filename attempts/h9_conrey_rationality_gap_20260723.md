@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260723-H9-CONREY-RATIONALITY-GAP-01`
 
 Mode: `FALSIFICATION`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_BACKFILL_REQUIRED`
+Status: `EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Runtime record
 
@@ -42,6 +42,7 @@ certifies one.
 | 3 | `COMPACTION_RECOVERY / USER_ROUTE_RULING` | Re-read the canonical governance and campaign records after an inherited summary. The user fixed the survey's purpose as a search for overlooked branches across the major historical routes before original-route work becomes the main allocation; conjecture proposal and testing remain open throughout. | Preserve H9 as the next value-ranked omission audit, publish its preregistration first, and keep cross-family coverage as the default successor rule. |
 | 4 | `LEAN_IMPLEMENTATION` | Compiled the exact finite weighted-prefix identity, proved that zero first moment makes the prefix constant in its scale, proved the exhaustive flat-or-explicit-rational dichotomy, and checked a rational-parameter `sqrt(2)` countermodel. Five exact TargetChecks and five selected axiom prints pass; the full 8,741-job build passes. | Classify the generic rationality inference as formally falsified while keeping the actual quadratic-character Proposition 1 open. Publish the frozen implementation and require public CI. |
 | 5 | `IMPLEMENTATION_CI` | Implementation commit `4c9939496e6a508c2f5e631ad3fa5ede9f5a69aa` passed Lean Action run `29940099631`, build job `88991480954`, in `1m56s`. | Freeze Lean proof source. Publish immutable implementation evidence and require its own public CI. |
+| 6 | `EVIDENCE_CI` | Evidence commit `3f6eee393a262582f3d52a54f5e18bf07e6dd143` passed Lean Action run `29940351313`, build job `88992322443`, in `1m48s`. | Stop at the registered local success endpoint. Publish the final ledger, require its CI, then return the persistent RH Goal to historical route selection. |
 
 ## Compiled declarations
 
@@ -74,5 +75,11 @@ Definition alignment is recorded in
 - `implementation_public_ci`: Lean Action run `29940099631`, build job `88991480954`, passed in
   `1m56s`.
 - `proof_source_state`: frozen at the implementation commit.
-- `next_gate`: immutable evidence commit and public CI.
+- `evidence_commit`: `3f6eee393a262582f3d52a54f5e18bf07e6dd143`.
+- `evidence_public_ci`: Lean Action run `29940351313`, build job `88992322443`, passed in
+  `1m48s`.
+- `local_stop`: reached at the preregistered corrected-dichotomy and countermodel endpoint.
+- `remaining_source_obligation`: prove that every actual relevant quadratic-character prefix
+  excludes `B_m=0,A_m=H`, or replace Proposition 1's proof by an independent argument.
+- `next_gate`: final-ledger commit and public CI; then `ROUTE_SELECTION`.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

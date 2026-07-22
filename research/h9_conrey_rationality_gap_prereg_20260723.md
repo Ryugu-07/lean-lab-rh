@@ -161,4 +161,9 @@ Targets, TargetChecks, AxiomsAudit, or aggregate imports are edited.
 - `implementation_public_ci`: Lean Action run `29940099631`, build job `88991480954`, passed in
   `1m56s`.
 - `proof_source_state`: frozen.
-- `next_gate`: immutable evidence commit and public CI.
+- `evidence_commit`: `3f6eee393a262582f3d52a54f5e18bf07e6dd143`.
+- `evidence_public_ci`: Lean Action run `29940351313`, build job `88992322443`, passed in
+  `1m48s`.
+- `local_stop`: reached at the registered success endpoint. The actual-character flat-prefix
+  exclusion remains an open source obligation.
+- `next_gate`: final-ledger commit and public CI, then historical route selection.

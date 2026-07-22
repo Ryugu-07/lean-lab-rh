@@ -2995,3 +2995,8 @@ locally. Public implementation CI remains before evidence closure.
 Implementation commit `4c9939496e6a508c2f5e631ad3fa5ede9f5a69aa` passed public Lean Action
 run `29940099631`, build job `88991480954`, in `1m56s`. Proof source is frozen; immutable evidence
 and final-ledger public CI remain before route reselection.
+
+Evidence commit `3f6eee393a262582f3d52a54f5e18bf07e6dd143` passed public Lean Action run
+`29940351313`, build job `88992322443`, in `1m48s`. The campaign reaches its registered local stop.
+Final-ledger CI remains; the actual-character flat-prefix exclusion stays open for future
+cross-route comparison rather than being silently assumed.
