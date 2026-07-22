@@ -1969,3 +1969,58 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   after public closure, value-rank its near-zero cancellation and shifted-tail subproblems against
   the two remaining outer-edge limits and other open DAG edges
 - `persistent_goal`: H6-Q1 and the global RH Goal remain active
+
+## Loop 29 Boyd boundary-trace two-scale reduction
+
+- `campaign`: `PROOF-ATTEMPT-20260722-H6-BOYD-BOUNDARY-TRACE-TWO-SCALE-01`
+- `mode`: `PROOF-ATTEMPT`
+- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; public implementation verified, closure
+  evidence pending
+- `target`: prove the Loop 28 canonical trace discrepancy tends to zero by separating its
+  near-zero cancellation, fixed compact-annulus, and shifted-tail regimes
+- `material_difference_from_loop28`: Loop 28 supplied pointwise convergence away from zero but no
+  interchange theorem. Loop 29 attacks the full discrepancy through an exact three-scale
+  partition and requires elimination of the complete compact-annulus regime before any local stop.
+- `compiled_middle_chain`:
+  `deBruijnNewmanPolymathBoydShiftedBoundaryPairIntegrand_tendstoUniformlyOn_middle` obtains
+  uniform convergence on every fixed annulus from joint continuity on a pole-free compact slab
+  and Heine--Cantor. The real-offset and canonical middle residuals consequently tend to zero.
+- `compiled_axis_and_partition_chain`: the truncated Boyd jump projection is exactly the
+  normalized symmetric integral of the axis kernel. The Loop 28 discrepancy is the normalized
+  total error integral and
+  `deBruijnNewmanPolymathBoydBoundaryTraceDiscrepancy_eq_threeScale` partitions it exactly into
+  near, middle, and tail residuals.
+- `compiled_exact_reduction`:
+  `deBruijnNewmanPolymathBoydBoundaryTrace_tendsto_iff_near_add_tail` proves the complete
+  discrepancy limit iff the canonical near-plus-tail residual tends to zero. The aggregate
+  theorem is `deBruijnNewmanPolymathBoydBoundaryTraceTwoScaleCertificate`.
+- `compiled_near_zero_normal_form`:
+  `deBruijnNewmanPolymathBoydShiftedBoundaryPairIntegrand_eq_nearZeroRegularized` cancels the two
+  explicit `1/(12*w)` singular terms into one `epsilon/6` rational correction. It exposes the
+  actual remaining local boundary problem in `w*GammaStar(w)` and `w/GammaStar(w)`.
+- `refined_obstructions`:
+  `OBS-H6-BOYD-R2-BOUNDARY-TRACE-NEAR-ZERO-SCALED-GAMMA-01` asks for uniform scaled-Gamma boundary
+  estimates in a shrinking right-half-disk;
+  `OBS-H6-BOYD-R2-BOUNDARY-TRACE-SHIFTED-TAIL-01` asks for shifted-tail control uniform in the
+  vanishing offset and growing canonical height.
+- `assumption_frontier_after`: the complete compact-annulus regime and explicit Stirling-pole
+  cancellation are K0. Neither refined obstruction, the discrepancy limit, the inner trace, the
+  two outer-edge limits, equation `(15)`, effective `R2`, nor Table 1 is assumed or proved.
+- `classification_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`,
+  `route_infrastructure_delta=1`, `obstruction_map_delta=1`
+- `local_mechanical_audit`: 884-line production module, exact proven Target, seven exact
+  TargetChecks, eight selected standard-only axiom prints, empty forbidden scans,
+  `git diff --check`, and the full 8,734-job build pass; selected declarations depend only on
+  `propext`, `Classical.choice`, and `Quot.sound`
+- `public_preregistration`: commit `436594434b0611d92978a3e7201f8f5f477ecf4c`, CI run
+  `29889067030`, build job `88825688680`, passed in `1m49s` before proof-source editing
+- `public_implementation`: commit `6f34d60701ac696d99b694132d231dc2ab931b62`, CI run
+  `29890689402`, build job `88830378785`, passed in `2m16s`
+- `compaction_state`: two compaction recoveries during Loop 29; the complete canonical frontier
+  and new source were re-read after each before proof or publication work resumed
+- `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
+- `budget`: no V4.1 numerical quota and no exposed serving token budget
+- `next_route_decision`: locally stop after the preregistered exact reduction. After public
+  closure, value-rank the two refined children against the still-open outer-edge limits and other
+  DAG edges; do not promote either estimate to a premise.
+- `persistent_goal`: H6-Q1 and the global RH Goal remain active

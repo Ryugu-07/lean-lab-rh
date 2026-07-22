@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260722-H6-BOYD-BOUNDARY-TRACE-TWO-SCALE-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PREREGISTERED`
+Status: `PUBLIC_IMPLEMENTATION_VERIFIED / CLOSURE_EVIDENCE_PENDING`
 
 ## Opening
 
@@ -233,3 +233,35 @@ include the unconditional discrepancy limit and close the Loop 28 inner trace.
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort are not exposed.
 - `budget`: V4.1 has no numerical quota; no serving token budget is exposed.
 - `global_goal`: the persistent RH Goal remains active.
+
+## Local outcome
+
+- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`.
+- `minimum_hard_gap_reduction`: achieved. The aggregate theorem
+  `deBruijnNewmanPolymathBoydBoundaryTraceTwoScaleCertificate` compiles and contains the exact
+  axis normalization, compact-annulus uniform convergence, real and canonical middle-integral
+  convergence, exact near/middle/tail partition, and final iff removing the middle regime.
+- `near_zero_attack`: Lean additionally proves
+  `deBruijnNewmanPolymathBoydShiftedBoundaryPairIntegrand_eq_nearZeroRegularized`. The two explicit
+  `1/(12*w)` singular terms combine into the regular rational correction
+  `epsilon/(6*(w-z)*(q-z))`; the remaining local quantities are the scaled-Gamma expressions
+  `w*GammaStar(w)` and `q/GammaStar(-q)`.
+- `full_success`: not achieved. No near-zero uniform estimate, shifted-tail estimate, complete
+  discrepancy limit, inner trace, outer-edge limit, or Boyd--Nemes equation `(15)` is assumed or
+  proved.
+- `refined_obstructions`:
+  `OBS-H6-BOYD-R2-BOUNDARY-TRACE-NEAR-ZERO-SCALED-GAMMA-01` requires uniform boundary estimates
+  for `w*GammaStar(w)` and `w/GammaStar(w)` in shrinking right-half-disks;
+  `OBS-H6-BOYD-R2-BOUNDARY-TRACE-SHIFTED-TAIL-01` requires a tail majorant uniform as the offset
+  tends to zero and the canonical height tends to infinity.
+- `local_mechanical_audit`: the 884-line production module, exact Target, seven exact
+  TargetChecks, eight selected axiom prints, standalone and integration compiles, empty forbidden
+  scans, `git diff --check`, and the full 8,734-job build pass. Every selected declaration depends
+  only on `propext`, `Classical.choice`, and `Quot.sound`.
+- `public_preregistration`: commit `436594434b0611d92978a3e7201f8f5f477ecf4c`, Lean Action run
+  `29889067030`, build job `88825688680`, passed in `1m49s` before proof-source editing.
+- `public_implementation`: commit `6f34d60701ac696d99b694132d231dc2ab931b62`, Lean Action run
+  `29890689402`, build job `88830378785`, passed in `2m16s`.
+- `compaction_state`: two compaction recoveries during Loop 29; the canonical frontier and new
+  production source were re-read after each before proof or publication work resumed.
+- `persistent_goal`: H6-Q1 and the global RH Goal remain active.

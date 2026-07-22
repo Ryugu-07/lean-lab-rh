@@ -806,3 +806,37 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `still_open`: the new boundary-trace uniform-integrability child, both outer-edge limits, the
   global cut-stitching route, equation `(15)`, effective `R2`, unconditional Table 1 certificates,
   H6-E/G8, and RH.
+
+## 2026-07-22 H6-Q1 Loop 29 local outcome
+
+- `H6-Q1`: open; the compact-annulus and exact three-scale subedge is proven locally.
+- `K0-H6-BOYD-R2-BOUNDARY-TRACE-MIDDLE-01`: the paired offset kernel converges uniformly to the
+  exact axis jump kernel on every fixed compact annulus away from zero. Both middle integrals and
+  their canonical-offset sequence tend to zero.
+- `K0-H6-BOYD-R2-BOUNDARY-TRACE-THREE-SCALE-01`: the Loop 28 discrepancy is exactly the sum of
+  near-zero, middle, and shifted-tail residuals, and its limit is equivalent to the near-plus-tail
+  limit after the middle term is removed.
+- `K0-H6-BOYD-R2-BOUNDARY-TRACE-POLE-CANCELLATION-01`: the two explicit `1/(12*w)` Stirling
+  singularities in the shifted pair cancel to the regular correction
+  `epsilon/(6*(w-z)*(q-z))`; the remaining local terms expose the actual scaled-Gamma boundary
+  quantities rather than an artificial pole.
+- `OBS-H6-BOYD-R2-BOUNDARY-TRACE-NEAR-ZERO-SCALED-GAMMA-01`: prove a uniform boundary estimate for
+  `w*GammaStar(w)` and `w/GammaStar(w)` on the shrinking right-half-disk sampled by the paired
+  offset lines, strong enough to make the canonical near residual vanish.
+- `OBS-H6-BOYD-R2-BOUNDARY-TRACE-SHIFTED-TAIL-01`: prove a uniform tail majorant as the offset tends
+  to zero and the canonical height grows, strong enough to make the canonical tail residual
+  vanish.
+- `relation_to_loop28_obstruction`: the parent uniform-integrability obstruction is reduced to
+  these two exact children; no compact-annulus obligation remains. Neither child is assumed.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `local_audit`: 884-line module, seven exact TargetChecks, eight selected standard-only axiom
+  prints, empty forbidden scans, `git diff --check`, and the full 8,734-job build pass.
+- `public_preregistration`: commit `436594434b0611d92978a3e7201f8f5f477ecf4c`, CI run
+  `29889067030`, build job `88825688680`, passed in `1m49s` before proof-source editing.
+- `public_implementation`: commit `6f34d60701ac696d99b694132d231dc2ab931b62`, CI run
+  `29890689402`, build job `88830378785`, passed in `2m16s`.
+- `compaction_state`: two recoveries; all canonical frontier files and the new source were re-read
+  after each before continuing.
+- `still_open`: both refined trace children, both outer-edge limits, the global cut-stitching
+  route, equation `(15)`, effective `R2`, unconditional Table 1 certificates, H6-E/G8, and RH.
