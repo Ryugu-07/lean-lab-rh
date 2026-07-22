@@ -3099,3 +3099,25 @@ Immutable-evidence commit `3a2d721d0397ff40c9bce496149ac1e05b84db6c` passed publ
 Action run `29948908677`, build job `89021336009`, in `2m10s`. Only final-ledger CI remains. The
 local campaign stops at its registered finite-hinge, conditional-consumer, and falsification
 endpoint; PCC and sparse-exception amplification remain open H11 work.
+
+Final-ledger commit `3424cb661487a45e544eb4fa1ff4ad8bcd757455` passed public Lean Action
+run `29949249815`, build job `89022493860`, in `1m33s`. The local H11 campaign is fully publicly
+closed; the analytic PCC and arithmetic sparse-exception-amplification nodes remain open.
+
+## H8 Jensen Eventual-Hyperbolicity Launch
+
+Fresh cross-family selection parks immediate H2 work because its finite/sparse-exception logic is
+already represented by H11, and does not re-enter H7 after three recent finite spectral campaigns.
+The selected breadth correction is
+`FALSIFICATION-20260723-H8-JENSEN-EVENTUAL-HYPERBOLICITY-01`.
+
+Primary-source search found no 2025--2026 theorem controlling Jensen degree and shift uniformly.
+Duran 2024 is a real atlas addition: Brenke polynomials generate further RH-equivalent
+real-rootedness criteria, but not a proof of their all-index condition. The fixed Lean endpoint is
+therefore adversarial rather than another equivalence: construct one coefficient sequence that
+passes every prescribed finite initial wedge and is eventually hyperbolic for every fixed degree,
+yet has one explicit `1+X^2` window with nonreal root `I`.
+
+The model will not be identified with xi coefficients and will not falsify the source theorems.
+It tests exactly whether fixed-degree eventuality or finite certificates can be promoted to the
+all-degree/all-shift statement. Public preregistration CI is required before proof-source editing.

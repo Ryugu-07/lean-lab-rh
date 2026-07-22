@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260723-H11-PCC-HORIZONTAL-MULTIPLICITY-01`
 
 Selected node: `H11-PCC-HORIZONTAL-MULTIPLICITY-01`
 
-Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_CI_REQUIRED`
+Status: `PUBLICLY_CLOSED / H11_ANALYTIC_AND_AMPLIFICATION_NODES_OPEN`
 
 ## Selection reason
 
@@ -180,4 +180,6 @@ job `89020321751`, in `2m1s`. Lean proof source is frozen; immutable evidence an
 public CI are the next gate. Immutable-evidence commit
 `3a2d721d0397ff40c9bce496149ac1e05b84db6c` then passed public run `29948908677`, build job
 `89021336009`, in `2m10s`. Only final-ledger CI remains before local campaign closure and fresh
-route selection.
+route selection. Final-ledger commit `3424cb661487a45e544eb4fa1ff4ad8bcd757455` passed public run
+`29949249815`, build job `89022493860`, in `1m33s`. This local campaign is publicly closed;
+H11-D, H11-E, PCC, and RH remain open.

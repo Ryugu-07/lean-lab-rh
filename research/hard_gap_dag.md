@@ -1112,6 +1112,21 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   closed; only final-ledger CI remains before cross-route selection.
 - `global_goal`: active; final-ledger publication and CI are the next gate.
 
+## 2026-07-23 H8 Jensen eventual-hyperbolicity launch
+
+- `H8-A-JENSEN-WINDOW-LOCALITY-01`: `PREREGISTERED`. Define generic Jensen polynomials and prove
+  that a degree/shift pair depends only on its finite coefficient window.
+- `H8-B-FINITE-WEDGE-BLINDNESS-01`: `PREREGISTERED / FALSIFICATION`. For an arbitrary cutoff,
+  construct a later one-coefficient defect while every earlier window remains exactly the
+  all-one hyperbolic polynomial `(1+X)^d`.
+- `H8-C-EVENTUAL-NOT-GLOBAL-01`: `PREREGISTERED / FALSIFICATION`. Prove every fixed degree is
+  hyperbolic at all sufficiently large shifts, but one degree-two window is `1+X^2` and has root
+  `I`. This isolates the quantifier gap between source asymptotics and the RH-bearing criterion.
+- `H8-D-XI-ALL-INDEX-01`: `OPEN / RH_STRENGTH`. Prove all required Jensen polynomials for the
+  actual xi coefficients are hyperbolic. No generic coefficient countermodel discharges this.
+- `source_update`: Duran 2024 adds Brenke-polynomial RH equivalences but no uniform all-index
+  mechanism. Preregistration public CI is required before proof-source editing.
+
 ## 2026-07-23 H1 closure and H9 Conrey rationality-gap launch
 
 - `H1-SHORT-MOLLIFIER-VARIATIONAL-01`: fully public-green at final-ledger commit
@@ -1219,6 +1234,9 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `3a2d721d0397ff40c9bce496149ac1e05b84db6c` passed Lean Action run `29948908677`, build job
   `89021336009`, in `2m10s`. Final-ledger CI remains; H11-D and H11-E stay open after this finite
   consumer/falsification campaign stops.
+- `final_ledger`: commit `3424cb661487a45e544eb4fa1ff4ad8bcd757455` passed Lean Action run
+  `29949249815`, build job `89022493860`, in `1m33s`. The finite H11 consumer/falsification
+  campaign is publicly closed; H11-D/H11-E remain open.
 
 ## 2026-07-22 H7 closure and H1 short-mollifier launch
 

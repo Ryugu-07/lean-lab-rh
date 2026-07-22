@@ -4,7 +4,7 @@ Date: 2026-07-22
 
 Campaign: `LITERATURE-20260722-HISTORICAL-DOOR-SURVEY-01`
 
-Status: `ATLAS_COMPLETE / PUBLICLY_CLOSED / POST_SURVEY_H11_CORRECTION_ACTIVE`
+Status: `ATLAS_COMPLETE / H11_CORRECTION_FORMALIZED / H8_FALSIFICATION_ACTIVE`
 
 ## Claim boundary
 
@@ -75,8 +75,8 @@ mathematically weak route.
 | 6 | D7 function-field/cohomology | Construct a number-field trace/cohomology object with positivity/weights and a uniform infinite-spectrum tail. | `OPEN`; characteristic-p and finite-spectrum inputs do not transfer. | Moderate structural value, low evidence of a missed direct transfer. | `LITERATURE` only where it feeds D6 or D1. |
 | 7 | D2 heat flow/zero dynamics | Prove `Lambda <= 0`, for example through an actual-theta all-index invariant or collision-compatible continuation. | `OPEN`; several generic mechanisms are formally obstructed. | Low after deep project exploration, though exact direct endpoint remains legitimate. | Keep open; H6 numerical upper-bound successor remains parked. |
 | 8 | D9 de Branges/canonical systems | Build a valid zeta canonical system whose required positivity survives the Conrey-Li tests and implies the full zero correspondence. | Original positivity condition fails; repaired systems are `OPEN`. | Low-to-moderate if D6 supplies a natural ground-state system. | Re-enter only through an exact D6 consumer. |
-| 9 | D8 Laguerre-Polya/Jensen | Prove all degrees and all shifts hyperbolic, including the finite exceptional region. | `OPEN`, but eventual fixed-degree hyperbolicity is asymptotically universal and does not control the exceptions. | Low; the apparent progress is concentrated away from the RH-bearing indices. | `HEURISTIC_ONLY` unless a finite-exception mechanism appears. |
-| 10 (under review) | D5 zero statistics/random matrices | Upgrade the 2026 horizontal-multiplicity density-one theorem to exclusion of every sparse off-line orbit. | PCC now conditionally gives density one on the line, but its normalized error permits finite or density-zero exceptions. | Moderate post-survey omission evidence: the source explicitly corrects the older no-horizontal-information claim. | `LITERATURE / FALSIFICATION` active at H11. |
+| 9 | D8 Laguerre-Polya/Jensen | Prove all degrees and all shifts hyperbolic, including the finite exceptional region. | `OPEN`, but eventual fixed-degree hyperbolicity is asymptotically universal and does not control the exceptions. | Low; Duran 2024 adds Brenke equivalences without a uniform-index bridge. | `FALSIFICATION` active at H8 before any further criterion expansion. |
+| 10 | D5 zero statistics/random matrices | Upgrade the 2026 horizontal-multiplicity density-one theorem to exclusion of every sparse off-line orbit. | PCC now conditionally gives density one on the line, but its normalized error permits finite or density-zero exceptions. | Moderate post-survey omission evidence: the source explicitly corrects the older no-horizontal-information claim. | Finite hinge and sparse-exception model formalized; H11-D/H11-E remain open. |
 | 11 | D11 generalized/automorphic/Iwasawa | Find a theorem that transfers a proved family or p-adic mechanism to the individual archimedean zeta zero set. | `OPEN`; no direct p-adic RH analogue, and family laws do not decide one member. | Low. | `MONITOR`; use for mechanism stress tests. |
 | 12 | D12 certified computation | Pair finite verification with a proved uniform global tail that excludes all higher off-line zeros. | Tail is the whole unresolved global edge. | Low as a standalone route; high as a certificate component. | `SUPPORTING`; no finite-to-global promotion. |
 | control | D13 countermodels/failed mechanisms | Not a proof endpoint. | Several mechanisms are decisively false. | High negative value: prevents repeated false routes. | Maintain as mandatory regression suite. |
@@ -506,6 +506,15 @@ Formalization fit: `4/5`. Machine-task fit: `5/5` for finite polynomials, `2/5` 
    zeros.
 3. Do not extend PF-order calculations unless the surviving order has a proved implication to
    all required Jensen polynomials.
+
+### Post-survey H8 campaign
+
+Fresh source audit adds Duran 2024: Brenke-polynomial real-rootedness supplies further RH
+equivalences but no theorem controlling every degree and shift. Campaign
+`FALSIFICATION-20260723-H8-JENSEN-EVENTUAL-HYPERBOLICITY-01` preregisters an exact coefficient
+model that satisfies fixed-degree eventual hyperbolicity and arbitrary finite-wedge checks while
+failing one explicit degree-two window. The model tests only the quantifier promotion and is not
+claimed to be the xi coefficient sequence.
 
 ## D9. de Branges spaces and canonical systems
 

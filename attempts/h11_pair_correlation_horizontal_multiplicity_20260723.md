@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260723-H11-PCC-HORIZONTAL-MULTIPLICITY-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_CI_REQUIRED`
+Status: `PUBLICLY_CLOSED / H11_ANALYTIC_AND_AMPLIFICATION_NODES_OPEN`
 
 ## Runtime record
 
@@ -47,6 +47,7 @@ adapter and exact cofinal-count consumer into RH.
 | 10 | `FULL_LOCAL_BUILD` | The production forbidden scan is empty, `git diff --check` passes, the H11 module build has no local warning, and the full `8,743`-job build passes. | Freeze the implementation in a scoped commit and require independent public CI. |
 | 11 | `IMPLEMENTATION_CI` | Frozen implementation commit `a2c8dc06f493f8577de668286482c4cbe2e6498f` passed public run `29948610437`, build job `89020321751`, in `2m1s`. | Keep all Lean proof source frozen; publish immutable evidence and require that evidence commit's own CI. |
 | 12 | `IMMUTABLE_EVIDENCE_CI` | Evidence commit `3a2d721d0397ff40c9bce496149ac1e05b84db6c` passed public run `29948908677`, build job `89021336009`, in `2m10s`. | Publish the final campaign ledger and require its CI, then return the persistent RH Goal to historical-route omission search. |
+| 13 | `FINAL_LEDGER_CI / ROUTE_SELECTION` | Final-ledger commit `3424cb661487a45e544eb4fa1ff4ad8bcd757455` passed public run `29949249815`, build job `89022493860`, in `1m33s`. | Close this finite-hinge campaign. Keep H11-D/H11-E open and select a fresh historical family. |
 
 ## Assumption and gap accounting
 
@@ -71,5 +72,7 @@ adapter and exact cofinal-count consumer into RH.
 - `implementation_public_ci`: run `29948610437`, build job `89020321751`, passed in `2m1s`.
 - `evidence_commit`: `3a2d721d0397ff40c9bce496149ac1e05b84db6c`.
 - `evidence_public_ci`: run `29948908677`, build job `89021336009`, passed in `2m10s`.
-- `next_gate`: final-ledger commit and its public CI; Lean proof source remains frozen.
+- `final_ledger_commit`: `3424cb661487a45e544eb4fa1ff4ad8bcd757455`.
+- `final_ledger_public_ci`: run `29949249815`, build job `89022493860`, passed in `1m33s`.
+- `next_gate`: fresh historical-route selection; Lean proof source remains frozen.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.
