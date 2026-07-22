@@ -81,6 +81,7 @@ import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
+import LeanLab.Riemann.FiniteHeightPromotionAudit
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
@@ -1441,6 +1442,21 @@ def rhTargets : List ResearchTarget :=
         "Produce a proved generalized, automorphic, family, or p-adic theorem that controls the real part of every nontrivial zero of the individual Riemann zeta function without assuming a class statement that already contains RH."
       status := .inProgress
       note := "The modulus-one theorem shows that a class theorem containing the zeta member is at least as strong as RH. Product factorization gives a valid one-way reduction but no unconditional generalized-RH input, and extra factors can create additional zeros." },
+    { id := "H14.computation.finite-height-promotion"
+      tier := .tier2
+      title := "Audit standalone finite-height-to-global promotion"
+      statement :=
+        "For every nonnegative finite height, construct a finite open-strip orbit closed under conjugation and one-sub reflection that passes all below-height critical-line checks while retaining an off-line point strictly above the checked height."
+      leanName := some ``finiteHeightPromotionAudit_endpoint
+      status := .proven
+      note := "Campaign FALSIFICATION-20260723-H14-FINITE-HEIGHT-PROMOTION-01 kernel-checks only the generic promotion boundary. The finite orbit is not an actual zeta zero set and does not challenge certified computation paired with a separate analytic reduction." },
+    { id := "H14.computation.global-tail-reduction"
+      tier := .tier2
+      title := "Reduce all higher zeta zeros to a finite certificate"
+      statement :=
+        "Prove a global analytic theorem showing that a finite certified zero calculation excludes every higher off-line nontrivial zeta zero."
+      status := .inProgress
+      note := "Platt-Trudgian finite verification is genuine unconditional information and has valid bounded analytic consumers. The open edge is a global tail theorem strong enough to localize every possible RH exception." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

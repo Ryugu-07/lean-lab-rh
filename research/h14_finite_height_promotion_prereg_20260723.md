@@ -6,7 +6,16 @@ Campaign: `FALSIFICATION-20260723-H14-FINITE-HEIGHT-PROMOTION-01`
 
 Selected node: `H14-FINITE-HEIGHT-PROMOTION-01`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_IMPLEMENTATION_COMPLETE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+
+Preregistration commit `39ba83974d338cffc563945be9a829d0f73018ba` passed public Lean Action run
+`29962435935`, build job `89066333032`, in `1m54s`. Proof-source editing began only after this
+gate passed.
+
+The fixed endpoint is now implemented locally in
+`LeanLab/Riemann/FiniteHeightPromotionAudit.lean`. All exact checks, selected axiom prints,
+forbidden scan, direct compiles, definition alignment, and the full `8,749`-job build pass.
+Public implementation CI remains required before evidence may be frozen.
 
 ## Selection reason
 
@@ -90,6 +99,16 @@ strip property recorded precisely.
 `FINITE_PROMOTION_SURVIVES` occurs if the specified finite symmetric orbit cannot pass the exact
 verification predicate while retaining an off-line point. That would falsify the witness design
 and require re-examining the promotion logic.
+
+## Local implementation outcome
+
+The campaign reaches the registered `FULL_SUCCESS` endpoint locally. For every `T >= 0`, the
+compiled orbit is finite, nonempty, closed under conjugation and one-sub reflection, contained in
+the open critical strip, and verified through height `T`. Every orbit member has exact absolute
+ordinate `T+1`, and the base point is an off-line witness strictly above `T`.
+
+This closes only the generic standalone-promotion node. It produces no information about actual
+zeta zeros, and `H14-GLOBAL-TAIL-REDUCTION-01` remains open.
 
 ## Claim boundary
 

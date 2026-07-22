@@ -1404,3 +1404,19 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   a valid and high-value support tool whenever a separate theorem supplies a finite reduction.
 - `expected_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_map_delta=1`,
   `obstruction_map_delta=1` on success; preregistration CI precedes proof-source editing.
+- `preregistration_gate`: commit `39ba83974d338cffc563945be9a829d0f73018ba` passed public Lean
+  Action run `29962435935`, build job `89066333032`, in `1m54s`; proof-source editing is open.
+
+## 2026-07-23 H14 finite-height promotion local result
+
+- `H14-FINITE-HEIGHT-PROMOTION-01`: `LOCALLY_PROVEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`.
+  `finiteHeightPromotionAudit_endpoint` constructs the registered finite nonempty orbit for every
+  `T >= 0`, with both symmetries, open-strip membership, finite-height verification, and a strict
+  above-height off-line witness.
+- `H14-GLOBAL-TAIL-REDUCTION-01`: `OPEN / RH_STRENGTH`. The generic theorem neither constrains
+  actual zeta zeros nor supplies the missing analytic tail reduction.
+- `audit`: ten exact TargetChecks, eight standard-only axiom prints, an empty production forbidden
+  scan, direct compiles, and a full `8,749`-job build pass.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_map_delta=1`,
+  `obstruction_map_delta=1`.
+- `next_gate`: publish the frozen implementation commit and require public Lean Action CI.

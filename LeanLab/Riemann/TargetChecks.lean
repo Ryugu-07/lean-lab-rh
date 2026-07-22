@@ -2,6 +2,7 @@ import LeanLab.Riemann.Targets
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
+import LeanLab.Riemann.FiniteHeightPromotionAudit
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.DeBruijnNewmanHeat
@@ -210,6 +211,7 @@ def checkedTargetNames : List Lean.Name :=
     ``riemannHypothesis_of_heatLi_atBot_zero_and_monotone_assumptions,
     ``not_isPolyaFrequencyFive_deBruijnNewmanEvenKernel,
     ``dirichletFamilyInclusionAudit_endpoint,
+    ``finiteHeightPromotionAudit_endpoint,
     ``riemannHypothesis_iff_nontrivial_zeros_on_line ]
 
 example :
@@ -3629,5 +3631,62 @@ example :
     ¬ criticalStripZerosOnLine
       (fun s => riemannZeta s * (s - (1 / 4 : ℂ))) :=
   dirichletFamilyInclusionAudit_endpoint
+
+example (T : ℝ) :
+    (finiteHeightAuditOrbit T : Set ℂ).Finite :=
+  finiteHeightAuditOrbit_finite T
+
+example (T : ℝ) :
+    (finiteHeightAuditOrbit T).Nonempty :=
+  finiteHeightAuditOrbit_nonempty T
+
+example (T : ℝ) {rho : ℂ} (hrho : rho ∈ finiteHeightAuditOrbit T) :
+    star rho ∈ finiteHeightAuditOrbit T :=
+  finiteHeightAuditOrbit_conj_closed T hrho
+
+example (T : ℝ) {rho : ℂ} (hrho : rho ∈ finiteHeightAuditOrbit T) :
+    1 - rho ∈ finiteHeightAuditOrbit T :=
+  finiteHeightAuditOrbit_one_sub_closed T hrho
+
+example (T : ℝ) {rho : ℂ} (hrho : rho ∈ finiteHeightAuditOrbit T) :
+    InCriticalStrip rho :=
+  finiteHeightAuditOrbit_inCriticalStrip T hrho
+
+example {T : ℝ} (hT : 0 ≤ T) {rho : ℂ}
+    (hrho : rho ∈ finiteHeightAuditOrbit T) :
+    |rho.im| = T + 1 :=
+  finiteHeightAuditOrbit_abs_im hT hrho
+
+example {T : ℝ} (hT : 0 ≤ T) :
+    verifiedOnCriticalLineUpTo (finiteHeightAuditOrbit T) T :=
+  finiteHeightAuditOrbit_verified hT
+
+example {T : ℝ} (hT : 0 ≤ T) :
+    ∃ rho ∈ finiteHeightAuditOrbit T,
+      ¬ OnCriticalLine rho ∧ T < |rho.im| :=
+  finiteHeightAuditOrbit_has_high_offLine hT
+
+example (T : ℝ) (hT : 0 ≤ T) :
+    ∃ zeros : Finset ℂ,
+      (zeros : Set ℂ).Finite ∧
+      zeros.Nonempty ∧
+      (∀ rho ∈ zeros, star rho ∈ zeros) ∧
+      (∀ rho ∈ zeros, 1 - rho ∈ zeros) ∧
+      (∀ rho ∈ zeros, InCriticalStrip rho) ∧
+      verifiedOnCriticalLineUpTo zeros T ∧
+      ∃ rho ∈ zeros, ¬ OnCriticalLine rho ∧ T < |rho.im| :=
+  exists_finiteHeightAuditOrbit T hT
+
+example :
+    ∀ T : ℝ, 0 ≤ T →
+      ∃ zeros : Finset ℂ,
+        (zeros : Set ℂ).Finite ∧
+        zeros.Nonempty ∧
+        (∀ rho ∈ zeros, star rho ∈ zeros) ∧
+        (∀ rho ∈ zeros, 1 - rho ∈ zeros) ∧
+        (∀ rho ∈ zeros, InCriticalStrip rho) ∧
+        verifiedOnCriticalLineUpTo zeros T ∧
+        ∃ rho ∈ zeros, ¬ OnCriticalLine rho ∧ T < |rho.im| :=
+  finiteHeightPromotionAudit_endpoint
 
 end LeanLab.Riemann

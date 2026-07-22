@@ -3331,3 +3331,21 @@ Campaign `FALSIFICATION-20260723-H14-FINITE-HEIGHT-PROMOTION-01` audits only sta
 finite-to-global promotion. It does not challenge Platt--Trudgian's certified computation or its
 valid use by a separate analytic de Bruijn--Newman theorem, and it does not optimize any bound.
 Public preregistration CI is required before proof-source editing; persistent RH Goal active.
+
+Preregistration commit `39ba83974d338cffc563945be9a829d0f73018ba` passed public Lean Action run
+`29962435935`, build job `89066333032`, in `1m54s`. The fixed proof-source gate is open; the
+campaign remains a generic promotion audit rather than a zeta computation.
+
+## H14 Finite-Height Promotion Local Result
+
+The fixed endpoint now compiles in `LeanLab/Riemann/FiniteHeightPromotionAudit.lean`. For every
+real `T >= 0`, the explicit finite orbit of `1/4 + i*(T+1)` is nonempty, lies in the open critical
+strip, and is closed under conjugation and `rho |-> 1-rho`. Every member has absolute ordinate
+`T+1`; hence all points through height `T` satisfy the critical-line predicate while the base point
+remains strictly higher and off-line.
+
+This is a quantifier and promotion obstruction, not a model of zeta. It closes no analytic tail
+gap, does not weaken the value of certified computation, and does not optimize a bound. Ten exact
+TargetChecks, eight standard-only axiom prints, an empty forbidden scan, direct compiles, and the
+full `8,749`-job build pass locally. `H14-GLOBAL-TAIL-REDUCTION-01` and RH remain open; public
+implementation CI is the next gate.

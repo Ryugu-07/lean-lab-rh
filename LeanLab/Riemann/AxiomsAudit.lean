@@ -4,6 +4,7 @@ import LeanLab.Riemann.InfiniteReciprocalTraceAudit
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
+import LeanLab.Riemann.FiniteHeightPromotionAudit
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -847,3 +848,11 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.riemannHypothesis_of_criticalStripZerosOnLine_riemannZeta_mul
 #print axioms LeanLab.Riemann.not_criticalStripZerosOnLine_riemannZeta_mul_offLineFactor
 #print axioms LeanLab.Riemann.dirichletFamilyInclusionAudit_endpoint
+#print axioms LeanLab.Riemann.finiteHeightAuditOrbit_conj_closed
+#print axioms LeanLab.Riemann.finiteHeightAuditOrbit_one_sub_closed
+#print axioms LeanLab.Riemann.finiteHeightAuditOrbit_inCriticalStrip
+#print axioms LeanLab.Riemann.finiteHeightAuditOrbit_abs_im
+#print axioms LeanLab.Riemann.finiteHeightAuditOrbit_verified
+#print axioms LeanLab.Riemann.finiteHeightAuditOrbit_has_high_offLine
+#print axioms LeanLab.Riemann.exists_finiteHeightAuditOrbit
+#print axioms LeanLab.Riemann.finiteHeightPromotionAudit_endpoint

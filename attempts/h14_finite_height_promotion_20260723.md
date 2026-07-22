@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260723-H14-FINITE-HEIGHT-PROMOTION-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_IMPLEMENTATION_COMPLETE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 
 ## Runtime record
 
@@ -22,8 +22,8 @@ Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
 - `parent_public_ci`: run `29961935426`, build job `89064730187`, passed in `2m17s`.
 - `selected_node`: `H14-FINITE-HEIGHT-PROMOTION-01`.
 - `preregistration`: `research/h14_finite_height_promotion_prereg_20260723.md`.
-- `preregistration_commit`: pending.
-- `preregistration_public_ci`: required before proof-source editing.
+- `preregistration_commit`: `39ba83974d338cffc563945be9a829d0f73018ba`.
+- `preregistration_public_ci`: run `29962435935`, build job `89066333032`, passed in `1m54s`.
 
 ## Preregistered endpoint
 
@@ -39,6 +39,12 @@ strictly above the checked height.
 | 2 | `H14_CARD_AUDIT` | Platt--Trudgian supply genuine finite-height information; their de Bruijn--Newman consequence uses a separate analytic consumer and does not promote finite verification to RH. | Audit only the forbidden standalone promotion, not the numerical height. |
 | 3 | `DUPLICATION_CHECK` | H11 covers density-one with sparse exceptions and H8 covers eventual-index behavior, but neither has the universal finite-height predicate with both zeta symmetries. | A distinct H14 quantifier audit has value. |
 | 4 | `WITNESS_DESIGN` | The orbit of `1/4 + i*(T+1)` under conjugation and `s |-> 1-s` lies in the strip, above `T`, and contains off-line points. | Preregister the exact four-point finite witness. |
+| 5 | `PREREGISTRATION_GATE` | Commit `39ba83974d338cffc563945be9a829d0f73018ba` passed public Lean Action run `29962435935`, build job `89066333032`, in `1m54s`. | Open proof-source editing with the fixed endpoint and claim boundary unchanged. |
+| 6 | `PREDICATE_AND_ORBIT` | `verifiedOnCriticalLineUpTo`, the base point `1/4 + i*(T+1)`, and its finite two-symmetry orbit compile. | Continue to exact closure and strip geometry. |
+| 7 | `SYMMETRY_AND_STRIP` | The orbit is finite, nonempty, conjugation-closed, one-sub-closed, and wholly inside the open critical strip. | Continue to the arbitrary-height quantifier. |
+| 8 | `EXACT_HEIGHT` | Every orbit point has exact absolute ordinate `T+1` for `T >= 0`, so every below-height implication is discharged without weakening `<= T`. | Construct the explicit high off-line witness. |
+| 9 | `HIGH_OFFLINE_WITNESS` | The base point has real part `1/4`, is off the critical line, and satisfies `T < abs rho.im`; the aggregate universal endpoint compiles. | Register the result as a generic promotion obstruction, not a zeta theorem. |
+| 10 | `LOCAL_KERNEL_AUDIT` | Ten exact TargetChecks, eight standard-only axiom prints, an empty production forbidden scan, direct compiles, and the full `8,749`-job build pass. | Publish the frozen implementation commit and require public CI. |
 
 ## Assumption and gap accounting
 
@@ -52,5 +58,14 @@ strictly above the checked height.
 - `obstruction_map_delta_target`: `1`; finite-height-only promotion is tested with full basic
   zero symmetries.
 - `rh_frontier_delta_target`: `0`.
-- `next_gate`: preregistration commit and public CI before Lean proof-source editing.
+- `hard_gap_delta`: `0`; no actual zeta zero is constrained.
+- `route_map_delta`: `1`; H14 now has an exact theorem-producing finite-to-global boundary.
+- `obstruction_map_delta`: `1`; both basic zero symmetries coexist with arbitrary finite-height
+  verification and an unchecked off-line point.
+- `rh_frontier_delta`: `0`; RH remains open.
+- `production_module`: `LeanLab/Riemann/FiniteHeightPromotionAudit.lean`, `127` lines.
+- `definition_alignment`:
+  `research/h14_finite_height_promotion_definition_alignment_20260723.md`.
+- `next_gate`: publish the frozen implementation commit and require public Lean Action CI before
+  accepting immutable evidence.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.
