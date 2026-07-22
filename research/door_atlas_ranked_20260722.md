@@ -71,7 +71,7 @@ mathematically weak route.
 | 2 | D3 critical-line proportions/mollifiers | Obtain a source-valid path from optimized mollification to proportion one and then exclude every sparse exceptional off-line zero. | Mixed: long mean values are open; sparse-zero insufficiency is logical and still operative. | Moderate: 2025 work identifies derivative-combination optimization as relatively underused and gains without new arithmetic input. | `LITERATURE -> DISCOVERY`; runner-up. |
 | 3 | D10 arithmetic/Speiser/character sums | Prove a uniform arithmetic inequality strong enough for the RH implication, or a derivative-zero exclusion theorem on the left half-strip. | `OPEN`, but most classical criteria merely restate RH. | Moderate for Conrey's 2024 character-sum reduction; low for Robin/Lagarias alone. | `FALSIFICATION` of the exact character-sum strengthening before proof work. |
 | 4 | D1 closure/Li/Weil positivity | Produce unconditional global positivity or target closure, with prime and archimedean terms controlled together. | `OPEN`; local same-sign prime decomposition is formally obstructed. | Moderate only through the D6 global operator interface. | Merge consumers into D6; do not add another equivalent criterion. |
-| 5 | D4 density/moments/subconvexity | Convert large-value control into a theorem excluding even one exceptional off-line orbit. | `OPEN`; density bounds alone provably allow finite or sparse exceptions. | Low-to-moderate: active analytic progress, but no identified exceptional-zero killer. | `MONITOR` and seek a cross-route localizer. |
+| 5 | D4 density/moments/subconvexity | Convert vertically sensitive zero detection or large-value control into exclusion of even one exceptional off-line orbit. | `OPEN`; density bounds allow sparse exceptions, and Maynard--Pratt identify bow configurations as the obstruction to removing finite-real-part rigidity. | Moderate: the half-isolated detector was omitted from the first atlas and gives a precise geometric stress test, though not a known exceptional-zero killer. | `FALSIFICATION` of symmetry-only half-isolation, then retain the actual bow-exclusion edge. |
 | 6 | D7 function-field/cohomology | Construct a number-field trace/cohomology object with positivity/weights and a uniform infinite-spectrum tail. | `OPEN`; characteristic-p and finite-spectrum inputs do not transfer. | Moderate structural value, low evidence of a missed direct transfer. | `LITERATURE` only where it feeds D6 or D1. |
 | 7 | D2 heat flow/zero dynamics | Prove `Lambda <= 0`, for example through an actual-theta all-index invariant or collision-compatible continuation. | `OPEN`; several generic mechanisms are formally obstructed. | Low after deep project exploration, though exact direct endpoint remains legitimate. | Keep open; H6 numerical upper-bound successor remains parked. |
 | 8 | D9 de Branges/canonical systems | Prove a regular, source-valid limit from finite self-adjoint characteristic functions to an xi-bearing target without introducing nonremovable reciprocal-log-derivative poles. | Original positivity fails; Suzuki 2026 proves finite real-zero functions but leaves the global limit conjectural and its displayed normalization regularity unstated. | Moderate: the finite operator is explicit, but the proposed target/topology now has a sharp audit point. | `FALSIFICATION` of the normalization and target regularity before any limit attack. |
@@ -255,25 +255,36 @@ zero-density exponent `30/13` in the project's H2 card.
 These are unconditional advances in analytic number theory. They are not zero-location theorems
 for every nontrivial zero.
 
+A distinct vertically sensitive branch is Maynard--Pratt's
+[half-isolated-zero method](https://arxiv.org/abs/2206.11729). It gives short detectors and the
+density hypothesis for half-isolated zeros, and improves density estimates under the hypothesis
+that all real parts lie on finitely many fixed vertical lines. Its stated unconditional obstacle
+is a slowly bending bow of zeros, not merely a suboptimal numerical exponent.
+
 ### Exact missing object
 
 The route lacks a localizer that turns large-value or density information into the exclusion of
-a single exceptional off-line orbit. The density hypothesis itself is still compatible with
-finitely many exceptions and therefore is weaker than RH.
+a single exceptional off-line orbit. For the half-isolated branch, it also lacks a theorem
+excluding bow-like actual-zeta configurations or forcing an off-line half-isolated extremum
+without the finite-vertical-line hypothesis. The density hypothesis itself remains compatible
+with finitely many exceptions and therefore is weaker than RH.
 
 ### Obstacle validity
 
 The exceptional-zero objection is current and theorem-level as a logical model statement. Better
-density exponents can improve prime-distribution applications without closing it. Lindelof-type
-bounds on the critical line are also RH consequences but do not by themselves state that zeta is
-nonzero off the line.
+density exponents can improve prime-distribution applications without closing it. Maynard--Pratt's
+finite-real-part rigidity is a genuine additional premise: functional-equation reflection does
+not visibly discretize nearby real parts. Lindelof-type bounds on the critical line are also RH
+consequences but do not by themselves state that zeta is nonzero off the line.
 
 ### Unused machinery and omission audit
 
-The route is actively progressing, so absence of a result is not evidence of neglect. The
-omission candidate is cross-route: use a mollified or explicit-formula functional designed to
-amplify one off-line zero faster than the density error. No source-backed functional with the
-required uniform tail was found.
+The first atlas omitted the half-isolated branch. Campaign
+`FALSIFICATION-20260723-H2-HALF-ISOLATED-BOW-01` now tests its exact geometric hinge: discrete
+vertical-line gaps should force a rightmost-bottom half-isolated point, while a finite
+reflection-symmetric bow may show why zeta symmetry alone does not. The larger omission candidate
+remains cross-route: amplify one off-line bow faster than the density error. No source-backed
+functional with the required uniform tail was found.
 
 Formalization fit: `1/5`. Machine-task fit: `2/5` for exponent bookkeeping and finite Dirichlet
 polynomials, `1/5` for the core estimates.
@@ -282,8 +293,8 @@ polynomials, `1/5` for the core estimates.
 
 1. Formalize the finite divisor symmetry/count layer so any proposed density-to-RH theorem must
    expose where it excludes a single orbit.
-2. Test extremal explicit-formula kernels against one artificial off-line orbit plus an RH-like
-   background and measure whether the defect survives the required tails.
+2. Test the exact half-isolation disjunction on a finite critical-reflection-symmetric bow and
+   identify the precise vertical-gap premise that fails.
 3. Monitor improvements only when they change the exceptional-zero logic, not merely an exponent.
 
 ## D5. Zero statistics and random matrices

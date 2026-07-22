@@ -1340,3 +1340,17 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `29957075006`, job `89048714221`, in `2m4s`. H10-C is publicly closed at its fixed ordinary-trace
   endpoint; final-ledger CI remains. `H10-D-REGULARIZED-NUMBER-FIELD-TRACE-01` remains open.
   `rh_frontier_delta=0`; persistent RH Goal active.
+
+## 2026-07-23 H2 half-isolated bow geometry launch
+
+- `H2-HALF-ISOLATED-BOW-GEOMETRY-01`: `PREREGISTERED / FALSIFICATION`. Formalize the exact local
+  half-isolation disjunction from Maynard--Pratt, prove the finite-vertical-gap rightmost-bottom
+  criterion, and test functional-equation reflection symmetry with a finite bow countermodel.
+- `H2-HALF-ISOLATED-ANALYTIC-DETECTOR-01`: `OPEN / KNOWN_EXTERNAL_ANALYTIC`. Reconstruct the
+  short Dirichlet-polynomial detector and density bound for actual half-isolated zeta zeros.
+- `H2-BOW-EXCLUSION-01`: `OPEN / RH_RELEVANT`. Exclude slowly bending actual-zeta bows or produce
+  a detector that remains effective on them and forces zero witnesses to be absent rather than
+  sparse.
+- `claim_boundary`: finite geometry cannot assert that actual zeta bows exist or fail. Public
+  preregistration CI is required before Lean proof-source edits. `rh_frontier_delta=0`; persistent
+  RH Goal active.

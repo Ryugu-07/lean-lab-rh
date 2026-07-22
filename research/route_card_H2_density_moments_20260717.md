@@ -29,6 +29,12 @@ logical strengths and must remain separate:
   prove the stated zero-density estimate
   `N(sigma,T) <= T^(30*(1-sigma)/13 + o(1))`. The 2026 Annals version is the strongest
   unconditional broad zero-density improvement located in this audit.
+- Maynard and Pratt,
+  [*Half-isolated zeros and zero-density estimates*](https://arxiv.org/abs/2206.11729), introduce
+  a vertically sensitive short detector. They prove the density hypothesis for half-isolated
+  zeros and strengthen classical density estimates under the hypothesis that zeta zeros lie on
+  finitely many fixed vertical lines. Their Section 8 identifies slowly bending `bow`
+  configurations as an obstruction to removing this real-part rigidity.
 
 These are incomparable frontiers inside H2: pointwise size, large-value frequency, zero density,
 and zero-free regions should not be collapsed into one scalar notion of progress.
@@ -128,6 +134,8 @@ negative Li coefficient by the dominant-transform mechanism formalized in
 
 ## Recommendation
 
-`FORMALIZE` H2-B if shared finite-count infrastructure is selected. Keep H2-Q as a canonical open
-benchmark and `MONITOR` the large-value literature; do not report exponent improvements as RH
-closure.
+Campaign `FALSIFICATION-20260723-H2-HALF-ISOLATED-BOW-01` now takes priority over H2-B. It audits
+whether the Maynard--Pratt finite-vertical-line geometry can be replaced by functional-equation
+symmetry, using an exact positive extremum lemma and a finite bow countermodel. Keep H2-Q as a
+canonical open benchmark and `MONITOR` the large-value literature; do not report exponent
+improvements or half-isolated-zero sparsity as RH closure.

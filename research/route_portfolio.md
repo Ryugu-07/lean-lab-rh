@@ -3233,3 +3233,22 @@ Action run `29957075006`, build job `89048714221`, in `2m4s`. H10-C stops at the
 ordinary-summability endpoint; proof source remains frozen. Final-ledger CI is the last publication
 gate before fresh cross-family selection. This stop does not close H10: regularized or
 distributional traces, an actual number-field zeta spectral object, and RH remain open.
+
+## H2 Half-Isolated Bow Geometry Launch
+
+H10-C final-ledger commit `2edf069a217255bbc20b93a2aa938f51dd57d94e` passed public Lean
+Action run `29957374602`, build job `89049724940`, in `1m54s`. Fresh historical coverage selects
+H2, the remaining canonical zero-density/large-value family without an independent
+theorem-producing campaign, rather than the lower-transfer-value H13 analogy track or H14 finite
+computation.
+
+The source audit found a real atlas omission: Maynard--Pratt's 2022/2024 half-isolated-zero method
+uses vertical zero geometry, proves short detectors for half-isolated zeros, and explicitly
+identifies bow configurations as the obstacle to removing finite-real-part rigidity. Campaign
+`FALSIFICATION-20260723-H2-HALF-ISOLATED-BOW-01` will formalize the exact local disjunction, prove
+the positive rightmost-bottom theorem under discrete vertical gaps, and attempt a finite
+critical-reflection-symmetric bow with off-line points but no right-side half-isolated point.
+
+This is a mechanism audit, not exponent optimization. It does not model actual zeta zeros or prove
+the analytic detector, density hypothesis, bow exclusion, or RH. Public preregistration CI is
+required before proof-source editing; persistent RH Goal active.
