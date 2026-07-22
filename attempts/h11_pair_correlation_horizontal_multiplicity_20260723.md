@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260723-H11-PCC-HORIZONTAL-MULTIPLICITY-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_CI_PASSED / EVIDENCE_COMMIT_REQUIRED`
 
 ## Runtime record
 
@@ -45,6 +45,7 @@ adapter and exact cofinal-count consumer into RH.
 | 8 | `EXACT_CONSUMER` | Lean proved `PccExactHorizontalPairCountCofinal -> RiemannHypothesis`, handling positive ordinates directly, negative ordinates by conjugation, and the real axis with the existing H6 zero-free theorem. | Keep the theorem conditional. Register sparse-exception amplification as the open H11 node. |
 | 9 | `MECHANICAL_AUDIT` | The module, Targets, six exact TargetChecks, and six selected axiom prints compile. Selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`. | Run forbidden scan, diff check, and full build; then publish the implementation commit and require public CI. |
 | 10 | `FULL_LOCAL_BUILD` | The production forbidden scan is empty, `git diff --check` passes, the H11 module build has no local warning, and the full `8,743`-job build passes. | Freeze the implementation in a scoped commit and require independent public CI. |
+| 11 | `IMPLEMENTATION_CI` | Frozen implementation commit `a2c8dc06f493f8577de668286482c4cbe2e6498f` passed public run `29948610437`, build job `89020321751`, in `2m1s`. | Keep all Lean proof source frozen; publish immutable evidence and require that evidence commit's own CI. |
 
 ## Assumption and gap accounting
 
@@ -65,5 +66,7 @@ adapter and exact cofinal-count consumer into RH.
   definitions and a countermodel to the stronger inference.
 - `definition_alignment`:
   `research/h11_pair_correlation_definition_alignment_20260723.md`.
-- `next_gate`: implementation commit and public CI.
+- `implementation_commit`: `a2c8dc06f493f8577de668286482c4cbe2e6498f`.
+- `implementation_public_ci`: run `29948610437`, build job `89020321751`, passed in `2m1s`.
+- `next_gate`: immutable-evidence commit and its public CI; Lean proof source remains frozen.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

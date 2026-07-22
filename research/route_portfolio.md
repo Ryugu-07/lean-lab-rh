@@ -3088,4 +3088,9 @@ non-sparse equal-ordinate excess, or can another statistic detect the last excep
 TargetChecks and six selected standard-only axiom prints pass locally. Classification is
 `FULL_SUCCESS_AT_REGISTERED_ENDPOINT / CONDITIONAL_CONSUMER_AND_FALSIFICATION_MODEL`, with
 `rh_frontier_delta=0` and `route_infrastructure_delta=1`. The forbidden scan is empty,
-`git diff --check` passes, and the full `8,743`-job build passes; implementation public CI remains.
+`git diff --check` passes, and the full `8,743`-job build passes.
+
+Frozen implementation commit `a2c8dc06f493f8577de668286482c4cbe2e6498f` passed public Lean
+Action run `29948610437`, build job `89020321751`, in `2m1s`. Lean proof source is frozen;
+immutable evidence and its own public CI remain before this local campaign returns to historical
+route selection.

@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260723-H11-PCC-HORIZONTAL-MULTIPLICITY-01`
 
 Selected node: `H11-PCC-HORIZONTAL-MULTIPLICITY-01`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_CI_PASSED / EVIDENCE_COMMIT_REQUIRED`
 
 ## Selection reason
 
@@ -174,4 +174,7 @@ Six exact TargetChecks compile. The six selected axiom prints contain only `prop
 falsification endpoint, with `rh_frontier_delta=0` and `route_infrastructure_delta=1`. PCC, sparse
 exception amplification, exact cofinal equality, and RH remain open. The production forbidden
 scan is empty, `git diff --check` passes, the H11 module build has no local warning, and the full
-`8,743`-job build passes. Public implementation CI is the next gate.
+`8,743`-job build passes. Frozen implementation commit
+`a2c8dc06f493f8577de668286482c4cbe2e6498f` passed public Lean Action run `29948610437`, build
+job `89020321751`, in `2m1s`. Lean proof source is frozen; immutable evidence and its independent
+public CI are the next gate.

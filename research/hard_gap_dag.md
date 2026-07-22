@@ -1209,8 +1209,12 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   functional-equation symmetry and normalized count convergence alone are insufficient.
 - `route_map_correction`: arXiv:2503.15449v4 supersedes the older claim that pair correlation
   gives no horizontal information. The finite hinge, actual zeta definition adapter, conditional
-  exact consumer, and sparse-exception countermodel are locally compiled; implementation public
-  CI remains required. `rh_frontier_delta=0`, `route_infrastructure_delta=1`.
+  exact consumer, and sparse-exception countermodel are compiled and implementation-public-green.
+  `rh_frontier_delta=0`, `route_infrastructure_delta=1`.
+- `public_implementation_evidence`: frozen implementation commit
+  `a2c8dc06f493f8577de668286482c4cbe2e6498f` passed Lean Action run `29948610437`, build job
+  `89020321751`, in `2m1s`. Lean proof source is frozen; immutable-evidence CI remains before local
+  closure.
 
 ## 2026-07-22 H7 closure and H1 short-mollifier launch
 
