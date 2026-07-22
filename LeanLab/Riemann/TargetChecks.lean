@@ -47,6 +47,7 @@ import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
 import LeanLab.Riemann.DeBruijnNewmanHeatLiMonotonicity
 import LeanLab.Riemann.FinitePowerSumRigidity
+import LeanLab.Riemann.InfiniteReciprocalTraceAudit
 import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6PositiveCoshLiAudit
 import LeanLab.Riemann.H6ReverseHeatLiAudit
@@ -3416,6 +3417,52 @@ example :
         JensenHasOnlyRealRoots (jensenPolynomial a d n)) ∧
       ¬ ∀ d n : ℕ, JensenHasOnlyRealRoots (jensenPolynomial a d n) :=
   exists_eventually_realRooted_not_all_realRooted
+
+example {alpha : ℕ → ℂ} {sigma : Equiv.Perm ℕ} {k : ℕ}
+    (htrace : infiniteSpectrumHasOrdinaryPowerTrace alpha k) :
+    Summable (fun n => alpha (sigma n) ^ k) :=
+  infiniteSpectrumHasOrdinaryPowerTrace_reindex htrace
+
+example {alpha : ℕ → ℂ} {k : ℕ}
+    (htrace : infiniteSpectrumHasOrdinaryPowerTrace alpha k) :
+    Filter.Tendsto (fun n => alpha n ^ k) Filter.atTop (nhds 0) :=
+  infiniteSpectrumOrdinaryPowerTrace_tendsto_zero htrace
+
+example {alpha : ℕ → ℂ} {sigma : Equiv.Perm ℕ} {k : ℕ}
+    (htrace : infiniteSpectrumHasOrdinaryPowerTrace alpha k) :
+    Filter.Tendsto (fun n => alpha (sigma n) ^ k) Filter.atTop (nhds 0) :=
+  infiniteSpectrumOrdinaryPowerTrace_reindex_tendsto_zero htrace
+
+example {alpha : ℕ → ℂ} {sigma : Equiv.Perm ℕ} {q : ℂ} {k : ℕ}
+    (hk : 0 < k)
+    (htrace : infiniteSpectrumHasOrdinaryPowerTrace alpha k)
+    (hpair : infiniteSpectrumHasReciprocalPairing alpha sigma q) :
+    q = 0 :=
+  eq_zero_of_ordinaryPowerTrace_and_reciprocalPairing hk htrace hpair
+
+example {alpha : ℕ → ℂ} {sigma : Equiv.Perm ℕ} {q : ℂ} {k : ℕ}
+    (hk : 0 < k) (hq : q ≠ 0)
+    (hpair : infiniteSpectrumHasReciprocalPairing alpha sigma q) :
+    ¬ infiniteSpectrumHasOrdinaryPowerTrace alpha k :=
+  not_ordinaryPowerTrace_of_reciprocalPairing hk hq hpair
+
+example :
+    ∃ (alpha : Fin 1 → ℂ) (sigma : Equiv.Perm (Fin 1)) (q : ℂ),
+      q ≠ 0 ∧
+      (∀ i, alpha (sigma i) * alpha i = q) ∧
+      (∀ k : ℕ, Summable (fun i => alpha i ^ k)) :=
+  finiteReciprocalPairingWitness
+
+example :
+    (∃ (alpha : Fin 1 → ℂ) (sigma : Equiv.Perm (Fin 1)) (q : ℂ),
+      q ≠ 0 ∧
+      (∀ i, alpha (sigma i) * alpha i = q) ∧
+      (∀ k : ℕ, Summable (fun i => alpha i ^ k))) ∧
+    (∀ (alpha : ℕ → ℂ) (sigma : Equiv.Perm ℕ) (q : ℂ) (k : ℕ),
+      0 < k → q ≠ 0 →
+      infiniteSpectrumHasReciprocalPairing alpha sigma q →
+      ¬ infiniteSpectrumHasOrdinaryPowerTrace alpha k) :=
+  infiniteReciprocalTraceAudit_endpoint
 
 example (n : ℕ) (z : ℂ) :
     suzukiAuditPuncturedApproximation n z ≠ 0 :=

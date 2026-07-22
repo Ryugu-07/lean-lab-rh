@@ -1,5 +1,6 @@
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.DeBruijnNewman
+import LeanLab.Riemann.InfiniteReciprocalTraceAudit
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
@@ -824,3 +825,10 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.hasDerivAt_suzukiAuditQuartic
 #print axioms LeanLab.Riemann.not_exists_suzukiAuditQuartic_reciprocalLogDerivativeExtension
 #print axioms LeanLab.Riemann.suzukiReciprocalLogDerivativeAudit_endpoint
+#print axioms LeanLab.Riemann.infiniteSpectrumHasOrdinaryPowerTrace_reindex
+#print axioms LeanLab.Riemann.infiniteSpectrumOrdinaryPowerTrace_tendsto_zero
+#print axioms LeanLab.Riemann.infiniteSpectrumOrdinaryPowerTrace_reindex_tendsto_zero
+#print axioms LeanLab.Riemann.eq_zero_of_ordinaryPowerTrace_and_reciprocalPairing
+#print axioms LeanLab.Riemann.not_ordinaryPowerTrace_of_reciprocalPairing
+#print axioms LeanLab.Riemann.finiteReciprocalPairingWitness
+#print axioms LeanLab.Riemann.infiniteReciprocalTraceAudit_endpoint

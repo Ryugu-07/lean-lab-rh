@@ -43,6 +43,7 @@ import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
 import LeanLab.Riemann.DeBruijnNewmanHeatLiMonotonicity
 import LeanLab.Riemann.FinitePowerSumRigidity
+import LeanLab.Riemann.InfiniteReciprocalTraceAudit
 import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6PositiveCoshLiAudit
 import LeanLab.Riemann.H6ReverseHeatLiAudit
@@ -1293,6 +1294,21 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``norm_eq_sqrt_of_powerSum_bound_and_reciprocal
       status := .proven
       note := "Campaign CAMPAIGN-20260717-H10-FINITE-SPECTRAL-RIGIDITY-01 formalizes the final finite-spectral step in function-field RH using simultaneous phase recurrence. It assumes the aggregate point-count-scale bound and reciprocal pairing; it does not construct them for curves or transfer them to the infinite number-field zero divisor." },
+    { id := "H10.function-field.infinite-ordinary-trace-obstruction"
+      tier := .tier2
+      title := "Audit ordinary power traces under infinite reciprocal pairing"
+      statement :=
+        "Prove that a countably infinite spectrum with a nonzero constant reciprocal pairing cannot have an ordinary summable positive-power trace, while an exact finite spectrum admits both properties."
+      leanName := some ``infiniteReciprocalTraceAudit_endpoint
+      status := .proven
+      note := "Campaign FALSIFICATION-20260723-H10-INFINITE-RECIPROCAL-TRACE-01 isolates a finite-to-infinite transfer obstruction. Summability of one positive power and its permutation reindexing forces both term sequences to zero, contradicting a nonzero constant paired product. This is a generic ordinary-trace theorem: it does not represent zeta zeros, rule out regularized or distributional traces, construct number-field cohomology, or prove RH." },
+    { id := "H10.function-field.regularized-number-field-trace"
+      tier := .tier2
+      title := "Construct a regularized number-field spectral trace"
+      statement :=
+        "Construct a source-valid infinite spectral object for the Riemann zeta function, define its regularized or distributional trace, identify the prime and archimedean terms, and prove the uniform tail or positivity theorem that locates every nontrivial zero."
+      status := .inProgress
+      note := "The finite Frobenius theorem and finite power-sum rigidity do not transfer through an ordinary summable reciprocal spectrum. A successful number-field analogue must specify different coordinates, a truncation with uniform tails, or a regularized trace and prove the associated analytic identities without assuming RH." },
     { id := "H7.weil-ground-state.weighted-coordinate-alignment"
       tier := .tier2
       title := "Align finite-prime Weil ground-state coordinates"

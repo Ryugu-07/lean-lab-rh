@@ -6,7 +6,11 @@ Campaign: `FALSIFICATION-20260723-H10-INFINITE-RECIPROCAL-TRACE-01`
 
 Selected node: `H10-INFINITE-ORDINARY-TRACE-RECIPROCITY-01`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_IMPLEMENTATION_COMPLETE / IMPLEMENTATION_CI_REQUIRED`
+
+Preregistration commit `8077a2558142a1968b283296e9fc196da02bda93` passed public Lean Action
+run `29955908591`, build job `89044796394`, in `2m32s`. Proof-source editing began only after this
+gate passed.
 
 ## Selection reason
 

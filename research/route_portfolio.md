@@ -3213,3 +3213,11 @@ zero, while reciprocal pairing makes their product the constant `q^k`. A compile
 would show only that the ordinary unregularized trace cannot be transferred literally. It would
 leave regularized/distributional trace formulae, actual zeta spectral constructions, and RH open.
 Public preregistration CI is required before proof-source editing; persistent RH Goal active.
+
+Preregistration commit `8077a2558142a1968b283296e9fc196da02bda93` passed public Lean Action
+run `29955908591`, build job `89044796394`, in `2m32s`. The local implementation proves that
+ordinary summability of any positive power and its permutation reindexing forces both factors to
+zero, contradicting a nonzero constant reciprocal product. A one-point finite witness verifies
+that finite reciprocal spectra retain ordinary traces. Two Targets, seven exact TargetChecks, and
+seven selected standard-only axiom audits compile. The actual regularized number-field trace,
+zeta spectral construction, and RH remain open; implementation publication and CI are next.

@@ -4,7 +4,7 @@ Date: 2026-07-22
 
 Campaign: `LITERATURE-20260722-HISTORICAL-DOOR-SURVEY-01`
 
-Status: `ATLAS_COMPLETE / D9_SUZUKI_AUDIT_CLOSED / H10_INFINITE_TRACE_AUDIT_PREREGISTERED`
+Status: `ATLAS_COMPLETE / D9_SUZUKI_AUDIT_CLOSED / H10_INFINITE_TRACE_AUDIT_LOCAL_COMPLETE`
 
 ## Claim boundary
 
@@ -476,6 +476,10 @@ This proposed obstruction is generic. It does not apply to a regularized or dist
 does not represent actual zeta zeros, and does not rule out Hilbert-Polya or Connes-type spectral
 constructions. Its purpose is to prove that ordinary unregularized power sums cannot be silently
 carried across the finite-to-infinite boundary.
+
+The local Lean implementation now proves the exact contradiction for every positive power and
+supplies a one-point finite reciprocal witness. The literal ordinary-trace transfer is therefore
+closed locally; the regularized number-field trace and actual spectral construction remain open.
 
 ## D8. Laguerre-Polya class and Jensen polynomials
 
