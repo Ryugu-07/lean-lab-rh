@@ -6,7 +6,7 @@ Campaign: `FALSIFICATION-20260723-H2-HALF-ISOLATED-BOW-01`
 
 Selected node: `H2-HALF-ISOLATED-BOW-GEOMETRY-01`
 
-Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`
+Status: `PUBLICLY_CLOSED / H2_ANALYTIC_EDGES_OPEN`
 
 Preregistration commit `1475d90b96f6a5aabf9a6afea72a56575f11dc61` passed public Lean Action
 run `29958359541`, build job `89053021275`, in `1m48s`. Proof-source editing began only after this
@@ -16,8 +16,10 @@ Frozen implementation commit `2cac0b4813435dffe468cd87f888d9f2763263d9` passed p
 Action run `29959216007`, build job `89055884594`, in `2m11s`. Lean proof source is frozen;
 immutable-evidence commit `5f9f8ea175c269507e96fbb0a8ca8dff40144e12` then passed public Lean
 Action run `29959619394`, build job `89057229832`, in `1m30s`. The generic geometry audit has
-reached its registered local stop. Final-ledger publication and CI precede fresh historical-route
-selection; the analytic detector, actual-zeta bow exclusion, H2, and RH remain open.
+reached its registered local stop. Final-ledger commit
+`b13bc623e266990e9ba40802c6e1deb5ed87215a` passed public Lean Action run `29959903737`, build
+job `89058172229`, in `2m14s`. The generic campaign is publicly closed; the analytic detector,
+actual-zeta bow exclusion, H2, and RH remain open.
 
 ## Selection reason
 

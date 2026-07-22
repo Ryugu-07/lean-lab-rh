@@ -1360,3 +1360,24 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `29959619394`, job `89057229832`, in `1m30s`. The generic geometry node is publicly closed at its
   fixed endpoint; final-ledger CI remains. `H2-BOW-EXCLUSION-01` remains open.
   `rh_frontier_delta=0`; persistent RH Goal active.
+
+Final-ledger commit `b13bc623e266990e9ba40802c6e1deb5ed87215a` passed public Lean Action run
+`29959903737`, build job `89058172229`, in `2m14s`. The generic H2 geometry node is publicly
+closed. `H2-HALF-ISOLATED-ANALYTIC-DETECTOR-01`, `H2-BOW-EXCLUSION-01`, H2, and RH remain open.
+
+## 2026-07-23 H13 Dirichlet-family inclusion launch
+
+- `H13-DIRICHLET-FAMILY-INCLUSION-01`: `PREREGISTERED / TRANSFER_AUDIT`. Prove the exact
+  equivalence between RH and critical-strip zero control for Mathlib's modulus-one Dirichlet
+  L-function, then specialize an all-Dirichlet family claim to that member.
+- `H13-ZETA-FACTOR-INHERITANCE-01`: `PREREGISTERED / TRANSFER_AUDIT`. Prove that critical-strip
+  zero control for `zeta*g` implies RH, and falsify the reverse-equivalence intuition with an
+  explicit factor having an off-line root in the strip.
+- `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`: `OPEN / RH_STRENGTH`. Supply a proved generalized,
+  automorphic, family, or p-adic theorem that controls every zero of the individual archimedean
+  zeta function without assuming a class statement that already contains RH.
+- `claim_boundary`: the modulus-one identity exposes exact inclusion but supplies no new zero
+  estimate. The extra-factor witness is not a Davenport--Heilbronn, Dedekind, Rankin--Selberg, or
+  p-adic L-function. Public preregistration CI precedes proof-source editing.
+- `expected_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_map_delta=1`,
+  `obstruction_map_delta=1` on success; persistent RH Goal active.

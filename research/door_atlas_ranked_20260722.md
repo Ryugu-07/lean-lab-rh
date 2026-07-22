@@ -705,6 +705,12 @@ The route is best used as a robustness test: a proposed zeta mechanism should ei
 the expected self-dual L-functions or explain which zeta-specific input it uses. No overlooked
 direct transfer theorem was found.
 
+The follow-up campaign `FALSIFICATION-20260723-H13-DIRICHLET-FAMILY-INCLUSION-01` therefore tests
+the strongest literal inclusion already available in Mathlib: the modulus-one Dirichlet
+L-function is Riemann zeta. It also tests the one-way product transfer and the obstruction from an
+extra factor that inserts an off-line critical-strip zero. This is a transfer-logic audit, not a
+generalized RH result.
+
 Formalization fit: `1/5`. Machine-task fit: `2/5` for finite local factors and symmetry models.
 
 ### Discriminating probes

@@ -3274,3 +3274,22 @@ registered finite-line-versus-symmetry geometry endpoint; proof source remains f
 Final-ledger CI is the last publication gate before fresh cross-family selection. This stop does
 not close H2: the analytic detector, actual-zeta bow exclusion, zero-density estimates, and RH
 remain open.
+
+Final-ledger commit `b13bc623e266990e9ba40802c6e1deb5ed87215a` passed public Lean Action run
+`29959903737`, build job `89058172229`, in `2m14s`. The generic H2 geometry audit is fully
+publicly closed; the analytic detector, actual-zeta bow exclusion, zero-density estimates, H2,
+and RH remain open.
+
+## H13 Dirichlet-Family Inclusion Launch
+
+Fresh historical breadth now selects H13, the remaining source-aligned family without an
+independent theorem-producing campaign. Mathlib's actual Dirichlet L-function API proves that the
+unique modulus-one member is exactly Riemann zeta. Campaign
+`FALSIFICATION-20260723-H13-DIRICHLET-FAMILY-INCLUSION-01` preregisters the exact critical-strip
+equivalence at that member and the implication from an all-Dirichlet family claim to RH.
+
+The same campaign separates valid zeta-factor inheritance from an invalid reverse promotion: if
+all critical-strip zeros of `zeta*g` lie on the line, RH follows, but an explicit extra factor can
+insert an off-line zero. This does not prove any generalized RH, model a Dedekind or automorphic
+L-function, or create a p-adic/archimedean zero map. Public preregistration CI is required before
+proof-source editing; persistent RH Goal active.
