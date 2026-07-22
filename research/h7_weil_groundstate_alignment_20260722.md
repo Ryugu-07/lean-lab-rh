@@ -4,7 +4,7 @@ Date: 2026-07-22
 
 Campaign: `LITERATURE-20260722-H7-WEIL-GROUNDSTATE-ALIGN-01`
 
-Status: `LOCAL_VERIFICATION_PASSED / IMPLEMENTATION_COMMIT_PENDING`
+Status: `IMPLEMENTATION_PUBLIC_CI_PASSED / EVIDENCE_COMMIT_PENDING`
 
 Classification:
 `MEANINGFUL_PARTIAL / WEIGHTED_COORDINATE_ALIGNMENT_COMPILED /
@@ -116,5 +116,7 @@ closure extension.
 - `LeanLab/Riemann/AxiomsAudit.lean`: all eight selected H7 declarations print only `propext`,
   `Classical.choice`, and `Quot.sound`.
 - Full project build: passed locally with `8,737` jobs.
-- Public implementation CI: pending at this checkpoint.
+- Public implementation CI: commit `0ed05ba49605c7de621f16193ff73dd63a7bbabb` passed run
+  `29924570570`, build job `88938283725`, in `1m56s`.
+- Evidence backfill CI: pending at this checkpoint.
 - Persistent RH Goal: active.

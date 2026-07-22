@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260722-H7-WEIL-GROUNDSTATE-ALIGN-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_VERIFICATION_PASSED / IMPLEMENTATION_COMMIT_PENDING`
+Status: `IMPLEMENTATION_PUBLIC_CI_PASSED / EVIDENCE_COMMIT_PENDING`
 
 ## Baseline and route decision
 
@@ -154,3 +154,9 @@ finite Galerkin class is generally only piecewise smooth after zero extension, w
 project criterion requires a globally `C infinity` compact root; the unrestricted source pole
 block and the project pole-free constrained quadratic are also distinct. The full local project
 build passed with `8,737` jobs; public implementation evidence remains pending.
+
+## Implementation evidence
+
+Implementation commit `0ed05ba49605c7de621f16193ff73dd63a7bbabb` passed public Lean Action run
+`29924570570`, build job `88938283725`, in `1m56s`. Immutable evidence backfill and its own public
+CI remain before local campaign closure.

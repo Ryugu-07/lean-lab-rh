@@ -2824,4 +2824,5 @@ form retains a pole block that the project's constrained named quadratic omits. 
 dictionary remains one-way. The next bounded H7 child should formalize the source finite matrix
 and parity blocks, then test the simple-even hypothesis by theorem-producing falsification before
 attempting an infinite spectral gap or ground-state convergence theorem. Public implementation CI
-for the alignment campaign remains pending.
+for the alignment campaign passed at commit `0ed05ba49605c7de621f16193ff73dd63a7bbabb`, run
+`29924570570`, build job `88938283725`, in `1m56s`; evidence backfill remains.
