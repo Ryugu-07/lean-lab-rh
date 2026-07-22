@@ -964,5 +964,24 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `public_implementation`: atlas commit `62c813f51020b2c012a4770c204ea97b3893d87e`
   passed Lean Action run `29921175166`, build job `88926780992`, in `1m49s`.
 - `public_closure`: evidence commit `f8cce8ae32f716cc34087cee5319b23656c8733a`
-  passed Lean Action run `29921582753`, build job `88928153258`, in `1m48s`; final ledger CI
-  remains before local turn closure.
+  passed Lean Action run `29921582753`, build job `88928153258`, in `1m48s`.
+- `final_ledger`: commit `051ace38c80aebcde083432297c9fa01e02539e4` passed Lean Action run
+  `29921844064`, build job `88929023824`, in `2m1s`; the survey is fully publicly closed.
+
+## 2026-07-22 H7 finite-prime Weil alignment campaign launch
+
+- `campaign`: `LITERATURE-20260722-H7-WEIL-GROUNDSTATE-ALIGN-01`.
+- `selected_node`: `H7-WEIL-GROUNDSTATE-ALIGN-01`; preregistration public CI is required before
+  any Lean proof-source edit or substantive alignment verdict.
+- `source_frontier_correction`: Connes 2026 Fact 6.4 already proves the explicit `k_lambda`
+  Fourier-transform limit to Riemann `Xi`. The genuinely open limit edge is comparison of the
+  actual lowest eigenfunction `xi_lambda` with `k_lambda`; simple-even ground-state structure is
+  separately open.
+- `new_source_edge`: arXiv:2607.02828 claims an exact one-way finite Guinand--Weil dictionary.
+  It may close the finite coefficient-to-test portion of M0 but does not claim an inverse,
+  continuum simple-even structure, or the true-ground-state limit.
+- `alignment_risk`: the source uses the ordinary additive star on `L^2([0,L])`; the project uses
+  a weighted additive involution on smooth compact roots. The candidate exact conjugacy is
+  `g(x)=exp(-x/2)*f(x+L/2)` and must be Lean-checked. The source pole block must not be silently
+  dropped when comparing with `compactWeilArithmeticQuadratic`.
+- `global_goal`: active; RH and all downstream H7 nodes remain open.

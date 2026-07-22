@@ -2795,4 +2795,18 @@ and green.
 
 Evidence commit `f8cce8ae32f716cc34087cee5319b23656c8733a` passed public Lean Action run
 `29921582753`, build job `88928153258`, in `1m48s`. The survey is publicly closed at its registered
-endpoint; only the final ledger commit and CI remain before local turn closure.
+endpoint. Final ledger commit `051ace38c80aebcde083432297c9fa01e02539e4` passed run
+`29921844064`, build job `88929023824`, in `2m1s`.
+
+## H7 Finite-Prime Weil Alignment Launch
+
+The next selected campaign is `LITERATURE-20260722-H7-WEIL-GROUNDSTATE-ALIGN-01`. It will not
+infer equality from the shared phrase "Weil form." It must align the source `L^2` form, finite
+trigonometric matrices, pole/prime/archimedean blocks, and Fourier--Mellin convention with the
+project's weighted compact-Laplace autocorrelation API item by item.
+
+The source frontier is sharper than the survey summary: Connes 2026 proves convergence of the
+explicit prolate approximants `k_lambda` to `Xi`; the missing limit is the actual ground state
+`xi_lambda` versus `k_lambda`. A July 2026 preprint gives an exact one-way finite Guinand--Weil
+dictionary and is now an audit input, not a premise. Preregistration and public CI precede any
+Lean proof edit or alignment verdict.
