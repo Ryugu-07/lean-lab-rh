@@ -6,7 +6,7 @@ Campaign: `FALSIFICATION-20260723-D9-SUZUKI-RECIPROCAL-LIMIT-01`
 
 Selected node: `D9-SUZUKI-RECIPROCAL-LIMIT-REGULARITY-01`
 
-Status: `IMPLEMENTATION_CI_PASSED / EVIDENCE_COMMIT_REQUIRED`
+Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`
 
 Preregistration commit `b455391bf7211e0136a98b082f1264fee4cac1ca` passed public Lean Action
 run `29952313617`, build job `89032753680`, in `1m54s`. Proof-source editing began only after this
@@ -14,7 +14,10 @@ gate passed.
 
 Frozen implementation commit `8442a4ac2b71886efbc11fb90d78a91a8cbdbcdb` passed public Lean
 Action run `29954158019`, build job `89038905667`, in `2m37s`. Lean proof source is frozen;
-immutable-evidence publication and its own public CI are the next gate.
+immutable-evidence commit `36d6f6e9b47240e95b9d6668d7a4cc9bccc8045e` then passed public Lean
+Action run `29954848710`, build job `89041187831`, in `1m32s`. The generic audit has reached its
+registered local stop. Final-ledger publication and CI precede fresh historical-route selection;
+the actual source limit, any meromorphic repair, and RH remain open.
 
 ## Selection reason
 

@@ -3188,3 +3188,9 @@ Frozen implementation commit `8442a4ac2b71886efbc11fb90d78a91a8cbdbcdb` passed p
 Action run `29954158019`, build job `89038905667`, in `2m37s`. The proof source is now frozen;
 immutable evidence and its own public CI remain before this local D9 audit returns to the
 unfinished historical atlas. The actual source limit, any meromorphic repair, and RH remain open.
+
+Immutable-evidence commit `36d6f6e9b47240e95b9d6668d7a4cc9bccc8045e` passed public Lean
+Action run `29954848710`, build job `89041187831`, in `1m32s`. The local campaign stops at the
+registered generic interpretation endpoints; proof source remains frozen. Final-ledger CI is the
+last publication gate before fresh cross-family selection. This stop does not close D9: the actual
+canonical-system limit, a meromorphic repair, and RH remain open.

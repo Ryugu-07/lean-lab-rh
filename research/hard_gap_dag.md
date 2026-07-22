@@ -1314,5 +1314,7 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   remain separate. Preregistration commit `b455391bf7211e0136a98b082f1264fee4cac1ca` passed public
   CI run `29952313617`, job `89032753680`. Frozen implementation commit
   `8442a4ac2b71886efbc11fb90d78a91a8cbdbcdb` passed run `29954158019`, job `89038905667`, in
-  `2m37s`; immutable-evidence CI remains before local closure.
+  `2m37s`. Immutable-evidence commit `36d6f6e9b47240e95b9d6668d7a4cc9bccc8045e` passed run
+  `29954848710`, job `89041187831`, in `1m32s`. The two generic audit nodes are publicly closed at
+  their fixed endpoints; final-ledger CI remains. `D9-C-SUZUKI-ACTUAL-XI-LIMIT-01` remains open.
   `rh_frontier_delta=0`; persistent RH Goal active.

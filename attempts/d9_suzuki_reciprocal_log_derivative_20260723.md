@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260723-D9-SUZUKI-RECIPROCAL-LIMIT-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `IMPLEMENTATION_CI_PASSED / EVIDENCE_COMMIT_REQUIRED`
+Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`
 
 ## Runtime record
 
@@ -45,6 +45,7 @@ global reciprocal-log-derivative extension.
 | 8 | `LEAN_ENTIRE_BRANCH` | Lean proves the quartic has only real zeros, has derivative `4*z^3-4*z`, and at `z=1` has zero derivative but nonzero value. | Reject a finite global `z^2*f/f'` extension for this generic symmetric real-rooted model. |
 | 9 | `INTEGRATION_AUDIT` | The aggregate endpoint, two Targets, nine exact TargetChecks, and seven selected axiom prints compile. Selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`. | Classify as generic route-boundary progress; leave the actual Suzuki limit, meromorphic repair, and RH open. |
 | 10 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation commit `8442a4ac2b71886efbc11fb90d78a91a8cbdbcdb` passed public Lean Action run `29954158019`, build job `89038905667`, in `2m37s`. | Keep Lean proof source frozen; publish immutable implementation evidence and require that evidence commit's own public CI. |
+| 11 | `EVIDENCE_PUBLIC_CI` | Immutable-evidence commit `36d6f6e9b47240e95b9d6668d7a4cc9bccc8045e` passed public Lean Action run `29954848710`, build job `89041187831`, in `1m32s`. | Stop the local audit at its registered generic endpoint; publish the final ledger and return the active RH Goal to historical-route omission search. |
 
 ## Assumption and gap accounting
 
@@ -64,5 +65,10 @@ global reciprocal-log-derivative extension.
 - `public_implementation_evidence`: frozen implementation commit
   `8442a4ac2b71886efbc11fb90d78a91a8cbdbcdb` passed Lean Action run `29954158019`, build job
   `89038905667`, in `2m37s`.
-- `next_gate`: immutable-evidence commit and public CI, followed by final ledger.
+- `public_closure_evidence`: immutable-evidence commit
+  `36d6f6e9b47240e95b9d6668d7a4cc9bccc8045e` passed Lean Action run `29954848710`, build job
+  `89041187831`, in `1m32s`.
+- `local_stop`: the two registered generic interpretation tests are publicly closed. The actual
+  Suzuki canonical-system limit, any meromorphic repair, and RH remain open.
+- `next_gate`: final-ledger commit and public CI, then fresh historical-route selection.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.
