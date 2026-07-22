@@ -2106,8 +2106,8 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 
 - `campaign`: `LITERATURE-20260722-H6-BOYD-STIELTJES-SCALED-GAMMA-01`
 - `mode`: `LITERATURE`
-- `result`: `PROVED / KNOWN_THEOREM_FORMALIZED / HARD_GAP_CLOSED`; public implementation verified,
-  closure-evidence CI pending
+- `result`: `PROVED / KNOWN_THEOREM_FORMALIZED / HARD_GAP_CLOSED`; publicly closed, final-ledger
+  CI pending
 - `target`: reconstruct Nemes equation `(13)` for the actual project scaled Gamma, derive explicit
   direct and inverse second-order complex Stirling bounds, and use them to close the shifted tail,
   both outer edges, the dispersion certificate, and equation `(15)`
@@ -2149,7 +2149,8 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   `29893818120`, build job `88839576741`, passed in `1m32s` before proof editing
 - `public_implementation`: commit `a0931346a32400e937bbb1333ea355649d8ec101`, CI run
   `29916415509`, build job `88911217586`, passed in `2m15s`
-- `public_closure`: pending
+- `public_closure`: evidence commit `785028c7b9efa34c26e9589d3817473f40c18452`, CI run
+  `29916703368`, build job `88912167838`, passed in `1m31s`
 - `compaction_state`: five inherited summaries; after each, all canonical frontier files and the
   complete current source were re-read before proof or publication work resumed
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed

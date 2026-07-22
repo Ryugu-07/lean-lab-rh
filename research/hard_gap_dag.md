@@ -915,7 +915,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `29893818120`, build job `88839576741`, passed in `1m32s` before proof-source editing.
 - `public_implementation`: commit `a0931346a32400e937bbb1333ea355649d8ec101`, CI run
   `29916415509`, build job `88911217586`, passed in `2m15s`.
-- `public_closure`: pending.
+- `public_closure`: evidence commit `785028c7b9efa34c26e9589d3817473f40c18452`, CI run
+  `29916703368`, build job `88912167838`, passed in `1m31s`.
 - `compaction_state`: five inherited summaries; the complete canonical frontier and current
   source were re-read after each before proof or publication work resumed.
 - `still_open`: the unconditional Table 1 row, H6-E/G8, and RH.

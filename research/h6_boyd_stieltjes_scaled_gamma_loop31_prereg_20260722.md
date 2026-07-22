@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260722-H6-BOYD-STIELTJES-SCALED-GAMMA-01`
 
 Mode: `LITERATURE`
 
-Status: `PREREGISTERED / PROOF_SOURCE_FROZEN_PENDING_PUBLIC_CI`
+Status: `PUBLICLY_CLOSED / PROVED / KNOWN_THEOREM_FORMALIZED / HARD_GAP_CLOSED`
 
 ## Opening
 
@@ -291,12 +291,13 @@ proved. Full success includes the unconditional dispersion-limit certificate and
   `29893818120`, build job `88839576741`, passed in `1m32s` before proof editing.
 - `public_implementation`: commit `a0931346a32400e937bbb1333ea355649d8ec101`, CI run
   `29916415509`, build job `88911217586`, passed in `2m15s`.
-- `public_closure`: pending.
+- `public_closure`: evidence commit `785028c7b9efa34c26e9589d3817473f40c18452`, CI run
+  `29916703368`, build job `88912167838`, passed in `1m31s`.
 - `compaction_state`: five inherited compaction summaries during Loop 31. After each recovery the
   canonical governance, HANDOFF, relevant Targets/TargetChecks, H6 attempt, hard-gap DAG, complete
   preregistration, current source, selected AxiomsAudit entries, external ACTIVE ledger, and git
   status were re-read before continuing.
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort are not exposed.
 - `budget`: V4.1 has no numerical quota; no serving token budget is exposed.
-- `local_stop`: full success has compiled, so Loop 31 stops locally after public implementation,
-  closure-evidence, and final-ledger CI. The persistent RH Goal remains active.
+- `local_stop`: full success is publicly closed. The final-ledger commit and its CI remain for
+  turn closure; the persistent RH Goal remains active.
