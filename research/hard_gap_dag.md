@@ -797,7 +797,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   prints, empty forbidden scans, `git diff --check`, and the full 8,733-job build pass.
 - `public_preregistration`: commit `a370945962a2ce4b1e037ae824da24d3edef85bc`, CI run
   `29887021780`, build job `88819539208`, passed in `2m23s` before proof-source editing.
-- `public_implementation`: pending.
+- `public_implementation`: commit `d7f23c7caa40c14d5f3682722720f863dd3e6438`, CI run
+  `29888125681`, build job `88822893952`, passed in `2m28s`.
 - `public_closure`: pending.
 - `compaction_state`: one recovery; all canonical frontier files and the new proof source were
   re-read before continuing.
