@@ -2766,3 +2766,25 @@ literature. Ranking must follow exact missing-object and obstacle evidence rathe
 Conjecture generation and validation remain open throughout the survey. A precise candidate may
 receive falsification, numerical, or Lean probes under the standing gates, but an easy or novel
 candidate may not displace unfinished high-value door cards without evidence.
+
+## Local Completion Update: Historical Door Survey
+
+Campaign `LITERATURE-20260722-HISTORICAL-DOOR-SURVEY-01` completes its fixed inventory locally in
+`research/door_atlas_ranked_20260722.md`. The atlas reconciles actual project coverage, provides
+thirteen cards spanning H0-H14 plus the countermodel control plane, records each last proved node
+and exact missing object, audits obstacle validity, and limits every door to three discriminating
+probes. The source registry now includes the decisive 2023-2026 mollifier, pair-correlation,
+Connes/Weil/prolate, character-sum, and countermodel sources.
+
+The highest-value omission candidate is not generic Hilbert-Polya. It is the exact 2025-2026
+finite-prime Weil ground-state program: source theorems put every admissible approximant's zeros
+on the line under simple isolated even ground-state hypotheses, while convergence to the Riemann
+xi transform remains unproved. The selected next gate is M0 alignment of that quadratic form and
+constraint space with the compiled compact Weil form, followed by a stable spectral-gap audit.
+H1's 2025 derivative-combination variational optimization is runner-up; long mean values and the
+sparse exceptional-zero barrier remain open.
+
+Classification is `ROUTE_ATLAS_COMPLETED / NEW_OPEN_EDGE_IDENTIFIED`, with
+`rh_frontier_delta=0`, `hard_gap_delta=0`, and `route_map_delta=1`. No new Lean theorem or proof
+premise is claimed. Implementation publication and public CI are pending; the persistent RH Goal
+remains active.

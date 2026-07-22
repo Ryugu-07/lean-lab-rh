@@ -937,3 +937,27 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   can be weakened, and whether cross-route combinations expose an untried closure.
 - `conjecture_lane`: precise conjecture proposal, falsification, numerical screening, and Lean
   testing remain open at every time under the standing admission gates.
+
+## 2026-07-22 Historical Door Survey local outcome
+
+- `SURVEY-DOOR-ATLAS-01`: complete within the registered source boundary. Every admitted H0-H14
+  family has a common omission-seeking card in
+  `research/door_atlas_ranked_20260722.md`; certified finite computation and countermodels are
+  represented as distinct supporting/control doors.
+- `H7-WEIL-GROUNDSTATE-ALIGN-01`: selected open node. Align the 2025-2026 finite-prime Weil
+  quadratic form and constrained ground-state space with the project's compact Weil form. This
+  is an M0 definition and assumption audit, not RH progress.
+- `H7-WEIL-GROUNDSTATE-SPECTRAL-01`: open after alignment. Prove or falsify simple isolated even
+  ground states and a spectral gap stable under both Galerkin refinement and increasing prime
+  cutoff.
+- `H7-WEIL-GROUNDSTATE-LIMIT-01`: open RH-strength edge. Prove compact-uniform convergence of the
+  normalized ground-state Fourier-Mellin transforms to the Riemann xi transform without assuming
+  Weil positivity or RH. The cited real-zero theorem plus Hurwitz would then become relevant.
+- `OBS-H1-SPARSE-EXCEPTION-01`: retained. Critical-line proportion one still permits finitely
+  many or density-zero off-line orbits; the 2025 derivative-combination optimization does not
+  discharge this obstruction.
+- `selection`: H7/H5 ground-state alignment is recommended; H1 short-mollifier variational
+  reconstruction is runner-up.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_map_delta=1`.
+- `still_open`: H7 alignment/spectral/limit nodes, H1 long mean values and sparse exceptions,
+  H6-E/G8, W2/G7, M2/G3, and RH.

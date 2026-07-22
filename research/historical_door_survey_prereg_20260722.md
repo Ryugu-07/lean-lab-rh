@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260722-HISTORICAL-DOOR-SURVEY-01`
 
 Mode: `LITERATURE`
 
-Status: `PREREGISTERED / SURVEY_CONTENT_PENDING_PUBLIC_CI`
+Status: `LOCAL_SUCCESS / IMPLEMENTATION_PUBLIC_CI_PENDING`
 
 ## Baseline and route decision
 
@@ -116,3 +116,22 @@ existing research-log pattern.
 - `budget`: V4.1 has no numerical quota; no serving token budget is exposed.
 - `global_goal`: active.
 
+## Outcome
+
+- `preregistration_commit`: `6aae2d066cddb8978f40b0ec0a8d4a6e7c7bd2ad`.
+- `preregistration_public_ci`: run `29919775540`, build job `88922071785`, passed in `1m58s`.
+- `deliverable`: [`door_atlas_ranked_20260722.md`](door_atlas_ranked_20260722.md), thirteen full
+  cards including the distinct certified-computation and countermodel doors.
+- `classification`: `ROUTE_ATLAS_COMPLETED / NEW_OPEN_EDGE_IDENTIFIED`.
+- `selected_opening`: the 2025-2026 finite-prime Weil ground-state program. The source proves a
+  real-zero theorem for simple isolated even ground states; definition alignment, stable ground-
+  state structure, and convergence to the Riemann xi transform remain open.
+- `runner_up`: the 2025 short-mollifier derivative-combination optimization, bounded by the long
+  mean-value and sparse-exception gaps.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_map_delta=1`.
+- `Lean_verification`: no new mathematical declaration was introduced; literature
+  classifications are not Lean premises.
+- `compaction_state`: one inherited compaction; the canonical governance and frontier were reread
+  before substantive work.
+- `next_gate`: publish the atlas implementation commit, require public CI, then backfill immutable
+  evidence before opening the recommended M0 alignment campaign.

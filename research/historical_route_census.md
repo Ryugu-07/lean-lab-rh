@@ -30,15 +30,15 @@ Coverage labels:
 | H3 | CANONICAL | Nyman-Beurling and Baez-Duarte Hilbert-space closure criteria | EQUIVALENT | DEEP_FORMALIZATION | Consolidated route card from the compiled criterion through Burnol's obstruction to the still-open unconditional approximation edge. |
 | H4 | CANONICAL | Li/Keiper coefficients and Bombieri-Lagarias transformed-zero criteria | EQUIVALENT | DEEP_FORMALIZATION | External source audit of the project-specific all-index reverse theorem and a clean statement crosswalk. |
 | H5 | CANONICAL | Weil explicit formula, test-function algebra, and positivity criteria | EQUIVALENT | DEEP_FORMALIZATION | Freeze the full admissible class and isolate the one canonical unconditional positivity gap; reclassify fixed-test subedges as infrastructure. |
-| H6 | CANONICAL | de Bruijn-Newman heat flow and zero dynamics | EQUIVALENT | SOURCE_ALIGNED | [`route_card_H6_de_bruijn_newman_20260717.md`](route_card_H6_de_bruijn_newman_20260717.md) fixes `0 <= Lambda <= 0.22`, the exact `Lambda = 0` edge, and three audited candidates. |
-| H7 | CANONICAL | Hilbert-Polya, self-adjoint operators, trace formulae, and noncommutative geometry | STRUCTURAL_ANALOGY / POTENTIAL EQUIVALENCE | PARTIAL | Separate proved spectral realizations and trace identities from the missing positivity, self-adjointness, or full zero-spectrum correspondence. |
-| H8 | CANONICAL | Entire-function geometry: Laguerre-Polya class, Jensen polynomials, de Branges/canonical systems | EQUIVALENT / STRUCTURAL_ANALOGY | MENTION_ONLY | Record exact equivalences, eventual finite-degree hyperbolicity results, known insufficiency warnings, and the first non-tautological global edge. |
-| H9 | CANONICAL | Arithmetic equivalents: Mertens and Chebyshev error terms, Robin/Lagarias divisor-sum inequalities, Farey-type criteria | EQUIVALENT | UNMAPPED | Compare which forms expose a usable quantitative mechanism and which merely restate RH in harder arithmetic clothing. |
+| H6 | CANONICAL | de Bruijn-Newman heat flow and zero dynamics | EQUIVALENT | DEEP_FORMALIZATION | The source card plus completed H6 campaigns cover the exact heat family, threshold theory, strip contraction, zero dynamics, finite heat-Li signs, the TP2/PF5 boundary, and Boyd asymptotics; `Lambda = 0` remains open. |
+| H7 | CANONICAL | Hilbert-Polya, self-adjoint operators, trace formulae, and noncommutative geometry | STRUCTURAL_ANALOGY / POTENTIAL EQUIVALENCE | SOURCE_ALIGNED | [`door_atlas_ranked_20260722.md`](door_atlas_ranked_20260722.md) separates proved trace/prolate results from the open 2025-2026 finite-prime Weil ground-state convergence edge. |
+| H8 | CANONICAL | Entire-function geometry: Laguerre-Polya class, Jensen polynomials, de Branges/canonical systems | EQUIVALENT / STRUCTURAL_ANALOGY | SOURCE_ALIGNED | The ranked atlas separates eventual Jensen hyperbolicity from the finite-exception edge and the Conrey-Li obstruction to the original de Branges positivity input. |
+| H9 | CANONICAL | Arithmetic equivalents: Mertens and Chebyshev error terms, Robin/Lagarias divisor-sum inequalities, Farey-type criteria | EQUIVALENT | SOURCE_ALIGNED | The ranked atlas distinguishes equivalent divisor inequalities from Conrey's 2024 character-sum proof program and the Mertens counterexample. |
 | H10 | CANONICAL | Function-field analogues, Bombieri-Stepanov, Frobenius/cohomology, Weil conjectures, and Deligne weights | STRUCTURAL_ANALOGY | SOURCE_ALIGNED | [`route_card_H10_bombieri_stepanov_20260717.md`](route_card_H10_bombieri_stepanov_20260717.md) isolates the auxiliary-function point-count mechanism, finite power-sum spectral rigidity, and exact number-field transfer gap. |
-| H11 | SUPPORTING | Zero statistics, Montgomery pair correlation, random-matrix models, and quantum chaos | HEURISTIC_ONLY / CONDITIONAL | MENTION_ONLY | Separate conditional theorems and numerical laws from statements capable of excluding a single off-line zero. |
-| H12 | SUPPORTING | Speiser-type derivative criteria, value distribution, and complex dynamics | EQUIVALENT / PARTIAL_PROGRESS | UNMAPPED | Exact criterion, derivative-zero frontier, and relation to existing xi divisor infrastructure. |
-| H13 | SUPPORTING | Generalized zeta/L-functions and automorphic transfer | STRUCTURAL_ANALOGY / GENERALIZATION | UNMAPPED | Identify which mechanisms are specific to zeta and which survive for Selberg-class or automorphic L-functions. |
-| H14 | SUPPORTING | Rigorous computation and finite-height zero verification | FINITE_VERIFICATION | UNMAPPED | State certified scope, interfaces useful to analytic bounds, and the prohibition on finite-to-global promotion. |
+| H11 | SUPPORTING | Zero statistics, Montgomery pair correlation, random-matrix models, and quantum chaos | HEURISTIC_ONLY / CONDITIONAL | SOURCE_ALIGNED | The ranked atlas records that the modern unconditional Montgomery theorem explicitly supplies no on-line/off-line information. |
+| H12 | SUPPORTING | Speiser-type derivative criteria, value distribution, and complex dynamics | EQUIVALENT / PARTIAL_PROGRESS | SOURCE_ALIGNED | The ranked atlas fixes the left-half-strip `zeta'` exclusion edge and its possible role as an exceptional-zero localizer. |
+| H13 | SUPPORTING | Generalized zeta/L-functions and automorphic transfer | STRUCTURAL_ANALOGY / GENERALIZATION | SOURCE_ALIGNED | The ranked atlas separates family laws, automorphic structure, and Iwasawa analogies from any theorem about the individual archimedean zeta zero set. |
+| H14 | SUPPORTING | Rigorous computation and finite-height zero verification | FINITE_VERIFICATION | SOURCE_ALIGNED | The ranked atlas fixes finite certification as a supporting interface and prohibits finite-to-global promotion without an analytic reduction theorem. |
 
 An independent auditor may add a route only with a primary-source anchor and a reason it is not a
 subroute of an existing row. Renaming a route does not create a new campaign slot.
@@ -115,3 +115,16 @@ The census is complete only when:
 
 These criteria measure atlas coverage. Incomplete coverage does not suspend the global Goal or
 block a separately preregistered proof attempt.
+
+## 2026-07-22 Historical Door Survey completion
+
+[`door_atlas_ranked_20260722.md`](door_atlas_ranked_20260722.md) supplies the common source-backed
+card schema for every H0-H14 family and adds a distinct countermodel control card. The census is
+now complete within its stated 2026-07-22 source boundary. This is auditable coverage, not a claim
+that no historical paper or future route exists.
+
+The selected opening is the H5/H7 finite-prime Weil ground-state program introduced in the
+2025-2026 Connes sources. Its real-zero approximant theorem is proved in the cited source; simple
+even ground states and convergence to the Riemann xi transform remain open. H1's 2025
+short-mollifier derivative-combination optimization is the runner-up, with both long mean values
+and the sparse-exception barrier still operative. `rh_frontier_delta=0`.
