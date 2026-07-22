@@ -2846,3 +2846,25 @@ kernel-checked parity crossing, degeneracy, or odd minimum can open `FALSIFICATI
 success cannot be promoted to a gap uniform in Galerkin size and prime cutoff. Conjecture proposal
 and testing remain open throughout, while the historical route audit remains the main selection
 objective.
+
+## H7 Finite Matrix and Parity Local Outcome
+
+The fixed endpoint is locally complete. `WeilGroundStateFiniteMatrix.lean` compiles the exact
+source divided-difference shape, reflection and parity algebra, rank-two commutator, quadratic
+split, and a strict two-block Rayleigh certificate implying a unique even global ground state.
+The arithmetic matrix is not asserted to satisfy the strict conditions. Classification is
+`KNOWN_SOURCE_STRUCTURE_FORMALIZED / FINITE_CERTIFICATE_INTERFACE`, with
+`rh_frontier_delta=0`, `hard_gap_delta=0`, `route_infrastructure_delta=1`, and
+`obstruction_map_delta=1`.
+
+The implementation search also corrected the route map. Four June 2026 S3 Zenodo preprints by
+Breno Wilson de Andrade Silva already isolate the pole term, parity-sector Loewner matrices, and a
+scalar Herglotz resolvent criterion for even-simplicity. The best next H7 literature child is
+therefore `H7-WEIL-GROUNDSTATE-HERGLOTZ-01`: reconstruct the finite criterion exactly, then attack
+or falsify its arithmetic inequality. A model-original universal checkerboard-inverse conjecture
+was screened out numerically at several high-precision finite cells and is not admitted as a
+premise or Lean falsification.
+
+Nine exact TargetChecks and nine selected standard-only axiom prints pass; forbidden scans and
+`git diff --check` are empty; the full 8,738-job build succeeds. Public implementation CI,
+immutable evidence backfill, and final closure remain before fresh route selection.

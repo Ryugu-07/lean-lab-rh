@@ -69,6 +69,7 @@ import LeanLab.Riemann.WeilCompactLaplaceSeparator
 import LeanLab.Riemann.WeilCompactLaplaceZeroCutoff
 import LeanLab.Riemann.WeilCompactLaplaceArithmeticFormula
 import LeanLab.Riemann.WeilGroundStateAlignment
+import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -99,6 +100,9 @@ examples.
 -/
 
 namespace LeanLab.Riemann
+
+open Matrix
+open scoped BigOperators Matrix
 
 example
     (hlimit : DeBruijnNewmanHeatLiAtBotZero)
@@ -3109,5 +3113,71 @@ example (L : ℝ) (f : ℝ → ℂ) :
     compactLaplaceTransform (weilGroundStateLogRoot L f) 1 =
       weilGroundStateSourceFourier L f (Complex.I / 2) :=
   compactLaplaceTransform_weilGroundStateLogRoot_one_sourceMoment L f
+
+example (N : ℕ) (i : Fin (2 * N + 1)) :
+    weilFiniteCenteredFrequency N i.rev = -weilFiniteCenteredFrequency N i :=
+  weilFiniteCenteredFrequency_rev N i
+
+example (N : ℕ) (a b : Fin (2 * N + 1) → ℝ) :
+    (weilFiniteDividedDifferenceMatrix N a b)ᵀ =
+      weilFiniteDividedDifferenceMatrix N a b :=
+  weilFiniteDividedDifferenceMatrix_transpose N a b
+
+example (N : ℕ) (a b : Fin (2 * N + 1) → ℝ)
+    (ha : ∀ i, a i.rev = a i) (hb : ∀ i, b i.rev = -b i)
+    (i j : Fin (2 * N + 1)) :
+    weilFiniteDividedDifferenceMatrix N a b i.rev j.rev =
+      weilFiniteDividedDifferenceMatrix N a b i j :=
+  weilFiniteDividedDifferenceMatrix_reflection N a b ha hb i j
+
+example (N : ℕ) (a b : Fin (2 * N + 1) → ℝ) :
+    weilFiniteFrequencyDiagonal N * weilFiniteDividedDifferenceMatrix N a b -
+        weilFiniteDividedDifferenceMatrix N a b * weilFiniteFrequencyDiagonal N =
+      Matrix.vecMulVec b (weilFiniteEta N) -
+        Matrix.vecMulVec (weilFiniteEta N) b :=
+  weilFiniteDividedDifferenceMatrix_commutator N a b
+
+example {N : ℕ}
+    (A : Matrix (Fin (2 * N + 1)) (Fin (2 * N + 1)) ℝ)
+    (hA : ∀ i j, A i.rev j.rev = A i j)
+    (x : Fin (2 * N + 1) → ℝ) :
+    A *ᵥ weilFiniteReflect x = weilFiniteReflect (A *ᵥ x) :=
+  weilFiniteMatrix_mulVec_reflect A hA x
+
+example {N : ℕ}
+    (A : Matrix (Fin (2 * N + 1)) (Fin (2 * N + 1)) ℝ)
+    (hA : ∀ i j, A i.rev j.rev = A i j)
+    (x : Fin (2 * N + 1) → ℝ) :
+    x ⬝ᵥ (A *ᵥ x) =
+      weilFiniteEvenPart x ⬝ᵥ (A *ᵥ weilFiniteEvenPart x) +
+        weilFiniteOddPart x ⬝ᵥ (A *ᵥ weilFiniteOddPart x) :=
+  weilFiniteQuadratic_split A hA x
+
+example {N : ℕ}
+    {A : Matrix (Fin (2 * N + 1)) (Fin (2 * N + 1)) ℝ}
+    {mu : ℝ} {xi : Fin (2 * N + 1) → ℝ}
+    (h : WeilFiniteParityRayleighCertificate A mu xi)
+    (hAT : Aᵀ = A) (hAR : ∀ i j, A i.rev j.rev = A i j)
+    (x : Fin (2 * N + 1) → ℝ) :
+    0 ≤ weilFiniteRayleighDefect A mu x ∧
+      (weilFiniteRayleighDefect A mu x = 0 ↔ ∃ c : ℝ, x = c • xi) :=
+  h.defect_nonneg_and_eq_smul hAT hAR x
+
+example {N : ℕ}
+    {A : Matrix (Fin (2 * N + 1)) (Fin (2 * N + 1)) ℝ}
+    {mu : ℝ} {xi : Fin (2 * N + 1) → ℝ}
+    (h : WeilFiniteParityRayleighCertificate A mu xi)
+    (hAT : Aᵀ = A) (hAR : ∀ i j, A i.rev j.rev = A i j) :
+    WeilFiniteEvenSimpleGroundState A mu xi :=
+  h.evenSimpleGroundState hAT hAR
+
+example {N : ℕ} (a b : Fin (2 * N + 1) → ℝ)
+    (ha : ∀ i, a i.rev = a i) (hb : ∀ i, b i.rev = -b i)
+    {mu : ℝ} {xi : Fin (2 * N + 1) → ℝ}
+    (h : WeilFiniteParityRayleighCertificate
+      (weilFiniteDividedDifferenceMatrix N a b) mu xi) :
+    WeilFiniteEvenSimpleGroundState
+      (weilFiniteDividedDifferenceMatrix N a b) mu xi :=
+  weilFiniteDividedDifferenceMatrix_evenSimple_of_parityRayleigh a b ha hb h
 
 end LeanLab.Riemann

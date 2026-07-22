@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260722-H7-WEIL-FINITE-MATRIX-PARITY-01`
 
 Mode: `LITERATURE`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_IMPLEMENTATION_COMPLETE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 
 ## Baseline and route decision
 
@@ -155,8 +155,8 @@ does not imply a gap uniform in `N` or the prime cutoff.
 - `model`: Codex, GPT-5 family; exact serving variant is not exposed.
 - `reasoning_effort`: not exposed.
 - `budget`: V4.1 has no numerical quota; no serving token budget is exposed.
-- `compaction_state`: one inherited compaction before preregistration; canonical governance and
-  all current frontier files were reread.
+- `compaction_state`: two inherited compactions. Canonical governance and all current frontier
+  files were reread after each recovery.
 - `protected_files`: the six inherited user/exposure files remain untouched and unstaged.
 
 ## Publication gate
@@ -164,3 +164,43 @@ does not imply a gap uniform in `N` or the prime cutoff.
 Commit only this preregistration and its synchronized ledgers first. It must pass public Lean
 Action CI before `WeilGroundStateFiniteMatrix.lean`, Targets, TargetChecks, or AxiomsAudit are
 edited.
+
+## Local implementation outcome
+
+- `production_module`: `LeanLab/Riemann/WeilGroundStateFiniteMatrix.lean`, 556 lines.
+- `compiled_structure`: centered `Fin (2*N+1)` frequencies, reflection, even/odd projections,
+  source divided differences, transpose symmetry, centrosymmetry, reflection commutation, parity
+  preservation, orthogonality, quadratic splitting, and the exact source rank-two commutator.
+- `compiled_certificate`: `WeilFiniteParityRayleighCertificate` proves global Rayleigh
+  nonnegativity, equality exactly on one line, the full eigenspace characterization, and
+  `WeilFiniteEvenSimpleGroundState`. The source-matrix endpoint is
+  `weilFiniteDividedDifferenceMatrix_evenSimple_of_parityRayleigh`.
+- `mechanical_gate`: the module, Targets, nine exact TargetChecks, and AxiomsAudit compile; nine
+  selected axiom prints use only `propext`, `Classical.choice`, and `Quot.sound`, except the
+  centered-frequency reflection theorem which uses only `propext` and `Quot.sound`. Forbidden
+  scans and `git diff --check` are empty; the full build passes with 8,738 jobs.
+- `classification`: `KNOWN_SOURCE_STRUCTURE_FORMALIZED / FINITE_CERTIFICATE_INTERFACE`.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `strict_boundary`: no theorem asserts either strict block inequality for an arithmetic Weil
+  matrix. Positive inertia, one finite table, or one even-sector computation remains insufficient.
+
+## Adjacent literature and numerical screening found during implementation
+
+Four June 2026 S3 Zenodo preprints by Breno Wilson de Andrade Silva directly study this exact
+simple-even gap. They claim a pole-free Perron theorem, parity-sector Loewner identities, and an
+exact reduction of full even-simplicity to a pole-localization condition plus one odd-sector
+Herglotz resolvent inequality. The claimed residual is
+
+```text
+<S,(B_odd-lambda_even)^(-1)S> < 1/2,
+```
+
+or an equivalent bordered Schur-complement inequality. Those source claims are not project
+premises. Their precise finite statements are the highest-value next literature target.
+
+A bounded high-precision navigation probe also tested whether the cutoff-free matrix inverse is
+checkerboard positive. The property holds in some small cells but fails for fixed prime cutoff as
+the band grows, including robust failures at `(c,N)=(2,8),(3,8),(5,8),(7,6)`. Therefore the
+universal checkerboard-inverse Perron conjecture is rejected as a route candidate. This is
+numerical screening, not a Lean counterexample and not a falsification of source even-simplicity.

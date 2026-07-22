@@ -74,6 +74,7 @@ import LeanLab.Riemann.WeilCompactLaplaceZeroCutoff
 import LeanLab.Riemann.WeilCompactLaplaceArithmeticFormula
 import LeanLab.Riemann.WeilCompactPositivityCriterion
 import LeanLab.Riemann.WeilGroundStateAlignment
+import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -766,3 +767,12 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.compactLaplaceTransform_weilGroundStateLogRoot_one
 #print axioms LeanLab.Riemann.compactLaplaceTransform_weilGroundStateLogRoot_zero_sourceMoment
 #print axioms LeanLab.Riemann.compactLaplaceTransform_weilGroundStateLogRoot_one_sourceMoment
+#print axioms LeanLab.Riemann.weilFiniteCenteredFrequency_rev
+#print axioms LeanLab.Riemann.weilFiniteDividedDifferenceMatrix_transpose
+#print axioms LeanLab.Riemann.weilFiniteDividedDifferenceMatrix_reflection
+#print axioms LeanLab.Riemann.weilFiniteDividedDifferenceMatrix_commutator
+#print axioms LeanLab.Riemann.weilFiniteMatrix_mulVec_reflect
+#print axioms LeanLab.Riemann.weilFiniteQuadratic_split
+#print axioms LeanLab.Riemann.WeilFiniteParityRayleighCertificate.defect_nonneg_and_eq_smul
+#print axioms LeanLab.Riemann.WeilFiniteParityRayleighCertificate.evenSimpleGroundState
+#print axioms LeanLab.Riemann.weilFiniteDividedDifferenceMatrix_evenSimple_of_parityRayleigh

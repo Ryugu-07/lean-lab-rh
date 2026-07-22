@@ -1033,3 +1033,31 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `still_open`: uniform simple-even structure in both cutoff parameters, actual ground-state to
   `k_lambda` convergence, W2/G7, M2/G3, H6-E/G8, and RH.
 - `global_goal`: active; preregistration public CI precedes every Lean proof-source edit.
+
+## 2026-07-22 H7 finite matrix and parity local outcome
+
+- `K0-H7-WEIL-GROUNDSTATE-FINITE-MATRIX-01`: the exact divided-difference matrix, centered
+  reflection, transpose symmetry, centrosymmetry, rank-two frequency commutator, parity
+  preservation, orthogonal parity decomposition, and quadratic splitting compile.
+- `K0-H7-WEIL-GROUNDSTATE-PARITY-CERTIFICATE-01`: strict Rayleigh positivity on the even
+  complement and odd block implies a global ground-state line and the source-faithful
+  simple-even predicate. This is a conditional finite checker, not a proof that the arithmetic
+  matrix supplies its premises.
+- `H7-WEIL-GROUNDSTATE-HERGLOTZ-01`: newly exposed open child from four June 2026 S3 sources.
+  Align the finite pole-free sector operators and prove the exact Herglotz/Schur-complement
+  equivalence reducing even-simplicity to pole localization and
+  `<S,(B_odd-lambda_even)^(-1)S><1/2`; then prove or falsify that arithmetic inequality.
+- `OBS-H7-WEIL-GROUNDSTATE-HERGLOTZ-UNIFORM-01`: the reported inequality is exponentially tight
+  as the tested cutoff grows, and no registered source proves it uniformly. S3 numerical tables
+  are navigation only. The claimed pole-free Perron theorem and sector identities require M0 and
+  K0 reconstruction before use.
+- `REJECTED-H7-CHECKERBOARD-INVERSE-UNIVERSAL-01`: high-precision navigation rejects universal
+  checkerboard positivity of the cutoff-free inverse for fixed cutoff and growing band, including
+  `(2,8)`, `(3,8)`, `(5,8)`, and `(7,6)`. This rejects only that proposed mechanism; no Lean
+  falsification of simple-even structure is claimed.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `local_audit`: 556-line production module, nine exact TargetChecks, nine selected standard-only
+  axiom prints, empty forbidden scans, `git diff --check`, and full 8,738-job build.
+- `still_open`: arithmetic Herglotz inequality, uniform simple-even structure, the actual
+  ground-state-to-`k_lambda` comparison, W2/G7, M2/G3, H6-E/G8, and RH.

@@ -381,6 +381,16 @@ The project's audit of a separate 2026 Volterra proposal also proves that factor
 contractive middle map does not force contraction of the compressed composite. That obstruction
 does not apply to the Connes ground-state theorem, whose assumptions and operator are different.
 
+Post-survey H7 audit on 2026-07-22 sharpened the first clause. Four June 2026 S3 Zenodo preprints
+by Breno Wilson de Andrade Silva claim pole-free Perron structure, exact parity-sector Loewner
+identities, and an equivalence between full even-simplicity and pole localization together with
+the odd-sector Herglotz inequality
+`<S,(B_odd-lambda_even)^(-1)S><1/2`. The claimed inequality is exponentially tight in the reported
+finite data and remains unproved uniformly. The project has now compiled the finite matrix,
+parity split, and a strict two-block Rayleigh certificate, but not the arithmetic inequality.
+A high-precision navigation probe also rejects universal checkerboard positivity of the inverse,
+so that naive Perron shortcut is not a surviving omission candidate.
+
 ### Unused machinery and omission audit
 
 This is the strongest omission candidate in the survey because the key theorem and the precise

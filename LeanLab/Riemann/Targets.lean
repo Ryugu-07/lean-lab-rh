@@ -72,6 +72,7 @@ import LeanLab.Riemann.WeilCompactLaplaceZeroCutoff
 import LeanLab.Riemann.WeilCompactLaplaceArithmeticFormula
 import LeanLab.Riemann.WeilCompactPositivityCriterion
 import LeanLab.Riemann.WeilGroundStateAlignment
+import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -1293,6 +1294,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``compactLaplaceAutocorrelation_weilGroundStateLogRoot
       status := .proven
       note := "Campaign LITERATURE-20260722-H7-WEIL-GROUNDSTATE-ALIGN-01 compiles the exact weighted-coordinate bridge only. It does not identify the source L2 form domain with the project's smooth compact test class, construct the finite Galerkin matrix in Lean, prove a simple-even ground state, compare the true ground state with the explicit prolate approximant, or prove RH. Classification is source-definition alignment infrastructure with rh_frontier_delta=0." },
+    { id := "H7.weil-ground-state.finite-matrix-parity-certificate"
+      tier := .tier2
+      title := "Formalize the finite Weil matrix and simple-even certificate"
+      statement :=
+        "Represent the source band {-N,...,N} by centered finite indices, prove symmetry and reflection commutation of the divided-difference matrix, split every vector and quadratic value into orthogonal even and odd parts, and prove that strict Rayleigh positivity on the even orthogonal complement and odd block makes one normalized even eigenvector the unique global ground state."
+      leanName := some ``weilFiniteDividedDifferenceMatrix_evenSimple_of_parityRayleigh
+      status := .proven
+      note := "Campaign LITERATURE-20260722-H7-WEIL-FINITE-MATRIX-PARITY-01 formalizes the exact finite source matrix and a theorem-producing target for later exact or interval certificates. The endpoint is conditional on two strict block inequalities; it does not assert them for the arithmetic Weil matrix, prove uniformity in Galerkin size or prime cutoff, compare the true ground state with k_lambda, or prove RH. Classification is source spectral-interface infrastructure with rh_frontier_delta=0." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"
