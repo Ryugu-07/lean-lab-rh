@@ -6,7 +6,7 @@ Campaign: `DISCOVERY-20260723-H7-PROLATE-RAYLEIGH-GAP-01`
 
 Selected node: `H7-WEIL-GROUNDSTATE-QUANTITATIVE-APPROX-01`
 
-Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`
+Status: `PUBLICLY_CLOSED`
 
 ## Baseline
 
@@ -154,3 +154,7 @@ Immutable-evidence commit `1e0c560293e189a4f02c5fc67f6de2758a239b28` passed publ
 Action run `29965651199`, build job `89076440184`, in `1m45s`. The registered generic endpoint
 has reached its local stop. Final-ledger publication and CI precede route reselection; the source
 ratio, H7, and RH remain open.
+
+Final-ledger commit `5e36c53da657b4018f23339d4744562da07002ba` passed public Lean
+Action run `29965855724`, build job `89077075898`, in `1m51s`. The campaign is publicly closed
+at its registered generic endpoint. The source ratio, source instantiation, H7, and RH remain open.

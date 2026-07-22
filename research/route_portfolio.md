@@ -3410,3 +3410,23 @@ Action run `29965651199`, build job `89076440184`, in `1m45s`. The local campaig
 registered generic Rayleigh-gap consumer and collapsing-gap falsification endpoint; proof source
 remains frozen. Final-ledger CI is the last publication gate before value-ranked historical-route
 and conjecture-pool selection. The concrete source ratio, H7, and RH remain open.
+
+Final-ledger commit `5e36c53da657b4018f23339d4744562da07002ba` passed public Lean Action
+run `29965855724`, build job `89077075898`, in `1m51s`. The generic H7 campaign is fully publicly
+closed; the concrete arithmetic/prolate ratio and RH remain open.
+
+## H1 Theta-Infinity Consumer Launch
+
+The next mechanism-level audit returns to H1 with a correction to the original route map. A bare
+critical-line proportion-one theorem permits sparse exceptions, but Farmer's full
+`theta=infinity` conjecture is stronger. Bettin--Gonek prove that a uniform mollified second-moment
+bound through length `T^theta` excludes every zeta zero in
+`Re(s)>1/2+1/(2*theta)`; arbitrary `theta` implies RH directly.
+
+Campaign `LITERATURE-20260723-H1-THETA-INFINITY-CONSUMER-01` preregisters the exact logarithmically
+tapered mollifier and moment, the integer-to-real cutoff interpolation used under the source
+integral, and the final power-exponent/zero-free consumers. The Mellin inversion, auxiliary
+transform decay, contour shift, residue lower bound, and arbitrary-length moment conjecture remain
+open and unavailable as premises. This is an individual-zero historical mechanism audit, not
+another optimization of a zero percentage. Public preregistration CI is required before Lean
+proof-source editing; persistent RH Goal active.

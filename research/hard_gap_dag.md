@@ -1444,7 +1444,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 
 ## 2026-07-23 H7 prolate Rayleigh-gap local result
 
-- `K0-H7-RAYLEIGH-GAP-CONSUMER-01`: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`. A normalized
+- `K0-H7-RAYLEIGH-GAP-CONSUMER-01`: `PUBLICLY_CLOSED / GENERIC_CONSUMER`. A normalized
   finite ground eigenline with positive orthogonal Rayleigh gap satisfies
   `delta * projective_defect <= rayleigh_excess`;
   division and one-parameter limit consumers compile.
@@ -1464,5 +1464,27 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `public_implementation`: frozen commit `4404a93e92777c904563cda68120e9a1057e084e` passed Lean Action
   run `29965379529`, build job `89075616914`, in `2m36s`; proof source is frozen.
 - `public_closure_evidence`: commit `1e0c560293e189a4f02c5fc67f6de2758a239b28` passed Lean Action
-  run `29965651199`, build job `89076440184`, in `1m45s`; only final-ledger CI remains.
-- `next_gate`: publish the final ledger, then return to historical-route/conjecture-pool selection.
+  run `29965651199`, build job `89076440184`, in `1m45s`.
+- `public_final_ledger`: commit `5e36c53da657b4018f23339d4744562da07002ba` passed Lean Action
+  run `29965855724`, build job `89077075898`, in `1m51s`.
+- `next_gate`: complete; historical-route/conjecture-pool selection resumed.
+
+## 2026-07-23 H1 theta-infinity consumer launch
+
+- `H1-FARMER-REAL-CUTOFF-INTERPOLATION-01`: `PREREGISTERED / SOURCE_ALIGNMENT`. Define the exact
+  logarithmically tapered mollifier for real cutoffs and prove its affine interpolation in
+  `1/log x` between consecutive integer cutoffs, including the convex squared-norm bound.
+- `H1-BETTIN-GONEK-POWER-CONSUMER-01`: `PREREGISTERED / LITERATURE`. Prove that
+  `T^(2*beta*theta) <<_epsilon T^(1+epsilon+theta)` for every positive epsilon forces
+  `beta <= 1/2+1/(2*theta)`, then compile fixed- and all-`theta` zero consumers.
+- `H1-BETTIN-GONEK-MOMENT-TO-POWER-01`: `OPEN / PUBLISHED_ANALYTIC_BRIDGE`. Formalize Mellin
+  inversion, auxiliary-transform decay, the contour shift and selected-zero residue, Cauchy--Schwarz,
+  critical-line zeta second-moment lower bound, and uniform constants in equations `(2.2)`--`(2.5)`.
+- `H1-FARMER-THETA-INFINITY-MOMENT-01`: `OPEN / RH_STRENGTH`. Prove the arbitrary-length
+  mollified second-moment conjecture. It is unavailable as a premise.
+- `route_map_correction`: sparse-exception insufficiency applies to a bare proportion-one theorem,
+  not to the full Farmer--Bettin--Gonek mechanism, which excludes individual zeros and implies RH
+  for arbitrary `theta`.
+- `expected_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_map_delta=1`, and
+  `source_consumer_delta=2` at the registered endpoint.
+- `global_goal`: active; preregistration public CI precedes Lean proof-source editing.

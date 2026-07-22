@@ -4,7 +4,7 @@ Campaign: `DISCOVERY-20260723-H7-PROLATE-RAYLEIGH-GAP-01`
 
 Mode: `DISCOVERY / FALSIFICATION`
 
-Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`
+Status: `PUBLICLY_CLOSED`
 
 ## Baseline
 
@@ -31,6 +31,7 @@ Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`
 | 11 | `LOCAL_MECHANICAL_GATES` | Production forbidden scan and `git diff --check` are empty; direct compiles pass; the full `8,750`-job build passes with only pre-existing replay warnings. | Freeze the implementation commit and require independent public Lean Action CI. |
 | 12 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation commit `4404a93e92777c904563cda68120e9a1057e084e` passed run `29965379529`, build job `89075616914`, in `2m36s`. | Keep Lean proof source frozen; publish immutable evidence and require its own public CI. |
 | 13 | `EVIDENCE_PUBLIC_CI` | Immutable-evidence commit `1e0c560293e189a4f02c5fc67f6de2758a239b28` passed run `29965651199`, build job `89076440184`, in `1m45s`. | Stop the generic consumer/falsification campaign at its registered endpoint; publish the final ledger before route reselection. |
+| 14 | `FINAL_LEDGER_PUBLIC_CI` | Final-ledger commit `5e36c53da657b4018f23339d4744562da07002ba` passed run `29965855724`, build job `89077075898`, in `1m51s`. | Campaign publicly closed. Return to historical mechanism-level route selection; keep the concrete source ratio open. |
 
 ## Assumption and gap accounting
 
@@ -56,6 +57,8 @@ Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`
   `89076440184`, in `1m45s`.
 - `local_stop`: the generic Rayleigh-gap consumer and collapsing-gap falsification endpoint are
   compiled. The source-ratio conjecture and every downstream H7 edge remain open.
-- `next_gate`: publish the final campaign ledger and require public Lean Action CI, then return to
-  value-ranked historical-route and conjecture-pool selection.
+- `final_ledger_commit`: `5e36c53da657b4018f23339d4744562da07002ba`.
+- `final_ledger_public_ci`: Lean Action run `29965855724`, build job `89077075898`, passed in
+  `1m51s`.
+- `next_gate`: complete; value-ranked historical-route and conjecture-pool selection resumes.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

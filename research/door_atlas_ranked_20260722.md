@@ -68,7 +68,7 @@ mathematically weak route.
 | rank | door | exact missing object | obstacle status | omission evidence | recommendation |
 | --- | --- | --- | --- | --- | --- |
 | 1 | D6 spectral/trace plus finite-prime Weil ground states | Prove simple even ground states and compact-uniform convergence of their Fourier-Mellin transforms to the Riemann xi transform as the prime cutoff grows. | `OPEN`; explicitly isolated in 2025-2026 sources. | Strong: a new theorem supplies on-line zeros for every admissible approximant, while convergence is recent and sharply stated. | `PROOF-ATTEMPT` after a definition-alignment campaign. |
-| 2 | D3 critical-line proportions/mollifiers | Obtain a source-valid path from optimized mollification to proportion one and then exclude every sparse exceptional off-line zero. | Mixed: long mean values are open; sparse-zero insufficiency is logical and still operative. | Moderate: 2025 work identifies derivative-combination optimization as relatively underused and gains without new arithmetic input. | `LITERATURE -> DISCOVERY`; runner-up. |
+| 2 | D3 critical-line proportions/mollifiers | Prove arbitrary-length mollified moment bounds strong enough for the Bettin--Gonek individual-zero exclusion, or separately repair the sparse-exception gap of proportion-only methods. | Mixed: long mean values are open; sparse-zero insufficiency applies to density-only conclusions, while the full `theta=infinity` conjecture has a published direct implication to RH. | Stronger than first recorded: Bettin--Gonek turn each off-line zero into a power-growth obstruction, and 2025 work identifies derivative-combination optimization as relatively underused. | `LITERATURE -> PROOF-ATTEMPT`; runner-up. |
 | 3 | D10 arithmetic/Speiser/character sums | Prove a uniform arithmetic inequality strong enough for the RH implication, or a derivative-zero exclusion theorem on the left half-strip. | `OPEN`, but most classical criteria merely restate RH. | Moderate for Conrey's 2024 character-sum reduction; low for Robin/Lagarias alone. | `FALSIFICATION` of the exact character-sum strengthening before proof work. |
 | 4 | D1 closure/Li/Weil positivity | Produce unconditional global positivity or target closure, with prime and archimedean terms controlled together. | `OPEN`; local same-sign prime decomposition is formally obstructed. | Moderate only through the D6 global operator interface. | Merge consumers into D6; do not add another equivalent criterion. |
 | 5 | D4 density/moments/subconvexity | Convert vertically sensitive zero detection or large-value control into exclusion of even one exceptional off-line orbit. | `OPEN`; density bounds allow sparse exceptions, and Maynard--Pratt identify bow configurations as the obstruction to removing finite-real-part rigidity. | Moderate: the half-isolated detector was omitted from the first atlas and gives a precise geometric stress test, though not a known exceptional-zero killer. | `FALSIFICATION` of symmetry-only half-isolation, then retain the actual bow-exclusion edge. |
@@ -210,16 +210,21 @@ record or proportion one.
 
 ### Exact missing object
 
-The classical path needs mean-value formulae for mollified zeta expressions at lengths and
-complexity sufficient to force proportion one. Even proportion one leaves a second exact gap:
-exclude every finite or density-zero off-line orbit.
+Two endpoints must be distinguished. A Levinson-style argument that outputs only asymptotic
+critical-line proportion one still needs a second theorem excluding every finite or density-zero
+off-line orbit. Farmer's stronger `theta=infinity` moment conjecture has a different endpoint:
+Bettin--Gonek prove that a uniform bound through length `T^theta` excludes every zero in
+`Re(s) > 1/2 + 1/(2*theta)`, so arbitrary `theta` implies RH directly. Its missing object is the
+arbitrary-length mollified moment bound itself, together with formal reconstruction of the
+Mellin/residue transfer to an individual zero.
 
 ### Obstacle validity
 
 The long-mollifier barrier is a missing analytic estimate, not an impossibility theorem. The
-sparse-exception barrier is logical and fully current: asymptotic density one is compatible with
-finitely many off-line zeros. The project's finite xi-divisor model verifies this distinction and
-rejects density-one-to-Li positivity.
+sparse-exception barrier remains fully current for asymptotic density-one conclusions, but it must
+not be attached to the full Farmer--Bettin--Gonek mechanism: that mechanism localizes each
+individual off-line zero through a power-growth contradiction. The project's finite xi-divisor
+model still rejects density-one-to-Li positivity; it does not obstruct `theta=infinity`.
 
 ### Unused machinery and omission audit
 
@@ -239,8 +244,9 @@ identities, `1/5` for the required long mean values.
    one under currently proved mean-value inputs.
 2. State and falsify candidate inequalities that would convert a density-one critical-line result
    into exclusion of one off-line xi orbit.
-3. Audit whether derivative-combination optimization and longer mollifier pieces are genuinely
-   additive or encode the same missing twisted moment.
+3. Reconstruct Bettin--Gonek equations `(2.1)`--`(2.5)`, including the integer-to-real cutoff
+   passage and every uniform quantifier, before deciding whether derivative-combination
+   optimization can feed the same arbitrary-length moment.
 
 ## D4. Zero density, moments, mean values, and subconvexity
 
