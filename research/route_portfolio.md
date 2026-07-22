@@ -3037,3 +3037,8 @@ Levinson-Montgomery functional-equation/Gamma boundary estimates. The project ha
 entire-xi rectangle theorem but no generic theorem that can be applied directly. Classification:
 `MEANINGFUL_PARTIAL / CONDITIONAL_SOURCE_CONSUMER`, with `rh_frontier_delta=0` and
 `route_infrastructure_delta=1`.
+
+Frozen implementation commit `2a6290a27fd7675db409f884679d1a554c13b72d` passed public Lean
+Action run `29943873685`, build job `89004249306`, in `2m6s`. Lean source is frozen;
+immutable-evidence CI and final-ledger CI remain before this local campaign returns the persistent
+RH Goal to historical-route omission search.

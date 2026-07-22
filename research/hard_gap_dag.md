@@ -1178,6 +1178,9 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `H12-SPEISER-LEVINSON-MONTGOMERY-COUNT-01`: conditional consumer compiled; full known theorem
   remains open exactly at H12-D and H12-E. `rh_frontier_delta=0`,
   `route_infrastructure_delta=1`.
+- `public_implementation_evidence`: frozen implementation commit
+  `2a6290a27fd7675db409f884679d1a554c13b72d` passed Lean Action run `29943873685`, build job
+  `89004249306`, in `2m6s`; immutable-evidence commit CI remains before local closure.
 
 ## 2026-07-22 H7 closure and H1 short-mollifier launch
 

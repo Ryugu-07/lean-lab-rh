@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260723-H12-SPEISER-COUNTING-EQUIVALENCE-01`
 
 Mode: `LITERATURE`
 
-Status: `MEANINGFUL_PARTIAL_LOCAL_COMPLETE / IMPLEMENTATION_CI_REQUIRED`
+Status: `MEANINGFUL_PARTIAL / EVIDENCE_CI_REQUIRED`
 
 ## Runtime record
 
@@ -44,6 +44,7 @@ unproved Lean premise.
 | 8 | `SOURCE_LOGIC_CORRECTION` | The source does not provide an unconditional exact sequence. It provides an exact-or-eventually-`N_-(T)>T/2` dichotomy together with `O(log T)` count difference. | Define both source outputs separately; prove `O(log T)` implies the needed `o(T)` estimate and that the incompatible branch is eliminated under either zero-free condition. |
 | 9 | `CONDITIONAL_EQUIVALENCE` | `riemannHypothesis_iff_speiserDerivativeZeroFree_of_levinsonMontgomeryTheoremOne` compiles from the literal logarithmic bound and count dichotomy. | Register it as a conditional source consumer, not as completion of Speiser's theorem. |
 | 10 | `MECHANICAL_AUDIT` | Five exact TargetChecks pass; five selected axiom prints contain only `propext`, `Classical.choice`, and `Quot.sound`; forbidden scan and `git diff --check` are clean; full `lake build` passes 8,742 jobs. | Stop locally at the first exact external analytic obstruction and require implementation CI. |
+| 11 | `IMPLEMENTATION_CI` | Implementation commit `2a6290a27fd7675db409f884679d1a554c13b72d` passed Lean Action run `29943873685`, build job `89004249306`, in `2m6s`. | Freeze all Lean proof source. Publish immutable implementation evidence and require its own public CI. |
 
 ## Compiled declarations
 
@@ -81,5 +82,9 @@ unproved Lean premise.
 - `rh_frontier_delta`: `0`.
 - `route_infrastructure_delta`: `1`.
 - `cross_route_reuse_delta`: `1` from H6 imaginary-axis positivity.
-- `next_gate`: implementation commit and public CI; then immutable evidence and final ledger.
+- `implementation_commit`: `2a6290a27fd7675db409f884679d1a554c13b72d`.
+- `implementation_public_ci`: Lean Action run `29943873685`, build job `89004249306`, passed in
+  `2m6s`.
+- `proof_source_state`: frozen at the implementation commit.
+- `next_gate`: immutable evidence commit and public CI; then final ledger.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.
