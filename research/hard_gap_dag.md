@@ -770,3 +770,37 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   each before continuing.
 - `still_open`: both exact Boyd route obstructions, equation `(15)`, effective `R2`, unconditional
   Table 1 certificates, H6-E/G8, and RH.
+
+## 2026-07-22 H6-Q1 Loop 28 local outcome
+
+- `H6-Q1`: open; the inner boundary-truncation and pointwise-trace subedge is proven locally.
+- `K0-H6-BOYD-R2-BOUNDARY-TRACE-TRUNCATION-01`: the canonical heights tend to infinity and the
+  two exact source jump truncations converge to the full Loop 27 boundary-jump projection.
+- `K0-H6-BOYD-R2-BOUNDARY-TRACE-PAIR-01`: both finite offset-line kernels are interval integrable,
+  and their normalized difference is exactly one paired vertical-line integral. For every
+  `Re z>0` and every nonzero boundary coordinate, its integrand tends to the exact reflection-jump
+  kernel. The `Re z>0` helper hypothesis corrects the preregistration's omitted quantifier.
+- `K0-H6-BOYD-R2-BOUNDARY-TRACE-REDUCTION-01`: the complete canonical inner trace holds iff
+  `deBruijnNewmanPolymathBoydBoundaryTraceDiscrepancy z` tends to zero. This discrepancy limit is
+  not proved or assumed.
+- `OBS-H6-BOYD-R2-BOUNDARY-TRACE-UNIFORM-INTEGRABILITY-01`: establish uniform integrability of the
+  paired offset kernels on the canonical growing intervals, with explicit control of the
+  near-zero cancellation and the shifted tails. Imaginary-axis integrability and pointwise
+  convergence do not supply this interchange; the current half-plane estimate has unproved
+  growth premises.
+- `relation_to_parent`: this refines only the third clause of
+  `OBS-H6-BOYD-R2-BOUNDARY-DISPERSION-LIMITS-01`. The right and left outer-edge decay limits remain
+  independent obligations, so Boyd--Nemes equation `(15)` is still open.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `local_audit`: 358-line module, six exact TargetChecks, eight selected standard-only axiom
+  prints, empty forbidden scans, `git diff --check`, and the full 8,733-job build pass.
+- `public_preregistration`: commit `a370945962a2ce4b1e037ae824da24d3edef85bc`, CI run
+  `29887021780`, build job `88819539208`, passed in `2m23s` before proof-source editing.
+- `public_implementation`: pending.
+- `public_closure`: pending.
+- `compaction_state`: one recovery; all canonical frontier files and the new proof source were
+  re-read before continuing.
+- `still_open`: the new boundary-trace uniform-integrability child, both outer-edge limits, the
+  global cut-stitching route, equation `(15)`, effective `R2`, unconditional Table 1 certificates,
+  H6-E/G8, and RH.

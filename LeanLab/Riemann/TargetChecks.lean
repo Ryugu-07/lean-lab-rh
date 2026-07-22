@@ -35,6 +35,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentLandingJacobian
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydR2JacobianRemainder
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentPuiseuxJump
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryDispersion
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryTrace
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2844,5 +2845,46 @@ example
     deBruijnNewmanPolymathGammaStirlingR2 z =
       deBruijnNewmanPolymathBoydR2Integral z :=
   deBruijnNewmanPolymathGammaStirlingR2_eq_boyd_of_boundaryDispersionLimits hlimits hz
+
+example : deBruijnNewmanPolymathBoydBoundaryTraceCertificateStatement :=
+  deBruijnNewmanPolymathBoydBoundaryTraceCertificate
+
+example (z : ℂ) : Filter.Tendsto
+    (deBruijnNewmanPolymathBoydBoundaryHeight z) Filter.atTop Filter.atTop :=
+  deBruijnNewmanPolymathBoydBoundaryHeight_tendsto_atTop z
+
+example {z : ℂ} (hz : 0 < z.re) : Filter.Tendsto
+    (fun n : ℕ => deBruijnNewmanPolymathBoydTruncatedBoundaryJumpProjection z
+      (deBruijnNewmanPolymathBoydBoundaryHeight z n))
+    Filter.atTop (𝓝 (deBruijnNewmanPolymathBoydBoundaryJumpProjection z)) :=
+  deBruijnNewmanPolymathBoydTruncatedBoundaryJumpProjection_tendsto hz
+
+example {z : ℂ} {epsilon T : ℝ} (hz : 0 < z.re) (hepsilon : 0 < epsilon)
+    (hepsilonz : epsilon < z.re) :
+    deBruijnNewmanPolymathBoydFiniteBoundaryProjection z epsilon T =
+      -(1 / (2 * Real.pi * Complex.I * z)) *
+        (∫ y : ℝ in -T..T,
+          deBruijnNewmanPolymathBoydShiftedBoundaryPairIntegrand z epsilon y) :=
+  deBruijnNewmanPolymathBoydFiniteBoundaryProjection_eq_shiftedBoundaryPairIntegral
+    hz hepsilon hepsilonz
+
+example {z : ℂ} (hz : 0 < z.re) {y : ℝ} (hy : y ≠ 0) : Filter.Tendsto
+    (fun epsilon : ℝ =>
+      deBruijnNewmanPolymathBoydShiftedBoundaryPairIntegrand z epsilon y)
+    (𝓝 0)
+    (𝓝 (Complex.I * (((y : ℂ) * Complex.I) *
+      deBruijnNewmanPolymathScaledGammaBoundaryJump ((y : ℂ) * Complex.I) /
+        ((y : ℂ) * Complex.I - z)))) :=
+  deBruijnNewmanPolymathBoydShiftedBoundaryPairIntegrand_tendsto hz hy
+
+example {z : ℂ} (hz : 0 < z.re) :
+    (Filter.Tendsto
+        (fun n : ℕ => deBruijnNewmanPolymathBoydFiniteBoundaryProjection z
+          (deBruijnNewmanPolymathBoydBoundaryEpsilon z n)
+          (deBruijnNewmanPolymathBoydBoundaryHeight z n))
+        Filter.atTop (𝓝 (deBruijnNewmanPolymathBoydBoundaryJumpProjection z)) ↔
+      Filter.Tendsto (deBruijnNewmanPolymathBoydBoundaryTraceDiscrepancy z)
+        Filter.atTop (𝓝 0)) :=
+  deBruijnNewmanPolymathBoydBoundaryTrace_tendsto_iff_discrepancy hz
 
 end LeanLab.Riemann

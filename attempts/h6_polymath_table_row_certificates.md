@@ -1911,3 +1911,60 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   one-loop rest, value-rank a source-faithful complex Stirling/closed-half-plane estimate against
   other open DAG edges; do not promote the limit certificate to a premise.
 - `persistent_goal`: H6-Q1 and the global RH Goal remain active
+
+## Loop 28 Boyd inner boundary trace reduction
+
+- `campaign`: `PROOF-ATTEMPT-20260722-H6-BOYD-BOUNDARY-TRACE-01`
+- `mode`: `PROOF-ATTEMPT`
+- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; locally verified, public implementation
+  evidence pending
+- `target`: prove the third Loop 27 dispersion-limit clause by taking the canonical finite inner
+  projections to the already compiled Boyd boundary-jump projection
+- `material_difference_from_loop27`: Loop 27 exposed the inner trace as one of three undischarged
+  limits. Loop 28 separates the source jump truncation, which is already controlled by positive-ray
+  integrability, from the real-offset approach, which needs genuinely uniform control.
+- `compiled_truncation_chain`: the canonical heights tend to infinity, and
+  `deBruijnNewmanPolymathBoydTruncatedBoundaryJumpProjection_tendsto` proves that the two exact
+  truncated jump rays converge with the Loop 27 orientation and `2*pi*i*z^2` normalization.
+- `compiled_offset_chain`: Lean proves both shifted-line kernels are interval integrable under the
+  exact half-plane and pole-separation hypotheses.
+  `deBruijnNewmanPolymathBoydFiniteBoundaryProjection_eq_shiftedBoundaryPairIntegral` then rewrites
+  the entire finite projection as one paired vertical-line integral with no residual term.
+- `compiled_pointwise_chain`:
+  `deBruijnNewmanPolymathBoydShiftedBoundaryPairIntegrand_tendsto` proves convergence at every
+  nonzero imaginary-axis coordinate to the exact scaled-Gamma reflection-jump kernel.
+- `preregistration_quantifier_correction`: the proposed pointwise helper omitted `0 < z.re`; for
+  arbitrary `z` the Cauchy denominator can vanish on the boundary. The compiled helper adds this
+  necessary hypothesis. The parent inner-trace target already quantified `0 < z.re`, so its
+  statement and success criterion are unchanged.
+- `compiled_exact_residual`:
+  `deBruijnNewmanPolymathBoydBoundaryTrace_tendsto_iff_discrepancy` proves that the desired inner
+  trace is equivalent to the single named canonical discrepancy tending to zero. The aggregate
+  theorem is `deBruijnNewmanPolymathBoydBoundaryTraceCertificate`.
+- `new_obstruction`: `OBS-H6-BOYD-R2-BOUNDARY-TRACE-UNIFORM-INTEGRABILITY-01`: prove the discrepancy
+  tends to zero by a uniform estimate for the paired offset kernels on the growing intervals.
+  The estimate must handle the cancellation of the individual `1/(12*w)` remainder terms near
+  `w=0` and uniform tails as `epsilon -> 0`. The exact imaginary-axis Boyd majorant does not bound
+  shifted values, while the available half-plane Phragmen--Lindelof propagation retains unproved
+  growth hypotheses and cannot be substituted.
+- `assumption_frontier_after`: jump truncation, finite paired representation, nonzero-boundary
+  pointwise convergence, and the discrepancy iff are K0. The discrepancy limit, both outer-edge
+  limits, equation `(15)`, effective `R2`, and every downstream Table 1 certificate remain open.
+- `classification_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`,
+  `route_infrastructure_delta=1`, `obstruction_map_delta=1`
+- `local_mechanical_audit`: 358-line production module, exact proven Target, six exact
+  TargetChecks, eight selected axiom prints, empty proof-placeholder and forbidden-declaration
+  scans, `git diff --check`, and the full 8,733-job build pass; selected declarations depend only
+  on `propext`, `Classical.choice`, and `Quot.sound`
+- `public_preregistration`: commit `a370945962a2ce4b1e037ae824da24d3edef85bc`, CI run
+  `29887021780`, build job `88819539208`, passed in `2m23s` before proof-source editing
+- `public_implementation`: pending
+- `public_closure`: pending
+- `compaction_state`: one compaction recovery after the initial proof module was created; the full
+  canonical frontier and new source were re-read before compiling or extending the proof
+- `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
+- `budget`: no V4.1 numerical quota and no exposed serving token budget
+- `next_route_decision`: locally stop this attack at the exact uniform-integrability obstruction;
+  after public closure, value-rank its near-zero cancellation and shifted-tail subproblems against
+  the two remaining outer-edge limits and other open DAG edges
+- `persistent_goal`: H6-Q1 and the global RH Goal remain active

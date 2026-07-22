@@ -207,3 +207,25 @@ iff. If the full discrepancy limit compiles, include it and discharge the third 
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort are not exposed.
 - `budget`: V4.1 has no numerical quota; no serving token budget is exposed.
 - `global_goal`: the persistent RH Goal remains active.
+
+## Local outcome
+
+- `status`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; locally verified, public implementation and
+  closure evidence pending.
+- `compiled_endpoint`: `deBruijnNewmanPolymathBoydBoundaryTraceCertificate` packages the canonical
+  height limit, exact source-jump truncation limit, both shifted-line interval-integrability
+  certificates, the paired finite-projection representation, nonzero-boundary pointwise
+  convergence, and the exact discrepancy iff.
+- `quantifier_correction`: the preregistered pointwise helper omitted `0 < z.re`. Lean requires it
+  to exclude a boundary Cauchy pole; the parent inner-trace theorem already carries this
+  hypothesis, so the correction does not weaken or alter that target.
+- `full_success_not_reached`: the discrepancy limit is not proved or assumed, so the third Loop 27
+  clause and equation `(15)` remain open.
+- `first_remaining_obstruction`:
+  `OBS-H6-BOYD-R2-BOUNDARY-TRACE-UNIFORM-INTEGRABILITY-01`, requiring uniform near-zero
+  cancellation and shifted-tail control on the canonical growing intervals.
+- `local_audit`: standalone module, Targets, six exact TargetChecks, eight selected standard-only
+  axiom prints, forbidden scans, `git diff --check`, and the full 8,733-job build pass.
+- `compaction_state`: one recovery after initial source creation; all canonical frontier files and
+  the complete new module were re-read before continuing.
+- `global_goal`: H6-Q1 and the persistent RH Goal remain active.
