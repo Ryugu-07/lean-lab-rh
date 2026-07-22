@@ -56,7 +56,7 @@ flowchart TD
 | H6-B | complete | Align the Polymath-normalized de Bruijn-Newman heat family at time zero with the project xi. | `deBruijnNewmanH_zero_eq_riemannXi` proves `H_0(z) = (1/8) * riemannXi((1+i*z)/2)` from explicit theta-kernel and Mellin calculations. This is a definition bridge with `hard_gap_delta=0`. |
 | H6-H1 | complete | Prove the exact source family is entire in space for every real time and satisfies the backward heat equation. | `DeBruijnNewmanHeat.lean` proves arbitrary quadratic/linear weighted integrability, differentiation in time and twice in complex space, and `partial_t H_t = -partial_z^2 H_t` on all `R x C`. This is analytic infrastructure with `hard_gap_delta=0`. |
 | H6-H | open globally; H2a-H2f and zero-dynamics interfaces compiled | Formalize the all-real-zero predicate, de Bruijn forward preservation, threshold existence, threshold closedness, strip contraction, and the full Polymath regional-continuation interface for the exact H6-B/H6-H1 family. | The framework reaches the unconditional `t=1/2` witness, arbitrary-base strip contraction, and the complete conditional Polymath three-region criterion. Simple contacts use the regularized divisor force; repeated contacts use compiler-checked backward Hermite splitting and zero transfer. The three unconditional Table 1 region certificates, global enumeration/continuation beyond the criterion, H6-E/G8, and RH remain open. |
-| H6-Q1 | open; selected through Loop 27 local hard-gap reduction | Kernel-check the initial, final, and barrier certificates for the second row of Polymath Table 1 and derive `deBruijnNewmanAllZerosReal (1/5)` without hypotheses. | The conditional Polymath consumer, finite-height-RH initial bridge, complete Theorem 1.3 normalization, explicit final-region consumer, equation `(htz)`, fixed principal-power `5*pi/4` line integrability, every positive-integer local residue normalization, exact adjacent and finite `R_(0,0)` shifts, full Titchmarsh `(xio)`, finite equation `(39)`, and both actual-source contour shifts are public K0. Loops 10--24 compile the Boyd phase geometry through a global normalized coordinate, adjacent landings, and the maximal centered inverse radius. Loop 25 identifies the actual positive-real inverse-Jacobian remainder and reduces equation `(15)` to one contour equality; Loop 26 compiles the first adjacent Puiseux jumps and records the global chart-stitching barrier. Loop 27 bypasses that atlas: the reflection product gives an exact scaled-Gamma boundary jump, the jump splits into direct and inverse `R_2` on opposite half-planes, and finite Cauchy rectangles reduce equation `(15)` to two explicit outer-edge limits plus one inner boundary-trace limit. Those limits, equation `(15)`, and effective `R_2` are not premises. Proposition 6.1/6.3, strict finite-sum certificates, finite RH through `3*10^12`, compact barrier winding, H6-E/G8, and RH remain open. External Arb output is navigation evidence only. |
+| H6-Q1 | open; selected through Loop 31 closure of Boyd--Nemes equation `(15)` | Kernel-check the initial, final, and barrier certificates for the second row of Polymath Table 1 and derive `deBruijnNewmanAllZerosReal (1/5)` without hypotheses. | The conditional Polymath consumer, finite-height-RH initial bridge, complete Theorem 1.3 normalization, explicit final-region consumer, equation `(htz)`, fixed principal-power `5*pi/4` line integrability, every positive-integer local residue normalization, exact adjacent and finite `R_(0,0)` shifts, full Titchmarsh `(xio)`, finite equation `(39)`, and both actual-source contour shifts are public K0. Loops 10--30 reduce the Boyd analytic input through saddle geometry, boundary dispersion, and the near/middle/tail trace decomposition. Loop 31 reconstructs the actual scaled-Gamma Stieltjes formula noncircularly, proves direct and inverse `3/|z|^2` bounds, closes the shifted tail, inner trace, and both outer edges, and proves the unconditional dispersion certificate and Boyd--Nemes equation `(15)`. The inverse-Jacobian global-cut-stitching route remains bypassed and is no longer required for `(15)`. Proposition 6.1/6.3 and the remaining Table 1 certificate assembly, strict finite-sum certificates, finite RH through `3*10^12`, compact barrier winding, H6-E/G8, and RH remain open. External Arb output is navigation evidence only. |
 | H6-X | complete first-three finite endpoint | Prove theta-specific Li information for the exact heat family beyond the generic heat PDE. | `DeBruijnNewmanLiMoments.lean` publicly proves the exact first-two moment spine. `DeBruijnNewmanThirdLi.lean` extends it through `F_t'''(1)=64D`, `B*C<=A*D`, the exact third Li formula, and strict positive-real `liCoefficientCandidate 2`; implementation commit `1b521686d4e8561f01ba98a6ceaa4905ced4d92f` passed public CI run `29545583372`. This is finite-index route infrastructure with `hard_gap_delta=0`; no all-index extrapolation is made. |
 | H6-X3 | complete public | Prove the actual-theta ordered covariance and third Li sign. | The one-integral monotone covariance certificate gives `B*C<=A*D`; together with `B^2<=A*C` and `liCoefficientCandidate_zero_re_lt_one`, Lean proves `0 < (liCoefficientCandidate 2).re` and zero imaginary part. Implementation `1b521686d4e8561f01ba98a6ceaa4905ced4d92f` and evidence `abf5ebf19e3636662a45eed7a5eff9e947c3c3b4` passed public CI. The exact aggregate is `deBruijnNewmanHeat_thirdLi_covariance_endpoint`; this does not reduce H6-E/G8. |
 | H6-E | open | Prove all zeros of `H_0` are real, equivalently `Lambda <= 0` in the audited normalization. | The generic adjacent-gap and positive-kernel/Hankel routes are obstructed. The actual-theta heat-Li time-monotonicity candidate survived high-precision finite screening, and Lean compiles its exact reduction to RH plus the function-level heat-log evolution, but no all-index sign representation or global moving-divisor differentiation theorem was obtained. A new attack must supply that theta-specific input, height-aware continuation, or a different all-index invariant. The endpoint is unchanged. |
@@ -884,3 +884,36 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   superseded by V4.1.
 - `still_open`: the shifted-tail child, both outer-edge limits, the global cut-stitching route,
   equation `(15)`, effective `R2`, unconditional Table 1 certificates, H6-E/G8, and RH.
+
+## 2026-07-22 H6-Q1 Loop 31 local outcome
+
+- `H6-Q1`: open; the shared Stieltjes scaled-Gamma input, all boundary-dispersion limits, and
+  Boyd--Nemes equation `(15)` are proven locally.
+- `K0-H6-BOYD-STIELTJES-SCALED-GAMMA-01`: the actual project scaled Gamma equals the exponential
+  of the source Stieltjes integral on `Re z>0`, reconstructed from finite unit blocks,
+  GammaSeq/Bohr--Mollerup, factorial Stirling, and analytic continuation.
+- `K0-H6-BOYD-R2-SECOND-ORDER-01`: centering the periodic kernel at `1/12` gives the logarithmic
+  `2/|z|^2` estimate, and exponential remainders give direct and inverse `3/|z|^2` bounds for
+  `|z|>=1`.
+- `K0-H6-BOYD-BOUNDARY-DISPERSION-LIMITS-01`: a common tail majorant closes every canonical
+  shifted tail and the inner trace; explicit
+  `24*(|z|+n+1)/(n+1)^2` bounds close both outer-edge residuals.
+- `K0-H6-BOYD-NEMES-EQUATION-15-01`: the unconditional three-limit certificate instantiates the
+  Loop 27 closure theorem and proves equation `(15)` for every `Re z>0`.
+- `closed_obstructions`: the shifted-tail child, its remaining uniform-integrability parent, and
+  all three boundary-dispersion limits are discharged. The global cut-stitching obstruction is a
+  bypassed route-specific problem rather than a premise of equation `(15)`.
+- `next_obstruction`: assemble the remaining Table 1 chain, including the still-needed source
+  Proposition 6.1/6.3 uses, finite-RH input, strict finite-sum certificates, and compact barrier.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `local_audit`: 2,500-line production module, ten exact TargetChecks, eleven selected
+  standard-only axiom prints, empty forbidden scans, `git diff --check`, and the full 8,736-job
+  build pass; selected declarations depend only on `propext`, `Classical.choice`, and
+  `Quot.sound`.
+- `public_preregistration`: commit `340e8ebfcf917dd17e03f36a22f2995be62c4058`, CI run
+  `29893818120`, build job `88839576741`, passed in `1m32s` before proof-source editing.
+- `public_implementation`: pending.
+- `compaction_state`: five inherited summaries; the complete canonical frontier and current
+  source were re-read after each before proof or publication work resumed.
+- `still_open`: the unconditional Table 1 row, H6-E/G8, and RH.

@@ -254,3 +254,47 @@ proved. Full success includes the unconditional dispersion-limit certificate and
 - `budget`: V4.1 has no numerical quota; no serving token budget is exposed.
 - `global_goal`: the persistent RH Goal remains active.
 
+## Outcome
+
+- `result`: `PROVED / KNOWN_THEOREM_FORMALIZED / HARD_GAP_CLOSED`; full success compiled locally.
+- `production_module`:
+  `LeanLab/Riemann/DeBruijnNewmanPolymathStieltjesScaledGamma.lean`, 2,500 lines.
+- `source_reconstruction`: Lean proves the actual project scaled Gamma equals the exponential of
+  the Stieltjes integral on `Re z>0`. The proof derives the exact unit-block identity, telescopes
+  finite blocks, reconstructs the positive-real value through `Real.BohrMollerup.logGammaSeq` and
+  `Stirling.stirlingSeq`, and extends to the right half-plane by differentiability and the complex
+  identity theorem. Equation `(13)`, Binet, Euler--Maclaurin, and a complex log-Gamma theorem are
+  not premises.
+- `explicit_bounds`: centering the periodic kernel at mean `1/12` and integrating its polynomial
+  primitive by parts gives `|L(z)-1/(12*z)| <= 2/|z|^2`; the exponential remainder then gives both
+  direct and inverse `3/|z|^2` bounds for `Re z>0`, `1<=|z|`.
+- `downstream_closure`: indicator dominated convergence proves the canonical growing positive and
+  negative shifted tails vanish. Loop 30's exact iff yields every positive-cutoff tail and the
+  inner trace. Explicit three-edge estimates bound both canonical outer residuals by
+  `24*(|z|+n+1)/(n+1)^2`, hence both vanish. The three unconditional limits instantiate
+  `deBruijnNewmanPolymathBoydBoundaryDispersionLimitCertificate`, and Lean proves Boyd--Nemes
+  equation `(15)` for every `Re z>0`.
+- `aggregate`: `deBruijnNewmanPolymathStieltjesScaledGammaCertificate` contains the actual
+  Stieltjes identity, both explicit second-order bounds, canonical tail, inner trace, dispersion
+  certificate, and equation `(15)`.
+- `closed_obstructions`: `OBS-H6-BOYD-R2-BOUNDARY-TRACE-SHIFTED-TAIL-01`, its remaining
+  uniform-integrability parent, and `OBS-H6-BOYD-R2-BOUNDARY-DISPERSION-LIMITS-01` are closed.
+  The inverse-Jacobian global-cut-stitching route remains a bypassed route-specific problem, not a
+  premise of equation `(15)`.
+- `still_open_after`: unconditional Polymath Table 1 row certificates, source Proposition 6.1/6.3
+  instantiation where still required, compact barrier and finite-RH inputs, H6-E/G8, and RH.
+- `local_mechanical_audit`: the production source compiles standalone and as a Lake target; the
+  Target, ten exact TargetChecks, eleven selected `#print axioms` entries, forbidden scans,
+  `git diff --check`, and the full 8,736-job build pass. Every selected declaration depends only
+  on `propext`, `Classical.choice`, and `Quot.sound`.
+- `public_preregistration`: commit `340e8ebfcf917dd17e03f36a22f2995be62c4058`, CI run
+  `29893818120`, build job `88839576741`, passed in `1m32s` before proof editing.
+- `public_implementation`: pending.
+- `compaction_state`: five inherited compaction summaries during Loop 31. After each recovery the
+  canonical governance, HANDOFF, relevant Targets/TargetChecks, H6 attempt, hard-gap DAG, complete
+  preregistration, current source, selected AxiomsAudit entries, external ACTIVE ledger, and git
+  status were re-read before continuing.
+- `model`: Codex, GPT-5 family; exact serving variant and reasoning effort are not exposed.
+- `budget`: V4.1 has no numerical quota; no serving token budget is exposed.
+- `local_stop`: full success has compiled, so Loop 31 stops locally after public implementation,
+  closure-evidence, and final-ledger CI. The persistent RH Goal remains active.

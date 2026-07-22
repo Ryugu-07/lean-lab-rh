@@ -2101,3 +2101,57 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   closure, value-rank a direct shifted-tail complex-Stirling campaign against the two Loop 27
   outer-edge limits and other open DAG edges; do not promote any conditional `R2` estimate.
 - `persistent_goal`: H6-Q1 and the global RH Goal remain active
+
+## Loop 31 Stieltjes scaled-Gamma and Boyd--Nemes equation (15)
+
+- `campaign`: `LITERATURE-20260722-H6-BOYD-STIELTJES-SCALED-GAMMA-01`
+- `mode`: `LITERATURE`
+- `result`: `PROVED / KNOWN_THEOREM_FORMALIZED / HARD_GAP_CLOSED`; full success compiled locally
+- `target`: reconstruct Nemes equation `(13)` for the actual project scaled Gamma, derive explicit
+  direct and inverse second-order complex Stirling bounds, and use them to close the shifted tail,
+  both outer edges, the dispersion certificate, and equation `(15)`
+- `material_difference_from_loop25`: Loop 25 only inventoried the absent Binet/Stieltjes API and
+  returned to the local inverse-Jacobian contour. Loop 31 constructs the finite unit-block formula,
+  GammaSeq/Bohr--Mollerup limit, and Stirling normalization directly, without assuming Binet,
+  Euler--Maclaurin, equation `(13)`, equation `(15)`, any R2 estimate, or residual limit.
+- `compiled_stieltjes_chain`: `deBruijnNewmanPolymath_scaledGamma_eq_exp_stieltjes` proves the
+  source identity on `Re z>0`. The exact unit-block integral telescopes to the improper Stieltjes
+  integral; positive-real identification uses the actual log-Gamma and factorial Stirling limits;
+  differentiability and the identity theorem propagate the equality to the half-plane.
+- `compiled_bound_chain`:
+  `deBruijnNewmanPolymath_stieltjesLogRemainder_sub_first_norm_le` gives `2/|z|^2`, while
+  `deBruijnNewmanPolymathGammaStirlingR2_norm_le_three` and
+  `deBruijnNewmanPolymathScaledGammaInverseR2_norm_le_three` give the fixed direct/inverse
+  `3/|z|^2` estimates.
+- `compiled_trace_chain`: a common `24/y^2` majorant and indicator DCT close growing canonical
+  tails on both signs. The every-cutoff tail theorem, discrepancy limit, and complete inner trace
+  follow through the exact Loop 30 and Loop 28 iff theorems.
+- `compiled_outer_chain`: each right and left canonical three-edge residual has norm at most
+  `24*(|z|+n+1)/(n+1)^2`; both limits therefore vanish.
+- `compiled_endpoint`: `deBruijnNewmanPolymathBoydBoundaryDispersionLimits` proves the formerly
+  conditional three-limit package and `deBruijnNewmanPolymathGammaStirlingR2_eq_boyd` proves
+  Boyd--Nemes equation `(15)` for every `Re z>0`. The aggregate theorem is
+  `deBruijnNewmanPolymathStieltjesScaledGammaCertificate`.
+- `closed_obstructions`: shifted-tail, remaining boundary-trace uniform integrability, and the
+  three dispersion limits are closed. The global-cut-stitching obstacle remains bypassed and is no
+  longer required for equation `(15)`.
+- `assumption_frontier_after`: equation `(13)`, both second-order estimates, every shifted-tail and
+  inner-trace limit, both outer-edge limits, the dispersion certificate, and equation `(15)` are
+  K0. Table 1 certificate assembly, H6-E/G8, and RH remain open.
+- `classification_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`,
+  `route_infrastructure_delta=1`, `obstruction_map_delta=1`
+- `local_mechanical_audit`: 2,500-line production module, exact proven Target, ten exact
+  TargetChecks, eleven selected standard-only axiom prints, empty forbidden scans,
+  `git diff --check`, and the full 8,736-job build pass; selected declarations depend only on
+  `propext`, `Classical.choice`, and `Quot.sound`
+- `public_preregistration`: commit `340e8ebfcf917dd17e03f36a22f2995be62c4058`, CI run
+  `29893818120`, build job `88839576741`, passed in `1m32s` before proof editing
+- `public_implementation`: pending
+- `compaction_state`: five inherited summaries; after each, all canonical frontier files and the
+  complete current source were re-read before proof or publication work resumed
+- `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
+- `budget`: no V4.1 numerical quota and no exposed serving token budget
+- `next_route_decision`: locally stop on full success after public closure. Then value-rank direct
+  use of the new equation `(15)` and `3/|z|^2` bound in the still-open Table 1 certificate chain
+  against other open DAG edges.
+- `persistent_goal`: H6-Q1 and the global RH Goal remain active

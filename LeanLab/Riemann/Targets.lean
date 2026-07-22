@@ -37,6 +37,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryDispersion
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryTrace
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryTraceTwoScale
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryTraceNearZero
+import LeanLab.Riemann.DeBruijnNewmanPolymathStieltjesScaledGamma
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1042,7 +1043,7 @@ def rhTargets : List ResearchTarget :=
         "Rewrite both exponentially weighted Boyd rays as the scaled-Gamma reflection jump, split that jump into R2 and the reflected inverse-R2 on opposite half-planes, prove exact finite rectangular Cauchy projections with every outer edge explicit, and reduce equation (15) to the two edge-decay limits and the inner boundary-trace limit."
       leanName := some ``deBruijnNewmanPolymathBoydBoundaryDispersionCertificate
       status := .proven
-      note := "Loop 27 meaningful hard-gap reduction. Lean proves exp(-2*pi*s)GammaStar(+/- i*s) is exactly GammaStar(z)-1/GammaStar(-z), defines the source-aligned inverse R2, and proves the jump is R2(z)-inverseR2(-z). It proves analytic separation on the two open half-planes and rewrites the complete source Boyd integral as that jump projection. A new local-open-set rectangular Cauchy theorem yields exact finite right and left projections; a canonical rectangle family then leaves only two named outer-edge residuals. The compiled limit certificate consists of those two residuals tending to zero and the inner vertical projection tending to the Boyd jump integral, and Lean proves that certificate implies equation (15). The certificate itself is not proved: mathlib has no complex second-order Stirling asymptotic, and the project R2 bound is downstream rather than an available premise. Classification HARD_GAP_REDUCED; equation (15), effective R2, Table 1, H6-E/G8, and RH remain open." },
+      note := "Loop 27 meaningful hard-gap reduction. Lean proves exp(-2*pi*s)GammaStar(+/- i*s) is exactly GammaStar(z)-1/GammaStar(-z), defines the source-aligned inverse R2, proves the jump is R2(z)-inverseR2(-z), and reduces equation (15) to two outer-edge limits plus the inner trace. Loop 31 later proves all three limits from a noncircular Stieltjes reconstruction and explicit second-order bounds, so this formerly conditional dispersion route is now closed; see the Stieltjes scaled-Gamma target. Table 1, H6-E/G8, and RH remain open." },
     { id := "H6.debruijn-newman.boyd-boundary-trace"
       tier := .tier2
       title := "Reduce the Boyd inner boundary trace to one discrepancy limit"
@@ -1050,7 +1051,7 @@ def rhTargets : List ResearchTarget :=
         "For every z with positive real part, prove that the canonical Boyd jump truncations converge, rewrite every finite inner projection as one paired offset-line integral, prove its integrand converges at every nonzero imaginary-axis point to the exact reflection-jump kernel, and prove that the inner boundary trace holds exactly when the named trace discrepancy tends to zero."
       leanName := some ``deBruijnNewmanPolymathBoydBoundaryTraceCertificate
       status := .proven
-      note := "Loop 28 meaningful hard-gap reduction. Lean proves the canonical heights tend to infinity and both already integrable source jump rays converge to the full boundary projection. It verifies finite-interval integrability on both offset lines and combines the Loop 27 projection into one paired integral. For Re z>0 and every nonzero boundary coordinate, Lean proves pointwise convergence to the exact scaled-Gamma reflection jump; the Re z>0 hypothesis corrects an omitted helper quantifier in the preregistration while leaving the parent inner-trace target unchanged. The desired inner trace is then equivalent to one named discrepancy tending to zero. That limit is not assumed or proved: it requires uniform integrability on growing intervals, including control near zero and on the tails, unavailable from the current noncircular Gamma facts. Classification HARD_GAP_REDUCED; both outer-edge limits, equation (15), effective R2, Table 1, H6-E/G8, and RH remain open." },
+      note := "Loop 28 meaningful hard-gap reduction. Lean proves the canonical heights tend to infinity, rewrites each finite inner projection as a paired offset integral, proves nonzero-boundary pointwise convergence, and reduces the inner trace to one discrepancy limit. Loop 29 removes the compact middle, Loop 30 removes the origin, and Loop 31 supplies the shifted-tail domination and proves the discrepancy and inner trace limits. The Re z>0 helper correction remains recorded. Table 1, H6-E/G8, and RH remain open." },
     { id := "H6.debruijn-newman.boyd-boundary-trace-two-scale"
       tier := .tier2
       title := "Reduce the Boyd boundary trace to near-zero and shifted-tail residuals"
@@ -1058,7 +1059,7 @@ def rhTargets : List ResearchTarget :=
         "For every z with positive real part, prove uniform convergence of the paired offset kernel on every compact annulus away from zero, prove the corresponding middle integrals vanish, split the canonical trace discrepancy exactly into near, middle, and tail residuals, and prove the full discrepancy limit equivalent to the near-plus-tail limit."
       leanName := some ``deBruijnNewmanPolymathBoydBoundaryTraceTwoScaleCertificate
       status := .proven
-      note := "Loop 29 meaningful hard-gap reduction. Lean identifies the exact symmetric boundary-axis kernel, proves joint continuity on a pole-free epsilon slab times every compact annulus, and applies Heine--Cantor to obtain uniform convergence there. Both fixed middle integrals and their canonical sequence tend to zero. The Loop 28 discrepancy is exactly partitioned into near-zero, middle, and shifted-tail residuals, yielding an iff that removes the middle regime completely. A further exact normal form cancels both explicit 1/(12*w) terms into one epsilon/6 rational correction. The remaining near-zero scaled-Gamma boundary bounds and shifted-tail control are not assumed or proved. Both outer-edge limits, equation (15), effective R2, Table 1, H6-E/G8, and RH remain open." },
+      note := "Loop 29 meaningful hard-gap reduction. Lean proves compact-annulus uniform convergence, both middle-integral limits, the exact three-scale partition, and cancellation of the explicit 1/(12*w) terms. Loop 30 later closes the near-zero child and Loop 31 closes the shifted-tail child using the reconstructed Stieltjes formula and explicit second-order bounds. Table 1, H6-E/G8, and RH remain open." },
     { id := "H6.debruijn-newman.boyd-boundary-trace-near-zero"
       tier := .tier2
       title := "Eliminate the Boyd boundary-trace near-zero residual"
@@ -1066,7 +1067,15 @@ def rhTargets : List ResearchTarget :=
         "Globally remove the scaled-Gamma pole through the principal square-root factor, prove right-offset uniform convergence of the paired boundary kernel across the origin on every fixed near interval, prove the canonical near residual vanishes, and reduce the complete trace discrepancy exactly to the shifted-tail residual alone."
       leanName := some ``deBruijnNewmanPolymathBoydBoundaryTraceNearZeroCertificate
       status := .proven
-      note := "Loop 30 meaningful hard-gap reduction. Lean proves w*log(w) is continuous at zero and derives global totalized identities for w*GammaStar(w) and 1/GammaStar(w), each with the exact principal sqrt(w) zero factor. These identities make the pole-free paired kernel jointly continuous on compact right-offset slabs crossing the boundary origin. Heine--Cantor gives uniform convergence on every [-delta,delta] specifically along the right-sided filter, the fixed and canonical near residuals tend to zero, and the full discrepancy limit is equivalent to the canonical shifted-tail residual alone. A bounded tail audit found no unconditional closed-half-plane second-order complex Stirling estimate in mathlib or the project; the existing R2 estimates require that bound as a premise or depend downstream on Boyd equation (15). The shifted tail, both outer-edge limits, equation (15), effective R2, Table 1, H6-E/G8, and RH remain open and unassumed. Classification HARD_GAP_REDUCED." },
+      note := "Loop 30 meaningful hard-gap reduction. Lean globally removes both scaled-Gamma boundary singularities, proves right-offset uniform convergence through the origin, eliminates the canonical near residual, and reduces the complete trace to the shifted tail. Loop 31 later reconstructs the missing Stieltjes formula, proves direct and inverse 3/|z|^2 bounds, and closes that tail together with both outer edges and equation (15). Table 1, H6-E/G8, and RH remain open." },
+    { id := "H6.debruijn-newman.stieltjes-scaled-gamma"
+      tier := .tier2
+      title := "Formalize the Stieltjes scaled-Gamma remainder and close Boyd equation (15)"
+      statement :=
+        "Reconstruct the source Stieltjes representation of the actual project scaled Gamma on the right half-plane, prove explicit direct and inverse second-order remainder bounds, eliminate the canonical Boyd shifted tail and both outer edges, and prove the unconditional boundary-dispersion certificate and Boyd--Nemes equation (15)."
+      leanName := some ``deBruijnNewmanPolymathStieltjesScaledGammaCertificate
+      status := .proven
+      note := "Loop 31 known-theorem formalization and hard-gap closure. Lean derives Nemes equation (13) from the actual GammaSeq/Bohr--Mollerup limit and factorial Stirling theorem rather than assuming Binet, Euler--Maclaurin, R2 decay, or equation (15). Centering the periodic Stieltjes kernel gives the explicit logarithmic 2/|z|^2 bound and exponential remainders give direct and inverse 3/|z|^2 bounds for |z|>=1. Indicator dominated convergence closes every canonical shifted tail; explicit O((n+1)^-1) rectangle bounds close both outer edges. The resulting unconditional dispersion certificate proves Boyd--Nemes equation (15) for Re z>0. Classification KNOWN_THEOREM_FORMALIZED / HARD_GAP_CLOSED. Table 1, H6-E/G8, and RH remain open." },
     { id := "H6.debruijn-newman.boyd-positive-real-saddle-integral"
       tier := .tier2
       title := "Derive the positive-real scaled-Gamma saddle integral"
