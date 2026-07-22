@@ -3094,3 +3094,8 @@ Frozen implementation commit `a2c8dc06f493f8577de668286482c4cbe2e6498f` passed p
 Action run `29948610437`, build job `89020321751`, in `2m1s`. Lean proof source is frozen;
 immutable evidence and its own public CI remain before this local campaign returns to historical
 route selection.
+
+Immutable-evidence commit `3a2d721d0397ff40c9bce496149ac1e05b84db6c` passed public Lean
+Action run `29948908677`, build job `89021336009`, in `2m10s`. Only final-ledger CI remains. The
+local campaign stops at its registered finite-hinge, conditional-consumer, and falsification
+endpoint; PCC and sparse-exception amplification remain open H11 work.

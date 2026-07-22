@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260723-H11-PCC-HORIZONTAL-MULTIPLICITY-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `IMPLEMENTATION_CI_PASSED / EVIDENCE_COMMIT_REQUIRED`
+Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_CI_REQUIRED`
 
 ## Runtime record
 
@@ -46,6 +46,7 @@ adapter and exact cofinal-count consumer into RH.
 | 9 | `MECHANICAL_AUDIT` | The module, Targets, six exact TargetChecks, and six selected axiom prints compile. Selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`. | Run forbidden scan, diff check, and full build; then publish the implementation commit and require public CI. |
 | 10 | `FULL_LOCAL_BUILD` | The production forbidden scan is empty, `git diff --check` passes, the H11 module build has no local warning, and the full `8,743`-job build passes. | Freeze the implementation in a scoped commit and require independent public CI. |
 | 11 | `IMPLEMENTATION_CI` | Frozen implementation commit `a2c8dc06f493f8577de668286482c4cbe2e6498f` passed public run `29948610437`, build job `89020321751`, in `2m1s`. | Keep all Lean proof source frozen; publish immutable evidence and require that evidence commit's own CI. |
+| 12 | `IMMUTABLE_EVIDENCE_CI` | Evidence commit `3a2d721d0397ff40c9bce496149ac1e05b84db6c` passed public run `29948908677`, build job `89021336009`, in `2m10s`. | Publish the final campaign ledger and require its CI, then return the persistent RH Goal to historical-route omission search. |
 
 ## Assumption and gap accounting
 
@@ -68,5 +69,7 @@ adapter and exact cofinal-count consumer into RH.
   `research/h11_pair_correlation_definition_alignment_20260723.md`.
 - `implementation_commit`: `a2c8dc06f493f8577de668286482c4cbe2e6498f`.
 - `implementation_public_ci`: run `29948610437`, build job `89020321751`, passed in `2m1s`.
-- `next_gate`: immutable-evidence commit and its public CI; Lean proof source remains frozen.
+- `evidence_commit`: `3a2d721d0397ff40c9bce496149ac1e05b84db6c`.
+- `evidence_public_ci`: run `29948908677`, build job `89021336009`, passed in `2m10s`.
+- `next_gate`: final-ledger commit and its public CI; Lean proof source remains frozen.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

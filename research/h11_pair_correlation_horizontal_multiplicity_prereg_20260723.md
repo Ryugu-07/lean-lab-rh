@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260723-H11-PCC-HORIZONTAL-MULTIPLICITY-01`
 
 Selected node: `H11-PCC-HORIZONTAL-MULTIPLICITY-01`
 
-Status: `IMPLEMENTATION_CI_PASSED / EVIDENCE_COMMIT_REQUIRED`
+Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_CI_REQUIRED`
 
 ## Selection reason
 
@@ -177,4 +177,7 @@ scan is empty, `git diff --check` passes, the H11 module build has no local warn
 `8,743`-job build passes. Frozen implementation commit
 `a2c8dc06f493f8577de668286482c4cbe2e6498f` passed public Lean Action run `29948610437`, build
 job `89020321751`, in `2m1s`. Lean proof source is frozen; immutable evidence and its independent
-public CI are the next gate.
+public CI are the next gate. Immutable-evidence commit
+`3a2d721d0397ff40c9bce496149ac1e05b84db6c` then passed public run `29948908677`, build job
+`89021336009`, in `2m10s`. Only final-ledger CI remains before local campaign closure and fresh
+route selection.
