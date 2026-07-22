@@ -4,7 +4,7 @@ Date: 2026-07-22
 
 Campaign: `LITERATURE-20260722-HISTORICAL-DOOR-SURVEY-01`
 
-Status: `ATLAS_COMPLETE / IMPLEMENTATION_PUBLIC_CI_PASSED / EVIDENCE_CI_PENDING`
+Status: `ATLAS_COMPLETE / PUBLICLY_CLOSED / FINAL_LEDGER_CI_PENDING`
 
 ## Claim boundary
 
@@ -786,10 +786,12 @@ parked, and finite/asymptotic results are not promoted to RH progress.
 - `Lean_verification`: not applicable to the literature classifications in this file. Existing
   project theorem claims retain their recorded TargetChecks and axiom audits; no new mathematical
   declaration is introduced by this survey.
-- `compaction_state`: one inherited compaction; canonical governance and frontier files were
-  reread before substantive survey work.
+- `compaction_state`: two inherited compactions; canonical governance and frontier files were
+  reread before substantive work and again before evidence publication resumed.
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort are not exposed.
 - `budget`: V4.1 has no numerical quota; no serving token budget is exposed.
 - `global_goal`: active.
 - `public_implementation`: commit `62c813f51020b2c012a4770c204ea97b3893d87e` passed Lean
   Action run `29921175166`, build job `88926780992`, in `1m49s`.
+- `public_closure`: evidence commit `f8cce8ae32f716cc34087cee5319b23656c8733a` passed Lean
+  Action run `29921582753`, build job `88928153258`, in `1m48s`.

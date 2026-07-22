@@ -2791,4 +2791,8 @@ remains active.
 
 Implementation commit `62c813f51020b2c012a4770c204ea97b3893d87e` passed public Lean Action run
 `29921175166`, build job `88926780992`, in `1m49s`. The atlas implementation is therefore public
-and green; immutable evidence backfill and its own public CI remain before closure.
+and green.
+
+Evidence commit `f8cce8ae32f716cc34087cee5319b23656c8733a` passed public Lean Action run
+`29921582753`, build job `88928153258`, in `1m48s`. The survey is publicly closed at its registered
+endpoint; only the final ledger commit and CI remain before local turn closure.

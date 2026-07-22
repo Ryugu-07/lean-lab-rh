@@ -4,15 +4,16 @@ Campaign: `LITERATURE-20260722-HISTORICAL-DOOR-SURVEY-01`
 
 Mode: `LITERATURE`
 
-Status: `IMPLEMENTATION_PUBLIC_CI_PASSED / EVIDENCE_PUBLIC_CI_PENDING`
+Status: `PUBLICLY_CLOSED / FINAL_LEDGER_CI_PENDING`
 
 ## Runtime record
 
 - `model`: Codex, GPT-5 family; exact serving variant not exposed.
 - `reasoning_effort`: not exposed.
 - `loop_budget`: no numerical quota under V4.1; serving token budget not exposed.
-- `compaction_state`: one inherited compaction. Governance, HANDOFF, Targets, TargetChecks,
-  preregistration, DAG, external ACTIVE ledger, and git state were reread before substantive work.
+- `compaction_state`: two inherited compactions. Governance, HANDOFF, Targets, TargetChecks,
+  preregistration, DAG, external ACTIVE ledger, and git state were reread before substantive work
+  and again before evidence publication resumed.
 - `global_goal`: active.
 
 ## Preregistered endpoint
@@ -36,6 +37,7 @@ Preregistration commit `6aae2d066cddb8978f40b0ec0a8d4a6e7c7bd2ad` passed public 
 | 4 | `ADVERSARIAL_RANKING` | Retained long-mean-value and sparse-exception barriers for H1/H2; retained Conrey-Li, Jensen universality, function-field transfer, pair-correlation real-part, and finite-height barriers. | Rank 2025 short-mollifier derivative optimization second, with explicit reversal evidence. |
 | 5 | `LOCAL_LEDGER_AUDIT` | Completed the 793-line atlas, source registry additions, census/DAG/portfolio/HANDOFF synchronization, and this attempt log. No mathematical Lean declaration was added. | Publish implementation and require public CI before evidence backfill. |
 | 6 | `IMPLEMENTATION_PUBLIC_CI` | Commit `62c813f51020b2c012a4770c204ea97b3893d87e` passed Lean Action run `29921175166`, build job `88926780992`, in `1m49s`. | Publish immutable evidence and require its own public CI. |
+| 7 | `EVIDENCE_PUBLIC_CI` | Evidence commit `f8cce8ae32f716cc34087cee5319b23656c8733a` passed Lean Action run `29921582753`, build job `88928153258`, in `1m48s`. | Publish the final ledger and require its own public CI; then locally stop this survey on success. |
 
 ## Outcome and accounting
 
@@ -56,7 +58,9 @@ Preregistration commit `6aae2d066cddb8978f40b0ec0a8d4a6e7c7bd2ad` passed public 
   retain their original exact witnesses and axiom audits; no new result is used as a premise.
 - `protected_files`: README, both exposure/novelty files, CONTRIBUTIONS, VERIFYING, and the plain-
   language summary remain untouched and unstaged.
-- `next_gate`: implementation commit and public CI, immutable evidence backfill, evidence CI, then
-  final ledger CI. The recommended M0 campaign cannot begin before this survey closes publicly.
+- `next_gate`: publish the final ledger and require its own public CI. The recommended M0 campaign
+  remains a separate campaign and is not opened inside this survey closure.
 - `implementation_commit`: `62c813f51020b2c012a4770c204ea97b3893d87e`.
 - `implementation_public_ci`: run `29921175166`, build job `88926780992`, success in `1m49s`.
+- `evidence_commit`: `f8cce8ae32f716cc34087cee5319b23656c8733a`.
+- `evidence_public_ci`: run `29921582753`, build job `88928153258`, success in `1m48s`.

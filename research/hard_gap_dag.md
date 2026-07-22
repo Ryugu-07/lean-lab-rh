@@ -962,4 +962,7 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `still_open`: H7 alignment/spectral/limit nodes, H1 long mean values and sparse exceptions,
   H6-E/G8, W2/G7, M2/G3, and RH.
 - `public_implementation`: atlas commit `62c813f51020b2c012a4770c204ea97b3893d87e`
-  passed Lean Action run `29921175166`, build job `88926780992`, in `1m49s`; evidence CI remains.
+  passed Lean Action run `29921175166`, build job `88926780992`, in `1m49s`.
+- `public_closure`: evidence commit `f8cce8ae32f716cc34087cee5319b23656c8733a`
+  passed Lean Action run `29921582753`, build job `88928153258`, in `1m48s`; final ledger CI
+  remains before local turn closure.
