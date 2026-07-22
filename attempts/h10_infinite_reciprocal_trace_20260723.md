@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260723-H10-INFINITE-RECIPROCAL-TRACE-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `IMPLEMENTATION_CI_PASSED / EVIDENCE_COMMIT_REQUIRED`
+Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`
 
 ## Runtime record
 
@@ -43,6 +43,7 @@ constant reciprocal pairing with ordinary summability of any positive power sequ
 | 7 | `FINITE_CONTRAST` | The one-point spectrum `alpha=1`, identity pairing, and `q=1` has every finite power family summable. | Attribute the obstruction to countably infinite ordinary summation, not reciprocal pairing alone. |
 | 8 | `INTEGRATION_AUDIT` | The aggregate endpoint, two Targets, seven exact TargetChecks, and seven selected axiom prints compile. Selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`. | Classify as generic transfer-boundary progress; leave regularized traces, actual zeta spectra, and RH open. |
 | 9 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation commit `34b307baaca52e043d05668894abe4cceb9a3c2a` passed public Lean Action run `29956666496`, build job `89047355398`, in `2m25s`. | Keep Lean proof source frozen; publish immutable implementation evidence and require that evidence commit's own public CI. |
+| 10 | `EVIDENCE_PUBLIC_CI` | Immutable-evidence commit `332616ce1d8e0cca4824ef63f135283e9f45b0b3` passed public Lean Action run `29957075006`, build job `89048714221`, in `2m4s`. | Stop H10-C at its registered ordinary-summability endpoint; publish the final ledger and return the active RH Goal to historical-route omission search. |
 
 ## Assumption and gap accounting
 
@@ -61,5 +62,10 @@ constant reciprocal pairing with ordinary summability of any positive power sequ
 - `public_implementation_evidence`: frozen implementation commit
   `34b307baaca52e043d05668894abe4cceb9a3c2a` passed Lean Action run `29956666496`, build job
   `89047355398`, in `2m25s`.
-- `next_gate`: immutable-evidence commit and public CI, followed by final ledger.
+- `public_closure_evidence`: immutable-evidence commit
+  `332616ce1d8e0cca4824ef63f135283e9f45b0b3` passed Lean Action run `29957075006`, build job
+  `89048714221`, in `2m4s`.
+- `local_stop`: H10-C's literal ordinary-summability transfer test is publicly closed. Regularized
+  or distributional traces, an actual number-field zeta spectral object, H10, and RH remain open.
+- `next_gate`: final-ledger commit and public CI, then fresh historical-route selection.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

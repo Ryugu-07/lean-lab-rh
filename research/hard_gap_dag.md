@@ -61,7 +61,7 @@ flowchart TD
 | H6-X3 | complete public | Prove the actual-theta ordered covariance and third Li sign. | The one-integral monotone covariance certificate gives `B*C<=A*D`; together with `B^2<=A*C` and `liCoefficientCandidate_zero_re_lt_one`, Lean proves `0 < (liCoefficientCandidate 2).re` and zero imaginary part. Implementation `1b521686d4e8561f01ba98a6ceaa4905ced4d92f` and evidence `abf5ebf19e3636662a45eed7a5eff9e947c3c3b4` passed public CI. The exact aggregate is `deBruijnNewmanHeat_thirdLi_covariance_endpoint`; this does not reduce H6-E/G8. |
 | H6-E | open | Prove all zeros of `H_0` are real, equivalently `Lambda <= 0` in the audited normalization. | The generic adjacent-gap and positive-kernel/Hankel routes are obstructed. The actual-theta heat-Li time-monotonicity candidate survived high-precision finite screening, and Lean compiles its exact reduction to RH plus the function-level heat-log evolution, but no all-index sign representation or global moving-divisor differentiation theorem was obtained. A new attack must supply that theta-specific input, height-aware continuation, or a different all-index invariant. The endpoint is unchanged. |
 | H10-B | complete | Prove finite aggregate power-sum spectral rigidity and the reciprocal-pairing square-root-circle corollary. | The final finite-spectral step of function-field RH is publicly compiled. It proves no curve point-count bound and supplies no finite-spectrum or uniform-tail transfer for the Riemann zeta zero divisor; `hard_gap_delta=0`. |
-| H10-C | implementation CI passed | Test a countably infinite ordinary power-trace extension with nonzero reciprocal pairing. | Lean proves `Summable (alpha^k)` for positive `k` forces `q=0` under `alpha(sigma n)*alpha(n)=q`; a one-point finite witness shows the obstruction is specific to the infinite ordinary-trace transfer. Frozen implementation commit `34b307baaca52e043d05668894abe4cceb9a3c2a` passed public CI; immutable-evidence CI remains before local closure. |
+| H10-C | evidence CI passed; final ledger pending | Test a countably infinite ordinary power-trace extension with nonzero reciprocal pairing. | Lean proves `Summable (alpha^k)` for positive `k` forces `q=0` under `alpha(sigma n)*alpha(n)=q`; a one-point finite witness shows the obstruction is specific to the infinite ordinary-trace transfer. Frozen implementation and immutable-evidence commits passed independent public CI; final-ledger CI remains before returning to route selection. |
 
 ## Hard Gaps
 
@@ -1336,5 +1336,7 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   trace approaches. Preregistration commit `8077a2558142a1968b283296e9fc196da02bda93` passed public
   CI run `29955908591`, job `89044796394`. Frozen implementation commit
   `34b307baaca52e043d05668894abe4cceb9a3c2a` passed run `29956666496`, job `89047355398`, in
-  `2m25s`; immutable-evidence CI remains before local closure.
+  `2m25s`. Immutable-evidence commit `332616ce1d8e0cca4824ef63f135283e9f45b0b3` passed run
+  `29957075006`, job `89048714221`, in `2m4s`. H10-C is publicly closed at its fixed ordinary-trace
+  endpoint; final-ledger CI remains. `H10-D-REGULARIZED-NUMBER-FIELD-TRACE-01` remains open.
   `rh_frontier_delta=0`; persistent RH Goal active.

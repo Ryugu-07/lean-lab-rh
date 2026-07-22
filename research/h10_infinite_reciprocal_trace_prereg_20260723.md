@@ -6,7 +6,7 @@ Campaign: `FALSIFICATION-20260723-H10-INFINITE-RECIPROCAL-TRACE-01`
 
 Selected node: `H10-INFINITE-ORDINARY-TRACE-RECIPROCITY-01`
 
-Status: `IMPLEMENTATION_CI_PASSED / EVIDENCE_COMMIT_REQUIRED`
+Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`
 
 Preregistration commit `8077a2558142a1968b283296e9fc196da02bda93` passed public Lean Action
 run `29955908591`, build job `89044796394`, in `2m32s`. Proof-source editing began only after this
@@ -14,7 +14,10 @@ gate passed.
 
 Frozen implementation commit `34b307baaca52e043d05668894abe4cceb9a3c2a` passed public Lean
 Action run `29956666496`, build job `89047355398`, in `2m25s`. Lean proof source is frozen;
-immutable-evidence publication and its own public CI are the next gate.
+immutable-evidence commit `332616ce1d8e0cca4824ef63f135283e9f45b0b3` then passed public Lean
+Action run `29957075006`, build job `89048714221`, in `2m4s`. H10-C has reached its registered
+local stop. Final-ledger publication and CI precede fresh historical-route selection; regularized
+or distributional traces, an actual number-field zeta spectral object, H10, and RH remain open.
 
 ## Selection reason
 

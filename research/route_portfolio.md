@@ -3227,3 +3227,9 @@ Action run `29956666496`, build job `89047355398`, in `2m25s`. The proof source 
 immutable evidence and its own public CI remain before this local H10-C audit returns to the
 unfinished historical atlas. Regularized traces, an actual zeta spectral construction, and RH
 remain open.
+
+Immutable-evidence commit `332616ce1d8e0cca4824ef63f135283e9f45b0b3` passed public Lean
+Action run `29957075006`, build job `89048714221`, in `2m4s`. H10-C stops at the registered literal
+ordinary-summability endpoint; proof source remains frozen. Final-ledger CI is the last publication
+gate before fresh cross-family selection. This stop does not close H10: regularized or
+distributional traces, an actual number-field zeta spectral object, and RH remain open.
