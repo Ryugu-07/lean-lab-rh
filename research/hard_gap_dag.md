@@ -1111,3 +1111,21 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   run `29933695505`, build job `88969645422`, in `2m2s`. The finite Herglotz node is publicly
   closed; only final-ledger CI remains before cross-route selection.
 - `global_goal`: active; final-ledger publication and CI are the next gate.
+
+## 2026-07-22 H7 closure and H1 short-mollifier launch
+
+- `H7-WEIL-GROUNDSTATE-HERGLOTZ-01`: finite criterion campaign fully public-green at final-ledger
+  commit `7e15cfb386e961f7437dfa25d39b6cab85d3946b`, run `29934044666`, build job
+  `88970856616`. The arithmetic scalar inequality remains open.
+- `H1-SHORT-MOLLIFIER-VARIATIONAL-01`: selected cross-route node. Reconstruct source equations
+  `(58)`-`(63)` and prove or falsify that `c < 1/4` plus fixed endpoints makes every
+  Euler-Lagrange solution the unique global minimizer.
+- `K0-H1-WEIGHTED-HARDY-QUARTER-01`: proposed source-exact child. Prove the `cosh`-weighted
+  endpoint inequality with threshold `1/4` by completion of squares and integration by parts.
+- `OBS-H1-LONG-MEAN-VALUE-01`: retained. Variational optimality does not supply the unproved
+  twisted mean values required for proportion one.
+- `OBS-H1-SPARSE-EXCEPTION-01`: retained. Even proportion one does not exclude a finite or
+  density-zero off-line orbit.
+- `expected_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`,
+  `route_infrastructure_delta=1`, `source_sufficiency_audit_delta=1` on success.
+- `global_goal`: active; preregistration public CI precedes every Lean proof-source edit.

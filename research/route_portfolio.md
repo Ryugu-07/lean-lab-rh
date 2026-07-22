@@ -2920,3 +2920,21 @@ Evidence commit `552c7716673fb2cddd02efc1a1e6a83423a3ef48` passed public Lean Ac
 `29933695505`, build job `88969645422`, in `2m2s`. The finite iff campaign stops on its
 registered success endpoint after final-ledger publication. Fresh selection must compare other
 historical families rather than treating further H7 scalar-bound optimization as automatic.
+
+Final-ledger commit `7e15cfb386e961f7437dfa25d39b6cab85d3946b` passed public Lean Action run
+`29934044666`, build job `88970856616`, in `1m37s`. The H7 finite Herglotz campaign is fully
+closed; its arithmetic residual remains available for later re-entry.
+
+## H1 Short-Mollifier Variational Launch
+
+Cross-route selection now chooses `LITERATURE-20260722-H1-SHORT-MOLLIFIER-VARIATIONAL-01`.
+The 2025 source identifies derivative-combination optimization as underused and writes a general
+functional whose normalized Euler-Lagrange parameter satisfies `c < 1/4`. The exact audit question
+is whether that threshold supplies strict global minimality, not merely stationarity of the
+displayed hypergeometric solution.
+
+The campaign will align source equations `(58)`-`(63)`, prove the `cosh`-weighted endpoint Hardy
+inequality with threshold `1/4`, and use it to derive an exact energy gap and unique-minimizer
+certificate. It does not assume the mollified mean-value theorem, optimize a reported decimal,
+claim proportion one, remove sparse off-line zeros, or advance RH. Public preregistration CI is
+required before proof-source editing.

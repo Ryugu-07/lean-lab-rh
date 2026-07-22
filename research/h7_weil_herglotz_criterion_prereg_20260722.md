@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260722-H7-WEIL-HERGLOTZ-CRITERION-01`
 
 Mode: `LITERATURE`
 
-Status: `PUBLIC_CLOSURE_EVIDENCE_GREEN / FINAL_LEDGER_CI_PENDING`
+Status: `PUBLICLY_CLOSED`
 
 ## Baseline and value-ranked route decision
 
@@ -175,5 +175,7 @@ imports are edited.
   run `29933348708`, build job `88968461122`, in `2m5s`.
 - `public_closure_evidence`: commit `552c7716673fb2cddd02efc1a1e6a83423a3ef48` passed Lean Action
   run `29933695505`, build job `88969645422`, in `2m2s`.
-- `next_gate`: publish the final ledger and require public Lean Action CI, then stop this local
-  campaign at its registered finite endpoint and return to cross-route historical selection.
+- `final_ledger`: commit `7e15cfb386e961f7437dfa25d39b6cab85d3946b` passed Lean Action run
+  `29934044666`, build job `88970856616`, in `1m37s`.
+- `next_gate`: complete. The local campaign stops at its registered finite endpoint; the
+  persistent RH Goal returns to cross-route historical selection.
