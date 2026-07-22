@@ -762,7 +762,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   8,732-job build pass.
 - `public_preregistration`: commit `d3d95ed555139112f5826bde32c3bd1a767d499e`, CI run
   `29884574692`, build job `88812386449`, passed in `1m52s` before proof-source editing.
-- `public_implementation`: pending commit, push, and public Lean Action CI.
+- `public_implementation`: commit `526f7221dc11f15f8d48a98f02f102a4bce507d2`, CI run
+  `29886280505`, build job `88817383080`, passed in `2m19s`.
 - `compaction_state`: two compaction recoveries; all canonical frontier files were re-read after
   each before continuing.
 - `still_open`: both exact Boyd route obstructions, equation `(15)`, effective `R2`, unconditional
