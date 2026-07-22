@@ -1292,3 +1292,22 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   run `29937092592`, build job `88981336680`, in `1m32s`. The variational node is publicly closed;
   only final-ledger CI remains before route selection.
 - `global_goal`: active; final-ledger publication and CI are the next gate.
+
+## 2026-07-23 H8 closure and D9 Suzuki reciprocal-limit launch
+
+- `H8-JENSEN-EVENTUAL-NOT-GLOBAL-01`: final-ledger commit
+  `c80b9e6a4114d7d591f4db72e6326810d0fe9d1c` passed Lean Action run `29951256366`, build job
+  `89029220136`, in `1m53s`. The generic promotion countermodel is publicly closed;
+  `H8-D-XI-ALL-INDEX-01` and RH remain open.
+- `D9-A-SUZUKI-NORMALIZATION-REGULARITY-01`: `PREREGISTERED / FALSIFICATION`. Test whether
+  finite-valued exponential normalization plus compact-uniform convergence preserves real zeros
+  without a holomorphy or continuity hypothesis on the normalizer.
+- `D9-B-SUZUKI-RECIPROCAL-POLE-01`: `PREREGISTERED / FALSIFICATION`. Test whether the target
+  `z^2*f/f'` admits a finite global extension at nonzero critical points of a symmetric
+  all-real-zero model.
+- `D9-C-SUZUKI-ACTUAL-XI-LIMIT-01`: `OPEN / RH_STRENGTH`. Prove a source-valid regular or
+  meromorphic limit for the actual finite-interval characteristic functions, with a topology that
+  supports the claimed zero transfer and does not assume RH.
+- `source_update`: Suzuki 2026 proves the finite self-adjoint-extension real-zero theorem but leaves
+  the infinite operator/function limit conjectural. Literal, entire, and meromorphic readings must
+  remain separate. `rh_frontier_delta=0`; persistent RH Goal active.

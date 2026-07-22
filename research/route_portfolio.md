@@ -3153,3 +3153,26 @@ run `29951025462`, build job `89028448900`, in `1m37s`. The local campaign stops
 generic quantifier-falsification endpoint; proof source remains frozen. Final-ledger CI is the last
 publication gate before fresh cross-family selection. This stop does not close H8: the actual-xi
 all-index theorem and RH remain open.
+
+Final-ledger commit `c80b9e6a4114d7d591f4db72e6326810d0fe9d1c` passed public Lean Action
+run `29951256366`, build job `89029220136`, in `1m53s`. The generic H8 campaign is fully publicly
+closed; the actual-xi all-index theorem and RH remain open.
+
+## D9 Suzuki Reciprocal-Log-Derivative Limit Launch
+
+Fresh historical breadth selection chooses D9 over another D4 density estimate, D7 finite
+rigidity theorem, or D11 analogy stress test. Suzuki 2026 supplies an atlas correction: for each
+finite interval, an operator-built entire characteristic function has only real zeros
+unconditionally, while convergence to the xi-bearing target remains conjectural.
+
+The displayed Corollary 6 asks for finite-valued exponential normalizations converging uniformly
+on every compact subset of `C` to `z^2*xi/xi'`, but does not state regularity of the exponent. The
+new campaign `FALSIFICATION-20260723-D9-SUZUKI-RECIPROCAL-LIMIT-01` therefore tests both natural
+readings. A literal nonregular normalization is challenged by a nowhere-zero sequence converging
+uniformly to a function with nonreal zero. The repaired entire reading is challenged by a
+symmetric all-real-zero quartic whose reciprocal logarithmic derivative has an uncancelled
+nonzero critical-point pole.
+
+These are generic route-boundary models, not the source `W` or actual xi. A meromorphic
+reformulation may survive but needs a different convergence and zero-transfer theorem. Public
+preregistration CI is required before proof-source editing; persistent RH Goal active.

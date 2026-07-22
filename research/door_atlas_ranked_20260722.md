@@ -4,7 +4,7 @@ Date: 2026-07-22
 
 Campaign: `LITERATURE-20260722-HISTORICAL-DOOR-SURVEY-01`
 
-Status: `ATLAS_COMPLETE / H11_CORRECTION_FORMALIZED / H8_FALSIFICATION_ACTIVE`
+Status: `ATLAS_COMPLETE / H8_FALSIFICATION_CLOSED / D9_SUZUKI_AUDIT_PREREGISTERED`
 
 ## Claim boundary
 
@@ -74,8 +74,8 @@ mathematically weak route.
 | 5 | D4 density/moments/subconvexity | Convert large-value control into a theorem excluding even one exceptional off-line orbit. | `OPEN`; density bounds alone provably allow finite or sparse exceptions. | Low-to-moderate: active analytic progress, but no identified exceptional-zero killer. | `MONITOR` and seek a cross-route localizer. |
 | 6 | D7 function-field/cohomology | Construct a number-field trace/cohomology object with positivity/weights and a uniform infinite-spectrum tail. | `OPEN`; characteristic-p and finite-spectrum inputs do not transfer. | Moderate structural value, low evidence of a missed direct transfer. | `LITERATURE` only where it feeds D6 or D1. |
 | 7 | D2 heat flow/zero dynamics | Prove `Lambda <= 0`, for example through an actual-theta all-index invariant or collision-compatible continuation. | `OPEN`; several generic mechanisms are formally obstructed. | Low after deep project exploration, though exact direct endpoint remains legitimate. | Keep open; H6 numerical upper-bound successor remains parked. |
-| 8 | D9 de Branges/canonical systems | Build a valid zeta canonical system whose required positivity survives the Conrey-Li tests and implies the full zero correspondence. | Original positivity condition fails; repaired systems are `OPEN`. | Low-to-moderate if D6 supplies a natural ground-state system. | Re-enter only through an exact D6 consumer. |
-| 9 | D8 Laguerre-Polya/Jensen | Prove all degrees and all shifts hyperbolic, including the finite exceptional region. | `OPEN`, but eventual fixed-degree hyperbolicity is asymptotically universal and does not control the exceptions. | Low; Duran 2024 adds Brenke equivalences without a uniform-index bridge. | `FALSIFICATION` active at H8 before any further criterion expansion. |
+| 8 | D9 de Branges/canonical systems | Prove a regular, source-valid limit from finite self-adjoint characteristic functions to an xi-bearing target without introducing nonremovable reciprocal-log-derivative poles. | Original positivity fails; Suzuki 2026 proves finite real-zero functions but leaves the global limit conjectural and its displayed normalization regularity unstated. | Moderate: the finite operator is explicit, but the proposed target/topology now has a sharp audit point. | `FALSIFICATION` of the normalization and target regularity before any limit attack. |
+| 9 | D8 Laguerre-Polya/Jensen | Prove all degrees and all shifts hyperbolic, including the finite exceptional region. | `OPEN`, but eventual fixed-degree hyperbolicity is asymptotically universal and does not control the exceptions. | Low; Duran 2024 adds Brenke equivalences without a uniform-index bridge. | Generic eventual-to-global promotion falsified; retain actual-xi all-index edge. |
 | 10 | D5 zero statistics/random matrices | Upgrade the 2026 horizontal-multiplicity density-one theorem to exclusion of every sparse off-line orbit. | PCC now conditionally gives density one on the line, but its normalized error permits finite or density-zero exceptions. | Moderate post-survey omission evidence: the source explicitly corrects the older no-horizontal-information claim. | Finite hinge and sparse-exception model formalized; H11-D/H11-E remain open. |
 | 11 | D11 generalized/automorphic/Iwasawa | Find a theorem that transfers a proved family or p-adic mechanism to the individual archimedean zeta zero set. | `OPEN`; no direct p-adic RH analogue, and family laws do not decide one member. | Low. | `MONITOR`; use for mechanism stress tests. |
 | 12 | D12 certified computation | Pair finite verification with a proved uniform global tail that excludes all higher off-line zeros. | Tail is the whole unresolved global edge. | Low as a standalone route; high as a certificate component. | `SUPPORTING`; no finite-to-global promotion. |
@@ -516,6 +516,11 @@ model that satisfies fixed-degree eventual hyperbolicity and arbitrary finite-we
 failing one explicit degree-two window. The model tests only the quantifier promotion and is not
 claimed to be the xi coefficient sequence.
 
+The campaign is publicly closed at final-ledger commit
+`c80b9e6a4114d7d591f4db72e6326810d0fe9d1c`, Lean Action run `29951256366`, build job
+`89029220136`, in `1m53s`. It closes only the generic promotion; the actual-xi all-index theorem
+and RH remain open.
+
 ## D9. de Branges spaces and canonical systems
 
 ### Endpoint and last proved node
@@ -562,6 +567,21 @@ Formalization fit: `2/5`. Machine-task fit: `3/5` for finite canonical systems a
    monotonic Hamiltonian; falsify at finite cutoffs first.
 3. Reject any system whose definition uses the xi zeros as input without an independent
    arithmetic/trace construction.
+
+### Post-survey D9 source correction
+
+Suzuki 2026, arXiv:2606.09096v1, gives an unconditional finite-interval theorem absent from the
+original atlas: characteristic functions of self-adjoint extensions have only real zeros. Its
+Corollary 6 proposes compact-uniform convergence on every compact subset of `C` after a
+finite-valued exponential normalization to `z^2*xi/xi'`.
+
+The displayed statement does not specify regularity of the normalizing exponent. Without such
+regularity, zero-location persistence is not justified by uniform convergence alone. With the
+natural entire-function repair, the target must admit an entire extension, while reciprocal
+logarithmic derivatives can have nonremovable poles at nonzero critical points. Campaign
+`FALSIFICATION-20260723-D9-SUZUKI-RECIPROCAL-LIMIT-01` audits both interpretations with generic
+Lean countermodels before any attempt at the actual operator limit. This does not refute the
+source's unconditional finite theorem or a possible meromorphic reformulation.
 
 ## D10. Arithmetic criteria, character sums, and Speiser derivatives
 
