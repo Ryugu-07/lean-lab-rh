@@ -1367,10 +1367,10 @@ closed. `H2-HALF-ISOLATED-ANALYTIC-DETECTOR-01`, `H2-BOW-EXCLUSION-01`, H2, and 
 
 ## 2026-07-23 H13 Dirichlet-family inclusion launch
 
-- `H13-DIRICHLET-FAMILY-INCLUSION-01`: `PREREGISTERED / TRANSFER_AUDIT`. Prove the exact
+- `H13-DIRICHLET-FAMILY-INCLUSION-01`: `LOCALLY_PROVEN / TRANSFER_AUDIT`. Lean proves the exact
   equivalence between RH and critical-strip zero control for Mathlib's modulus-one Dirichlet
   L-function, then specialize an all-Dirichlet family claim to that member.
-- `H13-ZETA-FACTOR-INHERITANCE-01`: `PREREGISTERED / TRANSFER_AUDIT`. Prove that critical-strip
+- `H13-ZETA-FACTOR-INHERITANCE-01`: `LOCALLY_PROVEN / TRANSFER_AUDIT`. Critical-strip
   zero control for `zeta*g` implies RH, and falsify the reverse-equivalence intuition with an
   explicit factor having an off-line root in the strip.
 - `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`: `OPEN / RH_STRENGTH`. Supply a proved generalized,
@@ -1381,3 +1381,5 @@ closed. `H2-HALF-ISOLATED-ANALYTIC-DETECTOR-01`, `H2-BOW-EXCLUSION-01`, H2, and 
   p-adic L-function. Public preregistration CI precedes proof-source editing.
 - `expected_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_map_delta=1`,
   `obstruction_map_delta=1` on success; persistent RH Goal active.
+- `preregistration_gate`: commit `e001e3afb37818918e42b08d76c18b6490062ac7` passed public Lean
+  Action run `29960700375`, build job `89060685988`, in `2m2s`; proof-source editing is open.

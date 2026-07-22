@@ -80,6 +80,7 @@ import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.HalfIsolatedBowAudit
+import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
@@ -1425,6 +1426,21 @@ def rhTargets : List ResearchTarget :=
         "Prove that the actual zeta zero divisor cannot form the slowly bending bow configurations that obstruct Maynard-Pratt's local power-sum detector, or construct a source-valid detector effective on such bows whose quantitative bound forces every off-line witness to be absent."
       status := .inProgress
       note := "Maynard-Pratt prove short detectors and density bounds for half-isolated zeros, but Section 8 leaves bows as the obstruction to removing finite-real-part rigidity. The finite symmetry countermodel shows that functional-equation reflection alone cannot discharge this analytic and arithmetic gap." },
+    { id := "H13.dirichlet.family-inclusion-transfer"
+      tier := .tier2
+      title := "Audit exact Dirichlet-family inclusion and zeta-factor transfer"
+      statement :=
+        "Prove that critical-strip zero control for the modulus-one Dirichlet L-function is exactly RH, that an all-Dirichlet claim and any zeta-factor product claim imply RH, and that an extra factor can insert an off-line critical-strip zero."
+      leanName := some ``dirichletFamilyInclusionAudit_endpoint
+      status := .proven
+      note := "Campaign FALSIFICATION-20260723-H13-DIRICHLET-FAMILY-INCLUSION-01 uses Mathlib's exact modulus-one L-function identity. The extra-factor witness is generic and does not instantiate a Dedekind, Rankin-Selberg, Davenport-Heilbronn, automorphic, or p-adic L-function. This closes only the transfer-logic audit; generalized RH, H13, and RH remain open." },
+    { id := "H13.automorphic.individual-zeta-transfer"
+      tier := .tier2
+      title := "Transfer a proved generalized mechanism to every zeta zero"
+      statement :=
+        "Produce a proved generalized, automorphic, family, or p-adic theorem that controls the real part of every nontrivial zero of the individual Riemann zeta function without assuming a class statement that already contains RH."
+      status := .inProgress
+      note := "The modulus-one theorem shows that a class theorem containing the zeta member is at least as strong as RH. Product factorization gives a valid one-way reduction but no unconditional generalized-RH input, and extra factors can create additional zeros." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

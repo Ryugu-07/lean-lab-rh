@@ -6,7 +6,16 @@ Campaign: `FALSIFICATION-20260723-H13-DIRICHLET-FAMILY-INCLUSION-01`
 
 Selected node: `H13-DIRICHLET-FAMILY-INCLUSION-01`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_IMPLEMENTATION_COMPLETE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+
+Preregistration commit `e001e3afb37818918e42b08d76c18b6490062ac7` passed public Lean Action
+run `29960700375`, build job `89060685988`, in `2m2s`. Proof-source editing began only after this
+gate passed.
+
+The fixed endpoint now compiles in `LeanLab/Riemann/DirichletFamilyInclusionAudit.lean` with one
+proven and one open Target, eight exact TargetChecks, seven selected standard-only axiom prints,
+an empty production forbidden scan, and a passing `8,748`-job full build. Implementation
+publication and public CI are required before Lean proof source freezes.
 
 ## Selection reason
 

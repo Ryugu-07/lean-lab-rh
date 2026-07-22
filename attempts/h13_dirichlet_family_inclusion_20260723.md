@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260723-H13-DIRICHLET-FAMILY-INCLUSION-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_IMPLEMENTATION_COMPLETE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 
 ## Runtime record
 
@@ -22,8 +22,8 @@ Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
 - `parent_public_ci`: run `29959903737`, build job `89058172229`, passed in `2m14s`.
 - `selected_node`: `H13-DIRICHLET-FAMILY-INCLUSION-01`.
 - `preregistration`: `research/h13_dirichlet_family_inclusion_prereg_20260723.md`.
-- `preregistration_commit`: pending.
-- `preregistration_public_ci`: required before proof-source editing.
+- `preregistration_commit`: `e001e3afb37818918e42b08d76c18b6490062ac7`.
+- `preregistration_public_ci`: run `29960700375`, build job `89060685988`, passed in `2m2s`.
 
 ## Preregistered endpoint
 
@@ -39,6 +39,12 @@ L-function target preserves an RH-equivalent zero set.
 | 2 | `CROSS_FAMILY_COVERAGE` | H13 is the remaining source-aligned historical family without an independent theorem-producing attempt; H14 is supporting finite computation. | Select H13 before H14 and avoid returning to numerical-bound optimization. |
 | 3 | `MATHLIB_OBJECT_AUDIT` | Mathlib commit `fabf563a7c95a166b8d7b6efca11c8b4dc9d911f` supplies analytic Dirichlet L-functions and proves the modulus-one member equals `riemannZeta`. | Use the real family object rather than a synthetic L-function class. |
 | 4 | `TRANSFER_DESIGN` | Family-wide zero control implies RH only by specializing to the zeta member; a product containing zeta gives the same one-way implication, while an extra factor can add off-line zeros. | Preregister exact inclusion plus an explicit reverse-direction obstruction. |
+| 5 | `PREREGISTRATION_GATE` | Commit `e001e3afb37818918e42b08d76c18b6490062ac7` passed public Lean Action run `29960700375`, build job `89060685988`, in `2m2s`. | Open proof-source editing with the fixed endpoint and claim boundary unchanged. |
+| 6 | `LEAN_ZETA_EQUIVALENCE` | Lean proves that critical-strip zero control for `riemannZeta` is equivalent to Mathlib's RH, with nontrivial/strip conversion in both directions. | Fix the generic predicate against the project's exact RH definition. |
+| 7 | `LEAN_DIRICHLET_INCLUSION` | The modulus-one Dirichlet L-function predicate is exactly RH, and the all-Dirichlet predicate implies RH by specialization. | Confirm that a class theorem containing the zeta member is not a shortcut around RH. |
+| 8 | `LEAN_PRODUCT_TRANSFER` | Critical-strip zero control for `zeta*g` implies zeta zero control and hence RH for every function `g`. | Retain this as a valid one-way consumer for genuine factorizations. |
+| 9 | `LEAN_EXTRA_FACTOR_FALSIFICATION` | The product with factor `s-1/4` has an exact strip zero at `1/4`, away from the critical line. | Reject reverse-equivalence promotion for unconstrained extra factors. |
+| 10 | `INTEGRATION_AUDIT` | One proven and one open Target, eight exact TargetChecks, seven selected standard-only axiom prints, an empty production forbidden scan, and the full `8,748`-job build pass. | Publish the implementation and require independent public CI; generalized RH, H13, and RH remain open. |
 
 ## Assumption and gap accounting
 
@@ -53,5 +59,12 @@ L-function target preserves an RH-equivalent zero set.
 - `route_map_delta_target`: `1`; H13 gains an exact theorem-producing transfer boundary.
 - `obstruction_map_delta_target`: `1`; extra-factor reverse promotion is tested explicitly.
 - `rh_frontier_delta_target`: `0` unless an unanticipated unconditional family theorem is found.
-- `next_gate`: preregistration commit and public CI before Lean proof-source editing.
+- `hard_gap_delta`: `0`; no generalized-RH input has been proved.
+- `route_map_delta`: `1`; H13 now has an exact theorem-producing inclusion/transfer boundary.
+- `obstruction_map_delta`: `1`; unconstrained extra-factor reverse promotion is kernel-refuted.
+- `rh_frontier_delta`: `0`.
+- `local_stop`: the fixed transfer-logic endpoint is compiled. Actual automorphic, family, or
+  p-adic individual-zeta transfer remains open.
+- `next_gate`: publish the implementation commit and require public CI, then freeze Lean proof
+  source and publish immutable evidence.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

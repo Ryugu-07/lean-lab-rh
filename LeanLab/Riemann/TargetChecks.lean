@@ -1,6 +1,7 @@
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.HalfIsolatedBowAudit
+import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.DeBruijnNewmanHeat
@@ -208,6 +209,7 @@ def checkedTargetNames : List Lean.Name :=
     ``deBruijnNewmanHeat_firstTwoLi_endpoint,
     ``riemannHypothesis_of_heatLi_atBot_zero_and_monotone_assumptions,
     ``not_isPolyaFrequencyFive_deBruijnNewmanEvenKernel,
+    ``dirichletFamilyInclusionAudit_endpoint,
     ``riemannHypothesis_iff_nontrivial_zeros_on_line ]
 
 example :
@@ -3586,5 +3588,46 @@ example :
       ¬ halfIsolatedIn (finiteBow (1 : ℝ) 1)
         (dist finiteBowBase (finiteBowRight (1 : ℝ) 1)) 0 2 rho) :=
   halfIsolatedBowAudit_endpoint
+
+example {f g : ℂ → ℂ} (hfg : f = g) :
+    criticalStripZerosOnLine f ↔ criticalStripZerosOnLine g :=
+  criticalStripZerosOnLine_congr hfg
+
+example :
+    criticalStripZerosOnLine riemannZeta ↔ RiemannHypothesis :=
+  criticalStripZerosOnLine_riemannZeta_iff
+
+example (χ : DirichletCharacter ℂ 1) :
+    criticalStripZerosOnLine (DirichletCharacter.LFunction χ) ↔ RiemannHypothesis :=
+  criticalStripZerosOnLine_dirichletL_modOne_iff χ
+
+example (hfamily : allDirichletCriticalStripZerosOnLine) :
+    RiemannHypothesis :=
+  riemannHypothesis_of_allDirichletCriticalStripZerosOnLine hfamily
+
+example (g : ℂ → ℂ)
+    (hproduct : criticalStripZerosOnLine (fun s => riemannZeta s * g s)) :
+    criticalStripZerosOnLine riemannZeta :=
+  criticalStripZerosOnLine_riemannZeta_of_mul g hproduct
+
+example (g : ℂ → ℂ)
+    (hproduct : criticalStripZerosOnLine (fun s => riemannZeta s * g s)) :
+    RiemannHypothesis :=
+  riemannHypothesis_of_criticalStripZerosOnLine_riemannZeta_mul g hproduct
+
+example :
+    ¬ criticalStripZerosOnLine
+      (fun s => riemannZeta s * (s - (1 / 4 : ℂ))) :=
+  not_criticalStripZerosOnLine_riemannZeta_mul_offLineFactor
+
+example :
+    (∀ χ : DirichletCharacter ℂ 1,
+      criticalStripZerosOnLine (DirichletCharacter.LFunction χ) ↔ RiemannHypothesis) ∧
+    (allDirichletCriticalStripZerosOnLine → RiemannHypothesis) ∧
+    (∀ g : ℂ → ℂ,
+      criticalStripZerosOnLine (fun s => riemannZeta s * g s) → RiemannHypothesis) ∧
+    ¬ criticalStripZerosOnLine
+      (fun s => riemannZeta s * (s - (1 / 4 : ℂ))) :=
+  dirichletFamilyInclusionAudit_endpoint
 
 end LeanLab.Riemann

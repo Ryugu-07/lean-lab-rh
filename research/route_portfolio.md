@@ -3293,3 +3293,14 @@ all critical-strip zeros of `zeta*g` lie on the line, RH follows, but an explici
 insert an off-line zero. This does not prove any generalized RH, model a Dedekind or automorphic
 L-function, or create a p-adic/archimedean zero map. Public preregistration CI is required before
 proof-source editing; persistent RH Goal active.
+
+Preregistration commit `e001e3afb37818918e42b08d76c18b6490062ac7` passed public Lean Action
+run `29960700375`, build job `89060685988`, in `2m2s`. The fixed proof-source gate is open; no
+actual generalized-RH input or p-adic/archimedean zero map has been added.
+
+The local implementation now compiles the exact zeta predicate equivalence, modulus-one
+Dirichlet equivalence, all-family implication, generic zeta-factor implication, and explicit
+extra-factor obstruction. One proven and one open Target, eight exact TargetChecks, and seven
+selected standard-only axiom prints pass; the full `8,748`-job build passes. This closes only the
+transfer-logic node. Implementation publication and public CI are the next gate; generalized RH,
+individual automorphic or p-adic transfer, H13, and RH remain open.

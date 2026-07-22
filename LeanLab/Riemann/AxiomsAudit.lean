@@ -3,6 +3,7 @@ import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.InfiniteReciprocalTraceAudit
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.HalfIsolatedBowAudit
+import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -839,3 +840,10 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.finiteBow_no_right_offLine_halfIsolated
 #print axioms LeanLab.Riemann.finiteBow_concreteCounterexample
 #print axioms LeanLab.Riemann.halfIsolatedBowAudit_endpoint
+#print axioms LeanLab.Riemann.criticalStripZerosOnLine_riemannZeta_iff
+#print axioms LeanLab.Riemann.criticalStripZerosOnLine_dirichletL_modOne_iff
+#print axioms LeanLab.Riemann.riemannHypothesis_of_allDirichletCriticalStripZerosOnLine
+#print axioms LeanLab.Riemann.criticalStripZerosOnLine_riemannZeta_of_mul
+#print axioms LeanLab.Riemann.riemannHypothesis_of_criticalStripZerosOnLine_riemannZeta_mul
+#print axioms LeanLab.Riemann.not_criticalStripZerosOnLine_riemannZeta_mul_offLineFactor
+#print axioms LeanLab.Riemann.dirichletFamilyInclusionAudit_endpoint
