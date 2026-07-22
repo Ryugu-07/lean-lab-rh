@@ -2877,3 +2877,17 @@ Evidence commit `27582dbf6f8c28eae870ed57fea07409f1b3a2d2` passed public Lean Ac
 `29930544524`, build job `88958796486`, in `1m54s`. The finite-checker campaign stops on its
 registered success endpoint. Final-ledger CI remains; afterwards return to value-ranked route
 selection with the Herglotz child as a candidate, not an automatic continuation.
+
+## H7 Finite Herglotz Criterion Launch
+
+Final-ledger commit `c5ba3ab66e9a61446da7ad43d3a1d3786efd220d` passed public Lean Action run
+`29930876406`, build job `88959943824`, in `1m45s`, fully closing the finite matrix/parity parent.
+Fresh value ranking selects `LITERATURE-20260722-H7-WEIL-HERGLOTZ-CRITERION-01` over an immediate
+ground-state limit attack because it isolates the exact human simple-even residual and directly
+consumes the compiled parity interface.
+
+The fixed endpoint is the finite rank-one iff
+`P-2*S*S^T>0 on odd vectors <-> 2*(S dot u)<1` under `P*u=S` and pole-free odd positivity, plus a
+consumer into `WeilFiniteParityRayleighCertificate`. The arithmetic scalar inequality, continuum
+Perron theorem, and Herglotz spectral claims remain outside the premise set. Public preregistration
+CI is required before proof-source editing.

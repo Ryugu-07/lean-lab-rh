@@ -1067,3 +1067,20 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   closed; only final-ledger CI remains before route selection.
 - `still_open`: arithmetic Herglotz inequality, uniform simple-even structure, the actual
   ground-state-to-`k_lambda` comparison, W2/G7, M2/G3, H6-E/G8, and RH.
+
+## 2026-07-22 H7 finite Herglotz criterion campaign launch
+
+- `campaign`: `LITERATURE-20260722-H7-WEIL-HERGLOTZ-CRITERION-01`.
+- `selected_node`: `H7-WEIL-GROUNDSTATE-HERGLOTZ-01`.
+- `parent_status`: the finite matrix/parity campaign is fully public-green at final-ledger commit
+  `c5ba3ab66e9a61446da7ad43d3a1d3786efd220d`, run `29930876406`, build job `88959943824`.
+- `exact_edge`: prove by completion of squares that, on the reflection-odd sector, strict
+  positivity of `P-2*S*S^T` is equivalent to `2*(S dot u)<1` under `P*u=S` and strict positivity
+  of `P`; then construct the existing parity Rayleigh certificate.
+- `source_boundary`: the four direct June 2026 sources are S3. Their infinite-operator claims and
+  arithmetic inequality are targets, not premises. The finite rank-one algebra must be K0.
+- `expected_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`,
+  `route_infrastructure_delta=1`, `obstruction_map_delta=1`.
+- `still_open`: the actual scalar arithmetic inequality, uniform simple-even structure, the true
+  ground-state limit, and RH.
+- `global_goal`: active; preregistration public CI precedes every Lean proof-source edit.
