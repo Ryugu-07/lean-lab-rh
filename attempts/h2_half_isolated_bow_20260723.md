@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260723-H2-HALF-ISOLATED-BOW-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `IMPLEMENTATION_CI_PASSED / EVIDENCE_COMMIT_REQUIRED`
+Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`
 
 ## Runtime record
 
@@ -44,6 +44,7 @@ symmetry alone admits a finite bow with off-line points but no right-side half-i
 | 8 | `LEAN_BOW_FALSIFICATION` | A finite three-point set is critical-reflection invariant, has a right off-line point, and uses a nearby lower blocker with intermediate real displacement to make every right off-line point non-half-isolated. | Reject promotion from functional-equation reflection symmetry alone to half-isolated off-line detection. |
 | 9 | `INTEGRATION_AUDIT` | The aggregate endpoint, two Targets, seven exact TargetChecks, and six selected axiom prints compile. Selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`. | Classify as an H2 mechanism/obstruction-map correction; leave actual bow exclusion, analytic detectors, density estimates, and RH open. |
 | 10 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation commit `2cac0b4813435dffe468cd87f888d9f2763263d9` passed public Lean Action run `29959216007`, build job `89055884594`, in `2m11s`. | Keep Lean proof source frozen; publish immutable implementation evidence and require that evidence commit's own public CI. |
+| 11 | `EVIDENCE_PUBLIC_CI` | Immutable-evidence commit `5f9f8ea175c269507e96fbb0a8ca8dff40144e12` passed public Lean Action run `29959619394`, build job `89057229832`, in `1m30s`. | Stop the local geometry audit at its registered endpoint; publish the final ledger and return the active RH Goal to historical-route omission search. |
 
 ## Assumption and gap accounting
 
@@ -62,5 +63,10 @@ symmetry alone admits a finite bow with off-line points but no right-side half-i
 - `public_implementation_evidence`: frozen implementation commit
   `2cac0b4813435dffe468cd87f888d9f2763263d9` passed Lean Action run `29959216007`, build job
   `89055884594`, in `2m11s`.
-- `next_gate`: immutable-evidence commit and public CI, followed by final ledger.
+- `public_closure_evidence`: immutable-evidence commit
+  `5f9f8ea175c269507e96fbb0a8ca8dff40144e12` passed Lean Action run `29959619394`, build job
+  `89057229832`, in `1m30s`.
+- `local_stop`: the finite-line positive theorem and symmetry-only bow countermodel are publicly
+  closed. The analytic detector, actual-zeta bow exclusion, H2, and RH remain open.
+- `next_gate`: final-ledger commit and public CI, then fresh historical-route selection.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

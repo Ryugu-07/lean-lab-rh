@@ -3267,3 +3267,10 @@ Action run `29959216007`, build job `89055884594`, in `2m11s`. The proof source 
 immutable evidence and its own public CI remain before this local H2 geometry audit returns to the
 unfinished historical atlas. The analytic detector, actual-zeta bow exclusion, zero-density
 estimates, H2, and RH remain open.
+
+Immutable-evidence commit `5f9f8ea175c269507e96fbb0a8ca8dff40144e12` passed public Lean
+Action run `29959619394`, build job `89057229832`, in `1m30s`. The local campaign stops at the
+registered finite-line-versus-symmetry geometry endpoint; proof source remains frozen.
+Final-ledger CI is the last publication gate before fresh cross-family selection. This stop does
+not close H2: the analytic detector, actual-zeta bow exclusion, zero-density estimates, and RH
+remain open.

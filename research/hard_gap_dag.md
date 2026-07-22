@@ -1356,5 +1356,7 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   job `89053021275`, in `1m48s`. The local implementation proves the positive finite-line
   criterion and a reflection-symmetric bow countermodel. Frozen implementation commit
   `2cac0b4813435dffe468cd87f888d9f2763263d9` passed run `29959216007`, job `89055884594`, in
-  `2m11s`; immutable-evidence CI remains before local closure.
+  `2m11s`. Immutable-evidence commit `5f9f8ea175c269507e96fbb0a8ca8dff40144e12` passed run
+  `29959619394`, job `89057229832`, in `1m30s`. The generic geometry node is publicly closed at its
+  fixed endpoint; final-ledger CI remains. `H2-BOW-EXCLUSION-01` remains open.
   `rh_frontier_delta=0`; persistent RH Goal active.
