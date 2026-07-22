@@ -913,7 +913,9 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `Quot.sound`.
 - `public_preregistration`: commit `340e8ebfcf917dd17e03f36a22f2995be62c4058`, CI run
   `29893818120`, build job `88839576741`, passed in `1m32s` before proof-source editing.
-- `public_implementation`: pending.
+- `public_implementation`: commit `a0931346a32400e937bbb1333ea355649d8ec101`, CI run
+  `29916415509`, build job `88911217586`, passed in `2m15s`.
+- `public_closure`: pending.
 - `compaction_state`: five inherited summaries; the complete canonical frontier and current
   source were re-read after each before proof or publication work resumed.
 - `still_open`: the unconditional Table 1 row, H6-E/G8, and RH.

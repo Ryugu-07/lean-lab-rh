@@ -289,7 +289,9 @@ proved. Full success includes the unconditional dispersion-limit certificate and
   on `propext`, `Classical.choice`, and `Quot.sound`.
 - `public_preregistration`: commit `340e8ebfcf917dd17e03f36a22f2995be62c4058`, CI run
   `29893818120`, build job `88839576741`, passed in `1m32s` before proof editing.
-- `public_implementation`: pending.
+- `public_implementation`: commit `a0931346a32400e937bbb1333ea355649d8ec101`, CI run
+  `29916415509`, build job `88911217586`, passed in `2m15s`.
+- `public_closure`: pending.
 - `compaction_state`: five inherited compaction summaries during Loop 31. After each recovery the
   canonical governance, HANDOFF, relevant Targets/TargetChecks, H6 attempt, hard-gap DAG, complete
   preregistration, current source, selected AxiomsAudit entries, external ACTIVE ledger, and git
