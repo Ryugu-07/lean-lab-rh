@@ -1014,3 +1014,22 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   run `29924847974`, build job `88939252739`, in `1m39s`; final-ledger CI remains.
 - `global_goal`: active; H7 spectral and true-ground-state limit nodes, W2/G7, M2/G3, H6-E/G8,
   and RH remain open.
+
+## 2026-07-22 H7 finite matrix and parity campaign launch
+
+- `campaign`: `LITERATURE-20260722-H7-WEIL-FINITE-MATRIX-PARITY-01`.
+- `selected_node`: `H7-WEIL-GROUNDSTATE-FINITE-MATRIX-01`.
+- `parent_status`: the alignment campaign is fully public-green at final-ledger commit
+  `9ab3bf45101226f731b371a11ec06b149fa11a9a`, run `29925232284`, build job `88940549581`.
+- `exact_edge`: formalize the source divided-difference matrix and reflection blocks, then prove
+  that strict Rayleigh positivity on the even orthogonal complement and odd block certifies a
+  unique even global ground state.
+- `evidence_boundary`: the existing `c=100`, `N=200` Arb certificate proves positive inertia, not
+  simple-even structure. Earlier finite-height negative values are source-documented cutoff
+  artifacts. Neither is a theorem-level decision on this node.
+- `falsification_lane`: any exact odd-sector minimum, degeneracy, or parity crossing opens a
+  separate theorem-producing `FALSIFICATION` campaign immediately. Numerical candidates remain
+  navigation evidence until kernel checked.
+- `still_open`: uniform simple-even structure in both cutoff parameters, actual ground-state to
+  `k_lambda` convergence, W2/G7, M2/G3, H6-E/G8, and RH.
+- `global_goal`: active; preregistration public CI precedes every Lean proof-source edit.

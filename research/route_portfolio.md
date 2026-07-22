@@ -2828,3 +2828,21 @@ for the alignment campaign passed at commit `0ed05ba49605c7de621f16193ff73dd63a7
 `29924570570`, build job `88938283725`, in `1m56s`. Evidence commit
 `b2c752d730a48d76fadfc5ff1165f3e1240feed6` passed run `29924847974`, build job
 `88939252739`, in `1m39s`; final-ledger CI remains before the independent child starts.
+
+## H7 Finite Matrix and Parity Launch
+
+The alignment final-ledger commit `9ab3bf45101226f731b371a11ec06b149fa11a9a` passed public Lean
+Action run `29925232284`, build job `88940549581`, in `1m55s`. The selected independent child is
+`LITERATURE-20260722-H7-WEIL-FINITE-MATRIX-PARITY-01`.
+
+This campaign targets the exact historical omission, not another coordinate normalization. It
+formalizes the divided-difference matrix, its reflection parity blocks, and a strict two-block
+Rayleigh certificate that implies a unique even global ground state. The existing Arb result is
+positive-inertia evidence only, and the older negative eigenvalues are documented finite-height
+artifacts; neither decides the source's simple-even assumption.
+
+Bounded numerical comparison of even and odd spectra is permitted for candidate selection. Only a
+kernel-checked parity crossing, degeneracy, or odd minimum can open `FALSIFICATION`. Fixed finite
+success cannot be promoted to a gap uniform in Galerkin size and prime cutoff. Conjecture proposal
+and testing remain open throughout, while the historical route audit remains the main selection
+objective.
