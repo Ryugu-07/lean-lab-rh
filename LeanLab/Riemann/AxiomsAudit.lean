@@ -77,6 +77,7 @@ import LeanLab.Riemann.WeilGroundStateAlignment
 import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.ShortMollifierVariational
+import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -790,3 +791,8 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.shortMollifierNormalizedEnergy_gap_of_eulerLagrange
 #print axioms LeanLab.Riemann.shortMollifierWeightedVariation_pos
 #print axioms LeanLab.Riemann.shortMollifierSourceEnergy_unique_minimizer
+#print axioms LeanLab.Riemann.conreyWeightedPrefix_eq_mass_sub_moment_div
+#print axioms LeanLab.Riemann.conreyWeightedPrefix_eq_mass_of_moment_eq_zero
+#print axioms LeanLab.Riemann.conreyAffineFraction_eq_dichotomy
+#print axioms LeanLab.Riemann.conreyAffineFraction_eq_rat_or_flat
+#print axioms LeanLab.Riemann.conreyAffineRationalityInference_counterexample

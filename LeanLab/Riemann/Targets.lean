@@ -75,6 +75,7 @@ import LeanLab.Riemann.WeilGroundStateAlignment
 import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.ShortMollifierVariational
+import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -1320,6 +1321,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``shortMollifierSourceEnergy_unique_minimizer
       status := .proven
       note := "Campaign LITERATURE-20260722-H1-SHORT-MOLLIFIER-VARIATIONAL-01 proves an exact cosh-weighted Hardy completion identity, aligns the source and normalized energies, derives the exact second variation, and kernel-checks strict global minimality. This is a structural sufficiency audit of equations (58)-(63), not a mollified mean-value theorem, a numerical proportion improvement, an exceptional-zero eliminator, or a proof of RH. Classification is known-analysis formalization with rh_frontier_delta=0 and hard_gap_delta=0." },
+    { id := "H9.conrey-character-sum.rationality-flat-branch"
+      tier := .tier2
+      title := "Audit the flat branch in Conrey's character-sum rationality step"
+      statement :=
+        "Prove the exact fixed-prefix identity S(y)=A-B/y, show that A-B/(q*x)=H gives either the flat branch B=0,A=H or the explicit nonflat solution x=B/(q*(A-H)), derive rationality only in the latter branch for rational data, and exhibit a rational-parameter irrational countermodel to the omitted generic inference."
+      leanName := some ``conreyAffineFraction_eq_rat_or_flat
+      status := .proven
+      note := "Campaign FALSIFICATION-20260723-H9-CONREY-RATIONALITY-GAP-01 isolates a proof-gap candidate in Proposition 1 of Conrey 2024. The generic affine-fraction inference needs a nonzero first prefix moment; Lean certifies both the corrected dichotomy and a sqrt(2) flat-branch countermodel. No actual quadratic-character flat prefix is asserted, so the published proposition remains open rather than formally falsified. This is source-proof-gap and obstruction-map progress with rh_frontier_delta=0 and hard_gap_delta=0." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

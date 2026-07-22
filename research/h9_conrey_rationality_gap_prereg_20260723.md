@@ -146,3 +146,15 @@ receive exact TargetChecks and selected `#print axioms` entries.
 Commit only this preregistration, its attempt record, the H1 final-CI backfill, source-registry
 upgrade, and synchronized ledgers first. Public Lean Action CI must pass before proof-source,
 Targets, TargetChecks, AxiomsAudit, or aggregate imports are edited.
+
+## Implementation backfill
+
+- `preregistration_commit`: `7e682226d4ac7965ba0f02265578d1c71dc0d9ad`.
+- `preregistration_public_ci`: Lean Action run `29939270138`, build job `88988711235`, passed in
+  `2m3s`.
+- `local_result`:
+  `PROVED / SOURCE_GENERIC_INFERENCE_FALSIFIED / ACTUAL_CHARACTER_PROPOSITION_OPEN`.
+- `compiled_spine`: all seven proposed declarations plus the explicit flat-prefix constancy
+  theorem compile; five exact TargetChecks and selected axiom audits pass.
+- `full_build`: `8,741` jobs, passed locally.
+- `next_gate`: implementation commit and public CI.

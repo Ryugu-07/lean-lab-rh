@@ -2979,3 +2979,15 @@ omitted inference. It will not call the actual quadratic-character proposition f
 kernel-checked flat-prefix witness. Exact finite scans found no such witness below the recorded
 bounds and remain navigation evidence only. Public preregistration CI is required before
 proof-source editing.
+
+### Local implementation result
+
+Lean compiles the fixed-prefix identity and proves that zero first moment makes the weighted
+prefix constant for every scale. The corrected source alternative is exhaustive: either
+`B=0,A=H`, or `B!=0,A!=H` and `x=B/(q*(A-H))`. For rational data only the second branch certifies
+rationality. A rational-parameter `x=sqrt(2)` witness formally falsifies the omitted generic
+inference without furnishing an actual quadratic-character flat prefix.
+
+The result is therefore source-proof-gap and obstruction-map progress, not an RH-frontier change.
+Five exact TargetChecks, selected standard-only axiom prints, and the full `8,741`-job build pass
+locally. Public implementation CI remains before evidence closure.

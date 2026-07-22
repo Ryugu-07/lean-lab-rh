@@ -1129,6 +1129,19 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `source_proof_gap_delta=1`, `obstruction_map_delta=1` on success.
 - `global_goal`: active; preregistration public CI precedes every Lean proof-source edit.
 
+### H9 local implementation result
+
+- `compiled`: `conreyWeightedPrefix_eq_mass_sub_moment_div`, the zero-moment flatness theorem,
+  the exhaustive affine dichotomy, its rational-data corollary, and the `sqrt(2)` countermodel.
+- `new_obligation`: to recover the source's unconditional rationality claim from this proof path,
+  exclude `B_m=0,A_m=H` for every actual relevant quadratic-character prefix.
+- `classification`:
+  `SOURCE_GENERIC_INFERENCE_FALSIFIED / ACTUAL_CHARACTER_PROPOSITION_OPEN`.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `source_proof_gap_delta=1`,
+  `obstruction_map_delta=1`.
+- `verification`: five exact TargetChecks, five selected standard-only axiom prints, forbidden
+  scan, diff check, and full `8,741`-job build pass locally. Public implementation CI remains.
+
 ## 2026-07-22 H7 closure and H1 short-mollifier launch
 
 - `H7-WEIL-GROUNDSTATE-HERGLOTZ-01`: finite criterion campaign fully public-green at final-ledger

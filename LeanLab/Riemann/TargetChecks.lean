@@ -72,6 +72,7 @@ import LeanLab.Riemann.WeilGroundStateAlignment
 import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.ShortMollifierVariational
+import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -3303,5 +3304,31 @@ example {R beta c c1 : ℝ} (hRpos : 0 < R) (hc : c < 1 / 4) (hc1 : 0 < c1)
           shortMollifierSourceEnergy R beta (-c * c1) c1 T dT) :=
   shortMollifierSourceEnergy_unique_minimizer hRpos hc hc1
     hS hdS hT hdT h0 hR hEL
+
+example (chi : ℕ → ℤ) (m : ℕ) (y : ℝ) :
+    conreyWeightedPrefix chi m y =
+      (conreyPrefixMass chi m : ℝ) - (conreyPrefixMoment chi m : ℝ) / y :=
+  conreyWeightedPrefix_eq_mass_sub_moment_div chi m y
+
+example {chi : ℕ → ℤ} {m : ℕ} (hMoment : conreyPrefixMoment chi m = 0) (y : ℝ) :
+    conreyWeightedPrefix chi m y = (conreyPrefixMass chi m : ℝ) :=
+  conreyWeightedPrefix_eq_mass_of_moment_eq_zero hMoment y
+
+example {q x A B H : ℝ} (hq : q ≠ 0) (hx : x ≠ 0)
+    (hEq : A - B / (q * x) = H) :
+    (B = 0 ∧ A = H) ∨
+      (B ≠ 0 ∧ A ≠ H ∧ x = B / (q * (A - H))) :=
+  conreyAffineFraction_eq_dichotomy hq hx hEq
+
+example {q A B H : ℚ} {x : ℝ} (hq : q ≠ 0) (hx : x ≠ 0)
+    (hEq : (A : ℝ) - (B : ℝ) / ((q : ℝ) * x) = (H : ℝ)) :
+    (B = 0 ∧ A = H) ∨ ∃ r : ℚ, x = (r : ℝ) :=
+  conreyAffineFraction_eq_rat_or_flat hq hx hEq
+
+example :
+    ∃ (q A B H : ℚ) (x : ℝ),
+      q ≠ 0 ∧ x ≠ 0 ∧
+        (A : ℝ) - (B : ℝ) / ((q : ℝ) * x) = (H : ℝ) ∧ Irrational x :=
+  conreyAffineRationalityInference_counterexample
 
 end LeanLab.Riemann
