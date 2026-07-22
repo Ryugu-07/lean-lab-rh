@@ -76,6 +76,7 @@ import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
+import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -1329,6 +1330,21 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``conreyAffineFraction_eq_rat_or_flat
       status := .proven
       note := "Campaign FALSIFICATION-20260723-H9-CONREY-RATIONALITY-GAP-01 isolates a proof-gap candidate in Proposition 1 of Conrey 2024. The generic affine-fraction inference needs a nonzero first prefix moment; Lean certifies both the corrected dichotomy and a sqrt(2) flat-branch countermodel. No actual quadratic-character flat prefix is asserted, so the published proposition remains open rather than formally falsified. This is source-proof-gap and obstruction-map progress with rh_frontier_delta=0 and hard_gap_delta=0." },
+    { id := "H12.speiser.counting-equivalence-consumer"
+      tier := .tier2
+      title := "Formalize the Speiser zero-count consumer"
+      statement :=
+        "Construct the locally finite zeta-derivative divisor and finite multiplicity-bearing upper-left counts, prove the critical-strip real-axis base fact, and prove that the Levinson-Montgomery logarithmic count bound plus exact-or-linear-density dichotomy imply RH iff zeta' has no upper-left-strip zero."
+      leanName := some ``riemannHypothesis_iff_speiserDerivativeZeroFree_of_levinsonMontgomeryTheoremOne
+      status := .proven
+      note := "Campaign LITERATURE-20260723-H12-SPEISER-COUNTING-EQUIVALENCE-01 compiles the exact logical consumer and source conventions. The real-axis base fact is discharged from existing de Bruijn-Newman imaginary-axis positivity. The theorem remains conditional on the two named analytic outputs of Levinson-Montgomery Theorem 1, so it is route infrastructure with rh_frontier_delta=0 rather than a completed formalization of Speiser's theorem." },
+    { id := "H12.speiser.levinson-montgomery-analytic-counts"
+      tier := .tier2
+      title := "Prove the Levinson-Montgomery analytic count theorem"
+      statement :=
+        "Prove LevinsonMontgomeryLogCountBound and LevinsonMontgomeryCountDichotomy for the actual multiplicity-bearing zeta and zeta-derivative rectangle counts, including the functional-equation zero sum, Gamma estimates, low-height boundary sign, indented critical-line contour, and argument-principle bookkeeping."
+      status := .inProgress
+      note := "This is the first exact external analytic obstruction exposed by the H12 reconstruction. Mathlib supplies analyticity, divisors, Jensen's formula, and complex integration, while the project supplies an xi rectangle argument principle; no generic meromorphic indented-rectangle argument principle or specialized Levinson-Montgomery boundary theorem is currently available." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

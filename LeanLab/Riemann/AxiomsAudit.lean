@@ -78,6 +78,7 @@ import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
+import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -796,3 +797,8 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.conreyAffineFraction_eq_dichotomy
 #print axioms LeanLab.Riemann.conreyAffineFraction_eq_rat_or_flat
 #print axioms LeanLab.Riemann.conreyAffineRationalityInference_counterexample
+#print axioms LeanLab.Riemann.criticalStripRealAxisZeroFree
+#print axioms LeanLab.Riemann.riemannZetaDerivDivisor_apply
+#print axioms LeanLab.Riemann.finite_speiserUpperLeftDerivZeroSet
+#print axioms LeanLab.Riemann.levinsonMontgomeryCountDifferenceSublinear_of_logCountBound
+#print axioms LeanLab.Riemann.riemannHypothesis_iff_speiserDerivativeZeroFree_of_levinsonMontgomeryTheoremOne

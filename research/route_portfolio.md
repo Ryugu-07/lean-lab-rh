@@ -3017,3 +3017,23 @@ The 1935 Speiser geometry is historical motivation only because its level-curve 
 rigor gaps. The proof spine uses the rigorous 1974 count theorem and will expose every functional
 equation, Gamma estimate, low-height verification, contour indentation, and argument-principle
 obligation. Public preregistration CI is required before Lean proof-source editing.
+
+## H12 Speiser Counting Consumer Result
+
+Preregistration commit `178d86eaa7d02d8eb88421171bee8964c722fb0e` passed public CI run
+`29941747166`, build job `88997067033`. The implementation reaches a meaningful local stop:
+
+- actual analytic multiplicities and finite source-aligned rectangle counts compile for both zeta
+  and `zeta'`;
+- H6 imaginary-axis positivity closes the real-axis base fact;
+- the exact last-exception consumer compiles in both directions;
+- the literal `O(log T)` count bound is proved to imply the required sublinear estimate;
+- the full Speiser equivalence compiles conditionally from the source's logarithmic bound and
+  exact-or-linear-density dichotomy.
+
+This is not full success: neither analytic source output has been proved for the actual counts.
+The next H12 attack would need a meromorphic indented-rectangle argument principle and the
+Levinson-Montgomery functional-equation/Gamma boundary estimates. The project has a specialized
+entire-xi rectangle theorem but no generic theorem that can be applied directly. Classification:
+`MEANINGFUL_PARTIAL / CONDITIONAL_SOURCE_CONSUMER`, with `rh_frontier_delta=0` and
+`route_infrastructure_delta=1`.

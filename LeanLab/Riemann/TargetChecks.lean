@@ -3331,4 +3331,25 @@ example :
         (A : ℝ) - (B : ℝ) / ((q : ℝ) * x) = (H : ℝ) ∧ Irrational x :=
   conreyAffineRationalityInference_counterexample
 
+example : CriticalStripRealAxisZeroFree :=
+  criticalStripRealAxisZeroFree
+
+example {s : ℂ} (hs : s ≠ 1) :
+    riemannZetaDerivDivisor s = (riemannZetaDerivZeroMultiplicity s : ℤ) :=
+  riemannZetaDerivDivisor_apply hs
+
+example (T : ℝ) :
+    ({s : ℂ | s ∈ speiserUpperLeftRectangle T ∧ deriv riemannZeta s = 0} : Set ℂ).Finite :=
+  finite_speiserUpperLeftDerivZeroSet T
+
+example (hlogBound : LevinsonMontgomeryLogCountBound) :
+    LevinsonMontgomeryCountDifferenceSublinear :=
+  levinsonMontgomeryCountDifferenceSublinear_of_logCountBound hlogBound
+
+example (hlogBound : LevinsonMontgomeryLogCountBound)
+    (hdichotomy : LevinsonMontgomeryCountDichotomy) :
+    RiemannHypothesis ↔ SpeiserDerivativeZeroFree :=
+  riemannHypothesis_iff_speiserDerivativeZeroFree_of_levinsonMontgomeryTheoremOne
+    hlogBound hdichotomy
+
 end LeanLab.Riemann

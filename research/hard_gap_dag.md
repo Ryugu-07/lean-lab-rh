@@ -1162,6 +1162,23 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   unbounded heights; no such theorem is currently known.
 - `global_goal`: active; preregistration public CI precedes proof-source editing.
 
+## 2026-07-23 H12 Speiser compiled decomposition
+
+- `H12-A-DERIVATIVE-DIVISOR-01`: `CLOSED`. The actual `zeta'` divisor on `{1}ᶜ`, support/zero
+  equivalence, finite open-rectangle sets, and multiplicity-bearing counts compile.
+- `H12-B-REAL-AXIS-01`: `CLOSED`. H6 imaginary-axis positivity plus the exact `H_0`--xi coordinate
+  excludes every nontrivial real-axis zeta zero.
+- `H12-C-EXACT-COUNT-CONSUMER-01`: `CLOSED`. Exact equality at unbounded heights eliminates the
+  last zero in either direction, and the compiled count dichotomy plus sublinear count difference
+  forces the exact branch under either zero-free condition.
+- `H12-D-LOG-COUNT-BOUND-01`: `OPEN / EXTERNAL_ANALYTIC`. Prove
+  `LevinsonMontgomeryLogCountBound` for the actual counts.
+- `H12-E-COUNT-DICHOTOMY-01`: `OPEN / EXTERNAL_ANALYTIC`. Prove
+  `LevinsonMontgomeryCountDichotomy` from the source boundary sign and top-height argument.
+- `H12-SPEISER-LEVINSON-MONTGOMERY-COUNT-01`: conditional consumer compiled; full known theorem
+  remains open exactly at H12-D and H12-E. `rh_frontier_delta=0`,
+  `route_infrastructure_delta=1`.
+
 ## 2026-07-22 H7 closure and H1 short-mollifier launch
 
 - `H7-WEIL-GROUNDSTATE-HERGLOTZ-01`: finite criterion campaign fully public-green at final-ledger

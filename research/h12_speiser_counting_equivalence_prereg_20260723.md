@@ -160,3 +160,22 @@ recorded without promoting it to a premise.
 Commit only this preregistration, its attempt log, H9 final-CI backfill, source-registry correction,
 and synchronized route ledgers. Public Lean Action CI must pass before editing any H12 Lean proof
 source, Targets, TargetChecks, AxiomsAudit, or aggregate imports.
+
+## Implementation result
+
+- `preregistration_commit`: `178d86eaa7d02d8eb88421171bee8964c722fb0e`.
+- `preregistration_public_ci`: Lean Action run `29941747166`, build job `88997067033`, passed in
+  `1m33s`.
+- `result`: `MEANINGFUL_PARTIAL_LOCAL_COMPLETE / IMPLEMENTATION_CI_REQUIRED`.
+- The 465-line production module constructs the actual derivative divisor and both finite
+  multiplicity-bearing counts. It proves the exact count consumer, the real-axis base fact by
+  cross-route H6 positivity, and the full conditional equivalence from the two source-faithful
+  Levinson-Montgomery Theorem 1 outputs.
+- Source logic was corrected during implementation: exact equality is not unconditional. The Lean
+  interface separately records the `O(log T)` bound and exact-or-linear-density dichotomy, proves
+  the former is sublinear, and uses both to force the exact branch under either zero-free condition.
+- `local_stop`: reached. The first exact external analytic obstruction is the conjunction of
+  `LevinsonMontgomeryLogCountBound` and `LevinsonMontgomeryCountDichotomy` for the actual counts.
+  The full Speiser equivalence is not claimed.
+- Five exact TargetChecks and five selected standard-only axiom prints pass. Full `lake build`
+  passes 8,742 jobs; implementation public CI is next.
