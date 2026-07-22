@@ -6,7 +6,7 @@ Campaign: `FALSIFICATION-20260723-H13-DIRICHLET-FAMILY-INCLUSION-01`
 
 Selected node: `H13-DIRICHLET-FAMILY-INCLUSION-01`
 
-Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`
+Status: `PUBLICLY_CLOSED / INDIVIDUAL_TRANSFER_OPEN`
 
 Preregistration commit `e001e3afb37818918e42b08d76c18b6490062ac7` passed public Lean Action
 run `29960700375`, build job `89060685988`, in `2m2s`. Proof-source editing began only after this
@@ -25,6 +25,10 @@ Immutable-evidence commit `cb19d46bd1b62eb15dbd2ff41efe5ddf820c4505` passed publ
 Action run `29961677975`, build job `89063888150`, in `2m17s`. The registered transfer-logic
 endpoint has reached its local stop. Final-ledger publication and CI precede fresh historical-route
 selection; generalized RH, actual individual-zeta transfer, H13, and RH remain open.
+
+Final-ledger commit `11822e34ad720b9715f7cc22d17e2ed066e51803` passed public Lean Action run
+`29961935426`, build job `89064730187`, in `2m17s`. The transfer-logic campaign is publicly
+closed; generalized RH, actual individual-zeta transfer, H13, and RH remain open.
 
 ## Selection reason
 

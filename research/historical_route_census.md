@@ -38,7 +38,7 @@ Coverage labels:
 | H11 | SUPPORTING | Zero statistics, Montgomery pair correlation, random-matrix models, and quantum chaos | HEURISTIC_ONLY / CONDITIONAL | SOURCE_ALIGNED | The ranked atlas records that the modern unconditional Montgomery theorem explicitly supplies no on-line/off-line information. |
 | H12 | SUPPORTING | Speiser-type derivative criteria, value distribution, and complex dynamics | EQUIVALENT / PARTIAL_PROGRESS | SOURCE_ALIGNED | The ranked atlas fixes the left-half-strip `zeta'` exclusion edge and its possible role as an exceptional-zero localizer. |
 | H13 | SUPPORTING | Generalized zeta/L-functions and automorphic transfer | STRUCTURAL_ANALOGY / GENERALIZATION | DEEP_FORMALIZATION | The exact modulus-one Dirichlet-family equivalence, all-family implication, zeta-factor transfer, and extra-factor obstruction now compile; actual generalized RH and p-adic/archimedean individual-zeta transfer remain open. |
-| H14 | SUPPORTING | Rigorous computation and finite-height zero verification | FINITE_VERIFICATION | SOURCE_ALIGNED | The ranked atlas fixes finite certification as a supporting interface and prohibits finite-to-global promotion without an analytic reduction theorem. |
+| H14 | SUPPORTING | Rigorous computation and finite-height zero verification | FINITE_VERIFICATION | SOURCE_ALIGNED | Campaign `FALSIFICATION-20260723-H14-FINITE-HEIGHT-PROMOTION-01` preregisters an arbitrary-height symmetric finite-orbit stress test; certified computation remains valid when paired with a separate analytic reduction. |
 
 An independent auditor may add a route only with a primary-source anchor and a reason it is not a
 subroute of an existing row. Renaming a route does not create a new campaign slot.

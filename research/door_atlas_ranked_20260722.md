@@ -760,6 +760,12 @@ Formalization fit: `5/5`. Machine-task fit: `5/5` finite, `0/5` standalone globa
    continuum limits explicit.
 3. Maintain a hard prohibition on finite-height-to-global promotion.
 
+The follow-up campaign `FALSIFICATION-20260723-H14-FINITE-HEIGHT-PROMOTION-01` isolates that last
+prohibition from the already compiled H11 density-one and H8 eventual-index obstructions. It tests
+an arbitrary finite height using a finite open-strip orbit closed under conjugation and
+`s |-> 1-s`, while retaining an off-line point above the checked height. The witness is generic and
+does not challenge actual certified zero computations.
+
 ## D13. Countermodels and falsified mechanisms
 
 ### Last proved nodes and what they forbid

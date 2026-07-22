@@ -3314,3 +3314,20 @@ Action run `29961677975`, build job `89063888150`, in `2m17s`. The local campaig
 registered inclusion/directionality endpoint; proof source remains frozen. Final-ledger CI is the
 last publication gate before fresh cross-family selection. This stop does not close H13,
 generalized RH, actual individual-zeta transfer, or RH.
+
+Final-ledger commit `11822e34ad720b9715f7cc22d17e2ed066e51803` passed public Lean Action run
+`29961935426`, build job `89064730187`, in `2m17s`. The H13 transfer-logic campaign is fully
+publicly closed; generalized RH, actual individual-zeta transfer, H13, and RH remain open.
+
+## H14 Finite-Height Promotion Launch
+
+Fresh historical breadth selects H14, the remaining support route without an independent
+campaign. The exact quantifier differs from H11 density-one and H8 eventual-index obstructions:
+for every nonnegative finite height, construct a finite open-strip orbit closed under conjugation
+and `s |-> 1-s` that passes every below-height critical-line check but retains an off-line point
+above the checked height.
+
+Campaign `FALSIFICATION-20260723-H14-FINITE-HEIGHT-PROMOTION-01` audits only standalone
+finite-to-global promotion. It does not challenge Platt--Trudgian's certified computation or its
+valid use by a separate analytic de Bruijn--Newman theorem, and it does not optimize any bound.
+Public preregistration CI is required before proof-source editing; persistent RH Goal active.

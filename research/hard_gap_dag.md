@@ -1388,3 +1388,19 @@ closed. `H2-HALF-ISOLATED-ANALYTIC-DETECTOR-01`, `H2-BOW-EXCLUSION-01`, H2, and 
   immutable-evidence commit `cb19d46bd1b62eb15dbd2ff41efe5ddf820c4505` passed run
   `29961677975`, job `89063888150`, in `2m17s`. The transfer-logic node is publicly closed at its
   fixed endpoint; final-ledger CI remains. `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01` stays open.
+
+Final-ledger commit `11822e34ad720b9715f7cc22d17e2ed066e51803` passed public Lean Action run
+`29961935426`, build job `89064730187`, in `2m17s`. The H13 transfer-logic node is fully publicly
+closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
+
+## 2026-07-23 H14 finite-height promotion launch
+
+- `H14-FINITE-HEIGHT-PROMOTION-01`: `PREREGISTERED / FALSIFICATION`. For every `T >= 0`, build a
+  finite open-strip orbit closed under conjugation and `s |-> 1-s` that is verified on the
+  critical line through height `T` but has an off-line point strictly above `T`.
+- `H14-GLOBAL-TAIL-REDUCTION-01`: `OPEN / RH_STRENGTH`. Prove a global analytic theorem reducing
+  exclusion of all higher off-line zeta zeros to a finite certified calculation.
+- `claim_boundary`: the generic orbit is not an actual zeta zero set. Finite verification remains
+  a valid and high-value support tool whenever a separate theorem supplies a finite reduction.
+- `expected_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_map_delta=1`,
+  `obstruction_map_delta=1` on success; preregistration CI precedes proof-source editing.

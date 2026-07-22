@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260723-H13-DIRICHLET-FAMILY-INCLUSION-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`
+Status: `PUBLICLY_CLOSED / INDIVIDUAL_TRANSFER_OPEN`
 
 ## Runtime record
 
@@ -47,6 +47,7 @@ L-function target preserves an RH-equivalent zero set.
 | 10 | `INTEGRATION_AUDIT` | One proven and one open Target, eight exact TargetChecks, seven selected standard-only axiom prints, an empty production forbidden scan, and the full `8,748`-job build pass. | Publish the implementation and require independent public CI; generalized RH, H13, and RH remain open. |
 | 11 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation commit `ab45b1bd8ba5c8cdbe5fb2bd9cd87c222131bb91` passed public Lean Action run `29961388807`, build job `89062966415`, in `2m18s`. | Keep Lean proof source frozen; publish immutable implementation evidence and require that evidence commit's own public CI. |
 | 12 | `EVIDENCE_PUBLIC_CI` | Immutable-evidence commit `cb19d46bd1b62eb15dbd2ff41efe5ddf820c4505` passed public Lean Action run `29961677975`, build job `89063888150`, in `2m17s`. | Stop the local transfer-logic audit at its registered endpoint; publish the final ledger and return the active RH Goal to historical-route omission search. |
+| 13 | `FINAL_LEDGER_PUBLIC_CI` | Final-ledger commit `11822e34ad720b9715f7cc22d17e2ed066e51803` passed public Lean Action run `29961935426`, build job `89064730187`, in `2m17s`. | Mark the transfer-logic campaign publicly closed; retain generalized RH, actual individual-zeta transfer, H13, and RH as open. |
 
 ## Assumption and gap accounting
 
@@ -71,7 +72,9 @@ L-function target preserves an RH-equivalent zero set.
 - `public_closure_evidence`: immutable-evidence commit
   `cb19d46bd1b62eb15dbd2ff41efe5ddf820c4505` passed Lean Action run `29961677975`, build job
   `89063888150`, in `2m17s`.
+- `public_final_ledger`: commit `11822e34ad720b9715f7cc22d17e2ed066e51803` passed Lean Action run
+  `29961935426`, build job `89064730187`, in `2m17s`.
 - `local_stop`: the fixed transfer-logic endpoint is compiled. Actual automorphic, family, or
   p-adic individual-zeta transfer remains open.
-- `next_gate`: final-ledger commit and public CI, then fresh historical-route selection.
+- `next_gate`: H14 finite-height promotion is preregistered separately.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.
