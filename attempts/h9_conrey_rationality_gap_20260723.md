@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260723-H9-CONREY-RATIONALITY-GAP-01`
 
 Mode: `FALSIFICATION`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_BACKFILL_REQUIRED`
 
 ## Runtime record
 
@@ -41,6 +41,7 @@ certifies one.
 | 2 | `SOURCE_AUDIT / FALSIFICATION_RECONNAISSANCE` | Read the peer-reviewed source through Theorem 6 and Proposition 1. The rationality proof omits `B_m=0`; the paper later writes the same flat branch but does not exclude it. Exact scans found no actual character counterexample below the recorded bounds. | Preregister the corrected dichotomy and generic irrational countermodel. Keep the published proposition open rather than labeling it refuted. |
 | 3 | `COMPACTION_RECOVERY / USER_ROUTE_RULING` | Re-read the canonical governance and campaign records after an inherited summary. The user fixed the survey's purpose as a search for overlooked branches across the major historical routes before original-route work becomes the main allocation; conjecture proposal and testing remain open throughout. | Preserve H9 as the next value-ranked omission audit, publish its preregistration first, and keep cross-family coverage as the default successor rule. |
 | 4 | `LEAN_IMPLEMENTATION` | Compiled the exact finite weighted-prefix identity, proved that zero first moment makes the prefix constant in its scale, proved the exhaustive flat-or-explicit-rational dichotomy, and checked a rational-parameter `sqrt(2)` countermodel. Five exact TargetChecks and five selected axiom prints pass; the full 8,741-job build passes. | Classify the generic rationality inference as formally falsified while keeping the actual quadratic-character Proposition 1 open. Publish the frozen implementation and require public CI. |
+| 5 | `IMPLEMENTATION_CI` | Implementation commit `4c9939496e6a508c2f5e631ad3fa5ede9f5a69aa` passed Lean Action run `29940099631`, build job `88991480954`, in `1m56s`. | Freeze Lean proof source. Publish immutable implementation evidence and require its own public CI. |
 
 ## Compiled declarations
 
@@ -69,5 +70,9 @@ Definition alignment is recorded in
 - `mechanical_gates`: production module, Targets entry, five exact TargetChecks, five selected
   standard-only axiom prints, forbidden scan, and `git diff --check` pass; full `lake build`
   passes with `8,741` jobs.
-- `next_gate`: implementation commit and public CI; freeze proof source after that commit.
+- `implementation_commit`: `4c9939496e6a508c2f5e631ad3fa5ede9f5a69aa`.
+- `implementation_public_ci`: Lean Action run `29940099631`, build job `88991480954`, passed in
+  `1m56s`.
+- `proof_source_state`: frozen at the implementation commit.
+- `next_gate`: immutable evidence commit and public CI.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

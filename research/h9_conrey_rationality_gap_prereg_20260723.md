@@ -157,4 +157,8 @@ Targets, TargetChecks, AxiomsAudit, or aggregate imports are edited.
 - `compiled_spine`: all seven proposed declarations plus the explicit flat-prefix constancy
   theorem compile; five exact TargetChecks and selected axiom audits pass.
 - `full_build`: `8,741` jobs, passed locally.
-- `next_gate`: implementation commit and public CI.
+- `implementation_commit`: `4c9939496e6a508c2f5e631ad3fa5ede9f5a69aa`.
+- `implementation_public_ci`: Lean Action run `29940099631`, build job `88991480954`, passed in
+  `1m56s`.
+- `proof_source_state`: frozen.
+- `next_gate`: immutable evidence commit and public CI.

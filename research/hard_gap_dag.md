@@ -1141,6 +1141,8 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `obstruction_map_delta=1`.
 - `verification`: five exact TargetChecks, five selected standard-only axiom prints, forbidden
   scan, diff check, and full `8,741`-job build pass locally. Public implementation CI remains.
+- `public_implementation_evidence`: commit `4c9939496e6a508c2f5e631ad3fa5ede9f5a69aa`
+  passed Lean Action run `29940099631`, build job `88991480954`, in `1m56s`; proof source frozen.
 
 ## 2026-07-22 H7 closure and H1 short-mollifier launch
 

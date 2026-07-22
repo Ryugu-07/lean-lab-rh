@@ -2991,3 +2991,7 @@ inference without furnishing an actual quadratic-character flat prefix.
 The result is therefore source-proof-gap and obstruction-map progress, not an RH-frontier change.
 Five exact TargetChecks, selected standard-only axiom prints, and the full `8,741`-job build pass
 locally. Public implementation CI remains before evidence closure.
+
+Implementation commit `4c9939496e6a508c2f5e631ad3fa5ede9f5a69aa` passed public Lean Action
+run `29940099631`, build job `88991480954`, in `1m56s`. Proof source is frozen; immutable evidence
+and final-ledger public CI remain before route reselection.
