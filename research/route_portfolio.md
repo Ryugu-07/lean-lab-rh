@@ -2810,3 +2810,18 @@ explicit prolate approximants `k_lambda` to `Xi`; the missing limit is the actua
 `xi_lambda` versus `k_lambda`. A July 2026 preprint gives an exact one-way finite Guinand--Weil
 dictionary and is now an audit input, not a premise. Preregistration and public CI precede any
 Lean proof edit or alignment verdict.
+
+## H7 Finite-Prime Weil Alignment Local Outcome
+
+The fourteen-row M0 record is complete in
+`research/h7_weil_groundstate_alignment_20260722.md`. Lean verifies the weighted coordinate,
+involution, autocorrelation, source Fourier sign, and endpoint moments. The source coordinate is
+`s=1/2-i*z`, not `s=1/2+i*z`; the latter is the source transform at `-z`.
+
+The result is `MEANINGFUL_PARTIAL`, not full-form equality. Generic source Galerkin vectors have
+endpoint regularity below the project's globally smooth compact root class, and the source full
+form retains a pole block that the project's constrained named quadratic omits. The exact finite
+dictionary remains one-way. The next bounded H7 child should formalize the source finite matrix
+and parity blocks, then test the simple-even hypothesis by theorem-producing falsification before
+attempting an infinite spectral gap or ground-state convergence theorem. Public implementation CI
+for the alignment campaign remains pending.

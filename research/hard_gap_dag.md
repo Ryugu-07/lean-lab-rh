@@ -985,3 +985,28 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `g(x)=exp(-x/2)*f(x+L/2)` and must be Lean-checked. The source pole block must not be silently
   dropped when comparing with `compactWeilArithmeticQuadratic`.
 - `global_goal`: active; RH and all downstream H7 nodes remain open.
+
+## 2026-07-22 H7 finite-prime Weil M0 local outcome
+
+- `H7-WEIL-GROUNDSTATE-ALIGN-01`: locally complete as `MEANINGFUL_PARTIAL`; public implementation
+  CI is pending. The exact fourteen-row record is
+  `research/h7_weil_groundstate_alignment_20260722.md`.
+- `compiled_edge`: the Mellin half-density conjugates the source star and autocorrelation to the
+  project's weighted compact-Laplace objects. Under the source convention `u^(-i*z)`, source
+  ordinate `z` maps exactly to project `s=1/2-i*z`; both pole moments are compiled.
+- `OBS-H7-WEIL-ALIGN-REGULARITY-01`: open project-domain obstruction. Generic finite Fourier
+  vectors extended by zero are not globally smooth at support endpoints, so they cannot directly
+  instantiate the current `ContDiff infinity` compact criterion. Smoothing changes the matrix and
+  is not an equality proof.
+- `H7-WEIL-GROUNDSTATE-FINITE-MATRIX-01`: proposed open child. Formalize the exact finite
+  divided-difference matrix, diagonal derivatives, parity blocks, and source normalization.
+- `H7-WEIL-GROUNDSTATE-SPECTRAL-FALSIFY-01`: proposed open child after the matrix exists. Seek a
+  kernel-checked finite failure of simplicity/even-sector minimality or certify bounded parameter
+  cells; finite success is not uniform spectral proof.
+- `corrected_limit_frontier`: `k_lambda -> Xi` on closed substrips is source-proved; the open
+  RH-bearing comparison is the actual lowest eigenfunction `xi_lambda` versus `k_lambda`, together
+  with simple-even structure.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `global_goal`: active; H7 spectral and true-ground-state limit nodes, W2/G7, M2/G3, H6-E/G8,
+  and RH remain open.

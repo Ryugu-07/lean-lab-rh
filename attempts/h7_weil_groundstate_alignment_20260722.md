@@ -4,14 +4,14 @@ Campaign: `LITERATURE-20260722-H7-WEIL-GROUNDSTATE-ALIGN-01`
 
 Mode: `LITERATURE`
 
-Status: `PREREGISTRATION_LOCAL / PUBLIC_CI_PENDING`
+Status: `LOCAL_VERIFICATION_PASSED / IMPLEMENTATION_COMMIT_PENDING`
 
 ## Runtime record
 
 - `model`: Codex, GPT-5 family; exact serving variant not exposed.
 - `reasoning_effort`: not exposed.
 - `loop_budget`: no numerical quota under V4.1; serving token budget not exposed.
-- `compaction_state`: none in this campaign.
+- `compaction_state`: one inherited compaction, recovered under the current governance protocol.
 - `global_goal`: active.
 
 ## Baseline
@@ -26,6 +26,8 @@ Status: `PREREGISTRATION_LOCAL / PUBLIC_CI_PENDING`
 | loop | mode | result | decision |
 | --- | --- | --- | --- |
 | 1 | `RECOVERY / SOURCE_INVENTORY` | Re-read governance and the public survey frontier; audited source TeX for arXiv:2511.23257, 2511.22755, 2602.04022, 2605.20224, and 2607.02828 against the project compact Weil modules. | Preregister an itemized M0 campaign before any Lean proof-source edit. |
+| 2 | `PREREGISTRATION_PUBLIC_CI` | Commit `0e1941d05c2f0a9faa166170e93a017f121fe9f6` passed run `29922818186`, build job `88932298080`, in `1m33s`. | Begin the itemized alignment and weighted-coordinate Lean bridge. |
+| 3 | `M0_ALIGNMENT / LEAN_BRIDGE` | Completed all fourteen rows in `research/h7_weil_groundstate_alignment_20260722.md`. Lean compiles the weighted involution, autocorrelation, positive-sign transform, source negative-sign coordinate `s=1/2-i*z`, and both source pole moments. Exact witnesses and selected axiom prints pass. | Classify `MEANINGFUL_PARTIAL`: algebraic alignment succeeds, while the source Galerkin class cannot directly instantiate the project's globally smooth compact criterion. Close this campaign after full build/public CI; make finite matrix/parity formalization and spectral falsification a separate child. |
 
 ## Initial correction and exact risk
 
@@ -34,14 +36,25 @@ Status: `PREREGISTRATION_LOCAL / PUBLIC_CI_PENDING`
 - The July 2026 finite dictionary may close the finite coefficient-to-test part of M0, but it is
   explicitly one-way and does not prove continuum simple-even structure or the true-ground-state
   limit.
-- The expected coordinate conjugacy is
-  `g(x)=exp(-x/2)*f(x+L/2)`. It has not yet been compiled in Lean.
+- The coordinate conjugacy `g(x)=exp(-x/2)*f(x+L/2)` now compiles in Lean. Source ordinate `z`
+  maps to project parameter `s=1/2-i*z`; the initially implicit Fourier sign has been corrected
+  and compiled.
 - The project's named `compactWeilArithmeticQuadratic` is pole-free after two endpoint moments;
   the source finite matrix includes the pole block. Direct equality without this distinction is
   forbidden.
 
-## Next gate
+## Local outcome
 
-Commit the preregistration and synchronized route ledgers, push to public `main`, and require green
-Lean Action CI. Only then may the fourteen-row alignment record or any Lean bridge be written.
-
+- `classification`: `MEANINGFUL_PARTIAL / WEIGHTED_COORDINATE_ALIGNMENT_COMPILED /
+  SOURCE_PROJECT_DOMAIN_GAP_EXPOSED`.
+- `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `OBS-H7-WEIL-ALIGN-REGULARITY-01`: generic source trigonometric vectors extended by zero are not
+  globally `C infinity`; smoothing changes the finite form and is not an equality repair.
+- Eight exact TargetChecks and eight selected axiom prints pass locally; selected declarations use
+  only `propext`, `Classical.choice`, and `Quot.sound`.
+- Full project build passed with `8,737` jobs. Implementation commit, public CI, evidence
+  backfill, and final ledger remain.
+- Proposed independent child after closure: formalize the exact source finite matrix and parity
+  blocks, then run `FALSIFICATION` against simple/even ground-state uniformity before an infinite
+  spectral proof attempt.

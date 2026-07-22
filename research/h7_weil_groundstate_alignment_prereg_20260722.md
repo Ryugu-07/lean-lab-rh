@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260722-H7-WEIL-GROUNDSTATE-ALIGN-01`
 
 Mode: `LITERATURE`
 
-Status: `PREREGISTRATION_LOCAL / PUBLIC_CI_PENDING`
+Status: `LOCAL_VERIFICATION_PASSED / IMPLEMENTATION_COMMIT_PENDING`
 
 ## Baseline and route decision
 
@@ -139,3 +139,18 @@ resource relaxation is permitted.
 - `compaction_state`: no compaction in this campaign at preregistration.
 - `protected_files`: the six inherited user/exposure files remain untouched and unstaged.
 
+## Preregistration evidence
+
+Commit `0e1941d05c2f0a9faa166170e93a017f121fe9f6` passed public Lean Action run
+`29922818186`, build job `88932298080`, in `1m33s`. Substantive alignment and Lean bridge edits
+may now begin.
+
+## Local outcome
+
+The registered `meaningful_partial` endpoint was reached. The weighted coordinate bridge compiles,
+including the source's negative Fourier sign and both endpoint moments. The fourteen-row record is
+`research/h7_weil_groundstate_alignment_20260722.md`. Full form equality is not claimed: the source
+finite Galerkin class is generally only piecewise smooth after zero extension, while the current
+project criterion requires a globally `C infinity` compact root; the unrestricted source pole
+block and the project pole-free constrained quadratic are also distinct. The full local project
+build passed with `8,737` jobs; public implementation evidence remains pending.

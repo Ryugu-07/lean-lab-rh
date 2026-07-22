@@ -71,6 +71,7 @@ import LeanLab.Riemann.WeilCompactLaplaceSeparator
 import LeanLab.Riemann.WeilCompactLaplaceZeroCutoff
 import LeanLab.Riemann.WeilCompactLaplaceArithmeticFormula
 import LeanLab.Riemann.WeilCompactPositivityCriterion
+import LeanLab.Riemann.WeilGroundStateAlignment
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -1284,6 +1285,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``norm_eq_sqrt_of_powerSum_bound_and_reciprocal
       status := .proven
       note := "Campaign CAMPAIGN-20260717-H10-FINITE-SPECTRAL-RIGIDITY-01 formalizes the final finite-spectral step in function-field RH using simultaneous phase recurrence. It assumes the aggregate point-count-scale bound and reciprocal pairing; it does not construct them for curves or transfer them to the infinite number-field zero divisor." },
+    { id := "H7.weil-ground-state.weighted-coordinate-alignment"
+      tier := .tier2
+      title := "Align finite-prime Weil ground-state coordinates"
+      statement :=
+        "Conjugate the source interval function by the centered Mellin half-density, identify its weighted involution and autocorrelation, identify its critical-line bilateral Laplace transform with the centered source Fourier transform, and identify the endpoint transforms with the two pole moments."
+      leanName := some ``compactLaplaceAutocorrelation_weilGroundStateLogRoot
+      status := .proven
+      note := "Campaign LITERATURE-20260722-H7-WEIL-GROUNDSTATE-ALIGN-01 compiles the exact weighted-coordinate bridge only. It does not identify the source L2 form domain with the project's smooth compact test class, construct the finite Galerkin matrix in Lean, prove a simple-even ground state, compare the true ground state with the explicit prolate approximant, or prove RH. Classification is source-definition alignment infrastructure with rh_frontier_delta=0." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

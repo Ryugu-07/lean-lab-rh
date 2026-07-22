@@ -68,6 +68,7 @@ import LeanLab.Riemann.WeilGaussianFixedWidthCriterion
 import LeanLab.Riemann.WeilCompactLaplaceSeparator
 import LeanLab.Riemann.WeilCompactLaplaceZeroCutoff
 import LeanLab.Riemann.WeilCompactLaplaceArithmeticFormula
+import LeanLab.Riemann.WeilGroundStateAlignment
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -3066,5 +3067,47 @@ example {z : ℂ} (hz : 0 < z.re) :
     deBruijnNewmanPolymathGammaStirlingR2 z =
       deBruijnNewmanPolymathBoydR2Integral z :=
   deBruijnNewmanPolymathGammaStirlingR2_eq_boyd hz
+
+example (L : ℝ) (f : ℝ → ℂ) (x : ℝ) :
+    compactLaplaceConjInvolution (weilGroundStateLogRoot L f) x =
+      Complex.exp (-(x : ℂ) / 2) *
+        (starRingEnd ℂ) (f (-x + L / 2)) :=
+  compactLaplaceConjInvolution_weilGroundStateLogRoot L f x
+
+example (L : ℝ) (f : ℝ → ℂ) (x : ℝ) :
+    compactLaplaceAutocorrelation (weilGroundStateLogRoot L f) x =
+      Complex.exp (-(x : ℂ) / 2) *
+        weilGroundStateCenteredAutocorrelation L f x :=
+  compactLaplaceAutocorrelation_weilGroundStateLogRoot L f x
+
+example (L : ℝ) (f : ℝ → ℂ) (z : ℂ) :
+    compactLaplaceTransform (weilGroundStateLogRoot L f) (1 / 2 + Complex.I * z) =
+      weilGroundStateCenteredFourier L f z :=
+  compactLaplaceTransform_weilGroundStateLogRoot_criticalLine L f z
+
+example (L : ℝ) (f : ℝ → ℂ) (z : ℂ) :
+    compactLaplaceTransform (weilGroundStateLogRoot L f) (1 / 2 - Complex.I * z) =
+      weilGroundStateSourceFourier L f z :=
+  compactLaplaceTransform_weilGroundStateLogRoot_sourceCoordinate L f z
+
+example (L : ℝ) (f : ℝ → ℂ) :
+    compactLaplaceTransform (weilGroundStateLogRoot L f) 0 =
+      weilGroundStateCenteredFourier L f (Complex.I / 2) :=
+  compactLaplaceTransform_weilGroundStateLogRoot_zero L f
+
+example (L : ℝ) (f : ℝ → ℂ) :
+    compactLaplaceTransform (weilGroundStateLogRoot L f) 1 =
+      weilGroundStateCenteredFourier L f (-Complex.I / 2) :=
+  compactLaplaceTransform_weilGroundStateLogRoot_one L f
+
+example (L : ℝ) (f : ℝ → ℂ) :
+    compactLaplaceTransform (weilGroundStateLogRoot L f) 0 =
+      weilGroundStateSourceFourier L f (-Complex.I / 2) :=
+  compactLaplaceTransform_weilGroundStateLogRoot_zero_sourceMoment L f
+
+example (L : ℝ) (f : ℝ → ℂ) :
+    compactLaplaceTransform (weilGroundStateLogRoot L f) 1 =
+      weilGroundStateSourceFourier L f (Complex.I / 2) :=
+  compactLaplaceTransform_weilGroundStateLogRoot_one_sourceMoment L f
 
 end LeanLab.Riemann

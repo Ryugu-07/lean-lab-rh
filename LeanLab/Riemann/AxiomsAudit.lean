@@ -73,6 +73,7 @@ import LeanLab.Riemann.WeilCompactLaplaceSeparator
 import LeanLab.Riemann.WeilCompactLaplaceZeroCutoff
 import LeanLab.Riemann.WeilCompactLaplaceArithmeticFormula
 import LeanLab.Riemann.WeilCompactPositivityCriterion
+import LeanLab.Riemann.WeilGroundStateAlignment
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -757,3 +758,11 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.deBruijnNewmanPolymathBoydBoundaryDispersionLimits
 #print axioms LeanLab.Riemann.deBruijnNewmanPolymathGammaStirlingR2_eq_boyd
 #print axioms LeanLab.Riemann.deBruijnNewmanPolymathStieltjesScaledGammaCertificate
+#print axioms LeanLab.Riemann.compactLaplaceConjInvolution_weilGroundStateLogRoot
+#print axioms LeanLab.Riemann.compactLaplaceAutocorrelation_weilGroundStateLogRoot
+#print axioms LeanLab.Riemann.compactLaplaceTransform_weilGroundStateLogRoot_criticalLine
+#print axioms LeanLab.Riemann.compactLaplaceTransform_weilGroundStateLogRoot_sourceCoordinate
+#print axioms LeanLab.Riemann.compactLaplaceTransform_weilGroundStateLogRoot_zero
+#print axioms LeanLab.Riemann.compactLaplaceTransform_weilGroundStateLogRoot_one
+#print axioms LeanLab.Riemann.compactLaplaceTransform_weilGroundStateLogRoot_zero_sourceMoment
+#print axioms LeanLab.Riemann.compactLaplaceTransform_weilGroundStateLogRoot_one_sourceMoment
