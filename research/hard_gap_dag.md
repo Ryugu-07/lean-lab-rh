@@ -1409,7 +1409,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 
 ## 2026-07-23 H14 finite-height promotion local result
 
-- `H14-FINITE-HEIGHT-PROMOTION-01`: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`.
+- `H14-FINITE-HEIGHT-PROMOTION-01`: `PUBLICLY_CLOSED / GENERIC_OBSTRUCTION`.
   `finiteHeightPromotionAudit_endpoint` constructs the registered finite nonempty orbit for every
   `T >= 0`, with both symmetries, open-strip membership, finite-height verification, and a strict
   above-height off-line witness.
@@ -1422,5 +1422,22 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `public_implementation`: frozen commit `8c61ef5d87ecf9ba5ffb923dabada87080b89f81` passed Lean Action
   run `29963329369`, build job `89069216973`, in `2m42s`; proof source is frozen.
 - `public_closure_evidence`: commit `0931f90f08905c0609854788725d151d4ace9632` passed Lean Action
-  run `29963630200`, build job `89070175938`, in `1m34s`; only final-ledger CI remains.
-- `next_gate`: publish the final ledger, then return to atlas/conjecture-pool route selection.
+  run `29963630200`, build job `89070175938`, in `1m34s`; proof source remains frozen.
+- `public_final_ledger`: commit `cd67e4ad4f899631b11b8d6a8927c5709e4f9fa3` passed Lean Action
+  run `29963802981`, build job `89070709361`, in `1m57s`.
+
+## 2026-07-23 H7 prolate Rayleigh-gap campaign launch
+
+- `campaign`: `DISCOVERY-20260723-H7-PROLATE-RAYLEIGH-GAP-01`.
+- `selected_node`: `H7-WEIL-GROUNDSTATE-QUANTITATIVE-APPROX-01`.
+- `candidate`: for the exact source arithmetic matrix and normalized prolate vector, the Rayleigh
+  excess divided by a certified ground-state gap tends to zero in the prescribed two-parameter
+  limit. This is original, open, and unavailable as a premise.
+- `generic_consumer`: prove that the ratio bounds projective distance to the ground line.
+- `falsification`: prove a collapsing-gap two-dimensional family where absolute excess tends to
+  zero but projective defect stays one.
+- `source_boundary`: actual prime/archimedean matrix entries and prolate coefficients are not yet
+  instantiated in Lean. Generic success is route-map progress only.
+- `expected_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_map_delta=1`,
+  `obstruction_map_delta=1` at the generic endpoint.
+- `global_goal`: active; preregistration public CI precedes every new Lean proof-source edit.

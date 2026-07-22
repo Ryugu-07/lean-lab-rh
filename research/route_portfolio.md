@@ -3359,3 +3359,24 @@ Action run `29963630200`, build job `89070175938`, in `1m34s`. The local campaig
 registered generic finite-height promotion endpoint; proof source remains frozen. Final-ledger CI
 is the last publication gate before value-ranked comparison of the admitted historical atlas and
 the conjecture pool. The actual-zeta global-tail edge, H14 support use, and RH remain open.
+
+Final-ledger commit `cd67e4ad4f899631b11b8d6a8927c5709e4f9fa3` passed public Lean Action
+run `29963802981`, build job `89070709361`, in `1m57s`. The H14 generic promotion campaign is
+fully publicly closed; actual-zeta global-tail reduction, H14 support use, and RH remain open.
+
+## H7 Prolate Rayleigh-Gap Launch
+
+The post-H14 comparison treats H0-H14 coverage as an audit baseline rather than exhaustion. H7 is
+selected with a materially new angle: not another finite Herglotz constant, but the open
+true-ground-state/prolate convergence bridge explicitly named by the 2025-2026 primary sources.
+
+Campaign `DISCOVERY-20260723-H7-PROLATE-RAYLEIGH-GAP-01` proposes an original, falsifiable
+decomposition. For the exact source matrix, normalized ground vector, positive spectral gap, and
+normalized prolate coefficient vector, the Rayleigh excess divided by the gap should tend to zero.
+The generic Lean consumer will prove that this ratio bounds projective distance to the ground
+line. A collapsing-gap model will prove that small absolute excess alone is insufficient.
+
+No locked source states this ratio theorem. The actual arithmetic entries and prolate coefficients
+are not yet project objects, so the candidate is not a premise and generic success is not RH
+progress. Public preregistration CI is required before proof-source editing; persistent RH Goal
+active.

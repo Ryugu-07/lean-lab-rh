@@ -6,7 +6,7 @@ Campaign: `FALSIFICATION-20260723-H14-FINITE-HEIGHT-PROMOTION-01`
 
 Selected node: `H14-FINITE-HEIGHT-PROMOTION-01`
 
-Status: `EVIDENCE_CI_PASSED / FINAL_LEDGER_REQUIRED`
+Status: `PUBLICLY_CLOSED / GLOBAL_TAIL_OPEN`
 
 Preregistration commit `39ba83974d338cffc563945be9a829d0f73018ba` passed public Lean Action run
 `29962435935`, build job `89066333032`, in `1m54s`. Proof-source editing began only after this
@@ -25,6 +25,10 @@ Immutable-evidence commit `0931f90f08905c0609854788725d151d4ace9632` passed publ
 Action run `29963630200`, build job `89070175938`, in `1m34s`. The registered generic-promotion
 endpoint has reached its local stop. Final-ledger publication and CI precede route reselection;
 actual-zeta global-tail reduction, H14 as a support tool, and RH remain open.
+
+Final-ledger commit `cd67e4ad4f899631b11b8d6a8927c5709e4f9fa3` passed public Lean Action
+run `29963802981`, build job `89070709361`, in `1m57s`. The generic promotion campaign is
+publicly closed; actual-zeta global-tail reduction, H14 as a support tool, and RH remain open.
 
 ## Selection reason
 
