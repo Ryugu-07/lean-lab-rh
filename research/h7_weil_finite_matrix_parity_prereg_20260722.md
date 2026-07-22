@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260722-H7-WEIL-FINITE-MATRIX-PARITY-01`
 
 Mode: `LITERATURE`
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED / EVIDENCE_BACKFILL_PENDING`
+Status: `PUBLICLY_CLOSED / FINAL_LEDGER_CI_PENDING`
 
 ## Baseline and route decision
 
@@ -211,4 +211,8 @@ numerical screening, not a Lean counterexample and not a falsification of source
 - `public_ci`: Lean Action run `29930107842`, build job `88957270851`, passed in `2m26s`.
 - `evidence_state`: the public implementation commit independently rebuilds the exact module,
   target witnesses, axiom audit, aggregate import, and synchronized historical-route records.
-- `next_gate`: immutable evidence-backfill commit and its own public CI; no Lean source changes.
+- `closure_evidence_commit`: `27582dbf6f8c28eae870ed57fea07409f1b3a2d2`.
+- `closure_evidence_ci`: Lean Action run `29930544524`, build job `88958796486`, passed in
+  `1m54s`.
+- `local_stop`: the registered finite checker endpoint is publicly verified. Final-ledger commit
+  and CI close bookkeeping; arithmetic simple-even and the Herglotz inequality remain open.

@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260722-H7-WEIL-FINITE-MATRIX-PARITY-01`
 
 Mode: `LITERATURE`
 
-Status: `PUBLIC_IMPLEMENTATION_VERIFIED / EVIDENCE_BACKFILL_PENDING`
+Status: `PUBLICLY_CLOSED / FINAL_LEDGER_CI_PENDING`
 
 ## Runtime record
 
@@ -41,6 +41,7 @@ certificates without assuming the source's unproved simple-even condition.
 | 4 | `DISCOVERY / FALSIFICATION_SCREEN` | A numerical probe found mixed off-diagonal signs and tested checkerboard positivity of the inverse. High precision rejects the universal inverse-sign conjecture at `(2,8)`, `(3,8)`, `(5,8)`, and `(7,6)`. A source search found four June 2026 S3 preprints already pursuing Perron, Loewner, parity, and Herglotz reductions. | Do not open an original Perron campaign. Register the human scalar Herglotz frontier; numerical failures remain navigation only. |
 | 5 | `INDEPENDENT_LOCAL_AUDIT` | The 556-line module, Targets, nine exact TargetChecks, nine selected standard-only axiom prints, empty forbidden scans, `git diff --check`, and the full 8,738-job build pass. | Classify as a finite certificate interface with no RH or hard-gap delta. Publish implementation and require public CI. |
 | 6 | `PUBLIC_IMPLEMENTATION_CI` | Implementation commit `77ab09b17d371787a8a2d043fd866056de061003` passed Lean Action run `29930107842`, build job `88957270851`, in `2m26s`. | Freeze Lean source. Commit immutable evidence backfills and require their independent CI before closure. |
+| 7 | `PUBLIC_CLOSURE_EVIDENCE` | Evidence commit `27582dbf6f8c28eae870ed57fea07409f1b3a2d2` passed Lean Action run `29930544524`, build job `88958796486`, in `1m54s`. | Stop the finite-checker campaign at its registered success endpoint. Publish the final ledger and require its CI before fresh route selection. |
 
 ## Compiled theorem inventory
 
@@ -83,7 +84,11 @@ pool. It neither proves nor disproves simple-even structure.
 - `obstruction_map_delta`: `1`.
 - `public_implementation`: commit `77ab09b17d371787a8a2d043fd866056de061003`, Lean Action run
   `29930107842`, build job `88957270851`, passed in `2m26s`.
-- `next_gate`: immutable evidence backfill commit and public CI, then final ledger closure.
+- `public_closure_evidence`: commit `27582dbf6f8c28eae870ed57fea07409f1b3a2d2`, Lean Action run
+  `29930544524`, build job `88958796486`, passed in `1m54s`.
+- `local_stop`: yes; the preregistered finite checker is complete. No actual arithmetic
+  simple-even premise is proved.
+- `next_gate`: final ledger commit and public CI, then fresh value-ranked route selection.
 - `next_route_candidate`: `H7-WEIL-GROUNDSTATE-HERGLOTZ-01`, subject to fresh route selection
   after this campaign is publicly closed.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

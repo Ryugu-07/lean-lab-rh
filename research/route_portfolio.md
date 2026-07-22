@@ -2872,3 +2872,8 @@ immutable evidence backfill, and final closure remain before fresh route selecti
 Implementation commit `77ab09b17d371787a8a2d043fd866056de061003` passed public Lean Action run
 `29930107842`, build job `88957270851`, in `2m26s`. Lean source is frozen; immutable evidence
 backfill and its independent public CI are next.
+
+Evidence commit `27582dbf6f8c28eae870ed57fea07409f1b3a2d2` passed public Lean Action run
+`29930544524`, build job `88958796486`, in `1m54s`. The finite-checker campaign stops on its
+registered success endpoint. Final-ledger CI remains; afterwards return to value-ranked route
+selection with the Herglotz child as a candidate, not an automatic continuation.
