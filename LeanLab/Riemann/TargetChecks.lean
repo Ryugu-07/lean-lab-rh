@@ -34,6 +34,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydNormalizedCoordinate
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentLandingJacobian
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydR2JacobianRemainder
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentPuiseuxJump
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryDispersion
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -2777,5 +2778,71 @@ example :
     ‖deBruijnNewmanPolymathBoydAdjacentPrincipalUniformizer (-1) 0‖ =
       2 * Real.sqrt Real.pi :=
   norm_deBruijnNewmanPolymathBoydAdjacentPrincipalUniformizer_neg_one_zero
+
+example : deBruijnNewmanPolymathBoydBoundaryDispersionCertificateStatement :=
+  deBruijnNewmanPolymathBoydBoundaryDispersionCertificate
+
+example {s : ℝ} (hs : 0 < s) :
+    deBruijnNewmanPolymathScaledGammaBoundaryJump ((s : ℂ) * Complex.I) =
+      Real.exp (-2 * Real.pi * s) *
+        deBruijnNewmanPolymathScaledGamma ((s : ℂ) * Complex.I) :=
+  deBruijnNewmanPolymathScaledGammaBoundaryJump_I hs
+
+example {z : ℂ} (hz : z ≠ 0) :
+    deBruijnNewmanPolymathScaledGammaBoundaryJump z =
+      deBruijnNewmanPolymathGammaStirlingR2 z -
+        deBruijnNewmanPolymathScaledGammaInverseR2 (-z) :=
+  deBruijnNewmanPolymathScaledGammaBoundaryJump_eq_remainders hz
+
+example (z : ℂ) :
+    deBruijnNewmanPolymathBoydR2Integral z =
+      deBruijnNewmanPolymathBoydBoundaryJumpProjection z :=
+  deBruijnNewmanPolymathBoydR2Integral_eq_boundaryJumpProjection z
+
+example {z : ℂ} {epsilon R T : ℝ}
+    (hepsilon : 0 < epsilon) (hepsilonz : epsilon < z.re) (hzR : z.re < R)
+    (hbottom : -T < z.im) (htop : z.im < T) :
+    Complex.I * (∫ y : ℝ in -T..T,
+      deBruijnNewmanPolymathBoydR2CauchyWeight
+          (epsilon + y * Complex.I) /
+        (epsilon + y * Complex.I - z)) =
+      -(2 * (Real.pi : ℂ) * Complex.I *
+          deBruijnNewmanPolymathBoydR2CauchyWeight z) +
+        deBruijnNewmanPolymathBoydR2RightEdgeResidual z epsilon R T :=
+  deBruijnNewmanPolymathBoydR2_finite_rightHalfPlane_projection
+    hepsilon hepsilonz hzR hbottom htop
+
+example {z : ℂ} {epsilon R T : ℝ}
+    (hz : 0 < z.re) (hepsilon : 0 < epsilon) (hepsilonR : epsilon < R) :
+    Complex.I * (∫ y : ℝ in -T..T,
+      deBruijnNewmanPolymathBoydInverseR2CauchyWeight
+          (-epsilon + y * Complex.I) /
+        (-epsilon + y * Complex.I - z)) =
+      deBruijnNewmanPolymathBoydInverseR2LeftEdgeResidual z epsilon R T :=
+  deBruijnNewmanPolymathBoydInverseR2_finite_leftHalfPlane_projection
+    hz hepsilon hepsilonR
+
+example {z : ℂ} (hz : 0 < z.re) (n : ℕ) :
+    deBruijnNewmanPolymathBoydFiniteBoundaryProjection z
+        (deBruijnNewmanPolymathBoydBoundaryEpsilon z n)
+        (deBruijnNewmanPolymathBoydBoundaryHeight z n) =
+      deBruijnNewmanPolymathGammaStirlingR2 z -
+        (deBruijnNewmanPolymathBoydR2RightEdgeResidual z
+            (deBruijnNewmanPolymathBoydBoundaryEpsilon z n)
+            (deBruijnNewmanPolymathBoydBoundaryRadius z n)
+            (deBruijnNewmanPolymathBoydBoundaryHeight z n) -
+          deBruijnNewmanPolymathBoydInverseR2LeftEdgeResidual z
+            (deBruijnNewmanPolymathBoydBoundaryEpsilon z n)
+            (deBruijnNewmanPolymathBoydBoundaryRadius z n)
+            (deBruijnNewmanPolymathBoydBoundaryHeight z n)) /
+          (2 * Real.pi * Complex.I * z) :=
+  deBruijnNewmanPolymathBoydFiniteBoundaryProjection_eq_R2_sub_residual hz n
+
+example
+    (hlimits : deBruijnNewmanPolymathBoydBoundaryDispersionLimitCertificate)
+    {z : ℂ} (hz : 0 < z.re) :
+    deBruijnNewmanPolymathGammaStirlingR2 z =
+      deBruijnNewmanPolymathBoydR2Integral z :=
+  deBruijnNewmanPolymathGammaStirlingR2_eq_boyd_of_boundaryDispersionLimits hlimits hz
 
 end LeanLab.Riemann

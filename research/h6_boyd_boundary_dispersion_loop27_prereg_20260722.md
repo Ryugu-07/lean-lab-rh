@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260722-H6-BOYD-BOUNDARY-DISPERSION-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `PREREGISTERED`
+Status: `LOCAL_IMPLEMENTATION_VERIFIED_PUBLIC_IMPLEMENTATION_CI_PENDING`
 
 ## Opening
 
@@ -244,3 +244,30 @@ or prove the right-half-plane statement directly.
 - `model`: Codex, GPT-5 family; exact serving variant and reasoning effort are not exposed.
 - `budget`: V4.1 has no numerical quota; no serving token budget is exposed.
 - `global_goal`: the persistent RH Goal remains active.
+
+## Outcome
+
+- `classification`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`.
+- `success_criterion`: not met. Boyd--Nemes equation `(15)` is not claimed.
+- `minimum_hard_gap_reduction`: met. Lean compiles both exact ray jumps, the exact direct/inverse
+  `R2` split, analytic separation on opposite half-planes, the complete Boyd boundary-jump
+  rewrite, exact finite right/left rectangle projections, and a canonical finite identity with
+  every outer-edge residual named.
+- `aggregate_certificate`:
+  `deBruijnNewmanPolymathBoydBoundaryDispersionCertificate`.
+- `conditional_closure`:
+  `deBruijnNewmanPolymathGammaStirlingR2_eq_boyd_of_boundaryDispersionLimits` proves equation `(15)`
+  from the three clauses of `deBruijnNewmanPolymathBoydBoundaryDispersionLimitCertificate`.
+- `first_remaining_obstruction`: `OBS-H6-BOYD-R2-BOUNDARY-DISPERSION-LIMITS-01`, consisting of the
+  two named outer-edge residual limits and the inner boundary-trace limit. The needed complex
+  second-order Stirling/closed-half-plane control is not in mathlib or current project K0.
+- `mechanical_result`: the 750-line production module, Targets, eight exact TargetChecks, ten
+  selected axiom prints, forbidden scans, `git diff --check`, and full 8,732-job build pass. All
+  selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`.
+- `public_preregistration`: commit `d3d95ed555139112f5826bde32c3bd1a767d499e`, Lean Action run
+  `29884574692`, build job `88812386449`, passed in `1m52s` before source editing.
+- `public_implementation`: pending.
+- `compaction_state_after`: two compaction recoveries occurred in Loop 27; authoritative files were
+  re-read after each.
+- `persistent_goal`: H6-Q1 and the global RH Goal remain active. Local stop returns to value-ranked
+  route selection after the planned one-loop rest.

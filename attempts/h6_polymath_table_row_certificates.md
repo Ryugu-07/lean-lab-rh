@@ -1851,3 +1851,61 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   chart overlaps and boundary-value compatibility; do not infer global continuation from the
   local coefficient-two jump
 - `persistent_goal`: H6-Q1 and the global RH Goal remain active
+
+## Loop 27 Boyd boundary dispersion and finite Cauchy projection
+
+- `campaign`: `PROOF-ATTEMPT-20260722-H6-BOYD-BOUNDARY-DISPERSION-01`
+- `mode`: `PROOF-ATTEMPT`
+- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; local implementation verified, public
+  implementation CI pending
+- `target`: prove Boyd--Nemes equation `(15)` by rewriting its two exponentially weighted scaled-
+  Gamma rays as one boundary jump, splitting that jump across the right and left half-planes, and
+  evaluating the resulting Cauchy projection
+- `material_difference_from_loop26`: Loop 26 attempted to continue inverse-coordinate charts
+  through the first adjacent saddles. Loop 27 bypasses that atlas and instead uses the actual
+  scaled-Gamma reflection product and half-plane analyticity of source-normalized direct and
+  inverse Stirling remainders.
+- `compiled_boundary_chain`: the two exact ray identities
+  `deBruijnNewmanPolymathScaledGammaBoundaryJump_I` and its negative-ray analogue rewrite the Boyd
+  weights as `G(z)-1/G(-z)`. The exact theorem
+  `deBruijnNewmanPolymathScaledGammaBoundaryJump_eq_remainders` then splits this as
+  `R2(z)-inverseR2(-z)`, with the two terms differentiable on their respective open half-planes.
+- `compiled_integral_and_finite_projection`:
+  `deBruijnNewmanPolymathBoydR2Integral_eq_boundaryJumpProjection` fixes the complete imaginary-
+  axis orientation and normalization. A generic local-open-set rectangle Cauchy theorem yields
+  exact right- and left-half-plane finite projections with all horizontal and outer vertical edges
+  explicit. The canonical aggregate
+  `deBruijnNewmanPolymathBoydFiniteBoundaryProjection_eq_R2_sub_residual` leaves exactly two named
+  outer-edge residuals.
+- `compiled_conditional_closure`:
+  `deBruijnNewmanPolymathGammaStirlingR2_eq_boyd_of_boundaryDispersionLimits` proves equation `(15)`
+  from the exact package `deBruijnNewmanPolymathBoydBoundaryDispersionLimitCertificate`: both
+  outer-edge residuals tend to zero and the finite inner projection tends to the registered Boyd
+  jump projection. This package is a proposition, not an assumption or a proved theorem.
+- `new_obstruction`: `OBS-H6-BOYD-R2-BOUNDARY-DISPERSION-LIMITS-01`: prove those two outer-edge
+  decay limits and the inner boundary-trace limit from source-level complex second-order Stirling
+  control. Mathlib has no complex Stirling asymptotic of this strength, and the project's only
+  effective `R2` bound is downstream conditional infrastructure rather than an available premise.
+- `source_alignment`: the inverse remainder is exactly Nemes arXiv `1310.0166`, Section 2,
+  `inverseR_2(z)=1/GammaStar(z)-1+1/(12*z)`; the audited local source SHA-256 is
+  `2ed05322fda9c874cc2f83e67ba1e5e59ef6bb342866eb112be05f943aec34d8`.
+- `assumption_frontier_after`: every boundary-jump, analytic-separation, Boyd-integral rewrite,
+  and finite-rectangle identity above is K0. No edge limit, equation `(15)`, effective `R2`, or
+  Table 1 certificate is assumed.
+- `classification_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`,
+  `route_infrastructure_delta=1`, `obstruction_map_delta=1`
+- `local_mechanical_audit`: 750-line production module, exact proven Target, eight exact
+  TargetChecks, ten selected standard-only axiom prints, empty proof-placeholder and forbidden-
+  declaration scans, `git diff --check`, and the full 8,732-job build pass; selected declarations
+  depend only on `propext`, `Classical.choice`, and `Quot.sound`
+- `public_preregistration`: commit `d3d95ed555139112f5826bde32c3bd1a767d499e`, CI run
+  `29884574692`, build job `88812386449`, passed in `1m52s` before proof-source editing
+- `public_implementation`: pending commit, push, and public Lean Action CI
+- `compaction_state`: two compaction recoveries during Loop 27; the complete canonical frontier
+  was re-read after each before proof or publication work
+- `model`: Codex, GPT-5 family; exact serving variant and reasoning effort not exposed
+- `budget`: no V4.1 numerical quota and no exposed serving token budget
+- `next_route_decision`: locally stop at the exact dispersion-limit obstruction. After the planned
+  one-loop rest, value-rank a source-faithful complex Stirling/closed-half-plane estimate against
+  other open DAG edges; do not promote the limit certificate to a premise.
+- `persistent_goal`: H6-Q1 and the global RH Goal remain active

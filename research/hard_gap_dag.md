@@ -56,7 +56,7 @@ flowchart TD
 | H6-B | complete | Align the Polymath-normalized de Bruijn-Newman heat family at time zero with the project xi. | `deBruijnNewmanH_zero_eq_riemannXi` proves `H_0(z) = (1/8) * riemannXi((1+i*z)/2)` from explicit theta-kernel and Mellin calculations. This is a definition bridge with `hard_gap_delta=0`. |
 | H6-H1 | complete | Prove the exact source family is entire in space for every real time and satisfies the backward heat equation. | `DeBruijnNewmanHeat.lean` proves arbitrary quadratic/linear weighted integrability, differentiation in time and twice in complex space, and `partial_t H_t = -partial_z^2 H_t` on all `R x C`. This is analytic infrastructure with `hard_gap_delta=0`. |
 | H6-H | open globally; H2a-H2f and zero-dynamics interfaces compiled | Formalize the all-real-zero predicate, de Bruijn forward preservation, threshold existence, threshold closedness, strip contraction, and the full Polymath regional-continuation interface for the exact H6-B/H6-H1 family. | The framework reaches the unconditional `t=1/2` witness, arbitrary-base strip contraction, and the complete conditional Polymath three-region criterion. Simple contacts use the regularized divisor force; repeated contacts use compiler-checked backward Hermite splitting and zero transfer. The three unconditional Table 1 region certificates, global enumeration/continuation beyond the criterion, H6-E/G8, and RH remain open. |
-| H6-Q1 | open; selected through Loop 24 local success | Kernel-check the initial, final, and barrier certificates for the second row of Polymath Table 1 and derive `deBruijnNewmanAllZerosReal (1/5)` without hypotheses. | The conditional Polymath consumer, finite-height-RH initial bridge, complete Theorem 1.3 normalization, explicit final-region consumer, equation `(htz)`, fixed principal-power `5*pi/4` line integrability, every positive-integer local residue normalization, exact adjacent and finite `R_(0,0)` shifts, full Titchmarsh `(xio)`, finite equation `(39)`, and both actual-source contour shifts are public K0. Loops 10--16 compile the effective consumer, scaled-Gamma continuation, Boyd majorants, saddle/log coordinates, local complex inverse, global real diffeomorphism, and all integer critical images. Loops 17--23 then compile the generic adjacent-radius obstruction, both adjacent contours and coordinate rays, phase properness, connectedness, branched degree two, and the unconditional global normalized-coordinate homeomorphism with analytic disk inverse. Loop 24 locally compiles the actual inverse phase/Jacobian identities, Cauchy expansion on every smaller disk, both adjacent radial landings, and the unconditional maximal centered radius `2*sqrt(pi)`. The remaining Boyd gap is the inverse-Jacobian adjacent-saddle singular decomposition, contour rotation/Stieltjes representation, and source-exact proof of Boyd--Nemes equation `(15)`; equation `(15)` and effective `R_2` are not premises. Proposition 6.1/6.3, strict finite-sum certificates, finite RH through `3*10^12`, compact barrier winding, H6-E/G8, and RH remain open. External Arb output is navigation evidence only. |
+| H6-Q1 | open; selected through Loop 27 local hard-gap reduction | Kernel-check the initial, final, and barrier certificates for the second row of Polymath Table 1 and derive `deBruijnNewmanAllZerosReal (1/5)` without hypotheses. | The conditional Polymath consumer, finite-height-RH initial bridge, complete Theorem 1.3 normalization, explicit final-region consumer, equation `(htz)`, fixed principal-power `5*pi/4` line integrability, every positive-integer local residue normalization, exact adjacent and finite `R_(0,0)` shifts, full Titchmarsh `(xio)`, finite equation `(39)`, and both actual-source contour shifts are public K0. Loops 10--24 compile the Boyd phase geometry through a global normalized coordinate, adjacent landings, and the maximal centered inverse radius. Loop 25 identifies the actual positive-real inverse-Jacobian remainder and reduces equation `(15)` to one contour equality; Loop 26 compiles the first adjacent Puiseux jumps and records the global chart-stitching barrier. Loop 27 bypasses that atlas: the reflection product gives an exact scaled-Gamma boundary jump, the jump splits into direct and inverse `R_2` on opposite half-planes, and finite Cauchy rectangles reduce equation `(15)` to two explicit outer-edge limits plus one inner boundary-trace limit. Those limits, equation `(15)`, and effective `R_2` are not premises. Proposition 6.1/6.3, strict finite-sum certificates, finite RH through `3*10^12`, compact barrier winding, H6-E/G8, and RH remain open. External Arb output is navigation evidence only. |
 | H6-X | complete first-three finite endpoint | Prove theta-specific Li information for the exact heat family beyond the generic heat PDE. | `DeBruijnNewmanLiMoments.lean` publicly proves the exact first-two moment spine. `DeBruijnNewmanThirdLi.lean` extends it through `F_t'''(1)=64D`, `B*C<=A*D`, the exact third Li formula, and strict positive-real `liCoefficientCandidate 2`; implementation commit `1b521686d4e8561f01ba98a6ceaa4905ced4d92f` passed public CI run `29545583372`. This is finite-index route infrastructure with `hard_gap_delta=0`; no all-index extrapolation is made. |
 | H6-X3 | complete public | Prove the actual-theta ordered covariance and third Li sign. | The one-integral monotone covariance certificate gives `B*C<=A*D`; together with `B^2<=A*C` and `liCoefficientCandidate_zero_re_lt_one`, Lean proves `0 < (liCoefficientCandidate 2).re` and zero imaginary part. Implementation `1b521686d4e8561f01ba98a6ceaa4905ced4d92f` and evidence `abf5ebf19e3636662a45eed7a5eff9e947c3c3b4` passed public CI. The exact aggregate is `deBruijnNewmanHeat_thirdLi_covariance_endpoint`; this does not reduce H6-E/G8. |
 | H6-E | open | Prove all zeros of `H_0` are real, equivalently `Lambda <= 0` in the audited normalization. | The generic adjacent-gap and positive-kernel/Hankel routes are obstructed. The actual-theta heat-Li time-monotonicity candidate survived high-precision finite screening, and Lean compiles its exact reduction to RH plus the function-level heat-log evolution, but no all-index sign representation or global moving-divisor differentiation theorem was obtained. A new attack must supply that theta-specific input, height-aware continuation, or a different all-index invariant. The endpoint is unchanged. |
@@ -733,3 +733,37 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   each before continuing.
 - `still_open`: `OBS-H6-BOYD-R2-GLOBAL-CUT-STITCHING-01`, parent positive-real contour equality,
   equation `(15)`, effective `R2`, unconditional Table 1 certificates, H6-E/G8, and RH.
+
+## 2026-07-22 H6-Q1 Loop 27 local outcome
+
+- `H6-Q1`: open; the boundary-dispersion and finite Cauchy-projection subedge is proven locally.
+- `K0-H6-BOYD-R2-BOUNDARY-JUMP-01`: on both imaginary rays, the actual reflection product rewrites
+  `exp(-2*pi*s)*GammaStar(+/-i*s)` as the exact jump `GammaStar(z)-1/GammaStar(-z)`. For nonzero
+  `z`, that jump is exactly the direct `R2(z)` minus reflected source-normalized `inverseR2(-z)`;
+  the two pieces are differentiable on opposite open half-planes.
+- `K0-H6-BOYD-R2-FINITE-DISPERSION-01`: the complete Boyd `N=2` integral equals the registered
+  boundary-jump projection. Exact right- and left-half-plane rectangle identities expose every
+  horizontal and outer vertical edge, and the canonical finite projection equals `R2(z)` minus
+  the difference of two named outer-edge residuals divided by `2*pi*i*z`.
+- `K0-H6-BOYD-R2-DISPERSION-CONDITIONAL-CLOSURE-01`: the exact three-part limit certificate implies
+  Boyd--Nemes equation `(15)` for every `Re z>0`. The certificate itself is not proved or assumed.
+- `OBS-H6-BOYD-R2-BOUNDARY-DISPERSION-LIMITS-01`: prove the right `R2` outer-edge residual tends to
+  zero, prove the reflected inverse-`R2` left residual tends to zero, and identify the inner
+  vertical limit with the Boyd jump projection. This requires a source-level complex second-order
+  Stirling/closed-half-plane bound or an equivalent boundary theorem absent from current K0.
+- `relation_to_loop26_obstruction`: this is a materially different child attack on equation `(15)`.
+  It bypasses the adjacent inverse-chart atlas and therefore does not close or assume
+  `OBS-H6-BOYD-R2-GLOBAL-CUT-STITCHING-01`; both routes now expose independent exact analytic
+  endpoints.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=1`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`.
+- `local_audit`: 750-line module, eight exact TargetChecks, ten selected standard-only axiom
+  prints, empty placeholder/forbidden-declaration scans, `git diff --check`, and the full
+  8,732-job build pass.
+- `public_preregistration`: commit `d3d95ed555139112f5826bde32c3bd1a767d499e`, CI run
+  `29884574692`, build job `88812386449`, passed in `1m52s` before proof-source editing.
+- `public_implementation`: pending commit, push, and public Lean Action CI.
+- `compaction_state`: two compaction recoveries; all canonical frontier files were re-read after
+  each before continuing.
+- `still_open`: both exact Boyd route obstructions, equation `(15)`, effective `R2`, unconditional
+  Table 1 certificates, H6-E/G8, and RH.

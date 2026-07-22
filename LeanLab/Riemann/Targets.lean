@@ -33,6 +33,7 @@ import LeanLab.Riemann.DeBruijnNewmanPolymathBoydNormalizedCoordinate
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentLandingJacobian
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydR2JacobianRemainder
 import LeanLab.Riemann.DeBruijnNewmanPolymathBoydAdjacentPuiseuxJump
+import LeanLab.Riemann.DeBruijnNewmanPolymathBoydBoundaryDispersion
 import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
@@ -1014,7 +1015,7 @@ def rhTargets : List ResearchTarget :=
       statement :=
         "For every complex z with positive real part, prove that the project's actual second scaled-Gamma Stirling remainder equals the source-exact two-ray Boyd--Nemes integral expression."
       status := .inProgress
-      note := "Loop 25 proves the actual R2 is exactly the normalized Gaussian integral of the real inverse-Jacobian remainder after subtracting the mechanically certified Taylor polynomial 1-w/3+w^2/12. It proves both Boyd ray integrals and the actual R2 holomorphic on Re z>0, and compiles an iff reducing all of equation (15) to one exact positive-real contour equality, also expressed as a one-ray real scalar identity. The remaining theorem must analytically continue the inverse Jacobian beyond its first-saddle disk to the appropriate cut plane and compute its two adjacent-saddle jumps, or reconstruct the same equality from a source-faithful Binet formula. Neither statement is assumed; equation (15) remains open." },
+      note := "Loop 25 proves the actual R2 is exactly the normalized Gaussian integral of the real inverse-Jacobian remainder and reduces equation (15) to one positive-real contour equality. Loop 27 gives a second direct reduction: the reflection product rewrites both exponential Gamma rays as a boundary jump, the jump splits into R2 and reflected inverse-R2 on opposite half-planes, and finite Cauchy rectangles reduce the equation to two explicit outer-edge decay limits plus one inner boundary-trace limit. None of those three limits is assumed. Equation (15) remains open at OBS-H6-BOYD-R2-BOUNDARY-DISPERSION-LIMITS-01; effective R2, Table 1, H6-E/G8, and RH remain open." },
     { id := "H6.debruijn-newman.boyd-r2-jacobian-reduction"
       tier := .tier2
       title := "Reduce Boyd equation (15) to one positive-real Jacobian contour equality"
@@ -1031,6 +1032,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``deBruijnNewmanPolymathBoydAdjacentPuiseuxJumpCertificate
       status := .proven
       note := "Loop 26 hard-gap reduction. Lean translates the actual disk inverse to both adjacent saddles, proves the two analytic Puiseux sheets solve the same translated phase equation, computes their exact chain-rule phase-Jacobians and jump, and proves eta times the jump tends to 2. The actual upper and lower radial branches generate uniformizers that enter the disk, tend to zero, remain nonzero before landing, and select the positive sheets without an arbitrary square-root sign. A principal slit-plane coordinate chart is analytic and solves the original w^2/2 phase equation, but its uniformizer already meets the first disk boundary at w=0. Thus equation (15) remains open: the next obstruction is a multi-chart or exterior inverse continuation with certified cut boundary values, unbounded contour homology, and decay. Classification HARD_GAP_REDUCED; effective R2, Table 1, H6-E/G8, and RH remain open." },
+    { id := "H6.debruijn-newman.boyd-boundary-dispersion"
+      tier := .tier2
+      title := "Reduce Boyd equation (15) to two-half-plane boundary dispersion limits"
+      statement :=
+        "Rewrite both exponentially weighted Boyd rays as the scaled-Gamma reflection jump, split that jump into R2 and the reflected inverse-R2 on opposite half-planes, prove exact finite rectangular Cauchy projections with every outer edge explicit, and reduce equation (15) to the two edge-decay limits and the inner boundary-trace limit."
+      leanName := some ``deBruijnNewmanPolymathBoydBoundaryDispersionCertificate
+      status := .proven
+      note := "Loop 27 meaningful hard-gap reduction. Lean proves exp(-2*pi*s)GammaStar(+/- i*s) is exactly GammaStar(z)-1/GammaStar(-z), defines the source-aligned inverse R2, and proves the jump is R2(z)-inverseR2(-z). It proves analytic separation on the two open half-planes and rewrites the complete source Boyd integral as that jump projection. A new local-open-set rectangular Cauchy theorem yields exact finite right and left projections; a canonical rectangle family then leaves only two named outer-edge residuals. The compiled limit certificate consists of those two residuals tending to zero and the inner vertical projection tending to the Boyd jump integral, and Lean proves that certificate implies equation (15). The certificate itself is not proved: mathlib has no complex second-order Stirling asymptotic, and the project R2 bound is downstream rather than an available premise. Classification HARD_GAP_REDUCED; equation (15), effective R2, Table 1, H6-E/G8, and RH remain open." },
     { id := "H6.debruijn-newman.boyd-positive-real-saddle-integral"
       tier := .tier2
       title := "Derive the positive-real scaled-Gamma saddle integral"
