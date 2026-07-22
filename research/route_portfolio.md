@@ -2891,3 +2891,23 @@ The fixed endpoint is the finite rank-one iff
 consumer into `WeilFiniteParityRayleighCertificate`. The arithmetic scalar inequality, continuum
 Perron theorem, and Herglotz spectral claims remain outside the premise set. Public preregistration
 CI is required before proof-source editing.
+
+## H7 Finite Herglotz Criterion Local Outcome
+
+The fixed finite endpoint compiles. `WeilGroundStateHerglotz.lean` proves the exact
+completion-of-squares identity and the iff between strict positivity of `P-2*S*S^T` on nonzero
+odd vectors and `2*(S dot u)<1`. A source-aligned certificate consumes this scalar condition and
+constructs the previous parity Rayleigh certificate and finite simple-even ground-state endpoint.
+
+Formalization also removes one unnecessary generic assumption: `S` itself need not be odd in the
+rank-one iff. Oddness of `u` is enough because the reverse implication tests
+`y-2*(S dot y)*u`. The source-facing certificate still records `odd_S`; the arithmetic bound is
+not proved, so the hard gap does not move.
+
+Classification is `PROVED / KNOWN_FINITE_LINEAR_ALGEBRA_FORMALIZED /
+SOURCE_ASSUMPTION_WEAKENED / FINITE_CERTIFICATE_CONSUMER`, with `rh_frontier_delta=0`,
+`hard_gap_delta=0`, `route_infrastructure_delta=1`, `obstruction_map_delta=1`, and
+`source_assumption_weakening_delta=1`. Six exact TargetChecks, six selected standard-only axiom
+prints, the forbidden scan, `git diff --check`, and the full 8,739-job build pass. Public
+implementation CI is next; the arithmetic scalar inequality and the historical H7 limit chain
+remain open.

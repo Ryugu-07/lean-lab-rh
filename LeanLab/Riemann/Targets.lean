@@ -73,6 +73,7 @@ import LeanLab.Riemann.WeilCompactLaplaceArithmeticFormula
 import LeanLab.Riemann.WeilCompactPositivityCriterion
 import LeanLab.Riemann.WeilGroundStateAlignment
 import LeanLab.Riemann.WeilGroundStateFiniteMatrix
+import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -1302,6 +1303,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``weilFiniteDividedDifferenceMatrix_evenSimple_of_parityRayleigh
       status := .proven
       note := "Campaign LITERATURE-20260722-H7-WEIL-FINITE-MATRIX-PARITY-01 formalizes the exact finite source matrix and a theorem-producing target for later exact or interval certificates. The endpoint is conditional on two strict block inequalities; it does not assert them for the arithmetic Weil matrix, prove uniformity in Galerkin size or prime cutoff, compare the true ground state with k_lambda, or prove RH. Classification is source spectral-interface infrastructure with rh_frontier_delta=0." },
+    { id := "H7.weil-ground-state.finite-herglotz-rank-one-criterion"
+      tier := .tier2
+      title := "Formalize the finite odd-sector Herglotz criterion"
+      statement :=
+        "For a symmetric pole-free matrix P with P*u=S and strict positivity on nonzero odd vectors, prove that the rank-one update P-2*S*S^T is strictly positive on nonzero odd vectors exactly when 2*(S dot u)<1, and feed this condition into the finite simple-even ground-state certificate."
+      leanName := some ``weilFiniteOddRankOneStrict_iff_resolvent
+      status := .proven
+      note := "Campaign LITERATURE-20260722-H7-WEIL-HERGLOTZ-CRITERION-01 kernel-checks the exact finite completion-of-squares reduction. The generic iff does not need the source assumption that S is odd; oddness of the resolvent vector u suffices. The source-aligned certificate retains odd_S, while the arithmetic scalar inequality, uniformity in both cutoffs, the true ground-state limit, and RH remain open. Classification is known finite linear-algebra infrastructure with rh_frontier_delta=0." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

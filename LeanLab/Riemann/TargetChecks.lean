@@ -70,6 +70,7 @@ import LeanLab.Riemann.WeilCompactLaplaceZeroCutoff
 import LeanLab.Riemann.WeilCompactLaplaceArithmeticFormula
 import LeanLab.Riemann.WeilGroundStateAlignment
 import LeanLab.Riemann.WeilGroundStateFiniteMatrix
+import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -3179,5 +3180,63 @@ example {N : ℕ} (a b : Fin (2 * N + 1) → ℝ)
     WeilFiniteEvenSimpleGroundState
       (weilFiniteDividedDifferenceMatrix N a b) mu xi :=
   weilFiniteDividedDifferenceMatrix_evenSimple_of_parityRayleigh a b ha hb h
+
+example {N : ℕ}
+    (P : Matrix (Fin (2 * N + 1)) (Fin (2 * N + 1)) ℝ)
+    (S u y : Fin (2 * N + 1) → ℝ)
+    (hPT : Pᵀ = P) (hPu : P *ᵥ u = S) :
+    y ⬝ᵥ (weilFiniteRankOneDeflation P S *ᵥ y) =
+      (y - (2 * (S ⬝ᵥ y)) • u) ⬝ᵥ
+          (P *ᵥ (y - (2 * (S ⬝ᵥ y)) • u)) +
+        2 * (S ⬝ᵥ y) ^ 2 * (1 - 2 * (S ⬝ᵥ u)) :=
+  weilFiniteRankOneDeflectionQuadratic P S u y hPT hPu
+
+example {N : ℕ}
+    (P : Matrix (Fin (2 * N + 1)) (Fin (2 * N + 1)) ℝ)
+    (S u : Fin (2 * N + 1) → ℝ)
+    (hPT : Pᵀ = P) (hSne : S ≠ 0)
+    (huodd : WeilFiniteIsOdd u) (hPu : P *ᵥ u = S)
+    (hPodd : ∀ y, WeilFiniteIsOdd y → y ≠ 0 → 0 < y ⬝ᵥ (P *ᵥ y)) :
+    (∀ y, WeilFiniteIsOdd y → y ≠ 0 →
+        0 < y ⬝ᵥ (weilFiniteRankOneDeflation P S *ᵥ y)) ↔
+      2 * (S ⬝ᵥ u) < 1 :=
+  weilFiniteOddRankOneStrict_iff_resolvent P S u hPT hSne huodd hPu hPodd
+
+example {N : ℕ}
+    (P : Matrix (Fin (2 * N + 1)) (Fin (2 * N + 1)) ℝ)
+    (S u : Fin (2 * N + 1) → ℝ)
+    (hPT : Pᵀ = P) (hSne : S ≠ 0)
+    (huodd : WeilFiniteIsOdd u) (hPu : P *ᵥ u = S)
+    (hPodd : ∀ y, WeilFiniteIsOdd y → y ≠ 0 → 0 < y ⬝ᵥ (P *ᵥ y))
+    (hstrict : ∀ y, WeilFiniteIsOdd y → y ≠ 0 →
+      0 < y ⬝ᵥ (weilFiniteRankOneDeflation P S *ᵥ y)) :
+    2 * (S ⬝ᵥ u) < 1 :=
+  (weilFiniteOddRankOneStrict_iff_resolvent P S u hPT hSne huodd hPu hPodd).mp hstrict
+
+example {N : ℕ}
+    (P : Matrix (Fin (2 * N + 1)) (Fin (2 * N + 1)) ℝ)
+    (S u : Fin (2 * N + 1) → ℝ)
+    (hPT : Pᵀ = P) (hSne : S ≠ 0)
+    (huodd : WeilFiniteIsOdd u) (hPu : P *ᵥ u = S)
+    (hPodd : ∀ y, WeilFiniteIsOdd y → y ≠ 0 → 0 < y ⬝ᵥ (P *ᵥ y))
+    (hscalar : 2 * (S ⬝ᵥ u) < 1) :
+    ∀ y, WeilFiniteIsOdd y → y ≠ 0 →
+      0 < y ⬝ᵥ (weilFiniteRankOneDeflation P S *ᵥ y) :=
+  (weilFiniteOddRankOneStrict_iff_resolvent P S u hPT hSne huodd hPu hPodd).mpr hscalar
+
+example {N : ℕ}
+    {A P : Matrix (Fin (2 * N + 1)) (Fin (2 * N + 1)) ℝ}
+    {mu : ℝ} {xi S u : Fin (2 * N + 1) → ℝ}
+    (h : WeilFiniteOddHerglotzCertificate A P mu xi S u) :
+    WeilFiniteParityRayleighCertificate A mu xi :=
+  h.parityRayleighCertificate
+
+example {N : ℕ}
+    {A P : Matrix (Fin (2 * N + 1)) (Fin (2 * N + 1)) ℝ}
+    {mu : ℝ} {xi S u : Fin (2 * N + 1) → ℝ}
+    (h : WeilFiniteOddHerglotzCertificate A P mu xi S u)
+    (hAT : Aᵀ = A) (hAR : ∀ i j, A i.rev j.rev = A i j) :
+    WeilFiniteEvenSimpleGroundState A mu xi :=
+  h.evenSimpleGroundState hAT hAR
 
 end LeanLab.Riemann

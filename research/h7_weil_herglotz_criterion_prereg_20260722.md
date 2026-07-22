@@ -6,13 +6,16 @@ Campaign: `LITERATURE-20260722-H7-WEIL-HERGLOTZ-CRITERION-01`
 
 Mode: `LITERATURE`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_ENDPOINT_PROVED / PUBLIC_IMPLEMENTATION_CI_PENDING`
 
 ## Baseline and value-ranked route decision
 
 - `parent_commit`: `c5ba3ab66e9a61446da7ad43d3a1d3786efd220d`.
 - `baseline_public_ci`: Lean Action run `29930876406`, build job `88959943824`, passed in
   `1m45s`.
+- `preregistration_commit`: `47d6adb4d8f25bf3d631cd449159a98eb1b94c20`.
+- `preregistration_public_ci`: Lean Action run `29931671154`, build job `88962703883`, passed in
+  `1m55s` before proof-source implementation began.
 - `previous_campaign`: `LITERATURE-20260722-H7-WEIL-FINITE-MATRIX-PARITY-01` publicly compiled
   the exact finite divided-difference matrix and a strict two-block Rayleigh certificate. It did
   not prove either strict block inequality for an arithmetic Weil matrix.
@@ -134,8 +137,9 @@ endpoint receive TargetChecks. Selected declarations receive `#print axioms` ent
 - `model`: Codex, GPT-5 family; exact serving variant is not exposed.
 - `reasoning_effort`: not exposed.
 - `budget`: V4.1 has no numerical quota; no serving token budget is exposed.
-- `compaction_state`: two inherited recoveries occurred in the parent campaign; no compaction in
-  this route-selection step.
+- `compaction_state`: one inherited recovery occurred during implementation; the canonical
+  governance, frontier, current campaign files, complete source, external ACTIVE ledger, and git
+  status were re-read before proof work resumed.
 - `protected_files`: the six inherited user/exposure files remain untouched and unstaged.
 
 ## Publication gate
@@ -143,3 +147,29 @@ endpoint receive TargetChecks. Selected declarations receive `#print axioms` ent
 Commit only this preregistration and synchronized research ledgers first. Public Lean Action CI
 must pass before `WeilGroundStateHerglotz.lean`, Targets, TargetChecks, AxiomsAudit, or aggregate
 imports are edited.
+
+## Local outcome
+
+- `result`: `PROVED / KNOWN_FINITE_LINEAR_ALGEBRA_FORMALIZED /
+  SOURCE_ASSUMPTION_WEAKENED / FINITE_CERTIFICATE_CONSUMER`.
+- `compiled_identity`: `weilFiniteRankOneDeflectionQuadratic` proves the registered completion of
+  squares exactly for the source sign and coefficient `2`.
+- `compiled_iff`: `weilFiniteOddRankOneStrict_iff_resolvent` proves both directions of the strict
+  odd-sector rank-one criterion, using `u` in the forward direction and the registered zero/nonzero
+  split for `y-2*(S dot y)*u` in the reverse direction.
+- `assumption_weakening`: the generic iff does not require `S` to be reflection-odd. The proof only
+  needs `u` odd in order to keep the shifted test vector odd. The source-aligned certificate retains
+  `odd_S`; this weakening does not prove the arithmetic scalar inequality.
+- `compiled_consumer`: `WeilFiniteOddHerglotzCertificate.parityRayleighCertificate` constructs the
+  previous finite parity certificate, and `.evenSimpleGroundState` reaches the registered
+  simple-even endpoint under the original matrix symmetry/reflection assumptions.
+- `mechanical_gate`: the 171-line production module, Targets, six exact TargetChecks, and six
+  selected axiom prints compile. The selected declarations depend only on `propext`,
+  `Classical.choice`, and `Quot.sound`; the production-module forbidden scan and
+  `git diff --check` are empty; the full build passes with 8,739 jobs.
+- `classification_boundary`: no arithmetic `2*(S dot u)<1` theorem, uniform spectral gap,
+  ground-state-to-`k_lambda` comparison, or RH theorem is claimed.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`, `source_assumption_weakening_delta=1`.
+- `next_gate`: publish the implementation commit and require public Lean Action CI before any
+  evidence backfill or route selection.

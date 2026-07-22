@@ -63,6 +63,7 @@ import LeanLab.Riemann.WeilCompactLaplaceZeroCutoff
 import LeanLab.Riemann.WeilCompactLaplaceArithmeticFormula
 import LeanLab.Riemann.WeilCompactPositivityCriterion
 import LeanLab.Riemann.WeilGroundStateFiniteMatrix
+import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit

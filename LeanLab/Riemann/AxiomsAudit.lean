@@ -75,6 +75,7 @@ import LeanLab.Riemann.WeilCompactLaplaceArithmeticFormula
 import LeanLab.Riemann.WeilCompactPositivityCriterion
 import LeanLab.Riemann.WeilGroundStateAlignment
 import LeanLab.Riemann.WeilGroundStateFiniteMatrix
+import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -776,3 +777,9 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.WeilFiniteParityRayleighCertificate.defect_nonneg_and_eq_smul
 #print axioms LeanLab.Riemann.WeilFiniteParityRayleighCertificate.evenSimpleGroundState
 #print axioms LeanLab.Riemann.weilFiniteDividedDifferenceMatrix_evenSimple_of_parityRayleigh
+#print axioms LeanLab.Riemann.weilFiniteRankOneDeflation_mulVec
+#print axioms LeanLab.Riemann.weilFiniteRankOneDeflectionQuadratic
+#print axioms LeanLab.Riemann.weilFiniteOddRankOneStrict_iff_resolvent
+#print axioms LeanLab.Riemann.WeilFiniteOddHerglotzCertificate.strict_odd
+#print axioms LeanLab.Riemann.WeilFiniteOddHerglotzCertificate.parityRayleighCertificate
+#print axioms LeanLab.Riemann.WeilFiniteOddHerglotzCertificate.evenSimpleGroundState

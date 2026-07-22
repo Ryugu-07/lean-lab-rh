@@ -1084,3 +1084,24 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
 - `still_open`: the actual scalar arithmetic inequality, uniform simple-even structure, the true
   ground-state limit, and RH.
 - `global_goal`: active; preregistration public CI precedes every Lean proof-source edit.
+
+## 2026-07-22 H7 finite Herglotz criterion local outcome
+
+- `K0-H7-WEIL-GROUNDSTATE-HERGLOTZ-RANK-ONE-01`: locally closed. The exact finite completion of
+  squares and strict odd-sector positivity iff compile for `P-2*S*S^T` under `P*u=S` and pole-free
+  odd positivity.
+- `K0-H7-WEIL-GROUNDSTATE-HERGLOTZ-CONSUMER-01`: locally closed. The scalar condition constructs
+  `WeilFiniteParityRayleighCertificate` and the previous finite simple-even endpoint.
+- `WEAKENED-H7-HERGLOTZ-S-ODD-01`: the generic iff does not require `S` odd; `u` odd is sufficient
+  for the subspace argument. The source certificate retains `odd_S`, so this is a genuine generic
+  hypothesis weakening but not a closure of the arithmetic edge.
+- `OBS-H7-WEIL-GROUNDSTATE-HERGLOTZ-UNIFORM-01`: remains open and is now isolated exactly as the
+  arithmetic theorem `2*(S dot u)<1` for the source matrices, uniformly in the relevant cutoffs.
+- `still_open`: source operator/Perron alignment beyond the finite certificate, the arithmetic
+  scalar inequality, uniform simple-even structure, actual ground-state-to-`k_lambda` comparison,
+  and RH.
+- `deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_infrastructure_delta=1`,
+  `obstruction_map_delta=1`, `source_assumption_weakening_delta=1`.
+- `local_audit`: 171-line production module, six exact TargetChecks, six standard-only axiom
+  prints, empty forbidden scan, `git diff --check`, and full 8,739-job build.
+- `global_goal`: active; public implementation CI is the next gate.
