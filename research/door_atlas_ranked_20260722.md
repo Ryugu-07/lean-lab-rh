@@ -4,7 +4,7 @@ Date: 2026-07-22
 
 Campaign: `LITERATURE-20260722-HISTORICAL-DOOR-SURVEY-01`
 
-Status: `ATLAS_COMPLETE / H8_FALSIFICATION_CLOSED / D9_SUZUKI_AUDIT_LOCAL_COMPLETE`
+Status: `ATLAS_COMPLETE / D9_SUZUKI_AUDIT_CLOSED / H10_INFINITE_TRACE_AUDIT_PREREGISTERED`
 
 ## Claim boundary
 
@@ -463,6 +463,19 @@ Formalization fit: `2/5` for geometry, `5/5` for finite spectral rigidity. Machi
    an artificial sparse off-line orbit.
 2. Test whether semilocal D6 trace truncations satisfy the extension's uniform-tail hypotheses.
 3. Formalize further function-field geometry only after a number-field consumer is named.
+
+### Post-survey H10 infinite-trace audit
+
+The first discriminating probe is now selected as
+`FALSIFICATION-20260723-H10-INFINITE-RECIPROCAL-TRACE-01`. It tests the literal transfer of a
+finite Frobenius power trace to a countably infinite ordinary `Summable` trace while retaining a
+nonzero constant reciprocal pairing. Summability of one positive power and its permutation
+reindexing should force both factors to zero, contradicting the constant paired product.
+
+This proposed obstruction is generic. It does not apply to a regularized or distributional trace,
+does not represent actual zeta zeros, and does not rule out Hilbert-Polya or Connes-type spectral
+constructions. Its purpose is to prove that ordinary unregularized power sums cannot be silently
+carried across the finite-to-infinite boundary.
 
 ## D8. Laguerre-Polya class and Jensen polynomials
 

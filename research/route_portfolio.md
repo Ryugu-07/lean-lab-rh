@@ -3194,3 +3194,22 @@ Action run `29954848710`, build job `89041187831`, in `1m32s`. The local campaig
 registered generic interpretation endpoints; proof source remains frozen. Final-ledger CI is the
 last publication gate before fresh cross-family selection. This stop does not close D9: the actual
 canonical-system limit, a meromorphic repair, and RH remain open.
+
+Final-ledger commit `276282262f033aeb3f106e7eb66180a92b23ec4d` passed public Lean Action run
+`29955117117`, build job `89042095525`, in `2m2s`. The generic D9 audit is fully publicly closed;
+the actual Suzuki canonical-system limit, a meromorphic repair, and RH remain open.
+
+## H10 Infinite Reciprocal-Trace Transfer Launch
+
+Fresh historical breadth selection moves to the function-field analogy. The project already
+compiles the finite Frobenius-style power-sum rigidity step, but it has not tested whether the same
+ordinary trace language survives a countably infinite spectrum. The literal transfer would combine
+ordinary summability of `alpha(n)^k` with a nonzero constant reciprocal pairing
+`alpha(sigma(n))*alpha(n)=q`.
+
+Campaign `FALSIFICATION-20260723-H10-INFINITE-RECIPROCAL-TRACE-01` preregisters the exact generic
+test. Summability and permutation reindexing should force both positive-power sequences to tend to
+zero, while reciprocal pairing makes their product the constant `q^k`. A compiled contradiction
+would show only that the ordinary unregularized trace cannot be transferred literally. It would
+leave regularized/distributional trace formulae, actual zeta spectral constructions, and RH open.
+Public preregistration CI is required before proof-source editing; persistent RH Goal active.

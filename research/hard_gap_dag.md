@@ -61,6 +61,7 @@ flowchart TD
 | H6-X3 | complete public | Prove the actual-theta ordered covariance and third Li sign. | The one-integral monotone covariance certificate gives `B*C<=A*D`; together with `B^2<=A*C` and `liCoefficientCandidate_zero_re_lt_one`, Lean proves `0 < (liCoefficientCandidate 2).re` and zero imaginary part. Implementation `1b521686d4e8561f01ba98a6ceaa4905ced4d92f` and evidence `abf5ebf19e3636662a45eed7a5eff9e947c3c3b4` passed public CI. The exact aggregate is `deBruijnNewmanHeat_thirdLi_covariance_endpoint`; this does not reduce H6-E/G8. |
 | H6-E | open | Prove all zeros of `H_0` are real, equivalently `Lambda <= 0` in the audited normalization. | The generic adjacent-gap and positive-kernel/Hankel routes are obstructed. The actual-theta heat-Li time-monotonicity candidate survived high-precision finite screening, and Lean compiles its exact reduction to RH plus the function-level heat-log evolution, but no all-index sign representation or global moving-divisor differentiation theorem was obtained. A new attack must supply that theta-specific input, height-aware continuation, or a different all-index invariant. The endpoint is unchanged. |
 | H10-B | complete | Prove finite aggregate power-sum spectral rigidity and the reciprocal-pairing square-root-circle corollary. | The final finite-spectral step of function-field RH is publicly compiled. It proves no curve point-count bound and supplies no finite-spectrum or uniform-tail transfer for the Riemann zeta zero divisor; `hard_gap_delta=0`. |
+| H10-C | preregistered | Test a countably infinite ordinary power-trace extension with nonzero reciprocal pairing. | Campaign `FALSIFICATION-20260723-H10-INFINITE-RECIPROCAL-TRACE-01` asks whether `Summable (alpha^k)` for any positive `k` can coexist with `alpha(sigma n)*alpha(n)=q != 0`. Public preregistration CI is required before Lean proof-source editing. |
 
 ## Hard Gaps
 
@@ -1318,3 +1319,18 @@ If all hard gaps are unchanged, the loop result is at most `FORMALIZATION_ONLY`.
   `29954848710`, job `89041187831`, in `1m32s`. The two generic audit nodes are publicly closed at
   their fixed endpoints; final-ledger CI remains. `D9-C-SUZUKI-ACTUAL-XI-LIMIT-01` remains open.
   `rh_frontier_delta=0`; persistent RH Goal active.
+
+## 2026-07-23 D9 closure and H10 infinite ordinary-trace launch
+
+- `D9-A/B-SUZUKI-GENERIC-AUDIT`: final-ledger commit
+  `276282262f033aeb3f106e7eb66180a92b23ec4d` passed Lean Action run `29955117117`, build job
+  `89042095525`, in `2m2s`. The generic normalization and finite-extension tests are publicly
+  closed; `D9-C-SUZUKI-ACTUAL-XI-LIMIT-01` and RH remain open.
+- `H10-C-INFINITE-ORDINARY-TRACE-01`: `PREREGISTERED / FALSIFICATION`. Test whether ordinary
+  summability of any positive power can coexist with a nonzero constant reciprocal pairing under
+  a permutation of a countably infinite spectrum.
+- `H10-D-REGULARIZED-NUMBER-FIELD-TRACE-01`: `OPEN / RH_STRENGTH`. Construct a source-valid
+  regularized or distributional trace, identify its spectral object and prime/archimedean sides,
+  and prove the uniform tail or positivity theorem needed to locate every zeta zero.
+- `claim_boundary`: the H10-C audit does not represent zeta zeros and cannot refute regularized
+  trace approaches. `rh_frontier_delta=0`; persistent RH Goal active.
