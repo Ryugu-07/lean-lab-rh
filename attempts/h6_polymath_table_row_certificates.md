@@ -2032,8 +2032,7 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
 
 - `campaign`: `PROOF-ATTEMPT-20260722-H6-BOYD-BOUNDARY-TRACE-NEAR-ZERO-01`
 - `mode`: `PROOF-ATTEMPT`
-- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; public implementation verified, closure
-  evidence CI pending
+- `result`: `MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`; publicly closed, final ledger CI pending
 - `target`: prove the complete canonical trace discrepancy limit by first removing the actual
   scaled-Gamma singularity at the boundary origin, eliminating the canonical near residual, and
   reducing the trace exactly to the shifted tail alone
@@ -2087,6 +2086,8 @@ No Lean proof source may be edited for Loop 2 before this preregistration passes
   `29891398740`, build job `88832391759`, passed in `2m9s` before proof-source editing
 - `public_implementation`: commit `0abfc639e17512316ba2468fbda7f6e84388210e`, CI run
   `29892793629`, build job `88836454324`, passed in `2m29s`
+- `public_closure`: evidence commit `f7bea1f2d721e085fd901e5cef7cdd6d5e1b3b78`, CI run
+  `29892965990`, build job `88836961122`, passed in `1m39s`
 - `compaction_state`: one inherited compaction during the joint-continuity proof; current
   governance, HANDOFF, relevant Targets/TargetChecks, the Loop29 outcome, hard-gap DAG, complete
   Loop30 preregistration and source, AxiomsAudit tail, external ledger, and git status were re-read

@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260722-H6-BOYD-BOUNDARY-TRACE-NEAR-ZERO-01`
 
 Mode: `PROOF-ATTEMPT`
 
-Status: `LOCALLY_VERIFIED / MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`
+Status: `PUBLICLY_CLOSED / MEANINGFUL_PARTIAL / HARD_GAP_REDUCED`
 
 ## Opening
 
@@ -244,4 +244,6 @@ Targets, eight exact TargetChecks, nine selected standard-only axiom prints, thr
 scans, `git diff --check`, and the full 8,735-job build pass. Every selected declaration depends
 only on `propext`, `Classical.choice`, and `Quot.sound`. Implementation commit
 `0abfc639e17512316ba2468fbda7f6e84388210e` passed public Lean Action run `29892793629`, build job
-`88836454324`, in `2m29s`. Closure evidence is pending.
+`88836454324`, in `2m29s`. Closure-evidence commit
+`f7bea1f2d721e085fd901e5cef7cdd6d5e1b3b78` passed run `29892965990`, build job `88836961122`, in
+`1m39s`. Loop 30 is publicly closed; the final ledger commit and its CI remain for turn closure.
