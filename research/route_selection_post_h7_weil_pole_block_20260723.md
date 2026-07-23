@@ -58,4 +58,6 @@ Action run `29971859428`, build job `89095368881`, in `1m34s`. The local fixed e
 compiled without a source mismatch. In particular, the `C=16,q=8` atom has the registered
 opposite strict parity signs. Frozen implementation commit
 `cc264cde977a8b04e596d267aa6656cd8cbf4058` passed run `29973199798`, build job `89099433656`,
-in `2m8s`; Lean source is frozen and immutable evidence plus final-ledger gates remain.
+in `2m8s`; Lean source is frozen. Immutable-evidence commit
+`6a697d92caa485fe1f274ffb5495e8cd3379b297` passed run `29973451920`, build job `89100185836`,
+in `2m20s`. Only final-ledger CI remains before closure at this source-block endpoint.

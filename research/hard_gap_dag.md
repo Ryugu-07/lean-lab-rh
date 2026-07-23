@@ -1609,7 +1609,8 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   build pass.
 - `implementation_gate`: frozen commit `cc264cde977a8b04e596d267aa6656cd8cbf4058` passed public Lean
   Action run `29973199798`, build job `89099433656`, in `2m8s`; proof source is frozen and
-  immutable evidence plus final-ledger CI remain.
+  immutable-evidence commit `6a697d92caa485fe1f274ffb5495e8cd3379b297` passed run
+  `29973451920`, build job `89100185836`, in `2m20s`. Only final-ledger CI remains.
 - `obstruction`: a genuine prime atom is negative on an even direction and positive on an odd
   direction; termwise common-sign semidefinite compensation is unavailable. The aggregate prime
   block is not classified.

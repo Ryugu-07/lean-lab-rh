@@ -3570,4 +3570,6 @@ One proven Target, 12 exact TargetChecks, 9 selected standard-only axiom prints,
 production scan, `git diff --check`, and the 8,754-job full build pass locally.
 `rh_frontier_delta=0`; frozen implementation commit `cc264cde977a8b04e596d267aa6656cd8cbf4058`
 passed Lean Action run `29973199798`, build job `89099433656`, in `2m8s`. Lean source is frozen;
-immutable evidence and final-ledger CI remain, and the persistent RH Goal stays active.
+immutable-evidence commit `6a697d92caa485fe1f274ffb5495e8cd3379b297` then passed run
+`29973451920`, build job `89100185836`, in `2m20s`. Only final-ledger CI remains, and the
+persistent RH Goal stays active.

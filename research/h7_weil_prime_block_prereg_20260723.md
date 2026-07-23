@@ -105,4 +105,6 @@ and the 8,754-job full build pass. This is `FULL_SUCCESS_AT_PRIME_ENDPOINT` loca
 implementation and evidence gates. Frozen implementation commit
 `cc264cde977a8b04e596d267aa6656cd8cbf4058` passed public Lean Action run `29973199798`, build
 job `89099433656`, in `2m8s`; Lean source is frozen and immutable evidence plus final-ledger gates
-remain. Every excluded aggregate and limit edge remains open.
+remain. Immutable-evidence commit `6a697d92caa485fe1f274ffb5495e8cd3379b297` passed run
+`29973451920`, build job `89100185836`, in `2m20s`. Only final-ledger CI remains. Every excluded
+aggregate and limit edge remains open.

@@ -106,5 +106,7 @@ proof must use aggregate arithmetic and archimedean balance rather than termwise
 - Full build: 8,754 jobs passed.
 - Frozen implementation: commit `cc264cde977a8b04e596d267aa6656cd8cbf4058` passed public Lean
   Action run `29973199798`, build job `89099433656`, in `2m8s`.
+- Immutable evidence: commit `6a697d92caa485fe1f274ffb5495e8cd3379b297` passed public Lean
+  Action run `29973451920`, build job `89100185836`, in `2m20s`.
 - `rh_frontier_delta=0`; `hard_gap_delta=0`; `actual_source_block_delta=1`;
   `obstruction_map_delta=1`.
