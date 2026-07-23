@@ -970,3 +970,17 @@ Action run `29976558428`, build job `89109449098`, in `2m6s`. Proof source is fr
 evidence commit `17a1c46f2cb62c1aa351d2d918e872f1cbc9340e` passed run `29976815386`,
 build job `89110232514`, in `1m53s`. Only final-ledger publication remains before successor
 selection.
+
+The H1 Mellin final ledger then passed as commit `98bc69b87c66212e92dc2efc814bbffc4cf847dd`,
+Lean Action run `29977016712`, build job `89110861524`, in `1m55s`. Cross-route ranking selects
+the D6 node `H7-WEIL-ARCHIMEDEAN-TAIL-DENSITY-01`, because pole and prime source blocks already
+share the finite divided-difference carrier and the archimedean source is the last missing actual
+block before total assembly can be tested.
+
+The fixed probe starts from the literal sine-cosine interval source and treats its derivative at
+integer nodes as a falsification guard. It targets the exact rank-two Cauchy density, reflection,
+quadratic sum of squares, and conditional semidefiniteness of the integrated increment. It does
+not assume the source's Arb-assisted `h_+(T)>0` threshold, and does not claim strict tail order,
+total positivity, a tail limit, the total Weil sign, Herglotz, simple-even structure, source
+convergence, H7, or RH. D3 and the rest of the historical atlas remain active after this bounded
+D6 campaign.

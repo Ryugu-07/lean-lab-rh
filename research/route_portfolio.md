@@ -3610,3 +3610,22 @@ Action run `29976558428`, build job `89109449098`, in `2m6s`. The Lean source is
 immutable-evidence commit `17a1c46f2cb62c1aa351d2d918e872f1cbc9340e` passed run
 `29976815386`, build job `89110232514`, in `1m53s`. Only final-ledger CI remains before reranking
 the successor.
+
+## H7 Archimedean Tail Density Selection
+
+The H1 Mellin campaign publicly closed at final-ledger commit
+`98bc69b87c66212e92dc2efc814bbffc4cf847dd`, Lean Action run `29977016712`, build job
+`89110861524`, in `1m55s`. It closes equation `(2.1)` only; H1's inverse Mellin and contour edges
+remain active.
+
+Fresh cross-route ranking selects `H7-WEIL-ARCHIMEDEAN-TAIL-DENSITY-01`. The pole and prime
+source blocks already inhabit the finite divided-difference API, while the archimedean source is
+the last block missing before three-block assembly can be audited. The endpoint is the literal
+sine-cosine interval source, its exact integer-node and true-source diagonal values, the
+rank-two Cauchy density and quadratic sum of squares, plus conditional semidefiniteness of an
+integrated increment under an explicit pointwise `h_+` sign premise.
+
+This is structural source work, not tail-budget or constant optimization. The source's
+`h_+(T)>0` threshold, strict positive definiteness, total positivity, total Weil sign, Herglotz,
+simple-even, source convergence, H7, and RH remain outside the endpoint. Production Lean editing
+is gated on public preregistration CI.

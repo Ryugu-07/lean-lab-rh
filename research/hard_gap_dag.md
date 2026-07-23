@@ -1650,3 +1650,18 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `open`: inverse Mellin support/boundedness, auxiliary vertical decay, convolution, contour
   movement, selected-residue lower bounds, the complete moment-to-power bridge, Farmer's
   arbitrary-length moment conjecture, H1, and RH.
+
+## 2026-07-23 H7 archimedean tail density selected
+
+- `parent_closure`: H1 Mellin final ledger `98bc69b87c66212e92dc2efc814bbffc4cf847dd`
+  passed public run `29977016712`, job `89110861524`, in `1m55s`.
+- `H7-WEIL-ARCHIMEDEAN-TAIL-DENSITY-01`: `PREREGISTERED / ACTUAL_SOURCE_DIAGONAL`.
+- `target`: compile the literal sine-cosine source kernel, actual node and derivative samples,
+  exact rank-two Cauchy matrix density, reflection and quadratic identities, and the integrated
+  increment's conditional semidefinite sign under an explicit pointwise `h_+` premise.
+- `falsification_edge`: a mismatch in `2`, `pi`, `rho`, sign, or the true-source diagonal stops
+  the source block identification.
+- `claim_boundary`: no unconditional `h_+` threshold, strict tail order, total positivity, tail
+  limit, total Weil sign, Herglotz, simple-even theorem, source convergence, H7, or RH.
+- `expected_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`,
+  `actual_source_block_delta=1`, with a source-diagonal falsification endpoint.
