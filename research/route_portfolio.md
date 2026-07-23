@@ -3573,3 +3573,20 @@ passed Lean Action run `29973199798`, build job `89099433656`, in `2m8s`. Lean s
 immutable-evidence commit `6a697d92caa485fe1f274ffb5495e8cd3379b297` then passed run
 `29973451920`, build job `89100185836`, in `2m20s`. Only final-ledger CI remains, and the
 persistent RH Goal stays active.
+
+## H1 Bettin--Gonek `H_t` Mellin Identity Selection
+
+After publicly closing the H7 finite prime-source endpoint, the portfolio re-enters H1 at the
+first still-open source equality in Bettin--Gonek. The actual `farmerMollifier` must be connected
+to the reciprocal zeta function by
+
+```text
+integral_1^infinity M_x(1/2+it) log(x) x^(-w) dx
+  = 1 / ((w-1)^2 zeta(w-1/2+it)),  Re(w)>3/2.
+```
+
+The unit logarithmic kernel and the Mobius L-series reciprocal-zeta identity already compile.
+The selected campaign tests the missing floor-cutoff source expansion and absolute
+sum-integral exchange. This is a historical mechanism campaign, not a numerical optimization.
+The H7 archimedean source remains a co-leading successor, and no historical family is marked
+exhausted.

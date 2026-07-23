@@ -1618,3 +1618,14 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   Herglotz scalar bound, simple-even uniformity, source limits, H7, and RH.
 - `local_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `actual_source_block_delta=1`,
   `obstruction_map_delta=1`.
+
+## 2026-07-23 H1 exact mollifier Mellin bridge selected
+
+- `H1-BETTIN-GONEK-H-MELLIN-IDENTITY-01`: `PREREGISTERED / SOURCE_FUBINI_BRIDGE`.
+- `input`: the literal real-cutoff `farmerMollifier`, the compiled logarithmic kernel integral,
+  and `LSeries_moebius_eq_reciprocal_riemannZeta`.
+- `target`: for `Re(w)>3/2`, prove the source `H_t(w)` integral converges and equals
+  `1/((w-1)^2*zeta(w-1/2+it))` from the actual Mobius cutoff.
+- `successor_edges`: inverse Mellin support/boundedness for `g_t`, vertical decay, contour shift,
+  selected-residue lower bound, moment-to-power transfer, and Farmer's arbitrary-length moment.
+- `claim_boundary`: no successor edge, H1, or RH is available as a premise.
