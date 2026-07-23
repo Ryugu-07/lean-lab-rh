@@ -1514,3 +1514,21 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   Action run `29967964091`, build job `89083481677`, in `2m18s`; final-ledger CI remains. This
   consumer campaign may close, but the two open H1 analytic nodes and the broader mollifier family
   remain active graph candidates.
+
+## 2026-07-23 H1 Bettin--Gonek auxiliary regularization launch
+
+- `parent_closure`: theta-infinity consumer final ledger
+  `d4196d0f47d42f1c95d29b48dd341b9a469c514b` passed public run `29968166845`, job
+  `89084084918`, in `1m54s`.
+- `H1-BETTIN-GONEK-AUXILIARY-REGULARIZATION-01`: `PREREGISTERED / SOURCE_ANALYTIC_ALGEBRA`.
+  Regularize `(s-1) zeta(s)/(s-rho)` with `dslope zetaPoleRemoved rho`, recover the raw source
+  formula off the patched points, prove the auxiliary factor holomorphic on `Re(w)>-1`, and verify
+  the exact nonzero selected-pole coefficient.
+- `H1-BETTIN-GONEK-MELLIN-CONVOLUTION-01`: remains `OPEN`.
+- `H1-BETTIN-GONEK-DECAY-CONTOUR-01`: remains `OPEN`.
+- `H1-BETTIN-GONEK-MOMENT-TO-POWER-01`: remains `OPEN / PUBLISHED_ANALYTIC_BRIDGE`.
+- `H1-FARMER-THETA-INFINITY-MOMENT-01`: remains `OPEN / RH_STRENGTH`.
+- `claim_boundary`: no contour, decay, convolution, moment, bridge, or RH theorem is registered in
+  the auxiliary campaign. Public preregistration CI must precede proof-source editing.
+- `expected_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`,
+  `source_analytic_algebra_delta=1`, with a falsifiable source-normalization endpoint.

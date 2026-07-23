@@ -893,3 +893,14 @@ parked, and finite/asymptotic results are not promoted to RH progress.
   Action run `29921175166`, build job `88926780992`, in `1m49s`.
 - `public_closure`: evidence commit `f8cce8ae32f716cc34087cee5319b23656c8733a` passed Lean
   Action run `29921582753`, build job `88928153258`, in `1m48s`.
+
+## Post-atlas D3 mechanism update: 2026-07-23
+
+The D3 theta-infinity consumer is now publicly closed at final-ledger commit
+`d4196d0f47d42f1c95d29b48dd341b9a469c514b`, Lean Action run `29968166845`, build job
+`89084084918`, in `1m54s`. It proves the real-cutoff interpolation and exact individual-zero
+power consumers; it does not prove the analytic bridge or Farmer's moment conjecture.
+
+The next D3 submechanism is `H1-BETTIN-GONEK-AUXILIARY-REGULARIZATION-01`: a source-exact audit of
+the removable singularities and selected-zero pole coefficient in equations `(2.2)`--`(2.3)`.
+This continues the historical mechanism audit and does not mark D3, H1, or mollifiers exhausted.

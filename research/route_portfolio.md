@@ -3475,3 +3475,21 @@ Action run `29967964091`, build job `89083481677`, in `2m18s`. Final-ledger CI i
 publication gate. Closing this consumer campaign does not exhaust H1 or mollifier mechanisms; the
 two open analytic edges return to graph-ranked historical selection alongside other families and
 the always-open conjecture pool.
+
+Final-ledger commit `d4196d0f47d42f1c95d29b48dd341b9a469c514b` passed public Lean Action
+run `29968166845`, build job `89084084918`, in `1m54s`. The H1 consumer campaign is fully
+public-green and closes only the real-cutoff and power-consumer endpoint.
+
+## H1 Bettin--Gonek Auxiliary Launch
+
+The next graph-ranked historical mechanism continues into the published Bettin--Gonek analytic
+bridge without optimizing a proportion or constant. Equations `(2.2)`--`(2.3)` use a quotient
+whose numerator removes the zeta pole and whose denominator vanishes at the selected zero. The
+project's entire `zetaPoleRemoved` and Mathlib `dslope` provide a canonical source-aligned
+regularization.
+
+Campaign `LITERATURE-20260723-H1-BETTIN-GONEK-AUXILIARY-01` preregisters the exact source equality,
+holomorphy on an open neighborhood of `Re(w)>=0`, and the explicit nonzero simple-pole
+coefficient. Mellin inversion, auxiliary decay, contour integration, convolution, moment bounds,
+the full bridge, Farmer's conjecture, and RH remain open. Public preregistration CI is required
+before production Lean editing; the persistent RH Goal remains active.
