@@ -8,7 +8,7 @@ Selected node: `H1-BETTIN-GONEK-H-MELLIN-IDENTITY-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `LOCALLY_PROVEN / LOCAL_GATES_PASSED / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Baseline
 
@@ -85,8 +85,8 @@ real-cutoff condition.
 
 ## Local result
 
-Decision: `FULL_SUCCESS_AT_MELLIN_ENDPOINT` pending the public implementation and evidence
-sequence.
+Decision: `FULL_SUCCESS_AT_MELLIN_ENDPOINT`; immutable evidence and final-ledger CI remain for
+campaign closure.
 
 All six fixed items compile. The actual real-cutoff mollifier equals both the finite source sum
 and the pointwise supported `tsum`; the scaled kernel is integrable with the exact source value;
@@ -101,6 +101,10 @@ unchanged.
 The 576-line production module compiles standalone with warnings as errors. Twelve exact
 TargetChecks, nine selected standard-only axiom prints, the empty production forbidden scan,
 `git diff --check`, and the full 8,755-job build pass locally.
+
+Frozen implementation commit `1ca590891a51da76712e8a2dd177287de56d0b43` passed public Lean
+Action run `29976558428`, build job `89109449098`, in `2m6s`. Proof source is frozen; only
+immutable evidence and final-ledger publication remain for campaign closure.
 
 ## Mechanical gates
 

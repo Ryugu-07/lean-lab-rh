@@ -77,3 +77,7 @@ This moves the H1 mechanism from the displayed identity `(2.1)` to the inverse M
 support/boundedness, decay, convolution, and contour edges. It does not move the RH frontier.
 After public closure, the successor must be reranked against the H7 archimedean source block and
 other still-underexplored historical mechanisms; the H1 family is not marked exhausted.
+
+Frozen implementation commit `1ca590891a51da76712e8a2dd177287de56d0b43` passed public Lean
+Action run `29976558428`, build job `89109449098`, in `2m6s`. The proof source is frozen;
+immutable evidence and final-ledger publication remain.

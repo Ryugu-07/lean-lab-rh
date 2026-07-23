@@ -1641,6 +1641,9 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `local_gates`: 576-line warning-free module, one proven Target, 12 exact TargetChecks, 9
   standard-only axiom prints, empty production scan, `git diff --check`, and the 8,755-job full
   build pass.
+- `implementation_gate`: frozen commit `1ca590891a51da76712e8a2dd177287de56d0b43` passed public Lean
+  Action run `29976558428`, build job `89109449098`, in `2m6s`; proof source is frozen and
+  immutable evidence remains.
 - `delta`: `source_mellin_bridge_delta=1`, while `rh_frontier_delta=0` and
   `hard_gap_delta=0`.
 - `open`: inverse Mellin support/boundedness, auxiliary vertical decay, convolution, contour

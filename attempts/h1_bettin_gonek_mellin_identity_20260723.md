@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260723-H1-BETTIN-GONEK-MELLIN-IDENTITY-01`
 
 Selected node: `H1-BETTIN-GONEK-H-MELLIN-IDENTITY-01`
 
-Status: `LOCALLY_PROVEN / LOCAL_GATES_PASSED / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Attempt log
 
@@ -23,6 +23,7 @@ Status: `LOCALLY_PROVEN / LOCAL_GATES_PASSED / IMPLEMENTATION_CI_REQUIRED`
 | `RECIPROCAL_ZETA` | Rewrote each integrated source term at exponent `w+s-1` and invoked the compiled Mobius L-series theorem. | The integral equals `zeta(w-1/2+i*t)^(-1)/(w-1)^2`; the source denominator normalization is algebraically identical because zeta is nonzero in this half-plane. | Package Mellin convergence and source `H_t`. |
 | `ENDPOINT` | Proved `MellinConvergent`, `HasMellin`, `bettinGonekH_eq`, and the aggregate endpoint. | `FULL_SUCCESS_AT_MELLIN_ENDPOINT` holds locally. Twelve exact TargetChecks and nine selected standard-only axiom prints pass. | Complete scans, full build, and public implementation/evidence/ledger gates. |
 | `LOCAL_GATES` | Recompiled production and registries, scanned forbidden tokens, checked the diff, audited selected axioms, and built the complete project. | The production scan is empty, `git diff --check` passes, and the 8,755-job full build succeeds with inherited replay warnings only. | Freeze and publish the implementation commit. |
+| `IMPLEMENTATION_CI` | Published the frozen implementation and required a clean public rebuild. | Commit `1ca590891a51da76712e8a2dd177287de56d0b43` passed run `29976558428`, job `89109449098`, in `2m6s`. Proof source is frozen. | Publish immutable evidence without changing Lean source. |
 
 ## Resolved local obstacles
 
@@ -42,6 +43,7 @@ Status: `LOCALLY_PROVEN / LOCAL_GATES_PASSED / IMPLEMENTATION_CI_REQUIRED`
 
 ## Claim boundary
 
-The Mellin identity is locally compiled and registered as a proven Target, but has not yet passed
-the implementation publication sequence. Inverse Mellin support, auxiliary decay, contour shift,
-selected-residue extraction, moment-to-power transfer, Farmer's conjecture, and RH remain open.
+The Mellin identity is compiled, registered as a proven Target, and public-green at the frozen
+implementation commit. Immutable evidence and final-ledger CI remain for campaign closure.
+Inverse Mellin support, auxiliary decay, contour shift, selected-residue extraction,
+moment-to-power transfer, Farmer's conjecture, and RH remain open.

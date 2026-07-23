@@ -964,3 +964,7 @@ now concentrated at inverse Mellin support/boundedness, vertical decay, convolut
 movement, selected-residue lower bounds, the moment-to-power bridge, and Farmer's moment
 conjecture. D3 is not exhausted; D6's archimedean source block and the wider historical atlas stay
 active competitors for the next campaign.
+
+The frozen implementation commit `1ca590891a51da76712e8a2dd177287de56d0b43` passed public Lean
+Action run `29976558428`, build job `89109449098`, in `2m6s`. Proof source is frozen; immutable
+evidence and final-ledger publication remain before successor selection.

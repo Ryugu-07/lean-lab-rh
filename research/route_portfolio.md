@@ -3604,3 +3604,7 @@ reciprocal-zeta `H_t(w)` formula. The campaign therefore closes equation `(2.1)`
 inverse Mellin support, auxiliary decay, convolution, contour movement, moment transfer,
 Farmer's moment conjecture, H1, and RH remain open. After public closure, successor selection
 will compare those H1 edges with H7's archimedean block and the broader historical portfolio.
+
+Frozen implementation commit `1ca590891a51da76712e8a2dd177287de56d0b43` passed public Lean
+Action run `29976558428`, build job `89109449098`, in `2m6s`. The Lean source is frozen;
+immutable evidence and final-ledger gates remain before reranking the successor.
