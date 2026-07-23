@@ -1552,3 +1552,14 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   `89088970037`, in `2m0s`. Only the final ledger remains.
 - `local_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`,
   `source_analytic_algebra_delta=1`.
+
+## 2026-07-23 H7 Weil pole block selected
+
+- `H7-WEIL-POLE-RANK-TWO-INSTANTIATION-01`: `PREREGISTERED / PUBLIC_CI_REQUIRED`.
+- `parent`: H1 auxiliary final ledger `b3c967d64a7c9df3cec8c251a302190e516aad81`, public run
+  `29969901015`, job `89089454873`, in `2m0s`.
+- `fixed_edge`: exact source coefficient positivity, divided-difference closed formula, rank-two
+  parity decomposition, all-vector quadratic identity, and parity-sector sign laws.
+- `strict_boundary`: no total Weil positivity, Herglotz bound, simple-even theorem, source limit,
+  or RH theorem is included.
+- `next_gate`: publish preregistration and require public CI before production Lean editing.

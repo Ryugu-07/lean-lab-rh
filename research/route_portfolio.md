@@ -3510,3 +3510,16 @@ Frozen implementation commit `2dd7fcb2284b9fe9afd3e01792a6a6c199a770f9` passed p
 run `29969572291`, build job `89088421970`, in `2m4s`. `rh_frontier_delta=0`; immutable evidence
 commit `fdd688ba7e2157ec616b8f58a366b86c94c7f0e9` passed run `29969746284`, build job
 `89088970037`, in `2m0s`. Only the final ledger remains, and the persistent RH Goal stays active.
+
+## H7 Weil Pole Block Selection
+
+The H1 auxiliary campaign publicly closed at final-ledger commit
+`b3c967d64a7c9df3cec8c251a302190e516aad81`, Lean Action run `29969901015`, build job
+`89089454873`, in `2m0s`. Cross-route ranking now selects the actual D6 source pole matrix rather
+than another abstract finite certificate or numerical eigenvalue optimization.
+
+Campaign `LITERATURE-20260723-H7-WEIL-POLE-BLOCK-01` preregisters the exact source coefficient,
+closed divided-difference entries, even/odd rank-two decomposition, and parity-sector quadratic
+sign laws. This is one actual Weil block. Prime and archimedean blocks, the total matrix,
+Herglotz scalar inequality, simple-even uniformity, ground-state/prolate convergence, and RH
+remain open. Production Lean editing is gated on public preregistration CI.

@@ -913,3 +913,9 @@ frozen implementation commit `2dd7fcb2284b9fe9afd3e01792a6a6c199a770f9` passed p
 Action run `29969572291`, build job `89088421970`, in `2m4s`; immutable evidence and final ledger
 were separated. Immutable-evidence commit `fdd688ba7e2157ec616b8f58a366b86c94c7f0e9` passed run
 `29969746284`, build job `89088970037`, in `2m0s`; only the final ledger remains.
+
+After the auxiliary final-ledger CI, route selection returned to D6. The next source-instantiation
+node is `H7-WEIL-POLE-RANK-TWO-INSTANTIATION-01`: compile the actual closed pole
+divided-difference matrix and its exact even-positive minus odd-positive rank-two decomposition.
+This does not assert a sign for the total Weil matrix and does not replace the open Herglotz,
+simple-even, or source-limit edges.
