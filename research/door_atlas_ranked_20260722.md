@@ -908,5 +908,7 @@ This continues the historical mechanism audit and does not mark D3, H1, or molli
 That submechanism now reaches its local registered endpoint. Lean's divided-difference
 regularization proves the source quotient holomorphic, and the selected-pole coefficient is exact
 and nonzero. No local normalization gap was found. The remaining D3 bridge is the genuinely
-analytic Mellin/decay/contour/convolution chain. The 8,752-job full build passes locally; public
-implementation gates still remain.
+analytic Mellin/decay/contour/convolution chain. The 8,752-job full build passes locally, and
+frozen implementation commit `2dd7fcb2284b9fe9afd3e01792a6a6c199a770f9` passed public Lean
+Action run `29969572291`, build job `89088421970`, in `2m4s`; immutable evidence and final ledger
+still remain.

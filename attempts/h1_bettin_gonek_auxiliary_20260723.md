@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260723-H1-BETTIN-GONEK-AUXILIARY-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `LOCAL_MECHANICAL_CLOSURE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Baseline
 
@@ -28,6 +28,7 @@ Status: `LOCAL_MECHANICAL_CLOSURE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 | 8 | `SELECTED_POLE_CERTIFICATE` | Lean proves the exact punctured-neighborhood coefficient displayed in equation `(2.3)` and proves it nonzero for every nontrivial zero and `x>0`. | There is no hidden local cancellation of the selected-zero term; move the gap to contour and decay estimates. |
 | 9 | `TARGET_AND_AXIOM_GATES` | One proven auxiliary Target, 10 exact TargetChecks, and 7 selected standard-only axiom prints compile; the 277-line module is diagnostic-free and its forbidden scan is empty. | Run diff checks, the full build, and public implementation CI. |
 | 10 | `LOCAL_MECHANICAL_CLOSURE` | `git diff --check` and the 8,752-job full build pass. The seven selected axiom prints contain only `propext`, `Classical.choice`, and `Quot.sound`. | Freeze the implementation and require independent public CI before closing this auxiliary endpoint. |
+| 11 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation commit `2dd7fcb2284b9fe9afd3e01792a6a6c199a770f9` passed run `29969572291`, build job `89088421970`, in `2m4s`. | Keep Lean proof source frozen; publish immutable evidence and require its own public CI. |
 
 ## Frontier accounting
 
@@ -39,7 +40,7 @@ Status: `LOCAL_MECHANICAL_CLOSURE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
   building contour infrastructure.
 - `hard_gap_after_if_success`: the global analytic estimates and integral identities remain open.
 - `local_result`: `FULL_SUCCESS_AT_AUXILIARY_ENDPOINT` at the local mechanical gate, pending
-  public implementation and evidence gates. No source regularization mismatch was found.
+  immutable-evidence and final-ledger gates. No source regularization mismatch was found.
 - `definition_alignment`:
   `research/h1_bettin_gonek_auxiliary_definition_alignment_20260723.md`.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

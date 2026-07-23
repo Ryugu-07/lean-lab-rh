@@ -141,3 +141,10 @@ TargetChecks and seven selected standard-only axiom prints compile, and the prod
 scan is empty. `git diff --check` and the 8,752-job full build pass. This is
 `FULL_SUCCESS_AT_AUXILIARY_ENDPOINT` at the local mechanical gate, pending public implementation
 and evidence gates. Every excluded analytic edge remains open.
+
+## Frozen implementation public gate
+
+- `commit`: `2dd7fcb2284b9fe9afd3e01792a6a6c199a770f9`.
+- `public_ci`: Lean Action run `29969572291`, build job `89088421970`, passed in `2m4s`.
+- `effect`: the registered Lean implementation is frozen; immutable-evidence and final-ledger
+  gates remain before public campaign closure.

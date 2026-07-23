@@ -1545,6 +1545,8 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `H1-BETTIN-GONEK-MOMENT-TO-POWER-01`: remains `OPEN / PUBLISHED_ANALYTIC_BRIDGE`.
 - `local_gates`: 277-line warning-free module, one proven Target, 10 exact TargetChecks, 7
   standard-only axiom prints, an empty production forbidden scan, `git diff --check`, and the
-  8,752-job full build pass. Public implementation CI remains.
+  8,752-job full build pass. Frozen implementation commit
+  `2dd7fcb2284b9fe9afd3e01792a6a6c199a770f9` passed public Lean Action run `29969572291`, build
+  job `89088421970`, in `2m4s`; immutable evidence and final ledger remain.
 - `local_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`,
   `source_analytic_algebra_delta=1`.

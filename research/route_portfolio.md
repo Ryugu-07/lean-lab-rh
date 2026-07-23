@@ -3506,4 +3506,6 @@ No local source normalization or hidden-cancellation gap was found. The remainin
 analytic: inverse Mellin support and decay, contour integration, convolution, lower bounds, and
 uniform constants. One proven Target, ten exact TargetChecks, seven selected standard-only axiom
 prints, the empty production scan, `git diff --check`, and the 8,752-job full build pass locally.
-`rh_frontier_delta=0`; public implementation CI remains, and the persistent RH Goal stays active.
+Frozen implementation commit `2dd7fcb2284b9fe9afd3e01792a6a6c199a770f9` passed public Lean Action
+run `29969572291`, build job `89088421970`, in `2m4s`. `rh_frontier_delta=0`; immutable evidence
+and final ledger remain, and the persistent RH Goal stays active.

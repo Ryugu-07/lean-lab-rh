@@ -4,7 +4,7 @@ Date: 2026-07-23
 
 Campaign: `LITERATURE-20260723-H1-BETTIN-GONEK-AUXILIARY-01`
 
-Status: `LOCAL_MECHANICAL_CLOSURE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Source coordinates
 
@@ -72,4 +72,6 @@ compile the source Mellin/convolution identity.
 - Production forbidden scan: empty.
 - Direct compiles: production module, Targets, TargetChecks, and AxiomsAudit pass.
 - Full build: 8,752 jobs, passed.
+- Frozen implementation: commit `2dd7fcb2284b9fe9afd3e01792a6a6c199a770f9` passed public Lean
+  Action run `29969572291`, build job `89088421970`, in `2m4s`.
 - `rh_frontier_delta=0`; `source_analytic_algebra_delta=1`.
