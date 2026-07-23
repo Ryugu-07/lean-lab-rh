@@ -3668,3 +3668,19 @@ decay premise is allowed.
 Campaign `LITERATURE-20260723-H1-BETTIN-GONEK-J-CONTOUR-01` is preregistered. Inverse Mellin
 support, convolution `(2.4)`, the full moment-to-power bridge, Farmer's conjecture, H1, and RH stay
 open. Production Lean editing requires public preregistration CI.
+
+The J-contour endpoint now compiles locally. The actual `G_t H_t x^w` product equals the literal
+rational kernel, both source vertical lines are absolutely integrable, the finite rectangle
+crosses exactly the selected pole, and both horizontal sides vanish by a proved uniform
+`O(|u|^-4)` estimate. Thus Lean obtains equation `(2.5)` with exact normalization,
+`norm(JLine(0))<=2`, and the positive `x^(Re(rho)+1/2)` residue lower term.
+
+This is a genuine D3 source-mechanism advance but not an RH frontier change. The shortest
+remaining Bettin--Gonek chain is now inverse Mellin support/boundedness, standalone auxiliary
+decay in that inversion, convolution `(2.4)`, Cauchy--Schwarz plus the zeta moment transfer, and
+Farmer's arbitrary-length moment conjecture. Frozen implementation and public evidence gates
+remain before reranking.
+
+Local audit: 947-line warning-free module, one aggregate proven Target, one exact aggregate
+TargetCheck, selected standard-only axiom prints, empty forbidden scan, `git diff --check`, and
+the full 8,757-job build. `source_analytic_bridge_delta=1`, `rh_frontier_delta=0`.

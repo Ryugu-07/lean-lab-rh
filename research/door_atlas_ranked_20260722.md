@@ -1007,3 +1007,18 @@ of this edge. Campaign `LITERATURE-20260723-H1-BETTIN-GONEK-J-CONTOUR-01` prereg
 product cancellation, finite-to-infinite one-pole shift, `x`-uniform boundary bound, exact residue
 norm, and selected-zero lower inequality. Inverse Mellin support, convolution `(2.4)`, the full
 moment transfer, Farmer's conjecture, H1, and RH remain open.
+
+The campaign now reaches its local compiled endpoint. Lean verifies the literal product
+cancellation, both full vertical integrals, the exact selected-pole rectangle, horizontal
+`O(|u|^-4)` decay, and the normalized infinite contour identity. The zero line has the explicit
+uniform bound `2`, and the selected residue has a strictly positive scale times
+`x^(Re(rho)+1/2)`. No source normalization mismatch was found.
+
+This raises the historical H1/Bettin--Gonek route because equations `(2.1)`, `(2.3)`, and `(2.5)`
+now use actual source objects. It does not exhaust H1: inverse Mellin support/boundedness,
+standalone `G_t` decay, convolution `(2.4)`, the moment-transfer inequalities, Farmer's
+conjecture, H1, and RH remain open. Public freeze/evidence gates precede the next atlas rerank.
+
+The local freeze gates pass: the new source is 947 lines, the exact aggregate TargetCheck and
+selected standard-only axiom audit compile, the forbidden scan is empty, `git diff --check`
+passes, and the full 8,757-job build succeeds.

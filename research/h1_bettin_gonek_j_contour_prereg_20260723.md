@@ -8,7 +8,7 @@ Selected node: `H1-BETTIN-GONEK-J-CONTOUR-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTED_LOCAL / FROZEN_IMPLEMENTATION_PENDING`
 
 ## Baseline
 
@@ -111,3 +111,17 @@ relaxation. Require direct warning-as-error compilation, exact TargetChecks, sel
 implementation CI, immutable-evidence CI, and final-ledger CI.
 
 The six inherited user/exposure files remain untouched and unstaged.
+
+## Local result
+
+All seven fixed items now compile in `LeanLab/Riemann/BettinGonekJContour.lean`. The literal
+`G_t H_t x^w` product is the source rational kernel; both vertical lines are integrable; the
+finite rectangle crosses exactly the selected pole; both horizontal sides tend to zero from a
+derived `O(|u|^-4)` bound; and the normalized infinite identity is
+`JLine(3)=JLine(0)+residue`. Lean proves `norm(JLine(0))<=2`, strict positivity of the residue
+scale, the exact residue norm, and the selected-zero lower inequality with constant `2`.
+
+The exact TargetCheck and selected transitive axiom audit pass. The forbidden scan is empty,
+`git diff --check` passes, and the full 8,757-job build succeeds. No inverse Mellin, standalone
+`G_t` decay, convolution, moment transfer, Farmer conjecture, H1, or RH claim is introduced.
+Public frozen-implementation evidence is still required.

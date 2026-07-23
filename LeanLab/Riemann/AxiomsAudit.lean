@@ -8,6 +8,7 @@ import LeanLab.Riemann.FiniteHeightPromotionAudit
 import LeanLab.Riemann.ThetaInfinityMollifier
 import LeanLab.Riemann.BettinGonekAuxiliary
 import LeanLab.Riemann.BettinGonekMellinIdentity
+import LeanLab.Riemann.BettinGonekJContour
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -918,6 +919,13 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.hasMellin_bettinGonekLogMollifier
 #print axioms LeanLab.Riemann.bettinGonekH_eq
 #print axioms LeanLab.Riemann.bettinGonekMellinIdentity_endpoint
+#print axioms LeanLab.Riemann.bettinGonekAuxiliary_mul_H_eq_JKernel
+#print axioms LeanLab.Riemann.bettinGonekJKernel_rectangleBoundaryIntegral
+#print axioms LeanLab.Riemann.tendsto_integral_bettinGonekJKernel_top_horizontal
+#print axioms LeanLab.Riemann.tendsto_integral_bettinGonekJKernel_bottom_horizontal
+#print axioms LeanLab.Riemann.bettinGonekJLineIntegral_three_eq_zero_add_residue
+#print axioms LeanLab.Riemann.norm_bettinGonekResidueCoefficient
+#print axioms LeanLab.Riemann.bettinGonekJContour_endpoint
 #print axioms LeanLab.Riemann.hasDerivAt_weilArchimedeanKernel
 #print axioms LeanLab.Riemann.weilArchimedeanKernel_integer_eq
 #print axioms LeanLab.Riemann.weilArchimedeanKernelDerivative_integer_eq

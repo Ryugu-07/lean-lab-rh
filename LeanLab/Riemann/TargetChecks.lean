@@ -4086,6 +4086,36 @@ example (t : ℝ) {w : ℂ} (hw : 3 / 2 < w.re) :
         1 / ((w - 1) ^ 2 * riemannZeta (w - 1 / 2 + t * Complex.I)) :=
   bettinGonekMellinIdentity_endpoint t hw
 
+example {rho : ℂ} (hrho : IsNontrivialZero rho) (t : ℝ) {x : ℝ} (hx : 0 < x) :
+    (∀ w : ℂ, 3 / 2 < w.re →
+      bettinGonekAuxiliaryG rho t w * bettinGonekH t w * (x : ℂ) ^ w =
+        bettinGonekJKernel rho t x w) ∧
+      MeasureTheory.Integrable
+        (fun y : ℝ => bettinGonekJKernel rho t x (y * Complex.I)) ∧
+      MeasureTheory.Integrable
+        (fun y : ℝ => bettinGonekJKernel rho t x (3 + y * Complex.I)) ∧
+      (∀ T : ℝ, |(bettinGonekSelectedPole rho t).im| < T →
+        rectangleBoundaryIntegral (bettinGonekJKernel rho t x) 0 3 (-T) T =
+          2 * (Real.pi : ℂ) * Complex.I * bettinGonekResidueCoefficient rho t x) ∧
+      Filter.Tendsto
+        (fun T : ℝ => ∫ a : ℝ in 0..3,
+          bettinGonekJKernel rho t x (a + (-T) * Complex.I))
+        Filter.atTop (nhds 0) ∧
+      Filter.Tendsto
+        (fun T : ℝ => ∫ a : ℝ in 0..3,
+          bettinGonekJKernel rho t x (a + T * Complex.I))
+        Filter.atTop (nhds 0) ∧
+      bettinGonekJLineIntegral rho t x 3 =
+        bettinGonekJLineIntegral rho t x 0 +
+          bettinGonekResidueCoefficient rho t x ∧
+      ‖bettinGonekJLineIntegral rho t x 0‖ ≤ 2 ∧
+      0 < bettinGonekResidueScale rho t ∧
+      ‖bettinGonekResidueCoefficient rho t x‖ =
+        bettinGonekResidueScale rho t * x ^ (rho.re + 1 / 2) ∧
+      bettinGonekResidueScale rho t * x ^ (rho.re + 1 / 2) ≤
+        ‖bettinGonekJLineIntegral rho t x 3‖ + 2 :=
+  bettinGonekJContour_endpoint hrho t hx
+
 example (L r x : ℝ) :
     HasDerivAt (weilArchimedeanKernel L r)
       (weilArchimedeanKernelDerivative L r x) x :=
