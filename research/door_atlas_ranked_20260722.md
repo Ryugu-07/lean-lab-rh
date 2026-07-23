@@ -927,4 +927,5 @@ remaining mechanism sharper: the odd pole term has the adverse sign, so actual p
 archimedean blocks must establish the total parity ordering. The 8,753-job full build passes;
 frozen implementation commit `4b22712b531df010901e9813710b8ad145e60392` passed public Lean
 Action run `29971043533`, build job `89092937602`, in `2m30s`. Immutable evidence and final-ledger
-gates remain.
+gates remain. Immutable-evidence commit `58665041b17686cf6ac02abd2b89a295406838f4`
+passed run `29971296016`, build job `89093681779`, in `1m34s`; only final-ledger CI remains.

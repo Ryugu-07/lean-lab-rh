@@ -3538,5 +3538,6 @@ simple-even ordering without the prime and archimedean blocks. One proven Target
 TargetChecks, seven selected standard-only axiom prints, the empty production scan,
 `git diff --check`, and the 8,753-job full build pass locally. `rh_frontier_delta=0`; public
 implementation commit `4b22712b531df010901e9813710b8ad145e60392` passed Lean Action run
-`29971043533`, build job `89092937602`, in `2m30s`. Lean source is frozen; immutable evidence and
-final-ledger CI remain, and the persistent RH Goal stays active.
+`29971043533`, build job `89092937602`, in `2m30s`. Lean source is frozen. Immutable-evidence commit
+`58665041b17686cf6ac02abd2b89a295406838f4` then passed run `29971296016`, build job
+`89093681779`, in `1m34s`; only final-ledger CI remains, and the persistent RH Goal stays active.

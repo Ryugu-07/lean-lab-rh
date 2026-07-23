@@ -1576,7 +1576,8 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   build pass.
 - `implementation_gate`: frozen commit `4b22712b531df010901e9813710b8ad145e60392` passed public Lean
   Action run `29971043533`, build job `89092937602`, in `2m30s`; proof source is frozen and
-  immutable evidence plus final-ledger CI remain.
+  immutable-evidence commit `58665041b17686cf6ac02abd2b89a295406838f4` passed run
+  `29971296016`, build job `89093681779`, in `1m34s`. Only final-ledger CI remains.
 - `open`: prime and archimedean block instantiation, total parity ordering, arithmetic Herglotz
   scalar bound, simple-even uniformity, ground/prolate comparison, source limits, H7, and RH.
 - `local_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `actual_source_block_delta=1`.

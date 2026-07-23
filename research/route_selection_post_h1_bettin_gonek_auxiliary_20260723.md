@@ -68,4 +68,6 @@ campaign and unavailable as premises.
 
 The frozen implementation commit `4b22712b531df010901e9813710b8ad145e60392` passed public Lean
 Action run `29971043533`, build job `89092937602`, in `2m30s`. The selected Lean source is frozen;
-immutable evidence and final-ledger gates remain before campaign closure.
+immutable-evidence commit `58665041b17686cf6ac02abd2b89a295406838f4` passed run
+`29971296016`, build job `89093681779`, in `1m34s`. Only final-ledger CI remains before campaign
+closure at this source-block endpoint.

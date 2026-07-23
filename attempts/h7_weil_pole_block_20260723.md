@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260723-H7-WEIL-POLE-BLOCK-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PUBLIC_IMPLEMENTATION_CI_PASSED / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `PUBLIC_EVIDENCE_CI_PASSED / FINAL_LEDGER_CI_REQUIRED`
 
 ## Baseline
 
@@ -29,6 +29,7 @@ Status: `PUBLIC_IMPLEMENTATION_CI_PASSED / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 | 9 | `TARGET_AND_AXIOM_GATES` | One proven actual-source Target, 9 exact TargetChecks, and 7 selected standard-only axiom prints compile. The 250-line module is diagnostic-free and its forbidden scan is empty. | Run the full build and freeze the local endpoint. |
 | 10 | `LOCAL_MECHANICAL_CLOSURE` | `git diff --check` and the 8,753-job full build pass. | Freeze the registered implementation and require public implementation CI. |
 | 11 | `PUBLIC_IMPLEMENTATION_CI` | Frozen implementation commit `4b22712b531df010901e9813710b8ad145e60392` passed Lean Action run `29971043533`, build job `89092937602`, in `2m30s`. | Keep Lean source frozen and publish immutable evidence coordinates. |
+| 12 | `IMMUTABLE_EVIDENCE_CI` | Evidence commit `58665041b17686cf6ac02abd2b89a295406838f4` passed Lean Action run `29971296016`, build job `89093681779`, in `1m34s`. | Publish the final ledger without changing proof source. |
 
 ## Frontier accounting
 
@@ -40,6 +41,7 @@ Status: `PUBLIC_IMPLEMENTATION_CI_PASSED / IMMUTABLE_EVIDENCE_CI_REQUIRED`
   before the pole block is supplied to the Herglotz route.
 - `hard_gap_after_if_success`: the prime and archimedean blocks and every global H7 gap remain open.
 - `public_result`: `FULL_SUCCESS_AT_POLE_ENDPOINT` at the frozen implementation gate; no source
-  normalization mismatch was found. Immutable evidence and final-ledger gates remain.
+  normalization mismatch was found. Implementation and immutable-evidence CI pass; final-ledger
+  CI remains.
 - `definition_alignment`: `research/h7_weil_pole_block_definition_alignment_20260723.md`.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.
