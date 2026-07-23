@@ -8,7 +8,7 @@ Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
 Selected node: `H7-WEIL-POLE-RANK-TWO-INSTANTIATION-01`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `PREREGISTRATION_PUBLIC_GREEN / PROOF_SOURCE_GATE_OPEN`
 
 ## Baseline
 
@@ -106,3 +106,19 @@ The six inherited user/exposure files remain untouched and unstaged.
 - Compaction: one inherited summary was used to resume and publicly close the H1 auxiliary
   campaign. The current H7 alignment, finite-matrix, Herglotz, Rayleigh-gap records and the locked
   source formulas were re-read before this selection.
+
+## Preregistration public gate
+
+- `commit`: `c17a3be17b585f349972e0fb7f9d8541839f3dea`.
+- `public_ci`: Lean Action run `29970453996`, build job `89091164213`, passed in `1m54s`.
+- `effect`: the fixed production proof-source gate is open.
+
+## Local endpoint result
+
+The 250-line production module compiles all nine registered items. The source coefficient is
+strictly positive for `c>1`; the value and derivative samples have exact reflection parity; their
+divided-difference matrix equals the source closed formula at every entry; and the exact rank-two,
+all-vector quadratic, and parity sign laws compile. One proven Target, nine exact TargetChecks,
+seven selected standard-only axiom prints, an empty production forbidden scan, `git diff --check`,
+and the 8,753-job full build pass. This is `FULL_SUCCESS_AT_POLE_ENDPOINT` locally, pending public
+implementation and evidence gates. Every excluded total-matrix and limit edge remains open.

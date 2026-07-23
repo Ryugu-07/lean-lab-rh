@@ -84,6 +84,7 @@ import LeanLab.Riemann.WeilGroundStateAlignment
 import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.WeilGroundStateRayleighGap
+import LeanLab.Riemann.WeilGroundStatePoleBlock
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
@@ -889,3 +890,10 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.tendsto_bettinGonekJKernel_selectedPole
 #print axioms LeanLab.Riemann.bettinGonekResidueCoefficient_ne_zero
 #print axioms LeanLab.Riemann.bettinGonekAuxiliaryAudit_endpoint
+#print axioms LeanLab.Riemann.weilPoleCoefficient_pos
+#print axioms LeanLab.Riemann.weilFinitePoleSourceMatrix_apply
+#print axioms LeanLab.Riemann.weilFinitePoleSourceMatrix_rankTwo
+#print axioms LeanLab.Riemann.weilFinitePoleSourceMatrix_quadratic
+#print axioms LeanLab.Riemann.weilFinitePoleSourceMatrix_nonneg_even
+#print axioms LeanLab.Riemann.weilFinitePoleSourceMatrix_nonpos_odd
+#print axioms LeanLab.Riemann.weilFinitePoleBlockAudit_endpoint

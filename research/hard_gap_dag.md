@@ -1563,3 +1563,17 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `strict_boundary`: no total Weil positivity, Herglotz bound, simple-even theorem, source limit,
   or RH theorem is included.
 - `next_gate`: publish preregistration and require public CI before production Lean editing.
+
+## 2026-07-23 H7 Weil pole block local result
+
+- `H7-WEIL-POLE-RANK-TWO-INSTANTIATION-01`: `LOCALLY_PROVEN / SOURCE_ALIGNED`.
+- `compiled`: exact positive coefficient, sample parity, all-entry source equality, rank-two
+  parity decomposition, all-vector quadratic identity, and even/odd sign laws.
+- `source_audit`: no coefficient, centered-frequency, diagonal-limit, or rank-one sign mismatch
+  was found.
+- `local_gates`: 250-line warning-free module, one proven Target, 9 exact TargetChecks, 7
+  standard-only axiom prints, empty production scan, `git diff --check`, and the 8,753-job full
+  build pass. Public implementation CI remains.
+- `open`: prime and archimedean block instantiation, total parity ordering, arithmetic Herglotz
+  scalar bound, simple-even uniformity, ground/prolate comparison, source limits, H7, and RH.
+- `local_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `actual_source_block_delta=1`.

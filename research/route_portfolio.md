@@ -3523,3 +3523,18 @@ closed divided-difference entries, even/odd rank-two decomposition, and parity-s
 sign laws. This is one actual Weil block. Prime and archimedean blocks, the total matrix,
 Herglotz scalar inequality, simple-even uniformity, ground-state/prolate convergence, and RH
 remain open. Production Lean editing is gated on public preregistration CI.
+
+## H7 Weil Pole Block Local Result
+
+Preregistration commit `c17a3be17b585f349972e0fb7f9d8541839f3dea` passed public Lean Action
+run `29970453996`, build job `89091164213`, in `1m54s`. The 250-line module then compiles the
+actual source coefficient and value/derivative samples, all-entry divided-difference equality,
+exact even-positive minus odd-positive rank-two decomposition, all-vector quadratic identity,
+and parity-sector sign laws.
+
+No source normalization mismatch was found. The pole term alone is nonnegative on the even
+sector and nonpositive on the odd sector, so it cannot supply total Weil positivity or
+simple-even ordering without the prime and archimedean blocks. One proven Target, nine exact
+TargetChecks, seven selected standard-only axiom prints, the empty production scan,
+`git diff --check`, and the 8,753-job full build pass locally. `rh_frontier_delta=0`; public
+implementation CI remains and the persistent RH Goal stays active.

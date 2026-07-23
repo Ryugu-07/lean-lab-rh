@@ -79,6 +79,7 @@ import LeanLab.Riemann.WeilGroundStateAlignment
 import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.WeilGroundStateRayleighGap
+import LeanLab.Riemann.WeilGroundStatePoleBlock
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
@@ -3897,5 +3898,59 @@ example {rho : ℂ} (hrho : IsNontrivialZero rho) (t : ℝ) {x : ℝ} (hx : 0 < 
         (𝓝 (bettinGonekResidueCoefficient rho t x)) ∧
       bettinGonekResidueCoefficient rho t x ≠ 0 :=
   bettinGonekAuxiliaryAudit_endpoint hrho t hx
+
+example {c : ℝ} (hc : 1 < c) :
+    0 < weilPoleCoefficient c :=
+  weilPoleCoefficient_pos hc
+
+example (c : ℝ) (N : ℕ) (i : Fin (2 * N + 1)) :
+    weilPoleSourceValue c N i.rev = -weilPoleSourceValue c N i ∧
+      weilPoleSourceDerivative c N i.rev = weilPoleSourceDerivative c N i :=
+  ⟨weilPoleSourceValue_rev c N i, weilPoleSourceDerivative_rev c N i⟩
+
+example {c : ℝ} (hc : 1 < c) (N : ℕ) (i j : Fin (2 * N + 1)) :
+    weilFinitePoleSourceMatrix c N i j = weilFinitePoleClosedEntry c N i j :=
+  weilFinitePoleSourceMatrix_apply hc N i j
+
+example (c : ℝ) (N : ℕ) :
+    WeilFiniteIsEven (weilFinitePoleEvenVector c N) ∧
+      WeilFiniteIsOdd (weilFinitePoleOddVector c N) :=
+  ⟨weilFinitePoleEvenVector_isEven c N, weilFinitePoleOddVector_isOdd c N⟩
+
+example {c : ℝ} (hc : 1 < c) (N : ℕ) :
+    weilFinitePoleSourceMatrix c N =
+      weilPoleCoefficient c •
+        (Matrix.vecMulVec (weilFinitePoleEvenVector c N) (weilFinitePoleEvenVector c N) -
+          Matrix.vecMulVec (weilFinitePoleOddVector c N) (weilFinitePoleOddVector c N)) :=
+  weilFinitePoleSourceMatrix_rankTwo hc N
+
+example {c : ℝ} (hc : 1 < c) (N : ℕ) (x : Fin (2 * N + 1) → ℝ) :
+    x ⬝ᵥ (weilFinitePoleSourceMatrix c N *ᵥ x) =
+      weilPoleCoefficient c *
+        ((weilFinitePoleEvenVector c N ⬝ᵥ x) ^ 2 -
+          (weilFinitePoleOddVector c N ⬝ᵥ x) ^ 2) :=
+  weilFinitePoleSourceMatrix_quadratic hc N x
+
+example {c : ℝ} (hc : 1 < c) (N : ℕ)
+    {x : Fin (2 * N + 1) → ℝ} (hx : WeilFiniteIsEven x) :
+    0 ≤ x ⬝ᵥ (weilFinitePoleSourceMatrix c N *ᵥ x) :=
+  weilFinitePoleSourceMatrix_nonneg_even hc N hx
+
+example {c : ℝ} (hc : 1 < c) (N : ℕ)
+    {x : Fin (2 * N + 1) → ℝ} (hx : WeilFiniteIsOdd x) :
+    x ⬝ᵥ (weilFinitePoleSourceMatrix c N *ᵥ x) ≤ 0 :=
+  weilFinitePoleSourceMatrix_nonpos_odd hc N hx
+
+example {c : ℝ} (hc : 1 < c) (N : ℕ) :
+    0 < weilPoleCoefficient c ∧
+      weilFinitePoleSourceMatrix c N =
+        weilPoleCoefficient c •
+          (Matrix.vecMulVec (weilFinitePoleEvenVector c N) (weilFinitePoleEvenVector c N) -
+            Matrix.vecMulVec (weilFinitePoleOddVector c N) (weilFinitePoleOddVector c N)) ∧
+      (∀ x, WeilFiniteIsEven x →
+        0 ≤ x ⬝ᵥ (weilFinitePoleSourceMatrix c N *ᵥ x)) ∧
+      (∀ x, WeilFiniteIsOdd x →
+        x ⬝ᵥ (weilFinitePoleSourceMatrix c N *ᵥ x) ≤ 0) :=
+  weilFinitePoleBlockAudit_endpoint hc N
 
 end LeanLab.Riemann

@@ -76,6 +76,7 @@ import LeanLab.Riemann.WeilGroundStateAlignment
 import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.WeilGroundStateRayleighGap
+import LeanLab.Riemann.WeilGroundStatePoleBlock
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ThetaInfinityMollifier
 import LeanLab.Riemann.BettinGonekAuxiliary
@@ -1339,6 +1340,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``weilFiniteOddRankOneStrict_iff_resolvent
       status := .proven
       note := "Campaign LITERATURE-20260722-H7-WEIL-HERGLOTZ-CRITERION-01 kernel-checks the exact finite completion-of-squares reduction. The generic iff does not need the source assumption that S is odd; oddness of the resolvent vector u suffices. The source-aligned certificate retains odd_S, while the arithmetic scalar inequality, uniformity in both cutoffs, the true ground-state limit, and RH remain open. Classification is known finite linear-algebra infrastructure with rh_frontier_delta=0." },
+    { id := "H7.weil-ground-state.actual-pole-block"
+      tier := .tier2
+      title := "Instantiate the finite Weil pole block"
+      statement :=
+        "From the source pole value and derivative samples, prove the exact closed divided-difference matrix, its positive scalar coefficient, its even-positive minus odd-positive rank-two decomposition, and the resulting parity-sector quadratic sign laws."
+      leanName := some ``weilFinitePoleBlockAudit_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260723-H7-WEIL-POLE-BLOCK-01 instantiates one actual source block behind the H7 Herglotz interface. It does not define the prime or archimedean blocks, prove a sign for the total Weil matrix, establish the arithmetic scalar bound, prove simple-even uniformity or ground-state convergence, or prove RH; rh_frontier_delta=0." },
     { id := "H7.weil-ground-state.rayleigh-gap-consumer"
       tier := .tier2
       title := "Control ground-line defect by Rayleigh excess over the spectral gap"

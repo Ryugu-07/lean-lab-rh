@@ -919,3 +919,10 @@ node is `H7-WEIL-POLE-RANK-TWO-INSTANTIATION-01`: compile the actual closed pole
 divided-difference matrix and its exact even-positive minus odd-positive rank-two decomposition.
 This does not assert a sign for the total Weil matrix and does not replace the open Herglotz,
 simple-even, or source-limit edges.
+
+That source block now reaches its local registered endpoint. Lean proves the literal pole
+coefficient positive, the closed divided-difference formula, and the exact even-positive minus
+odd-positive rank-two sign law. No normalization mismatch was found. The result also makes the
+remaining mechanism sharper: the odd pole term has the adverse sign, so actual prime and
+archimedean blocks must establish the total parity ordering. The 8,753-job full build passes;
+public implementation gates remain.
