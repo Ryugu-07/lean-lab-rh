@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260723-H1-BETTIN-GONEK-MELLIN-IDENTITY-01`
 
 Selected node: `H1-BETTIN-GONEK-H-MELLIN-IDENTITY-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Attempt log
 
@@ -24,6 +24,7 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 | `ENDPOINT` | Proved `MellinConvergent`, `HasMellin`, `bettinGonekH_eq`, and the aggregate endpoint. | `FULL_SUCCESS_AT_MELLIN_ENDPOINT` holds locally. Twelve exact TargetChecks and nine selected standard-only axiom prints pass. | Complete scans, full build, and public implementation/evidence/ledger gates. |
 | `LOCAL_GATES` | Recompiled production and registries, scanned forbidden tokens, checked the diff, audited selected axioms, and built the complete project. | The production scan is empty, `git diff --check` passes, and the 8,755-job full build succeeds with inherited replay warnings only. | Freeze and publish the implementation commit. |
 | `IMPLEMENTATION_CI` | Published the frozen implementation and required a clean public rebuild. | Commit `1ca590891a51da76712e8a2dd177287de56d0b43` passed run `29976558428`, job `89109449098`, in `2m6s`. Proof source is frozen. | Publish immutable evidence without changing Lean source. |
+| `IMMUTABLE_EVIDENCE_CI` | Published the frozen implementation coordinates in docs only and required another clean rebuild. | Commit `17a1c46f2cb62c1aa351d2d918e872f1cbc9340e` passed run `29976815386`, job `89110232514`, in `1m53s`. | Publish the docs-only final ledger. |
 
 ## Resolved local obstacles
 
@@ -43,7 +44,8 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Claim boundary
 
-The Mellin identity is compiled, registered as a proven Target, and public-green at the frozen
-implementation commit. Immutable evidence and final-ledger CI remain for campaign closure.
+The Mellin identity is compiled, registered as a proven Target, and public-green at both the
+frozen implementation and immutable-evidence commits. Final-ledger CI remains for campaign
+closure.
 Inverse Mellin support, auxiliary decay, contour shift, selected-residue extraction,
 moment-to-power transfer, Farmer's conjecture, and RH remain open.

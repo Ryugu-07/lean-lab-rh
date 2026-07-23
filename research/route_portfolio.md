@@ -3607,4 +3607,6 @@ will compare those H1 edges with H7's archimedean block and the broader historic
 
 Frozen implementation commit `1ca590891a51da76712e8a2dd177287de56d0b43` passed public Lean
 Action run `29976558428`, build job `89109449098`, in `2m6s`. The Lean source is frozen;
-immutable evidence and final-ledger gates remain before reranking the successor.
+immutable-evidence commit `17a1c46f2cb62c1aa351d2d918e872f1cbc9340e` passed run
+`29976815386`, build job `89110232514`, in `1m53s`. Only final-ledger CI remains before reranking
+the successor.

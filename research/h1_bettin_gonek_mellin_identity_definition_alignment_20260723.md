@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260723-H1-BETTIN-GONEK-MELLIN-IDENTITY-01`
 
 Production module: `LeanLab/Riemann/BettinGonekMellinIdentity.lean`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Source coordinates
 
@@ -104,5 +104,7 @@ mechanisms.
 - Full build: 8,755 jobs, passed with inherited replay warnings only.
 - Frozen implementation: commit `1ca590891a51da76712e8a2dd177287de56d0b43` passed public Lean
   Action run `29976558428`, build job `89109449098`, in `2m6s`; proof source is frozen.
-- Immutable-evidence publication and its public Lean Action CI remain.
+- Immutable evidence: commit `17a1c46f2cb62c1aa351d2d918e872f1cbc9340e` passed public Lean
+  Action run `29976815386`, build job `89110232514`, in `1m53s`; proof source remains frozen.
+- Docs-only final-ledger publication and its public Lean Action CI remain.
 - `rh_frontier_delta=0`; `hard_gap_delta=0`; `source_mellin_bridge_delta=1`.

@@ -8,7 +8,7 @@ Selected node: `H1-BETTIN-GONEK-H-MELLIN-IDENTITY-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Baseline
 
@@ -105,6 +105,10 @@ TargetChecks, nine selected standard-only axiom prints, the empty production for
 Frozen implementation commit `1ca590891a51da76712e8a2dd177287de56d0b43` passed public Lean
 Action run `29976558428`, build job `89109449098`, in `2m6s`. Proof source is frozen; only
 immutable evidence and final-ledger publication remain for campaign closure.
+
+Immutable-evidence commit `17a1c46f2cb62c1aa351d2d918e872f1cbc9340e` passed public Lean
+Action run `29976815386`, build job `89110232514`, in `1m53s`. Only docs-only final-ledger CI
+remains for campaign closure.
 
 ## Mechanical gates
 
