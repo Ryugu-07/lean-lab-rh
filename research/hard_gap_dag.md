@@ -1547,6 +1547,8 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   standard-only axiom prints, an empty production forbidden scan, `git diff --check`, and the
   8,752-job full build pass. Frozen implementation commit
   `2dd7fcb2284b9fe9afd3e01792a6a6c199a770f9` passed public Lean Action run `29969572291`, build
-  job `89088421970`, in `2m4s`; immutable evidence and final ledger remain.
+  job `89088421970`, in `2m4s`; immutable-evidence commit
+  `fdd688ba7e2157ec616b8f58a366b86c94c7f0e9` passed run `29969746284`, build job
+  `89088970037`, in `2m0s`. Only the final ledger remains.
 - `local_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`,
   `source_analytic_algebra_delta=1`.

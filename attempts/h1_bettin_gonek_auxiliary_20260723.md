@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260723-H1-BETTIN-GONEK-AUXILIARY-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_REQUIRED`
 
 ## Baseline
 
@@ -29,6 +29,7 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 | 9 | `TARGET_AND_AXIOM_GATES` | One proven auxiliary Target, 10 exact TargetChecks, and 7 selected standard-only axiom prints compile; the 277-line module is diagnostic-free and its forbidden scan is empty. | Run diff checks, the full build, and public implementation CI. |
 | 10 | `LOCAL_MECHANICAL_CLOSURE` | `git diff --check` and the 8,752-job full build pass. The seven selected axiom prints contain only `propext`, `Classical.choice`, and `Quot.sound`. | Freeze the implementation and require independent public CI before closing this auxiliary endpoint. |
 | 11 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation commit `2dd7fcb2284b9fe9afd3e01792a6a6c199a770f9` passed run `29969572291`, build job `89088421970`, in `2m4s`. | Keep Lean proof source frozen; publish immutable evidence and require its own public CI. |
+| 12 | `IMMUTABLE_EVIDENCE_PUBLIC_CI` | Evidence commit `fdd688ba7e2157ec616b8f58a366b86c94c7f0e9` passed run `29969746284`, build job `89088970037`, in `2m0s`. | Publish the final campaign ledger, then return the open analytic edges to value-ranked historical-route selection. |
 
 ## Frontier accounting
 
@@ -40,7 +41,7 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
   building contour infrastructure.
 - `hard_gap_after_if_success`: the global analytic estimates and integral identities remain open.
 - `local_result`: `FULL_SUCCESS_AT_AUXILIARY_ENDPOINT` at the local mechanical gate, pending
-  immutable-evidence and final-ledger gates. No source regularization mismatch was found.
+  final-ledger gate. No source regularization mismatch was found.
 - `definition_alignment`:
   `research/h1_bettin_gonek_auxiliary_definition_alignment_20260723.md`.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

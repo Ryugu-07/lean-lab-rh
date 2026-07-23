@@ -3508,4 +3508,5 @@ uniform constants. One proven Target, ten exact TargetChecks, seven selected sta
 prints, the empty production scan, `git diff --check`, and the 8,752-job full build pass locally.
 Frozen implementation commit `2dd7fcb2284b9fe9afd3e01792a6a6c199a770f9` passed public Lean Action
 run `29969572291`, build job `89088421970`, in `2m4s`. `rh_frontier_delta=0`; immutable evidence
-and final ledger remain, and the persistent RH Goal stays active.
+commit `fdd688ba7e2157ec616b8f58a366b86c94c7f0e9` passed run `29969746284`, build job
+`89088970037`, in `2m0s`. Only the final ledger remains, and the persistent RH Goal stays active.

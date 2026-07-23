@@ -4,7 +4,7 @@ Date: 2026-07-23
 
 Campaign: `LITERATURE-20260723-H1-BETTIN-GONEK-AUXILIARY-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_REQUIRED`
 
 ## Source coordinates
 
@@ -74,4 +74,6 @@ compile the source Mellin/convolution identity.
 - Full build: 8,752 jobs, passed.
 - Frozen implementation: commit `2dd7fcb2284b9fe9afd3e01792a6a6c199a770f9` passed public Lean
   Action run `29969572291`, build job `89088421970`, in `2m4s`.
+- Immutable evidence: commit `fdd688ba7e2157ec616b8f58a366b86c94c7f0e9` passed public Lean
+  Action run `29969746284`, build job `89088970037`, in `2m0s`.
 - `rh_frontier_delta=0`; `source_analytic_algebra_delta=1`.

@@ -148,3 +148,10 @@ and evidence gates. Every excluded analytic edge remains open.
 - `public_ci`: Lean Action run `29969572291`, build job `89088421970`, passed in `2m4s`.
 - `effect`: the registered Lean implementation is frozen; immutable-evidence and final-ledger
   gates remain before public campaign closure.
+
+## Immutable evidence public gate
+
+- `commit`: `fdd688ba7e2157ec616b8f58a366b86c94c7f0e9`.
+- `public_ci`: Lean Action run `29969746284`, build job `89088970037`, passed in `2m0s`.
+- `effect`: preregistration, frozen implementation, and immutable evidence are independently
+  public-green; only the final-ledger gate remains.

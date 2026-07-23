@@ -911,4 +911,5 @@ and nonzero. No local normalization gap was found. The remaining D3 bridge is th
 analytic Mellin/decay/contour/convolution chain. The 8,752-job full build passes locally, and
 frozen implementation commit `2dd7fcb2284b9fe9afd3e01792a6a6c199a770f9` passed public Lean
 Action run `29969572291`, build job `89088421970`, in `2m4s`; immutable evidence and final ledger
-still remain.
+were separated. Immutable-evidence commit `fdd688ba7e2157ec616b8f58a366b86c94c7f0e9` passed run
+`29969746284`, build job `89088970037`, in `2m0s`; only the final ledger remains.
