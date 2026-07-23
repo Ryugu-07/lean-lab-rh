@@ -8,7 +8,7 @@ Selected node: `H7-WEIL-ARCHIMEDEAN-TAIL-DENSITY-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `LOCALLY_PROVEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Baseline
 
@@ -101,6 +101,7 @@ source diagonal agrees with the primary-source formula, so neither `SOURCE_MISMA
 digamma density from Gamma analyticity and nonvanishing on the right half-plane, allowing the
 entrywise increment identity to compile without an added integrability premise.
 
-The result is `FULL_SUCCESS_AT_TAIL_DENSITY_ENDPOINT` locally. It is not public evidence until
-the frozen implementation commit passes public CI. The unconditional `h_+` threshold and every
-claim boundary above remain open.
+The result is `FULL_SUCCESS_AT_TAIL_DENSITY_ENDPOINT`. Frozen implementation commit
+`9546806d8c3d0afeef9f6c7ee674982e8710576a` passed public Lean Action run `29979643215`, build
+job `89118608592`, in `2m32s`; the proof source is frozen. The next gate is a docs-only immutable
+evidence commit. The unconditional `h_+` threshold and every claim boundary above remain open.

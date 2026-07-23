@@ -89,5 +89,7 @@ semidefinite under the explicit interval premise `0<=h_+`. Continuity of the lit
 density is proved from Gamma analyticity and nonvanishing, not assumed. The 973-line module, 12
 exact checks, 11 standard-only axiom prints, empty scan, and 8,756-job build pass locally.
 
-This adds one actual source block and does not change the RH frontier. Public implementation CI,
-immutable evidence, and final ledger remain before successor reranking.
+This adds one actual source block and does not change the RH frontier. Frozen implementation
+commit `9546806d8c3d0afeef9f6c7ee674982e8710576a` passed public Lean Action run `29979643215`,
+build job `89118608592`, in `2m32s`. Immutable evidence and final ledger remain before successor
+reranking.

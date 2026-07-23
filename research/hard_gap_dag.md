@@ -1666,9 +1666,9 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `expected_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`,
   `actual_source_block_delta=1`, with a source-diagonal falsification endpoint.
 
-## 2026-07-23 H7 archimedean tail density local result
+## 2026-07-23 H7 archimedean tail density implementation public-green
 
-- `status`: `LOCALLY_PROVEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`.
+- `status`: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`.
 - `compiled`: literal `h_+` and interval source, justified `x` differentiation, exact node and
   true-source diagonal values, actual finite divided-difference matrix, rank-two Cauchy density,
   reflection, all-vector two-square identity, and conditional integrated-increment PSD.
@@ -1676,6 +1676,8 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   mismatch was found. Digamma continuity is derived from Gamma analyticity and nonvanishing.
 - `local_gates`: 973-line warning-free module, one proven Target, 12 exact checks, 11 selected
   standard-only axiom prints, empty scan, `git diff --check`, and `8756/8756` full build.
+- `public_implementation`: commit `9546806d8c3d0afeef9f6c7ee674982e8710576a`, Lean Action run
+  `29979643215`, build job `89118608592`, passed in `2m32s`; proof source frozen.
 - `deltas`: `actual_source_block_delta=1`, `rh_frontier_delta=0`, `hard_gap_delta=0`.
 - `open`: unconditional `h_+` threshold, aggregate prime control, three-block assembly, total
   parity ordering, arithmetic Herglotz scalar inequality, uniform simple-even theorem,

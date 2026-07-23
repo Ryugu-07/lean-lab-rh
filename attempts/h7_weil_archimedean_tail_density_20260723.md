@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260723-H7-WEIL-ARCHIMEDEAN-TAIL-DENSITY-01`
 
 Selected node: `H7-WEIL-ARCHIMEDEAN-TAIL-DENSITY-01`
 
-Status: `LOCALLY_PROVEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Attempt log
 
@@ -22,6 +22,7 @@ Status: `LOCALLY_PROVEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 | `DIGAMMA_CONTINUITY` | Reconstructed continuity of `h_+` from complex Gamma analyticity, analytic differentiation, and Gamma nonvanishing on `Re(z)>0`. | No extra measurability or interval-integrability premise is needed for the source increment. | Exchange finite contractions with interval integration. |
 | `INTEGRATED_INCREMENT` | Defined the entrywise interval increment and moved its finite quadratic contraction through the integral. | Its quadratic value is the integral of the pointwise two-square density; it is nonnegative under the explicit premise `0<=h_+` on the interval. | Run mechanical gates and publish the frozen implementation. |
 | `LOCAL_GATES` | Ran direct warning-as-error compile, 12 exact TargetChecks, 11 selected axiom prints, forbidden-token scan, `git diff --check`, and full build. | New declarations use only `propext`, `Classical.choice`, and `Quot.sound`; scan is empty; full build passes `8756/8756`. | Freeze implementation in a commit and require public CI. |
+| `IMPLEMENTATION_CI` | Published frozen implementation commit `9546806d8c3d0afeef9f6c7ee674982e8710576a`. | Lean Action run `29979643215`, build job `89118608592`, passed in `2m32s`; proof source is frozen. | Record immutable coordinates in docs only and require public CI. |
 
 ## Known obstacles
 

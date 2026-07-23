@@ -3630,7 +3630,7 @@ This is structural source work, not tail-budget or constant optimization. The so
 simple-even, source convergence, H7, and RH remain outside the endpoint. Production Lean editing
 is gated on public preregistration CI.
 
-## H7 Archimedean Tail Density Local Result
+## H7 Archimedean Tail Density Implementation Public-Green
 
 The literal source probe succeeds locally. Lean derives the actual node and derivative diagonal
 from the interval kernel, and the resulting divided-difference density is exactly the sum of two
@@ -3646,3 +3646,7 @@ public implementation/evidence/ledger gates.
 Local audit: 973-line warning-free module, one proven Target, 12 exact TargetChecks, 11 selected
 standard-only axiom prints, empty scan, and 8,756-job full build. `actual_source_block_delta=1`,
 `rh_frontier_delta=0`.
+
+Frozen implementation commit `9546806d8c3d0afeef9f6c7ee674982e8710576a` passed public Lean
+Action run `29979643215`, build job `89118608592`, in `2m32s`. Proof source is frozen; immutable
+evidence and final-ledger public gates remain before successor reranking.

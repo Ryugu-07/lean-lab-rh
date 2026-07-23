@@ -994,5 +994,6 @@ found.
 This completes the individual finite pole, prime, and archimedean source instantiations, not the
 total Weil argument. Aggregate prime cancellation, the adverse odd pole term, unconditional
 `h_+` positivity, total parity ordering, Herglotz, simple-even uniformity, source limits, H7, and
-RH remain open. The 8,756-job build passes locally; public implementation, immutable-evidence,
-and final-ledger gates remain before cross-family reranking.
+RH remain open. Frozen implementation `9546806d8c3d0afeef9f6c7ee674982e8710576a` passed public
+Lean Action run `29979643215`, build job `89118608592`, in `2m32s`; immutable-evidence and
+final-ledger gates remain before cross-family reranking.
