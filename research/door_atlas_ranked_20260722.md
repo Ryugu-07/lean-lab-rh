@@ -949,3 +949,18 @@ Action run `29973199798`, build job `89099433656`, in `2m8s`. Immutable evidence
 gates remain. Immutable-evidence commit `6a697d92caa485fe1f274ffb5495e8cd3379b297` passed run
 `29973451920`, build job `89100185836`, in `2m20s`; only final-ledger CI remains. No aggregate
 prime sign, Herglotz bound, or source limit is claimed.
+
+The finite-prime campaign then publicly closed at final-ledger commit
+`26a6f93ccc4b7532f21b50acc2ffbb1debfd338c`, Lean Action run `29973710220`, build job
+`89100966535`, in `1m33s`. Cross-route ranking returned to D3 at
+`H1-BETTIN-GONEK-H-MELLIN-IDENTITY-01`, the literal equation `(2.1)` bridge from the actual
+real-cutoff mollifier to reciprocal zeta.
+
+That endpoint now compiles locally. Lean proves the finite and pointwise supported Mobius
+expansions, the scaled logarithmic kernel, absolute integrated-norm summability on
+`Re(w)>3/2`, Bochner Fubini, Mellin convergence, and the exact source `H_t(w)` formula. No cutoff,
+boundary, branch, exponent, or normalization mismatch was found. The remaining D3 mechanism is
+now concentrated at inverse Mellin support/boundedness, vertical decay, convolution, contour
+movement, selected-residue lower bounds, the moment-to-power bridge, and Farmer's moment
+conjecture. D3 is not exhausted; D6's archimedean source block and the wider historical atlas stay
+active competitors for the next campaign.

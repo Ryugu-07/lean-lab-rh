@@ -3590,3 +3590,17 @@ The selected campaign tests the missing floor-cutoff source expansion and absolu
 sum-integral exchange. This is a historical mechanism campaign, not a numerical optimization.
 The H7 archimedean source remains a co-leading successor, and no historical family is marked
 exhausted.
+
+## H1 Bettin--Gonek `H_t` Mellin Identity Local Result
+
+The registered endpoint now compiles from the actual `farmerMollifier`. The finite floor-cutoff
+formula agrees pointwise with the supported Mobius `tsum`; the scaled logarithmic kernel has its
+exact source value; and the integrated norms are bounded by the summable series
+`n^(1/2-Re(w))/(Re(w)-1)^2` under the paper's condition `Re(w)>3/2`. This supplies a justified
+Bochner sum-integral exchange rather than a formal rearrangement.
+
+Lean packages the result as `HasMellin` at Mathlib parameter `1-w` and proves the literal
+reciprocal-zeta `H_t(w)` formula. The campaign therefore closes equation `(2.1)` locally, while
+inverse Mellin support, auxiliary decay, convolution, contour movement, moment transfer,
+Farmer's moment conjecture, H1, and RH remain open. After public closure, successor selection
+will compare those H1 edges with H7's archimedean block and the broader historical portfolio.

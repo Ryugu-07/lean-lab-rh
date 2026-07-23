@@ -7,6 +7,7 @@ import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
 import LeanLab.Riemann.ThetaInfinityMollifier
 import LeanLab.Riemann.BettinGonekAuxiliary
+import LeanLab.Riemann.BettinGonekMellinIdentity
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -907,3 +908,12 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.weilFinitePrimeAtomMatrix_sixteen_eight_even_neg
 #print axioms LeanLab.Riemann.weilFinitePrimeAtomMatrix_sixteen_eight_odd_pos
 #print axioms LeanLab.Riemann.weilFinitePrimeBlockAudit_endpoint
+#print axioms LeanLab.Riemann.bettinGonekLogMollifier_eq_finset
+#print axioms LeanLab.Riemann.tsum_bettinGonekMollifierSeriesTerm
+#print axioms LeanLab.Riemann.integral_bettinGonekLogKernel_Ioi
+#print axioms LeanLab.Riemann.integral_bettinGonekMellinSeriesTerm
+#print axioms LeanLab.Riemann.summable_integral_norm_bettinGonekMellinSeriesTerm
+#print axioms LeanLab.Riemann.integral_bettinGonekWeightedMollifier
+#print axioms LeanLab.Riemann.hasMellin_bettinGonekLogMollifier
+#print axioms LeanLab.Riemann.bettinGonekH_eq
+#print axioms LeanLab.Riemann.bettinGonekMellinIdentity_endpoint

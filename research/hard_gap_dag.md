@@ -1629,3 +1629,20 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `successor_edges`: inverse Mellin support/boundedness for `g_t`, vertical decay, contour shift,
   selected-residue lower bound, moment-to-power transfer, and Farmer's arbitrary-length moment.
 - `claim_boundary`: no successor edge, H1, or RH is available as a premise.
+
+## 2026-07-23 H1 exact mollifier Mellin bridge local result
+
+- `H1-BETTIN-GONEK-H-MELLIN-IDENTITY-01`: `LOCALLY_PROVEN / SOURCE_ALIGNED`.
+- `compiled`: literal real-cutoff Mobius finite and pointwise expansions, scaled logarithmic
+  improper integral, absolute integrated-norm summability on `Re(w)>3/2`, Bochner sum-integral
+  exchange, Mellin convergence, and the exact reciprocal-zeta `H_t(w)` formula.
+- `source_audit`: no cutoff boundary, principal-power branch, exponent, normalization, or Fubini
+  mismatch was found.
+- `local_gates`: 576-line warning-free module, one proven Target, 12 exact TargetChecks, 9
+  standard-only axiom prints, empty production scan, `git diff --check`, and the 8,755-job full
+  build pass.
+- `delta`: `source_mellin_bridge_delta=1`, while `rh_frontier_delta=0` and
+  `hard_gap_delta=0`.
+- `open`: inverse Mellin support/boundedness, auxiliary vertical decay, convolution, contour
+  movement, selected-residue lower bounds, the complete moment-to-power bridge, Farmer's
+  arbitrary-length moment conjecture, H1, and RH.

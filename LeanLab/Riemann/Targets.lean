@@ -81,6 +81,7 @@ import LeanLab.Riemann.WeilGroundStatePrimeBlock
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ThetaInfinityMollifier
 import LeanLab.Riemann.BettinGonekAuxiliary
+import LeanLab.Riemann.BettinGonekMellinIdentity
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
@@ -1404,6 +1405,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``bettinGonekAuxiliaryAudit_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260723-H1-BETTIN-GONEK-AUXILIARY-01 compiles the local analytic algebra in equations (2.2)-(2.3). It does not prove inverse Mellin support, vertical decay, contour integration, convolution, the full moment-to-power bridge, Farmer's conjecture, or RH; rh_frontier_delta=0." },
+    { id := "H1.theta-infinity.actual-mollifier-mellin-identity"
+      tier := .tier2
+      title := "Prove the actual Bettin--Gonek mollifier Mellin identity"
+      statement :=
+        "From the literal real-cutoff Mobius mollifier, prove its logarithmic source series, absolute sum-integral interchange on Re(w)>3/2, and H_t(w)=1/((w-1)^2*zeta(w-1/2+it)) in Mathlib's Mellin convention."
+      leanName := some ``bettinGonekMellinIdentity_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260723-H1-BETTIN-GONEK-MELLIN-IDENTITY-01 closes equation (2.1) from the actual source cutoff. Lean proves the scaled logarithmic kernel, a summable integrated-norm majorant, Bochner integrability of the pointwise Mobius sum, the reciprocal-zeta L-series identification, and the exact HasMellin statement. It does not prove inverse Mellin support, auxiliary vertical decay, contour shifting, the selected-residue lower bound, the full moment-to-power bridge, Farmer's conjecture, or RH; rh_frontier_delta=0 and source_analytic_bridge_delta=1." },
     { id := "H1.theta-infinity.moment-to-power-bridge"
       tier := .tier2
       title := "Formalize the Bettin--Gonek selected-zero residue bridge"

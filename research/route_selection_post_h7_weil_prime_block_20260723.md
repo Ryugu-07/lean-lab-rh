@@ -65,3 +65,15 @@ absolute Mobius-series interchange, and the exact `H_t(w)` reciprocal-zeta formu
 This endpoint does not include inverse Mellin support, vertical decay of `G_t`, contour shifting,
 the selected-residue lower bound, a moment-to-power theorem, Farmer's arbitrary-length moment
 conjecture, or RH.
+
+## Local outcome
+
+The selected endpoint now compiles from the literal `farmerMollifier`. Lean proves the finite and
+pointwise source expansions, the scaled logarithmic kernel, the absolute integrated-norm
+majorant on `Re(w)>3/2`, the sum-integral exchange, Mellin convergence, and the exact reciprocal
+zeta value. No cutoff, exponent, branch, or boundary mismatch was found.
+
+This moves the H1 mechanism from the displayed identity `(2.1)` to the inverse Mellin,
+support/boundedness, decay, convolution, and contour edges. It does not move the RH frontier.
+After public closure, the successor must be reranked against the H7 archimedean source block and
+other still-underexplored historical mechanisms; the H1 family is not marked exhausted.

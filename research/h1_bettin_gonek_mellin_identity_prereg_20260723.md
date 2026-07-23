@@ -8,7 +8,7 @@ Selected node: `H1-BETTIN-GONEK-H-MELLIN-IDENTITY-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `LOCALLY_PROVEN / LOCAL_GATES_PASSED / IMPLEMENTATION_CI_REQUIRED`
 
 ## Baseline
 
@@ -18,6 +18,9 @@ Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
 - `route_selection`: `research/route_selection_post_h7_weil_prime_block_20260723.md`.
 - `production_gate`: no production Lean source may be created before this preregistration commit
   passes public Lean Action CI.
+- `preregistration_gate`: commit `3dfe6e96bbbb57474aa241630a3624c4ed290b3d` passed public Lean
+  Action run `29974255134`, build job `89102575415`, in `1m49s`; production editing began only
+  after this gate.
 
 ## Primary source alignment
 
@@ -79,6 +82,25 @@ moment bound, and no RH.
 An abstract function carrying the desired Mellin transform cannot satisfy the endpoint. The proof
 must start from the existing `farmerMollifier` and use the literal Mobius coefficients and
 real-cutoff condition.
+
+## Local result
+
+Decision: `FULL_SUCCESS_AT_MELLIN_ENDPOINT` pending the public implementation and evidence
+sequence.
+
+All six fixed items compile. The actual real-cutoff mollifier equals both the finite source sum
+and the pointwise supported `tsum`; the scaled kernel is integrable with the exact source value;
+the integrated norms admit the summable majorant `n^(1/2-Re(w))/(Re(w)-1)^2`; Bochner Fubini is
+justified; and the resulting Mobius L-series gives the exact reciprocal-zeta `H_t` formula. The
+endpoint is packaged as `HasMellin` at parameter `1-w` and as
+`bettinGonekMellinIdentity_endpoint`.
+
+No source mismatch or omitted `x=1` boundary term was found. The claim boundary above is
+unchanged.
+
+The 576-line production module compiles standalone with warnings as errors. Twelve exact
+TargetChecks, nine selected standard-only axiom prints, the empty production forbidden scan,
+`git diff --check`, and the full 8,755-job build pass locally.
 
 ## Mechanical gates
 

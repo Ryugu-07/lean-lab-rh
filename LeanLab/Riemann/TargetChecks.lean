@@ -4017,4 +4017,72 @@ example (C N : ℕ) :
           (weilFinitePrimeAtomMatrix 16 8 1 *ᵥ weilPrimeLevelOneOdd) :=
   weilFinitePrimeBlockAudit_endpoint C N
 
+example {x : ℝ} (hx : 1 < x) (s : ℂ) :
+    bettinGonekLogMollifier x s =
+      ∑ n ∈ Finset.Icc 1 ⌊x⌋₊,
+        LSeries.term (fun m : ℕ => (ArithmeticFunction.moebius m : ℂ)) s n *
+          (Real.log (x / n) : ℂ) :=
+  bettinGonekLogMollifier_eq_finset hx s
+
+example (x : ℝ) (s : ℂ) :
+    ∑' n : ℕ, bettinGonekMollifierSeriesTerm s n x = bettinGonekLogMollifier x s :=
+  tsum_bettinGonekMollifierSeriesTerm x s
+
+example {n : ℕ} (hn : 0 < n) {w : ℂ} (hw : 1 < w.re) :
+    (∫ x : ℝ in Set.Ioi (n : ℝ), bettinGonekLogKernel n w x) =
+      (n : ℂ) ^ (1 - w) / (w - 1) ^ 2 :=
+  integral_bettinGonekLogKernel_Ioi hn hw
+
+example (s : ℂ) {w : ℂ} (hw : 1 < w.re) (n : ℕ) :
+    MeasureTheory.Integrable (bettinGonekMellinSeriesTerm s w n) :=
+  integrable_bettinGonekMellinSeriesTerm s hw n
+
+example (s : ℂ) {w : ℂ} (hw : 1 < w.re) (n : ℕ) :
+    (∫ x : ℝ, bettinGonekMellinSeriesTerm s w n x) =
+      LSeries.term (fun m : ℕ => (ArithmeticFunction.moebius m : ℂ)) (w + s - 1) n /
+        (w - 1) ^ 2 :=
+  integral_bettinGonekMellinSeriesTerm s hw n
+
+example (t : ℝ) {w : ℂ} (hw : 3 / 2 < w.re) :
+    Summable
+      (fun n : ℕ =>
+        ∫ x : ℝ, ‖bettinGonekMellinSeriesTerm (farmerCriticalLinePoint t) w n x‖) :=
+  summable_integral_norm_bettinGonekMellinSeriesTerm t hw
+
+example (t : ℝ) {w : ℂ} (hw : 3 / 2 < w.re) :
+    MeasureTheory.Integrable (bettinGonekWeightedMollifier t w) :=
+  integrable_bettinGonekWeightedMollifier t hw
+
+example (t : ℝ) {w : ℂ} (hw : 3 / 2 < w.re) :
+    (∫ x : ℝ, bettinGonekWeightedMollifier t w x) =
+      (riemannZeta (w - 1 / 2 + t * Complex.I))⁻¹ / (w - 1) ^ 2 :=
+  integral_bettinGonekWeightedMollifier t hw
+
+example (t : ℝ) {w : ℂ} (hw : 3 / 2 < w.re) :
+    MellinConvergent
+      (fun x : ℝ => bettinGonekLogMollifier x (farmerCriticalLinePoint t)) (1 - w) :=
+  mellinConvergent_bettinGonekLogMollifier t hw
+
+example (t : ℝ) {w : ℂ} (hw : 3 / 2 < w.re) :
+    HasMellin
+      (fun x : ℝ => bettinGonekLogMollifier x (farmerCriticalLinePoint t)) (1 - w)
+      ((riemannZeta (w - 1 / 2 + t * Complex.I))⁻¹ / (w - 1) ^ 2) :=
+  hasMellin_bettinGonekLogMollifier t hw
+
+example (t : ℝ) {w : ℂ} (hw : 3 / 2 < w.re) :
+    bettinGonekH t w =
+      1 / ((w - 1) ^ 2 * riemannZeta (w - 1 / 2 + t * Complex.I)) :=
+  bettinGonekH_eq t hw
+
+example (t : ℝ) {w : ℂ} (hw : 3 / 2 < w.re) :
+    (∀ x : ℝ,
+      ∑' n : ℕ, bettinGonekMollifierSeriesTerm (farmerCriticalLinePoint t) n x =
+        bettinGonekLogMollifier x (farmerCriticalLinePoint t)) ∧
+      HasMellin
+        (fun x : ℝ => bettinGonekLogMollifier x (farmerCriticalLinePoint t)) (1 - w)
+        ((riemannZeta (w - 1 / 2 + t * Complex.I))⁻¹ / (w - 1) ^ 2) ∧
+      bettinGonekH t w =
+        1 / ((w - 1) ^ 2 * riemannZeta (w - 1 / 2 + t * Complex.I)) :=
+  bettinGonekMellinIdentity_endpoint t hw
+
 end LeanLab.Riemann
