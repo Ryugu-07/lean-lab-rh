@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260723-H1-BETTIN-GONEK-J-CONTOUR-01`
 
 Selected node: `H1-BETTIN-GONEK-J-CONTOUR-01`
 
-Status: `FROZEN_IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Attempt log
 
@@ -25,6 +25,7 @@ Status: `FROZEN_IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 | `RESIDUE_POWER` | Computed the complex-power norm at the selected pole and proved the denominator scale positive. | `norm(residue)=residueScale*x^(Re(rho)+1/2)` and `residueScale*x^(Re(rho)+1/2)<=norm(JLine(3))+2`. | Register and audit the aggregate endpoint. |
 | `LOCAL_GATES` | Added one proven Target, an exact aggregate TargetCheck, selected transitive axiom prints, and definition alignment; then ran the forbidden scan, patch check, and full build. | The 947-line module and all exact entry points pass with warnings as errors; selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; the forbidden scan is empty, `git diff --check` passes, and the full 8,757-job build succeeds. | Freeze the implementation and require public Lean Action CI. |
 | `PUBLIC_FREEZE` | Committed and pushed the complete implementation as `66f5260c6ae71dbb8c09d31000fd6c13f9bf7ec1`. | Public Lean Action run `29982986397`, build job `89128701960`, passed in `2m14s`; proof source is frozen. | Publish these coordinates in a docs-only immutable-evidence commit. |
+| `IMMUTABLE_EVIDENCE` | Published the frozen implementation coordinates in docs-only commit `6fccd535aa41d8e953b16bd28537d9984d00be34`. | Public Lean Action run `29983227759`, build job `89129435959`, passed in `1m54s`; proof source remained unchanged. | Publish the final campaign ledger and require its CI. |
 
 ## Claim boundary
 

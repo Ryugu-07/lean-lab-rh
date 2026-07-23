@@ -1025,4 +1025,6 @@ passes, and the full 8,757-job build succeeds.
 
 Frozen implementation `66f5260c6ae71dbb8c09d31000fd6c13f9bf7ec1` passed public Lean
 Action run `29982986397`, build job `89128701960`, in `2m14s`. Proof source remains frozen;
-immutable-evidence CI precedes final ledger closure and successor reranking.
+immutable-evidence commit `6fccd535aa41d8e953b16bd28537d9984d00be34` passed run
+`29983227759`, build job `89129435959`, in `1m54s`. Final-ledger CI precedes successor
+reranking.

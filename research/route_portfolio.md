@@ -3687,4 +3687,6 @@ the full 8,757-job build. `source_analytic_bridge_delta=1`, `rh_frontier_delta=0
 
 Frozen implementation commit `66f5260c6ae71dbb8c09d31000fd6c13f9bf7ec1` passed public Lean
 Action run `29982986397`, build job `89128701960`, in `2m14s`. Proof source is frozen;
-immutable-evidence CI is next.
+immutable-evidence commit `6fccd535aa41d8e953b16bd28537d9984d00be34` passed run
+`29983227759`, build job `89129435959`, in `1m54s`. Only final-ledger CI remains before
+successor reranking.

@@ -8,7 +8,7 @@ Selected node: `H1-BETTIN-GONEK-J-CONTOUR-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `FROZEN_IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Baseline
 
@@ -126,4 +126,6 @@ The exact TargetCheck and selected transitive axiom audit pass. The forbidden sc
 `G_t` decay, convolution, moment transfer, Farmer conjecture, H1, or RH claim is introduced.
 Frozen implementation commit `66f5260c6ae71dbb8c09d31000fd6c13f9bf7ec1` passed public Lean
 Action run `29982986397`, build job `89128701960`, in `2m14s`. Proof source is frozen; this
-coordinate record now requires its own immutable-evidence CI.
+coordinate record is published by immutable-evidence commit
+`6fccd535aa41d8e953b16bd28537d9984d00be34`, which passed public Lean Action run
+`29983227759`, build job `89129435959`, in `1m54s`. Only docs-only final-ledger CI remains.

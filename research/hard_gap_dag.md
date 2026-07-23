@@ -1703,7 +1703,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 ## 2026-07-23 H1 Bettin--Gonek J-contour implementation public-green
 
 - `node`: `H1-BETTIN-GONEK-J-CONTOUR-01`.
-- `status`: `FROZEN_IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`.
+- `status`: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`.
 - `compiled_edge`: actual `G_t H_t` cancellation; two absolute vertical integrals; exact finite
   selected-pole rectangle; horizontal `O(|u|^-4)` decay; infinite equation `(2.5)`; uniform
   line-zero bound; exact positive residue scale and selected-zero lower inequality.
@@ -1712,6 +1712,8 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   `8757/8757` build.
 - `public_implementation`: commit `66f5260c6ae71dbb8c09d31000fd6c13f9bf7ec1`, Lean Action run
   `29982986397`, build job `89128701960`, passed in `2m14s`; proof source frozen.
+- `immutable_evidence`: commit `6fccd535aa41d8e953b16bd28537d9984d00be34`, Lean Action run
+  `29983227759`, build job `89129435959`, passed in `1m54s`; final-ledger CI remains.
 - `deltas`: `source_analytic_bridge_delta=1`, `rh_frontier_delta=0`, `hard_gap_delta=0`.
 - `remaining_D3_path`: inverse Mellin support and boundedness of `g_t`; standalone `G_t` decay
   sufficient for inversion; convolution `(2.4)`; Cauchy--Schwarz and zeta second-moment transfer;
