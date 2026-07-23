@@ -78,6 +78,7 @@ import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.WeilGroundStateRayleighGap
 import LeanLab.Riemann.WeilGroundStatePoleBlock
 import LeanLab.Riemann.WeilGroundStatePrimeBlock
+import LeanLab.Riemann.WeilArchimedeanTailDensity
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ThetaInfinityMollifier
 import LeanLab.Riemann.BettinGonekAuxiliary
@@ -1358,6 +1359,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``weilFinitePrimeBlockAudit_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260723-H7-WEIL-PRIME-BLOCK-01 instantiates the actual finite prime source and formally obstructs a termwise uniform semidefinite sign using the C=16,q=8 atom. The witness is not a sign theorem for the aggregate prime block. It does not define the archimedean block, prove a sign for the total Weil matrix, establish the arithmetic Herglotz scalar bound, prove simple-even uniformity or source convergence, or prove RH; rh_frontier_delta=0." },
+    { id := "H7.weil-ground-state.actual-archimedean-tail-density"
+      tier := .tier2
+      title := "Instantiate the finite Weil archimedean tail density"
+      statement :=
+        "From the literal digamma-weighted sine-cosine interval source, prove the exact integer-node and true-source diagonal formulas, the finite rank-two Cauchy density, reflection and quadratic identities, and conditional positive semidefiniteness of its entrywise interval increment."
+      leanName := some ``weilArchimedeanTailDensityAudit_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260723-H7-WEIL-ARCHIMEDEAN-TAIL-DENSITY-01 derives the diagonal by differentiating the actual interval source, proves digamma-density continuity without a custom axiom, and keeps interval nonnegativity conditional on the explicit pointwise h_+ sign premise. It does not prove the published h_+(T)>0 threshold, strict positivity, total positivity, total pole-prime-archimedean sign, Herglotz, simple-even uniformity, source convergence, H7, or RH; rh_frontier_delta=0." },
     { id := "H7.weil-ground-state.rayleigh-gap-consumer"
       tier := .tier2
       title := "Control ground-line defect by Rayleigh excess over the spectral gap"
@@ -1372,7 +1381,7 @@ def rhTargets : List ResearchTarget :=
       statement :=
         "Instantiate the exact finite-prime Weil matrix, its normalized true ground vector and gap, and the normalized prolate coefficient vector, then prove that Rayleigh excess divided by the certified gap tends to zero in the source-prescribed Galerkin and prime-cutoff limit."
       status := .inProgress
-      note := "This is an original open candidate suggested by the quantitative consumer, not a theorem stated in the locked Connes sources. No current Lean declaration defines all prime, archimedean, pole, and prolate entries. It has no leanName and is unavailable as a premise." },
+      note := "This is an original open candidate suggested by the quantitative consumer, not a theorem stated in the locked Connes sources. Individual pole, finite-prime, and archimedean tail blocks now compile, but no current declaration assembles their total source matrix with the prolate vector and two uniform cutoff limits. It has no leanName and is unavailable as a premise." },
     { id := "H1.short-mollifier.variational-global-minimizer"
       tier := .tier2
       title := "Certify the short-mollifier variational minimizer"

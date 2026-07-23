@@ -76,3 +76,18 @@ The campaign does not prove `h_+(r)>0` for `r>=7`, strict positive definiteness 
 interval increment, strict total positivity of all minors, the infinite tail limit, a tail budget,
 the total pole/prime/archimedean sign, Herglotz, simple-even ground states, source convergence, H7,
 or RH.
+
+## Local selected-node result
+
+The selected node reaches its full registered endpoint locally. Lean differentiates the literal
+interval kernel under the integral, proves both source formulas, constructs the actual finite
+matrix, and derives the exact positive-sign Cauchy rank-two density. The diagonal falsification
+guard passed with no normalization mismatch.
+
+The entrywise interval increment has the claimed quadratic integral identity and is positive
+semidefinite under the explicit interval premise `0<=h_+`. Continuity of the literal digamma
+density is proved from Gamma analyticity and nonvanishing, not assumed. The 973-line module, 12
+exact checks, 11 standard-only axiom prints, empty scan, and 8,756-job build pass locally.
+
+This adds one actual source block and does not change the RH frontier. Public implementation CI,
+immutable evidence, and final ledger remain before successor reranking.

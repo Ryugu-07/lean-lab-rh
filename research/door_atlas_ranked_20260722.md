@@ -984,3 +984,15 @@ not assume the source's Arb-assisted `h_+(T)>0` threshold, and does not claim st
 total positivity, a tail limit, the total Weil sign, Herglotz, simple-even structure, source
 convergence, H7, or RH. D3 and the rest of the historical atlas remain active after this bounded
 D6 campaign.
+
+That D6 source node now reaches its local registered endpoint. The literal interval source and
+its true derivative diagonal agree exactly with the published Cauchy formulas. Lean proves the
+rank-two density, parity preservation, all-vector two-square identity, digamma-density
+continuity, and conditional PSD of the entrywise interval increment. No source mismatch was
+found.
+
+This completes the individual finite pole, prime, and archimedean source instantiations, not the
+total Weil argument. Aggregate prime cancellation, the adverse odd pole term, unconditional
+`h_+` positivity, total parity ordering, Herglotz, simple-even uniformity, source limits, H7, and
+RH remain open. The 8,756-job build passes locally; public implementation, immutable-evidence,
+and final-ledger gates remain before cross-family reranking.

@@ -3629,3 +3629,20 @@ This is structural source work, not tail-budget or constant optimization. The so
 `h_+(T)>0` threshold, strict positive definiteness, total positivity, total Weil sign, Herglotz,
 simple-even, source convergence, H7, and RH remain outside the endpoint. Production Lean editing
 is gated on public preregistration CI.
+
+## H7 Archimedean Tail Density Local Result
+
+The literal source probe succeeds locally. Lean derives the actual node and derivative diagonal
+from the interval kernel, and the resulting divided-difference density is exactly the sum of two
+Cauchy outer products with scalar `h_+(r) sin^2(Lr/2)/(pi^2 rho)`. The all-vector quadratic is a
+sum of two squares, while interval nonnegativity remains explicitly conditional on `h_+>=0`.
+
+The project now has source-aligned pole, finite-prime, and archimedean tail blocks in one finite
+matrix API. This does not yet assemble the total matrix or settle aggregate prime cancellation,
+the negative odd pole contribution, the unconditional digamma sign threshold, Herglotz,
+simple-even uniformity, or either source limit. The next campaign is reranked only after the three
+public implementation/evidence/ledger gates.
+
+Local audit: 973-line warning-free module, one proven Target, 12 exact TargetChecks, 11 selected
+standard-only axiom prints, empty scan, and 8,756-job full build. `actual_source_block_delta=1`,
+`rh_frontier_delta=0`.

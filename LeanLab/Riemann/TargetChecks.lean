@@ -81,6 +81,7 @@ import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.WeilGroundStateRayleighGap
 import LeanLab.Riemann.WeilGroundStatePoleBlock
 import LeanLab.Riemann.WeilGroundStatePrimeBlock
+import LeanLab.Riemann.WeilArchimedeanTailDensity
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
@@ -4084,5 +4085,95 @@ example (t : ℝ) {w : ℂ} (hw : 3 / 2 < w.re) :
       bettinGonekH t w =
         1 / ((w - 1) ^ 2 * riemannZeta (w - 1 / 2 + t * Complex.I)) :=
   bettinGonekMellinIdentity_endpoint t hw
+
+example (L r x : ℝ) :
+    HasDerivAt (weilArchimedeanKernel L r)
+      (weilArchimedeanKernelDerivative L r x) x :=
+  hasDerivAt_weilArchimedeanKernel L r x
+
+example {L r : ℝ} (hL : 0 < L) (n : ℤ)
+    (hplus : weilArchimedeanBandScale L * (n : ℝ) + r ≠ 0)
+    (hminus : weilArchimedeanBandScale L * (n : ℝ) - r ≠ 0) :
+    weilArchimedeanKernel L r n =
+      (2 * Real.sin (L * r / 2) ^ 2 / weilArchimedeanBandScale L) *
+        (n : ℝ) /
+          ((r / weilArchimedeanBandScale L) ^ 2 - (n : ℝ) ^ 2) :=
+  weilArchimedeanKernel_integer_eq hL n hplus hminus
+
+example {L r : ℝ} (hL : 0 < L) (n : ℤ)
+    (hplus : weilArchimedeanBandScale L * (n : ℝ) + r ≠ 0)
+    (hminus : weilArchimedeanBandScale L * (n : ℝ) - r ≠ 0) :
+    weilArchimedeanKernelDerivative L r n =
+      (2 * Real.sin (L * r / 2) ^ 2 / weilArchimedeanBandScale L) *
+        ((r / weilArchimedeanBandScale L) ^ 2 + (n : ℝ) ^ 2) /
+          ((r / weilArchimedeanBandScale L) ^ 2 - (n : ℝ) ^ 2) ^ 2 :=
+  weilArchimedeanKernelDerivative_integer_eq hL n hplus hminus
+
+example (L r : ℝ) (N : ℕ) (i : Fin (2 * N + 1)) :
+    HasDerivAt (weilArchimedeanTailSource L r)
+      (weilArchimedeanSourceDerivative L r N i)
+      (weilFiniteCenteredFrequency N i) :=
+  hasDerivAt_weilArchimedeanTailSource_centered L r N i
+
+example {L r : ℝ} {N : ℕ} (hL : 0 < L)
+    (hr : weilArchimedeanBandScale L * N < r) (i j : Fin (2 * N + 1)) :
+    weilFiniteArchimedeanDensityMatrix L r N i j =
+      weilFiniteArchimedeanClosedEntry L r N i j :=
+  weilFiniteArchimedeanDensityMatrix_apply hL hr i j
+
+example {L r : ℝ} {N : ℕ} (hL : 0 < L)
+    (hr : weilArchimedeanBandScale L * N < r) :
+    weilFiniteArchimedeanDensityMatrix L r N =
+      weilArchimedeanCauchyCoefficient L r •
+        (Matrix.vecMulVec (weilFiniteArchimedeanMinusVector L r N)
+            (weilFiniteArchimedeanMinusVector L r N) +
+          Matrix.vecMulVec (weilFiniteArchimedeanPlusVector L r N)
+            (weilFiniteArchimedeanPlusVector L r N)) :=
+  weilFiniteArchimedeanDensityMatrix_rankTwo hL hr
+
+example {L r : ℝ} {N : ℕ} (hL : 0 < L)
+    (hr : weilArchimedeanBandScale L * N < r) (i j : Fin (2 * N + 1)) :
+    weilFiniteArchimedeanDensityMatrix L r N i.rev j.rev =
+      weilFiniteArchimedeanDensityMatrix L r N i j :=
+  weilFiniteArchimedeanDensityMatrix_reflection hL hr i j
+
+example {L r : ℝ} {N : ℕ} (hL : 0 < L)
+    (hr : weilArchimedeanBandScale L * N < r)
+    (x : Fin (2 * N + 1) → ℝ) :
+    x ⬝ᵥ (weilFiniteArchimedeanDensityMatrix L r N *ᵥ x) =
+      weilArchimedeanCauchyCoefficient L r *
+        ((weilFiniteArchimedeanMinusVector L r N ⬝ᵥ x) ^ 2 +
+          (weilFiniteArchimedeanPlusVector L r N ⬝ᵥ x) ^ 2) :=
+  weilFiniteArchimedeanDensityMatrix_quadratic hL hr x
+
+example : Continuous weilArchimedeanDensity :=
+  continuous_weilArchimedeanDensity
+
+example {L T₁ T₂ : ℝ} {N : ℕ} (hL : 0 < L)
+    (hband : weilArchimedeanBandScale L * N < T₁) (hT : T₁ ≤ T₂)
+    (x : Fin (2 * N + 1) → ℝ) :
+    x ⬝ᵥ (weilFiniteArchimedeanIncrement L T₁ T₂ N *ᵥ x) =
+      ∫ r in T₁..T₂, weilFiniteArchimedeanQuadraticDensity L r N x :=
+  weilFiniteArchimedeanIncrement_quadratic hL hband hT x
+
+example {L T₁ T₂ : ℝ} {N : ℕ} (hL : 0 < L)
+    (hband : weilArchimedeanBandScale L * N < T₁) (hT : T₁ ≤ T₂)
+    (hdensity : ∀ r ∈ Set.Icc T₁ T₂, 0 ≤ weilArchimedeanDensity r)
+    (x : Fin (2 * N + 1) → ℝ) :
+    0 ≤ x ⬝ᵥ (weilFiniteArchimedeanIncrement L T₁ T₂ N *ᵥ x) :=
+  weilFiniteArchimedeanIncrement_nonneg hL hband hT hdensity x
+
+example {L T₁ T₂ : ℝ} {N : ℕ} (hL : 0 < L)
+    (hband : weilArchimedeanBandScale L * N < T₁) (hT : T₁ ≤ T₂)
+    (hdensity : ∀ r ∈ Set.Icc T₁ T₂, 0 ≤ weilArchimedeanDensity r) :
+    (∀ r, T₁ ≤ r →
+      weilFiniteArchimedeanDensityMatrix L r N =
+        weilArchimedeanCauchyCoefficient L r •
+          (Matrix.vecMulVec (weilFiniteArchimedeanMinusVector L r N)
+              (weilFiniteArchimedeanMinusVector L r N) +
+            Matrix.vecMulVec (weilFiniteArchimedeanPlusVector L r N)
+              (weilFiniteArchimedeanPlusVector L r N))) ∧
+      (∀ x, 0 ≤ x ⬝ᵥ (weilFiniteArchimedeanIncrement L T₁ T₂ N *ᵥ x)) :=
+  weilArchimedeanTailDensityAudit_endpoint hL hband hT hdensity
 
 end LeanLab.Riemann

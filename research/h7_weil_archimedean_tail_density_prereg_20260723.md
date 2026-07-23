@@ -8,7 +8,7 @@ Selected node: `H7-WEIL-ARCHIMEDEAN-TAIL-DENSITY-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `LOCALLY_PROVEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 
 ## Baseline
 
@@ -18,6 +18,8 @@ Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
 - `route_selection`: `research/route_selection_post_h1_mellin_identity_20260723.md`.
 - `production_gate`: no production Lean source may be created before this preregistration commit
   passes public Lean Action CI.
+- `preregistration_public_ci`: commit `be0b58b3e27bff4af738d81db6cac3f223f2eee7`, Lean Action run
+  `29977635904`, build job `89112697896`, passed in `1m28s`.
 
 ## Primary source alignment
 
@@ -90,3 +92,15 @@ Production code must pass direct warning-as-error compilation, exact TargetCheck
 `#print axioms`, an empty forbidden-token scan, `git diff --check`, and the full `lake build`.
 Publication requires frozen implementation CI, immutable-evidence CI, and final-ledger CI. Proof
 source freezes after implementation CI.
+
+## Local implementation result
+
+All seven fixed items compile in `LeanLab/Riemann/WeilArchimedeanTailDensity.lean`. The actual
+source diagonal agrees with the primary-source formula, so neither `SOURCE_MISMATCH` nor
+`FALSIFICATION_DIAGONAL` fired. The implementation also derives continuity of the literal
+digamma density from Gamma analyticity and nonvanishing on the right half-plane, allowing the
+entrywise increment identity to compile without an added integrability premise.
+
+The result is `FULL_SUCCESS_AT_TAIL_DENSITY_ENDPOINT` locally. It is not public evidence until
+the frozen implementation commit passes public CI. The unconditional `h_+` threshold and every
+claim boundary above remain open.

@@ -87,6 +87,7 @@ import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.WeilGroundStateRayleighGap
 import LeanLab.Riemann.WeilGroundStatePoleBlock
 import LeanLab.Riemann.WeilGroundStatePrimeBlock
+import LeanLab.Riemann.WeilArchimedeanTailDensity
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
@@ -917,3 +918,14 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.hasMellin_bettinGonekLogMollifier
 #print axioms LeanLab.Riemann.bettinGonekH_eq
 #print axioms LeanLab.Riemann.bettinGonekMellinIdentity_endpoint
+#print axioms LeanLab.Riemann.hasDerivAt_weilArchimedeanKernel
+#print axioms LeanLab.Riemann.weilArchimedeanKernel_integer_eq
+#print axioms LeanLab.Riemann.weilArchimedeanKernelDerivative_integer_eq
+#print axioms LeanLab.Riemann.hasDerivAt_weilArchimedeanTailSource_centered
+#print axioms LeanLab.Riemann.weilFiniteArchimedeanDensityMatrix_apply
+#print axioms LeanLab.Riemann.weilFiniteArchimedeanDensityMatrix_rankTwo
+#print axioms LeanLab.Riemann.weilFiniteArchimedeanDensityMatrix_quadratic
+#print axioms LeanLab.Riemann.continuous_weilArchimedeanDensity
+#print axioms LeanLab.Riemann.weilFiniteArchimedeanIncrement_quadratic
+#print axioms LeanLab.Riemann.weilFiniteArchimedeanIncrement_nonneg
+#print axioms LeanLab.Riemann.weilArchimedeanTailDensityAudit_endpoint

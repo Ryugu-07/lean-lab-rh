@@ -1665,3 +1665,18 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   limit, total Weil sign, Herglotz, simple-even theorem, source convergence, H7, or RH.
 - `expected_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`,
   `actual_source_block_delta=1`, with a source-diagonal falsification endpoint.
+
+## 2026-07-23 H7 archimedean tail density local result
+
+- `status`: `LOCALLY_PROVEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`.
+- `compiled`: literal `h_+` and interval source, justified `x` differentiation, exact node and
+  true-source diagonal values, actual finite divided-difference matrix, rank-two Cauchy density,
+  reflection, all-vector two-square identity, and conditional integrated-increment PSD.
+- `source_audit`: no coefficient, trigonometric boundary, centered-frequency, diagonal, or sign
+  mismatch was found. Digamma continuity is derived from Gamma analyticity and nonvanishing.
+- `local_gates`: 973-line warning-free module, one proven Target, 12 exact checks, 11 selected
+  standard-only axiom prints, empty scan, `git diff --check`, and `8756/8756` full build.
+- `deltas`: `actual_source_block_delta=1`, `rh_frontier_delta=0`, `hard_gap_delta=0`.
+- `open`: unconditional `h_+` threshold, aggregate prime control, three-block assembly, total
+  parity ordering, arithmetic Herglotz scalar inequality, uniform simple-even theorem,
+  ground/prolate and source limits, H7, and RH.
