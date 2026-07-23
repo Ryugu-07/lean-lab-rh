@@ -8,7 +8,7 @@ Selected node: `H1-BETTIN-GONEK-J-CONTOUR-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `IMPLEMENTED_LOCAL / FROZEN_IMPLEMENTATION_PENDING`
+Status: `FROZEN_IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 
 ## Baseline
 
@@ -124,4 +124,6 @@ scale, the exact residue norm, and the selected-zero lower inequality with const
 The exact TargetCheck and selected transitive axiom audit pass. The forbidden scan is empty,
 `git diff --check` passes, and the full 8,757-job build succeeds. No inverse Mellin, standalone
 `G_t` decay, convolution, moment transfer, Farmer conjecture, H1, or RH claim is introduced.
-Public frozen-implementation evidence is still required.
+Frozen implementation commit `66f5260c6ae71dbb8c09d31000fd6c13f9bf7ec1` passed public Lean
+Action run `29982986397`, build job `89128701960`, in `2m14s`. Proof source is frozen; this
+coordinate record now requires its own immutable-evidence CI.

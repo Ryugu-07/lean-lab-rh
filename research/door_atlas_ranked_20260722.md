@@ -1022,3 +1022,7 @@ conjecture, H1, and RH remain open. Public freeze/evidence gates precede the nex
 The local freeze gates pass: the new source is 947 lines, the exact aggregate TargetCheck and
 selected standard-only axiom audit compile, the forbidden scan is empty, `git diff --check`
 passes, and the full 8,757-job build succeeds.
+
+Frozen implementation `66f5260c6ae71dbb8c09d31000fd6c13f9bf7ec1` passed public Lean
+Action run `29982986397`, build job `89128701960`, in `2m14s`. Proof source remains frozen;
+immutable-evidence CI precedes final ledger closure and successor reranking.

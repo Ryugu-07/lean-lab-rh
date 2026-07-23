@@ -3684,3 +3684,7 @@ remain before reranking.
 Local audit: 947-line warning-free module, one aggregate proven Target, one exact aggregate
 TargetCheck, selected standard-only axiom prints, empty forbidden scan, `git diff --check`, and
 the full 8,757-job build. `source_analytic_bridge_delta=1`, `rh_frontier_delta=0`.
+
+Frozen implementation commit `66f5260c6ae71dbb8c09d31000fd6c13f9bf7ec1` passed public Lean
+Action run `29982986397`, build job `89128701960`, in `2m14s`. Proof source is frozen;
+immutable-evidence CI is next.
