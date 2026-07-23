@@ -91,5 +91,6 @@ exact checks, 11 standard-only axiom prints, empty scan, and 8,756-job build pas
 
 This adds one actual source block and does not change the RH frontier. Frozen implementation
 commit `9546806d8c3d0afeef9f6c7ee674982e8710576a` passed public Lean Action run `29979643215`,
-build job `89118608592`, in `2m32s`. Immutable evidence and final ledger remain before successor
-reranking.
+build job `89118608592`, in `2m32s`. Immutable-evidence commit
+`213af9d7a26a23a828b12e5b7523d520c424b1b4` passed run `29979851450`, build job `89119211639`,
+in `1m56s`. Only final-ledger CI remains before successor reranking.

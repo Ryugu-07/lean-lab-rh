@@ -8,7 +8,7 @@ Selected node: `H7-WEIL-ARCHIMEDEAN-TAIL-DENSITY-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Baseline
 
@@ -105,3 +105,7 @@ The result is `FULL_SUCCESS_AT_TAIL_DENSITY_ENDPOINT`. Frozen implementation com
 `9546806d8c3d0afeef9f6c7ee674982e8710576a` passed public Lean Action run `29979643215`, build
 job `89118608592`, in `2m32s`; the proof source is frozen. The next gate is a docs-only immutable
 evidence commit. The unconditional `h_+` threshold and every claim boundary above remain open.
+
+Immutable-evidence commit `213af9d7a26a23a828b12e5b7523d520c424b1b4` passed public Lean
+Action run `29979851450`, build job `89119211639`, in `1m56s`. Only docs-only final-ledger CI
+remains for campaign closure.

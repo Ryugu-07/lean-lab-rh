@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260723-H7-WEIL-ARCHIMEDEAN-TAIL-DENSITY-01`
 
 Selected node: `H7-WEIL-ARCHIMEDEAN-TAIL-DENSITY-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Attempt log
 
@@ -23,6 +23,7 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 | `INTEGRATED_INCREMENT` | Defined the entrywise interval increment and moved its finite quadratic contraction through the integral. | Its quadratic value is the integral of the pointwise two-square density; it is nonnegative under the explicit premise `0<=h_+` on the interval. | Run mechanical gates and publish the frozen implementation. |
 | `LOCAL_GATES` | Ran direct warning-as-error compile, 12 exact TargetChecks, 11 selected axiom prints, forbidden-token scan, `git diff --check`, and full build. | New declarations use only `propext`, `Classical.choice`, and `Quot.sound`; scan is empty; full build passes `8756/8756`. | Freeze implementation in a commit and require public CI. |
 | `IMPLEMENTATION_CI` | Published frozen implementation commit `9546806d8c3d0afeef9f6c7ee674982e8710576a`. | Lean Action run `29979643215`, build job `89118608592`, passed in `2m32s`; proof source is frozen. | Record immutable coordinates in docs only and require public CI. |
+| `IMMUTABLE_EVIDENCE_CI` | Published the frozen implementation coordinates in docs only. | Commit `213af9d7a26a23a828b12e5b7523d520c424b1b4` passed Lean Action run `29979851450`, build job `89119211639`, in `1m56s`. | Publish the docs-only final ledger. |
 
 ## Known obstacles
 
@@ -37,6 +38,8 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Claim boundary
 
-No unconditional `h_+` positivity, strict positive definiteness, total positivity, tail limit,
-tail budget, total Weil sign, Herglotz inequality, simple-even ground state, source convergence,
-H7, or RH is registered as proven.
+The fixed archimedean tail-density endpoint is public-green at both the frozen implementation and
+immutable-evidence commits. Final-ledger CI remains for campaign closure. No unconditional `h_+`
+positivity, strict positive definiteness, total positivity, tail limit, tail budget, total Weil
+sign, Herglotz inequality, simple-even ground state, source convergence, H7, or RH is registered
+as proven.

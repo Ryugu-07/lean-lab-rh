@@ -4,7 +4,7 @@ Date: 2026-07-23
 
 Campaign: `LITERATURE-20260723-H7-WEIL-ARCHIMEDEAN-TAIL-DENSITY-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Source objects
 
@@ -69,3 +69,5 @@ inequality, simple-even theorem, source convergence, H7, and RH are not proved.
 - Full local build: `8756/8756` jobs passed; replay warnings are inherited from existing files.
 - Frozen implementation: commit `9546806d8c3d0afeef9f6c7ee674982e8710576a`, public Lean Action
   run `29979643215`, build job `89118608592`, passed in `2m32s`.
+- Immutable evidence: commit `213af9d7a26a23a828b12e5b7523d520c424b1b4`, public Lean Action
+  run `29979851450`, build job `89119211639`, passed in `1m56s`.

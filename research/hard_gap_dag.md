@@ -1668,7 +1668,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 
 ## 2026-07-23 H7 archimedean tail density implementation public-green
 
-- `status`: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`.
+- `status`: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`.
 - `compiled`: literal `h_+` and interval source, justified `x` differentiation, exact node and
   true-source diagonal values, actual finite divided-difference matrix, rank-two Cauchy density,
   reflection, all-vector two-square identity, and conditional integrated-increment PSD.
@@ -1678,6 +1678,8 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   standard-only axiom prints, empty scan, `git diff --check`, and `8756/8756` full build.
 - `public_implementation`: commit `9546806d8c3d0afeef9f6c7ee674982e8710576a`, Lean Action run
   `29979643215`, build job `89118608592`, passed in `2m32s`; proof source frozen.
+- `immutable_evidence`: commit `213af9d7a26a23a828b12e5b7523d520c424b1b4`, Lean Action run
+  `29979851450`, build job `89119211639`, passed in `1m56s`; final-ledger CI remains.
 - `deltas`: `actual_source_block_delta=1`, `rh_frontier_delta=0`, `hard_gap_delta=0`.
 - `open`: unconditional `h_+` threshold, aggregate prime control, three-block assembly, total
   parity ordering, arithmetic Herglotz scalar inequality, uniform simple-even theorem,
