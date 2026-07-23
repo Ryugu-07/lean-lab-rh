@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260723-H1-THETA-INFINITY-CONSUMER-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_REQUIRED`
 
 ## Baseline
 
@@ -30,6 +30,7 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 | 10 | `TARGET_AND_AXIOM_GATES` | Two proven and two open Targets, 12 exact TargetChecks, and 12 selected axiom prints compile. Every selected theorem uses only the standard three axioms. | Run the production scan, diff checks, full build, and public implementation CI. |
 | 11 | `LOCAL_MECHANICAL_CLOSURE` | The production forbidden scan is empty, `git diff --check` passes, and the full `8,751`-job build succeeds. | Freeze the registered implementation endpoint and publish it for independent Lean Action CI. |
 | 12 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation commit `ed9fb11e3293e80a86561f30eb05073bfbf0b7ab` passed run `29967710426`, build job `89082709000`, in `2m3s`. | Keep Lean proof source frozen; publish immutable evidence and require its own public CI. |
+| 13 | `IMMUTABLE_EVIDENCE_PUBLIC_CI` | Evidence commit `877511c7ae47ba96b1334359d6e6a5c934694ac5` passed run `29967964091`, build job `89083481677`, in `2m18s`. | Publish the final campaign ledger, then return both open analytic edges to value-ranked historical-route selection. |
 
 ## Frontier accounting
 

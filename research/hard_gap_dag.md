@@ -1510,3 +1510,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `implementation_gate`: frozen commit `ed9fb11e3293e80a86561f30eb05073bfbf0b7ab` passed public Lean
   Action run `29967710426`, build job `89082709000`, in `2m3s`; proof source is frozen and immutable
   evidence remains.
+- `evidence_gate`: commit `877511c7ae47ba96b1334359d6e6a5c934694ac5` passed public Lean
+  Action run `29967964091`, build job `89083481677`, in `2m18s`; final-ledger CI remains. This
+  consumer campaign may close, but the two open H1 analytic nodes and the broader mollifier family
+  remain active graph candidates.

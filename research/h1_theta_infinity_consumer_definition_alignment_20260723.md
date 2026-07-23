@@ -91,4 +91,6 @@ zeta second-moment lower bound, and uniform constant bookkeeping.
 - Full build: `8,751` jobs passed.
 - Frozen implementation: commit `ed9fb11e3293e80a86561f30eb05073bfbf0b7ab` passed public Lean
   Action run `29967710426`, build job `89082709000`, in `2m3s`.
+- Immutable evidence: commit `877511c7ae47ba96b1334359d6e6a5c934694ac5` passed public Lean
+  Action run `29967964091`, build job `89083481677`, in `2m18s`.
 - RH frontier delta: zero. Source-consumer delta: two. Route-map correction: one.

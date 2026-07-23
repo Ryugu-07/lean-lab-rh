@@ -149,3 +149,10 @@ with no proving declaration.
 - `public_ci`: Lean Action run `29967710426`, build job `89082709000`, passed in `2m3s`.
 - `effect`: the registered implementation endpoint is independently public-green and Lean proof
   source is frozen. Immutable evidence and final-ledger publication gates remain.
+
+## Immutable-evidence public gate
+
+- `commit`: `877511c7ae47ba96b1334359d6e6a5c934694ac5`.
+- `public_ci`: Lean Action run `29967964091`, build job `89083481677`, passed in `2m18s`.
+- `effect`: preregistration, frozen implementation, and immutable evidence are independently
+  public-green. Only final-ledger publication remains before the local campaign stop.
