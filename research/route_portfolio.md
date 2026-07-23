@@ -3541,3 +3541,17 @@ implementation commit `4b22712b531df010901e9813710b8ad145e60392` passed Lean Act
 `29971043533`, build job `89092937602`, in `2m30s`. Lean source is frozen. Immutable-evidence commit
 `58665041b17686cf6ac02abd2b89a295406838f4` then passed run `29971296016`, build job
 `89093681779`, in `1m34s`; only final-ledger CI remains, and the persistent RH Goal stays active.
+
+## H7 Finite Weil Prime Block Selected
+
+Pole-block final-ledger commit `48e57d28b7e8ec98042cb7f21b836f6eb1c98adc` passed public Lean
+Action run `29971448611`, build job `89094128646`, in `1m47s`. Cross-route ranking then selected
+campaign `LITERATURE-20260723-H7-WEIL-PRIME-BLOCK-01` rather than a numerical eigenvalue or cutoff
+optimization.
+
+The fixed endpoint is the actual integer-cutoff von Mangoldt sine source, its exact finite atom
+matrix sum, reflection-sector preservation, and an exact `C=16,q=8` constituent with opposite
+strict quadratic signs on level-one even and odd witnesses. The atom witness is not a sign theorem
+for the aggregate prime block. The archimedean block, total Weil sign, Herglotz scalar inequality,
+simple-even uniformity, source limits, H7, and RH remain open. Production Lean editing is gated on
+public preregistration CI.

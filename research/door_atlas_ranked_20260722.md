@@ -929,3 +929,12 @@ frozen implementation commit `4b22712b531df010901e9813710b8ad145e60392` passed p
 Action run `29971043533`, build job `89092937602`, in `2m30s`. Immutable evidence and final-ledger
 gates remain. Immutable-evidence commit `58665041b17686cf6ac02abd2b89a295406838f4`
 passed run `29971296016`, build job `89093681779`, in `1m34s`; only final-ledger CI remains.
+
+The pole-block final ledger then passed as commit `48e57d28b7e8ec98042cb7f21b836f6eb1c98adc`,
+Lean Action run `29971448611`, build job `89094128646`, in `1m47s`. The next D6 source node is
+`H7-WEIL-FINITE-PRIME-SOURCE-INSTANTIATION-01`: compile the literal finite von Mangoldt sine
+source and test its parity signs before attempting the complete Herglotz scalar inequality. The
+registered `C=16,q=8` constituent has frequency `1/4` and is predicted to have opposite strict
+signs on explicit level-one even and odd vectors. This is a source-exact falsification test of
+termwise semidefinite compensation, not a sign claim for the aggregate prime block and not a
+numerical bound campaign.

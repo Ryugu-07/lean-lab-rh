@@ -1581,3 +1581,16 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `open`: prime and archimedean block instantiation, total parity ordering, arithmetic Herglotz
   scalar bound, simple-even uniformity, ground/prolate comparison, source limits, H7, and RH.
 - `local_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `actual_source_block_delta=1`.
+
+## 2026-07-23 H7 finite prime source selected
+
+- `H7-WEIL-FINITE-PRIME-SOURCE-INSTANTIATION-01`: `PREREGISTERED / PUBLIC_CI_REQUIRED`.
+- `parent`: pole-block final ledger `48e57d28b7e8ec98042cb7f21b836f6eb1c98adc`, public run
+  `29971448611`, job `89094128646`, in `1m47s`.
+- `fixed_edge`: actual integer-cutoff von Mangoldt sine source, exact derivative diagonals,
+  finite atom-matrix sum, reflection-sector preservation, and the `C=16,q=8` opposite-sign atom.
+- `falsification_edge`: a successful witness rules out one semidefinite sign for every individual
+  arithmetic atom across even and odd sectors; it says nothing about the aggregate prime block.
+- `strict_boundary`: no archimedean block, total Weil sign, Herglotz scalar inequality,
+  simple-even theorem, source limit, H7, or RH theorem is included.
+- `next_gate`: publish preregistration and require public CI before production Lean editing.
