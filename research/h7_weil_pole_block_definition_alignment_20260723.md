@@ -78,4 +78,6 @@ uniform cutoff theorem, ground-state/prolate comparison, transform convergence, 
 - Production forbidden scan: empty.
 - Direct compiles: production module, Targets, TargetChecks, and AxiomsAudit pass.
 - Full build: 8,753 jobs passed.
+- Frozen implementation: commit `4b22712b531df010901e9813710b8ad145e60392` passed public Lean
+  Action run `29971043533`, build job `89092937602`, in `2m30s`.
 - `rh_frontier_delta=0`; `hard_gap_delta=0`; `actual_source_block_delta=1`.

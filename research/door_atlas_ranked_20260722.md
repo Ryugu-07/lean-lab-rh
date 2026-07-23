@@ -925,4 +925,6 @@ coefficient positive, the closed divided-difference formula, and the exact even-
 odd-positive rank-two sign law. No normalization mismatch was found. The result also makes the
 remaining mechanism sharper: the odd pole term has the adverse sign, so actual prime and
 archimedean blocks must establish the total parity ordering. The 8,753-job full build passes;
-public implementation gates remain.
+frozen implementation commit `4b22712b531df010901e9813710b8ad145e60392` passed public Lean
+Action run `29971043533`, build job `89092937602`, in `2m30s`. Immutable evidence and final-ledger
+gates remain.

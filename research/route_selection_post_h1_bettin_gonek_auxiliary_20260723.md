@@ -65,3 +65,7 @@ source coefficient positivity, sample parity, closed matrix identity, rank-two d
 and exact parity-sector sign law. Prime and archimedean blocks, the total Weil matrix, the
 Herglotz scalar bound, simple-even ground states, source limits, and RH remain outside the
 campaign and unavailable as premises.
+
+The frozen implementation commit `4b22712b531df010901e9813710b8ad145e60392` passed public Lean
+Action run `29971043533`, build job `89092937602`, in `2m30s`. The selected Lean source is frozen;
+immutable evidence and final-ledger gates remain before campaign closure.

@@ -120,5 +120,7 @@ strictly positive for `c>1`; the value and derivative samples have exact reflect
 divided-difference matrix equals the source closed formula at every entry; and the exact rank-two,
 all-vector quadratic, and parity sign laws compile. One proven Target, nine exact TargetChecks,
 seven selected standard-only axiom prints, an empty production forbidden scan, `git diff --check`,
-and the 8,753-job full build pass. This is `FULL_SUCCESS_AT_POLE_ENDPOINT` locally, pending public
-implementation and evidence gates. Every excluded total-matrix and limit edge remains open.
+and the 8,753-job full build pass. This is `FULL_SUCCESS_AT_POLE_ENDPOINT` locally. Frozen
+implementation commit `4b22712b531df010901e9813710b8ad145e60392` passed public Lean Action
+run `29971043533`, build job `89092937602`, in `2m30s`; Lean source is frozen and immutable
+evidence plus final-ledger gates remain. Every excluded total-matrix and limit edge remains open.

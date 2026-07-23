@@ -1573,7 +1573,10 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   was found.
 - `local_gates`: 250-line warning-free module, one proven Target, 9 exact TargetChecks, 7
   standard-only axiom prints, empty production scan, `git diff --check`, and the 8,753-job full
-  build pass. Public implementation CI remains.
+  build pass.
+- `implementation_gate`: frozen commit `4b22712b531df010901e9813710b8ad145e60392` passed public Lean
+  Action run `29971043533`, build job `89092937602`, in `2m30s`; proof source is frozen and
+  immutable evidence plus final-ledger CI remain.
 - `open`: prime and archimedean block instantiation, total parity ordering, arithmetic Herglotz
   scalar bound, simple-even uniformity, ground/prolate comparison, source limits, H7, and RH.
 - `local_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `actual_source_block_delta=1`.

@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260723-H7-WEIL-POLE-BLOCK-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `LOCAL_MECHANICAL_CLOSURE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `PUBLIC_IMPLEMENTATION_CI_PASSED / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Baseline
 
@@ -28,6 +28,7 @@ Status: `LOCAL_MECHANICAL_CLOSURE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 | 8 | `RANK_TWO_PARITY_SIGNS` | Lean proves the exact even-positive minus odd-positive rank-two matrix identity, the all-vector quadratic formula, and the two parity sign laws. | The pole block is source-aligned; total parity ordering must use the missing prime and archimedean blocks. |
 | 9 | `TARGET_AND_AXIOM_GATES` | One proven actual-source Target, 9 exact TargetChecks, and 7 selected standard-only axiom prints compile. The 250-line module is diagnostic-free and its forbidden scan is empty. | Run the full build and freeze the local endpoint. |
 | 10 | `LOCAL_MECHANICAL_CLOSURE` | `git diff --check` and the 8,753-job full build pass. | Freeze the registered implementation and require public implementation CI. |
+| 11 | `PUBLIC_IMPLEMENTATION_CI` | Frozen implementation commit `4b22712b531df010901e9813710b8ad145e60392` passed Lean Action run `29971043533`, build job `89092937602`, in `2m30s`. | Keep Lean source frozen and publish immutable evidence coordinates. |
 
 ## Frontier accounting
 
@@ -38,7 +39,7 @@ Status: `LOCAL_MECHANICAL_CLOSURE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 - `falsification_value`: detect a factor, sign, diagonal-limit, or centered-frequency mismatch
   before the pole block is supplied to the Herglotz route.
 - `hard_gap_after_if_success`: the prime and archimedean blocks and every global H7 gap remain open.
-- `local_result`: `FULL_SUCCESS_AT_POLE_ENDPOINT` at the local mechanical gate; no source
-  normalization mismatch was found. Public implementation and evidence gates remain.
+- `public_result`: `FULL_SUCCESS_AT_POLE_ENDPOINT` at the frozen implementation gate; no source
+  normalization mismatch was found. Immutable evidence and final-ledger gates remain.
 - `definition_alignment`: `research/h7_weil_pole_block_definition_alignment_20260723.md`.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.
