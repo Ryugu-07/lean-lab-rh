@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260723-H7-WEIL-PRIME-BLOCK-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `LOCAL_MECHANICAL_CLOSURE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `PUBLIC_IMPLEMENTATION_CI_PASSED / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Baseline
 
@@ -28,6 +28,7 @@ Status: `LOCAL_MECHANICAL_CLOSURE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 | 8 | `ATOM_SUM_AND_REFLECTION` | Lean proves the aggregate source matrix is exactly the finite sum of atom matrices and preserves both reflection sectors. | Feed the actual source into the existing parity interface without assuming a block sign. |
 | 9 | `ACTUAL_ATOM_SIGN_WITNESS` | Lean proves `omega(16,8)=1/4`, the `q=8` coefficient is negative, and its level-one even/odd quadratic values are respectively negative and positive. | Register a termwise semidefinite-sign obstruction; do not promote it to the aggregate block. |
 | 10 | `TARGET_AXIOM_AND_BUILD_GATES` | One proven Target, 12 exact TargetChecks, 9 standard-only axiom prints, empty forbidden scan, diagnostic-free 297-line module, `git diff --check`, and the 8,754-job full build pass. | Freeze the registered local endpoint and require public implementation CI. |
+| 11 | `PUBLIC_IMPLEMENTATION_CI` | Frozen implementation commit `cc264cde977a8b04e596d267aa6656cd8cbf4058` passed Lean Action run `29973199798`, build job `89099433656`, in `2m8s`. | Keep Lean source frozen and publish immutable evidence coordinates. |
 
 ## Frontier accounting
 
@@ -42,6 +43,6 @@ Status: `LOCAL_MECHANICAL_CLOSURE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
   remain open.
 - `local_result`: `FULL_SUCCESS_AT_PRIME_ENDPOINT`; no source, derivative, cutoff, reflection, or
   sign normalization mismatch was found. The atom obstruction does not decide the aggregate
-  prime block. Public implementation and evidence gates remain.
+  prime block. Public implementation CI passes; immutable evidence and final-ledger gates remain.
 - `definition_alignment`: `research/h7_weil_prime_block_definition_alignment_20260723.md`.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.

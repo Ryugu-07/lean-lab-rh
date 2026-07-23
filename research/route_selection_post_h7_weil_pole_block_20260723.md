@@ -56,4 +56,6 @@ a sign for the aggregate prime block, the total Weil matrix, or any infinite-cut
 The preregistration commit `21fad44edcbb9277ca7f3142e776ca2f78d2df09` passed public Lean
 Action run `29971859428`, build job `89095368881`, in `1m34s`. The local fixed endpoint then
 compiled without a source mismatch. In particular, the `C=16,q=8` atom has the registered
-opposite strict parity signs. Public implementation and evidence gates remain.
+opposite strict parity signs. Frozen implementation commit
+`cc264cde977a8b04e596d267aa6656cd8cbf4058` passed run `29973199798`, build job `89099433656`,
+in `2m8s`; Lean source is frozen and immutable evidence plus final-ledger gates remain.

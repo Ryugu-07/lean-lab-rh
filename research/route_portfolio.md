@@ -3568,4 +3568,6 @@ strictly negative while its edge-odd value is strictly positive. This is an exac
 termwise common-sign semidefinite compensation, not a statement about the aggregate prime block.
 One proven Target, 12 exact TargetChecks, 9 selected standard-only axiom prints, the empty
 production scan, `git diff --check`, and the 8,754-job full build pass locally.
-`rh_frontier_delta=0`; public implementation CI remains and the persistent RH Goal stays active.
+`rh_frontier_delta=0`; frozen implementation commit `cc264cde977a8b04e596d267aa6656cd8cbf4058`
+passed Lean Action run `29973199798`, build job `89099433656`, in `2m8s`. Lean source is frozen;
+immutable evidence and final-ledger CI remain, and the persistent RH Goal stays active.

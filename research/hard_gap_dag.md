@@ -1606,7 +1606,10 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   normalization mismatch was found.
 - `local_gates`: 297-line warning-free module, one proven Target, 12 exact TargetChecks, 9
   standard-only axiom prints, empty production scan, `git diff --check`, and the 8,754-job full
-  build pass. Public implementation CI remains.
+  build pass.
+- `implementation_gate`: frozen commit `cc264cde977a8b04e596d267aa6656cd8cbf4058` passed public Lean
+  Action run `29973199798`, build job `89099433656`, in `2m8s`; proof source is frozen and
+  immutable evidence plus final-ledger CI remain.
 - `obstruction`: a genuine prime atom is negative on an even direction and positive on an odd
   direction; termwise common-sign semidefinite compensation is unavailable. The aggregate prime
   block is not classified.

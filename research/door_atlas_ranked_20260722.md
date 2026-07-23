@@ -944,5 +944,6 @@ von Mangoldt source and derivative diagonal, the exact finite atom sum, and refl
 preservation. The `C=16,q=8` atom has the predicted opposite strict signs. This sharpens D6:
 neither the adverse odd pole term nor individual prime atoms admit a termwise common-sign proof;
 aggregate arithmetic and archimedean balance are essential. The 8,754-job full build passes;
-public implementation gates remain. No aggregate prime sign, Herglotz bound, or source limit is
-claimed.
+frozen implementation commit `cc264cde977a8b04e596d267aa6656cd8cbf4058` passed public Lean
+Action run `29973199798`, build job `89099433656`, in `2m8s`. Immutable evidence and final-ledger
+gates remain. No aggregate prime sign, Herglotz bound, or source limit is claimed.

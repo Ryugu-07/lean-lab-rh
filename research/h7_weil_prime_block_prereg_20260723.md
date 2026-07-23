@@ -102,4 +102,7 @@ vanishing off prime powers and certified diagonal derivatives. The `C=16,q=8` at
 negative even and positive odd quadratic directions. One proven Target, 12 exact TargetChecks,
 9 selected standard-only axiom prints, an empty production forbidden scan, `git diff --check`,
 and the 8,754-job full build pass. This is `FULL_SUCCESS_AT_PRIME_ENDPOINT` locally, pending public
-implementation and evidence gates. Every excluded aggregate and limit edge remains open.
+implementation and evidence gates. Frozen implementation commit
+`cc264cde977a8b04e596d267aa6656cd8cbf4058` passed public Lean Action run `29973199798`, build
+job `89099433656`, in `2m8s`; Lean source is frozen and immutable evidence plus final-ledger gates
+remain. Every excluded aggregate and limit edge remains open.

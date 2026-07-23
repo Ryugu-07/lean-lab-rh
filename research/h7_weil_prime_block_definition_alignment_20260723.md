@@ -104,5 +104,7 @@ proof must use aggregate arithmetic and archimedean balance rather than termwise
 - Production forbidden scan: empty.
 - Direct compiles: production module, Targets, TargetChecks, and AxiomsAudit pass.
 - Full build: 8,754 jobs passed.
+- Frozen implementation: commit `cc264cde977a8b04e596d267aa6656cd8cbf4058` passed public Lean
+  Action run `29973199798`, build job `89099433656`, in `2m8s`.
 - `rh_frontier_delta=0`; `hard_gap_delta=0`; `actual_source_block_delta=1`;
   `obstruction_map_delta=1`.
