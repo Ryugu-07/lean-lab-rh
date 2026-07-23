@@ -1507,3 +1507,6 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   implementation CI remains.
 - `local_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `route_map_delta=1`,
   `source_consumer_delta=2`.
+- `implementation_gate`: frozen commit `ed9fb11e3293e80a86561f30eb05073bfbf0b7ab` passed public Lean
+  Action run `29967710426`, build job `89082709000`, in `2m3s`; proof source is frozen and immutable
+  evidence remains.

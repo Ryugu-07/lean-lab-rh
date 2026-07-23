@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260723-H1-THETA-INFINITY-CONSUMER-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Baseline
 
@@ -29,6 +29,7 @@ Status: `LOCAL_IMPLEMENTATION_COMPLETE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 | 9 | `POWER_AND_ZERO_CONSUMERS` | Lean proves the exact exponent boundary, fixed-theta zeta zero-free half-plane, all-theta RH consumer through functional-equation reflection, and a fixed-theta off-line boundary witness. | Correctly separate quasi-RH at one theta from RH at all theta. Keep the analytic moment-to-power bridge open. |
 | 10 | `TARGET_AND_AXIOM_GATES` | Two proven and two open Targets, 12 exact TargetChecks, and 12 selected axiom prints compile. Every selected theorem uses only the standard three axioms. | Run the production scan, diff checks, full build, and public implementation CI. |
 | 11 | `LOCAL_MECHANICAL_CLOSURE` | The production forbidden scan is empty, `git diff --check` passes, and the full `8,751`-job build succeeds. | Freeze the registered implementation endpoint and publish it for independent Lean Action CI. |
+| 12 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation commit `ed9fb11e3293e80a86561f30eb05073bfbf0b7ab` passed run `29967710426`, build job `89082709000`, in `2m3s`. | Keep Lean proof source frozen; publish immutable evidence and require its own public CI. |
 
 ## Frontier accounting
 

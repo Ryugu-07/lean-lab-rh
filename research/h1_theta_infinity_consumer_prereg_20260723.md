@@ -139,6 +139,13 @@ remains active; original conjectures and direct attacks remain open.
 The exact source definitions, real-cutoff interpolation, pointwise and moment convexity, final
 power-exponent barrier, fixed-theta zeta zero-free consumer, all-theta RH consumer, and fixed-theta
 boundary witness compile without warnings. This is `FULL_SUCCESS_AT_CONSUMER_ENDPOINT` locally:
-the production scan is empty, diff checks pass, and the full `8,751`-job build succeeds. Public
-implementation CI remains. The Mellin/residue moment-to-power bridge and Farmer's theta-infinity
-moment conjecture remain open with no proving declaration.
+the production scan is empty, diff checks pass, and the full `8,751`-job build succeeds. The
+Mellin/residue moment-to-power bridge and Farmer's theta-infinity moment conjecture remain open
+with no proving declaration.
+
+## Implementation public gate
+
+- `commit`: `ed9fb11e3293e80a86561f30eb05073bfbf0b7ab`.
+- `public_ci`: Lean Action run `29967710426`, build job `89082709000`, passed in `2m3s`.
+- `effect`: the registered implementation endpoint is independently public-green and Lean proof
+  source is frozen. Immutable evidence and final-ledger publication gates remain.

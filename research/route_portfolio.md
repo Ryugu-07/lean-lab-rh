@@ -3465,3 +3465,7 @@ no proving declaration and are unavailable as premises. Two proven and two open 
 exact TargetChecks, twelve selected standard-only axiom prints, an empty production scan, diff
 checks, and the full `8,751`-job build pass locally. `rh_frontier_delta=0`; public implementation
 CI is the next gate, and the persistent RH Goal remains active.
+
+Frozen implementation commit `ed9fb11e3293e80a86561f30eb05073bfbf0b7ab` passed public Lean
+Action run `29967710426`, build job `89082709000`, in `2m3s`. Lean proof source is frozen;
+immutable evidence and its own public CI remain. The two analytic source gaps and RH remain open.

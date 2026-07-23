@@ -89,4 +89,6 @@ zeta second-moment lower bound, and uniform constant bookkeeping.
 - Production forbidden scan: empty in `ThetaInfinityMollifier.lean`.
 - Direct compiles: production module, Targets, TargetChecks, and AxiomsAudit pass.
 - Full build: `8,751` jobs passed.
+- Frozen implementation: commit `ed9fb11e3293e80a86561f30eb05073bfbf0b7ab` passed public Lean
+  Action run `29967710426`, build job `89082709000`, in `2m3s`.
 - RH frontier delta: zero. Source-consumer delta: two. Route-map correction: one.
