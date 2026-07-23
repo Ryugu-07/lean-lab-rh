@@ -1532,3 +1532,19 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   the auxiliary campaign. Public preregistration CI must precede proof-source editing.
 - `expected_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`,
   `source_analytic_algebra_delta=1`, with a falsifiable source-normalization endpoint.
+
+## 2026-07-23 H1 Bettin--Gonek auxiliary local result
+
+- `H1-BETTIN-GONEK-AUXILIARY-REGULARIZATION-01`: `LOCALLY_PROVEN / SOURCE_ALIGNED`.
+  The `dslope` extension, raw-source equality, `Re(w)>-1` holomorphy, exact selected-pole
+  coefficient, and nonvanishing compile.
+- `source_audit`: no extra singularity or residue mismatch was found. Raw totalized division at
+  the selected point is replaced by the source-intended holomorphic extension.
+- `H1-BETTIN-GONEK-MELLIN-CONVOLUTION-01`: remains `OPEN`.
+- `H1-BETTIN-GONEK-DECAY-CONTOUR-01`: remains `OPEN`.
+- `H1-BETTIN-GONEK-MOMENT-TO-POWER-01`: remains `OPEN / PUBLISHED_ANALYTIC_BRIDGE`.
+- `local_gates`: 277-line warning-free module, one proven Target, 10 exact TargetChecks, 7
+  standard-only axiom prints, an empty production forbidden scan, `git diff --check`, and the
+  8,752-job full build pass. Public implementation CI remains.
+- `local_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`,
+  `source_analytic_algebra_delta=1`.

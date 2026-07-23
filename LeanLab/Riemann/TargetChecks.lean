@@ -3841,4 +3841,61 @@ example {theta : ℝ} (htheta : 0 < theta) :
   ⟨bettinGonekFixedThetaWitness_off_line htheta,
     bettinGonekFixedThetaWitness_below_boundary htheta⟩
 
+example (rho : ℂ) (t : ℝ) :
+    bettinGonekShiftedArgument t (bettinGonekSelectedPole rho t) = rho :=
+  bettinGonekShiftedArgument_selectedPole rho t
+
+example {rho : ℂ} (hrho : IsNontrivialZero rho) :
+    zetaPoleRemoved rho = 0 :=
+  zetaPoleRemoved_eq_zero_of_nontrivialZero hrho
+
+example {rho s : ℂ} (hrho : IsNontrivialZero rho)
+    (hsrho : s ≠ rho) (hsone : s ≠ 1) :
+    bettinGonekCancelledZeta rho s =
+      (s - 1) * riemannZeta s / (s - rho) :=
+  bettinGonekCancelledZeta_eq_source hrho hsrho hsone
+
+example {rho : ℂ} (hrho : IsNontrivialZero rho) (t : ℝ) {w : ℂ}
+    (hrhoArg : bettinGonekShiftedArgument t w ≠ rho)
+    (honeArg : bettinGonekShiftedArgument t w ≠ 1) :
+    bettinGonekAuxiliaryG rho t w = bettinGonekAuxiliaryGRaw rho t w :=
+  bettinGonekAuxiliaryG_eq_raw hrho t hrhoArg honeArg
+
+example {rho : ℂ} (hrho : IsNontrivialZero rho) (t : ℝ) :
+    DifferentiableOn ℂ (bettinGonekAuxiliaryG rho t) bettinGonekAuxiliaryDomain :=
+  differentiableOn_bettinGonekAuxiliaryG hrho t
+
+example {rho w : ℂ} (t x : ℝ)
+    (hw : w ≠ bettinGonekSelectedPole rho t) :
+    (w - bettinGonekSelectedPole rho t) * bettinGonekJKernel rho t x w =
+      bettinGonekJKernelPoleRemoved t x w :=
+  bettinGonekJKernel_mul_poleFactor t x hw
+
+example (rho : ℂ) (t x : ℝ) :
+    bettinGonekJKernelPoleRemoved t x (bettinGonekSelectedPole rho t) =
+      bettinGonekResidueCoefficient rho t x :=
+  bettinGonekJKernelPoleRemoved_selectedPole rho t x
+
+example {rho : ℂ} (hrho : IsNontrivialZero rho) (t : ℝ) {x : ℝ} (hx : 0 < x) :
+    Filter.Tendsto
+      (fun w : ℂ => (w - bettinGonekSelectedPole rho t) *
+        bettinGonekJKernel rho t x w)
+      (𝓝[≠] bettinGonekSelectedPole rho t)
+      (𝓝 (bettinGonekResidueCoefficient rho t x)) :=
+  tendsto_bettinGonekJKernel_selectedPole hrho t hx
+
+example {rho : ℂ} (hrho : IsNontrivialZero rho) (t : ℝ) {x : ℝ} (hx : 0 < x) :
+    bettinGonekResidueCoefficient rho t x ≠ 0 :=
+  bettinGonekResidueCoefficient_ne_zero hrho t hx
+
+example {rho : ℂ} (hrho : IsNontrivialZero rho) (t : ℝ) {x : ℝ} (hx : 0 < x) :
+    DifferentiableOn ℂ (bettinGonekAuxiliaryG rho t) bettinGonekAuxiliaryDomain ∧
+      Filter.Tendsto
+        (fun w : ℂ => (w - bettinGonekSelectedPole rho t) *
+          bettinGonekJKernel rho t x w)
+        (𝓝[≠] bettinGonekSelectedPole rho t)
+        (𝓝 (bettinGonekResidueCoefficient rho t x)) ∧
+      bettinGonekResidueCoefficient rho t x ≠ 0 :=
+  bettinGonekAuxiliaryAudit_endpoint hrho t hx
+
 end LeanLab.Riemann

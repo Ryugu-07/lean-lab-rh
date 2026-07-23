@@ -6,6 +6,7 @@ import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
 import LeanLab.Riemann.ThetaInfinityMollifier
+import LeanLab.Riemann.BettinGonekAuxiliary
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -881,3 +882,10 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.riemannHypothesis_of_all_bettinGonekPowerObstructions
 #print axioms LeanLab.Riemann.farmerThetaInfinityConjecture_implies_riemannHypothesis
 #print axioms LeanLab.Riemann.bettinGonekFixedThetaWitness_below_boundary
+#print axioms LeanLab.Riemann.bettinGonekCancelledZeta_eq_source
+#print axioms LeanLab.Riemann.bettinGonekAuxiliaryG_eq_raw
+#print axioms LeanLab.Riemann.differentiableOn_bettinGonekAuxiliaryG
+#print axioms LeanLab.Riemann.bettinGonekJKernelPoleRemoved_selectedPole
+#print axioms LeanLab.Riemann.tendsto_bettinGonekJKernel_selectedPole
+#print axioms LeanLab.Riemann.bettinGonekResidueCoefficient_ne_zero
+#print axioms LeanLab.Riemann.bettinGonekAuxiliaryAudit_endpoint

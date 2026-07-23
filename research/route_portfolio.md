@@ -3493,3 +3493,17 @@ holomorphy on an open neighborhood of `Re(w)>=0`, and the explicit nonzero simpl
 coefficient. Mellin inversion, auxiliary decay, contour integration, convolution, moment bounds,
 the full bridge, Farmer's conjecture, and RH remain open. Public preregistration CI is required
 before production Lean editing; the persistent RH Goal remains active.
+
+## H1 Bettin--Gonek Auxiliary Local Result
+
+Preregistration commit `452e266613b7c8444de9366f1f65a6c1352dd219` passed public Lean Action
+run `29968683311`, build job `89085640497`, in `2m13s`. The 277-line module then compiles the
+canonical divided-difference regularization of `(s-1)zeta(s)/(s-rho)`, equality with the raw source
+formula away from the patched points, holomorphy on `Re(w)>-1`, and the exact nonzero selected-pole
+coefficient.
+
+No local source normalization or hidden-cancellation gap was found. The remaining bridge is
+analytic: inverse Mellin support and decay, contour integration, convolution, lower bounds, and
+uniform constants. One proven Target, ten exact TargetChecks, seven selected standard-only axiom
+prints, the empty production scan, `git diff --check`, and the 8,752-job full build pass locally.
+`rh_frontier_delta=0`; public implementation CI remains, and the persistent RH Goal stays active.

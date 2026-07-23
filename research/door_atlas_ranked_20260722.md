@@ -904,3 +904,9 @@ power consumers; it does not prove the analytic bridge or Farmer's moment conjec
 The next D3 submechanism is `H1-BETTIN-GONEK-AUXILIARY-REGULARIZATION-01`: a source-exact audit of
 the removable singularities and selected-zero pole coefficient in equations `(2.2)`--`(2.3)`.
 This continues the historical mechanism audit and does not mark D3, H1, or mollifiers exhausted.
+
+That submechanism now reaches its local registered endpoint. Lean's divided-difference
+regularization proves the source quotient holomorphic, and the selected-pole coefficient is exact
+and nonzero. No local normalization gap was found. The remaining D3 bridge is the genuinely
+analytic Mellin/decay/contour/convolution chain. The 8,752-job full build passes locally; public
+implementation gates still remain.

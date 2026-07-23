@@ -125,3 +125,19 @@ The six inherited user/exposure files remain untouched and unstaged.
 - Compaction: the inherited summary was used to resume H1 closure; the source TeX, current atlas,
   H1 card, parent preregistration, parent production module, Targets, and available removable
   singularity APIs were re-read before this selection.
+
+## Preregistration public gate
+
+- `commit`: `452e266613b7c8444de9366f1f65a6c1352dd219`.
+- `public_ci`: Lean Action run `29968683311`, build job `89085640497`, passed in `2m13s`.
+- `effect`: the fixed proof-source gate opened before creation of the production module.
+
+## Local endpoint result
+
+The 277-line production module compiles without diagnostics. All six registered mathematical
+items pass: the zero value, source quotient equality, raw `G_t` equality, half-plane-neighborhood
+holomorphy, exact punctured-neighborhood coefficient, and coefficient nonvanishing. Ten exact
+TargetChecks and seven selected standard-only axiom prints compile, and the production forbidden
+scan is empty. `git diff --check` and the 8,752-job full build pass. This is
+`FULL_SUCCESS_AT_AUXILIARY_ENDPOINT` at the local mechanical gate, pending public implementation
+and evidence gates. Every excluded analytic edge remains open.

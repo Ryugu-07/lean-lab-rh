@@ -78,6 +78,7 @@ import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.WeilGroundStateRayleighGap
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ThetaInfinityMollifier
+import LeanLab.Riemann.BettinGonekAuxiliary
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
@@ -1377,6 +1378,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``riemannHypothesis_of_all_bettinGonekPowerObstructions
       status := .proven
       note := "This compiles the final exponent and reflection consumer in Bettin--Gonek Theorem 1. The predicate is not assumed true for zeta: deriving it from the exact mollified-moment hypothesis remains an open analytic Target. The conditional FarmerThetaInfinityConjecture implication displays that bridge as an explicit premise, so rh_frontier_delta=0." },
+    { id := "H1.theta-infinity.auxiliary-regularization"
+      tier := .tier2
+      title := "Regularize the Bettin--Gonek auxiliary quotient and selected pole"
+      statement :=
+        "Use the divided difference of the entire pole-removed zeta function to recover the source auxiliary quotient away from its patched points, prove holomorphy on an open neighborhood of Re(w)>=0, and verify the exact nonzero punctured-neighborhood coefficient at the pole selected by every nontrivial zeta zero."
+      leanName := some ``bettinGonekAuxiliaryAudit_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260723-H1-BETTIN-GONEK-AUXILIARY-01 compiles the local analytic algebra in equations (2.2)-(2.3). It does not prove inverse Mellin support, vertical decay, contour integration, convolution, the full moment-to-power bridge, Farmer's conjecture, or RH; rh_frontier_delta=0." },
     { id := "H1.theta-infinity.moment-to-power-bridge"
       tier := .tier2
       title := "Formalize the Bettin--Gonek selected-zero residue bridge"
