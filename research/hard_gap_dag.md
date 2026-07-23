@@ -1684,3 +1684,18 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `open`: unconditional `h_+` threshold, aggregate prime control, three-block assembly, total
   parity ordering, arithmetic Herglotz scalar inequality, uniform simple-even theorem,
   ground/prolate and source limits, H7, and RH.
+
+## 2026-07-23 H1 Bettin--Gonek J-contour selection
+
+- `node`: `H1-BETTIN-GONEK-J-CONTOUR-01`.
+- `status`: `PREREGISTERED / PUBLIC_CI_REQUIRED`.
+- `parent`: H7 archimedean final ledger `64782a564a19a8e9c25a0d520bcbbcb2397b807a`, public Lean
+  Action run `29980056767`, build job `89119806051`, passed in `1m36s`.
+- `fixed_edge`: actual `G_tH_t` cancellation, source rational-kernel vertical integrability,
+  finite-to-infinite one-pole shift `(2.5)`, `x`-uniform boundary-line bound, exact positive
+  residue scale, and the resulting selected-zero lower inequality.
+- `available_both_sides`: actual-mollifier `H_t` and regularized `G_t` are proven; the exact
+  nonzero selected-pole coefficient is proven; generic rectangle and improper-integral APIs are
+  available.
+- `open_after_success`: inverse Mellin support/boundedness, `G_t` vertical decay alone,
+  convolution `(2.4)`, Cauchy--Schwarz and zeta moment transfer, Farmer's conjecture, H1, and RH.

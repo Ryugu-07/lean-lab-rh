@@ -998,3 +998,12 @@ RH remain open. Frozen implementation `9546806d8c3d0afeef9f6c7ee674982e8710576a`
 Lean Action run `29979643215`, build job `89118608592`, in `2m32s`; immutable evidence
 `213af9d7a26a23a828b12e5b7523d520c424b1b4` passed run `29979851450`, build job `89119211639`,
 in `1m56s`. Only final-ledger CI remains before cross-family reranking.
+
+H7 final-ledger commit `64782a564a19a8e9c25a0d520bcbbcb2397b807a` then passed Lean Action
+run `29980056767`, build job `89119806051`, in `1m36s`. Cross-family ranking re-enters D3/H1 at
+the exact Bettin--Gonek `J_t` contour equation `(2.5)`. The actual mollifier Mellin transform,
+regularized auxiliary factor, and selected-pole coefficient are already compiled on the two sides
+of this edge. Campaign `LITERATURE-20260723-H1-BETTIN-GONEK-J-CONTOUR-01` preregisters the literal
+product cancellation, finite-to-infinite one-pole shift, `x`-uniform boundary bound, exact residue
+norm, and selected-zero lower inequality. Inverse Mellin support, convolution `(2.4)`, the full
+moment transfer, Farmer's conjecture, H1, and RH remain open.

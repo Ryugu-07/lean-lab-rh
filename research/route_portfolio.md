@@ -3651,3 +3651,20 @@ Frozen implementation commit `9546806d8c3d0afeef9f6c7ee674982e8710576a` passed p
 Action run `29979643215`, build job `89118608592`, in `2m32s`. Proof source is frozen; immutable
 evidence commit `213af9d7a26a23a828b12e5b7523d520c424b1b4` passed run `29979851450`,
 build job `89119211639`, in `1m56s`. Only final-ledger CI remains before successor reranking.
+
+## H1 Bettin--Gonek J-Contour Selection
+
+H7 archimedean final-ledger commit `64782a564a19a8e9c25a0d520bcbbcb2397b807a` passed public Lean
+Action run `29980056767`, build job `89119806051`, in `1m36s`. Fresh cross-family ranking selects
+the H1 source contour equation `(2.5)` over H7 definition-only assembly, H12's broad analytic
+count package, and the currently unidentified H2/H11 exceptional-zero amplifiers.
+
+The selected endpoint uses the already compiled actual `H_t`, regularized `G_t`, and selected-pole
+coefficient. It must prove their right-line product equals the literal rational `J_t` kernel,
+derive the real-part-three to real-part-zero shift from finite rectangles, bound the zero line
+uniformly in `x`, and preserve the exact `x^(Re(rho)+1/2)` residue norm. No abstract contour or
+decay premise is allowed.
+
+Campaign `LITERATURE-20260723-H1-BETTIN-GONEK-J-CONTOUR-01` is preregistered. Inverse Mellin
+support, convolution `(2.4)`, the full moment-to-power bridge, Farmer's conjecture, H1, and RH stay
+open. Production Lean editing requires public preregistration CI.
