@@ -77,6 +77,7 @@ import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.WeilGroundStateRayleighGap
 import LeanLab.Riemann.WeilGroundStatePoleBlock
+import LeanLab.Riemann.WeilGroundStatePrimeBlock
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ThetaInfinityMollifier
 import LeanLab.Riemann.BettinGonekAuxiliary
@@ -1348,6 +1349,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``weilFinitePoleBlockAudit_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260723-H7-WEIL-POLE-BLOCK-01 instantiates one actual source block behind the H7 Herglotz interface. It does not define the prime or archimedean blocks, prove a sign for the total Weil matrix, establish the arithmetic scalar bound, prove simple-even uniformity or ground-state convergence, or prove RH; rh_frontier_delta=0." },
+    { id := "H7.weil-ground-state.actual-finite-prime-block"
+      tier := .tier2
+      title := "Instantiate the finite Weil prime source"
+      statement :=
+        "From the integer-cutoff von Mangoldt sine source, prove the exact finite atom-matrix sum and reflection-sector preservation, then exhibit an actual prime-power atom with opposite strict quadratic signs on explicit even and odd level-one vectors."
+      leanName := some ``weilFinitePrimeBlockAudit_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260723-H7-WEIL-PRIME-BLOCK-01 instantiates the actual finite prime source and formally obstructs a termwise uniform semidefinite sign using the C=16,q=8 atom. The witness is not a sign theorem for the aggregate prime block. It does not define the archimedean block, prove a sign for the total Weil matrix, establish the arithmetic Herglotz scalar bound, prove simple-even uniformity or source convergence, or prove RH; rh_frontier_delta=0." },
     { id := "H7.weil-ground-state.rayleigh-gap-consumer"
       tier := .tier2
       title := "Control ground-line defect by Rayleigh excess over the spectral gap"

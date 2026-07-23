@@ -88,3 +88,18 @@ empty forbidden-token scan, `git diff --check`, and the full `lake build`. Publi
 frozen implementation CI, immutable-evidence CI, and final-ledger CI. The proof source is frozen
 after implementation CI.
 
+## Preregistration public gate
+
+- `commit`: `21fad44edcbb9277ca7f3142e776ca2f78d2df09`.
+- `public_ci`: Lean Action run `29971859428`, build job `89095368881`, passed in `1m34s`.
+- `effect`: the fixed production proof-source gate is open.
+
+## Local endpoint result
+
+The 297-line production module compiles all fixed source, derivative, atom-sum, reflection, and
+sign-witness items. Lean proves the integer-cutoff von Mangoldt source is literal, including
+vanishing off prime powers and certified diagonal derivatives. The `C=16,q=8` atom has exact
+negative even and positive odd quadratic directions. One proven Target, 12 exact TargetChecks,
+9 selected standard-only axiom prints, an empty production forbidden scan, `git diff --check`,
+and the 8,754-job full build pass. This is `FULL_SUCCESS_AT_PRIME_ENDPOINT` locally, pending public
+implementation and evidence gates. Every excluded aggregate and limit edge remains open.

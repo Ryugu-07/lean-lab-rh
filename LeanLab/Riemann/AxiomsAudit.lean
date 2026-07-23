@@ -85,6 +85,7 @@ import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.WeilGroundStateRayleighGap
 import LeanLab.Riemann.WeilGroundStatePoleBlock
+import LeanLab.Riemann.WeilGroundStatePrimeBlock
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
@@ -897,3 +898,12 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.weilFinitePoleSourceMatrix_nonneg_even
 #print axioms LeanLab.Riemann.weilFinitePoleSourceMatrix_nonpos_odd
 #print axioms LeanLab.Riemann.weilFinitePoleBlockAudit_endpoint
+#print axioms LeanLab.Riemann.weilPrimeFrequency_mem_unitInterval
+#print axioms LeanLab.Riemann.weilPrimeAtomCoefficient_eq_zero_of_not_isPrimePow
+#print axioms LeanLab.Riemann.hasDerivAt_weilPrimeAtomSource_centered
+#print axioms LeanLab.Riemann.weilFinitePrimeSourceMatrix_eq_sum_atoms
+#print axioms LeanLab.Riemann.weilFinitePrimeSourceMatrix_reflection
+#print axioms LeanLab.Riemann.weilPrimeFrequency_sixteen_eight
+#print axioms LeanLab.Riemann.weilFinitePrimeAtomMatrix_sixteen_eight_even_neg
+#print axioms LeanLab.Riemann.weilFinitePrimeAtomMatrix_sixteen_eight_odd_pos
+#print axioms LeanLab.Riemann.weilFinitePrimeBlockAudit_endpoint

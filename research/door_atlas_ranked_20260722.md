@@ -938,3 +938,11 @@ registered `C=16,q=8` constituent has frequency `1/4` and is predicted to have o
 signs on explicit level-one even and odd vectors. This is a source-exact falsification test of
 termwise semidefinite compensation, not a sign claim for the aggregate prime block and not a
 numerical bound campaign.
+
+That prime-source node now reaches its local registered endpoint. Lean certifies the literal
+von Mangoldt source and derivative diagonal, the exact finite atom sum, and reflection-sector
+preservation. The `C=16,q=8` atom has the predicted opposite strict signs. This sharpens D6:
+neither the adverse odd pole term nor individual prime atoms admit a termwise common-sign proof;
+aggregate arithmetic and archimedean balance are essential. The 8,754-job full build passes;
+public implementation gates remain. No aggregate prime sign, Herglotz bound, or source limit is
+claimed.

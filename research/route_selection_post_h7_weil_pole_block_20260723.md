@@ -53,3 +53,7 @@ Select node `H7-WEIL-FINITE-PRIME-SOURCE-INSTANTIATION-01` and preregister campa
 reflection-sector preservation, and the exact `C=16,q=8` opposite-sign witness. It does not claim
 a sign for the aggregate prime block, the total Weil matrix, or any infinite-cutoff limit.
 
+The preregistration commit `21fad44edcbb9277ca7f3142e776ca2f78d2df09` passed public Lean
+Action run `29971859428`, build job `89095368881`, in `1m34s`. The local fixed endpoint then
+compiled without a source mismatch. In particular, the `C=16,q=8` atom has the registered
+opposite strict parity signs. Public implementation and evidence gates remain.

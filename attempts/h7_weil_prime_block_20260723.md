@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260723-H7-WEIL-PRIME-BLOCK-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_MECHANICAL_CLOSURE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 
 ## Baseline
 
@@ -23,6 +23,11 @@ Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
 | 3 | `SOURCE_RECONSTRUCTION` | The prime source is a finite sum of negative von Mangoldt sine atoms at frequencies `1-log(q)/log(C)`; derivative diagonals are explicit. | Lock the source samples, atom sum, reflection sectors, and integer-cutoff convention. |
 | 4 | `SIGN_STRESS_TEST` | For the actual prime-power atom `C=16,q=8`, the frequency is `1/4`; direct level-one algebra predicts a negative center-even value and a positive edge-odd value. | Preregister this as an exact Lean witness, not as a numerical observation or a statement about the full prime block. |
 | 5 | `PREREGISTRATION` | Ten fixed Lean items, success/failure criteria, and claim boundaries are recorded. | Publish and require public CI before creating production Lean source. |
+| 6 | `PREREGISTRATION_PUBLIC_CI` | Commit `21fad44edcbb9277ca7f3142e776ca2f78d2df09` passed run `29971859428`, build job `89095368881`, in `1m34s`. | Open the fixed production proof-source gate. |
+| 7 | `SOURCE_AND_DIAGONAL_ALIGNMENT` | Lean proves frequency bounds, coefficient signs and vanishing, and that the displayed cosine sample is the actual derivative of the sine source. | Use only certified samples in the divided-difference matrix. |
+| 8 | `ATOM_SUM_AND_REFLECTION` | Lean proves the aggregate source matrix is exactly the finite sum of atom matrices and preserves both reflection sectors. | Feed the actual source into the existing parity interface without assuming a block sign. |
+| 9 | `ACTUAL_ATOM_SIGN_WITNESS` | Lean proves `omega(16,8)=1/4`, the `q=8` coefficient is negative, and its level-one even/odd quadratic values are respectively negative and positive. | Register a termwise semidefinite-sign obstruction; do not promote it to the aggregate block. |
+| 10 | `TARGET_AXIOM_AND_BUILD_GATES` | One proven Target, 12 exact TargetChecks, 9 standard-only axiom prints, empty forbidden scan, diagnostic-free 297-line module, `git diff --check`, and the 8,754-job full build pass. | Freeze the registered local endpoint and require public implementation CI. |
 
 ## Frontier accounting
 
@@ -35,5 +40,8 @@ Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
   termwise semidefinite prime compensation is possible.
 - `hard_gap_after_if_success`: aggregate prime and archimedean control and every global H7 edge
   remain open.
+- `local_result`: `FULL_SUCCESS_AT_PRIME_ENDPOINT`; no source, derivative, cutoff, reflection, or
+  sign normalization mismatch was found. The atom obstruction does not decide the aggregate
+  prime block. Public implementation and evidence gates remain.
+- `definition_alignment`: `research/h7_weil_prime_block_definition_alignment_20260723.md`.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.
-

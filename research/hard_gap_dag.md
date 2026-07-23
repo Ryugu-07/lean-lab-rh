@@ -1594,3 +1594,23 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `strict_boundary`: no archimedean block, total Weil sign, Herglotz scalar inequality,
   simple-even theorem, source limit, H7, or RH theorem is included.
 - `next_gate`: publish preregistration and require public CI before production Lean editing.
+
+## 2026-07-23 H7 finite prime source local result
+
+- `H7-WEIL-FINITE-PRIME-SOURCE-INSTANTIATION-01`: `LOCALLY_PROVEN / SOURCE_ALIGNED /
+  TERMWISE_SIGN_OBSTRUCTED`.
+- `compiled`: actual integer-cutoff von Mangoldt source, certified derivative diagonals,
+  non-prime-power vanishing, finite atom-matrix sum, reflection-sector preservation, and the
+  exact `C=16,q=8` opposite-sign parity witness.
+- `source_audit`: no cutoff, coefficient, derivative, centered-frequency, reflection, or sign
+  normalization mismatch was found.
+- `local_gates`: 297-line warning-free module, one proven Target, 12 exact TargetChecks, 9
+  standard-only axiom prints, empty production scan, `git diff --check`, and the 8,754-job full
+  build pass. Public implementation CI remains.
+- `obstruction`: a genuine prime atom is negative on an even direction and positive on an odd
+  direction; termwise common-sign semidefinite compensation is unavailable. The aggregate prime
+  block is not classified.
+- `open`: aggregate prime control, archimedean instantiation, total parity ordering, arithmetic
+  Herglotz scalar bound, simple-even uniformity, source limits, H7, and RH.
+- `local_deltas`: `rh_frontier_delta=0`, `hard_gap_delta=0`, `actual_source_block_delta=1`,
+  `obstruction_map_delta=1`.

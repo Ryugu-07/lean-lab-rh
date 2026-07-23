@@ -80,6 +80,7 @@ import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.WeilGroundStateRayleighGap
 import LeanLab.Riemann.WeilGroundStatePoleBlock
+import LeanLab.Riemann.WeilGroundStatePrimeBlock
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
@@ -3952,5 +3953,68 @@ example {c : ℝ} (hc : 1 < c) (N : ℕ) :
       (∀ x, WeilFiniteIsOdd x →
         x ⬝ᵥ (weilFinitePoleSourceMatrix c N *ᵥ x) ≤ 0) :=
   weilFinitePoleBlockAudit_endpoint hc N
+
+example {C q : ℕ} (hC : 2 ≤ C) (hq : 2 ≤ q) (hqC : q ≤ C) :
+    0 ≤ weilPrimeFrequency C q ∧ weilPrimeFrequency C q ≤ 1 :=
+  weilPrimeFrequency_mem_unitInterval hC hq hqC
+
+example (q : ℕ) : weilPrimeAtomCoefficient q ≤ 0 :=
+  weilPrimeAtomCoefficient_nonpos q
+
+example {q : ℕ} (hq : ¬IsPrimePow q) :
+    weilPrimeAtomCoefficient q = 0 :=
+  weilPrimeAtomCoefficient_eq_zero_of_not_isPrimePow hq
+
+example (C q N : ℕ) (i : Fin (2 * N + 1)) :
+    HasDerivAt (weilPrimeAtomSource C q)
+      (weilPrimeAtomSourceDerivative C q N i) (weilFiniteCenteredFrequency N i) :=
+  hasDerivAt_weilPrimeAtomSource_centered C q N i
+
+example (C q N : ℕ) (i : Fin (2 * N + 1)) :
+    weilPrimeAtomSourceValue C q N i.rev = -weilPrimeAtomSourceValue C q N i ∧
+      weilPrimeAtomSourceDerivative C q N i.rev = weilPrimeAtomSourceDerivative C q N i :=
+  ⟨weilPrimeAtomSourceValue_rev C q N i, weilPrimeAtomSourceDerivative_rev C q N i⟩
+
+example (C N : ℕ) :
+    weilFinitePrimeSourceMatrix C N =
+      ∑ q ∈ Finset.Icc 2 C, weilFinitePrimeAtomMatrix C q N :=
+  weilFinitePrimeSourceMatrix_eq_sum_atoms C N
+
+example (C N : ℕ) (i j : Fin (2 * N + 1)) :
+    weilFinitePrimeSourceMatrix C N i.rev j.rev =
+      weilFinitePrimeSourceMatrix C N i j :=
+  weilFinitePrimeSourceMatrix_reflection C N i j
+
+example (C N : ℕ) {x : Fin (2 * N + 1) → ℝ} (hx : WeilFiniteIsEven x) :
+    WeilFiniteIsEven (weilFinitePrimeSourceMatrix C N *ᵥ x) :=
+  weilFinitePrimeSourceMatrix_mulVec_isEven C N hx
+
+example (C N : ℕ) {x : Fin (2 * N + 1) → ℝ} (hx : WeilFiniteIsOdd x) :
+    WeilFiniteIsOdd (weilFinitePrimeSourceMatrix C N *ᵥ x) :=
+  weilFinitePrimeSourceMatrix_mulVec_isOdd C N hx
+
+example : weilPrimeFrequency 16 8 = 1 / 4 ∧ weilPrimeAtomCoefficient 8 < 0 :=
+  ⟨weilPrimeFrequency_sixteen_eight, weilPrimeAtomCoefficient_eight_neg⟩
+
+example :
+    weilPrimeLevelOneEven ⬝ᵥ
+        (weilFinitePrimeAtomMatrix 16 8 1 *ᵥ weilPrimeLevelOneEven) < 0 ∧
+      0 < weilPrimeLevelOneOdd ⬝ᵥ
+        (weilFinitePrimeAtomMatrix 16 8 1 *ᵥ weilPrimeLevelOneOdd) :=
+  ⟨weilFinitePrimeAtomMatrix_sixteen_eight_even_neg,
+    weilFinitePrimeAtomMatrix_sixteen_eight_odd_pos⟩
+
+example (C N : ℕ) :
+    weilFinitePrimeSourceMatrix C N =
+        ∑ q ∈ Finset.Icc 2 C, weilFinitePrimeAtomMatrix C q N ∧
+      (∀ x, WeilFiniteIsEven x →
+        WeilFiniteIsEven (weilFinitePrimeSourceMatrix C N *ᵥ x)) ∧
+      (∀ x, WeilFiniteIsOdd x →
+        WeilFiniteIsOdd (weilFinitePrimeSourceMatrix C N *ᵥ x)) ∧
+      weilPrimeLevelOneEven ⬝ᵥ
+          (weilFinitePrimeAtomMatrix 16 8 1 *ᵥ weilPrimeLevelOneEven) < 0 ∧
+      0 < weilPrimeLevelOneOdd ⬝ᵥ
+          (weilFinitePrimeAtomMatrix 16 8 1 *ᵥ weilPrimeLevelOneOdd) :=
+  weilFinitePrimeBlockAudit_endpoint C N
 
 end LeanLab.Riemann

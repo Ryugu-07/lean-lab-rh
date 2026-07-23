@@ -3555,3 +3555,17 @@ strict quadratic signs on level-one even and odd witnesses. The atom witness is 
 for the aggregate prime block. The archimedean block, total Weil sign, Herglotz scalar inequality,
 simple-even uniformity, source limits, H7, and RH remain open. Production Lean editing is gated on
 public preregistration CI.
+
+## H7 Finite Weil Prime Block Local Result
+
+Preregistration commit `21fad44edcbb9277ca7f3142e776ca2f78d2df09` passed public Lean Action
+run `29971859428`, build job `89095368881`, in `1m34s`. The 297-line module then compiles the
+literal integer-cutoff von Mangoldt source, certified derivative diagonal, exact finite atom
+matrix sum, and reflection-sector preservation.
+
+The actual `C=16,q=8` atom has frequency `1/4`; its level-one center-even quadratic value is
+strictly negative while its edge-odd value is strictly positive. This is an exact obstruction to
+termwise common-sign semidefinite compensation, not a statement about the aggregate prime block.
+One proven Target, 12 exact TargetChecks, 9 selected standard-only axiom prints, the empty
+production scan, `git diff --check`, and the 8,754-job full build pass locally.
+`rh_frontier_delta=0`; public implementation CI remains and the persistent RH Goal stays active.
