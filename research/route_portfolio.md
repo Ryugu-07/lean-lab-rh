@@ -3690,3 +3690,22 @@ Action run `29982986397`, build job `89128701960`, in `2m14s`. Proof source is f
 immutable-evidence commit `6fccd535aa41d8e953b16bd28537d9984d00be34` passed run
 `29983227759`, build job `89129435959`, in `1m54s`. Only final-ledger CI remains before
 successor reranking.
+
+## H7 Finite Dictionary Source Calculus Selection
+
+H1 J-contour final-ledger commit `c4287392fe4ba0e9d588aca1b13121ae13a27654` passed public Lean
+Action run `29983416809`, build job `89129994376`, in `1m34s`. Cross-route ranking now selects
+the finite Guinand--Weil dictionary's Volterra source-calculus layer.
+
+The project has actual finite pole, prime, and archimedean source matrices, but no formal object
+carrying an even coefficient vector through its trigonometric polynomial and Volterra kernel to
+the band-limited explicit-formula weight. The selected campaign tests the source's exact
+single-frequency identity, including its derivative diagonal, then instantiates the literal
+von Mangoldt source and prime cutoff coordinate.
+
+This is not three-block bookkeeping and not numerical optimization. It tests the stronger claim
+that finite spectral quadratic values are exact test-function values. Full zero-sum
+admissibility, the pole and archimedean transports, source limits, inverse/density, total
+positivity, H7, and RH remain open. Campaign
+`LITERATURE-20260724-H7-WEIL-FINITE-DICTIONARY-01` is preregistered; production Lean requires
+public preregistration CI.

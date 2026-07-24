@@ -1719,3 +1719,17 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   sufficient for inversion; convolution `(2.4)`; Cauchy--Schwarz and zeta second-moment transfer;
   uniform parameter bookkeeping; Farmer's arbitrary-length moment conjecture.
 - `claim_boundary`: no remaining edge is assumed, and H1 and RH remain open.
+
+## 2026-07-24 H7 finite dictionary source calculus selected
+
+- `node`: `H7-WEIL-VOLTERRA-SOURCE-CALCULUS-01`.
+- `status`: `PREREGISTERED / PUBLIC_CI_REQUIRED`.
+- `parent`: H1 J-contour final ledger `c4287392fe4ba0e9d588aca1b13121ae13a27654`,
+  public Lean Action run `29983416809`, build job `89129994376`, passed in `1m34s`.
+- `fixed_edge`: exact `T_u`, Volterra `K_u`, sine-source divided-difference identity including
+  the diagonal, finite superposition, actual prime matrix transport, and Fourier support/cutoff.
+- `available_both_sides`: centered finite frequencies, reflection-even vectors, literal prime
+  atoms and their sum, matrix quadratic APIs, and interval exponential integration are compiled.
+- `open_after_success`: full finite zero-sum dictionary, admissibility in the needed explicit-
+  formula class, pole and archimedean transports, cutoff-free source assembly, inverse/density,
+  simple-even uniformity, ground/prolate convergence, H7, and RH.

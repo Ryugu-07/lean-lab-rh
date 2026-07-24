@@ -1028,3 +1028,16 @@ Action run `29982986397`, build job `89128701960`, in `2m14s`. Proof source rema
 immutable-evidence commit `6fccd535aa41d8e953b16bd28537d9984d00be34` passed run
 `29983227759`, build job `89129435959`, in `1m54s`. Final-ledger CI precedes successor
 reranking.
+
+H1 J-contour final-ledger commit `c4287392fe4ba0e9d588aca1b13121ae13a27654` passed public Lean
+Action run `29983416809`, build job `89129994376`, in `1m34s`. Fresh cross-family ranking
+selects D6/H7's finite Guinand--Weil dictionary source calculus. The pole, prime, and
+archimedean source matrices are now actual objects, but the project still lacks the closed-form
+transport from a finite even vector to the band-limited test weight whose explicit formula is
+claimed to equal the matrix quadratic.
+
+Campaign `LITERATURE-20260724-H7-WEIL-FINITE-DICTIONARY-01` fixes the literal trigonometric
+polynomial, Volterra kernel, single-frequency divided-difference identity including the diagonal,
+finite atom superposition, actual von Mangoldt prime block, and Fourier cutoff coordinate. It
+does not claim the full zero-sum dictionary, test-class admissibility, inverse/density, source
+limits, H7, or RH. Public preregistration CI gates production Lean.
