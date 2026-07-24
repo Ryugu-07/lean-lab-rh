@@ -8,7 +8,7 @@ Selected node: `H7-WEIL-VOLTERRA-SOURCE-CALCULUS-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `LOCAL_GATES_PASSED / FROZEN_IMPLEMENTATION_PENDING`
+Status: `FROZEN_IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 
 ## Baseline
 
@@ -148,3 +148,9 @@ compile. The source-to-Lean audit is
 `research/h7_weil_volterra_source_calculus_definition_alignment_20260724.md`. The forbidden scan
 is empty, `git diff --check` passes, and the full `8758/8758` build succeeds. Frozen
 implementation publication is next.
+
+## Frozen implementation evidence
+
+Frozen implementation commit `e5f011dbbf9f7c40a802ab88f9a91aa6aea3f370` passed public Lean
+Action run `30072543069`, build job `89416248542`, in `2m6s`. The proof source, Target,
+TargetCheck, and axiom audit are frozen. The next commit records these coordinates only.

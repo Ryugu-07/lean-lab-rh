@@ -50,3 +50,8 @@ items. The alignment probe found no source mismatch.
 The endpoint does not establish admissibility or decay of the induced test in the project's
 explicit-formula class. It also does not provide the zero, pole, or archimedean transports, a
 cutoff-free limit, inverse/density, a sign for the total matrix, H7, or RH.
+
+## Public freeze
+
+Frozen implementation commit `e5f011dbbf9f7c40a802ab88f9a91aa6aea3f370` passed public Lean
+Action run `30072543069`, build job `89416248542`, in `2m6s`.

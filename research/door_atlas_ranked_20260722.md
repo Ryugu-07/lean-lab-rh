@@ -1052,4 +1052,6 @@ This is evidence that the finite H7 matrix is not merely formal bookkeeping: its
 is an exact source test value. The route is still blocked before the zero side by admissibility
 and boundary regularity of the piecewise Fourier weight, plus the pole and archimedean
 transports. All local gates, including the full `8758/8758` build, pass; frozen implementation
-and public evidence gates precede the next atlas ranking. H7 and RH remain open.
+commit `e5f011dbbf9f7c40a802ab88f9a91aa6aea3f370` passed public Lean Action run
+`30072543069`, build job `89416248542`, in `2m6s`. Immutable-evidence and final-ledger gates
+precede the next atlas ranking. H7 and RH remain open.

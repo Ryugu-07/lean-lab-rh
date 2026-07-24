@@ -3728,4 +3728,6 @@ weight, followed by exact zero, pole, and archimedean transports. Those tasks re
 historical-route pool rather than being treated as exhausted. Full local and public evidence
 gates precede reranking. The 729-line source, aggregate Target and exact check, 11 selected
 standard-only axiom prints, empty forbidden scan, patch check, and full `8758/8758` build pass
-locally; frozen implementation CI is next.
+locally. Frozen implementation commit `e5f011dbbf9f7c40a802ab88f9a91aa6aea3f370`
+passed public Lean Action run `30072543069`, build job `89416248542`, in `2m6s`; proof source is
+frozen and immutable-evidence publication is next.

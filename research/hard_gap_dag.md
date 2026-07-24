@@ -1737,7 +1737,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 ## 2026-07-24 H7 Volterra source calculus local endpoint
 
 - `node`: `H7-WEIL-VOLTERRA-SOURCE-CALCULUS-01`.
-- `status`: `LOCAL_GATES_PASSED / FROZEN_IMPLEMENTATION_PENDING`.
+- `status`: `FROZEN_IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`.
 - `proved_edge`: the literal finite vector-to-test source map now runs from centered `T_u`
   through interval `K_u`, both divided-difference branches and finite atom superposition to the
   actual finite prime matrix and its induced Fourier prime side.
@@ -1749,4 +1749,6 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   boundary regularity. No such premise is currently available.
 - `local_gates`: exact source and interface checks, 11 standard-only axiom prints, empty
   forbidden scan, `git diff --check`, and the full `8758/8758` build pass.
-- `global_goal`: active; frozen implementation and two subsequent public evidence gates remain.
+- `public_implementation`: frozen commit `e5f011dbbf9f7c40a802ab88f9a91aa6aea3f370`
+  passed Lean Action run `30072543069`, build job `89416248542`, in `2m6s`.
+- `global_goal`: active; immutable-evidence and final-ledger public gates remain.

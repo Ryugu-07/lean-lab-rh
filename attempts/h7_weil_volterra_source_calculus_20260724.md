@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260724-H7-WEIL-FINITE-DICTIONARY-01`
 
 Selected node: `H7-WEIL-VOLTERRA-SOURCE-CALCULUS-01`
 
-Status: `LOCAL_GATES_PASSED / FROZEN_IMPLEMENTATION_PENDING`
+Status: `FROZEN_IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 
 ## Attempt log
 
@@ -24,6 +24,7 @@ Status: `LOCAL_GATES_PASSED / FROZEN_IMPLEMENTATION_PENDING`
 | `FOURIER_CUTOFF` | Defined `Delta=log(C)/(2*pi)` and the piecewise induced Fourier weight. | Evenness, outside-band vanishing, `xi_q` membership, `1-xi_q/Delta=omega_q`, and the literal finite prime-side rewrite compile. | Register and run all local gates. |
 | `LOCAL_INTERFACE` | Added the seven-part certificate, proven Target, exact TargetCheck, selected axiom prints, and definition alignment. | Source module, Targets, TargetChecks, and AxiomsAudit compile. Full build and scans remain. | Run freeze gates before publication. |
 | `LOCAL_GATES` | Ran warning-as-error source and interface checks, selected transitive axiom audit, forbidden scan, `git diff --check`, and full build. | All checks pass; every selected declaration uses only `propext`, `Classical.choice`, and `Quot.sound`; the full build completes `8758/8758`. | Publish and freeze the implementation commit. |
+| `FROZEN_IMPLEMENTATION` | Published commit `e5f011dbbf9f7c40a802ab88f9a91aa6aea3f370`. | Public Lean Action run `30072543069`, build job `89416248542`, passed in `2m6s`; proof source is frozen. | Publish these coordinates in a docs-only immutable-evidence commit. |
 
 ## Claim boundary
 
