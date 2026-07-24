@@ -3732,3 +3732,27 @@ locally. Frozen implementation commit `e5f011dbbf9f7c40a802ab88f9a91aa6aea3f370`
 passed public Lean Action run `30072543069`, build job `89416248542`, in `2m6s`; proof source is
 frozen. Docs-only immutable-evidence commit `59adecc50ac343912eca3ef1989a5b4a642103e7`
 passed run `30072806474`, build job `89417024378`, in `1m36s`; only final-ledger CI remains.
+
+## H7 Finite Dictionary Admissibility Selection
+
+The Volterra source-calculus campaign publicly closed at final-ledger commit
+`46befa6a2e935e73b077140e5e9df24df3623db6`, Lean Action run `30073083407`, build job
+`89417854356`, in `1m39s`. The fixed prime-side vector-to-test edge is complete; the H7 family is
+not exhausted.
+
+Fresh ranking compares H7 admissibility with H1 inverse Mellin/convolution, H12 Speiser counting,
+H2 bow localization, H10 function-field transfer, and H11 sparse-exception amplification. It
+selects `H7-WEIL-FINITE-DICTIONARY-ADMISSIBILITY-01` because the literal finite Fourier weight and
+a published exact zero-side consumer now sit on opposite sides of one precisely stated analytic
+hypothesis.
+
+The source audit corrects an earlier tentative restriction: Groskin Lemma 2.2 asserts
+admissibility for every finite even-sector vector, without moment-neutrality. The fixed campaign
+must prove endpoint continuity, compact support, entire/even structure, the exact affine
+source-to-project zero coordinate, inverse-square decay on horizontal strips, and absolute
+summability over the multiplicity-bearing xi divisor.
+
+This is not a numerical bound optimization. The generalized arithmetic explicit formula for this
+piecewise-smooth/BV class remains outside the endpoint because the project's current theorem
+requires compact `C^6` input. After public closure, the route selector must compare H1, H12, H2,
+and any exact H7 zero-side consumer anew; API familiarity alone is not a selection reason.

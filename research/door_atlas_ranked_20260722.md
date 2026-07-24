@@ -1057,3 +1057,21 @@ commit `e5f011dbbf9f7c40a802ab88f9a91aa6aea3f370` passed public Lean Action run
 `59adecc50ac343912eca3ef1989a5b4a642103e7` passed run `30072806474`, build job
 `89417024378`, in `1m36s`. Only final-ledger CI precedes the next atlas ranking. H7 and RH
 remain open.
+
+The H7 Volterra source-calculus campaign then publicly closed at final-ledger commit
+`46befa6a2e935e73b077140e5e9df24df3623db6`, Lean Action run `30073083407`, build job
+`89417854356`, in `1m39s`.
+
+Source rereading corrects the next D6 edge. Groskin Lemma 2.2 claims that every finite even-sector
+vector, not only a moment-neutral vector, induces an admissible Guinand--Weil test. The compact
+Fourier weight is continuous and endpoint-vanishing but only piecewise smooth; its zero-extended
+derivative has bounded variation, and the source's inverse-square strip decay uses a Stieltjes
+second integration by parts.
+
+Campaign `LITERATURE-20260724-H7-WEIL-FINITE-DICTIONARY-ADMISSIBILITY-01` therefore targets the
+literal boundary regularity, entire/even test, exact affine rotation into the project's Laplace
+and xi-divisor coordinates, horizontal-strip decay, and absolute multiplicity-bearing zero
+summability. The project compact explicit formula requires global `C^6`, so the weaker-class
+arithmetic formula and total matrix-to-zero identity remain separate open edges. After this
+campaign, D3/H1, H12 Speiser, H2 localization, and any exact D6 zero-side transport are reranked;
+D6 is not selected automatically.

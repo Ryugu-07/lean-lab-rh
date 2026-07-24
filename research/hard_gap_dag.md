@@ -1754,3 +1754,24 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `immutable_evidence`: docs-only commit `59adecc50ac343912eca3ef1989a5b4a642103e7`
   passed run `30072806474`, build job `89417024378`, in `1m36s`.
 - `global_goal`: active; final-ledger public CI remains.
+
+## 2026-07-24 H7 finite dictionary admissibility selected
+
+- `parent_closed`: Volterra source-calculus final ledger
+  `46befa6a2e935e73b077140e5e9df24df3623db6` passed public Lean Action run
+  `30073083407`, build job `89417854356`, in `1m39s`.
+- `node`: `H7-WEIL-FINITE-DICTIONARY-ADMISSIBILITY-01`.
+- `status`: `PREREGISTERED / PUBLIC_CI_REQUIRED`.
+- `source_correction`: Groskin Lemma 2.2 claims admissibility for every finite even-sector vector;
+  moment-neutrality is not required. The derivative of the compact Fourier weight may jump, and
+  the source uses bounded variation plus a Stieltjes second integration by parts.
+- `fixed_edge`: boundary continuity and compact support of the literal Fourier weight; entire and
+  even source test; exact affine rotation into the project's Laplace and xi-divisor coordinates;
+  horizontal-strip inverse-square decay; and absolute summability over the actual divisor with
+  multiplicity.
+- `hard_boundary`: the project's compact arithmetic explicit formula currently assumes global
+  `C^6`. Extending it to the source's continuous, piecewise-smooth/BV class is a downstream node,
+  not an available premise.
+- `rotation_after_closure`: rerank H1 inverse Mellin/convolution, H12 Speiser counting, H2
+  arithmetic bow localization, and any H7 exact zero-side transport. No automatic H7 successor.
+- `global_goal`: active; H7 and RH remain open.
