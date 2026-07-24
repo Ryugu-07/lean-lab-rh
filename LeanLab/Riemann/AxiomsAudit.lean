@@ -89,6 +89,7 @@ import LeanLab.Riemann.WeilGroundStateRayleighGap
 import LeanLab.Riemann.WeilGroundStatePoleBlock
 import LeanLab.Riemann.WeilGroundStatePrimeBlock
 import LeanLab.Riemann.WeilArchimedeanTailDensity
+import LeanLab.Riemann.WeilFiniteDictionarySourceCalculus
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
@@ -937,3 +938,14 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.weilFiniteArchimedeanIncrement_quadratic
 #print axioms LeanLab.Riemann.weilFiniteArchimedeanIncrement_nonneg
 #print axioms LeanLab.Riemann.weilArchimedeanTailDensityAudit_endpoint
+#print axioms LeanLab.Riemann.weilFiniteTrigPolynomial_im_eq_zero
+#print axioms LeanLab.Riemann.weilFiniteVolterraKernel_im_eq_zero
+#print axioms LeanLab.Riemann.weilFiniteVolterraPair_same
+#print axioms LeanLab.Riemann.weilFiniteVolterraPair_ne
+#print axioms LeanLab.Riemann.weilFiniteSineAtomMatrix_quadratic_complex
+#print axioms LeanLab.Riemann.weilFiniteSineAtomSum_quadratic
+#print axioms LeanLab.Riemann.weilFinitePrimeAtomMatrix_eq_sineAtom
+#print axioms LeanLab.Riemann.weilFinitePrimeSourceMatrix_quadratic_eq_volterra
+#print axioms LeanLab.Riemann.weilFiniteDictionary_prime_coordinate
+#print axioms LeanLab.Riemann.weilFinitePrimeSourceMatrix_quadratic_eq_fourierWeight
+#print axioms LeanLab.Riemann.weilFiniteDictionarySourceCalculus_endpoint

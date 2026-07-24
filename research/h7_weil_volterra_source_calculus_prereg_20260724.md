@@ -8,7 +8,7 @@ Selected node: `H7-WEIL-VOLTERRA-SOURCE-CALCULUS-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_GATES_PASSED / FROZEN_IMPLEMENTATION_PENDING`
 
 ## Baseline
 
@@ -128,3 +128,23 @@ relaxation. Require direct warning-as-error compilation, exact TargetChecks, sel
 implementation CI, immutable-evidence CI, and final-ledger CI.
 
 The six inherited user/exposure files remain untouched and unstaged.
+
+## Production gate
+
+Preregistration commit `b98925631116a204240b210a4f181438413700c2` passed public Lean Action
+run `30070385819`, build job `89409815046`, in `1m41s`. Production proof-source editing is now
+open.
+
+## Local implementation checkpoint
+
+The 729-line source module compiles all seven fixed items with no admitted premise. Reflection
+symmetry makes the literal trigonometric polynomial real by finite `Fin.rev` reindexing and makes
+the Volterra kernel real by commuting `Complex.imCLM` with the actual interval integral. Both
+pair-integral branches, the generic and finite-superposition quadratics, actual prime
+instantiation, Fourier support and prime coordinate, and the aggregate certificate compile.
+
+`Targets`, the exact aggregate `TargetChecks` witness, and selected transitive axiom prints also
+compile. The source-to-Lean audit is
+`research/h7_weil_volterra_source_calculus_definition_alignment_20260724.md`. The forbidden scan
+is empty, `git diff --check` passes, and the full `8758/8758` build succeeds. Frozen
+implementation publication is next.

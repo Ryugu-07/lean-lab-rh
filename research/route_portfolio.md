@@ -3709,3 +3709,23 @@ admissibility, the pole and archimedean transports, source limits, inverse/densi
 positivity, H7, and RH remain open. Campaign
 `LITERATURE-20260724-H7-WEIL-FINITE-DICTIONARY-01` is preregistered; production Lean requires
 public preregistration CI.
+
+## H7 Finite Dictionary Source Calculus Local Result
+
+The preregistered source-calculus endpoint compiles. Lean constructs the literal centered
+trigonometric polynomial and Volterra interval kernel, proves real-valuedness from reflection
+symmetry, retains the diagonal exponential-integral branch, and derives the generic
+divided-difference quadratic and finite atomic superposition.
+
+The same chain identifies the existing finite von Mangoldt atom and source matrix and rewrites
+their quadratic as the induced band-limited Fourier prime side at
+`xi=log(q)/(2*pi)`. No source normalization mismatch was found. This adds an actual
+vector-to-prime-test bridge, with `source_analytic_bridge_delta=1`; it does not yet enter the
+zero side, so `rh_frontier_delta=0` and `hard_gap_delta=0`.
+
+The next H7 obstruction is test admissibility and boundary regularity for the piecewise Fourier
+weight, followed by exact zero, pole, and archimedean transports. Those tasks remain in the
+historical-route pool rather than being treated as exhausted. Full local and public evidence
+gates precede reranking. The 729-line source, aggregate Target and exact check, 11 selected
+standard-only axiom prints, empty forbidden scan, patch check, and full `8758/8758` build pass
+locally; frozen implementation CI is next.

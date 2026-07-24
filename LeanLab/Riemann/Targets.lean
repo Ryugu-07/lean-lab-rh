@@ -79,6 +79,7 @@ import LeanLab.Riemann.WeilGroundStateRayleighGap
 import LeanLab.Riemann.WeilGroundStatePoleBlock
 import LeanLab.Riemann.WeilGroundStatePrimeBlock
 import LeanLab.Riemann.WeilArchimedeanTailDensity
+import LeanLab.Riemann.WeilFiniteDictionarySourceCalculus
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ThetaInfinityMollifier
 import LeanLab.Riemann.BettinGonekAuxiliary
@@ -1368,6 +1369,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``weilArchimedeanTailDensityAudit_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260723-H7-WEIL-ARCHIMEDEAN-TAIL-DENSITY-01 derives the diagonal by differentiating the actual interval source, proves digamma-density continuity without a custom axiom, and keeps interval nonnegativity conditional on the explicit pointwise h_+ sign premise. It does not prove the published h_+(T)>0 threshold, strict positivity, total positivity, total pole-prime-archimedean sign, Herglotz, simple-even uniformity, source convergence, H7, or RH; rh_frontier_delta=0." },
+    { id := "H7.weil-ground-state.volterra-source-calculus"
+      tier := .tier2
+      title := "Transport finite Weil matrices through the Volterra source calculus"
+      statement :=
+        "Construct the centered trigonometric polynomial and literal Volterra kernel, prove their real-valuedness for reflection-even coefficients, evaluate both branches of the sine-source matrix quadratic, pass through finite atomic superposition, identify the actual finite von Mangoldt source, and rewrite its quadratic as the induced band-limited Fourier prime side."
+      leanName := some ``weilFiniteDictionarySourceCalculus_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260724-H7-WEIL-FINITE-DICTIONARY-01 compiles the exact source-calculus and actual finite-prime leg of the Guinand--Weil dictionary, including the diagonal derivative branch and the coordinate xi=log(q)/(2*pi). It does not prove admissibility or decay of the induced test, the zero, pole, or archimedean transports, a cutoff limit, inverse/density, positivity of the total matrix, H7, or RH; rh_frontier_delta=0 and source_analytic_bridge_delta=1." },
     { id := "H7.weil-ground-state.rayleigh-gap-consumer"
       tier := .tier2
       title := "Control ground-line defect by Rayleigh excess over the spectral gap"

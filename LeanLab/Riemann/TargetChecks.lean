@@ -4206,4 +4206,7 @@ example {L T₁ T₂ : ℝ} {N : ℕ} (hL : 0 < L)
       (∀ x, 0 ≤ x ⬝ᵥ (weilFiniteArchimedeanIncrement L T₁ T₂ N *ᵥ x)) :=
   weilArchimedeanTailDensityAudit_endpoint hL hband hT hdensity
 
+example : WeilFiniteDictionarySourceCalculusCertificate :=
+  weilFiniteDictionarySourceCalculus_endpoint
+
 end LeanLab.Riemann

@@ -1041,3 +1041,15 @@ polynomial, Volterra kernel, single-frequency divided-difference identity includ
 finite atom superposition, actual von Mangoldt prime block, and Fourier cutoff coordinate. It
 does not claim the full zero-sum dictionary, test-class admissibility, inverse/density, source
 limits, H7, or RH. Public preregistration CI gates production Lean.
+
+The fixed source-calculus probe now succeeds locally. Reflection-even coefficients make the
+literal `T_u` and `K_u` real, both pair-integral branches match the published sine-source matrix,
+and finite superposition reaches the actual project prime matrix. The exact cutoff substitution
+rewrites that matrix quadratic as the induced finite Fourier prime side. No factor, sign,
+diagonal, or coordinate mismatch was found.
+
+This is evidence that the finite H7 matrix is not merely formal bookkeeping: its prime quadratic
+is an exact source test value. The route is still blocked before the zero side by admissibility
+and boundary regularity of the piecewise Fourier weight, plus the pole and archimedean
+transports. All local gates, including the full `8758/8758` build, pass; frozen implementation
+and public evidence gates precede the next atlas ranking. H7 and RH remain open.

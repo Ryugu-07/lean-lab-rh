@@ -1733,3 +1733,20 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `open_after_success`: full finite zero-sum dictionary, admissibility in the needed explicit-
   formula class, pole and archimedean transports, cutoff-free source assembly, inverse/density,
   simple-even uniformity, ground/prolate convergence, H7, and RH.
+
+## 2026-07-24 H7 Volterra source calculus local endpoint
+
+- `node`: `H7-WEIL-VOLTERRA-SOURCE-CALCULUS-01`.
+- `status`: `LOCAL_GATES_PASSED / FROZEN_IMPLEMENTATION_PENDING`.
+- `proved_edge`: the literal finite vector-to-test source map now runs from centered `T_u`
+  through interval `K_u`, both divided-difference branches and finite atom superposition to the
+  actual finite prime matrix and its induced Fourier prime side.
+- `symmetry_result`: reflection-even coefficients make `T_u` and `K_u` real by derived
+  cancellation and integral transport, so the complex source identity is not an extra premise.
+- `delta`: `source_analytic_bridge_delta=1`, `rh_frontier_delta=0`, `hard_gap_delta=0`.
+- `next_obstruction`: prove the induced piecewise Fourier weight belongs to a source-valid
+  explicit-formula test class, then transport the zero, pole, and archimedean sides with exact
+  boundary regularity. No such premise is currently available.
+- `local_gates`: exact source and interface checks, 11 standard-only axiom prints, empty
+  forbidden scan, `git diff --check`, and the full `8758/8758` build pass.
+- `global_goal`: active; frozen implementation and two subsequent public evidence gates remain.
