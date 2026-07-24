@@ -3730,4 +3730,5 @@ gates precede reranking. The 729-line source, aggregate Target and exact check, 
 standard-only axiom prints, empty forbidden scan, patch check, and full `8758/8758` build pass
 locally. Frozen implementation commit `e5f011dbbf9f7c40a802ab88f9a91aa6aea3f370`
 passed public Lean Action run `30072543069`, build job `89416248542`, in `2m6s`; proof source is
-frozen and immutable-evidence publication is next.
+frozen. Docs-only immutable-evidence commit `59adecc50ac343912eca3ef1989a5b4a642103e7`
+passed run `30072806474`, build job `89417024378`, in `1m36s`; only final-ledger CI remains.

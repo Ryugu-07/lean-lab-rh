@@ -1737,7 +1737,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 ## 2026-07-24 H7 Volterra source calculus local endpoint
 
 - `node`: `H7-WEIL-VOLTERRA-SOURCE-CALCULUS-01`.
-- `status`: `FROZEN_IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`.
+- `status`: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`.
 - `proved_edge`: the literal finite vector-to-test source map now runs from centered `T_u`
   through interval `K_u`, both divided-difference branches and finite atom superposition to the
   actual finite prime matrix and its induced Fourier prime side.
@@ -1751,4 +1751,6 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   forbidden scan, `git diff --check`, and the full `8758/8758` build pass.
 - `public_implementation`: frozen commit `e5f011dbbf9f7c40a802ab88f9a91aa6aea3f370`
   passed Lean Action run `30072543069`, build job `89416248542`, in `2m6s`.
-- `global_goal`: active; immutable-evidence and final-ledger public gates remain.
+- `immutable_evidence`: docs-only commit `59adecc50ac343912eca3ef1989a5b4a642103e7`
+  passed run `30072806474`, build job `89417024378`, in `1m36s`.
+- `global_goal`: active; final-ledger public CI remains.

@@ -8,7 +8,7 @@ Selected node: `H7-WEIL-VOLTERRA-SOURCE-CALCULUS-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `FROZEN_IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Baseline
 
@@ -153,4 +153,6 @@ implementation publication is next.
 
 Frozen implementation commit `e5f011dbbf9f7c40a802ab88f9a91aa6aea3f370` passed public Lean
 Action run `30072543069`, build job `89416248542`, in `2m6s`. The proof source, Target,
-TargetCheck, and axiom audit are frozen. The next commit records these coordinates only.
+TargetCheck, and axiom audit are frozen. Docs-only immutable-evidence commit
+`59adecc50ac343912eca3ef1989a5b4a642103e7` passed run `30072806474`, build job
+`89417024378`, in `1m36s`. Only final-ledger CI remains.

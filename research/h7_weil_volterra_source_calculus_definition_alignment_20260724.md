@@ -54,4 +54,6 @@ cutoff-free limit, inverse/density, a sign for the total matrix, H7, or RH.
 ## Public freeze
 
 Frozen implementation commit `e5f011dbbf9f7c40a802ab88f9a91aa6aea3f370` passed public Lean
-Action run `30072543069`, build job `89416248542`, in `2m6s`.
+Action run `30072543069`, build job `89416248542`, in `2m6s`. Docs-only immutable-evidence
+commit `59adecc50ac343912eca3ef1989a5b4a642103e7` passed run `30072806474`, build job
+`89417024378`, in `1m36s`.

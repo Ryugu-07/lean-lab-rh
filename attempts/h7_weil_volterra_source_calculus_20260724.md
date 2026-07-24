@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260724-H7-WEIL-FINITE-DICTIONARY-01`
 
 Selected node: `H7-WEIL-VOLTERRA-SOURCE-CALCULUS-01`
 
-Status: `FROZEN_IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Attempt log
 
@@ -25,6 +25,7 @@ Status: `FROZEN_IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 | `LOCAL_INTERFACE` | Added the seven-part certificate, proven Target, exact TargetCheck, selected axiom prints, and definition alignment. | Source module, Targets, TargetChecks, and AxiomsAudit compile. Full build and scans remain. | Run freeze gates before publication. |
 | `LOCAL_GATES` | Ran warning-as-error source and interface checks, selected transitive axiom audit, forbidden scan, `git diff --check`, and full build. | All checks pass; every selected declaration uses only `propext`, `Classical.choice`, and `Quot.sound`; the full build completes `8758/8758`. | Publish and freeze the implementation commit. |
 | `FROZEN_IMPLEMENTATION` | Published commit `e5f011dbbf9f7c40a802ab88f9a91aa6aea3f370`. | Public Lean Action run `30072543069`, build job `89416248542`, passed in `2m6s`; proof source is frozen. | Publish these coordinates in a docs-only immutable-evidence commit. |
+| `IMMUTABLE_EVIDENCE` | Published the frozen implementation coordinates in docs-only commit `59adecc50ac343912eca3ef1989a5b4a642103e7`. | Public Lean Action run `30072806474`, build job `89417024378`, passed in `1m36s`; proof source remained unchanged. | Publish the final campaign ledger and require its CI. |
 
 ## Claim boundary
 
