@@ -3823,7 +3823,7 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 
 ## 2026-07-24 H7 finite dictionary admissibility local result
 
-- `status`: `FULL_ADMISSIBILITY_SUCCESS / LOCAL_GATES_PASSED`.
+- `status`: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`.
 - `compiled_edge`: literal weight continuity/support/integrability; continuous compact physical
   density; even entire test; exact `log(C)` exponential type; exact project Laplace and xi-zero
   coordinates; uniform horizontal-strip inverse-square decay; absolute summability over the
@@ -3842,4 +3842,6 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `boundary`: weaker-class arithmetic explicit formula, total matrix-to-zero identity,
   pole/archimedean transports, pole-neutral survival, inverse/density, cutoff limits, positivity,
   H7, and RH remain open.
-- `next_gate`: freeze the implementation and require public CI.
+- `public_implementation`: frozen commit `257b80dcda7d4a68a9c6a4b9860b1a97fa42c0ca`
+  passed Lean Action run `30140659408`, build job `89633127915`, in `2m37s`.
+- `next_gate`: publish docs-only immutable evidence; do not modify proof or governance source.

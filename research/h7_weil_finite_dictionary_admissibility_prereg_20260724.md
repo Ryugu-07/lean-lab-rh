@@ -8,7 +8,7 @@ Selected node: `H7-WEIL-FINITE-DICTIONARY-ADMISSIBILITY-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `FULL_ADMISSIBILITY_SUCCESS / LOCAL_GATES_PASSED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 
 ## Baseline
 
@@ -146,3 +146,7 @@ sum is dominated by the existing Hadamard reciprocal-square majorant. The aggreg
 Target, exact checks, and selected standard-only axiom prints compile. The forbidden scan and
 `git diff --check` are empty, and the full `8759/8759` build passes. The remaining gates are the
 public freeze/evidence/final-ledger sequence.
+
+Frozen implementation commit `257b80dcda7d4a68a9c6a4b9860b1a97fa42c0ca` passed public Lean
+Action run `30140659408`, build job `89633127915`, in `2m37s`. The Lean source, Target,
+TargetChecks, and AxiomsAudit entries are frozen; only docs-only immutable evidence may follow.

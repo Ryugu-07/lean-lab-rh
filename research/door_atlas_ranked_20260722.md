@@ -1088,3 +1088,7 @@ arithmetic explicit formula and total matrix-to-zero transport. It does not prov
 or RH. The exact checks, standard-only axiom audit, empty forbidden scan and patch check, and
 full `8759/8759` build pass. Public freeze/evidence gates and a fresh H1/H12/H2/H7 comparison
 remain mandatory.
+
+Frozen implementation `257b80dcda7d4a68a9c6a4b9860b1a97fa42c0ca` passed public Lean Action
+run `30140659408`, build job `89633127915`, in `2m37s`. The proof source is frozen; docs-only
+immutable evidence and final-ledger CI precede the fresh route comparison.

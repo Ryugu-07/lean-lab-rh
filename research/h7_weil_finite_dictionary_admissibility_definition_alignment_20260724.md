@@ -62,3 +62,9 @@ The 1,819-line source and all three governance modules compile directly with war
 errors. The selected transitive axiom sets contain only `propext`, `Classical.choice`, and
 `Quot.sound`; the production forbidden scan and `git diff --check` are empty, and the full
 `8759/8759` build passes.
+
+## Public freeze
+
+Frozen implementation commit `257b80dcda7d4a68a9c6a4b9860b1a97fa42c0ca` passed public Lean
+Action run `30140659408`, build job `89633127915`, in `2m37s`. All proof and governance source is
+frozen at this coordinate.
