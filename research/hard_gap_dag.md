@@ -1782,7 +1782,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 ## 2026-07-24 H7 finite dictionary admissibility local endpoint
 
 - `node`: `H7-WEIL-FINITE-DICTIONARY-ADMISSIBILITY-01`.
-- `status`: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`.
+- `status`: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`.
 - `proved_edge`: every literal finite even-sector dictionary vector induces a continuous compact
   Fourier weight, an even entire test of exponential type at most `log(C)`, and a test with
   uniform inverse-square decay on each horizontal strip.
@@ -1798,4 +1798,6 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   patch check are empty, and the full `8759/8759` build passes.
 - `public_implementation`: frozen commit `257b80dcda7d4a68a9c6a4b9860b1a97fa42c0ca`
   passed Lean Action run `30140659408`, build job `89633127915`, in `2m37s`.
+- `immutable_evidence`: docs-only commit `317a610f22637fd91ae84f125b3086f552081813`
+  passed run `30140782861`, build job `89633473809`, in `1m32s`; final-ledger CI remains.
 - `global_goal`: active; H7 and RH remain open.

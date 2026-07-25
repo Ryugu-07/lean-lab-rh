@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260724-H7-WEIL-FINITE-DICTIONARY-ADMISSIBILITY-01`
 
 Selected node: `H7-WEIL-FINITE-DICTIONARY-ADMISSIBILITY-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Attempt log
 
@@ -23,6 +23,7 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 | `ZERO_SUM` | Computed the rotated zero coordinate and compared `(1+|Im(rho)|)^-2` with `norm(rho)^-2`. | Existing certified Hadamard reciprocal-square summability yields summability of both norms and values over `RiemannXiDivisorZeroIndex`, and of the exact project symmetrized Laplace weights. No RH, simplicity, ordering, or zero-count asymptotic is used. | Package and register the fixed endpoint. |
 | `REGISTRATION` | Added `WeilFiniteDictionaryAdmissibilityCertificate`, one proven Target, exact aggregate/decay/summability checks, and selected axiom prints. | Direct warning-as-error compilation passes. Selected transitive axioms are only `propext`, `Classical.choice`, and `Quot.sound`; the forbidden scan and `git diff --check` are empty, and the full `8759/8759` build passes. | Freeze the implementation, then run immutable-evidence and final-ledger public CI. |
 | `IMPLEMENTATION_CI` | Published frozen implementation commit `257b80dcda7d4a68a9c6a4b9860b1a97fa42c0ca`. | Public Lean Action run `30140659408`, build job `89633127915`, passed in `2m37s`. | Keep proof and governance source frozen; publish docs-only immutable evidence. |
+| `IMMUTABLE_EVIDENCE_CI` | Published docs-only evidence commit `317a610f22637fd91ae84f125b3086f552081813`. | Public Lean Action run `30140782861`, build job `89633473809`, passed in `1m32s`; frozen source is unchanged from `257b80d`. | Publish one docs-only final ledger and require public CI. |
 
 ## Claim boundary
 

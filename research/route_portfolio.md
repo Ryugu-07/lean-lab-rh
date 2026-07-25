@@ -3778,4 +3778,5 @@ cross-route reranking.
 
 Frozen implementation commit `257b80dcda7d4a68a9c6a4b9860b1a97fa42c0ca` passed public Lean
 Action run `30140659408`, build job `89633127915`, in `2m37s`. Proof and governance source is
-frozen; docs-only immutable evidence and final-ledger gates remain.
+frozen. Docs-only immutable-evidence commit `317a610f22637fd91ae84f125b3086f552081813`
+passed run `30140782861`, build job `89633473809`, in `1m32s`; only final-ledger CI remains.

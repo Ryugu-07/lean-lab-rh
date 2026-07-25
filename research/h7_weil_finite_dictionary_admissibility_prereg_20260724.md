@@ -8,7 +8,7 @@ Selected node: `H7-WEIL-FINITE-DICTIONARY-ADMISSIBILITY-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Baseline
 
@@ -150,3 +150,7 @@ public freeze/evidence/final-ledger sequence.
 Frozen implementation commit `257b80dcda7d4a68a9c6a4b9860b1a97fa42c0ca` passed public Lean
 Action run `30140659408`, build job `89633127915`, in `2m37s`. The Lean source, Target,
 TargetChecks, and AxiomsAudit entries are frozen; only docs-only immutable evidence may follow.
+
+Docs-only immutable-evidence commit `317a610f22637fd91ae84f125b3086f552081813` passed public Lean
+Action run `30140782861`, build job `89633473809`, in `1m32s`. The frozen implementation is
+unchanged. One docs-only final-ledger CI remains.

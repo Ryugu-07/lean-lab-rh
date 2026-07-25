@@ -1091,4 +1091,5 @@ remain mandatory.
 
 Frozen implementation `257b80dcda7d4a68a9c6a4b9860b1a97fa42c0ca` passed public Lean Action
 run `30140659408`, build job `89633127915`, in `2m37s`. The proof source is frozen; docs-only
-immutable evidence and final-ledger CI precede the fresh route comparison.
+immutable evidence `317a610f22637fd91ae84f125b3086f552081813` passed run `30140782861`,
+build job `89633473809`, in `1m32s`. Only final-ledger CI precedes the fresh route comparison.
