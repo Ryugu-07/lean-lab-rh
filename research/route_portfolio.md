@@ -3756,3 +3756,22 @@ This is not a numerical bound optimization. The generalized arithmetic explicit 
 piecewise-smooth/BV class remains outside the endpoint because the project's current theorem
 requires compact `C^6` input. After public closure, the route selector must compare H1, H12, H2,
 and any exact H7 zero-side consumer anew; API familiarity alone is not a selection reason.
+
+## H7 Finite Dictionary Admissibility Local Result
+
+The full source admissibility endpoint compiles. Every finite even-sector vector now has a
+continuous compact Fourier weight, a continuous compact physical density, an even entire test
+with the exact `log(C)` exponential-type bound, and exact project Laplace and xi-divisor
+coordinates.
+
+The main analytic step succeeds without a new bounded-variation library: splitting at the origin
+gives two smooth branches, and two integrations by parts on each branch retain all derivative
+jumps while producing the source-strength horizontal-strip inverse-square estimate. At actual xi
+zeros this is dominated by the project's Hadamard reciprocal-square series, proving absolute
+summability with analytic multiplicity.
+
+This closes the admissibility and zero-series well-definedness edge, not the arithmetic
+Guinand--Weil formula for the weaker test class. The total matrix-to-zero identity,
+pole/archimedean transports, source limits, positivity, H7, and RH remain open. Local mechanical
+gates pass, including the full `8759/8759` build; public evidence gates precede the mandatory
+cross-route reranking.

@@ -80,6 +80,7 @@ import LeanLab.Riemann.WeilGroundStatePoleBlock
 import LeanLab.Riemann.WeilGroundStatePrimeBlock
 import LeanLab.Riemann.WeilArchimedeanTailDensity
 import LeanLab.Riemann.WeilFiniteDictionarySourceCalculus
+import LeanLab.Riemann.WeilFiniteDictionaryAdmissibility
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ThetaInfinityMollifier
 import LeanLab.Riemann.BettinGonekAuxiliary
@@ -1377,6 +1378,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``weilFiniteDictionarySourceCalculus_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260724-H7-WEIL-FINITE-DICTIONARY-01 compiles the exact source-calculus and actual finite-prime leg of the Guinand--Weil dictionary, including the diagonal derivative branch and the coordinate xi=log(q)/(2*pi). It does not prove admissibility or decay of the induced test, the zero, pole, or archimedean transports, a cutoff limit, inverse/density, positivity of the total matrix, H7, or RH; rh_frontier_delta=0 and source_analytic_bridge_delta=1." },
+    { id := "H7.weil-ground-state.finite-dictionary-admissibility"
+      tier := .tier2
+      title := "Prove source-strength admissibility of every finite Weil dictionary vector"
+      statement :=
+        "For every finite even-sector coefficient vector, prove continuity and compact support of the literal Fourier weight, construct the induced even entire test of exponential type at most log(C), identify its exact project Laplace and xi-zero coordinates, prove uniform inverse-square decay on every horizontal strip, and prove absolute summability over the actual multiplicity-bearing xi divisor."
+      leanName := some ``weilFiniteDictionaryAdmissibility_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260724-H7-WEIL-FINITE-DICTIONARY-ADMISSIBILITY-01 formalizes Groskin Lemma 2.2 for the literal finite dictionary. The second integration-by-parts argument splits the two smooth half-bands and retains derivative jumps; the zero sum is dominated by the existing Hadamard reciprocal-square majorant without RH, simplicity, or a zero ordering. This does not prove the weaker-class Guinand--Weil arithmetic explicit formula, the total matrix/zero-sum identity, pole or archimedean transports, pole-neutral survival, inverse/density, cutoff limits, positivity, H7, or RH; rh_frontier_delta=0 and source_analytic_bridge_delta=1." },
     { id := "H7.weil-ground-state.rayleigh-gap-consumer"
       tier := .tier2
       title := "Control ground-line defect by Rayleigh excess over the spectral gap"

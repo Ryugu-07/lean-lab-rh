@@ -1075,3 +1075,16 @@ summability. The project compact explicit formula requires global `C^6`, so the 
 arithmetic formula and total matrix-to-zero identity remain separate open edges. After this
 campaign, D3/H1, H12 Speiser, H2 localization, and any exact D6 zero-side transport are reranked;
 D6 is not selected automatically.
+
+The fixed admissibility probe now succeeds locally. Lean proves the exact boundary continuity,
+compact support, entire/even structure, `log(C)` exponential type, affine zero coordinate, and
+horizontal-strip inverse-square decay. Two ordinary integrations by parts on each smooth
+half-band retain the derivative jumps, so the anticipated missing Stieltjes API is not a blocker.
+The resulting values and norms are summable over the actual multiplicity-bearing xi divisor by
+the existing Hadamard reciprocal-square majorant.
+
+This promotes the next exact D6 omission candidate from admissibility to the weaker-regularity
+arithmetic explicit formula and total matrix-to-zero transport. It does not prove that edge, H7,
+or RH. The exact checks, standard-only axiom audit, empty forbidden scan and patch check, and
+full `8759/8759` build pass. Public freeze/evidence gates and a fresh H1/H12/H2/H7 comparison
+remain mandatory.

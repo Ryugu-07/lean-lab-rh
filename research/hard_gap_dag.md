@@ -1772,6 +1772,28 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `hard_boundary`: the project's compact arithmetic explicit formula currently assumes global
   `C^6`. Extending it to the source's continuous, piecewise-smooth/BV class is a downstream node,
   not an available premise.
+- `production_gate`: preregistration commit `aeadffd932c087a9d14b3c5c1828b4eb2faef3ce`
+  passed public Lean Action run `30073965695`, build job `89420586899`, in `2m3s`; production
+  proof editing is open.
 - `rotation_after_closure`: rerank H1 inverse Mellin/convolution, H12 Speiser counting, H2
   arithmetic bow localization, and any H7 exact zero-side transport. No automatic H7 successor.
+- `global_goal`: active; H7 and RH remain open.
+
+## 2026-07-24 H7 finite dictionary admissibility local endpoint
+
+- `node`: `H7-WEIL-FINITE-DICTIONARY-ADMISSIBILITY-01`.
+- `status`: `FULL_ADMISSIBILITY_SUCCESS / LOCAL_GATES_PASSED`.
+- `proved_edge`: every literal finite even-sector dictionary vector induces a continuous compact
+  Fourier weight, an even entire test of exponential type at most `log(C)`, and a test with
+  uniform inverse-square decay on each horizontal strip.
+- `actual_zero_interface`: exact affine rotation into the project Laplace coordinate and absolute
+  summability over `RiemannXiDivisorZeroIndex`, with analytic multiplicity.
+- `method_delta`: two smooth-half integrations by parts retain the derivative jumps and bypass
+  the anticipated missing global BV/Stieltjes interface.
+- `delta`: `source_analytic_bridge_delta=1`, `rh_frontier_delta=0`, `hard_gap_delta=0`.
+- `next_hard_edge`: extend the Guinand--Weil arithmetic explicit formula from compact `C^6`
+  densities to this continuous piecewise-smooth class, or identify another exact source-valid
+  route to the total zero/pole/prime/archimedean matrix identity.
+- `local_gates`: exact checks and standard-only axiom prints compile, the forbidden scan and
+  patch check are empty, and the full `8759/8759` build passes.
 - `global_goal`: active; H7 and RH remain open.

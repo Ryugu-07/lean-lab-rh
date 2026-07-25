@@ -82,6 +82,7 @@ import LeanLab.Riemann.WeilGroundStateRayleighGap
 import LeanLab.Riemann.WeilGroundStatePoleBlock
 import LeanLab.Riemann.WeilGroundStatePrimeBlock
 import LeanLab.Riemann.WeilArchimedeanTailDensity
+import LeanLab.Riemann.WeilFiniteDictionaryAdmissibility
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
@@ -4208,5 +4209,26 @@ example {L T₁ T₂ : ℝ} {N : ℕ} (hL : 0 < L)
 
 example : WeilFiniteDictionarySourceCalculusCertificate :=
   weilFiniteDictionarySourceCalculus_endpoint
+
+example {C : ℕ} (hC : 2 ≤ C) (N : ℕ)
+    (u : Fin (2 * N + 1) → ℝ) :
+    WeilFiniteDictionaryAdmissibilityCertificate C N u :=
+  weilFiniteDictionaryAdmissibility_endpoint hC N u
+
+example {C : ℕ} (hC : 2 ≤ C) (N : ℕ)
+    (u : Fin (2 * N + 1) → ℝ) :
+    ∀ A : ℝ, 0 ≤ A →
+      ∃ M : ℝ, 0 ≤ M ∧
+        ∀ z : ℂ, |z.im| ≤ A →
+          ‖weilFiniteDictionaryTest C N u z‖ ≤
+            M * ((1 + |z.re|)⁻¹ ^ (2 : ℕ)) :=
+  (weilFiniteDictionaryAdmissibility_endpoint hC N u).horizontalStripDecay
+
+example {C : ℕ} (hC : 2 ≤ C) (N : ℕ)
+    (u : Fin (2 * N + 1) → ℝ) :
+    Summable (fun p : RiemannXiDivisorZeroIndex =>
+      ‖weilFiniteDictionaryTest C N u
+        ((riemannXiDivisorZeroValue p - 1 / 2) / Complex.I)‖) :=
+  (weilFiniteDictionaryAdmissibility_endpoint hC N u).zeroNormSummable
 
 end LeanLab.Riemann

@@ -3813,4 +3813,33 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `rotation_rule`: after public closure, rerank H1 inverse Mellin/convolution, H12 Speiser
   counting, H2 arithmetic localization, and H7 zero-side transport. Do not continue H7 solely
   from local API momentum.
-- `next_gate`: publish preregistration and require public CI before production Lean source edits.
+- `production_gate`: preregistration commit `aeadffd932c087a9d14b3c5c1828b4eb2faef3ce`
+  passed public Lean Action run `30073965695`, build job `89420586899`, in `2m3s`.
+- `next_gate`: implement the fixed no-sorry endpoint and record the first exact analytic
+  obstruction if full source admissibility cannot be compiled.
+
+## Arch 审计第十一轮（2026-07-24，Claude）
+- 36 commits：专注 D6 谱/有限素数 Weil 基态（排名第一门），建有限 Weil 字典解析基建（pole block/prime source/archimedean tail/Volterra calculus），当前攻 finite dictionary admissibility（对齐 Groskin 2607.02828 Lemma 2.2）；旁及 D3 Bettin-Gonek mollifier。build 8758 全过；公理审计 820 条零非标准；零 sorry。RH/H7 端点如实 open，无处方。
+
+## 2026-07-24 H7 finite dictionary admissibility local result
+
+- `status`: `FULL_ADMISSIBILITY_SUCCESS / LOCAL_GATES_PASSED`.
+- `compiled_edge`: literal weight continuity/support/integrability; continuous compact physical
+  density; even entire test; exact `log(C)` exponential type; exact project Laplace and xi-zero
+  coordinates; uniform horizontal-strip inverse-square decay; absolute summability over the
+  actual multiplicity-bearing xi divisor.
+- `technical_result`: splitting into two smooth half-bands and retaining derivative jumps makes
+  two ordinary integrations by parts sufficient; no global `C^2` fiction or new BV/Stieltjes API
+  is assumed.
+- `zero_sum`: the rotated coordinate lies in `|Im(z)|<=1/2`; the decay majorant is compared to
+  the certified Hadamard `norm(rho)^-2` sum. No RH, simplicity, ordering, or zero-count asymptotic
+  is used.
+- `registered`: `weilFiniteDictionaryAdmissibility_endpoint`, Target
+  `H7.weil-ground-state.finite-dictionary-admissibility`, exact TargetChecks, and selected
+  standard-only axiom prints compile.
+- `local_gates`: 1,819-line source, empty forbidden scan, `git diff --check`, and full
+  `8759/8759` build pass.
+- `boundary`: weaker-class arithmetic explicit formula, total matrix-to-zero identity,
+  pole/archimedean transports, pole-neutral survival, inverse/density, cutoff limits, positivity,
+  H7, and RH remain open.
+- `next_gate`: freeze the implementation and require public CI.

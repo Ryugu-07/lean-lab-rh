@@ -8,7 +8,7 @@ Selected node: `H7-WEIL-FINITE-DICTIONARY-ADMISSIBILITY-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `FULL_ADMISSIBILITY_SUCCESS / LOCAL_GATES_PASSED`
 
 ## Baseline
 
@@ -131,3 +131,18 @@ implementation CI, immutable-evidence CI, and final-ledger CI.
 
 The six inherited user/exposure files remain untouched and unstaged.
 
+## Production gate
+
+Preregistration commit `aeadffd932c087a9d14b3c5c1828b4eb2faef3ce` passed public Lean
+Action run `30073965695`, build job `89420586899`, in `2m3s`. Production proof-source editing is
+now open.
+
+## Local result
+
+All six fixed items compile in `WeilFiniteDictionaryAdmissibility.lean`. The source-strength
+inverse-square strip decay is obtained by two ordinary integrations by parts on each smooth
+half-band, with all derivative jumps retained. The actual multiplicity-bearing xi-divisor norm
+sum is dominated by the existing Hadamard reciprocal-square majorant. The aggregate certificate,
+Target, exact checks, and selected standard-only axiom prints compile. The forbidden scan and
+`git diff --check` are empty, and the full `8759/8759` build passes. The remaining gates are the
+public freeze/evidence/final-ledger sequence.

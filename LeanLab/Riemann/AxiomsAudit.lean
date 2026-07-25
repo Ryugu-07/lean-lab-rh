@@ -90,6 +90,7 @@ import LeanLab.Riemann.WeilGroundStatePoleBlock
 import LeanLab.Riemann.WeilGroundStatePrimeBlock
 import LeanLab.Riemann.WeilArchimedeanTailDensity
 import LeanLab.Riemann.WeilFiniteDictionarySourceCalculus
+import LeanLab.Riemann.WeilFiniteDictionaryAdmissibility
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
@@ -949,3 +950,7 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.weilFiniteDictionary_prime_coordinate
 #print axioms LeanLab.Riemann.weilFinitePrimeSourceMatrix_quadratic_eq_fourierWeight
 #print axioms LeanLab.Riemann.weilFiniteDictionarySourceCalculus_endpoint
+#print axioms LeanLab.Riemann.norm_weilFiniteDictionaryTest_le_stripDecay
+#print axioms LeanLab.Riemann.summable_norm_weilFiniteDictionaryTest_xiDivisorZero
+#print axioms LeanLab.Riemann.summable_symmetrizedCompactLaplaceWeight_weilFiniteDictionary
+#print axioms LeanLab.Riemann.weilFiniteDictionaryAdmissibility_endpoint
