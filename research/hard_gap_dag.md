@@ -2514,3 +2514,8 @@ publicly closed and cross-family selection resumed.
 Frozen implementation commit `98bf9927a8a331cd0da7541492cc4502c29e24ee` passed public Lean
 Action run `30213428759`, build job `89823396107`, in `2m6s`. The complete fixed edge is
 proof-frozen; docs-only immutable evidence is the next gate.
+
+Docs-only immutable-evidence commit `657b6dd3fa33e00d9c4f79ef3d4b64fa09b3d2de` passed public
+Lean Action run `30213562165`, build job `89823746008`, in `2m22s`; `LeanLab/` remains
+identical to the frozen implementation. Final-ledger CI is the only remaining gate for this
+fixed node.

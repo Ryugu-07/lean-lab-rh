@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H1-HARDY-CRITICAL-LINE-SIGN-01`
 
 Selected node: `H1-HARDY-CRITICAL-LINE-REAL-SIGN-BRIDGE-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Target
 
@@ -40,6 +40,7 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 | `SEQUENCE_CONSUMER` | Applied the bracket theorem to every adjacent interval of an ordered alternating-sign sequence. | One actual witness compiles in each interval. No pairwise distinctness is claimed. | Register Target and audits. |
 | `LOCAL_GATES` | Added one aggregate Target, five exact checks, and nine selected axiom prints; ran standalone, warning-as-error, forbidden, and full-build checks. | Selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`; new-module scan is empty; full build passes `8774/8774`. | Freeze and publish implementation. |
 | `IMPLEMENTATION_PUBLIC_CI` | Froze and pushed the complete implementation and local ledgers. | Commit `98bf9927a8a331cd0da7541492cc4502c29e24ee` passed run `30213428759`, job `89823396107`, in `2m6s`. | Freeze all `LeanLab/` files and publish docs-only immutable evidence. |
+| `IMMUTABLE_EVIDENCE_PUBLIC_CI` | Published docs-only proof-freeze evidence. | Commit `657b6dd3fa33e00d9c4f79ef3d4b64fa09b3d2de` passed run `30213562165`, job `89823746008`, in `2m22s`; the implementation-to-evidence `LeanLab/` diff is empty. | Publish one docs-only final ledger and require public CI. |
 
 ## Runtime record
 
@@ -76,5 +77,6 @@ The six inherited user/exposure files remain untouched and unstaged.
 - `local_gates`: one proven Target, five exact TargetChecks, nine selected standard-only axiom
   prints, empty forbidden scan, warning-as-error compile, and full `8774/8774` build.
 - `frozen_implementation`: `98bf9927a8a331cd0da7541492cc4502c29e24ee`, public-green.
-- `next_gate`: docs-only immutable evidence and public Lean Action CI.
+- `immutable_evidence`: `657b6dd3fa33e00d9c4f79ef3d4b64fa09b3d2de`, public-green.
+- `next_gate`: docs-only final ledger and public Lean Action CI.
 - `global_goal`: active.

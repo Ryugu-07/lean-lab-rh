@@ -8,7 +8,7 @@ Selected node: `H1-HARDY-CRITICAL-LINE-REAL-SIGN-BRIDGE-01`
 
 Mode: `LITERATURE`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Selection rationale
 
@@ -249,3 +249,11 @@ hash.
 The next gate is a docs-only immutable-evidence commit and public CI. No `LeanLab/` file may
 change between the frozen implementation and immutable evidence. Endpoint signs, Hardy's
 transform, distinct witnesses, critical-line infinitude, H1, and RH remain open.
+
+Docs-only immutable-evidence commit `657b6dd3fa33e00d9c4f79ef3d4b64fa09b3d2de` passed public
+Lean Action run `30213562165`, build job `89823746008`, in `2m22s`. There is no `LeanLab/`
+difference between the frozen implementation and evidence commits.
+
+The next gate is one docs-only final ledger and its public CI. It closes only the real
+critical-line xi/sign-consumer endpoint; endpoint signs, Hardy's transform, separated and
+distinct witnesses, critical-line infinitude, H1, and RH remain open.

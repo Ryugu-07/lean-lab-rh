@@ -4970,3 +4970,19 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   H1, and RH.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H1 Hardy critical-line sign bridge immutable evidence public green
+
+- `frozen_implementation`: commit `98bf9927a8a331cd0da7541492cc4502c29e24ee`
+  passed run `30213428759`, build job `89823396107`, in `2m6s`.
+- `immutable_evidence`: docs-only commit `657b6dd3fa33e00d9c4f79ef3d4b64fa09b3d2de`
+  passed run `30213562165`, build job `89823746008`, in `2m22s`.
+- `proof_freeze_verified`: no `LeanLab/` difference between the implementation and evidence
+  commits.
+- `result`: `HARDY_CRITICAL_LINE_REAL_SIGN_BRIDGE_FORMALIZED`.
+- `next_gate`: publish one docs-only final ledger and require public CI.
+- `after_closure`: close only the real critical-line xi/sign-consumer endpoint and return the
+  active global Goal to fresh cross-family historical-route selection. Retain Hardy's source
+  transform, separated sign brackets, critical-line infinitude, H1, and RH as open.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
