@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H9-RIESZ-MELLIN-BOUNDARY-01`
 
 Selected node: `H9-RIESZ-EXPONENTIAL-MELLIN-BOUNDARY-01`
 
-Status: `IMPLEMENTED_LOCAL / PUBLIC_FREEZE_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Target
 
@@ -40,6 +40,7 @@ Status: `IMPLEMENTED_LOCAL / PUBLIC_FREEZE_REQUIRED`
 | `DISPLAYED_POINT_FALSIFICATION` | Used right continuity and `P_2(0)!=0` to dominate `x^-3/2` near zero. | `¬ MellinConvergent P_2 (-1/2)` compiles by `integrableOn_Ioo_rpow_iff`. | Add the conditional decay interface. |
 | `DECAY_INTERFACE` | Proved `P_2=O(x^-a)` unconditionally for every `0<=a<1/2`, then exposed general explicit `O(x^-a)` consumers. | Base-strip convergence is unconditional; arbitrary-decay convergence and Mellin differentiability compile on `-a<Re(s)<0`. The RH-equivalent `a=3/4-epsilon` decay is not proved. | Register Target and audits. |
 | `LOCAL_GATES` | Added one aggregate Target, four exact TargetChecks, and eight selected axiom prints; ran standalone compilation, forbidden scan, diff check, and full build. | New-module scan empty; selected axioms standard only; full build `8773/8773`. | Freeze and publish implementation. |
+| `IMPLEMENTATION_PUBLIC_CI` | Froze and pushed the complete implementation and local ledgers. | Commit `096aea939d27fb6828b702296c156bbef4ba1559` passed run `30212146718`, job `89820083261`, in `2m25s`. | Freeze all `LeanLab/` files and publish docs-only immutable evidence. |
 
 ## Runtime record
 
@@ -71,5 +72,6 @@ The six inherited user/exposure files remain untouched and unstaged.
   source point `s=1/2` gives Mellin argument `-1/2` and diverges at zero.
 - `criterion_status`: the source's analytic-continuation argument may still begin from the
   corrected base strip. No Riesz decay, critical-strip zero-free theorem, or RH proof follows.
-- `next_gate`: frozen implementation commit and public Lean Action CI.
+- `frozen_implementation`: `096aea939d27fb6828b702296c156bbef4ba1559`, public-green.
+- `next_gate`: docs-only immutable evidence and public Lean Action CI.
 - `global_goal`: active.

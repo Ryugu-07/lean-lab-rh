@@ -1591,3 +1591,7 @@ refute the Riesz criterion: continuation may start from the corrected base strip
 route edges are the RH-equivalent `x^(-3/4+epsilon)` decay and a rigorous continuation/zero-free
 consumer. Local classification is source-domain and historical-coverage progress with
 `rh_frontier_delta=0`.
+
+Frozen implementation commit `096aea939d27fb6828b702296c156bbef4ba1559` passed public Lean
+Action run `30212146718`, build job `89820083261`, in `2m25s`. Proof source is frozen; the
+next gate is docs-only immutable evidence.

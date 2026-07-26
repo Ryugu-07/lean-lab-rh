@@ -4351,3 +4351,7 @@ This is a source-domain correction and a completed historical route-card edge. I
 prove the Riesz `3/4-epsilon` decay or any new zero-free region. After the implementation,
 immutable-evidence, and final-ledger CI gates, return to cross-family selection while retaining
 Riesz decay and identity continuation as open H9 edges.
+
+Frozen implementation commit `096aea939d27fb6828b702296c156bbef4ba1559` passed public Lean
+Action run `30212146718`, build job `89820083261`, in `2m25s`. The route card's proof source
+is frozen while docs-only immutable evidence is published.

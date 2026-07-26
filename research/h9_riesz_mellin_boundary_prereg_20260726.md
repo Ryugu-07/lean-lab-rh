@@ -8,7 +8,7 @@ Selected node: `H9-RIESZ-EXPONENTIAL-MELLIN-BOUNDARY-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `IMPLEMENTED_LOCAL / PUBLIC_FREEZE_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Selection rationale
 
@@ -231,3 +231,14 @@ and `rh_frontier_delta=0`.
 The next gate is a frozen implementation commit and public CI. After immutable evidence and a
 final ledger, local STOP returns to fresh route selection; the Riesz decay criterion and
 zero-free continuation remain open.
+
+## Frozen implementation
+
+Implementation commit `096aea939d27fb6828b702296c156bbef4ba1559` passed public Lean Action
+run `30212146718`, build job `89820083261`, in `2m25s`. The 490-line production module, proven
+Target, four exact TargetChecks, and eight selected standard-only axiom prints are frozen at
+that hash.
+
+The next gate is a docs-only immutable-evidence commit and public CI. No `LeanLab/` file may
+change between the frozen implementation and immutable evidence. The Riesz decay, identity
+continuation, zero exclusion, H9, and RH remain open.

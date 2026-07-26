@@ -4867,3 +4867,19 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   final ledger with public CI at each gate.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H9 Riesz Mellin boundary implementation public green
+
+- `campaign`: `LITERATURE-20260726-H9-RIESZ-MELLIN-BOUNDARY-01`.
+- `frozen_implementation`: commit `096aea939d27fb6828b702296c156bbef4ba1559`.
+- `public_ci`: Lean Action run `30212146718`, build job `89820083261`, passed in `2m25s`.
+- `result`: `RIESZ_TWO_MELLIN_LITERAL_STRIP_CORRECTED`.
+- `proof_freeze`: the 490-line source, one proven Target, four exact TargetChecks, and eight
+  selected standard-only axiom prints are frozen.
+- `source_boundary`: the ordinary integral is verified only on `-1/2<Re(s)<0`; Lean proves
+  divergence at the displayed source point `s=1/2`.
+- `next_gate`: publish docs-only immutable evidence and require public CI, then a docs-only
+  final ledger and public CI.
+- `open_H9`: RH-equivalent Riesz decay, identity continuation, zeta zero exclusion, H9, and RH.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

@@ -2458,3 +2458,7 @@ publicly closed.
 - `classification`: `source_domain_correction_delta=1`,
   `historical_route_coverage_delta=1`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
 - `global_goal`: active.
+
+Frozen implementation commit `096aea939d27fb6828b702296c156bbef4ba1559` passed public Lean
+Action run `30212146718`, build job `89820083261`, in `2m25s`. The closed edge is proof-frozen;
+docs-only immutable evidence is the next gate.
