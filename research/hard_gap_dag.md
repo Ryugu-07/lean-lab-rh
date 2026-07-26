@@ -2038,3 +2038,23 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `delta`: `source_analytic_bridge_delta=1`, `historical_route_coverage_delta=1`,
   `hard_gap_delta=0`, `rh_frontier_delta=0`.
 - `global_goal`: active.
+
+## 2026-07-26 H12 paired-mass public closure and equation (2.1) launch
+
+- `H12-LM-PAIRED-MASS-DENSITY-01`: `PUBLICLY_CLOSED`. Final-ledger commit
+  `69774e9d4d7b96590d48acd8ad5f6f9b152f0dc2` passed run `30190977973`, job
+  `89764077666`, in `1m47s`.
+- `selected_node`: `H12-LM-LOGDERIV-MASS-BRIDGE-01`.
+- `mode`: `LITERATURE / PROOF-ATTEMPT`.
+- `available_inputs`: actual paired xi-divisor sum, Hadamard polynomial/reciprocal cancellation,
+  xi/zeta/Gamma factorization, digamma recurrence, differentiable Stieltjes Gamma remainder,
+  radial inverse-cube control, and the compiled negative-mass dense branch.
+- `fixed_edge`: actual paired sum `=` `Re(xi'/xi)`; source equation `(2.1)`; explicit digamma
+  remainder with norm at most `27/(64*norm(z)^2)`; negativity of the remaining source term on
+  `0<=sigma<=1/2, t>=10`; nonnegative `Re(zeta'/zeta)` implies negative paired mass; eventual
+  integer witnesses imply `N^-(T)>T/2`.
+- `remaining_after_success`: prove the source boundary signs and existence of an interior
+  nonnegative-log-derivative witness when the exact-count top sequence fails; then the indented
+  contour, logarithmic count difference, full dichotomy, Speiser equivalence, and RH.
+- `production_gate`: docs-only preregistration public CI before proof-source editing.
+- `global_goal`: active.

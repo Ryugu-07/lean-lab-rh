@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H12-LEVINSON-MONTGOMERY-PAIRED-MASS-DENSITY-01`
 
 Selected node: `H12-LM-PAIRED-MASS-DENSITY-01`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
+Status: `PUBLICLY_CLOSED`
 
 ## Target
 
@@ -53,6 +53,7 @@ Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 | `ATTACK_B` | Finite symmetric cutoffs. | Not needed because direct paired summability compiled. | Retain only as historical fallback. |
 | `PUBLIC_IMPLEMENTATION` | Published the frozen proof, Target, exact checks, and axiom audit. | Commit `0b5b6d5c44cddb680be721c54a6fc9d261e01ba5` passed run `30190754950`, job `89763478543`, in `2m6s`. | Publish immutable docs-only evidence. |
 | `IMMUTABLE_EVIDENCE` | Published the complete attempts, source-alignment, route, DAG, and handoff evidence without touching proof source. | Commit `38071d8a6c085b74bd1f8d258cb6e83cec55d592` passed run `30190894736`, job `89763862993`, in `1m33s`. | Publish one final closure ledger. |
+| `FINAL_LEDGER` | Published the docs-only closure record and required one final independent public build. | Commit `69774e9d4d7b96590d48acd8ad5f6f9b152f0dc2` passed run `30190977973`, job `89764077666`, in `1m47s`. | Close only this campaign and return to cross-family route selection. |
 
 ## Runtime record
 
@@ -97,4 +98,6 @@ Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
   `0b5b6d5c44cddb680be721c54a6fc9d261e01ba5`, run `30190754950`, job
   `89763478543`, `2m6s`; immutable evidence
   `38071d8a6c085b74bd1f8d258cb6e83cec55d592`, run `30190894736`, job
-  `89763862993`, `1m33s`.
+  `89763862993`, `1m33s`; final ledger
+  `69774e9d4d7b96590d48acd8ad5f6f9b152f0dc2`, run `30190977973`, job
+  `89764077666`, `1m47s`.

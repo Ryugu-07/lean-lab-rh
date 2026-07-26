@@ -8,7 +8,7 @@ Selected node: `H12-LM-PAIRED-MASS-DENSITY-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
+Status: `PUBLICLY_CLOSED`
 
 ## Primary source
 
@@ -228,6 +228,10 @@ run `30190223668`, build job `89762046622`, in `1m34s`. Frozen implementation co
 `89763478543`, in `2m6s`. Docs-only immutable-evidence commit
 `38071d8a6c085b74bd1f8d258cb6e83cec55d592` passed run `30190894736`, build job
 `89763862993`, in `1m33s`; the frozen proof source was unchanged.
+
+Final-ledger commit `69774e9d4d7b96590d48acd8ad5f6f9b152f0dc2` passed public Lean Action
+run `30190977973`, build job `89764077666`, in `1m47s`. The fixed campaign is publicly closed
+as `FULL_PAIRED_MASS_DENSITY_SUCCESS`; H12 and the global RH Goal remain open.
 
 ## Mechanical and publication gates
 

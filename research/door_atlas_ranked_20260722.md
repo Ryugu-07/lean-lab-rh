@@ -1236,3 +1236,24 @@ the low-height sign certificate; H12 and RH remain open.
 
 Immutable-evidence commit `38071d8a6c085b74bd1f8d258cb6e83cec55d592` passed run
 `30190894736`, job `89763862993`, in `1m33s`; only final-ledger CI remains for this fixed edge.
+
+Final-ledger commit `69774e9d4d7b96590d48acd8ad5f6f9b152f0dc2` passed run
+`30190977973`, job `89764077666`, in `1m47s`; the paired-mass edge is publicly closed.
+
+### Post-paired-mass rerank: equation (2.1) and explicit Gamma control
+
+The historical comparison selects the adjacent Levinson--Montgomery log-derivative bridge.
+H1 now reaches Farmer's open moment conjecture; H7/H10 need an unconditional positivity or
+number-field spectral construction; H2/H11 need an actual sparse-exception amplifier. H12 still
+has a source-proved segment whose objects now exist in Lean.
+
+The fixed campaign identifies the compiled paired reciprocal sum with `Re(xi'/xi)`, proves source
+equation `(2.1)`, differentiates the compiled Stieltjes Gamma representation to obtain an
+explicit digamma remainder, proves its radial norm bound, and derives
+`Re(zeta'/zeta)>=0 -> I1<0` for `0<sigma<1/2, t>=10`. This feeds the compiled dense branch from
+eventual integer-height witnesses.
+
+The low-height zeta certificate, boundary signs, witness-existence alternative, indented contour,
+`O(log T)` count difference, full dichotomy, Speiser equivalence, and RH remain open. This
+selection does not downgrade historical breadth: every family is reranked again after the fixed
+published edge closes or records an exact obstruction.

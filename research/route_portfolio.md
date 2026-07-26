@@ -3923,3 +3923,30 @@ explicit Gamma and low-height estimates proving eventual mass negativity; the co
 Docs-only immutable evidence `38071d8a6c085b74bd1f8d258cb6e83cec55d592` passed run
 `30190894736`, job `89763862993`, in `1m33s`; proof source remained frozen. One final-ledger CI
 remains before local campaign closure and fresh cross-family reranking.
+
+Final-ledger commit `69774e9d4d7b96590d48acd8ad5f6f9b152f0dc2` passed run
+`30190977973`, job `89764077666`, in `1m47s`; the fixed paired-mass campaign is publicly closed.
+
+## H12 Levinson--Montgomery Log-Derivative to Paired-Mass Selection
+
+Fresh omission-seeking comparison retains H12 for one adjacent source edge. H1's compiled
+Bettin--Gonek implication now stops at Farmer's open arbitrary-length moment conjecture. H7 and
+H10 require a new unconditional positivity mechanism, number-field spectral object, or
+regularized trace. H2 and H11 require an arithmetic theorem amplifying one actual sparse
+off-line orbit. None is exhausted, but each next named edge is presently an open conjecture or
+missing object.
+
+Levinson--Montgomery equation `(2.1)` is instead a published identity immediately upstream of
+the just-compiled paired mass. The current project also contains a source-proved Stieltjes
+representation of scaled Gamma, differentiation under its integral, a nonnegative periodic
+kernel, and radial inverse-cube estimates. The new campaign will therefore prove the exact
+paired-sum/`Re(xi'/xi)` identification, reconstruct `(2.1)`, derive the digamma Stirling
+remainder with an explicit norm bound, and prove that the nonzero source term is negative for
+`0<=sigma<=1/2, t>=10`.
+
+Combined with `(2.3)`, a nonnegative real zeta logarithmic derivative then forces negative paired
+mass. Eventual such witnesses at integer heights feed the already compiled
+`N^-(T)>T/2` branch. The witness-existence theorem, low-height sign certificate, contour signs,
+indented argument principle, logarithmic count estimate, full dichotomy, Speiser equivalence,
+and RH remain outside this campaign. Public preregistration CI is required before any Lean proof
+edit.

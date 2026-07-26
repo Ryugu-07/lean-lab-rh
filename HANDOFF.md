@@ -4144,3 +4144,32 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `next_gate`: publish one docs-only final ledger and require public CI; on success close only
   this fixed paired-mass density campaign and return to fresh route selection.
 - `global_goal`: active.
+
+## 2026-07-26 H12 paired-mass closure and log-derivative bridge selection
+
+- `parent_public_closure`: final-ledger commit
+  `69774e9d4d7b96590d48acd8ad5f6f9b152f0dc2` passed public Lean Action run
+  `30190977973`, build job `89764077666`, in `1m47s`. Campaign
+  `LITERATURE-20260726-H12-LEVINSON-MONTGOMERY-PAIRED-MASS-DENSITY-01` is
+  publicly closed as `FULL_PAIRED_MASS_DENSITY_SUCCESS`.
+- `fresh_historical_comparison`: H1 is now at Farmer's open arbitrary-length moment premise;
+  H7/H10 need unconditional positivity, a number-field spectral object, or regularized trace;
+  H2/H11 need an actual sparse-exception amplifier. H12 retains the adjacent published equation
+  `(2.1)` and the project has a differentiable Stieltjes Gamma remainder with explicit radial
+  control.
+- `campaign`:
+  `LITERATURE-20260726-H12-LEVINSON-MONTGOMERY-LOGDERIV-MASS-BRIDGE-01`.
+- `node`: `H12-LM-LOGDERIV-MASS-BRIDGE-01`.
+- `fixed_endpoint`: identify the actual paired zero sum with `Re(xi'/xi)`, prove source equation
+  `(2.1)`, derive the digamma Stirling remainder and an explicit norm bound from the compiled
+  Stieltjes integral, prove the nonzero archimedean term is negative for
+  `0<=sigma<=1/2, t>=10`, and derive the compiled dense branch from eventual nonnegative
+  `Re(zeta'/zeta)` witnesses at integer heights.
+- `strict_boundary`: no low-height zeta sign certificate, lower/critical contour sign,
+  interior-witness existence theorem, indented argument principle, `O(log T)` count difference,
+  full dichotomy, Speiser equivalence, or RH.
+- `production_gate`: no Lean proof source edit until the docs-only preregistration passes public
+  Lean Action CI.
+- `global_goal`: active. Historical omission search remains the main route-selection discipline;
+  conjecture generation and direct proof attempts remain open.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
