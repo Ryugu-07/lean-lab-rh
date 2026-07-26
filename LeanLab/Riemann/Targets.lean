@@ -94,6 +94,7 @@ import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
 import LeanLab.Riemann.LevinsonMontgomeryLogDerivMassBridge
+import LeanLab.Riemann.LevinsonMontgomeryBoundarySigns
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
@@ -1526,6 +1527,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``levinsonMontgomeryDenseBranch_of_eventuallyNonnegativeLogDerivAtIntegers
       status := .proven
       note := "Campaign LITERATURE-20260726-H12-LEVINSON-MONTGOMERY-LOGDERIV-MASS-BRIDGE-01 compiles equation (2.1) with no raw reciprocal sum or abstract Gamma premise. Hadamard polynomial cancellation identifies the multiplicity-bearing paired sum with Re(logDeriv riemannXi). Differentiating the compiled Stieltjes scaled-Gamma identity gives digamma(z)=log(z)-1/(2z)+R(z) and norm R(z)<=27/(64*norm(z)^2); rational pi/log/geometry bounds prove the source archimedean term is strictly negative at t>=10. Thus a nonnegative real zeta logarithmic derivative forces negative paired mass and enters the compiled dense branch. The low-height boundary sign, contour witness production, indented count argument, O(log T) count difference, full dichotomy, Speiser equivalence, and RH remain open." },
+    { id := "H12.speiser.levinson-montgomery-boundary-signs"
+      tier := .tier2
+      title := "Formalize the Levinson-Montgomery vertical boundary signs"
+      statement :=
+        "Extend equation (2.1) to sigma=0 and sigma=1/2, prove the actual paired sum is nonpositive on the left boundary and zero on the critical boundary, derive strict boundary negativity for t>=10, and prove the exact integer-height alternative between cofinal negativity and eventual nonnegative interior witnesses feeding the dense branch."
+      leanName := some ``levinsonMontgomeryDenseBranch_of_not_cofinallyNegativeLogDerivAtIntegers
+      status := .proven
+      note := "Campaign LITERATURE-20260726-H12-LEVINSON-MONTGOMERY-BOUNDARY-SIGNS-01 generalizes GammaR differentiation and its logarithmic derivative from Re(s)>0 to every non-pole point. Xi has no imaginary-axis zero because every nontrivial zero has positive real part; exact factorization then proves zeta is nonzero there. Termwise paired-kernel algebra gives the two source signs, and classical negation yields the zero-free integer-height witness branch without exploiting totalized division at zeta zeros. Local analytic xi factorization and strict left-pointing negativity of the multiplicity pole also compile, but uniform critical-zero semicircle indentation, the bottom t=10 certificate, contour counts, O(log T), Speiser equivalence, and RH remain open." },
     { id := "H12.speiser.levinson-montgomery-analytic-counts"
       tier := .tier2
       title := "Prove the Levinson-Montgomery analytic count theorem"

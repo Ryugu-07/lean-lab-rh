@@ -9,7 +9,7 @@ Selected node: `H12-LM-BOUNDARY-SIGNS-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_AUDIT_GREEN / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
 
 ## Primary source
 
@@ -247,3 +247,47 @@ Expected classification on success:
 - `hard_gap_delta=0` for RH;
 - `rh_frontier_delta=0`.
 
+## Production gate
+
+Docs-only preregistration commit `a071e954c0433b072e16facba02b3a6f8647f391` passed public Lean
+Action run `30192787155`, build job `89768923636`, in `1m36s`. Production proof editing opened
+only after this gate.
+
+## Local implementation result
+
+Attacks A--C succeed in the 426-line
+`LeanLab/Riemann/LevinsonMontgomeryBoundarySigns.lean` module:
+
+- `GammaR` is differentiable and nonzero away from its nonpositive even poles, and its
+  logarithmic derivative has the expected digamma formula there;
+- the xi/Gamma/zeta logarithmic derivative identity and equation `(2.1)` extend to
+  `0<=sigma<=1/2`, `t>=10`;
+- the actual paired reciprocal sum is nonpositive on `sigma=0` and zero on `sigma=1/2`;
+- xi has no imaginary-axis zero because every nontrivial zero has positive real part, and exact
+  factorization therefore proves zeta is nonzero on `sigma=0`, `t>=10`;
+- `Re(zeta'/zeta)<0` compiles on the left boundary and at every zero-free critical-boundary
+  point;
+- exact classical negation proves the integer-height cofinal-negative/eventual-nonnegative
+  dichotomy, and failure of the first branch feeds the existing dense upper-left-zero count.
+
+Attack D reaches a source-relevant partial endpoint. Every actual xi zero has a local analytic
+factor retaining multiplicity, the residual logarithmic derivative is continuous, and the
+principal term `m/(z-rho)` has strictly negative real part at every strict left point. This does
+not yet prove negativity on a whole left semicircle: near its two critical-line endpoints the
+principal real part is not uniformly separated from zero, so a later proof must glue
+critical-line endpoint neighborhoods to a quantitatively dominated middle arc.
+
+The proven Target, nine mandatory TargetChecks, selected axiom prints, forbidden scans,
+warning-as-error checks, and full `8766/8766` build pass. Selected transitive axioms are only
+`propext`, `Classical.choice`, and `Quot.sound`.
+
+Local classification:
+
+- `result=FULL_BOUNDARY_SIGNS_AND_INTEGER_DICHOTOMY_SUCCESS`;
+- `indentation_reconnaissance=LOCAL_FACTOR_AND_PRINCIPAL_SIGN_COMPILED`;
+- `source_analytic_bridge_delta=1`;
+- `historical_route_coverage_delta=1`;
+- `hard_gap_delta=0`;
+- `rh_frontier_delta=0`.
+
+Proof source now requires frozen implementation public CI.

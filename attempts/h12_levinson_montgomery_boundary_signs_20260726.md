@@ -7,7 +7,7 @@ Campaign:
 
 Selected node: `H12-LM-BOUNDARY-SIGNS-01`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_AUDIT_GREEN / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
 
 ## Target
 
@@ -46,6 +46,14 @@ Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
 | `SOURCE_RECONSTRUCTION` | Re-read source pages 51--52 after equation `(2.4)`. | The proof separately uses left-boundary negativity, critical-line negativity plus indentations, and a top-height witness alternative. The bottom `t=10` edge depends on a low-zero certificate. | Split boundary signs and logic from numerical and contour count obligations. |
 | `API_AUDIT` | Inspected paired kernels, equation `(2.1)`, GammaR, generic Gamma differentiability, xi-zero strip bounds, and the existing dense consumer. | Critical-line paired terms vanish termwise. Left-boundary kernels have the source sign. Mathlib supports Gamma differentiation away from poles, so the imaginary-axis extension has a concrete path. | Register Attacks A--C and indentation reconnaissance D. |
 | `PREREGISTRATION_LOCAL` | Fixed exact endpoints, assumptions, source boundaries, falsifiers, and local stop before production proof edits. | Local docs complete; public CI is required. | Commit and push docs only. |
+| `PREREGISTRATION_PUBLIC` | Published the docs-only preregistration. | Commit `a071e954c0433b072e16facba02b3a6f8647f391` passed run `30192787155`, build job `89768923636`, in `1m36s`. | Open production proof editing. |
+| `PAIRED_BOUNDARY_SIGNS` | Evaluated the actual paired reciprocal terms at `sigma=0` and `sigma=1/2`. | The critical-boundary sum is zero termwise. On the left boundary, `0<beta<1` makes every paired kernel nonnegative and the reciprocal sum nonpositive. | Extend equation `(2.1)` to the closed region. |
+| `GENERIC_GAMMA_NONPOLE` | Generalized GammaR differentiation, nonvanishing, and its logarithmic derivative from `Re(s)>0` to points outside the nonpositive even poles. | All generic non-pole identities compile with the same normalization as the open-half-plane formulas. | Reconstruct the xi/Gamma/zeta logarithmic derivative on the imaginary axis. |
+| `CLOSED_EQUATION_2_1` | Used local nonvanishing of GammaR and the exact completed-zeta factorization to extend equation `(2.1)`. | `levinsonMontgomery_equation_two_one_closed` compiles on `0<=sigma<=1/2`, `t>=10`. | Combine with the paired signs and archimedean negativity. |
+| `VERTICAL_BOUNDARY_SIGNS` | Proved xi has no imaginary-axis zero, transferred this to zeta, and combined closed `(2.1)` with both paired signs. | Strict negativity compiles on `sigma=0` and on every zero-free point of `sigma=1/2` for `t>=10`. | Formalize the exact top-height logical alternative. |
+| `INTEGER_HEIGHT_DICHOTOMY` | Negated cofinal strict negativity while keeping zeta nonvanishing explicit in the predicate. | Eventual nonnegative zero-free witnesses compile and feed the existing dense branch. No totalized-log-derivative fake witness is admitted. | Run indentation reconnaissance. |
+| `INDENTATION_RECONNAISSANCE` | Factored xi analytically at an actual zero, proved residual log-derivative continuity, and proved the multiplicity pole points strictly left. | These local components compile. Uniform whole-semicircle dominance is not claimed because the principal real part approaches zero near the two critical-line endpoints; endpoint/middle-arc gluing remains. | Retain the compiled local lemmas and audit the mandatory endpoint. |
+| `LOCAL_AUDIT` | Registered one proven Target, nine mandatory TargetChecks, and selected axiom prints; ran warning-as-error checks, forbidden scans, patch check, and the full build. | The 426-line module passes. Selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`; full build passes `8766/8766`. | Freeze proof source and require public implementation CI. |
 
 ## Runtime record
 
@@ -59,6 +67,8 @@ Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
 
 ## Current boundary
 
-No production theorem is claimed yet. The six inherited user/exposure files remain untouched and
-unstaged. The next gate is docs-only public preregistration CI.
-
+The two vertical boundary signs and exact integer-height dichotomy compile locally. The bottom
+`t=10` zero certificate, whole-semicircle indentation, contour admissibility, exact count
+equality, `O(log T)`, full Levinson--Montgomery theorem, Speiser equivalence, and RH remain open.
+The six inherited user/exposure files remain untouched and unstaged. The next gate is frozen
+implementation public CI.

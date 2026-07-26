@@ -2,6 +2,7 @@ import LeanLab.Riemann.Targets
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
 import LeanLab.Riemann.LevinsonMontgomeryLogDerivMassBridge
+import LeanLab.Riemann.LevinsonMontgomeryBoundarySigns
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -221,6 +222,7 @@ def checkedTargetNames : List Lean.Name :=
     ``WeilQuantitativeGroundStateCertificate.gap_mul_one_sub_groundCoefficient_sq_le,
     ``dirichletFamilyInclusionAudit_endpoint,
     ``finiteHeightPromotionAudit_endpoint,
+    ``levinsonMontgomeryDenseBranch_of_not_cofinallyNegativeLogDerivAtIntegers,
     ``riemannHypothesis_iff_nontrivial_zeros_on_line ]
 
 example :
@@ -4406,5 +4408,52 @@ example
     ∃ T0 : ℝ, ∀ T : ℝ, T0 ≤ T →
       T / 2 < (speiserUpperLeftZetaZeroCount T : ℝ) :=
   levinsonMontgomeryDenseBranch_of_eventuallyNonnegativeLogDerivAtIntegers hlog
+
+example {s : ℂ} (hs : ∀ m : ℕ, s ≠ -(2 * m)) :
+    DifferentiableAt ℂ Complex.Gammaℝ s :=
+  differentiableAt_GammaR_of_not_neg_even hs
+
+example {s : ℂ} (hs : ∀ m : ℕ, s ≠ -(2 * m)) :
+    logDeriv Complex.Gammaℝ s =
+      -(Real.log Real.pi : ℂ) / 2 + Complex.digamma (s / 2) / 2 :=
+  logDeriv_GammaR_eq_digamma_of_not_neg_even hs
+
+example {s : ℂ} (hs0 : 0 ≤ s.re) (hsHalf : s.re ≤ 1 / 2)
+    (hsIm : 10 ≤ s.im) (hzeta : riemannZeta s ≠ 0) :
+    (logDeriv riemannZeta s).re =
+      levinsonMontgomeryLogDerivArchimedeanTerm s +
+        levinsonMontgomeryRealPairedZeroSum s :=
+  levinsonMontgomery_equation_two_one_closed hs0 hsHalf hsIm hzeta
+
+example {s : ℂ} (hsRe : s.re = 0) (hxi : riemannXi s ≠ 0) :
+    levinsonMontgomeryRealPairedZeroSum s ≤ 0 :=
+  levinsonMontgomeryRealPairedZeroSum_nonpos_of_re_eq_zero hsRe hxi
+
+example {s : ℂ} (hsRe : s.re = 1 / 2) (hxi : riemannXi s ≠ 0) :
+    levinsonMontgomeryRealPairedZeroSum s = 0 :=
+  levinsonMontgomeryRealPairedZeroSum_eq_zero_of_re_eq_half hsRe hxi
+
+example {s : ℂ} (hsRe : s.re = 0) (hsIm : 10 ≤ s.im) :
+    riemannZeta s ≠ 0 ∧ (logDeriv riemannZeta s).re < 0 :=
+  levinsonMontgomery_logDeriv_riemannZeta_re_neg_on_left_boundary hsRe hsIm
+
+example {s : ℂ} (hsRe : s.re = 1 / 2) (hsIm : 10 ≤ s.im)
+    (hzeta : riemannZeta s ≠ 0) :
+    (logDeriv riemannZeta s).re < 0 :=
+  levinsonMontgomery_logDeriv_riemannZeta_re_neg_on_critical_boundary
+    hsRe hsIm hzeta
+
+example :
+    (∀ N : ℕ, ∃ n : ℕ, N ≤ n ∧
+      LevinsonMontgomeryNegativeLogDerivAtIntegerHeight n) ∨
+    LevinsonMontgomeryEventuallyNonnegativeLogDerivAtIntegers :=
+  levinsonMontgomery_integer_height_logDeriv_dichotomy
+
+example
+    (h : ¬(∀ N : ℕ, ∃ n : ℕ, N ≤ n ∧
+      LevinsonMontgomeryNegativeLogDerivAtIntegerHeight n)) :
+    ∃ T0 : ℝ, ∀ T : ℝ, T0 ≤ T →
+      T / 2 < (speiserUpperLeftZetaZeroCount T : ℝ) :=
+  levinsonMontgomeryDenseBranch_of_not_cofinallyNegativeLogDerivAtIntegers h
 
 end LeanLab.Riemann

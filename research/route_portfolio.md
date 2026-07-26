@@ -3998,3 +3998,32 @@ critical-line zeros, contour admissibility, argument-principle count equality, `
 difference, full theorem, Speiser equivalence, and RH remain outside the endpoint. Local
 critical-zero dominance is registered only as reconnaissance. Production Lean editing requires
 docs-only public preregistration CI.
+
+## H12 Levinson--Montgomery Boundary-Sign Local Result
+
+The complete fixed endpoint compiles in the 426-line
+`LevinsonMontgomeryBoundarySigns.lean` module. Generic non-pole GammaR calculus extends the
+xi/Gamma/zeta logarithmic derivative identity and equation `(2.1)` to the source's closed
+vertical region. The actual paired reciprocal sum is nonpositive on `sigma=0` and zero on
+`sigma=1/2`, giving strict negativity of `Re(zeta'/zeta)` on the left boundary and on every
+zero-free critical-boundary point for `t>=10`.
+
+The left-boundary theorem proves its own zeta nonvanishing. If xi vanished on the imaginary
+axis, the resulting nontrivial zero would contradict the already compiled strict positive
+real-part bound. Exact GammaR factorization then transfers xi nonvanishing to zeta.
+
+The integer-height alternative also compiles with nonvanishing visible in every witness: either
+strict negativity occurs cofinally, or eventual zero-free points with nonnegative
+`Re(zeta'/zeta)` enter the existing `N^-(T)>T/2` branch. Thus Lean's totalized division at zeros
+is not used as evidence.
+
+Indentation reconnaissance reaches local analytic xi factorization with multiplicity,
+continuity of the residual logarithmic derivative, and strict left-pointing negativity of the
+principal pole. It does not yet prove a whole left semicircle negative: the principal real part
+approaches zero near both critical-line endpoints, so endpoint neighborhoods must be glued to a
+quantitatively dominated middle arc.
+
+One proven Target, nine mandatory TargetChecks, selected standard-only axiom prints, empty
+forbidden scans, and the full `8766/8766` build pass. Classify the fixed endpoint as
+`FULL_BOUNDARY_SIGNS_AND_INTEGER_DICHOTOMY_SUCCESS`, with `hard_gap_delta=0` and
+`rh_frontier_delta=0`. The proof source now requires frozen implementation public CI.

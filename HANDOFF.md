@@ -4243,3 +4243,38 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active. Historical omission search remains the main route-selection discipline;
   conjecture generation and direct proof attempts remain open.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H12 boundary signs local result
+
+- `status`: `LOCAL_AUDIT_GREEN / IMPLEMENTATION_PUBLIC_CI_REQUIRED`.
+- `production_gate`: preregistration commit
+  `a071e954c0433b072e16facba02b3a6f8647f391` passed public run `30192787155`, build
+  job `89768923636`, in `1m36s`.
+- `compiled_endpoint`: the 426-line
+  `LeanLab/Riemann/LevinsonMontgomeryBoundarySigns.lean` extends GammaR calculus and equation
+  `(2.1)` to the closed source region, proves the actual paired sum is nonpositive on
+  `sigma=0` and zero on `sigma=1/2`, and derives strict vertical-boundary negativity for
+  `t>=10`.
+- `left_boundary_nonvanishing`: every xi zero has positive real part, so xi is nonzero on the
+  imaginary axis; exact non-pole factorization then proves zeta is nonzero there without a new
+  premise.
+- `logical_endpoint`: exact classical negation gives either cofinal strict negativity at
+  integer heights or eventual zero-free interior points with nonnegative
+  `Re(zeta'/zeta)`. Failure of the first branch feeds the compiled dense count theorem.
+- `indentation_reconnaissance`: local analytic xi factorization with multiplicity, continuity of
+  the residual logarithmic derivative, and strict left-pointing negativity of `m/(z-rho)`
+  compile. Whole-semicircle negativity remains open because endpoint neighborhoods must be glued
+  to a quantitatively dominated middle arc.
+- `registered`: proven Target
+  `H12.speiser.levinson-montgomery-boundary-signs`, nine mandatory TargetChecks, and selected
+  standard-only axiom prints.
+- `local_gates`: direct warning-as-error checks, empty forbidden scan, `git diff --check`, and
+  full `8766/8766` build pass.
+- `classification`: `FULL_BOUNDARY_SIGNS_AND_INTEGER_DICHOTOMY_SUCCESS`,
+  `source_analytic_bridge_delta=1`, `historical_route_coverage_delta=1`,
+  `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `strict_boundary`: bottom-edge low-zero certificate, whole-semicircle indentation, contour
+  admissibility, exact count equality, `O(log T)`, full theorem, Speiser equivalence, and RH.
+- `next_gate`: freeze proof source, publish implementation, and require public CI.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

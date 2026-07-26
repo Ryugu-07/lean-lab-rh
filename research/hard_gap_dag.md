@@ -2108,3 +2108,25 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   equivalence, and RH.
 - `production_gate`: docs-only preregistration public CI before proof-source editing.
 - `global_goal`: active.
+
+## 2026-07-26 H12 boundary-sign local endpoint
+
+- `proved_edge`:
+  `GammaR generic non-pole calculus -> closed equation (2.1) -> left paired sum <=0 and critical
+  paired sum =0 -> strict vertical-boundary negativity`.
+- `proved_logic`:
+  `not cofinally negative at integer heights -> eventual zero-free nonnegative interior
+  witnesses -> compiled N^-(T)>T/2 branch`.
+- `nonvanishing_detail`: xi has no imaginary-axis zero by the compiled strict real-part bound
+  for every nontrivial zero; exact xi/Gamma/zeta factorization supplies zeta nonvanishing.
+- `indentation_partial`: actual xi zeros admit local analytic multiplicity factors, the residual
+  logarithmic derivative is continuous, and the principal pole points left at every strict left
+  point. A full semicircle requires endpoint/middle-arc gluing and remains open.
+- `remaining_chain`:
+  `certified bottom t=10 sign + critical-zero indentation + admissible cofinal top contours
+  -> exact count equality`, then `O(log T) count difference -> full Levinson-Montgomery theorem
+  -> unconditional Speiser equivalence`.
+- `local_gates`: one proven Target, nine mandatory TargetChecks, standard-only selected axioms,
+  empty forbidden scan, and full `8766/8766` build.
+- `result`: `FULL_BOUNDARY_SIGNS_AND_INTEGER_DICHOTOMY_SUCCESS`.
+- `global_goal`: active.

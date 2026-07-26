@@ -1300,3 +1300,20 @@ This is not a numerical-bound campaign. The low-height `t=10` zero certificate, 
 semicircle indentation, contour admissibility, exact count equality, `O(log T)` difference,
 Speiser equivalence, and RH remain open. Public preregistration CI is required before production
 proof editing.
+
+### H12 vertical boundary signs local result
+
+The fixed endpoint compiles. GammaR calculus and equation `(2.1)` now reach both vertical
+boundaries. The actual paired sum is nonpositive at `sigma=0` and zero at `sigma=1/2`, so
+`Re(zeta'/zeta)<0` holds on the imaginary boundary and at every zero-free critical-boundary
+point for `t>=10`.
+
+The exact integer-height logical alternative also compiles and protects nonvanishing explicitly:
+failure of cofinal strict negativity produces the eventual interior witnesses already known to
+force `N^-(T)>T/2`.
+
+Local critical-zero factorization and the strict left-pointing principal pole are now available,
+but whole-semicircle indentation remains open because endpoint neighborhoods require a separate
+critical-line continuity argument. The bottom `t=10` certificate, admissible top contours, exact
+count equality, `O(log T)`, Speiser equivalence, and RH remain the atlas frontier. Frozen
+implementation public CI is next.
