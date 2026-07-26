@@ -4176,8 +4176,7 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 
 ## 2026-07-26 H12 log-derivative to paired-mass local result
 
-- `status`: `LOCAL_FULL_LOGDERIV_MASS_BRIDGE_SUCCESS /
-  PUBLIC_IMPLEMENTATION_CI_REQUIRED`.
+- `status`: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`.
 - `production_gate`: preregistration commit
   `8a3c54d5092c13b8489e2c92c49d586f79176e95` passed public Lean Action run
   `30191371867`, build job `89765103953`, in `1m49s`.
@@ -4198,11 +4197,13 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `local_gates`: warning-as-error direct checks, empty forbidden scans, `git diff --check`, and
   full `8765/8765` build pass. Selected axioms are only `propext`, `Classical.choice`, and
   `Quot.sound`.
+- `public_implementation`: frozen commit
+  `076b4e2023114c33fdf80cce123bc91c07d5c5a0` passed public Lean Action run
+  `30192061892`, build job `89766933675`, in `2m14s`; proof source remains frozen.
 - `strict_boundary`: no low-height zeta sign certificate, lower/critical contour signs,
   witness-existence alternative, indented argument principle, `O(log T)` count theorem, full
   dichotomy, Speiser equivalence, or RH.
-- `next_gate`: freeze and publish the implementation, then require immutable-evidence and
-  final-ledger public CI.
+- `next_gate`: publish docs-only immutable evidence, then require one final-ledger public CI.
 - `global_goal`: active. After fixed-edge closure return to cross-family historical route
   selection; conjecture and direct-proof tracks remain open.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

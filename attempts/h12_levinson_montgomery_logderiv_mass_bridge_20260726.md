@@ -7,7 +7,7 @@ Campaign:
 
 Selected node: `H12-LM-LOGDERIV-MASS-BRIDGE-01`
 
-Status: `LOCAL_FULL_LOGDERIV_MASS_BRIDGE_SUCCESS / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Target
 
@@ -52,6 +52,7 @@ Status: `LOCAL_FULL_LOGDERIV_MASS_BRIDGE_SUCCESS / PUBLIC_IMPLEMENTATION_CI_REQU
 | `ARCHIMEDEAN_SIGN` | Combined explicit pole, logarithm, inverse correction, and Stieltjes remainder estimates at `t>=10`. | `levinsonMontgomeryLogDerivArchimedeanTerm_neg` compiles for `0<=sigma<=1/2`. | Apply the paired-mass identity in the open strip. |
 | `MASS_AND_COUNT_CONSUMER` | Combined `(2.1)`, strict archimedean negativity, the paired mass identity, and the existing integer-height count injection. | Both `levinsonMontgomeryPairedMass_neg_of_logDeriv_riemannZeta_re_nonneg` and `levinsonMontgomeryDenseBranch_of_eventuallyNonnegativeLogDerivAtIntegers` compile. | Register and audit the fixed endpoint. |
 | `LOCAL_AUDIT` | Added the proven Target, seven exact TargetChecks, and seven selected axiom prints; ran direct warning-as-error checks, forbidden scans, patch check, and the full build. | The 615-line module and registries pass; selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`; the full build passes `8765/8765`. | Freeze the implementation and require public CI. |
+| `IMPLEMENTATION_PUBLIC` | Published the frozen proof implementation and registries. | Commit `076b4e2023114c33fdf80cce123bc91c07d5c5a0` passed public run `30192061892`, build job `89766933675`, in `2m14s`. | Keep proof source frozen and publish immutable evidence. |
 
 ## Runtime record
 

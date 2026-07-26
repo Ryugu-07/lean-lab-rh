@@ -1277,5 +1277,7 @@ contour argument, followed by the `O(log T)` count comparison.
 Preregistration commit `8a3c54d5092c13b8489e2c92c49d586f79176e95` passed public Lean
 Action run `30191371867`, build job `89765103953`, in `1m49s`. The warning-free 615-line module,
 exact TargetChecks, standard-only selected axiom prints, empty forbidden scans, and full
-`8765/8765` build pass locally. Public freeze/evidence gates remain before fixed-edge closure and
-fresh cross-family ranking.
+`8765/8765` build pass locally. Frozen implementation commit
+`076b4e2023114c33fdf80cce123bc91c07d5c5a0` passed public run `30192061892`, build job
+`89766933675`, in `2m14s`; the proof source is frozen. Docs-only evidence gates remain before
+fixed-edge closure and fresh cross-family ranking.

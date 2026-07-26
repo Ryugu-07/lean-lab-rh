@@ -2062,8 +2062,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 ## 2026-07-26 H12 log-derivative mass bridge local endpoint
 
 - `node`: `H12-LM-LOGDERIV-MASS-BRIDGE-01`.
-- `status`: `LOCAL_FULL_LOGDERIV_MASS_BRIDGE_SUCCESS /
-  PUBLIC_IMPLEMENTATION_CI_REQUIRED`.
+- `status`: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`.
 - `proved_edge`: the actual paired reciprocal sum equals `Re(xi'/xi)`; the differentiated
   Stieltjes representation gives the exact digamma Stirling formula and explicit remainder;
   equation `(2.1)` and archimedean negativity on the full source region compile.
@@ -2079,4 +2078,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   `rh_frontier_delta=0`.
 - `local_gates`: warning-free 615-line source, exact TargetChecks, standard-only selected axiom
   prints, empty forbidden scans, and full `8765/8765` build.
+- `public_implementation`: frozen commit
+  `076b4e2023114c33fdf80cce123bc91c07d5c5a0` passed run `30192061892`, job
+  `89766933675`, in `2m14s`.
 - `global_goal`: active.

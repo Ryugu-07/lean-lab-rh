@@ -3966,4 +3966,7 @@ fixed-edge omission was real and is now closed locally. The next substantive H12
 the source contour argument produces those witnesses and controls the low and critical
 boundaries; tightening the already sufficient Gamma constant is not selected as a frontier.
 Targets, exact checks, selected standard-only axiom prints, forbidden scans, and the full
-`8765/8765` build pass. Public implementation, immutable-evidence, and final-ledger gates remain.
+`8765/8765` build pass. Frozen implementation commit
+`076b4e2023114c33fdf80cce123bc91c07d5c5a0` passed public run `30192061892`, build job
+`89766933675`, in `2m14s`. The proof source remains frozen; immutable-evidence and final-ledger
+gates remain.

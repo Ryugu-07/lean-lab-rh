@@ -9,7 +9,7 @@ Selected node: `H12-LM-LOGDERIV-MASS-BRIDGE-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT`
 
-Status: `LOCAL_FULL_LOGDERIV_MASS_BRIDGE_SUCCESS / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Primary source
 
@@ -272,6 +272,10 @@ This local success removes equation `(2.1)` and the explicit Gamma-sign bridge f
 frontier. It does not provide the low-height zeta sign certificate, lower or critical boundary
 signs, the interior-witness alternative, the indented contour, the logarithmic count theorem,
 the full dichotomy, Speiser equivalence, or RH.
+
+Frozen implementation commit `076b4e2023114c33fdf80cce123bc91c07d5c5a0` passed public Lean
+Action run `30192061892`, build job `89766933675`, in `2m14s`. The proof source is frozen.
+Only docs-only immutable evidence and final-ledger publication remain for this fixed campaign.
 
 ## Mechanical and publication gates
 
