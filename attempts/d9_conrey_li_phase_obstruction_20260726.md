@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-D9-CONREY-LI-PHASE-OBSTRUCTION-01`
 
 Selected node: `D9-CONREY-LI-PHASE-OBSTRUCTION-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Target
 
@@ -34,6 +34,7 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 | `ACTUAL_XI_CONSUMER` | Specialized the generic theorem to actual `riemannXi`. | `not_conreyLiRiemannXiShiftRatioNonnegative_of_phase_data` compiles with every value-distribution, branch, boundedness, strip, and nonvanishing premise visible. | Stop at the known-theorem frontier; do not claim an unconditional zeta counterexample. |
 | `LOCAL_GATES` | Ran warning-as-error, Target, seven TargetChecks, six selected axiom prints, three forbidden scans, `git diff --check`, and full build. | New module has no diagnostics; selected axioms are standard-only; scans are empty; full build is `8768/8768`. | Freeze and publish the implementation. |
 | `IMPLEMENTATION_PUBLIC` | Froze production proof source at `74787a77a20218bb967d18279b29bd7ab9a5ab97`. | Public run `30195816933`, build job `89777044355`, passed in `2m6s`. | Publish docs-only immutable evidence without changing Lean source. |
+| `IMMUTABLE_EVIDENCE_PUBLIC` | Published docs-only evidence commit `0f8cd8437a8495bc57be0c556b74d95bc7bef623`. | Public run `30195949149`, build job `89777408452`, passed in `1m32s`; `LeanLab/` is unchanged from the frozen implementation. | Publish the final ledger and require its public CI. |
 
 ## Runtime record
 
@@ -53,3 +54,6 @@ bounded archimedean correction, the de Branges RKHS theorem, an unconditional ac
 counterexample, RH, and every other route remain open. Docs-only immutable-evidence CI, followed
 by a docs-only final-ledger CI, remains before local campaign closure. The six inherited
 user/exposure files remain untouched and unstaged.
+
+Immutable evidence is now public-green. The final ledger is the sole remaining gate for this
+fixed campaign.

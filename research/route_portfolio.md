@@ -4125,3 +4125,7 @@ forbidden scans, and full `8768/8768` build pass locally. Classification:
 Frozen implementation commit `74787a77a20218bb967d18279b29bd7ab9a5ab97` passed public Lean
 Action run `30195816933`, build job `89777044355`, in `2m6s`. The next two gates are docs-only
 immutable evidence and final-ledger CI; proof source remains frozen.
+
+Docs-only immutable-evidence commit `0f8cd8437a8495bc57be0c556b74d95bc7bef623`
+passed run `30195949149`, build job `89777408452`, in `1m32s`, with no `LeanLab/` changes.
+Only final-ledger CI remains before fresh route selection.

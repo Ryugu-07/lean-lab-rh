@@ -4473,3 +4473,18 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   phase correction, RKHS Theorem 2, an unconditional actual-zeta obstruction, and RH remain open.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 D9 Conrey--Li phase obstruction immutable evidence public green
+
+- `frozen_implementation`: commit `74787a77a20218bb967d18279b29bd7ab9a5ab97` passed run
+  `30195816933`, build job `89777044355`, in `2m6s`.
+- `immutable_evidence`: docs-only commit `0f8cd8437a8495bc57be0c556b74d95bc7bef623`
+  passed run `30195949149`, build job `89777408452`, in `1m32s`.
+- `proof_freeze_verified`: no `LeanLab/` difference between the frozen implementation and
+  immutable-evidence commits.
+- `result`: `CONDITIONAL_PHASE_OBSTRUCTION_LOGIC_SUCCESS`.
+- `next_gate`: publish one docs-only final ledger and require public CI.
+- `after_closure`: return the active global Goal to historical-route selection; D9's actual
+  value-distribution/logarithm package and RKHS bridge remain open.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

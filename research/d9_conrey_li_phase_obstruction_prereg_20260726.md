@@ -8,7 +8,7 @@ Selected node: `D9-CONREY-LI-PHASE-OBSTRUCTION-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Primary source
 
@@ -212,3 +212,8 @@ Action run `30195816933`, build job `89777044355`, in `2m6s`.
 The production module, registered Target, TargetChecks, and axiom prints are frozen at that
 commit. The next gate is a docs-only immutable-evidence commit whose own public CI must pass;
 no Lean proof source may change between the frozen implementation and that evidence commit.
+
+Docs-only immutable-evidence commit `0f8cd8437a8495bc57be0c556b74d95bc7bef623` passed public
+Lean Action run `30195949149`, build job `89777408452`, in `1m32s`. A direct Git comparison
+shows no `LeanLab/` difference from the frozen implementation. Only final-ledger CI remains
+before closing this fixed campaign and returning to route selection.

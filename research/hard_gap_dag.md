@@ -2225,3 +2225,7 @@ Frozen implementation commit `74787a77a20218bb967d18279b29bd7ab9a5ab97` passed p
 Action run `30195816933`, build job `89777044355`, in `2m6s`. The source-logic endpoint is
 public-green; proof source is frozen while docs-only immutable evidence and final-ledger CI
 remain.
+
+Docs-only immutable-evidence commit `0f8cd8437a8495bc57be0c556b74d95bc7bef623`
+passed run `30195949149`, build job `89777408452`, in `1m32s`; `LeanLab/` remains identical
+to the frozen implementation. Final-ledger CI is the only remaining gate for this fixed node.
