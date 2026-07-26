@@ -1362,3 +1362,19 @@ This closes `H12-LM-CRITICAL-INDENTATION-01` locally as
 than another endpoint estimate: certify the bottom contour, produce cofinal admissible tops,
 and formalize the indented argument-principle count and `O(log T)` comparison. Cross-family
 route selection resumes after final-ledger public closure of the fixed campaign.
+
+### Post-H12 rerank: D9 Conrey--Li phase obstruction
+
+The H12 local indentation is publicly closed, while its successor is now a global contour-count
+package. Fresh comparison selects the older canonical de Branges obstruction before returning to
+another deep open estimate.
+
+Conrey--Li's final Sarnak remark avoids the paper's numerical witnesses. Its exact logical core is
+that dense logarithmic values plus a bounded correction make a continuous phase unbounded in both
+directions on a connected domain, so it crosses a phase with negative exponential real part.
+The coordinate `z=i*(s-1)` then turns the xi ratio into the reciprocal shifted ratio whose
+nonnegativity is necessary for the proposed positivity.
+
+Campaign `LITERATURE-20260726-D9-CONREY-LI-PHASE-OBSTRUCTION-01` will formalize this core and an
+actual-xi conditional endpoint. Actual log-zeta density, source-valid logarithm branches, the
+bounded correction, and the RKHS theorem remain outside the fixed endpoint and must stay visible.

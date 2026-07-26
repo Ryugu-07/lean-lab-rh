@@ -2184,4 +2184,19 @@ Frozen implementation commit `49d43eda415c00c10939c2df529b6231c973aa5b` passed p
 Action run `30195029807`, build job `89774903553`, in `2m44s`. Proof source is frozen.
 Docs-only immutable-evidence commit `482835012cba3c51839d428a41127fe40e513e2e`
 passed run `30195156406`, build job `89775241280`, in `1m28s`; proof source remained frozen.
-Final-ledger public CI remains before route selection.
+Final-ledger commit `4ee3b000bf2baff304edfedc215cf9143b399cea` passed run
+`30195238711`, build job `89775469902`, in `1m53s`; the fixed node is publicly closed.
+
+## 2026-07-26 D9 Conrey--Li phase-obstruction launch
+
+- `selected_node`: `D9-CONREY-LI-PHASE-OBSTRUCTION-01`.
+- `mode`: `LITERATURE / FALSIFICATION`.
+- `fixed_edge`:
+  `dense log values + bounded imaginary correction + continuous connected phase
+  -> phase pi -> negative xi ratio -> negative shifted reciprocal ratio`.
+- `source_alignment`: Conrey--Li 1998 Theorem 2 and Sarnak's concluding nonnumerical proof.
+- `actual_specialization_boundary`: the value-distribution theorem, logarithm branches, and
+  bounded correction remain explicit premises unless separately compiled.
+- `success_boundary`: source-logic reconstruction and actual-xi conditional consumer only; no
+  claim that the full RKHS obstruction or RH is formalized.
+- `global_goal`: active.

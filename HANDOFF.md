@@ -4411,3 +4411,24 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `strict_boundary`: bottom certificate, admissible top contours, global argument principle,
   exact count equality, `O(log T)`, full theorem, Speiser equivalence, and RH remain open.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 D9 Conrey--Li phase obstruction selected
+
+- `parent_public_closure`: H12 final-ledger commit
+  `4ee3b000bf2baff304edfedc215cf9143b399cea` passed run `30195238711`, build job
+  `89775469902`, in `1m53s`.
+- `campaign`: `LITERATURE-20260726-D9-CONREY-LI-PHASE-OBSTRUCTION-01`.
+- `node`: `D9-CONREY-LI-PHASE-OBSTRUCTION-01`.
+- `source`: Conrey--Li 1998, Theorem 2, equations `(3.3)`--`(3.4)`, and Sarnak's nonnumerical
+  concluding argument.
+- `fixed_endpoint`: prove the dense-range, bounded-correction, connected-phase crossing;
+  negative exponential; exact `z=i*(s-1)` reciprocal-shift identity; and an actual-xi
+  conditional aggregate with all value-distribution inputs visible.
+- `prohibited_shortcut`: no use of the published Mathematica decimals, custom axioms, or hidden
+  universality/log-branch premises.
+- `strict_boundary`: Bohr--Courant/Voronin density, actual continuous zeta logarithms, the bounded
+  xi/zeta phase correction, de Branges Theorem 2, an unconditional actual-zeta counterexample,
+  and RH remain open.
+- `production_gate`: docs-only preregistration public CI before Lean proof editing.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

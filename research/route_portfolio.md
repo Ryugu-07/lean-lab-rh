@@ -4085,4 +4085,20 @@ comparison, full Levinson--Montgomery theorem, Speiser equivalence, and RH remai
 Frozen implementation commit `49d43eda415c00c10939c2df529b6231c973aa5b` passed public Lean
 Action run `30195029807`, build job `89774903553`, in `2m44s`. Proof source remains frozen;
 docs-only immutable-evidence commit `482835012cba3c51839d428a41127fe40e513e2e`
-passed run `30195156406`, build job `89775241280`, in `1m28s`. Only final-ledger CI remains.
+passed run `30195156406`, build job `89775241280`, in `1m28s`. Final-ledger commit
+`4ee3b000bf2baff304edfedc215cf9143b399cea` passed run `30195238711`, build job
+`89775469902`, in `1m53s`; the fixed H12 campaign is publicly closed.
+
+## D9 Conrey--Li Phase-Obstruction Selection
+
+After public closure of the H12 critical indentation, route selection moves to a canonical failed
+de Branges condition rather than continuing into the global H12 contour theorem. Conrey--Li's
+1998 numerical zeta witnesses are not suitable as Lean premises, but the paper's final Sarnak
+remark gives a nonnumerical mechanism: dense logarithmic zeta values, a bounded phase correction,
+and continuity on a connected strip force the xi ratio into a negative-real-part sector.
+
+The fixed campaign kernel-checks that topology, the exponential sign, and the exact coordinate
+identity converting an xi ratio into the reciprocal shifted ratio required by Conrey--Li Theorem
+2. It will expose log-zeta density, continuous logarithm branches, and the bounded correction as
+explicit premises in the actual-xi endpoint. It does not formalize Theorem 2's RKHS proof, certify
+the source decimals, prove the unconditional actual-zeta obstruction, or advance RH.
