@@ -4806,3 +4806,38 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   retain every non-unit-root estimate as open.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H9 Redheffer characteristic polynomial publicly closed
+
+- `final_ledger`: commit `2799ec66850919db744026ae58aaea4c2bd2f769` passed run
+  `30210035283`, build job `89814585909`, in `1m37s`.
+- `public_chain`: preregistration `0b0654a53272104e64bfba6f18d36b9c362e1028`, frozen
+  implementation `4fbad00c4c24c8a5ae9b9885b0a23da82744665b`, immutable evidence
+  `ada5bb11085378fb8c1def1e3e9924a4a6b672a9`, and final ledger are public-green.
+- `closed_only`: ordered-factor support, denominator-free characteristic-polynomial
+  factorization, exact unit-root multiplicity for `N>=2`, the order-one correction, and
+  low-order checks.
+- `unchanged`: all non-unit-root estimates, Mertens growth, H9, and RH remain open.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H9 Riesz Mellin boundary selected
+
+- `campaign`: `LITERATURE-20260726-H9-RIESZ-MELLIN-BOUNDARY-01`.
+- `node`: `H9-RIESZ-EXPONENTIAL-MELLIN-BOUNDARY-01`.
+- `source`: Riesz 1916; Agarwal--Garg--Maji 2022 equations `(1.5)`, Lemma 2.4, and
+  `(3.31)`.
+- `selection_reason`: the actual classical `k=2` Mobius-exponential route is absent from the
+  repository, while source audit exposes an exact ordinary-integral versus analytic-continuation
+  boundary that Lean can decide.
+- `fixed_endpoint`: actual kernel and summability, continuity and
+  `P_2(0)=1/zeta(2)!=0`, the exact ordinary Mellin identity on `-1/2<Re(s)<0`, divergence at
+  source parameter `s=1/2`, and conditional Mellin holomorphy from explicit `O(x^-a)` decay.
+- `strict_boundary`: the RH-equivalent Riesz decay, continuation of the product identity into
+  the enlarged strip, zeta zero exclusion, the `k=1` kernel, H9, and RH remain open.
+- `production_gate`: docs-only preregistration public CI before Lean proof editing.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## Arch 审计第十三轮（2026-07-26，Claude）
+- 43 commits：Groskin Theorem 2.5 拿下（零点和=有限 von Mangoldt+极点+阿基米德，3213 行）；门户图谱兑现——H10 Bombieri-Stepanov 函数域机制+polar injectivity 门（含负控制）、D9 Conrey-Li 相位障碍形式化、H9 Redheffer/Mertens 行列式与特征多项式、H12 Speiser 边界符号，四条历史路线同时推进。build 8772 全过；公理审计 906 条零非标准；零 sorry。四段式冻结纪律+delta 诚实结算，无处方。

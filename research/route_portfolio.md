@@ -4316,3 +4316,25 @@ Docs-only immutable-evidence commit `ada5bb11085378fb8c1def1e3e9924a4a6b672a9` p
 `30209857664`, build job `89814144474`, in `1m47s`; the frozen implementation has no
 `LeanLab/` difference. Only final-ledger CI remains before closing this fixed endpoint and
 returning to cross-family route selection.
+
+Final-ledger commit `2799ec66850919db744026ae58aaea4c2bd2f769` passed run
+`30210035283`, build job `89814585909`, in `1m37s`; the fixed Redheffer characteristic-
+polynomial endpoint is publicly closed.
+
+## H9 Riesz Mellin Boundary Selection
+
+Fresh route selection moves to a missing classical arithmetic-analytic branch rather than
+optimizing the just-compiled Redheffer roots. The actual `k=2` Riesz kernel is absolutely
+convergent and avoids the `k=1` Hardy--Littlewood kernel's PNT-level definition boundary.
+
+The source audit finds a precise literal-versus-continuation issue. Since
+`P_2(0)=1/zeta(2)!=0`, the ordinary integral
+`integral_0^infinity x^(-s-1)P_2(x) dx` cannot converge at zero for `Re(s)>=0`.
+Thus the unconditional ordinary Mellin identity begins on `-1/2<Re(s)<0`; any value to the
+right is analytic continuation, not the same improper integral.
+
+Campaign `LITERATURE-20260726-H9-RIESZ-MELLIN-BOUNDARY-01` fixes the actual kernel,
+zero value, base-strip identity, a source-region divergence witness, and the conditional
+Mellin-holomorphy interface under explicit decay. It does not prove the RH-equivalent
+`x^(-3/4+epsilon)` bound, continue the product identity to the zero-free region, or prove RH.
+Public preregistration CI is required before Lean proof-source editing.

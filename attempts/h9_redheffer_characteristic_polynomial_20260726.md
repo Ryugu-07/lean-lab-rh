@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H9-REDHEFFER-CHARPOLY-01`
 
 Selected node: `H9-REDHEFFER-CHARACTERISTIC-POLYNOMIAL-01`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_REQUIRED`
+Status: `PUBLICLY_CLOSED`
 
 ## Target
 
@@ -40,6 +40,7 @@ Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_REQUIRED`
 | `LOCAL_GATES` | Ran warning-as-error production, Targets, TargetChecks, and AxiomsAudit compiles; scanned forbidden declarations and resource relaxations; ran `git diff --check` and the full build. | One proven Target, eight exact checks, seven standard-only axiom prints, empty scans, and `8772/8772` build all pass. | Freeze and publish the implementation. |
 | `IMPLEMENTATION_PUBLIC` | Published frozen implementation commit `4fbad00c4c24c8a5ae9b9885b0a23da82744665b`. | Public run `30209691871`, build job `89813735900`, passed in `2m24s`; the proof source is frozen. | Publish docs-only immutable evidence with no `LeanLab/` change. |
 | `IMMUTABLE_EVIDENCE_PUBLIC` | Published docs-only evidence commit `ada5bb11085378fb8c1def1e3e9924a4a6b672a9`. | Public run `30209857664`, build job `89814144474`, passed in `1m47s`; the implementation-to-evidence `LeanLab/` diff is empty. | Publish the docs-only final ledger and require public CI. |
+| `FINAL_LEDGER_PUBLIC` | Published final-ledger commit `2799ec66850919db744026ae58aaea4c2bd2f769`. | Public run `30210035283`, build job `89814585909`, passed in `1m37s`; the complete four-gate chain is public-green. | Close only the fixed endpoint and return to fresh route selection. |
 
 ## Runtime record
 
@@ -69,3 +70,7 @@ Local result: `REDHEFFER_CHARACTERISTIC_POLYNOMIAL_FORMALIZED`, with
 `unit_root_multiplicity_delta=1`, `source_boundary_correction_delta=1`,
 `nonunit_root_location_delta=0`, `mertens_growth_delta=0`, `hard_gap_delta=0`, and
 `rh_frontier_delta=0`.
+
+Public closure: final-ledger commit `2799ec66850919db744026ae58aaea4c2bd2f769`,
+run `30210035283`, job `89814585909`, in `1m37s`. The fixed endpoint is closed; every
+non-unit-root estimate, Mertens growth, H9, and RH remain open.

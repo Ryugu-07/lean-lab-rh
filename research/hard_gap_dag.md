@@ -2393,7 +2393,7 @@ publicly closed.
 ## 2026-07-26 H9 Redheffer characteristic-polynomial local endpoint
 
 - `node`: `H9-REDHEFFER-CHARACTERISTIC-POLYNOMIAL-01`.
-- `local_status`: `REDHEFFER_CHARACTERISTIC_POLYNOMIAL_FORMALIZED / FINAL_LEDGER_REQUIRED`.
+- `local_status`: `REDHEFFER_CHARACTERISTIC_POLYNOMIAL_FORMALIZED / PUBLICLY_CLOSED`.
 - `closed_edges`:
   `ordered-factor recursion -> minimal-product and logarithmic support`;
   `cleared polynomial row eliminator -> exact characteristic-matrix product`;
@@ -2410,8 +2410,7 @@ publicly closed.
   `spectral_compression_interface_delta=1`, `unit_root_multiplicity_delta=1`,
   `source_boundary_correction_delta=1`, `nonunit_root_location_delta=0`,
   `mertens_growth_delta=0`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
-- `next_gate`: freeze and publish the implementation, then publish immutable evidence and a
-  final ledger before fresh cross-family route selection.
+- `next_gate`: complete; final-ledger CI passed and fresh cross-family route selection resumed.
 - `global_goal`: active.
 
 Frozen implementation commit `4fbad00c4c24c8a5ae9b9885b0a23da82744665b` passed public Lean
@@ -2421,3 +2420,26 @@ next gate is docs-only immutable evidence.
 Docs-only immutable-evidence commit `ada5bb11085378fb8c1def1e3e9924a4a6b672a9` passed run
 `30209857664`, build job `89814144474`, in `1m47s`; `LeanLab/` remains identical to the frozen
 implementation. Final-ledger CI is the only remaining gate for this fixed node.
+
+Final-ledger commit `2799ec66850919db744026ae58aaea4c2bd2f769` passed public Lean Action
+run `30210035283`, build job `89814585909`, in `1m37s`; the characteristic-polynomial node is
+publicly closed.
+
+## 2026-07-26 H9 Riesz Mellin-boundary launch
+
+- `node`: `H9-RIESZ-EXPONENTIAL-MELLIN-BOUNDARY-01`.
+- `mode`: `LITERATURE / FALSIFICATION`.
+- `fixed_edge`:
+  `absolute Mobius-exponential series -> actual P_2 kernel`;
+  `Mellin sum-integral interchange -> Gamma/reciprocal-zeta identity on -1/2<Re(s)<0`;
+  `P_2(0)!=0 -> literal zero-end divergence at source s=1/2`;
+  `explicit O(x^-a) decay -> conditional Mellin holomorphy on -a<Re(s)<0`.
+- `source_correction`: the wider displayed region in Agarwal--Garg--Maji Lemma 2.4 must be read
+  as analytic continuation outside the ordinary integral's convergence strip.
+- `negative_controls`: source/Mellin sign, exponent `2*s+2`, Nat-zero term, `k=1` substitution,
+  assumed Riesz decay, and zeta division below `Re=1`.
+- `open_H9_edges`: prove the Riesz decay; continue the product identity into the enlarged
+  left strip; exclude zeta zeros with `1/2<Re<1`; close RH by symmetry.
+- `classification_target`: `RIESZ_TWO_MELLIN_LITERAL_STRIP_CORRECTED`, with source-domain and
+  historical-coverage deltas but no hard-gap or RH-frontier delta.
+- `global_goal`: active.

@@ -8,7 +8,7 @@ Selected node: `H9-REDHEFFER-CHARACTERISTIC-POLYNOMIAL-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_REQUIRED`
+Status: `PUBLICLY_CLOSED`
 
 ## Selection rationale
 
@@ -205,3 +205,19 @@ difference between the frozen implementation and evidence commits.
 The next gate is a docs-only final ledger and its public CI. Dominant-root asymptotics,
 remaining-root disks, joint non-unit-root product control, Mertens growth, H9, and RH remain
 open.
+
+## Public closure
+
+Final-ledger commit `2799ec66850919db744026ae58aaea4c2bd2f769` passed public Lean Action
+run `30210035283`, build job `89814585909`, in `1m37s`.
+
+The full public chain is preregistration `0b0654a53272104e64bfba6f18d36b9c362e1028`,
+frozen implementation `4fbad00c4c24c8a5ae9b9885b0a23da82744665b`, immutable evidence
+`ada5bb11085378fb8c1def1e3e9924a4a6b672a9`, and final ledger
+`2799ec66850919db744026ae58aaea4c2bd2f769`.
+
+Only the exact characteristic-polynomial factorization, logarithmic unit-root compression, low
+orders, and order-one source boundary are closed. Every non-unit-root estimate, Mertens growth,
+H9, and RH remain open. Fresh route selection chose the missing Riesz
+Mobius-exponential/Mellin boundary rather than continuing Redheffer from implementation
+momentum.

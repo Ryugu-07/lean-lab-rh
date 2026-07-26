@@ -1546,3 +1546,32 @@ docs-only immutable evidence remains.
 Docs-only immutable-evidence commit `ada5bb11085378fb8c1def1e3e9924a4a6b672a9` passed run
 `30209857664`, build job `89814144474`, in `1m47s`, with no `LeanLab/` change from the frozen
 implementation. Only final-ledger CI remains.
+
+Final-ledger commit `2799ec66850919db744026ae58aaea4c2bd2f769` passed run
+`30210035283`, build job `89814585909`, in `1m37s`; the exact characteristic-polynomial
+endpoint is publicly closed.
+
+### Post-Redheffer rerank: Riesz exponential smoothing
+
+Fresh comparison retains the Redheffer non-unit roots, H1 arbitrary-length moments, H2 actual
+bow exclusion, H7 ground-state convergence, H8 all-index hyperbolicity, H10 geometric transfer,
+H11 sparse-exception amplification, and H12 global counting as open. It does not choose another
+Redheffer estimate from local momentum.
+
+The missing classical H9 branch is Riesz's 1916 exponential smoothing:
+
+```text
+P_2(x)=sum mu(n)n^-2 exp(-x/n^2).
+```
+
+Its RH-equivalent decay is explicit and remains unproved. The selected first edge instead audits
+the Mellin bridge. Agarwal--Garg--Maji 2022 state the ordinary transform on a region including
+`Re(s)>=0`, but `P_2(0)=1/zeta(2)!=0`; therefore the zero endpoint forces divergence there.
+The source proof itself first derives the literal identity for `Re(s)<0` and then invokes
+analytic continuation.
+
+Campaign `LITERATURE-20260726-H9-RIESZ-MELLIN-BOUNDARY-01` will compile the actual kernel,
+the exact literal strip `-1/2<Re(s)<0`, a divergence witness at source parameter `s=1/2`, and
+the conditional Mellin holomorphy supplied by an explicit power-decay assumption. The Riesz
+decay, continuation of the product identity into the enlarged strip, zero exclusion, and RH
+remain outside. Production editing is closed until docs-only preregistration passes public CI.
