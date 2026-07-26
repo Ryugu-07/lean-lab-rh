@@ -4355,3 +4355,7 @@ Riesz decay and identity continuation as open H9 edges.
 Frozen implementation commit `096aea939d27fb6828b702296c156bbef4ba1559` passed public Lean
 Action run `30212146718`, build job `89820083261`, in `2m25s`. The route card's proof source
 is frozen while docs-only immutable evidence is published.
+
+Docs-only immutable-evidence commit `5448bd74cdf55a8ead8847f6c7cd50e21e8711e7` passed run
+`30212403937`, build job `89820745802`, in `1m39s`; the frozen implementation has no
+`LeanLab/` difference. Only final-ledger CI remains before returning to route selection.

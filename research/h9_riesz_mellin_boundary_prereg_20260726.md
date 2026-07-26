@@ -8,7 +8,7 @@ Selected node: `H9-RIESZ-EXPONENTIAL-MELLIN-BOUNDARY-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Selection rationale
 
@@ -242,3 +242,11 @@ that hash.
 The next gate is a docs-only immutable-evidence commit and public CI. No `LeanLab/` file may
 change between the frozen implementation and immutable evidence. The Riesz decay, identity
 continuation, zero exclusion, H9, and RH remain open.
+
+Docs-only immutable-evidence commit `5448bd74cdf55a8ead8847f6c7cd50e21e8711e7` passed public
+Lean Action run `30212403937`, build job `89820745802`, in `1m39s`. There is no `LeanLab/`
+difference between the frozen implementation and evidence commits.
+
+The next gate is one docs-only final ledger and its public CI. It closes only the literal Mellin
+boundary endpoint; the Riesz decay, analytic continuation consumer, zeta zero exclusion, H9,
+and RH remain open.

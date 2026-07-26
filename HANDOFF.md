@@ -4883,3 +4883,19 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `open_H9`: RH-equivalent Riesz decay, identity continuation, zeta zero exclusion, H9, and RH.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H9 Riesz Mellin boundary immutable evidence public green
+
+- `frozen_implementation`: commit `096aea939d27fb6828b702296c156bbef4ba1559`
+  passed run `30212146718`, build job `89820083261`, in `2m25s`.
+- `immutable_evidence`: docs-only commit `5448bd74cdf55a8ead8847f6c7cd50e21e8711e7`
+  passed run `30212403937`, build job `89820745802`, in `1m39s`.
+- `proof_freeze_verified`: no `LeanLab/` difference between the implementation and evidence
+  commits.
+- `result`: `RIESZ_TWO_MELLIN_LITERAL_STRIP_CORRECTED`.
+- `next_gate`: publish one docs-only final ledger and require public CI.
+- `after_closure`: close only the literal-integral boundary endpoint and return the active
+  global Goal to fresh cross-family historical-route selection; retain Riesz decay and
+  continuation as open H9 edges.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

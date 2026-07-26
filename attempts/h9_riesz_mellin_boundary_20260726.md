@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H9-RIESZ-MELLIN-BOUNDARY-01`
 
 Selected node: `H9-RIESZ-EXPONENTIAL-MELLIN-BOUNDARY-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Target
 
@@ -41,6 +41,7 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 | `DECAY_INTERFACE` | Proved `P_2=O(x^-a)` unconditionally for every `0<=a<1/2`, then exposed general explicit `O(x^-a)` consumers. | Base-strip convergence is unconditional; arbitrary-decay convergence and Mellin differentiability compile on `-a<Re(s)<0`. The RH-equivalent `a=3/4-epsilon` decay is not proved. | Register Target and audits. |
 | `LOCAL_GATES` | Added one aggregate Target, four exact TargetChecks, and eight selected axiom prints; ran standalone compilation, forbidden scan, diff check, and full build. | New-module scan empty; selected axioms standard only; full build `8773/8773`. | Freeze and publish implementation. |
 | `IMPLEMENTATION_PUBLIC_CI` | Froze and pushed the complete implementation and local ledgers. | Commit `096aea939d27fb6828b702296c156bbef4ba1559` passed run `30212146718`, job `89820083261`, in `2m25s`. | Freeze all `LeanLab/` files and publish docs-only immutable evidence. |
+| `IMMUTABLE_EVIDENCE_PUBLIC_CI` | Published docs-only proof-freeze evidence. | Commit `5448bd74cdf55a8ead8847f6c7cd50e21e8711e7` passed run `30212403937`, job `89820745802`, in `1m39s`; the implementation-to-evidence `LeanLab/` diff is empty. | Publish one docs-only final ledger and require public CI. |
 
 ## Runtime record
 
@@ -73,5 +74,6 @@ The six inherited user/exposure files remain untouched and unstaged.
 - `criterion_status`: the source's analytic-continuation argument may still begin from the
   corrected base strip. No Riesz decay, critical-strip zero-free theorem, or RH proof follows.
 - `frozen_implementation`: `096aea939d27fb6828b702296c156bbef4ba1559`, public-green.
-- `next_gate`: docs-only immutable evidence and public Lean Action CI.
+- `immutable_evidence`: `5448bd74cdf55a8ead8847f6c7cd50e21e8711e7`, public-green.
+- `next_gate`: docs-only final ledger and public Lean Action CI.
 - `global_goal`: active.
