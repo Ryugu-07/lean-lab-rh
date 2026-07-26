@@ -4321,3 +4321,31 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active. After fixed-edge closure return to cross-family historical route
   selection; conjecture and direct-proof tracks remain open.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H12 critical-zero indentation selected
+
+- `parent_public_closure`: final-ledger commit
+  `53f781929605243e05dcec36bb188afb1b0c50a5` passed public Lean Action run
+  `30193513376`, build job `89770844367`, in `1m51s`. Campaign
+  `LITERATURE-20260726-H12-LEVINSON-MONTGOMERY-BOUNDARY-SIGNS-01` is publicly
+  closed as `FULL_BOUNDARY_SIGNS_AND_INTEGER_DICHOTOMY_SUCCESS`.
+- `cross_family_audit`: H1 is at Farmer's open arbitrary-length moment; H2/H11 lack an actual
+  sparse-exception amplifier; H7/H10 lack a number-field spectral object and regularized tail;
+  D9 Conrey--Li needs actual high-point-value or universality certification.
+- `campaign`:
+  `LITERATURE-20260726-H12-LEVINSON-MONTGOMERY-CRITICAL-INDENTATION-01`.
+- `node`: `H12-LM-CRITICAL-INDENTATION-01`.
+- `fixed_endpoint`: prove a punctured left half-neighborhood of every critical-line xi zero
+  above height `10` has zeta nonvanishing and strict negative `Re(zeta'/zeta)`, then derive a
+  complete negative left semicircle indentation.
+- `new_attack`: show the local xi analytic-unit logarithmic derivative has zero real part at the
+  center; subtracting the completed-zeta factor leaves the already negative archimedean term.
+  Residual continuity plus the nonpositive principal pole should cover the endpoints and middle
+  arc simultaneously.
+- `fallback`: critical-boundary endpoint neighborhoods plus quantitatively dominated compact
+  middle arc; partial principal-term negativity is not success.
+- `strict_boundary`: no bottom `t=10` certificate, cofinal admissible top contours,
+  argument-principle count, `O(log T)`, full theorem, Speiser equivalence, or RH.
+- `production_gate`: no proof-source edit before docs-only preregistration public CI.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

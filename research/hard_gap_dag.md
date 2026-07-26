@@ -2137,3 +2137,24 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `status`: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`.
 - `result`: `FULL_BOUNDARY_SIGNS_AND_INTEGER_DICHOTOMY_SUCCESS`.
 - `global_goal`: active.
+
+## 2026-07-26 H12 critical-indentation launch
+
+- `parent_closed`: final-ledger commit
+  `53f781929605243e05dcec36bb188afb1b0c50a5` passed run `30193513376`, job
+  `89770844367`, in `1m51s`.
+- `selected_node`: `H12-LM-CRITICAL-INDENTATION-01`.
+- `mode`: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`.
+- `fixed_edge`:
+  `critical xi zero factor -> punctured principal-plus-residual logarithmic derivative ->
+  center residual real sign -> negative punctured left half-neighborhood -> complete source
+  indentation semicircle`.
+- `source_alignment`: Levinson--Montgomery 1974, page 52, the paragraph asserting strict
+  negativity on small left semicircles around critical-line zeros.
+- `new_uniformity_test`: replace the source's unquantified principal-term dominance by a
+  continuous residual whose center real part should equal the strictly negative archimedean
+  term; retain endpoint/middle-arc gluing as fallback.
+- `open_after_success`: certified bottom edge, cofinal admissible top contours, indented argument
+  principle, exact count equality, `O(log T)`, full theorem, Speiser equivalence, and RH.
+- `production_gate`: docs-only preregistration public CI before proof-source editing.
+- `global_goal`: active.

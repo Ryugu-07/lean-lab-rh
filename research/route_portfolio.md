@@ -4031,3 +4031,33 @@ forbidden scans, and the full `8766/8766` build pass. Classify the fixed endpoin
 build job `89770129416`, in `2m7s`. Docs-only immutable-evidence commit
 `4c0ad75da06648c564fa58d9d29c762d46bff823` passed run `30193425500`, build job
 `89770603420`, in `1m34s`; proof source remained frozen and only final-ledger CI remains.
+
+Final-ledger commit `53f781929605243e05dcec36bb188afb1b0c50a5` passed public Lean Action
+run `30193513376`, build job `89770844367`, in `1m51s`; the fixed boundary-sign and
+integer-height-dichotomy edge is publicly closed.
+
+## H12 Levinson--Montgomery Critical-Zero Indentation Selection
+
+Fresh cross-family comparison retains H12 for one more literal source edge. H1 now stops at the
+open arbitrary-length Farmer moment. H2 and H11 need an arithmetic amplifier for one sparse
+off-line orbit. H7 and H10 need an actual number-field spectral/cohomological object with
+positive regularized tails. The D9 Conrey--Li obstruction is historically important, but its
+actual-zeta negative witness requires a certified high point value or a universality theorem not
+yet in the project.
+
+Levinson--Montgomery page 52 instead asserts strict negativity on a small left semicircle around
+each critical-line zero. The parent module already factors xi locally with exact multiplicity,
+proves continuity of the analytic-unit logarithmic derivative, and proves the principal pole
+points left. The source's stated dominance is not uniform at the two critical-line endpoints,
+where the principal real part vanishes.
+
+The new fixed campaign tests a stronger repair. Functional symmetry should force the xi unit's
+logarithmic derivative to have zero real part at the center. Subtracting the pole/Gamma factor
+then identifies the zeta residual with the already compiled strictly negative archimedean term.
+Continuity would make the residual negative on a whole disk, while the principal term is
+nonpositive throughout the closed left half-plane. The result would be a punctured negative left
+half-neighborhood and hence every sufficiently small source semicircle, including both endpoints.
+
+The bottom `t=10` certificate, admissible top contours, argument principle, exact count equality,
+`O(log T)`, full Levinson--Montgomery theorem, Speiser equivalence, and RH remain outside the
+campaign. Public preregistration CI is required before proof-source editing.

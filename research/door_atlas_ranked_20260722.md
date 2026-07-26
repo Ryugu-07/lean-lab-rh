@@ -1320,3 +1320,26 @@ implementation commit `d45e87b3c6ab9d41217f671b0dc96ec979167b45` passed public L
 Action run `30193246131`, build job `89770129416`, in `2m7s`. Docs-only immutable evidence
 `4c0ad75da06648c564fa58d9d29c762d46bff823` passed run `30193425500`, build job
 `89770603420`, in `1m34s`; proof source remained frozen and only final-ledger CI remains.
+
+Final-ledger commit `53f781929605243e05dcec36bb188afb1b0c50a5` passed run
+`30193513376`, build job `89770844367`, in `1m51s`; the vertical-boundary and exact logical
+dichotomy edge is publicly closed.
+
+### Post-boundary-sign rerank: H12 critical-zero indentation
+
+The next source paragraph is retained after a fresh H1/H2/H7/H10/H11/D9 comparison. Its exact
+claim is strict negativity of `Re(zeta'/zeta)` on small left semicircles around critical-line
+zeros. The source invokes dominance of the principal reciprocal term, but its real part vanishes
+at the two endpoints, so a formal proof must expose the endpoint mechanism.
+
+The project now has a materially new route: local xi factorization with multiplicity and
+continuous residual. Functional symmetry should make the xi residual purely imaginary at the
+center; after subtracting the completed-zeta factor, the zeta residual should have the strictly
+negative archimedean real part already proved in Lean. If so, the entire punctured left
+half-neighborhood is negative, which is stronger than the source semicircle and avoids a separate
+endpoint gluing argument.
+
+D9's actual Conrey--Li counterexample becomes the leading breadth reserve, but it first needs
+certified high-height xi evaluation or universality infrastructure. The H12 bottom certificate,
+top-contour admissibility, count theorem, Speiser equivalence, and RH remain open. Production
+editing requires public preregistration CI.
