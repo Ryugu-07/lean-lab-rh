@@ -1,5 +1,6 @@
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
+import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -4345,5 +4346,23 @@ example {C : ℕ} (hC : 2 ≤ C) (N : ℕ)
         (1 / (2 * Real.pi : ℂ)) *
           weilFiniteDictionarySourceArchimedeanIntegral C N u :=
   weilFiniteDictionary_primeMatrix_archimedean_zeroSum hC N u hc
+
+example {s : ℂ} (hs : s.re < 1 / 2) (hxi : riemannXi s ≠ 0) :
+    levinsonMontgomeryRealPairedZeroSum s =
+      -(1 / 2 - s.re) * levinsonMontgomeryPairedZeroMass s :=
+  levinsonMontgomery_real_paired_zero_sum_eq hs hxi
+
+example {s : ℂ} (hsRe : s.re < 1 / 2) (hsIm : 1 ≤ s.im)
+    (hxi : riemannXi s ≠ 0)
+    (hmass : levinsonMontgomeryPairedZeroMass s < 0) :
+    ∃ rho : ℂ, IsNontrivialZero rho ∧
+      0 < rho.re ∧ rho.re < 1 / 2 ∧ |s.im - rho.im| < 1 / 2 :=
+  exists_upperLeft_zero_abs_im_sub_lt_half_of_pairedMass_neg
+    hsRe hsIm hxi hmass
+
+example (hmass : LevinsonMontgomeryPairedMassNegativeAtIntegers) :
+    ∃ T0 : ℝ, ∀ T : ℝ, T0 ≤ T →
+      T / 2 < (speiserUpperLeftZetaZeroCount T : ℝ) :=
+  levinsonMontgomeryDenseBranch_of_pairedMassNegativeAtIntegers hmass
 
 end LeanLab.Riemann

@@ -92,6 +92,7 @@ import LeanLab.Riemann.BettinGonekMomentToPowerBridge
 import LeanLab.Riemann.PolyaTuranAbelAudit
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
+import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
@@ -1508,13 +1509,21 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``riemannHypothesis_iff_speiserDerivativeZeroFree_of_levinsonMontgomeryTheoremOne
       status := .proven
       note := "Campaign LITERATURE-20260723-H12-SPEISER-COUNTING-EQUIVALENCE-01 compiles the exact logical consumer and source conventions. The real-axis base fact is discharged from existing de Bruijn-Newman imaginary-axis positivity. The theorem remains conditional on the two named analytic outputs of Levinson-Montgomery Theorem 1, so it is route infrastructure with rh_frontier_delta=0 rather than a completed formalization of Speiser's theorem." },
+    { id := "H12.speiser.levinson-montgomery-paired-mass-density"
+      tier := .tier2
+      title := "Formalize the Levinson-Montgomery paired-mass density branch"
+      statement :=
+        "Over the actual multiplicity-bearing xi divisor, prove the functional-equation paired real zero-sum identity, show negative paired mass at height t localizes an upper-left zero within distance 1/2 of t, and amplify eventual negativity at every integer height into N^-(T)>T/2 for the existing zeta-zero count."
+      leanName := some ``levinsonMontgomeryDenseBranch_of_pairedMassNegativeAtIntegers
+      status := .proven
+      note := "Campaign LITERATURE-20260726-H12-LEVINSON-MONTGOMERY-PAIRED-MASS-DENSITY-01 compiles equations (2.2)-(2.3) through the multiplicity-preserving rho |-> 1-conj(rho) permutation. Global half-pair averaging gives coefficient two off the critical line and coefficient one on it. Strict half-unit localization makes the integer-height witness selector injective, and its image embeds into speiserUpperLeftZetaZeroFinset with multiplicity at least one. The remaining source work is to derive eventual paired-mass negativity from Re(zeta'/zeta)>=0 using the Gamma estimate and low-height certificate; the contour and O(log T) count theorem also remain open. This is a source_analytic_bridge_delta=1 and historical_route_coverage_delta=1 result, not RH." },
     { id := "H12.speiser.levinson-montgomery-analytic-counts"
       tier := .tier2
       title := "Prove the Levinson-Montgomery analytic count theorem"
       statement :=
         "Prove LevinsonMontgomeryLogCountBound and LevinsonMontgomeryCountDichotomy for the actual multiplicity-bearing zeta and zeta-derivative rectangle counts, including the functional-equation zero sum, Gamma estimates, low-height boundary sign, indented critical-line contour, and argument-principle bookkeeping."
       status := .inProgress
-      note := "This is the first exact external analytic obstruction exposed by the H12 reconstruction. Mathlib supplies analyticity, divisors, Jensen's formula, and complex integration, while the project supplies an xi rectangle argument principle; no generic meromorphic indented-rectangle argument principle or specialized Levinson-Montgomery boundary theorem is currently available." },
+      note := "The paired xi zero-mass identity, negative-mass half-unit localizer, and integer-height dense branch are now compiled. The next exact source obstruction is to prove eventual paired-mass negativity from Re(zeta'/zeta)>=0 using equation (2.1), explicit Gamma estimates, and the low-height zero certificate. The later indented critical-line argument principle and O(log T) count difference also remain open. Mathlib supplies analyticity, divisors, Jensen's formula, and complex integration, while no specialized Levinson-Montgomery boundary theorem is currently available." },
     { id := "H11.pcc.horizontal-multiplicity-consumer"
       tier := .tier2
       title := "Formalize pair-correlation horizontal multiplicity"

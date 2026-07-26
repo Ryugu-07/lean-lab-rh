@@ -99,6 +99,7 @@ import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
+import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
@@ -981,3 +982,8 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.tsum_compactSymmetrizedVonMangoldtWeight_dictionary_eq_neg_pi_mul_primeQuadratic
 #print axioms LeanLab.Riemann.weilFiniteDictionary_source_arithmetic_explicit_formula
 #print axioms LeanLab.Riemann.weilFiniteDictionary_primeMatrix_archimedean_zeroSum
+#print axioms LeanLab.Riemann.summable_levinsonMontgomeryPairedReciprocalTerm
+#print axioms LeanLab.Riemann.summable_levinsonMontgomeryPairedKernel
+#print axioms LeanLab.Riemann.levinsonMontgomery_real_paired_zero_sum_eq
+#print axioms LeanLab.Riemann.exists_upperLeft_zero_abs_im_sub_lt_half_of_pairedMass_neg
+#print axioms LeanLab.Riemann.levinsonMontgomeryDenseBranch_of_pairedMassNegativeAtIntegers
