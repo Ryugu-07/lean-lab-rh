@@ -1538,3 +1538,7 @@ The 725-line module, one proven Target, eight exact checks, seven standard-only 
 empty forbidden scans, and full `8772/8772` build pass locally. Classification:
 `REDHEFFER_CHARACTERISTIC_POLYNOMIAL_FORMALIZED`; spectral compression and source-boundary
 coverage increase, while Mertens growth, the hard gap, and the RH frontier do not.
+
+Frozen implementation commit `4fbad00c4c24c8a5ae9b9885b0a23da82744665b` passed public Lean
+Action run `30209691871`, build job `89813735900`, in `2m24s`. Proof source is frozen while
+docs-only immutable evidence remains.

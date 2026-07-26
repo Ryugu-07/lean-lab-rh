@@ -8,7 +8,7 @@ Selected node: `H9-REDHEFFER-CHARACTERISTIC-POLYNOMIAL-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `LOCAL_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Selection rationale
 
@@ -191,3 +191,12 @@ Local classification:
 The next gate is to freeze and publish the implementation. Dominant-root asymptotics,
 remaining-root disks, joint non-unit-root product control, Mertens growth, H9, and RH remain
 open.
+
+## Frozen implementation
+
+Implementation commit `4fbad00c4c24c8a5ae9b9885b0a23da82744665b` passed public Lean
+Action run `30209691871`, build job `89813735900`, in `2m24s`. The production module, proven
+Target, eight exact TargetChecks, and seven selected axiom prints are frozen at that hash.
+
+The next gate is a docs-only immutable-evidence commit and its public CI. No `LeanLab/` file may
+change before that evidence is published.

@@ -4307,3 +4307,7 @@ The logarithmic compression does not by itself control any non-unit root. Domina
 asymptotics, remaining-root disks, and a joint-product estimate strong enough to imply Mertens
 growth remain the live spectral edges. Freeze and publish the implementation before the next
 cross-family selection.
+
+Frozen implementation commit `4fbad00c4c24c8a5ae9b9885b0a23da82744665b` passed public Lean
+Action run `30209691871`, build job `89813735900`, in `2m24s`. Proof source is frozen; publish
+docs-only immutable evidence next with no `LeanLab/` change.

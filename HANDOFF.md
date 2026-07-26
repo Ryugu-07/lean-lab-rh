@@ -4773,3 +4773,20 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   final ledger with public CI at each gate.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H9 Redheffer characteristic polynomial implementation public green
+
+- `campaign`: `LITERATURE-20260726-H9-REDHEFFER-CHARPOLY-01`.
+- `frozen_implementation`: commit `4fbad00c4c24c8a5ae9b9885b0a23da82744665b`.
+- `public_ci`: Lean Action run `30209691871`, build job `89813735900`, passed in `2m24s`.
+- `result`: `REDHEFFER_CHARACTERISTIC_POLYNOMIAL_FORMALIZED`.
+- `proof_freeze`: the 725-line source, one proven Target, eight exact TargetChecks, and seven
+  selected standard-only axiom prints are frozen.
+- `source_boundary`: the generic unit-root multiplicity theorem is scoped to `N>=2`; the
+  separate `N=1` theorem records multiplicity one.
+- `next_gate`: publish docs-only immutable evidence and require public CI, then a docs-only
+  final ledger and public CI.
+- `open_H9`: all non-unit-root location and joint-product estimates, Mertens growth,
+  reciprocal-zeta continuation, H9, and RH.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H9-REDHEFFER-CHARPOLY-01`
 
 Selected node: `H9-REDHEFFER-CHARACTERISTIC-POLYNOMIAL-01`
 
-Status: `LOCAL_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Target
 
@@ -38,6 +38,7 @@ Status: `LOCAL_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
 | `UNIT_ROOT_MULTIPLICITY` | Proved the reduced factor is nonzero at one and computed root multiplicity. | For order `N>=2`, the multiplicity is exactly `N-floor(log_2 N)-1`. At `N=1`, it is one, so the unrestricted source formula has a genuine boundary exception. | Register both the generic theorem and the order-one correction. |
 | `MERTENS_AND_LOW_ORDERS` | Evaluated the characteristic polynomial at zero and compiled orders one through four. | Evaluation gives `(-1)^N M(N)` with project indexing; the first four source polynomials fix the sign and indexing conventions. | Run all local gates. |
 | `LOCAL_GATES` | Ran warning-as-error production, Targets, TargetChecks, and AxiomsAudit compiles; scanned forbidden declarations and resource relaxations; ran `git diff --check` and the full build. | One proven Target, eight exact checks, seven standard-only axiom prints, empty scans, and `8772/8772` build all pass. | Freeze and publish the implementation. |
+| `IMPLEMENTATION_PUBLIC` | Published frozen implementation commit `4fbad00c4c24c8a5ae9b9885b0a23da82744665b`. | Public run `30209691871`, build job `89813735900`, passed in `2m24s`; the proof source is frozen. | Publish docs-only immutable evidence with no `LeanLab/` change. |
 
 ## Runtime record
 

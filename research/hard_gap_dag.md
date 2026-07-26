@@ -2393,7 +2393,7 @@ publicly closed.
 ## 2026-07-26 H9 Redheffer characteristic-polynomial local endpoint
 
 - `node`: `H9-REDHEFFER-CHARACTERISTIC-POLYNOMIAL-01`.
-- `local_status`: `REDHEFFER_CHARACTERISTIC_POLYNOMIAL_FORMALIZED / IMPLEMENTATION_CI_REQUIRED`.
+- `local_status`: `REDHEFFER_CHARACTERISTIC_POLYNOMIAL_FORMALIZED / IMMUTABLE_EVIDENCE_CI_REQUIRED`.
 - `closed_edges`:
   `ordered-factor recursion -> minimal-product and logarithmic support`;
   `cleared polynomial row eliminator -> exact characteristic-matrix product`;
@@ -2413,3 +2413,7 @@ publicly closed.
 - `next_gate`: freeze and publish the implementation, then publish immutable evidence and a
   final ledger before fresh cross-family route selection.
 - `global_goal`: active.
+
+Frozen implementation commit `4fbad00c4c24c8a5ae9b9885b0a23da82744665b` passed public Lean
+Action run `30209691871`, build job `89813735900`, in `2m24s`. Proof source is frozen; the
+next gate is docs-only immutable evidence.
