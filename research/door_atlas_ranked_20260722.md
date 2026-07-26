@@ -1465,3 +1465,7 @@ new number-field source/descent structure, not this finite-dimensional inference
 
 Frozen implementation commit `011ce4d16bb565d03059ae220e9ad1996e6ec7cb` passed public run
 `30206491939`, build job `89805380158`, in `2m25s`. Docs-only immutable evidence is next.
+
+Docs-only immutable evidence `66071f7a4cb4685be1434f8b28558c209a004f78` passed run
+`30206663217`, build job `89805830462`, in `1m35s`; proof source remained frozen. Only
+final-ledger CI remains.

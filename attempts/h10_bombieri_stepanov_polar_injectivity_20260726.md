@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H10-BOMBIERI-STEPANOV-POLAR-INJECTIVITY-01`
 
 Selected node: `H10-E-BOMBIERI-STEPANOV-POLAR-INJECTIVITY-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Target
 
@@ -37,6 +37,7 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 | `POSITIVE_WITNESS` | Realized the blocks `1` and `X` in width two. | Two exact output coefficients equal one, and the realized polynomial is nonzero. | Run all local gates. |
 | `LOCAL_GATES` | Ran warning-as-error production, Targets, TargetChecks, and AxiomsAudit compiles; scanned forbidden declarations and resource relaxations; ran the full build. | One proven Target, six exact checks, six standard-only axiom prints, empty scans, and `8770/8770` build all pass. | Freeze and publish the implementation. |
 | `IMPLEMENTATION_PUBLIC` | Published frozen implementation `011ce4d16bb565d03059ae220e9ad1996e6ec7cb`. | Public run `30206491939`, build job `89805380158`, passed in `2m25s`. | Keep `LeanLab/` frozen and publish immutable evidence. |
+| `IMMUTABLE_EVIDENCE_PUBLIC` | Published docs-only evidence `66071f7a4cb4685be1434f8b28558c209a004f78` and compared it with the frozen implementation. | Public run `30206663217`, build job `89805830462`, passed in `1m35s`; `LeanLab/` diff is empty. | Publish the final ledger and require its own public CI. |
 
 ## Runtime record
 
@@ -61,3 +62,8 @@ remain untouched and unstaged.
 
 Frozen implementation: `011ce4d16bb565d03059ae220e9ad1996e6ec7cb`. No Lean proof-source
 changes are permitted during immutable evidence and final-ledger publication.
+
+After final-ledger CI, close only this fixed finite-dimensional noncancellation endpoint and
+return the active global Goal to fresh cross-family route selection. Keep the actual curve
+valuation theorem, number-field source/descent construction, conjecture generation, and direct
+RH attacks open.

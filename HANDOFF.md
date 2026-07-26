@@ -4617,3 +4617,18 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   counts, number-field source/descent structure, and RH.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H10 polar-injectivity immutable evidence public green
+
+- `frozen_implementation`: commit `011ce4d16bb565d03059ae220e9ad1996e6ec7cb` passed run
+  `30206491939`, build job `89805380158`, in `2m25s`.
+- `immutable_evidence`: docs-only commit `66071f7a4cb4685be1434f8b28558c209a004f78`
+  passed run `30206663217`, build job `89805830462`, in `1m35s`.
+- `proof_freeze_verified`: no `LeanLab/` difference between the frozen implementation and
+  immutable-evidence commits.
+- `result`: `SOURCE_NONCANCELLATION_GATE_FORMALIZED`.
+- `next_gate`: publish one docs-only final ledger and require public CI.
+- `after_closure`: return the active global Goal to cross-family historical-route selection;
+  retain actual curve polar injectivity and any number-field source/descent analogue as open.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

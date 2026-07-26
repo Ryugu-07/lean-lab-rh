@@ -177,6 +177,9 @@ object.
 `011ce4d16bb565d03059ae220e9ad1996e6ec7cb` passed run `30206491939`. The actual curve
 polar-order theorem remains open.
 
+Immutable-evidence commit `66071f7a4cb4685be1434f8b28558c209a004f78` passed run
+`30206663217` with proof source unchanged. Final-ledger CI remains.
+
 ## Recommendation
 
 Keep H10-B as the finite spectral endpoint and H10-D as the source-algebra endpoint. Continue the
