@@ -8,7 +8,7 @@ Selected node: `H1-HARDY-CRITICAL-LINE-REAL-SIGN-BRIDGE-01`
 
 Mode: `LITERATURE`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
+Status: `PUBLICLY_CLOSED`
 
 ## Selection rationale
 
@@ -257,3 +257,8 @@ difference between the frozen implementation and evidence commits.
 The next gate is one docs-only final ledger and its public CI. It closes only the real
 critical-line xi/sign-consumer endpoint; endpoint signs, Hardy's transform, separated and
 distinct witnesses, critical-line infinitude, H1, and RH remain open.
+
+Final-ledger commit `24567b9a7bd2baae902c83ffbb1b2281a676a074` passed public Lean
+Action run `30213706063`, build job `89824117700`, in `1m50s`. The fixed endpoint is publicly
+closed. Fresh cross-family selection chose the missing Farey--Mobius transform; all Hardy
+transform, endpoint-sign, distinctness, infinitude, H1, and RH boundaries remain unchanged.

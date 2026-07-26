@@ -4403,3 +4403,25 @@ publish docs-only immutable evidence next.
 Docs-only immutable-evidence commit `657b6dd3fa33e00d9c4f79ef3d4b64fa09b3d2de` passed run
 `30213562165`, build job `89823746008`, in `2m22s`; the frozen implementation has no
 `LeanLab/` difference. Only final-ledger CI remains before returning to route selection.
+
+Final-ledger commit `24567b9a7bd2baae902c83ffbb1b2281a676a074` passed run
+`30213706063`, build job `89824117700`, in `1m50s`; the exact Hardy real-coordinate and
+sign-consumer endpoint is publicly closed. Endpoint signs and Hardy's original transform remain
+open.
+
+## H9 Farey--Mobius--Weyl Transform Selection
+
+Fresh route selection opens a canonical historical branch that has no production Lean coverage.
+Kanemitsu--Yoshimoto's finite Farey transform separates an exact arithmetic identity from the
+later RH-equivalent estimates: for reduced positive pairs `0<a<=q<=N`, an arbitrary test sum is
+the sum of complete numerator blocks weighted by `M(floor(N/n))`.
+
+Campaign `LITERATURE-20260726-H9-FAREY-MOBIUS-WEYL-01` fixes the actual pair convention,
+uniqueness of reduced rational representation, totient cardinality, the generic finite transform,
+and its frequency-one specialization. At that frequency all complete blocks except `n=1`
+vanish, leaving exactly `finiteMertens(N)`.
+
+This campaign does not prove an ordered Farey discrepancy estimate, equidistribution rate,
+Mertens cancellation, H9, or RH. It is selected for historical breadth and omission auditing,
+not because it follows the most recent implementation. Public preregistration CI is required
+before proof-source editing.

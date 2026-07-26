@@ -159,3 +159,12 @@ The local implementation now compiles every fixed interface theorem in the 179-l
 `HardyCriticalLineSign.lean`. Both sign orientations return an actual nontrivial critical-line
 zero with closed-interval membership; the sequence theorem returns one witness per registered
 interval and does not claim distinctness. Implementation public CI remains the next gate.
+
+The full public chain is now closed: preregistration
+`fa9f7842d87263370e4c166553f130d6e3d3ca2d`, frozen implementation
+`98bf9927a8a331cd0da7541492cc4502c29e24ee`, immutable evidence
+`657b6dd3fa33e00d9c4f79ef3d4b64fa09b3d2de`, and final ledger
+`24567b9a7bd2baae902c83ffbb1b2281a676a074` are public-green. This closes only the
+real-coordinate and sign-consumer entry. Hardy's source transform, actual endpoint signs,
+separated distinct witnesses, critical-line infinitude, H1, and RH remain open. Fresh route
+selection rotates to the missing Farey arithmetic branch rather than extending H1 by momentum.

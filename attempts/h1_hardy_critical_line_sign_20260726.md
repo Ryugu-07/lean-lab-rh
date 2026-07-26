@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H1-HARDY-CRITICAL-LINE-SIGN-01`
 
 Selected node: `H1-HARDY-CRITICAL-LINE-REAL-SIGN-BRIDGE-01`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
+Status: `PUBLICLY_CLOSED`
 
 ## Target
 
@@ -41,6 +41,7 @@ Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 | `LOCAL_GATES` | Added one aggregate Target, five exact checks, and nine selected axiom prints; ran standalone, warning-as-error, forbidden, and full-build checks. | Selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`; new-module scan is empty; full build passes `8774/8774`. | Freeze and publish implementation. |
 | `IMPLEMENTATION_PUBLIC_CI` | Froze and pushed the complete implementation and local ledgers. | Commit `98bf9927a8a331cd0da7541492cc4502c29e24ee` passed run `30213428759`, job `89823396107`, in `2m6s`. | Freeze all `LeanLab/` files and publish docs-only immutable evidence. |
 | `IMMUTABLE_EVIDENCE_PUBLIC_CI` | Published docs-only proof-freeze evidence. | Commit `657b6dd3fa33e00d9c4f79ef3d4b64fa09b3d2de` passed run `30213562165`, job `89823746008`, in `2m22s`; the implementation-to-evidence `LeanLab/` diff is empty. | Publish one docs-only final ledger and require public CI. |
+| `FINAL_LEDGER_PUBLIC_CI` | Published the docs-only final ledger. | Commit `24567b9a7bd2baae902c83ffbb1b2281a676a074` passed run `30213706063`, job `89824117700`, in `1m50s`. | Close only the fixed sign-consumer node and return to cross-family selection. |
 
 ## Runtime record
 
@@ -78,5 +79,7 @@ The six inherited user/exposure files remain untouched and unstaged.
   prints, empty forbidden scan, warning-as-error compile, and full `8774/8774` build.
 - `frozen_implementation`: `98bf9927a8a331cd0da7541492cc4502c29e24ee`, public-green.
 - `immutable_evidence`: `657b6dd3fa33e00d9c4f79ef3d4b64fa09b3d2de`, public-green.
-- `next_gate`: docs-only final ledger and public Lean Action CI.
+- `final_ledger`: `24567b9a7bd2baae902c83ffbb1b2281a676a074`, public-green.
+- `next_gate`: none for this fixed node; Farey--Franel--Landau is selected by fresh
+  cross-family route choice.
 - `global_goal`: active.

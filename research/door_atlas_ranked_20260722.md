@@ -1610,3 +1610,20 @@ next gate is docs-only immutable evidence.
 Docs-only immutable-evidence commit `5448bd74cdf55a8ead8847f6c7cd50e21e8711e7` passed run
 `30212403937`, build job `89820745802`, in `1m39s`, with no `LeanLab/` change from the frozen
 implementation. Only final-ledger CI remains.
+
+### Post-Hardy rerank: Farey--Franel--Landau arithmetic transform
+
+The Hardy real-coordinate/sign-consumer endpoint is publicly closed at final ledger
+`24567b9a7bd2baae902c83ffbb1b2281a676a074`. Fresh comparison retains Hardy's original
+transform, Riesz decay, Redheffer estimates, H2 density, H7 spectral convergence, H10
+function-field transfer, H11 pair correlation, and H12 Speiser as live branches.
+
+Farey is selected because it is a canonical historical RH-equivalent branch still absent from
+production Lean. Kanemitsu--Yoshimoto Lemma 3 exposes a bounded exact entry: a reduced positive
+Farey test sum equals complete numerator-block sums weighted by `M(floor(N/n))`. The
+frequency-one exponential specialization collapses exactly to `M(N)`.
+
+Campaign `LITERATURE-20260726-H9-FAREY-MOBIUS-WEYL-01` freezes source endpoint conventions,
+reduced-value uniqueness, totient cardinality, the arbitrary-test transform, and the
+frequency-one specialization. It does not prove ordering, discrepancy decay, Mertens growth,
+H9, or RH. Production editing remains closed until docs-only preregistration passes public CI.

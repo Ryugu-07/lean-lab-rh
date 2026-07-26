@@ -4986,3 +4986,35 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   transform, separated sign brackets, critical-line infinitude, H1, and RH as open.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H1 Hardy critical-line sign bridge publicly closed
+
+- `final_ledger`: commit `24567b9a7bd2baae902c83ffbb1b2281a676a074` passed run
+  `30213706063`, build job `89824117700`, in `1m50s`.
+- `public_chain`: preregistration `fa9f7842d87263370e4c166553f130d6e3d3ca2d`, frozen
+  implementation `98bf9927a8a331cd0da7541492cc4502c29e24ee`, immutable evidence
+  `657b6dd3fa33e00d9c4f79ef3d4b64fa09b3d2de`, and final ledger are public-green.
+- `closed_only`: literal critical-line geometry, actual project-xi real/even/continuous
+  coordinate, exact nontrivial-zero dictionary, and interval/sequence sign consumers.
+- `unchanged`: endpoint signs, Hardy's transform, distinct witnesses, critical-line infinitude,
+  H1, and RH remain open.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H9 Farey--Mobius--Weyl transform selected
+
+- `campaign`: `LITERATURE-20260726-H9-FAREY-MOBIUS-WEYL-01`.
+- `node`: `H9-FAREY-MOBIUS-WEYL-TRANSFORM-01`.
+- `selection_reason`: Farey--Franel--Landau is a canonical historical RH-equivalent family
+  absent from production Lean. Its exact finite Mobius transform can be audited before the open
+  discrepancy estimates and without first constructing an ordered Farey enumeration.
+- `fixed_endpoint`: source-aligned reduced positive pairs, rational-value uniqueness, totient
+  cardinality, the exact arbitrary-test-function Mertens transform, primitive frequency-one
+  sums, and the global Farey Weyl sum equal to `finiteMertens`.
+- `strict_boundary`: no ordered discrepancy theorem, equidistribution rate, Mertens growth,
+  H9, or RH.
+- `production_gate`: docs-only preregistration public CI before any `LeanLab/` edit.
+- `after_closure`: return to cross-family selection before choosing ordered Farey discrepancy,
+  Hardy's transform, or another historical branch.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

@@ -2519,3 +2519,25 @@ Docs-only immutable-evidence commit `657b6dd3fa33e00d9c4f79ef3d4b64fa09b3d2de` p
 Lean Action run `30213562165`, build job `89823746008`, in `2m22s`; `LeanLab/` remains
 identical to the frozen implementation. Final-ledger CI is the only remaining gate for this
 fixed node.
+
+Final-ledger commit `24567b9a7bd2baae902c83ffbb1b2281a676a074` passed public Lean
+Action run `30213706063`, build job `89824117700`, in `1m50s`; the fixed Hardy entry node is
+publicly closed and cross-family selection resumed.
+
+## 2026-07-26 H9 Farey--Mobius--Weyl transform launch
+
+- `node`: `H9-FAREY-MOBIUS-WEYL-TRANSFORM-01`.
+- `mode`: `LITERATURE`.
+- `fixed_edge`:
+  `reduced positive Farey pairs -> exact source normalization and no duplicate rationals`;
+  `pair blocks -> totient cardinality`;
+  `finite Mobius inversion -> arbitrary-test Farey sum weighted by M(floor(N/n))`;
+  `frequency-one complete root sums -> primitive block mu(q) and total M(N)`.
+- `negative_controls`: no zero denominator, no accidental `0/1`, no duplicate `1/1`, no
+  detached root-of-unity substitute, no ordering claim, no discrepancy estimate, and no Mertens
+  growth premise.
+- `open_H9_edges`: ordered Franel discrepancy formulas; RH-equivalent discrepancy estimates;
+  Mertens square-root cancellation; H9 and RH.
+- `classification_target`: `FAREY_MOBIUS_WEYL_TRANSFORM_FORMALIZED`, with normalization,
+  exact-transform, and historical-coverage deltas but no hard-gap or RH-frontier delta.
+- `global_goal`: active.
