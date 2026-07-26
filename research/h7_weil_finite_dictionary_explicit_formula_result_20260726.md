@@ -4,7 +4,7 @@ Date: 2026-07-26
 
 Campaign: `LITERATURE-20260726-H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
+Status: `PUBLICLY_CLOSED`
 
 ## Result
 
@@ -72,7 +72,9 @@ Action run `30185492253`, build job `89749281543`. Frozen implementation commit
 `f0d76ee081c22381f6ffc208b024268b090fc35c` passed run `30187598839`, build job
 `89754974406`, in `2m48s`. Docs-only immutable-evidence commit
 `0a15b1d951c978ece49da9b477686cc1e61d6939` passed run `30187720024`, build job
-`89755296426`, in `1m33s`; proof source remained frozen. Final-ledger CI is pending.
+`89755296426`, in `1m33s`; proof source remained frozen. Final-ledger commit
+`31362f4044e99651d7567f91dc4fd8a701974f38` passed run `30187802034`, build job
+`89755512303`, in `1m29s`; the fixed campaign is publicly closed.
 
 ## Claim Boundary
 

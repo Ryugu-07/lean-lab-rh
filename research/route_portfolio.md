@@ -3825,5 +3825,26 @@ selected standard-only axiom prints, empty forbidden scan, and full `8762/8762` 
 Frozen implementation commit `f0d76ee081c22381f6ffc208b024268b090fc35c` passed public Lean
 Action run `30187598839`, build job `89754974406`, in `2m48s`. Proof source remains frozen;
 docs-only immutable-evidence commit `0a15b1d951c978ece49da9b477686cc1e61d6939`
-passed run `30187720024`, build job `89755296426`, in `1m33s`. Final-ledger CI precedes fresh
-cross-route ranking.
+passed run `30187720024`, build job `89755296426`, in `1m33s`. Final-ledger commit
+`31362f4044e99651d7567f91dc4fd8a701974f38` passed run `30187802034`, build job
+`89755512303`, in `1m29s`; the fixed explicit-formula edge is publicly closed.
+
+## H1 Bettin--Gonek Moment-to-Power Bridge Selection
+
+Fresh comparison now selects the remaining analytic assembly in Bettin--Gonek Theorem 1. The
+actual mollifier Mellin identity, inverse Mellin support and convolution, selected-zero contour
+residue, and exponent consumer already compile. The missing endpoint is no longer a general
+source reconstruction: it is the exact implication from `FarmerLongMollifierBound theta` to the
+selected-zero power obstruction.
+
+The new attack specializes honestly to the source interval `[0,T]`. Instead of importing a full
+critical-line second-moment asymptotic, it uses continuity and nonvanishing at one fixed
+low-height point to obtain positive zeta mass on a compact interval. The convolution cutoff is
+partitioned into unit intervals, and the compiled interpolation reduces every real cutoff to
+neighboring integer mollifiers before finite Cauchy--Schwarz and the assumed moment bound are
+applied.
+
+Campaign `LITERATURE-20260726-H1-BETTIN-GONEK-MOMENT-TO-POWER-BRIDGE-01` requires the complete
+bridge and the source corollary `FarmerThetaInfinityConjecture -> RiemannHypothesis`. Farmer's
+conjecture remains open and unavailable as an unconditional premise. Production Lean editing is
+gated on public preregistration CI.

@@ -2,7 +2,7 @@
 
 Date: 2026-07-26
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
+Status: `PUBLICLY_CLOSED / SUCCESSOR_SELECTED_SEPARATELY`
 
 Parent closure: `0e10b1899daf7ce0c3ce48ab4ccd857d7e9c61c8`, public Lean Action run
 `30185002301`, build job `89747968167`, passed in `1m53s`.
@@ -110,4 +110,9 @@ This result closes only the selected finite-dictionary explicit-formula edge, wi
 Frozen implementation commit `f0d76ee081c22381f6ffc208b024268b090fc35c` passed public Lean
 Action run `30187598839`, build job `89754974406`, in `2m48s`. Proof source is frozen;
 docs-only immutable-evidence commit `0a15b1d951c978ece49da9b477686cc1e61d6939` passed run
-`30187720024`, build job `89755296426`, in `1m33s`. Final-ledger publication is next.
+`30187720024`, build job `89755296426`, in `1m33s`. The proof source remained frozen.
+
+Final-ledger commit `31362f4044e99651d7567f91dc4fd8a701974f38` passed public Lean
+Action run `30187802034`, build job `89755512303`, in `1m29s`. The fixed H7 campaign is
+publicly closed; successor selection is recorded in
+`research/route_selection_post_h7_dictionary_explicit_formula_20260726.md`.

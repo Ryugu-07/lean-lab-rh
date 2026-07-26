@@ -1167,4 +1167,22 @@ fresh cross-route ranking follow.
 Frozen implementation commit `f0d76ee081c22381f6ffc208b024268b090fc35c` passed public Lean
 Action run `30187598839`, build job `89754974406`, in `2m48s`. Docs-only immutable-evidence
 commit `0a15b1d951c978ece49da9b477686cc1e61d6939` passed run `30187720024`, build job
-`89755296426`, in `1m33s`. Final-ledger publication remains before reranking.
+`89755296426`, in `1m33s`. Final-ledger commit
+`31362f4044e99651d7567f91dc4fd8a701974f38` passed run `30187802034`, build job
+`89755512303`, in `1m29s`; the fixed H7 edge is publicly closed.
+
+### Post-H7 rerank: H1 Bettin--Gonek moment-to-power bridge
+
+The cross-route comparison returns to D3/H1, but not to the already closed inverse-Mellin
+endpoint. Equations `(2.1)`--`(2.5)` now compile for the actual mollifier and selected zero. The
+remaining source theorem is the full moment-to-power assembly that turns a uniform
+`I_N(0,T)` bound into an individual-zero exclusion.
+
+The source `[0,T]` normalization exposes a useful simplification: fixed positive zeta mass on
+one low-height compact interval is enough for the lower side. It can be combined with uniform
+residue bounds and a unit-interval partition of the real cutoff, reducing the upper side to the
+integer moments already named by `FarmerLongMollifierBound`.
+
+This is selected as a complete known-theorem formalization. On success, Farmer's arbitrary-length
+mollifier conjecture remains the sole open premise in this H1 implication to RH. H12 analytic
+counts, H2 actual bow exclusion, H10 transfer, and H7 positivity/density remain open reserves.

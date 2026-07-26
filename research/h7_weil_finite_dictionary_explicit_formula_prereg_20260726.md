@@ -8,7 +8,7 @@ Selected node: `H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
+Status: `PUBLICLY_CLOSED`
 
 ## Baseline
 
@@ -223,5 +223,7 @@ Attack A closed the endpoint. The local mechanical gate passes `8762/8762`. Froz
 implementation commit `f0d76ee081c22381f6ffc208b024268b090fc35c` passed public Lean Action
 run `30187598839`, build job `89754974406`, in `2m48s`. Docs-only immutable-evidence commit
 `0a15b1d951c978ece49da9b477686cc1e61d6939` passed run `30187720024`, build job
-`89755296426`, in `1m33s`; final-ledger CI is pending. See
+`89755296426`, in `1m33s`. Final-ledger commit
+`31362f4044e99651d7567f91dc4fd8a701974f38` passed run `30187802034`, build job
+`89755512303`, in `1m29s`; the fixed campaign is publicly closed. See
 `research/h7_weil_finite_dictionary_explicit_formula_result_20260726.md`.

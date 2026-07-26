@@ -1668,7 +1668,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 
 ## 2026-07-23 H7 archimedean tail density implementation public-green
 
-- `status`: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`.
+- `status`: `PUBLICLY_CLOSED`.
 - `compiled`: literal `h_+` and interval source, justified `x` differentiation, exact node and
   true-source diagonal values, actual finite divided-difference matrix, rank-two Cauchy density,
   reflection, all-vector two-square identity, and conditional integrated-increment PSD.
@@ -1931,5 +1931,32 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   passed Lean Action run `30187598839`, build job `89754974406`, in `2m48s`; proof source
   remains frozen.
 - `immutable_evidence`: docs-only commit `0a15b1d951c978ece49da9b477686cc1e61d6939`
-  passed run `30187720024`, build job `89755296426`, in `1m33s`; final-ledger CI remains.
+  passed run `30187720024`, build job `89755296426`, in `1m33s`.
+- `final_ledger`: commit `31362f4044e99651d7567f91dc4fd8a701974f38` passed public Lean
+  Action run `30187802034`, build job `89755512303`, in `1m29s`; the fixed edge is publicly
+  closed.
 - `global_goal`: active; H7 and RH remain open.
+
+## 2026-07-26 H1 Bettin--Gonek moment-to-power bridge selected
+
+- `node`: `H1-BETTIN-GONEK-MOMENT-TO-POWER-BRIDGE-01`.
+- `status`: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`.
+- `parent_closed`: H7 finite-dictionary explicit-formula final ledger
+  `31362f4044e99651d7567f91dc4fd8a701974f38`, public run `30187802034`, build job
+  `89755512303`, passed in `1m29s`.
+- `fixed_edge`: prove `BettinGonekMomentToPowerBridge theta` for every positive `theta` from the
+  actual source mollifier, inverse Mellin convolution, contour residue, and integer moment bound;
+  then discharge the bridge premise in the theta-infinity-to-RH consumer.
+- `material_reentry`: the prior H1 campaign stopped at equation `(2.4)`. This campaign assembles
+  `(2.4)` and `(2.5)` with the moment hypothesis and exact asymptotics.
+- `new_attack`: for the `[0,T]` source theorem, use positive zeta mass on one fixed low-height
+  interval, uniform compact residue bounds, integer partition of the real cutoff, and finite
+  Cauchy--Schwarz. This avoids requiring the stronger full critical-line second-moment
+  asymptotic previously listed as the first input.
+- `available_both_sides`: equations `(2.1)`--`(2.5)`, real cutoff interpolation,
+  `FarmerLongMollifierBound`, `BettinGonekPowerObstruction`, and the RH exponent consumer compile.
+- `claim_boundary`: the bridge is a known unconditional theorem, but
+  `FarmerThetaInfinityConjecture` remains open. Success does not prove RH unconditionally.
+- `next_gate`: publish the docs-only preregistration and require public CI before production
+  Lean editing.
+- `global_goal`: active.

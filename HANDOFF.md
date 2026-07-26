@@ -3989,7 +3989,7 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 
 - `campaign`:
   `LITERATURE-20260726-H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`.
-- `status`: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`.
+- `status`: `PUBLICLY_CLOSED`.
 - `production_gate`: preregistration commit
   `002a775afd9dbfa5d5d2006b531523b6a0e84414` passed Lean Action run `30185492253`,
   build job `89749281543`; all production edits occurred afterward.
@@ -4011,11 +4011,36 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   frozen.
 - `immutable_evidence`: docs-only commit `0a15b1d951c978ece49da9b477686cc1e61d6939`
   passed run `30187720024`, build job `89755296426`, in `1m33s`; proof source remained frozen.
-- `next_gate`: publish this docs-only final ledger and require public CI. On success close only
-  this fixed explicit-formula campaign and return to fresh cross-route selection.
+- `final_ledger`: commit `31362f4044e99651d7567f91dc4fd8a701974f38` passed public Lean
+  Action run `30187802034`, build job `89755512303`, in `1m29s`; the fixed campaign is
+  publicly closed.
 - `delta`: `source_analytic_bridge_delta=1`, `historical_route_coverage_delta=1`,
   `hard_gap_delta=0`, `rh_frontier_delta=0`.
 - `boundary`: positivity, inverse/density, cutoff limits, simple-even ground states, H7, and RH
-  remain open. Attack B was not needed. Freeze and publish the implementation, then return to
-  fresh cross-route selection; the persistent RH Goal remains active.
+  remain open. Attack B was not needed. The persistent RH Goal remains active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H1 Bettin--Gonek moment-to-power bridge selected
+
+- `campaign`:
+  `LITERATURE-20260726-H1-BETTIN-GONEK-MOMENT-TO-POWER-BRIDGE-01`.
+- `node`: `H1-BETTIN-GONEK-MOMENT-TO-POWER-BRIDGE-01`.
+- `status`: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`.
+- `selection`: fresh H1/H2/H7/H10/H12 comparison selects the complete analytic assembly in
+  Bettin--Gonek Theorem 1. H12 remains a broad indented-contour/sign package, H2 lacks an
+  actual-zeta bow amplifier, H10 lacks a transfer object, and post-formula H7 enters
+  positivity/density statements carrying essentially RH strength.
+- `material_difference`: the prior H1 campaign proved the actual inverse Mellin convolution and
+  equation `(2.4)`. This campaign must combine `(2.4)` and `(2.5)` with the actual uniform
+  integer moment hypothesis and derive `BettinGonekPowerObstruction`.
+- `new_attack`: specialize to `[0,T]` and use a fixed low-height compact interval where the
+  critical-line zeta squared norm has positive mass. Uniform residue/kernel bounds and a
+  unit-interval real-cutoff partition reduce the proof to the integer moments. This avoids the
+  stronger full second-moment asymptotic previously listed as necessary.
+- `fixed_endpoint`: prove `BettinGonekMomentToPowerBridge theta` for every positive `theta`, then
+  compile `FarmerThetaInfinityConjecture -> RiemannHypothesis` with no abstract bridge premise.
+- `strict_boundary`: Farmer's arbitrary-length moment conjecture is not proved or assumed in
+  unconditional work; success is a known conditional theorem with `rh_frontier_delta=0`.
+- `next_gate`: commit and publish the docs-only preregistration. Production Lean editing remains
+  closed until public CI passes.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
