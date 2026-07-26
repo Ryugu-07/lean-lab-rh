@@ -8,7 +8,7 @@ Selected node: `H1-BETTIN-GONEK-INVERSE-MELLIN-CONVOLUTION-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PUBLIC_IMPLEMENTATION_GREEN / EVIDENCE_CI_PENDING`
+Status: `IMMUTABLE_EVIDENCE_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Baseline
 
@@ -207,4 +207,5 @@ Farmer's conjecture, H1, and RH remain open.
 
 Frozen implementation commit `b99a10f3b0543587c1aacdd992e88b28ea9f35e5` passed public Lean
 Action run `30183853748`, build job `89744990702`, in `2m24s`. Proof source is frozen;
-immutable-evidence and final-ledger CI remain.
+immutable-evidence commit `5b3e5da98bf7bc596fcc53646c960e4c44e99ddb` passed run
+`30183962685`, build job `89745272540`, in `2m6s`. Only final-ledger CI remains.
