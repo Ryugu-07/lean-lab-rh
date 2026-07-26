@@ -9,7 +9,7 @@ Selected node: `H12-LM-LOGDERIV-MASS-BRIDGE-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Primary source
 
@@ -275,7 +275,9 @@ the full dichotomy, Speiser equivalence, or RH.
 
 Frozen implementation commit `076b4e2023114c33fdf80cce123bc91c07d5c5a0` passed public Lean
 Action run `30192061892`, build job `89766933675`, in `2m14s`. The proof source is frozen.
-Only docs-only immutable evidence and final-ledger publication remain for this fixed campaign.
+Docs-only immutable-evidence commit `3b730f836bb61dde7cc15062015dc2fe7b33986b`
+passed run `30192188923`, build job `89767296489`, in `1m53s`; the proof source remained
+unchanged. Only final-ledger publication remains for this fixed campaign.
 
 ## Mechanical and publication gates
 

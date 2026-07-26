@@ -7,7 +7,7 @@ Campaign:
 
 Selected node: `H12-LM-LOGDERIV-MASS-BRIDGE-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Target
 
@@ -53,6 +53,20 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 | `MASS_AND_COUNT_CONSUMER` | Combined `(2.1)`, strict archimedean negativity, the paired mass identity, and the existing integer-height count injection. | Both `levinsonMontgomeryPairedMass_neg_of_logDeriv_riemannZeta_re_nonneg` and `levinsonMontgomeryDenseBranch_of_eventuallyNonnegativeLogDerivAtIntegers` compile. | Register and audit the fixed endpoint. |
 | `LOCAL_AUDIT` | Added the proven Target, seven exact TargetChecks, and seven selected axiom prints; ran direct warning-as-error checks, forbidden scans, patch check, and the full build. | The 615-line module and registries pass; selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`; the full build passes `8765/8765`. | Freeze the implementation and require public CI. |
 | `IMPLEMENTATION_PUBLIC` | Published the frozen proof implementation and registries. | Commit `076b4e2023114c33fdf80cce123bc91c07d5c5a0` passed public run `30192061892`, build job `89766933675`, in `2m14s`. | Keep proof source frozen and publish immutable evidence. |
+| `IMMUTABLE_EVIDENCE_PUBLIC` | Published the implementation run identifiers and exact claim boundary without changing proof source. | Docs-only commit `3b730f836bb61dde7cc15062015dc2fe7b33986b` passed run `30192188923`, build job `89767296489`, in `1m53s`. | Publish one final ledger and require CI. |
+
+## Final classification
+
+- `result`: `FULL_LOGDERIV_MASS_BRIDGE_SUCCESS`.
+- `source_analytic_bridge_delta`: `1`.
+- `historical_route_coverage_delta`: `1`.
+- `known_theorem_formalization_delta`: `0` until the full Levinson--Montgomery theorem.
+- `hard_gap_delta`: `0` for RH.
+- `rh_frontier_delta`: `0`.
+- `next_exact_H12_obstacle`: derive the low and critical boundary signs and the resulting
+  interior nonnegative-log-derivative witness in the source indented-contour argument.
+- `route_policy_after_closure`: return to cross-family historical `ROUTE_SELECTION`; do not
+  optimize the already sufficient Gamma constant unless a later proof edge requires it.
 
 ## Runtime record
 

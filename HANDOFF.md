@@ -4176,7 +4176,7 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 
 ## 2026-07-26 H12 log-derivative to paired-mass local result
 
-- `status`: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`.
+- `status`: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`.
 - `production_gate`: preregistration commit
   `8a3c54d5092c13b8489e2c92c49d586f79176e95` passed public Lean Action run
   `30191371867`, build job `89765103953`, in `1m49s`.
@@ -4200,10 +4200,16 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `public_implementation`: frozen commit
   `076b4e2023114c33fdf80cce123bc91c07d5c5a0` passed public Lean Action run
   `30192061892`, build job `89766933675`, in `2m14s`; proof source remains frozen.
+- `immutable_evidence`: docs-only commit
+  `3b730f836bb61dde7cc15062015dc2fe7b33986b` passed run `30192188923`, build job
+  `89767296489`, in `1m53s`; proof source remained frozen.
 - `strict_boundary`: no low-height zeta sign certificate, lower/critical contour signs,
   witness-existence alternative, indented argument principle, `O(log T)` count theorem, full
   dichotomy, Speiser equivalence, or RH.
-- `next_gate`: publish docs-only immutable evidence, then require one final-ledger public CI.
+- `classification`: `FULL_LOGDERIV_MASS_BRIDGE_SUCCESS`,
+  `source_analytic_bridge_delta=1`, `historical_route_coverage_delta=1`,
+  `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `next_gate`: publish one docs-only final ledger and require its public CI.
 - `global_goal`: active. After fixed-edge closure return to cross-family historical route
   selection; conjecture and direct-proof tracks remain open.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

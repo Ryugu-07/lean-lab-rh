@@ -3968,5 +3968,7 @@ boundaries; tightening the already sufficient Gamma constant is not selected as 
 Targets, exact checks, selected standard-only axiom prints, forbidden scans, and the full
 `8765/8765` build pass. Frozen implementation commit
 `076b4e2023114c33fdf80cce123bc91c07d5c5a0` passed public run `30192061892`, build job
-`89766933675`, in `2m14s`. The proof source remains frozen; immutable-evidence and final-ledger
-gates remain.
+`89766933675`, in `2m14s`. The proof source remains frozen. Docs-only immutable evidence
+`3b730f836bb61dde7cc15062015dc2fe7b33986b` passed run `30192188923`, build job
+`89767296489`, in `1m53s`; only final-ledger CI remains. Classify the fixed edge as
+`FULL_LOGDERIV_MASS_BRIDGE_SUCCESS` with `hard_gap_delta=0` and `rh_frontier_delta=0`.

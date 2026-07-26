@@ -1279,5 +1279,7 @@ Action run `30191371867`, build job `89765103953`, in `1m49s`. The warning-free 
 exact TargetChecks, standard-only selected axiom prints, empty forbidden scans, and full
 `8765/8765` build pass locally. Frozen implementation commit
 `076b4e2023114c33fdf80cce123bc91c07d5c5a0` passed public run `30192061892`, build job
-`89766933675`, in `2m14s`; the proof source is frozen. Docs-only evidence gates remain before
-fixed-edge closure and fresh cross-family ranking.
+`89766933675`, in `2m14s`; the proof source is frozen. Immutable-evidence commit
+`3b730f836bb61dde7cc15062015dc2fe7b33986b` passed run `30192188923`, build job
+`89767296489`, in `1m53s`; only final-ledger CI remains before fixed-edge closure and fresh
+cross-family ranking.
