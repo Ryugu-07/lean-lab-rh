@@ -4349,3 +4349,33 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `production_gate`: no proof-source edit before docs-only preregistration public CI.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H12 critical-zero indentation local success
+
+- `campaign`:
+  `LITERATURE-20260726-H12-LEVINSON-MONTGOMERY-CRITICAL-INDENTATION-01`.
+- `preregistration_public`: commit `54b5eabdf46acf44878db80cf2e38657f7fb7378` passed run
+  `30193955050`, build job `89772029846`, in `1m35s`.
+- `compiled_center_invariant`: the analytic unit in the exact local xi zero factor has
+  `Re(logDeriv g rho)=0`; this follows by differentiating the xi reflection symmetry and does
+  not use totalized `logDeriv` at the zero.
+- `compiled_actual_zeta_factor`: after division by the nonvanishing xi/zeta unit, actual zeta
+  has exact multiplicity `m>0` and an analytic residual with strictly negative logarithmic
+  derivative real part at the center.
+- `compiled_geometry`: residual continuity plus
+  `Re(m/(z-rho))<=0` on the closed left side proves a punctured negative left half-neighborhood,
+  then a complete positive-radius left semicircle including both critical-line endpoints.
+- `module`: `LeanLab/Riemann/LevinsonMontgomeryCriticalIndentation.lean`, 468 lines, no
+  warning-as-error diagnostics.
+- `local_gates`: proven Target, six exact TargetChecks, five selected standard-only axiom
+  prints, three empty forbidden scans, `git diff --check`, and full `8767/8767` build.
+- `classification`: `FULL_CRITICAL_INDENTATION_SUCCESS`,
+  `source_analytic_bridge_delta=1`, `historical_route_coverage_delta=1`,
+  `known_theorem_formalization_delta=0`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `strict_boundary`: bottom `t=10` certificate, cofinal admissible top contours, global
+  indented argument principle, exact count equality, `O(log T)`, full theorem, Speiser
+  equivalence, and RH remain open.
+- `next_gate`: freeze and publish the implementation; require public CI before immutable
+  evidence.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

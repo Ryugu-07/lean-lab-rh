@@ -1343,3 +1343,19 @@ D9's actual Conrey--Li counterexample becomes the leading breadth reserve, but i
 certified high-height xi evaluation or universality infrastructure. The H12 bottom certificate,
 top-contour admissibility, count theorem, Speiser equivalence, and RH remain open. Production
 editing requires public preregistration CI.
+
+### H12 critical-zero indentation local result
+
+The endpoint mechanism is now kernel-checked. Xi reflection forces the local analytic zero
+factor's residual logarithmic derivative to have zero real part at the critical-line center.
+After exact division by the completed-zeta unit, the zeta residual is strictly negative there
+and remains so nearby. Since the multiplicity pole has nonpositive real part on the closed left
+side, the whole punctured left half-neighborhood and every sufficiently small closed left
+semicircle are negative, endpoints included.
+
+This closes `H12-LM-CRITICAL-INDENTATION-01` locally as
+`FULL_CRITICAL_INDENTATION_SUCCESS`; implementation public CI remains pending. The next H12
+source gap is global rather than another endpoint estimate: certify the bottom contour, produce
+cofinal admissible tops, and formalize the indented argument-principle count and `O(log T)`
+comparison. Cross-family route selection resumes only after public closure of the fixed
+campaign.

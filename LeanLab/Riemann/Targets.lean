@@ -95,6 +95,7 @@ import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
 import LeanLab.Riemann.LevinsonMontgomeryLogDerivMassBridge
 import LeanLab.Riemann.LevinsonMontgomeryBoundarySigns
+import LeanLab.Riemann.LevinsonMontgomeryCriticalIndentation
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
@@ -1535,6 +1536,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``levinsonMontgomeryDenseBranch_of_not_cofinallyNegativeLogDerivAtIntegers
       status := .proven
       note := "Campaign LITERATURE-20260726-H12-LEVINSON-MONTGOMERY-BOUNDARY-SIGNS-01 generalizes GammaR differentiation and its logarithmic derivative from Re(s)>0 to every non-pole point. Xi has no imaginary-axis zero because every nontrivial zero has positive real part; exact factorization then proves zeta is nonzero there. Termwise paired-kernel algebra gives the two source signs, and classical negation yields the zero-free integer-height witness branch without exploiting totalized division at zeta zeros. Local analytic xi factorization and strict left-pointing negativity of the multiplicity pole also compile, but uniform critical-zero semicircle indentation, the bottom t=10 certificate, contour counts, O(log T), Speiser equivalence, and RH remain open." },
+    { id := "H12.speiser.levinson-montgomery-critical-indentation"
+      tier := .tier2
+      title := "Formalize the Levinson-Montgomery critical-zero indentation"
+      statement :=
+        "For every actual critical-line nontrivial zeta zero above height 10, prove that zeta is nonzero and Re(zeta'/zeta)<0 throughout a punctured left half-neighborhood, and hence on a complete positive-radius left semicircle including its two critical-line endpoints."
+      leanName := some ``exists_levinsonMontgomery_negative_left_semicircle
+      status := .proven
+      note := "Campaign LITERATURE-20260726-H12-LEVINSON-MONTGOMERY-CRITICAL-INDENTATION-01 differentiates the local xi reflection symmetry to prove that the exact analytic xi zero-factor residual has zero real logarithmic derivative at the center. Dividing by the analytic xi/zeta unit identifies the zeta residual with the strictly negative compiled archimedean term. Continuity plus the nonpositive multiplicity-pole real part then gives the full punctured left half-neighborhood and a complete source indentation semicircle without assuming zero simplicity or using the totalized logarithmic derivative at the zero. The bottom t=10 certificate, global admissible contour construction, argument-principle counts, O(log T), the full Levinson-Montgomery theorem, Speiser equivalence, and RH remain open." },
     { id := "H12.speiser.levinson-montgomery-analytic-counts"
       tier := .tier2
       title := "Prove the Levinson-Montgomery analytic count theorem"

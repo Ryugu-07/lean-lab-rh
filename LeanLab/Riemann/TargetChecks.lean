@@ -3,6 +3,7 @@ import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
 import LeanLab.Riemann.LevinsonMontgomeryLogDerivMassBridge
 import LeanLab.Riemann.LevinsonMontgomeryBoundarySigns
+import LeanLab.Riemann.LevinsonMontgomeryCriticalIndentation
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -4455,5 +4456,46 @@ example
     ∃ T0 : ℝ, ∀ T : ℝ, T0 ≤ T →
       T / 2 < (speiserUpperLeftZetaZeroCount T : ℝ) :=
   levinsonMontgomeryDenseBranch_of_not_cofinallyNegativeLogDerivAtIntegers h
+
+example {s : ℂ} (hsRe : s.re = 1 / 2) (hxi : riemannXi s ≠ 0) :
+    (logDeriv riemannXi s).re = 0 :=
+  levinsonMontgomery_logDeriv_riemannXi_re_eq_zero_on_criticalLine
+    hsRe hxi
+
+example {rho : ℂ} {m : ℕ} {g : ℂ → ℂ}
+    (hrhoRe : rho.re = 1 / 2) (hg : AnalyticAt ℂ g rho)
+    (hgne : g rho ≠ 0)
+    (hfactor : riemannXi =ᶠ[nhds rho] fun z => (z - rho) ^ m * g z) :
+    (logDeriv g rho).re = 0 :=
+  levinsonMontgomery_zeroFactor_logDeriv_re_eq_zero
+    hrhoRe hg hgne hfactor
+
+example {rho : ℂ} (hrho : IsNontrivialZero rho)
+    (hrhoRe : rho.re = 1 / 2) (hrhoIm : 10 ≤ rho.im) :
+    ∃ (m : ℕ) (h : ℂ → ℂ), 0 < m ∧ AnalyticAt ℂ h rho ∧ h rho ≠ 0 ∧
+      (riemannZeta =ᶠ[nhds rho] fun z => (z - rho) ^ m * h z) ∧
+      (logDeriv h rho).re < 0 :=
+  exists_riemannZeta_critical_zero_analytic_factor hrho hrhoRe hrhoIm
+
+example {rho z : ℂ} {m : ℕ} (hz : z ≠ rho)
+    (hleft : z.re ≤ rho.re) :
+    (((m : ℂ) / (z - rho)).re) ≤ 0 :=
+  levinsonMontgomery_principalZeroTerm_re_nonpos hz hleft
+
+example {rho : ℂ} (hrho : IsNontrivialZero rho)
+    (hrhoRe : rho.re = 1 / 2) (hrhoIm : 10 < rho.im) :
+    ∃ epsilon : ℝ, 0 < epsilon ∧
+      ∀ z : ℂ, dist z rho < epsilon → z ≠ rho → z.re ≤ 1 / 2 →
+        riemannZeta z ≠ 0 ∧ (logDeriv riemannZeta z).re < 0 :=
+  exists_levinsonMontgomery_critical_zero_left_neighborhood
+    hrho hrhoRe hrhoIm
+
+example {rho : ℂ} (hrho : IsNontrivialZero rho)
+    (hrhoRe : rho.re = 1 / 2) (hrhoIm : 10 < rho.im) :
+    ∃ r : ℝ, 0 < r ∧
+      ∀ z : ℂ, dist z rho = r → z.re ≤ 1 / 2 →
+        riemannZeta z ≠ 0 ∧ (logDeriv riemannZeta z).re < 0 :=
+  exists_levinsonMontgomery_negative_left_semicircle
+    hrho hrhoRe hrhoIm
 
 end LeanLab.Riemann

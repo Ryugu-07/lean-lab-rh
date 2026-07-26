@@ -9,7 +9,7 @@ Selected node: `H12-LM-CRITICAL-INDENTATION-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `FULL_CRITICAL_INDENTATION_SUCCESS_LOCAL / IMPLEMENTATION_CI_REQUIRED`
 
 ## Primary source
 
@@ -197,3 +197,50 @@ Expected classification on full success:
 
 No production Lean proof source may be created or edited until this docs-only preregistration
 passes public Lean Action CI.
+
+The gate passed at preregistration commit
+`54b5eabdf46acf44878db80cf2e38657f7fb7378`, public Lean Action run `30193955050`,
+build job `89772029846`, in `1m35s`.
+
+## Local result
+
+The complete fixed endpoint compiles in the 468-line
+`LeanLab/Riemann/LevinsonMontgomeryCriticalIndentation.lean` module.
+
+Attack B used the registered symmetry fallback rather than a limiting sequence of zero-free
+critical-line points. The exact local factor and
+`riemannXi (1-conj(z))=conj(riemannXi z)` imply a reflected identity for the analytic unit.
+Differentiating that identity at the center proves
+`Re(logDeriv g rho)=0` without evaluating the totalized logarithmic derivative of xi at its
+zero.
+
+Dividing the xi factor by the nonvanishing analytic xi/zeta unit produces the actual zeta
+factor. Its residual logarithmic derivative at the center has real part equal to the compiled
+archimedean term and is therefore strictly negative for `rho.im>=10`. Analyticity makes that
+residual negative and nonvanishing in a neighborhood. At every distinct point on the closed
+left side, the exact multiplicity term `m/(z-rho)` has nonpositive real part. Adding the two
+terms proves the stronger punctured-left-half-neighborhood endpoint and hence a complete
+positive-radius left semicircle including both critical-line endpoints.
+
+## Local mechanical audit
+
+- direct production compile with `-DwarningAsError=true`: pass with no diagnostics;
+- proven Target and six exact TargetChecks: pass;
+- five selected transitive axiom prints: only `propext`, `Classical.choice`, `Quot.sound`;
+- placeholder, custom-declaration, and resource-relaxation scans: empty;
+- `git diff --check`: pass;
+- full build: `8767/8767`.
+
+Local classification:
+
+- `result=FULL_CRITICAL_INDENTATION_SUCCESS`;
+- `source_analytic_bridge_delta=1`;
+- `historical_route_coverage_delta=1`;
+- `known_theorem_formalization_delta=0` until the full count theorem;
+- `hard_gap_delta=0`;
+- `rh_frontier_delta=0`.
+
+The implementation is not yet public-green. The bottom `t=10` certificate, cofinal admissible
+top contours, the global indented argument principle, exact zeta/zeta-derivative count equality,
+the `O(log T)` comparison, the full Levinson--Montgomery theorem, Speiser equivalence, and RH
+remain open.

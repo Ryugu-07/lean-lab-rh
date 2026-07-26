@@ -4061,3 +4061,24 @@ half-neighborhood and hence every sufficiently small source semicircle, includin
 The bottom `t=10` certificate, admissible top contours, argument principle, exact count equality,
 `O(log T)`, full Levinson--Montgomery theorem, Speiser equivalence, and RH remain outside the
 campaign. Public preregistration CI is required before proof-source editing.
+
+## H12 Levinson--Montgomery Critical-Zero Indentation Local Result
+
+The stronger registered repair compiles. Differentiating the reflected local xi factor proves
+that its analytic residual has zero real logarithmic derivative at a critical-line zero.
+Dividing by the exact nonvanishing xi/zeta unit leaves the already compiled strictly negative
+archimedean real term in the zeta residual.
+
+Continuity keeps that residual negative in a disk. The exact multiplicity term
+`m/(z-rho)` is nonpositive on the entire closed left side, including the two endpoint rays where
+its real part is zero. Their sum therefore proves actual zeta nonvanishing and strict
+`Re(zeta'/zeta)<0` on a punctured left half-neighborhood, and hence on a complete small left
+semicircle. No zero simplicity or totalized logarithmic-derivative value at the zero is used.
+
+The 468-line production module, proven Target, six exact TargetChecks, five standard-only axiom
+prints, empty forbidden scans, and full `8767/8767` build pass locally. Classify this as
+`FULL_CRITICAL_INDENTATION_SUCCESS`, with `source_analytic_bridge_delta=1`,
+`historical_route_coverage_delta=1`, `hard_gap_delta=0`, and `rh_frontier_delta=0`.
+Implementation CI remains required. The bottom certificate, top-contour admissibility, global
+argument principle, exact count comparison, full Levinson--Montgomery theorem, Speiser
+equivalence, and RH remain open.

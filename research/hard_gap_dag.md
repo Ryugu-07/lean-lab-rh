@@ -2158,3 +2158,25 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   principle, exact count equality, `O(log T)`, full theorem, Speiser equivalence, and RH.
 - `production_gate`: docs-only preregistration public CI before proof-source editing.
 - `global_goal`: active.
+
+## 2026-07-26 H12 critical-indentation local closure
+
+- `node`: `H12-LM-CRITICAL-INDENTATION-01`.
+- `local_status`: `FULL_CRITICAL_INDENTATION_SUCCESS / IMPLEMENTATION_CI_REQUIRED`.
+- `closed_edges`:
+  `xi reflection + local multiplicity factor -> center xi residual real part zero`;
+  `completed-zeta factorization -> center zeta residual real part negative`;
+  `residual continuity + closed-left principal sign -> punctured negative half-neighborhood`;
+  `positive subradius -> complete negative left semicircle including endpoints`.
+- `proof_surface`: actual xi, actual zeta, exact positive multiplicity, and no simplicity,
+  zero-table, RH, or totalized-log-derivative premise.
+- `local_audit`: one proven Target, six exact TargetChecks, five standard-only axiom prints,
+  empty forbidden scans, and full `8767/8767` build.
+- `next_open_H12_edges`:
+  `certified bottom t=10 sign + cofinal admissible top contours + global indented argument
+  principle + exact count equality + O(log T) -> full Levinson--Montgomery theorem`.
+- `classification`: `source_analytic_bridge_delta=1`,
+  `historical_route_coverage_delta=1`, `known_theorem_formalization_delta=0`,
+  `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `global_goal`: active; public implementation, immutable-evidence, and final-ledger CI remain
+  before route selection.

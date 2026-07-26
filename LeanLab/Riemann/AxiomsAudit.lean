@@ -102,6 +102,7 @@ import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
 import LeanLab.Riemann.LevinsonMontgomeryLogDerivMassBridge
 import LeanLab.Riemann.LevinsonMontgomeryBoundarySigns
+import LeanLab.Riemann.LevinsonMontgomeryCriticalIndentation
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
@@ -1007,3 +1008,8 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.levinsonMontgomeryDenseBranch_of_not_cofinallyNegativeLogDerivAtIntegers
 #print axioms LeanLab.Riemann.exists_riemannXi_zero_analytic_factor
 #print axioms LeanLab.Riemann.levinsonMontgomery_principalZeroTerm_re_neg
+#print axioms LeanLab.Riemann.levinsonMontgomery_zeroFactor_logDeriv_re_eq_zero
+#print axioms LeanLab.Riemann.exists_riemannZeta_critical_zero_analytic_factor
+#print axioms LeanLab.Riemann.levinsonMontgomery_principalZeroTerm_re_nonpos
+#print axioms LeanLab.Riemann.exists_levinsonMontgomery_critical_zero_left_neighborhood
+#print axioms LeanLab.Riemann.exists_levinsonMontgomery_negative_left_semicircle
