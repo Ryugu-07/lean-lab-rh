@@ -93,6 +93,7 @@ import LeanLab.Riemann.WeilGroundStatePrimeBlock
 import LeanLab.Riemann.WeilArchimedeanTailDensity
 import LeanLab.Riemann.WeilFiniteDictionarySourceCalculus
 import LeanLab.Riemann.WeilFiniteDictionaryAdmissibility
+import LeanLab.Riemann.WeilFiniteDictionaryExplicitFormula
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
@@ -969,3 +970,9 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.polyaTuranSignShortcutWitness_prefix_add_two
 #print axioms LeanLab.Riemann.exists_prefixNonpositive_weightedNegative
 #print axioms LeanLab.Riemann.polyaTuranAbelSignAudit_endpoint
+#print axioms LeanLab.Riemann.tendsto_dictionaryXiTopHorizontalIntegral
+#print axioms LeanLab.Riemann.weilFiniteDictionaryTest_arithmetic_explicit_formula
+#print axioms LeanLab.Riemann.compactSymmetrizedXiArchimedeanIntegral_dictionary_eq_source
+#print axioms LeanLab.Riemann.tsum_compactSymmetrizedVonMangoldtWeight_dictionary_eq_neg_pi_mul_primeQuadratic
+#print axioms LeanLab.Riemann.weilFiniteDictionary_source_arithmetic_explicit_formula
+#print axioms LeanLab.Riemann.weilFiniteDictionary_primeMatrix_archimedean_zeroSum

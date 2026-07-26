@@ -1146,3 +1146,20 @@ at a sharp analytic mismatch: inverse-square dictionary decay does not absorb th
 fourth-power xi logarithmic-derivative top-edge bound. A direct sharper contour estimate and a
 source-faithful smooth-approximation proof are preregistered as separate attacks. H7 and RH remain
 open.
+
+### H7 finite dictionary explicit formula local result
+
+The direct contour attack succeeds. Jensen's formula and order-one growth of `riemannXi` give
+cofinal norm-ball zero counts of order `R^(5/4)`, which supply long zero-free selected heights.
+At those heights the usable logarithmic-derivative bound is `O(R^(7/4))`, so the dictionary's
+inverse-square decay makes the top horizontal integral vanish.
+
+Lean now proves the multiplicity-bearing zero sum equals the exact finite prime, pole, and
+archimedean source expression, including equality of the prime term with the existing finite
+matrix quadratic and equality of the Gamma term with the literal middle-line `h_+` integral.
+The compact `C^6` approximation fallback was not needed.
+
+This closes Theorem 2.5's finite explicit-formula edge locally. Positivity, inverse/density,
+cutoff limits, simple-even ground states, H7, and RH remain open. The result records
+`source_analytic_bridge_delta=1` and `rh_frontier_delta=0`; public implementation evidence and
+fresh cross-route ranking follow.

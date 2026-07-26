@@ -83,6 +83,7 @@ import LeanLab.Riemann.WeilGroundStatePoleBlock
 import LeanLab.Riemann.WeilGroundStatePrimeBlock
 import LeanLab.Riemann.WeilArchimedeanTailDensity
 import LeanLab.Riemann.WeilFiniteDictionaryAdmissibility
+import LeanLab.Riemann.WeilFiniteDictionaryExplicitFormula
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
@@ -4293,5 +4294,48 @@ example :
 
 example : PolyaTuranAbelSignAuditCertificate :=
   polyaTuranAbelSignAudit_endpoint
+
+example {C : ℕ} (hC : 2 ≤ C) (N : ℕ)
+    (u : Fin (2 * N + 1) → ℝ) {c : ℝ} (hc : 1 < c) :
+    (Real.pi : ℂ) *
+        ∑' p : RiemannXiDivisorZeroIndex,
+          weilFiniteDictionaryTest C N u
+            ((riemannXiDivisorZeroValue p - 1 / 2) / Complex.I) =
+      2 * (Real.pi : ℂ) *
+          symmetrizedCompactLaplaceWeight
+            (weilFiniteDictionaryPhysicalDensity C N u) 1 +
+        compactSymmetrizedXiArchimedeanIntegral
+          (weilFiniteDictionaryPhysicalDensity C N u) c -
+        ∑' n : ℕ, compactSymmetrizedVonMangoldtWeight
+          (weilFiniteDictionaryPhysicalDensity C N u) n :=
+  weilFiniteDictionaryTest_arithmetic_explicit_formula hC N u hc
+
+example {C : ℕ} (hC : 2 ≤ C) (N : ℕ)
+    (u : Fin (2 * N + 1) → ℝ) {c : ℝ} (hc : 1 < c) :
+    (∑' p : RiemannXiDivisorZeroIndex,
+      weilFiniteDictionaryTest C N u
+        ((riemannXiDivisorZeroValue p - 1 / 2) / Complex.I)) =
+      -(1 / (Real.pi : ℂ)) *
+          (∑ q ∈ Finset.Icc 2 C,
+            (ArithmeticFunction.vonMangoldt q : ℂ) /
+                (Real.sqrt q : ℂ) *
+              weilFiniteDictionaryFourierWeight C N u
+                (Real.log q / (2 * Real.pi))) +
+        2 * weilFiniteDictionaryTest C N u (Complex.I / 2) +
+        (1 / (2 * Real.pi : ℂ)) *
+          weilFiniteDictionarySourceArchimedeanIntegral C N u :=
+  weilFiniteDictionary_source_arithmetic_explicit_formula hC N u hc
+
+example {C : ℕ} (hC : 2 ≤ C) (N : ℕ)
+    (u : Fin (2 * N + 1) → ℝ) {c : ℝ} (hc : 1 < c) :
+    (∑' p : RiemannXiDivisorZeroIndex,
+      weilFiniteDictionaryTest C N u
+        ((riemannXiDivisorZeroValue p - 1 / 2) / Complex.I)) =
+      ((dotProduct u (Matrix.mulVec
+        (weilFinitePrimeSourceMatrix C N) u) : ℝ) : ℂ) +
+        2 * weilFiniteDictionaryTest C N u (Complex.I / 2) +
+        (1 / (2 * Real.pi : ℂ)) *
+          weilFiniteDictionarySourceArchimedeanIntegral C N u :=
+  weilFiniteDictionary_primeMatrix_archimedean_zeroSum hC N u hc
 
 end LeanLab.Riemann

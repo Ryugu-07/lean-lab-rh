@@ -8,7 +8,7 @@ Selected node: `H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTATION_LOCAL_GREEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 
 ## Baseline
 
@@ -19,6 +19,9 @@ Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
 - `global_goal`: active. RH is the target.
 - `production_gate`: no production Lean source, Target, TargetCheck, or axiom-audit entry may be
   created or edited before this docs-only state passes public Lean Action CI.
+- `preregistration_public_gate`: commit
+  `002a775afd9dbfa5d5d2006b531523b6a0e84414`, Lean Action run `30185492253`, build job
+  `89749281543`, passed; production editing was opened only afterward.
 
 ## Locked primary source
 
@@ -205,3 +208,17 @@ relaxation. Require direct module compilation, exact TargetChecks, selected tran
 `lake build`, frozen implementation CI, immutable-evidence CI, and final-ledger CI.
 
 The six inherited user/exposure files remain untouched and unstaged.
+
+## Implementation outcome
+
+Attack A succeeded. A Jensen-derived `O(R^(5/4))` zero count supplies long zero-free selected
+heights, improving the usable top-edge logarithmic-derivative estimate to `O(R^(7/4))`. The
+dictionary's `O(R^-2)` decay then proves top-horizontal vanishing. Weak Fourier inversion,
+prime sum-integral exchange, pole convergence, Gamma integrability, and a holomorphic Gamma-line
+shift close every registered source coordinate without global `C^6`.
+
+The mandatory formula and all required source-coordinate corollaries compile in
+`LeanLab/Riemann/WeilFiniteDictionaryExplicitFormula.lean`. Attack B was not started because
+Attack A closed the endpoint. The local mechanical gate passes `8762/8762`; public
+implementation CI is pending. See
+`research/h7_weil_finite_dictionary_explicit_formula_result_20260726.md`.

@@ -3981,3 +3981,34 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   theorem and is not a numerical archimedean-bound optimization.
 - `next_gate`: publish the docs-only preregistration and require public Lean Action CI before
   any production Lean edit. The six inherited user/exposure files remain untouched and unstaged.
+
+## Arch 审计第十二轮（2026-07-26，Claude）
+- 12 commits：D6 谱路线继续——finite dictionary admissibility 关闭（Groskin 引理 2.2），当前攻 Theorem 2.5（字典显式公式，扩到连续分段光滑类）；旁支 H1 逆 Mellin、H9 Polya-Turan Abel 审计（反例 1,-3,0 证前缀非正不强制正性，logic 审计非反例）。选题拒了 H1 因"会落回刚完成的族+撞 Farmer 开放猜想"。build 8761 全过；公理审计 837 条零非标准；零 sorry。RH 端点 open，无处方。
+
+## 2026-07-26 H7 finite dictionary explicit formula local result
+
+- `campaign`:
+  `LITERATURE-20260726-H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`.
+- `status`: `IMPLEMENTATION_LOCAL_GREEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`.
+- `production_gate`: preregistration commit
+  `002a775afd9dbfa5d5d2006b531523b6a0e84414` passed Lean Action run `30185492253`,
+  build job `89749281543`; all production edits occurred afterward.
+- `compiled_edge`: for every literal finite dictionary vector, the absolutely convergent
+  multiplicity-bearing xi-divisor zero sum equals the exact finite von-Mangoldt, pole, and
+  archimedean Guinand--Weil expression.
+- `key_method`: Jensen and order-one xi growth yield cofinal `O(R^(5/4))` zero counts and long
+  zero-free selected heights. The resulting `O(R^(7/4))` logarithmic-derivative estimate is
+  absorbed by inverse-square dictionary decay, closing the top horizontal contour limit.
+- `source_alignment`: the pole is `2*g_u(i/2)`; compact support gives the exact
+  `q in Icc 2 C` prime sum and existing prime-matrix quadratic; the Gamma term shifts to the
+  source middle line and equals `(1/(2*pi))*integral h_+(r)g_u(r)dr`.
+- `registered`: Target `H7.weil-ground-state.finite-dictionary-explicit-formula`, exact
+  mandatory/source/matrix TargetChecks, and six selected axiom prints.
+- `local_gates`: warning-free 3,213-line module, empty forbidden scan, and full `8762/8762`
+  build. Selected transitive axioms are only `propext`, `Classical.choice`, and `Quot.sound`.
+- `delta`: `source_analytic_bridge_delta=1`, `historical_route_coverage_delta=1`,
+  `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `boundary`: positivity, inverse/density, cutoff limits, simple-even ground states, H7, and RH
+  remain open. Attack B was not needed. Freeze and publish the implementation, then return to
+  fresh cross-route selection; the persistent RH Goal remains active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

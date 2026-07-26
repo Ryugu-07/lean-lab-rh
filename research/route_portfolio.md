@@ -3800,3 +3800,26 @@ convolution identity, and the source interval estimate. This is historical omiss
 not numerical optimization. Cauchy--Schwarz, zeta second moments, Farmer's arbitrary-length
 moment conjecture, H1, and RH remain open. Production Lean editing requires public
 preregistration CI.
+
+## H7 Finite Dictionary Explicit Formula Local Result
+
+After the H1 inverse-Mellin campaign and the intervening H9 Pólya--Turán audit publicly closed,
+fresh ranking selected Groskin Theorem 2.5 rather than another numerical-tail optimization.
+Preregistration commit `002a775afd9dbfa5d5d2006b531523b6a0e84414` passed public Lean
+Action run `30185492253`, build job `89749281543`.
+
+The full finite-dictionary Guinand--Weil identity now compiles locally. The direct contour route
+overcomes the apparent top-edge mismatch by deriving sparse selected heights from Jensen and
+order-one xi growth. Lean then proves the zero-side contour limit, weak Fourier inversion and the
+finite prime cutoff, pole evaluation, Gamma integrability, and the holomorphic shift to the
+source middle line.
+
+The resulting source formula retains analytic zero multiplicity and has the exact prime, pole,
+and archimedean normalizations. The prime term also equals the existing finite prime-source
+matrix quadratic. This closes an exact historical source edge with
+`source_analytic_bridge_delta=1`, but does not prove sign, positivity, inverse/density, a cutoff
+limit, H7, or RH; `rh_frontier_delta=0`.
+
+Local mechanical gates pass: warning-free 3,213-line source, registered Target and exact checks,
+selected standard-only axiom prints, empty forbidden scan, and full `8762/8762` build.
+Implementation publication is the next gate, followed by fresh cross-route ranking.

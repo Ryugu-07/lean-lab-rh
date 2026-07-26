@@ -2,7 +2,7 @@
 
 Date: 2026-07-26
 
-Status: `SELECTED / PREREGISTRATION_REQUIRED`
+Status: `IMPLEMENTATION_LOCAL_GREEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 
 Parent closure: `0e10b1899daf7ce0c3ce48ab4ccd857d7e9c61c8`, public Lean Action run
 `30185002301`, build job `89747968167`, passed in `1m53s`.
@@ -86,3 +86,23 @@ route selection; the persistent RH Goal remains active.
 
 No production Lean source may be created or edited before the fixed preregistration passes
 public Lean Action CI.
+
+## Selected-campaign outcome
+
+Preregistration commit `002a775afd9dbfa5d5d2006b531523b6a0e84414` passed public Lean
+Action run `30185492253`, build job `89749281543`, before production editing began.
+
+The direct weak-regularity attack succeeds. Instead of using the coarse generic `O(R^4)`
+selected-height logarithmic-derivative estimate, Lean derives a cofinal `O(R^(5/4))` xi-zero
+count from Jensen and order-one growth, chooses a long zero-free height, and obtains the usable
+`O(R^(7/4))` logarithmic-derivative bound. Combined with inverse-square dictionary decay, this
+makes the top horizontal integral tend to zero.
+
+The zero, pole, finite-prime, and Gamma sides then converge and align exactly with the source.
+The mandatory formula, literal Groskin normalization, and prime-matrix assembly compile for
+every finite real vector. Compact `C^6` approximation was not needed. Local checks and the full
+`8762/8762` build pass; implementation publication remains.
+
+This result closes only the selected finite-dictionary explicit-formula edge, with
+`source_analytic_bridge_delta=1`, `historical_route_coverage_delta=1`, and
+`rh_frontier_delta=0`. After public closure, selection returns to a fresh cross-route comparison.

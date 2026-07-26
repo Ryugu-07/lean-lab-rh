@@ -1904,3 +1904,27 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `decision_boundary`: no target-equivalent premise and no helper-only success. If both attacks
   reach one exact analytic blocker, record it and return to route selection. H7 and RH remain
   open; the global Goal remains active.
+
+## 2026-07-26 H7 finite dictionary explicit formula local endpoint
+
+- `node`: `H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`.
+- `status`: `IMPLEMENTATION_LOCAL_GREEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`.
+- `preregistration_gate`: commit `002a775afd9dbfa5d5d2006b531523b6a0e84414`
+  passed public Lean Action run `30185492253`, build job `89749281543`.
+- `proved_edge`: the multiplicity-bearing xi-divisor zero `tsum` equals the exact finite
+  von-Mangoldt, pole, and archimedean Guinand--Weil expression for every literal finite
+  dictionary vector.
+- `obstacle_resolution`: the coarse `O(R^4)` selected-height bound remains insufficient, but
+  Jensen plus order-one xi growth gives cofinal `O(R^(5/4))` zero counts and long zero-free
+  heights; the resulting `O(R^(7/4))` log-derivative estimate is absorbed by `O(R^-2)` test
+  decay.
+- `source_alignment`: the prime term equals the existing finite prime-source matrix quadratic;
+  the pole is `2*g_u(i/2)`; the Gamma term is exactly
+  `(1/(2*pi))*integral h_+(r)g_u(r)dr` and is independent of the auxiliary line `c>1`.
+- `delta`: `source_analytic_bridge_delta=1`, `historical_route_coverage_delta=1`,
+  `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `remaining_H7_path`: unconditional sign/positivity, inverse or density in the full Weil class,
+  `C`/`N` limits, simple-even ground states, and a zeta spectral realization.
+- `local_gates`: warning-free 3,213-line source, exact TargetChecks, selected standard-only
+  axiom prints, empty forbidden scan, and full `8762/8762` build.
+- `global_goal`: active; H7 and RH remain open.

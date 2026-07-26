@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`
 
 Selected node: `H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTATION_LOCAL_GREEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 
 ## Target
 
@@ -51,31 +51,56 @@ Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
 | `API_AUDIT` | Located the generic selected-height zero consumer, the `C^6` arithmetic formula, the dictionary zero-coordinate and summability theorems, and the prime source quadratic. | Differentiability, symmetry, and zero summability already match. The missing direct-contour hypothesis is top-horizontal vanishing. | Register direct contour and smooth approximation as the only two initial attacks. |
 | `OBSTACLE_PRECHECK` | Compared the dictionary inverse-square strip decay with the selected-height `O(R^4)` xi logarithmic-derivative bound used by the smooth formula. | The existing estimates do not imply top-edge vanishing; a sharper source theorem or an approximation argument is required. | Do not weaken the endpoint or introduce the explicit formula as a premise. |
 | `PREREGISTRATION` | Fixed the complete theorem, source corollaries, attack order, decision criteria, and claim boundary. | Production Lean editing remains closed pending public CI. | Publish this docs-only state and require public Lean Action CI. |
+| `PUBLIC_GATE` | Published preregistration commit `002a775afd9dbfa5d5d2006b531523b6a0e84414`. | Lean Action run `30185492253`, build job `89749281543`, passed. | Open only the fixed production endpoint. |
+| `ATTACK_A_ZERO_COUNT` | Applied Mathlib Jensen to order-one `riemannXi` and converted the divisor finsum to a finite norm-ball count. | Lean proves a cofinal height with zero count `O(R^(5/4))`; a finite-set avoidance argument then supplies a long zero-free selected height. | Estimate the logarithmic derivative at that height rather than reuse the coarse generic `O(R^4)` selector. |
+| `ATTACK_A_TOP_EDGE` | Combined the long zero-free height with the Hadamard logarithmic derivative expansion and the dictionary's uniform inverse-square strip decay. | The selected top integrand is `O(R^(-1/4))`, so `tendsto_dictionaryXiTopHorizontalIntegral` compiles. | Feed the sharper selector to the generic argument-principle consumer. |
+| `ZERO_SIDE` | Reused the compiled divisor summability and selected-height contour theorem. | The right vertical xi integral converges to `pi` times the multiplicity-bearing dictionary zero `tsum`. | Identify the arithmetic decomposition term by term. |
+| `PRIME_SIDE` | Proved weak Fourier inversion for the continuous compact dictionary density, justified the von-Mangoldt sum/integral exchange, and used compact support. | The prime integral converges to the exact finite `q in Icc 2 C` source sum and to the existing finite prime matrix quadratic. | Close pole and Gamma terms without imposing global `C^6`. |
+| `POLE_SIDE` | Evaluated the pole-pair integral and passed the selected-height interval integral to the full line. | The pole term is exactly `2*g_u(i/2)` after division by `pi`; evenness supplies the sign convention. | Prove the real-place integral and source normalization. |
+| `ARCHIMEDEAN_SIDE` | Established Gamma-logarithmic growth against the dictionary's inverse-square decay, then shifted the holomorphic Gamma integrand from `Re(s)=c` to `Re(s)=1/2` with vanishing horizontal sides. | The real-place term is independent of `c>1` and equals one half of the literal source integral `integral h_+(r) g_u(r) dr`. | Assemble the project and source-coordinate formulas. |
+| `ASSEMBLY` | Combined the zero, pole, prime, and archimedean limits and divided by the exact `pi` normalization. | Both the mandatory weak-regularity formula and Groskin Theorem 2.5 source normalization compile for every finite real vector. | Register the theorem and run the full mechanical gate. |
+| `REGISTRATION` | Added one proven H7 Target, exact mandatory/source/matrix TargetChecks, and six selected transitive axiom prints. | Every selected theorem depends only on `propext`, `Classical.choice`, and `Quot.sound`. | Scan forbidden constructs and build the whole repository. |
+| `MECHANICAL_AUDIT` | Compiled the 3,213-line module directly; scanned the implementation and interfaces; ran the full build. | New source is warning-free, the forbidden scan is empty, and `lake build` passes `8762/8762`. | Freeze the implementation and require public Lean Action CI. |
 
 ## Mechanical audit
 
-- exact module compilation: `PENDING_PUBLIC_PREREGISTRATION`.
-- `Targets.lean`: `CLOSED`.
-- `TargetChecks.lean` exact witness: `CLOSED`.
-- `AxiomsAudit.lean` and printed axioms: `CLOSED`.
-- forbidden token/declaration/resource scan: `PENDING`.
+- exact module compilation: `PASS`.
+- `Targets.lean`: `PASS`.
+- `TargetChecks.lean` exact witness: `PASS`.
+- `AxiomsAudit.lean` and printed axioms: `PASS`; selected axioms are
+  `propext`, `Classical.choice`, and `Quot.sound`.
+- forbidden token/declaration/resource scan: `PASS / EMPTY`.
 - witness audit: `NOT_NUMERICAL`.
-- definition/source alignment: `PREREGISTERED`.
-- full `lake build`: `PENDING_PUBLIC_PREREGISTRATION`.
+- definition/source alignment: `PASS`.
+- full `lake build`: `PASS / 8762/8762`.
 
 ## Result
 
-- `result_class`: `PENDING`.
+- `result_class`: `KNOWN_THEOREM_FORMALIZED / LOCAL_GREEN`.
 - `assumption_frontier_after`: unchanged.
-- `hard_gap_after`: pending.
-- `hard_gap_delta`: pending.
-- `OBS_node`: pending.
-- `theorem_names`: pending.
-- `failure_or_obstacle`: pending direct contour and smooth-approximation attempts.
-- `route_selection_decision`: selected; production gate not yet open.
+- `hard_gap_after`: the finite dictionary now has its exact arithmetic and zero-sum identity.
+  Positivity, inverse/density, cutoff limits, H7, and RH remain open.
+- `hard_gap_delta`: `0` for RH.
+- `source_analytic_bridge_delta`: `1`.
+- `historical_route_coverage_delta`: `1`.
+- `rh_frontier_delta`: `0`.
+- `OBS_node`: the coarse `O(R^4)` selected-height estimate is insufficient for this test, but it
+  is bypassed by a compiled Jensen-derived sparse-height selector; it is not a remaining blocker.
+- `theorem_names`: `tendsto_dictionaryXiTopHorizontalIntegral`,
+  `weilFiniteDictionaryTest_arithmetic_explicit_formula`,
+  `compactSymmetrizedXiArchimedeanIntegral_dictionary_eq_source`,
+  `tsum_compactSymmetrizedVonMangoldtWeight_dictionary_eq_neg_pi_mul_primeQuadratic`,
+  `weilFiniteDictionary_source_arithmetic_explicit_formula`, and
+  `weilFiniteDictionary_primeMatrix_archimedean_zeroSum`.
+- `failure_or_obstacle`: Attack A succeeded. Attack B was not started because it was no longer
+  necessary. No source normalization mismatch was found.
+- `route_selection_decision`: freeze and publish the implementation; after closure return to
+  fresh cross-route selection rather than automatically extending H7.
 - `model`: `GPT-5 Codex`.
 - `reasoning_effort`: `high`.
 - `budget`: no numerical quota under V4.1; bounded by the fixed endpoint and local-stop criteria.
 - `compaction_state`: inherited context was compacted before preregistration; authoritative state
   was reloaded from governance, HANDOFF, route cards, attempts, and exact Lean APIs.
-- `commit_and_CI`: pending docs-only preregistration commit.
+- `commit_and_CI`: preregistration commit
+  `002a775afd9dbfa5d5d2006b531523b6a0e84414` passed public Lean Action run
+  `30185492253`, build job `89749281543`; implementation commit and CI are pending.

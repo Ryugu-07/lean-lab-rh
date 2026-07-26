@@ -81,6 +81,7 @@ import LeanLab.Riemann.WeilGroundStatePrimeBlock
 import LeanLab.Riemann.WeilArchimedeanTailDensity
 import LeanLab.Riemann.WeilFiniteDictionarySourceCalculus
 import LeanLab.Riemann.WeilFiniteDictionaryAdmissibility
+import LeanLab.Riemann.WeilFiniteDictionaryExplicitFormula
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ThetaInfinityMollifier
 import LeanLab.Riemann.BettinGonekAuxiliary
@@ -1388,6 +1389,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``weilFiniteDictionaryAdmissibility_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260724-H7-WEIL-FINITE-DICTIONARY-ADMISSIBILITY-01 formalizes Groskin Lemma 2.2 for the literal finite dictionary. The second integration-by-parts argument splits the two smooth half-bands and retains derivative jumps; the zero sum is dominated by the existing Hadamard reciprocal-square majorant without RH, simplicity, or a zero ordering. This does not prove the weaker-class Guinand--Weil arithmetic explicit formula, the total matrix/zero-sum identity, pole or archimedean transports, pole-neutral survival, inverse/density, cutoff limits, positivity, H7, or RH; rh_frontier_delta=0 and source_analytic_bridge_delta=1." },
+    { id := "H7.weil-ground-state.finite-dictionary-explicit-formula"
+      tier := .tier2
+      title := "Prove the finite Guinand-Weil dictionary explicit formula"
+      statement :=
+        "For every literal finite dictionary vector, prove the unconditional multiplicity-bearing xi-zero explicit formula under inverse-square strip decay, identify the exact integer-cutoff prime sum and existing prime-source matrix quadratic, rewrite the pole as 2*g(i/2) using evenness, and rewrite the real-place term as (1/(2*pi))*integral h_+(r)*g(r) dr."
+      leanName := some ``weilFiniteDictionary_source_arithmetic_explicit_formula
+      status := .proven
+      note := "Campaign LITERATURE-20260726-H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01 independently compiles Groskin Lemma 2.2/Theorem 2.5 for the project's literal finite dictionary. A Jensen zero-count bound and long zero-free heights close the weak-regularity top edge; Fourier inversion handles the exact finite prime side; a separate holomorphic Gamma line shift proves the literal h_+ normalization. The zero sum retains analytic multiplicity. This does not prove positivity of the assembled quadratic, inverse/density in the full Weil class, a prime-cutoff limit, H7, or RH; rh_frontier_delta=0 and source_analytic_bridge_delta=1." },
     { id := "H7.weil-ground-state.rayleigh-gap-consumer"
       tier := .tier2
       title := "Control ground-line defect by Rayleigh excess over the spectral gap"
