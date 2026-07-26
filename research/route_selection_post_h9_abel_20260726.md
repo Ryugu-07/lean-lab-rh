@@ -2,7 +2,7 @@
 
 Date: 2026-07-26
 
-Status: `IMPLEMENTATION_LOCAL_GREEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 Parent closure: `0e10b1899daf7ce0c3ce48ab4ccd857d7e9c61c8`, public Lean Action run
 `30185002301`, build job `89747968167`, passed in `1m53s`.
@@ -106,3 +106,7 @@ every finite real vector. Compact `C^6` approximation was not needed. Local chec
 This result closes only the selected finite-dictionary explicit-formula edge, with
 `source_analytic_bridge_delta=1`, `historical_route_coverage_delta=1`, and
 `rh_frontier_delta=0`. After public closure, selection returns to a fresh cross-route comparison.
+
+Frozen implementation commit `f0d76ee081c22381f6ffc208b024268b090fc35c` passed public Lean
+Action run `30187598839`, build job `89754974406`, in `2m48s`. Proof source is frozen;
+immutable-evidence publication is next.

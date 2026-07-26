@@ -1908,7 +1908,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 ## 2026-07-26 H7 finite dictionary explicit formula local endpoint
 
 - `node`: `H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`.
-- `status`: `IMPLEMENTATION_LOCAL_GREEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`.
+- `status`: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`.
 - `preregistration_gate`: commit `002a775afd9dbfa5d5d2006b531523b6a0e84414`
   passed public Lean Action run `30185492253`, build job `89749281543`.
 - `proved_edge`: the multiplicity-bearing xi-divisor zero `tsum` equals the exact finite
@@ -1927,4 +1927,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   `C`/`N` limits, simple-even ground states, and a zeta spectral realization.
 - `local_gates`: warning-free 3,213-line source, exact TargetChecks, selected standard-only
   axiom prints, empty forbidden scan, and full `8762/8762` build.
+- `public_implementation`: frozen commit `f0d76ee081c22381f6ffc208b024268b090fc35c`
+  passed Lean Action run `30187598839`, build job `89754974406`, in `2m48s`; proof source
+  remains frozen.
 - `global_goal`: active; H7 and RH remain open.

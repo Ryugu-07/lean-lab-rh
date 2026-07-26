@@ -1163,3 +1163,7 @@ This closes Theorem 2.5's finite explicit-formula edge locally. Positivity, inve
 cutoff limits, simple-even ground states, H7, and RH remain open. The result records
 `source_analytic_bridge_delta=1` and `rh_frontier_delta=0`; public implementation evidence and
 fresh cross-route ranking follow.
+
+Frozen implementation commit `f0d76ee081c22381f6ffc208b024268b090fc35c` passed public Lean
+Action run `30187598839`, build job `89754974406`, in `2m48s`. Immutable-evidence and
+final-ledger publication remain before reranking.

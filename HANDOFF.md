@@ -3989,7 +3989,7 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 
 - `campaign`:
   `LITERATURE-20260726-H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`.
-- `status`: `IMPLEMENTATION_LOCAL_GREEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`.
+- `status`: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`.
 - `production_gate`: preregistration commit
   `002a775afd9dbfa5d5d2006b531523b6a0e84414` passed Lean Action run `30185492253`,
   build job `89749281543`; all production edits occurred afterward.
@@ -4006,6 +4006,9 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   mandatory/source/matrix TargetChecks, and six selected axiom prints.
 - `local_gates`: warning-free 3,213-line module, empty forbidden scan, and full `8762/8762`
   build. Selected transitive axioms are only `propext`, `Classical.choice`, and `Quot.sound`.
+- `public_implementation`: frozen commit `f0d76ee081c22381f6ffc208b024268b090fc35c`
+  passed Lean Action run `30187598839`, build job `89754974406`, in `2m48s`. Proof source is
+  frozen; immutable-evidence CI is next.
 - `delta`: `source_analytic_bridge_delta=1`, `historical_route_coverage_delta=1`,
   `hard_gap_delta=0`, `rh_frontier_delta=0`.
 - `boundary`: positivity, inverse/density, cutoff limits, simple-even ground states, H7, and RH

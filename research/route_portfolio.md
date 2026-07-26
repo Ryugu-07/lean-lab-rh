@@ -3822,4 +3822,6 @@ limit, H7, or RH; `rh_frontier_delta=0`.
 
 Local mechanical gates pass: warning-free 3,213-line source, registered Target and exact checks,
 selected standard-only axiom prints, empty forbidden scan, and full `8762/8762` build.
-Implementation publication is the next gate, followed by fresh cross-route ranking.
+Frozen implementation commit `f0d76ee081c22381f6ffc208b024268b090fc35c` passed public Lean
+Action run `30187598839`, build job `89754974406`, in `2m48s`. Proof source remains frozen;
+immutable-evidence publication and final-ledger CI precede fresh cross-route ranking.

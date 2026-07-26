@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`
 
 Selected node: `H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`
 
-Status: `IMPLEMENTATION_LOCAL_GREEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Target
 
@@ -61,6 +61,7 @@ Status: `IMPLEMENTATION_LOCAL_GREEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 | `ASSEMBLY` | Combined the zero, pole, prime, and archimedean limits and divided by the exact `pi` normalization. | Both the mandatory weak-regularity formula and Groskin Theorem 2.5 source normalization compile for every finite real vector. | Register the theorem and run the full mechanical gate. |
 | `REGISTRATION` | Added one proven H7 Target, exact mandatory/source/matrix TargetChecks, and six selected transitive axiom prints. | Every selected theorem depends only on `propext`, `Classical.choice`, and `Quot.sound`. | Scan forbidden constructs and build the whole repository. |
 | `MECHANICAL_AUDIT` | Compiled the 3,213-line module directly; scanned the implementation and interfaces; ran the full build. | New source is warning-free, the forbidden scan is empty, and `lake build` passes `8762/8762`. | Freeze the implementation and require public Lean Action CI. |
+| `PUBLIC_IMPLEMENTATION` | Published frozen implementation commit `f0d76ee081c22381f6ffc208b024268b090fc35c`. | Lean Action run `30187598839`, build job `89754974406`, passed in `2m48s`. | Keep proof source frozen and publish immutable evidence. |
 
 ## Mechanical audit
 
@@ -103,4 +104,6 @@ Status: `IMPLEMENTATION_LOCAL_GREEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
   was reloaded from governance, HANDOFF, route cards, attempts, and exact Lean APIs.
 - `commit_and_CI`: preregistration commit
   `002a775afd9dbfa5d5d2006b531523b6a0e84414` passed public Lean Action run
-  `30185492253`, build job `89749281543`; implementation commit and CI are pending.
+  `30185492253`, build job `89749281543`. Frozen implementation commit
+  `f0d76ee081c22381f6ffc208b024268b090fc35c` passed run `30187598839`, build job
+  `89754974406`, in `2m48s`; immutable-evidence CI is pending.

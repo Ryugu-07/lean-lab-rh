@@ -4,7 +4,7 @@ Date: 2026-07-26
 
 Campaign: `LITERATURE-20260726-H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`
 
-Status: `IMPLEMENTATION_LOCAL_GREEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Result
 
@@ -68,7 +68,9 @@ Attack B, compact `C^6` approximation, was not needed.
 - full `lake build`: pass, `8762/8762`.
 
 Preregistration commit `002a775afd9dbfa5d5d2006b531523b6a0e84414` passed public Lean
-Action run `30185492253`, build job `89749281543`. Implementation publication is pending.
+Action run `30185492253`, build job `89749281543`. Frozen implementation commit
+`f0d76ee081c22381f6ffc208b024268b090fc35c` passed run `30187598839`, build job
+`89754974406`, in `2m48s`. Proof source is frozen; immutable-evidence CI is pending.
 
 ## Claim Boundary
 
