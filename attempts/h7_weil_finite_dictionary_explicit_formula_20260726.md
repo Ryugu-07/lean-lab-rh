@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`
 
 Selected node: `H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Target
 
@@ -62,6 +62,7 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 | `REGISTRATION` | Added one proven H7 Target, exact mandatory/source/matrix TargetChecks, and six selected transitive axiom prints. | Every selected theorem depends only on `propext`, `Classical.choice`, and `Quot.sound`. | Scan forbidden constructs and build the whole repository. |
 | `MECHANICAL_AUDIT` | Compiled the 3,213-line module directly; scanned the implementation and interfaces; ran the full build. | New source is warning-free, the forbidden scan is empty, and `lake build` passes `8762/8762`. | Freeze the implementation and require public Lean Action CI. |
 | `PUBLIC_IMPLEMENTATION` | Published frozen implementation commit `f0d76ee081c22381f6ffc208b024268b090fc35c`. | Lean Action run `30187598839`, build job `89754974406`, passed in `2m48s`. | Keep proof source frozen and publish immutable evidence. |
+| `IMMUTABLE_EVIDENCE` | Published docs-only evidence commit `0a15b1d951c978ece49da9b477686cc1e61d6939`. | Lean Action run `30187720024`, build job `89755296426`, passed in `1m33s`; proof source remained byte-for-byte frozen. | Publish the final ledger and require its own public CI. |
 
 ## Mechanical audit
 
@@ -106,4 +107,6 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
   `002a775afd9dbfa5d5d2006b531523b6a0e84414` passed public Lean Action run
   `30185492253`, build job `89749281543`. Frozen implementation commit
   `f0d76ee081c22381f6ffc208b024268b090fc35c` passed run `30187598839`, build job
-  `89754974406`, in `2m48s`; immutable-evidence CI is pending.
+  `89754974406`, in `2m48s`. Docs-only immutable-evidence commit
+  `0a15b1d951c978ece49da9b477686cc1e61d6939` passed run `30187720024`, build job
+  `89755296426`, in `1m33s`; final-ledger CI is pending.

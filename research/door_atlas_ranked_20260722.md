@@ -1165,5 +1165,6 @@ cutoff limits, simple-even ground states, H7, and RH remain open. The result rec
 fresh cross-route ranking follow.
 
 Frozen implementation commit `f0d76ee081c22381f6ffc208b024268b090fc35c` passed public Lean
-Action run `30187598839`, build job `89754974406`, in `2m48s`. Immutable-evidence and
-final-ledger publication remain before reranking.
+Action run `30187598839`, build job `89754974406`, in `2m48s`. Docs-only immutable-evidence
+commit `0a15b1d951c978ece49da9b477686cc1e61d6939` passed run `30187720024`, build job
+`89755296426`, in `1m33s`. Final-ledger publication remains before reranking.

@@ -3824,4 +3824,6 @@ Local mechanical gates pass: warning-free 3,213-line source, registered Target a
 selected standard-only axiom prints, empty forbidden scan, and full `8762/8762` build.
 Frozen implementation commit `f0d76ee081c22381f6ffc208b024268b090fc35c` passed public Lean
 Action run `30187598839`, build job `89754974406`, in `2m48s`. Proof source remains frozen;
-immutable-evidence publication and final-ledger CI precede fresh cross-route ranking.
+docs-only immutable-evidence commit `0a15b1d951c978ece49da9b477686cc1e61d6939`
+passed run `30187720024`, build job `89755296426`, in `1m33s`. Final-ledger CI precedes fresh
+cross-route ranking.

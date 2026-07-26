@@ -4,7 +4,7 @@ Date: 2026-07-26
 
 Campaign: `LITERATURE-20260726-H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Result
 
@@ -70,7 +70,9 @@ Attack B, compact `C^6` approximation, was not needed.
 Preregistration commit `002a775afd9dbfa5d5d2006b531523b6a0e84414` passed public Lean
 Action run `30185492253`, build job `89749281543`. Frozen implementation commit
 `f0d76ee081c22381f6ffc208b024268b090fc35c` passed run `30187598839`, build job
-`89754974406`, in `2m48s`. Proof source is frozen; immutable-evidence CI is pending.
+`89754974406`, in `2m48s`. Docs-only immutable-evidence commit
+`0a15b1d951c978ece49da9b477686cc1e61d6939` passed run `30187720024`, build job
+`89755296426`, in `1m33s`; proof source remained frozen. Final-ledger CI is pending.
 
 ## Claim Boundary
 

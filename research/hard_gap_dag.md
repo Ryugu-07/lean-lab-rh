@@ -1908,7 +1908,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 ## 2026-07-26 H7 finite dictionary explicit formula local endpoint
 
 - `node`: `H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`.
-- `status`: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`.
+- `status`: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`.
 - `preregistration_gate`: commit `002a775afd9dbfa5d5d2006b531523b6a0e84414`
   passed public Lean Action run `30185492253`, build job `89749281543`.
 - `proved_edge`: the multiplicity-bearing xi-divisor zero `tsum` equals the exact finite
@@ -1930,4 +1930,6 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `public_implementation`: frozen commit `f0d76ee081c22381f6ffc208b024268b090fc35c`
   passed Lean Action run `30187598839`, build job `89754974406`, in `2m48s`; proof source
   remains frozen.
+- `immutable_evidence`: docs-only commit `0a15b1d951c978ece49da9b477686cc1e61d6939`
+  passed run `30187720024`, build job `89755296426`, in `1m33s`; final-ledger CI remains.
 - `global_goal`: active; H7 and RH remain open.

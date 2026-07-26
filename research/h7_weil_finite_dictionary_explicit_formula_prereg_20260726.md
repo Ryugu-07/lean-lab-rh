@@ -8,7 +8,7 @@ Selected node: `H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Baseline
 
@@ -221,5 +221,7 @@ The mandatory formula and all required source-coordinate corollaries compile in
 `LeanLab/Riemann/WeilFiniteDictionaryExplicitFormula.lean`. Attack B was not started because
 Attack A closed the endpoint. The local mechanical gate passes `8762/8762`. Frozen
 implementation commit `f0d76ee081c22381f6ffc208b024268b090fc35c` passed public Lean Action
-run `30187598839`, build job `89754974406`, in `2m48s`; immutable-evidence CI is pending. See
+run `30187598839`, build job `89754974406`, in `2m48s`. Docs-only immutable-evidence commit
+`0a15b1d951c978ece49da9b477686cc1e61d6939` passed run `30187720024`, build job
+`89755296426`, in `1m33s`; final-ledger CI is pending. See
 `research/h7_weil_finite_dictionary_explicit_formula_result_20260726.md`.

@@ -2,7 +2,7 @@
 
 Date: 2026-07-26
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 Parent closure: `0e10b1899daf7ce0c3ce48ab4ccd857d7e9c61c8`, public Lean Action run
 `30185002301`, build job `89747968167`, passed in `1m53s`.
@@ -109,4 +109,5 @@ This result closes only the selected finite-dictionary explicit-formula edge, wi
 
 Frozen implementation commit `f0d76ee081c22381f6ffc208b024268b090fc35c` passed public Lean
 Action run `30187598839`, build job `89754974406`, in `2m48s`. Proof source is frozen;
-immutable-evidence publication is next.
+docs-only immutable-evidence commit `0a15b1d951c978ece49da9b477686cc1e61d6939` passed run
+`30187720024`, build job `89755296426`, in `1m33s`. Final-ledger publication is next.
