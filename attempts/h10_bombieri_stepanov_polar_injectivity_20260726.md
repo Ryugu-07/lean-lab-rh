@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H10-BOMBIERI-STEPANOV-POLAR-INJECTIVITY-01`
 
 Selected node: `H10-E-BOMBIERI-STEPANOV-POLAR-INJECTIVITY-01`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_PREREGISTRATION_CI_REQUIRED`
+Status: `LOCAL_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
 
 ## Target
 
@@ -28,6 +28,14 @@ Status: `PREREGISTERED_LOCAL / PUBLIC_PREREGISTRATION_CI_REQUIRED`
 | `CROSS_FAMILY_AUDIT` | Compared H1, H2, H7, H10, H11, and H12 at their latest compiled edges. | H1/H2/H7/H11/H12 next require direct open analytic or spectral inputs. H10 retains an adjacent unformalized hinge inside a successful proof. | Select the nonzero-production gate, not another point-count constant. |
 | `PRIMARY_SOURCE_AUDIT` | Re-read Bombieri's key product-isomorphism lemma and Kedlaya's tensor/dimension presentation. | The source needs injective realization before dimension surplus yields a nonzero auxiliary. | Fix the positive logic and a countermodel without injectivity. |
 | `API_SURVEY` | Checked finite-dimensional rank-nullity, `ker_ne_bot_of_finrank_lt`, polynomial `degreeLT`, coefficient equivalences, and finite `Pi` linear equivalences. | The fixed finite-dimensional and coefficient-block endpoints have a direct no-sorry Lean surface. | Publish docs-only preregistration before proof edits. |
+| `PREREGISTRATION_PUBLIC` | Published docs-only commit `e4efd3e2c6a2c2cae983b1d3224a8780aaa88f1c`. | Public run `30205991741`, build job `89804024442`, passed in `2m15s`. | Open the fixed production gate. |
+| `KERNEL_CERTIFICATE` | Applied finite-dimensional rank-nullity to an arbitrary descent map. | A strict source-target finrank surplus yields a nonzero vector with zero descent. | Test whether realization preserves nonzeroness. |
+| `INJECTIVE_REALIZATION` | Added an arbitrary injective linear realization. | The nonzero kernel vector realizes to a nonzero target object. | Build a source-shaped noncancellation model. |
+| `COEFFICIENT_BLOCK_EQUIV` | Reindexed `n` degree-`<q` coefficient blocks into one degree-`<n*q` polynomial. | The construction is a linear equivalence and exact block coefficients transport through it. | Combine it with the kernel certificate. |
+| `SOURCE_SHAPED_ENDPOINT` | Used the block equivalence as the realization map. | Any descent target of finrank below `n*q` has a zero-descent block family with nonzero realized polynomial. | Run the negative control. |
+| `NONINJECTIVE_CONTROL` | Set both descent and realization to the first projection on `Q x Q`. | The descent kernel contains `(0,1)`, but every kernel vector realizes to zero. | Record injectivity as indispensable. |
+| `POSITIVE_WITNESS` | Realized the blocks `1` and `X` in width two. | Two exact output coefficients equal one, and the realized polynomial is nonzero. | Run all local gates. |
+| `LOCAL_GATES` | Ran warning-as-error production, Targets, TargetChecks, and AxiomsAudit compiles; scanned forbidden declarations and resource relaxations; ran the full build. | One proven Target, six exact checks, six standard-only axiom prints, empty scans, and `8770/8770` build all pass. | Freeze and publish the implementation. |
 
 ## Runtime record
 
@@ -41,6 +49,11 @@ Status: `PREREGISTERED_LOCAL / PUBLIC_PREREGISTRATION_CI_REQUIRED`
 
 ## Current boundary
 
-No production Lean source exists for this campaign. Public preregistration CI is required before
-implementation. The actual curve polar lemma, Riemann--Roch construction, number-field transfer,
-and RH remain open. The six inherited user/exposure files remain untouched and unstaged.
+Local result: `SOURCE_NONCANCELLATION_GATE_FORMALIZED`.
+
+The source's nonzero-production logic is valid when realization is injective and false without
+that premise. This does not prove Bombieri's actual curve polar-order injection. A number-field
+analogue would likewise need both an injective realization and a separately constructed
+dimension-surplus descent map; no such map is supplied here. Riemann--Roch construction,
+point counts, number-field transfer, and RH remain open. The six inherited user/exposure files
+remain untouched and unstaged.

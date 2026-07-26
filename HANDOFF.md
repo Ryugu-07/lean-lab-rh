@@ -4578,3 +4578,29 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `production_gate`: docs-only preregistration public CI before Lean proof editing.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H10 polar-injectivity gate local result
+
+- `campaign`: `LITERATURE-20260726-H10-BOMBIERI-STEPANOV-POLAR-INJECTIVITY-01`.
+- `preregistration_public`: commit `e4efd3e2c6a2c2cae983b1d3224a8780aaa88f1c` passed run
+  `30205991741`, build job `89804024442`, in `2m15s`.
+- `compiled_positive_logic`: strict finite-dimensional source surplus gives a nonzero descent
+  kernel; injective realization preserves its nonzeroness.
+- `compiled_block_model`: `n` polynomial coefficient blocks of width `q` are linearly equivalent
+  to one degree-`<n*q` polynomial, with exact coefficient transport.
+- `compiled_negative_control`: on `Q x Q`, a nonzero first-projection kernel is entirely killed
+  when realization is the same noninjective first projection.
+- `module`: `LeanLab/Riemann/BombieriStepanovPolarInjectivity.lean`, 174 lines, no
+  warning-as-error diagnostics.
+- `local_gates`: one proven Target, six exact TargetChecks, six selected standard-only axiom
+  prints, empty forbidden scans, and full `8770/8770` build.
+- `classification`: `SOURCE_NONCANCELLATION_GATE_FORMALIZED`,
+  `historical_route_coverage_delta=1`, `source_logic_bridge_delta=1`,
+  `actual_curve_polar_lemma_delta=0`, `curve_theorem_delta=0`,
+  `number_field_transfer_delta=0`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `research_reading`: Bombieri's polar/tensor injectivity is indispensable; no dimension-only
+  shortcut was omitted at this layer. The actual curve valuation theorem and any number-field
+  descent-map analogue remain open.
+- `next_gate`: freeze and publish the implementation.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

@@ -1450,3 +1450,15 @@ The fixed campaign kernel-checks this dependency with an injective coefficient-b
 noninjective countermodel. It is an omission audit of a lightly stated source lemma, not a
 point-count optimization. The actual curve valuation proof and all number-field transfer remain
 outside.
+
+### H10 polar-injectivity local result
+
+The logical gate is now kernel-checked. Strict source-target finrank surplus gives a nonzero
+descent kernel, and injective realization preserves nonzeroness. A coefficient-block linear
+equivalence supplies an exact finite model of polar separation. Conversely, a two-dimensional
+first-projection example has a nonzero descent kernel whose entire realization is zero.
+
+Therefore no dimension-only shortcut is available at this layer; the source's noncancellation
+lemma is necessary. A future omission claim must concern the actual curve valuation argument or a
+new number-field source/descent structure, not this finite-dimensional inference. This is
+`SOURCE_NONCANCELLATION_GATE_FORMALIZED`, with no RH-frontier change.

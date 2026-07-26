@@ -8,7 +8,7 @@ Selected node: `H10-E-BOMBIERI-STEPANOV-POLAR-INJECTIVITY-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_PREREGISTRATION_CI_REQUIRED`
+Status: `LOCAL_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
 
 ## Primary-source anchor
 
@@ -110,3 +110,42 @@ Expected classification:
 
 No production Lean source may be created or edited until this docs-only preregistration passes
 public Lean Action CI. Local STOP returns the active global Goal to `ROUTE_SELECTION`.
+
+The production gate passed at preregistration commit
+`e4efd3e2c6a2c2cae983b1d3224a8780aaa88f1c`, public Lean Action run `30205991741`,
+build job `89804024442`, in `2m15s`.
+
+## Local result
+
+`LeanLab/Riemann/BombieriStepanovPolarInjectivity.lean` is a 174-line no-sorry
+implementation of the fixed endpoint. It proves:
+
+- dimension surplus gives a nonzero descent-kernel vector;
+- injective realization turns that vector into a nonzero auxiliary;
+- finite polynomial coefficient blocks form a linear equivalence with one larger
+  degree-bounded polynomial space, with exact coefficient transport;
+- the source-shaped dimension-surplus theorem for that block realization;
+- a rational two-dimensional countermodel where the descent kernel is nonzero but a
+  noninjective realization kills all of it;
+- a two-block positive witness with two certified nonzero output coefficients.
+
+The proven Target, six exact TargetChecks, six selected axiom prints, warning-as-error
+production/registry/check/audit compilation, empty forbidden scans, and full `8770/8770` build
+pass locally. Every selected theorem depends only on `propext`, `Classical.choice`, and
+`Quot.sound`.
+
+The countermodel shows that the source's polar/tensor injectivity premise is logically
+indispensable. No hidden shortcut from Riemann--Roch dimension surplus directly to a nonzero
+function survives this audit. The actual curve polar-order theorem and its possible number-field
+analogue remain open.
+
+Local classification:
+
+- `result=SOURCE_NONCANCELLATION_GATE_FORMALIZED`;
+- `historical_route_coverage_delta=1`;
+- `source_logic_bridge_delta=1`;
+- `actual_curve_polar_lemma_delta=0`;
+- `curve_theorem_delta=0`;
+- `number_field_transfer_delta=0`;
+- `hard_gap_delta=0`;
+- `rh_frontier_delta=0`.

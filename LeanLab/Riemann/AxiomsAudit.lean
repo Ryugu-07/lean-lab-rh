@@ -106,6 +106,7 @@ import LeanLab.Riemann.LevinsonMontgomeryCriticalIndentation
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.ConreyLiPhaseObstruction
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
+import LeanLab.Riemann.BombieriStepanovPolarInjectivity
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -1027,3 +1028,9 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.finset_card_mul_le_natDegree_of_rootMultiplicity
 #print axioms LeanLab.Riemann.stepanovFrobenius_card_le_natDegree_div
 #print axioms LeanLab.Riemann.stepanovZModTwo_saturated
+#print axioms LeanLab.Riemann.exists_ne_zero_mem_ker_of_finrank_lt
+#print axioms LeanLab.Riemann.exists_descent_zero_realize_ne_zero_of_finrank_lt
+#print axioms LeanLab.Riemann.stepanovPolarBlockEquiv_coeff
+#print axioms LeanLab.Riemann.exists_stepanovPolarBlock_ne_zero_mem_ker
+#print axioms LeanLab.Riemann.stepanovDimensionSurplus_not_enough_without_injective
+#print axioms LeanLab.Riemann.stepanovPolarBlock_two_witness

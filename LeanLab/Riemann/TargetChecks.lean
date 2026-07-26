@@ -11,6 +11,7 @@ import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.ConreyLiPhaseObstruction
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
+import LeanLab.Riemann.BombieriStepanovPolarInjectivity
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -4615,5 +4616,58 @@ example :
       stepanovZModTwoV stepanovZModTwoS).natDegree = 4 ∧
     2 * Fintype.card (ZMod 2) = 4 :=
   stepanovZModTwo_saturated
+
+example {K U W : Type*} [Field K]
+    [AddCommGroup U] [Module K U] [FiniteDimensional K U]
+    [AddCommGroup W] [Module K W] [FiniteDimensional K W]
+    (delta : U →ₗ[K] W)
+    (hdim : Module.finrank K W < Module.finrank K U) :
+    ∃ u : U, u ≠ 0 ∧ delta u = 0 :=
+  exists_ne_zero_mem_ker_of_finrank_lt delta hdim
+
+example {K U W F : Type*} [Field K]
+    [AddCommGroup U] [Module K U] [FiniteDimensional K U]
+    [AddCommGroup W] [Module K W] [FiniteDimensional K W]
+    [AddCommGroup F] [Module K F]
+    (delta : U →ₗ[K] W) (realize : U →ₗ[K] F)
+    (hrealize : Function.Injective realize)
+    (hdim : Module.finrank K W < Module.finrank K U) :
+    ∃ u : U, delta u = 0 ∧ realize u ≠ 0 :=
+  exists_descent_zero_realize_ne_zero_of_finrank_lt
+    delta realize hrealize hdim
+
+example (K : Type*) [Field K] (n q : ℕ)
+    (u : Fin n → Polynomial.degreeLT K q) (i : Fin n) (j : Fin q) :
+    ((stepanovPolarBlockEquiv K n q u :
+        Polynomial.degreeLT K (n * q)) : K[X]).coeff
+      (finProdFinEquiv (i, j)) =
+        (u i : K[X]).coeff j :=
+  stepanovPolarBlockEquiv_coeff K n q u i j
+
+example {K W : Type*} [Field K]
+    [AddCommGroup W] [Module K W] [FiniteDimensional K W]
+    (n q : ℕ)
+    (delta : (Fin n → Polynomial.degreeLT K q) →ₗ[K] W)
+    (hdim : Module.finrank K W < n * q) :
+    ∃ u : Fin n → Polynomial.degreeLT K q,
+      delta u = 0 ∧ stepanovPolarBlockEquiv K n q u ≠ 0 :=
+  exists_stepanovPolarBlock_ne_zero_mem_ker n q delta hdim
+
+example :
+    Module.finrank ℚ ℚ < Module.finrank ℚ (ℚ × ℚ) ∧
+      (∃ u : ℚ × ℚ, u ≠ 0 ∧ stepanovNoninjectiveDescent u = 0) ∧
+      (∀ u : ℚ × ℚ, stepanovNoninjectiveDescent u = 0 →
+        stepanovNoninjectiveRealize u = 0) :=
+  stepanovDimensionSurplus_not_enough_without_injective
+
+example :
+    stepanovPolarBlockEquiv ℚ 2 2 stepanovPolarBlockTwoInput ≠ 0 ∧
+      (((stepanovPolarBlockEquiv ℚ 2 2 stepanovPolarBlockTwoInput :
+          Polynomial.degreeLT ℚ 4) : ℚ[X]).coeff
+        (finProdFinEquiv ((0 : Fin 2), (0 : Fin 2)))) = 1 ∧
+      (((stepanovPolarBlockEquiv ℚ 2 2 stepanovPolarBlockTwoInput :
+          Polynomial.degreeLT ℚ 4) : ℚ[X]).coeff
+        (finProdFinEquiv ((1 : Fin 2), (1 : Fin 2)))) = 1 :=
+  stepanovPolarBlock_two_witness
 
 end LeanLab.Riemann

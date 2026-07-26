@@ -4189,3 +4189,20 @@ finite-dimensional certificate, a separated coefficient-block realization, and a
 without injectivity. It does not optimize the point-count constant and does not claim the
 polynomial block model is the curve valuation theorem. Public preregistration CI is required
 before proof-source editing.
+
+## H10 Bombieri--Stepanov Polar Injectivity Local Result
+
+The fixed nonzero-production logic compiles. Finite-dimensional rank-nullity supplies a nonzero
+descent-kernel vector exactly under a strict finrank surplus, and an injective realization sends
+it to a nonzero auxiliary. The source-shaped model concatenates `n` degree-`<q` polynomial
+coefficient blocks into one degree-`<n*q` polynomial through a linear equivalence, so exact block
+coefficients cannot cancel.
+
+The negative control is decisive: on `Q x Q`, the first projection has a nonzero kernel, but if
+the realization is also first projection then every kernel vector realizes to zero. Thus
+dimension surplus alone is not the source's hidden shortcut; Bombieri's polar/tensor
+noncancellation lemma is logically indispensable.
+
+The 174-line module, proven Target, six exact checks, six standard-only axiom prints, empty
+forbidden scans, and full `8770/8770` build pass locally. The actual curve valuation lemma,
+Riemann--Roch construction, number-field descent-map analogue, and RH remain open.

@@ -167,6 +167,14 @@ Riemann--Roch dimensions, a point count, or number-field RH.
 
 **Verdict:** `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`.
 
+**Implementation result.** Rank-nullity plus injective realization compiles, as does a separated
+coefficient-block linear equivalence and its exact coefficient theorem. A noninjective
+first-projection countermodel proves that a nonzero descent kernel need not realize to a nonzero
+object.
+
+**Verdict update:** `LOCAL_SUCCESS` as `SOURCE_NONCANCELLATION_GATE_FORMALIZED`, pending public
+implementation CI. The actual curve polar-order theorem remains open.
+
 ## Recommendation
 
 Keep H10-B as the finite spectral endpoint and H10-D as the source-algebra endpoint. Continue the

@@ -63,7 +63,7 @@ flowchart TD
 | H10-B | complete | Prove finite aggregate power-sum spectral rigidity and the reciprocal-pairing square-root-circle corollary. | The final finite-spectral step of function-field RH is publicly compiled. It proves no curve point-count bound and supplies no finite-spectrum or uniform-tail transfer for the Riemann zeta zero divisor; `hard_gap_delta=0`. |
 | H10-C | complete | Test a countably infinite ordinary power-trace extension with nonzero reciprocal pairing. | Lean proves `Summable (alpha^k)` for positive `k` forces `q=0` under `alpha(sigma n)*alpha(n)=q`; a one-point finite witness shows the obstruction is specific to the infinite ordinary-trace transfer. Final-ledger commit `2edf069a217255bbc20b93a2aa938f51dd57d94e` passed public CI. |
 | H10-D | complete | Formalize the Bombieri--Stepanov finite-field Frobenius auxiliary mechanism and test its degree budget for slack. | The generic descent, perfect-power multiplicity, and root-degree bounds compile. A nonzero `ZMod 2` kernel witness has exact multiplicity two at both points and saturates the degree budget. Final-ledger commit `b23d601ee8c69a654d542f1da43d16bb042eaf22` passed public CI. |
-| H10-E | preregistered; public preregistration CI required | Audit the nonzero-production gate between Riemann--Roch dimension surplus and the auxiliary function. | Fixed endpoints are rank-nullity, injective realization, a separated polynomial coefficient-block model, and a countermodel showing dimension surplus alone is insufficient. |
+| H10-E | local success; implementation CI required | Audit the nonzero-production gate between Riemann--Roch dimension surplus and the auxiliary function. | Rank-nullity, injective realization, a separated polynomial coefficient-block equivalence, and exact witnesses compile. A noninjective countermodel proves dimension surplus alone is insufficient. |
 
 ## Hard Gaps
 
@@ -2293,4 +2293,24 @@ Final-ledger commit `b23d601ee8c69a654d542f1da43d16bb042eaf22` passed run
   Riemann--Roch dimension estimates, parameter choice, and pole control.
 - `classification_target`: `SOURCE_NONCANCELLATION_GATE_FORMALIZED`, with no curve theorem,
   number-field transfer, or RH implication.
+- `global_goal`: active.
+
+## 2026-07-26 H10 polar-injectivity gate local endpoint
+
+- `node`: `H10-E-BOMBIERI-STEPANOV-POLAR-INJECTIVITY-01`.
+- `local_status`: `SOURCE_NONCANCELLATION_GATE_FORMALIZED / IMPLEMENTATION_CI_REQUIRED`.
+- `closed_edges`:
+  `finrank surplus -> nonzero descent kernel`;
+  `injective realization -> nonzero realized auxiliary`;
+  `separated coefficient blocks -> explicit injective realization`.
+- `negative_control`: a strict finrank surplus with noninjective realization can kill every
+  descent-kernel vector after realization.
+- `open_H10_edges`: actual curve polar-order separation, Riemann--Roch space dimensions,
+  optimized parameter selection, pole control, lower point counts, and any number-field descent
+  or cohomology object.
+- `local_audit`: one proven Target, six exact TargetChecks, six standard-only axiom prints,
+  empty forbidden scans, and full `8770/8770` build.
+- `classification`: `historical_route_coverage_delta=1`, `source_logic_bridge_delta=1`,
+  `actual_curve_polar_lemma_delta=0`, `curve_theorem_delta=0`,
+  `number_field_transfer_delta=0`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
 - `global_goal`: active.
