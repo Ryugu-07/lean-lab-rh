@@ -4680,3 +4680,21 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `production_gate`: docs-only preregistration public CI before Lean proof editing.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H9 Redheffer--Mertens determinant implementation public green
+
+- `campaign`: `LITERATURE-20260726-H9-REDHEFFER-MERTENS-DETERMINANT-01`.
+- `frozen_implementation`: commit `2003f912dfb0627b1c41d4b80db1abc6eb24e5d3`.
+- `public_ci`: Lean Action run `30207909320`, build job `89809080863`, passed in `2m6s`.
+- `result`: `REDHEFFER_MERTENS_ELIMINATION_FORMALIZED`.
+- `proof_freeze`: the 257-line source, one proven Target, eight exact TargetChecks, and six
+  selected standard-only axiom prints are frozen.
+- `research_reading`: the exact elimination exposes no extra determinant slack; it concentrates
+  all arithmetic cancellation in `M(N)`. The next source-bearing edge is the characteristic
+  polynomial and joint product control of its logarithmically many non-unit roots.
+- `next_gate`: publish docs-only immutable evidence and require public CI, then a docs-only final
+  ledger and public CI.
+- `open_H9`: RH-equivalent Mertens growth, full characteristic polynomial, non-unit-root
+  estimates, reciprocal-zeta continuation, H9, and RH.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

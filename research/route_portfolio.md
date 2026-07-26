@@ -4258,4 +4258,8 @@ axiom prints, empty forbidden scans, and full `8771/8771` build pass locally. Cl
 `REDHEFFER_MERTENS_ELIMINATION_FORMALIZED`, with
 `arithmetic_spectral_interface_delta=1`, `hard_gap_delta=0`, and `rh_frontier_delta=0`.
 The next source question is the characteristic polynomial and logarithmically many non-unit
-roots; implementation public CI is required first.
+roots.
+
+Frozen implementation commit `2003f912dfb0627b1c41d4b80db1abc6eb24e5d3` passed public Lean
+Action run `30207909320`, build job `89809080863`, in `2m6s`. Proof source is frozen; publish
+docs-only immutable evidence next with no `LeanLab/` change.

@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H9-REDHEFFER-MERTENS-DETERMINANT-01`
 
 Selected node: `H9-REDHEFFER-MERTENS-DETERMINANT-01`
 
-Status: `LOCAL_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Target
 
@@ -36,6 +36,7 @@ Status: `LOCAL_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
 | `MERTENS_DETERMINANT` | Combined determinant multiplicativity, the first-row expansion, and the unit tail. | `det A_N=M(N)` compiles for every positive order, with exact zero/nonzero criteria. | Run low-order orientation checks. |
 | `LOW_ORDER_CHECKS` | Checked orders one through four. | Determinants are `1,0,-1,-1`, matching the finite Mertens sums. | Run all local gates. |
 | `LOCAL_GATES` | Ran warning-as-error production, Targets, TargetChecks, and AxiomsAudit compiles; scanned forbidden declarations and resource relaxations; ran the full build. | One proven Target, eight exact checks, six standard-only axiom prints, empty scans, and `8771/8771` build all pass. | Freeze and publish the implementation. |
+| `IMPLEMENTATION_PUBLIC` | Published frozen implementation commit `2003f912dfb0627b1c41d4b80db1abc6eb24e5d3`. | Public run `30207909320`, build job `89809080863`, passed in `2m6s`; the proof source is frozen. | Publish docs-only immutable evidence with no `LeanLab/` change. |
 
 ## Runtime record
 
@@ -54,7 +55,7 @@ Mathlib's Mobius divisor-cancellation theorem, and standard determinant identiti
 assume RH, the RH-equivalent Mertens growth estimate, the false Mertens conjecture, or any
 unproved spectral-location claim.
 
-Local result: `REDHEFFER_MERTENS_ELIMINATION_FORMALIZED`.
+Public implementation result: `REDHEFFER_MERTENS_ELIMINATION_FORMALIZED`.
 
 The characteristic polynomial, the exact multiplicity of eigenvalue one, the two dominant-root
 asymptotics, estimates for the remaining roots, reciprocal-zeta continuation, H9, and RH remain

@@ -8,7 +8,7 @@ Selected node: `H9-REDHEFFER-MERTENS-DETERMINANT-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `LOCAL_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Selection rationale
 
@@ -169,3 +169,14 @@ Local classification:
 - `mertens_growth_delta=0`;
 - `hard_gap_delta=0`;
 - `rh_frontier_delta=0`.
+
+## Frozen implementation
+
+Implementation commit `2003f912dfb0627b1c41d4b80db1abc6eb24e5d3` passed public Lean
+Action run `30207909320`, build job `89809080863`, in `2m6s`. The production module, proven
+Target, exact TargetChecks, and selected axiom prints are frozen at that hash.
+
+The next gate is a docs-only immutable-evidence commit. No `LeanLab/` file may change between
+the frozen implementation and that evidence commit. The full characteristic polynomial, joint
+control of its logarithmically many non-unit roots, the RH-equivalent Mertens growth estimate,
+reciprocal-zeta continuation, H9, and RH remain open.

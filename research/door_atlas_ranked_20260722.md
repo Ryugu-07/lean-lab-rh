@@ -1497,5 +1497,7 @@ the Mertens bound; it confirms that the source's possible extra leverage begins 
 characteristic polynomial and joint control of the non-unit roots.
 
 One proven Target, eight exact TargetChecks, six standard-only axiom prints, empty forbidden
-scans, and full `8771/8771` build pass locally. The implementation must pass public CI before
-immutable evidence or successor selection.
+scans, and full `8771/8771` build pass locally. Frozen implementation commit
+`2003f912dfb0627b1c41d4b80db1abc6eb24e5d3` passed public Lean Action run `30207909320`,
+build job `89809080863`, in `2m6s`. Proof source is frozen; docs-only immutable evidence is the
+next gate before successor selection.
