@@ -8,7 +8,7 @@ Selected node: `H1-HARDY-CRITICAL-LINE-REAL-SIGN-BRIDGE-01`
 
 Mode: `LITERATURE`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_RESULT / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
 
 ## Selection rationale
 
@@ -210,3 +210,31 @@ The local campaign stops when the fixed endpoint is proved, falsified, or reduce
 Mathlib or mathematical obstruction. A successful endpoint returns to fresh cross-family route
 selection before choosing between Hardy's original transform, Farey--Franel--Landau, or another
 historical family. Local STOP does not close H1 or the active RH Goal.
+
+## Local implementation result
+
+The docs-only preregistration commit `fa9f7842d87263370e4c166553f130d6e3d3ca2d` passed public
+Lean Action run `30213072417`, build job `89822480269`, in `1m47s`, opening the production gate.
+
+The 179-line module `LeanLab/Riemann/HardyCriticalLineSign.lean` proves every fixed endpoint:
+
+- the literal `1/2+i*t` conjugate-reflection geometry and project critical-line membership;
+- exact project-xi real reconstruction, evenness, and continuity;
+- `hardyXi(t)=0` iff the actual point is a project `IsNontrivialZero`;
+- both weak endpoint-sign orientations with interval membership;
+- one actual nontrivial critical-line witness in every interval of an ordered alternating-sign
+  sequence, without claiming distinctness.
+
+One proven aggregate Target, five exact TargetChecks, and nine selected axiom prints compile.
+Every selected print contains only `propext`, `Classical.choice`, and `Quot.sound`; the new
+module's forbidden scan is empty, warning-as-error compilation passes, and the full build passes
+`8774/8774`.
+
+Classification is `result=HARDY_CRITICAL_LINE_REAL_SIGN_BRIDGE_FORMALIZED`,
+`historical_route_coverage_delta=1`, `critical_line_real_coordinate_delta=1`,
+`sign_change_consumer_delta=1`, `hardy_transform_delta=0`,
+`critical_line_infinitude_delta=0`, `hard_gap_delta=0`, and `rh_frontier_delta=0`.
+
+Endpoint signs remain hypotheses. Hardy's transform estimates, arbitrarily high sign changes,
+pairwise distinct zero witnesses, critical-line infinitude, H1, and RH remain open. The next gate
+is a frozen implementation commit and public CI.

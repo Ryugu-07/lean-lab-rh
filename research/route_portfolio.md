@@ -4380,3 +4380,18 @@ interval.
 This is not the infinitude theorem. Endpoint signs remain hypotheses, and the subsequent Hardy
 transform must produce them. Farey--Franel--Landau remains queued as another missing classical
 branch. Public preregistration CI is required before any Lean proof-source edit.
+
+## H1 Hardy Critical-Line Sign Bridge Local Result
+
+Preregistration commit `fa9f7842d87263370e4c166553f130d6e3d3ca2d` passed public CI run
+`30213072417`, job `89822480269`, in `1m47s`. The production module now proves the exact
+critical-line conjugate-reflection geometry, project-xi real reconstruction, evenness,
+continuity, the actual nontrivial-zero dictionary, both interval sign orientations, and a
+sequence interval-witness consumer.
+
+This result supplies the normalization-safe output consumer for a future reconstruction of
+Hardy's transform. It does not supply endpoint signs, distinctness, critical-line infinitude,
+or a critical-zero proportion. Classification is
+`HARDY_CRITICAL_LINE_REAL_SIGN_BRIDGE_FORMALIZED`, with route-coverage and sign-consumer deltas
+but `hard_gap_delta=0` and `rh_frontier_delta=0`. Freeze and publish the implementation before
+immutable evidence.

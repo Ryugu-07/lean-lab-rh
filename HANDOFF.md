@@ -4932,3 +4932,26 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   branch.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H1 Hardy critical-line sign bridge local result
+
+- `public_prereg`: commit `fa9f7842d87263370e4c166553f130d6e3d3ca2d` passed run
+  `30213072417`, build job `89822480269`, in `1m47s`.
+- `result`: `HARDY_CRITICAL_LINE_REAL_SIGN_BRIDGE_FORMALIZED`.
+- `module`: `LeanLab/Riemann/HardyCriticalLineSign.lean`, 179 lines.
+- `compiled_core`: exact `1/2+i*t` geometry, project-xi real reconstruction, evenness,
+  continuity, exact `hardyXi=0` iff project `IsNontrivialZero`, both weak-sign orientations,
+  and one actual critical-line witness in every interval of an alternating-sign sequence.
+- `local_gates`: one proven Target, five exact TargetChecks, nine selected standard-only axiom
+  prints, empty new-module forbidden scan, warning-as-error compile, `git diff --check`, and
+  full `8774/8774` build.
+- `strict_boundary`: endpoint signs are hypotheses. Hardy's transform, arbitrarily high sign
+  changes, pairwise distinct witnesses, critical-line infinitude, H1, and RH remain open.
+- `classification`: `historical_route_coverage_delta=1`,
+  `critical_line_real_coordinate_delta=1`, `sign_change_consumer_delta=1`,
+  `hardy_transform_delta=0`, `critical_line_infinitude_delta=0`, `hard_gap_delta=0`,
+  `rh_frontier_delta=0`.
+- `next_gate`: freeze and publish the implementation, then docs-only immutable evidence and
+  final ledger with public CI at each gate.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

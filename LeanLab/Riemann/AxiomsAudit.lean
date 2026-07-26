@@ -7,6 +7,7 @@ import LeanLab.Riemann.PolyaTuranAbelAudit
 import LeanLab.Riemann.RedhefferMertensDeterminant
 import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
+import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
 import LeanLab.Riemann.ThetaInfinityMollifier
@@ -1058,3 +1059,12 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.mellinConvergent_rieszTwoKernel_of_decay
 #print axioms LeanLab.Riemann.mellin_differentiableAt_rieszTwoKernel_of_decay
 #print axioms LeanLab.Riemann.rieszTwoMellinBoundary_endpoint
+#print axioms LeanLab.Riemann.hardyCriticalLinePoint_conj
+#print axioms LeanLab.Riemann.hardyCriticalXi_eq_ofReal
+#print axioms LeanLab.Riemann.hardyXi_even
+#print axioms LeanLab.Riemann.continuous_hardyXi
+#print axioms LeanLab.Riemann.hardyXi_eq_zero_iff_isNontrivialZero
+#print axioms LeanLab.Riemann.exists_hardyXi_zero_of_sign_change_forward
+#print axioms LeanLab.Riemann.exists_hardyXi_zero_of_sign_change_reverse
+#print axioms LeanLab.Riemann.exists_hardyXi_zero_in_each_alternating_interval
+#print axioms LeanLab.Riemann.hardyCriticalLineSign_endpoint

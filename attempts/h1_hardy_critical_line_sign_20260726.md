@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H1-HARDY-CRITICAL-LINE-SIGN-01`
 
 Selected node: `H1-HARDY-CRITICAL-LINE-REAL-SIGN-BRIDGE-01`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_RESULT / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
 
 ## Target
 
@@ -32,6 +32,13 @@ Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
 | `PRIMARY_SOURCE_AUDIT` | Located Hardy 1914 and the later Hardy--Littlewood full account. | The historical endpoint is infinitely many critical-line zeros; the first formal hinge is a real critical-line coordinate plus a theorem converting signs to actual zeros. | Keep infinitude and transform estimates outside this fixed endpoint. |
 | `REPOSITORY_DUPLICATION_SCAN` | Searched production, attempts, route cards, and ledgers for Hardy xi, Hardy Z, or an xi sign-change theorem. | Production Lean has xi conjugation, functional equation, analyticity, and zero dictionaries, but no direct Hardy critical-line real/sign module. | Admit the new H1 subroute. |
 | `LEAN_API_SURVEY` | Checked the existing xi symmetry and differentiability theorems and the real intermediate-value route. | The fixed endpoint has a direct no-sorry path; exact theorem syntax remains to be tested after the public preregistration gate. | Publish docs-only preregistration before proof edits. |
+| `PUBLIC_PREREG_GATE` | Published the docs-only fixed endpoint. | Commit `fa9f7842d87263370e4c166553f130d6e3d3ca2d` passed run `30213072417`, job `89822480269`, in `1m47s`. | Open production editing. |
+| `CRITICAL_LINE_GEOMETRY` | Defined the literal point `1/2+i*t` and proved its conjugate and negative-parameter identities. | Both identities normalize exactly to `s -> 1-s`, and every point satisfies project `OnCriticalLine`. | Transport the xi symmetries. |
+| `REAL_EVEN_CONTINUOUS_XI` | Combined `riemannXi_conj`, `riemannXi_one_sub`, and entire continuity. | `hardyCriticalXi(t)=ofReal(hardyXi(t))`; `hardyXi` is even and continuous. Real-valuedness does not supply any sign. | Register the exact zero dictionary. |
+| `ZERO_DICTIONARY` | Rewrote project xi zeros through the existing multiplicity-safe nontrivial-zero equivalence. | `hardyXi(t)=0` iff `IsNontrivialZero(1/2+i*t)` compiles, with critical-line membership proved separately. | Apply the real intermediate value theorem. |
+| `SIGN_CONSUMERS` | Proved negative-to-positive and positive-to-negative weak endpoint versions and a disjunctive bracket theorem. | Each theorem returns an interval member together with actual `IsNontrivialZero` and `OnCriticalLine`; endpoint zeros are admitted. | Lift pointwise to a sequence. |
+| `SEQUENCE_CONSUMER` | Applied the bracket theorem to every adjacent interval of an ordered alternating-sign sequence. | One actual witness compiles in each interval. No pairwise distinctness is claimed. | Register Target and audits. |
+| `LOCAL_GATES` | Added one aggregate Target, five exact checks, and nine selected axiom prints; ran standalone, warning-as-error, forbidden, and full-build checks. | Selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`; new-module scan is empty; full build passes `8774/8774`. | Freeze and publish implementation. |
 
 ## Runtime record
 
@@ -55,3 +62,17 @@ assert that such signs exist at arbitrarily large heights, import Hardy's theore
 assume RH, or infer oscillation from real-valuedness.
 
 The six inherited user/exposure files remain untouched and unstaged.
+
+## Local result
+
+- `result`: `HARDY_CRITICAL_LINE_REAL_SIGN_BRIDGE_FORMALIZED`.
+- `module`: `LeanLab/Riemann/HardyCriticalLineSign.lean`, 179 lines.
+- `proved_boundary`: the actual project xi restriction is a real even continuous coordinate,
+  and either weak sign orientation on an ordered interval produces a genuine nontrivial
+  critical-line zero in that interval.
+- `unproved_boundary`: no endpoint sign, transform estimate, zero distinctness, critical-line
+  infinitude, H1, or RH is proved.
+- `local_gates`: one proven Target, five exact TargetChecks, nine selected standard-only axiom
+  prints, empty forbidden scan, warning-as-error compile, and full `8774/8774` build.
+- `next_gate`: frozen implementation commit and public Lean Action CI.
+- `global_goal`: active.

@@ -15,6 +15,7 @@ import LeanLab.Riemann.BombieriStepanovPolarInjectivity
 import LeanLab.Riemann.RedhefferMertensDeterminant
 import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
+import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -4775,5 +4776,31 @@ example :
 example :
     RieszTwoMellinBoundaryCertificate :=
   rieszTwoMellinBoundary_endpoint
+
+example (t : ℝ) :
+    (starRingEnd ℂ) (hardyCriticalLinePoint t) =
+        1 - hardyCriticalLinePoint t ∧
+      OnCriticalLine (hardyCriticalLinePoint t) :=
+  ⟨hardyCriticalLinePoint_conj t, onCriticalLine_hardyCriticalLinePoint t⟩
+
+example (t : ℝ) :
+    hardyCriticalXi t = (hardyXi t : ℂ) ∧
+      hardyXi (-t) = hardyXi t :=
+  ⟨hardyCriticalXi_eq_ofReal t, hardyXi_even t⟩
+
+example (t : ℝ) :
+    hardyXi t = 0 ↔ IsNontrivialZero (hardyCriticalLinePoint t) :=
+  hardyXi_eq_zero_iff_isNontrivialZero t
+
+example {a b : ℝ} (hab : a ≤ b)
+    (ha : hardyXi a ≤ 0) (hb : 0 ≤ hardyXi b) :
+    ∃ t ∈ Set.Icc a b,
+      IsNontrivialZero (hardyCriticalLinePoint t) ∧
+        OnCriticalLine (hardyCriticalLinePoint t) :=
+  exists_hardyXi_zero_of_sign_change_forward hab ha hb
+
+example :
+    HardyCriticalLineSignCertificate :=
+  hardyCriticalLineSign_endpoint
 
 end LeanLab.Riemann

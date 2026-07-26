@@ -214,6 +214,11 @@ sign-change-to-zero consumer are absent. This does not change the published prop
 It opens `H1-HARDY-CRITICAL-LINE-REAL-SIGN-BRIDGE-01` so that a later reconstruction of Hardy's
 transform must produce literal signs feeding an exact nontrivial-zero witness.
 
+That fixed node now compiles locally: the project-xi coordinate is real, even, and continuous,
+and both weak endpoint-sign orientations produce an actual interval critical-line zero. The
+remaining omission-bearing edge is the source transform or estimate that produces arbitrarily
+high separated sign brackets; no such signs are asserted by the compiled consumer.
+
 ### Exact missing object
 
 Two endpoints must be distinguished. A Levinson-style argument that outputs only asymptotic

@@ -2490,3 +2490,23 @@ publicly closed and cross-family selection resumed.
   coverage and route-interface deltas but no critical-line-infinitude, hard-gap, or RH-frontier
   delta.
 - `global_goal`: active.
+
+## 2026-07-26 H1 Hardy critical-line sign bridge local result
+
+- `closed_edge`: exact real/even/continuous project-xi coordinate and interval sign consumer.
+- `zero_dictionary`: `hardyXi(t)=0` iff
+  `IsNontrivialZero(hardyCriticalLinePoint(t))`, with literal `OnCriticalLine`.
+- `sequence_boundary`: one witness is produced in every adjacent registered interval; no
+  pairwise distinctness is inferred.
+- `open_edge_H1A`: reconstruct a source-faithful Hardy theta/Fourier or integral transform whose
+  estimates produce arbitrarily high opposite endpoint signs.
+- `open_edge_H1B`: combine separated sign intervals with the consumer to prove infinitely many
+  distinct critical-line zeros.
+- `classification`: `historical_route_coverage_delta=1`,
+  `critical_line_real_coordinate_delta=1`, `sign_change_consumer_delta=1`,
+  `hardy_transform_delta=0`, `critical_line_infinitude_delta=0`, `hard_gap_delta=0`,
+  `rh_frontier_delta=0`.
+- `local_audit`: one proven Target, five exact TargetChecks, nine selected standard-only axiom
+  prints, empty forbidden scan, warning-as-error compile, and full `8774/8774` build.
+- `next_gate`: frozen implementation commit and public CI.
+- `global_goal`: active.

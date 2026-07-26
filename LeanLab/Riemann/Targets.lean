@@ -93,6 +93,7 @@ import LeanLab.Riemann.PolyaTuranAbelAudit
 import LeanLab.Riemann.RedhefferMertensDeterminant
 import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
+import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
@@ -1439,6 +1440,14 @@ def rhTargets : List ResearchTarget :=
         "Instantiate the exact finite-prime Weil matrix, its normalized true ground vector and gap, and the normalized prolate coefficient vector, then prove that Rayleigh excess divided by the certified gap tends to zero in the source-prescribed Galerkin and prime-cutoff limit."
       status := .inProgress
       note := "This is an original open candidate suggested by the quantitative consumer, not a theorem stated in the locked Connes sources. Individual pole, finite-prime, and archimedean tail blocks now compile, but no current declaration assembles their total source matrix with the prolate vector and two uniform cutoff limits. It has no leanName and is unavailable as a premise." },
+    { id := "H1.hardy.critical-line-real-sign-bridge"
+      tier := .tier2
+      title := "Formalize Hardy's real critical-line xi sign bridge"
+      statement :=
+        "Restrict the actual project xi function to 1/2+i*t, prove the resulting coordinate is real, even, and continuous, identify its zeros exactly with project nontrivial critical-line zeros, and turn both endpoint-sign orientations and an alternating interval sequence into actual interval witnesses."
+      leanName := some ``hardyCriticalLineSign_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260726-H1-HARDY-CRITICAL-LINE-SIGN-01 compiles the normalization-safe consumer at the entrance to Hardy's 1914 route. The proof uses only xi conjugation, the functional equation, entire continuity, and the real intermediate value theorem. Endpoint signs remain explicit premises, and sequence witnesses are not asserted distinct. Hardy's theta/Fourier transform, arbitrarily high sign changes, infinitely many critical-line zeros, critical-zero proportions, H1, and RH remain open; historical_route_coverage_delta=1, sign_change_consumer_delta=1, hard_gap_delta=0, rh_frontier_delta=0." },
     { id := "H1.short-mollifier.variational-global-minimizer"
       tier := .tier2
       title := "Certify the short-mollifier variational minimizer"

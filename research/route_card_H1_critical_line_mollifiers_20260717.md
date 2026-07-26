@@ -154,3 +154,8 @@ another numerical proportion optimization. Its fixed endpoint is the actual proj
 even, continuous coordinate and its interval/sequence sign consumer. Endpoint signs remain
 explicit hypotheses. Hardy's transform estimates, critical-line infinitude, H1, and RH remain
 open after this interface.
+
+The local implementation now compiles every fixed interface theorem in the 179-line module
+`HardyCriticalLineSign.lean`. Both sign orientations return an actual nontrivial critical-line
+zero with closed-interval membership; the sequence theorem returns one witness per registered
+interval and does not claim distinctness. Implementation public CI remains the next gate.
