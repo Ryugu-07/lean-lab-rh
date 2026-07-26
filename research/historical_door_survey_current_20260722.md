@@ -21,6 +21,19 @@ input or mechanical output gates.
   at every time. Such work must follow the existing conjecture-admission gates and may not replace
   the survey main line merely because it is easier or more novel.
 
+## Historical-first allocation clarification (2026-07-26)
+
+- The main research effort continues through the admitted historical routes to look for human
+  omissions, unnecessarily strong abandoned premises, and combinations that were not tested.
+- A source-backed route is not treated as exhausted merely because one local campaign stops.
+  Its proved nodes, failed probes, and exact surviving edge must be logged before reranking.
+- Original route-building becomes the dominant allocation only after the admitted historical
+  atlas has been attempted to its recorded local stopping points.
+- Conjecture proposal and Lean verification remain open at every time, including during the
+  historical survey. A proved conjecture may immediately change the route ranking.
+- "All routes" means the auditable census and any genuinely distinct source-backed additions,
+  not an unverifiable claim that every idea ever considered by a human has been enumerated.
+
 ## H6 upper-bound successor status
 
 The H6 Boyd/Polymath numerical upper-bound successor is parked at the clean public Loop 31
@@ -91,4 +104,3 @@ proposed Lean statement, RH-strength audit, nearest literature, finite/edge/coun
 and the exact DAG node it would unlock. A surviving conjecture remains unavailable as a premise
 until Lean proves it. A short validation campaign may run when it tests a survey-discovered
 opening; afterward the main line returns to the unfinished atlas.
-

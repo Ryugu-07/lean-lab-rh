@@ -4170,3 +4170,22 @@ through immutable evidence.
 Docs-only immutable-evidence commit `89b7dead3b9a9344dc34c16a1d9e0bfa0c2cd792` passed run
 `30205553507`, build job `89802869900`, in `1m30s`, with no `LeanLab/` changes. Only
 final-ledger CI remains before fresh historical-route selection.
+
+Final-ledger commit `b23d601ee8c69a654d542f1da43d16bb042eaf22` passed run
+`30205670028`, build job `89803179330`, in `1m30s`; the fixed Frobenius auxiliary campaign is
+publicly closed.
+
+## H10 Bombieri--Stepanov Polar Injectivity Selection
+
+Fresh comparison retains H1's arbitrary-length moment, H2's actual bow exclusion, H7's true
+ground-state convergence, H11's sparse-exception amplifier, and H12's global contour assembly as
+open route edges. The next fixed campaign stays briefly with H10 because a logically prior step
+inside its successful proof has not been audited: dimension surplus produces a vector in a
+descent kernel, but only polar/tensor injectivity guarantees that vector realizes a nonzero
+function.
+
+Campaign `LITERATURE-20260726-H10-BOMBIERI-STEPANOV-POLAR-INJECTIVITY-01` will formalize the
+finite-dimensional certificate, a separated coefficient-block realization, and a countermodel
+without injectivity. It does not optimize the point-count constant and does not claim the
+polynomial block model is the curve valuation theorem. Public preregistration CI is required
+before proof-source editing.

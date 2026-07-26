@@ -4559,3 +4559,22 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   attacks as open work.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H10 polar-injectivity gate selected
+
+- `parent_public_closure`: H10 Frobenius auxiliary final-ledger commit
+  `b23d601ee8c69a654d542f1da43d16bb042eaf22` passed run `30205670028`, build job
+  `89803179330`, in `1m30s`.
+- `campaign`: `LITERATURE-20260726-H10-BOMBIERI-STEPANOV-POLAR-INJECTIVITY-01`.
+- `node`: `H10-E-BOMBIERI-STEPANOV-POLAR-INJECTIVITY-01`.
+- `source`: Bombieri Bourbaki 430 key product-isomorphism lemma; Kedlaya Theorem 5.1.5.
+- `fixed_endpoint`: finite-dimensional kernel production, injective realization, a separated
+  polynomial coefficient-block equivalence, a source-shaped nonzero-kernel theorem, and a
+  noninjective realization countermodel.
+- `selection_reason`: this audits whether the successful source truly creates a nonzero
+  auxiliary; it does not optimize the already sharp Frobenius/multiplicity bound.
+- `strict_boundary`: actual curve polar orders, Riemann--Roch spaces, optimized parameters, point
+  counts, number-field transfer, and RH remain open.
+- `production_gate`: docs-only preregistration public CI before Lean proof editing.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

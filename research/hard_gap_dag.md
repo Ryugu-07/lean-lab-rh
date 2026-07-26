@@ -62,7 +62,8 @@ flowchart TD
 | H6-E | open | Prove all zeros of `H_0` are real, equivalently `Lambda <= 0` in the audited normalization. | The generic adjacent-gap and positive-kernel/Hankel routes are obstructed. The actual-theta heat-Li time-monotonicity candidate survived high-precision finite screening, and Lean compiles its exact reduction to RH plus the function-level heat-log evolution, but no all-index sign representation or global moving-divisor differentiation theorem was obtained. A new attack must supply that theta-specific input, height-aware continuation, or a different all-index invariant. The endpoint is unchanged. |
 | H10-B | complete | Prove finite aggregate power-sum spectral rigidity and the reciprocal-pairing square-root-circle corollary. | The final finite-spectral step of function-field RH is publicly compiled. It proves no curve point-count bound and supplies no finite-spectrum or uniform-tail transfer for the Riemann zeta zero divisor; `hard_gap_delta=0`. |
 | H10-C | complete | Test a countably infinite ordinary power-trace extension with nonzero reciprocal pairing. | Lean proves `Summable (alpha^k)` for positive `k` forces `q=0` under `alpha(sigma n)*alpha(n)=q`; a one-point finite witness shows the obstruction is specific to the infinite ordinary-trace transfer. Final-ledger commit `2edf069a217255bbc20b93a2aa938f51dd57d94e` passed public CI. |
-| H10-D | immutable evidence CI passed; final ledger pending | Formalize the Bombieri--Stepanov finite-field Frobenius auxiliary mechanism and test its degree budget for slack. | The generic descent, perfect-power multiplicity, and root-degree bounds compile. A nonzero `ZMod 2` kernel witness has exact multiplicity two at both points and saturates the degree budget. Frozen implementation and immutable evidence passed independent public CI. |
+| H10-D | complete | Formalize the Bombieri--Stepanov finite-field Frobenius auxiliary mechanism and test its degree budget for slack. | The generic descent, perfect-power multiplicity, and root-degree bounds compile. A nonzero `ZMod 2` kernel witness has exact multiplicity two at both points and saturates the degree budget. Final-ledger commit `b23d601ee8c69a654d542f1da43d16bb042eaf22` passed public CI. |
+| H10-E | preregistered; public preregistration CI required | Audit the nonzero-production gate between Riemann--Roch dimension surplus and the auxiliary function. | Fixed endpoints are rank-nullity, injective realization, a separated polynomial coefficient-block model, and a countermodel showing dimension surplus alone is insufficient. |
 
 ## Hard Gaps
 
@@ -2274,3 +2275,22 @@ docs-only immutable evidence and final-ledger CI remain.
 Docs-only immutable-evidence commit `89b7dead3b9a9344dc34c16a1d9e0bfa0c2cd792` passed run
 `30205553507`, build job `89802869900`, in `1m30s`; `LeanLab/` remains identical to the
 frozen implementation. Final-ledger CI is the only remaining gate for this fixed node.
+
+Final-ledger commit `b23d601ee8c69a654d542f1da43d16bb042eaf22` passed run
+`30205670028`, build job `89803179330`, in `1m30s`; H10-D is publicly closed.
+
+## 2026-07-26 H10 polar-injectivity gate launch
+
+- `node`: `H10-E-BOMBIERI-STEPANOV-POLAR-INJECTIVITY-01`.
+- `mode`: `LITERATURE / FALSIFICATION`.
+- `fixed_edge`:
+  `polar/coefficient block separation -> injective realization`;
+  `dimension surplus -> nonzero descent kernel`;
+  `both -> nonzero realized auxiliary`.
+- `negative_control`: dimension surplus with a noninjective realization may kill the entire
+  descent kernel and must not be accepted.
+- `open_geometric_inputs`: actual curve valuations, the Bombieri product-isomorphism theorem,
+  Riemann--Roch dimension estimates, parameter choice, and pole control.
+- `classification_target`: `SOURCE_NONCANCELLATION_GATE_FORMALIZED`, with no curve theorem,
+  number-field transfer, or RH implication.
+- `global_goal`: active.

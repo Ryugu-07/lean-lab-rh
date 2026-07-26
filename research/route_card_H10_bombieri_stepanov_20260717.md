@@ -151,6 +151,22 @@ optimized kernel production, and pole control.
 Immutable-evidence commit `89b7dead3b9a9344dc34c16a1d9e0bfa0c2cd792` passed run
 `30205553507` with proof source unchanged. Final-ledger CI remains.
 
+Final-ledger commit `b23d601ee8c69a654d542f1da43d16bb042eaf22` passed run
+`30205670028`; H10-D is publicly closed.
+
+## Candidate H10-E: polar injectivity and nonzero kernel realization
+
+**Exact proposition.** A source dimension surplus gives a nonzero descent-kernel vector. An
+injective realization sends it to a nonzero auxiliary. A separated polynomial coefficient-block
+equivalence models the polar-order noncancellation, while a noninjective countermodel proves the
+realization hypothesis cannot be omitted.
+
+**DAG and strength.** This closes the finite-dimensional logic between the source product lemma
+and the Frobenius auxiliary. It does not prove the actual curve polar-expansion theorem,
+Riemann--Roch dimensions, a point count, or number-field RH.
+
+**Verdict:** `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`.
+
 ## Recommendation
 
 Keep H10-B as the finite spectral endpoint and H10-D as the source-algebra endpoint. Continue the

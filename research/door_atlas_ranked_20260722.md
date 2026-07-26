@@ -1434,3 +1434,19 @@ Frozen implementation commit `61bb73ad666e3bdd4ba460bedd93af16256c997d` passed p
 Docs-only immutable evidence `89b7dead3b9a9344dc34c16a1d9e0bfa0c2cd792` passed run
 `30205553507`, build job `89802869900`, in `1m30s`; proof source remained frozen. Only
 final-ledger CI remains.
+
+Final-ledger commit `b23d601ee8c69a654d542f1da43d16bb042eaf22` passed run
+`30205670028`, build job `89803179330`, in `1m30s`; the fixed source-algebra endpoint is
+publicly closed.
+
+### Post-H10-D rerank: polar injectivity before dimension surplus
+
+The next H10 source hinge is selected after comparison with the current H1, H2, H7, H11, and H12
+frontiers. Bombieri's nonzero auxiliary does not follow from a dimension inequality alone. The
+polar-order lemma first identifies the product source with a tensor product, preventing a
+nonzero coefficient vector from realizing as the zero function.
+
+The fixed campaign kernel-checks this dependency with an injective coefficient-block model and a
+noninjective countermodel. It is an omission audit of a lightly stated source lemma, not a
+point-count optimization. The actual curve valuation proof and all number-field transfer remain
+outside.
