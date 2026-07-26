@@ -8,7 +8,7 @@ Selected node: `H12-LM-PAIRED-MASS-DENSITY-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Primary source
 
@@ -203,6 +203,29 @@ Expected classification on success:
 - `known_theorem_formalization_delta=0` until the full Levinson--Montgomery theorem is compiled;
 - `hard_gap_delta=0` for RH;
 - `rh_frontier_delta=0`.
+
+## Compiled result
+
+Attack A succeeded without the finite-cutoff fallback. The production module
+`LeanLab/Riemann/LevinsonMontgomeryPairedMassDensity.lean` uses a global half-pair average over
+the actual xi divisor. For off-line values, the left and right divisor copies together recover
+the source coefficient two; for critical-line values, the pair has one value and the half
+average recovers coefficient one.
+
+The three mandatory endpoints compile with their registered strength:
+
+- `levinsonMontgomery_real_paired_zero_sum_eq`;
+- `exists_upperLeft_zero_abs_im_sub_lt_half_of_pairedMass_neg`;
+- `levinsonMontgomeryDenseBranch_of_pairedMassNegativeAtIntegers`.
+
+The first exact remaining source edge is equation `(2.1)` plus the explicit Gamma and low-height
+estimates needed to derive eventual integer-height mass negativity. The indented contour,
+`O(log T)` count difference, full dichotomy, unconditional Speiser theorem, and RH remain open.
+
+Preregistration commit `8990be949f0160c593a55bf710714bdaeeef1768` passed public Lean Action
+run `30190223668`, build job `89762046622`, in `1m34s`. Frozen implementation commit
+`0b5b6d5c44cddb680be721c54a6fc9d261e01ba5` passed run `30190754950`, build job
+`89763478543`, in `2m6s`.
 
 ## Mechanical and publication gates
 

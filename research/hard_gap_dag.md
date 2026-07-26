@@ -2015,3 +2015,24 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `claim_boundary`: no later H12 premise, derivative-zero-free condition, or RH is assumed.
 - `next_gate`: docs-only preregistration public CI.
 - `global_goal`: active.
+
+## 2026-07-26 H12 paired-mass density compiled
+
+- `node`: `H12-LM-PAIRED-MASS-DENSITY-01`, status `PUBLIC_IMPLEMENTATION_GREEN`.
+- `compiled_edge`: actual multiplicity-bearing xi divisor
+  `->` summable `rho,1-conj(rho)` real half-pairs
+  `->` exact Levinson--Montgomery mass identity
+  `->` negative mass gives an upper-left zero within `1/2`
+  `->` eventual integer-height negativity gives
+  `T/2 < speiserUpperLeftZetaZeroCount T`.
+- `method`: global half-pairing avoids a separate left/critical-line subtype split while
+  preserving exactly the source coefficients and analytic multiplicity.
+- `next_open_edge`: equation `(2.1)` and explicit Gamma plus low-height estimates must imply
+  eventual paired-mass negativity. The indented contour and `O(log T)` count theorem remain
+  later open nodes.
+- `public_evidence`: preregistration `8990be949f0160c593a55bf710714bdaeeef1768`
+  passed run `30190223668`; frozen implementation
+  `0b5b6d5c44cddb680be721c54a6fc9d261e01ba5` passed run `30190754950`.
+- `delta`: `source_analytic_bridge_delta=1`, `historical_route_coverage_delta=1`,
+  `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `global_goal`: active.

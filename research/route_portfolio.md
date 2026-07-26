@@ -3906,3 +3906,16 @@ The later H7/Li divisor and zero-sum infrastructure makes this a materially new 
 Gamma estimates, the low boundary, the indented contour, the logarithmic count bound, the full
 dichotomy, Speiser's unconditional known equivalence, and RH remain open. Production Lean edits
 require public preregistration CI.
+
+Attack A succeeds in the frozen 403-line implementation. Instead of splitting left and
+critical-line subtypes, Lean averages every multiplicity copy with `1-conj(rho)` by `1/2`.
+Both off-line copies then recover coefficient two, while a critical-line value recovers
+coefficient one. The compensated Hadamard terms and real reciprocal-square majorant prove
+summability; a negative kernel term yields the strict half-unit witness; strict neighborhoods
+make the integer selector injective and embed it in the existing weighted count.
+
+Preregistration `8990be949f0160c593a55bf710714bdaeeef1768` passed run `30190223668`.
+Frozen implementation `0b5b6d5c44cddb680be721c54a6fc9d261e01ba5` passed run
+`30190754950`, job `89763478543`, in `2m6s`. The next source edge is equation `(2.1)` plus
+explicit Gamma and low-height estimates proving eventual mass negativity; the contour and
+`O(log T)` count theorem remain later.

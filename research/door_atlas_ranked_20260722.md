@@ -1225,3 +1225,11 @@ turn the integer-height witnesses into the existing `N^-(T)>T/2` branch.
 
 The Gamma remainder, low-height verification, indented contour, logarithmic count bound, full
 count dichotomy, Speiser equivalence, H12, and RH remain open.
+
+This fixed edge now compiles. The implementation uses a global half-pair average over the actual
+multiplicity-bearing xi divisor, proves its compensated summability and exact rational identity,
+localizes a left zero from negative mass, and derives the existing eventual `N^-(T)>T/2` count
+branch from integer-height negativity. Frozen commit
+`0b5b6d5c44cddb680be721c54a6fc9d261e01ba5` passed public run `30190754950`, job
+`89763478543`, in `2m6s`. The atlas frontier advances to equation `(2.1)`, Gamma control, and
+the low-height sign certificate; H12 and RH remain open.
