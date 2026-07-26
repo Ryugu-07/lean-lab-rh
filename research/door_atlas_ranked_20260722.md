@@ -208,6 +208,12 @@ proportions even with arbitrarily short mollifiers. The authors explicitly ident
 linear-combination optimization as relatively underused. It does not claim a new `>5/12` zeta
 record or proportion one.
 
+The 2026-07-26 route recheck also finds a historically prior omission in the formal repository:
+Hardy's theorem is cited, but the actual project-xi real critical-line coordinate and its
+sign-change-to-zero consumer are absent. This does not change the published proportion frontier.
+It opens `H1-HARDY-CRITICAL-LINE-REAL-SIGN-BRIDGE-01` so that a later reconstruction of Hardy's
+transform must produce literal signs feeding an exact nontrivial-zero witness.
+
 ### Exact missing object
 
 Two endpoints must be distinguished. A Levinson-style argument that outputs only asymptotic

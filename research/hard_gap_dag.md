@@ -2466,3 +2466,27 @@ docs-only immutable evidence is the next gate.
 Docs-only immutable-evidence commit `5448bd74cdf55a8ead8847f6c7cd50e21e8711e7` passed run
 `30212403937`, build job `89820745802`, in `1m39s`; `LeanLab/` remains identical to the frozen
 implementation. Final-ledger CI is the only remaining gate for this fixed node.
+
+Final-ledger commit `18110c4a553e710fcb67fbe5617562fc573eca45` passed public Lean Action
+run `30212583915`, build job `89821224995`, in `1m31s`; the Riesz Mellin-boundary node is
+publicly closed and cross-family selection resumed.
+
+## 2026-07-26 H1 Hardy critical-line sign bridge launch
+
+- `node`: `H1-HARDY-CRITICAL-LINE-REAL-SIGN-BRIDGE-01`.
+- `mode`: `LITERATURE`.
+- `fixed_edge`:
+  `xi functional equation + conjugation -> xi real on 1/2+iR`;
+  `real coordinate + xi symmetry -> even continuous hardyXi`;
+  `hardyXi(t)=0 <-> project IsNontrivialZero(1/2+i*t)`;
+  `opposite weak endpoint signs -> interval critical-line zero witness`;
+  `alternating sequence -> one actual witness in every registered interval`.
+- `negative_controls`: no abstract surrogate, no assumed real-valuedness, no inferred
+  oscillation, no lost interval membership, and no unproved distinctness.
+- `open_H1_edges`: reconstruct Hardy's theta/Fourier transform and the estimates producing
+  arbitrarily high signs; prove infinitely many critical-line zeros; retain the modern
+  proportion and arbitrary-length mollifier branches.
+- `classification_target`: `HARDY_CRITICAL_LINE_REAL_SIGN_BRIDGE_FORMALIZED`, with historical
+  coverage and route-interface deltas but no critical-line-infinitude, hard-gap, or RH-frontier
+  delta.
+- `global_goal`: active.

@@ -4899,3 +4899,36 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   continuation as open H9 edges.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H9 Riesz Mellin boundary publicly closed
+
+- `final_ledger`: commit `18110c4a553e710fcb67fbe5617562fc573eca45` passed run
+  `30212583915`, build job `89821224995`, in `1m31s`.
+- `public_chain`: preregistration `2a0f1dbbb894f107b5a4c4c8a5e9f1f5837a9811`, frozen
+  implementation `096aea939d27fb6828b702296c156bbef4ba1559`, immutable evidence
+  `5448bd74cdf55a8ead8847f6c7cd50e21e8711e7`, and final ledger are public-green.
+- `closed_only`: actual `k=2` kernel, ordinary Mellin base strip, source-point divergence, and
+  explicit decay-conditional Mellin holomorphy.
+- `unchanged`: RH-equivalent Riesz decay, identity continuation, zeta zero exclusion, H9, and
+  RH remain open.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H1 Hardy critical-line sign bridge selected
+
+- `campaign`: `LITERATURE-20260726-H1-HARDY-CRITICAL-LINE-SIGN-01`.
+- `node`: `H1-HARDY-CRITICAL-LINE-REAL-SIGN-BRIDGE-01`.
+- `selection_reason`: the repository cites Hardy's critical-line theorem but has no production
+  theorem connecting the actual project xi function's real critical-line coordinate to interval
+  sign changes and nontrivial-zero witnesses.
+- `fixed_endpoint`: exact critical-line embedding, xi real-valuedness, evenness, continuity,
+  actual xi/nontrivial-zero dictionaries, both sign orientations, and a sequence of interval
+  witnesses.
+- `strict_boundary`: the existence of arbitrarily high sign changes, Hardy's transform
+  estimates, infinitely many critical-line zeros, H1, and RH remain open.
+- `production_gate`: docs-only preregistration public CI before Lean proof editing.
+- `after_closure`: return to fresh cross-family selection; compare Hardy's source transform,
+  Farey--Franel--Landau, and the other live historical families without defaulting to the latest
+  branch.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

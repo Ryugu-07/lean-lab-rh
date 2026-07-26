@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H9-RIESZ-MELLIN-BOUNDARY-01`
 
 Selected node: `H9-RIESZ-EXPONENTIAL-MELLIN-BOUNDARY-01`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
+Status: `PUBLICLY_CLOSED`
 
 ## Target
 
@@ -42,6 +42,7 @@ Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 | `LOCAL_GATES` | Added one aggregate Target, four exact TargetChecks, and eight selected axiom prints; ran standalone compilation, forbidden scan, diff check, and full build. | New-module scan empty; selected axioms standard only; full build `8773/8773`. | Freeze and publish implementation. |
 | `IMPLEMENTATION_PUBLIC_CI` | Froze and pushed the complete implementation and local ledgers. | Commit `096aea939d27fb6828b702296c156bbef4ba1559` passed run `30212146718`, job `89820083261`, in `2m25s`. | Freeze all `LeanLab/` files and publish docs-only immutable evidence. |
 | `IMMUTABLE_EVIDENCE_PUBLIC_CI` | Published docs-only proof-freeze evidence. | Commit `5448bd74cdf55a8ead8847f6c7cd50e21e8711e7` passed run `30212403937`, job `89820745802`, in `1m39s`; the implementation-to-evidence `LeanLab/` diff is empty. | Publish one docs-only final ledger and require public CI. |
+| `FINAL_LEDGER_PUBLIC_CI` | Published the docs-only final ledger with proof sources still frozen. | Commit `18110c4a553e710fcb67fbe5617562fc573eca45` passed run `30212583915`, job `89821224995`, in `1m31s`. | Close only this fixed node and return to fresh cross-family route selection. |
 
 ## Runtime record
 
@@ -75,5 +76,6 @@ The six inherited user/exposure files remain untouched and unstaged.
   corrected base strip. No Riesz decay, critical-strip zero-free theorem, or RH proof follows.
 - `frozen_implementation`: `096aea939d27fb6828b702296c156bbef4ba1559`, public-green.
 - `immutable_evidence`: `5448bd74cdf55a8ead8847f6c7cd50e21e8711e7`, public-green.
-- `next_gate`: docs-only final ledger and public Lean Action CI.
+- `final_ledger`: `18110c4a553e710fcb67fbe5617562fc573eca45`, public-green.
+- `next_gate`: complete; fresh cross-family route selection resumed.
 - `global_goal`: active.

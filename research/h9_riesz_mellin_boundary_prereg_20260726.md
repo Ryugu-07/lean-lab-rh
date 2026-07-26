@@ -8,7 +8,7 @@ Selected node: `H9-RIESZ-EXPONENTIAL-MELLIN-BOUNDARY-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
+Status: `PUBLICLY_CLOSED`
 
 ## Selection rationale
 
@@ -250,3 +250,14 @@ difference between the frozen implementation and evidence commits.
 The next gate is one docs-only final ledger and its public CI. It closes only the literal Mellin
 boundary endpoint; the Riesz decay, analytic continuation consumer, zeta zero exclusion, H9,
 and RH remain open.
+
+## Public closure
+
+Final-ledger commit `18110c4a553e710fcb67fbe5617562fc573eca45` passed public Lean Action
+run `30212583915`, build job `89821224995`, in `1m31s`. The complete four-stage chain is
+public-green and the production proof remains identical to frozen implementation
+`096aea939d27fb6828b702296c156bbef4ba1559`.
+
+This closes only `H9-RIESZ-EXPONENTIAL-MELLIN-BOUNDARY-01`. The Riesz decay, product-identity
+continuation, zeta zero exclusion, H9, and RH remain open; the active global Goal returns to
+fresh cross-family historical-route selection.

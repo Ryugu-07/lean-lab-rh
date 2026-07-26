@@ -137,3 +137,20 @@ detection principle for the actual xi divisor.
 
 `MONITOR` for new mollifier mean values; `FORMALIZE` only H1-B if selected for shared counting
 infrastructure. Do not select H1-Q as the next direct proof attempt.
+
+## 2026-07-26 classical-entry correction
+
+The original card grouped Hardy's theorem with the later proportion route but did not audit its
+own first formal mechanism. Production Lean has no xi-specific theorem that packages:
+
+```text
+xi real and continuous on 1/2+iR
++ opposite endpoint signs
+-> an actual nontrivial critical-line zero in the interval.
+```
+
+Campaign `LITERATURE-20260726-H1-HARDY-CRITICAL-LINE-SIGN-01` is therefore selected before
+another numerical proportion optimization. Its fixed endpoint is the actual project-xi real,
+even, continuous coordinate and its interval/sequence sign consumer. Endpoint signs remain
+explicit hypotheses. Hardy's transform estimates, critical-line infinitude, H1, and RH remain
+open after this interface.

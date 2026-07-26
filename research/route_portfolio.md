@@ -4359,3 +4359,24 @@ is frozen while docs-only immutable evidence is published.
 Docs-only immutable-evidence commit `5448bd74cdf55a8ead8847f6c7cd50e21e8711e7` passed run
 `30212403937`, build job `89820745802`, in `1m39s`; the frozen implementation has no
 `LeanLab/` difference. Only final-ledger CI remains before returning to route selection.
+
+Final-ledger commit `18110c4a553e710fcb67fbe5617562fc573eca45` passed run
+`30212583915`, build job `89821224995`, in `1m31s`; the fixed Riesz Mellin-boundary node is
+publicly closed. Its decay and analytic-continuation successors remain open.
+
+## H1 Hardy Critical-Line Sign Bridge Selection
+
+Fresh cross-family selection rotates from H9 to a historically prior H1 mechanism. The
+repository has deeply reconstructed the modern Bettin--Gonek mollifier consumer, but it only
+cites Hardy's 1914 theorem and has no production module for the real critical-line xi coordinate
+or the exact sign-change-to-zero bridge.
+
+Campaign `LITERATURE-20260726-H1-HARDY-CRITICAL-LINE-SIGN-01` fixes the actual project-xi
+embedding `1/2+i*t`, proves its values are real and even, registers continuity and the exact
+nontrivial-zero dictionary, and converts both endpoint-sign orientations into interval witnesses.
+An alternating-sequence consumer must produce one actual critical-line zero in every registered
+interval.
+
+This is not the infinitude theorem. Endpoint signs remain hypotheses, and the subsequent Hardy
+transform must produce them. Farey--Franel--Landau remains queued as another missing classical
+branch. Public preregistration CI is required before any Lean proof-source edit.
