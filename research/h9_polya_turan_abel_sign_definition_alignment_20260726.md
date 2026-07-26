@@ -4,7 +4,7 @@ Date: 2026-07-26
 
 Campaign: `LITERATURE-20260726-H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Source crosswalk
 
@@ -44,3 +44,5 @@ eventual-sign-to-RH implication, H9 endpoint, or RH theorem is claimed.
   `Quot.sound`.
 - Forbidden proof-token and declaration scans are empty.
 - The full local build passes `8761/8761`.
+- Frozen implementation commit `adf2812591fdb0205c2a147ca22f95976421fadc` passed public Lean
+  Action run `30184829099`, build job `89747516026`, in `2m33s`.

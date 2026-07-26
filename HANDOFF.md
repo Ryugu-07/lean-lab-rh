@@ -3944,3 +3944,6 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   certificate, finite zeta-section theorem, repaired equivalence, H9, or RH is proved.
 - `next_gate`: freeze and publish the implementation, then require immutable-evidence and final
   ledger CI. The persistent RH Goal remains active.
+- `public_implementation`: frozen commit `adf2812591fdb0205c2a147ca22f95976421fadc`
+  passed Lean Action run `30184829099`, build job `89747516026`, in `2m33s`. Proof source is
+  frozen; immutable-evidence CI is next.

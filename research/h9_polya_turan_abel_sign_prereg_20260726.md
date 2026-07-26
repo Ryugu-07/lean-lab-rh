@@ -8,7 +8,7 @@ Selected node: `H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01`
 
 Mode: `LITERATURE / FORMALIZATION / FALSIFICATION`
 
-Status: `LOCAL_FULL_ABEL_AUDIT_SUCCESS / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Baseline and selection
 
@@ -170,4 +170,7 @@ six inherited user/exposure files remain untouched and unstaged.
   build passes `8761/8761`.
 - This is `FULL_ABEL_AUDIT_SUCCESS` locally with
   `historical_route_coverage_delta=1`, `sign_logic_obstruction_delta=1`, and
-  `rh_frontier_delta=0`. Public implementation and immutable-evidence gates remain.
+  `rh_frontier_delta=0`.
+- Frozen implementation commit `adf2812591fdb0205c2a147ca22f95976421fadc` passed public Lean
+  Action run `30184829099`, build job `89747516026`, in `2m33s`. Proof source is frozen;
+  immutable-evidence and final-ledger gates remain.

@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01`
 
 Selected node: `H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01`
 
-Status: `LOCAL_FULL_ABEL_AUDIT_SUCCESS / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Attempt log
 
@@ -23,6 +23,7 @@ Status: `LOCAL_FULL_ABEL_AUDIT_SUCCESS / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 | `FALSIFICATION_WITNESS` | Tested the sequence `a(1)=1`, `a(2)=-3`, and `a(n)=0` afterward. | Lean proves every prefix from index two equals `-2`, while the second harmonic-weighted sum equals `-1/2`. The generic sign-only shortcut is false. | Record this as a logic obstruction, not a Liouville counterexample. |
 | `REGISTRATION` | Added the aggregate certificate, proven Target, exact TargetChecks, and six selected axiom prints. | All interfaces compile; the selected transitive axioms are only `propext`, `Classical.choice`, and `Quot.sound`. | Run the full mechanical gate. |
 | `MECHANICAL_AUDIT` | Compiled the 244-line module directly and through Lake; scanned forbidden tokens and declarations; ran `git diff --check` and the full build. | New source is warning-free, scans are empty, patch check passes, and `lake build` passes `8761/8761`. | Freeze the implementation and require public CI. |
+| `PUBLIC_IMPLEMENTATION` | Published frozen implementation commit `adf2812591fdb0205c2a147ca22f95976421fadc`. | Lean Action run `30184829099`, build job `89747516026`, passed in `2m33s`; the clean public checkout rebuilds the exact endpoint. | Keep proof source frozen and publish immutable evidence. |
 
 ## Current boundary
 
