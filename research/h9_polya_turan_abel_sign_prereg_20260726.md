@@ -8,7 +8,7 @@ Selected node: `H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01`
 
 Mode: `LITERATURE / FORMALIZATION / FALSIFICATION`
 
-Status: `IMMUTABLE_EVIDENCE_GREEN / FINAL_LEDGER_CI_REQUIRED`
+Status: `PUBLICLY_CLOSED`
 
 ## Baseline and selection
 
@@ -174,4 +174,7 @@ six inherited user/exposure files remain untouched and unstaged.
 - Frozen implementation commit `adf2812591fdb0205c2a147ca22f95976421fadc` passed public Lean
   Action run `30184829099`, build job `89747516026`, in `2m33s`. Proof source is frozen;
   docs-only immutable-evidence commit `0073f191fe2316e7d76a8f015106eeec400f364a` passed run
-  `30184927447`, build job `89747777977`, in `1m39s`. Only final-ledger CI remains.
+  `30184927447`, build job `89747777977`, in `1m39s`.
+- Final-ledger commit `0e10b1899daf7ce0c3ce48ab4ccd857d7e9c61c8` passed public Lean
+  Action run `30185002301`, build job `89747968167`, in `1m53s`. The fixed campaign is
+  publicly closed; H9 and RH remain open.

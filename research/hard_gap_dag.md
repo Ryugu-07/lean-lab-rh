@@ -1877,3 +1877,30 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `immutable_evidence`: docs-only commit `0073f191fe2316e7d76a8f015106eeec400f364a`
   passed run `30184927447`, build job `89747777977`, in `1m39s`; final-ledger CI remains.
 - `global_goal`: active; H9 and RH remain open.
+
+## 2026-07-26 H9 closure and H7 finite dictionary explicit-formula launch
+
+- `H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01`: publicly closed at final-ledger commit
+  `0e10b1899daf7ce0c3ce48ab4ccd857d7e9c61c8`, Lean Action run `30185002301`, build job
+  `89747968167`, passed in `1m53s`.
+- `selected_node`: `H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`.
+- `campaign`:
+  `LITERATURE-20260726-H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`.
+- `source_endpoint`: for every literal finite dictionary vector, identify the absolutely
+  convergent multiplicity-bearing zeta-zero sum with the exact prime, pole, and archimedean
+  Guinand--Weil expression, then align the finite source assembly.
+- `available_both_sides`: the project has the literal finite test, zero coordinate and
+  summability, source prime quadratic, pole block, archimedean density, and a `C^6` compact
+  arithmetic explicit formula.
+- `missing_edge`: the dictionary physical density is continuous and piecewise smooth rather than
+  globally `C^6`. The generic selected-height zero theorem reduces the direct route to
+  top-horizontal vanishing.
+- `quantitative_obstruction`: existing top-edge inputs combine inverse-square test decay with an
+  `O(R^4)` logarithmic-derivative bound and therefore do not tend to zero.
+- `attack_A`: prove a sharper source-valid selected-height/top-edge theorem and reuse the direct
+  contour decomposition.
+- `attack_B`: construct compact `C^6` approximants and prove simultaneous zero, pole, finite
+  prime, and Gamma-term convergence.
+- `decision_boundary`: no target-equivalent premise and no helper-only success. If both attacks
+  reach one exact analytic blocker, record it and return to route selection. H7 and RH remain
+  open; the global Goal remains active.

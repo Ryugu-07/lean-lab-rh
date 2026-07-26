@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01`
 
 Selected node: `H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01`
 
-Status: `IMMUTABLE_EVIDENCE_GREEN / FINAL_LEDGER_CI_REQUIRED`
+Status: `PUBLICLY_CLOSED`
 
 ## Attempt log
 
@@ -25,6 +25,7 @@ Status: `IMMUTABLE_EVIDENCE_GREEN / FINAL_LEDGER_CI_REQUIRED`
 | `MECHANICAL_AUDIT` | Compiled the 244-line module directly and through Lake; scanned forbidden tokens and declarations; ran `git diff --check` and the full build. | New source is warning-free, scans are empty, patch check passes, and `lake build` passes `8761/8761`. | Freeze the implementation and require public CI. |
 | `PUBLIC_IMPLEMENTATION` | Published frozen implementation commit `adf2812591fdb0205c2a147ca22f95976421fadc`. | Lean Action run `30184829099`, build job `89747516026`, passed in `2m33s`; the clean public checkout rebuilds the exact endpoint. | Keep proof source frozen and publish immutable evidence. |
 | `IMMUTABLE_EVIDENCE` | Published docs-only evidence commit `0073f191fe2316e7d76a8f015106eeec400f364a`. | Lean Action run `30184927447`, build job `89747777977`, passed in `1m39s`; proof source remained byte-for-byte frozen. | Publish the final ledger and require its own public CI. |
+| `FINAL_LEDGER` | Published final-ledger commit `0e10b1899daf7ce0c3ce48ab4ccd857d7e9c61c8`. | Lean Action run `30185002301`, build job `89747968167`, passed in `1m53s`; the fixed campaign is publicly closed. | Return to historical route selection; keep the global RH Goal active. |
 
 ## Current boundary
 

@@ -3952,3 +3952,32 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `next_gate`: publish this docs-only final ledger and require public CI. On success close only
   the fixed Abel/sign-audit campaign, return to historical route selection, and keep the global
   RH Goal active.
+
+## 2026-07-26 H9 public closure and H7 dictionary explicit-formula selection
+
+- `H9_public_closure`: final-ledger commit
+  `0e10b1899daf7ce0c3ce48ab4ccd857d7e9c61c8` passed public Lean Action run
+  `30185002301`, build job `89747968167`, in `1m53s`. Only the fixed Abel/sign-audit campaign is
+  closed; H9 and RH remain open.
+- `fresh_comparison`: H11 and H12 already have exact count consumers; H1 would immediately
+  continue the just-completed Bettin--Gonek family; H2 still lacks a source-backed bow amplifier.
+  H7 has the largest exact primary-source theorem with compiled objects on both sides.
+- `campaign`:
+  `LITERATURE-20260726-H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`.
+- `node`: `H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`.
+- `fixed_endpoint`: prove Groskin Theorem 2.5 for the literal project dictionary: the
+  multiplicity-bearing zero sum equals the exact finite von-Mangoldt, pole, and archimedean
+  expression, then align the already compiled finite source blocks.
+- `compiled_inputs`: vector-to-test source calculus, compact Fourier support, entire/even test,
+  inverse-square strip decay, exact xi-divisor coordinate, absolute zero summability, finite
+  prime-source quadratic, and the generic selected-height zero consumer.
+- `first_exact_risk`: the dictionary gives only inverse-square top-edge decay, while the current
+  selected-height `logDeriv riemannXi` bound grows like the fourth power. The existing estimates
+  do not prove top-horizontal vanishing.
+- `registered_attacks`: direct weak-regularity contour first; source-faithful compact `C^6`
+  approximation with convergence of every explicit-formula term second.
+- `strict_boundary`: no abstract explicit-formula or top-edge premise, no positivity,
+  inverse/density, cutoff limit, H7, or RH claim. This campaign attacks the exact dictionary
+  theorem and is not a numerical archimedean-bound optimization.
+- `next_gate`: publish the docs-only preregistration and require public Lean Action CI before
+  any production Lean edit. The six inherited user/exposure files remain untouched and unstaged.

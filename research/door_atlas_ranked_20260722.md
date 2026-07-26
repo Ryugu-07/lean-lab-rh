@@ -1123,3 +1123,26 @@ the integrand, whereas the new endpoint must control `G_t` itself, move the inve
 zero and arbitrarily far right, and justify the source Fubini exchange. H7 weak-regularity
 arithmetic transport remains the strongest reserve; H12 counts and H2 localization remain open.
 No family is marked exhausted, and original conjecture/falsification lanes remain open.
+
+### Post-H9 rerank: H7 finite dictionary explicit formula
+
+The H1 inverse-Mellin/convolution bridge subsequently compiled and publicly closed, including
+the literal inverse kernel, support, boundedness, actual mollifier convolution, and source
+interval bound. The remaining H1 edge begins at Cauchy--Schwarz and critical-line moments.
+
+The intervening H9 Polya--Turan audit publicly closed after compiling the exact Abel relation and
+the generic sign-shortcut obstruction. That campaign repaired a historical coverage omission but
+did not advance the RH frontier.
+
+The fresh H1/H2/H7/H10/H11/H12 comparison now selects
+`H7-WEIL-FINITE-DICTIONARY-EXPLICIT-FORMULA-01`. This does not optimize the numerical
+archimedean tail budget. It attacks Theorem 2.5 of arXiv:2607.02828v1, the exact claim that every
+literal finite dictionary value is a multiplicity-bearing zeta-zero sum.
+
+The vector-to-test map, admissibility, xi-coordinate summability, and finite prime source already
+compile. The missing theorem is the weak-regularity Guinand--Weil arithmetic formula and the
+complete zero/pole/prime/archimedean transport. The direct selected-height route currently stops
+at a sharp analytic mismatch: inverse-square dictionary decay does not absorb the project's
+fourth-power xi logarithmic-derivative top-edge bound. A direct sharper contour estimate and a
+source-faithful smooth-approximation proof are preregistered as separate attacks. H7 and RH remain
+open.
