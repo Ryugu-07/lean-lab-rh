@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H9-FAREY-MOBIUS-WEYL-01`
 
 Selected node: `H9-FAREY-MOBIUS-WEYL-TRANSFORM-01`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Target
 
@@ -38,6 +38,7 @@ Status: `LOCAL_IMPLEMENTATION_COMPLETE / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
 | `MOBIUS_AND_GLOBAL_REINDEX` | Applied Mathlib Mobius inversion at fixed denominator, then compiled the finite divisor-antidiagonal to `(n,d)` reindexing. | The actual arbitrary-test Farey sum equals `sum_{n<=N} M(floor(N/n))*V_f(n)`. | Specialize the exponential test. |
 | `FREQUENCY_ONE` | Proved the complete root sums, primitive block identity, and total specialization. | Complete blocks vanish for `n>1`; the primitive `q` block is `mu(q)` and the total is `finiteMertens(N)`. | Register Target and audits. |
 | `LOCAL_GATES` | Added one aggregate Target, eight exact checks, and nine selected axiom prints; ran standalone, warning-as-error, forbidden, and full-build checks. | Selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`; new-module scan is empty; full build passes `8775/8775`. | Freeze and publish implementation. |
+| `IMPLEMENTATION_PUBLIC_CI` | Froze and pushed the complete implementation and local ledgers. | Commit `10bbaa1825bac871d5664322f85ab04f6668ec20` passed run `30214982286`, job `89827558524`, in `2m7s`. | Freeze all `LeanLab/` files and publish docs-only immutable evidence. |
 
 ## Runtime record
 
@@ -74,5 +75,7 @@ The six inherited user/exposure files remain untouched and unstaged.
 - `classification`: `historical_route_coverage_delta=1`, `farey_normalization_delta=1`,
   `farey_mertens_transform_delta=1`, `farey_discrepancy_delta=0`,
   `mertens_growth_delta=0`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
-- `next_gate`: frozen implementation commit and public Lean Action CI.
+- `frozen_implementation`: `10bbaa1825bac871d5664322f85ab04f6668ec20`,
+  public-green.
+- `next_gate`: docs-only immutable evidence and public Lean Action CI.
 - `global_goal`: active.

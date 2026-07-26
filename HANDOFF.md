@@ -5042,3 +5042,17 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   final ledger with public CI at each gate.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H9 Farey--Mobius--Weyl implementation public green
+
+- `campaign`: `LITERATURE-20260726-H9-FAREY-MOBIUS-WEYL-01`.
+- `frozen_implementation`: commit `10bbaa1825bac871d5664322f85ab04f6668ec20`.
+- `public_ci`: Lean Action run `30214982286`, build job `89827558524`, passed in `2m7s`.
+- `result`: `FAREY_MOBIUS_WEYL_TRANSFORM_FORMALIZED`.
+- `proof_freeze`: the 579-line source, one aggregate Target, eight exact TargetChecks, and nine
+  selected standard-only axiom prints are frozen.
+- `next_gate`: publish docs-only immutable evidence and require public CI, then a docs-only
+  final ledger and public CI.
+- `open_H9`: ordered Farey discrepancy, every RH-equivalent estimate, Mertens growth, H9, and RH.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

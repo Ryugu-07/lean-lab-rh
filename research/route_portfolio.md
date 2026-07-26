@@ -4443,3 +4443,7 @@ discrepancy formula or any RH-equivalent estimate. Local classification is
 `FAREY_MOBIUS_WEYL_TRANSFORM_FORMALIZED`, with historical, normalization, and transform deltas
 but `hard_gap_delta=0` and `rh_frontier_delta=0`. Freeze and publish the implementation before
 immutable evidence.
+
+Frozen implementation commit `10bbaa1825bac871d5664322f85ab04f6668ec20` passed public Lean
+Action run `30214982286`, build job `89827558524`, in `2m7s`. All proof sources are now frozen;
+publish docs-only immutable evidence next.

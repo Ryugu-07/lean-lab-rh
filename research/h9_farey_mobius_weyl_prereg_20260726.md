@@ -8,7 +8,7 @@ Selected node: `H9-FAREY-MOBIUS-WEYL-TRANSFORM-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_IMPLEMENTATION_COMPLETE / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Parent public closure
 
@@ -262,3 +262,14 @@ Classification is `result=FAREY_MOBIUS_WEYL_TRANSFORM_FORMALIZED`,
 Ordered Farey fractions, Franel discrepancy identities and estimates, equidistribution rates,
 Mertens growth, H9, and RH remain open. The next gate is a frozen implementation commit and
 public CI.
+
+## Frozen implementation
+
+Implementation commit `10bbaa1825bac871d5664322f85ab04f6668ec20` passed public Lean
+Action run `30214982286`, build job `89827558524`, in `2m7s`. The 579-line module, proven
+aggregate Target, eight exact TargetChecks, and nine selected standard-only axiom prints are
+frozen at that hash.
+
+The next gate is a docs-only immutable-evidence commit and public CI. No `LeanLab/` file may
+change between the frozen implementation and immutable evidence. Ordered Farey enumeration,
+Franel discrepancy, every asymptotic estimate, Mertens growth, H9, and RH remain open.

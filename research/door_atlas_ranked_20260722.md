@@ -1640,3 +1640,7 @@ Lean then proves the actual arbitrary-test Farey sum equals complete blocks weig
 `M(floor(N/n))`. The frequency-one specialization gives primitive block `mu(q)` and total
 `M(N)`. This closes the exact arithmetic entry only. Ordered Franel discrepancy, its squared
 error identity, every asymptotic estimate, Mertens growth, H9, and RH remain open.
+
+Frozen implementation commit `10bbaa1825bac871d5664322f85ab04f6668ec20` passed public Lean
+Action run `30214982286`, build job `89827558524`, in `2m7s`. Proof source is frozen while
+docs-only immutable evidence is published.
