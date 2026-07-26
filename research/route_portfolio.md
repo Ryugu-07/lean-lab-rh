@@ -4206,3 +4206,7 @@ noncancellation lemma is logically indispensable.
 The 174-line module, proven Target, six exact checks, six standard-only axiom prints, empty
 forbidden scans, and full `8770/8770` build pass locally. The actual curve valuation lemma,
 Riemann--Roch construction, number-field descent-map analogue, and RH remain open.
+
+Frozen implementation commit `011ce4d16bb565d03059ae220e9ad1996e6ec7cb` passed public Lean
+Action run `30206491939`, build job `89805380158`, in `2m25s`. Proof source remains frozen
+through immutable evidence.

@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H10-BOMBIERI-STEPANOV-POLAR-INJECTIVITY-01`
 
 Selected node: `H10-E-BOMBIERI-STEPANOV-POLAR-INJECTIVITY-01`
 
-Status: `LOCAL_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Target
 
@@ -36,6 +36,7 @@ Status: `LOCAL_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
 | `NONINJECTIVE_CONTROL` | Set both descent and realization to the first projection on `Q x Q`. | The descent kernel contains `(0,1)`, but every kernel vector realizes to zero. | Record injectivity as indispensable. |
 | `POSITIVE_WITNESS` | Realized the blocks `1` and `X` in width two. | Two exact output coefficients equal one, and the realized polynomial is nonzero. | Run all local gates. |
 | `LOCAL_GATES` | Ran warning-as-error production, Targets, TargetChecks, and AxiomsAudit compiles; scanned forbidden declarations and resource relaxations; ran the full build. | One proven Target, six exact checks, six standard-only axiom prints, empty scans, and `8770/8770` build all pass. | Freeze and publish the implementation. |
+| `IMPLEMENTATION_PUBLIC` | Published frozen implementation `011ce4d16bb565d03059ae220e9ad1996e6ec7cb`. | Public run `30206491939`, build job `89805380158`, passed in `2m25s`. | Keep `LeanLab/` frozen and publish immutable evidence. |
 
 ## Runtime record
 
@@ -57,3 +58,6 @@ analogue would likewise need both an injective realization and a separately cons
 dimension-surplus descent map; no such map is supplied here. Riemann--Roch construction,
 point counts, number-field transfer, and RH remain open. The six inherited user/exposure files
 remain untouched and unstaged.
+
+Frozen implementation: `011ce4d16bb565d03059ae220e9ad1996e6ec7cb`. No Lean proof-source
+changes are permitted during immutable evidence and final-ledger publication.

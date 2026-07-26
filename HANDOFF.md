@@ -4604,3 +4604,16 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `next_gate`: freeze and publish the implementation.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H10 polar-injectivity implementation public green
+
+- `frozen_implementation`: commit `011ce4d16bb565d03059ae220e9ad1996e6ec7cb`.
+- `public_ci`: Lean Action run `30206491939`, build job `89805380158`, passed in `2m25s`.
+- `result`: `SOURCE_NONCANCELLATION_GATE_FORMALIZED`.
+- `proof_freeze`: no Lean proof source changes are allowed after the frozen implementation hash.
+- `next_gate`: publish docs-only immutable evidence and require public CI, then a docs-only final
+  ledger and public CI.
+- `open_H10`: actual curve polar orders, Riemann--Roch dimensions, optimized parameters, point
+  counts, number-field source/descent structure, and RH.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

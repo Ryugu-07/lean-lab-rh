@@ -172,8 +172,10 @@ coefficient-block linear equivalence and its exact coefficient theorem. A noninj
 first-projection countermodel proves that a nonzero descent kernel need not realize to a nonzero
 object.
 
-**Verdict update:** `LOCAL_SUCCESS` as `SOURCE_NONCANCELLATION_GATE_FORMALIZED`, pending public
-implementation CI. The actual curve polar-order theorem remains open.
+**Verdict update:** `IMPLEMENTATION_PUBLIC_GREEN` as
+`SOURCE_NONCANCELLATION_GATE_FORMALIZED`. Frozen implementation
+`011ce4d16bb565d03059ae220e9ad1996e6ec7cb` passed run `30206491939`. The actual curve
+polar-order theorem remains open.
 
 ## Recommendation
 

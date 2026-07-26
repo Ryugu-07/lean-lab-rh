@@ -1462,3 +1462,6 @@ Therefore no dimension-only shortcut is available at this layer; the source's no
 lemma is necessary. A future omission claim must concern the actual curve valuation argument or a
 new number-field source/descent structure, not this finite-dimensional inference. This is
 `SOURCE_NONCANCELLATION_GATE_FORMALIZED`, with no RH-frontier change.
+
+Frozen implementation commit `011ce4d16bb565d03059ae220e9ad1996e6ec7cb` passed public run
+`30206491939`, build job `89805380158`, in `2m25s`. Docs-only immutable evidence is next.

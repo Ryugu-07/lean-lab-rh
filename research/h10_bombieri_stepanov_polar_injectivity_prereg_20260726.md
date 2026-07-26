@@ -8,7 +8,7 @@ Selected node: `H10-E-BOMBIERI-STEPANOV-POLAR-INJECTIVITY-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `LOCAL_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Primary-source anchor
 
@@ -105,6 +105,10 @@ Expected classification:
 - `number_field_transfer_delta=0`;
 - `hard_gap_delta=0`;
 - `rh_frontier_delta=0`.
+
+Frozen implementation commit `011ce4d16bb565d03059ae220e9ad1996e6ec7cb` passed public Lean
+Action run `30206491939`, build job `89805380158`, in `2m25s`. Lean proof source is frozen;
+the next gate is a docs-only immutable-evidence commit and public CI.
 
 ## Production gate
 

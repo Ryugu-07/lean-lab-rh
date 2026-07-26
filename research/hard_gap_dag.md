@@ -63,7 +63,7 @@ flowchart TD
 | H10-B | complete | Prove finite aggregate power-sum spectral rigidity and the reciprocal-pairing square-root-circle corollary. | The final finite-spectral step of function-field RH is publicly compiled. It proves no curve point-count bound and supplies no finite-spectrum or uniform-tail transfer for the Riemann zeta zero divisor; `hard_gap_delta=0`. |
 | H10-C | complete | Test a countably infinite ordinary power-trace extension with nonzero reciprocal pairing. | Lean proves `Summable (alpha^k)` for positive `k` forces `q=0` under `alpha(sigma n)*alpha(n)=q`; a one-point finite witness shows the obstruction is specific to the infinite ordinary-trace transfer. Final-ledger commit `2edf069a217255bbc20b93a2aa938f51dd57d94e` passed public CI. |
 | H10-D | complete | Formalize the Bombieri--Stepanov finite-field Frobenius auxiliary mechanism and test its degree budget for slack. | The generic descent, perfect-power multiplicity, and root-degree bounds compile. A nonzero `ZMod 2` kernel witness has exact multiplicity two at both points and saturates the degree budget. Final-ledger commit `b23d601ee8c69a654d542f1da43d16bb042eaf22` passed public CI. |
-| H10-E | local success; implementation CI required | Audit the nonzero-production gate between Riemann--Roch dimension surplus and the auxiliary function. | Rank-nullity, injective realization, a separated polynomial coefficient-block equivalence, and exact witnesses compile. A noninjective countermodel proves dimension surplus alone is insufficient. |
+| H10-E | implementation CI passed; immutable evidence required | Audit the nonzero-production gate between Riemann--Roch dimension surplus and the auxiliary function. | Rank-nullity, injective realization, a separated polynomial coefficient-block equivalence, and exact witnesses compile. Frozen implementation `011ce4d16bb565d03059ae220e9ad1996e6ec7cb` passed public run `30206491939`. |
 
 ## Hard Gaps
 
@@ -2314,3 +2314,7 @@ Final-ledger commit `b23d601ee8c69a654d542f1da43d16bb042eaf22` passed run
   `actual_curve_polar_lemma_delta=0`, `curve_theorem_delta=0`,
   `number_field_transfer_delta=0`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
 - `global_goal`: active.
+
+Frozen implementation commit `011ce4d16bb565d03059ae220e9ad1996e6ec7cb` passed public Lean
+Action run `30206491939`, build job `89805380158`, in `2m25s`. Proof source is frozen while
+docs-only immutable evidence and final-ledger CI remain.
