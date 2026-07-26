@@ -8,7 +8,7 @@ Selected node: `H10-BOMBIERI-STEPANOV-FROBENIUS-AUXILIARY-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Primary-source anchor
 
@@ -132,6 +132,11 @@ Expected classification:
 Frozen implementation commit `61bb73ad666e3bdd4ba460bedd93af16256c997d` passed public Lean
 Action run `30205411443`, build job `89802493185`, in `2m31s`. Lean proof source is frozen;
 the next gate is a docs-only immutable-evidence commit and public CI.
+
+Docs-only immutable-evidence commit `89b7dead3b9a9344dc34c16a1d9e0bfa0c2cd792` passed public
+run `30205553507`, build job `89802869900`, in `1m30s`. There is no `LeanLab/` difference
+between the frozen implementation and immutable-evidence commits. This final ledger requires its
+own public CI before the fixed campaign is closed.
 
 ## Production gate
 

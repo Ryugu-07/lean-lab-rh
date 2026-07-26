@@ -148,6 +148,9 @@ saturates the degree budget.
 the live omission search to Riemann--Roch dimension selection, polar/tensor injectivity, nonzero
 optimized kernel production, and pole control.
 
+Immutable-evidence commit `89b7dead3b9a9344dc34c16a1d9e0bfa0c2cd792` passed run
+`30205553507` with proof source unchanged. Final-ledger CI remains.
+
 ## Recommendation
 
 Keep H10-B as the finite spectral endpoint and H10-D as the source-algebra endpoint. Continue the

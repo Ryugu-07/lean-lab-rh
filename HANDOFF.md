@@ -4543,3 +4543,19 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   pole control, lower point counts, number-field transfer, and RH.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H10 Bombieri--Stepanov Frobenius auxiliary immutable evidence public green
+
+- `frozen_implementation`: commit `61bb73ad666e3bdd4ba460bedd93af16256c997d` passed run
+  `30205411443`, build job `89802493185`, in `2m31s`.
+- `immutable_evidence`: docs-only commit `89b7dead3b9a9344dc34c16a1d9e0bfa0c2cd792`
+  passed run `30205553507`, build job `89802869900`, in `1m30s`.
+- `proof_freeze_verified`: no `LeanLab/` difference between the frozen implementation and
+  immutable-evidence commits.
+- `result`: `KNOWN_FUNCTION_FIELD_MECHANISM_FORMALIZED`.
+- `next_gate`: publish one docs-only final ledger and require public CI.
+- `after_closure`: return the active global Goal to historical-route selection; retain the
+  curve-geometric H10 construction, number-field transfer, conjecture generation, and direct RH
+  attacks as open work.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H10-BOMBIERI-STEPANOV-FROBENIUS-AUXILIARY-01`
 
 Selected node: `H10-BOMBIERI-STEPANOV-FROBENIUS-AUXILIARY-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Target
 
@@ -35,6 +35,7 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 | `SATURATION_TEST` | Constructed the preregistered `ZMod 2` kernel witness. | The base is nonzero, the descent is zero, roots `0` and `1` have exact multiplicity `2`, and `2 * card (ZMod 2) = natDegree F = 4`. | Record that the algebraic budget is sharp; move omission search to the curve-level construction. |
 | `LOCAL_GATES` | Ran warning-as-error production, Targets, TargetChecks, and AxiomsAudit compiles; scanned forbidden declarations and resource relaxations; ran the full build. | One proven Target, seven exact checks, six standard-only axiom prints, empty scans, and `8769/8769` build all pass. | Freeze and publish the implementation. |
 | `IMPLEMENTATION_PUBLIC` | Published frozen implementation `61bb73ad666e3bdd4ba460bedd93af16256c997d`. | Public run `30205411443`, build job `89802493185`, passed in `2m31s`. | Keep `LeanLab/` frozen and publish immutable evidence. |
+| `IMMUTABLE_EVIDENCE_PUBLIC` | Published docs-only evidence `89b7dead3b9a9344dc34c16a1d9e0bfa0c2cd792` and compared it with the frozen implementation. | Public run `30205553507`, build job `89802869900`, passed in `1m30s`; `LeanLab/` diff is empty. | Publish the final ledger and require its own public CI. |
 
 ## Runtime record
 
@@ -58,3 +59,7 @@ The six inherited user/exposure files remain untouched and unstaged.
 
 Frozen implementation: `61bb73ad666e3bdd4ba460bedd93af16256c997d`. No Lean proof-source
 changes are permitted during immutable evidence and final-ledger publication.
+
+After final-ledger CI, close only this fixed source-algebra endpoint and return the active global
+Goal to historical route selection. Keep the H10 curve-geometric construction and all
+number-field bridges open; conjecture generation and direct RH attacks remain available.

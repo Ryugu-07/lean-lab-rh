@@ -1430,3 +1430,7 @@ number-field transfer, or RH progress.
 
 Frozen implementation commit `61bb73ad666e3bdd4ba460bedd93af16256c997d` passed public run
 `30205411443`, build job `89802493185`, in `2m31s`. Docs-only immutable evidence is next.
+
+Docs-only immutable evidence `89b7dead3b9a9344dc34c16a1d9e0bfa0c2cd792` passed run
+`30205553507`, build job `89802869900`, in `1m30s`; proof source remained frozen. Only
+final-ledger CI remains.
