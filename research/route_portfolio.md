@@ -4447,3 +4447,7 @@ immutable evidence.
 Frozen implementation commit `10bbaa1825bac871d5664322f85ab04f6668ec20` passed public Lean
 Action run `30214982286`, build job `89827558524`, in `2m7s`. All proof sources are now frozen;
 publish docs-only immutable evidence next.
+
+Docs-only immutable-evidence commit `c0190936358edf63ebec0588e6fdec4ac0c88ed6` passed run
+`30215145080`, build job `89827979109`, in `1m53s`; the frozen implementation has no
+`LeanLab/` difference. Only final-ledger CI remains before returning to route selection.

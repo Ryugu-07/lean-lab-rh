@@ -1644,3 +1644,7 @@ error identity, every asymptotic estimate, Mertens growth, H9, and RH remain ope
 Frozen implementation commit `10bbaa1825bac871d5664322f85ab04f6668ec20` passed public Lean
 Action run `30214982286`, build job `89827558524`, in `2m7s`. Proof source is frozen while
 docs-only immutable evidence is published.
+
+Docs-only immutable-evidence commit `c0190936358edf63ebec0588e6fdec4ac0c88ed6` passed run
+`30215145080`, build job `89827979109`, in `1m53s`, with no `LeanLab/` change from the frozen
+implementation. Only final-ledger CI remains.

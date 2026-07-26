@@ -5056,3 +5056,19 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `open_H9`: ordered Farey discrepancy, every RH-equivalent estimate, Mertens growth, H9, and RH.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H9 Farey--Mobius--Weyl immutable evidence public green
+
+- `frozen_implementation`: commit `10bbaa1825bac871d5664322f85ab04f6668ec20`
+  passed run `30214982286`, build job `89827558524`, in `2m7s`.
+- `immutable_evidence`: docs-only commit `c0190936358edf63ebec0588e6fdec4ac0c88ed6`
+  passed run `30215145080`, build job `89827979109`, in `1m53s`.
+- `proof_freeze_verified`: no `LeanLab/` difference between the implementation and evidence
+  commits.
+- `result`: `FAREY_MOBIUS_WEYL_TRANSFORM_FORMALIZED`.
+- `next_gate`: publish one docs-only final ledger and require public CI.
+- `after_closure`: close only the finite arithmetic transform endpoint and return the active
+  global Goal to fresh cross-family selection. Retain ordered Franel discrepancy, all
+  RH-equivalent estimates, Mertens growth, H9, and RH as open.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

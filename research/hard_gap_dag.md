@@ -2515,6 +2515,11 @@ Frozen implementation commit `10bbaa1825bac871d5664322f85ab04f6668ec20` passed p
 Action run `30214982286`, build job `89827558524`, in `2m7s`. The complete exact-transform edge
 is proof-frozen; docs-only immutable evidence is the next gate.
 
+Docs-only immutable-evidence commit `c0190936358edf63ebec0588e6fdec4ac0c88ed6` passed public
+Lean Action run `30215145080`, build job `89827979109`, in `1m53s`; `LeanLab/` remains
+identical to the frozen implementation. Final-ledger CI is the only remaining gate for this
+fixed node.
+
 Frozen implementation commit `98bf9927a8a331cd0da7541492cc4502c29e24ee` passed public Lean
 Action run `30213428759`, build job `89823396107`, in `2m6s`. The complete fixed edge is
 proof-frozen; docs-only immutable evidence is the next gate.

@@ -8,7 +8,7 @@ Selected node: `H9-FAREY-MOBIUS-WEYL-TRANSFORM-01`
 
 Mode: `LITERATURE`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Parent public closure
 
@@ -273,3 +273,11 @@ frozen at that hash.
 The next gate is a docs-only immutable-evidence commit and public CI. No `LeanLab/` file may
 change between the frozen implementation and immutable evidence. Ordered Farey enumeration,
 Franel discrepancy, every asymptotic estimate, Mertens growth, H9, and RH remain open.
+
+Docs-only immutable-evidence commit `c0190936358edf63ebec0588e6fdec4ac0c88ed6` passed public
+Lean Action run `30215145080`, build job `89827979109`, in `1m53s`. There is no `LeanLab/`
+difference between the frozen implementation and evidence commits.
+
+The next gate is one docs-only final ledger and its public CI. It closes only the exact finite
+Farey--Mobius transform and frequency-one specializations; ordered discrepancy, every
+RH-equivalent estimate, Mertens growth, H9, and RH remain open.

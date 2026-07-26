@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H9-FAREY-MOBIUS-WEYL-01`
 
 Selected node: `H9-FAREY-MOBIUS-WEYL-TRANSFORM-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Target
 
@@ -39,6 +39,7 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 | `FREQUENCY_ONE` | Proved the complete root sums, primitive block identity, and total specialization. | Complete blocks vanish for `n>1`; the primitive `q` block is `mu(q)` and the total is `finiteMertens(N)`. | Register Target and audits. |
 | `LOCAL_GATES` | Added one aggregate Target, eight exact checks, and nine selected axiom prints; ran standalone, warning-as-error, forbidden, and full-build checks. | Selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`; new-module scan is empty; full build passes `8775/8775`. | Freeze and publish implementation. |
 | `IMPLEMENTATION_PUBLIC_CI` | Froze and pushed the complete implementation and local ledgers. | Commit `10bbaa1825bac871d5664322f85ab04f6668ec20` passed run `30214982286`, job `89827558524`, in `2m7s`. | Freeze all `LeanLab/` files and publish docs-only immutable evidence. |
+| `IMMUTABLE_EVIDENCE_PUBLIC_CI` | Published docs-only proof-freeze evidence. | Commit `c0190936358edf63ebec0588e6fdec4ac0c88ed6` passed run `30215145080`, job `89827979109`, in `1m53s`; the implementation-to-evidence `LeanLab/` diff is empty. | Publish one docs-only final ledger and require public CI. |
 
 ## Runtime record
 
@@ -77,5 +78,7 @@ The six inherited user/exposure files remain untouched and unstaged.
   `mertens_growth_delta=0`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
 - `frozen_implementation`: `10bbaa1825bac871d5664322f85ab04f6668ec20`,
   public-green.
-- `next_gate`: docs-only immutable evidence and public Lean Action CI.
+- `immutable_evidence`: `c0190936358edf63ebec0588e6fdec4ac0c88ed6`,
+  public-green.
+- `next_gate`: docs-only final ledger and public Lean Action CI.
 - `global_goal`: active.
