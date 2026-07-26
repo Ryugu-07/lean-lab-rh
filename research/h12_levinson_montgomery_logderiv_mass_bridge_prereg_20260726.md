@@ -9,7 +9,7 @@ Selected node: `H12-LM-LOGDERIV-MASS-BRIDGE-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_FULL_LOGDERIV_MASS_BRIDGE_SUCCESS / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 
 ## Primary source
 
@@ -240,6 +240,38 @@ Expected classification on success:
 - `known_theorem_formalization_delta=0` until the full Levinson--Montgomery theorem is compiled;
 - `hard_gap_delta=0` for RH;
 - `rh_frontier_delta=0`.
+
+## Local implementation result
+
+The docs-only preregistration commit
+`8a3c54d5092c13b8489e2c92c49d586f79176e95` passed public Lean Action run
+`30191371867`, build job `89765103953`, in `1m49s`. Production proof editing began only after
+that public gate.
+
+Attack A succeeds in the 615-line
+`LeanLab/Riemann/LevinsonMontgomeryLogDerivMassBridge.lean` module:
+
+- the actual multiplicity-bearing paired zero sum is exactly `Re(xi'/xi)`, with no residual
+  Hadamard constant;
+- differentiating the compiled scaled-Gamma Stieltjes identity gives the exact digamma
+  Stirling formula and the explicit bound `27/(64*norm(z)^2)`;
+- the project xi factorization gives Levinson--Montgomery equation `(2.1)` exactly;
+- rational estimates prove the archimedean term is strictly negative throughout
+  `0<=sigma<=1/2, t>=10`;
+- a nonnegative real zeta logarithmic derivative in the open left half-strip forces negative
+  paired mass;
+- eventual integer-height witnesses feed the already compiled
+  `T/2 < speiserUpperLeftZetaZeroCount T` branch.
+
+The module, Targets, exact TargetChecks, and selected axiom audit compile directly under
+warning-as-error. The three forbidden scans are empty, `git diff --check` passes, and the full
+`8765/8765` build succeeds. Every selected transitive axiom print contains only `propext`,
+`Classical.choice`, and `Quot.sound`.
+
+This local success removes equation `(2.1)` and the explicit Gamma-sign bridge from the project
+frontier. It does not provide the low-height zeta sign certificate, lower or critical boundary
+signs, the interior-witness alternative, the indented contour, the logarithmic count theorem,
+the full dichotomy, Speiser equivalence, or RH.
 
 ## Mechanical and publication gates
 

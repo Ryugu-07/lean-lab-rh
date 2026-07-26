@@ -7,7 +7,7 @@ Campaign:
 
 Selected node: `H12-LM-LOGDERIV-MASS-BRIDGE-01`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_FULL_LOGDERIV_MASS_BRIDGE_SUCCESS / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 
 ## Target
 
@@ -45,6 +45,13 @@ Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
 | `SOURCE_RECONSTRUCTION` | Re-read source pages 51--52 and equations `(2.1)`--`(2.4)`. | The exact implication needed for the dense branch is `Re(zeta'/zeta)>=0 -> I1<0`, once the nonzero term `A(s)` is strictly negative. | Separate this bridge from the later low-height and contour certificate. |
 | `API_AUDIT` | Inspected the paired-mass module, Li Hadamard cancellation, xi/zeta factorization, digamma recurrence, and the Stieltjes scaled-Gamma module. | All algebraic objects exist. The Stieltjes remainder is differentiable under its integral, and radial inverse-cube bounds can produce an explicit `O(norm(z)^-2)` remainder without a new premise. | Register direct Hadamard/Stieltjes Attack A and derivative-cancellation fallback B. |
 | `PREREGISTRATION_LOCAL` | Fixed exact endpoints, thresholds, assumption frontier, source boundaries, and stop conditions before any Lean proof edit. | Local docs complete; public CI is required. | Commit and push docs only. |
+| `PREREGISTRATION_PUBLIC` | Published the docs-only preregistration. | Commit `8a3c54d5092c13b8489e2c92c49d586f79176e95` passed run `30191371867`, build job `89765103953`, in `1m49s`. | Open production editing. |
+| `HADAMARD_PAIR_CANCELLATION` | Reindexed the actual xi divisor by `rho -> 1-conj(rho)` and averaged the compensated Hadamard terms. | `levinsonMontgomeryRealPairedZeroSum_eq_logDeriv_riemannXi_re` compiles with no residual constant. | Differentiate the existing Stieltjes Gamma identity. |
+| `STIELTJES_DIGAMMA` | Differentiated the scaled-Gamma equality, identified the explicit derivative kernel, and integrated the inverse-cube majorant. | `levinsonMontgomery_digamma_stirling` and the remainder bound `27/(64*norm(z)^2)` compile. | Reconstruct source equation `(2.1)` and close the sign estimate. |
+| `SOURCE_EQUATION_2_1` | Took the logarithmic derivative of the actual xi pole/Gamma/zeta factorization and applied the digamma recurrence. | `levinsonMontgomery_equation_two_one` compiles over the actual paired sum. | Bound the nonzero archimedean term on the source region. |
+| `ARCHIMEDEAN_SIGN` | Combined explicit pole, logarithm, inverse correction, and Stieltjes remainder estimates at `t>=10`. | `levinsonMontgomeryLogDerivArchimedeanTerm_neg` compiles for `0<=sigma<=1/2`. | Apply the paired-mass identity in the open strip. |
+| `MASS_AND_COUNT_CONSUMER` | Combined `(2.1)`, strict archimedean negativity, the paired mass identity, and the existing integer-height count injection. | Both `levinsonMontgomeryPairedMass_neg_of_logDeriv_riemannZeta_re_nonneg` and `levinsonMontgomeryDenseBranch_of_eventuallyNonnegativeLogDerivAtIntegers` compile. | Register and audit the fixed endpoint. |
+| `LOCAL_AUDIT` | Added the proven Target, seven exact TargetChecks, and seven selected axiom prints; ran direct warning-as-error checks, forbidden scans, patch check, and the full build. | The 615-line module and registries pass; selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`; the full build passes `8765/8765`. | Freeze the implementation and require public CI. |
 
 ## Runtime record
 
@@ -58,8 +65,10 @@ Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
 
 ## Current boundary
 
-No production Lean source has been created or edited. The low-height `t=10` zeta sign
-certificate, lower/critical contour signs, indented argument-principle count, `O(log T)` count
-difference, full Levinson--Montgomery dichotomy, Speiser equivalence, and RH remain open.
+The exact source identity, explicit Gamma remainder and sign bridge, paired-mass consequence,
+and dense-branch consumer now compile locally. The low-height `t=10` zeta sign certificate,
+lower/critical contour signs, existence of the interior nonnegative-log-derivative witness,
+indented argument-principle count, `O(log T)` count difference, full Levinson--Montgomery
+dichotomy, Speiser equivalence, and RH remain open.
 
 The six inherited user/exposure files remain untouched and unstaged.

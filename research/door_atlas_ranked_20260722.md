@@ -1257,3 +1257,25 @@ The low-height zeta certificate, boundary signs, witness-existence alternative, 
 `O(log T)` count difference, full dichotomy, Speiser equivalence, and RH remain open. This
 selection does not downgrade historical breadth: every family is reranked again after the fixed
 published edge closes or records an exact obstruction.
+
+### H12 equation (2.1) and Gamma bridge local result
+
+The fixed published edge compiles locally. Lean proves that the actual multiplicity-bearing
+paired reciprocal sum equals `Re(xi'/xi)` without a residual Hadamard constant. It differentiates
+the project's existing Stieltjes scaled-Gamma identity to obtain the exact digamma Stirling
+formula and the explicit bound `27/(64*norm(z)^2)`, reconstructs Levinson--Montgomery equation
+`(2.1)`, and proves strict negativity of its archimedean term for
+`0<=sigma<=1/2, t>=10`.
+
+Consequently, a nonnegative real zeta logarithmic derivative at a zero-free point in the open
+left half-strip forces negative paired mass, and eventual integer-height witnesses feed the
+already compiled `N^-(T)>T/2` branch. This result makes further optimization of the Gamma
+constant a low-value task: the proved bound already closes the source sign inequality. The open
+historical edge is now the low/critical boundary and interior-witness part of the indented
+contour argument, followed by the `O(log T)` count comparison.
+
+Preregistration commit `8a3c54d5092c13b8489e2c92c49d586f79176e95` passed public Lean
+Action run `30191371867`, build job `89765103953`, in `1m49s`. The warning-free 615-line module,
+exact TargetChecks, standard-only selected axiom prints, empty forbidden scans, and full
+`8765/8765` build pass locally. Public freeze/evidence gates remain before fixed-edge closure and
+fresh cross-family ranking.

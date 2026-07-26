@@ -3950,3 +3950,20 @@ mass. Eventual such witnesses at integer heights feed the already compiled
 indented argument principle, logarithmic count estimate, full dichotomy, Speiser equivalence,
 and RH remain outside this campaign. Public preregistration CI is required before any Lean proof
 edit.
+
+The preregistration gate passed at commit
+`8a3c54d5092c13b8489e2c92c49d586f79176e95`, public run `30191371867`, build job
+`89765103953`, in `1m49s`. Attack A then compiled the complete fixed edge in the 615-line
+`LevinsonMontgomeryLogDerivMassBridge.lean` module. The actual paired divisor sum is exactly
+`Re(xi'/xi)`; differentiating the existing Stieltjes scaled-Gamma identity gives the source
+digamma expansion and an explicit `27/(64*norm(z)^2)` error; the xi factorization yields
+equation `(2.1)`; and rational estimates make its archimedean term strictly negative on
+`0<=sigma<=1/2, t>=10`.
+
+Thus nonnegative `Re(zeta'/zeta)` in the open left strip forces negative paired mass and feeds the
+compiled dense count branch whenever such witnesses occur eventually at integer heights. The
+fixed-edge omission was real and is now closed locally. The next substantive H12 question is how
+the source contour argument produces those witnesses and controls the low and critical
+boundaries; tightening the already sufficient Gamma constant is not selected as a frontier.
+Targets, exact checks, selected standard-only axiom prints, forbidden scans, and the full
+`8765/8765` build pass. Public implementation, immutable-evidence, and final-ledger gates remain.

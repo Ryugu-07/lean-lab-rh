@@ -1,6 +1,7 @@
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
+import LeanLab.Riemann.LevinsonMontgomeryLogDerivMassBridge
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -4364,5 +4365,46 @@ example (hmass : LevinsonMontgomeryPairedMassNegativeAtIntegers) :
     ∃ T0 : ℝ, ∀ T : ℝ, T0 ≤ T →
       T / 2 < (speiserUpperLeftZetaZeroCount T : ℝ) :=
   levinsonMontgomeryDenseBranch_of_pairedMassNegativeAtIntegers hmass
+
+example {s : ℂ} (hxi : riemannXi s ≠ 0) :
+    levinsonMontgomeryRealPairedZeroSum s =
+      (logDeriv riemannXi s).re :=
+  levinsonMontgomeryRealPairedZeroSum_eq_logDeriv_riemannXi_re hxi
+
+example {z : ℂ} (hz : 0 < z.re) :
+    Complex.digamma z =
+      Complex.log z - 1 / (2 * z) +
+        levinsonMontgomeryDigammaStirlingRemainder z :=
+  levinsonMontgomery_digamma_stirling hz
+
+example {z : ℂ} (hz : 0 < z.re) :
+    ‖levinsonMontgomeryDigammaStirlingRemainder z‖ ≤
+      27 / (64 * ‖z‖ ^ 2) :=
+  levinsonMontgomery_digamma_stirling_remainder_norm_le hz
+
+example {s : ℂ} (hs0 : 0 < s.re) (hsHalf : s.re < 1 / 2)
+    (hzeta : riemannZeta s ≠ 0) :
+    (logDeriv riemannZeta s).re =
+      levinsonMontgomeryLogDerivArchimedeanTerm s +
+        levinsonMontgomeryRealPairedZeroSum s :=
+  levinsonMontgomery_equation_two_one hs0 hsHalf hzeta
+
+example {s : ℂ} (hs0 : 0 ≤ s.re) (hsHalf : s.re ≤ 1 / 2)
+    (hsIm : 10 ≤ s.im) :
+    levinsonMontgomeryLogDerivArchimedeanTerm s < 0 :=
+  levinsonMontgomeryLogDerivArchimedeanTerm_neg hs0 hsHalf hsIm
+
+example {s : ℂ} (hs0 : 0 < s.re) (hsHalf : s.re < 1 / 2)
+    (hsIm : 10 ≤ s.im) (hzeta : riemannZeta s ≠ 0)
+    (hlog : 0 ≤ (logDeriv riemannZeta s).re) :
+    levinsonMontgomeryPairedZeroMass s < 0 :=
+  levinsonMontgomeryPairedMass_neg_of_logDeriv_riemannZeta_re_nonneg
+    hs0 hsHalf hsIm hzeta hlog
+
+example
+    (hlog : LevinsonMontgomeryEventuallyNonnegativeLogDerivAtIntegers) :
+    ∃ T0 : ℝ, ∀ T : ℝ, T0 ≤ T →
+      T / 2 < (speiserUpperLeftZetaZeroCount T : ℝ) :=
+  levinsonMontgomeryDenseBranch_of_eventuallyNonnegativeLogDerivAtIntegers hlog
 
 end LeanLab.Riemann

@@ -2058,3 +2058,25 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   contour, logarithmic count difference, full dichotomy, Speiser equivalence, and RH.
 - `production_gate`: docs-only preregistration public CI before proof-source editing.
 - `global_goal`: active.
+
+## 2026-07-26 H12 log-derivative mass bridge local endpoint
+
+- `node`: `H12-LM-LOGDERIV-MASS-BRIDGE-01`.
+- `status`: `LOCAL_FULL_LOGDERIV_MASS_BRIDGE_SUCCESS /
+  PUBLIC_IMPLEMENTATION_CI_REQUIRED`.
+- `proved_edge`: the actual paired reciprocal sum equals `Re(xi'/xi)`; the differentiated
+  Stieltjes representation gives the exact digamma Stirling formula and explicit remainder;
+  equation `(2.1)` and archimedean negativity on the full source region compile.
+- `count_interface`: nonnegative `Re(zeta'/zeta)` at an open-left-strip point above height ten
+  forces negative paired mass, and eventual integer witnesses imply the compiled
+  `N^-(T)>T/2` branch.
+- `frontier_reduction`: remove the Hadamard-normalization, Gamma-remainder, and equation `(2.1)`
+  nodes from the local H12 frontier. Retain low/critical boundary signs, witness production,
+  indented argument principle, `O(log T)` count difference, full dichotomy, Speiser equivalence,
+  and RH as open nodes.
+- `delta`: `source_analytic_bridge_delta=1`, `historical_route_coverage_delta=1`,
+  `known_theorem_formalization_delta=0` until the full theorem, `hard_gap_delta=0`,
+  `rh_frontier_delta=0`.
+- `local_gates`: warning-free 615-line source, exact TargetChecks, standard-only selected axiom
+  prints, empty forbidden scans, and full `8765/8765` build.
+- `global_goal`: active.

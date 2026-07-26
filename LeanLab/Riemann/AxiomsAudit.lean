@@ -100,6 +100,7 @@ import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
+import LeanLab.Riemann.LevinsonMontgomeryLogDerivMassBridge
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
@@ -987,3 +988,10 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.levinsonMontgomery_real_paired_zero_sum_eq
 #print axioms LeanLab.Riemann.exists_upperLeft_zero_abs_im_sub_lt_half_of_pairedMass_neg
 #print axioms LeanLab.Riemann.levinsonMontgomeryDenseBranch_of_pairedMassNegativeAtIntegers
+#print axioms LeanLab.Riemann.levinsonMontgomeryRealPairedZeroSum_eq_logDeriv_riemannXi_re
+#print axioms LeanLab.Riemann.levinsonMontgomery_digamma_stirling
+#print axioms LeanLab.Riemann.levinsonMontgomery_digamma_stirling_remainder_norm_le
+#print axioms LeanLab.Riemann.levinsonMontgomery_equation_two_one
+#print axioms LeanLab.Riemann.levinsonMontgomeryLogDerivArchimedeanTerm_neg
+#print axioms LeanLab.Riemann.levinsonMontgomeryPairedMass_neg_of_logDeriv_riemannZeta_re_nonneg
+#print axioms LeanLab.Riemann.levinsonMontgomeryDenseBranch_of_eventuallyNonnegativeLogDerivAtIntegers

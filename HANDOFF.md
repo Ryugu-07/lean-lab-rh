@@ -4173,3 +4173,36 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active. Historical omission search remains the main route-selection discipline;
   conjecture generation and direct proof attempts remain open.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H12 log-derivative to paired-mass local result
+
+- `status`: `LOCAL_FULL_LOGDERIV_MASS_BRIDGE_SUCCESS /
+  PUBLIC_IMPLEMENTATION_CI_REQUIRED`.
+- `production_gate`: preregistration commit
+  `8a3c54d5092c13b8489e2c92c49d586f79176e95` passed public Lean Action run
+  `30191371867`, build job `89765103953`, in `1m49s`.
+- `compiled_endpoint`: the 615-line
+  `LeanLab/Riemann/LevinsonMontgomeryLogDerivMassBridge.lean` proves the actual paired xi
+  reciprocal sum is `Re(xi'/xi)`, the explicit Stieltjes digamma formula and
+  `27/(64*norm(z)^2)` remainder bound, source equation `(2.1)`, and strict negativity of the
+  archimedean term for `0<=sigma<=1/2, t>=10`.
+- `source_consequence`: at every nonzero zeta point with
+  `0<sigma<1/2, t>=10`, `Re(zeta'/zeta)>=0` forces negative paired zero mass. Eventual such
+  integer-height witnesses imply `T/2 < speiserUpperLeftZetaZeroCount T`.
+- `omission_result`: the published Hadamard/Gamma bridge closes without a normalization
+  mismatch or a stronger Gamma premise. The next source obstruction is witness production from
+  the low and critical contour boundaries, not further optimization of the remainder constant.
+- `registered`: proven Target
+  `H12.speiser.levinson-montgomery-logderiv-mass-bridge`, seven exact TargetChecks, and seven
+  selected axiom prints.
+- `local_gates`: warning-as-error direct checks, empty forbidden scans, `git diff --check`, and
+  full `8765/8765` build pass. Selected axioms are only `propext`, `Classical.choice`, and
+  `Quot.sound`.
+- `strict_boundary`: no low-height zeta sign certificate, lower/critical contour signs,
+  witness-existence alternative, indented argument principle, `O(log T)` count theorem, full
+  dichotomy, Speiser equivalence, or RH.
+- `next_gate`: freeze and publish the implementation, then require immutable-evidence and
+  final-ledger public CI.
+- `global_goal`: active. After fixed-edge closure return to cross-family historical route
+  selection; conjecture and direct-proof tracks remain open.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

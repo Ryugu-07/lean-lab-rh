@@ -93,6 +93,7 @@ import LeanLab.Riemann.PolyaTuranAbelAudit
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
+import LeanLab.Riemann.LevinsonMontgomeryLogDerivMassBridge
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
@@ -1517,13 +1518,21 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``levinsonMontgomeryDenseBranch_of_pairedMassNegativeAtIntegers
       status := .proven
       note := "Campaign LITERATURE-20260726-H12-LEVINSON-MONTGOMERY-PAIRED-MASS-DENSITY-01 compiles equations (2.2)-(2.3) through the multiplicity-preserving rho |-> 1-conj(rho) permutation. Global half-pair averaging gives coefficient two off the critical line and coefficient one on it. Strict half-unit localization makes the integer-height witness selector injective, and its image embeds into speiserUpperLeftZetaZeroFinset with multiplicity at least one. The remaining source work is to derive eventual paired-mass negativity from Re(zeta'/zeta)>=0 using the Gamma estimate and low-height certificate; the contour and O(log T) count theorem also remain open. This is a source_analytic_bridge_delta=1 and historical_route_coverage_delta=1 result, not RH." },
+    { id := "H12.speiser.levinson-montgomery-logderiv-mass-bridge"
+      tier := .tier2
+      title := "Formalize the Levinson-Montgomery log-derivative to paired-mass bridge"
+      statement :=
+        "Identify the actual paired xi-divisor reciprocal sum with Re(xi'/xi), prove source equation (2.1), derive an explicit digamma Stirling remainder and norm bound from the Stieltjes kernel, prove the remaining pole-Gamma term is negative for 0<=sigma<=1/2 and t>=10, and map eventual nonnegative Re(zeta'/zeta) integer-height witnesses into N^-(T)>T/2."
+      leanName := some ``levinsonMontgomeryDenseBranch_of_eventuallyNonnegativeLogDerivAtIntegers
+      status := .proven
+      note := "Campaign LITERATURE-20260726-H12-LEVINSON-MONTGOMERY-LOGDERIV-MASS-BRIDGE-01 compiles equation (2.1) with no raw reciprocal sum or abstract Gamma premise. Hadamard polynomial cancellation identifies the multiplicity-bearing paired sum with Re(logDeriv riemannXi). Differentiating the compiled Stieltjes scaled-Gamma identity gives digamma(z)=log(z)-1/(2z)+R(z) and norm R(z)<=27/(64*norm(z)^2); rational pi/log/geometry bounds prove the source archimedean term is strictly negative at t>=10. Thus a nonnegative real zeta logarithmic derivative forces negative paired mass and enters the compiled dense branch. The low-height boundary sign, contour witness production, indented count argument, O(log T) count difference, full dichotomy, Speiser equivalence, and RH remain open." },
     { id := "H12.speiser.levinson-montgomery-analytic-counts"
       tier := .tier2
       title := "Prove the Levinson-Montgomery analytic count theorem"
       statement :=
         "Prove LevinsonMontgomeryLogCountBound and LevinsonMontgomeryCountDichotomy for the actual multiplicity-bearing zeta and zeta-derivative rectangle counts, including the functional-equation zero sum, Gamma estimates, low-height boundary sign, indented critical-line contour, and argument-principle bookkeeping."
       status := .inProgress
-      note := "The paired xi zero-mass identity, negative-mass half-unit localizer, and integer-height dense branch are now compiled. The next exact source obstruction is to prove eventual paired-mass negativity from Re(zeta'/zeta)>=0 using equation (2.1), explicit Gamma estimates, and the low-height zero certificate. The later indented critical-line argument principle and O(log T) count difference also remain open. Mathlib supplies analyticity, divisors, Jensen's formula, and complex integration, while no specialized Levinson-Montgomery boundary theorem is currently available." },
+      note := "The paired xi zero-mass identity, equation (2.1), explicit Stieltjes digamma bound, negative-mass implication, half-unit localizer, and integer-height dense branch are now compiled. The next exact source obstruction is the low-height and boundary sign package that produces an interior nonnegative-log-derivative witness whenever the exact-count top sequence fails. The later indented critical-line argument principle and O(log T) count difference also remain open. Mathlib supplies analyticity, divisors, Jensen's formula, and complex integration, while no specialized Levinson-Montgomery boundary theorem is currently available." },
     { id := "H11.pcc.horizontal-multiplicity-consumer"
       tier := .tier2
       title := "Formalize pair-correlation horizontal multiplicity"
