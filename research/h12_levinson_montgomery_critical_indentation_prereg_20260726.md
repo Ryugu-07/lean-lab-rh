@@ -9,7 +9,7 @@ Selected node: `H12-LM-CRITICAL-INDENTATION-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `FULL_CRITICAL_INDENTATION_SUCCESS_LOCAL / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Primary source
 
@@ -231,6 +231,10 @@ positive-radius left semicircle including both critical-line endpoints.
 - `git diff --check`: pass;
 - full build: `8767/8767`.
 
+Frozen implementation commit `49d43eda415c00c10939c2df529b6231c973aa5b` passed public Lean
+Action run `30195029807`, build job `89774903553`, in `2m44s`. The proof source is now frozen;
+the next gate is a docs-only immutable-evidence commit and public CI.
+
 Local classification:
 
 - `result=FULL_CRITICAL_INDENTATION_SUCCESS`;
@@ -240,7 +244,6 @@ Local classification:
 - `hard_gap_delta=0`;
 - `rh_frontier_delta=0`.
 
-The implementation is not yet public-green. The bottom `t=10` certificate, cofinal admissible
-top contours, the global indented argument principle, exact zeta/zeta-derivative count equality,
-the `O(log T)` comparison, the full Levinson--Montgomery theorem, Speiser equivalence, and RH
-remain open.
+The bottom `t=10` certificate, cofinal admissible top contours, the global indented argument
+principle, exact zeta/zeta-derivative count equality, the `O(log T)` comparison, the full
+Levinson--Montgomery theorem, Speiser equivalence, and RH remain open.

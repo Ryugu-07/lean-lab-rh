@@ -2178,5 +2178,8 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `classification`: `source_analytic_bridge_delta=1`,
   `historical_route_coverage_delta=1`, `known_theorem_formalization_delta=0`,
   `hard_gap_delta=0`, `rh_frontier_delta=0`.
-- `global_goal`: active; public implementation, immutable-evidence, and final-ledger CI remain
-  before route selection.
+- `global_goal`: active; immutable-evidence and final-ledger CI remain before route selection.
+
+Frozen implementation commit `49d43eda415c00c10939c2df529b6231c973aa5b` passed public Lean
+Action run `30195029807`, build job `89774903553`, in `2m44s`. Proof source is frozen.
+Immutable-evidence and final-ledger public CI remain before route selection.

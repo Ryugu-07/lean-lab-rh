@@ -1354,8 +1354,10 @@ side, the whole punctured left half-neighborhood and every sufficiently small cl
 semicircle are negative, endpoints included.
 
 This closes `H12-LM-CRITICAL-INDENTATION-01` locally as
-`FULL_CRITICAL_INDENTATION_SUCCESS`; implementation public CI remains pending. The next H12
-source gap is global rather than another endpoint estimate: certify the bottom contour, produce
-cofinal admissible tops, and formalize the indented argument-principle count and `O(log T)`
-comparison. Cross-family route selection resumes only after public closure of the fixed
-campaign.
+`FULL_CRITICAL_INDENTATION_SUCCESS`. Frozen implementation commit
+`49d43eda415c00c10939c2df529b6231c973aa5b` passed public run `30195029807`, build job
+`89774903553`, in `2m44s`; proof source remains frozen. The next H12 source gap is global rather
+than another endpoint estimate: certify the bottom contour, produce cofinal admissible tops,
+and formalize the indented argument-principle count and `O(log T)` comparison. Cross-family
+route selection resumes only after docs-only immutable-evidence and final-ledger public closure
+of the fixed campaign.

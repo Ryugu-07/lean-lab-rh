@@ -4379,3 +4379,18 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   evidence.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H12 critical-zero indentation implementation public green
+
+- `frozen_implementation`: commit `49d43eda415c00c10939c2df529b6231c973aa5b`.
+- `public_ci`: Lean Action run `30195029807`, build job `89774903553`, passed in `2m44s`.
+- `result`: `FULL_CRITICAL_INDENTATION_SUCCESS`; actual zeta is nonzero with strictly negative
+  logarithmic-derivative real part on a punctured left half-neighborhood of every critical-line
+  nontrivial zero above height `10`, hence on a complete small closed left semicircle.
+- `proof_freeze`: no Lean proof source changes after the frozen implementation hash.
+- `next_gate`: publish docs-only immutable evidence and require public CI, then a docs-only final
+  ledger and public CI.
+- `strict_boundary`: bottom certificate, admissible top contours, global argument principle,
+  exact count equality, `O(log T)`, full theorem, Speiser equivalence, and RH remain open.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

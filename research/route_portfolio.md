@@ -4079,6 +4079,9 @@ The 468-line production module, proven Target, six exact TargetChecks, five stan
 prints, empty forbidden scans, and full `8767/8767` build pass locally. Classify this as
 `FULL_CRITICAL_INDENTATION_SUCCESS`, with `source_analytic_bridge_delta=1`,
 `historical_route_coverage_delta=1`, `hard_gap_delta=0`, and `rh_frontier_delta=0`.
-Implementation CI remains required. The bottom certificate, top-contour admissibility, global
-argument principle, exact count comparison, full Levinson--Montgomery theorem, Speiser
-equivalence, and RH remain open.
+The bottom certificate, top-contour admissibility, global argument principle, exact count
+comparison, full Levinson--Montgomery theorem, Speiser equivalence, and RH remain open.
+
+Frozen implementation commit `49d43eda415c00c10939c2df529b6231c973aa5b` passed public Lean
+Action run `30195029807`, build job `89774903553`, in `2m44s`. Proof source remains frozen;
+docs-only immutable evidence and final-ledger CI are the remaining campaign gates.
