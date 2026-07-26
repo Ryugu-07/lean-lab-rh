@@ -1688,7 +1688,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 ## 2026-07-23 H1 Bettin--Gonek J-contour selection
 
 - `node`: `H1-BETTIN-GONEK-J-CONTOUR-01`.
-- `status`: `PREREGISTERED / PUBLIC_CI_REQUIRED`.
+- `status`: `PREREGISTERED / PUBLIC_CI_GREEN / PRODUCTION_OPEN`.
 - `parent`: H7 archimedean final ledger `64782a564a19a8e9c25a0d520bcbbcb2397b807a`, public Lean
   Action run `29980056767`, build job `89119806051`, passed in `1m36s`.
 - `fixed_edge`: actual `G_tH_t` cancellation, source rational-kernel vertical integrability,
@@ -1802,13 +1802,14 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   passed run `30140782861`, build job `89633473809`, in `1m32s`; final-ledger CI remains.
 - `global_goal`: active; H7 and RH remain open.
 
-## 2026-07-26 H1 inverse Mellin convolution selection
+## 2026-07-26 H1 inverse Mellin convolution local result
 
 - `parent_closed`: H7 finite dictionary admissibility final ledger
   `f7c137b128406dd55b09d81411c2d7e38d81f731`, public Lean Action run `30140898700`, build
   job `89633790335`, passed in `1m36s`.
 - `node`: `H1-BETTIN-GONEK-INVERSE-MELLIN-CONVOLUTION-01`.
-- `status`: `PREREGISTERED / PUBLIC_CI_REQUIRED`.
+- `status`: `LOCAL_FULL_INVERSE_MELLIN_SUCCESS / LOCAL_GATES_GREEN /
+  IMPLEMENTATION_CI_PENDING`.
 - `fixed_edge`: for the actual compiled auxiliary factor, prove standalone vertical decay and
   integrability, define the literal inverse Mellin kernel, prove its support in `0<u<=1` and
   uniform boundedness there, prove the actual convolution with the real-cutoff mollifier, and
@@ -1822,4 +1823,16 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   parameter bookkeeping, Farmer's arbitrary-length mollifier conjecture, H1, and RH.
 - `route_reserves`: H7 weak-regularity arithmetic transport, H12 analytic counts, and H2
   actual-zeta localization remain open.
+- `production_gate`: preregistration commit `3acbaa32aa7cdcf9303adb38976d213e5057967f`
+  passed public Lean Action run `30181383630`, build job `89738396880`, in `1m35s`.
+- `compiled_result`: the literal source kernel, inverse-cube fixed-strip decay, zero/three/all
+  right-line integrability, finite left and arbitrary-right shifts, support, boundedness, direct
+  Bochner-Fubini convolution, support cutoff, and exact source upper bound all compile.
+- `registered`: `bettinGonekInverseMellinConvolution_endpoint`, one proven Target, its exact
+  TargetCheck, and selected standard-only axiom prints compile.
+- `local_gates`: direct warning-as-error checks, three forbidden scans, `git diff --check`, and
+  the full `8760/8760` build pass.
+- `delta`: `source_analytic_bridge_delta=1`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `next_hard_edge`: Cauchy--Schwarz and the critical-line zeta second-moment transfer, followed by
+  integration in `t` and uniform asymptotic parameter bookkeeping.
 - `global_goal`: active; RH remains open.

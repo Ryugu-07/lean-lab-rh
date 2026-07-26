@@ -9,6 +9,7 @@ import LeanLab.Riemann.ThetaInfinityMollifier
 import LeanLab.Riemann.BettinGonekAuxiliary
 import LeanLab.Riemann.BettinGonekMellinIdentity
 import LeanLab.Riemann.BettinGonekJContour
+import LeanLab.Riemann.BettinGonekInverseMellinConvolution
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -928,6 +929,13 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.bettinGonekJLineIntegral_three_eq_zero_add_residue
 #print axioms LeanLab.Riemann.norm_bettinGonekResidueCoefficient
 #print axioms LeanLab.Riemann.bettinGonekJContour_endpoint
+#print axioms LeanLab.Riemann.norm_bettinGonekAuxiliaryG_fixedStrip_le
+#print axioms LeanLab.Riemann.bettinGonekInverseMellinKernel_eq_zero
+#print axioms LeanLab.Riemann.norm_bettinGonekInverseMellinKernel_le
+#print axioms LeanLab.Riemann.integrable_bettinGonekInverseMellinConvolutionIntegrand
+#print axioms LeanLab.Riemann.bettinGonekJLineIntegral_three_eq_inverseMellinConvolution
+#print axioms LeanLab.Riemann.norm_bettinGonekJLineIntegral_three_le_inverseMellinBound
+#print axioms LeanLab.Riemann.bettinGonekInverseMellinConvolution_endpoint
 #print axioms LeanLab.Riemann.hasDerivAt_weilArchimedeanKernel
 #print axioms LeanLab.Riemann.weilArchimedeanKernel_integer_eq
 #print axioms LeanLab.Riemann.weilArchimedeanKernelDerivative_integer_eq

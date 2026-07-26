@@ -86,6 +86,7 @@ import LeanLab.Riemann.ThetaInfinityMollifier
 import LeanLab.Riemann.BettinGonekAuxiliary
 import LeanLab.Riemann.BettinGonekMellinIdentity
 import LeanLab.Riemann.BettinGonekJContour
+import LeanLab.Riemann.BettinGonekInverseMellinConvolution
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
@@ -1432,7 +1433,7 @@ def rhTargets : List ResearchTarget :=
         "Use the divided difference of the entire pole-removed zeta function to recover the source auxiliary quotient away from its patched points, prove holomorphy on an open neighborhood of Re(w)>=0, and verify the exact nonzero punctured-neighborhood coefficient at the pole selected by every nontrivial zeta zero."
       leanName := some ``bettinGonekAuxiliaryAudit_endpoint
       status := .proven
-      note := "Campaign LITERATURE-20260723-H1-BETTIN-GONEK-AUXILIARY-01 compiles the local analytic algebra in equations (2.2)-(2.3). It does not prove inverse Mellin support, vertical decay, contour integration, convolution, the full moment-to-power bridge, Farmer's conjecture, or RH; rh_frontier_delta=0." },
+      note := "Campaign LITERATURE-20260723-H1-BETTIN-GONEK-AUXILIARY-01 compiles the local analytic algebra in equations (2.2)-(2.3). The later inverse-Mellin campaign supplies the standalone vertical decay and inversion consequences. This target by itself does not prove the full moment-to-power bridge, Farmer's conjecture, or RH; rh_frontier_delta=0." },
     { id := "H1.theta-infinity.actual-mollifier-mellin-identity"
       tier := .tier2
       title := "Prove the actual Bettin--Gonek mollifier Mellin identity"
@@ -1440,7 +1441,7 @@ def rhTargets : List ResearchTarget :=
         "From the literal real-cutoff Mobius mollifier, prove its logarithmic source series, absolute sum-integral interchange on Re(w)>3/2, and H_t(w)=1/((w-1)^2*zeta(w-1/2+it)) in Mathlib's Mellin convention."
       leanName := some ``bettinGonekMellinIdentity_endpoint
       status := .proven
-      note := "Campaign LITERATURE-20260723-H1-BETTIN-GONEK-MELLIN-IDENTITY-01 closes equation (2.1) from the actual source cutoff. Lean proves the scaled logarithmic kernel, a summable integrated-norm majorant, Bochner integrability of the pointwise Mobius sum, the reciprocal-zeta L-series identification, and the exact HasMellin statement. It does not prove inverse Mellin support, auxiliary vertical decay, contour shifting, the selected-residue lower bound, the full moment-to-power bridge, Farmer's conjecture, or RH; rh_frontier_delta=0 and source_analytic_bridge_delta=1." },
+      note := "Campaign LITERATURE-20260723-H1-BETTIN-GONEK-MELLIN-IDENTITY-01 closes equation (2.1) from the actual source cutoff. Lean proves the scaled logarithmic kernel, a summable integrated-norm majorant, Bochner integrability of the pointwise Mobius sum, the reciprocal-zeta L-series identification, and the exact HasMellin statement. The later inverse-Mellin and J-contour campaigns consume this identity. It does not prove the remaining moment transfer, Farmer's conjecture, or RH; rh_frontier_delta=0 and source_analytic_bridge_delta=1." },
     { id := "H1.theta-infinity.actual-j-contour"
       tier := .tier2
       title := "Shift the actual Bettin--Gonek J-contour"
@@ -1448,14 +1449,22 @@ def rhTargets : List ResearchTarget :=
         "Cancel the compiled source auxiliary factor against the actual mollifier Mellin transform, prove absolute integrability on Re(w)=0 and Re(w)=3, shift the finite rectangle across exactly the selected-zero pole, send both horizontal sides to zero, and derive the exact residue power lower bound with a boundary constant uniform in x."
       leanName := some ``bettinGonekJContour_endpoint
       status := .proven
-      note := "Campaign LITERATURE-20260723-H1-BETTIN-GONEK-J-CONTOUR-01 compiles equations (2.3)-(2.5) for the literal rational kernel. The normalized line identity is J_3=J_0+Res, norm(J_0)<=2 uniformly in x, and norm(Res)=c(rho,t)*x^(Re(rho)+1/2) with c(rho,t)>0. It does not prove inverse Mellin support or boundedness of g_t, decay of G_t alone, convolution equation (2.4), the Cauchy--Schwarz and zeta-moment transfer, Farmer's conjecture, H1, or RH; rh_frontier_delta=0 and source_analytic_bridge_delta=1." },
+      note := "Campaign LITERATURE-20260723-H1-BETTIN-GONEK-J-CONTOUR-01 compiles equations (2.3)-(2.5) for the literal rational kernel. The normalized line identity is J_3=J_0+Res, norm(J_0)<=2 uniformly in x, and norm(Res)=c(rho,t)*x^(Re(rho)+1/2) with c(rho,t)>0. The later inverse-Mellin campaign supplies the missing standalone G_t and convolution side. This target does not prove the Cauchy--Schwarz and zeta-moment transfer, Farmer's conjecture, H1, or RH; rh_frontier_delta=0 and source_analytic_bridge_delta=1." },
+    { id := "H1.theta-infinity.actual-inverse-mellin-convolution"
+      tier := .tier2
+      title := "Invert the actual Bettin--Gonek auxiliary transform"
+      statement :=
+        "Prove standalone fixed-strip and arbitrary-right decay for the literal G_t, invert it to a bounded kernel supported on 0<u<=1, justify the direct Bochner-Fubini convolution with the actual mollifier, and derive the source interval upper bound for J_t(x)."
+      leanName := some ``bettinGonekInverseMellinConvolution_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260726-H1-BETTIN-GONEK-INVERSE-MELLIN-CONVOLUTION-01 compiles equations (2.2)-(2.4) for the literal source objects. Lean proves G_t=O(|Im(w)+t|^-3) uniformly on 0<=Re(w)<=3, integrability on every right line Re(w)>=3, finite-rectangle line shifts, the Re(w)->+infinity support argument, the line-zero uniform kernel bound, product-space Bochner integrability, the exact convolution identity, and the Icc(1,x) upper estimate. It does not prove Cauchy--Schwarz, the critical-line zeta second-moment transfer, t-uniform asymptotics, Farmer's conjecture, H1, or RH; rh_frontier_delta=0 and source_analytic_bridge_delta=1." },
     { id := "H1.theta-infinity.moment-to-power-bridge"
       tier := .tier2
       title := "Formalize the Bettin--Gonek selected-zero residue bridge"
       statement :=
         "From the exact uniform mollified second-moment bound through length T^theta, derive for every nontrivial zero rho the power obstruction T^(2*Re(rho)*theta) <<_epsilon T^(1+epsilon+theta), including Mellin inversion, auxiliary-transform decay, contour shifting, the selected-zero residue, Cauchy--Schwarz, the zeta second-moment lower bound, and uniform constants."
       status := .inProgress
-      note := "Equations (2.1), (2.3), and the actual one-pole shift (2.5) are now compiled. The remaining source bridge still requires inverse Mellin support and boundedness of g_t, decay of G_t alone in the inversion theorem, convolution equation (2.4), Cauchy--Schwarz, the zeta second-moment transfer, and uniform parameter bookkeeping. The project definition BettinGonekMomentToPowerBridge names the still-unavailable aggregate premise and may not be used in unconditional work." },
+      note := "Equations (2.1)-(2.5), including standalone inverse-Mellin support and boundedness, direct convolution, and the selected one-pole residue shift, are now compiled for the actual source objects. The remaining source bridge is the Cauchy--Schwarz step, the critical-line zeta second-moment transfer, integration in t, and uniform parameter bookkeeping needed to derive the stated power obstruction. The project definition BettinGonekMomentToPowerBridge names the still-unavailable aggregate premise and may not be used in unconditional work." },
     { id := "H1.theta-infinity.arbitrary-length-moment"
       tier := .tier2
       title := "Prove Farmer's theta-infinity mollified moment conjecture"

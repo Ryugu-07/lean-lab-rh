@@ -4117,6 +4117,38 @@ example {rho : ℂ} (hrho : IsNontrivialZero rho) (t : ℝ) {x : ℝ} (hx : 0 < 
         ‖bettinGonekJLineIntegral rho t x 3‖ + 2 :=
   bettinGonekJContour_endpoint hrho t hx
 
+example {rho : ℂ} (hrho : IsNontrivialZero rho) (t : ℝ)
+    {x : ℝ} (hx : 2 ≤ x) :
+    MeasureTheory.Integrable (fun y : ℝ =>
+      bettinGonekAuxiliaryG rho t (y * Complex.I)) ∧
+      MeasureTheory.Integrable (fun y : ℝ =>
+        bettinGonekAuxiliaryG rho t (3 + y * Complex.I)) ∧
+      (∀ a v : ℝ, a ∈ Set.Icc (0 : ℝ) 3 → 1 ≤ |v| →
+        ‖bettinGonekAuxiliaryG rho t
+            (a + (v - t) * Complex.I)‖ ≤
+          bettinGonekAuxiliaryStripLiftBound rho / |v| ^ 3) ∧
+      (∀ R : ℝ, 3 ≤ R →
+        MeasureTheory.Integrable (fun y : ℝ =>
+          bettinGonekAuxiliaryG rho t (R + y * Complex.I))) ∧
+      MeasureTheory.Integrable
+        (bettinGonekInverseMellinConvolutionIntegrand rho t x)
+        ((MeasureTheory.volume.restrict (Set.Ioi (1 : ℝ))).prod
+          MeasureTheory.volume) ∧
+      (∀ u : ℝ, 1 < u →
+        bettinGonekInverseMellinKernel rho t u = 0) ∧
+      (∀ u : ℝ, 0 < u → u ≤ 1 →
+        ‖bettinGonekInverseMellinKernel rho t u‖ ≤
+          bettinGonekInverseMellinBound rho t) ∧
+      bettinGonekJLineIntegral rho t x 3 =
+        ∫ y : ℝ in Set.Ioi 1,
+          bettinGonekLogMollifier y (farmerCriticalLinePoint t) *
+            bettinGonekInverseMellinKernel rho t (y / x) ∧
+      ‖bettinGonekJLineIntegral rho t x 3‖ ≤
+        bettinGonekInverseMellinBound rho t *
+          ∫ y : ℝ in Set.Icc 1 x,
+            ‖bettinGonekLogMollifier y (farmerCriticalLinePoint t)‖ :=
+  bettinGonekInverseMellinConvolution_endpoint hrho t hx
+
 example (L r x : ℝ) :
     HasDerivAt (weilArchimedeanKernel L r)
       (weilArchimedeanKernelDerivative L r x) x :=

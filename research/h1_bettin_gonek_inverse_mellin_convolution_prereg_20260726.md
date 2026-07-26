@@ -8,7 +8,7 @@ Selected node: `H1-BETTIN-GONEK-INVERSE-MELLIN-CONVOLUTION-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_FULL_INVERSE_MELLIN_SUCCESS / LOCAL_GATES_GREEN / IMPLEMENTATION_CI_PENDING`
 
 ## Baseline
 
@@ -173,4 +173,34 @@ The six inherited user/exposure files remain untouched and unstaged.
 
 ## Production gate
 
-Closed pending a public-green preregistration commit.
+Preregistration commit `3acbaa32aa7cdcf9303adb38976d213e5057967f` passed public Lean
+Action run `30181383630`, build job `89738396880`, in `1m35s`. Production editing is open for
+the fixed endpoint only.
+
+## Local implementation result
+
+The fixed endpoint now compiles in
+`LeanLab/Riemann/BettinGonekInverseMellinConvolution.lean`.
+
+- The literal `G_t` satisfies an explicit inverse-cube ordinate bound on both source boundary
+  lines and uniformly throughout `0<=Re(w)<=3`. The strip proof uses a
+  Phragmen--Lindelof lift rather than the cancelled rational `G_t H_t` kernel.
+- Finite rectangles and vanishing horizontal edges identify the real-part-three and
+  real-part-zero inverse-Mellin lines. This gives the explicit `u`-independent bound on
+  `0<u<=1`.
+- Separate estimates uniform in every `R>=3`, finite shifts from three to `R`, and a proved
+  `R->+infinity` limit give exact support `g_t(u)=0` for `u>1`.
+- A direct source-specific Bochner-Fubini proof establishes product measurability and
+  integrability, recognizes the actual mollifier Mellin transform `H_t`, and proves equation
+  `(2.4)` with the source normalization.
+- The compiled support cuts the convolution to `Icc 1 x`; local integrability of the literal log
+  mollifier norm and the kernel bound give the exact preregistered upper estimate for `2<=x`.
+- `bettinGonekInverseMellinConvolution_endpoint` packages all fixed items. Its proven Target,
+  exact TargetCheck, and selected transitive axiom audit compile; the selected axioms are only
+  `propext`, `Classical.choice`, and `Quot.sound`.
+
+Local classification is `FULL_INVERSE_MELLIN_SUCCESS`. Direct warning-as-error compilation,
+three forbidden scans, `git diff --check`, and the full `8760/8760` build pass. Implementation
+freeze and public implementation/evidence gates remain before public closure. Cauchy--Schwarz,
+the critical-line zeta second-moment transfer, integration in `t`, uniform asymptotic bookkeeping,
+Farmer's conjecture, H1, and RH remain open.

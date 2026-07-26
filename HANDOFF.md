@@ -3866,5 +3866,32 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   movement and Bochner Fubini.
 - `strict_boundary`: Cauchy--Schwarz and zeta second-moment transfer, Farmer's arbitrary-length
   moment conjecture, H1, and RH remain open.
-- `production_gate`: no production Lean source may be created or edited until the preregistration
-  commit passes public Lean Action CI.
+- `production_gate`: preregistration commit `3acbaa32aa7cdcf9303adb38976d213e5057967f`
+  passed public Lean Action run `30181383630`, build job `89738396880`, in `1m35s`; fixed-endpoint
+  production editing is open.
+
+## 2026-07-26 H1 Bettin--Gonek inverse Mellin convolution local result
+
+- `status`: `LOCAL_FULL_INVERSE_MELLIN_SUCCESS / LOCAL_GATES_GREEN /
+  IMPLEMENTATION_CI_PENDING`.
+- `compiled_edge`: literal inverse Mellin kernel; standalone inverse-cube `G_t` decay on the
+  fixed strip; integrability on zero, three, and every right line; exact left and arbitrary-right
+  contour shifts; support on `0<u<=1`; a uniform kernel bound there; direct product-space
+  Bochner Fubini; equation `(2.4)`; and the source `Icc(1,x)` upper estimate.
+- `key_method`: the zero-line functional-equation estimate and three-line estimate are propagated
+  by a Phragmen--Lindelof lift. The support theorem uses finite rectangles followed by an actual
+  `Re(w)->+infinity` limit. The convolution uses the literal mollifier and recognizes the
+  already compiled `H_t`; no generic target-equivalent convolution premise is assumed.
+- `registered`: aggregate theorem
+  `bettinGonekInverseMellinConvolution_endpoint`, one proven Target, one exact aggregate
+  TargetCheck, and seven selected axiom prints. The selected transitive axioms are only
+  `propext`, `Classical.choice`, and `Quot.sound`.
+- `delta`: `source_analytic_bridge_delta=1`, `hard_gap_delta=0` for RH. The missing H1 source
+  chain now begins at Cauchy--Schwarz, critical-line zeta second-moment transfer, integration in
+  `t`, and uniform asymptotic bookkeeping.
+- `local_gates`: direct warning-as-error source and interface checks pass; three forbidden scans
+  and `git diff --check` are empty; full `lake build` passes `8760/8760`.
+- `boundary`: Farmer's arbitrary-length moment conjecture, H1, and RH remain open. Historical
+  route exploration, conjecture formation, falsification, and direct RH attacks remain eligible.
+- `next_gate`: freeze the implementation commit and require public Lean Action CI; the six
+  inherited user/exposure files remain untouched and unstaged.
