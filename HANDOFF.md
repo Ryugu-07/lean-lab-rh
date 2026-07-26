@@ -4488,3 +4488,20 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   value-distribution/logarithm package and RKHS bridge remain open.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H10 Bombieri--Stepanov Frobenius auxiliary selected
+
+- `parent_public_closure`: D9 final-ledger commit
+  `fca9616b7580eeff45b7591a66eb061cf4a94af9` passed run `30196032626`, build job
+  `89777631633`, in `1m32s`.
+- `campaign`: `LITERATURE-20260726-H10-BOMBIERI-STEPANOV-FROBENIUS-AUXILIARY-01`.
+- `node`: `H10-BOMBIERI-STEPANOV-FROBENIUS-AUXILIARY-01`.
+- `source`: Stepanov 1969; Bombieri Bourbaki 430; Kedlaya, Theorem 5.1.5.
+- `fixed_endpoint`: finite-field Frobenius expansion, rational-point descent, perfect-power root
+  multiplicity, finite root-degree budget, full-cardinality bound, and a saturated `ZMod 2`
+  witness.
+- `strict_boundary`: curve Riemann--Roch spaces, polar/tensor injectivity, nonzero optimized
+  kernel production, pole divisors, lower point counts, number-field transfer, and RH remain open.
+- `production_gate`: docs-only preregistration public CI before Lean proof editing.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

@@ -2229,3 +2229,19 @@ remain.
 Docs-only immutable-evidence commit `0f8cd8437a8495bc57be0c556b74d95bc7bef623`
 passed run `30195949149`, build job `89777408452`, in `1m32s`; `LeanLab/` remains identical
 to the frozen implementation. Final-ledger CI is the only remaining gate for this fixed node.
+
+## 2026-07-26 H10 Bombieri--Stepanov Frobenius auxiliary launch
+
+- `node`: `H10-BOMBIERI-STEPANOV-FROBENIUS-AUXILIARY-01`.
+- `mode`: `LITERATURE / FALSIFICATION`.
+- `fixed_edge`:
+  `finite-field cardinal Frobenius + characteristic-p perfect power + descent-kernel identity
+  -> high-multiplicity rational-point zeros -> degree/multiplicity point budget`.
+- `new_attack_angle`: previous H10 work formalized only the final finite spectral rigidity and
+  refuted ordinary infinite power traces; this campaign reconstructs the successful proof's
+  central auxiliary-function algebra.
+- `open_geometric_inputs`: Riemann--Roch dimensions, polar/tensor injectivity, nonzero optimized
+  kernel production, and pole-degree control.
+- `classification_target`: `KNOWN_FUNCTION_FIELD_MECHANISM_FORMALIZED`, with no number-field or
+  RH implication.
+- `global_goal`: active.

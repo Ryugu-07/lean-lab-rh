@@ -4129,3 +4129,17 @@ immutable evidence and final-ledger CI; proof source remains frozen.
 Docs-only immutable-evidence commit `0f8cd8437a8495bc57be0c556b74d95bc7bef623`
 passed run `30195949149`, build job `89777408452`, in `1m32s`, with no `LeanLab/` changes.
 Only final-ledger CI remains before fresh route selection.
+
+## H10 Bombieri--Stepanov Frobenius Auxiliary Selection
+
+After closing the D9 source-logic campaign, route selection moves to the least reconstructed
+layer of the successful function-field RH family. Existing H10 modules prove the final finite
+power-sum spectral rigidity and block an ordinary infinite-trace transfer; they do not formalize
+how Bombieri--Stepanov manufacture a nonzero auxiliary function with high-multiplicity zeros at
+all rational points.
+
+The fixed polynomial model separates the source's algebraic kernel from its curve geometry. It
+will prove Frobenius expansion, the `delta` evaluation identity on a finite field, perfect
+`p^mu`-power multiplicity, the degree budget, and a saturated `ZMod 2` example. Riemann--Roch,
+the tensor-product injectivity that protects nonzero kernel elements, pole control, the lower
+point-count argument, number-field transfer, and RH stay open.

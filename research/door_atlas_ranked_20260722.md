@@ -1400,3 +1400,16 @@ immutable evidence and final-ledger CI remain before returning to route selectio
 Docs-only immutable-evidence commit `0f8cd8437a8495bc57be0c556b74d95bc7bef623`
 passed run `30195949149`, build job `89777408452`, in `1m32s`; proof source remained frozen.
 Only final-ledger CI remains.
+
+### Post-D9 rerank: H10 Bombieri--Stepanov Frobenius auxiliary
+
+The D9 conditional phase-obstruction campaign is publicly closed. Fresh comparison gives breadth
+priority to D7/H10: the project has audited the successful function-field proof's final finite
+spectral implication, but not its central auxiliary-function construction.
+
+Bombieri's source separates five steps that must not be compressed: a Frobenius-twisted source
+space, a descent map with nontrivial kernel, noncancellation of the resulting auxiliary function,
+perfect-power multiplicity at rational points, and a pole-degree count. Campaign
+`LITERATURE-20260726-H10-BOMBIERI-STEPANOV-FROBENIUS-AUXILIARY-01` fixes the finite-field
+algebra and multiplicity budget, plus a saturated `ZMod 2` witness. Curve-level Riemann--Roch and
+number-field transfer remain outside.
