@@ -1505,3 +1505,19 @@ next gate before successor selection.
 Docs-only immutable-evidence commit `ad5444b8948eab6ac2cf2dd60f0a0e2fb7f85975` passed run
 `30208079452`, build job `89809518957`, in `1m29s`, with no `LeanLab/` change from the frozen
 implementation. Only final-ledger CI remains before fixed-edge closure and fresh route selection.
+
+Final-ledger commit `6dfb8689243824598d865c911f64c46a0dc8de18` passed run
+`30208188470`, build job `89809811907`, in `1m37s`; the determinant endpoint is publicly closed.
+
+### Post-determinant rerank: Redheffer characteristic polynomial
+
+Fresh comparison does not continue H9 merely from implementation momentum. H1's arbitrary-length
+moment, H2/H11's sparse-exception amplifier, H7's true spectral convergence, H8's actual all-index
+control, and H12's global count assembly all require new global inputs. Vaughan equations
+`(7)`--`(12)` instead give an exact unformalized structural edge that decides whether only
+`Nat.log 2 N+1` roots genuinely carry the determinant product.
+
+Campaign `LITERATURE-20260726-H9-REDHEFFER-CHARPOLY-01` fixes ordered-factor counts, their
+minimal-product support, a denominator-free polynomial eliminator, the generic characteristic
+polynomial, exact algebraic multiplicity of eigenvalue one, and low-order sign checks. Dominant
+and remaining-root location, Mertens growth, H9, and RH remain outside.

@@ -8,7 +8,7 @@ Selected node: `H9-REDHEFFER-MERTENS-DETERMINANT-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_REQUIRED`
+Status: `PUBLICLY_CLOSED`
 
 ## Selection rationale
 
@@ -183,3 +183,8 @@ difference between the frozen implementation and evidence commits.
 The next gate is a docs-only final ledger and its public CI. The full characteristic polynomial,
 joint control of its logarithmically many non-unit roots, the RH-equivalent Mertens growth
 estimate, reciprocal-zeta continuation, H9, and RH remain open.
+
+Final-ledger commit `6dfb8689243824598d865c911f64c46a0dc8de18` passed public Lean
+Action run `30208188470`, build job `89809811907`, in `1m37s`. This closes only the exact
+determinant-elimination endpoint. Fresh route selection admits the characteristic-polynomial
+successor as campaign `LITERATURE-20260726-H9-REDHEFFER-CHARPOLY-01`.

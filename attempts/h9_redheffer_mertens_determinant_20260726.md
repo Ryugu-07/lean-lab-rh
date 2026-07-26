@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H9-REDHEFFER-MERTENS-DETERMINANT-01`
 
 Selected node: `H9-REDHEFFER-MERTENS-DETERMINANT-01`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_REQUIRED`
+Status: `PUBLICLY_CLOSED`
 
 ## Target
 
@@ -38,6 +38,7 @@ Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_REQUIRED`
 | `LOCAL_GATES` | Ran warning-as-error production, Targets, TargetChecks, and AxiomsAudit compiles; scanned forbidden declarations and resource relaxations; ran the full build. | One proven Target, eight exact checks, six standard-only axiom prints, empty scans, and `8771/8771` build all pass. | Freeze and publish the implementation. |
 | `IMPLEMENTATION_PUBLIC` | Published frozen implementation commit `2003f912dfb0627b1c41d4b80db1abc6eb24e5d3`. | Public run `30207909320`, build job `89809080863`, passed in `2m6s`; the proof source is frozen. | Publish docs-only immutable evidence with no `LeanLab/` change. |
 | `IMMUTABLE_EVIDENCE_PUBLIC` | Published docs-only evidence commit `ad5444b8948eab6ac2cf2dd60f0a0e2fb7f85975`. | Public run `30208079452`, build job `89809518957`, passed in `1m29s`; the implementation-to-evidence `LeanLab/` diff is empty. | Publish the docs-only final ledger and require public CI. |
+| `FINAL_LEDGER_PUBLIC` | Published final-ledger commit `6dfb8689243824598d865c911f64c46a0dc8de18`. | Public run `30208188470`, build job `89809811907`, passed in `1m37s`; the fixed determinant endpoint is fully public-green. | Close only this endpoint and return to route selection. |
 
 ## Runtime record
 

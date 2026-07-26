@@ -4714,3 +4714,34 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   characteristic polynomial and non-unit-root analysis as open candidates.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H9 Redheffer--Mertens determinant publicly closed
+
+- `final_ledger`: commit `6dfb8689243824598d865c911f64c46a0dc8de18` passed run
+  `30208188470`, build job `89809811907`, in `1m37s`.
+- `public_chain`: preregistration `1b535d265bdd186bbcd1e5e5c67cf69b441259f2`, frozen
+  implementation `2003f912dfb0627b1c41d4b80db1abc6eb24e5d3`, immutable evidence
+  `ad5444b8948eab6ac2cf2dd60f0a0e2fb7f85975`, and final ledger are public-green.
+- `closed_only`: positive-index Mobius elimination, unit tail, `det A_N=M(N)`, singularity
+  criteria, and low-order checks.
+- `unchanged`: Mertens growth, Redheffer characteristic polynomial and root estimates, H9, and
+  RH remain open.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H9 Redheffer characteristic polynomial selected
+
+- `campaign`: `LITERATURE-20260726-H9-REDHEFFER-CHARPOLY-01`.
+- `node`: `H9-REDHEFFER-CHARACTERISTIC-POLYNOMIAL-01`.
+- `source`: Vaughan I equations `(7)`--`(12)` and Theorem 1.
+- `selection_reason`: the current H0/H1/H2/H7/H8/H11/H12 successors require new global inputs;
+  this exact unformalized transition tests whether Redheffer's determinant product is genuinely
+  compressed into only logarithmically many non-unit roots.
+- `fixed_endpoint`: ordered-factor counts and support, a denominator-free polynomial row
+  eliminator, generic charpoly factorization, exact algebraic multiplicity of eigenvalue one,
+  Mertens compatibility, and low-order checks.
+- `strict_boundary`: dominant and remaining-root estimates, Mertens growth, reciprocal-zeta
+  continuation, H9, and RH remain open.
+- `production_gate`: docs-only preregistration public CI before Lean proof editing.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

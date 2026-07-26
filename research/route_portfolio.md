@@ -4268,3 +4268,19 @@ Docs-only immutable-evidence commit `ad5444b8948eab6ac2cf2dd60f0a0e2fb7f85975` p
 `30208079452`, build job `89809518957`, in `1m29s`; the frozen implementation has no
 `LeanLab/` difference. Only final-ledger CI remains before closing this fixed endpoint and
 returning to cross-family route selection.
+
+Final-ledger commit `6dfb8689243824598d865c911f64c46a0dc8de18` passed run
+`30208188470`, build job `89809811907`, in `1m37s`; the exact determinant endpoint is publicly
+closed.
+
+## H9 Redheffer Characteristic Polynomial Selection
+
+Fresh cross-family selection compares the exposed H9 successor with H0/H1/H2/H7/H8/H11/H12.
+Those alternatives presently need new global inputs. Vaughan's equations `(7)`--`(12)` are an
+exact source transition not yet represented in the project and are necessary before any claim
+that the logarithmically many non-unit roots contain overlooked leverage.
+
+The fixed endpoint uses ordered factorization counts and a denominator-free polynomial row
+transform to prove the full characteristic polynomial and exact algebraic multiplicity of the
+root one. It excludes dominant-root asymptotics, remaining-root disks, any Mertens growth
+estimate, H9, and RH. Production Lean editing is gated by docs-only preregistration public CI.

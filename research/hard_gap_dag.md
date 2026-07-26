@@ -2368,3 +2368,24 @@ Final-ledger commit `76c21bb536ad205b53eb8aee2035c2529e32eb96` passed run
 - `proof_freeze`: no `LeanLab/` difference between implementation and evidence; final-ledger CI
   is the only remaining gate.
 - `global_goal`: active.
+
+Final-ledger commit `6dfb8689243824598d865c911f64c46a0dc8de18` passed public Lean
+Action run `30208188470`, build job `89809811907`, in `1m37s`; the determinant endpoint is
+publicly closed.
+
+## 2026-07-26 H9 Redheffer characteristic-polynomial launch
+
+- `node`: `H9-REDHEFFER-CHARACTERISTIC-POLYNOMIAL-01`.
+- `mode`: `LITERATURE / FALSIFICATION`.
+- `fixed_edge`:
+  `ordered factor counts + support -> denominator-free polynomial row elimination`;
+  `cleared product -> exact Redheffer charpoly -> exact unit-root algebraic multiplicity`.
+- `new_attack_angle`: this audits the source's logarithmic spectral compression, not a numerical
+  refinement of the determinant or Mertens bound.
+- `negative_controls`: denominator at `lambda=1`, ordered versus unordered factors, log-floor
+  boundary, charpoly sign, and algebraic versus geometric multiplicity.
+- `open_H9_edges`: dominant and remaining-root estimates, joint non-unit-root control, the
+  RH-equivalent Mertens growth bound, reciprocal-zeta continuation, H9, and RH.
+- `classification_target`: `REDHEFFER_CHARACTERISTIC_POLYNOMIAL_FORMALIZED`, with no root-
+  location, Mertens-growth, hard-gap, or RH-frontier delta.
+- `global_goal`: active.
