@@ -2322,3 +2322,24 @@ docs-only immutable evidence and final-ledger CI remain.
 Docs-only immutable-evidence commit `66071f7a4cb4685be1434f8b28558c209a004f78` passed run
 `30206663217`, build job `89805830462`, in `1m35s`; `LeanLab/` remains identical to the
 frozen implementation. Final-ledger CI is the only remaining gate for this fixed node.
+
+Final-ledger commit `76c21bb536ad205b53eb8aee2035c2529e32eb96` passed run
+`30206809306`, build job `89806209072`, in `1m33s`; H10-E is publicly closed.
+
+## 2026-07-26 H9 Redheffer--Mertens determinant launch
+
+- `node`: `H9-REDHEFFER-MERTENS-DETERMINANT-01`.
+- `mode`: `LITERATURE / FALSIFICATION`.
+- `fixed_edge`:
+  `Mobius divisor cancellation -> exact first-row elimination -> Mertens pivot`;
+  `unit complementary divisibility block -> det Redheffer(n)=M(n)`.
+- `new_attack_angle`: the project had Mertens/Perron analysis and failed sign routes but no
+  Redheffer matrix or arithmetic-to-spectrum interface.
+- `negative_controls`: positive index shift, Boolean entry at `(1,1)`, row/column orientation,
+  false square-root Mertens bound, and determinant-product versus individual spectrum.
+- `open_H9_edges`: full characteristic polynomial, multiplicity of eigenvalue one, dominant and
+  remaining-root estimates, the RH-equivalent Mertens growth bound, and reciprocal-zeta
+  continuation.
+- `classification_target`: `REDHEFFER_MERTENS_ELIMINATION_FORMALIZED`, with no Mertens-growth,
+  hard-gap, or RH-frontier delta.
+- `global_goal`: active.

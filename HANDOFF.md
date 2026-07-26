@@ -4632,3 +4632,24 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   retain actual curve polar injectivity and any number-field source/descent analogue as open.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H9 Redheffer--Mertens determinant selected
+
+- `parent_public_closure`: H10 polar-injectivity final-ledger commit
+  `76c21bb536ad205b53eb8aee2035c2529e32eb96` passed run `30206809306`, build job
+  `89806209072`, in `1m33s`.
+- `campaign`: `LITERATURE-20260726-H9-REDHEFFER-MERTENS-DETERMINANT-01`.
+- `node`: `H9-REDHEFFER-MERTENS-DETERMINANT-01`.
+- `source`: Vaughan I equations `(3)`--`(12)`, with Barrett--Jarvis and Vaughan II as the
+  spectral successors.
+- `fixed_endpoint`: positive-index Redheffer matrix, finite Mertens sum, Vaughan's Mobius first
+  row eliminator, exact product shape, unit complementary determinant,
+  `det Redheffer(n)=M(n)`, determinant-zero criteria, and low-order checks.
+- `selection_reason`: this missing H9 subroute converts arithmetic cancellation into an explicit
+  spectral product and precedes the source's logarithmically many non-unit-root analysis.
+- `strict_boundary`: the false square-root Mertens conjecture is prohibited; the RH-equivalent
+  `M(n)=O(n^(1/2+epsilon))`, full characteristic polynomial, individual eigenvalue estimates,
+  reciprocal-zeta continuation, H9, and RH remain open.
+- `production_gate`: docs-only preregistration public CI before Lean proof editing.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

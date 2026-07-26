@@ -1469,3 +1469,22 @@ Frozen implementation commit `011ce4d16bb565d03059ae220e9ad1996e6ec7cb` passed p
 Docs-only immutable evidence `66071f7a4cb4685be1434f8b28558c209a004f78` passed run
 `30206663217`, build job `89805830462`, in `1m35s`; proof source remained frozen. Only
 final-ledger CI remains.
+
+Final-ledger commit `76c21bb536ad205b53eb8aee2035c2529e32eb96` passed run
+`30206809306`, build job `89806209072`, in `1m33s`; H10-E is publicly closed.
+
+### Post-H10 rerank: H9 Redheffer--Mertens determinant
+
+Fresh cross-family ranking selects a historical H9 branch absent from the initial atlas. The
+Redheffer matrix converts the summatory Mobius function into an exact determinant by a source
+specified integer row elimination. Vaughan, Barrett--Jarvis, and Vaughan II then study the
+characteristic polynomial, two dominant roots, and the remaining roots near one. This is an
+arithmetic-spectral route distinct from the false pointwise Mertens conjecture and from merely
+listing the RH-equivalent summatory bound.
+
+The first fixed campaign compiles the exact eliminator, product shape, unit complementary
+determinant, `det A_n=M(n)`, determinant-zero criteria, and low-order checks. It does not assume
+or prove `M(n)=O(n^(1/2+epsilon))`, and determinant product control alone does not locate
+individual eigenvalues. The next omission-bearing layer, if the source identity survives, is
+the factorization of the characteristic polynomial and the quantitative control of its
+logarithmically many non-unit roots.

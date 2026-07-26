@@ -4214,3 +4214,29 @@ through immutable evidence.
 Docs-only immutable-evidence commit `66071f7a4cb4685be1434f8b28558c209a004f78` passed run
 `30206663217`, build job `89805830462`, in `1m35s`, with no `LeanLab/` changes. Only
 final-ledger CI remains before fresh cross-family route selection.
+
+Final-ledger commit `76c21bb536ad205b53eb8aee2035c2529e32eb96` passed run
+`30206809306`, build job `89806209072`, in `1m33s`; the fixed H10 noncancellation gate is
+publicly closed.
+
+## H9 Redheffer--Mertens Determinant Selection
+
+Fresh cross-family comparison moves from H10 to a missing H9 arithmetic-spectral branch. H2,
+H8, and H11 currently require new global inputs; H1, H7, and H12 have source-exact compiled
+frontiers but their next named edges are open analytic or spectral statements. H0's classical
+side already has substantial truncated-Perron and Guinand--Weil infrastructure. No Redheffer
+matrix object exists in the project.
+
+Vaughan's source does more than restate the Mertens criterion. A first-row Mobius eliminator
+turns the complete arithmetic cancellation into one matrix pivot, proving
+`det A_n=M(n)`; the later characteristic-polynomial analysis shows that only logarithmically
+many non-unit roots carry this product. Campaign
+`LITERATURE-20260726-H9-REDHEFFER-MERTENS-DETERMINANT-01` fixes the integer elimination,
+complementary unit determinant, generic determinant identity, singularity criteria, and exact
+small orders.
+
+The false Mertens conjecture is prohibited, and the RH-equivalent
+`M(n)=O(n^(1/2+epsilon))` remains open. The full characteristic polynomial, eigenvalue-one
+multiplicity, dominant-root asymptotics, remaining-root estimates, reciprocal-zeta continuation,
+H9, and RH remain outside this first endpoint. Production Lean editing requires docs-only
+preregistration public CI.
