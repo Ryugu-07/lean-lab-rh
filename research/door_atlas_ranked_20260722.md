@@ -684,10 +684,12 @@ was too compressed.  Pólya's unweighted Liouville sum, Turán's harmonic-weight
 and Turán's finite zeta Dirichlet polynomials are distinct historical mechanisms with distinct
 failure evidence.
 
-Campaign `LITERATURE-20260726-H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01` is preregistered to reconstruct
-the source boundary and prove the exact finite Abel transform between the first two sums.  It will
-not assume either false global sign claim or promote a repaired RH equivalence to unconditional
-progress.
+Campaign `LITERATURE-20260726-H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01` locally compiles the source
+boundary and exact finite Abel transform between the first two sums.  It proves that Pólya-prefix
+nonpositivity from index two supplies only the upper bound `T(N)<=1/2`, then gives a generic exact
+witness showing that prefix nonpositivity alone does not force weighted positivity.  The witness
+is not Liouville, neither false global sign claim is assumed, and no repaired RH equivalence is
+promoted to unconditional progress.
 
 ## D11. Generalized L-functions, automorphic forms, and Iwasawa analogies
 

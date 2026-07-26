@@ -4263,4 +4263,35 @@ example {C : ℕ} (hC : 2 ≤ C) (N : ℕ)
         ((riemannXiDivisorZeroValue p - 1 / 2) / Complex.I)‖) :=
   (weilFiniteDictionaryAdmissibility_endpoint hC N u).zeroNormSummable
 
+example (a : ℕ → ℚ) (N : ℕ) :
+    finiteHarmonicWeightedSum a (N + 1) =
+      finitePrefixSum a (N + 1) / (N + 1 : ℕ) +
+        ∑ k ∈ Finset.range N,
+          finitePrefixSum a (k + 1) *
+            (1 / (k + 1 : ℕ) - 1 / (k + 2 : ℕ)) :=
+  finiteHarmonicWeightedSum_eq_abel a N
+
+example (N : ℕ) :
+    turanLiouvilleSum (N + 1) =
+      polyaLiouvilleSum (N + 1) / (N + 1 : ℕ) +
+        ∑ k ∈ Finset.range N,
+          polyaLiouvilleSum (k + 1) *
+            (1 / (k + 1 : ℕ) - 1 / (k + 2 : ℕ)) :=
+  turanLiouvilleSum_eq_abel N
+
+example (N : ℕ)
+    (hpolya : ∀ k : ℕ, 2 ≤ k → k ≤ N + 2 → polyaLiouvilleSum k ≤ 0) :
+    turanLiouvilleSum (N + 2) ≤ 1 / 2 :=
+  turanLiouvilleSum_le_half_of_polya_nonpos N hpolya
+
+example :
+    ∃ a : ℕ → ℚ,
+      finitePrefixSum a 1 = 1 ∧
+      (∀ k : ℕ, 2 ≤ k → finitePrefixSum a k ≤ 0) ∧
+      finiteHarmonicWeightedSum a 2 < 0 :=
+  exists_prefixNonpositive_weightedNegative
+
+example : PolyaTuranAbelSignAuditCertificate :=
+  polyaTuranAbelSignAudit_endpoint
+
 end LeanLab.Riemann

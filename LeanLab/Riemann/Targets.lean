@@ -87,6 +87,7 @@ import LeanLab.Riemann.BettinGonekAuxiliary
 import LeanLab.Riemann.BettinGonekMellinIdentity
 import LeanLab.Riemann.BettinGonekJContour
 import LeanLab.Riemann.BettinGonekInverseMellinConvolution
+import LeanLab.Riemann.PolyaTuranAbelAudit
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
@@ -1480,6 +1481,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``conreyAffineFraction_eq_rat_or_flat
       status := .proven
       note := "Campaign FALSIFICATION-20260723-H9-CONREY-RATIONALITY-GAP-01 isolates a proof-gap candidate in Proposition 1 of Conrey 2024. The generic affine-fraction inference needs a nonzero first prefix moment; Lean certifies both the corrected dichotomy and a sqrt(2) flat-branch countermodel. No actual quadratic-character flat prefix is asserted, so the published proposition remains open rather than formally falsified. This is source-proof-gap and obstruction-map progress with rh_frontier_delta=0 and hard_gap_delta=0." },
+    { id := "H9.polya-turan.abel-sign-audit"
+      tier := .tier2
+      title := "Separate Pólya and Turán Liouville sign mechanisms"
+      statement :=
+        "Prove the exact finite Abel identity between arbitrary unweighted and harmonic-weighted rational prefix sums, specialize it to Mathlib's Liouville function, derive the finite T(N)<=1/2 consequence of Pólya-prefix nonpositivity, and construct a generic sequence whose every prefix from two onward is nonpositive while its second harmonic-weighted sum is negative."
+      leanName := some ``polyaTuranAbelSignAudit_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260726-H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01 fills a classical route-card gap and kernel-checks the exact sign logic. The generic witness is not the Liouville sequence, and neither false historical global sign conjecture is assumed. The result does not certify the published large counterexamples, formalize finite zeta-section zeros, prove an eventual-sign-to-RH implication, or advance RH; historical_route_coverage_delta=1 and rh_frontier_delta=0." },
     { id := "H12.speiser.counting-equivalence-consumer"
       tier := .tier2
       title := "Formalize the Speiser zero-count consumer"

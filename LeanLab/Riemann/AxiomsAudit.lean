@@ -3,6 +3,7 @@ import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.InfiniteReciprocalTraceAudit
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.HalfIsolatedBowAudit
+import LeanLab.Riemann.PolyaTuranAbelAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
 import LeanLab.Riemann.ThetaInfinityMollifier
@@ -962,3 +963,9 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.summable_norm_weilFiniteDictionaryTest_xiDivisorZero
 #print axioms LeanLab.Riemann.summable_symmetrizedCompactLaplaceWeight_weilFiniteDictionary
 #print axioms LeanLab.Riemann.weilFiniteDictionaryAdmissibility_endpoint
+#print axioms LeanLab.Riemann.finiteHarmonicWeightedSum_eq_abel
+#print axioms LeanLab.Riemann.turanLiouvilleSum_eq_abel
+#print axioms LeanLab.Riemann.turanLiouvilleSum_le_half_of_polya_nonpos
+#print axioms LeanLab.Riemann.polyaTuranSignShortcutWitness_prefix_add_two
+#print axioms LeanLab.Riemann.exists_prefixNonpositive_weightedNegative
+#print axioms LeanLab.Riemann.polyaTuranAbelSignAudit_endpoint

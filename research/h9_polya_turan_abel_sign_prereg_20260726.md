@@ -8,7 +8,7 @@ Selected node: `H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01`
 
 Mode: `LITERATURE / FORMALIZATION / FALSIFICATION`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_FULL_ABEL_AUDIT_SUCCESS / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 
 ## Baseline and selection
 
@@ -153,3 +153,21 @@ CI, immutable-evidence CI, and final-ledger CI.
 Commit only documentation and ledgers first.  Public Lean Action CI must pass before creating or
 editing the production Lean module, Targets, TargetChecks, AxiomsAudit, or aggregate imports.  The
 six inherited user/exposure files remain untouched and unstaged.
+
+## Execution result
+
+- The preregistration gate passed at commit
+  `f6f1329558bca0aa233bbaa472604c2bacbd6fa4`, Lean Action run `30184412364`, build job
+  `89746411347`, in `2m2s`.
+- The production module proves the exact generic Abel identity and its Liouville specialization.
+- The strongest registered finite sign consequence is
+  `turanLiouvilleSum (N+2) <= 1/2` under Pólya-prefix nonpositivity from index two.
+- The registered generic witness is stronger than the bounded proposal: every prefix from index
+  two onward equals `-2`, while the second harmonic-weighted sum is `-1/2`.
+- Aggregate theorem `polyaTuranAbelSignAudit_endpoint`, the proven Target, exact TargetChecks,
+  and six selected axiom prints compile.
+- The 244-line source is warning-free. Forbidden scans and `git diff --check` are empty; the full
+  build passes `8761/8761`.
+- This is `FULL_ABEL_AUDIT_SUCCESS` locally with
+  `historical_route_coverage_delta=1`, `sign_logic_obstruction_delta=1`, and
+  `rh_frontier_delta=0`. Public implementation and immutable-evidence gates remain.

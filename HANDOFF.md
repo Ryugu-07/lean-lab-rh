@@ -3921,3 +3921,26 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   included.
 - `next_gate`: commit and publish the docs-only preregistration; production Lean editing remains
   closed until public CI passes.  The persistent RH Goal remains active.
+
+## 2026-07-26 H9 Pólya--Turán Abel sign audit local result
+
+- `production_gate`: preregistration commit
+  `f6f1329558bca0aa233bbaa472604c2bacbd6fa4` passed Lean Action run `30184412364`, build job
+  `89746411347`, in `2m2s`.
+- `compiled_edge`: exact one-indexed rational prefix and harmonic sums, finite Abel summation,
+  Mathlib Liouville specialization, the strongest finite Pólya-prefix consequence, and a generic
+  exact sign-shortcut witness.
+- `logic_result`: Pólya-prefix nonpositivity from index two yields only
+  `turanLiouvilleSum (N+2) <= 1/2`. The sequence `1,-3,0,...` has every prefix from index two
+  equal to `-2` but weighted sum at two equal to `-1/2`, so prefix signs alone cannot prove
+  Turán positivity.
+- `registered`: `polyaTuranAbelSignAudit_endpoint`, Target
+  `H9.polya-turan.abel-sign-audit`, exact TargetChecks, and six standard-only axiom prints.
+- `local_gates`: warning-free 244-line module, empty forbidden scans, `git diff --check`, and full
+  `8761/8761` build pass.
+- `delta`: `historical_route_coverage_delta=1`, `sign_logic_obstruction_delta=1`,
+  `rh_frontier_delta=0`.
+- `boundary`: the witness is not Liouville; no false historical premise, published large-index
+  certificate, finite zeta-section theorem, repaired equivalence, H9, or RH is proved.
+- `next_gate`: freeze and publish the implementation, then require immutable-evidence and final
+  ledger CI. The persistent RH Goal remains active.

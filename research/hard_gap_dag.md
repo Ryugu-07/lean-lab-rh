@@ -1854,3 +1854,22 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `expected_delta`: `historical_route_coverage_delta=1`,
   `sign_logic_obstruction_delta=1`, `rh_frontier_delta=0`.
 - `next_gate`: publish preregistration and require public CI before production Lean editing.
+
+## 2026-07-26 H9 Pólya--Turán Abel sign audit local endpoint
+
+- `node`: `H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01`.
+- `status`: `LOCAL_FULL_ABEL_AUDIT_SUCCESS / PUBLIC_IMPLEMENTATION_CI_REQUIRED`.
+- `proved_edge`: exact finite Abel summation for arbitrary rational sequences, exact Liouville
+  specialization, and the finite implication from Pólya-prefix nonpositivity to the upper bound
+  `T(N)<=1/2`.
+- `falsified_shortcut`: prefix nonpositivity alone does not imply harmonic-weighted positivity;
+  the exact generic sequence `1,-3,0,...` has all prefixes from two equal to `-2` and weighted
+  sum at two equal to `-1/2`.
+- `hard_boundary`: obtaining a source-relevant positive lower bound needs Liouville-specific
+  arithmetic cancellation not contained in prefix signs. Historical finite zeta sections and
+  Alkan's repaired all-parameter criteria are separate nodes.
+- `delta`: `historical_route_coverage_delta=1`, `sign_logic_obstruction_delta=1`,
+  `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `local_gates`: aggregate Target and checks, selected standard-only axiom audit, empty forbidden
+  scans, patch check, and full `8761/8761` build pass.
+- `global_goal`: active; H9 and RH remain open.
