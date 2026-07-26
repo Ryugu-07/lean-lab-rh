@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H1-HARDY-CRITICAL-LINE-SIGN-01`
 
 Selected node: `H1-HARDY-CRITICAL-LINE-REAL-SIGN-BRIDGE-01`
 
-Status: `LOCAL_RESULT / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Target
 
@@ -39,6 +39,7 @@ Status: `LOCAL_RESULT / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
 | `SIGN_CONSUMERS` | Proved negative-to-positive and positive-to-negative weak endpoint versions and a disjunctive bracket theorem. | Each theorem returns an interval member together with actual `IsNontrivialZero` and `OnCriticalLine`; endpoint zeros are admitted. | Lift pointwise to a sequence. |
 | `SEQUENCE_CONSUMER` | Applied the bracket theorem to every adjacent interval of an ordered alternating-sign sequence. | One actual witness compiles in each interval. No pairwise distinctness is claimed. | Register Target and audits. |
 | `LOCAL_GATES` | Added one aggregate Target, five exact checks, and nine selected axiom prints; ran standalone, warning-as-error, forbidden, and full-build checks. | Selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`; new-module scan is empty; full build passes `8774/8774`. | Freeze and publish implementation. |
+| `IMPLEMENTATION_PUBLIC_CI` | Froze and pushed the complete implementation and local ledgers. | Commit `98bf9927a8a331cd0da7541492cc4502c29e24ee` passed run `30213428759`, job `89823396107`, in `2m6s`. | Freeze all `LeanLab/` files and publish docs-only immutable evidence. |
 
 ## Runtime record
 
@@ -74,5 +75,6 @@ The six inherited user/exposure files remain untouched and unstaged.
   infinitude, H1, or RH is proved.
 - `local_gates`: one proven Target, five exact TargetChecks, nine selected standard-only axiom
   prints, empty forbidden scan, warning-as-error compile, and full `8774/8774` build.
-- `next_gate`: frozen implementation commit and public Lean Action CI.
+- `frozen_implementation`: `98bf9927a8a331cd0da7541492cc4502c29e24ee`, public-green.
+- `next_gate`: docs-only immutable evidence and public Lean Action CI.
 - `global_goal`: active.

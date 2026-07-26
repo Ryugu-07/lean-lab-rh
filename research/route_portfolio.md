@@ -4395,3 +4395,7 @@ or a critical-zero proportion. Classification is
 `HARDY_CRITICAL_LINE_REAL_SIGN_BRIDGE_FORMALIZED`, with route-coverage and sign-consumer deltas
 but `hard_gap_delta=0` and `rh_frontier_delta=0`. Freeze and publish the implementation before
 immutable evidence.
+
+Frozen implementation commit `98bf9927a8a331cd0da7541492cc4502c29e24ee` passed public Lean
+Action run `30213428759`, build job `89823396107`, in `2m6s`. All proof sources are now frozen;
+publish docs-only immutable evidence next.

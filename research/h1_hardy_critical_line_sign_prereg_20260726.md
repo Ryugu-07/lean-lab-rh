@@ -8,7 +8,7 @@ Selected node: `H1-HARDY-CRITICAL-LINE-REAL-SIGN-BRIDGE-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_RESULT / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Selection rationale
 
@@ -238,3 +238,14 @@ Classification is `result=HARDY_CRITICAL_LINE_REAL_SIGN_BRIDGE_FORMALIZED`,
 Endpoint signs remain hypotheses. Hardy's transform estimates, arbitrarily high sign changes,
 pairwise distinct zero witnesses, critical-line infinitude, H1, and RH remain open. The next gate
 is a frozen implementation commit and public CI.
+
+## Frozen implementation
+
+Implementation commit `98bf9927a8a331cd0da7541492cc4502c29e24ee` passed public Lean Action
+run `30213428759`, build job `89823396107`, in `2m6s`. The 179-line production module, proven
+Target, five exact TargetChecks, and nine selected standard-only axiom prints are frozen at that
+hash.
+
+The next gate is a docs-only immutable-evidence commit and public CI. No `LeanLab/` file may
+change between the frozen implementation and immutable evidence. Endpoint signs, Hardy's
+transform, distinct witnesses, critical-line infinitude, H1, and RH remain open.

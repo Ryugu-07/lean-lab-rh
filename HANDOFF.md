@@ -4955,3 +4955,18 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   final ledger with public CI at each gate.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H1 Hardy critical-line sign bridge implementation public green
+
+- `campaign`: `LITERATURE-20260726-H1-HARDY-CRITICAL-LINE-SIGN-01`.
+- `frozen_implementation`: commit `98bf9927a8a331cd0da7541492cc4502c29e24ee`.
+- `public_ci`: Lean Action run `30213428759`, build job `89823396107`, passed in `2m6s`.
+- `result`: `HARDY_CRITICAL_LINE_REAL_SIGN_BRIDGE_FORMALIZED`.
+- `proof_freeze`: the 179-line source, one proven Target, five exact TargetChecks, and nine
+  selected standard-only axiom prints are frozen.
+- `next_gate`: publish docs-only immutable evidence and require public CI, then a docs-only
+  final ledger and public CI.
+- `open_H1`: endpoint signs, Hardy's transform, distinct witnesses, critical-line infinitude,
+  H1, and RH.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

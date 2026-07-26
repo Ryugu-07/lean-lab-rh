@@ -2510,3 +2510,7 @@ publicly closed and cross-family selection resumed.
   prints, empty forbidden scan, warning-as-error compile, and full `8774/8774` build.
 - `next_gate`: frozen implementation commit and public CI.
 - `global_goal`: active.
+
+Frozen implementation commit `98bf9927a8a331cd0da7541492cc4502c29e24ee` passed public Lean
+Action run `30213428759`, build job `89823396107`, in `2m6s`. The complete fixed edge is
+proof-frozen; docs-only immutable evidence is the next gate.
