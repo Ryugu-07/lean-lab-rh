@@ -1093,3 +1093,19 @@ Frozen implementation `257b80dcda7d4a68a9c6a4b9860b1a97fa42c0ca` passed public L
 run `30140659408`, build job `89633127915`, in `2m37s`. The proof source is frozen; docs-only
 immutable evidence `317a610f22637fd91ae84f125b3086f552081813` passed run `30140782861`,
 build job `89633473809`, in `1m32s`. Only final-ledger CI precedes the fresh route comparison.
+
+The H7 admissibility campaign then publicly closed at final-ledger commit
+`f7c137b128406dd55b09d81411c2d7e38d81f731`, Lean Action run `30140898700`, build job
+`89633790335`, in `1m36s`.
+
+The mandatory D3/D6/H12/H2 rerank selects D3/H1's inverse-Mellin and convolution bridge.
+Bettin--Gonek equations `(2.2)`--`(2.4)` pass from the standalone auxiliary-factor decay to a
+supported bounded inverse Mellin kernel and then to the actual mollifier convolution. The
+project has the literal `G_t`, `H_t`, mollifier, `J_t`, and selected-zero contour residue, but not
+these intermediate inferences.
+
+This is a materially new H1 re-entry: the prior contour campaign canceled zeta before estimating
+the integrand, whereas the new endpoint must control `G_t` itself, move the inversion line to
+zero and arbitrarily far right, and justify the source Fubini exchange. H7 weak-regularity
+arithmetic transport remains the strongest reserve; H12 counts and H2 localization remain open.
+No family is marked exhausted, and original conjecture/falsification lanes remain open.

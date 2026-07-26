@@ -1801,3 +1801,25 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `immutable_evidence`: docs-only commit `317a610f22637fd91ae84f125b3086f552081813`
   passed run `30140782861`, build job `89633473809`, in `1m32s`; final-ledger CI remains.
 - `global_goal`: active; H7 and RH remain open.
+
+## 2026-07-26 H1 inverse Mellin convolution selection
+
+- `parent_closed`: H7 finite dictionary admissibility final ledger
+  `f7c137b128406dd55b09d81411c2d7e38d81f731`, public Lean Action run `30140898700`, build
+  job `89633790335`, passed in `1m36s`.
+- `node`: `H1-BETTIN-GONEK-INVERSE-MELLIN-CONVOLUTION-01`.
+- `status`: `PREREGISTERED / PUBLIC_CI_REQUIRED`.
+- `fixed_edge`: for the actual compiled auxiliary factor, prove standalone vertical decay and
+  integrability, define the literal inverse Mellin kernel, prove its support in `0<u<=1` and
+  uniform boundedness there, prove the actual convolution with the real-cutoff mollifier, and
+  derive the source interval bound for `J_t`.
+- `source_omission`: Bettin--Gonek equations `(2.2)`--`(2.4)` compress arbitrary-right and
+  line-zero contour shifts plus a Mellin-product Fubini step. The project's existing J-contour
+  proof cancels zeta first and therefore does not supply this edge.
+- `known_obstacles`: zeta growth at real part `-1/2`, uniform control as the inverse-Mellin line
+  moves right, and source-specific Bochner Fubini.
+- `open_after_success`: Cauchy--Schwarz, the critical-line zeta second-moment transfer, uniform
+  parameter bookkeeping, Farmer's arbitrary-length mollifier conjecture, H1, and RH.
+- `route_reserves`: H7 weak-regularity arithmetic transport, H12 analytic counts, and H2
+  actual-zeta localization remain open.
+- `global_goal`: active; RH remains open.

@@ -3847,3 +3847,24 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `immutable_evidence`: docs-only commit `317a610f22637fd91ae84f125b3086f552081813`
   passed run `30140782861`, build job `89633473809`, in `1m32s`; frozen source is unchanged.
 - `next_gate`: publish one docs-only final ledger and require public CI.
+
+## 2026-07-26 H1 Bettin--Gonek inverse Mellin convolution selected
+
+- `parent_closed`: H7 finite dictionary admissibility final-ledger commit
+  `f7c137b128406dd55b09d81411c2d7e38d81f731` passed public Lean Action run
+  `30140898700`, build job `89633790335`, in `1m36s`.
+- `campaign`: `LITERATURE-20260726-H1-BETTIN-GONEK-INVERSE-MELLIN-CONVOLUTION-01`.
+- `node`: `H1-BETTIN-GONEK-INVERSE-MELLIN-CONVOLUTION-01`.
+- `selection`: a fresh H1/H12/H2/H7 comparison selects the source equations `(2.2)`--`(2.4)`
+  bridge. It connects compiled actual objects and tests a compressed primary-source inference;
+  H7 weak-regularity transport remains the strongest reserve.
+- `fixed_edge`: standalone source-strength `G_t` decay and vertical integrability, support and
+  boundedness of the literal inverse Mellin kernel, the actual mollifier convolution identity,
+  and the resulting interval upper bound.
+- `material_difference`: the prior J-contour campaign controlled `G_t H_t` after rational
+  cancellation. This campaign must control `G_t` itself and justify arbitrary-right contour
+  movement and Bochner Fubini.
+- `strict_boundary`: Cauchy--Schwarz and zeta second-moment transfer, Farmer's arbitrary-length
+  moment conjecture, H1, and RH remain open.
+- `production_gate`: no production Lean source may be created or edited until the preregistration
+  commit passes public Lean Action CI.

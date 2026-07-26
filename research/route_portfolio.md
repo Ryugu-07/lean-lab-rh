@@ -3780,3 +3780,23 @@ Frozen implementation commit `257b80dcda7d4a68a9c6a4b9860b1a97fa42c0ca` passed p
 Action run `30140659408`, build job `89633127915`, in `2m37s`. Proof and governance source is
 frozen. Docs-only immutable-evidence commit `317a610f22637fd91ae84f125b3086f552081813`
 passed run `30140782861`, build job `89633473809`, in `1m32s`; only final-ledger CI remains.
+
+## H1 Bettin--Gonek Inverse Mellin Convolution Selection
+
+The H7 admissibility campaign publicly closed at final-ledger commit
+`f7c137b128406dd55b09d81411c2d7e38d81f731`, Lean Action run `30140898700`, build job
+`89633790335`, in `1m36s`. Fresh route selection compares H1 inverse Mellin, H12 analytic
+Speiser counts, H2 actual-zeta bow exclusion, and H7 weak-regularity arithmetic transport.
+
+H1 is selected because primary-source equations `(2.2)`--`(2.4)` form one exact missing
+mechanism between already compiled actual objects. The paper moves the standalone `G_t` inverse
+Mellin line to zero and positive infinity, obtains support and boundedness of `g_t`, and invokes
+Mellin convolution with the actual mollifier. None of those steps follows from the prior
+J-contour campaign, which first canceled `G_t H_t` to a rational kernel.
+
+Campaign `LITERATURE-20260726-H1-BETTIN-GONEK-INVERSE-MELLIN-CONVOLUTION-01` fixes standalone
+vertical decay/integrability, the literal inverse Mellin kernel and its support/bound, the actual
+convolution identity, and the source interval estimate. This is historical omission testing,
+not numerical optimization. Cauchy--Schwarz, zeta second moments, Farmer's arbitrary-length
+moment conjecture, H1, and RH remain open. Production Lean editing requires public
+preregistration CI.
