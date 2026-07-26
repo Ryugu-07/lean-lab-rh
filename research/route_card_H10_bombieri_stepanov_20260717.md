@@ -142,9 +142,11 @@ rational-point descent, high-multiplicity theorem, arbitrary-finset root budget,
 cardinality quotient. Its nonzero `ZMod 2` witness has exact multiplicity two at both points and
 saturates the degree budget.
 
-**Verdict:** `LOCAL_SUCCESS` as `KNOWN_FUNCTION_FIELD_MECHANISM_FORMALIZED`, pending public
-implementation CI. The sharp witness moves the live omission search to Riemann--Roch dimension
-selection, polar/tensor injectivity, nonzero optimized kernel production, and pole control.
+**Verdict:** `IMPLEMENTATION_PUBLIC_GREEN` as
+`KNOWN_FUNCTION_FIELD_MECHANISM_FORMALIZED`. Frozen implementation
+`61bb73ad666e3bdd4ba460bedd93af16256c997d` passed run `30205411443`. The sharp witness moves
+the live omission search to Riemann--Roch dimension selection, polar/tensor injectivity, nonzero
+optimized kernel production, and pole control.
 
 ## Recommendation
 

@@ -62,7 +62,7 @@ flowchart TD
 | H6-E | open | Prove all zeros of `H_0` are real, equivalently `Lambda <= 0` in the audited normalization. | The generic adjacent-gap and positive-kernel/Hankel routes are obstructed. The actual-theta heat-Li time-monotonicity candidate survived high-precision finite screening, and Lean compiles its exact reduction to RH plus the function-level heat-log evolution, but no all-index sign representation or global moving-divisor differentiation theorem was obtained. A new attack must supply that theta-specific input, height-aware continuation, or a different all-index invariant. The endpoint is unchanged. |
 | H10-B | complete | Prove finite aggregate power-sum spectral rigidity and the reciprocal-pairing square-root-circle corollary. | The final finite-spectral step of function-field RH is publicly compiled. It proves no curve point-count bound and supplies no finite-spectrum or uniform-tail transfer for the Riemann zeta zero divisor; `hard_gap_delta=0`. |
 | H10-C | complete | Test a countably infinite ordinary power-trace extension with nonzero reciprocal pairing. | Lean proves `Summable (alpha^k)` for positive `k` forces `q=0` under `alpha(sigma n)*alpha(n)=q`; a one-point finite witness shows the obstruction is specific to the infinite ordinary-trace transfer. Final-ledger commit `2edf069a217255bbc20b93a2aa938f51dd57d94e` passed public CI. |
-| H10-D | local success; implementation CI required | Formalize the Bombieri--Stepanov finite-field Frobenius auxiliary mechanism and test its degree budget for slack. | The generic descent, perfect-power multiplicity, and root-degree bounds compile. A nonzero `ZMod 2` kernel witness has exact multiplicity two at both points and saturates the degree budget, so the next omission search lies in the curve Riemann--Roch/nonzero-kernel/pole-control package. |
+| H10-D | implementation CI passed; immutable evidence required | Formalize the Bombieri--Stepanov finite-field Frobenius auxiliary mechanism and test its degree budget for slack. | The generic descent, perfect-power multiplicity, and root-degree bounds compile. A nonzero `ZMod 2` kernel witness has exact multiplicity two at both points and saturates the degree budget. Frozen implementation `61bb73ad666e3bdd4ba460bedd93af16256c997d` passed public run `30205411443`. |
 
 ## Hard Gaps
 
@@ -2266,3 +2266,7 @@ to the frozen implementation. Final-ledger CI is the only remaining gate for thi
   `curve_theorem_delta=0`, `number_field_transfer_delta=0`, `hard_gap_delta=0`,
   `rh_frontier_delta=0`.
 - `global_goal`: active.
+
+Frozen implementation commit `61bb73ad666e3bdd4ba460bedd93af16256c997d` passed public Lean
+Action run `30205411443`, build job `89802493185`, in `2m31s`. Proof source is frozen while
+docs-only immutable evidence and final-ledger CI remain.

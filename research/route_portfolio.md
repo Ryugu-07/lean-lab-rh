@@ -4162,3 +4162,7 @@ kernel, how polar expansions prevent cancellation, and how pole degrees are opti
 point-count comparison. Number-field transfer still requires a separate cohomology or
 regularized-trace object. The 264-line module, proven Target, seven exact checks, six
 standard-only axiom prints, empty forbidden scans, and full `8769/8769` build pass locally.
+
+Frozen implementation commit `61bb73ad666e3bdd4ba460bedd93af16256c997d` passed public Lean
+Action run `30205411443`, build job `89802493185`, in `2m31s`. Proof source remains frozen
+through immutable evidence.

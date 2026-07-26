@@ -1427,3 +1427,6 @@ to the source's Riemann--Roch dimension balance, polar/tensor injectivity, nonze
 kernel, and pole divisor, then separately examine whether any number-field structure can replace
 finite Frobenius. This is `KNOWN_FUNCTION_FIELD_MECHANISM_FORMALIZED`, not a curve theorem,
 number-field transfer, or RH progress.
+
+Frozen implementation commit `61bb73ad666e3bdd4ba460bedd93af16256c997d` passed public run
+`30205411443`, build job `89802493185`, in `2m31s`. Docs-only immutable evidence is next.

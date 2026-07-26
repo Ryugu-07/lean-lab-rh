@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H10-BOMBIERI-STEPANOV-FROBENIUS-AUXILIARY-01`
 
 Selected node: `H10-BOMBIERI-STEPANOV-FROBENIUS-AUXILIARY-01`
 
-Status: `LOCAL_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Target
 
@@ -34,6 +34,7 @@ Status: `LOCAL_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
 | `ROOT_DEGREE_BUDGET` | Summed root multiplicities over an arbitrary finite set and specialized to the universal finite-field finset. | Both `p^mu * card K <= natDegree F` and `card K <= natDegree F / p^mu` compile. | Test whether the algebra leaves any strict slack. |
 | `SATURATION_TEST` | Constructed the preregistered `ZMod 2` kernel witness. | The base is nonzero, the descent is zero, roots `0` and `1` have exact multiplicity `2`, and `2 * card (ZMod 2) = natDegree F = 4`. | Record that the algebraic budget is sharp; move omission search to the curve-level construction. |
 | `LOCAL_GATES` | Ran warning-as-error production, Targets, TargetChecks, and AxiomsAudit compiles; scanned forbidden declarations and resource relaxations; ran the full build. | One proven Target, seven exact checks, six standard-only axiom prints, empty scans, and `8769/8769` build all pass. | Freeze and publish the implementation. |
+| `IMPLEMENTATION_PUBLIC` | Published frozen implementation `61bb73ad666e3bdd4ba460bedd93af16256c997d`. | Public run `30205411443`, build job `89802493185`, passed in `2m31s`. | Keep `LeanLab/` frozen and publish immutable evidence. |
 
 ## Runtime record
 
@@ -54,3 +55,6 @@ saturated. This closes neither the Bombieri--Stepanov curve proof nor H10. The l
 frontier is the construction of a nonzero optimized auxiliary from Riemann--Roch spaces,
 polar/tensor injectivity, and pole-degree control; the number-field transfer and RH remain open.
 The six inherited user/exposure files remain untouched and unstaged.
+
+Frozen implementation: `61bb73ad666e3bdd4ba460bedd93af16256c997d`. No Lean proof-source
+changes are permitted during immutable evidence and final-ledger publication.

@@ -4530,3 +4530,16 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `next_gate`: freeze and publish the implementation.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H10 Bombieri--Stepanov Frobenius auxiliary implementation public green
+
+- `frozen_implementation`: commit `61bb73ad666e3bdd4ba460bedd93af16256c997d`.
+- `public_ci`: Lean Action run `30205411443`, build job `89802493185`, passed in `2m31s`.
+- `result`: `KNOWN_FUNCTION_FIELD_MECHANISM_FORMALIZED`.
+- `proof_freeze`: no Lean proof source changes are allowed after the frozen implementation hash.
+- `next_gate`: publish docs-only immutable evidence and require public CI, then a docs-only final
+  ledger and public CI.
+- `open_H10`: curve Riemann--Roch dimensions, polar/tensor injectivity, optimized nonzero kernel,
+  pole control, lower point counts, number-field transfer, and RH.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

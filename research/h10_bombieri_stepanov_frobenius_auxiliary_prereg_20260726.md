@@ -8,7 +8,7 @@ Selected node: `H10-BOMBIERI-STEPANOV-FROBENIUS-AUXILIARY-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `LOCAL_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Primary-source anchor
 
@@ -128,6 +128,10 @@ Expected classification:
 - `number_field_transfer_delta=0`;
 - `hard_gap_delta=0`;
 - `rh_frontier_delta=0`.
+
+Frozen implementation commit `61bb73ad666e3bdd4ba460bedd93af16256c997d` passed public Lean
+Action run `30205411443`, build job `89802493185`, in `2m31s`. Lean proof source is frozen;
+the next gate is a docs-only immutable-evidence commit and public CI.
 
 ## Production gate
 
