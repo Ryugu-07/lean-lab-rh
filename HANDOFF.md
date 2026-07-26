@@ -4698,3 +4698,19 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   estimates, reciprocal-zeta continuation, H9, and RH.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H9 Redheffer--Mertens determinant immutable evidence public green
+
+- `frozen_implementation`: commit `2003f912dfb0627b1c41d4b80db1abc6eb24e5d3` passed run
+  `30207909320`, build job `89809080863`, in `2m6s`.
+- `immutable_evidence`: docs-only commit `ad5444b8948eab6ac2cf2dd60f0a0e2fb7f85975`
+  passed run `30208079452`, build job `89809518957`, in `1m29s`.
+- `proof_freeze_verified`: no `LeanLab/` difference between the implementation and evidence
+  commits.
+- `result`: `REDHEFFER_MERTENS_ELIMINATION_FORMALIZED`.
+- `next_gate`: publish one docs-only final ledger and require public CI.
+- `after_closure`: close only the exact determinant-elimination endpoint and return the active
+  global Goal to fresh cross-family historical-route selection; retain the Redheffer
+  characteristic polynomial and non-unit-root analysis as open candidates.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

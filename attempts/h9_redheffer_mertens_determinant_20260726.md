@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H9-REDHEFFER-MERTENS-DETERMINANT-01`
 
 Selected node: `H9-REDHEFFER-MERTENS-DETERMINANT-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_REQUIRED`
 
 ## Target
 
@@ -37,6 +37,7 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 | `LOW_ORDER_CHECKS` | Checked orders one through four. | Determinants are `1,0,-1,-1`, matching the finite Mertens sums. | Run all local gates. |
 | `LOCAL_GATES` | Ran warning-as-error production, Targets, TargetChecks, and AxiomsAudit compiles; scanned forbidden declarations and resource relaxations; ran the full build. | One proven Target, eight exact checks, six standard-only axiom prints, empty scans, and `8771/8771` build all pass. | Freeze and publish the implementation. |
 | `IMPLEMENTATION_PUBLIC` | Published frozen implementation commit `2003f912dfb0627b1c41d4b80db1abc6eb24e5d3`. | Public run `30207909320`, build job `89809080863`, passed in `2m6s`; the proof source is frozen. | Publish docs-only immutable evidence with no `LeanLab/` change. |
+| `IMMUTABLE_EVIDENCE_PUBLIC` | Published docs-only evidence commit `ad5444b8948eab6ac2cf2dd60f0a0e2fb7f85975`. | Public run `30208079452`, build job `89809518957`, passed in `1m29s`; the implementation-to-evidence `LeanLab/` diff is empty. | Publish the docs-only final ledger and require public CI. |
 
 ## Runtime record
 

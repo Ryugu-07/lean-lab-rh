@@ -2347,7 +2347,7 @@ Final-ledger commit `76c21bb536ad205b53eb8aee2035c2529e32eb96` passed run
 ## 2026-07-26 H9 Redheffer--Mertens determinant local endpoint
 
 - `node`: `H9-REDHEFFER-MERTENS-DETERMINANT-01`.
-- `local_status`: `REDHEFFER_MERTENS_ELIMINATION_FORMALIZED / IMPLEMENTATION_PUBLIC_GREEN`.
+- `local_status`: `REDHEFFER_MERTENS_ELIMINATION_FORMALIZED / IMMUTABLE_EVIDENCE_PUBLIC_GREEN`.
 - `closed_edges`:
   `positive Fin index <-> positive divisor`;
   `Mobius convolution -> first-row cancellation`;
@@ -2363,5 +2363,8 @@ Final-ledger commit `76c21bb536ad205b53eb8aee2035c2529e32eb96` passed run
   `mertens_growth_delta=0`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
 - `frozen_implementation`: commit `2003f912dfb0627b1c41d4b80db1abc6eb24e5d3` passed public Lean
   Action run `30207909320`, build job `89809080863`, in `2m6s`.
-- `proof_freeze`: docs-only immutable evidence is next; no `LeanLab/` file may change.
+- `immutable_evidence`: docs-only commit `ad5444b8948eab6ac2cf2dd60f0a0e2fb7f85975`
+  passed run `30208079452`, build job `89809518957`, in `1m29s`.
+- `proof_freeze`: no `LeanLab/` difference between implementation and evidence; final-ledger CI
+  is the only remaining gate.
 - `global_goal`: active.

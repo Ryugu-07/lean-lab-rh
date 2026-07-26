@@ -1501,3 +1501,7 @@ scans, and full `8771/8771` build pass locally. Frozen implementation commit
 `2003f912dfb0627b1c41d4b80db1abc6eb24e5d3` passed public Lean Action run `30207909320`,
 build job `89809080863`, in `2m6s`. Proof source is frozen; docs-only immutable evidence is the
 next gate before successor selection.
+
+Docs-only immutable-evidence commit `ad5444b8948eab6ac2cf2dd60f0a0e2fb7f85975` passed run
+`30208079452`, build job `89809518957`, in `1m29s`, with no `LeanLab/` change from the frozen
+implementation. Only final-ledger CI remains before fixed-edge closure and fresh route selection.
