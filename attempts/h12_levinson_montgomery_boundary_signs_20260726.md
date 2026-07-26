@@ -7,7 +7,7 @@ Campaign:
 
 Selected node: `H12-LM-BOUNDARY-SIGNS-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Target
 
@@ -55,6 +55,7 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 | `INDENTATION_RECONNAISSANCE` | Factored xi analytically at an actual zero, proved residual log-derivative continuity, and proved the multiplicity pole points strictly left. | These local components compile. Uniform whole-semicircle dominance is not claimed because the principal real part approaches zero near the two critical-line endpoints; endpoint/middle-arc gluing remains. | Retain the compiled local lemmas and audit the mandatory endpoint. |
 | `LOCAL_AUDIT` | Registered one proven Target, nine mandatory TargetChecks, and selected axiom prints; ran warning-as-error checks, forbidden scans, patch check, and the full build. | The 426-line module passes. Selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`; full build passes `8766/8766`. | Freeze proof source and require public implementation CI. |
 | `IMPLEMENTATION_PUBLIC` | Published the frozen proof implementation and registries. | Commit `d45e87b3c6ab9d41217f671b0dc96ec979167b45` passed public run `30193246131`, build job `89770129416`, in `2m7s`. | Keep proof source frozen and publish immutable evidence. |
+| `IMMUTABLE_EVIDENCE_PUBLIC` | Published the implementation run identifiers and exact claim boundary without changing proof source. | Docs-only commit `4c0ad75da06648c564fa58d9d29c762d46bff823` passed run `30193425500`, build job `89770603420`, in `1m34s`. | Publish one final ledger and require CI. |
 
 ## Final classification
 
@@ -88,4 +89,6 @@ The two vertical boundary signs and exact integer-height dichotomy compile local
 equality, `O(log T)`, full Levinson--Montgomery theorem, Speiser equivalence, and RH remain open.
 The six inherited user/exposure files remain untouched and unstaged. Frozen implementation
 commit `d45e87b3c6ab9d41217f671b0dc96ec979167b45` passed public run `30193246131`, build job
-`89770129416`, in `2m7s`; the next gate is docs-only immutable evidence and its public CI.
+`89770129416`, in `2m7s`. Docs-only immutable evidence
+`4c0ad75da06648c564fa58d9d29c762d46bff823` passed run `30193425500`, build job
+`89770603420`, in `1m34s`; one final-ledger CI remains.

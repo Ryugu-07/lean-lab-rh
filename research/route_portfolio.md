@@ -4028,5 +4028,6 @@ forbidden scans, and the full `8766/8766` build pass. Classify the fixed endpoin
 `FULL_BOUNDARY_SIGNS_AND_INTEGER_DICHOTOMY_SUCCESS`, with `hard_gap_delta=0` and
 `rh_frontier_delta=0`. Frozen implementation commit
 `d45e87b3c6ab9d41217f671b0dc96ec979167b45` passed public Lean Action run `30193246131`,
-build job `89770129416`, in `2m7s`. The proof source remains frozen; docs-only immutable
-evidence and its public CI are next.
+build job `89770129416`, in `2m7s`. Docs-only immutable-evidence commit
+`4c0ad75da06648c564fa58d9d29c762d46bff823` passed run `30193425500`, build job
+`89770603420`, in `1m34s`; proof source remained frozen and only final-ledger CI remains.

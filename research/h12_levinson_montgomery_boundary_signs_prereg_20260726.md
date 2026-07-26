@@ -9,7 +9,7 @@ Selected node: `H12-LM-BOUNDARY-SIGNS-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Primary source
 
@@ -294,5 +294,6 @@ Local classification:
 
 Frozen implementation commit `d45e87b3c6ab9d41217f671b0dc96ec979167b45` passed public Lean
 Action run `30193246131`, build job `89770129416`, in `2m7s`. Proof source remains frozen.
-Publish the exact run coordinates and claim boundary in a docs-only immutable-evidence commit,
-then require its own public CI.
+Docs-only immutable-evidence commit `4c0ad75da06648c564fa58d9d29c762d46bff823` passed public run
+`30193425500`, build job `89770603420`, in `1m34s`, without changing proof source. Publish one
+final ledger recording all three public gates and require its own CI.

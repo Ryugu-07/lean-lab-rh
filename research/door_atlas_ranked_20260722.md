@@ -1317,5 +1317,6 @@ but whole-semicircle indentation remains open because endpoint neighborhoods req
 critical-line continuity argument. The bottom `t=10` certificate, admissible top contours, exact
 count equality, `O(log T)`, Speiser equivalence, and RH remain the atlas frontier. Frozen
 implementation commit `d45e87b3c6ab9d41217f671b0dc96ec979167b45` passed public Lean
-Action run `30193246131`, build job `89770129416`, in `2m7s`; proof source remains frozen and
-docs-only immutable evidence is next.
+Action run `30193246131`, build job `89770129416`, in `2m7s`. Docs-only immutable evidence
+`4c0ad75da06648c564fa58d9d29c762d46bff823` passed run `30193425500`, build job
+`89770603420`, in `1m34s`; proof source remained frozen and only final-ledger CI remains.

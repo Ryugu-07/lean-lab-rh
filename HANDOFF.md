@@ -4299,3 +4299,25 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `next_gate`: publish docs-only immutable evidence and require public CI.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H12 boundary signs immutable evidence CI passed
+
+- `status`: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`.
+- `preregistration`: commit `a071e954c0433b072e16facba02b3a6f8647f391` passed run
+  `30192787155`, build job `89768923636`, in `1m36s`.
+- `public_implementation`: frozen commit
+  `d45e87b3c6ab9d41217f671b0dc96ec979167b45` passed run `30193246131`, build job
+  `89770129416`, in `2m7s`.
+- `immutable_evidence`: docs-only commit
+  `4c0ad75da06648c564fa58d9d29c762d46bff823` passed run `30193425500`, build job
+  `89770603420`, in `1m34s`; proof source remained frozen.
+- `classification`: `FULL_BOUNDARY_SIGNS_AND_INTEGER_DICHOTOMY_SUCCESS`,
+  `indentation_reconnaissance=LOCAL_FACTOR_AND_PRINCIPAL_SIGN_COMPILED`,
+  `source_analytic_bridge_delta=1`, `historical_route_coverage_delta=1`,
+  `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `strict_boundary`: bottom-edge low-zero certificate, whole-semicircle indentation, contour
+  admissibility, exact count equality, `O(log T)`, full theorem, Speiser equivalence, and RH.
+- `next_gate`: publish one docs-only final ledger and require public CI.
+- `global_goal`: active. After fixed-edge closure return to cross-family historical route
+  selection; conjecture and direct-proof tracks remain open.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

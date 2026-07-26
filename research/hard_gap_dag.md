@@ -2131,6 +2131,9 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `public_implementation`: frozen commit
   `d45e87b3c6ab9d41217f671b0dc96ec979167b45` passed run `30193246131`, job
   `89770129416`, in `2m7s`; proof source remains frozen.
-- `status`: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`.
+- `immutable_evidence`: docs-only commit
+  `4c0ad75da06648c564fa58d9d29c762d46bff823` passed run `30193425500`, job
+  `89770603420`, in `1m34s`; proof source remained frozen.
+- `status`: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`.
 - `result`: `FULL_BOUNDARY_SIGNS_AND_INTEGER_DICHOTOMY_SUCCESS`.
 - `global_goal`: active.
