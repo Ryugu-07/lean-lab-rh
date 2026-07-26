@@ -4394,3 +4394,20 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   exact count equality, `O(log T)`, full theorem, Speiser equivalence, and RH remain open.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H12 critical-zero indentation immutable evidence public green
+
+- `frozen_implementation`: commit `49d43eda415c00c10939c2df529b6231c973aa5b` passed run
+  `30195029807`, build job `89774903553`, in `2m44s`.
+- `immutable_evidence`: docs-only commit
+  `482835012cba3c51839d428a41127fe40e513e2e` passed run `30195156406`, build job
+  `89775241280`, in `1m28s`.
+- `proof_freeze_verified`: no `LeanLab/` difference between the frozen implementation and
+  immutable-evidence commits.
+- `result`: `FULL_CRITICAL_INDENTATION_SUCCESS`.
+- `next_gate`: publish one docs-only final ledger and require public CI.
+- `after_closure`: return the active global Goal to cross-family historical route selection;
+  conjecture generation and direct proof attempts remain open.
+- `strict_boundary`: bottom certificate, admissible top contours, global argument principle,
+  exact count equality, `O(log T)`, full theorem, Speiser equivalence, and RH remain open.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

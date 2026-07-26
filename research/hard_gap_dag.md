@@ -2182,4 +2182,6 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 
 Frozen implementation commit `49d43eda415c00c10939c2df529b6231c973aa5b` passed public Lean
 Action run `30195029807`, build job `89774903553`, in `2m44s`. Proof source is frozen.
-Immutable-evidence and final-ledger public CI remain before route selection.
+Docs-only immutable-evidence commit `482835012cba3c51839d428a41127fe40e513e2e`
+passed run `30195156406`, build job `89775241280`, in `1m28s`; proof source remained frozen.
+Final-ledger public CI remains before route selection.

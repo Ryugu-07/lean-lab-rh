@@ -4084,4 +4084,5 @@ comparison, full Levinson--Montgomery theorem, Speiser equivalence, and RH remai
 
 Frozen implementation commit `49d43eda415c00c10939c2df529b6231c973aa5b` passed public Lean
 Action run `30195029807`, build job `89774903553`, in `2m44s`. Proof source remains frozen;
-docs-only immutable evidence and final-ledger CI are the remaining campaign gates.
+docs-only immutable-evidence commit `482835012cba3c51839d428a41127fe40e513e2e`
+passed run `30195156406`, build job `89775241280`, in `1m28s`. Only final-ledger CI remains.

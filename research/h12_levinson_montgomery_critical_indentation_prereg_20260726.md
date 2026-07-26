@@ -9,7 +9,7 @@ Selected node: `H12-LM-CRITICAL-INDENTATION-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Primary source
 
@@ -234,6 +234,10 @@ positive-radius left semicircle including both critical-line endpoints.
 Frozen implementation commit `49d43eda415c00c10939c2df529b6231c973aa5b` passed public Lean
 Action run `30195029807`, build job `89774903553`, in `2m44s`. The proof source is now frozen;
 the next gate is a docs-only immutable-evidence commit and public CI.
+
+Docs-only immutable-evidence commit `482835012cba3c51839d428a41127fe40e513e2e` passed public Lean
+Action run `30195156406`, build job `89775241280`, in `1m28s`. The frozen proof source remained
+unchanged. Only the docs-only final-ledger public gate remains.
 
 Local classification:
 

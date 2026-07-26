@@ -7,7 +7,7 @@ Campaign:
 
 Selected node: `H12-LM-CRITICAL-INDENTATION-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Target
 
@@ -39,6 +39,7 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 | `GEOMETRIC_ENDPOINT` | Chose half the neighborhood radius. | `exists_levinsonMontgomery_negative_left_semicircle` compiles for the complete closed left semicircle, including both critical-line endpoints. | Register the result and run all local gates. |
 | `LOCAL_GATES` | Ran warning-as-error, Target, six TargetChecks, five selected axiom prints, three forbidden scans, `git diff --check`, and full build. | New module has no diagnostics; axioms are only `propext`, `Classical.choice`, `Quot.sound`; scans are empty; full build is `8767/8767`. | Freeze and publish the implementation. |
 | `IMPLEMENTATION_PUBLIC` | Published frozen implementation commit `49d43eda415c00c10939c2df529b6231c973aa5b`. | Public run `30195029807`, build job `89774903553`, passed in `2m44s`. | Keep proof source frozen; publish docs-only immutable evidence. |
+| `IMMUTABLE_EVIDENCE_PUBLIC` | Published docs-only commit `482835012cba3c51839d428a41127fe40e513e2e` and verified no `LeanLab/` difference from the frozen implementation. | Public run `30195156406`, build job `89775241280`, passed in `1m28s`; proof source remained frozen. | Publish one docs-only final ledger and require public CI. |
 
 ## Runtime record
 
@@ -52,9 +53,9 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Current boundary
 
-Result is `FULL_CRITICAL_INDENTATION_SUCCESS` with a public-green frozen implementation.
-Immutable-evidence and final-ledger public CI remain before fixed-campaign closure. This closes
-the local critical-zero indentation edge only. The bottom `t=10` certificate, cofinal admissible
-top contours, global indented argument-principle bookkeeping, exact count equality, `O(log T)`,
-full Levinson--Montgomery theorem, Speiser equivalence, and RH remain open. The six inherited
+Result is `FULL_CRITICAL_INDENTATION_SUCCESS` with public-green frozen implementation and
+immutable evidence. Final-ledger public CI remains before fixed-campaign closure. This closes the
+local critical-zero indentation edge only. The bottom `t=10` certificate, cofinal admissible top
+contours, global indented argument-principle bookkeeping, exact count equality, `O(log T)`, full
+Levinson--Montgomery theorem, Speiser equivalence, and RH remain open. The six inherited
 user/exposure files remain untouched and unstaged.
