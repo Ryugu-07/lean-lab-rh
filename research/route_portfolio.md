@@ -3848,3 +3848,28 @@ Campaign `LITERATURE-20260726-H1-BETTIN-GONEK-MOMENT-TO-POWER-BRIDGE-01` require
 bridge and the source corollary `FarmerThetaInfinityConjecture -> RiemannHypothesis`. Farmer's
 conjecture remains open and unavailable as an unconditional premise. Production Lean editing is
 gated on public preregistration CI.
+
+## H1 Bettin--Gonek Moment-to-Power Bridge Local Result
+
+Preregistration commit `3df6ed836c550671a0e552a09bbba314fcab5c1c` passed public Lean
+Action run `30188267224`, build job `89756704490`, in `1m31s`. The fixed endpoint now compiles
+in the 1,174-line `LeanLab/Riemann/BettinGonekMomentToPowerBridge.lean`.
+
+The proof derives strictly positive critical-line zeta mass on `[0,1]` from nonvanishing at
+`1/2`, proves the selected-residue scale uniformly positive there, and proves that the
+inverse-Mellin majorant is translation invariant. It combines the existing convolution and
+contour-residue inequalities, partitions the real cutoff into unit intervals, controls each
+interval by neighboring integer mollifiers, and applies finite Cauchy. The resulting integer
+moments embed monotonically into `[0,T]`; `floor(T^theta)` comparison and logarithmic absorption
+then give the exact Bettin--Gonek power obstruction.
+
+Thus `bettinGonekMomentToPowerBridge_of_pos` and the direct
+`farmerThetaInfinityConjecture_implies_riemannHypothesis_bettinGonek` corollary compile. This
+validates the fixed-low-height omission attack: the full critical-line second-moment asymptotic
+is unnecessary for this conditional theorem. Farmer's arbitrary-length moment conjecture
+remains open, so the result is not an unconditional RH proof.
+
+Local mechanical gates pass: warning-as-error production compile, proven Target and exact
+checks, selected standard-only axiom prints, empty forbidden scans, and full `8763/8763` build.
+The implementation now awaits frozen public CI before immutable evidence and fresh cross-family
+reranking.

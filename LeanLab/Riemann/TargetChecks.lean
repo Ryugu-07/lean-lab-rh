@@ -3841,6 +3841,14 @@ example (hmoment : FarmerThetaInfinityConjecture)
   farmerThetaInfinityConjecture_implies_riemannHypothesis hmoment hbridge
 
 example {theta : ℝ} (htheta : 0 < theta) :
+    BettinGonekMomentToPowerBridge theta :=
+  bettinGonekMomentToPowerBridge_of_pos htheta
+
+example (hmoment : FarmerThetaInfinityConjecture) :
+    RiemannHypothesis :=
+  farmerThetaInfinityConjecture_implies_riemannHypothesis_bettinGonek hmoment
+
+example {theta : ℝ} (htheta : 0 < theta) :
     1 / 2 < bettinGonekFixedThetaWitness theta ∧
       bettinGonekFixedThetaWitness theta < 1 / 2 + 1 / (2 * theta) :=
   ⟨bettinGonekFixedThetaWitness_off_line htheta,

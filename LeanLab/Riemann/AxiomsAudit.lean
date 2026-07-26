@@ -11,6 +11,7 @@ import LeanLab.Riemann.BettinGonekAuxiliary
 import LeanLab.Riemann.BettinGonekMellinIdentity
 import LeanLab.Riemann.BettinGonekJContour
 import LeanLab.Riemann.BettinGonekInverseMellinConvolution
+import LeanLab.Riemann.BettinGonekMomentToPowerBridge
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -891,6 +892,10 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.riemannZeta_ne_zero_of_bettinGonekPowerObstructions
 #print axioms LeanLab.Riemann.riemannHypothesis_of_all_bettinGonekPowerObstructions
 #print axioms LeanLab.Riemann.farmerThetaInfinityConjecture_implies_riemannHypothesis
+#print axioms LeanLab.Riemann.bettinGonek_fixed_mass_rpow_sq_le
+#print axioms LeanLab.Riemann.bettinGonek_integer_power_le
+#print axioms LeanLab.Riemann.bettinGonekMomentToPowerBridge_of_pos
+#print axioms LeanLab.Riemann.farmerThetaInfinityConjecture_implies_riemannHypothesis_bettinGonek
 #print axioms LeanLab.Riemann.bettinGonekFixedThetaWitness_below_boundary
 #print axioms LeanLab.Riemann.bettinGonekCancelledZeta_eq_source
 #print axioms LeanLab.Riemann.bettinGonekAuxiliaryG_eq_raw

@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H1-BETTIN-GONEK-MOMENT-TO-POWER-BRIDGE-01`
 
 Selected node: `H1-BETTIN-GONEK-MOMENT-TO-POWER-BRIDGE-01`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_FULL_MOMENT_TO_POWER_SUCCESS / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
 
 ## Target
 
@@ -43,17 +43,23 @@ Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
 | `SOURCE_RECONSTRUCTION` | Re-read the primary TeX for Theorem 1 and equations `(2.1)`--`(2.5)`. | After squaring the residue inequality, the Cauchy factor cancels the extra `x`; the remaining real-cutoff moment contributes exactly one factor of `x`, producing exponent `1+epsilon+theta`. | Preserve this normalization exactly. |
 | `OMISSION_AUDIT` | Specialized the source proof to `T1=0`. | A fixed compact interval with positive zeta mass suffices; the full asymptotic second moment is unnecessary for Theorem 1. | Register fixed-low-height Attack A and source fallback B. |
 | `API_AUDIT` | Located exact residue, inverse-Mellin, real-cutoff interpolation, interval partition, finite Cauchy, positivity, and real-power APIs. | No target-equivalent premise is needed at the statement level. Joint real-cutoff/time Fubini can be avoided by partitioning into integer intervals before integrating in time. | Preregister the full endpoint and gate production edits on public CI. |
+| `PUBLIC_PREREGISTRATION` | Published the fixed endpoint and attacks before production proof editing. | Commit `3df6ed836c550671a0e552a09bbba314fcab5c1c` passed Lean Action run `30188267224`, build job `89756704490`, in `1m31s`. | Open the production gate without changing the endpoint. |
+| `ATTACK_A_FIXED_MASS` | Proved nonvanishing at `1/2`, positive zeta squared mass on `[0,1]`, a selected-zero residue lower bound uniform in `t`, and translation invariance of the inverse-Mellin majorant. | Every fixed analytic constant required by the compact-height attack is strictly positive or finite for the actual source objects. | Assemble the real-cutoff estimate. |
+| `ATTACK_A_INTEGER_ASSEMBLY` | Handled `[1,2]` directly, partitioned `[1,X]` into unit intervals, reduced real cutoffs to neighboring integer mollifiers, and applied finite Cauchy. | The integrated source lower bound is controlled by the exact finite sum of Farmer integer moments on `[0,1]`. | Embed those moments into the assumed `[0,T]` moments. |
+| `ATTACK_A_POWER_ASYMPTOTICS` | Used moment monotonicity, `X=floor(T^theta)`, floor comparison, logarithmic absorption, and real-power algebra. | Lean derives the registered exponent `T^(2*Re(rho)*theta) << T^(1+epsilon+theta)` for every nontrivial zero. | Close the aggregate bridge and RH consumer. |
+| `ENDPOINT_CLOSURE` | Proved the full bridge for every positive `theta` and supplied it directly to the existing reflection/exponent consumer. | `bettinGonekMomentToPowerBridge_of_pos` and `farmerThetaInfinityConjecture_implies_riemannHypothesis_bettinGonek` compile. Attack A succeeds; fallback B is not needed. | Run registration, axiom, forbidden-token, and full-build gates. |
+| `LOCAL_MECHANICAL_AUDIT` | Compiled the production module with warnings as errors, checked exact Targets and audits, scanned forbidden declarations/tokens and resource relaxations, and ran the complete project build. | All local gates pass; selected transitive axioms are only `propext`, `Classical.choice`, and `Quot.sound`; full build is `8763/8763`. | Freeze and publish the implementation. |
 
 ## Mechanical audit
 
-- exact module compilation: `PENDING_PUBLIC_PREREGISTRATION`.
-- `Targets.lean`: `CLOSED`.
-- `TargetChecks.lean`: `CLOSED`.
-- `AxiomsAudit.lean`: `CLOSED`.
-- forbidden scan: `PENDING`.
+- exact module compilation: `PASS_WARNING_AS_ERROR`.
+- `Targets.lean`: `PASS_PROVEN_TARGET`.
+- `TargetChecks.lean`: `PASS_EXACT_ENDPOINTS`.
+- `AxiomsAudit.lean`: `PASS_STANDARD_ONLY`.
+- forbidden scan: `PASS_EMPTY`.
 - witness audit: `NOT_NUMERICAL`.
-- definition/source alignment: `PREREGISTERED`.
-- full `lake build`: `PENDING_PUBLIC_PREREGISTRATION`.
+- definition/source alignment: `PASS`.
+- full `lake build`: `PASS_8763_OF_8763`.
 
 ## Runtime record
 
@@ -66,10 +72,18 @@ Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
 
 ## Result
 
-- `result_class`: `PENDING`.
-- `hard_gap_delta`: pending.
-- `rh_frontier_delta`: pending.
-- `theorem_names`: pending.
-- `failure_or_obstacle`: pending Attack A and fallback B.
-- `route_selection_decision`: selected; production gate remains closed until public CI.
-- `commit_and_CI`: pending docs-only preregistration commit.
+- `result_class`: `FULL_MOMENT_TO_POWER_SUCCESS_LOCAL`.
+- `source_analytic_bridge_delta`: `1`.
+- `known_theorem_formalization_delta`: `1`.
+- `historical_route_coverage_delta`: `1`.
+- `hard_gap_delta`: `0` for RH; Farmer's conjecture remains the open hard gap.
+- `rh_frontier_delta`: `0`.
+- `theorem_names`: `bettinGonekMomentToPowerBridge_of_pos`;
+  `farmerThetaInfinityConjecture_implies_riemannHypothesis_bettinGonek`.
+- `failure_or_obstacle`: none at the registered bridge; Attack A succeeded and fallback B was
+  not needed.
+- `route_selection_decision`: freeze and publish this implementation, then return to a fresh
+  cross-family route comparison after public closure.
+- `commit_and_CI`: preregistration commit
+  `3df6ed836c550671a0e552a09bbba314fcab5c1c` passed public Lean Action run
+  `30188267224`, build job `89756704490`, in `1m31s`; implementation commit pending.

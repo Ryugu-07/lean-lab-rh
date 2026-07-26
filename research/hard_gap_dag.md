@@ -1960,3 +1960,29 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `next_gate`: publish the docs-only preregistration and require public CI before production
   Lean editing.
 - `global_goal`: active.
+
+## 2026-07-26 H1 Bettin--Gonek moment-to-power bridge local endpoint
+
+- `node`: `H1-BETTIN-GONEK-MOMENT-TO-POWER-BRIDGE-01`.
+- `status`: `LOCAL_FULL_MOMENT_TO_POWER_SUCCESS / IMPLEMENTATION_PUBLIC_CI_REQUIRED`.
+- `preregistration_gate`: commit `3df6ed836c550671a0e552a09bbba314fcab5c1c`
+  passed public Lean Action run `30188267224`, build job `89756704490`, in `1m31s`.
+- `proved_edge`: for every `theta>0`, the actual Farmer long-mollifier bound implies the
+  selected-zero `BettinGonekPowerObstruction`; the theta-infinity conjecture therefore implies
+  Mathlib's `RiemannHypothesis` with no extra bridge premise.
+- `obstacle_resolution`: one fixed compact interval supplies positive critical-line zeta mass.
+  Combined with a uniform selected-residue lower bound and translation-invariant inverse-Mellin
+  bound, this removes the previously listed need for a global zeta second-moment asymptotic.
+- `real_cutoff_resolution`: the literal `[1,2]` mollifier is handled directly; every later unit
+  interval reduces to neighboring integer cutoffs before finite Cauchy and the registered
+  integer moment hypothesis are applied.
+- `asymptotic_resolution`: `X=floor(T^theta)`, floor comparison, logarithmic absorption, and
+  rpow algebra preserve the exact source exponent `1+epsilon+theta`.
+- `remaining_H1_path`: prove Farmer's arbitrary-length mollified moment conjecture, or find a
+  different unconditional premise supplying its strength. The known conditional analytic
+  assembly is no longer a project hard gap.
+- `delta`: `source_analytic_bridge_delta=1`, `known_theorem_formalization_delta=1`,
+  `historical_route_coverage_delta=1`, `hard_gap_delta=0` for RH, `rh_frontier_delta=0`.
+- `local_gates`: warning-free 1,174-line source under warning-as-error, exact TargetChecks,
+  standard-only selected axiom prints, empty forbidden scans, and full `8763/8763` build.
+- `global_goal`: active; Farmer's conjecture and RH remain open.

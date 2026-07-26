@@ -1186,3 +1186,17 @@ integer moments already named by `FarmerLongMollifierBound`.
 This is selected as a complete known-theorem formalization. On success, Farmer's arbitrary-length
 mollifier conjecture remains the sole open premise in this H1 implication to RH. H12 analytic
 counts, H2 actual bow exclusion, H10 transfer, and H7 positivity/density remain open reserves.
+
+### H1 Bettin--Gonek moment-to-power bridge local result
+
+The fixed-low-height attack succeeds. Lean proves positive critical-line zeta squared mass on
+`[0,1]`, a selected-residue lower bound uniform there, and translation invariance of the
+inverse-Mellin majorant. Unit-interval cutoff interpolation and finite Cauchy reduce the source
+real-cutoff integral to Farmer's exact integer moments; `floor(T^theta)` and logarithmic
+absorption preserve the source exponent.
+
+The resulting theorems prove `BettinGonekMomentToPowerBridge theta` for every positive `theta`
+and the direct implication `FarmerThetaInfinityConjecture -> RiemannHypothesis`. This closes the
+known conditional analytic bridge and shows that a full critical-line second-moment asymptotic
+was stronger than necessary for this endpoint. Farmer's arbitrary-length moment conjecture
+remains open, so D3/H1 and RH are not marked solved or exhausted.

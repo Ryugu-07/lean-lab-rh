@@ -4044,3 +4044,35 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `next_gate`: commit and publish the docs-only preregistration. Production Lean editing remains
   closed until public CI passes.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H1 Bettin--Gonek moment-to-power bridge local result
+
+- `status`: `LOCAL_FULL_MOMENT_TO_POWER_SUCCESS / IMPLEMENTATION_PUBLIC_CI_REQUIRED`.
+- `production_gate`: preregistration commit
+  `3df6ed836c550671a0e552a09bbba314fcab5c1c` passed public Lean Action run
+  `30188267224`, build job `89756704490`, in `1m31s`; production proof editing began only
+  afterward.
+- `compiled_endpoint`: the 1,174-line
+  `LeanLab/Riemann/BettinGonekMomentToPowerBridge.lean` proves
+  `bettinGonekMomentToPowerBridge_of_pos` for every positive `theta` and the direct corollary
+  `farmerThetaInfinityConjecture_implies_riemannHypothesis_bettinGonek`.
+- `proof_chain`: fixed positive zeta mass on `[0,1]`, a compact selected-residue lower bound,
+  translation-invariant inverse-Mellin majorant, exact `[1,2]` cutoff handling, unit-interval
+  interpolation to integer mollifiers, finite Cauchy, moment monotonicity, and
+  `floor(T^theta)`/rpow/logarithm asymptotics.
+- `omission_result`: the fixed-low-height attack succeeds. The conditional source theorem needs
+  only positive critical-line zeta mass on one compact interval; the stronger full
+  second-moment asymptotic fallback was not needed.
+- `registered`: Target `H1.theta-infinity.moment-to-power-bridge` is proven; exact checks cover
+  both mandatory endpoints; selected axiom prints cover the fixed-mass inequality, integer-power
+  inequality, full bridge, and RH corollary.
+- `local_gates`: warning-as-error direct compile, all registry/audit modules, empty forbidden
+  scans, `git diff --check`, and full `8763/8763` build pass. Selected axioms are only
+  `propext`, `Classical.choice`, and `Quot.sound`.
+- `claim_boundary`: Farmer's arbitrary-length moment conjecture remains open. This closes the
+  known conditional bridge but does not prove RH unconditionally; `hard_gap_delta=0` and
+  `rh_frontier_delta=0`.
+- `next_gate`: freeze and publish the implementation, then require immutable-evidence and
+  final-ledger public CI before returning to fresh cross-family route selection.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

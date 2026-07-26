@@ -73,3 +73,20 @@ known conditional bridge; the open long-mollifier estimate remains unavailable a
 No production Lean source, Target, TargetCheck, or axiom-audit entry may be edited until the
 docs-only preregistration passes public Lean Action CI. The six inherited user/exposure files
 remain untouched and unstaged.
+
+## Local outcome
+
+The preregistration gate passed at commit
+`3df6ed836c550671a0e552a09bbba314fcab5c1c`, Lean Action run `30188267224`, build job
+`89756704490`, in `1m31s`. The fixed Attack A then succeeded without endpoint drift.
+
+The 1,174-line `LeanLab/Riemann/BettinGonekMomentToPowerBridge.lean` proves
+`bettinGonekMomentToPowerBridge_of_pos` and the direct
+`farmerThetaInfinityConjecture_implies_riemannHypothesis_bettinGonek` corollary. A fixed positive
+zeta mass on `[0,1]` replaces the full second-moment asymptotic; the remaining source chain is
+closed by compact residue bounds, translation invariance, unit-interval cutoff interpolation,
+finite Cauchy, integer moment monotonicity, and exact floor/rpow bookkeeping.
+
+The local result is `FULL_MOMENT_TO_POWER_SUCCESS`. Farmer's arbitrary-length moment conjecture
+remains open, so `hard_gap_delta=0` and `rh_frontier_delta=0` for RH. Frozen implementation
+public CI is the next gate.

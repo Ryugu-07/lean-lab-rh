@@ -88,6 +88,7 @@ import LeanLab.Riemann.BettinGonekAuxiliary
 import LeanLab.Riemann.BettinGonekMellinIdentity
 import LeanLab.Riemann.BettinGonekJContour
 import LeanLab.Riemann.BettinGonekInverseMellinConvolution
+import LeanLab.Riemann.BettinGonekMomentToPowerBridge
 import LeanLab.Riemann.PolyaTuranAbelAudit
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
@@ -1473,8 +1474,9 @@ def rhTargets : List ResearchTarget :=
       title := "Formalize the Bettin--Gonek selected-zero residue bridge"
       statement :=
         "From the exact uniform mollified second-moment bound through length T^theta, derive for every nontrivial zero rho the power obstruction T^(2*Re(rho)*theta) <<_epsilon T^(1+epsilon+theta), including Mellin inversion, auxiliary-transform decay, contour shifting, the selected-zero residue, Cauchy--Schwarz, the zeta second-moment lower bound, and uniform constants."
-      status := .inProgress
-      note := "Equations (2.1)-(2.5), including standalone inverse-Mellin support and boundedness, direct convolution, and the selected one-pole residue shift, are now compiled for the actual source objects. The remaining source bridge is the Cauchy--Schwarz step, the critical-line zeta second-moment transfer, integration in t, and uniform parameter bookkeeping needed to derive the stated power obstruction. The project definition BettinGonekMomentToPowerBridge names the still-unavailable aggregate premise and may not be used in unconditional work." },
+      leanName := some ``bettinGonekMomentToPowerBridge_of_pos
+      status := .proven
+      note := "Campaign LITERATURE-20260726-H1-BETTIN-GONEK-MOMENT-TO-POWER-BRIDGE-01 compiles the remaining source implication for the actual mollifier. The proof uses the strictly positive zeta mass on the fixed source interval [0,1], a uniform selected-residue lower bound there, translation invariance of the inverse-Mellin majorant, unit-interval real-cutoff interpolation, finite Cauchy, Farmer's integer moment hypothesis, and floor/rpow bookkeeping. Thus FarmerThetaInfinityConjecture now implies Mathlib.RiemannHypothesis without an extra bridge premise. This proves the conditional Bettin--Gonek theorem, not Farmer's open arbitrary-length moment conjecture and not RH unconditionally." },
     { id := "H1.theta-infinity.arbitrary-length-moment"
       tier := .tier2
       title := "Prove Farmer's theta-infinity mollified moment conjecture"

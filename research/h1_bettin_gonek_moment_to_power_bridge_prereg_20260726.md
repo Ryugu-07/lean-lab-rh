@@ -157,3 +157,29 @@ empty forbidden scans, `git diff --check`, full `lake build`, frozen implementat
 immutable-evidence CI, and final-ledger CI.
 
 The six inherited user/exposure files remain untouched and unstaged.
+
+## Local outcome
+
+Status: `FULL_MOMENT_TO_POWER_SUCCESS_LOCAL / IMPLEMENTATION_PUBLIC_CI_REQUIRED`.
+
+Attack A succeeded without changing the preregistered endpoint. The 1,174-line production
+module `LeanLab/Riemann/BettinGonekMomentToPowerBridge.lean` proves:
+
+```text
+0 < theta -> BettinGonekMomentToPowerBridge theta
+FarmerThetaInfinityConjecture -> RiemannHypothesis
+```
+
+The exact exported theorem names are `bettinGonekMomentToPowerBridge_of_pos` and
+`farmerThetaInfinityConjecture_implies_riemannHypothesis_bettinGonek`. The proof establishes the
+fixed positive zeta mass on `[0,1]`, the compact residue lower bound, translation invariance of
+the inverse-Mellin majorant, the unit-interval real-cutoff reduction to integer mollifiers,
+finite Cauchy, moment monotonicity, and the floor/rpow/logarithm asymptotics. The stronger source
+second-moment fallback was not needed.
+
+Direct warning-as-error compilation, exact Targets and TargetChecks, selected axiom prints,
+three forbidden scans, `git diff --check`, and the full `8763/8763` build pass locally. Selected
+transitive axioms are only `propext`, `Classical.choice`, and `Quot.sound`.
+
+This is a formalization of the known conditional Bettin--Gonek bridge. It does not prove
+Farmer's arbitrary-length moment conjecture and does not prove RH unconditionally.
