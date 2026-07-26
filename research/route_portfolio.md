@@ -3972,3 +3972,29 @@ Targets, exact checks, selected standard-only axiom prints, forbidden scans, and
 `3b730f836bb61dde7cc15062015dc2fe7b33986b` passed run `30192188923`, build job
 `89767296489`, in `1m53s`; only final-ledger CI remains. Classify the fixed edge as
 `FULL_LOGDERIV_MASS_BRIDGE_SUCCESS` with `hard_gap_delta=0` and `rh_frontier_delta=0`.
+
+## H12 Levinson--Montgomery Boundary-Sign Selection
+
+The log-derivative mass bridge publicly closed at final-ledger commit
+`7e745ffb509fd425a965a6eed99e49c6a070464e`, Lean Action run `30192288017`, build job
+`89767603710`, in `1m30s`. Fresh cross-family comparison now selects the adjacent boundary
+paragraph in Levinson--Montgomery rather than optimizing the already sufficient Gamma constant.
+
+H2 and H11 still lack a source-backed amplifier for one actual sparse off-line orbit. H10 lacks
+a number-field spectral object. The audited H7 sources explicitly leave their uniform Herglotz
+inequality open or require a new nonlocal nodal theory. H1 is at Farmer's open arbitrary-length
+mollified moment conjecture. H12 instead has two concrete vertical-boundary claims whose exact
+paired and Gamma objects are already present.
+
+The fixed campaign will extend equation `(2.1)` to the imaginary and critical boundaries, prove
+the paired reciprocal sum is nonpositive at `sigma=0` and zero at `sigma=1/2`, and derive strict
+negativity of `Re(zeta'/zeta)` on both vertical boundaries for `t>=10` away from critical-line
+zeros. It will also prove the exact integer-height logical alternative: either strict interior
+negativity occurs cofinally, or eventual nonnegative zero-free witnesses feed the compiled dense
+upper-left-zero branch.
+
+The source's certified bottom edge at `t=10`, the left semicircle indentation around
+critical-line zeros, contour admissibility, argument-principle count equality, `O(log T)` count
+difference, full theorem, Speiser equivalence, and RH remain outside the endpoint. Local
+critical-zero dominance is registered only as reconnaissance. Production Lean editing requires
+docs-only public preregistration CI.

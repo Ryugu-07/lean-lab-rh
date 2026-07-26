@@ -1283,3 +1283,20 @@ exact TargetChecks, standard-only selected axiom prints, empty forbidden scans, 
 `3b730f836bb61dde7cc15062015dc2fe7b33986b` passed run `30192188923`, build job
 `89767296489`, in `1m53s`; only final-ledger CI remains before fixed-edge closure and fresh
 cross-family ranking.
+
+### Post-equation-(2.1) rerank: H12 vertical boundary signs
+
+Final-ledger commit `7e745ffb509fd425a965a6eed99e49c6a070464e` passed public run
+`30192288017`, build job `89767603710`, in `1m30s`; the actual paired-sum, digamma remainder,
+equation `(2.1)`, archimedean sign, and mass bridge are closed.
+
+The next omission-seeking selection is the adjacent source paragraph proving negativity on
+`sigma=0` and on zero-free points of `sigma=1/2`, plus the exact logical alternative that produces
+interior nonnegative-log-derivative witnesses when strict negativity is not cofinal. Mathlib's
+generic Gamma differentiability away from negative integers and the project's actual paired
+kernel make both vertical signs concrete Lean targets.
+
+This is not a numerical-bound campaign. The low-height `t=10` zero certificate, critical-zero
+semicircle indentation, contour admissibility, exact count equality, `O(log T)` difference,
+Speiser equivalence, and RH remain open. Public preregistration CI is required before production
+proof editing.

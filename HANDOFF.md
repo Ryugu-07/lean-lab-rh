@@ -4213,3 +4213,33 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active. After fixed-edge closure return to cross-family historical route
   selection; conjecture and direct-proof tracks remain open.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H12 boundary signs and integer-height dichotomy selected
+
+- `parent_public_closure`: final-ledger commit
+  `7e745ffb509fd425a965a6eed99e49c6a070464e` passed public Lean Action run
+  `30192288017`, build job `89767603710`, in `1m30s`. Campaign
+  `LITERATURE-20260726-H12-LEVINSON-MONTGOMERY-LOGDERIV-MASS-BRIDGE-01` is publicly
+  closed as `FULL_LOGDERIV_MASS_BRIDGE_SUCCESS`.
+- `cross_family_audit`: H2/H11 have no published actual sparse-exception amplifier; H10 has no
+  number-field spectral object; H7 sources explicitly retain an open uniform Herglotz inequality
+  or require new nonlocal nodal infrastructure; H1 is at Farmer's open arbitrary-length moment
+  conjecture.
+- `campaign`:
+  `LITERATURE-20260726-H12-LEVINSON-MONTGOMERY-BOUNDARY-SIGNS-01`.
+- `node`: `H12-LM-BOUNDARY-SIGNS-01`.
+- `fixed_endpoint`: extend equation `(2.1)` to `sigma=0` and `sigma=1/2`, prove the actual paired
+  sum is nonpositive on the left boundary and zero on the critical boundary, derive strict
+  boundary negativity for `t>=10`, and prove the exact integer-height alternative between
+  cofinal strict negativity and eventual nonnegative interior witnesses feeding the dense branch.
+- `registered_reconnaissance`: test local critical-zero semicircle dominance from analytic order
+  factorization, without making it a substitute for the mandatory boundary and dichotomy
+  endpoints.
+- `strict_boundary`: no certified bottom-edge `t=10` zero table, semicircle indentation result,
+  contour admissibility, argument-principle count equality, `O(log T)` count difference, full
+  Levinson--Montgomery theorem, Speiser equivalence, or RH.
+- `production_gate`: no Lean proof-source edit until docs-only preregistration passes public Lean
+  Action CI.
+- `global_goal`: active. Historical omission search remains the main route-selection discipline;
+  conjecture generation and direct proof attempts remain open.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

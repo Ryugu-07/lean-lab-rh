@@ -2087,3 +2087,24 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `classification`: `FULL_LOGDERIV_MASS_BRIDGE_SUCCESS`; one final-ledger CI remains before
   fixed-edge closure and cross-family route selection.
 - `global_goal`: active.
+
+## 2026-07-26 H12 boundary-sign launch
+
+- `parent_closed`: final-ledger commit
+  `7e745ffb509fd425a965a6eed99e49c6a070464e` passed run `30192288017`, job
+  `89767603710`, in `1m30s`; the equation `(2.1)` and Gamma bridge is publicly closed.
+- `selected_node`: `H12-LM-BOUNDARY-SIGNS-01`.
+- `mode`: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`.
+- `fixed_edge`:
+  `generic GammaR non-pole calculus -> closed equation (2.1) -> paired boundary signs ->
+  strict left/critical boundary negativity`, together with
+  `not cofinally negative at integer heights -> eventual nonnegative interior witnesses ->
+  compiled dense branch`.
+- `source_alignment`: this is the paragraph after Levinson--Montgomery equations
+  `(2.1)`--`(2.4)`, split before its low-height numerical certificate and indented argument
+  principle.
+- `open_after_success`: bottom `t=10` certificate, critical-zero indentation, zero-free/admissible
+  top sequence, exact count equality, `O(log T)` count difference, full theorem, Speiser
+  equivalence, and RH.
+- `production_gate`: docs-only preregistration public CI before proof-source editing.
+- `global_goal`: active.
