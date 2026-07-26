@@ -5,6 +5,7 @@ import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.PolyaTuranAbelAudit
 import LeanLab.Riemann.RedhefferMertensDeterminant
+import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
 import LeanLab.Riemann.ThetaInfinityMollifier
@@ -1041,3 +1042,10 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.det_redhefferMatrix_eq_finiteMertens
 #print axioms LeanLab.Riemann.det_redhefferMatrix_eq_zero_iff
 #print axioms LeanLab.Riemann.redhefferMertensDeterminant_endpoint
+#print axioms LeanLab.Riemann.redhefferOrderedFactorCount_eq_zero_of_lt_pow_two
+#print axioms LeanLab.Riemann.redhefferCharpolyEliminator_mul_charmatrix
+#print axioms LeanLab.Riemann.charpoly_redhefferMatrix_source
+#print axioms LeanLab.Riemann.eval_one_redhefferReducedPolynomial
+#print axioms LeanLab.Riemann.rootMultiplicity_one_charpoly_redhefferMatrix
+#print axioms LeanLab.Riemann.eval_zero_charpoly_redhefferMatrix
+#print axioms LeanLab.Riemann.redhefferCharacteristicPolynomial_endpoint

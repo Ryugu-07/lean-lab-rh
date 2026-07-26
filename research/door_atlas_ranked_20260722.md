@@ -1521,3 +1521,20 @@ Campaign `LITERATURE-20260726-H9-REDHEFFER-CHARPOLY-01` fixes ordered-factor cou
 minimal-product support, a denominator-free polynomial eliminator, the generic characteristic
 polynomial, exact algebraic multiplicity of eigenvalue one, and low-order sign checks. Dominant
 and remaining-root location, Mertens growth, H9, and RH remain outside.
+
+The fixed edge compiles locally. The ordered counts vanish below `2^k`, so only depths through
+`floor(log_2 N)` enter; a power-of-two witness makes the top depth nonzero. A polynomial
+first-row eliminator clears every denominator before multiplication and yields the exact source
+factorization over `Z[X]`. For `N>=2`, precisely `N-floor(log_2 N)-1` roots are one, counted
+algebraically.
+
+The audit also finds a small but genuine source boundary: at `N=1`, the matrix is `[1]` and the
+unit root has multiplicity one, not the zero returned by the unrestricted displayed formula.
+Lean therefore states and checks the order-one case separately. This correction does not touch
+the spectral frontier. The remaining `floor(log_2 N)+1` roots are algebraically isolated as a
+factor, but no location, separation, or joint-product estimate for them follows.
+
+The 725-line module, one proven Target, eight exact checks, seven standard-only axiom prints,
+empty forbidden scans, and full `8772/8772` build pass locally. Classification:
+`REDHEFFER_CHARACTERISTIC_POLYNOMIAL_FORMALIZED`; spectral compression and source-boundary
+coverage increase, while Mertens growth, the hard gap, and the RH frontier do not.

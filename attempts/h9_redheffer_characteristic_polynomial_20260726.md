@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H9-REDHEFFER-CHARPOLY-01`
 
 Selected node: `H9-REDHEFFER-CHARACTERISTIC-POLYNOMIAL-01`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
 
 ## Target
 
@@ -31,6 +31,13 @@ Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
 | `PRIMARY_SOURCE_AUDIT` | Checked Vaughan I equations `(7)`--`(12)` and Theorem 1. | The source uses ordered factor counts and a rational first-row transform; exact multiplicity requires retaining `lambda=1`. | Preregister a denominator-free polynomial reconstruction. |
 | `REPOSITORY_DUPLICATION_SCAN` | Searched production and research files for Redheffer charpoly and ordered-factor objects. | Only the determinant module exists; no characteristic-polynomial theorem or factor-count recursion is present. | Admit the adjacent H9 node. |
 | `LEAN_API_SURVEY` | Checked `Matrix.charpoly`, `Matrix.eval_charpoly`, polynomial determinant APIs, `Nat.log`, `pow_log_le_self`, and `lt_pow_succ_log_self`. | The exact finite polynomial endpoint has a no-sorry route with the log-floor boundary exposed. | Publish docs-only preregistration before proof edits. |
+| `PREREGISTRATION_PUBLIC` | Published docs-only commit `0b0654a53272104e64bfba6f18d36b9c362e1028`. | Public run `30208450587`, build job `89810511648`, passed in `1m59s`. | Open the fixed production gate. |
+| `ORDERED_FACTOR_SUPPORT` | Defined `D_k(m)` recursively through proper divisors and proved its minimal-product support. | `D_k(m)=0` for `m<2^k`, all depth sums vanish above `floor(log_2 N)`, and `m=2^L` witnesses positivity at `L=floor(log_2 N)`. | Build the source row coefficients without an infinite series. |
+| `DENOMINATOR_FREE_ELIMINATION` | Cleared powers of `lambda-1` before multiplying the characteristic matrix. | The polynomial eliminator has a proved determinant and cancels every nonfirst entry without assuming `lambda != 1`. | Take determinants over `Z[X]`. |
+| `SOURCE_FACTORIZATION` | Combined the exact product and determinant identities. | Vaughan's reduced polynomial and the full characteristic-polynomial factorization compile for every positive matrix order. | Audit the root at one. |
+| `UNIT_ROOT_MULTIPLICITY` | Proved the reduced factor is nonzero at one and computed root multiplicity. | For order `N>=2`, the multiplicity is exactly `N-floor(log_2 N)-1`. At `N=1`, it is one, so the unrestricted source formula has a genuine boundary exception. | Register both the generic theorem and the order-one correction. |
+| `MERTENS_AND_LOW_ORDERS` | Evaluated the characteristic polynomial at zero and compiled orders one through four. | Evaluation gives `(-1)^N M(N)` with project indexing; the first four source polynomials fix the sign and indexing conventions. | Run all local gates. |
+| `LOCAL_GATES` | Ran warning-as-error production, Targets, TargetChecks, and AxiomsAudit compiles; scanned forbidden declarations and resource relaxations; ran `git diff --check` and the full build. | One proven Target, eight exact checks, seven standard-only axiom prints, empty scans, and `8772/8772` build all pass. | Freeze and publish the implementation. |
 
 ## Runtime record
 
@@ -49,6 +56,14 @@ ordered-factor support, standard characteristic-polynomial identities, and the a
 Redheffer matrix. It may not assume RH, a Mertens growth estimate, any root-location estimate,
 normality, self-adjointness, or the dominant-root asymptotics.
 
-The parent determinant identity is public-green. The characteristic polynomial, exact unit-root
-multiplicity, dominant-root estimates, remaining-root estimates, Mertens growth, H9, and RH are
-open at launch. The six inherited user/exposure files remain untouched and unstaged.
+The parent determinant identity is public-green. The characteristic polynomial and exact
+unit-root multiplicity now compile locally, including the separate order-one source boundary.
+Dominant-root estimates, remaining-root estimates, any joint non-unit-root product bound,
+Mertens growth, H9, and RH remain open. The six inherited user/exposure files remain untouched
+and unstaged.
+
+Local result: `REDHEFFER_CHARACTERISTIC_POLYNOMIAL_FORMALIZED`, with
+`historical_route_coverage_delta=1`, `spectral_compression_interface_delta=1`,
+`unit_root_multiplicity_delta=1`, `source_boundary_correction_delta=1`,
+`nonunit_root_location_delta=0`, `mertens_growth_delta=0`, `hard_gap_delta=0`, and
+`rh_frontier_delta=0`.

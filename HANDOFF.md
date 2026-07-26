@@ -4745,3 +4745,31 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `production_gate`: docs-only preregistration public CI before Lean proof editing.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H9 Redheffer characteristic polynomial local result
+
+- `campaign`: `LITERATURE-20260726-H9-REDHEFFER-CHARPOLY-01`.
+- `result`: `REDHEFFER_CHARACTERISTIC_POLYNOMIAL_FORMALIZED`.
+- `module`: `LeanLab/Riemann/RedhefferCharacteristicPolynomial.lean`, 725 lines, no
+  warning-as-error diagnostics.
+- `compiled_core`: ordered-factor recursion and `2^k` support; logarithmic cutoff and boundary
+  witness; denominator-free polynomial eliminator and exact characteristic-matrix product;
+  generic source factorization; reduced-factor nonvanishing at one; exact unit-root algebraic
+  multiplicity; Mertens evaluation at zero; orders one through four.
+- `source_boundary_correction`: Vaughan's displayed multiplicity formula gives the correct
+  `N-floor(log_2 N)-1` value for `N>=2`. At `N=1`, `A_1=[1]` has multiplicity one, so Lean
+  exposes a separate theorem instead of extending the formula.
+- `local_gates`: one proven Target, eight exact TargetChecks, seven selected axiom prints using
+  only `propext`, `Classical.choice`, and `Quot.sound`; empty forbidden scan; `git diff --check`;
+  full `8772/8772` build.
+- `classification`: `historical_route_coverage_delta=1`,
+  `spectral_compression_interface_delta=1`, `unit_root_multiplicity_delta=1`,
+  `source_boundary_correction_delta=1`, `nonunit_root_location_delta=0`,
+  `mertens_growth_delta=0`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `strict_boundary`: no non-unit root is located or bounded; dominant-root asymptotics,
+  remaining-root disks, joint-product control, Mertens growth, reciprocal-zeta continuation,
+  H9, and RH remain open.
+- `next_gate`: freeze and publish the implementation, then docs-only immutable evidence and
+  final ledger with public CI at each gate.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

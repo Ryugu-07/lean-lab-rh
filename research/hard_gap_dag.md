@@ -2389,3 +2389,27 @@ publicly closed.
 - `classification_target`: `REDHEFFER_CHARACTERISTIC_POLYNOMIAL_FORMALIZED`, with no root-
   location, Mertens-growth, hard-gap, or RH-frontier delta.
 - `global_goal`: active.
+
+## 2026-07-26 H9 Redheffer characteristic-polynomial local endpoint
+
+- `node`: `H9-REDHEFFER-CHARACTERISTIC-POLYNOMIAL-01`.
+- `local_status`: `REDHEFFER_CHARACTERISTIC_POLYNOMIAL_FORMALIZED / IMPLEMENTATION_CI_REQUIRED`.
+- `closed_edges`:
+  `ordered-factor recursion -> minimal-product and logarithmic support`;
+  `cleared polynomial row eliminator -> exact characteristic-matrix product`;
+  `source factorization -> exact unit-root algebraic multiplicity for N>=2`;
+  `order-one direct computation -> source boundary correction`.
+- `source_boundary`: the displayed formula `N-floor(log_2 N)-1` is valid for `N>=2`; at `N=1`
+  the matrix `[1]` has unit-root multiplicity one.
+- `open_H9_edges`: dominant and remaining-root estimates, location and joint-product control of
+  the `floor(log_2 N)+1` non-unit roots, the RH-equivalent Mertens growth bound,
+  reciprocal-zeta continuation, H9, and RH.
+- `local_audit`: one proven Target, eight exact TargetChecks, seven standard-only axiom prints,
+  empty forbidden scans, warning-as-error compiles, and full `8772/8772` build.
+- `classification`: `historical_route_coverage_delta=1`,
+  `spectral_compression_interface_delta=1`, `unit_root_multiplicity_delta=1`,
+  `source_boundary_correction_delta=1`, `nonunit_root_location_delta=0`,
+  `mertens_growth_delta=0`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `next_gate`: freeze and publish the implementation, then publish immutable evidence and a
+  final ledger before fresh cross-family route selection.
+- `global_goal`: active.

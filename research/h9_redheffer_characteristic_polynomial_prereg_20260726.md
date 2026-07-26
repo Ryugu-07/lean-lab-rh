@@ -8,7 +8,7 @@ Selected node: `H9-REDHEFFER-CHARACTERISTIC-POLYNOMIAL-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
 
 ## Selection rationale
 
@@ -40,6 +40,11 @@ R. C. Vaughan, *On the Eigenvalues of Redheffer's Matrix, I* (1993), equations `
   `P_N(lambda)=(lambda-1)^(L+1)
     - sum_{k=1}^L S_k(N)(lambda-1)^(L-k)`;
 - deduce that exactly `N-L-1` eigenvalues, with algebraic multiplicity, equal one.
+
+The displayed multiplicity statement requires `N >= 2`. At `N=1`, the source matrix is `[1]`,
+so its characteristic polynomial is `lambda-1` and the root one has multiplicity one, whereas
+`N-floor(log_2 N)-1=0`. The production theorem must expose this order-one boundary separately
+instead of silently extending the generic formula.
 
 Source:
 `https://personal.science.psu.edu/rcv4/personal/Publications/REDCONF.pdf`.
@@ -125,6 +130,7 @@ Expected classification:
 - `historical_route_coverage_delta=1`;
 - `spectral_compression_interface_delta=1`;
 - `unit_root_multiplicity_delta=1`;
+- `source_boundary_correction_delta=1`;
 - `nonunit_root_location_delta=0`;
 - `mertens_growth_delta=0`;
 - `hard_gap_delta=0`;
@@ -138,3 +144,50 @@ cleared-eliminator theorem as `PARTIAL / BLOCKER_EXPOSED`; do not promote it to 
 No production Lean source may be created or edited until this docs-only preregistration passes
 public Lean Action CI. Local STOP returns the active global Goal to `ROUTE_SELECTION`; it does
 not close the Redheffer spectral route, H9, or RH.
+
+The production gate passed at preregistration commit
+`0b0654a53272104e64bfba6f18d36b9c362e1028`, public Lean Action run `30208450587`,
+build job `89810511648`, in `1m59s`.
+
+## Local result
+
+`LeanLab/Riemann/RedhefferCharacteristicPolynomial.lean` is a 725-line no-sorry
+implementation of the fixed endpoint. It proves:
+
+- exact ordered-factor recursion and the support bound `D_k(m)=0` for `m<2^k`;
+- vanishing above `floor(log_2 N)` and a positive witness at the logarithmic boundary;
+- a denominator-free polynomial first-row eliminator, its determinant, and its exact product
+  with the characteristic matrix;
+- Vaughan's generic characteristic-polynomial factorization over `Z[X]`;
+- nonvanishing of the reduced factor at one and exact algebraic multiplicity
+  `N-floor(log_2 N)-1` for `N>=2`;
+- the separate order-one multiplicity `1`, correcting the unrestricted reading of the source
+  formula;
+- compatibility at zero with `det A_N=M(N)` and exact characteristic polynomials for orders one
+  through four.
+
+The proven Target, eight exact TargetChecks, seven selected axiom prints,
+warning-as-error production/registry/check/audit compilation, empty forbidden scans,
+`git diff --check`, and full `8772/8772` build pass locally. Every selected theorem depends only
+on `propext`, `Classical.choice`, and `Quot.sound`.
+
+The exact logarithmic compression is therefore real: for every order `N>=2`, all but
+`floor(log_2 N)+1` roots are exactly one. It supplies no location, separation, or joint-product
+bound for the remaining roots. In particular, it proves no new Mertens estimate and does not
+advance the RH frontier.
+
+Local classification:
+
+- `result=REDHEFFER_CHARACTERISTIC_POLYNOMIAL_FORMALIZED`;
+- `historical_route_coverage_delta=1`;
+- `spectral_compression_interface_delta=1`;
+- `unit_root_multiplicity_delta=1`;
+- `source_boundary_correction_delta=1`;
+- `nonunit_root_location_delta=0`;
+- `mertens_growth_delta=0`;
+- `hard_gap_delta=0`;
+- `rh_frontier_delta=0`.
+
+The next gate is to freeze and publish the implementation. Dominant-root asymptotics,
+remaining-root disks, joint non-unit-root product control, Mertens growth, H9, and RH remain
+open.

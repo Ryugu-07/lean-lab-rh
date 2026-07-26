@@ -4284,3 +4284,26 @@ The fixed endpoint uses ordered factorization counts and a denominator-free poly
 transform to prove the full characteristic polynomial and exact algebraic multiplicity of the
 root one. It excludes dominant-root asymptotics, remaining-root disks, any Mertens growth
 estimate, H9, and RH. Production Lean editing is gated by docs-only preregistration public CI.
+
+## H9 Redheffer Characteristic Polynomial Local Result
+
+The source transition survives in a denominator-free form over `Z[X]`. Lean proves the exact
+ordered-factor support `D_k(m)=0` below `2^k`, the logarithmic cutoff and boundary witness, the
+cleared first-row eliminator, its characteristic-matrix product, and Vaughan's generic
+factorization. For matrix order `N>=2`, the root one has exact algebraic multiplicity
+`N-floor(log_2 N)-1`; order `N=1` is handled separately and has multiplicity one. This is a
+real source-boundary correction to the unrestricted statement of Theorem 1.
+
+The characteristic polynomials at orders one through four and evaluation at zero agree with the
+compiled Mertens determinant. One proven Target, eight exact TargetChecks, seven selected
+standard-only axiom prints, empty forbidden scans, and the full `8772/8772` build pass locally
+for the 725-line module. Classify the result as
+`REDHEFFER_CHARACTERISTIC_POLYNOMIAL_FORMALIZED`, with
+`spectral_compression_interface_delta=1`, `unit_root_multiplicity_delta=1`,
+`source_boundary_correction_delta=1`, `nonunit_root_location_delta=0`,
+`mertens_growth_delta=0`, `hard_gap_delta=0`, and `rh_frontier_delta=0`.
+
+The logarithmic compression does not by itself control any non-unit root. Dominant-root
+asymptotics, remaining-root disks, and a joint-product estimate strong enough to imply Mertens
+growth remain the live spectral edges. Freeze and publish the implementation before the next
+cross-family selection.

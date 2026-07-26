@@ -91,6 +91,7 @@ import LeanLab.Riemann.BettinGonekInverseMellinConvolution
 import LeanLab.Riemann.BettinGonekMomentToPowerBridge
 import LeanLab.Riemann.PolyaTuranAbelAudit
 import LeanLab.Riemann.RedhefferMertensDeterminant
+import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
@@ -1532,6 +1533,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``redhefferMertensDeterminant_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260726-H9-REDHEFFER-MERTENS-DETERMINANT-01 compiles Vaughan's finite source elimination for every positive order. A checked bijection between Fin N and positive divisors prevents mu(0) leakage; Mobius convolution kills every nonfirst entry of the replacement row, and the successor divisibility block is unit upper triangular. This gives the exact integer determinant identity and singularity boundary. It does not prove the RH-equivalent Mertens growth estimate, the full characteristic polynomial, individual eigenvalue estimates, reciprocal-zeta continuation, or RH; arithmetic_spectral_interface_delta=1 and rh_frontier_delta=0." },
+    { id := "H9.redheffer.characteristic-polynomial"
+      tier := .tier2
+      title := "Formalize the Redheffer characteristic polynomial"
+      statement :=
+        "Define Vaughan's ordered factor counts and logarithmic support, construct a denominator-free polynomial first-row eliminator, prove the generic Redheffer characteristic-polynomial factorization and exact algebraic multiplicity of eigenvalue one for orders at least two, retain the exceptional order-one boundary, and check Mertens compatibility and low orders."
+      leanName := some ``redhefferCharacteristicPolynomial_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260726-H9-REDHEFFER-CHARPOLY-01 compiles Vaughan equations (7)-(12) over Z[X] without dividing by lambda-1. The exact factorization proves that only Nat.log 2 N+1 roots are non-unit for N>=2; order N=1 is separately checked because the unqualified source multiplicity formula would incorrectly return zero there. This is a known source theorem and a spectral-compression interface, not a bound on the non-unit roots, a Mertens growth estimate, H9, or RH; rh_frontier_delta=0." },
     { id := "H12.speiser.counting-equivalence-consumer"
       tier := .tier2
       title := "Formalize the Speiser zero-count consumer"

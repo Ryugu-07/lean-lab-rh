@@ -13,6 +13,7 @@ import LeanLab.Riemann.ConreyLiPhaseObstruction
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.BombieriStepanovPolarInjectivity
 import LeanLab.Riemann.RedhefferMertensDeterminant
+import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -4709,5 +4710,49 @@ example :
 example :
     RedhefferMertensDeterminantCertificate :=
   redhefferMertensDeterminant_endpoint
+
+example {k m : ℕ} (hm : m < 2 ^ k) :
+    redhefferOrderedFactorCount k m = 0 :=
+  redhefferOrderedFactorCount_eq_zero_of_lt_pow_two hm
+
+example (n : ℕ) :
+    redhefferCharpolyEliminator n * (redhefferMatrix n).charmatrix =
+      (redhefferMatrix n).charmatrix.updateRow 0
+        (Pi.single 0 (redhefferReducedPolynomial n)) :=
+  redhefferCharpolyEliminator_mul_charmatrix n
+
+example (n : ℕ) :
+    (redhefferMatrix n).charpoly =
+      redhefferShift ^ (n - Nat.log 2 (n + 1)) *
+        redhefferSourceReducedPolynomial n :=
+  charpoly_redhefferMatrix_source n
+
+example {n : ℕ} (hn : 0 < n) :
+    (redhefferMatrix n).charpoly.rootMultiplicity 1 =
+      n - Nat.log 2 (n + 1) :=
+  rootMultiplicity_one_charpoly_redhefferMatrix hn
+
+example :
+    (redhefferMatrix 0).charpoly.rootMultiplicity 1 = 1 :=
+  rootMultiplicity_one_charpoly_redheffer_order_one
+
+example (n : ℕ) :
+    (redhefferMatrix n).charpoly.eval 0 =
+      (-1) ^ (n + 1) * finiteMertens (n + 1) :=
+  eval_zero_charpoly_redhefferMatrix n
+
+example :
+    (redhefferMatrix 0).charpoly = redhefferShift ∧
+    (redhefferMatrix 1).charpoly = redhefferShift ^ 2 - 1 ∧
+    (redhefferMatrix 2).charpoly =
+      redhefferShift * (redhefferShift ^ 2 - 2) ∧
+    (redhefferMatrix 3).charpoly =
+      redhefferShift * (redhefferShift ^ 3 - 3 * redhefferShift - 1) :=
+  ⟨charpoly_redheffer_order_one, charpoly_redheffer_order_two,
+    charpoly_redheffer_order_three, charpoly_redheffer_order_four⟩
+
+example :
+    RedhefferCharacteristicPolynomialCertificate :=
+  redhefferCharacteristicPolynomial_endpoint
 
 end LeanLab.Riemann
