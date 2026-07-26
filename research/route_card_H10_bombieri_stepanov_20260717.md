@@ -131,9 +131,24 @@ cancellation, dependence of constants on the cutoff, and nonuniform limits.
 **Verdict:** `UNVERIFIED_STRONG_CONJECTURE_SHAPE`; not admitted to the conjecture pool or as a
 premise because no noncircular tail mechanism is known.
 
+## Candidate H10-D: Bombieri--Stepanov Frobenius auxiliary
+
+**Exact proposition.** Over a finite field, a Frobenius-twisted polynomial auxiliary whose
+descent vanishes has uniform perfect-power root multiplicity, hence a
+multiplicity-weighted degree bound.
+
+**Implementation result.** `BombieriStepanovFrobeniusAuxiliary.lean` proves the expansion,
+rational-point descent, high-multiplicity theorem, arbitrary-finset root budget, and full-field
+cardinality quotient. Its nonzero `ZMod 2` witness has exact multiplicity two at both points and
+saturates the degree budget.
+
+**Verdict:** `LOCAL_SUCCESS` as `KNOWN_FUNCTION_FIELD_MECHANISM_FORMALIZED`, pending public
+implementation CI. The sharp witness moves the live omission search to Riemann--Roch dimension
+selection, polar/tensor injectivity, nonzero optimized kernel production, and pole control.
+
 ## Recommendation
 
-H10-B is publicly complete as the exact finite spectral rigidity interface, and its proof records
-where finiteness enters. Return to fresh route selection. Do not begin a full
-algebraic-geometry development until route selection finds a number-field-relevant consumer for
-the Frobenius/Riemann-Roch layers.
+Keep H10-B as the finite spectral endpoint and H10-D as the source-algebra endpoint. Continue the
+historical H10 audit at the curve-geometric construction, while treating any number-field
+cohomology or regularized-trace transfer as a separate conjectural bridge. Conjecture creation
+and direct RH attacks remain open throughout.

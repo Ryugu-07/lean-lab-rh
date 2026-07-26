@@ -4505,3 +4505,28 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `production_gate`: docs-only preregistration public CI before Lean proof editing.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H10 Bombieri--Stepanov Frobenius auxiliary local result
+
+- `campaign`: `LITERATURE-20260726-H10-BOMBIERI-STEPANOV-FROBENIUS-AUXILIARY-01`.
+- `preregistration_public`: commit `44ecd3bcda10a2687d3eac965c312a00ce90007b` passed run
+  `30204699920`, build job `89800633257`, in `1m53s`.
+- `compiled_source_algebra`: finite characteristic-power expansion, cardinal-Frobenius
+  rational-point descent, nonzero perfect-power root multiplicity, multiplicity-weighted degree
+  budget, and the cardinality quotient bound.
+- `compiled_saturation`: a nonzero `ZMod 2` descent-kernel witness has exact multiplicity `2` at
+  both field points and satisfies `2 * card (ZMod 2) = natDegree F = 4`.
+- `module`: `LeanLab/Riemann/BombieriStepanovFrobeniusAuxiliary.lean`, 264 lines, no
+  warning-as-error diagnostics.
+- `local_gates`: one proven Target, seven exact TargetChecks, six selected standard-only axiom
+  prints, empty forbidden scans, and full `8769/8769` build.
+- `classification`: `KNOWN_FUNCTION_FIELD_MECHANISM_FORMALIZED`,
+  `historical_route_coverage_delta=1`, `source_algebra_bridge_delta=1`,
+  `curve_theorem_delta=0`, `number_field_transfer_delta=0`, `hard_gap_delta=0`,
+  `rh_frontier_delta=0`.
+- `research_reading`: the Frobenius-plus-multiplicity budget itself can be sharp; omission search
+  should now inspect the curve-level Riemann--Roch dimension choice, polar/tensor injectivity,
+  optimized nonzero kernel construction, and pole-degree budget rather than optimize this bound.
+- `next_gate`: freeze and publish the implementation.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

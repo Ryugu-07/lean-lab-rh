@@ -10,6 +10,7 @@ import LeanLab.Riemann.FiniteHeightPromotionAudit
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.ConreyLiPhaseObstruction
+import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -122,8 +123,8 @@ examples.
 
 namespace LeanLab.Riemann
 
-open Matrix
-open scoped BigOperators Matrix
+open Matrix Polynomial
+open scoped BigOperators Matrix Polynomial
 
 example
     (hlimit : DeBruijnNewmanHeatLiAtBotZero)
@@ -4556,5 +4557,63 @@ example {X : Type*} [TopologicalSpace X] [PreconnectedSpace X] [Nonempty X]
       (conreyLiReciprocalModel riemannXi) :=
   not_conreyLiRiemannXiShiftRatioNonnegative_of_phase_data
     hu hell hbound hstrip hnonzero hlog
+
+example {K ι : Type*} [CommSemiring K] [Fintype ι]
+    {p : ℕ} [ExpChar K p] (μ r : ℕ) (v s : ι → K[X]) :
+    stepanovFrobeniusAuxiliary p μ r v s =
+      ∑ i, v i ^ (p ^ μ) * s i ^ (r * p ^ μ) :=
+  stepanovFrobeniusAuxiliary_eq_sum μ r v s
+
+example {K ι : Type*} [Field K] [Fintype K] [Fintype ι]
+    {p : ℕ} [CharP K p] [Fact p.Prime]
+    (μ r : ℕ) (v s : ι → K[X])
+    (hq : r * p ^ μ = Fintype.card K) (a : K) :
+    (stepanovFrobeniusAuxiliary p μ r v s).eval a =
+      (stepanovFrobeniusDescent p μ v s).eval a :=
+  stepanovFrobeniusAuxiliary_eval_eq_descent μ r v s hq a
+
+example {K ι : Type*} [Field K] [Fintype K] [Fintype ι]
+    {p : ℕ} [CharP K p] [Fact p.Prime] {μ r : ℕ}
+    (v s : ι → K[X]) (hq : r * p ^ μ = Fintype.card K)
+    (hdescent : stepanovFrobeniusDescent p μ v s = 0)
+    (hbase : stepanovFrobeniusBase r v s ≠ 0) (a : K) :
+    p ^ μ ≤ rootMultiplicity a
+      (stepanovFrobeniusAuxiliary p μ r v s) :=
+  stepanovFrobeniusAuxiliary_rootMultiplicity v s hq hdescent hbase a
+
+example {K : Type*} [Field K] (f : K[X]) (hf : f ≠ 0)
+    (S : Finset K) {m : ℕ} (hm : 0 < m)
+    (hmult : ∀ a ∈ S, m ≤ rootMultiplicity a f) :
+    m * S.card ≤ f.natDegree :=
+  finset_card_mul_le_natDegree_of_rootMultiplicity f hf S hm hmult
+
+example {K ι : Type*} [Field K] [Fintype K] [Fintype ι]
+    {p : ℕ} [CharP K p] [Fact p.Prime] {μ r : ℕ}
+    (v s : ι → K[X]) (hq : r * p ^ μ = Fintype.card K)
+    (hdescent : stepanovFrobeniusDescent p μ v s = 0)
+    (hbase : stepanovFrobeniusBase r v s ≠ 0) :
+    Fintype.card K ≤
+      (stepanovFrobeniusAuxiliary p μ r v s).natDegree / (p ^ μ) :=
+  stepanovFrobenius_card_le_natDegree_div v s hq hdescent hbase
+
+example :
+    rootMultiplicity (0 : ZMod 2)
+        (stepanovFrobeniusAuxiliary 2 1 1
+          stepanovZModTwoV stepanovZModTwoS) = 2 ∧
+      rootMultiplicity (1 : ZMod 2)
+        (stepanovFrobeniusAuxiliary 2 1 1
+          stepanovZModTwoV stepanovZModTwoS) = 2 :=
+  ⟨stepanovZModTwo_rootMultiplicity_zero,
+    stepanovZModTwo_rootMultiplicity_one⟩
+
+example :
+    (∀ a : ZMod 2,
+      2 ≤ rootMultiplicity a
+        (stepanovFrobeniusAuxiliary 2 1 1
+          stepanovZModTwoV stepanovZModTwoS)) ∧
+    (stepanovFrobeniusAuxiliary 2 1 1
+      stepanovZModTwoV stepanovZModTwoS).natDegree = 4 ∧
+    2 * Fintype.card (ZMod 2) = 4 :=
+  stepanovZModTwo_saturated
 
 end LeanLab.Riemann

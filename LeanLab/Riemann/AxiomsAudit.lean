@@ -105,6 +105,7 @@ import LeanLab.Riemann.LevinsonMontgomeryBoundarySigns
 import LeanLab.Riemann.LevinsonMontgomeryCriticalIndentation
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.ConreyLiPhaseObstruction
+import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -1020,3 +1021,9 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.conreyLi_reciprocal_shift_ratio_eq_inv
 #print axioms LeanLab.Riemann.not_conreyLiShiftRatioNonnegative_of_phase_data
 #print axioms LeanLab.Riemann.not_conreyLiRiemannXiShiftRatioNonnegative_of_phase_data
+#print axioms LeanLab.Riemann.stepanovFrobeniusAuxiliary_eq_sum
+#print axioms LeanLab.Riemann.stepanovFrobeniusAuxiliary_eval_eq_descent
+#print axioms LeanLab.Riemann.stepanovFrobeniusAuxiliary_rootMultiplicity
+#print axioms LeanLab.Riemann.finset_card_mul_le_natDegree_of_rootMultiplicity
+#print axioms LeanLab.Riemann.stepanovFrobenius_card_le_natDegree_div
+#print axioms LeanLab.Riemann.stepanovZModTwo_saturated

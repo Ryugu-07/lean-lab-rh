@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H10-BOMBIERI-STEPANOV-FROBENIUS-AUXILIARY-01`
 
 Selected node: `H10-BOMBIERI-STEPANOV-FROBENIUS-AUXILIARY-01`
 
-Status: `PREREGISTERED / PUBLIC_PREREGISTRATION_CI_REQUIRED`
+Status: `LOCAL_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
 
 ## Target
 
@@ -27,6 +27,13 @@ Status: `PREREGISTERED / PUBLIC_PREREGISTRATION_CI_REQUIRED`
 | `CROSS_FAMILY_AUDIT` | Compared D3, D4, D5, D6, D7, D9, and H12 after their latest campaigns. | D7/H10 alone has a successful historical proof family whose construction core remains largely unformalized; only its finite spectral endpoint and an infinite ordinary-trace obstruction are compiled. | Select the Bombieri--Stepanov auxiliary mechanism. |
 | `PRIMARY_SOURCE_AUDIT` | Read Stepanov's high-multiplicity polynomial construction and Bombieri/Kedlaya's Frobenius descent presentation. | The proof separates finite-field evaluation, perfect-power multiplicity, nonzero kernel production, pole-degree control, and the later spectral step. | Fix only the finite-field algebra and multiplicity budget. |
 | `API_SURVEY` | Checked finite-field cardinal powers, characteristic-`p` sum powers, polynomial roots, Hasse derivatives, root multiplicities, and degree bounds. | The fixed polynomial model has a direct no-sorry formalization surface; curve Riemann--Roch and divisor prerequisites remain unavailable. | Publish docs-only preregistration before proof edits. |
+| `PREREGISTRATION_PUBLIC` | Published docs-only commit `44ecd3bcda10a2687d3eac965c312a00ce90007b`. | Public run `30204699920`, build job `89800633257`, passed in `1m53s`. | Open the fixed production gate. |
+| `GENERIC_FROBENIUS_ALGEBRA` | Defined the base, descent, and auxiliary polynomials and proved the characteristic-`p` expansion. | `stepanovFrobeniusAuxiliary_eq_sum` compiles for finite polynomial families over a commutative semiring with `ExpChar`. | Specialize the cardinal exponent at finite-field points. |
+| `RATIONAL_POINT_DESCENT` | Used `r * p^mu = card K` and finite-field Frobenius evaluation. | `stepanovFrobeniusAuxiliary_eval_eq_descent` identifies every rational-point value with the descent polynomial. | Impose the source kernel identity without hiding nonzero production. |
+| `HIGH_MULTIPLICITY` | Kept `base != 0` explicit and proved the auxiliary is a nonzero perfect `p^mu`-power. | Every finite-field point has root multiplicity at least `p^mu` when the descent vanishes. | Convert local multiplicity to a global degree budget. |
+| `ROOT_DEGREE_BUDGET` | Summed root multiplicities over an arbitrary finite set and specialized to the universal finite-field finset. | Both `p^mu * card K <= natDegree F` and `card K <= natDegree F / p^mu` compile. | Test whether the algebra leaves any strict slack. |
+| `SATURATION_TEST` | Constructed the preregistered `ZMod 2` kernel witness. | The base is nonzero, the descent is zero, roots `0` and `1` have exact multiplicity `2`, and `2 * card (ZMod 2) = natDegree F = 4`. | Record that the algebraic budget is sharp; move omission search to the curve-level construction. |
+| `LOCAL_GATES` | Ran warning-as-error production, Targets, TargetChecks, and AxiomsAudit compiles; scanned forbidden declarations and resource relaxations; ran the full build. | One proven Target, seven exact checks, six standard-only axiom prints, empty scans, and `8769/8769` build all pass. | Freeze and publish the implementation. |
 
 ## Runtime record
 
@@ -40,6 +47,10 @@ Status: `PREREGISTERED / PUBLIC_PREREGISTRATION_CI_REQUIRED`
 
 ## Current boundary
 
-No production Lean source exists for this campaign. Public preregistration CI is required before
-implementation. The full curve theorem, number-field transfer, and RH remain open. The six
-inherited user/exposure files remain untouched and unstaged.
+Local result: `KNOWN_FUNCTION_FIELD_MECHANISM_FORMALIZED`.
+
+The finite-field Frobenius/descent/multiplicity mechanism is valid and its degree budget can be
+saturated. This closes neither the Bombieri--Stepanov curve proof nor H10. The live historical
+frontier is the construction of a nonzero optimized auxiliary from Riemann--Roch spaces,
+polar/tensor injectivity, and pole-degree control; the number-field transfer and RH remain open.
+The six inherited user/exposure files remain untouched and unstaged.

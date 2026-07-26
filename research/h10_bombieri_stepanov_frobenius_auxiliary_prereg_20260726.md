@@ -8,7 +8,7 @@ Selected node: `H10-BOMBIERI-STEPANOV-FROBENIUS-AUXILIARY-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `PREREGISTERED / PUBLIC_PREREGISTRATION_CI_REQUIRED`
+Status: `LOCAL_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
 
 ## Primary-source anchor
 
@@ -133,3 +133,38 @@ Expected classification:
 
 No production Lean source may be created or edited until this docs-only preregistration passes
 public Lean Action CI. Local STOP returns the active global Goal to `ROUTE_SELECTION`.
+
+The production gate passed at preregistration commit
+`44ecd3bcda10a2687d3eac965c312a00ce90007b`, public Lean Action run `30204699920`,
+build job `89800633257`, in `1m53s`.
+
+## Local result
+
+`LeanLab/Riemann/BombieriStepanovFrobeniusAuxiliary.lean` is a 264-line no-sorry
+implementation of the fixed endpoint. It proves:
+
+- the finite Frobenius expansion and rational-point descent identity;
+- the perfect-power root-multiplicity lower bound with nonzero base kept explicit;
+- the multiplicity-weighted finite-root degree budget and full-cardinality quotient bound;
+- a nonzero `ZMod 2` descent-kernel witness whose roots at `0` and `1` both have exact
+  multiplicity `2`, with `2 * card (ZMod 2) = natDegree F = 4`.
+
+The proven Target, seven exact TargetChecks, six selected axiom prints, warning-as-error
+production/registry/check/audit compilation, empty forbidden scans, and full `8769/8769` build
+pass locally. Every selected theorem depends only on `propext`, `Classical.choice`, and
+`Quot.sound`.
+
+The saturated witness rules out a strict improvement from Frobenius descent plus root
+multiplicity alone. It does not close the function-field route: Riemann--Roch dimensions,
+polar/tensor injectivity, optimized nonzero kernel production, pole-divisor control, the lower
+point-count construction, number-field transfer, and RH remain open.
+
+Local classification:
+
+- `result=KNOWN_FUNCTION_FIELD_MECHANISM_FORMALIZED`;
+- `historical_route_coverage_delta=1`;
+- `source_algebra_bridge_delta=1`;
+- `curve_theorem_delta=0`;
+- `number_field_transfer_delta=0`;
+- `hard_gap_delta=0`;
+- `rh_frontier_delta=0`.

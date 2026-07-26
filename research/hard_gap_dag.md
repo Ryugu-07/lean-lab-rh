@@ -61,7 +61,8 @@ flowchart TD
 | H6-X3 | complete public | Prove the actual-theta ordered covariance and third Li sign. | The one-integral monotone covariance certificate gives `B*C<=A*D`; together with `B^2<=A*C` and `liCoefficientCandidate_zero_re_lt_one`, Lean proves `0 < (liCoefficientCandidate 2).re` and zero imaginary part. Implementation `1b521686d4e8561f01ba98a6ceaa4905ced4d92f` and evidence `abf5ebf19e3636662a45eed7a5eff9e947c3c3b4` passed public CI. The exact aggregate is `deBruijnNewmanHeat_thirdLi_covariance_endpoint`; this does not reduce H6-E/G8. |
 | H6-E | open | Prove all zeros of `H_0` are real, equivalently `Lambda <= 0` in the audited normalization. | The generic adjacent-gap and positive-kernel/Hankel routes are obstructed. The actual-theta heat-Li time-monotonicity candidate survived high-precision finite screening, and Lean compiles its exact reduction to RH plus the function-level heat-log evolution, but no all-index sign representation or global moving-divisor differentiation theorem was obtained. A new attack must supply that theta-specific input, height-aware continuation, or a different all-index invariant. The endpoint is unchanged. |
 | H10-B | complete | Prove finite aggregate power-sum spectral rigidity and the reciprocal-pairing square-root-circle corollary. | The final finite-spectral step of function-field RH is publicly compiled. It proves no curve point-count bound and supplies no finite-spectrum or uniform-tail transfer for the Riemann zeta zero divisor; `hard_gap_delta=0`. |
-| H10-C | evidence CI passed; final ledger pending | Test a countably infinite ordinary power-trace extension with nonzero reciprocal pairing. | Lean proves `Summable (alpha^k)` for positive `k` forces `q=0` under `alpha(sigma n)*alpha(n)=q`; a one-point finite witness shows the obstruction is specific to the infinite ordinary-trace transfer. Frozen implementation and immutable-evidence commits passed independent public CI; final-ledger CI remains before returning to route selection. |
+| H10-C | complete | Test a countably infinite ordinary power-trace extension with nonzero reciprocal pairing. | Lean proves `Summable (alpha^k)` for positive `k` forces `q=0` under `alpha(sigma n)*alpha(n)=q`; a one-point finite witness shows the obstruction is specific to the infinite ordinary-trace transfer. Final-ledger commit `2edf069a217255bbc20b93a2aa938f51dd57d94e` passed public CI. |
+| H10-D | local success; implementation CI required | Formalize the Bombieri--Stepanov finite-field Frobenius auxiliary mechanism and test its degree budget for slack. | The generic descent, perfect-power multiplicity, and root-degree bounds compile. A nonzero `ZMod 2` kernel witness has exact multiplicity two at both points and saturates the degree budget, so the next omission search lies in the curve Riemann--Roch/nonzero-kernel/pole-control package. |
 
 ## Hard Gaps
 
@@ -2244,4 +2245,24 @@ to the frozen implementation. Final-ledger CI is the only remaining gate for thi
   kernel production, and pole-degree control.
 - `classification_target`: `KNOWN_FUNCTION_FIELD_MECHANISM_FORMALIZED`, with no number-field or
   RH implication.
+- `global_goal`: active.
+
+## 2026-07-26 H10 Bombieri--Stepanov Frobenius auxiliary local endpoint
+
+- `node`: `H10-BOMBIERI-STEPANOV-FROBENIUS-AUXILIARY-01`.
+- `local_status`: `KNOWN_FUNCTION_FIELD_MECHANISM_FORMALIZED / IMPLEMENTATION_CI_REQUIRED`.
+- `closed_edges`:
+  `finite Frobenius expansion -> rational-point descent`;
+  `zero descent + nonzero base -> perfect-power multiplicity`;
+  `uniform multiplicity -> finite root-degree budget -> cardinality quotient`.
+- `sharpness_witness`: over `ZMod 2`, the descent kernel contains a nonzero base whose auxiliary
+  has exact root multiplicity `2` at both rational points and total degree `4`.
+- `open_H10_edges`: curve Riemann--Roch spaces, polar/tensor injectivity, optimized nonzero
+  kernel production, pole-divisor control, lower point counts, the finite spectral transition,
+  and any number-field cohomology/regularized-trace transfer.
+- `local_audit`: one proven Target, seven exact TargetChecks, six standard-only axiom prints,
+  empty forbidden scans, and full `8769/8769` build.
+- `classification`: `historical_route_coverage_delta=1`, `source_algebra_bridge_delta=1`,
+  `curve_theorem_delta=0`, `number_field_transfer_delta=0`, `hard_gap_delta=0`,
+  `rh_frontier_delta=0`.
 - `global_goal`: active.

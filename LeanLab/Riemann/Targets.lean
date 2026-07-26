@@ -103,6 +103,7 @@ import LeanLab.Riemann.FiniteHeightPromotionAudit
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.ConreyLiPhaseObstruction
+import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -1316,6 +1317,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``norm_eq_sqrt_of_powerSum_bound_and_reciprocal
       status := .proven
       note := "Campaign CAMPAIGN-20260717-H10-FINITE-SPECTRAL-RIGIDITY-01 formalizes the final finite-spectral step in function-field RH using simultaneous phase recurrence. It assumes the aggregate point-count-scale bound and reciprocal pairing; it does not construct them for curves or transfer them to the infinite number-field zero divisor." },
+    { id := "H10.function-field.bombieri-stepanov-frobenius-auxiliary"
+      tier := .tier2
+      title := "Formalize the Bombieri-Stepanov Frobenius auxiliary mechanism"
+      statement :=
+        "For a finite field of characteristic p, prove that a p^mu-power auxiliary whose Frobenius descent vanishes has multiplicity at least p^mu at every rational point, derive the multiplicity-weighted degree bound and cardinality quotient bound, and certify a saturated ZMod 2 witness."
+      leanName := some ``stepanovFrobenius_card_le_natDegree_div
+      status := .proven
+      note := "Campaign LITERATURE-20260726-H10-BOMBIERI-STEPANOV-FROBENIUS-AUXILIARY-01 reconstructs the finite-field algebra and zero-multiplicity budget inside the successful curve proof. It keeps the nonzero base premise explicit and separately certifies a saturated ZMod 2 kernel witness. Curve Riemann-Roch spaces, polar/tensor injectivity, optimized nonzero kernel production, pole-degree control, the lower point-count argument, the number-field transfer, and RH remain open." },
     { id := "H10.function-field.infinite-ordinary-trace-obstruction"
       tier := .tier2
       title := "Audit ordinary power traces under infinite reciprocal pairing"

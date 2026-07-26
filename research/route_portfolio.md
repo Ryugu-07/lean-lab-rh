@@ -4143,3 +4143,22 @@ will prove Frobenius expansion, the `delta` evaluation identity on a finite fiel
 `p^mu`-power multiplicity, the degree budget, and a saturated `ZMod 2` example. Riemann--Roch,
 the tensor-product injectivity that protects nonzero kernel elements, pole control, the lower
 point-count argument, number-field transfer, and RH stay open.
+
+## H10 Bombieri--Stepanov Frobenius Auxiliary Local Result
+
+The fixed finite-field algebra compiles. A characteristic-power expansion converts the auxiliary
+into the source's Frobenius-twisted sum; the cardinal exponent identifies its value at every
+rational point with the descent polynomial. Zero descent and a separately stated nonzero base
+then give uniform `p^mu` root multiplicity. Summing multiplicities yields both the
+multiplicity-weighted degree bound and its cardinality quotient.
+
+The preregistered `ZMod 2` example is stronger than a mere existence check: the descent kernel
+contains a nonzero base, both finite-field points have exact multiplicity `2`, and
+`2 * card (ZMod 2) = natDegree F = 4`. Thus the algebraic budget can be sharp; no strict gain is
+available from Frobenius descent plus root counting alone.
+
+The next omission-bearing H10 layer is geometric: how Riemann--Roch dimensions create the
+kernel, how polar expansions prevent cancellation, and how pole degrees are optimized before the
+point-count comparison. Number-field transfer still requires a separate cohomology or
+regularized-trace object. The 264-line module, proven Target, seven exact checks, six
+standard-only axiom prints, empty forbidden scans, and full `8769/8769` build pass locally.

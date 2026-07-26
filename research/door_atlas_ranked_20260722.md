@@ -1413,3 +1413,17 @@ perfect-power multiplicity at rational points, and a pole-degree count. Campaign
 `LITERATURE-20260726-H10-BOMBIERI-STEPANOV-FROBENIUS-AUXILIARY-01` fixes the finite-field
 algebra and multiplicity budget, plus a saturated `ZMod 2` witness. Curve-level Riemann--Roch and
 number-field transfer remain outside.
+
+### H10 Frobenius auxiliary local result
+
+The source algebra is now kernel-checked. Finite characteristic-power expansion, rational-point
+descent, perfect-power root multiplicity, and the multiplicity-weighted degree budget all compile
+with the nonzero-base requirement visible. A nonzero `ZMod 2` kernel witness has exact
+multiplicity `2` at both rational points and saturates the degree bound.
+
+This sharp example reranks the remaining H10 door. Further optimization of the bare
+Frobenius/root-count inequality has no universal room; the omission audit should move upstream
+to the source's Riemann--Roch dimension balance, polar/tensor injectivity, nonzero optimized
+kernel, and pole divisor, then separately examine whether any number-field structure can replace
+finite Frobenius. This is `KNOWN_FUNCTION_FIELD_MECHANISM_FORMALIZED`, not a curve theorem,
+number-field transfer, or RH progress.
