@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H12-LEVINSON-MONTGOMERY-PAIRED-MASS-DENSITY-01`
 
 Selected node: `H12-LM-PAIRED-MASS-DENSITY-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Target
 
@@ -52,6 +52,7 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 | `ATTACK_A_DENSITY` | Selected one actual zero at each sufficiently large integer, proved injectivity from disjoint strict half-unit neighborhoods, and embedded the finite image into `speiserUpperLeftZetaZeroFinset T`. | Multiplicity is at least one on every selected value, and floor bookkeeping yields `T/2 < speiserUpperLeftZetaZeroCount T` eventually. | Register and freeze the full endpoint. |
 | `ATTACK_B` | Finite symmetric cutoffs. | Not needed because direct paired summability compiled. | Retain only as historical fallback. |
 | `PUBLIC_IMPLEMENTATION` | Published the frozen proof, Target, exact checks, and axiom audit. | Commit `0b5b6d5c44cddb680be721c54a6fc9d261e01ba5` passed run `30190754950`, job `89763478543`, in `2m6s`. | Publish immutable docs-only evidence. |
+| `IMMUTABLE_EVIDENCE` | Published the complete attempts, source-alignment, route, DAG, and handoff evidence without touching proof source. | Commit `38071d8a6c085b74bd1f8d258cb6e83cec55d592` passed run `30190894736`, job `89763862993`, in `1m33s`. | Publish one final closure ledger. |
 
 ## Runtime record
 
@@ -94,4 +95,6 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 - `commit_and_CI`: preregistration `8990be949f0160c593a55bf710714bdaeeef1768`,
   run `30190223668`, job `89762046622`, `1m34s`; frozen implementation
   `0b5b6d5c44cddb680be721c54a6fc9d261e01ba5`, run `30190754950`, job
-  `89763478543`, `2m6s`.
+  `89763478543`, `2m6s`; immutable evidence
+  `38071d8a6c085b74bd1f8d258cb6e83cec55d592`, run `30190894736`, job
+  `89763862993`, `1m33s`.

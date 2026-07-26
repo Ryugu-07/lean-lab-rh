@@ -8,7 +8,7 @@ Selected node: `H12-LM-PAIRED-MASS-DENSITY-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Primary source
 
@@ -225,7 +225,9 @@ estimates needed to derive eventual integer-height mass negativity. The indented
 Preregistration commit `8990be949f0160c593a55bf710714bdaeeef1768` passed public Lean Action
 run `30190223668`, build job `89762046622`, in `1m34s`. Frozen implementation commit
 `0b5b6d5c44cddb680be721c54a6fc9d261e01ba5` passed run `30190754950`, build job
-`89763478543`, in `2m6s`.
+`89763478543`, in `2m6s`. Docs-only immutable-evidence commit
+`38071d8a6c085b74bd1f8d258cb6e83cec55d592` passed run `30190894736`, build job
+`89763862993`, in `1m33s`; the frozen proof source was unchanged.
 
 ## Mechanical and publication gates
 

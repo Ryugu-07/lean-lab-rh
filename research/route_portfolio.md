@@ -3919,3 +3919,7 @@ Frozen implementation `0b5b6d5c44cddb680be721c54a6fc9d261e01ba5` passed run
 `30190754950`, job `89763478543`, in `2m6s`. The next source edge is equation `(2.1)` plus
 explicit Gamma and low-height estimates proving eventual mass negativity; the contour and
 `O(log T)` count theorem remain later.
+
+Docs-only immutable evidence `38071d8a6c085b74bd1f8d258cb6e83cec55d592` passed run
+`30190894736`, job `89763862993`, in `1m33s`; proof source remained frozen. One final-ledger CI
+remains before local campaign closure and fresh cross-family reranking.

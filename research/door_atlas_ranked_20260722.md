@@ -1233,3 +1233,6 @@ branch from integer-height negativity. Frozen commit
 `0b5b6d5c44cddb680be721c54a6fc9d261e01ba5` passed public run `30190754950`, job
 `89763478543`, in `2m6s`. The atlas frontier advances to equation `(2.1)`, Gamma control, and
 the low-height sign certificate; H12 and RH remain open.
+
+Immutable-evidence commit `38071d8a6c085b74bd1f8d258cb6e83cec55d592` passed run
+`30190894736`, job `89763862993`, in `1m33s`; only final-ledger CI remains for this fixed edge.

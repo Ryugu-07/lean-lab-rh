@@ -2032,7 +2032,9 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   later open nodes.
 - `public_evidence`: preregistration `8990be949f0160c593a55bf710714bdaeeef1768`
   passed run `30190223668`; frozen implementation
-  `0b5b6d5c44cddb680be721c54a6fc9d261e01ba5` passed run `30190754950`.
+  `0b5b6d5c44cddb680be721c54a6fc9d261e01ba5` passed run `30190754950`;
+  immutable evidence `38071d8a6c085b74bd1f8d258cb6e83cec55d592` passed run
+  `30190894736`.
 - `delta`: `source_analytic_bridge_delta=1`, `historical_route_coverage_delta=1`,
   `hard_gap_delta=0`, `rh_frontier_delta=0`.
 - `global_goal`: active.

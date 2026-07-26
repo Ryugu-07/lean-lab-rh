@@ -4113,7 +4113,7 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 
 ## 2026-07-26 H12 Levinson--Montgomery paired-mass density local result
 
-- `status`: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`.
+- `status`: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`.
 - `production_gate`: preregistration commit
   `8990be949f0160c593a55bf710714bdaeeef1768` passed Lean Action run `30190223668`,
   build job `89762046622`, in `1m34s`.
@@ -4133,10 +4133,14 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `public_implementation`: frozen commit
   `0b5b6d5c44cddb680be721c54a6fc9d261e01ba5` passed Lean Action run `30190754950`,
   build job `89763478543`, in `2m6s`; proof source is frozen.
+- `immutable_evidence`: docs-only commit
+  `38071d8a6c085b74bd1f8d258cb6e83cec55d592` passed Lean Action run `30190894736`,
+  build job `89763862993`, in `1m33s`; proof source remained frozen.
 - `delta`: `source_analytic_bridge_delta=1`, `historical_route_coverage_delta=1`,
   `hard_gap_delta=0`, `rh_frontier_delta=0`.
 - `boundary`: equation `(2.1)`, Gamma and low-height estimates, the indented contour,
   `O(log T)` count difference, full dichotomy, unconditional Speiser equivalence, and RH remain
   open.
-- `next_gate`: publish this docs-only immutable-evidence ledger and require public CI.
+- `next_gate`: publish one docs-only final ledger and require public CI; on success close only
+  this fixed paired-mass density campaign and return to fresh route selection.
 - `global_goal`: active.
