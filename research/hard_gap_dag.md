@@ -1839,3 +1839,18 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `immutable_evidence`: docs-only commit `5b3e5da98bf7bc596fcc53646c960e4c44e99ddb`
   passed run `30183962685`, build job `89745272540`, in `2m6s`; final-ledger CI remains.
 - `global_goal`: active; RH remains open.
+## 2026-07-26 H9 Pólya--Turán Abel sign audit selected
+
+- `parent_closed`: H1 inverse-Mellin final-ledger commit
+  `e36b2494284982ec276dc1f04cb86313f68eeb28` passed public run `30184071394`, build job
+  `89745543598`, in `1m34s`.
+- `campaign`: `LITERATURE-20260726-H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01`.
+- `fixed_edge`: source-separate the Pólya unweighted sum, Turán harmonic-weighted sum, and finite
+  zeta-section route; compile the exact finite Abel identity, Liouville specialization, strongest
+  finite prefix-sign consequence, and a generic sign-shortcut counterexample.
+- `claim_boundary`: no false historical sign claim, large published counterexample certificate,
+  finite zeta-section zero, eventual-sign-to-RH theorem, repaired equivalent criterion, H9, or RH
+  is assumed or proved.
+- `expected_delta`: `historical_route_coverage_delta=1`,
+  `sign_logic_obstruction_delta=1`, `rh_frontier_delta=0`.
+- `next_gate`: publish preregistration and require public CI before production Lean editing.

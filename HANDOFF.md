@@ -3899,3 +3899,25 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   frozen.
 - `immutable_evidence`: docs-only commit `5b3e5da98bf7bc596fcc53646c960e4c44e99ddb`
   passed run `30183962685`, build job `89745272540`, in `2m6s`; proof source remained frozen.
+
+## 2026-07-26 H1 inverse Mellin final closure
+
+- Final-ledger commit `e36b2494284982ec276dc1f04cb86313f68eeb28` passed public Lean
+  Action run `30184071394`, build job `89745543598`, in `1m34s`.
+- The local H1 campaign is publicly closed.  Cauchy--Schwarz, critical-line zeta second moments,
+  uniform `t` integration, Farmer's arbitrary-length conjecture, H1, and RH remain open.
+
+## 2026-07-26 H9 Pólya--Turán Abel sign audit selected
+
+- `campaign`: `LITERATURE-20260726-H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01`.
+- `selection`: fresh breadth comparison found that the atlas compressed three distinct historical
+  routes into a generic Pólya-type failure label.  H7 weak-regularity explicit-formula transport
+  remains the strongest reserve, but this source-card gap is selected first.
+- `fixed_edge`: exact rational finite Abel summation between the unweighted and
+  harmonic-weighted Liouville sums, its strongest finite prefix-sign consequence, and a generic
+  witness falsifying a sign-only shortcut.
+- `strict_boundary`: neither false historical sign claim is assumed; no large computational
+  counterexample, finite zeta-section zero, eventual-sign-to-RH implication, H9, or RH theorem is
+  included.
+- `next_gate`: commit and publish the docs-only preregistration; production Lean editing remains
+  closed until public CI passes.  The persistent RH Goal remains active.

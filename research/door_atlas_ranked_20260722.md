@@ -677,6 +677,18 @@ value distribution. Machine-task fit: `5/5` for finite falsification, `1/5` for 
 3. Test whether a D3 density-one hypothesis plus a quantitatively stated Speiser estimate truly
    excludes one off-line orbit; use a finite symmetric divisor countermodel first.
 
+### Post-survey H9 Pólya--Turán correction
+
+The initial atlas named Pólya-type sign claims only inside the failed-mechanism control card.  That
+was too compressed.  Pólya's unweighted Liouville sum, Turán's harmonic-weighted Liouville sum,
+and Turán's finite zeta Dirichlet polynomials are distinct historical mechanisms with distinct
+failure evidence.
+
+Campaign `LITERATURE-20260726-H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01` is preregistered to reconstruct
+the source boundary and prove the exact finite Abel transform between the first two sums.  It will
+not assume either false global sign claim or promote a repaired RH equivalence to unconditional
+progress.
+
 ## D11. Generalized L-functions, automorphic forms, and Iwasawa analogies
 
 ### Endpoint and last proved node
