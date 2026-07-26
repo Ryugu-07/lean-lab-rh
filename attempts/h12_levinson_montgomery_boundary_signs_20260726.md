@@ -7,7 +7,7 @@ Campaign:
 
 Selected node: `H12-LM-BOUNDARY-SIGNS-01`
 
-Status: `LOCAL_AUDIT_GREEN / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Target
 
@@ -54,6 +54,22 @@ Status: `LOCAL_AUDIT_GREEN / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
 | `INTEGER_HEIGHT_DICHOTOMY` | Negated cofinal strict negativity while keeping zeta nonvanishing explicit in the predicate. | Eventual nonnegative zero-free witnesses compile and feed the existing dense branch. No totalized-log-derivative fake witness is admitted. | Run indentation reconnaissance. |
 | `INDENTATION_RECONNAISSANCE` | Factored xi analytically at an actual zero, proved residual log-derivative continuity, and proved the multiplicity pole points strictly left. | These local components compile. Uniform whole-semicircle dominance is not claimed because the principal real part approaches zero near the two critical-line endpoints; endpoint/middle-arc gluing remains. | Retain the compiled local lemmas and audit the mandatory endpoint. |
 | `LOCAL_AUDIT` | Registered one proven Target, nine mandatory TargetChecks, and selected axiom prints; ran warning-as-error checks, forbidden scans, patch check, and the full build. | The 426-line module passes. Selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`; full build passes `8766/8766`. | Freeze proof source and require public implementation CI. |
+| `IMPLEMENTATION_PUBLIC` | Published the frozen proof implementation and registries. | Commit `d45e87b3c6ab9d41217f671b0dc96ec979167b45` passed public run `30193246131`, build job `89770129416`, in `2m7s`. | Keep proof source frozen and publish immutable evidence. |
+
+## Final classification
+
+- `result`: `FULL_BOUNDARY_SIGNS_AND_INTEGER_DICHOTOMY_SUCCESS`.
+- `indentation_reconnaissance`: `LOCAL_FACTOR_AND_PRINCIPAL_SIGN_COMPILED`.
+- `source_analytic_bridge_delta`: `1`.
+- `historical_route_coverage_delta`: `1`.
+- `known_theorem_formalization_delta`: `0` until the full Levinson--Montgomery theorem.
+- `hard_gap_delta`: `0` for RH.
+- `rh_frontier_delta`: `0`.
+- `next_exact_H12_obstacle`: glue critical-line endpoint neighborhoods to a quantitatively
+  dominated middle indentation arc, certify the bottom edge, and build the admissible count
+  contour.
+- `route_policy_after_closure`: return to cross-family historical `ROUTE_SELECTION`; conjecture
+  and direct-proof tracks remain open.
 
 ## Runtime record
 
@@ -70,5 +86,6 @@ Status: `LOCAL_AUDIT_GREEN / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
 The two vertical boundary signs and exact integer-height dichotomy compile locally. The bottom
 `t=10` zero certificate, whole-semicircle indentation, contour admissibility, exact count
 equality, `O(log T)`, full Levinson--Montgomery theorem, Speiser equivalence, and RH remain open.
-The six inherited user/exposure files remain untouched and unstaged. The next gate is frozen
-implementation public CI.
+The six inherited user/exposure files remain untouched and unstaged. Frozen implementation
+commit `d45e87b3c6ab9d41217f671b0dc96ec979167b45` passed public run `30193246131`, build job
+`89770129416`, in `2m7s`; the next gate is docs-only immutable evidence and its public CI.

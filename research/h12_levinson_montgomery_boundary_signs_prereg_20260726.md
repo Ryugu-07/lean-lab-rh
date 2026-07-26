@@ -9,7 +9,7 @@ Selected node: `H12-LM-BOUNDARY-SIGNS-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `LOCAL_AUDIT_GREEN / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Primary source
 
@@ -290,4 +290,9 @@ Local classification:
 - `hard_gap_delta=0`;
 - `rh_frontier_delta=0`.
 
-Proof source now requires frozen implementation public CI.
+## Public implementation result
+
+Frozen implementation commit `d45e87b3c6ab9d41217f671b0dc96ec979167b45` passed public Lean
+Action run `30193246131`, build job `89770129416`, in `2m7s`. Proof source remains frozen.
+Publish the exact run coordinates and claim boundary in a docs-only immutable-evidence commit,
+then require its own public CI.

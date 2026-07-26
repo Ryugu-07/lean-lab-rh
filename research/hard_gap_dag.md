@@ -2128,5 +2128,9 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   -> unconditional Speiser equivalence`.
 - `local_gates`: one proven Target, nine mandatory TargetChecks, standard-only selected axioms,
   empty forbidden scan, and full `8766/8766` build.
+- `public_implementation`: frozen commit
+  `d45e87b3c6ab9d41217f671b0dc96ec979167b45` passed run `30193246131`, job
+  `89770129416`, in `2m7s`; proof source remains frozen.
+- `status`: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`.
 - `result`: `FULL_BOUNDARY_SIGNS_AND_INTEGER_DICHOTOMY_SUCCESS`.
 - `global_goal`: active.

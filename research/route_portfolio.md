@@ -4026,4 +4026,7 @@ quantitatively dominated middle arc.
 One proven Target, nine mandatory TargetChecks, selected standard-only axiom prints, empty
 forbidden scans, and the full `8766/8766` build pass. Classify the fixed endpoint as
 `FULL_BOUNDARY_SIGNS_AND_INTEGER_DICHOTOMY_SUCCESS`, with `hard_gap_delta=0` and
-`rh_frontier_delta=0`. The proof source now requires frozen implementation public CI.
+`rh_frontier_delta=0`. Frozen implementation commit
+`d45e87b3c6ab9d41217f671b0dc96ec979167b45` passed public Lean Action run `30193246131`,
+build job `89770129416`, in `2m7s`. The proof source remains frozen; docs-only immutable
+evidence and its public CI are next.

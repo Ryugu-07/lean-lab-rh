@@ -1316,4 +1316,6 @@ Local critical-zero factorization and the strict left-pointing principal pole ar
 but whole-semicircle indentation remains open because endpoint neighborhoods require a separate
 critical-line continuity argument. The bottom `t=10` certificate, admissible top contours, exact
 count equality, `O(log T)`, Speiser equivalence, and RH remain the atlas frontier. Frozen
-implementation public CI is next.
+implementation commit `d45e87b3c6ab9d41217f671b0dc96ec979167b45` passed public Lean
+Action run `30193246131`, build job `89770129416`, in `2m7s`; proof source remains frozen and
+docs-only immutable evidence is next.

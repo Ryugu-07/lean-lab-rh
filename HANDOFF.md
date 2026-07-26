@@ -4278,3 +4278,24 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `next_gate`: freeze proof source, publish implementation, and require public CI.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H12 boundary signs implementation CI passed
+
+- `status`: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`.
+- `public_implementation`: frozen commit
+  `d45e87b3c6ab9d41217f671b0dc96ec979167b45` passed public Lean Action run
+  `30193246131`, build job `89770129416`, in `2m7s`; proof source remains frozen.
+- `proved_boundary`: generic non-pole GammaR calculus, closed equation `(2.1)`, actual paired
+  boundary signs, strict left/zero-free-critical negativity, and the nonvanishing-safe
+  integer-height dichotomy are public-green.
+- `indentation_boundary`: local xi multiplicity factorization, residual-log-derivative
+  continuity, and strict principal-pole sign are compiled; whole-semicircle negativity still
+  requires endpoint-neighborhood and middle-arc gluing.
+- `strict_boundary`: bottom-edge low-zero certificate, whole-semicircle indentation, contour
+  admissibility, exact count equality, `O(log T)`, full theorem, Speiser equivalence, and RH.
+- `classification`: `FULL_BOUNDARY_SIGNS_AND_INTEGER_DICHOTOMY_SUCCESS`,
+  `source_analytic_bridge_delta=1`, `historical_route_coverage_delta=1`,
+  `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `next_gate`: publish docs-only immutable evidence and require public CI.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
