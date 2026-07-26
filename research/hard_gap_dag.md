@@ -1808,8 +1808,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   `f7c137b128406dd55b09d81411c2d7e38d81f731`, public Lean Action run `30140898700`, build
   job `89633790335`, passed in `1m36s`.
 - `node`: `H1-BETTIN-GONEK-INVERSE-MELLIN-CONVOLUTION-01`.
-- `status`: `LOCAL_FULL_INVERSE_MELLIN_SUCCESS / LOCAL_GATES_GREEN /
-  IMPLEMENTATION_CI_PENDING`.
+- `status`: `PUBLIC_IMPLEMENTATION_GREEN / EVIDENCE_CI_PENDING`.
 - `fixed_edge`: for the actual compiled auxiliary factor, prove standalone vertical decay and
   integrability, define the literal inverse Mellin kernel, prove its support in `0<u<=1` and
   uniform boundedness there, prove the actual convolution with the real-cutoff mollifier, and
@@ -1835,4 +1834,6 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `delta`: `source_analytic_bridge_delta=1`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
 - `next_hard_edge`: Cauchy--Schwarz and the critical-line zeta second-moment transfer, followed by
   integration in `t` and uniform asymptotic parameter bookkeeping.
+- `public_implementation`: frozen commit `b99a10f3b0543587c1aacdd992e88b28ea9f35e5`
+  passed Lean Action run `30183853748`, build job `89744990702`, in `2m24s`.
 - `global_goal`: active; RH remains open.

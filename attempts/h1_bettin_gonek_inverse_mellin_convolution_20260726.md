@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H1-BETTIN-GONEK-INVERSE-MELLIN-CONVOLUTION-01`
 
 Selected node: `H1-BETTIN-GONEK-INVERSE-MELLIN-CONVOLUTION-01`
 
-Status: `LOCAL_FULL_INVERSE_MELLIN_SUCCESS / LOCAL_GATES_GREEN / IMPLEMENTATION_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_GREEN / EVIDENCE_CI_PENDING`
 
 ## Attempt log
 
@@ -43,6 +43,8 @@ Status: `LOCAL_FULL_INVERSE_MELLIN_SUCCESS / LOCAL_GATES_GREEN / IMPLEMENTATION_
   was available as an unconditional premise.
 - `assumption_frontier_after`: those source statements are compiled unconditionally for every
   actual nontrivial zero; no moment estimate, Farmer conjecture, H1, or RH premise was added.
+- `public_implementation`: frozen commit `b99a10f3b0543587c1aacdd992e88b28ea9f35e5`
+  passed Lean Action run `30183853748`, build job `89744990702`, in `2m24s`.
 
 ## Claim boundary
 

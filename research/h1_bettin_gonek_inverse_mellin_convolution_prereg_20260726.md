@@ -8,7 +8,7 @@ Selected node: `H1-BETTIN-GONEK-INVERSE-MELLIN-CONVOLUTION-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `LOCAL_FULL_INVERSE_MELLIN_SUCCESS / LOCAL_GATES_GREEN / IMPLEMENTATION_CI_PENDING`
+Status: `PUBLIC_IMPLEMENTATION_GREEN / EVIDENCE_CI_PENDING`
 
 ## Baseline
 
@@ -204,3 +204,7 @@ three forbidden scans, `git diff --check`, and the full `8760/8760` build pass. 
 freeze and public implementation/evidence gates remain before public closure. Cauchy--Schwarz,
 the critical-line zeta second-moment transfer, integration in `t`, uniform asymptotic bookkeeping,
 Farmer's conjecture, H1, and RH remain open.
+
+Frozen implementation commit `b99a10f3b0543587c1aacdd992e88b28ea9f35e5` passed public Lean
+Action run `30183853748`, build job `89744990702`, in `2m24s`. Proof source is frozen;
+immutable-evidence and final-ledger CI remain.

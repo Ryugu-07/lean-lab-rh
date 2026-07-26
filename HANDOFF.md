@@ -3872,8 +3872,7 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 
 ## 2026-07-26 H1 Bettin--Gonek inverse Mellin convolution local result
 
-- `status`: `LOCAL_FULL_INVERSE_MELLIN_SUCCESS / LOCAL_GATES_GREEN /
-  IMPLEMENTATION_CI_PENDING`.
+- `status`: `PUBLIC_IMPLEMENTATION_GREEN / EVIDENCE_CI_PENDING`.
 - `compiled_edge`: literal inverse Mellin kernel; standalone inverse-cube `G_t` decay on the
   fixed strip; integrability on zero, three, and every right line; exact left and arbitrary-right
   contour shifts; support on `0<u<=1`; a uniform kernel bound there; direct product-space
@@ -3893,5 +3892,8 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   and `git diff --check` are empty; full `lake build` passes `8760/8760`.
 - `boundary`: Farmer's arbitrary-length moment conjecture, H1, and RH remain open. Historical
   route exploration, conjecture formation, falsification, and direct RH attacks remain eligible.
-- `next_gate`: freeze the implementation commit and require public Lean Action CI; the six
-  inherited user/exposure files remain untouched and unstaged.
+- `next_gate`: publish immutable evidence and require its public Lean Action CI; the six inherited
+  user/exposure files remain untouched and unstaged.
+- `public_implementation`: frozen commit `b99a10f3b0543587c1aacdd992e88b28ea9f35e5`
+  passed Lean Action run `30183853748`, build job `89744990702`, in `2m24s`. Proof source remains
+  frozen; publish immutable evidence next.
