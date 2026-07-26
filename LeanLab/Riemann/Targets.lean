@@ -102,6 +102,7 @@ import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
+import LeanLab.Riemann.ConreyLiPhaseObstruction
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -1589,6 +1590,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``suzukiReciprocalLogDerivativeAudit_endpoint
       status := .proven
       note := "Campaign FALSIFICATION-20260723-D9-SUZUKI-RECIPROCAL-LIMIT-01 separates two unstated regularity boundaries in Suzuki 2026, Corollary 6. The compiled witnesses are generic: they do not instantiate the source characteristic function W(a,theta;z), the Riemann xi function, or a meromorphic convergence topology. They therefore falsify only an unrestricted zero-persistence inference and a universal finite-extension interpretation; the actual canonical-system limit and RH remain open." },
+    { id := "D9.conrey-li.phase-obstruction-consumer"
+      tier := .tier2
+      title := "Formalize the Conrey-Li dense-phase obstruction consumer"
+      statement :=
+        "Prove that dense complex logarithmic values, a uniformly bounded imaginary correction, and a continuous corrected phase on a preconnected domain force a negative xi ratio; transport it through z=i(s-1) to a negative shifted reciprocal ratio, and specialize the conditional source logic to the actual Riemann xi function."
+      leanName := some ``not_conreyLiRiemannXiShiftRatioNonnegative_of_phase_data
+      status := .proven
+      note := "Campaign LITERATURE-20260726-D9-CONREY-LI-PHASE-OBSTRUCTION-01 kernel-checks the topology and coordinate algebra in the nonnumerical Sarnak remark appended to Conrey-Li 1998. The actual-xi endpoint keeps dense log-zeta values, a continuous logarithm of the xi ratio, its bounded imaginary correction, strip membership, and nonvanishing as explicit premises. The project does not yet formalize the value-distribution theorem, logarithm branches, the bounded source correction, or the reproducing-kernel Hilbert-space Theorem 2, so this is a conditional historical source-logic bridge rather than an unconditional actual-zeta obstruction or RH progress." },
     { id := "D9.suzuki.actual-canonical-system-limit"
       tier := .tier2
       title := "Construct Suzuki's actual canonical-system limit"

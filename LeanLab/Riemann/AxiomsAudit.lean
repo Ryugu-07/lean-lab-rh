@@ -104,6 +104,7 @@ import LeanLab.Riemann.LevinsonMontgomeryLogDerivMassBridge
 import LeanLab.Riemann.LevinsonMontgomeryBoundarySigns
 import LeanLab.Riemann.LevinsonMontgomeryCriticalIndentation
 import LeanLab.Riemann.JensenEventualHyperbolicity
+import LeanLab.Riemann.ConreyLiPhaseObstruction
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -1013,3 +1014,9 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.levinsonMontgomery_principalZeroTerm_re_nonpos
 #print axioms LeanLab.Riemann.exists_levinsonMontgomery_critical_zero_left_neighborhood
 #print axioms LeanLab.Riemann.exists_levinsonMontgomery_negative_left_semicircle
+#print axioms LeanLab.Riemann.conreyLi_im_unbounded_above_of_denseRange
+#print axioms LeanLab.Riemann.conreyLi_exists_phase_eq_pi
+#print axioms LeanLab.Riemann.conreyLi_exists_exp_re_neg
+#print axioms LeanLab.Riemann.conreyLi_reciprocal_shift_ratio_eq_inv
+#print axioms LeanLab.Riemann.not_conreyLiShiftRatioNonnegative_of_phase_data
+#print axioms LeanLab.Riemann.not_conreyLiRiemannXiShiftRatioNonnegative_of_phase_data

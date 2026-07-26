@@ -9,6 +9,7 @@ import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
+import LeanLab.Riemann.ConreyLiPhaseObstruction
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -4497,5 +4498,63 @@ example {rho : ℂ} (hrho : IsNontrivialZero rho)
         riemannZeta z ≠ 0 ∧ (logDeriv riemannZeta z).re < 0 :=
   exists_levinsonMontgomery_negative_left_semicircle
     hrho hrhoRe hrhoIm
+
+example {X : Type*} {u : X → ℂ} (hu : DenseRange u) (A : ℝ) :
+    (∃ x : X, A < (u x).im) ∧ (∃ x : X, (u x).im < A) :=
+  ⟨conreyLi_im_unbounded_above_of_denseRange hu A,
+    conreyLi_im_unbounded_below_of_denseRange hu A⟩
+
+example {X : Type*} [TopologicalSpace X] [PreconnectedSpace X] [Nonempty X]
+    {u ell : X → ℂ} (hu : DenseRange u)
+    (hell : Continuous fun x => (ell x).im)
+    {C : ℝ} (hbound : ∀ x : X, |(ell x - u x).im| ≤ C) :
+    ∃ x : X, (ell x).im = Real.pi :=
+  conreyLi_exists_phase_eq_pi hu hell hbound
+
+example {X : Type*} [TopologicalSpace X] [PreconnectedSpace X] [Nonempty X]
+    {u ell : X → ℂ} (hu : DenseRange u)
+    (hell : Continuous fun x => (ell x).im)
+    {C : ℝ} (hbound : ∀ x : X, |(ell x - u x).im| ≤ C) :
+    ∃ x : X, (Complex.exp (ell x)).re < 0 :=
+  conreyLi_exists_exp_re_neg hu hell hbound
+
+example {Xi : ℂ → ℂ} {s : ℂ} (hXi : Xi s ≠ 0)
+    (hXiShift : Xi (s + 1) ≠ 0) :
+    conreyLiReciprocalModel Xi (conreyLiShiftCoordinate s) /
+        conreyLiReciprocalModel Xi (conreyLiShiftCoordinate s + Complex.I) =
+      (Xi s / Xi (s + 1))⁻¹ :=
+  conreyLi_reciprocal_shift_ratio_eq_inv hXi hXiShift
+
+example {z : ℂ} (hz : z.re < 0) :
+    (z⁻¹).re < 0 :=
+  conreyLi_inv_re_neg_of_re_neg hz
+
+example {X : Type*} [TopologicalSpace X] [PreconnectedSpace X] [Nonempty X]
+    {Xi : ℂ → ℂ} {s u ell : X → ℂ}
+    (hu : DenseRange u)
+    (hell : Continuous fun x => (ell x).im)
+    {C : ℝ} (hbound : ∀ x : X, |(ell x - u x).im| ≤ C)
+    (hstrip : ∀ x : X, 1 / 2 < (s x).re)
+    (hnonzero : ∀ x : X, Xi (s x) ≠ 0 ∧ Xi (s x + 1) ≠ 0)
+    (hlog : ∀ x : X,
+      Complex.exp (ell x) = Xi (s x) / Xi (s x + 1)) :
+    ¬ConreyLiShiftRatioNonnegative (conreyLiReciprocalModel Xi) :=
+  not_conreyLiShiftRatioNonnegative_of_phase_data
+    hu hell hbound hstrip hnonzero hlog
+
+example {X : Type*} [TopologicalSpace X] [PreconnectedSpace X] [Nonempty X]
+    {s u ell : X → ℂ}
+    (hu : DenseRange u)
+    (hell : Continuous fun x => (ell x).im)
+    {C : ℝ} (hbound : ∀ x : X, |(ell x - u x).im| ≤ C)
+    (hstrip : ∀ x : X, 1 / 2 < (s x).re)
+    (hnonzero : ∀ x : X,
+      riemannXi (s x) ≠ 0 ∧ riemannXi (s x + 1) ≠ 0)
+    (hlog : ∀ x : X, Complex.exp (ell x) =
+      riemannXi (s x) / riemannXi (s x + 1)) :
+    ¬ConreyLiShiftRatioNonnegative
+      (conreyLiReciprocalModel riemannXi) :=
+  not_conreyLiRiemannXiShiftRatioNonnegative_of_phase_data
+    hu hell hbound hstrip hnonzero hlog
 
 end LeanLab.Riemann

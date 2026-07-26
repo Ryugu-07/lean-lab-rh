@@ -8,7 +8,7 @@ Selected node: `D9-CONREY-LI-PHASE-OBSTRUCTION-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `CONDITIONAL_PHASE_OBSTRUCTION_LOGIC_SUCCESS_LOCAL / IMPLEMENTATION_CI_REQUIRED`
 
 ## Primary source
 
@@ -152,3 +152,54 @@ Expected classification:
 
 No production Lean source may be created or edited until this docs-only preregistration passes
 public Lean Action CI.
+
+The gate passed at preregistration commit
+`adc7b306fb045185c8edef802218b3fa745d5f04`, public Lean Action run `30195518860`,
+build job `89776251261`, in `1m33s`.
+
+## Local result
+
+The complete fixed endpoint compiles in the 200-line
+`LeanLab/Riemann/ConreyLiPhaseObstruction.lean` module.
+
+Lean proves that dense complex range makes the imaginary coordinate unbounded above and below.
+Any pointwise uniformly bounded imaginary correction preserves both directions. If the corrected
+phase is continuous on a nonempty preconnected domain, the intermediate-value theorem forces it
+to take the exact value `pi`; its complex exponential then has strictly negative real part.
+
+The source coordinate also compiles exactly:
+
+```text
+z = i*(s-1)
+W(z) = 1 / Xi(1-i*z)
+W(z)/W(z+i) = (Xi(s)/Xi(s+1))^(-1).
+```
+
+The real part of an inverse preserves strict negativity. Consequently the generic and actual
+`riemannXi` aggregate theorems refute `ConreyLiShiftRatioNonnegative` whenever the registered
+dense-range, continuous logarithm, bounded correction, strip, nonvanishing, and exponential
+identity premises hold.
+
+This validates the topology and coordinate logic in the Sarnak sketch. It does not discharge
+those analytic premises or prove Conrey--Li Theorem 2.
+
+## Local mechanical audit
+
+- direct production compile with `-DwarningAsError=true`: pass with no diagnostics;
+- proven Target and seven exact TargetChecks: pass;
+- six selected transitive axiom prints: only `propext`, `Classical.choice`, `Quot.sound`;
+- placeholder, custom-declaration, and resource-relaxation scans: empty;
+- `git diff --check`: pass;
+- full build: `8768/8768`.
+
+Local classification:
+
+- `result=CONDITIONAL_PHASE_OBSTRUCTION_LOGIC_SUCCESS`;
+- `historical_route_coverage_delta=1`;
+- `source_logic_bridge_delta=1`;
+- `known_theorem_formalization_delta=0`;
+- `hard_gap_delta=0`;
+- `rh_frontier_delta=0`.
+
+The exact next formalization frontier is the actual value-distribution/logarithm package, not a
+new numerical witness or a stronger generic topology lemma.

@@ -4102,3 +4102,22 @@ identity converting an xi ratio into the reciprocal shifted ratio required by Co
 2. It will expose log-zeta density, continuous logarithm branches, and the bounded correction as
 explicit premises in the actual-xi endpoint. It does not formalize Theorem 2's RKHS proof, certify
 the source decimals, prove the unconditional actual-zeta obstruction, or advance RH.
+
+## D9 Conrey--Li Phase-Obstruction Local Result
+
+The nonnumerical source logic compiles. Dense complex range forces its imaginary coordinate to be
+unbounded in both directions, and any uniformly bounded imaginary correction preserves that
+property. A continuous corrected phase on a nonempty preconnected domain therefore takes the
+exact value `pi`; its exponential and reciprocal both have strictly negative real part.
+
+The source coordinate is exact:
+`W(i*(s-1))/W(i*(s-1)+i)=(Xi(s)/Xi(s+1))⁻¹`. The aggregate theorem is specialized to actual
+`riemannXi`, but keeps dense log-zeta data, a continuous xi-ratio logarithm, the bounded
+correction, strip location, and nonvanishing as explicit premises.
+
+This validates the Sarnak phase-crossing argument rather than the paper's decimal witness. It
+stops at the known value-distribution/logarithm package and does not compile the RKHS Theorem 2.
+The 200-line module, proven Target, seven exact checks, six standard-only axiom prints, empty
+forbidden scans, and full `8768/8768` build pass locally. Classification:
+`CONDITIONAL_PHASE_OBSTRUCTION_LOGIC_SUCCESS`, with `hard_gap_delta=0` and
+`rh_frontier_delta=0`.

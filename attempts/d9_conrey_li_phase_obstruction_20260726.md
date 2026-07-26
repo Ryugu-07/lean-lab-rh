@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-D9-CONREY-LI-PHASE-OBSTRUCTION-01`
 
 Selected node: `D9-CONREY-LI-PHASE-OBSTRUCTION-01`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `CONDITIONAL_PHASE_OBSTRUCTION_LOGIC_SUCCESS_LOCAL / IMPLEMENTATION_CI_REQUIRED`
 
 ## Target
 
@@ -27,6 +27,12 @@ Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
 | `CROSS_FAMILY_AUDIT` | Compared H1/D3, H2/D4, H11/D5, H7/D6, H10/D7, H12, and D9. | H1 is at Farmer's open moment; H2/H11 lack an actual exception amplifier; H7/H10 lack the number-field object; H12 now needs global contour counting. D9 retains an unformalized canonical failed condition with a bounded source-logic core. | Select the Conrey--Li/Sarnak phase obstruction. |
 | `PRIMARY_SOURCE_AUDIT` | Read Conrey--Li Theorems 1--2, equations `(3.1)`--`(3.4)`, and the Sarnak remark. | The numerical witnesses are not acceptable proof evidence. The nonnumerical proof uses dense log-zeta values, bounded correction, continuity, and connectedness to enter a negative-real-part phase sector. | Preregister the topology and coordinate audit. |
 | `API_SURVEY` | Checked Mathlib dense-range metric approximation, complex coordinate norm bounds, and preconnected intermediate-value APIs. | The generic core has a direct no-sorry formalization path. No zeta universality theorem is present. | Require public preregistration CI before proof edits. |
+| `PREREGISTRATION_PUBLIC` | Published docs-only commit `adc7b306fb045185c8edef802218b3fa745d5f04`. | Public run `30195518860`, build job `89776251261`, passed in `1m33s`. | Open the fixed production gate. |
+| `DENSE_RANGE_CORE` | Approximated high and low imaginary targets within distance one. | Dense complex range gives imaginary values unbounded above and below; a bounded imaginary correction preserves both. | Add continuity and connectedness. |
+| `PHASE_CROSSING` | Applied the intermediate-value theorem to the corrected imaginary phase. | Lean proves the phase takes the exact value `pi`; the corresponding complex exponential has strictly negative real part. | Transport the source coordinate. |
+| `SHIFT_COORDINATE` | Defined `z=i*(s-1)` and `W(z)=1/Xi(1-i*z)`. | Lean proves `W(z)/W(z+i)=(Xi(s)/Xi(s+1))⁻¹`; strict negative real part survives inversion. | Assemble the source obstruction consumer. |
+| `ACTUAL_XI_CONSUMER` | Specialized the generic theorem to actual `riemannXi`. | `not_conreyLiRiemannXiShiftRatioNonnegative_of_phase_data` compiles with every value-distribution, branch, boundedness, strip, and nonvanishing premise visible. | Stop at the known-theorem frontier; do not claim an unconditional zeta counterexample. |
+| `LOCAL_GATES` | Ran warning-as-error, Target, seven TargetChecks, six selected axiom prints, three forbidden scans, `git diff --check`, and full build. | New module has no diagnostics; selected axioms are standard-only; scans are empty; full build is `8768/8768`. | Freeze and publish the implementation. |
 
 ## Runtime record
 
@@ -40,6 +46,8 @@ Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
 
 ## Current boundary
 
-No production proof edit has started. Actual log-zeta density, logarithm branches, bounded
-archimedean correction, the de Branges RKHS theorem, RH, and every other route remain open. The
-six inherited user/exposure files remain untouched and unstaged.
+The fixed source-logic endpoint succeeds locally as
+`CONDITIONAL_PHASE_OBSTRUCTION_LOGIC_SUCCESS`. Actual log-zeta density, logarithm branches,
+bounded archimedean correction, the de Branges RKHS theorem, an unconditional actual-zeta
+counterexample, RH, and every other route remain open. Public implementation CI is next. The six
+inherited user/exposure files remain untouched and unstaged.

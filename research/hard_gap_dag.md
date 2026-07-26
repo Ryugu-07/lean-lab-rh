@@ -2200,3 +2200,23 @@ Final-ledger commit `4ee3b000bf2baff304edfedc215cf9143b399cea` passed run
 - `success_boundary`: source-logic reconstruction and actual-xi conditional consumer only; no
   claim that the full RKHS obstruction or RH is formalized.
 - `global_goal`: active.
+
+## 2026-07-26 D9 Conrey--Li phase-obstruction local endpoint
+
+- `node`: `D9-CONREY-LI-PHASE-OBSTRUCTION-01`.
+- `local_status`: `CONDITIONAL_PHASE_OBSTRUCTION_LOGIC_SUCCESS / IMPLEMENTATION_CI_REQUIRED`.
+- `closed_edges`:
+  `dense complex range -> imaginary unboundedness`;
+  `bounded correction -> corrected unboundedness`;
+  `continuous preconnected phase -> exact phase pi`;
+  `phase pi -> negative exponential and inverse`;
+  `z=i*(s-1) -> exact Conrey--Li shifted reciprocal ratio`.
+- `actual_xi_surface`: a compiled conditional theorem whose density, log branch, bounded
+  correction, strip, nonvanishing, and exponential identity premises are all visible.
+- `open_D9_edges`: formalize the source value-distribution theorem and branch estimates; connect
+  the ratio-sign failure to the RKHS positivity through Conrey--Li Theorem 2.
+- `local_audit`: one proven Target, seven exact TargetChecks, six standard-only axiom prints,
+  empty forbidden scans, and full `8768/8768` build.
+- `classification`: `historical_route_coverage_delta=1`, `source_logic_bridge_delta=1`,
+  `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `global_goal`: active.

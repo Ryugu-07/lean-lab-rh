@@ -4432,3 +4432,31 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `production_gate`: docs-only preregistration public CI before Lean proof editing.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 D9 Conrey--Li phase obstruction local result
+
+- `campaign`: `LITERATURE-20260726-D9-CONREY-LI-PHASE-OBSTRUCTION-01`.
+- `preregistration_public`: commit `adc7b306fb045185c8edef802218b3fa745d5f04` passed run
+  `30195518860`, build job `89776251261`, in `1m33s`.
+- `compiled_topology`: dense complex range gives imaginary values unbounded both ways; uniformly
+  bounded imaginary correction preserves this; continuous corrected phase on a nonempty
+  preconnected domain takes the exact value `pi`.
+- `compiled_sign`: the corresponding exponential has negative real part and its inverse retains
+  negative real part.
+- `compiled_source_coordinate`:
+  `W(i*(s-1))/W(i*(s-1)+i)=(Xi(s)/Xi(s+1))⁻¹`.
+- `compiled_actual_xi_consumer`:
+  `not_conreyLiRiemannXiShiftRatioNonnegative_of_phase_data`, with every analytic source input
+  explicit.
+- `module`: `LeanLab/Riemann/ConreyLiPhaseObstruction.lean`, 200 lines, no warning-as-error
+  diagnostics.
+- `local_gates`: proven Target, seven exact TargetChecks, six selected standard-only axiom
+  prints, empty forbidden scans, `git diff --check`, and full `8768/8768` build.
+- `classification`: `CONDITIONAL_PHASE_OBSTRUCTION_LOGIC_SUCCESS`,
+  `historical_route_coverage_delta=1`, `source_logic_bridge_delta=1`,
+  `known_theorem_formalization_delta=0`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `strict_boundary`: actual log-zeta density, source-valid continuous logarithms, bounded
+  xi/zeta phase correction, RKHS Theorem 2, an unconditional actual-zeta obstruction, and RH.
+- `next_gate`: freeze and publish the implementation.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

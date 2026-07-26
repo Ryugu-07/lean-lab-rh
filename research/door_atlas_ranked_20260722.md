@@ -1378,3 +1378,17 @@ nonnegativity is necessary for the proposed positivity.
 Campaign `LITERATURE-20260726-D9-CONREY-LI-PHASE-OBSTRUCTION-01` will formalize this core and an
 actual-xi conditional endpoint. Actual log-zeta density, source-valid logarithm branches, the
 bounded correction, and the RKHS theorem remain outside the fixed endpoint and must stay visible.
+
+### D9 Conrey--Li phase-obstruction local result
+
+The topology in the Sarnak sketch is valid under its explicit hypotheses. Dense complex values
+give imaginary coordinates unbounded above and below; a uniformly bounded correction preserves
+both tails; continuity on a preconnected domain forces the corrected phase through `pi`. The
+source coordinate and reciprocal-sign step also compile exactly, including an actual
+`riemannXi` conditional aggregate.
+
+Thus the historical obstruction no longer depends logically on the paper's numerical
+`t=282` witness. The precise remaining formalization package is actual log-zeta value
+distribution, source-valid logarithm branches and bounded correction, followed by the RKHS
+Theorem 2 bridge. This is a source-logic success, not an unconditional actual-zeta obstruction or
+RH progress. Public implementation evidence remains required.
