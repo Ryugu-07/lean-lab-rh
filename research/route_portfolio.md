@@ -3875,4 +3875,6 @@ These were the frozen-implementation publication preconditions.
 
 Frozen implementation commit `d07fecd2f00748cf0dc2a4c19d15d89bb740a2e1` passed public Lean
 Action run `30189533073`, build job `89760104494`, in `2m31s`. The proof source is frozen;
-docs-only immutable evidence and final-ledger CI remain before reranking.
+docs-only immutable-evidence commit `6970f6b41ad5b1459504dab99a963482630a4b89` passed run
+`30189646824`, build job `89760437385`, in `2m2s`. Only final-ledger CI remains before
+reranking.

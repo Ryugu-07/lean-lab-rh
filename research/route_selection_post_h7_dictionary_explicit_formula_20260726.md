@@ -91,4 +91,5 @@ The local result is `FULL_MOMENT_TO_POWER_SUCCESS`. Farmer's arbitrary-length mo
 remains open, so `hard_gap_delta=0` and `rh_frontier_delta=0` for RH. Frozen implementation
 commit `d07fecd2f00748cf0dc2a4c19d15d89bb740a2e1` passed public Lean Action run
 `30189533073`, build job `89760104494`, in `2m31s`. The source is frozen; docs-only evidence is
-the next gate.
+recorded by commit `6970f6b41ad5b1459504dab99a963482630a4b89`, whose run
+`30189646824`, build job `89760437385`, passed in `2m2s`. Final-ledger CI is the next gate.

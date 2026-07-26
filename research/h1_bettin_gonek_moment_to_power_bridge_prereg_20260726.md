@@ -160,7 +160,7 @@ The six inherited user/exposure files remain untouched and unstaged.
 
 ## Local outcome
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`.
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`.
 
 Attack A succeeded without changing the preregistered endpoint. The 1,174-line production
 module `LeanLab/Riemann/BettinGonekMomentToPowerBridge.lean` proves:
@@ -186,4 +186,6 @@ Farmer's arbitrary-length moment conjecture and does not prove RH unconditionall
 
 Frozen implementation commit `d07fecd2f00748cf0dc2a4c19d15d89bb740a2e1` passed public Lean
 Action run `30189533073`, build job `89760104494`, in `2m31s`. The production proof source is
-now frozen; only docs-only evidence and final-ledger publication gates remain.
+now frozen. Docs-only immutable-evidence commit
+`6970f6b41ad5b1459504dab99a963482630a4b89` passed run `30189646824`, build job
+`89760437385`, in `2m2s`; only final-ledger publication CI remains.

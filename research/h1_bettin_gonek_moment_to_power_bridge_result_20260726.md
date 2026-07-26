@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H1-BETTIN-GONEK-MOMENT-TO-POWER-BRIDGE-01`
 
 Node: `H1-BETTIN-GONEK-MOMENT-TO-POWER-BRIDGE-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Compiled endpoint
 
@@ -79,6 +79,8 @@ number-theory theorem.
   run `30188267224`, build job `89756704490`, passed in `1m31s`.
 - frozen implementation commit `d07fecd2f00748cf0dc2a4c19d15d89bb740a2e1`: public Lean Action
   run `30189533073`, build job `89760104494`, passed in `2m31s`.
+- docs-only immutable-evidence commit `6970f6b41ad5b1459504dab99a963482630a4b89`:
+  public Lean Action run `30189646824`, build job `89760437385`, passed in `2m2s`.
 
 ## Claim boundary
 
@@ -92,5 +94,5 @@ it is not an unconditional proof of RH.
 - `hard_gap_delta=0` for RH
 - `rh_frontier_delta=0`
 
-The proof source is frozen. The next gates are docs-only immutable-evidence and final-ledger
-commits with independent public Lean Action runs.
+The proof source is frozen. One docs-only final-ledger commit with an independent public Lean
+Action run is the remaining campaign gate.
