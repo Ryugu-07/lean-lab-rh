@@ -8,7 +8,7 @@ Selected node: `H9-REDHEFFER-CHARACTERISTIC-POLYNOMIAL-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_REQUIRED`
 
 ## Selection rationale
 
@@ -198,5 +198,10 @@ Implementation commit `4fbad00c4c24c8a5ae9b9885b0a23da82744665b` passed public L
 Action run `30209691871`, build job `89813735900`, in `2m24s`. The production module, proven
 Target, eight exact TargetChecks, and seven selected axiom prints are frozen at that hash.
 
-The next gate is a docs-only immutable-evidence commit and its public CI. No `LeanLab/` file may
-change before that evidence is published.
+Docs-only immutable-evidence commit `ada5bb11085378fb8c1def1e3e9924a4a6b672a9` passed public
+Lean Action run `30209857664`, build job `89814144474`, in `1m47s`. There is no `LeanLab/`
+difference between the frozen implementation and evidence commits.
+
+The next gate is a docs-only final ledger and its public CI. Dominant-root asymptotics,
+remaining-root disks, joint non-unit-root product control, Mertens growth, H9, and RH remain
+open.

@@ -2393,7 +2393,7 @@ publicly closed.
 ## 2026-07-26 H9 Redheffer characteristic-polynomial local endpoint
 
 - `node`: `H9-REDHEFFER-CHARACTERISTIC-POLYNOMIAL-01`.
-- `local_status`: `REDHEFFER_CHARACTERISTIC_POLYNOMIAL_FORMALIZED / IMMUTABLE_EVIDENCE_CI_REQUIRED`.
+- `local_status`: `REDHEFFER_CHARACTERISTIC_POLYNOMIAL_FORMALIZED / FINAL_LEDGER_REQUIRED`.
 - `closed_edges`:
   `ordered-factor recursion -> minimal-product and logarithmic support`;
   `cleared polynomial row eliminator -> exact characteristic-matrix product`;
@@ -2417,3 +2417,7 @@ publicly closed.
 Frozen implementation commit `4fbad00c4c24c8a5ae9b9885b0a23da82744665b` passed public Lean
 Action run `30209691871`, build job `89813735900`, in `2m24s`. Proof source is frozen; the
 next gate is docs-only immutable evidence.
+
+Docs-only immutable-evidence commit `ada5bb11085378fb8c1def1e3e9924a4a6b672a9` passed run
+`30209857664`, build job `89814144474`, in `1m47s`; `LeanLab/` remains identical to the frozen
+implementation. Final-ledger CI is the only remaining gate for this fixed node.

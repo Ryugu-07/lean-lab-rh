@@ -4311,3 +4311,8 @@ cross-family selection.
 Frozen implementation commit `4fbad00c4c24c8a5ae9b9885b0a23da82744665b` passed public Lean
 Action run `30209691871`, build job `89813735900`, in `2m24s`. Proof source is frozen; publish
 docs-only immutable evidence next with no `LeanLab/` change.
+
+Docs-only immutable-evidence commit `ada5bb11085378fb8c1def1e3e9924a4a6b672a9` passed run
+`30209857664`, build job `89814144474`, in `1m47s`; the frozen implementation has no
+`LeanLab/` difference. Only final-ledger CI remains before closing this fixed endpoint and
+returning to cross-family route selection.

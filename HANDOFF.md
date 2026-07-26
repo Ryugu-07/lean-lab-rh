@@ -4790,3 +4790,19 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   reciprocal-zeta continuation, H9, and RH.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H9 Redheffer characteristic polynomial immutable evidence public green
+
+- `frozen_implementation`: commit `4fbad00c4c24c8a5ae9b9885b0a23da82744665b` passed run
+  `30209691871`, build job `89813735900`, in `2m24s`.
+- `immutable_evidence`: docs-only commit `ada5bb11085378fb8c1def1e3e9924a4a6b672a9`
+  passed run `30209857664`, build job `89814144474`, in `1m47s`.
+- `proof_freeze_verified`: no `LeanLab/` difference between the implementation and evidence
+  commits.
+- `result`: `REDHEFFER_CHARACTERISTIC_POLYNOMIAL_FORMALIZED`.
+- `next_gate`: publish one docs-only final ledger and require public CI.
+- `after_closure`: close only the exact characteristic-polynomial and unit-root multiplicity
+  endpoint and return the active global Goal to fresh cross-family historical-route selection;
+  retain every non-unit-root estimate as open.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
