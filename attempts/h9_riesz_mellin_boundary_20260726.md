@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H9-RIESZ-MELLIN-BOUNDARY-01`
 
 Selected node: `H9-RIESZ-EXPONENTIAL-MELLIN-BOUNDARY-01`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTED_LOCAL / PUBLIC_FREEZE_REQUIRED`
 
 ## Target
 
@@ -34,6 +34,12 @@ Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
 | `Riesz_SOURCE_AUDIT` | Read Riesz 1916 metadata and Agarwal--Garg--Maji 2022 equations `(1.5)`, Lemma 2.4, and `(3.31)`. | The `k=2` kernel is absolutely convergent and RH-equivalent decay is explicit. Lemma 2.4's displayed ordinary-integral region includes `Re(s)>=0`, although `P_2(0)=1/zeta(2)!=0`. | Select a literal-integral versus analytic-continuation boundary campaign. |
 | `REPOSITORY_DUPLICATION_SCAN` | Searched production, research, attempts, and handoff files for the actual Riesz Mobius-exponential kernel. | The repository has general dilation-system Riesz references and Mellin infrastructure, but no `P_2`, no exponential Mobius kernel, and no Riesz Mellin criterion. | Admit the new H9 subroute. |
 | `LEAN_API_SURVEY` | Checked `hasSum_mellin`, Gamma integral APIs, Mobius L-series summability, reciprocal zeta, rpow integrability, and Mellin big-O holomorphy. | The base identity, zero-end divergence, and conditional extension have a direct no-sorry API path. The subsequent product-identity continuation remains a separate complex-analytic edge. | Publish docs-only preregistration before proof edits. |
+| `PUBLIC_PREREG_GATE` | Published the docs-only fixed endpoint. | Commit `2a0f1dbbb894f107b5a4c4c8a5e9f1f5837a9811` passed run `30210947076`, job `89816945706`, in `1m37s`. | Open production editing. |
+| `KERNEL_AND_ZERO` | Defined the actual Mobius coefficient, `n^-2` frequency, exponential term, and tsum kernel; proved summability, continuity, local integrability, and the exact zero value. | `P_2(0)=1/zeta(2)!=0` compiles from the existing Mobius L-series identity. | Normalize the Mellin sum. |
+| `BASE_STRIP_IDENTITY` | Proved the real-rpow and complex-cpow coefficient transformations and applied Mathlib's `hasSum_mellin`. | Ordinary convergence and `zeta(2*s+2) M[P_2](-s)=Gamma(-s)` compile on `-1/2<Re(s)<0`; zeta nonvanishing is used only at `Re(2*s+2)>1`. | Audit the displayed right-side point. |
+| `DISPLAYED_POINT_FALSIFICATION` | Used right continuity and `P_2(0)!=0` to dominate `x^-3/2` near zero. | `¬ MellinConvergent P_2 (-1/2)` compiles by `integrableOn_Ioo_rpow_iff`. | Add the conditional decay interface. |
+| `DECAY_INTERFACE` | Proved `P_2=O(x^-a)` unconditionally for every `0<=a<1/2`, then exposed general explicit `O(x^-a)` consumers. | Base-strip convergence is unconditional; arbitrary-decay convergence and Mellin differentiability compile on `-a<Re(s)<0`. The RH-equivalent `a=3/4-epsilon` decay is not proved. | Register Target and audits. |
+| `LOCAL_GATES` | Added one aggregate Target, four exact TargetChecks, and eight selected axiom prints; ran standalone compilation, forbidden scan, diff check, and full build. | New-module scan empty; selected axioms standard only; full build `8773/8773`. | Freeze and publish implementation. |
 
 ## Runtime record
 
@@ -57,3 +63,13 @@ the critical strip, or identify an analytic continuation with a divergent ordina
 
 The six inherited user/exposure files remain untouched and unstaged.
 
+## Local result
+
+- `result`: `RIESZ_TWO_MELLIN_LITERAL_STRIP_CORRECTED`.
+- `module`: `LeanLab/Riemann/RieszMellinBoundary.lean`, 490 lines.
+- `proved_boundary`: the literal ordinary-integral strip is `-1/2<Re(s)<0`; the displayed
+  source point `s=1/2` gives Mellin argument `-1/2` and diverges at zero.
+- `criterion_status`: the source's analytic-continuation argument may still begin from the
+  corrected base strip. No Riesz decay, critical-strip zero-free theorem, or RH proof follows.
+- `next_gate`: frozen implementation commit and public Lean Action CI.
+- `global_goal`: active.

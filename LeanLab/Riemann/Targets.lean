@@ -92,6 +92,7 @@ import LeanLab.Riemann.BettinGonekMomentToPowerBridge
 import LeanLab.Riemann.PolyaTuranAbelAudit
 import LeanLab.Riemann.RedhefferMertensDeterminant
 import LeanLab.Riemann.RedhefferCharacteristicPolynomial
+import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
@@ -1541,6 +1542,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``redhefferCharacteristicPolynomial_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260726-H9-REDHEFFER-CHARPOLY-01 compiles Vaughan equations (7)-(12) over Z[X] without dividing by lambda-1. The exact factorization proves that only Nat.log 2 N+1 roots are non-unit for N>=2; order N=1 is separately checked because the unqualified source multiplicity formula would incorrectly return zero there. This is a known source theorem and a spectral-compression interface, not a bound on the non-unit roots, a Mertens growth estimate, H9, or RH; rh_frontier_delta=0." },
+    { id := "H9.riesz.mellin-literal-boundary"
+      tier := .tier2
+      title := "Correct the literal Mellin strip for the k=2 Riesz kernel"
+      statement :=
+        "Define the classical k=2 Riesz kernel, prove ordinary Mellin convergence and the zeta-Gamma identity on -1/2<Re(s)<0, prove divergence at the displayed source point s=1/2, and retain the decay-conditional continuation strip as an explicit premise."
+      leanName := some ``rieszTwoMellinBoundary_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260726-H9-RIESZ-MELLIN-BOUNDARY-01 proves P_2(0)=1/zeta(2) is nonzero, P_2(x)=O(x^-a) for every 0<=a<1/2, ordinary Mellin convergence and zeta(2s+2) M[P_2](-s)=Gamma(-s) on -1/2<Re(s)<0, and nonconvergence at Mellin argument -1/2. Thus the larger right-side range displayed in Agarwal-Garg-Maji Lemma 2.4 cannot be a literal improper integral there and requires analytic continuation. The Riesz decay criterion, a zero-free continuation theorem, and RH remain open; source_domain_delta=1, historical_route_coverage_delta=1, rh_frontier_delta=0." },
     { id := "H12.speiser.counting-equivalence-consumer"
       tier := .tier2
       title := "Formalize the Speiser zero-count consumer"

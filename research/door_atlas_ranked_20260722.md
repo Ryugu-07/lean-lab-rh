@@ -1575,3 +1575,19 @@ the exact literal strip `-1/2<Re(s)<0`, a divergence witness at source parameter
 the conditional Mellin holomorphy supplied by an explicit power-decay assumption. The Riesz
 decay, continuation of the product identity into the enlarged strip, zero exclusion, and RH
 remain outside. Production editing is closed until docs-only preregistration passes public CI.
+
+### Riesz Mellin boundary local result
+
+The preregistration passed public CI, and the 490-line implementation compiles the entire fixed
+endpoint. The actual kernel is continuous on `[0,infinity)`, has
+`P_2(0)=1/zeta(2)!=0`, and satisfies `P_2(x)=O(x^-a)` for every `0<=a<1/2`.
+Consequently the ordinary Mellin integral converges and gives
+`zeta(2*s+2) M[P_2](-s)=Gamma(-s)` on exactly the audited base strip
+`-1/2<Re(s)<0`.
+
+Lean also proves nonconvergence at Mellin argument `-1/2`, corresponding to the source's
+displayed parameter `s=1/2`. This closes the literal-versus-continuation audit but does not
+refute the Riesz criterion: continuation may start from the corrected base strip. The open
+route edges are the RH-equivalent `x^(-3/4+epsilon)` decay and a rigorous continuation/zero-free
+consumer. Local classification is source-domain and historical-coverage progress with
+`rh_frontier_delta=0`.

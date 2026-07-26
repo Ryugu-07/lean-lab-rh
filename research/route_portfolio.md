@@ -4338,3 +4338,16 @@ zero value, base-strip identity, a source-region divergence witness, and the con
 Mellin-holomorphy interface under explicit decay. It does not prove the RH-equivalent
 `x^(-3/4+epsilon)` bound, continue the product identity to the zero-free region, or prove RH.
 Public preregistration CI is required before Lean proof-source editing.
+
+## H9 Riesz Mellin Boundary Local Result
+
+Preregistration commit `2a0f1dbbb894f107b5a4c4c8a5e9f1f5837a9811` passed public CI run
+`30210947076`, job `89816945706`, in `1m37s`. The implementation now proves the actual
+Mobius-exponential kernel's continuity and nonzero origin value, every sub-half power decay,
+the ordinary base-strip Mellin identity, divergence at Mellin parameter `-1/2`, and the
+explicit decay-conditional holomorphic interface.
+
+This is a source-domain correction and a completed historical route-card edge. It does not
+prove the Riesz `3/4-epsilon` decay or any new zero-free region. After the implementation,
+immutable-evidence, and final-ledger CI gates, return to cross-family selection while retaining
+Riesz decay and identity continuation as open H9 edges.

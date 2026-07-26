@@ -2443,3 +2443,18 @@ publicly closed.
 - `classification_target`: `RIESZ_TWO_MELLIN_LITERAL_STRIP_CORRECTED`, with source-domain and
   historical-coverage deltas but no hard-gap or RH-frontier delta.
 - `global_goal`: active.
+
+## 2026-07-26 H9 Riesz Mellin-boundary local result
+
+- `closed_edge`: actual `P_2` kernel, ordinary base-strip convergence and identity,
+  zero-end divergence at Mellin `-1/2`, and explicit decay-conditional holomorphy.
+- `new_unconditional_fact`: `P_2(x)=O(x^-a)` for every `0<=a<1/2`; this is sufficient for the
+  literal base strip but remains below the RH-equivalent exponent.
+- `source_domain`: `-1/2<Re(s)<0` is the verified ordinary-integral strip. Values in the
+  source's wider displayed right-side region require analytic continuation.
+- `open_edge_R1`: prove `P_2(x)=O_epsilon(x^(-3/4+epsilon))`.
+- `open_edge_R2`: continue the product identity from the verified base strip into a domain that
+  can detect `1/2<Re(rho)<1`, without identifying a divergent integral with its continuation.
+- `classification`: `source_domain_correction_delta=1`,
+  `historical_route_coverage_delta=1`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `global_goal`: active.

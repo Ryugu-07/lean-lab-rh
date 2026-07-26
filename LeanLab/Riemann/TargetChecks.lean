@@ -14,6 +14,7 @@ import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.BombieriStepanovPolarInjectivity
 import LeanLab.Riemann.RedhefferMertensDeterminant
 import LeanLab.Riemann.RedhefferCharacteristicPolynomial
+import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -4754,5 +4755,25 @@ example :
 example :
     RedhefferCharacteristicPolynomialCertificate :=
   redhefferCharacteristicPolynomial_endpoint
+
+example :
+    rieszTwoKernel 0 = (riemannZeta (2 : ℂ))⁻¹ ∧
+      rieszTwoKernel 0 ≠ 0 :=
+  ⟨rieszTwoKernel_zero, rieszTwoKernel_zero_ne⟩
+
+example {s : ℂ} (hs_left : -(1 / 2 : ℝ) < s.re) (hs_right : s.re < 0) :
+    MellinConvergent rieszTwoKernel (-s) ∧
+      riemannZeta (2 * s + 2) * mellin rieszTwoKernel (-s) =
+        Complex.Gamma (-s) :=
+  ⟨mellinConvergent_rieszTwoKernel_baseStrip hs_left hs_right,
+    riemannZeta_mul_mellin_rieszTwoKernel hs_left hs_right⟩
+
+example :
+    ¬ MellinConvergent rieszTwoKernel (-(1 / 2 : ℂ)) :=
+  not_mellinConvergent_rieszTwoKernel_neg_one_half
+
+example :
+    RieszTwoMellinBoundaryCertificate :=
+  rieszTwoMellinBoundary_endpoint
 
 end LeanLab.Riemann

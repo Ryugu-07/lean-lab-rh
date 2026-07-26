@@ -4841,3 +4841,29 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 
 ## Arch 审计第十三轮（2026-07-26，Claude）
 - 43 commits：Groskin Theorem 2.5 拿下（零点和=有限 von Mangoldt+极点+阿基米德，3213 行）；门户图谱兑现——H10 Bombieri-Stepanov 函数域机制+polar injectivity 门（含负控制）、D9 Conrey-Li 相位障碍形式化、H9 Redheffer/Mertens 行列式与特征多项式、H12 Speiser 边界符号，四条历史路线同时推进。build 8772 全过；公理审计 906 条零非标准；零 sorry。四段式冻结纪律+delta 诚实结算，无处方。
+
+## 2026-07-26 H9 Riesz Mellin boundary local result
+
+- `campaign`: `LITERATURE-20260726-H9-RIESZ-MELLIN-BOUNDARY-01`.
+- `public_prereg`: commit `2a0f1dbbb894f107b5a4c4c8a5e9f1f5837a9811` passed run
+  `30210947076`, build job `89816945706`, in `1m37s`.
+- `result`: `RIESZ_TWO_MELLIN_LITERAL_STRIP_CORRECTED`.
+- `module`: `LeanLab/Riemann/RieszMellinBoundary.lean`, 490 lines.
+- `compiled_core`: actual `k=2` kernel, absolute convergence, continuity,
+  `P_2(0)=1/zeta(2)!=0`, `P_2=O(x^-a)` for every `0<=a<1/2`, ordinary Mellin convergence and
+  zeta-Gamma identity on `-1/2<Re(s)<0`, nonconvergence at Mellin parameter `-1/2`, and the
+  explicit decay-conditional convergence/differentiability interface.
+- `local_gates`: one proven Target, four exact TargetChecks, eight selected standard-only axiom
+  prints, empty new-module forbidden scan, `git diff --check`, and full `8773/8773` build.
+- `source_correction`: Agarwal--Garg--Maji Lemma 2.4's larger displayed right-side region cannot
+  denote the same ordinary integral at `s=1/2`; it must use analytic continuation there.
+- `strict_boundary`: the RH-equivalent Riesz decay, product-identity continuation into a
+  zero-detecting strip, zeta zero exclusion, H9, and RH remain open.
+- `classification`: `historical_route_coverage_delta=1`,
+  `source_domain_correction_delta=1`, `mobius_exponential_interface_delta=1`,
+  `conditional_mellin_extension_delta=1`, `riesz_decay_delta=0`,
+  `zero_free_identity_continuation_delta=0`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `next_gate`: freeze and publish the implementation, then docs-only immutable evidence and
+  final ledger with public CI at each gate.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

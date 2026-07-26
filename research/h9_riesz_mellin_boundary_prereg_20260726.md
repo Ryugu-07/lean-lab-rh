@@ -8,7 +8,7 @@ Selected node: `H9-RIESZ-EXPONENTIAL-MELLIN-BOUNDARY-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTED_LOCAL / PUBLIC_FREEZE_REQUIRED`
 
 ## Selection rationale
 
@@ -199,3 +199,35 @@ The local campaign stops when the fixed endpoint is proved, falsified, or reduce
 Mathlib or mathematical obstruction. A successful endpoint returns to fresh route selection
 before deciding whether to attack the conditional identity continuation and zero-free consumer.
 Local STOP does not close the Riesz route, H9, or the active RH Goal.
+
+## Local implementation result
+
+The docs-only preregistration commit
+`2a0f1dbbb894f107b5a4c4c8a5e9f1f5837a9811` passed public Lean Action run
+`30210947076`, build job `89816945706`, in `1m37s`, opening the production gate.
+
+The 490-line module `LeanLab/Riemann/RieszMellinBoundary.lean` now proves every fixed endpoint:
+
+- absolute convergence and continuity of the actual `k=2` Mobius-exponential kernel;
+- `rieszTwoKernel 0 = (riemannZeta 2)⁻¹` and nonvanishing;
+- the unconditional bound `P_2(x)=O(x^-a)` for every `0<=a<1/2`;
+- ordinary Mellin convergence and
+  `zeta(2*s+2) * mellin P_2(-s) = Gamma(-s)` on `-1/2<Re(s)<0`;
+- `¬ MellinConvergent P_2 (-1/2)`;
+- convergence and differentiability on `-a<Re(s)<0` from an explicit `O(x^-a)` hypothesis.
+
+One proven aggregate Target, four exact TargetChecks, and eight selected axiom prints compile.
+Every selected axiom print contains only `propext`, `Classical.choice`, and `Quot.sound`; the
+new module's forbidden scan is empty, `git diff --check` passes, and the full build passes
+`8773/8773`.
+
+Classification is
+`result=RIESZ_TWO_MELLIN_LITERAL_STRIP_CORRECTED`,
+`historical_route_coverage_delta=1`, `source_domain_correction_delta=1`,
+`mobius_exponential_interface_delta=1`, `conditional_mellin_extension_delta=1`,
+`riesz_decay_delta=0`, `zero_free_identity_continuation_delta=0`, `hard_gap_delta=0`,
+and `rh_frontier_delta=0`.
+
+The next gate is a frozen implementation commit and public CI. After immutable evidence and a
+final ledger, local STOP returns to fresh route selection; the Riesz decay criterion and
+zero-free continuation remain open.
