@@ -1206,3 +1206,22 @@ Action run `30189533073`, build job `89760104494`, in `2m31s`; the proof source 
 the docs-only evidence sequence proceeds. Immutable-evidence commit
 `6970f6b41ad5b1459504dab99a963482630a4b89` passed run `30189646824`, build job
 `89760437385`, in `2m2s`; only final-ledger CI remains.
+
+Final-ledger commit `281ba918582707bcfed21920fb3616120d5cd292` passed run
+`30189742343`, build job `89760720303`, in `2m2s`; the fixed H1 bridge is publicly closed.
+
+### Post-H1 rerank: H12 Levinson--Montgomery paired mass
+
+The next omission-seeking comparison selects equations `(2.2)`--`(2.3)` in
+Levinson--Montgomery's proof of Theorem 1. This does not merely restate Speiser's criterion. It
+attacks the actual functional-equation-paired xi zero mass that produces the theorem's
+linear-density alternative.
+
+The first H12 campaign compiled the count objects and logical consumer before the project had
+its current compensated Hadamard sum, reciprocal-square divisor mass, multiplicity-preserving
+zero permutations, and H7 finite/infinite cutoff machinery. The re-entry will use those later
+inputs to prove that negative paired mass at height `t` forces a left zero within `1/2`, then
+turn the integer-height witnesses into the existing `N^-(T)>T/2` branch.
+
+The Gamma remainder, low-height verification, indented contour, logarithmic count bound, full
+count dichotomy, Speiser equivalence, H12, and RH remain open.

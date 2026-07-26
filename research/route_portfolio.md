@@ -3878,3 +3878,31 @@ Action run `30189533073`, build job `89760104494`, in `2m31s`. The proof source 
 docs-only immutable-evidence commit `6970f6b41ad5b1459504dab99a963482630a4b89` passed run
 `30189646824`, build job `89760437385`, in `2m2s`. Only final-ledger CI remains before
 reranking.
+
+Final-ledger commit `281ba918582707bcfed21920fb3616120d5cd292` passed public Lean Action
+run `30189742343`, build job `89760720303`, in `2m2s`; the fixed conditional bridge is publicly
+closed.
+
+## H12 Levinson--Montgomery Paired-Mass Density Selection
+
+Fresh cross-family ranking selects a source-exact part of Levinson--Montgomery Theorem 1. The
+first H12 campaign already compiled the actual multiplicity-bearing zeta and zeta-derivative
+counts plus the exact-count Speiser consumer, but it stopped at the unformalized analytic count
+theorem.
+
+The new endpoint reconstructs equations `(2.2)`--`(2.3)` over the actual xi divisor. A left zero
+`rho=beta+i*gamma` is paired with `1-conj(rho)`, while critical-line zeros contribute one
+diagonal kernel. The real paired sum has reciprocal-square decay even though the raw reciprocal
+zero sum is not absolutely summable. If the paired mass is negative, the source algebra forces a
+left zero with `|t-gamma|<1/2`.
+
+At sufficiently large integer heights these strict half-unit neighborhoods are disjoint.
+Selecting one actual zero from each neighborhood and embedding the resulting finite image in the
+existing weighted zero count must yield
+`T/2 < speiserUpperLeftZetaZeroCount T` for every sufficiently large real `T`. This is the dense
+branch of the registered `LevinsonMontgomeryCountDichotomy`, not another equivalent criterion.
+
+The later H7/Li divisor and zero-sum infrastructure makes this a materially new H12 re-entry.
+Gamma estimates, the low boundary, the indented contour, the logarithmic count bound, the full
+dichotomy, Speiser's unconditional known equivalence, and RH remain open. Production Lean edits
+require public preregistration CI.

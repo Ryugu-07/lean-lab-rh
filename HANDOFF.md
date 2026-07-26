@@ -4082,3 +4082,31 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   fresh cross-family route selection.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H12 Levinson--Montgomery paired-mass density selected
+
+- `parent_closed`: H1 moment-to-power final-ledger commit
+  `281ba918582707bcfed21920fb3616120d5cd292` passed public Lean Action run
+  `30189742343`, build job `89760720303`, in `2m2s`. Close only that conditional bridge;
+  Farmer's conjecture, H1, and RH remain open.
+- `campaign`:
+  `LITERATURE-20260726-H12-LEVINSON-MONTGOMERY-PAIRED-MASS-DENSITY-01`.
+- `node`: `H12-LM-PAIRED-MASS-DENSITY-01`.
+- `status`: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`.
+- `selection`: fresh H12/H1/H7/H2/H11/H10 comparison selects equations `(2.2)`--`(2.3)` of
+  Levinson--Montgomery Theorem 1. The earlier H12 campaign compiled the count consumer but not
+  this actual infinite zero-pair mechanism.
+- `material_difference`: later H7/Li work now supplies the multiplicity-bearing xi divisor,
+  compensated Hadamard sums, reciprocal-square control, divisor permutations, and finite/infinite
+  decomposition that were absent at the first H12 stop.
+- `fixed_endpoint`: construct the source real paired zero mass, prove its exact paired-sum
+  identity, prove negative mass localizes a left zero within half a height unit, and convert
+  eventual integer-height negative mass into the existing eventual
+  `T/2 < speiserUpperLeftZetaZeroCount T` dense branch.
+- `strict_boundary`: the Gamma estimate, low-height sign, indented contour, logarithmic count
+  bound, full count dichotomy, unconditional Speiser equivalence, and RH remain outside this
+  endpoint.
+- `next_gate`: publish the docs-only preregistration and require public Lean Action CI before
+  any production Lean edit.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

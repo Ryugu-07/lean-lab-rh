@@ -1991,3 +1991,27 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `immutable_evidence`: docs-only commit `6970f6b41ad5b1459504dab99a963482630a4b89`
   passed public Lean Action run `30189646824`, build job `89760437385`, in `2m2s`.
 - `global_goal`: active; Farmer's conjecture and RH remain open.
+
+## 2026-07-26 H1 closure and H12 paired-mass density selection
+
+- `H1_public_closure`: final-ledger commit
+  `281ba918582707bcfed21920fb3616120d5cd292` passed public Lean Action run
+  `30189742343`, build job `89760720303`, in `2m2s`; only the known conditional bridge is
+  closed.
+- `node`: `H12-LM-PAIRED-MASS-DENSITY-01`.
+- `mode`: `LITERATURE / PROOF-ATTEMPT`.
+- `available_inputs`: actual multiplicity-bearing xi divisor, compensated Hadamard zero sum,
+  reciprocal-square summability, reflection/conjugation permutations, zeta/xi multiplicity
+  alignment, and the existing upper-left zeta count.
+- `fixed_edge`: formalize Levinson--Montgomery `(2.2)`--`(2.3)`, prove negative paired mass
+  creates an upper-left zeta zero within `1/2` of the current height, and prove that this event
+  at every sufficiently large integer yields the dense branch
+  `T/2 < speiserUpperLeftZetaZeroCount T`.
+- `material_reentry`: the first H12 campaign stopped at an abstract analytic-count interface
+  before the later H7/Li actual zero-sum infrastructure existed.
+- `remaining_after_success`: connect `Re(zeta'/zeta)>=0` to negative mass with Gamma bounds,
+  prove the low-height and indented-contour count identity, prove the logarithmic difference
+  bound, combine the full dichotomy, and only then close the known Speiser equivalence.
+- `claim_boundary`: no later H12 premise, derivative-zero-free condition, or RH is assumed.
+- `next_gate`: docs-only preregistration public CI.
+- `global_goal`: active.
