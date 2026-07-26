@@ -4,7 +4,7 @@ Date: 2026-07-26
 
 Campaign: `LITERATURE-20260726-H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01`
 
-Status: `PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Source crosswalk
 
@@ -46,3 +46,5 @@ eventual-sign-to-RH implication, H9 endpoint, or RH theorem is claimed.
 - The full local build passes `8761/8761`.
 - Frozen implementation commit `adf2812591fdb0205c2a147ca22f95976421fadc` passed public Lean
   Action run `30184829099`, build job `89747516026`, in `2m33s`.
+- Docs-only immutable-evidence commit `0073f191fe2316e7d76a8f015106eeec400f364a`
+  passed run `30184927447`, build job `89747777977`, in `1m39s`; proof source remained frozen.

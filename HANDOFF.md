@@ -3947,3 +3947,8 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `public_implementation`: frozen commit `adf2812591fdb0205c2a147ca22f95976421fadc`
   passed Lean Action run `30184829099`, build job `89747516026`, in `2m33s`. Proof source is
   frozen; immutable-evidence CI is next.
+- `immutable_evidence`: docs-only commit `0073f191fe2316e7d76a8f015106eeec400f364a`
+  passed run `30184927447`, build job `89747777977`, in `1m39s`; proof source remained frozen.
+- `next_gate`: publish this docs-only final ledger and require public CI. On success close only
+  the fixed Abel/sign-audit campaign, return to historical route selection, and keep the global
+  RH Goal active.

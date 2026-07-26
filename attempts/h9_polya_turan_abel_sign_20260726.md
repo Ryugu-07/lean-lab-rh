@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01`
 
 Selected node: `H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01`
 
-Status: `PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Attempt log
 
@@ -24,6 +24,7 @@ Status: `PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 | `REGISTRATION` | Added the aggregate certificate, proven Target, exact TargetChecks, and six selected axiom prints. | All interfaces compile; the selected transitive axioms are only `propext`, `Classical.choice`, and `Quot.sound`. | Run the full mechanical gate. |
 | `MECHANICAL_AUDIT` | Compiled the 244-line module directly and through Lake; scanned forbidden tokens and declarations; ran `git diff --check` and the full build. | New source is warning-free, scans are empty, patch check passes, and `lake build` passes `8761/8761`. | Freeze the implementation and require public CI. |
 | `PUBLIC_IMPLEMENTATION` | Published frozen implementation commit `adf2812591fdb0205c2a147ca22f95976421fadc`. | Lean Action run `30184829099`, build job `89747516026`, passed in `2m33s`; the clean public checkout rebuilds the exact endpoint. | Keep proof source frozen and publish immutable evidence. |
+| `IMMUTABLE_EVIDENCE` | Published docs-only evidence commit `0073f191fe2316e7d76a8f015106eeec400f364a`. | Lean Action run `30184927447`, build job `89747777977`, passed in `1m39s`; proof source remained byte-for-byte frozen. | Publish the final ledger and require its own public CI. |
 
 ## Current boundary
 

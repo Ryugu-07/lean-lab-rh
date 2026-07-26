@@ -1858,7 +1858,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 ## 2026-07-26 H9 Pólya--Turán Abel sign audit local endpoint
 
 - `node`: `H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01`.
-- `status`: `PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`.
+- `status`: `IMMUTABLE_EVIDENCE_GREEN / FINAL_LEDGER_CI_REQUIRED`.
 - `proved_edge`: exact finite Abel summation for arbitrary rational sequences, exact Liouville
   specialization, and the finite implication from Pólya-prefix nonpositivity to the upper bound
   `T(N)<=1/2`.
@@ -1874,4 +1874,6 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   scans, patch check, and full `8761/8761` build pass.
 - `public_implementation`: frozen commit `adf2812591fdb0205c2a147ca22f95976421fadc`
   passed Lean Action run `30184829099`, build job `89747516026`, in `2m33s`.
+- `immutable_evidence`: docs-only commit `0073f191fe2316e7d76a8f015106eeec400f364a`
+  passed run `30184927447`, build job `89747777977`, in `1m39s`; final-ledger CI remains.
 - `global_goal`: active; H9 and RH remain open.
