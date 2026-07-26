@@ -1488,3 +1488,14 @@ or prove `M(n)=O(n^(1/2+epsilon))`, and determinant product control alone does n
 individual eigenvalues. The next omission-bearing layer, if the source identity survives, is
 the factorization of the characteristic polynomial and the quantitative control of its
 logarithmically many non-unit roots.
+
+The fixed elimination survives exactly. Lean checks the positive-index divisor bijection,
+Vaughan's determinant-one first-row transform, total nonfirst-row cancellation, the unit
+successor divisibility determinant, and `det A_N=M(N)` for all positive orders. Exact orders one
+through four rule out the transpose and `(1,1)` double-count errors. The result does not improve
+the Mertens bound; it confirms that the source's possible extra leverage begins only with the
+characteristic polynomial and joint control of the non-unit roots.
+
+One proven Target, eight exact TargetChecks, six standard-only axiom prints, empty forbidden
+scans, and full `8771/8771` build pass locally. The implementation must pass public CI before
+immutable evidence or successor selection.

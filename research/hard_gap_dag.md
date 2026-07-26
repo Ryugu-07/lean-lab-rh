@@ -2343,3 +2343,22 @@ Final-ledger commit `76c21bb536ad205b53eb8aee2035c2529e32eb96` passed run
 - `classification_target`: `REDHEFFER_MERTENS_ELIMINATION_FORMALIZED`, with no Mertens-growth,
   hard-gap, or RH-frontier delta.
 - `global_goal`: active.
+
+## 2026-07-26 H9 Redheffer--Mertens determinant local endpoint
+
+- `node`: `H9-REDHEFFER-MERTENS-DETERMINANT-01`.
+- `local_status`: `REDHEFFER_MERTENS_ELIMINATION_FORMALIZED / IMPLEMENTATION_CI_REQUIRED`.
+- `closed_edges`:
+  `positive Fin index <-> positive divisor`;
+  `Mobius convolution -> first-row cancellation`;
+  `unit successor divisibility block -> det A_N=M(N)`.
+- `orientation_checks`: exact determinant values `1,0,-1,-1` at orders one through four.
+- `open_H9_edges`: full characteristic polynomial, exact eigenvalue-one multiplicity, dominant
+  and remaining-root estimates, the RH-equivalent Mertens growth bound, and reciprocal-zeta
+  continuation.
+- `local_audit`: one proven Target, eight exact TargetChecks, six standard-only axiom prints,
+  empty forbidden scans, and full `8771/8771` build.
+- `classification`: `historical_route_coverage_delta=1`,
+  `arithmetic_spectral_interface_delta=1`, `characteristic_polynomial_delta=0`,
+  `mertens_growth_delta=0`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `global_goal`: active.

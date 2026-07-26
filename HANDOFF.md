@@ -4433,6 +4433,33 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
 
+## 2026-07-26 H9 Redheffer--Mertens determinant local result
+
+- `campaign`: `LITERATURE-20260726-H9-REDHEFFER-MERTENS-DETERMINANT-01`.
+- `preregistration_public`: commit `1b535d265bdd186bbcd1e5e5c67cf69b441259f2` passed run
+  `30207301448`, build job `89807491114`, in `2m11s`.
+- `compiled_index_boundary`: a checked `k |-> k+1` bijection transports the finite matrix sum to
+  positive divisors, so no proof term evaluates `mu(0)`.
+- `compiled_elimination`: Vaughan's determinant-one first-row Mobius transform leaves `M(N)` in
+  the first pivot and zero in every other entry of that row.
+- `compiled_tail`: the successor-index divisibility block is unit upper triangular.
+- `compiled_source_theorem`: `det (redhefferMatrix n)=finiteMertens (n+1)` for every `n`, with
+  exact zero/nonzero criteria and order-one-through-four checks.
+- `module`: `LeanLab/Riemann/RedhefferMertensDeterminant.lean`, 257 lines, no warning-as-error
+  diagnostics.
+- `local_gates`: one proven Target, eight exact TargetChecks, six selected standard-only axiom
+  prints, empty forbidden scans, `git diff --check`, and full `8771/8771` build.
+- `classification`: `REDHEFFER_MERTENS_ELIMINATION_FORMALIZED`,
+  `historical_route_coverage_delta=1`, `arithmetic_spectral_interface_delta=1`,
+  `characteristic_polynomial_delta=0`, `mertens_growth_delta=0`, `hard_gap_delta=0`,
+  `rh_frontier_delta=0`.
+- `research_reading`: the determinant identity has no hidden slack; all arithmetic cancellation
+  is the Mertens pivot. The next source-bearing edge is Vaughan's characteristic polynomial and
+  its logarithmically many non-unit roots.
+- `next_gate`: freeze and publish the implementation.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
 ## 2026-07-26 D9 Conrey--Li phase obstruction local result
 
 - `campaign`: `LITERATURE-20260726-D9-CONREY-LI-PHASE-OBSTRUCTION-01`.

@@ -12,6 +12,7 @@ import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.ConreyLiPhaseObstruction
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.BombieriStepanovPolarInjectivity
+import LeanLab.Riemann.RedhefferMertensDeterminant
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -4669,5 +4670,44 @@ example :
           Polynomial.degreeLT ℚ 4) : ℚ[X]).coeff
         (finProdFinEquiv ((1 : Fin 2), (1 : Fin 2)))) = 1 :=
   stepanovPolarBlock_two_witness
+
+example (N : ℕ) :
+    finiteMertens N =
+      ∑ k : Fin N, ArithmeticFunction.moebius (k.1 + 1) :=
+  rfl
+
+example (n : ℕ) :
+    (redhefferEliminator n).det = 1 :=
+  det_redhefferEliminator n
+
+example (n : ℕ) :
+    (redhefferTail n).det = 1 :=
+  det_redhefferTail n
+
+example (n : ℕ) :
+    redhefferEliminator n * redhefferMatrix n =
+      (redhefferMatrix n).updateRow 0
+        (Pi.single 0 (finiteMertens (n + 1))) :=
+  redhefferEliminator_mul_redhefferMatrix n
+
+example (n : ℕ) :
+    (redhefferMatrix n).det = finiteMertens (n + 1) :=
+  det_redhefferMatrix_eq_finiteMertens n
+
+example (n : ℕ) :
+    (redhefferMatrix n).det = 0 ↔ finiteMertens (n + 1) = 0 :=
+  det_redhefferMatrix_eq_zero_iff n
+
+example :
+    (redhefferMatrix 0).det = 1 ∧
+    (redhefferMatrix 1).det = 0 ∧
+    (redhefferMatrix 2).det = -1 ∧
+    (redhefferMatrix 3).det = -1 :=
+  ⟨det_redheffer_order_one, det_redheffer_order_two,
+    det_redheffer_order_three, det_redheffer_order_four⟩
+
+example :
+    RedhefferMertensDeterminantCertificate :=
+  redhefferMertensDeterminant_endpoint
 
 end LeanLab.Riemann

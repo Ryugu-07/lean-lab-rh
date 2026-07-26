@@ -4240,3 +4240,22 @@ The false Mertens conjecture is prohibited, and the RH-equivalent
 multiplicity, dominant-root asymptotics, remaining-root estimates, reciprocal-zeta continuation,
 H9, and RH remain outside this first endpoint. Production Lean editing requires docs-only
 preregistration public CI.
+
+## H9 Redheffer--Mertens Determinant Local Result
+
+The source elimination compiles for every positive order. A checked finite bijection transports
+the zero-based matrix sum to the positive divisor set, so Mathlib's Mobius convolution kills
+every nonfirst entry of Vaughan's replaced row without evaluating `mu(0)`. The eliminator has
+determinant one, and the successor-index divisibility block is unit upper triangular.
+
+Consequently Lean proves the exact integer theorem `det A_N=M(N)`, determinant-zero and nonzero
+criteria, and the source values `1,0,-1,-1` for orders one through four. This creates the missing
+arithmetic-to-spectrum interface, but supplies no Mertens growth estimate: all cancellation is
+concentrated in the single `M(N)` pivot.
+
+The 257-line module, one proven Target, eight exact TargetChecks, six selected standard-only
+axiom prints, empty forbidden scans, and full `8771/8771` build pass locally. Classify this as
+`REDHEFFER_MERTENS_ELIMINATION_FORMALIZED`, with
+`arithmetic_spectral_interface_delta=1`, `hard_gap_delta=0`, and `rh_frontier_delta=0`.
+The next source question is the characteristic polynomial and logarithmically many non-unit
+roots; implementation public CI is required first.

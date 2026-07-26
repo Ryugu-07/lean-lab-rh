@@ -4,6 +4,7 @@ import LeanLab.Riemann.InfiniteReciprocalTraceAudit
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.PolyaTuranAbelAudit
+import LeanLab.Riemann.RedhefferMertensDeterminant
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
 import LeanLab.Riemann.ThetaInfinityMollifier
@@ -1034,3 +1035,9 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.exists_stepanovPolarBlock_ne_zero_mem_ker
 #print axioms LeanLab.Riemann.stepanovDimensionSurplus_not_enough_without_injective
 #print axioms LeanLab.Riemann.stepanovPolarBlock_two_witness
+#print axioms LeanLab.Riemann.det_redhefferEliminator
+#print axioms LeanLab.Riemann.det_redhefferTail
+#print axioms LeanLab.Riemann.redhefferEliminator_mul_redhefferMatrix
+#print axioms LeanLab.Riemann.det_redhefferMatrix_eq_finiteMertens
+#print axioms LeanLab.Riemann.det_redhefferMatrix_eq_zero_iff
+#print axioms LeanLab.Riemann.redhefferMertensDeterminant_endpoint

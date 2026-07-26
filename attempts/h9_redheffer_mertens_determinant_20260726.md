@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H9-REDHEFFER-MERTENS-DETERMINANT-01`
 
 Selected node: `H9-REDHEFFER-MERTENS-DETERMINANT-01`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
 
 ## Target
 
@@ -29,6 +29,13 @@ Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
 | `PRIMARY_SOURCE_AUDIT` | Read Vaughan I equations `(3)`--`(12)`, Barrett--Jarvis, and Vaughan II. | The determinant is obtained by exact Mobius row elimination; the later route concentrates the Mertens product in logarithmically many non-unit roots. | Fix the source elimination before auditing the characteristic polynomial. |
 | `REPOSITORY_DUPLICATION_SCAN` | Searched `research/` and `LeanLab/Riemann/` for Redheffer and summatory-Mobius matrix objects. | No Redheffer definition, determinant identity, or dedicated route card exists. | Admit a new H9 historical subroute. |
 | `LEAN_API_SURVEY` | Checked Mathlib's arithmetic-function Mobius API, determinant multiplication, row updates, Laplace expansion, and triangular determinant support. | The fixed finite integer endpoint has a direct no-sorry Lean surface. | Publish docs-only preregistration before proof edits. |
+| `PREREGISTRATION_PUBLIC` | Published docs-only commit `1b535d265bdd186bbcd1e5e5c67cf69b441259f2`. | Public run `30207301448`, build job `89807491114`, passed in `2m11s`. | Open the fixed production gate. |
+| `POSITIVE_INDEX_BIJECTION` | Reindexed `Fin N` by `k |-> k+1` onto the positive divisors of each column index. | The finite matrix sum is exactly Mathlib's divisor sum and never evaluates `mu(0)`. | Apply Mobius convolution. |
+| `FIRST_ROW_ELIMINATION` | Multiplied Vaughan's first-row Mobius matrix by the Redheffer matrix. | The first pivot is `M(N)` and every other entry in that row is zero. | Audit the complementary determinant. |
+| `TAIL_TRIANGULARITY` | Removed the first row and column and inspected the successor divisibility block. | A larger positive integer cannot divide a smaller one, so the block is unit upper triangular and has determinant one. | Expand the eliminated determinant. |
+| `MERTENS_DETERMINANT` | Combined determinant multiplicativity, the first-row expansion, and the unit tail. | `det A_N=M(N)` compiles for every positive order, with exact zero/nonzero criteria. | Run low-order orientation checks. |
+| `LOW_ORDER_CHECKS` | Checked orders one through four. | Determinants are `1,0,-1,-1`, matching the finite Mertens sums. | Run all local gates. |
+| `LOCAL_GATES` | Ran warning-as-error production, Targets, TargetChecks, and AxiomsAudit compiles; scanned forbidden declarations and resource relaxations; ran the full build. | One proven Target, eight exact checks, six standard-only axiom prints, empty scans, and `8771/8771` build all pass. | Freeze and publish the implementation. |
 
 ## Runtime record
 
@@ -47,7 +54,10 @@ Mathlib's Mobius divisor-cancellation theorem, and standard determinant identiti
 assume RH, the RH-equivalent Mertens growth estimate, the false Mertens conjecture, or any
 unproved spectral-location claim.
 
+Local result: `REDHEFFER_MERTENS_ELIMINATION_FORMALIZED`.
+
 The characteristic polynomial, the exact multiplicity of eigenvalue one, the two dominant-root
 asymptotics, estimates for the remaining roots, reciprocal-zeta continuation, H9, and RH remain
-open after this first campaign. The six inherited user/exposure files remain untouched and
-unstaged.
+open after this first campaign. The compiled determinant identity is an exact arithmetic-spectral
+interface, not a Mertens growth estimate. The six inherited user/exposure files remain untouched
+and unstaged.

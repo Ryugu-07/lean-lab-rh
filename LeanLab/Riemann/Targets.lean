@@ -90,6 +90,7 @@ import LeanLab.Riemann.BettinGonekJContour
 import LeanLab.Riemann.BettinGonekInverseMellinConvolution
 import LeanLab.Riemann.BettinGonekMomentToPowerBridge
 import LeanLab.Riemann.PolyaTuranAbelAudit
+import LeanLab.Riemann.RedhefferMertensDeterminant
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
@@ -1523,6 +1524,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``polyaTuranAbelSignAudit_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260726-H9-POLYA-TURAN-ABEL-SIGN-AUDIT-01 fills a classical route-card gap and kernel-checks the exact sign logic. The generic witness is not the Liouville sequence, and neither false historical global sign conjecture is assumed. The result does not certify the published large counterexamples, formalize finite zeta-section zeros, prove an eventual-sign-to-RH implication, or advance RH; historical_route_coverage_delta=1 and rh_frontier_delta=0." },
+    { id := "H9.redheffer.mertens-determinant"
+      tier := .tier2
+      title := "Formalize the Redheffer--Mertens determinant"
+      statement :=
+        "Define the positive-index integer Redheffer matrix and Vaughan's Mobius first-row eliminator, prove the exact eliminated product and unit complementary determinant, and deduce det A_n=M(n) with determinant-zero criteria and exact low-order checks."
+      leanName := some ``redhefferMertensDeterminant_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260726-H9-REDHEFFER-MERTENS-DETERMINANT-01 compiles Vaughan's finite source elimination for every positive order. A checked bijection between Fin N and positive divisors prevents mu(0) leakage; Mobius convolution kills every nonfirst entry of the replacement row, and the successor divisibility block is unit upper triangular. This gives the exact integer determinant identity and singularity boundary. It does not prove the RH-equivalent Mertens growth estimate, the full characteristic polynomial, individual eigenvalue estimates, reciprocal-zeta continuation, or RH; arithmetic_spectral_interface_delta=1 and rh_frontier_delta=0." },
     { id := "H12.speiser.counting-equivalence-consumer"
       tier := .tier2
       title := "Formalize the Speiser zero-count consumer"

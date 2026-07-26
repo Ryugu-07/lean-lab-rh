@@ -8,7 +8,7 @@ Selected node: `H9-REDHEFFER-MERTENS-DETERMINANT-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `LOCAL_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
 
 ## Selection rationale
 
@@ -132,3 +132,40 @@ Expected classification:
 No production Lean source may be created or edited until this docs-only preregistration passes
 public Lean Action CI. Local STOP returns the active global Goal to `ROUTE_SELECTION`; it does
 not close H9, the Redheffer spectral branch, or RH.
+
+The production gate passed at preregistration commit
+`1b535d265bdd186bbcd1e5e5c67cf69b441259f2`, public Lean Action run `30207301448`,
+build job `89807491114`, in `2m11s`.
+
+## Local result
+
+`LeanLab/Riemann/RedhefferMertensDeterminant.lean` is a 257-line no-sorry implementation of
+the fixed endpoint. It proves:
+
+- a checked bijection from zero-based `Fin N` indices to the positive divisors used by the
+  Mobius convolution, with no `mu(0)` evaluation;
+- determinant one for Vaughan's first-row eliminator;
+- exact elimination of every nonfirst entry in the replaced row;
+- a unit upper-triangular successor divisibility block;
+- `det (redhefferMatrix n) = finiteMertens (n+1)` for every `n`;
+- exact determinant-zero and nonzero criteria and orders one through four.
+
+The proven Target, eight exact TargetChecks, six selected axiom prints, warning-as-error
+production/registry/check/audit compilation, empty forbidden scans, `git diff --check`, and full
+`8771/8771` build pass locally. Every selected theorem depends only on `propext`,
+`Classical.choice`, and `Quot.sound`.
+
+The source elimination is correct but exposes no extra determinant slack: every arithmetic
+cancellation is concentrated in the pivot `finiteMertens (n+1)`. The next source-bearing
+question is the full characteristic polynomial and its logarithmically many non-unit roots, not
+another restatement of the determinant identity.
+
+Local classification:
+
+- `result=REDHEFFER_MERTENS_ELIMINATION_FORMALIZED`;
+- `historical_route_coverage_delta=1`;
+- `arithmetic_spectral_interface_delta=1`;
+- `characteristic_polynomial_delta=0`;
+- `mertens_growth_delta=0`;
+- `hard_gap_delta=0`;
+- `rh_frontier_delta=0`.
