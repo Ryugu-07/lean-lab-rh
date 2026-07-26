@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-D9-CONREY-LI-PHASE-OBSTRUCTION-01`
 
 Selected node: `D9-CONREY-LI-PHASE-OBSTRUCTION-01`
 
-Status: `CONDITIONAL_PHASE_OBSTRUCTION_LOGIC_SUCCESS_LOCAL / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Target
 
@@ -33,6 +33,7 @@ Status: `CONDITIONAL_PHASE_OBSTRUCTION_LOGIC_SUCCESS_LOCAL / IMPLEMENTATION_CI_R
 | `SHIFT_COORDINATE` | Defined `z=i*(s-1)` and `W(z)=1/Xi(1-i*z)`. | Lean proves `W(z)/W(z+i)=(Xi(s)/Xi(s+1))⁻¹`; strict negative real part survives inversion. | Assemble the source obstruction consumer. |
 | `ACTUAL_XI_CONSUMER` | Specialized the generic theorem to actual `riemannXi`. | `not_conreyLiRiemannXiShiftRatioNonnegative_of_phase_data` compiles with every value-distribution, branch, boundedness, strip, and nonvanishing premise visible. | Stop at the known-theorem frontier; do not claim an unconditional zeta counterexample. |
 | `LOCAL_GATES` | Ran warning-as-error, Target, seven TargetChecks, six selected axiom prints, three forbidden scans, `git diff --check`, and full build. | New module has no diagnostics; selected axioms are standard-only; scans are empty; full build is `8768/8768`. | Freeze and publish the implementation. |
+| `IMPLEMENTATION_PUBLIC` | Froze production proof source at `74787a77a20218bb967d18279b29bd7ab9a5ab97`. | Public run `30195816933`, build job `89777044355`, passed in `2m6s`. | Publish docs-only immutable evidence without changing Lean source. |
 
 ## Runtime record
 
@@ -46,8 +47,9 @@ Status: `CONDITIONAL_PHASE_OBSTRUCTION_LOGIC_SUCCESS_LOCAL / IMPLEMENTATION_CI_R
 
 ## Current boundary
 
-The fixed source-logic endpoint succeeds locally as
+The fixed source-logic endpoint succeeds publicly as
 `CONDITIONAL_PHASE_OBSTRUCTION_LOGIC_SUCCESS`. Actual log-zeta density, logarithm branches,
 bounded archimedean correction, the de Branges RKHS theorem, an unconditional actual-zeta
-counterexample, RH, and every other route remain open. Public implementation CI is next. The six
-inherited user/exposure files remain untouched and unstaged.
+counterexample, RH, and every other route remain open. Docs-only immutable-evidence CI, followed
+by a docs-only final-ledger CI, remains before local campaign closure. The six inherited
+user/exposure files remain untouched and unstaged.

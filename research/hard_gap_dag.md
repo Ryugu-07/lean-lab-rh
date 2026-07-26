@@ -2220,3 +2220,8 @@ Final-ledger commit `4ee3b000bf2baff304edfedc215cf9143b399cea` passed run
 - `classification`: `historical_route_coverage_delta=1`, `source_logic_bridge_delta=1`,
   `hard_gap_delta=0`, `rh_frontier_delta=0`.
 - `global_goal`: active.
+
+Frozen implementation commit `74787a77a20218bb967d18279b29bd7ab9a5ab97` passed public Lean
+Action run `30195816933`, build job `89777044355`, in `2m6s`. The source-logic endpoint is
+public-green; proof source is frozen while docs-only immutable evidence and final-ledger CI
+remain.

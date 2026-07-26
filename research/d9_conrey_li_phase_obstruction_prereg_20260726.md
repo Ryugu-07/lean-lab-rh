@@ -8,7 +8,7 @@ Selected node: `D9-CONREY-LI-PHASE-OBSTRUCTION-01`
 
 Mode: `LITERATURE / FALSIFICATION`
 
-Status: `CONDITIONAL_PHASE_OBSTRUCTION_LOGIC_SUCCESS_LOCAL / IMPLEMENTATION_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Primary source
 
@@ -203,3 +203,12 @@ Local classification:
 
 The exact next formalization frontier is the actual value-distribution/logarithm package, not a
 new numerical witness or a stronger generic topology lemma.
+
+## Public implementation evidence
+
+Frozen implementation commit `74787a77a20218bb967d18279b29bd7ab9a5ab97` passed public Lean
+Action run `30195816933`, build job `89777044355`, in `2m6s`.
+
+The production module, registered Target, TargetChecks, and axiom prints are frozen at that
+commit. The next gate is a docs-only immutable-evidence commit whose own public CI must pass;
+no Lean proof source may change between the frozen implementation and that evidence commit.

@@ -4460,3 +4460,16 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `next_gate`: freeze and publish the implementation.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 D9 Conrey--Li phase obstruction implementation public green
+
+- `frozen_implementation`: commit `74787a77a20218bb967d18279b29bd7ab9a5ab97`.
+- `public_ci`: Lean Action run `30195816933`, build job `89777044355`, passed in `2m6s`.
+- `result`: `CONDITIONAL_PHASE_OBSTRUCTION_LOGIC_SUCCESS`.
+- `proof_freeze`: no Lean proof source changes are allowed after the frozen implementation hash.
+- `next_gate`: publish docs-only immutable evidence and require public CI, then a docs-only final
+  ledger and public CI.
+- `strict_boundary`: actual log-zeta density, source-valid continuous logarithms, bounded xi/zeta
+  phase correction, RKHS Theorem 2, an unconditional actual-zeta obstruction, and RH remain open.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

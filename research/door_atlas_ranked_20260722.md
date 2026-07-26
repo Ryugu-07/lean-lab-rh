@@ -1392,3 +1392,7 @@ Thus the historical obstruction no longer depends logically on the paper's numer
 distribution, source-valid logarithm branches and bounded correction, followed by the RKHS
 Theorem 2 bridge. This is a source-logic success, not an unconditional actual-zeta obstruction or
 RH progress. Public implementation evidence remains required.
+
+Frozen implementation commit `74787a77a20218bb967d18279b29bd7ab9a5ab97` passed public Lean
+Action run `30195816933`, build job `89777044355`, in `2m6s`. Proof source is frozen; docs-only
+immutable evidence and final-ledger CI remain before returning to route selection.

@@ -4121,3 +4121,7 @@ The 200-line module, proven Target, seven exact checks, six standard-only axiom 
 forbidden scans, and full `8768/8768` build pass locally. Classification:
 `CONDITIONAL_PHASE_OBSTRUCTION_LOGIC_SUCCESS`, with `hard_gap_delta=0` and
 `rh_frontier_delta=0`.
+
+Frozen implementation commit `74787a77a20218bb967d18279b29bd7ab9a5ab97` passed public Lean
+Action run `30195816933`, build job `89777044355`, in `2m6s`. The next two gates are docs-only
+immutable evidence and final-ledger CI; proof source remains frozen.
