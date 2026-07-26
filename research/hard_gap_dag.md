@@ -1964,7 +1964,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 ## 2026-07-26 H1 Bettin--Gonek moment-to-power bridge local endpoint
 
 - `node`: `H1-BETTIN-GONEK-MOMENT-TO-POWER-BRIDGE-01`.
-- `status`: `LOCAL_FULL_MOMENT_TO_POWER_SUCCESS / IMPLEMENTATION_PUBLIC_CI_REQUIRED`.
+- `status`: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`.
 - `preregistration_gate`: commit `3df6ed836c550671a0e552a09bbba314fcab5c1c`
   passed public Lean Action run `30188267224`, build job `89756704490`, in `1m31s`.
 - `proved_edge`: for every `theta>0`, the actual Farmer long-mollifier bound implies the
@@ -1985,4 +1985,7 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   `historical_route_coverage_delta=1`, `hard_gap_delta=0` for RH, `rh_frontier_delta=0`.
 - `local_gates`: warning-free 1,174-line source under warning-as-error, exact TargetChecks,
   standard-only selected axiom prints, empty forbidden scans, and full `8763/8763` build.
+- `public_implementation`: frozen commit `d07fecd2f00748cf0dc2a4c19d15d89bb740a2e1`
+  passed public Lean Action run `30189533073`, build job `89760104494`, in `2m31s`; proof
+  source remains frozen.
 - `global_goal`: active; Farmer's conjecture and RH remain open.

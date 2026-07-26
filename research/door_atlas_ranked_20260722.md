@@ -1200,3 +1200,7 @@ and the direct implication `FarmerThetaInfinityConjecture -> RiemannHypothesis`.
 known conditional analytic bridge and shows that a full critical-line second-moment asymptotic
 was stronger than necessary for this endpoint. Farmer's arbitrary-length moment conjecture
 remains open, so D3/H1 and RH are not marked solved or exhausted.
+
+Frozen implementation commit `d07fecd2f00748cf0dc2a4c19d15d89bb740a2e1` passed public Lean
+Action run `30189533073`, build job `89760104494`, in `2m31s`; the proof source is frozen while
+the docs-only evidence sequence proceeds.

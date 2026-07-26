@@ -4047,7 +4047,7 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 
 ## 2026-07-26 H1 Bettin--Gonek moment-to-power bridge local result
 
-- `status`: `LOCAL_FULL_MOMENT_TO_POWER_SUCCESS / IMPLEMENTATION_PUBLIC_CI_REQUIRED`.
+- `status`: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`.
 - `production_gate`: preregistration commit
   `3df6ed836c550671a0e552a09bbba314fcab5c1c` passed public Lean Action run
   `30188267224`, build job `89756704490`, in `1m31s`; production proof editing began only
@@ -4072,7 +4072,10 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `claim_boundary`: Farmer's arbitrary-length moment conjecture remains open. This closes the
   known conditional bridge but does not prove RH unconditionally; `hard_gap_delta=0` and
   `rh_frontier_delta=0`.
-- `next_gate`: freeze and publish the implementation, then require immutable-evidence and
-  final-ledger public CI before returning to fresh cross-family route selection.
+- `public_implementation`: frozen commit
+  `d07fecd2f00748cf0dc2a4c19d15d89bb740a2e1` passed public Lean Action run
+  `30189533073`, build job `89760104494`, in `2m31s`; proof source is frozen.
+- `next_gate`: publish docs-only immutable evidence, then require one final-ledger public CI
+  before returning to fresh cross-family route selection.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

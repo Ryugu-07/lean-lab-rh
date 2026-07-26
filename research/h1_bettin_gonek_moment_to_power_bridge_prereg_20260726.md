@@ -160,7 +160,7 @@ The six inherited user/exposure files remain untouched and unstaged.
 
 ## Local outcome
 
-Status: `FULL_MOMENT_TO_POWER_SUCCESS_LOCAL / IMPLEMENTATION_PUBLIC_CI_REQUIRED`.
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`.
 
 Attack A succeeded without changing the preregistered endpoint. The 1,174-line production
 module `LeanLab/Riemann/BettinGonekMomentToPowerBridge.lean` proves:
@@ -183,3 +183,7 @@ transitive axioms are only `propext`, `Classical.choice`, and `Quot.sound`.
 
 This is a formalization of the known conditional Bettin--Gonek bridge. It does not prove
 Farmer's arbitrary-length moment conjecture and does not prove RH unconditionally.
+
+Frozen implementation commit `d07fecd2f00748cf0dc2a4c19d15d89bb740a2e1` passed public Lean
+Action run `30189533073`, build job `89760104494`, in `2m31s`. The production proof source is
+now frozen; only docs-only evidence and final-ledger publication gates remain.

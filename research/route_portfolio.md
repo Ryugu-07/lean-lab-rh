@@ -3871,5 +3871,8 @@ remains open, so the result is not an unconditional RH proof.
 
 Local mechanical gates pass: warning-as-error production compile, proven Target and exact
 checks, selected standard-only axiom prints, empty forbidden scans, and full `8763/8763` build.
-The implementation now awaits frozen public CI before immutable evidence and fresh cross-family
-reranking.
+These were the frozen-implementation publication preconditions.
+
+Frozen implementation commit `d07fecd2f00748cf0dc2a4c19d15d89bb740a2e1` passed public Lean
+Action run `30189533073`, build job `89760104494`, in `2m31s`. The proof source is frozen;
+docs-only immutable evidence and final-ledger CI remain before reranking.

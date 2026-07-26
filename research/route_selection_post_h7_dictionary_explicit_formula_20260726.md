@@ -89,4 +89,6 @@ finite Cauchy, integer moment monotonicity, and exact floor/rpow bookkeeping.
 
 The local result is `FULL_MOMENT_TO_POWER_SUCCESS`. Farmer's arbitrary-length moment conjecture
 remains open, so `hard_gap_delta=0` and `rh_frontier_delta=0` for RH. Frozen implementation
-public CI is the next gate.
+commit `d07fecd2f00748cf0dc2a4c19d15d89bb740a2e1` passed public Lean Action run
+`30189533073`, build job `89760104494`, in `2m31s`. The source is frozen; docs-only evidence is
+the next gate.

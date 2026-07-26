@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260726-H1-BETTIN-GONEK-MOMENT-TO-POWER-BRIDGE-01`
 
 Selected node: `H1-BETTIN-GONEK-MOMENT-TO-POWER-BRIDGE-01`
 
-Status: `LOCAL_FULL_MOMENT_TO_POWER_SUCCESS / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Target
 
@@ -86,4 +86,6 @@ Status: `LOCAL_FULL_MOMENT_TO_POWER_SUCCESS / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
   cross-family route comparison after public closure.
 - `commit_and_CI`: preregistration commit
   `3df6ed836c550671a0e552a09bbba314fcab5c1c` passed public Lean Action run
-  `30188267224`, build job `89756704490`, in `1m31s`; implementation commit pending.
+  `30188267224`, build job `89756704490`, in `1m31s`; frozen implementation commit
+  `d07fecd2f00748cf0dc2a4c19d15d89bb740a2e1` passed run `30189533073`, build job
+  `89760104494`, in `2m31s`. Immutable-evidence commit pending.
