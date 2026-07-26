@@ -16,6 +16,7 @@ import LeanLab.Riemann.RedhefferMertensDeterminant
 import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
+import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -4802,5 +4803,46 @@ example {a b : ℝ} (hab : a ≤ b)
 example :
     HardyCriticalLineSignCertificate :=
   hardyCriticalLineSign_endpoint
+
+example {N q a : ℕ} :
+    (q, a) ∈ fareyPairs N ↔
+      1 ≤ q ∧ q ≤ N ∧ 1 ≤ a ∧ a ≤ q ∧ Nat.Coprime a q :=
+  mem_fareyPairs
+
+example {N : ℕ} {p r : ℕ × ℕ}
+    (hp : p ∈ fareyPairs N) (hr : r ∈ fareyPairs N)
+    (hvalue : fareyValue p = fareyValue r) :
+    p = r :=
+  fareyValue_injective_on hp hr hvalue
+
+example (N : ℕ) :
+    (fareyPairs N).card =
+      ∑ q ∈ Finset.Ico 1 (N + 1), Nat.totient q :=
+  fareyPairs_card N
+
+example (f : ℚ → ℂ) (N : ℕ) :
+    fareySum f N =
+      ∑ n ∈ Finset.Ico 1 (N + 1),
+        (finiteMertens (N / n) : ℂ) * fareyFullBlock f n :=
+  farey_sum_eq_mertens_transform f N
+
+example {q : ℕ} (hq : 0 < q) :
+    fareyReducedBlock fareyFrequencyOne q =
+      (ArithmeticFunction.moebius q : ℂ) :=
+  fareyReducedBlock_frequencyOne_eq_moebius hq
+
+example (N : ℕ) :
+    fareySum fareyFrequencyOne N = (finiteMertens N : ℂ) :=
+  farey_frequency_one_sum_eq_finiteMertens N
+
+example :
+    fareyPairs 0 = ∅ ∧
+      fareyPairs 1 = {(1, 1)} ∧
+      fareyPairs 2 = {(1, 1), (2, 1)} :=
+  ⟨fareyPairs_zero, fareyPairs_one, fareyPairs_two⟩
+
+example :
+    FareyMobiusWeylCertificate :=
+  fareyMobiusWeyl_endpoint
 
 end LeanLab.Riemann

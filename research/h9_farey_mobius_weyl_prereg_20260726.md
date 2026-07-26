@@ -8,7 +8,7 @@ Selected node: `H9-FAREY-MOBIUS-WEYL-TRANSFORM-01`
 
 Mode: `LITERATURE`
 
-Status: `PREREGISTRATION / PRODUCTION_GATE_CLOSED`
+Status: `LOCAL_IMPLEMENTATION_COMPLETE / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
 
 ## Parent public closure
 
@@ -231,3 +231,34 @@ The local campaign stops when the fixed endpoint is proved, falsified, or reduce
 Mathlib or mathematical obstruction. Success returns to fresh cross-family route selection
 before choosing an ordered Farey discrepancy successor, Hardy's transform, or another historical
 family. Local STOP does not close H9 or the active RH Goal.
+
+## Local implementation result
+
+The docs-only preregistration commit `2829a845aad703992bc99b0f0e73f93b7c83ddfe` passed public
+Lean Action run `30214114568`, build job `89825172204`, in `1m29s`, opening production editing.
+
+The 579-line module `LeanLab/Riemann/FareyMobiusWeyl.lean` proves every fixed endpoint:
+
+- literal reduced positive pair membership, exclusion of `0/1`, and unique inclusion of `1/1`;
+- injectivity of reduced positive rational representation and total cardinality
+  `sum_{1<=q<=N} phi(q)`;
+- a checked gcd-reduction bijection from complete numerator blocks to reduced denominator blocks;
+- fixed-denominator Mobius inversion and the finite divisor-antidiagonal global reindexing;
+- the exact arbitrary-test identity
+  `F_N(f)=sum_{1<=n<=N} M(floor(N/n))*V_f(n)`;
+- complete frequency-one root sums, primitive block `mu(q)`, and total sum `M(N)`;
+- exact `N=0,1,2` endpoint checks.
+
+One aggregate Target, eight exact TargetChecks, and nine selected axiom prints compile. Every
+selected print contains only `propext`, `Classical.choice`, and `Quot.sound`; the new module's
+forbidden scan is empty, warning-as-error compilation passes, and the full build passes
+`8775/8775`.
+
+Classification is `result=FAREY_MOBIUS_WEYL_TRANSFORM_FORMALIZED`,
+`historical_route_coverage_delta=1`, `farey_normalization_delta=1`,
+`farey_mertens_transform_delta=1`, `farey_discrepancy_delta=0`,
+`mertens_growth_delta=0`, `hard_gap_delta=0`, and `rh_frontier_delta=0`.
+
+Ordered Farey fractions, Franel discrepancy identities and estimates, equidistribution rates,
+Mertens growth, H9, and RH remain open. The next gate is a frozen implementation commit and
+public CI.

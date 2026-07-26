@@ -1627,3 +1627,16 @@ Campaign `LITERATURE-20260726-H9-FAREY-MOBIUS-WEYL-01` freezes source endpoint c
 reduced-value uniqueness, totient cardinality, the arbitrary-test transform, and the
 frequency-one specialization. It does not prove ordering, discrepancy decay, Mertens growth,
 H9, or RH. Production editing remains closed until docs-only preregistration passes public CI.
+
+### Farey--Mobius--Weyl transform local result
+
+The preregistration passed public CI, and the 579-line implementation compiles the entire fixed
+endpoint. The key omission-sensitive step is a proved finite bijection: every complete numerator
+`a/q` maps to its unique reduced pair
+`(q/gcd(a,q),a/gcd(a,q))`, and the inverse reconstructs the original numerator. Thus no
+duplicate or endpoint convention is hidden in the Mobius inversion.
+
+Lean then proves the actual arbitrary-test Farey sum equals complete blocks weighted by
+`M(floor(N/n))`. The frequency-one specialization gives primitive block `mu(q)` and total
+`M(N)`. This closes the exact arithmetic entry only. Ordered Franel discrepancy, its squared
+error identity, every asymptotic estimate, Mertens growth, H9, and RH remain open.

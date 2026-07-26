@@ -4425,3 +4425,21 @@ This campaign does not prove an ordered Farey discrepancy estimate, equidistribu
 Mertens cancellation, H9, or RH. It is selected for historical breadth and omission auditing,
 not because it follows the most recent implementation. Public preregistration CI is required
 before proof-source editing.
+
+## H9 Farey--Mobius--Weyl Transform Local Result
+
+Preregistration commit `2829a845aad703992bc99b0f0e73f93b7c83ddfe` passed public CI run
+`30214114568`, job `89825172204`, in `1m29s`. The implementation now proves the actual positive
+reduced-pair convention, unique rational representation, totient cardinality, and the exact
+arbitrary-test finite Mertens transform.
+
+The source mechanism is fully exposed: gcd reduction partitions every complete numerator block,
+Mobius inversion extracts each primitive denominator block, and a checked finite antidiagonal
+reindexing produces `M(floor(N/n))`. At frequency one, the complete root sums vanish above
+denominator one, giving primitive sum `mu(q)` and global sum `M(N)`.
+
+This is exact historical arithmetic infrastructure. It does not prove the ordered Franel
+discrepancy formula or any RH-equivalent estimate. Local classification is
+`FAREY_MOBIUS_WEYL_TRANSFORM_FORMALIZED`, with historical, normalization, and transform deltas
+but `hard_gap_delta=0` and `rh_frontier_delta=0`. Freeze and publish the implementation before
+immutable evidence.

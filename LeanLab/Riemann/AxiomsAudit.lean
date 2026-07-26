@@ -8,6 +8,7 @@ import LeanLab.Riemann.RedhefferMertensDeterminant
 import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
+import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
 import LeanLab.Riemann.ThetaInfinityMollifier
@@ -1068,3 +1069,12 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.exists_hardyXi_zero_of_sign_change_reverse
 #print axioms LeanLab.Riemann.exists_hardyXi_zero_in_each_alternating_interval
 #print axioms LeanLab.Riemann.hardyCriticalLineSign_endpoint
+#print axioms LeanLab.Riemann.fareyValue_injective_on
+#print axioms LeanLab.Riemann.fareyPairs_card
+#print axioms LeanLab.Riemann.fareyFullBlock_eq_sum_reducedBlocks_divisors
+#print axioms LeanLab.Riemann.fareyReducedBlock_eq_moebiusAntidiagonal
+#print axioms LeanLab.Riemann.sum_Ico_divisorsAntidiagonal_eq_sum_Ico_div
+#print axioms LeanLab.Riemann.farey_sum_eq_mertens_transform
+#print axioms LeanLab.Riemann.fareyReducedBlock_frequencyOne_eq_moebius
+#print axioms LeanLab.Riemann.farey_frequency_one_sum_eq_finiteMertens
+#print axioms LeanLab.Riemann.fareyMobiusWeyl_endpoint

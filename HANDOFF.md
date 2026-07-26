@@ -5018,3 +5018,27 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   Hardy's transform, or another historical branch.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-26 H9 Farey--Mobius--Weyl transform local result
+
+- `public_prereg`: commit `2829a845aad703992bc99b0f0e73f93b7c83ddfe` passed run
+  `30214114568`, build job `89825172204`, in `1m29s`.
+- `result`: `FAREY_MOBIUS_WEYL_TRANSFORM_FORMALIZED`.
+- `module`: `LeanLab/Riemann/FareyMobiusWeyl.lean`, 579 lines.
+- `compiled_core`: exact positive reduced pairs and endpoints, reduced rational injectivity,
+  totient cardinality, complete-block gcd reduction, fixed-denominator Mobius inversion,
+  arbitrary-test Mertens transform, primitive frequency-one `mu(q)`, and total
+  frequency-one `finiteMertens(N)`.
+- `local_gates`: one aggregate Target, eight exact checks, nine selected standard-only axiom
+  prints, empty new-module forbidden scan, warning-as-error compile, `git diff --check`, and
+  full `8775/8775` build.
+- `strict_boundary`: ordered discrepancy, Franel's quadratic identity, every discrepancy or
+  equidistribution estimate, Mertens growth, H9, and RH remain open.
+- `classification`: `historical_route_coverage_delta=1`,
+  `farey_normalization_delta=1`, `farey_mertens_transform_delta=1`,
+  `farey_discrepancy_delta=0`, `mertens_growth_delta=0`, `hard_gap_delta=0`,
+  `rh_frontier_delta=0`.
+- `next_gate`: freeze and publish the implementation, then docs-only immutable evidence and
+  final ledger with public CI at each gate.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

@@ -2541,3 +2541,22 @@ publicly closed and cross-family selection resumed.
 - `classification_target`: `FAREY_MOBIUS_WEYL_TRANSFORM_FORMALIZED`, with normalization,
   exact-transform, and historical-coverage deltas but no hard-gap or RH-frontier delta.
 - `global_goal`: active.
+
+## 2026-07-26 H9 Farey--Mobius--Weyl transform local result
+
+- `closed_edge`: source pair normalization, reduced rational uniqueness, totient count,
+  complete-to-primitive denominator decomposition, exact finite Mertens transform, and the
+  frequency-one `mu(q)`/`M(N)` specializations.
+- `new_unconditional_fact`: for every complex test `f` on rationals,
+  `F_N(f)=sum_{n<=N}M(floor(N/n))*V_f(n)` for the actual reduced positive Farey sum.
+- `open_edge_F1`: formalize the ordered Farey sequence and exact Franel squared-discrepancy
+  identity without changing endpoint conventions.
+- `open_edge_F2`: prove an RH-equivalent discrepancy or Mertens square-root estimate.
+- `classification`: `historical_route_coverage_delta=1`,
+  `farey_normalization_delta=1`, `farey_mertens_transform_delta=1`,
+  `farey_discrepancy_delta=0`, `mertens_growth_delta=0`, `hard_gap_delta=0`,
+  `rh_frontier_delta=0`.
+- `local_audit`: one proven Target, eight exact TargetChecks, nine selected standard-only axiom
+  prints, empty forbidden scan, warning-as-error compile, and full `8775/8775` build.
+- `next_gate`: frozen implementation commit and public CI.
+- `global_goal`: active.

@@ -94,6 +94,7 @@ import LeanLab.Riemann.RedhefferMertensDeterminant
 import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
+import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
@@ -1559,6 +1560,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``rieszTwoMellinBoundary_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260726-H9-RIESZ-MELLIN-BOUNDARY-01 proves P_2(0)=1/zeta(2) is nonzero, P_2(x)=O(x^-a) for every 0<=a<1/2, ordinary Mellin convergence and zeta(2s+2) M[P_2](-s)=Gamma(-s) on -1/2<Re(s)<0, and nonconvergence at Mellin argument -1/2. Thus the larger right-side range displayed in Agarwal-Garg-Maji Lemma 2.4 cannot be a literal improper integral there and requires analytic continuation. The Riesz decay criterion, a zero-free continuation theorem, and RH remain open; source_domain_delta=1, historical_route_coverage_delta=1, rh_frontier_delta=0." },
+    { id := "H9.farey.mobius-weyl-transform"
+      tier := .tier2
+      title := "Formalize the finite Farey--Mobius--Weyl transform"
+      statement :=
+        "Define the source-aligned reduced positive Farey pairs, prove unique rational representation and totient cardinality, compile the exact arbitrary-test-function Mertens transform, and specialize frequency one to the primitive Mobius block and global finite Mertens sum."
+      leanName := some ``fareyMobiusWeyl_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260726-H9-FAREY-MOBIUS-WEYL-01 reconstructs the xi=1 finite transform in Kanemitsu-Yoshimoto Lemma 3. Lean verifies the convention 0<a<=q<=N, excludes 0/1, includes 1/1 once, proves reduced rational-value injectivity and sum(phi(q)) cardinality, and proves F_N(f)=sum_{n<=N}M(floor(N/n))V_f(n). At frequency one, every complete block above one vanishes, the primitive q-block is mu(q), and the total is M(N). No ordered Farey discrepancy estimate, equidistribution rate, Mertens growth, H9, or RH is proved; historical_route_coverage_delta=1, farey_mertens_transform_delta=1, rh_frontier_delta=0." },
     { id := "H12.speiser.counting-equivalence-consumer"
       tier := .tier2
       title := "Formalize the Speiser zero-count consumer"
