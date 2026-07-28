@@ -42,6 +42,7 @@ import LeanLab.Riemann.DeBruijnNewmanLiMoments
 import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
 import LeanLab.Riemann.DeBruijnNewmanHeatLiMonotonicity
+import LeanLab.Riemann.HardyThetaInversion
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.InfiniteReciprocalTraceAudit
 import LeanLab.Riemann.H6GapVelocityAudit
@@ -1758,6 +1759,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``chebyshevMellin_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260728-H0-CHEBYSHEV-MELLIN-01 reconstructs the Riemann/von Koch entrance using Mathlib's actual Chebyshev psi and von Mangoldt coefficients. Lean proves the generic ordered Abel theorem, absolute-region compatibility, the exact Lambda-1 partial sums, the floor correction, and the exponent-to-half-plane ordered convergence bridge. A kernel-checked alternating example records that ordered convergence at s=1/2 does not imply Mathlib LSeriesSummable, which means absolute convergence. No RH-strength psi error estimate, locally uniform/analytic continuation, zero exclusion, H0, or RH is proved." },
+    { id := "H1.hardy.theta-inversion"
+      tier := .tier2
+      title := "Reconstruct Hardy's positive-real theta inversion"
+      statement :=
+        "Prove the completed critical-line Mellin transform vertically integrable, independently invert its elementary pole kernel, and derive Hardy's exact 1914 Cahen--Mellin equation (1) for every positive real x."
+      leanName := some ``hardyThetaInversion_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260728-H1-HARDY-THETA-INVERSION-01 completes Attacks A--B in literal source normalization. The proof corrects the preregistered interpretation of Mathlib's f_modif: it subtracts one pole term on each side of x=1, while a separate compiled pole-kernel inversion restores both terms in Hardy's equation. Strip analyticity, equation (2), the tangential Abel boundary, the all-order moment law, H1, and RH remain open." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

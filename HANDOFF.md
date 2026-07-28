@@ -5431,3 +5431,30 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `production_gate`: docs-only preregistration must pass public CI before any `LeanLab/` edit.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H1 Hardy positive-real theta inversion local result
+
+- `campaign`: `LITERATURE-20260728-H1-HARDY-THETA-INVERSION-01`.
+- `result`: `MEANINGFUL_MELLIN_INVERSION_PARTIAL /
+  SOURCE_NORMALIZATION_CORRECTION`.
+- `compiled_endpoint`: `hardyThetaInversion_endpoint`.
+- `closed_edge`:
+  `Phi L1 mass -> uniform real-line Xi bound`;
+  `project xi algebra -> completed Mellin rational identity`;
+  `vertical integrability -> positive-real Mellin inversion`;
+  `elementary pole cutoff -> independent rational-kernel inversion`;
+  `difference of inverse transforms -> Hardy 1914 equation (1) for every x>0`.
+- `semantic_correction`: Mathlib `f_modif` subtracts `1` above one and `x^(-1/2)` below one,
+  rather than subtracting both everywhere. A separate compiled pole kernel restores Hardy's two
+  source terms, and dominated continuity closes `x=1`.
+- `first_open_Attack_C`: prove exponential-weight integrability of
+  `Xi(2t)/(1/4+4t^2)` on every compact alpha substrip. The current uniform Xi bound is
+  insufficient for the factor `exp(a*|t|)`.
+- `remaining_H1`: strip analyticity, Hardy equation (2), tangential Abel boundary, all-order
+  moment law, unconditional Hardy infinitude theorem in the project, positive proportion, H1,
+  and RH.
+- `local_audit`: 803-line production module, exact checks, seven standard-only axiom prints,
+  three empty forbidden scans, `git diff --check`, and full `8781/8781` build pass.
+- `next_gate`: freeze implementation and require public Lean Action CI.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.

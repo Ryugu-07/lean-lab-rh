@@ -19,6 +19,7 @@ import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.HardyAbelMomentAmplification
+import LeanLab.Riemann.HardyThetaInversion
 import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.FareyFranel
 import LeanLab.Riemann.DeBruijnNewmanHeat
@@ -5192,5 +5193,26 @@ example :
 example :
     ChebyshevMellinCertificate :=
   chebyshevMellin_endpoint
+
+example (t : ℝ) :
+    ‖hardyXi (2 * t)‖ ≤
+      8 * ∫ u : ℝ in Set.Ioi 0, ‖deBruijnNewmanPhi u‖ :=
+  norm_hardyXi_two_mul_le_phiMass t
+
+example :
+    Complex.VerticalIntegrable
+      (mellin (HurwitzZeta.hurwitzEvenFEPair 0).f_modif)
+      (1 / 4) :=
+  verticalIntegrable_hardyCompletedMellin
+
+example {x : ℝ} (hx : 0 < x) :
+    1 + (x : ℂ) ^ (-(1 / 2 : ℂ)) -
+        hardyXiPositiveRealIntegral x =
+      (HurwitzZeta.evenKernel 0 x : ℂ) :=
+  hardyCahenMellinInversion hx
+
+example :
+    HardyThetaInversionCertificate :=
+  hardyThetaInversion_endpoint
 
 end LeanLab.Riemann

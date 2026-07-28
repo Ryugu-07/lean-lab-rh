@@ -2856,3 +2856,24 @@ final-ledger CI, return to cross-family selection with H11-D/H11-E retained as o
   forbidden/resource scan, warning-as-error compiles, and full `8779/8779` build.
 - `next_gate`: frozen implementation public CI.
 - `global_goal`: active.
+
+## 2026-07-28 H1 Hardy theta inversion local result
+
+- `node`: `H1-HARDY-THETA-INVERSION-01`.
+- `status`: `MEANINGFUL_MELLIN_INVERSION_PARTIAL /
+  SOURCE_NORMALIZATION_CORRECTION`.
+- `closed`:
+  `actual Xi vertical integrability -> exact Mellin inversion`;
+  `elementary pole transform -> exact rational inverse`;
+  `source normalization -> Hardy equation (1) for all positive real x`.
+- `open_H1_theta_C1`: prove
+  `Integrable (exp(a*|t|) * norm(Xi(2t))/(1/4+4t^2))` for every
+  `0<=a<pi/2`.
+- `open_H1_theta_C2`: use C1 for analytic continuation on
+  `|Re(alpha)|<pi/2` and prove Hardy equation (2).
+- `open_H1_theta_boundary`: prove the one-sided tangential theta limit and the all-order moment
+  law needed by the compiled Hardy contradiction consumer.
+- `classification`: `historical_route_coverage_delta=1`,
+  `hardy_equation_one_delta=1`, `library_semantics_correction_delta=1`,
+  `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `global_goal`: active.

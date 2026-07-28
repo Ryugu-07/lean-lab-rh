@@ -11,6 +11,7 @@ import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.HardyAbelMomentAmplification
+import LeanLab.Riemann.HardyThetaInversion
 import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
 import LeanLab.Riemann.PairCorrelationTriangularMass
@@ -1125,3 +1126,10 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.orderedAlternatingDirichletHasSum
 #print axioms LeanLab.Riemann.not_LSeriesSummable_alternatingDirichletCoeff_half
 #print axioms LeanLab.Riemann.chebyshevMellin_endpoint
+#print axioms LeanLab.Riemann.norm_hardyXi_two_mul_le_phiMass
+#print axioms LeanLab.Riemann.verticalIntegrable_hardyCompletedMellin
+#print axioms LeanLab.Riemann.hardyMellinInv_eq_f_modif
+#print axioms LeanLab.Riemann.hardyPoleMellinInv_eq_kernel
+#print axioms LeanLab.Riemann.hardyXiPositiveRealIntegral_eq_pole_sub_f_modif
+#print axioms LeanLab.Riemann.hardyCahenMellinInversion
+#print axioms LeanLab.Riemann.hardyThetaInversion_endpoint
