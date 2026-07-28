@@ -2724,3 +2724,46 @@ Immutable evidence `ed2a400a98ca543d3a2795a80ea08544bcbb5df6` passed public run
 `30338961956`, build job `90209983168`, in `2m12s`; its `LeanLab/` diff from the frozen
 implementation is empty. The fixed boundary node is at `FULL_FIXED_ENDPOINT_SUCCESS`. After
 final-ledger CI, return to cross-family selection with H11-D/H11-E retained as open.
+
+## 2026-07-28 H0 Chebyshev--Mellin bridge launch
+
+- `node`: `H0-RIEMANN-VON-KOCH-PSI-MELLIN-01`.
+- `mode`: `LITERATURE / OMISSION_AUDIT`.
+- `source_edge`:
+  `von Mangoldt coefficients -> Chebyshev psi partial sums`;
+  `finite Abel summation -> ordered Dirichlet Mellin limit`;
+  `psi(N)-N=O(N^r) -> ordered error series on Re(s)>r`;
+  `analytic continuation plus zero exclusion -> reverse von Koch direction`.
+- `semantic_correction`: Mathlib `LSeriesSummable` is absolute convergence. A cancellation
+  estimate on complex partial sums supplies naturally ordered convergence, not absolute
+  convergence.
+- `positive_control`: an alternating coefficient sequence has bounded partial sums and ordered
+  convergence for `Re(s)>0`.
+- `negative_control`: at `s=1/2`, the same alternating series is not `LSeriesSummable`.
+- `open_edge_H0A`: prove an RH-strength `psi(N)-N` estimate rather than assume one.
+- `open_edge_H0B`: derive local uniform convergence or holomorphy from the ordered bridge and
+  connect it to zero exclusion for the pole-removed zeta function.
+- `classification_target`: historical mechanism and library-semantics progress; no hard-gap or
+  RH-frontier delta.
+- `global_goal`: active.
+
+## 2026-07-28 H0 Chebyshev--Mellin bridge local result
+
+- `closed_edge`:
+  `finite Abel summation + O(N^r) cancellation -> exact ordered Mellin limit`;
+  `absolute L-series convergence -> compatibility with the ordered limit`;
+  `actual von Mangoldt sum -> Chebyshev psi`;
+  `Re(s)>1 -> -zeta'(s)/zeta(s) Chebyshev Mellin identity`;
+  `psi error coefficients -> exact floor-error Mellin bridge`.
+- `compiled_endpoint`: `chebyshevMellin_endpoint`.
+- `adversarial_result`: ordered convergence at `s=1/2` and failure of absolute
+  `LSeriesSummable` are both compiled for the alternating sequence.
+- `remaining_H0A`: prove an RH-strength Chebyshev error estimate.
+- `remaining_H0B`: prove the analytic continuation/zero-exclusion reverse implication without
+  confusing pointwise ordered convergence with holomorphy.
+- `classification`: `library_semantics_correction_delta=1`,
+  `historical_route_coverage_delta=1`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `local_audit`: 527-line source, 13 exact TargetChecks, 11 standard-only axiom prints, empty
+  forbidden/resource scan, warning-as-error compiles, and full `8779/8779` build.
+- `next_gate`: frozen implementation public CI.
+- `global_goal`: active.

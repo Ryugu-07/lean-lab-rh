@@ -1,4 +1,5 @@
 import LeanLab.Riemann.BalazardSaias
+import LeanLab.Riemann.ChebyshevMellin
 import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.InfiniteReciprocalTraceAudit
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
@@ -1104,3 +1105,14 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.exists_hardyXi_zero_above_of_abelMomentLaw
 #print axioms LeanLab.Riemann.infinite_criticalLineZeros_of_hardyXiAbelMomentLaw
 #print axioms LeanLab.Riemann.hardyXiAbelMomentAmplification_endpoint
+#print axioms LeanLab.Riemann.orderedDirichletHasSum_mellin_of_sum_isBigO
+#print axioms LeanLab.Riemann.orderedDirichletHasSum_of_LSeriesSummable
+#print axioms LeanLab.Riemann.chebyshevPsi_eq_sum_vonMangoldt
+#print axioms LeanLab.Riemann.LSeries_vonMangoldt_eq_chebyshevPsi_mellin
+#print axioms LeanLab.Riemann.neg_deriv_riemannZeta_div_eq_chebyshevPsi_mellin
+#print axioms LeanLab.Riemann.sum_chebyshevPsiErrorCoeff
+#print axioms LeanLab.Riemann.LSeries_chebyshevPsiErrorCoeff_eq
+#print axioms LeanLab.Riemann.orderedChebyshevPsiErrorHasSum_of_isBigO
+#print axioms LeanLab.Riemann.orderedAlternatingDirichletHasSum
+#print axioms LeanLab.Riemann.not_LSeriesSummable_alternatingDirichletCoeff_half
+#print axioms LeanLab.Riemann.chebyshevMellin_endpoint

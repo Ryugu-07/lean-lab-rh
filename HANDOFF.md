@@ -5271,3 +5271,45 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   amplification, H11, and RH.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H0 Chebyshev--Mellin route selected
+
+- `parent_public_closure`: H11 moving-window final ledger
+  `a79f218d97f41d27d59ec12293927882d1069283` passed run `30339249648`, job
+  `90210877424`, in `1m37s`.
+- `campaign`: `LITERATURE-20260728-H0-CHEBYSHEV-MELLIN-01`.
+- `node`: `H0-RIEMANN-VON-KOCH-PSI-MELLIN-01`.
+- `selection_reason`: the project has deep explicit-formula machinery but lacked a dedicated
+  exact Target connecting Mathlib's actual Chebyshev `psi` to the half-plane selected by a
+  hypothetical prime-error exponent.
+- `semantic_correction`: initial preregistration commit
+  `ef2b3e90abebc963522e78ee01a37c7cf5cf1bd9` passed run `30340366975`, job
+  `90214370358`, in `1m55s`, but its proposed use of `LSeriesSummable` was rejected before any
+  proof-source edit because that predicate means absolute convergence.
+- `corrected_prereg_public`: commit `d718362979fc5e68580af90e1e8a562d5f5b4684`
+  passed run `30340685519`, job `90215366155`, in `1m36s`.
+- `corrected_endpoint`: naturally ordered finite-Abel/Mellin convergence, absolute-series
+  compatibility only where separately known, actual `psi`/von Mangoldt identities, exact floor
+  correction, and an alternating conditional-convergence control.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H0 Chebyshev--Mellin local result
+
+- `result`: `CHEBYSHEV_MELLIN_ORDERED_BRIDGE_FORMALIZED /
+  LIBRARY_SEMANTICS_CORRECTION`.
+- `compiled`: 527-line source; generic cancellation-preserving ordered Abel theorem; exact
+  ordered Mellin limit; compatibility with Mathlib `LSeries` in the absolute region; actual
+  `Chebyshev.psi` and von Mangoldt partial sums; `Re(s)>1` Mellin and `-zeta'/zeta` identities;
+  exact `psi(N)-N` coefficient series; floor correction; alternating conditional-convergence
+  witness; aggregate certificate.
+- `audits`: one aggregate Target, 13 exact checks, 11 standard-only axiom prints, empty
+  forbidden/resource scan, warning-as-error compiles, `git diff --check`, and full
+  `8779/8779` build.
+- `strict_boundary`: no RH-strength Chebyshev error estimate, local uniform convergence,
+  holomorphy, reverse zero exclusion, H0, H9, or RH.
+- `classification`: `library_semantics_correction_delta=1`,
+  `historical_route_coverage_delta=1`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `next_gate`: commit and publish the frozen implementation, then require public Lean Action CI.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.

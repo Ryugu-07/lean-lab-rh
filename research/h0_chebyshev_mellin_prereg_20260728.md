@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260728-H0-CHEBYSHEV-MELLIN-01`
 
 Selected node: `H0-RIEMANN-VON-KOCH-PSI-MELLIN-01`
 
-Status: `CORRECTED_PREREGISTERED_LOCAL / SECOND_PUBLIC_CI_PENDING`
+Status: `FULL_SUCCESS_LOCAL / FROZEN_IMPLEMENTATION_PENDING`
 
 ## Selection reason
 
@@ -197,3 +197,42 @@ subject to a fresh rerank. Direct RH attacks and conjecture verification remain 
   historical census, door atlas, H0/H2/H9/H12 frontiers, the H9 Farey implementation, Mathlib
   Chebyshev/L-series APIs, and the Riemann/von Koch primary sources before selection.
 - `global_goal`: active.
+
+## Corrected preregistration public green
+
+- `corrected_preregistration`: commit
+  `d718362979fc5e68580af90e1e8a562d5f5b4684` passed public Lean Action run
+  `30340685519`, build job `90215366155`, in `1m36s`.
+- `production_gate`: opened only after the corrected ordered-convergence endpoint was public
+  green.
+- `semantic_boundary`: `LSeriesSummable` remains reserved for absolute convergence; the
+  cancellation theorem uses an explicit naturally ordered limit.
+
+## Local implementation result
+
+- `module`: `LeanLab/Riemann/ChebyshevMellin.lean`, 527 lines.
+- `compiled_endpoint`: all twelve corrected blocks compile. The aggregate theorem is
+  `chebyshevMellin_endpoint`.
+- `generic_bridge`: `orderedDirichletHasSum_mellin_of_sum_isBigO` sends
+  `sum_{1 <= k <= N} f(k) = O(N^r)` to the exact naturally ordered Abel--Mellin limit for
+  `0 <= r < Re(s)`, without replacing the complex partial sum by coefficient norms.
+- `actual_arithmetic`: the exact Mathlib `Chebyshev.psi`/von Mangoldt partial sum, the
+  unconditional `Re(s)>1` Mellin identity, and
+  `-zeta'(s)/zeta(s)` identification all compile.
+- `error_bridge`: the coefficient `vonMangoldt(n)-1` has exact natural partial sum
+  `psi(N)-N`; any registered `O(N^r)` bound gives its naturally ordered Mellin limit throughout
+  `Re(s)>r`. The exact real-variable floor correction is also compiled.
+- `adversarial_certificate`: the alternating sequence has bounded partial sums and ordered
+  convergence at `s=1/2`, while `LSeriesSummable` at the same point is kernel-checked false.
+  This prevents later proofs from silently upgrading conditional to absolute convergence.
+- `local_audit`: one aggregate proven Target, 13 exact TargetChecks, 11 selected transitive
+  axiom prints using only `propext`, `Classical.choice`, and `Quot.sound`; empty
+  forbidden/resource scan; warning-as-error module and exact-check compiles; `git diff --check`;
+  and full `8779/8779` build.
+- `classification`: `CHEBYSHEV_MELLIN_ORDERED_BRIDGE_FORMALIZED`,
+  `library_semantics_correction_delta=1`, `historical_route_coverage_delta=1`,
+  `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `strict_boundary`: no RH-strength `psi` error estimate, local uniform convergence or
+  holomorphy in the enlarged half-plane, reverse zero-exclusion theorem, H0, H9, or RH has been
+  proved.
+- `next_gate`: freeze and publish the implementation, then require independent public CI.

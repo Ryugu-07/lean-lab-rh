@@ -96,6 +96,7 @@ import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.FareyMobiusWeyl
+import LeanLab.Riemann.ChebyshevMellin
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
@@ -1740,6 +1741,14 @@ def rhTargets : List ResearchTarget :=
         "Prove a global analytic theorem showing that a finite certified zero calculation excludes every higher off-line nontrivial zeta zero."
       status := .inProgress
       note := "Platt-Trudgian finite verification is genuine unconditional information and has valid bounded analytic consumers. The open edge is a global tail theorem strong enough to localize every possible RH exception." },
+    { id := "H0.chebyshev.ordered-mellin-bridge"
+      tier := .tier2
+      title := "Formalize the ordered Chebyshev--Mellin bridge"
+      statement :=
+        "Distinguish naturally ordered Dirichlet convergence from Mathlib's absolute LSeriesSummable predicate, prove the Abel limit from O(N^r) complex partial-sum cancellation, identify the von Mangoldt and Chebyshev psi transforms on Re(s)>1, and send a hypothetical psi(N)-N=O(N^r) estimate to the exact ordered error transform on Re(s)>r."
+      leanName := some ``chebyshevMellin_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260728-H0-CHEBYSHEV-MELLIN-01 reconstructs the Riemann/von Koch entrance using Mathlib's actual Chebyshev psi and von Mangoldt coefficients. Lean proves the generic ordered Abel theorem, absolute-region compatibility, the exact Lambda-1 partial sums, the floor correction, and the exponent-to-half-plane ordered convergence bridge. A kernel-checked alternating example records that ordered convergence at s=1/2 does not imply Mathlib LSeriesSummable, which means absolute convergence. No RH-strength psi error estimate, locally uniform/analytic continuation, zero exclusion, H0, or RH is proved." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

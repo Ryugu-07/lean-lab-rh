@@ -5029,4 +5029,83 @@ example :
     HardyXiAbelMomentAmplificationCertificate :=
   hardyXiAbelMomentAmplification_endpoint
 
+example (f : ℕ → ℂ) {r : ℝ}
+    (hO : (fun n => ∑ k ∈ Finset.Icc 1 n, f k) =O[Filter.atTop]
+      fun n => (n : ℝ) ^ r)
+    (hr : 0 ≤ r) {s : ℂ} (hs : r < s.re) :
+    OrderedDirichletHasSum f s
+      (s * ∫ t in Set.Ioi (1 : ℝ),
+        (∑ k ∈ Finset.Icc 1 ⌊t⌋₊, f k) *
+          (t : ℂ) ^ (-(s + 1))) :=
+  orderedDirichletHasSum_mellin_of_sum_isBigO f hO hr hs
+
+example {f : ℕ → ℂ} {s : ℂ} (hS : LSeriesSummable f s) :
+    OrderedDirichletHasSum f s (LSeries f s) :=
+  orderedDirichletHasSum_of_LSeriesSummable hS
+
+example (x : ℝ) :
+    (Chebyshev.psi x : ℂ) =
+      ∑ k ∈ Finset.Icc 1 ⌊x⌋₊,
+        (ArithmeticFunction.vonMangoldt k : ℂ) :=
+  chebyshevPsi_eq_sum_vonMangoldt x
+
+example {s : ℂ} (hs : 1 < s.re) :
+    LSeries (fun n => (ArithmeticFunction.vonMangoldt n : ℂ)) s =
+      s * ∫ t in Set.Ioi (1 : ℝ),
+        (Chebyshev.psi t : ℂ) * (t : ℂ) ^ (-(s + 1)) :=
+  LSeries_vonMangoldt_eq_chebyshevPsi_mellin hs
+
+example {s : ℂ} (hs : 1 < s.re) :
+    -deriv riemannZeta s / riemannZeta s =
+      s * ∫ t in Set.Ioi (1 : ℝ),
+        (Chebyshev.psi t : ℂ) * (t : ℂ) ^ (-(s + 1)) :=
+  neg_deriv_riemannZeta_div_eq_chebyshevPsi_mellin hs
+
+example (N : ℕ) :
+    (∑ k ∈ Finset.Icc 1 N, chebyshevPsiErrorCoeff k) =
+      (Chebyshev.psi N : ℂ) - (N : ℂ) :=
+  sum_chebyshevPsiErrorCoeff N
+
+example {s : ℂ} (hs : 1 < s.re) :
+    LSeries chebyshevPsiErrorCoeff s =
+      -deriv riemannZeta s / riemannZeta s - riemannZeta s :=
+  LSeries_chebyshevPsiErrorCoeff_eq hs
+
+example {s : ℂ} (hs : 1 < s.re) :
+    LSeries chebyshevPsiErrorCoeff s =
+      s * ∫ t in Set.Ioi (1 : ℝ),
+        ((Chebyshev.psi t : ℂ) - (⌊t⌋₊ : ℂ)) *
+          (t : ℂ) ^ (-(s + 1)) :=
+  LSeries_chebyshevPsiErrorCoeff_eq_mellin hs
+
+example {r : ℝ}
+    (hO : (fun n : ℕ => (Chebyshev.psi n : ℂ) - (n : ℂ)) =O[Filter.atTop]
+      fun n => (n : ℝ) ^ r)
+    (hr : 0 ≤ r) {s : ℂ} (hs : r < s.re) :
+    OrderedDirichletHasSum chebyshevPsiErrorCoeff s
+      (s * ∫ t in Set.Ioi (1 : ℝ),
+        ((Chebyshev.psi t : ℂ) - (⌊t⌋₊ : ℂ)) *
+          (t : ℂ) ^ (-(s + 1))) :=
+  orderedChebyshevPsiErrorHasSum_of_isBigO hO hr hs
+
+example (x : ℝ) :
+    Chebyshev.psi x - (⌊x⌋₊ : ℝ) =
+      (Chebyshev.psi x - x) + (x - (⌊x⌋₊ : ℝ)) :=
+  chebyshevPsi_floorError_eq_continuousError_add x
+
+example {s : ℂ} (hs : 0 < s.re) :
+    OrderedDirichletHasSum alternatingDirichletCoeff s
+      (s * ∫ t in Set.Ioi (1 : ℝ),
+        (∑ k ∈ Finset.Icc 1 ⌊t⌋₊, alternatingDirichletCoeff k) *
+          (t : ℂ) ^ (-(s + 1))) :=
+  orderedAlternatingDirichletHasSum hs
+
+example :
+    ¬LSeriesSummable alternatingDirichletCoeff (1 / 2 : ℂ) :=
+  not_LSeriesSummable_alternatingDirichletCoeff_half
+
+example :
+    ChebyshevMellinCertificate :=
+  chebyshevMellin_endpoint
+
 end LeanLab.Riemann
