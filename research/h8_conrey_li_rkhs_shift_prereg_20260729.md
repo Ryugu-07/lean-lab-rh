@@ -9,7 +9,7 @@ Node: `H8-CONREY-LI-RKHS-SHIFT-01`
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
 Status: `FULL_UPPER_HALF_PLANE_PRODUCER_SUCCESS /
-IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+IMPLEMENTATION_AND_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PENDING`
 
 ## Primary-source anchor
 
@@ -156,3 +156,7 @@ open.
 Frozen implementation `462c88ad1f80772e9485ce224e16e63c9fd39e8e` passed public Lean Action
 run `30387979402`, build job `90371989593`, in `2m2s`. Proof sources remain frozen while
 docs-only immutable evidence is published.
+
+Docs-only immutable evidence `7d17c19ad04fb0fca1c46dc2fc20813ed6ef6c95` passed public Lean
+Action run `30388269762`, build job `90372975118`, in `1m39s`. The `LeanLab/` diff from the
+frozen implementation is empty. One docs-only final ledger remains.

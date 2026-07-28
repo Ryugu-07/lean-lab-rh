@@ -5626,6 +5626,20 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-29 H8 Conrey--Li RKHS shift immutable evidence public green
+
+- `immutable_evidence`: `7d17c19ad04fb0fca1c46dc2fc20813ed6ef6c95`.
+- `public_ci`: run `30388269762`, build job `90372975118`, passed in `1m39s`.
+- `proof_freeze`: `LeanLab/` has an empty diff from frozen implementation
+  `462c88ad1f80772e9485ce224e16e63c9fd39e8e`.
+- `local_stop`: `FULL_UPPER_HALF_PLANE_PRODUCER_SUCCESS`, pending one docs-only final-ledger CI.
+- `remaining_H8`: concrete `F(W)`, actual-xi shift positivity, the half-strip Hardy-RKHS
+  multiplier/adjoint continuation, H8, and RH.
+- `next_gate`: publish one docs-only final ledger and require public CI, then return to fresh
+  cross-family `ROUTE_SELECTION`.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-28 H10 Weil surface Hodge-lattice selected
 
 - `parent_public_closure`: H12 final ledger

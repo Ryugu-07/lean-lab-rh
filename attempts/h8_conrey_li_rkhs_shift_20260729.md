@@ -9,7 +9,7 @@ Node: `H8-CONREY-LI-RKHS-SHIFT-01`
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
 Status: `FULL_UPPER_HALF_PLANE_PRODUCER_SUCCESS /
-IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+IMPLEMENTATION_AND_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PENDING`
 
 ## Fixed target
 
@@ -38,6 +38,7 @@ The complete criteria and claim boundary are fixed in
 | `REGISTRATION` | Added one proven Target, one open successor Target, eight exact TargetChecks, and eight selected axiom prints. | Every selected theorem uses only `propext`, `Classical.choice`, and `Quot.sound`. | Run local mechanical gates. |
 | `LOCAL_AUDIT` | Ran warning-as-error production and registry compiles, three forbidden scans, `git diff --check`, and the full build. | Scans are empty; patch check passes; full build passes `8784/8784`. | Freeze and publish the implementation. |
 | `IMPLEMENTATION_PUBLIC_CI` | Froze and pushed implementation `462c88ad1f80772e9485ce224e16e63c9fd39e8e`. | Run `30387979402`, job `90371989593`, passed in `2m2s`. | Keep proof sources frozen and publish docs-only immutable evidence. |
+| `IMMUTABLE_EVIDENCE_PUBLIC_CI` | Published docs-only evidence `7d17c19ad04fb0fca1c46dc2fc20813ed6ef6c95` after verifying an empty `LeanLab/` diff from the frozen implementation. | Run `30388269762`, job `90372975118`, passed in `1m39s`. | Publish one docs-only final ledger; proof sources remain frozen. |
 
 ## Runtime record
 
@@ -55,6 +56,8 @@ The complete criteria and claim boundary are fixed in
 - `frozen_implementation`: `462c88ad1f80772e9485ce224e16e63c9fd39e8e`, public-green on
   run `30387979402`, job `90371989593`, in `2m2s`.
 - `proof_freeze`: the `LeanLab/` diff from the frozen implementation is empty.
+- `immutable_evidence`: `7d17c19ad04fb0fca1c46dc2fc20813ed6ef6c95`, public-green on run
+  `30388269762`, job `90372975118`, in `1m39s`.
 
 ## Current boundary
 
@@ -79,4 +82,5 @@ Result accounting:
 - `hard_gap_delta=0`;
 - `rh_frontier_delta=0`.
 
-Frozen implementation is public-green. Docs-only immutable evidence is the next gate.
+Frozen implementation and immutable evidence are public-green. One docs-only final ledger is
+the next gate.

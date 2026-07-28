@@ -3000,6 +3000,10 @@ Frozen implementation `462c88ad1f80772e9485ce224e16e63c9fd39e8e` passed public L
 run `30387979402`, build job `90371989593`, in `2m2s`. The proof source is frozen while
 docs-only immutable evidence is published.
 
+Immutable evidence `7d17c19ad04fb0fca1c46dc2fc20813ed6ef6c95` passed public Lean Action
+run `30388269762`, build job `90372975118`, in `1m39s`; the `LeanLab/` diff from the frozen
+implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`.
+
 ## 2026-07-28 H10 Weil surface Hodge-lattice launch
 
 - `node`: `H10-WEIL-SURFACE-HODGE-LATTICE-01`.
