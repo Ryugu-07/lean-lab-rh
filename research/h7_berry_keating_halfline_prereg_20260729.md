@@ -8,7 +8,11 @@ Node: `H7-BERRY-KEATING-NAIVE-HALFLINE-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / FALSIFICATION`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTED_LOCAL / PUBLIC_IMPLEMENTATION_REQUIRED`
+
+Preregistration commit `5ec1e2b9b5e8028517934b986f407f2a210748e6` passed public Lean
+Action run `30407563102`, build job `90436305353`, in `1m40s`. Proof-source editing began only
+after this gate passed.
 
 ## Primary sources and exact inference
 
@@ -140,3 +144,5 @@ no-go theorem.
 Commit and push this docs-only preregistration first. Public Lean Action CI must pass before
 editing any `LeanLab/` proof source, target registry, exact check, or axiom-audit file.
 
+This gate passed at commit `5ec1e2b9b5e8028517934b986f407f2a210748e6`, Lean Action run
+`30407563102`, build job `90436305353`, in `1m40s`.

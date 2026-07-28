@@ -6185,3 +6185,25 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - Docs-only preregistration is local. Do not edit `LeanLab/` proof or registration sources until
   its commit passes public Lean Action CI.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H7 Berry--Keating half-line local result
+
+- `classification`: `FULL_SUCCESS / LOCAL_AUDIT_GREEN`.
+- Preregistration commit `5ec1e2b9b5e8028517934b986f407f2a210748e6` passed Lean Action run
+  `30407563102`, build job `90436305353`, in `1m40s`; proof editing began afterward.
+- New module `LeanLab/Riemann/BerryKeatingHalfLine.lean` proves for every real `E` and `x>0`:
+  `psi_E(x)=x^(-1/2+iE)` satisfies the formal `H_BK psi_E=E psi_E` equation,
+  `|psi_E(x)|^2=1/x`, and `psi_E` is not in `L^2((0,+infinity),dx)`.
+- Proven Target: `H7.berry-keating.naive-halfline-mode-obstruction`.
+- The key obstruction is energy-independent: the imaginary exponent changes phase but not
+  density, so special-energy selection cannot discretize the naive half-line model.
+- Audit: 93-line no-sorry module; five exact TargetChecks; five selected axiom prints containing
+  only `propext`, `Classical.choice`, and `Quot.sound`; empty forbidden scan; warning-as-error
+  production compile; full build `8791/8791`.
+- Keep the full half-line pure-continuity theorem, compact-graph Weyl no-go theorem, global
+  arithmetic confinement/absorption mechanism, Hilbert--Polya, H7, and RH open.
+- Deltas: historical subroute coverage `+1`, obstruction map `+1`, hard gap `0`, RH frontier
+  `0`.
+- Next gate: freeze and publish implementation, then immutable evidence and final ledger; after
+  closure return to fresh cross-family selection.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.

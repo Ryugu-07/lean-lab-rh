@@ -125,6 +125,7 @@ import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.ConreyLiPhaseObstruction
 import LeanLab.Riemann.ConreyLiRKHSShift
 import LeanLab.Riemann.ConreyLiHalfStrip
+import LeanLab.Riemann.BerryKeatingHalfLine
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.BombieriStepanovPolarInjectivity
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
@@ -1191,6 +1192,11 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.conreyLi_adjoint_multiplier_identity
 #print axioms LeanLab.Riemann.norm_conreyLiHalfStripCayleyExtension_le_one
 #print axioms LeanLab.Riemann.conreyLiHalfStrip_endpoint_of_rkhs_shift
+#print axioms LeanLab.Riemann.deriv_berryKeatingMode
+#print axioms LeanLab.Riemann.berryKeatingFormal_mode_eq
+#print axioms LeanLab.Riemann.norm_berryKeatingMode_sq
+#print axioms LeanLab.Riemann.not_memLp_two_berryKeatingMode
+#print axioms LeanLab.Riemann.berryKeatingHalfLine_endpoint
 #print axioms LeanLab.Riemann.continuous_selbergRootMollifier_criticalLine
 #print axioms LeanLab.Riemann.selbergRootSquare_nonneg
 #print axioms LeanLab.Riemann.hardyXi_pos_of_selbergMollifiedHardyXi_pos

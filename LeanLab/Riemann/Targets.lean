@@ -123,6 +123,7 @@ import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.ConreyLiPhaseObstruction
 import LeanLab.Riemann.ConreyLiRKHSShift
 import LeanLab.Riemann.ConreyLiHalfStrip
+import LeanLab.Riemann.BerryKeatingHalfLine
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.BombieriStepanovPolarInjectivity
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
@@ -1377,6 +1378,14 @@ def rhTargets : List ResearchTarget :=
         "Construct a source-valid infinite spectral object for the Riemann zeta function, define its regularized or distributional trace, identify the prime and archimedean terms, and prove the uniform tail or positivity theorem that locates every nontrivial zero."
       status := .inProgress
       note := "The finite Frobenius theorem and finite power-sum rigidity do not transfer through an ordinary summable reciprocal spectrum. A successful number-field analogue must specify different coordinates, a truncation with uniform tails, or a regularized trace and prove the associated analytic identities without assuming RH." },
+    { id := "H7.berry-keating.naive-halfline-mode-obstruction"
+      tier := .tier2
+      title := "Audit the naive Berry--Keating half-line generalized mode"
+      statement :=
+        "For every real energy E, prove that x^(-1/2+iE) satisfies the formal H_BK=-i(x*d/dx+1/2) eigenvalue equation on x>0, has squared norm 1/x, and does not belong to L2((0,+infinity),dx)."
+      leanName := some ``berryKeatingHalfLine_endpoint
+      status := .proven
+      note := "Campaign FALSIFICATION-20260729-H7-BERRY-KEATING-HALFLINE-01 kernel-checks the first no-go boundary in the Berry--Keating H=xp route. The displayed generalized mode solves the formal equation but is not an L2 eigenvector. This does not formalize an unbounded operator domain, prove pure continuity, treat compact quantum graphs or their Weyl asymptotics, rule out global arithmetic confinement or Connes' absorption spectrum, construct Hilbert--Polya, prove H7, or prove RH." },
     { id := "H7.weil-ground-state.weighted-coordinate-alignment"
       tier := .tier2
       title := "Align finite-prime Weil ground-state coordinates"

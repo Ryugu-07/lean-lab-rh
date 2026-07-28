@@ -16,6 +16,7 @@ import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.ConreyLiPhaseObstruction
 import LeanLab.Riemann.ConreyLiHalfStrip
+import LeanLab.Riemann.BerryKeatingHalfLine
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.BombieriStepanovPolarInjectivity
 import LeanLab.Riemann.WeilHodgeLattice
@@ -246,6 +247,7 @@ def checkedTargetNames : List Lean.Name :=
     ``finiteHeightPromotionAudit_endpoint,
     ``turingCompletenessConsumer_endpoint,
     ``conreyLiHalfStrip_endpoint_of_rkhs_shift,
+    ``berryKeatingHalfLine_endpoint,
     ``levinsonMontgomeryDenseBranch_of_not_cofinallyNegativeLogDerivAtIntegers,
     ``riemannHypothesis_iff_nontrivial_zeros_on_line ]
 
@@ -5733,5 +5735,31 @@ example :
         Complex.log (-speiserZetaDerivRatio (1 / 2 + t * Complex.I)) -
           Complex.log (-speiserZetaDerivRatio (t * Complex.I)) :=
   levinsonMontgomeryLeftHalfPlaneWinding_endpoint
+
+example {E x : ℝ} (hx : 0 < x) :
+    deriv (berryKeatingMode E) x =
+      berryKeatingExponent E * (x : ℂ) ^ (berryKeatingExponent E - 1) :=
+  deriv_berryKeatingMode hx
+
+example {E x : ℝ} (hx : 0 < x) :
+    berryKeatingFormal (berryKeatingMode E) x = E * berryKeatingMode E x :=
+  berryKeatingFormal_mode_eq hx
+
+example {E x : ℝ} (hx : 0 < x) :
+    ‖berryKeatingMode E x‖ ^ 2 = x⁻¹ :=
+  norm_berryKeatingMode_sq hx
+
+example (E : ℝ) :
+    ¬ MeasureTheory.MemLp (berryKeatingMode E) 2
+      (MeasureTheory.volume.restrict (Set.Ioi 0)) :=
+  not_memLp_two_berryKeatingMode E
+
+example (E : ℝ) :
+    (∀ x : ℝ, 0 < x →
+      berryKeatingFormal (berryKeatingMode E) x = E * berryKeatingMode E x) ∧
+    (∀ x : ℝ, 0 < x → ‖berryKeatingMode E x‖ ^ 2 = x⁻¹) ∧
+    ¬ MeasureTheory.MemLp (berryKeatingMode E) 2
+      (MeasureTheory.volume.restrict (Set.Ioi 0)) :=
+  berryKeatingHalfLine_endpoint E
 
 end LeanLab.Riemann

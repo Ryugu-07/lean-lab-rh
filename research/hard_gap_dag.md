@@ -3476,3 +3476,26 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   half-line and fixed-compact-graph no-go boundaries.
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.
+
+## 2026-07-29 H7 Berry--Keating half-line local result
+
+- `classification`: `FULL_SUCCESS / LOCAL_AUDIT_GREEN`.
+- `preregistration_gate`: commit `5ec1e2b9b5e8028517934b986f407f2a210748e6`,
+  run `30407563102`, build job `90436305353`, passed in `1m40s`.
+- `compiled_edge`:
+  `psi_E(x)=x^(-1/2+iE)`;
+  `-> psi_E'(x)=(-1/2+iE)*x^(-3/2+iE)`;
+  `-> H_BK psi_E=E psi_E`;
+  `-> |psi_E|^2=1/x`;
+  `-> psi_E notin L^2((0,+infinity),dx)`.
+- `proven_target`: `H7.berry-keating.naive-halfline-mode-obstruction`.
+- `key_reading`: the obstruction is independent of `E`; selecting special energies cannot
+  discretize the naive half-line scaling generator.
+- `audit`: 93-line no-sorry module; five exact TargetChecks; five selected standard-only axiom
+  prints; empty forbidden scan; warning-as-error production compile; full build `8791/8791`.
+- `open_source_theorems`: full half-line operator domain and pure continuity; fixed compact-graph
+  Weyl no-go; a global arithmetic confinement or absorption mechanism.
+- `deltas`: historical subroute coverage and obstruction map each `+1`; hard gap and RH frontier
+  remain `0`.
+- `next_gate`: freeze implementation and require public Lean Action CI.
+- `global_goal`: active.
