@@ -8,7 +8,7 @@ Node: `H7-BERRY-KEATING-NAIVE-HALFLINE-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / FALSIFICATION`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_REQUIRED`
 
 Preregistration commit `5ec1e2b9b5e8028517934b986f407f2a210748e6` passed public Lean
 Action run `30407563102`, build job `90436305353`, in `1m40s`. Proof-source editing began only
@@ -17,6 +17,10 @@ after this gate passed.
 Frozen implementation commit `56ec4c84d894899afb132b50aece303cb40f7cd7` passed public Lean
 Action run `30408034816`, build job `90437803648`, in `2m11s`. Proof and registration sources
 are frozen while immutable evidence is published.
+
+Immutable-evidence commit `d3cb2713740581d40027748f345389899bc8c2a5` passed public Lean
+Action run `30408221987`, build job `90438382124`, in `1m56s`. The five frozen proof and
+registration files are unchanged from the implementation commit.
 
 ## Primary sources and exact inference
 

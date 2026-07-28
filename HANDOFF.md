@@ -6220,3 +6220,17 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   compact-graph Weyl no-go, global arithmetic confinement, Hilbert--Polya, H7, and RH remain
   open.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H7 Berry--Keating immutable evidence public green
+
+- Immutable-evidence commit `d3cb2713740581d40027748f345389899bc8c2a5` passed Lean Action
+  run `30408221987`, build job `90438382124`, in `1m56s`.
+- The five frozen proof/registration files have an empty diff from implementation
+  `56ec4c84d894899afb132b50aece303cb40f7cd7`.
+- Final ledger closes only `H7.berry-keating.naive-halfline-mode-obstruction` at
+  `FULL_SUCCESS / KNOWN_SOURCE_MODE_OBSTRUCTION`.
+- Full half-line pure continuity, fixed compact-graph Weyl no-go, noncompact or
+  energy-dependent repairs, Connes' absorption trace, Hilbert--Polya, H7, and RH remain open.
+- Next gate: publish this docs-only final ledger and require public CI, then one closure receipt
+  before fresh cross-family route selection.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.

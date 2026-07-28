@@ -3344,6 +3344,12 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `implementation_public_ci`: run `30408034816`, build job `90437803648`, passed in `2m11s`.
 - `proof_freeze`: publish docs-only immutable evidence with the five proof/registration files
   unchanged from the frozen implementation.
+- `immutable_evidence`: `d3cb2713740581d40027748f345389899bc8c2a5`.
+- `evidence_public_ci`: run `30408221987`, build job `90438382124`, passed in `1m56s`.
+- `final_ledger_scope`: close only the standard half-line mode obstruction. Keep pure
+  continuity, compact-graph Weyl no-go, every global arithmetic confinement/absorption
+  mechanism, Hilbert--Polya, H7, and RH open.
+- `next_gate`: docs-only final ledger and public CI, then closure receipt.
 
 ## 2026-07-29 H12 left-half-plane winding launch
 

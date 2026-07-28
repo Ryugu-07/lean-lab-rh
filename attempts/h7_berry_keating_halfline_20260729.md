@@ -8,7 +8,7 @@ Node: `H7-BERRY-KEATING-NAIVE-HALFLINE-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / FALSIFICATION`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_REQUIRED`
 
 ## Fixed target
 
@@ -35,6 +35,7 @@ The exact endpoint, controls, and claim boundary are fixed in
 | `RESTRICTED_MEMLP` | Assumed membership in `MemLp 2` for Lebesgue measure restricted to `(0,+infinity)`. | The square-norm API makes `x^-1` integrable on that set, contradicting the improper-integral theorem. | Close the standard-mode obstruction without replacing it by `L^1` or a truncated interval. |
 | `LOCAL_AUDIT` | Registered one proven Target, five exact TargetChecks, five selected axiom prints, forbidden scans, warning-as-error module compile, and full build. | 93-line no-sorry module; selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`; full build `8791/8791`. | Classify `FULL_SUCCESS / LOCAL_AUDIT_GREEN` and publish the frozen implementation. |
 | `IMPLEMENTATION_PUBLIC` | Published the frozen proof and registration sources. | Commit `56ec4c84d894899afb132b50aece303cb40f7cd7`; run `30408034816`, job `90437803648`, passed in `2m11s`. | Freeze five proof/registration files and publish docs-only immutable evidence. |
+| `IMMUTABLE_EVIDENCE_PUBLIC` | Published the frozen-file receipt and exact claim boundary without changing proof sources. | Commit `d3cb2713740581d40027748f345389899bc8c2a5`; run `30408221987`, job `90438382124`, passed in `1m56s`. | Publish one docs-only final ledger and require its own public CI. |
 
 ## Current frontier
 
@@ -52,3 +53,5 @@ The exact endpoint, controls, and claim boundary are fixed in
 - `rh_frontier_delta`: `0`.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+- `local_stop`: close only the standard half-line mode obstruction after final-ledger and
+  closure-receipt CI; return to fresh cross-family historical selection.

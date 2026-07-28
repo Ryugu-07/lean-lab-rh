@@ -117,3 +117,29 @@ The frozen proof and registration set is:
 
 Immutable evidence and final-ledger commits must leave this set unchanged from the frozen
 implementation.
+
+Immutable-evidence commit `d3cb2713740581d40027748f345389899bc8c2a5` passed public Lean
+Action run `30408221987`, build job `90438382124`, in `1m56s`. The frozen-set diff from
+`56ec4c84d894899afb132b50aece303cb40f7cd7` is empty.
+
+## Final ledger
+
+Close exactly:
+
+```text
+H7.berry-keating.naive-halfline-mode-obstruction
+```
+
+as `FULL_SUCCESS / KNOWN_SOURCE_MODE_OBSTRUCTION`.
+
+Keep open:
+
+1. the full unbounded-operator domain and pure-continuity theorem on the positive half-line;
+2. the fixed compact-graph trace formula, Weyl law, and no-go theorem;
+3. every noncompact or energy-dependent Berry--Keating repair;
+4. Connes' semilocal and global absorption-spectrum trace programme;
+5. a multiplicity-bearing arithmetic spectrum with the Riemann-von Mangoldt count;
+6. Hilbert--Polya, H7, and RH.
+
+The local stop returns the active RH Goal to fresh historical-route comparison. It does not
+authorize immediate continuation into another Berry--Keating lemma by inertia.
