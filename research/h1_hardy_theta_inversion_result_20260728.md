@@ -52,9 +52,15 @@ must be proved before claiming strip analyticity or Hardy equation (2).
 - full build: `8781/8781`;
 - frozen implementation: `8b687aa46d67a049680a7cf964ce8e982f325afa`;
 - public implementation CI: run `30378958429`, job `90341715211`, passed in `2m29s`;
-- immutable evidence: pending.
+- immutable evidence: docs-only commit
+  `189ac653a5e3b04bc49f639d80d9e8dd0614f515`, run `30379288299`, job
+  `90342851859`, passed in `1m48s`;
+- proof freeze: the `LeanLab/` diff from the frozen implementation to immutable evidence is
+  empty.
 
 ## Claim boundary
 
 No complex-strip identity, boundary Abel limit, all-order moment law, unconditional Hardy
 infinitude theorem, positive proportion, H1, or RH is proved. The global RH Goal remains active.
+This campaign stops locally at its preregistered meaningful-partial boundary; the next action is
+fresh cross-family route selection rather than numerical or constant optimization.

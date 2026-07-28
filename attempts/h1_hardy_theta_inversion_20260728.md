@@ -8,8 +8,8 @@ Node: `H1-HARDY-THETA-INVERSION-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `MEANINGFUL_MELLIN_INVERSION_PARTIAL / IMPLEMENTATION_PUBLIC_GREEN /
-IMMUTABLE_EVIDENCE_PENDING`
+Status: `MEANINGFUL_MELLIN_INVERSION_PARTIAL /
+IMPLEMENTATION_AND_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PENDING`
 
 ## Fixed target
 
@@ -31,6 +31,7 @@ requires analytic continuation to the complex alpha strip and Hardy's equation (
 | `REGISTRATION` | Added one aggregate certificate and Target, exact checks, and selected transitive axiom prints. | Selected theorems use only `propext`, `Classical.choice`, and `Quot.sound`. | Run the remaining mechanical and public gates. |
 | `LOCAL_AUDIT` | Ran warning-as-error compilation, three forbidden scans, patch check, and the full build. | Scans are empty; `git diff --check` passes; full build passes `8781/8781`. | Freeze and publish the implementation. |
 | `IMPLEMENTATION_PUBLIC_CI` | Froze and pushed implementation `8b687aa46d67a049680a7cf964ce8e982f325afa`. | Run `30378958429`, job `90341715211`, passed in `2m29s`. | Keep all proof sources frozen and publish docs-only immutable evidence. |
+| `IMMUTABLE_EVIDENCE_PUBLIC_CI` | Published docs-only evidence at `189ac653a5e3b04bc49f639d80d9e8dd0614f515`. | Run `30379288299`, job `90342851859`, passed in `1m48s`; its `LeanLab/` diff from the frozen implementation is empty. | Publish one docs-only final ledger, then return to cross-family route selection. |
 
 ## Strongest compiled facts
 
@@ -117,3 +118,6 @@ critical-line infinitude theorem, positive-proportion theorem, H1, or RH is prov
 - `protected_files`: the six inherited protected files remain untouched and unstaged.
 - `frozen_implementation`: `8b687aa46d67a049680a7cf964ce8e982f325afa`, public-green on
   run `30378958429`, job `90341715211`, in `2m29s`.
+- `immutable_evidence`: `189ac653a5e3b04bc49f639d80d9e8dd0614f515`, public-green on
+  run `30379288299`, job `90342851859`, in `1m48s`; its `LeanLab/` diff from the frozen
+  implementation is empty.

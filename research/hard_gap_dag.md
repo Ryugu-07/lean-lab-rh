@@ -2880,3 +2880,10 @@ final-ledger CI, return to cross-family selection with H11-D/H11-E retained as o
   `30378958429`, job `90341715211`, passed in `2m29s`; proof sources are frozen pending
   docs-only immutable evidence.
 - `global_goal`: active.
+
+Immutable evidence `189ac653a5e3b04bc49f639d80d9e8dd0614f515` passed public run
+`30379288299`, build job `90342851859`, in `1m48s`; its `LeanLab/` diff from the frozen
+implementation is empty. This campaign stops locally at
+`MEANINGFUL_MELLIN_INVERSION_PARTIAL / SOURCE_NORMALIZATION_CORRECTION`. Preserve
+`open_H1_theta_C1`, `open_H1_theta_C2`, and `open_H1_theta_boundary` as re-entry nodes, and after
+final-ledger CI return to fresh cross-family route selection rather than constant optimization.

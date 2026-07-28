@@ -5462,3 +5462,20 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   frozen implementation.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H1 Hardy theta inversion immutable evidence public green
+
+- `frozen_implementation`: `8b687aa46d67a049680a7cf964ce8e982f325afa`, run
+  `30378958429`, job `90341715211`, `2m29s`.
+- `immutable_evidence`: `189ac653a5e3b04bc49f639d80d9e8dd0614f515`, run
+  `30379288299`, job `90342851859`, `1m48s`.
+- `proof_freeze`: the `LeanLab/` diff between those commits is empty.
+- `local_stop`: `MEANINGFUL_MELLIN_INVERSION_PARTIAL /
+  SOURCE_NORMALIZATION_CORRECTION`.
+- `remaining_H1`: actual Xi exponential decay on compact substrips, strip analyticity, Hardy
+  equation (2), tangential Abel boundary, all-order moment law, unconditional Hardy infinitude,
+  positive proportion, H1, and RH.
+- `next_gate`: one docs-only final ledger and public CI, then fresh cross-family
+  `ROUTE_SELECTION`; do not remain on constant or bound optimization by inertia.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
