@@ -3204,3 +3204,26 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `H14-GLOBAL-TAIL-REDUCTION-01`: remains open and is not weakened by a finite rectangle theorem.
 - `production_gate`: no Lean source edit before docs-only preregistration public CI.
 - `global_goal`: active.
+
+## 2026-07-29 H14 Turing completeness consumer local result
+
+- `classification`: `FULL_TURING_COMPLETENESS_CONSUMER_SUCCESS / LOCAL_AUDIT_PASS`.
+- `compiled_edge`:
+  `actual multiplicity-bearing xi candidate subfinset`;
+  `+ candidate critical-line location`;
+  `+ exact direct cardinality or boundary argument-principle count`;
+  `-> candidate exhaustion`;
+  `-> every actual nontrivial zeta zero in the rectangle lies on the critical line`.
+- `actual_count_bridge`:
+  `rectangleBoundaryIntegral_logDeriv_riemannXi_eq_turingXiZeroIndexFinset_card`.
+- `negative_control`:
+  `exists_line_candidate_proper_subset_with_offline_ambient`.
+- `proven_target`: `H14.computation.turing-completeness-consumer`.
+- `first_open_producer`: `H14.computation.turing-numerical-certificate`.
+- `separate_global_edge`: `H14.computation.global-tail-reduction`.
+- `audit`: 281-line no-sorry module; eight exact TargetChecks; seven standard-only axiom prints;
+  three empty forbidden scans; full build `8787/8787`.
+- `deltas`: historical subroute coverage, positive Turing consumer, and actual xi count bridge
+  each `+1`; certified height, global tail, hard gap, and RH frontier remain `0`.
+- `next_gate`: freeze implementation and require public Lean Action CI.
+- `global_goal`: active.

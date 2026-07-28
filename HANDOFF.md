@@ -5133,6 +5133,24 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   edit.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+- `public_preregistration`: commit
+  `f47ef747e9c9b9b82368545c7cbb1ec7a8848fe7`, Lean Action run `30396052748`,
+  build job `90399099063`, `2m13s`, success.
+- `local_classification`: `FULL_TURING_COMPLETENESS_CONSUMER_SUCCESS`.
+- `compiled_result`: the actual multiplicity-bearing interior xi divisor Finset and its exact
+  argument-principle cardinality compile; direct-cardinality and boundary-count certificates
+  both force candidate exhaustion and transfer line location to every actual nontrivial zeta
+  zero in the rectangle.
+- `negative_control`: without count equality, an all-line proper candidate subset can omit an
+  off-line ambient point.
+- `mechanical_audit`: 281-line no-sorry module, one proven Target, one exact open successor,
+  eight exact TargetChecks, seven standard-only axiom prints, three empty forbidden scans,
+  `git diff --check`, and full build `8787/8787`.
+- `first_open_producer`: `H14.computation.turing-numerical-certificate`.
+- `global_open_edge`: `H14.computation.global-tail-reduction`.
+- `claim_boundary`: no root isolation, concrete height, Turing average estimate, numerical zero
+  table, global tail theorem, H14-to-RH promotion, or RH.
+- `next_gate`: freeze implementation and require public Lean Action CI.
 
 ## 2026-07-29 H2 classical zero-detector local meaningful partial
 

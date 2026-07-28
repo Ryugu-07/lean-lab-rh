@@ -20,6 +20,7 @@ import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
+import LeanLab.Riemann.TuringCompletenessConsumer
 import LeanLab.Riemann.ThetaInfinityMollifier
 import LeanLab.Riemann.BettinGonekAuxiliary
 import LeanLab.Riemann.BettinGonekMellinIdentity
@@ -1176,3 +1177,10 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.exists_large_block_or_remainder
 #print axioms LeanLab.Riemann.uniform_blocks_sum_one
 #print axioms LeanLab.Riemann.classicalDetectorMellinPartialCertificate_endpoint
+#print axioms LeanLab.Riemann.mem_turingXiZeroIndexFinset_iff
+#print axioms LeanLab.Riemann.rectangleBoundaryIntegral_logDeriv_riemannXi_eq_turingXiZeroIndexFinset_card
+#print axioms LeanLab.Riemann.TuringXiRectangleCertificate.candidates_eq_actual
+#print axioms LeanLab.Riemann.TuringXiRectangleCertificate.nontrivial_zeros_on_line
+#print axioms LeanLab.Riemann.TuringXiBoundaryCountCertificate.toRectangleCertificate
+#print axioms LeanLab.Riemann.exists_line_candidate_proper_subset_with_offline_ambient
+#print axioms LeanLab.Riemann.turingCompletenessConsumer_endpoint

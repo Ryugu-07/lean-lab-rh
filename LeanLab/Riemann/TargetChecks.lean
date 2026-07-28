@@ -10,6 +10,7 @@ import LeanLab.Riemann.SpeiserAdmissibleContour
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
+import LeanLab.Riemann.TuringCompletenessConsumer
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.ConreyLiPhaseObstruction
@@ -240,6 +241,7 @@ def checkedTargetNames : List Lean.Name :=
     ``WeilQuantitativeGroundStateCertificate.gap_mul_one_sub_groundCoefficient_sq_le,
     ``dirichletFamilyInclusionAudit_endpoint,
     ``finiteHeightPromotionAudit_endpoint,
+    ``turingCompletenessConsumer_endpoint,
     ``levinsonMontgomeryDenseBranch_of_not_cofinallyNegativeLogDerivAtIntegers,
     ``riemannHypothesis_iff_nontrivial_zeros_on_line ]
 
@@ -5486,5 +5488,59 @@ example (k : ℕ) (hk : 0 < k) :
 
 example : ClassicalDetectorMellinPartialCertificate :=
   classicalDetectorMellinPartialCertificate_endpoint
+
+example {l r b t : ℝ} {p : RiemannXiDivisorZeroIndex} :
+    p ∈ turingXiZeroIndexFinset l r b t ↔
+      riemannXiZeroStrictlyInsideRectangle l r b t p :=
+  mem_turingXiZeroIndexFinset_iff
+
+example {l r b t : ℝ} (hlr : l < r) (hbt : b < t)
+    (hboundary : ∀ p : RiemannXiDivisorZeroIndex,
+      ¬riemannXiZeroOnRectangleBoundary l r b t p) :
+    rectangleBoundaryIntegral (logDeriv riemannXi) l r b t =
+      2 * (Real.pi : ℂ) * Complex.I *
+        (turingXiZeroIndexFinset l r b t).card :=
+  rectangleBoundaryIntegral_logDeriv_riemannXi_eq_turingXiZeroIndexFinset_card
+    hlr hbt hboundary
+
+example {candidates : Finset RiemannXiDivisorZeroIndex} {l r b t : ℝ}
+    (hcert : TuringXiRectangleCertificate candidates l r b t) :
+    candidates = turingXiZeroIndexFinset l r b t :=
+  hcert.candidates_eq_actual
+
+example {candidates : Finset RiemannXiDivisorZeroIndex} {l r b t : ℝ}
+    (hcert : TuringXiRectangleCertificate candidates l r b t)
+    {rho : ℂ} (hrho : IsNontrivialZero rho)
+    (hinside : l < rho.re ∧ rho.re < r ∧ b < rho.im ∧ rho.im < t) :
+    OnCriticalLine rho :=
+  hcert.nontrivial_zeros_on_line hrho hinside
+
+example {candidates : Finset RiemannXiDivisorZeroIndex} {l r b t : ℝ}
+    (hcert : TuringXiBoundaryCountCertificate candidates l r b t)
+    (hlr : l < r) (hbt : b < t)
+    (hboundary : ∀ p : RiemannXiDivisorZeroIndex,
+      ¬riemannXiZeroOnRectangleBoundary l r b t p) :
+    TuringXiRectangleCertificate candidates l r b t :=
+  hcert.toRectangleCertificate hlr hbt hboundary
+
+example {candidates : Finset RiemannXiDivisorZeroIndex} {l r b t : ℝ}
+    (hcert : TuringXiBoundaryCountCertificate candidates l r b t)
+    (hlr : l < r) (hbt : b < t)
+    (hboundary : ∀ p : RiemannXiDivisorZeroIndex,
+      ¬riemannXiZeroOnRectangleBoundary l r b t p)
+    {rho : ℂ} (hrho : IsNontrivialZero rho)
+    (hinside : l < rho.re ∧ rho.re < r ∧ b < rho.im ∧ rho.im < t) :
+    OnCriticalLine rho :=
+  hcert.nontrivial_zeros_on_line hlr hbt hboundary hrho hinside
+
+example :
+    ∃ candidates ambient : Finset ℂ,
+      candidates ⊂ ambient ∧
+      (∀ rho ∈ candidates, OnCriticalLine rho) ∧
+      ∃ rho ∈ ambient, ¬OnCriticalLine rho :=
+  exists_line_candidate_proper_subset_with_offline_ambient
+
+example : TuringCompletenessConsumerCertificate :=
+  turingCompletenessConsumer_endpoint
 
 end LeanLab.Riemann

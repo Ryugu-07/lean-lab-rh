@@ -4,7 +4,8 @@ Date: 2026-07-29
 
 Campaign: `LITERATURE-20260729-H14-TURING-COMPLETENESS-CONSUMER-01`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `FULL_TURING_COMPLETENESS_CONSUMER_SUCCESS / LOCAL_AUDIT_PASS /
+PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 
 ## Attempt ledger
 
@@ -16,6 +17,12 @@ Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
 | `INFRASTRUCTURE_AUDIT` | Inspected the actual xi divisor and rectangle argument-principle implementation. | `RiemannXiDivisorZeroIndex`, finite interior index sets, the zero-value bridge, and the weighted boundary identity already compile. | Reuse actual objects; do not invent a synthetic zero interface. |
 | `MULTIPLICITY_AUDIT` | Compared distinct zero values with divisor indices. | Divisor indices repeat values by analytic multiplicity, so index Finset cardinality is the correct finite count. | Make every candidate an actual divisor index and avoid simplicity assumptions. |
 | `NEGATIVE_CONTROL_DESIGN` | Removed the cardinality equality from the proposed certificate. | A proper candidate subset can consist entirely of critical-line points while omitting an off-line ambient point. | Require an exact count and compile the control. |
+| `PUBLIC_PREREGISTRATION` | Published the frozen docs-only endpoint before editing production Lean. | Commit `f47ef747e9c9b9b82368545c7cbb1ec7a8848fe7` passed Lean Action run `30396052748`, build job `90399099063`, in `2m13s`. | Production gate open; implement the fixed endpoint without `sorry`. |
+| `ACTUAL_FINSET_AND_COUNT` | Specialized the existing xi rectangle argument principle at constant weight one. | Exact interior membership and the boundary integral equal to `2*pi*i` times the actual multiplicity-bearing Finset cardinality compile. | Build direct and analytic-count certificate consumers. |
+| `DIRECT_COMPLETENESS` | Required the candidates to be actual interior divisor indices, all on line, with full cardinality. | Candidate equality, all-index line location, and the bridge to every actual nontrivial zeta zero in the rectangle compile. | Replace direct cardinality by the analytic boundary count. |
+| `BOUNDARY_COMPLETENESS` | Equated the candidate boundary count with the compiled actual xi count and canceled `2*pi*i`. | Boundary certificate conversion, exhaustion, and actual-zero location compile. | Compile the count-free negative control and aggregate. |
+| `NEGATIVE_CONTROL` | Used one line point and one off-line point in an ambient Finset. | A proper all-line candidate subset can omit the off-line ambient point. | Keep exact counting mandatory. |
+| `LOCAL_AUDIT` | Registered the proven Target, exact open successor, eight TargetChecks, and seven axiom prints; ran warning-as-error, forbidden scans, patch check, and full build. | New 281-line module is diagnostic-free; selected axioms are standard-only; scans are empty; full build passes `8787/8787`. | Freeze this implementation and require public CI. |
 
 ## Frozen boundary
 
@@ -23,5 +30,5 @@ This campaign proves only the finite completeness consumer for an actual xi rect
 not implement interval root isolation, Turing's average bound for `S(T)`, Platt--Trudgian's
 numerical computation, a global tail theorem, H14-to-RH promotion, or RH.
 
-Failure after the public gate must identify the first unavailable theorem or false implication
-and update the obstacle map. No unproved statement may become a premise.
+The abstract finite consumer is complete. The first open producer is a concrete interval-certified
+candidate list plus boundary-count certificate. The separate global tail reduction remains open.

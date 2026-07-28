@@ -115,6 +115,7 @@ import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
+import LeanLab.Riemann.TuringCompletenessConsumer
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.ConreyLiPhaseObstruction
@@ -1780,6 +1781,21 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``finiteHeightPromotionAudit_endpoint
       status := .proven
       note := "Campaign FALSIFICATION-20260723-H14-FINITE-HEIGHT-PROMOTION-01 kernel-checks only the generic promotion boundary. The finite orbit is not an actual zeta zero set and does not challenge certified computation paired with a separate analytic reduction." },
+    { id := "H14.computation.turing-completeness-consumer"
+      tier := .tier2
+      title := "Formalize the Turing-style finite zero-list completeness consumer"
+      statement :=
+        "For the actual multiplicity-bearing xi divisor indices in an open rectangle, prove that a candidate subfinset on the critical line exhausts the rectangle when its exact cardinality agrees with the xi argument-principle count, and transfer the conclusion to every actual nontrivial zeta zero in the rectangle."
+      leanName := some ``turingCompletenessConsumer_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260729-H14-TURING-COMPLETENESS-CONSUMER-01 compiles the positive finite-verification mechanism complementary to the earlier promotion countermodel. The candidate list consists of actual xi divisor indices and therefore retains analytic multiplicity. Both direct cardinality and boundary-integral certificates force finite exhaustion, while a compiled negative control shows that line verification without exact counting can omit an off-line point. No interval root isolation, Turing average estimate, concrete certified height, global tail reduction, H14-to-RH promotion, or RH is proved." },
+    { id := "H14.computation.turing-numerical-certificate"
+      tier := .tier2
+      title := "Construct a concrete certified Turing zero-list certificate"
+      statement :=
+        "Implement interval-certified isolation and critical-line location for every xi zero in a specified finite rectangle, prove the zero-free boundary and exact analytic count required by TuringXiBoundaryCountCertificate, and instantiate the compiled completeness consumer at a concrete height."
+      status := .inProgress
+      note := "The abstract consumer is kernel-checked and uses the actual multiplicity-bearing xi divisor. The open historical edge is the producer: rigorous root isolation, boundary nonvanishing, and a source-valid Turing or Weil-Barner count for a concrete rectangle. No numerical zero table is accepted as an unproved premise." },
     { id := "H14.computation.global-tail-reduction"
       tier := .tier2
       title := "Reduce all higher zeta zeros to a finite certificate"
