@@ -3453,3 +3453,26 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   concrete source space, actual-xi premise, H8, hard gap, and RH frontier remain `0`.
 - `next_gate`: frozen implementation public CI.
 - `global_goal`: active.
+
+## 2026-07-29 H7 Berry--Keating half-line launch
+
+- `parent_public_closure`: H8 half-strip closure receipt
+  `67a12f4d80e0d5246f7d1a2173f6972346a1c78d`, run `30406973119`, job
+  `90434479242`, passed in `1m34s`.
+- `coverage_correction`: existing H7 depth is concentrated on the finite-prime Weil
+  ground-state program; the Berry--Keating `H=xp` subroute has no independent card or compiled
+  theorem.
+- `H7-BERRY-KEATING-NAIVE-HALFLINE-01`: selected after a fresh
+  H7/H10/H11/H13/H1/H2 comparison.
+- `fixed_edge`:
+  `psi_E(x)=x^(-1/2+iE)`;
+  `-> H_BK psi_E = E psi_E` pointwise on `x>0`;
+  `-> |psi_E(x)|^2=1/x`;
+  `-> psi_E notin L^2((0,+infinity),dx)`.
+- `strict_boundary`: no operator domain, pure-continuity theorem, compact-graph Weyl theorem,
+  global arithmetic confinement, Hilbert--Polya operator, H7, or RH.
+- `omission_successor`: compare Connes' semilocal absorption trace, energy-dependent
+  Berry--Keating cutoffs, and noncompact arithmetic boundary constructions against both the
+  half-line and fixed-compact-graph no-go boundaries.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- `global_goal`: active.

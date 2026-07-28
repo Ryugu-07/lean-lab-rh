@@ -6162,3 +6162,26 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   final ledger.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+## 2026-07-29 H7 Berry--Keating half-line route selected
+
+- H8 Conrey--Li half-strip is publicly closed at closure receipt
+  `67a12f4d80e0d5246f7d1a2173f6972346a1c78d`, Lean Action run `30406973119`,
+  build job `90434479242`, passed in `1m34s`.
+- Fresh H7/H10/H11/H13/H1/H2 comparison corrects the coverage unit: existing H7 depth is the
+  distinct 2025--2026 finite-prime Weil ground-state program; Berry--Keating `H=xp` had no
+  independent route card.
+- Selected campaign:
+  `FALSIFICATION-20260729-H7-BERRY-KEATING-HALFLINE-01`, node
+  `H7-BERRY-KEATING-NAIVE-HALFLINE-01`.
+- Fixed endpoint: prove in Lean that `psi_E(x)=x^(-1/2+iE)` satisfies the formal
+  `H_BK=-i(x*d/dx+1/2)` eigenvalue equation on `x>0`, has squared norm `1/x`, and is not in
+  `L^2((0,+infinity),dx)`.
+- Claim boundary: this does not prove the full pure-continuity theorem, formalize an unbounded
+  operator domain, treat compact graph Weyl asymptotics, rule out modified/global arithmetic
+  scaling models, construct Hilbert--Polya, or prove RH.
+- Omission successor: search the primary literature for a global arithmetic confinement that
+  evades both the naive half-line and fixed-compact-graph no-go boundaries while retaining the
+  `T log T` zero count.
+- Docs-only preregistration is local. Do not edit `LeanLab/` proof or registration sources until
+  its commit passes public Lean Action CI.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
