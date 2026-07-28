@@ -2,7 +2,7 @@
 
 Date: 2026-07-29
 
-Status: `SELECTED_CAMPAIGN_LOCAL_SUCCESS / PUBLIC_EVIDENCE_REQUIRED`
+Status: `SELECTED_CAMPAIGN_IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Closed parent
 
@@ -110,3 +110,6 @@ assembly over strongly separated intervals, and the arbitrary-multiplier negativ
 The local result does not supply the global Selberg moment estimates that make the detector fire
 on many intervals. Those estimates remain the exact H1-Selberg successor. Once this result is
 publicly closed, selection must rerank the full atlas instead of automatically continuing H1.
+
+The frozen implementation is `8d9373fa6325a857541fb112b3ec137162a343c9`; Lean Action run
+`30390650837`, build job `90381074143`, passed in `3m7s`.

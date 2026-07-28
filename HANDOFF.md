@@ -5111,6 +5111,18 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-29 H1 Selberg implementation public green
+
+- `frozen_implementation`: `8d9373fa6325a857541fb112b3ec137162a343c9`.
+- `public_ci`: run `30390650837`, build job `90381074143`, passed in `3m7s`.
+- `result`: `FULL_LOCAL_SIGN_CHANGE_PRODUCER_SUCCESS`.
+- `proof_freeze`: the `LeanLab/` diff from the frozen implementation is empty.
+- `remaining_H1_selberg`: source-faithful global moments, many separated detected intervals,
+  critical-zero proportion, H1, and RH.
+- `next_gate`: publish docs-only immutable evidence and require public CI.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-28 H11 triangular pair-mass immutable evidence public green
 
 - `frozen_implementation`: `15381a49ff4dfb92a0ab4e29d5e76383f9789139`, run

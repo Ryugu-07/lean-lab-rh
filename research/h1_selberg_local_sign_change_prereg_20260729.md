@@ -8,7 +8,7 @@ Node: `H1-SELBERG-LOCAL-SIGN-CHANGE-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `FULL_LOCAL_SIGN_CHANGE_PRODUCER_SUCCESS / LOCAL_AUDIT_GREEN`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Primary-source anchor
 
@@ -172,3 +172,7 @@ The exact open successor is `H1.selberg.global-moment-production`: prove source-
 moment estimates that generate many separated intervals satisfying the compiled strict local
 gap. This campaign stops locally after the public evidence chain; the persistent RH Goal remains
 active.
+
+Frozen implementation commit `8d9373fa6325a857541fb112b3ec137162a343c9` passed Lean Action run
+`30390650837`, build job `90381074143`, in `3m7s`. The `LeanLab/` diff from that commit is empty
+while this docs-only immutable evidence is prepared.
