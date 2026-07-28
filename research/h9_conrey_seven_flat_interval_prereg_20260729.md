@@ -8,7 +8,7 @@ Node: `H9-CONREY-ACTUAL-SEVEN-FLAT-INTERVAL-01`
 
 Mode: `LITERATURE / FALSIFICATION / OMISSION_AUDIT`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
 
 ## Baseline
 
@@ -173,3 +173,14 @@ created or edited until this docs-only preregistration passes public Lean Action
 
 The persistent RH Goal remains active. Local completion returns to fresh cross-family historical
 route selection, while a separately source-locked main-family repair may be ranked immediately.
+
+## Implementation backfill
+
+- `preregistration_commit`: `37852c81e2d71f1ee95520f62929204f094f34d5`.
+- `preregistration_public_ci`: Lean Action run `30399568275`, build job `90410810937`, passed in
+  `2m19s`.
+- `local_result`: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS / LOCAL_AUDIT_PASS`.
+- `compiled_endpoint`: all ten clauses compile, including the actual infinite Fourier series,
+  full flat interval, irrational zero, and strict `7 mod 8` scope.
+- `full_build`: `8788/8788`, passed locally.
+- `next_gate`: freeze and publish the implementation, then require public CI.

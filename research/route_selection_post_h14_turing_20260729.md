@@ -2,7 +2,7 @@
 
 Date: 2026-07-29
 
-Status: `H9_CONREY_ACTUAL_SEVEN_FLAT_SELECTED / PREREGISTRATION_CI_REQUIRED`
+Status: `H9_CONREY_ACTUAL_SEVEN_FLAT_SELECTED / LOCAL_FULL_ENDPOINT`
 
 ## Closed parent campaign
 
@@ -79,3 +79,7 @@ Full success must certify the actual infinite Fourier series, not only an abstra
 or finite prefix. It must also compile the `7 mod 8` scope separation. Public preregistration CI
 must pass before any production Lean source, Target, TargetCheck, axiom audit, or aggregate import
 is edited.
+
+The preregistration gate passed at commit `37852c81e2d71f1ee95520f62929204f094f34d5`,
+run `30399568275`, job `90410810937`. The full fixed endpoint now compiles locally; implementation
+CI is the next gate.

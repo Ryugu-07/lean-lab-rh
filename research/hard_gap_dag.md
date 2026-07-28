@@ -3275,3 +3275,22 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `production_gate`: no Lean production edit before docs-only preregistration public CI.
 - `global_goal`: active; historical omission search remains the default selection discipline,
   with conjecture and direct-proof tracks open.
+
+## 2026-07-29 H9 Conrey actual-seven flat-interval local result
+
+- `classification`: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS / LOCAL_AUDIT_PASS`.
+- `compiled_edge`:
+  `legendreSym 7 period table + prefix mass 1 + first moment 0`;
+  `+ all-index discrete sine transform + K_7>0`;
+  `+ exact exponent-two Bernoulli cosine sums`;
+  `-> f_7(x)=0 for every x in [3/7,4/7]`;
+  `-> irrational zero sqrt(2)/3`.
+- `scope_certificate`: `7 % 8 = 7` and `7 % 8 != 3`.
+- `proven_target`: `H9.conrey-character-sum.actual-seven-flat-interval`.
+- `first_open_successor`: `H9.conrey-character-sum.main-family-flat-exclusion`.
+- `audit`: 428-line no-sorry module; eight exact TargetChecks; eight selected standard-only
+  axiom prints; empty forbidden scan; warning-as-error compiles; full build `8788/8788`.
+- `deltas`: historical omission mechanism and actual quadratic character each `+1`; main-family
+  flat branch, source refutation, hard gap, and RH frontier remain `0`.
+- `next_gate`: freeze implementation and require public Lean Action CI.
+- `global_goal`: active.

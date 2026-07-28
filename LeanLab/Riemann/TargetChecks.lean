@@ -107,6 +107,7 @@ import LeanLab.Riemann.WeilFiniteDictionaryAdmissibility
 import LeanLab.Riemann.WeilFiniteDictionaryExplicitFormula
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
+import LeanLab.Riemann.ConreySevenFlatInterval
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -3370,6 +3371,48 @@ example :
       q ≠ 0 ∧ x ≠ 0 ∧
         (A : ℝ) - (B : ℝ) / ((q : ℝ) * x) = (H : ℝ) ∧ Irrational x :=
   conreyAffineRationalityInference_counterexample
+
+example (n : ℕ) :
+    conreySevenCharacter n = conreySevenCharacterTable n :=
+  conreySevenCharacter_eq_table n
+
+example :
+    conreyPrefixMass conreySevenCharacter 3 = 1 ∧
+      conreyPrefixMoment conreySevenCharacter 3 = 0 :=
+  ⟨conreySeven_prefixMass_three, conreySeven_prefixMoment_three⟩
+
+example (n : ℕ) :
+    conreySevenSineConstant * (conreySevenCharacter n : ℝ) =
+      Real.sin (2 * Real.pi * n / 7) +
+        Real.sin (4 * Real.pi * n / 7) -
+          Real.sin (6 * Real.pi * n / 7) :=
+  conreySevenSineConstant_mul_character n
+
+example : 0 < conreySevenSineConstant :=
+  conreySevenSineConstant_pos
+
+example (x : ℝ) (hx : x ∈ Set.Icc (3 / 7 : ℝ) (4 / 7 : ℝ)) :
+    HasSum (conreySevenFourierTerm x) 0 :=
+  conreySevenFourierTerm_hasSum_zero x hx
+
+example (x : ℝ) (hx : x ∈ Set.Icc (3 / 7 : ℝ) (4 / 7 : ℝ)) :
+    conreySevenFourier x = 0 :=
+  conreySevenFourier_eq_zero x hx
+
+example :
+    Irrational (Real.sqrt 2 / 3) ∧
+      conreySevenFourier (Real.sqrt 2 / 3) = 0 :=
+  conreySevenFourier_irrational_zero
+
+example :
+    conreyPrefixMass conreySevenCharacter 3 = 1 ∧
+      conreyPrefixMoment conreySevenCharacter 3 = 0 ∧
+      (∀ x ∈ Set.Icc (3 / 7 : ℝ) (4 / 7 : ℝ),
+        conreySevenFourier x = 0) ∧
+      Irrational (Real.sqrt 2 / 3) ∧
+      conreySevenFourier (Real.sqrt 2 / 3) = 0 ∧
+      7 % 8 = 7 ∧ 7 % 8 ≠ 3 :=
+  conreySeven_actual_flat_interval_certificate
 
 example : CriticalStripRealAxisZeroFree :=
   criticalStripRealAxisZeroFree

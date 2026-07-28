@@ -112,6 +112,7 @@ import LeanLab.Riemann.WeilFiniteDictionaryAdmissibility
 import LeanLab.Riemann.WeilFiniteDictionaryExplicitFormula
 import LeanLab.Riemann.ShortMollifierVariational
 import LeanLab.Riemann.ConreyCharacterSumRationality
+import LeanLab.Riemann.ConreySevenFlatInterval
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
@@ -842,6 +843,14 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.conreyAffineFraction_eq_dichotomy
 #print axioms LeanLab.Riemann.conreyAffineFraction_eq_rat_or_flat
 #print axioms LeanLab.Riemann.conreyAffineRationalityInference_counterexample
+#print axioms LeanLab.Riemann.conreySevenCharacter_eq_table
+#print axioms LeanLab.Riemann.conreySeven_prefixMass_three
+#print axioms LeanLab.Riemann.conreySeven_prefixMoment_three
+#print axioms LeanLab.Riemann.conreySevenSineConstant_mul_character
+#print axioms LeanLab.Riemann.conreySevenSineConstant_pos
+#print axioms LeanLab.Riemann.conreySevenFourierTerm_hasSum_zero
+#print axioms LeanLab.Riemann.conreySevenFourier_irrational_zero
+#print axioms LeanLab.Riemann.conreySeven_actual_flat_interval_certificate
 #print axioms LeanLab.Riemann.criticalStripRealAxisZeroFree
 #print axioms LeanLab.Riemann.riemannZetaDerivDivisor_apply
 #print axioms LeanLab.Riemann.finite_speiserUpperLeftDerivZeroSet

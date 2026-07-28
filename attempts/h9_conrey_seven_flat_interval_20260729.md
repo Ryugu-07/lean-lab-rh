@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260729-H9-CONREY-SEVEN-FLAT-INTERVAL-01`
 
 Mode: `LITERATURE / FALSIFICATION / OMISSION_AUDIT`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
 
 ## Fixed question
 
@@ -23,6 +23,9 @@ RH-imitation family.
 | 2 | `SOURCE_AUDIT` | Re-read Conrey 2024 through Proposition 1. The proof omits the zero numerator, and the paper later calls the resulting flat interval unlikely. Proposition 1 invokes Corollary 1, which is stated for `q>3`, squarefree, `q congruent to 3 mod 8`; this scope prevents treating `q=7` as a main-family counterexample. | Register an adjacent-family mechanism audit with an explicit no-refutation boundary. |
 | 3 | `LEAN_RECONNAISSANCE` | A `/tmp` kernel probe proves the exact period-seven Legendre table using ordinary `decide` and `legendreSym.mod`. Exact navigation gives mass `1`, first moment `0` at prefix `m=3`; numerical partial sums suggest a flat interval. | Fix a full actual-series endpoint. Navigation output remains outside the theorem ledger. |
 | 4 | `ANALYTIC_FEASIBILITY` | Mathlib exposes `hasSum_one_div_nat_pow_mul_cos`; the period reduction for the required discrete sine transform is locally accessible. Remaining work is finite trig normalization, `K_7 != 0`, exact HasSum algebra, and Bernoulli cancellation. | Publish docs-only preregistration before any production proof edit. |
+| 5 | `PREREGISTRATION_CI` | Commit `37852c81e2d71f1ee95520f62929204f094f34d5` passed public Lean Action run `30399568275`, build job `90410810937`, in `2m19s`. | Open the production gate for the fixed endpoint. |
+| 6 | `LEAN_IMPLEMENTATION` | Compiled the genuine period table, exact flat prefix, all-index discrete sine transform, `K_7>0`, exponent-two Bernoulli cosine sums, six-shift cancellation, `f_7=0` on `[3/7,4/7]`, the irrational zero `sqrt(2)/3`, and the `7 mod 8` scope certificate. | Classify as full actual adjacent-family success, not a main-family source refutation. |
+| 7 | `LOCAL_AUDIT` | The 428-line module, one proven and one exact open Target, eight TargetChecks, eight standard-only axiom prints, empty forbidden scan, warning-as-error compiles, `git diff --check`, and full `8788/8788` build pass. | Freeze proof source, publish implementation, and require public CI. |
 
 ## Stop conditions
 

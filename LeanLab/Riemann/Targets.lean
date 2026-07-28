@@ -103,6 +103,7 @@ import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.FareyFranel
 import LeanLab.Riemann.ChebyshevMellin
 import LeanLab.Riemann.ConreyCharacterSumRationality
+import LeanLab.Riemann.ConreySevenFlatInterval
 import LeanLab.Riemann.SpeiserCountingEquivalence
 import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
 import LeanLab.Riemann.LevinsonMontgomeryLogDerivMassBridge
@@ -1556,6 +1557,21 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``conreyAffineFraction_eq_rat_or_flat
       status := .proven
       note := "Campaign FALSIFICATION-20260723-H9-CONREY-RATIONALITY-GAP-01 isolates a proof-gap candidate in Proposition 1 of Conrey 2024. The generic affine-fraction inference needs a nonzero first prefix moment; Lean certifies both the corrected dichotomy and a sqrt(2) flat-branch countermodel. No actual quadratic-character flat prefix is asserted, so the published proposition remains open rather than formally falsified. This is source-proof-gap and obstruction-map progress with rh_frontier_delta=0 and hard_gap_delta=0." },
+    { id := "H9.conrey-character-sum.actual-seven-flat-interval"
+      tier := .tier2
+      title := "Certify Conrey's flat branch for the actual character modulo seven"
+      statement :=
+        "For the genuine Legendre character modulo seven, prove the exact period table and flat prefix, derive the discrete sine transform with a nonzero transform constant, use exact Bernoulli cosine-series summation to show that f_7 vanishes on [3/7,4/7], exhibit the irrational zero sqrt(2)/3, and certify that 7 is 7 rather than 3 modulo 8."
+      leanName := some ``conreySeven_actual_flat_interval_certificate
+      status := .proven
+      note := "Campaign FALSIFICATION-20260729-H9-CONREY-SEVEN-FLAT-INTERVAL-01 proves that the source's flat branch occurs for a genuine neighboring quadratic character, not merely an abstract affine model. Since 7 is 7 modulo 8, this does not refute the contextually scoped Proposition 1, Conjecture 1, Theorem 3, H9, or RH. It gives historical_omission_mechanism_delta=1 and actual_quadratic_character_delta=1, with main_family_flat_branch_delta=0, hard_gap_delta=0, and rh_frontier_delta=0." },
+    { id := "H9.conrey-character-sum.main-family-flat-exclusion"
+      tier := .tier2
+      title := "Resolve Conrey's flat branch in the 3 mod 8 family"
+      statement :=
+        "For every source-permitted squarefree q greater than three with q congruent to 3 modulo 8, either prove that no prefix can simultaneously have class-number mass and zero first moment, or kernel-certify an actual permitted-character flat interval and state the corrected source consequence."
+      status := .inProgress
+      note := "The q=7 theorem proves that the omitted mechanism is real immediately outside the RH-imitation family, but supplies no permitted-character witness or general exclusion theorem. The main-family branch, Conjecture 1, Theorem 3, H9, and RH remain open." },
     { id := "H9.polya-turan.abel-sign-audit"
       tier := .tier2
       title := "Separate Pólya and Turán Liouville sign mechanisms"

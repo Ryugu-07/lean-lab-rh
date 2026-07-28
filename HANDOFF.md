@@ -5263,6 +5263,26 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-29 H9 Conrey actual-seven flat interval local full endpoint
+
+- `campaign`: `FALSIFICATION-20260729-H9-CONREY-SEVEN-FLAT-INTERVAL-01`.
+- `result`: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS`.
+- `preregistration`: `37852c81e2d71f1ee95520f62929204f094f34d5`, run
+  `30399568275`, job `90410810937`, `2m19s`.
+- `compiled_result`: the genuine `legendreSym 7` series is exactly zero on `[3/7,4/7]`;
+  `sqrt(2)/3` is a certified irrational zero.
+- `proof_spine`: period table, actual flat prefix, all-index discrete sine transform,
+  `K_7>0`, Mathlib Bernoulli cosine sums, exact six-shift cancellation, and `tsum` conclusion.
+- `scope`: `7 % 8 = 7`; no source-permitted `3 mod 8` witness or exclusion theorem is proved.
+  The contextually scoped Proposition 1, Conjecture 1, Theorem 3, H9, and RH remain open.
+- `local_audit`: 428-line no-sorry module, one proven Target, one exact open successor, eight
+  exact checks, eight standard-only axiom prints, empty forbidden scan, warning-as-error
+  compiles, `git diff --check`, and full `8788/8788` build pass.
+- `next_gate`: freeze and publish the implementation, then docs-only immutable evidence and
+  final ledger.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-29 H1 Selberg public closure and H2 classical detector launch
 
 - `H1-SELBERG-LOCAL-SIGN-CHANGE-01`: publicly closed at final ledger
