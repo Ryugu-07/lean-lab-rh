@@ -2671,6 +2671,13 @@ implementation `15381a49ff4dfb92a0ab4e29d5e76383f9789139` is empty. This node re
 - proof-source diff from the frozen implementation at immutable-evidence creation: empty;
 - next gate: docs-only immutable evidence public CI.
 
+### Public immutable-evidence receipt
+
+- immutable evidence: `a7765584e7078486c1c873a8283368061d5724e4`;
+- Lean Action run `30406546097`, build job `90433156392`, `2m22s`, success;
+- proof-source diff from frozen implementation through immutable evidence: empty;
+- next gate: docs-only final ledger public CI.
+
 ## 2026-07-28 H9 ordered Franel--Mertens correlation update
 
 - `node`: `H9-FRANEL-RANK-MERTENS-QUADRATIC-01`.

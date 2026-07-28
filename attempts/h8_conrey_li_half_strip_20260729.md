@@ -8,7 +8,7 @@ Node: `H8-CONREY-LI-HALF-STRIP-EXTENSION-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `MEANINGFUL_PARTIAL / IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_CI_REQUIRED`
+Status: `MEANINGFUL_PARTIAL / PUBLIC_EVIDENCE_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Fixed target
 
@@ -36,6 +36,7 @@ The full target, meaningful-partial threshold, controls, and claim boundary are 
 | `ADJOINT_CONTINUATION` | Applied the adjoint to the anchor kernel, checked the conjugation convention, continued the multiplier identity analytically, and bounded the extension using a nonzero diagonal kernel. | The extension agrees with the actual upper Cayley transform and has norm at most one at every half-strip point. | Register the abstract consumer as proven. |
 | `LOCAL_AUDIT` | Ran warning-as-error compiles, exact checks, selected axiom prints, forbidden scans, `git diff --check`, and the full build. | 740-line module; five new exact checks; eleven standard-only axiom prints; empty scans; full build `8790/8790`. | Classify as meaningful partial and publish the frozen implementation. |
 | `IMPLEMENTATION_PUBLIC` | Published the frozen proof and registration sources. | Commit `c8605da897d423a7bdab4e4bd49426c482b8f7a5`; run `30406353073`, job `90432548843`, passed in `2m9s`. | Freeze proof sources and publish docs-only immutable evidence. |
+| `IMMUTABLE_EVIDENCE_PUBLIC` | Published the proof-freeze receipt and claim boundary without changing proof sources. | Commit `a7765584e7078486c1c873a8283368061d5724e4`; run `30406546097`, job `90433156392`, passed in `2m22s`. | Publish one docs-only final ledger. |
 
 ## Current frontier
 

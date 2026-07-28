@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H8-CONREY-LI-HALF-STRIP-01`
 
 Classification: `MEANINGFUL_PARTIAL`
 
-Status: `LOCAL_IMMUTABLE_EVIDENCE_READY / PUBLIC_CI_REQUIRED`
+Status: `PUBLIC_EVIDENCE_PASS / FINAL_LEDGER_CI_REQUIRED`
 
 ## Frozen implementation
 
@@ -61,3 +61,7 @@ half-strip Hardy RKHS. It also does not formalize the final Cayley-to-`W` contin
 actual `F(W)` space, or the actual-xi shift-semipositivity premise.
 
 H8 and RH remain open. `rh_frontier_delta=0`.
+
+Immutable evidence commit `a7765584e7078486c1c873a8283368061d5724e4` passed Lean Action run
+`30406546097`, build job `90433156392`, in `2m22s`. The proof-source diff from the frozen
+implementation through this commit is empty.

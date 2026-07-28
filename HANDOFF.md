@@ -5221,6 +5221,18 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-29 H8 Conrey--Li half-strip immutable evidence public green
+
+- `immutable_evidence`: `a7765584e7078486c1c873a8283368061d5724e4`.
+- `public_ci`: run `30406546097`, build job `90433156392`, passed in `2m22s`.
+- `proof_freeze`: proof and registration sources remain identical to frozen implementation
+  `c8605da897d423a7bdab4e4bd49426c482b8f7a5`.
+- `local_stop`: `MEANINGFUL_PARTIAL`; concrete Hardy RKHS and all RH-bearing premises remain
+  open.
+- `next_gate`: publish one docs-only final ledger and require public CI.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-29 H9 Conrey actual-seven immutable evidence public green
 
 - `immutable_evidence`: `d629fbd2fdacf1adf866831761f8e127ae3330c7`.
