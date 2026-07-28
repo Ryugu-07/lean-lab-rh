@@ -3234,3 +3234,10 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - Lean Action run `30397348488`, build job `90403505298`, `2m6s`, success;
 - proof-source diff from the frozen implementation at immutable-evidence creation: empty;
 - next gate: docs-only immutable evidence public CI.
+
+### Public immutable-evidence receipt
+
+- immutable evidence: `c0b16dce7d8f70a4cc704276713ad824bd37ff3b`;
+- Lean Action run `30397611979`, build job `90404368803`, `1m57s`, success;
+- proof-source diff from frozen implementation through immutable evidence: empty;
+- next gate: docs-only final ledger public CI.

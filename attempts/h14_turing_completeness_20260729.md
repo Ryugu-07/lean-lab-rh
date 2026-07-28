@@ -4,8 +4,8 @@ Date: 2026-07-29
 
 Campaign: `LITERATURE-20260729-H14-TURING-COMPLETENESS-CONSUMER-01`
 
-Status: `FULL_TURING_COMPLETENESS_CONSUMER_SUCCESS / IMPLEMENTATION_PUBLIC /
-IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `FULL_TURING_COMPLETENESS_CONSUMER_SUCCESS / PUBLIC_CHAIN_AUDITED /
+FINAL_LEDGER_CI_REQUIRED`
 
 ## Attempt ledger
 
@@ -24,6 +24,7 @@ IMMUTABLE_EVIDENCE_CI_REQUIRED`
 | `NEGATIVE_CONTROL` | Used one line point and one off-line point in an ambient Finset. | A proper all-line candidate subset can omit the off-line ambient point. | Keep exact counting mandatory. |
 | `LOCAL_AUDIT` | Registered the proven Target, exact open successor, eight TargetChecks, and seven axiom prints; ran warning-as-error, forbidden scans, patch check, and full build. | New 281-line module is diagnostic-free; selected axioms are standard-only; scans are empty; full build passes `8787/8787`. | Freeze this implementation and require public CI. |
 | `FROZEN_IMPLEMENTATION_CI` | Published the exact implementation and registration state. | Commit `258a9ac8ce69f6dffe6beb4a6a7579845ca2a457` passed Lean Action run `30397348488`, build job `90403505298`, in `2m6s`. | Freeze proof sources and publish docs-only immutable evidence. |
+| `IMMUTABLE_EVIDENCE_CI` | Published the proof-source freeze check and local audit receipts without editing Lean source. | Commit `c0b16dce7d8f70a4cc704276713ad824bd37ff3b` passed Lean Action run `30397611979`, build job `90404368803`, in `1m57s`; proof-source diff from frozen implementation is empty. | Publish the final ledger and require public CI. |
 
 ## Frozen boundary
 

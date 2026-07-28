@@ -6,6 +6,8 @@ Campaign: `LITERATURE-20260729-H14-TURING-COMPLETENESS-CONSUMER-01`
 
 Classification: `FULL_TURING_COMPLETENESS_CONSUMER_SUCCESS`
 
+Status: `PUBLIC_EVIDENCE_PASS / FINAL_LEDGER_CI_REQUIRED`
+
 ## Frozen implementation
 
 - commit: `258a9ac8ce69f6dffe6beb4a6a7579845ca2a457`
@@ -55,3 +57,8 @@ registration sources.
 The compiled theorem is the finite Turing-style completeness consumer. Concrete root isolation,
 boundary nonvanishing, numerical counting, every certified height, the global tail reduction,
 H14-to-RH promotion, and RH remain open.
+
+This immutable evidence commit
+`c0b16dce7d8f70a4cc704276713ad824bd37ff3b` passed Lean Action run
+`30397611979`, build job `90404368803`, in `1m57s`. The proof-source diff from the frozen
+implementation through this commit is empty.

@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H14-TURING-COMPLETENESS-CONSUMER-01`
 
 Node: `H14-TURING-COMPLETENESS-CONSUMER-01`
 
-Classification: `FULL_TURING_COMPLETENESS_CONSUMER_SUCCESS / IMPLEMENTATION_PUBLIC`
+Classification: `FULL_TURING_COMPLETENESS_CONSUMER_SUCCESS / PUBLIC_CHAIN_AUDITED`
 
 ## Kernel-checked result
 
@@ -74,3 +74,7 @@ The separate global successor remains `H14.computation.global-tail-reduction`.
 Frozen implementation `258a9ac8ce69f6dffe6beb4a6a7579845ca2a457` passed public Lean Action
 run `30397348488`, build job `90403505298`, in `2m6s`. Immutable evidence CI is required
 before final ledger closure.
+
+Immutable evidence `c0b16dce7d8f70a4cc704276713ad824bd37ff3b` passed public Lean Action
+run `30397611979`, build job `90404368803`, in `1m57s`. The proof-source diff from frozen
+implementation through immutable evidence is empty. Final ledger CI remains.

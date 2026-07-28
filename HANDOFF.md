@@ -5156,6 +5156,11 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   `2m6s`, success.
 - `proof_source_diff_since_frozen`: empty.
 - `next_gate`: publish docs-only immutable evidence and require public CI.
+- `immutable_evidence`: `c0b16dce7d8f70a4cc704276713ad824bd37ff3b`.
+- `evidence_ci`: Lean Action run `30397611979`, build job `90404368803`,
+  `1m57s`, success.
+- `proof_source_diff_frozen_to_evidence`: empty.
+- `next_gate`: publish docs-only final ledger and require public CI, then add closure receipt.
 
 ## 2026-07-29 H2 classical zero-detector local meaningful partial
 
