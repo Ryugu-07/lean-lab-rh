@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260728-H1-HARDY-ABEL-MOMENT-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Target
 
@@ -87,6 +87,17 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 - Proof sources are frozen. The next commit is docs-only immutable evidence and must have an
   empty `LeanLab/` diff from the frozen implementation.
 
+## Loop 5 immutable evidence public gate
+
+- Docs-only immutable-evidence commit:
+  `2d662d49ebb783d9f3e86a50e752191a12c69754`.
+- Public Lean Action run `30336627329`, build job `90202820261`, passed in `1m35s`.
+- `git diff --name-only 2d5b5e2e692e8622263142a1205971c611736a78
+  2d662d49ebb783d9f3e86a50e752191a12c69754 -- LeanLab` is empty.
+- Local stop: `FULL_FIXED_ENDPOINT_SUCCESS`.
+- Final gate: publish this closure ledger and require public CI. After it passes, return to fresh
+  cross-family `ROUTE_SELECTION`; do not silently continue into proving the Abel law.
+
 ## Mechanical audit
 
 - exact module compilation: pass with `-DwarningAsError=true`
@@ -129,4 +140,6 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
   `03a788e80e6ca0acfb82a41c8e3663bda3a9ef79` passed public run `30334772898`,
   job `90197213274`; frozen implementation
   `2d5b5e2e692e8622263142a1205971c611736a78` passed public run `30336360223`,
-  job `90201998436`; immutable evidence pending
+  job `90201998436`; immutable evidence
+  `2d662d49ebb783d9f3e86a50e752191a12c69754` passed public run `30336627329`,
+  job `90202820261`; final-ledger CI pending

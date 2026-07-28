@@ -2667,3 +2667,8 @@ implementation `15381a49ff4dfb92a0ab4e29d5e76383f9789139` is empty. This node re
 Frozen implementation `2d5b5e2e692e8622263142a1205971c611736a78` passed public Lean Action
 run `30336360223`, build job `90201998436`, in `2m17s`. The complete conditional consumer is
 public-green. Proof sources remain frozen while docs-only immutable evidence is published.
+
+Immutable evidence `2d662d49ebb783d9f3e86a50e752191a12c69754` passed public run
+`30336627329`, build job `90202820261`, in `1m35s`; its `LeanLab/` diff from the frozen
+implementation is empty. This node is at `FULL_FIXED_ENDPOINT_SUCCESS`. After final-ledger CI,
+return to cross-family selection with `HardyXiAbelMomentLaw` retained as an open H1 node.

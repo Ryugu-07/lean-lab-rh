@@ -5188,3 +5188,18 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `next_gate`: docs-only immutable evidence and public CI.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H1 Hardy Abel-moment immutable evidence public green
+
+- `frozen_implementation`: `2d5b5e2e692e8622263142a1205971c611736a78`, run
+  `30336360223`, job `90201998436`, `2m17s`.
+- `immutable_evidence`: `2d662d49ebb783d9f3e86a50e752191a12c69754`, run
+  `30336627329`, job `90202820261`, `1m35s`.
+- `proof_freeze`: `LeanLab/` diff between those commits is empty.
+- `local_stop`: `FULL_FIXED_ENDPOINT_SUCCESS`.
+- `remaining_H1`: prove the source Abel law from Cahen-Mellin/theta inversion; quantitative
+  Hardy--Littlewood counts; mollifier proportions; H1; RH.
+- `next_gate`: one docs-only final ledger plus public CI, then fresh cross-family
+  `ROUTE_SELECTION`.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.

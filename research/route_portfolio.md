@@ -4542,3 +4542,8 @@ Frozen implementation `2d5b5e2e692e8622263142a1205971c611736a78` passed public r
 `30336360223`, build job `90201998436`, in `2m17s`. The conditional Hardy source-logic endpoint
 is public-green; docs-only immutable evidence is next, with the source Abel law retained as the
 open H1 analytic edge.
+
+Docs-only immutable evidence `2d662d49ebb783d9f3e86a50e752191a12c69754` passed public run
+`30336627329`, job `90202820261`, in `1m35s`; no proof source changed. The contradiction
+consumer is now at its local stop. Final-ledger CI is the only remaining gate before a fresh
+cross-family comparison.

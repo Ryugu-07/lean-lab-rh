@@ -8,7 +8,7 @@ Selected node: `H1-HARDY-ABEL-MOMENT-AMPLIFICATION-01`
 
 Mode: `LITERATURE`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Exact historical statement
 
@@ -201,3 +201,7 @@ must pass public CI before it is frozen.
 Frozen implementation `2d5b5e2e692e8622263142a1205971c611736a78` passed public Lean Action
 run `30336360223`, build job `90201998436`, in `2m17s`. The proof source and all registered
 statements are now frozen; immutable evidence must be docs-only.
+
+Docs-only immutable evidence `2d662d49ebb783d9f3e86a50e752191a12c69754` passed public run
+`30336627329`, build job `90202820261`, in `1m35s`. Its `LeanLab/` diff from the frozen
+implementation is empty. The fixed endpoint is complete; only final-ledger CI remains.

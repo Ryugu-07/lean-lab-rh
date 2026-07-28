@@ -1733,3 +1733,8 @@ Frozen implementation `2d5b5e2e692e8622263142a1205971c611736a78` passed public r
 `30336360223`, build job `90201998436`, in `2m17s`. This freezes the exact conditional
 amplification logic. The atlas must continue to rank the unproved source Abel law separately
 from the now-closed contradiction consumer.
+
+Immutable evidence `2d662d49ebb783d9f3e86a50e752191a12c69754` passed public run
+`30336627329`, job `90202820261`, in `1m35s`, with an empty `LeanLab/` diff from the frozen
+implementation. The next route decision must compare the source-law edge against unfinished
+H2, H7, H9, H10, H11, H12, and other historical nodes rather than following H1 by inertia.
