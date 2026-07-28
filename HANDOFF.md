@@ -5313,3 +5313,17 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `next_gate`: commit and publish the frozen implementation, then require public Lean Action CI.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H0 Chebyshev--Mellin implementation public green
+
+- `frozen_implementation`: `0ff8a577cb4eb247d6cfdbc03d82a5d7dd36707e`.
+- `public_ci`: run `30342482471`, build job `90220996513`, passed in `2m8s`.
+- `result`: `CHEBYSHEV_MELLIN_ORDERED_BRIDGE_FORMALIZED /
+  LIBRARY_SEMANTICS_CORRECTION`.
+- `proof_freeze`: do not modify any `LeanLab/` file before immutable-evidence CI.
+- `next_gate`: docs-only immutable evidence; verify an empty `LeanLab/` diff from the frozen
+  implementation.
+- `remaining_H0`: RH-strength Chebyshev error estimate, ordered-to-holomorphic continuation,
+  reverse zero exclusion, H0, and RH.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.

@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260728-H0-CHEBYSHEV-MELLIN-01`
 
 Selected node: `H0-RIEMANN-VON-KOCH-PSI-MELLIN-01`
 
-Status: `FULL_SUCCESS_LOCAL / FROZEN_IMPLEMENTATION_PENDING`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 
 ## Selection reason
 
@@ -236,3 +236,12 @@ subject to a fresh rerank. Direct RH attacks and conjecture verification remain 
   holomorphy in the enlarged half-plane, reverse zero-exclusion theorem, H0, H9, or RH has been
   proved.
 - `next_gate`: freeze and publish the implementation, then require independent public CI.
+
+## Frozen implementation
+
+- `frozen_implementation`: commit `0ff8a577cb4eb247d6cfdbc03d82a5d7dd36707e`.
+- `public_ci`: Lean Action run `30342482471`, build job `90220996513`, passed in `2m8s`.
+- `proof_freeze`: the 527-line module, aggregate Target, 13 exact TargetChecks, and 11 selected
+  axiom prints are frozen.
+- `next_gate`: publish docs-only immutable evidence and verify an empty `LeanLab/` diff from the
+  frozen implementation.
