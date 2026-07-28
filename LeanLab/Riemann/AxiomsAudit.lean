@@ -118,6 +118,7 @@ import LeanLab.Riemann.LevinsonMontgomeryCriticalIndentation
 import LeanLab.Riemann.SpeiserAdmissibleContour
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.ConreyLiPhaseObstruction
+import LeanLab.Riemann.ConreyLiRKHSShift
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.BombieriStepanovPolarInjectivity
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
@@ -1150,3 +1151,11 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.exists_speiserFixedBottomLogDerivBound
 #print axioms LeanLab.Riemann.integral_logDeriv_speiserNonzeroWindingModel
 #print axioms LeanLab.Riemann.speiserAdmissibleHorizontal_endpoint
+#print axioms LeanLab.Riemann.conreyLiShiftedKernelQuadratic_eq_add_conj
+#print axioms LeanLab.Riemann.conreyLiShiftedKernelQuadratic_im_eq_zero
+#print axioms LeanLab.Riemann.conreyLi_shiftedKernel_re_eq
+#print axioms LeanLab.Riemann.conreyLi_ratio_re_nonneg_of_kernel_re_nonneg
+#print axioms LeanLab.Riemann.inner_conreyLiKernelCombination_shift_eq_conj
+#print axioms LeanLab.Riemann.conreyLiShiftedKernelQuadratic_re_nonneg_of_rkhs_shift
+#print axioms LeanLab.Riemann.conreyLiUpperShiftRatio_re_nonneg_of_rkhs_shift
+#print axioms LeanLab.Riemann.conreyLiRKHSShift_endpoint

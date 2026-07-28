@@ -5580,6 +5580,40 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-29 H8 Conrey--Li RKHS shift preregistration public green
+
+- `preregistration`: `7b0517b0a3b2784191fa020e4bdc07249bc1455b`.
+- `public_ci`: run `30386443326`, build job `90366815958`, passed in `1m45s`.
+- `production_gate`: open for the fixed upper-half-plane RKHS endpoint.
+- `strict_boundary`: half-strip continuation, actual-xi operator positivity, H8, and RH remain
+  open.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-29 H8 Conrey--Li RKHS shift local full endpoint
+
+- `campaign`: `LITERATURE-20260729-H8-CONREY-LI-RKHS-SHIFT-01`.
+- `result`: `FULL_UPPER_HALF_PLANE_PRODUCER_SUCCESS`.
+- `closed_edge`:
+  `explicit scalar RKHS kernel + kernel-center shift + operator semipositivity`;
+  `-> arbitrary finite symmetrized shifted-kernel positivity`;
+  `-> Re(W(w)/W(w+i)) >= 0 for Im(w)>0`;
+  `-> source Cayley norm <= 1`.
+- `inner_convention_audit`: the source quadratic is `S+conj(S)` and Mathlib's RKHS inner
+  product is `conj(S)`, so the opposite linearity conventions agree after taking real parts.
+- `dependency_split`: analyticity of `W` is unused in the finite producer once the explicit
+  RKHS is supplied; it enters concrete-space construction and the second half-strip
+  continuation stage.
+- `local_audit`: 312-line no-sorry module, one proven Target, one open successor, eight exact
+  checks, eight standard-only axiom prints, empty scans, warning-as-error compiles,
+  `git diff --check`, and full `8784/8784` build pass.
+- `remaining_H8`: construct the concrete source `F(W)`, instantiate and test actual-xi shift
+  positivity, formalize the half-strip Hardy-RKHS multiplier/adjoint continuation, H8, and RH.
+- `next_gate`: freeze and publish the implementation, then docs-only immutable evidence and
+  final ledger.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-28 H10 Weil surface Hodge-lattice selected
 
 - `parent_public_closure`: H12 final ledger

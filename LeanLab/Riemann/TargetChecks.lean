@@ -158,7 +158,8 @@ example
     RiemannHypothesis :=
   baezDuarteComplexTarget_mem_closure_imp_riemannHypothesis h
 
-open scoped BigOperators ComplexConjugate ContDiff ENNReal FourierTransform InnerProductSpace Topology
+open scoped BigOperators ComplexConjugate ContDiff ENNReal FourierTransform InnerProductSpace
+  Topology UpperHalfPlane
 
 /-- Name-resolution witness for every `.proven` ledger target with a `leanName`. -/
 def checkedTargetNames : List Lean.Name :=
@@ -5314,5 +5315,75 @@ example :
             ‖∫ sigma : ℝ in (0 : ℝ)..(1 / 2),
               logDeriv (deriv riemannZeta) (sigma + b * Complex.I)‖ ≤ C :=
   speiserAdmissibleHorizontal_endpoint
+
+example (w : ℍ) :
+    2 * (Real.pi : ℂ) * Complex.I *
+        (conj (w : ℂ) - (conreyLiUpperShift w : ℂ)) =
+      ((2 * Real.pi * (2 * w.im + 1) : ℝ) : ℂ) :=
+  conreyLi_shiftedKernel_denominator w
+
+example {ι : Type*} (W : ℂ → ℂ) (s : Finset ι)
+    (w : ι → ℍ) (c : ι → ℂ) :
+    conreyLiShiftedKernelQuadratic W s w c =
+      conreyLiFirstShiftKernelSum W s w c +
+        conj (conreyLiFirstShiftKernelSum W s w c) :=
+  conreyLiShiftedKernelQuadratic_eq_add_conj W s w c
+
+example {ι : Type*} (W : ℂ → ℂ) (s : Finset ι)
+    (w : ι → ℍ) (c : ι → ℂ) :
+    (conreyLiShiftedKernelQuadratic W s w c).im = 0 :=
+  conreyLiShiftedKernelQuadratic_im_eq_zero W s w c
+
+example (W : ℂ → ℂ) (w : ℍ)
+    (hWshift : W (conreyLiUpperShift w) ≠ 0) :
+    (conreyLiKernel W w (conreyLiUpperShift w)).re =
+      (Complex.normSq (W (conreyLiUpperShift w)) /
+          (2 * Real.pi * (2 * w.im + 1))) *
+        (conreyLiUpperShiftRatio W w).re :=
+  conreyLi_shiftedKernel_re_eq W w hWshift
+
+example (W : ℂ → ℂ) (w : ℍ)
+    (hWshift : W (conreyLiUpperShift w) ≠ 0)
+    (hkernel : 0 ≤ (conreyLiKernel W w (conreyLiUpperShift w)).re) :
+    0 ≤ (conreyLiUpperShiftRatio W w).re :=
+  conreyLi_ratio_re_nonneg_of_kernel_re_nonneg W w hWshift hkernel
+
+example {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]
+    [CompleteSpace H] [RKHS ℂ H ℍ ℂ]
+    {ι : Type*} (W : ℂ → ℂ) (T : H →ₗ[ℂ] H)
+    (hkernel : ∀ w z : ℍ,
+      RKHS.kernel H z w 1 = conreyLiKernel W w z)
+    (hshift : ∀ w : ℍ,
+      T (RKHS.kerFun H w 1) = RKHS.kerFun H (conreyLiUpperShift w) 1)
+    (hpositive : ∀ f : H, 0 ≤ (inner ℂ f (T f)).re)
+    (s : Finset ι) (w : ι → ℍ) (c : ι → ℂ) :
+    0 ≤ (conreyLiShiftedKernelQuadratic W s w c).re :=
+  conreyLiShiftedKernelQuadratic_re_nonneg_of_rkhs_shift
+    W T hkernel hshift hpositive s w c
+
+example {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]
+    [CompleteSpace H] [RKHS ℂ H ℍ ℂ]
+    (W : ℂ → ℂ) (T : H →ₗ[ℂ] H)
+    (hkernel : ∀ w z : ℍ,
+      RKHS.kernel H z w 1 = conreyLiKernel W w z)
+    (hshift : ∀ w : ℍ,
+      T (RKHS.kerFun H w 1) = RKHS.kerFun H (conreyLiUpperShift w) 1)
+    (hpositive : ∀ f : H, 0 ≤ (inner ℂ f (T f)).re)
+    (hW : ∀ w : ℍ, W w ≠ 0) (w : ℍ) :
+    0 ≤ (conreyLiUpperShiftRatio W w).re :=
+  conreyLiUpperShiftRatio_re_nonneg_of_rkhs_shift
+    W T hkernel hshift hpositive hW w
+
+example {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]
+    [CompleteSpace H] [RKHS ℂ H ℍ ℂ]
+    (W : ℂ → ℂ) (T : H →ₗ[ℂ] H)
+    (hkernel : ∀ w z : ℍ,
+      RKHS.kernel H z w 1 = conreyLiKernel W w z)
+    (hshift : ∀ w : ℍ,
+      T (RKHS.kerFun H w 1) = RKHS.kerFun H (conreyLiUpperShift w) 1)
+    (hpositive : ∀ f : H, 0 ≤ (inner ℂ f (T f)).re)
+    (hW : ∀ w : ℍ, W w ≠ 0) :
+    ConreyLiRKHSShiftCertificate W :=
+  conreyLiRKHSShift_endpoint W T hkernel hshift hpositive hW
 
 end LeanLab.Riemann

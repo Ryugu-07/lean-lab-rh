@@ -116,6 +116,7 @@ import LeanLab.Riemann.FiniteHeightPromotionAudit
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.ConreyLiPhaseObstruction
+import LeanLab.Riemann.ConreyLiRKHSShift
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.BombieriStepanovPolarInjectivity
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
@@ -1717,6 +1718,21 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``not_conreyLiRiemannXiShiftRatioNonnegative_of_phase_data
       status := .proven
       note := "Campaign LITERATURE-20260726-D9-CONREY-LI-PHASE-OBSTRUCTION-01 kernel-checks the topology and coordinate algebra in the nonnumerical Sarnak remark appended to Conrey-Li 1998. The actual-xi endpoint keeps dense log-zeta values, a continuous logarithm of the xi ratio, its bounded imaginary correction, strip membership, and nonvanishing as explicit premises. The project does not yet formalize the value-distribution theorem, logarithm branches, the bounded source correction, or the reproducing-kernel Hilbert-space Theorem 2, so this is a conditional historical source-logic bridge rather than an unconditional actual-zeta obstruction or RH progress." },
+    { id := "H8.de-branges.conrey-li-rkhs-shift-producer"
+      tier := .tier2
+      title := "Formalize the Conrey-Li RKHS shift producer"
+      statement :=
+        "For a scalar complex RKHS with the explicit Conrey-Li kernel, prove that a linear operator shifting every kernel center by i and satisfying Re <F,T F> >= 0 makes the complete symmetrized shifted kernel positive on every finite combination, forces Re(W(z)/W(z+i)) >= 0 on the upper half-plane, and contracts the source Cayley transform."
+      leanName := some ``conreyLiRKHSShift_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260729-H8-CONREY-LI-RKHS-SHIFT-01 reconstructs the first stage of Conrey-Li 1998 Theorem 2 using Mathlib's actual RKHS API. It compiles the source kernel normalization, both inner-product conventions, arbitrary finite-combination positivity, diagonal shifted-ratio nonnegativity, and the Cayley closed-unit-disk bound. The source premise is non-strict, so no zero-vector defect exists. The concrete space F(W), actual W=1/xi(1-i*z) shift-operator positivity, the second Hardy-RKHS multiplier/adjoint argument, analytic continuation to Im z > -1/2, H8, and RH remain open." },
+    { id := "H8.de-branges.conrey-li-half-strip-extension"
+      tier := .tier2
+      title := "Formalize the Conrey-Li Hardy-RKHS half-strip extension"
+      statement :=
+        "Construct the Hardy RKHS on Im z > -1/2 with kernel 1/(2*pi*i*(conj(w)-z-i)), extend the source contractive multiplier and its adjoint from upper-half-plane kernel centers by density, and prove analytic continuation and norm at most one for the Cayley transform throughout the half-strip."
+      status := .inProgress
+      note := "The upper-half-plane RKHS producer now compiles. The remaining source stage needs the concrete half-strip Hardy space, density of kernel centers restricted to Im w>0, a bounded multiplier obtained from the positive kernel, its adjoint, and an identity-theorem continuation. No upper-half-plane bound is promoted to the half-strip without these inputs." },
     { id := "D9.suzuki.actual-canonical-system-limit"
       tier := .tier2
       title := "Construct Suzuki's actual canonical-system limit"

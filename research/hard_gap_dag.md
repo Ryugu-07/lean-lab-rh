@@ -2970,6 +2970,32 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `production_gate`: docs-only preregistration public CI before any proof-source edit.
 - `global_goal`: active.
 
+Preregistration commit `7b0517b0a3b2784191fa020e4bdc07249bc1455b` passed public Lean Action
+run `30386443326`, build job `90366815958`, in `1m45s`. Production editing is open for the
+fixed endpoint.
+
+## 2026-07-29 H8 Conrey--Li RKHS-shift local result
+
+- `node`: `H8-CONREY-LI-RKHS-SHIFT-01`.
+- `status`: `FULL_UPPER_HALF_PLANE_PRODUCER_SUCCESS / LOCAL_AUDIT_GREEN`.
+- `closed_H8_RKHS`:
+  `source kernel Hermitian normalization`;
+  `operator semipositivity -> arbitrary finite symmetrized shifted-kernel positivity`;
+  `one-kernel diagonal -> upper-half-plane shifted-ratio nonnegativity`;
+  `right-half-plane ratio -> source Cayley contraction`.
+- `source_dependency_split`: analyticity is not used by the compiled finite producer after
+  explicit RKHS alignment; it remains part of source-space construction and analytic
+  continuation.
+- `open_H8_half_strip`: construct the Hardy RKHS on `Im z > -1/2`, obtain the multiplier from
+  the positive kernel, extend it by density, use its adjoint, and prove analytic continuation.
+- `open_H8_actual_xi`: no concrete `F(W)` or positive shift operator is constructed for
+  `W=1/xi(1-i*z)`.
+- `classification`: `historical_route_coverage_delta=1`, `rkhs_source_bridge_delta=1`,
+  `finite_shifted_kernel_positivity_delta=1`, `upper_half_plane_ratio_delta=1`,
+  `half_strip_extension_delta=0`, `actual_xi_operator_delta=0`, `hard_gap_delta=0`,
+  `rh_frontier_delta=0`.
+- `global_goal`: active.
+
 ## 2026-07-28 H10 Weil surface Hodge-lattice launch
 
 - `node`: `H10-WEIL-SURFACE-HODGE-LATTICE-01`.

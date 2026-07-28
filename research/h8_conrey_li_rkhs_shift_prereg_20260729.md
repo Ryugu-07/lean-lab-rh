@@ -8,7 +8,7 @@ Node: `H8-CONREY-LI-RKHS-SHIFT-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `PREREGISTRATION_PUBLIC_GREEN / PRODUCTION_OPEN`
 
 ## Primary-source anchor
 
@@ -115,3 +115,39 @@ until this docs-only preregistration passes public Lean Action CI.
 
 The persistent RH Goal remains active. A local stop returns to fresh cross-family route
 selection after the full evidence chain.
+
+The production gate passed at preregistration commit
+`7b0517b0a3b2784191fa020e4bdc07249bc1455b`, public Lean Action run `30386443326`, build job
+`90366815958`, in `1m45s`.
+
+## Local result
+
+`LeanLab/Riemann/ConreyLiRKHSShift.lean` is a 312-line no-sorry implementation of every fixed
+upper-half-plane endpoint. It proves that the source kernel is Hermitian, that the complete
+finite symmetrized shifted-kernel quadratic is exactly a complex number plus its conjugate,
+and that the RKHS quadratic form is the conjugate of the first source sum. Therefore operator
+semipositivity gives a real, nonnegative source quadratic for every finite family.
+
+The one-kernel specialization exposes the exact positive denominator
+
+```text
+2*pi*(2*Im(w)+1)
+```
+
+and proves that the shifted-kernel diagonal real part is a strictly positive multiple of
+`Re(W(w)/W(w+i))` when `W(w+i)` is nonzero. The generic Cayley lemma then gives
+`|(r-1)/(r+1)| <= 1` from `Re(r) >= 0`, yielding the source `|B(w)| <= 1`.
+
+The audit also separates a source dependency: analyticity of `W` is not used in this finite
+upper-half-plane producer once the scalar RKHS and explicit kernel are supplied. Analyticity is
+needed to construct the concrete source space and in the second Hardy-RKHS continuation stage.
+
+One proven Target, one exact open successor Target, eight exact TargetChecks, eight selected
+standard-only axiom prints, empty forbidden scans, warning-as-error compiles,
+`git diff --check`, and full `8784/8784` build pass locally.
+
+This is `FULL_UPPER_HALF_PLANE_PRODUCER_SUCCESS` with
+`half_strip_extension_delta=0`, `actual_xi_operator_delta=0`, `hard_gap_delta=0`, and
+`rh_frontier_delta=0`. The concrete `F(W)` construction, the actual-xi shift operator and its
+positivity, the Hardy-RKHS multiplier/adjoint continuation to `Im z > -1/2`, H8, and RH remain
+open.
