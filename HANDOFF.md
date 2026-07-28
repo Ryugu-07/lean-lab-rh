@@ -5614,6 +5614,18 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-29 H8 Conrey--Li RKHS shift implementation public green
+
+- `frozen_implementation`: `462c88ad1f80772e9485ce224e16e63c9fd39e8e`.
+- `public_ci`: run `30387979402`, build job `90371989593`, passed in `2m2s`.
+- `result`: `FULL_UPPER_HALF_PLANE_PRODUCER_SUCCESS`.
+- `proof_freeze`: the `LeanLab/` diff from the frozen implementation is empty.
+- `remaining_H8`: concrete `F(W)`, actual-xi shift positivity, the half-strip Hardy-RKHS
+  multiplier/adjoint continuation, H8, and RH.
+- `next_gate`: publish docs-only immutable evidence and require public CI.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-28 H10 Weil surface Hodge-lattice selected
 
 - `parent_public_closure`: H12 final ledger

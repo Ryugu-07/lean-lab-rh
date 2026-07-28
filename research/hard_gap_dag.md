@@ -2996,6 +2996,10 @@ fixed endpoint.
   `rh_frontier_delta=0`.
 - `global_goal`: active.
 
+Frozen implementation `462c88ad1f80772e9485ce224e16e63c9fd39e8e` passed public Lean Action
+run `30387979402`, build job `90371989593`, in `2m2s`. The proof source is frozen while
+docs-only immutable evidence is published.
+
 ## 2026-07-28 H10 Weil surface Hodge-lattice launch
 
 - `node`: `H10-WEIL-SURFACE-HODGE-LATTICE-01`.

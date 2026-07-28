@@ -8,7 +8,8 @@ Node: `H8-CONREY-LI-RKHS-SHIFT-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `FULL_UPPER_HALF_PLANE_PRODUCER_SUCCESS / LOCAL_AUDIT_GREEN`
+Status: `FULL_UPPER_HALF_PLANE_PRODUCER_SUCCESS /
+IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 
 ## Fixed target
 
@@ -36,6 +37,7 @@ The complete criteria and claim boundary are fixed in
 | `DEPENDENCY_AUDIT` | Traced every used hypothesis in the compiled stage. | Analyticity of `W` is absent from the finite producer after RKHS/kernel alignment; it belongs to concrete-space construction and the second continuation stage. | Record the half-strip Hardy-RKHS edge separately. |
 | `REGISTRATION` | Added one proven Target, one open successor Target, eight exact TargetChecks, and eight selected axiom prints. | Every selected theorem uses only `propext`, `Classical.choice`, and `Quot.sound`. | Run local mechanical gates. |
 | `LOCAL_AUDIT` | Ran warning-as-error production and registry compiles, three forbidden scans, `git diff --check`, and the full build. | Scans are empty; patch check passes; full build passes `8784/8784`. | Freeze and publish the implementation. |
+| `IMPLEMENTATION_PUBLIC_CI` | Froze and pushed implementation `462c88ad1f80772e9485ce224e16e63c9fd39e8e`. | Run `30387979402`, job `90371989593`, passed in `2m2s`. | Keep proof sources frozen and publish docs-only immutable evidence. |
 
 ## Runtime record
 
@@ -50,6 +52,9 @@ The complete criteria and claim boundary are fixed in
   `30386443326`, job `90366815958`, in `1m45s`.
 - `production_module`: `LeanLab/Riemann/ConreyLiRKHSShift.lean`, 312 lines.
 - `local_build`: `8784/8784`.
+- `frozen_implementation`: `462c88ad1f80772e9485ce224e16e63c9fd39e8e`, public-green on
+  run `30387979402`, job `90371989593`, in `2m2s`.
+- `proof_freeze`: the `LeanLab/` diff from the frozen implementation is empty.
 
 ## Current boundary
 
@@ -74,4 +79,4 @@ Result accounting:
 - `hard_gap_delta=0`;
 - `rh_frontier_delta=0`.
 
-Frozen implementation and public CI are the next gate.
+Frozen implementation is public-green. Docs-only immutable evidence is the next gate.

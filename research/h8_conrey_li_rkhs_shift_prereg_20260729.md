@@ -8,7 +8,8 @@ Node: `H8-CONREY-LI-RKHS-SHIFT-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `PREREGISTRATION_PUBLIC_GREEN / PRODUCTION_OPEN`
+Status: `FULL_UPPER_HALF_PLANE_PRODUCER_SUCCESS /
+IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 
 ## Primary-source anchor
 
@@ -151,3 +152,7 @@ This is `FULL_UPPER_HALF_PLANE_PRODUCER_SUCCESS` with
 `rh_frontier_delta=0`. The concrete `F(W)` construction, the actual-xi shift operator and its
 positivity, the Hardy-RKHS multiplier/adjoint continuation to `Im z > -1/2`, H8, and RH remain
 open.
+
+Frozen implementation `462c88ad1f80772e9485ce224e16e63c9fd39e8e` passed public Lean Action
+run `30387979402`, build job `90371989593`, in `2m2s`. Proof sources remain frozen while
+docs-only immutable evidence is published.
