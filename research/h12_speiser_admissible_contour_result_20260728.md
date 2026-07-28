@@ -55,7 +55,9 @@ equivalence, derivative-zero exclusion, and RH remain open.
 - forbidden/custom-declaration/resource-relaxation scans: empty;
 - `git diff --check`: pass;
 - full build: `8782/8782`;
-- public implementation CI: pending.
+- frozen implementation: `fbdb2462141e20b169d25eae58ed3c9ef67eb92b`;
+- public implementation CI: run `30382486593`, job `90353492533`, passed in `2m7s`;
+- immutable evidence: pending.
 
 ## Claim boundary
 

@@ -9,7 +9,7 @@ Node: `H12-SPEISER-ADMISSIBLE-CONTOUR-01`
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
 Status: `MEANINGFUL_PARTIAL / SOURCE_DEPENDENCY_SPLIT /
-LOCAL_AUDIT_GREEN / IMPLEMENTATION_PUBLIC_CI_PENDING`
+IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 
 ## Fixed target
 
@@ -33,6 +33,7 @@ Full and meaningful-partial criteria are fixed in
 | `WINDING_FALSIFICATION` | Tested whether nonvanishing and matching endpoints force zero logarithmic winding. | `speiserNonzeroWindingModel` is everywhere nonzero, agrees at `0` and `1`, and `integral_logDeriv_speiserNonzeroWindingModel` is exactly `2*pi*I`. | Reject common nonvanishing as a replacement for the exact-count base orientation. |
 | `REGISTRATION` | Added an aggregate Target, exact statement checks, and eight selected axiom prints. | Every selected theorem uses only `propext`, `Classical.choice`, and `Quot.sound`. | Run the local mechanical gates. |
 | `LOCAL_AUDIT` | Ran warning-as-error standalone compilation, three forbidden scans, `git diff --check`, and the full build. | Scans are empty; patch check passes; full build passes `8782/8782`. | Freeze and publish the meaningful partial. |
+| `IMPLEMENTATION_PUBLIC_CI` | Froze and pushed implementation `fbdb2462141e20b169d25eae58ed3c9ef67eb92b`. | Run `30382486593`, job `90353492533`, passed in `2m7s`. | Keep proof sources frozen and publish docs-only immutable evidence. |
 
 ## Strongest compiled facts
 
@@ -109,3 +110,5 @@ Speiser equivalence, derivative-zero exclusion, or RH result is proved.
 - `protected_files`: the six inherited protected files remain untouched and unstaged.
 - `production_module`: `LeanLab/Riemann/SpeiserAdmissibleContour.lean`, 270 lines.
 - `local_build`: `8782/8782`.
+- `frozen_implementation`: `fbdb2462141e20b169d25eae58ed3c9ef67eb92b`, public-green on
+  run `30382486593`, job `90353492533`, in `2m7s`.

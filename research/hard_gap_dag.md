@@ -2935,3 +2935,7 @@ final-ledger CI return to fresh cross-family route selection rather than constan
   `common_admissible_horizontal_delta=1`, `source_dependency_correction_delta=1`,
   `hard_gap_delta=0`, `rh_frontier_delta=0`.
 - `global_goal`: active.
+
+Frozen implementation `fbdb2462141e20b169d25eae58ed3c9ef67eb92b` passed public Lean Action
+run `30382486593`, build job `90353492533`, in `2m7s`. Proof sources are frozen while docs-only
+immutable evidence is published.

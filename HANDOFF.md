@@ -5524,3 +5524,17 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `next_gate`: freeze and publish implementation, then docs-only immutable evidence.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H12 Speiser admissible contour implementation public green
+
+- `frozen_implementation`: `fbdb2462141e20b169d25eae58ed3c9ef67eb92b`.
+- `public_ci`: run `30382486593`, build job `90353492533`, passed in `2m7s`.
+- `result`: `MEANINGFUL_PARTIAL / SOURCE_DEPENDENCY_SPLIT`.
+- `proof_freeze`: do not modify any `LeanLab/` file before immutable-evidence CI.
+- `remaining_H12`: global indented argument principle, Jensen top variation, negative-bottom or
+  equivalent base orientation, both count outputs, actual Speiser equivalence, derivative-zero
+  exclusion, and RH.
+- `next_gate`: docs-only immutable evidence; verify an empty `LeanLab/` diff from the frozen
+  implementation.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
