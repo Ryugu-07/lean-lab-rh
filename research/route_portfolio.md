@@ -4502,3 +4502,23 @@ Docs-only immutable evidence `b6f34cbfef5790fa9e94b338d828fe1b79d37369` passed p
 `30333303052`, build job `90192852899`, in `1m40s`; no `LeanLab/` file differs from the frozen
 implementation. The fixed H11 node is at its local stop. One final-ledger CI remains before
 cross-family route selection resumes.
+
+## H1 Hardy Original Abel-Moment Selection
+
+After the H11 triangular-mass closure, fresh cross-family comparison selects Hardy's 1914
+equations (1)--(6). The previously compiled H1 sign bridge proves that actual project xi zeros
+follow from sign changes, but it does not reconstruct the historical argument that forces those
+changes.
+
+The source route is not the later Hardy-`Z` upper/lower integral proof. It writes an
+exponential-weight transform for `Xi(2t)`, differentiates `2p` times, takes
+`alpha -> pi/2` from below, and compares a compact initial moment of size `K*T^(2p)` with a
+fixed positive tail interval of size `C*(2T)^(2p)`. Odd and even parity handle the two possible
+eventual signs.
+
+The selected campaign preserves the Abel boundary rather than postulating an unconditional
+Lebesgue integral at `alpha=pi/2`. It also compiles the exact H1/H6 bridge
+`hardyXi(2*t)=8*deBruijnNewmanH 0 (4*t)`. Full success gives a zero above every height and
+infinitely many actual project critical-line zeros conditional only on the exact source Abel
+moment law. Proving that law from Cahen-Mellin/theta inversion remains the next analytic edge;
+Hardy--Littlewood counts, H1, and RH remain open.

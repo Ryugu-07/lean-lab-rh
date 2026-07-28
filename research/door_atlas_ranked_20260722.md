@@ -1689,3 +1689,27 @@ Immutable evidence `b6f34cbfef5790fa9e94b338d828fe1b79d37369` passed public run
 `30333303052`, job `90192852899`, in `1m40s`, with no proof-source change. H11 triangular mass
 therefore leaves the active shortlist at a local stop; its Fujii/PCC and sparse-exception nodes
 stay open, but the next campaign must be chosen by a fresh cross-family comparison.
+
+### Post-H11 rerank: Hardy's original Abel moment mechanism
+
+H11 triangular mass is publicly closed at final ledger
+`650bd2656b71c4a25a830d77ef49971eb8af1fc4`. Fresh comparison retains its moving-height and
+sparse-exception edges, H1's arbitrary mollifier moment, H2 localization, H7 convergence, H9
+ordered Franel discrepancy, H10 geometric transfer, and H12 global counting as open.
+
+Hardy's original 1914 proof is selected because the repository has only its real-xi sign
+consumer. The source actually proceeds through Cahen-Mellin/theta inversion, an interior
+exponential parameter `|alpha|<pi/2`, alternating Abel limits of even moments, and a
+`2^(2p)` amplification contradiction. The later Hardy-`Z` signed-integral proof is a different
+route and must not be substituted silently.
+
+The audit finds an omission-sensitive boundary: Hardy writes a boundary integral at
+`alpha=pi/2` only after invoking a convergence theorem under the assumed eventual sign. The new
+campaign keeps the one-sided Abel limit explicit and proves the contradiction using interior
+parameters, so it does not assume unconditional boundary integrability.
+
+Campaign `LITERATURE-20260728-H1-HARDY-ABEL-MOMENT-01` also fixes the exact cross-route identity
+`hardyXi(2*t)=8*deBruijnNewmanH 0 (4*t)`. Its full endpoint is the actual infinite-critical-zero
+consumer conditional on Hardy's source Abel moment law. The law itself, quantitative counts,
+H1, and RH remain open. Production Lean editing is blocked until the docs-only preregistration
+passes public CI.

@@ -2619,3 +2619,27 @@ Immutable-evidence commit `b6f34cbfef5790fa9e94b338d828fe1b79d37369` passed publ
 Action run `30333303052`, build job `90192852899`, in `1m40s`. The `LeanLab/` diff from frozen
 implementation `15381a49ff4dfb92a0ab4e29d5e76383f9789139` is empty. This node returns to
 `ROUTE_SELECTION` after final-ledger CI; H11-D and H11-E remain open.
+
+## 2026-07-28 H1 Hardy Abel-moment amplification launch
+
+- `node`: `H1-HARDY-ABEL-MOMENT-AMPLIFICATION-01`.
+- `mode`: `LITERATURE`.
+- `source_edge`:
+  `Hardy 1914 Cahen-Mellin/theta formula -> interior alpha moments`;
+  `2p derivatives -> alternating one-sided Abel limits`;
+  `eventual one-sign hypothesis -> compact initial bound versus amplified tail`;
+  `both parities -> zero above every height`;
+  `actual zero dictionary -> infinitely many critical-line nontrivial zeros`.
+- `compiled_parent`: real/even/continuous `hardyXi`, actual zero dictionary, and
+  `deBruijnNewmanH_zero_eq_riemannXi`.
+- `fixed_cross_route_identity`: `hardyXi(2*t)=8*deBruijnNewmanH 0 (4*t)`.
+- `omission_boundary`: do not replace the one-sided Abel limit by an unconditional boundary
+  Bochner integral at `alpha=pi/2`.
+- `fixed_endpoint`: complete high-moment contradiction and actual-zero infinitude, conditional
+  only on the exact source Abel moment law.
+- `open_edge_H1A`: prove the source Abel moment law from Cahen-Mellin/theta inversion.
+- `open_edge_H1B`: quantitative Hardy--Littlewood critical-zero count and later proportion
+  methods.
+- `classification_target`: historical mechanism and cross-route interface progress; no
+  unconditional critical-line-infinitude, hard-gap, or RH-frontier delta.
+- `global_goal`: active.

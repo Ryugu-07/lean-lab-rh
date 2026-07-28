@@ -5124,3 +5124,24 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `next_gate`: one docs-only final ledger plus public CI, then `ROUTE_SELECTION`.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H1 Hardy original Abel-moment route selected
+
+- `parent_public_closure`: H11 final ledger
+  `650bd2656b71c4a25a830d77ef49971eb8af1fc4` passed run `30333486822`, job
+  `90193405245`, in `2m0s`.
+- `campaign`: `LITERATURE-20260728-H1-HARDY-ABEL-MOMENT-01`.
+- `node`: `H1-HARDY-ABEL-MOMENT-AMPLIFICATION-01`.
+- `source_correction`: Hardy 1914 uses Cahen-Mellin/theta inversion and alternating Abel even
+  moments, not the later textbook Hardy-`Z` signed-integral proof.
+- `omission_boundary`: retain `alpha -> pi/2` from below; do not assume unconditional
+  integrability at the boundary.
+- `fixed_endpoint`: exact `hardyXi(2*t)=8*deBruijnNewmanH 0 (4*t)` normalization, exact source
+  moment-law definition, both eventual-sign contradictions, a zero above every height, and an
+  infinite set of actual critical-line nontrivial zeros conditional on that law.
+- `strict_boundary`: proving the Abel law from the source theta transform, quantitative
+  critical-zero counts, H1, and RH remain open.
+- `production_gate`: no `LeanLab/` source edit until the docs-only preregistration passes public
+  Lean Action CI.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
