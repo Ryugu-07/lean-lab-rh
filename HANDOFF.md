@@ -5236,6 +5236,28 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-29 H12 left-half-plane winding selected
+
+- `parent_public_closure`: H9 actual-seven final ledger
+  `5dab6664c49e5e03effe9ac309256eaf91e5a171`, run `30401325481`, job
+  `90416579015`; closure receipt `fa3e22d4a8cf9dcd082eec3ef2d2d6b788b0d5ca`, run
+  `30401538278`, job `90417268794`.
+- `campaign`: `LITERATURE-20260729-H12-LEFT-HALF-PLANE-WINDING-01`.
+- `node`: `H12-LM-LEFT-HALF-PLANE-WINDING-01`.
+- `selection_reason`: the previous H12 campaign proved that nonvanishing alone does not control
+  winding. Levinson--Montgomery page 52 uses the exact stronger fact that the closed ratio image
+  lies in the strict left half-plane.
+- `fixed_endpoint`: principal-log endpoint formula for a strict-left path, zero integral for a
+  closed path, and the actual horizontal `zeta'/zeta` formula with integrand
+  `logDeriv(zeta')-logDeriv(zeta)`.
+- `negative_control`: retain the compiled winding-one nonvanishing exponential model.
+- `strict_boundary`: no actual negative height, global indented argument principle, Jensen top
+  bound, count theorem, Speiser equivalence, H12, or RH.
+- `next_gate`: publish docs-only preregistration and require public CI before any `LeanLab/`
+  edit.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-29 H9 Conrey actual-seven publicly closed
 
 - `final_ledger`: `5dab6664c49e5e03effe9ac309256eaf91e5a171`.

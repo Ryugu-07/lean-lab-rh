@@ -3317,3 +3317,30 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   flat branch, source refutation, hard gap, and RH frontier remain `0`.
 - `next_gate`: freeze implementation and require public Lean Action CI.
 - `global_goal`: active.
+
+## 2026-07-29 H12 left-half-plane winding launch
+
+- `parent_public_closure`: H9 actual-seven final ledger
+  `5dab6664c49e5e03effe9ac309256eaf91e5a171`, run `30401325481`, job
+  `90416579015`; closure receipt `fa3e22d4a8cf9dcd082eec3ef2d2d6b788b0d5ca`, run
+  `30401538278`, job `90417268794`.
+- `H12-LM-LEFT-HALF-PLANE-WINDING-01`: selected after a fresh H9/H12/H7/H10/H1/H2/H11
+  comparison.
+- `compiled_predecessor`:
+  `common nonvanishing horizontal slices + fixed unsigned bottom`;
+  `nonvanishing closed path does not imply zero winding`.
+- `fixed_edge`:
+  `strict left-half-plane differentiable path`;
+  `-> principal logarithm of the negated path`;
+  `-> endpoint formula for integral g'/g`;
+  `-> zero logarithmic winding for a closed path`.
+- `actual_source_edge`:
+  `strict-negative common horizontal for actual zeta'/zeta`;
+  `-> integral of logDeriv(zeta')-logDeriv(zeta) equals the endpoint logarithm difference`.
+- `OBS-H12-NONVANISHING-NOT-ENOUGH-01`: remains the mandatory winding-one negative control.
+- `H12-LM-INDENTED-ARGUMENT-PRINCIPLE-01`: remains open after this campaign.
+- `H12-LM-JENSEN-TOP-VARIATION-01`: remains a separate open asymptotic edge.
+- `claim_boundary`: no actual strict-negative height, global count output, Speiser equivalence,
+  derivative-zero exclusion, H12, or RH is assumed or inferred.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- `global_goal`: active.
