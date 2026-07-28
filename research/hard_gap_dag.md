@@ -2664,6 +2664,13 @@ implementation `15381a49ff4dfb92a0ab4e29d5e76383f9789139` is empty. This node re
 - `next_gate`: frozen implementation public CI.
 - `global_goal`: active.
 
+### Public implementation receipt
+
+- frozen implementation: `c8605da897d423a7bdab4e4bd49426c482b8f7a5`;
+- Lean Action run `30406353073`, build job `90432548843`, `2m9s`, success;
+- proof-source diff from the frozen implementation at immutable-evidence creation: empty;
+- next gate: docs-only immutable evidence public CI.
+
 ## 2026-07-28 H9 ordered Franel--Mertens correlation update
 
 - `node`: `H9-FRANEL-RANK-MERTENS-QUADRATIC-01`.

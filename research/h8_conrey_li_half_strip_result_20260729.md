@@ -6,9 +6,9 @@ Campaign: `LITERATURE-20260729-H8-CONREY-LI-HALF-STRIP-01`
 
 Node: `H8-CONREY-LI-HALF-STRIP-EXTENSION-01`
 
-Classification: `MEANINGFUL_PARTIAL / LOCAL_AUDIT_GREEN`
+Classification: `MEANINGFUL_PARTIAL / IMPLEMENTATION_PUBLIC_GREEN`
 
-Evidence status: `PUBLIC_IMPLEMENTATION_REQUIRED`
+Evidence status: `IMMUTABLE_EVIDENCE_PUBLIC_CI_REQUIRED`
 
 ## Compiled result
 
@@ -67,6 +67,10 @@ well-definedness on linearly dependent kernel families rather than assuming it.
 - three forbidden scans: empty
 - `git diff --check`: passed
 - full build: `8790/8790` passed
+- frozen implementation:
+  `c8605da897d423a7bdab4e4bd49426c482b8f7a5`
+- public Lean Action: run `30406353073`, build job `90432548843`, passed in `2m9s`
+- proof-source diff from the frozen implementation at evidence creation: empty
 
 ## Claim boundary
 

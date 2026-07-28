@@ -5413,6 +5413,18 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-29 H8 Conrey--Li half-strip implementation public green
+
+- `frozen_implementation`: `c8605da897d423a7bdab4e4bd49426c482b8f7a5`.
+- `public_ci`: run `30406353073`, build job `90432548843`, passed in `2m9s`.
+- `classification`: `MEANINGFUL_PARTIAL`.
+- `proof_freeze`: the five proof and registration sources have an empty diff from the frozen
+  implementation.
+- `first_unavailable_object`: concrete half-strip Hardy RKHS.
+- `next_gate`: publish docs-only immutable evidence and require public CI.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-29 H9 Conrey actual-seven implementation public green
 
 - `frozen_implementation`: `e259b79773d290435b332c119ad5c81ff0ac16dc`.
