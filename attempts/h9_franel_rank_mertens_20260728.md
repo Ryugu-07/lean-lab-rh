@@ -8,7 +8,7 @@ Node: `H9-FRANEL-RANK-MERTENS-QUADRATIC-01`
 
 Mode: `LITERATURE`, with finite `FALSIFICATION` controls
 
-Status: `MEANINGFUL_PARTIAL / IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_CI_PENDING`
+Status: `MEANINGFUL_PARTIAL / IMPLEMENTATION_AND_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PENDING`
 
 ## Fixed target
 
@@ -36,6 +36,7 @@ ordering and rank, exact pointwise and squared Mertens formulas, finite controls
 | `FRANEL_CONTROLS` | Computed actual Farey sets and both sides of Theorem 3 for `N=1,2,3`; retained `N=0` as no-division boundary. | `Phi=0,1,2,4`; squared discrepancy `=0,0,0,1/72`; positive gcd kernels `=1,1,5/3`; all positive final formulas compile. | Source transcription passes falsification. |
 | `LOCAL_AUDIT` | Registered Target, checks, selected axiom prints; ran warning-as-error, scans, patch check, full build. | Standard axioms only; scans empty; full build `8780/8780`. | Freeze and require public CI. |
 | `IMPLEMENTATION_PUBLIC_CI` | Pushed frozen implementation `e672420574994819213da3999e8c2e962e6c903c`. | Run `30372189487` attempt 1 failed before build because GitHub returned HTTP 500 while downloading Elan. Unchanged attempt 2 passed job `90319104548` in `2m29s`. | Keep the implementation frozen and publish docs-only immutable evidence. |
+| `IMMUTABLE_EVIDENCE_PUBLIC_CI` | Published docs-only evidence at `10f45b94f4844baa6e4883b86f6cea4299fc40d3`. | Run `30372716950`, job `90320456175`, passed in `2m20s`; its `LeanLab/` diff from the frozen implementation is empty. | Publish one docs-only final ledger, then return to route selection. |
 
 ## Strongest compiled facts
 
@@ -93,3 +94,5 @@ No Franel asymptotic estimate, Mertens growth estimate, H9, or RH is proved.
 - `protected_files`: the six inherited protected files remain untouched and unstaged.
 - `frozen_implementation`: `e672420574994819213da3999e8c2e962e6c903c`, public-green on
   run `30372189487`, attempt 2, job `90319104548`.
+- `immutable_evidence`: `10f45b94f4844baa6e4883b86f6cea4299fc40d3`, public-green on
+  run `30372716950`, job `90320456175`.

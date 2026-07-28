@@ -5189,6 +5189,19 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-28 H9 Franel immutable evidence public green
+
+- `frozen_implementation`: `e672420574994819213da3999e8c2e962e6c903c`, run
+  `30372189487`, attempt 2, job `90319104548`, `2m29s`.
+- `immutable_evidence`: `10f45b94f4844baa6e4883b86f6cea4299fc40d3`, run
+  `30372716950`, job `90320456175`, `2m20s`.
+- `proof_freeze`: evidence-to-implementation `LeanLab/` diff is empty.
+- `local_stop`: `MEANINGFUL_PARTIAL`, pending one docs-only final-ledger CI.
+- `remaining_H9`: `FareyDedekindThreeTerm`, complete Franel gcd-kernel identity, discrepancy
+  asymptotic, Mertens growth, H9, RH.
+- `next_gate`: final ledger, public CI, then fresh cross-family `ROUTE_SELECTION`.
+- `global_goal`: active.
+
 ## 2026-07-28 H1 Hardy Abel-moment immutable evidence public green
 
 - `frozen_implementation`: `2d5b5e2e692e8622263142a1205971c611736a78`, run

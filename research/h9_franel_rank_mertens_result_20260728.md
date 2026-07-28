@@ -53,6 +53,9 @@ a further separate edge even after the finite identity.
 - public Lean Action: run `30372189487`, attempt 2, job `90319104548`, passed in `2m29s`;
 - infrastructure record: attempt 1 failed before build on GitHub's Elan-download HTTP 500;
   no source change was made before the successful rerun.
+- immutable evidence: `10f45b94f4844baa6e4883b86f6cea4299fc40d3`;
+- evidence Lean Action: run `30372716950`, job `90320456175`, passed in `2m20s`;
+- proof freeze: the evidence commit has an empty `LeanLab/` diff from the frozen implementation.
 
 ## Claim boundary
 
@@ -60,6 +63,6 @@ This is a finite historical interface and a localization of its first missing so
 It does not prove the general three-term relation, complete Franel gcd-kernel formula,
 discrepancy decay, Mertens square-root cancellation, H9, or RH.
 
-The proof source is frozen. The next gate is docs-only immutable evidence public CI. After that,
-local STOP returns to fresh cross-family `ROUTE_SELECTION`; direct proof attempts and conjecture
-testing remain open.
+The proof source and immutable evidence are public-green. One docs-only final ledger remains.
+After its CI, local STOP returns to fresh cross-family `ROUTE_SELECTION`; direct proof attempts
+and conjecture testing remain open.

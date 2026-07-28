@@ -7490,3 +7490,6 @@ Future attempt records must include:
 - frozen implementation `e672420574994819213da3999e8c2e962e6c903c` passed public run
   `30372189487`, attempt 2, job `90319104548`, in `2m29s`; attempt 1 was an external
   Elan-download HTTP 500 before build.
+- immutable evidence `10f45b94f4844baa6e4883b86f6cea4299fc40d3` passed run
+  `30372716950`, job `90320456175`, in `2m20s`, with empty `LeanLab/` diff from the frozen
+  implementation.

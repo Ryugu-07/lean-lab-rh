@@ -4634,3 +4634,7 @@ Frozen implementation `e672420574994819213da3999e8c2e962e6c903c` passed public r
 `30372189487`, attempt 2, job `90319104548`, in `2m29s`. Attempt 1 failed before build on a
 GitHub Elan-download HTTP 500; no source change preceded the green rerun. Docs-only immutable
 evidence is next.
+
+Immutable evidence `10f45b94f4844baa6e4883b86f6cea4299fc40d3` passed run
+`30372716950`, job `90320456175`, in `2m20s`; no `LeanLab/` source changed. One final-ledger
+CI remains before this local meaningful partial returns to cross-family selection.
