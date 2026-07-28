@@ -6207,3 +6207,16 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - Next gate: freeze and publish implementation, then immutable evidence and final ledger; after
   closure return to fresh cross-family selection.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H7 Berry--Keating implementation public green
+
+- Frozen implementation commit `56ec4c84d894899afb132b50aece303cb40f7cd7` passed Lean Action
+  run `30408034816`, build job `90437803648`, in `2m11s`.
+- Freeze `BerryKeatingHalfLine.lean`, `Targets.lean`, `TargetChecks.lean`,
+  `AxiomsAudit.lean`, and `LeanLab.lean`.
+- Next gate is one docs-only immutable-evidence commit whose diff for all five frozen files is
+  empty, followed by its own public CI.
+- Close only `H7.berry-keating.naive-halfline-mode-obstruction`; full pure continuity,
+  compact-graph Weyl no-go, global arithmetic confinement, Hilbert--Polya, H7, and RH remain
+  open.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.

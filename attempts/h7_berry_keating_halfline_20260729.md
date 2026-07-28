@@ -8,7 +8,7 @@ Node: `H7-BERRY-KEATING-NAIVE-HALFLINE-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / FALSIFICATION`
 
-Status: `IMPLEMENTED_LOCAL / PUBLIC_IMPLEMENTATION_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Fixed target
 
@@ -34,6 +34,7 @@ The exact endpoint, controls, and claim boundary are fixed in
 | `NORM_SQUARE` | Reduced the norm of `x^(-1/2+iE)` to a real power. | The imaginary energy disappears and the square is exactly `x^-1`. | Use the energy-independent density for the `L^2` obstruction. |
 | `RESTRICTED_MEMLP` | Assumed membership in `MemLp 2` for Lebesgue measure restricted to `(0,+infinity)`. | The square-norm API makes `x^-1` integrable on that set, contradicting the improper-integral theorem. | Close the standard-mode obstruction without replacing it by `L^1` or a truncated interval. |
 | `LOCAL_AUDIT` | Registered one proven Target, five exact TargetChecks, five selected axiom prints, forbidden scans, warning-as-error module compile, and full build. | 93-line no-sorry module; selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`; full build `8791/8791`. | Classify `FULL_SUCCESS / LOCAL_AUDIT_GREEN` and publish the frozen implementation. |
+| `IMPLEMENTATION_PUBLIC` | Published the frozen proof and registration sources. | Commit `56ec4c84d894899afb132b50aece303cb40f7cd7`; run `30408034816`, job `90437803648`, passed in `2m11s`. | Freeze five proof/registration files and publish docs-only immutable evidence. |
 
 ## Current frontier
 

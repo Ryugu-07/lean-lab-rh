@@ -3340,6 +3340,10 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   flat branch, source refutation, hard gap, and RH frontier remain `0`.
 - `next_gate`: freeze implementation and require public Lean Action CI.
 - `global_goal`: active.
+- `frozen_implementation`: `56ec4c84d894899afb132b50aece303cb40f7cd7`.
+- `implementation_public_ci`: run `30408034816`, build job `90437803648`, passed in `2m11s`.
+- `proof_freeze`: publish docs-only immutable evidence with the five proof/registration files
+  unchanged from the frozen implementation.
 
 ## 2026-07-29 H12 left-half-plane winding launch
 

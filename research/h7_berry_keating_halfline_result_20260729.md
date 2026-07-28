@@ -102,3 +102,18 @@ required repair:
 Connes' semilocal trace framework is the leading historical successor, but it must be selected
 afresh against other families after this campaign is publicly closed.
 
+## Public implementation evidence
+
+Frozen implementation commit `56ec4c84d894899afb132b50aece303cb40f7cd7` passed public Lean
+Action run `30408034816`, build job `90437803648`, in `2m11s`.
+
+The frozen proof and registration set is:
+
+- `LeanLab/Riemann/BerryKeatingHalfLine.lean`;
+- `LeanLab/Riemann/Targets.lean`;
+- `LeanLab/Riemann/TargetChecks.lean`;
+- `LeanLab/Riemann/AxiomsAudit.lean`;
+- `LeanLab.lean`.
+
+Immutable evidence and final-ledger commits must leave this set unchanged from the frozen
+implementation.
