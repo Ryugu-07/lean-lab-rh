@@ -4,7 +4,7 @@ Date: 2026-07-29
 
 Campaign: `LITERATURE-20260729-H2-CLASSICAL-ZERO-DETECTOR-MELLIN-01`
 
-Result: `MEANINGFUL_MELLIN_PARTIAL / IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
+Result: `MEANINGFUL_MELLIN_PARTIAL / PUBLICLY_CLOSED`
 
 ## Public prerequisite
 
@@ -94,3 +94,7 @@ estimate, H2 proof, or RH proof.
 
 After the final-ledger public gate, close this campaign locally and rerank the historical atlas.
 The inverse Mellin successor remains registered for future value-ranked reentry.
+
+Final ledger `b51748405512f194080f8370e5956763a9269b71` passed public Lean Action run
+`30394847509`, build job `90395094917`, in `1m36s`. This closes the public campaign without
+changing the `MEANINGFUL_MELLIN_PARTIAL` classification.

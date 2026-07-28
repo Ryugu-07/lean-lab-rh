@@ -8,7 +8,7 @@ Node: `H2-CLASSICAL-ZERO-DETECTOR-MELLIN-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `MEANINGFUL_MELLIN_PARTIAL / IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
+Status: `MEANINGFUL_MELLIN_PARTIAL / PUBLICLY_CLOSED`
 
 ## Source statement
 
@@ -149,5 +149,8 @@ docs-only immutable evidence is published.
 
 Immutable evidence `ee2e2adbadad66ed8927b3aae62bd7c49f1f9baa` passed public Lean Action
 run `30394609125`, job `90394329560`, in `1m41s`; its `LeanLab/` diff from the frozen
-implementation is empty. One docs-only final-ledger gate remains before returning to fresh
-historical route selection.
+implementation is empty.
+
+Final ledger `b51748405512f194080f8370e5956763a9269b71` passed public Lean Action run
+`30394847509`, job `90395094917`, in `1m36s`. The campaign is publicly closed and selection
+returns to the historical atlas.

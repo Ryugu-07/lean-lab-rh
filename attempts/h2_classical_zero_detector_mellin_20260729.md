@@ -4,7 +4,7 @@ Date: 2026-07-29
 
 Campaign: `LITERATURE-20260729-H2-CLASSICAL-ZERO-DETECTOR-MELLIN-01`
 
-Status: `MEANINGFUL_MELLIN_PARTIAL / IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
+Status: `MEANINGFUL_MELLIN_PARTIAL / PUBLICLY_CLOSED`
 
 ## Attempt ledger
 
@@ -54,3 +54,6 @@ control. This campaign does not assume either statement.
 
 Local stop is `MEANINGFUL_MELLIN_PARTIAL`. After the final-ledger public gate, return to a fresh
 cross-family historical selection; do not continue H2 or optimize a density exponent by inertia.
+
+Final ledger `b51748405512f194080f8370e5956763a9269b71` passed public Lean Action run
+`30394847509`, job `90395094917`, in `1m36s`. This campaign is publicly closed.

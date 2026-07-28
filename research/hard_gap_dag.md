@@ -3176,5 +3176,8 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   `30394609125`, job `90394329560`, `1m41s`, public green.
 - `proof_freeze`: the `LeanLab/` diff from frozen implementation through immutable evidence is
   empty.
-- `local_stop`: `MEANINGFUL_MELLIN_PARTIAL`, pending one docs-only final-ledger CI.
-- `next_gate`: final ledger, then fresh historical route selection.
+- `local_stop`: `MEANINGFUL_MELLIN_PARTIAL`.
+- `final_ledger`: `b51748405512f194080f8370e5956763a9269b71`, run
+  `30394847509`, job `90395094917`, `1m36s`, public green.
+- `status`: publicly closed at `MEANINGFUL_MELLIN_PARTIAL`.
+- `next_gate`: fresh cross-family historical route selection after the requested pause.

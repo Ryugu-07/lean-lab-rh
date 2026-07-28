@@ -5141,8 +5141,12 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   `30394609125`, job `90394329560`, `1m41s`, public green.
 - `proof_freeze`: the `LeanLab/` diff from frozen implementation through immutable evidence is
   empty.
-- `local_stop`: `MEANINGFUL_MELLIN_PARTIAL`, pending one docs-only final-ledger CI.
-- `next_gate`: final ledger, then fresh historical route selection.
+- `local_stop`: `MEANINGFUL_MELLIN_PARTIAL`.
+- `final_ledger`: `b51748405512f194080f8370e5956763a9269b71`, run
+  `30394847509`, job `90395094917`, `1m36s`, public green.
+- `status`: publicly closed at `MEANINGFUL_MELLIN_PARTIAL`.
+- `next_gate`: pause as requested; on resumption perform fresh cross-family historical route
+  selection.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
