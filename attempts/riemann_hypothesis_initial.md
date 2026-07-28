@@ -7487,3 +7487,6 @@ Future attempt records must include:
   worktree, and inherited transform.
 - detailed record: `research/h9_franel_rank_mertens_result_20260728.md` and
   `attempts/h9_franel_rank_mertens_20260728.md`.
+- frozen implementation `e672420574994819213da3999e8c2e962e6c903c` passed public run
+  `30372189487`, attempt 2, job `90319104548`, in `2m29s`; attempt 1 was an external
+  Elan-download HTTP 500 before build.

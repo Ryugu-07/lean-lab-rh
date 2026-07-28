@@ -5246,6 +5246,17 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-28 H9 Franel implementation public green
+
+- `frozen_implementation`: `e672420574994819213da3999e8c2e962e6c903c`.
+- `public_ci`: run `30372189487`, attempt 2, job `90319104548`, passed in `2m29s`.
+- `infrastructure_record`: attempt 1 failed before build because GitHub returned HTTP 500 while
+  downloading Elan; the unchanged rerun passed.
+- `proof_freeze`: the `LeanLab/` diff from the frozen implementation is empty.
+- `next_gate`: docs-only immutable evidence and public CI.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-28 H11 exact moving-window local result
 
 - `prereg_public`: `3b1025c12cead7839a14a5346c39c4106525d3bc`, run

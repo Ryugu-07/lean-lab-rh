@@ -49,6 +49,10 @@ a further separate edge even after the finite identity.
 - resource-limit relaxations: absent;
 - `git diff --check`: pass;
 - full build: `8780/8780`.
+- frozen implementation: `e672420574994819213da3999e8c2e962e6c903c`;
+- public Lean Action: run `30372189487`, attempt 2, job `90319104548`, passed in `2m29s`;
+- infrastructure record: attempt 1 failed before build on GitHub's Elan-download HTTP 500;
+  no source change was made before the successful rerun.
 
 ## Claim boundary
 
@@ -56,5 +60,6 @@ This is a finite historical interface and a localization of its first missing so
 It does not prove the general three-term relation, complete Franel gcd-kernel formula,
 discrepancy decay, Mertens square-root cancellation, H9, or RH.
 
-The next gate is frozen implementation public CI. After public evidence, local STOP returns to
-fresh cross-family `ROUTE_SELECTION`; direct proof attempts and conjecture testing remain open.
+The proof source is frozen. The next gate is docs-only immutable evidence public CI. After that,
+local STOP returns to fresh cross-family `ROUTE_SELECTION`; direct proof attempts and conjecture
+testing remain open.

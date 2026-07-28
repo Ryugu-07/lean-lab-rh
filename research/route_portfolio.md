@@ -4629,3 +4629,8 @@ The aggregate Target, checks, eight standard-only axiom prints, scans, warning-a
 patch check, and full `8780/8780` build pass. Classification:
 `historical_route_coverage_delta=1`, `finite_correlation_delta=1`,
 `dedekind_three_term_delta=0`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
+
+Frozen implementation `e672420574994819213da3999e8c2e962e6c903c` passed public run
+`30372189487`, attempt 2, job `90319104548`, in `2m29s`. Attempt 1 failed before build on a
+GitHub Elan-download HTTP 500; no source change preceded the green rerun. Docs-only immutable
+evidence is next.
