@@ -5554,3 +5554,25 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   cross-family `ROUTE_SELECTION`.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H10 Weil surface Hodge-lattice selected
+
+- `parent_public_closure`: H12 final ledger
+  `9d86466f36f872005ec270309ce09d47168d4018`, run `30383048725`, job
+  `90355386390`, `1m47s`.
+- `campaign`: `LITERATURE-20260728-H10-WEIL-HODGE-LATTICE-01`.
+- `node`: `H10-WEIL-SURFACE-HODGE-LATTICE-01`.
+- `selection_reason`: the repository covers the Bombieri--Stepanov function-field proof but not
+  Weil's distinct surface/Hodge proof. The source gives inequalities for integral divisors
+  `a*Gamma+b*Delta` and then uses real quadratic semipositivity.
+- `omission_probe`: prove that integer-lattice nonnegativity alone supplies the real
+  semipositivity and exact Hasse--Weil point-count bound; then compose extension-wise bounds with
+  the existing finite spectral-rigidity theorem.
+- `negative_control`: a homogeneous quadratic form that passes every coefficient pair in
+  `{-1,0,1}^2` but is negative at `(1,2)`.
+- `strict_boundary`: actual curve intersection theory, Hodge index, point-count identities,
+  number-field transfer, H10, and RH remain open.
+- `next_gate`: publish docs-only preregistration and require public CI before any `LeanLab/`
+  edit.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.

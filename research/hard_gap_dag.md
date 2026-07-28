@@ -2943,3 +2943,25 @@ immutable evidence is published.
 Immutable evidence `70b437177d7e990319e973bffc36053b413450c0` passed public Lean Action run
 `30382794033`, build job `90354522762`, in `1m41s`; the `LeanLab/` diff from the frozen
 implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`.
+
+## 2026-07-28 H10 Weil surface Hodge-lattice launch
+
+- `node`: `H10-WEIL-SURFACE-HODGE-LATTICE-01`.
+- `mode`: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`.
+- `parent_closure`: H12 final ledger `9d86466f36f872005ec270309ce09d47168d4018`,
+  run `30383048725`, job `90355386390`.
+- `source_edge`:
+  `Hodge index on X x X -> integer lattice inequality for a*Gamma+b*Delta`;
+  `integer lattice positivity -> real binary quadratic semipositivity`;
+  `semipositivity -> exact Hasse--Weil point-count bound`;
+  `extension bounds + reciprocal pairing -> finite spectral critical circle`.
+- `omission_probe`: remove the silently strengthened real-coefficient premise by proving the
+  integer-to-real bridge through homogeneity, rational scaling, density, and continuity.
+- `full_success`: the extension-wise integer-lattice endpoint compiles through the existing
+  finite spectral-rigidity theorem.
+- `meaningful_partial`: the integer-to-real bridge and exact point-count bound compile.
+- `negative_control`: finite coefficient boxes do not certify semipositivity.
+- `open_after_success`: actual curve intersections, Hodge index, number-field transfer, H10,
+  and RH.
+- `production_gate`: docs-only preregistration public CI before any proof-source edit.
+- `global_goal`: active.
