@@ -6,7 +6,7 @@ Campaign: `FALSIFICATION-20260729-H9-CONREY-SEVEN-FLAT-INTERVAL-01`
 
 Classification: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS`
 
-Status: `FINAL_LEDGER_CI_REQUIRED`
+Status: `PUBLIC_FINAL_LEDGER_PASS`
 
 ## Public chain
 
@@ -75,3 +75,9 @@ Close only `H9-CONREY-ACTUAL-SEVEN-FLAT-INTERVAL-01`. Retain
 Return the persistent RH Goal to fresh cross-family historical route selection after final-ledger
 CI. Historical omission search remains the default main allocation; conjecture generation and
 direct RH attacks remain open.
+
+## Public final-ledger receipt
+
+Final ledger commit `5dab6664c49e5e03effe9ac309256eaf91e5a171` passed Lean Action run
+`30401325481`, build job `90416579015`, in `1m31s`. The proof-source diff from frozen
+implementation through final ledger is empty. The local node is publicly closed.

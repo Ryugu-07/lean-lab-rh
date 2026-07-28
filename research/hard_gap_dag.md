@@ -3242,6 +3242,15 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - proof-source diff from frozen implementation through immutable evidence: empty;
 - next gate: docs-only final ledger public CI.
 
+### Public final-ledger receipt
+
+- final ledger: `5dab6664c49e5e03effe9ac309256eaf91e5a171`;
+- Lean Action run `30401325481`, build job `90416579015`, `1m31s`, success;
+- proof-source diff from frozen implementation through final ledger: empty;
+- close only `H9-CONREY-ACTUAL-SEVEN-FLAT-INTERVAL-01`;
+- retain `H9-CONREY-MAIN-FAMILY-FLAT-EXCLUSION-01`, H9, and RH open;
+- return to fresh cross-family historical omission selection.
+
 ### Public implementation receipt
 
 - frozen implementation: `258a9ac8ce69f6dffe6beb4a6a7579845ca2a457`;

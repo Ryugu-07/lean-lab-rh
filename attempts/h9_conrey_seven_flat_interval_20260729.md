@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260729-H9-CONREY-SEVEN-FLAT-INTERVAL-01`
 
 Mode: `LITERATURE / FALSIFICATION / OMISSION_AUDIT`
 
-Status: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS / FINAL_LEDGER_CI_REQUIRED`
+Status: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS / PUBLICLY_CLOSED`
 
 ## Fixed question
 
@@ -28,6 +28,7 @@ RH-imitation family.
 | 7 | `LOCAL_AUDIT` | The 428-line module, one proven and one exact open Target, eight TargetChecks, eight standard-only axiom prints, empty forbidden scan, warning-as-error compiles, `git diff --check`, and full `8788/8788` build pass. | Freeze proof source, publish implementation, and require public CI. |
 | 8 | `IMPLEMENTATION_CI` | Frozen implementation `e259b79773d290435b332c119ad5c81ff0ac16dc` passed Lean Action run `30400822025`, build job `90414919121`, in `2m55s`. The proof-source diff at immutable-evidence creation is empty. | Publish docs-only immutable evidence, require public CI, then create the final ledger. |
 | 9 | `IMMUTABLE_EVIDENCE_CI` | Evidence commit `d629fbd2fdacf1adf866831761f8e127ae3330c7` passed Lean Action run `30401127310`, build job `90415928990`, in `1m32s`; the proof-source diff remains empty. | Publish one docs-only final ledger, require public CI, close only this node, and return to fresh cross-family selection. |
+| 10 | `FINAL_LEDGER_CI` | Final ledger `5dab6664c49e5e03effe9ac309256eaf91e5a171` passed Lean Action run `30401325481`, build job `90416579015`, in `1m31s`; proof-source diff remains empty. | Publish closure receipt, close only the actual-seven node, and return the active RH Goal to cross-family historical omission selection. |
 
 ## Stop conditions
 

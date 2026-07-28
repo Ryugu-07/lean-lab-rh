@@ -8,7 +8,7 @@ Node: `H9-CONREY-ACTUAL-SEVEN-FLAT-INTERVAL-01`
 
 Mode: `LITERATURE / FALSIFICATION / OMISSION_AUDIT`
 
-Status: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS / FINAL_LEDGER_CI_REQUIRED`
+Status: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS / PUBLICLY_CLOSED`
 
 ## Baseline
 
@@ -190,4 +190,7 @@ route selection, while a separately source-locked main-family repair may be rank
 - `evidence_commit`: `d629fbd2fdacf1adf866831761f8e127ae3330c7`.
 - `evidence_public_ci`: Lean Action run `30401127310`, build job `90415928990`, passed in
   `1m32s`.
-- `next_gate`: publish one docs-only final ledger and require public CI.
+- `final_ledger_commit`: `5dab6664c49e5e03effe9ac309256eaf91e5a171`.
+- `final_ledger_public_ci`: Lean Action run `30401325481`, build job `90416579015`, passed in
+  `1m31s`.
+- `local_stop`: reached; close only the actual-seven node and return to fresh route selection.

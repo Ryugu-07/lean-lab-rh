@@ -4,7 +4,7 @@ Date: 2026-07-29
 
 Campaign: `FALSIFICATION-20260729-H9-CONREY-SEVEN-FLAT-INTERVAL-01`
 
-Status: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS / IMMUTABLE_EVIDENCE_PUBLIC_GREEN`
+Status: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS / PUBLICLY_CLOSED`
 
 ## Result
 
@@ -93,3 +93,10 @@ CI is required before immutable evidence or a final ledger is created.
 - Lean Action run `30401127310`, build job `90415928990`, passed in `1m32s`;
 - proof-source diff through immutable evidence: empty;
 - next gate: one docs-only final ledger and public CI.
+
+## Public final-ledger receipt
+
+- final ledger: `5dab6664c49e5e03effe9ac309256eaf91e5a171`;
+- Lean Action run `30401325481`, build job `90416579015`, passed in `1m31s`;
+- proof-source diff through final ledger: empty;
+- local actual-seven node: publicly closed.
