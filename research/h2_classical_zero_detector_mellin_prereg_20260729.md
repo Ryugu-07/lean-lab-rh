@@ -8,7 +8,7 @@ Node: `H2-CLASSICAL-ZERO-DETECTOR-MELLIN-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `MEANINGFUL_MELLIN_PARTIAL / IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `MEANINGFUL_MELLIN_PARTIAL / IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Source statement
 
@@ -146,3 +146,8 @@ open. The accepted classification is `MEANINGFUL_MELLIN_PARTIAL`, not full succe
 The frozen implementation commit `b050e9d027ca0fa27619803df1e764b1a65f887c` passed public Lean
 Action run `30394320528`, job `90393394704`, in `2m37s`. Proof sources remain frozen while
 docs-only immutable evidence is published.
+
+Immutable evidence `ee2e2adbadad66ed8927b3aae62bd7c49f1f9baa` passed public Lean Action
+run `30394609125`, job `90394329560`, in `1m41s`; its `LeanLab/` diff from the frozen
+implementation is empty. One docs-only final-ledger gate remains before returning to fresh
+historical route selection.

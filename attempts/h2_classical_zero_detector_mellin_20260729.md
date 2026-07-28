@@ -4,7 +4,7 @@ Date: 2026-07-29
 
 Campaign: `LITERATURE-20260729-H2-CLASSICAL-ZERO-DETECTOR-MELLIN-01`
 
-Status: `MEANINGFUL_MELLIN_PARTIAL / IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `MEANINGFUL_MELLIN_PARTIAL / IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Attempt ledger
 
@@ -26,6 +26,7 @@ Status: `MEANINGFUL_MELLIN_PARTIAL / IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVI
 | `LOCAL_CLASSIFICATION` | Packaged only the compiled layers in `ClassicalDetectorMellinPartialCertificate`. | Clauses 1--5, the abstract part of clause 8, clause 10, the full forward Mellin identity, and both local singularity calculations compile. The aggregate intentionally has no inverse-Mellin or global contour-shift field. | Classify `MEANINGFUL_MELLIN_PARTIAL`; run the full local and public evidence chain. |
 | `LOCAL_AUDIT` | Ran warning-as-error checks, selected axiom prints, forbidden scans, diff checks, and the complete repository build. | The new module, Targets, and TargetChecks pass warning-as-error; seven selected declarations use only standard axioms; scans and `git diff --check` are empty; full build passes `8786/8786`. | Freeze the implementation and require public CI. |
 | `IMPLEMENTATION_PUBLIC_GATE` | Published the frozen implementation and waited for the complete remote Lean Action. | Commit `b050e9d027ca0fa27619803df1e764b1a65f887c` passed run `30394320528`, job `90393394704`, in `2m37s`. The subsequent `LeanLab/` diff is empty. | Publish docs-only immutable evidence. |
+| `IMMUTABLE_EVIDENCE_PUBLIC_GATE` | Published the docs-only evidence with proof sources frozen. | Commit `ee2e2adbadad66ed8927b3aae62bd7c49f1f9baa` passed run `30394609125`, job `90394329560`, in `1m41s`; the `LeanLab/` diff from the frozen implementation is empty. | Publish one docs-only final ledger, then return to historical route selection. |
 
 ## Frozen boundary
 
@@ -50,3 +51,6 @@ and update the obstacle map. No unproved statement may become a premise.
 The first exact successor is `ClassicalDetectorInverseMellinLine`, followed by an infinite
 rectangle contour shift whose horizontal edges require explicit Gamma decay and zeta growth
 control. This campaign does not assume either statement.
+
+Local stop is `MEANINGFUL_MELLIN_PARTIAL`. After the final-ledger public gate, return to a fresh
+cross-family historical selection; do not continue H2 or optimize a density exponent by inertia.

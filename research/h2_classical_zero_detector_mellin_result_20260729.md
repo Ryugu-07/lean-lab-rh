@@ -4,7 +4,7 @@ Date: 2026-07-29
 
 Campaign: `LITERATURE-20260729-H2-CLASSICAL-ZERO-DETECTOR-MELLIN-01`
 
-Result: `MEANINGFUL_MELLIN_PARTIAL / IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Result: `MEANINGFUL_MELLIN_PARTIAL / IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Public prerequisite
 
@@ -75,6 +75,10 @@ Frozen implementation `b050e9d027ca0fa27619803df1e764b1a65f887c` passed public L
 run `30394320528`, build job `90393394704`, in `2m37s`. The `LeanLab/` diff after that commit is
 empty; this evidence update changes documentation only.
 
+Immutable evidence `ee2e2adbadad66ed8927b3aae62bd7c49f1f9baa` passed public Lean Action
+run `30394609125`, build job `90394329560`, in `1m41s`. The proof-source diff from frozen
+implementation through immutable evidence is empty.
+
 ## Classification
 
 - `historical_subroute_coverage_delta=1`.
@@ -87,3 +91,6 @@ empty; this evidence update changes documentation only.
 
 This result is not an inverse Mellin theorem, contour shift, Type-I/Type-II count, zero-density
 estimate, H2 proof, or RH proof.
+
+After the final-ledger public gate, close this campaign locally and rerank the historical atlas.
+The inverse Mellin successor remains registered for future value-ranked reentry.
