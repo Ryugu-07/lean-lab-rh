@@ -2726,6 +2726,32 @@ to cross-family selection with H0-A/H0-B retained as open.
   sawtooth convention.
 - `global_goal`: active.
 
+## 2026-07-28 H1 Hardy theta-inversion launch
+
+- `node`: `H1-HARDY-THETA-INVERSION-01`.
+- `mode`: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`.
+- `parent_closure`: H9 Franel final ledger
+  `c96b0df5e6aabc705c9deddbe86d9c367c8f8fe2`, run `30373106791`, job
+  `90321789406`.
+- `available_inputs`: actual `hardyXi`; exact
+  `hardyXi(2t)=8*deBruijnNewmanH 0 (4t)`; the Hurwitz even functional-equation pair and its
+  pole-subtracted strong pair; Mathlib Mellin inversion; the compiled theta-tail Mellin
+  transform; and the conditional Hardy Abel-moment amplification consumer.
+- `fixed_edge`:
+  `critical-line xi bound -> vertical integrability of the completed Mellin transform ->
+  positive-real Cahen--Mellin inversion -> analytic continuation on
+  |Re(alpha)|<pi/2 -> Hardy equation (2)`.
+- `source_alignment`: Hardy 1914, pages 1012--1013, equations (1)--(2).
+- `full_success`: the complex strip identity and its real-alpha source specialization compile.
+- `meaningful_partial`: source-normalized positive-real equation (1) compiles and the first
+  analytic-continuation obstacle is recorded in theorem form.
+- `falsification_guards`: alpha zero, alpha evenness, conjugation, both `f_modif` constants,
+  source theta indexing, exact `Xi(2t)` scale, and exclusion of the strip boundary.
+- `open_after_success`: all-order differentiation, tangential Bohr--Riesz theta limit, the Abel
+  moment law, unconditional Hardy infinitude, positive proportions, H1, and RH.
+- `production_gate`: no proof-source edit before docs-only preregistration public CI.
+- `global_goal`: active.
+
 
 Frozen implementation `2d5b5e2e692e8622263142a1205971c611736a78` passed public Lean Action
 run `30336360223`, build job `90201998436`, in `2m17s`. The complete conditional consumer is

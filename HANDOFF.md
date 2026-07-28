@@ -5407,3 +5407,27 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H9 Franel final closure and H1 Hardy theta inversion selected
+
+- `parent_final_ledger`: H9 Franel commit
+  `c96b0df5e6aabc705c9deddbe86d9c367c8f8fe2` passed run `30373106791`, job
+  `90321789406`, in `1m36s`.
+- `parent_result`: `MEANINGFUL_PARTIAL`; the first open source theorem is
+  `FareyDedekindThreeTerm`.
+- `campaign`: `LITERATURE-20260728-H1-HARDY-THETA-INVERSION-01`.
+- `node`: `H1-HARDY-THETA-INVERSION-01`.
+- `selection_reason`: Hardy's missing source input is a classical true theta/Mellin theorem,
+  while the H1 arbitrary-length moment, H2 bow exclusion, H7 infinite spectral object, H10
+  number-field transfer, H11 sparse-exception amplifier, and H12 global count theorem remain
+  genuinely open or globally broad.
+- `full_endpoint`: vertical integrability of the actual completed critical-line transform;
+  positive-real Cahen--Mellin inversion; analytic continuation on
+  `|Re(alpha)|<pi/2`; Hardy equation (2) for the actual project xi and theta series.
+- `meaningful_partial`: exact positive-real equation (1), with the first analytic-continuation
+  failure isolated.
+- `strict_boundary`: no boundary substitution, no assumed Abel law, no all-order theta
+  derivative limit, no unconditional Hardy theorem, H1, or RH.
+- `production_gate`: docs-only preregistration must pass public CI before any `LeanLab/` edit.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
