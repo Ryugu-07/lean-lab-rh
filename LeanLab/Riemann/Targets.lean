@@ -110,6 +110,7 @@ import LeanLab.Riemann.LevinsonMontgomeryLogDerivMassBridge
 import LeanLab.Riemann.LevinsonMontgomeryBoundarySigns
 import LeanLab.Riemann.LevinsonMontgomeryCriticalIndentation
 import LeanLab.Riemann.SpeiserAdmissibleContour
+import LeanLab.Riemann.LevinsonMontgomeryLeftHalfPlaneWinding
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -1668,6 +1669,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``speiserAdmissibleHorizontal_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260728-H12-SPEISER-ADMISSIBLE-CONTOUR-01 reaches MEANINGFUL_PARTIAL and corrects the preregistered full-success mechanism. The common-slice and fixed-bottom theorems remove the source's low-zero table from the bottom contribution to the O(log T) count comparison. They do not replace the strict left-half-plane image used for the exact-count branch: speiserNonzeroWindingModel is everywhere nonzero with matching endpoints, while its log-derivative integral is exactly 2*pi*I. Thus the source dependency splits into an unsigned fixed-bottom edge for the asymptotic count bound and a stronger zero-winding/sign edge for the dichotomy. The global indented argument principle, top Jensen bound, a zero-winding bottom or equivalent base orientation, both count outputs, Speiser equivalence, and RH remain open; historical_route_coverage_delta=1 and rh_frontier_delta=0." },
+    { id := "H12.speiser.left-half-plane-winding"
+      tier := .tier2
+      title := "Formalize the Levinson--Montgomery left-half-plane winding step"
+      statement :=
+        "Prove that a differentiable closed path contained in the strict left half-plane has zero logarithmic-derivative integral through the principal logarithm of its negation, define the actual zeta'/zeta ratio and a strict-negative common horizontal slice, and identify the actual horizontal integral of logDeriv(zeta')-logDeriv(zeta) with its endpoint logarithm difference."
+      leanName := some ``levinsonMontgomeryLeftHalfPlaneWinding_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260729-H12-LEFT-HALF-PLANE-WINDING-01 kernel-checks the positive topological counterpart to the preceding winding-one falsification. Strict left-half-plane containment gives a single principal-log primitive and zero integral on a closed path. For the actual zeta'/zeta horizontal ratio, Lean proves the exact complex and real-parameter derivatives and the endpoint formula with integrand logDeriv(zeta')-logDeriv(zeta). This does not produce a strict-negative height, enumerate a global indented contour, prove an argument-principle count or Jensen top bound, establish either Levinson--Montgomery count output, prove Speiser equivalence, exclude derivative zeros, or prove RH; historical_route_coverage_delta=1, source_topological_bridge_delta=1, and rh_frontier_delta=0." },
     { id := "H12.speiser.levinson-montgomery-analytic-counts"
       tier := .tier2
       title := "Prove the Levinson-Montgomery analytic count theorem"

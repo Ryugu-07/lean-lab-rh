@@ -3344,3 +3344,28 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   derivative-zero exclusion, H12, or RH is assumed or inferred.
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.
+
+## 2026-07-29 H12 left-half-plane winding local result
+
+- `classification`: `FULL_SUCCESS_LOCAL / PUBLIC_IMPLEMENTATION_CI_REQUIRED`.
+- `preregistration_gate`: commit `a0f051cb09c8ef309cd9458e712adfcf1029851b`,
+  run `30402375932`, build job `90420000555`, passed in `1m39s`.
+- `compiled_generic_edge`:
+  `strict left-half-plane differentiable path + interval integrability`;
+  `-> principal-log endpoint formula for integral g'/g`;
+  `-> zero integral when the path is closed`.
+- `compiled_actual_edge`:
+  `SpeiserStrictNegativeHorizontal t`;
+  `-> exact horizontal derivative of zeta'/zeta`;
+  `-> integral of logDeriv(zeta')-logDeriv(zeta) equals the principal-log endpoint difference`.
+- `definition_boundary`: `0 < t` is required to exclude the zeta pole point `s=1`;
+  totalized nonvanishing alone cannot supply this analytic exclusion.
+- `proven_target`: `H12.speiser.left-half-plane-winding`.
+- `audit`: 223-line no-sorry module; seven exact TargetChecks; seven selected standard-only
+  axiom prints; empty forbidden scans; warning-as-error compiles; full build `8789/8789`.
+- `open_source_inputs`: existence of an actual strict-negative horizontal height, finite
+  indented contour assembly, multiplicity-aware argument principle, and Jensen top variation.
+- `deltas`: exact historical topological inference and actual horizontal bridge each `+1`;
+  analytic sign production, count outputs, Speiser equivalence, H12, and RH remain `0`.
+- `next_gate`: freeze implementation and require public Lean Action CI.
+- `global_goal`: active.

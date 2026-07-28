@@ -8,7 +8,7 @@ Node: `H12-LM-LEFT-HALF-PLANE-WINDING-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `FULL_SUCCESS_LOCAL / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 
 ## Fixed target
 
@@ -28,6 +28,11 @@ The full statement, negative control, and claim boundary are fixed in
 | `PRIMARY_SOURCE_RECHECK` | Re-read Levinson--Montgomery 1974 Theorem 1 and Section 2, especially page 52. | The source uses strict left-half-plane containment, not mere nonvanishing, to force zero change of argument before applying the argument principle. | Fix the principal-log endpoint theorem and actual horizontal ratio formula. |
 | `REENTRY_DIFFERENCE` | Compared the target with `SpeiserAdmissibleContour.lean`. | The predecessor proves zero-free slices and a winding-one countermodel. It does not prove the positive left-half-plane theorem or the actual ratio derivative identity. | Re-entry is materially distinct. |
 | `PREREGISTRATION_LOCAL` | Recorded theorem shapes, success/falsification criteria, negative control, and output boundary. | Docs only; no `LeanLab/` source changed. | Publish and require public CI before proof editing. |
+| `PREREGISTRATION_PUBLIC_CI` | Published docs-only commit `a0f051cb09c8ef309cd9458e712adfcf1029851b`. | Lean Action run `30402375932`, build job `90420000555`, passed in `1m39s`. | Production gate satisfied; begin the fixed proof attempt. |
+| `GENERIC_LOG_BRANCH` | Negated a strict-left path and used the principal complex logarithm on the slit plane. | Compiled the endpoint formula and its closed-path zero-integral corollary. | The positive counterpart to the inherited winding-one control is complete. |
+| `ACTUAL_RATIO_DERIVATIVE` | Differentiated `deriv riemannZeta / riemannZeta` and restricted it to a real horizontal parameter. | Compiled the exact factorization by `logDeriv zeta' - logDeriv zeta`. The horizontal theorem requires `0 < t` to prove the point is not `1`. | Record the totalized-zeta boundary; do not weaken the analytic premise. |
+| `ACTUAL_HORIZONTAL_ENDPOINT` | Combined the ratio derivative, inherited integrability, strict negativity, and the principal-log endpoint theorem. | Compiled the exact actual `zeta'/zeta` horizontal endpoint formula. | Register the aggregate target and exact checks. |
+| `LOCAL_AUDIT` | Ran warning-as-error compiles, seven exact TargetChecks, seven selected axiom prints, three forbidden scans, `git diff --check`, and the full build. | All checks passed; selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; full build completed `8789/8789`. | Freeze implementation and require public CI. |
 
 ## Current frontier
 
@@ -39,6 +44,8 @@ The full statement, negative control, and claim boundary are fixed in
   principle.
 - `separate_asymptotic_edge`: Jensen `O(log T)` top variation.
 - `rh_frontier_delta`: `0`.
+- `local_classification`: `FULL_SUCCESS_LOCAL`.
+- `next_gate`: frozen implementation commit and public Lean Action CI.
 
 ## Runtime record
 

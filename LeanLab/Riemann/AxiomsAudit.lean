@@ -120,6 +120,7 @@ import LeanLab.Riemann.LevinsonMontgomeryLogDerivMassBridge
 import LeanLab.Riemann.LevinsonMontgomeryBoundarySigns
 import LeanLab.Riemann.LevinsonMontgomeryCriticalIndentation
 import LeanLab.Riemann.SpeiserAdmissibleContour
+import LeanLab.Riemann.LevinsonMontgomeryLeftHalfPlaneWinding
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.ConreyLiPhaseObstruction
 import LeanLab.Riemann.ConreyLiRKHSShift
@@ -1163,6 +1164,13 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.exists_speiserFixedBottomLogDerivBound
 #print axioms LeanLab.Riemann.integral_logDeriv_speiserNonzeroWindingModel
 #print axioms LeanLab.Riemann.speiserAdmissibleHorizontal_endpoint
+#print axioms LeanLab.Riemann.intervalIntegral_deriv_div_eq_log_sub_of_re_neg
+#print axioms LeanLab.Riemann.intervalIntegral_deriv_div_eq_zero_of_re_neg_of_eq
+#print axioms LeanLab.Riemann.SpeiserStrictNegativeHorizontal.toCommonZeroFree
+#print axioms LeanLab.Riemann.hasDerivAt_speiserZetaDerivRatio
+#print axioms LeanLab.Riemann.hasDerivAt_speiserZetaDerivRatio_horizontal
+#print axioms LeanLab.Riemann.intervalIntegral_speiserZetaDerivRatio_horizontal
+#print axioms LeanLab.Riemann.levinsonMontgomeryLeftHalfPlaneWinding_endpoint
 #print axioms LeanLab.Riemann.conreyLiShiftedKernelQuadratic_eq_add_conj
 #print axioms LeanLab.Riemann.conreyLiShiftedKernelQuadratic_im_eq_zero
 #print axioms LeanLab.Riemann.conreyLi_shiftedKernel_re_eq

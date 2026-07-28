@@ -7,6 +7,7 @@ import LeanLab.Riemann.LevinsonMontgomeryLogDerivMassBridge
 import LeanLab.Riemann.LevinsonMontgomeryBoundarySigns
 import LeanLab.Riemann.LevinsonMontgomeryCriticalIndentation
 import LeanLab.Riemann.SpeiserAdmissibleContour
+import LeanLab.Riemann.LevinsonMontgomeryLeftHalfPlaneWinding
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -5585,5 +5586,69 @@ example :
 
 example : TuringCompletenessConsumerCertificate :=
   turingCompletenessConsumer_endpoint
+
+example {g g' : ℝ → ℂ} {a b : ℝ}
+    (hderiv : ∀ x ∈ Set.uIcc a b, HasDerivAt g (g' x) x)
+    (hintegrable :
+      IntervalIntegrable (fun x => g' x / g x) MeasureTheory.volume a b)
+    (hneg : ∀ x ∈ Set.uIcc a b, (g x).re < 0) :
+    (∫ x : ℝ in a..b, g' x / g x) =
+      Complex.log (-g b) - Complex.log (-g a) :=
+  intervalIntegral_deriv_div_eq_log_sub_of_re_neg hderiv hintegrable hneg
+
+example {g g' : ℝ → ℂ} {a b : ℝ}
+    (hderiv : ∀ x ∈ Set.uIcc a b, HasDerivAt g (g' x) x)
+    (hintegrable :
+      IntervalIntegrable (fun x => g' x / g x) MeasureTheory.volume a b)
+    (hneg : ∀ x ∈ Set.uIcc a b, (g x).re < 0)
+    (hclosed : g b = g a) :
+    (∫ x : ℝ in a..b, g' x / g x) = 0 :=
+  intervalIntegral_deriv_div_eq_zero_of_re_neg_of_eq
+    hderiv hintegrable hneg hclosed
+
+example {t : ℝ} (ht : SpeiserStrictNegativeHorizontal t) :
+    SpeiserCommonZeroFreeHorizontal t :=
+  ht.toCommonZeroFree
+
+example {s : ℂ} (hs : s ≠ 1)
+    (hzeta : riemannZeta s ≠ 0)
+    (hderivZeta : deriv riemannZeta s ≠ 0) :
+    HasDerivAt speiserZetaDerivRatio
+      ((logDeriv (deriv riemannZeta) s - logDeriv riemannZeta s) *
+        speiserZetaDerivRatio s) s :=
+  hasDerivAt_speiserZetaDerivRatio hs hzeta hderivZeta
+
+example {t sigma : ℝ} (ht : 0 < t)
+    (hzeta : riemannZeta (sigma + t * Complex.I) ≠ 0)
+    (hderivZeta : deriv riemannZeta (sigma + t * Complex.I) ≠ 0) :
+    HasDerivAt
+      (fun x : ℝ => speiserZetaDerivRatio (x + t * Complex.I))
+      ((logDeriv (deriv riemannZeta) (sigma + t * Complex.I) -
+          logDeriv riemannZeta (sigma + t * Complex.I)) *
+        speiserZetaDerivRatio (sigma + t * Complex.I)) sigma :=
+  hasDerivAt_speiserZetaDerivRatio_horizontal ht hzeta hderivZeta
+
+example {t : ℝ} (ht : SpeiserStrictNegativeHorizontal t) :
+    (∫ sigma : ℝ in (0 : ℝ)..(1 / 2),
+      (logDeriv (deriv riemannZeta) (sigma + t * Complex.I) -
+        logDeriv riemannZeta (sigma + t * Complex.I))) =
+      Complex.log (-speiserZetaDerivRatio (1 / 2 + t * Complex.I)) -
+        Complex.log (-speiserZetaDerivRatio (t * Complex.I)) :=
+  intervalIntegral_speiserZetaDerivRatio_horizontal ht
+
+example :
+    (∀ (g g' : ℝ → ℂ) (a b : ℝ),
+      (∀ x ∈ Set.uIcc a b, HasDerivAt g (g' x) x) →
+      IntervalIntegrable (fun x => g' x / g x) MeasureTheory.volume a b →
+      (∀ x ∈ Set.uIcc a b, (g x).re < 0) →
+      g b = g a →
+      (∫ x : ℝ in a..b, g' x / g x) = 0) ∧
+    ∀ t : ℝ, SpeiserStrictNegativeHorizontal t →
+      (∫ sigma : ℝ in (0 : ℝ)..(1 / 2),
+        (logDeriv (deriv riemannZeta) (sigma + t * Complex.I) -
+          logDeriv riemannZeta (sigma + t * Complex.I))) =
+        Complex.log (-speiserZetaDerivRatio (1 / 2 + t * Complex.I)) -
+          Complex.log (-speiserZetaDerivRatio (t * Complex.I)) :=
+  levinsonMontgomeryLeftHalfPlaneWinding_endpoint
 
 end LeanLab.Riemann

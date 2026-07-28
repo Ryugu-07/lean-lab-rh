@@ -5258,6 +5258,28 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-29 H12 left-half-plane winding local success
+
+- `preregistration_gate`: commit `a0f051cb09c8ef309cd9458e712adfcf1029851b`,
+  run `30402375932`, build job `90420000555`, passed in `1m39s`.
+- `classification`: `FULL_SUCCESS_LOCAL / PUBLIC_IMPLEMENTATION_CI_REQUIRED`.
+- `compiled_module`: `LeanLab/Riemann/LevinsonMontgomeryLeftHalfPlaneWinding.lean`.
+- `compiled_generic_edge`: strict-left differentiable paths have the principal-log endpoint
+  formula for `integral g'/g`; a closed such path has zero logarithmic winding.
+- `compiled_actual_edge`: under `SpeiserStrictNegativeHorizontal t`, the horizontal integral of
+  `logDeriv(zeta')-logDeriv(zeta)` equals the endpoint variation of
+  `log (-(zeta'/zeta))`.
+- `definition_boundary`: the actual derivative theorem explicitly needs `0 < t` to exclude
+  `s=1`; totalized zeta nonvanishing alone is not an analyticity certificate at the pole.
+- `proven_target`: `H12.speiser.left-half-plane-winding`.
+- `audit`: seven exact checks; seven selected standard-only axiom prints; empty forbidden
+  scans; warning-as-error compiles; full build `8789/8789`.
+- `strict_boundary`: no actual strict-negative height, global indented argument principle,
+  Jensen top bound, count theorem, Speiser equivalence, H12, or RH.
+- `next_gate`: publish frozen implementation and require public Lean Action CI.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-29 H9 Conrey actual-seven publicly closed
 
 - `final_ledger`: `5dab6664c49e5e03effe9ac309256eaf91e5a171`.

@@ -74,3 +74,10 @@ closed path.
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration passes public CI.
 
 The persistent RH Goal remains active.
+
+## Preregistration receipt
+
+- `commit`: `a0f051cb09c8ef309cd9458e712adfcf1029851b`
+- `public_ci`: run `30402375932`, build job `90420000555`, passed in `1m39s`
+- `production_gate`: satisfied before proof-source editing
+- `local_outcome`: `FULL_SUCCESS_LOCAL / PUBLIC_IMPLEMENTATION_CI_REQUIRED`

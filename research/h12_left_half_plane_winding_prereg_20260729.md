@@ -8,7 +8,7 @@ Node: `H12-LM-LEFT-HALF-PLANE-WINDING-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `PREREGISTERED_PUBLIC_GREEN / IMPLEMENTATION_LOCAL_FULL_SUCCESS`
 
 ## Primary source and exact inference
 
@@ -191,3 +191,14 @@ It is historical-route infrastructure with `rh_frontier_delta=0`.
 
 Commit and push this docs-only preregistration first. Public Lean Action CI must pass before
 editing any `LeanLab/` proof source, target registry, exact check, or axiom-audit file.
+
+## Gate receipt and local outcome
+
+- `preregistration_commit`: `a0f051cb09c8ef309cd9458e712adfcf1029851b`
+- `public_ci`: run `30402375932`, build job `90420000555`, passed in `1m39s`
+- `production_gate`: satisfied before any `LeanLab/` proof-source edit
+- `local_classification`: `FULL_SUCCESS_LOCAL / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+- `result_record`: `research/h12_left_half_plane_winding_result_20260729.md`
+- `definition_boundary_exposed`: the actual horizontal derivative theorem needs `0 < t`
+  explicitly. Nonvanishing of Mathlib's totalized `riemannZeta` does not by itself exclude
+  `s = 1`, where analytic differentiability is unavailable.
