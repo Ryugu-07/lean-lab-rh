@@ -2876,4 +2876,7 @@ final-ledger CI, return to cross-family selection with H11-D/H11-E retained as o
 - `classification`: `historical_route_coverage_delta=1`,
   `hardy_equation_one_delta=1`, `library_semantics_correction_delta=1`,
   `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `frozen_implementation`: `8b687aa46d67a049680a7cf964ce8e982f325afa`, public run
+  `30378958429`, job `90341715211`, passed in `2m29s`; proof sources are frozen pending
+  docs-only immutable evidence.
 - `global_goal`: active.

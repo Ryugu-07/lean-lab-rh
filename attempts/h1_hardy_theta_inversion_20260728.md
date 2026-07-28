@@ -8,8 +8,8 @@ Node: `H1-HARDY-THETA-INVERSION-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `MEANINGFUL_MELLIN_INVERSION_PARTIAL / LOCAL_AUDIT_PASSED /
-IMPLEMENTATION_PUBLIC_CI_PENDING`
+Status: `MEANINGFUL_MELLIN_INVERSION_PARTIAL / IMPLEMENTATION_PUBLIC_GREEN /
+IMMUTABLE_EVIDENCE_PENDING`
 
 ## Fixed target
 
@@ -30,6 +30,7 @@ requires analytic continuation to the complex alpha strip and Hardy's equation (
 | `ATTACK_C_FIRST_EDGE` | Tried to promote the real identity to `x=exp(i*alpha)` by strip analyticity. | The exact first missing theorem is the compact-substrip exponential integrability statement below. The current uniform xi bound only gives rational decay and cannot dominate `exp(a*|t|)`. | Stop at the preregistered meaningful-partial boundary; re-entry must prove actual xi exponential decay in this normalization. |
 | `REGISTRATION` | Added one aggregate certificate and Target, exact checks, and selected transitive axiom prints. | Selected theorems use only `propext`, `Classical.choice`, and `Quot.sound`. | Run the remaining mechanical and public gates. |
 | `LOCAL_AUDIT` | Ran warning-as-error compilation, three forbidden scans, patch check, and the full build. | Scans are empty; `git diff --check` passes; full build passes `8781/8781`. | Freeze and publish the implementation. |
+| `IMPLEMENTATION_PUBLIC_CI` | Froze and pushed implementation `8b687aa46d67a049680a7cf964ce8e982f325afa`. | Run `30378958429`, job `90341715211`, passed in `2m29s`. | Keep all proof sources frozen and publish docs-only immutable evidence. |
 
 ## Strongest compiled facts
 
@@ -114,3 +115,5 @@ critical-line infinitude theorem, positive-proportion theorem, H1, or RH is prov
   Hardy consumer were rechecked.
 - `global_goal`: active.
 - `protected_files`: the six inherited protected files remain untouched and unstaged.
+- `frozen_implementation`: `8b687aa46d67a049680a7cf964ce8e982f325afa`, public-green on
+  run `30378958429`, job `90341715211`, in `2m29s`.

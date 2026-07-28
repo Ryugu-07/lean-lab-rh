@@ -50,7 +50,9 @@ must be proved before claiming strip analyticity or Hardy equation (2).
 - forbidden/custom-declaration/resource-relaxation scans: empty;
 - `git diff --check`: pass;
 - full build: `8781/8781`;
-- public implementation CI: pending.
+- frozen implementation: `8b687aa46d67a049680a7cf964ce8e982f325afa`;
+- public implementation CI: run `30378958429`, job `90341715211`, passed in `2m29s`;
+- immutable evidence: pending.
 
 ## Claim boundary
 

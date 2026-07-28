@@ -5455,6 +5455,10 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   and RH.
 - `local_audit`: 803-line production module, exact checks, seven standard-only axiom prints,
   three empty forbidden scans, `git diff --check`, and full `8781/8781` build pass.
-- `next_gate`: freeze implementation and require public Lean Action CI.
+- `frozen_implementation`: `8b687aa46d67a049680a7cf964ce8e982f325afa`, public run
+  `30378958429`, job `90341715211`, passed in `2m29s`.
+- `proof_freeze`: do not modify any `LeanLab/` file before immutable-evidence CI.
+- `next_gate`: publish docs-only immutable evidence and verify an empty `LeanLab/` diff from the
+  frozen implementation.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
