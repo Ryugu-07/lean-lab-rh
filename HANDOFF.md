@@ -5111,6 +5111,29 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-29 H14 Turing completeness consumer selected
+
+- `parent_public_closure`: H2 final ledger
+  `b51748405512f194080f8370e5956763a9269b71`, run `30394847509`, job
+  `90395094917`; closure receipt `9d7bccacf7da840d6fb8b542ed1fab02079357c3`,
+  run `30395400857`, job `90396925769`.
+- `campaign`: `LITERATURE-20260729-H14-TURING-COMPLETENESS-CONSUMER-01`.
+- `node`: `H14-TURING-COMPLETENESS-CONSUMER-01`.
+- `selection_reason`: H14 previously compiled only the negative standalone-promotion boundary;
+  it lacks the valid positive theorem that an actual critical-line zero list plus an exact
+  multiplicity count exhausts a finite region.
+- `fixed_edge`:
+  `actual xi divisor candidates + all candidate values on line + exact analytic count`;
+  `-> finite rectangle exhaustion`;
+  `-> every actual zeta zero in the rectangle lies on the critical line`.
+- `negative_control`: candidate verification without count equality can omit an off-line point.
+- `strict_boundary`: no root isolation, Turing average bound, numerical height, global tail
+  theorem, H14-to-RH promotion, or RH.
+- `next_gate`: publish docs-only preregistration and require public CI before any `LeanLab/`
+  edit.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-29 H2 classical zero-detector local meaningful partial
 
 - `campaign`: `LITERATURE-20260729-H2-CLASSICAL-ZERO-DETECTOR-MELLIN-01`.

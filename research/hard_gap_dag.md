@@ -3181,3 +3181,26 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   `30394847509`, job `90395094917`, `1m36s`, public green.
 - `status`: publicly closed at `MEANINGFUL_MELLIN_PARTIAL`.
 - `next_gate`: fresh cross-family historical route selection after the requested pause.
+
+## 2026-07-29 H14 Turing completeness consumer launch
+
+- `parent_public_closure`: H2 classical zero detector final ledger
+  `b51748405512f194080f8370e5956763a9269b71`, run `30394847509`, job
+  `90395094917`; closure receipt `9d7bccacf7da840d6fb8b542ed1fab02079357c3`,
+  run `30395400857`, job `90396925769`.
+- `H14-TURING-COMPLETENESS-CONSUMER-01`: preregistered positive finite-verification mechanism.
+- `fixed_edge`:
+  `candidate actual xi divisor indices inside a finite rectangle`;
+  `+ every candidate value on the critical line`;
+  `+ candidate cardinality equals the analytic multiplicity count`;
+  `-> candidates exhaust the full rectangle`;
+  `-> every actual nontrivial zeta zero inside is on the critical line`.
+- `actual_count_input`: specialize the compiled xi rectangle argument principle at constant
+  weight one and identify its divisor-index finsum with Finset cardinality.
+- `OBS-H14-NO-COUNT-NO-COMPLETENESS-01`: without exact count equality, a proper all-line
+  candidate subset may omit an off-line ambient point.
+- `H14-TURING-NUMERICAL-CERTIFICATE-01`: remains open. No interval root isolation or concrete
+  finite-height computation is imported.
+- `H14-GLOBAL-TAIL-REDUCTION-01`: remains open and is not weakened by a finite rectangle theorem.
+- `production_gate`: no Lean source edit before docs-only preregistration public CI.
+- `global_goal`: active.
