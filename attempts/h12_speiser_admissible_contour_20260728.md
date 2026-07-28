@@ -9,7 +9,7 @@ Node: `H12-SPEISER-ADMISSIBLE-CONTOUR-01`
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
 Status: `MEANINGFUL_PARTIAL / SOURCE_DEPENDENCY_SPLIT /
-IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+IMPLEMENTATION_AND_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PENDING`
 
 ## Fixed target
 
@@ -34,6 +34,7 @@ Full and meaningful-partial criteria are fixed in
 | `REGISTRATION` | Added an aggregate Target, exact statement checks, and eight selected axiom prints. | Every selected theorem uses only `propext`, `Classical.choice`, and `Quot.sound`. | Run the local mechanical gates. |
 | `LOCAL_AUDIT` | Ran warning-as-error standalone compilation, three forbidden scans, `git diff --check`, and the full build. | Scans are empty; patch check passes; full build passes `8782/8782`. | Freeze and publish the meaningful partial. |
 | `IMPLEMENTATION_PUBLIC_CI` | Froze and pushed implementation `fbdb2462141e20b169d25eae58ed3c9ef67eb92b`. | Run `30382486593`, job `90353492533`, passed in `2m7s`. | Keep proof sources frozen and publish docs-only immutable evidence. |
+| `IMMUTABLE_EVIDENCE_PUBLIC_CI` | Published docs-only evidence `70b437177d7e990319e973bffc36053b413450c0` after verifying an empty `LeanLab/` diff from the frozen implementation. | Run `30382794033`, job `90354522762`, passed in `1m41s`. | Publish one docs-only final ledger; proof sources remain frozen. |
 
 ## Strongest compiled facts
 
@@ -112,3 +113,7 @@ Speiser equivalence, derivative-zero exclusion, or RH result is proved.
 - `local_build`: `8782/8782`.
 - `frozen_implementation`: `fbdb2462141e20b169d25eae58ed3c9ef67eb92b`, public-green on
   run `30382486593`, job `90353492533`, in `2m7s`.
+- `immutable_evidence`: `70b437177d7e990319e973bffc36053b413450c0`, public-green on run
+  `30382794033`, job `90354522762`, in `1m41s`.
+- `proof_freeze`: `git diff --exit-code fbdb2462141e20b169d25eae58ed3c9ef67eb92b --
+  LeanLab` is empty before the immutable-evidence commit.

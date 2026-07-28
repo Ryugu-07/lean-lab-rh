@@ -57,7 +57,10 @@ equivalence, derivative-zero exclusion, and RH remain open.
 - full build: `8782/8782`;
 - frozen implementation: `fbdb2462141e20b169d25eae58ed3c9ef67eb92b`;
 - public implementation CI: run `30382486593`, job `90353492533`, passed in `2m7s`;
-- immutable evidence: pending.
+- proof freeze: empty `LeanLab/` diff from the frozen implementation;
+- immutable evidence: `70b437177d7e990319e973bffc36053b413450c0`, run `30382794033`,
+  job `90354522762`, passed in `1m41s`;
+- final ledger: pending.
 
 ## Claim boundary
 

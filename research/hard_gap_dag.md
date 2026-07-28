@@ -2939,3 +2939,7 @@ final-ledger CI return to fresh cross-family route selection rather than constan
 Frozen implementation `fbdb2462141e20b169d25eae58ed3c9ef67eb92b` passed public Lean Action
 run `30382486593`, build job `90353492533`, in `2m7s`. Proof sources are frozen while docs-only
 immutable evidence is published.
+
+Immutable evidence `70b437177d7e990319e973bffc36053b413450c0` passed public Lean Action run
+`30382794033`, build job `90354522762`, in `1m41s`; the `LeanLab/` diff from the frozen
+implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`.
