@@ -3053,3 +3053,31 @@ docs-only immutable evidence is published.
 Immutable evidence `c4fef4621dbed9831a38a5774587672122d45dfd` passed public Lean Action
 run `30384971222`, build job `90361859234`, in `2m3s`; the `LeanLab/` diff from the frozen
 implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`.
+
+## 2026-07-29 H8 closure and H1 Selberg local sign detector
+
+- `H8-CONREY-LI-RKHS-SHIFT-01`: publicly closed at final ledger
+  `84de6e2d13431aa3069d5808b3018eb66f50ccd8`, run `30388546641`, job
+  `90373923787`, `1m52s`. Keep the concrete xi RKHS shift and half-strip continuation open.
+- `H1-CENSUS-SPLIT-01`: the H1 family row concealed a mechanism-level coverage gap. Hardy
+  oscillation and Levinson--Conrey have production results; Selberg's 1942 sign-change method
+  had none.
+- `H1-SELBERG-LOCAL-SIGN-CHANGE-01`: preregistered. The intended proved edge is
+
+  ```text
+  strict local integral triangle gap
+    -> positive and negative values of hardyXi * normSq(rootMollifier)
+    -> opposite strict signs of actual hardyXi
+    -> actual critical-line nontrivial zeta zero.
+  ```
+
+- `OBS-H1-SELBERG-PRODUCT-ZERO-01`: a zero of the mollified product is not a zeta-zero
+  certificate because the root mollifier may vanish.
+- `OBS-H1-SELBERG-ARBITRARY-MULTIPLIER-01`: without a nonnegative square, a multiplier can
+  manufacture a sign change while the base function is everywhere nonzero.
+- `H1-SELBERG-MOMENTS-01`: open. Prove source-faithful global first/absolute/second moment
+  estimates strong enough to produce `T log T` separated detected intervals.
+- `H1-SELBERG-PROPORTION-01`: open. The local detector alone gives no positive proportion and
+  no RH consequence.
+- Production gate: no Lean source edit before the docs-only preregistration is public-green.
+  Persistent RH Goal active.

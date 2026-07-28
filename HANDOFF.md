@@ -5555,6 +5555,27 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-29 H8 public closure and H1 Selberg launch
+
+- H8 final-ledger commit `84de6e2d13431aa3069d5808b3018eb66f50ccd8` passed public Lean
+  Action run `30388546641`, build job `90373923787`, in `1m52s`. The complete H8 chain is
+  public-green and has no `LeanLab/` change after frozen implementation
+  `462c88ad1f80772e9485ce224e16e63c9fd39e8e`.
+- Fresh historical audit corrects the compressed H1 coverage reading: Hardy--Littlewood,
+  Selberg 1942, and Levinson--Conrey are materially different mechanisms. The repository has
+  theorem-producing Hardy and Levinson-shaped work, but Selberg's squared-root-mollifier
+  sign-change method was prose-only.
+- Selected campaign `LITERATURE-20260729-H1-SELBERG-LOCAL-SIGN-CHANGE-01`, node
+  `H1-SELBERG-LOCAL-SIGN-CHANGE-01`, freezes the actual
+  `hardyXi(t) * normSq(N(1/2+i*t))` local detector. A strict interval-integral triangle gap must
+  produce opposite Hardy-xi signs and hence an actual nontrivial critical-line zeta zero.
+- The campaign also freezes finite strongly separated interval assembly and a sign-changing
+  arbitrary-multiplier countermodel. A product zero alone is explicitly insufficient because
+  the root mollifier may vanish.
+- Selberg's global moments, `T log T` count, positive proportion, H1, and RH remain open.
+  Production Lean editing is blocked until the docs-only preregistration passes public CI. The
+  six protected files remain untouched and unstaged; persistent RH Goal active.
+
 ## 2026-07-29 H8 Conrey--Li RKHS shift selected
 
 - `parent_public_closure`: H10 final ledger
