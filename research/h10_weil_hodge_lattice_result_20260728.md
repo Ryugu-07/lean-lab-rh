@@ -73,7 +73,9 @@ Finite coefficient testing therefore cannot certify the universal Hodge lattice 
 - full build: `8783/8783`;
 - preregistration: `3c8742a23b6b955fa4ea976fd860593d6e052c27`, run `30383689739`,
   job `90357535402`, passed in `2m32s`;
-- frozen implementation: pending.
+- frozen implementation: `a97593c3609ec6ec3e1a699132c849dffd68a41c`;
+- public implementation CI: run `30384610038`, job `90360629352`, passed in `3m1s`;
+- immutable evidence: pending.
 
 ## Claim boundary
 

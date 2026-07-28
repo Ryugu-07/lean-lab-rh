@@ -8,8 +8,8 @@ Node: `H10-WEIL-SURFACE-HODGE-LATTICE-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `FULL_SOURCE_NUMERICAL_HINGE_SUCCESS / LOCAL_AUDIT_GREEN /
-IMPLEMENTATION_PUBLIC_CI_REQUIRED`
+Status: `FULL_SOURCE_NUMERICAL_HINGE_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN /
+IMMUTABLE_EVIDENCE_PENDING`
 
 ## Fixed target
 
@@ -36,6 +36,7 @@ The complete criteria and claim boundary are fixed in
 | `FINITE_BOX_FALSIFICATION` | Checked the explicit homogeneous model on every integer pair with absolute coordinates at most one. | The complete finite box is nonnegative, but `(1,2)` has value `-1/2`. | Reject finite coefficient testing as a Hodge certificate. |
 | `REGISTRATION` | Added one Target, seven exact TargetChecks, and seven selected axiom prints. | Every selected theorem uses only `propext`, `Classical.choice`, and `Quot.sound`. | Run local mechanical gates. |
 | `LOCAL_AUDIT` | Ran warning-as-error production and registry compiles, three forbidden scans, `git diff --check`, and the full build. | Scans are empty; patch check passes; full build passes `8783/8783`. | Freeze and publish the implementation. |
+| `IMPLEMENTATION_PUBLIC_CI` | Froze and pushed implementation `a97593c3609ec6ec3e1a699132c849dffd68a41c`. | Run `30384610038`, job `90360629352`, passed in `3m1s`. | Keep proof sources frozen and publish docs-only immutable evidence. |
 
 ## Runtime record
 
@@ -50,6 +51,8 @@ The complete criteria and claim boundary are fixed in
   `30383689739`, job `90357535402`, in `2m32s`.
 - `production_module`: `LeanLab/Riemann/WeilHodgeLattice.lean`, 243 lines.
 - `local_build`: `8783/8783`.
+- `frozen_implementation`: `a97593c3609ec6ec3e1a699132c849dffd68a41c`, public-green on
+  run `30384610038`, job `90360629352`, in `3m1s`.
 
 ## Current boundary
 

@@ -8,8 +8,8 @@ Node: `H10-WEIL-SURFACE-HODGE-LATTICE-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `FULL_SOURCE_NUMERICAL_HINGE_SUCCESS / LOCAL_AUDIT_GREEN /
-IMPLEMENTATION_PUBLIC_CI_REQUIRED`
+Status: `FULL_SOURCE_NUMERICAL_HINGE_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN /
+IMMUTABLE_EVIDENCE_PENDING`
 
 ## Primary-source anchor
 
@@ -132,3 +132,7 @@ This is `FULL_SOURCE_NUMERICAL_HINGE_SUCCESS` with
 `actual_curve_geometry_delta=0`, `hard_gap_delta=0`, and `rh_frontier_delta=0`. Actual curve
 intersection theory, Hodge index, point-count identities, number-field transfer, H10, and RH
 remain open.
+
+Frozen implementation `a97593c3609ec6ec3e1a699132c849dffd68a41c` passed public Lean Action
+run `30384610038`, build job `90360629352`, in `3m1s`. Proof sources remain frozen while
+docs-only immutable evidence is published.

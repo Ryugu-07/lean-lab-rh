@@ -5599,3 +5599,15 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   final ledger.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H10 Weil surface Hodge-lattice implementation public green
+
+- `frozen_implementation`: `a97593c3609ec6ec3e1a699132c849dffd68a41c`.
+- `public_ci`: run `30384610038`, build job `90360629352`, passed in `3m1s`.
+- `result`: `FULL_SOURCE_NUMERICAL_HINGE_SUCCESS`.
+- `proof_freeze`: the `LeanLab/` diff from the frozen implementation is empty.
+- `remaining_H10`: actual curve intersections, Hodge index, Frobenius point-count identity,
+  number-field transfer, H10, and RH.
+- `next_gate`: publish docs-only immutable evidence and require public CI.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.

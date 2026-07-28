@@ -2985,3 +2985,7 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   `finite_spectral_composition_delta=1`, `actual_curve_geometry_delta=0`,
   `hard_gap_delta=0`, `rh_frontier_delta=0`.
 - `global_goal`: active.
+
+Frozen implementation `a97593c3609ec6ec3e1a699132c849dffd68a41c` passed public Lean Action
+run `30384610038`, build job `90360629352`, in `3m1s`. The proof source is frozen while
+docs-only immutable evidence is published.
