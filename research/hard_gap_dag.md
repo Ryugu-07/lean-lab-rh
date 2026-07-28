@@ -2569,3 +2569,25 @@ publicly closed and cross-family selection resumed.
   prints, empty forbidden scan, warning-as-error compile, and full `8775/8775` build.
 - `next_gate`: frozen implementation commit and public CI.
 - `global_goal`: active.
+
+Final-ledger commit `8a84e18a30e95bf1be423a949438deb0fdfafabb` passed public Lean
+Action run `30215281290`, build job `89828323462`, in `1m35s`; the finite Farey transform node
+is publicly closed and cross-family selection resumed.
+
+## 2026-07-28 H11 triangular pair-mass launch
+
+- `node`: `H11-GALLAGHER-MUELLER-TRIANGULAR-MASS-01`.
+- `mode`: `LITERATURE`.
+- `fixed_edge`:
+  `ordered ordinate gaps -> strict positive short-gap count`;
+  `zero/positive/negative gap partition -> U times equal-ordinate count plus twice positive mass`;
+  `finite layer cake -> positive mass equals integral_0^U short-gap count`;
+  `equal ordinates -> exact project horizontalPairCount`;
+  `existing multiplicity-expanded zeta cutoff -> actual finite source identity`.
+- `negative_controls`: no unordered-pair division, no weak positive gap, no dropped boundary
+  case, no set-valued zeta population, no assumed integral identity, and no asymptotic promotion.
+- `open_H11_edges`: moving-height boundary error; Fujii's second moment; PCC; HMH;
+  absolute-error control; sparse-exception amplification; RH.
+- `classification_target`: `H11_TRIANGULAR_PAIR_MASS_FORMALIZED`, with source-mechanism and
+  horizontal-count-interface deltas but no hard-gap or RH-frontier delta.
+- `global_goal`: active.

@@ -5072,3 +5072,23 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   RH-equivalent estimates, Mertens growth, H9, and RH as open.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-28 H11 triangular pair-mass identity selected
+
+- `parent_public_closure`: Farey final ledger
+  `8a84e18a30e95bf1be423a949438deb0fdfafabb` passed run `30215281290`, build job
+  `89828323462`, in `1m35s`.
+- `campaign`: `LITERATURE-20260728-H11-TRIANGULAR-PAIR-MASS-01`.
+- `node`: `H11-GALLAGHER-MUELLER-TRIANGULAR-MASS-01`.
+- `selection_reason`: rotate from H9 to the missing source mechanism that connects H11's
+  compiled horizontal multiplicity count to pair-correlation second moments.
+- `fixed_endpoint`: ordered finite gap counts, triangular pair mass, exact zero/positive/negative
+  gap partition, the interval-integral layer-cake identity, exact equality with project
+  `horizontalPairCount`, and the multiplicity-preserving actual-zeta cutoff specialization.
+- `strict_boundary`: no moving-height boundary error, Fujii second moment, PCC, HMH,
+  sparse-exception amplification, RH, or direct zero exclusion.
+- `production_gate`: docs-only preregistration public CI before any `LeanLab/` edit.
+- `after_closure`: return to cross-family historical selection; retain H11's analytic and
+  last-exception edges as open.
+- `global_goal`: active.
+- `protected_files`: keep the inherited six user/exposure files untouched and unstaged.

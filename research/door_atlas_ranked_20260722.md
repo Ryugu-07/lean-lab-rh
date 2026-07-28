@@ -1648,3 +1648,24 @@ docs-only immutable evidence is published.
 Docs-only immutable-evidence commit `c0190936358edf63ebec0588e6fdec4ac0c88ed6` passed run
 `30215145080`, build job `89827979109`, in `1m53s`, with no `LeanLab/` change from the frozen
 implementation. Only final-ledger CI remains.
+
+Final-ledger commit `8a84e18a30e95bf1be423a949438deb0fdfafabb` passed run
+`30215281290`, build job `89828323462`, in `1m35s`; the finite Farey transform endpoint is
+publicly closed and cross-family selection resumed.
+
+### Post-Farey rerank: H11 triangular pair mass
+
+Fresh comparison does not continue to ordered Franel discrepancy by inertia. Hardy's transform,
+mollifier moments, H7 spectral convergence, H10 transfer, H11 statistics, H12 global counting,
+and direct actual-zeta attacks remain live.
+
+H11 is selected because the project has compiled horizontal multiplicity but not the exact
+Gallagher--Mueller mechanism that inserts it into the pair-correlation second moment.
+Goldston--Lee--Schettler--Suriajaya equations `(5.3)`--`(5.4)` split the triangular mass of all
+ordered ordinate pairs into `U*N*(T)` and twice the integral of the strict positive-gap count.
+
+Campaign `LITERATURE-20260728-H11-TRIANGULAR-PAIR-MASS-01` freezes that finite identity, its
+actual interval-integral proof, exact agreement with project `horizontalPairCount`, and the
+analytic-multiplicity-preserving positive zeta-zero cutoff instance. Fujii's second-moment
+estimate, the moving-height `O(L^2)` boundary, PCC, HMH, sparse-exception amplification, and RH
+remain outside. Production editing is closed until docs-only preregistration passes public CI.

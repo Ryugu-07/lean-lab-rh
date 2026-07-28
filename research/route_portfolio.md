@@ -4451,3 +4451,25 @@ publish docs-only immutable evidence next.
 Docs-only immutable-evidence commit `c0190936358edf63ebec0588e6fdec4ac0c88ed6` passed run
 `30215145080`, build job `89827979109`, in `1m53s`; the frozen implementation has no
 `LeanLab/` difference. Only final-ledger CI remains before returning to route selection.
+
+Final-ledger commit `8a84e18a30e95bf1be423a949438deb0fdfafabb` passed run
+`30215281290`, build job `89828323462`, in `1m35s`; the exact finite Farey transform is publicly
+closed.
+
+## H11 Triangular Pair-Mass Selection
+
+Fresh cross-family selection rotates from H9 to a missing H11 source mechanism. The existing
+pair-correlation module compiles horizontal multiplicity and an exact-count RH consumer, but it
+does not yet connect that count to the triangular short-gap statistic used by
+Gallagher--Mueller and Goldston--Lee--Schettler--Suriajaya.
+
+Campaign `LITERATURE-20260728-H11-TRIANGULAR-PAIR-MASS-01` fixes the exact finite ordered-pair
+identity behind equations `(5.3)`--`(5.4)`: triangular pair mass is `U` times the equal-ordinate
+pair count plus twice the integral of the positive short-gap count. The endpoint must prove the
+actual interval integral, identify the equal-ordinate count with project `horizontalPairCount`,
+and instantiate the result on the multiplicity-expanded positive zeta-zero cutoff.
+
+This is historical route coverage and an exact analytic interface, not PCC or RH progress.
+Fujii's second moment, moving-height boundary errors, HMH, absolute-error control, and exclusion
+of the last sparse off-line orbit remain open. Public preregistration CI is required before any
+proof-source edit.
