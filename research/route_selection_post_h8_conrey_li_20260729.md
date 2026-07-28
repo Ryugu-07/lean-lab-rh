@@ -2,7 +2,7 @@
 
 Date: 2026-07-29
 
-Status: `SELECTED_CAMPAIGN_IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `SELECTED_CAMPAIGN_IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Closed parent
 
@@ -113,3 +113,7 @@ publicly closed, selection must rerank the full atlas instead of automatically c
 
 The frozen implementation is `8d9373fa6325a857541fb112b3ec137162a343c9`; Lean Action run
 `30390650837`, build job `90381074143`, passed in `3m7s`.
+
+Immutable evidence is `5a80c9736d95294a3baf8bc666f8b45c85e5342f`; Lean Action run
+`30390974932`, build job `90382176746`, passed in `1m48s`. After one docs-only final-ledger CI,
+this selected campaign returns control to full-atlas reranking.

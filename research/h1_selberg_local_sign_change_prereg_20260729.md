@@ -8,7 +8,7 @@ Node: `H1-SELBERG-LOCAL-SIGN-CHANGE-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Primary-source anchor
 
@@ -176,3 +176,7 @@ active.
 Frozen implementation commit `8d9373fa6325a857541fb112b3ec137162a343c9` passed Lean Action run
 `30390650837`, build job `90381074143`, in `3m7s`. The `LeanLab/` diff from that commit is empty
 while this docs-only immutable evidence is prepared.
+
+Immutable evidence commit `5a80c9736d95294a3baf8bc666f8b45c85e5342f` passed Lean Action run
+`30390974932`, build job `90382176746`, in `1m48s`. The proof-source diff from frozen
+implementation remains empty. One docs-only final-ledger CI remains before local closure.

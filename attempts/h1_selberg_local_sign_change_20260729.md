@@ -4,7 +4,7 @@ Date: 2026-07-29
 
 Campaign: `LITERATURE-20260729-H1-SELBERG-LOCAL-SIGN-CHANGE-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Attempt ledger
 
@@ -24,6 +24,7 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 | `NEGATIVE_CONTROL` | Compiled the constant nonzero base with the sign-changing multiplier `m(t)=t`. | The product changes sign while the base never vanishes. | Preserve the square requirement. |
 | `LOCAL_AUDIT` | Compiled the module, Targets, TargetChecks, and AxiomsAudit with warnings as errors; ran forbidden scans, diff check, and full build. | 267-line no-sorry module; eight exact checks; eight selected declarations use only `propext`, `Classical.choice`, `Quot.sound`; empty scans; full `8785/8785` build. | Freeze the implementation and require public CI. |
 | `IMPLEMENTATION_PUBLIC_CI` | Published the frozen implementation and reran the complete Lean Action workflow. | Commit `8d9373fa6325a857541fb112b3ec137162a343c9`, run `30390650837`, job `90381074143`, passed in `3m7s`; subsequent `LeanLab/` diff is empty. | Publish docs-only immutable evidence. |
+| `IMMUTABLE_EVIDENCE_CI` | Published the implementation hash, public run, claim boundary, and empty proof-source diff without changing Lean files. | Commit `5a80c9736d95294a3baf8bc666f8b45c85e5342f`, run `30390974932`, job `90382176746`, passed in `1m48s`. | Publish one docs-only final ledger, then return to fresh route selection. |
 
 ## Frozen boundary
 
