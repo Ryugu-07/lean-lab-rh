@@ -8,7 +8,8 @@ Node: `H12-SPEISER-ADMISSIBLE-CONTOUR-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `MEANINGFUL_PARTIAL / SOURCE_DEPENDENCY_SPLIT /
+IMPLEMENTATION_PUBLIC_CI_PENDING`
 
 ## Primary source and fixed inference
 
@@ -170,6 +171,33 @@ may prove them directly but may not use any of them as a premise.
 Success on Attacks A--B is historical contour infrastructure. Full success formalizes a known
 1974 theorem and the existing project consumer then yields an unconditional Lean proof of
 Speiser's equivalence. Neither result proves derivative-zero-freeness or RH.
+
+## Outcome correction
+
+Attacks A--B compile in `LeanLab/Riemann/SpeiserAdmissibleContour.lean`. Common zero-free
+horizontal segments exist in every positive-height interval and cofinally, both actual
+logarithmic derivatives are interval integrable, and a selected bottom contributes one fixed
+constant.
+
+The preregistered claim that this replacement also suffices for the source dichotomy is
+falsified. Levinson--Montgomery use strict negativity on the whole closed contour to force the
+change in argument of `zeta'/zeta` to be zero. Lean compiles an everywhere-nonzero exponential
+model with matching endpoints but logarithmic-derivative integral `2*pi*I`; nonvanishing alone
+does not control winding.
+
+The corrected surviving edges are:
+
+```text
+fixed common zero-free bottom
+  -> fixed O(1) bottom contribution
+  -> available for the O(log T) count comparison;
+
+strict negative bottom or equivalent zero-winding base theorem
+  -> still required for the exact-count branch.
+```
+
+Full success is not reached. The campaign stops locally at its preregistered meaningful-partial
+boundary after the implementation is publicly verified.
 
 ## Runtime record
 

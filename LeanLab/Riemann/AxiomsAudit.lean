@@ -114,6 +114,7 @@ import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
 import LeanLab.Riemann.LevinsonMontgomeryLogDerivMassBridge
 import LeanLab.Riemann.LevinsonMontgomeryBoundarySigns
 import LeanLab.Riemann.LevinsonMontgomeryCriticalIndentation
+import LeanLab.Riemann.SpeiserAdmissibleContour
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.ConreyLiPhaseObstruction
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
@@ -1133,3 +1134,11 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.hardyXiPositiveRealIntegral_eq_pole_sub_f_modif
 #print axioms LeanLab.Riemann.hardyCahenMellinInversion
 #print axioms LeanLab.Riemann.hardyThetaInversion_endpoint
+#print axioms LeanLab.Riemann.finite_speiserCommonBadHeightSet
+#print axioms LeanLab.Riemann.exists_speiserCommonZeroFreeHorizontal_between
+#print axioms LeanLab.Riemann.exists_speiserCommonZeroFreeHorizontal_above
+#print axioms LeanLab.Riemann.intervalIntegrable_speiserZetaLogDeriv_horizontal
+#print axioms LeanLab.Riemann.intervalIntegrable_speiserZetaDerivLogDeriv_horizontal
+#print axioms LeanLab.Riemann.exists_speiserFixedBottomLogDerivBound
+#print axioms LeanLab.Riemann.integral_logDeriv_speiserNonzeroWindingModel
+#print axioms LeanLab.Riemann.speiserAdmissibleHorizontal_endpoint

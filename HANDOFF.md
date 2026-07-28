@@ -5500,3 +5500,27 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `production_gate`: docs-only preregistration must pass public CI before any `LeanLab/` edit.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H12 Speiser admissible contour local result
+
+- `campaign`: `LITERATURE-20260728-H12-SPEISER-ADMISSIBLE-CONTOUR-01`.
+- `result`: `MEANINGFUL_PARTIAL / SOURCE_DEPENDENCY_SPLIT`.
+- `compiled_endpoint`: `speiserAdmissibleHorizontal_endpoint`.
+- `closed_edge`:
+  `actual compact zeta and derivative divisors -> finite bad heights`;
+  `finite bad heights -> common zero-free horizontal in every positive interval`;
+  `actual nonvanishing and analyticity -> two interval-integrable logarithmic derivatives`;
+  `fixed segment -> fixed nonnegative bottom bound`.
+- `source_correction`: the unsigned fixed bottom removes low-zero verification from the bottom
+  contribution to the `O(log T)` count comparison, but not from the source exact-count branch.
+- `compiled_negative_control`: `speiserNonzeroWindingModel` is nonzero with matching endpoints,
+  while `integral_logDeriv_speiserNonzeroWindingModel=2*pi*I`.
+- `first_open_asymptotic`: global multiplicity-aware indented argument principle plus Jensen
+  `O(log T)` top variation.
+- `first_open_dichotomy`: a fixed strictly negative bottom or equivalent zero-winding base
+  theorem for the actual zeta logarithmic derivative.
+- `local_audit`: 270-line module, exact checks, eight standard-only axiom prints, empty scans,
+  `git diff --check`, and full `8782/8782` build pass.
+- `next_gate`: freeze and publish implementation, then docs-only immutable evidence.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.

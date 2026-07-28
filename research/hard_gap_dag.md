@@ -2912,3 +2912,26 @@ final-ledger CI return to fresh cross-family route selection rather than constan
   spectral routes.
 - `production_gate`: no proof-source edit before docs-only preregistration public CI.
 - `global_goal`: active.
+
+## 2026-07-28 H12 Speiser admissible-contour local result
+
+- `node`: `H12-SPEISER-ADMISSIBLE-CONTOUR-01`.
+- `status`: `MEANINGFUL_PARTIAL / SOURCE_DEPENDENCY_SPLIT`.
+- `closed_H12_horizontal`:
+  `two actual locally finite divisors -> finite bad-height union`;
+  `arbitrary positive interval -> common zero-free closed horizontal`;
+  `analytic nonvanishing -> fixed integrable log-derivative bottom`.
+- `corrected_split`:
+  `fixed common zero-free bottom -> O(1) bottom contribution for count asymptotics`;
+  `strict left-half-plane bottom or equivalent zero-winding theorem -> still needed for exact
+  count equality`.
+- `obstruction_H12_winding`: nonvanishing plus matching endpoints does not force zero winding;
+  the compiled exponential model has log-derivative integral `2*pi*I`.
+- `open_H12_contour`: multiplicity-aware global indented argument principle and Jensen
+  `O(log T)` top-edge variation.
+- `open_H12_base_orientation`: prove `LevinsonMontgomeryNegativeBottom` without an unformalized
+  low-zero table, or find an equivalent actual-zeta zero-winding theorem.
+- `classification`: `historical_route_coverage_delta=1`,
+  `common_admissible_horizontal_delta=1`, `source_dependency_correction_delta=1`,
+  `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `global_goal`: active.

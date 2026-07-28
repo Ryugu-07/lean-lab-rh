@@ -6,6 +6,7 @@ import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
 import LeanLab.Riemann.LevinsonMontgomeryLogDerivMassBridge
 import LeanLab.Riemann.LevinsonMontgomeryBoundarySigns
 import LeanLab.Riemann.LevinsonMontgomeryCriticalIndentation
+import LeanLab.Riemann.SpeiserAdmissibleContour
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -5214,5 +5215,62 @@ example {x : ℝ} (hx : 0 < x) :
 example :
     HardyThetaInversionCertificate :=
   hardyThetaInversion_endpoint
+
+example {a b : ℝ} (ha : 0 < a) :
+    (speiserCommonBadHeightSet a b).Finite :=
+  finite_speiserCommonBadHeightSet ha
+
+example {a b : ℝ} (ha : 0 < a) (hab : a < b) :
+    ∃ t : ℝ, t ∈ Set.Ioo a b ∧ SpeiserCommonZeroFreeHorizontal t :=
+  exists_speiserCommonZeroFreeHorizontal_between ha hab
+
+example (B : ℝ) :
+    ∃ t : ℝ, B < t ∧ SpeiserCommonZeroFreeHorizontal t :=
+  exists_speiserCommonZeroFreeHorizontal_above B
+
+example {t : ℝ} (ht : SpeiserCommonZeroFreeHorizontal t) :
+    IntervalIntegrable
+      (fun sigma : ℝ => logDeriv riemannZeta (sigma + t * Complex.I))
+      (MeasureTheory.volume : MeasureTheory.Measure ℝ) (0 : ℝ) (1 / 2) :=
+  intervalIntegrable_speiserZetaLogDeriv_horizontal ht
+
+example {t : ℝ} (ht : SpeiserCommonZeroFreeHorizontal t) :
+    IntervalIntegrable
+      (fun sigma : ℝ =>
+        logDeriv (deriv riemannZeta) (sigma + t * Complex.I))
+      (MeasureTheory.volume : MeasureTheory.Measure ℝ) (0 : ℝ) (1 / 2) :=
+  intervalIntegrable_speiserZetaDerivLogDeriv_horizontal ht
+
+example {b : ℝ} (hb : SpeiserCommonZeroFreeHorizontal b) :
+    ∃ C : ℝ, 0 ≤ C ∧
+      ‖∫ sigma : ℝ in (0 : ℝ)..(1 / 2),
+          logDeriv riemannZeta (sigma + b * Complex.I)‖ +
+        ‖∫ sigma : ℝ in (0 : ℝ)..(1 / 2),
+          logDeriv (deriv riemannZeta) (sigma + b * Complex.I)‖ ≤ C :=
+  exists_speiserFixedBottomLogDerivBound hb
+
+example :
+    (∫ x : ℝ in (0 : ℝ)..1,
+      logDeriv speiserNonzeroWindingModel x) =
+        2 * (Real.pi : ℂ) * Complex.I :=
+  integral_logDeriv_speiserNonzeroWindingModel
+
+example :
+    (∀ B : ℝ, ∃ t : ℝ, B < t ∧ SpeiserCommonZeroFreeHorizontal t) ∧
+      ∀ b : ℝ, SpeiserCommonZeroFreeHorizontal b →
+        IntervalIntegrable
+          (fun sigma : ℝ =>
+            logDeriv riemannZeta (sigma + b * Complex.I))
+          (MeasureTheory.volume : MeasureTheory.Measure ℝ) (0 : ℝ) (1 / 2) ∧
+        IntervalIntegrable
+          (fun sigma : ℝ =>
+            logDeriv (deriv riemannZeta) (sigma + b * Complex.I))
+          (MeasureTheory.volume : MeasureTheory.Measure ℝ) (0 : ℝ) (1 / 2) ∧
+        ∃ C : ℝ, 0 ≤ C ∧
+          ‖∫ sigma : ℝ in (0 : ℝ)..(1 / 2),
+              logDeriv riemannZeta (sigma + b * Complex.I)‖ +
+            ‖∫ sigma : ℝ in (0 : ℝ)..(1 / 2),
+              logDeriv (deriv riemannZeta) (sigma + b * Complex.I)‖ ≤ C :=
+  speiserAdmissibleHorizontal_endpoint
 
 end LeanLab.Riemann

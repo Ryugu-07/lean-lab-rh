@@ -105,6 +105,7 @@ import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
 import LeanLab.Riemann.LevinsonMontgomeryLogDerivMassBridge
 import LeanLab.Riemann.LevinsonMontgomeryBoundarySigns
 import LeanLab.Riemann.LevinsonMontgomeryCriticalIndentation
+import LeanLab.Riemann.SpeiserAdmissibleContour
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -1630,13 +1631,21 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``exists_levinsonMontgomery_negative_left_semicircle
       status := .proven
       note := "Campaign LITERATURE-20260726-H12-LEVINSON-MONTGOMERY-CRITICAL-INDENTATION-01 differentiates the local xi reflection symmetry to prove that the exact analytic xi zero-factor residual has zero real logarithmic derivative at the center. Dividing by the analytic xi/zeta unit identifies the zeta residual with the strictly negative compiled archimedean term. Continuity plus the nonpositive multiplicity-pole real part then gives the full punctured left half-neighborhood and a complete source indentation semicircle without assuming zero simplicity or using the totalized logarithmic derivative at the zero. The bottom t=10 certificate, global admissible contour construction, argument-principle counts, O(log T), the full Levinson-Montgomery theorem, Speiser equivalence, and RH remain open." },
+    { id := "H12.speiser.common-admissible-horizontal"
+      tier := .tier2
+      title := "Replace the numerical Speiser contour bottom"
+      statement :=
+        "Use local finiteness of the actual zeta and zeta-derivative divisors to construct a common zero-free closed horizontal segment in every positive-height interval, prove both actual logarithmic derivatives are interval integrable there, bound a fixed bottom by one constant, and kernel-check that nonvanishing alone does not force zero winding."
+      leanName := some ``speiserAdmissibleHorizontal_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260728-H12-SPEISER-ADMISSIBLE-CONTOUR-01 reaches MEANINGFUL_PARTIAL and corrects the preregistered full-success mechanism. The common-slice and fixed-bottom theorems remove the source's low-zero table from the bottom contribution to the O(log T) count comparison. They do not replace the strict left-half-plane image used for the exact-count branch: speiserNonzeroWindingModel is everywhere nonzero with matching endpoints, while its log-derivative integral is exactly 2*pi*I. Thus the source dependency splits into an unsigned fixed-bottom edge for the asymptotic count bound and a stronger zero-winding/sign edge for the dichotomy. The global indented argument principle, top Jensen bound, a zero-winding bottom or equivalent base orientation, both count outputs, Speiser equivalence, and RH remain open; historical_route_coverage_delta=1 and rh_frontier_delta=0." },
     { id := "H12.speiser.levinson-montgomery-analytic-counts"
       tier := .tier2
       title := "Prove the Levinson-Montgomery analytic count theorem"
       statement :=
         "Prove LevinsonMontgomeryLogCountBound and LevinsonMontgomeryCountDichotomy for the actual multiplicity-bearing zeta and zeta-derivative rectangle counts, including the functional-equation zero sum, Gamma estimates, low-height boundary sign, indented critical-line contour, and argument-principle bookkeeping."
       status := .inProgress
-      note := "The paired xi zero-mass identity, equation (2.1), explicit Stieltjes digamma bound, negative-mass implication, half-unit localizer, and integer-height dense branch are now compiled. The next exact source obstruction is the low-height and boundary sign package that produces an interior nonnegative-log-derivative witness whenever the exact-count top sequence fails. The later indented critical-line argument principle and O(log T) count difference also remain open. Mathlib supplies analyticity, divisors, Jensen's formula, and complex integration, while no specialized Levinson-Montgomery boundary theorem is currently available." },
+      note := "The paired xi zero-mass identity, equation (2.1), explicit Stieltjes digamma bound, negative-mass implication, half-unit localizer, integer-height dense branch, local critical indentations, and cofinal common zero-free horizontal slices are compiled. A fixed unsigned bottom now contributes only O(1) to the asymptotic count comparison, but a compiled winding-one model proves that nonvanishing alone cannot supply the zero-winding base orientation required by the exact-count branch. The first remaining global edges are the multiplicity-aware indented argument principle, the top Jensen O(log T) variation bound, and either a strict negative bottom or an equivalent zero-winding base theorem. Mathlib has no specialized Levinson-Montgomery contour theorem." },
     { id := "H11.pcc.horizontal-multiplicity-consumer"
       tier := .tier2
       title := "Formalize pair-correlation horizontal multiplicity"
