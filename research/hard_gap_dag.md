@@ -3241,3 +3241,13 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - Lean Action run `30397611979`, build job `90404368803`, `1m57s`, success;
 - proof-source diff from frozen implementation through immutable evidence: empty;
 - next gate: docs-only final ledger public CI.
+
+### Public final-ledger receipt
+
+- final ledger: `4fe9ca23fa5ac19dd4b09b23218cd0279e066cc4`;
+- Lean Action run `30397978810`, build job `90405585480`, `2m8s`, success;
+- proof-source diff from frozen implementation through final ledger: empty;
+- close only `H14-TURING-COMPLETENESS-CONSUMER-01`;
+- retain `H14-TURING-NUMERICAL-CERTIFICATE-01`,
+  `H14-GLOBAL-TAIL-REDUCTION-01`, H14, and RH open;
+- return to fresh historical route selection.

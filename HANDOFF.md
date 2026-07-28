@@ -5161,6 +5161,14 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   `1m57s`, success.
 - `proof_source_diff_frozen_to_evidence`: empty.
 - `next_gate`: publish docs-only final ledger and require public CI, then add closure receipt.
+- `final_ledger`: `4fe9ca23fa5ac19dd4b09b23218cd0279e066cc4`.
+- `ledger_ci`: Lean Action run `30397978810`, build job `90405585480`,
+  `2m8s`, success.
+- `proof_source_diff_frozen_to_ledger`: empty.
+- `local_node_status`: publicly closed at
+  `FULL_TURING_COMPLETENESS_CONSUMER_SUCCESS`.
+- `open_successors`: concrete Turing numerical certificate and global tail reduction.
+- `next_action`: return to fresh historical route selection; persistent RH Goal remains active.
 
 ## 2026-07-29 H2 classical zero-detector local meaningful partial
 

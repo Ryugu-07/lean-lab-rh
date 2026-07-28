@@ -4,8 +4,7 @@ Date: 2026-07-29
 
 Campaign: `LITERATURE-20260729-H14-TURING-COMPLETENESS-CONSUMER-01`
 
-Status: `FULL_TURING_COMPLETENESS_CONSUMER_SUCCESS / PUBLIC_CHAIN_AUDITED /
-FINAL_LEDGER_CI_REQUIRED`
+Status: `FULL_TURING_COMPLETENESS_CONSUMER_SUCCESS / PUBLICLY_CLOSED`
 
 ## Attempt ledger
 
@@ -25,6 +24,7 @@ FINAL_LEDGER_CI_REQUIRED`
 | `LOCAL_AUDIT` | Registered the proven Target, exact open successor, eight TargetChecks, and seven axiom prints; ran warning-as-error, forbidden scans, patch check, and full build. | New 281-line module is diagnostic-free; selected axioms are standard-only; scans are empty; full build passes `8787/8787`. | Freeze this implementation and require public CI. |
 | `FROZEN_IMPLEMENTATION_CI` | Published the exact implementation and registration state. | Commit `258a9ac8ce69f6dffe6beb4a6a7579845ca2a457` passed Lean Action run `30397348488`, build job `90403505298`, in `2m6s`. | Freeze proof sources and publish docs-only immutable evidence. |
 | `IMMUTABLE_EVIDENCE_CI` | Published the proof-source freeze check and local audit receipts without editing Lean source. | Commit `c0b16dce7d8f70a4cc704276713ad824bd37ff3b` passed Lean Action run `30397611979`, build job `90404368803`, in `1m57s`; proof-source diff from frozen implementation is empty. | Publish the final ledger and require public CI. |
+| `FINAL_LEDGER_CI` | Published the complete public chain, classification, deltas, and open successors. | Commit `4fe9ca23fa5ac19dd4b09b23218cd0279e066cc4` passed Lean Action run `30397978810`, build job `90405585480`, in `2m8s`; proof-source diff from frozen implementation is empty. | Publish closure receipt, close only this local node, and return to route selection. |
 
 ## Frozen boundary
 

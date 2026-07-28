@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H14-TURING-COMPLETENESS-CONSUMER-01`
 
 Node: `H14-TURING-COMPLETENESS-CONSUMER-01`
 
-Classification: `FULL_TURING_COMPLETENESS_CONSUMER_SUCCESS / PUBLIC_CHAIN_AUDITED`
+Classification: `FULL_TURING_COMPLETENESS_CONSUMER_SUCCESS / PUBLICLY_CLOSED`
 
 ## Kernel-checked result
 
@@ -78,3 +78,7 @@ before final ledger closure.
 Immutable evidence `c0b16dce7d8f70a4cc704276713ad824bd37ff3b` passed public Lean Action
 run `30397611979`, build job `90404368803`, in `1m57s`. The proof-source diff from frozen
 implementation through immutable evidence is empty. Final ledger CI remains.
+
+Final ledger `4fe9ca23fa5ac19dd4b09b23218cd0279e066cc4` passed public Lean Action
+run `30397978810`, build job `90405585480`, in `2m8s`. The proof-source diff from frozen
+implementation through final ledger is empty. The local node is publicly closed.
