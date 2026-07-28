@@ -5203,3 +5203,24 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   `ROUTE_SELECTION`.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H11 exact moving-window boundary selected
+
+- `parent_public_closure`: Hardy Abel-moment final ledger
+  `72f13a727fd71604095c054cb0f0574436c9795a` passed run `30336884288`, job
+  `90203611755`, in `2m9s`.
+- `campaign`: `LITERATURE-20260728-H11-MOVING-WINDOW-BOUNDARY-01`.
+- `node`: `H11-GALLAGHER-MUELLER-EXACT-BOUNDARY-01`.
+- `source_finding`: Section 9's future-block replacement by full triangular weights is not
+  termwise exact at the upper integration boundary; a point at `T+U` has zero literal overlap
+  but triangular self-weight `U`. The published `O(L^2)` proposition is not rejected.
+- `fixed_endpoint`: exact short-window square integral, pair-overlap kernel, interior triangular
+  mass plus nonnegative top-boundary remainder, local boundary support/bound, explicit
+  future-singleton control, one-sided interior-mass inequality, and actual-zeta
+  multiplicity-preserving specialization.
+- `strict_boundary`: Riemann-von Mangoldt estimates, Fujii's second moment, PCC, HMH,
+  last-exception-sensitive absolute error, sparse-exception amplification, H11, and RH remain
+  open.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.

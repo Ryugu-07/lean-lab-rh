@@ -2672,3 +2672,25 @@ Immutable evidence `2d662d49ebb783d9f3e86a50e752191a12c69754` passed public run
 `30336627329`, build job `90202820261`, in `1m35s`; its `LeanLab/` diff from the frozen
 implementation is empty. This node is at `FULL_FIXED_ENDPOINT_SUCCESS`. After final-ledger CI,
 return to cross-family selection with `HardyXiAbelMomentLaw` retained as an open H1 node.
+
+## 2026-07-28 H11 exact moving-window boundary launch
+
+- `node`: `H11-GALLAGHER-MUELLER-EXACT-BOUNDARY-01`.
+- `mode`: `LITERATURE / OMISSION_AUDIT`.
+- `source_edge`:
+  `Delta_U N square integral -> ordered window-overlap sum`;
+  `interior pairs -> exact triangular mass`;
+  `future pairs -> truncated nonnegative boundary overlap`;
+  `local boundary support -> finite remainder bound`;
+  `one-sided bridge -> interior triangular mass <= second moment`.
+- `source_correction`: full triangular weights are not termwise equal to the literal overlap for
+  ordinates in `(T,T+U]`; the discrepancy is legitimately hidden by the published `O(L^2)`.
+- `positive_control`: a singleton at `T+U` has overlap zero and full triangular self-weight `U`.
+- `actual_zeta_gate`: preserve the existing analytic-multiplicity copies at cutoff `T+U`;
+  retain the lower-support hypothesis because no first-zero certificate is compiled.
+- `remaining_H11_D`: prove the Riemann-von Mangoldt/Fujii analytic second-moment estimate with
+  an error scale capable of detecting a fixed horizontal excess.
+- `remaining_H11_E`: amplify or exclude a sparse actual off-line orbit.
+- `classification_target`: source-bookkeeping and historical-interface progress; no hard-gap or
+  RH-frontier delta.
+- `global_goal`: active.

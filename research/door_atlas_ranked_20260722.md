@@ -1738,3 +1738,24 @@ Immutable evidence `2d662d49ebb783d9f3e86a50e752191a12c69754` passed public run
 `30336627329`, job `90202820261`, in `1m35s`, with an empty `LeanLab/` diff from the frozen
 implementation. The next route decision must compare the source-law edge against unfinished
 H2, H7, H9, H10, H11, H12, and other historical nodes rather than following H1 by inertia.
+
+### Post-Hardy rerank: H11 exact moving-window boundary
+
+Hardy's conditional Abel-moment consumer is publicly closed at final ledger
+`72f13a727fd71604095c054cb0f0574436c9795a`. Fresh comparison retains its source Abel law,
+H2 bow exclusion, H7 convergence, H10 geometric transfer, H12 global counting, and direct RH
+attacks as open.
+
+H11 is selected at the moving-height interface immediately preceding Fujii's second moment.
+Goldston--Lee--Schettler--Suriajaya Section 9 correctly defines the pair contribution as the
+measure of window positions in `[0,T]`, but its displayed future-block replacement uses the
+untruncated triangular weight and absorbs the discrepancy in `O(L^2)`. The replacement is not
+termwise exact: an ordinate at `T+U` has zero literal overlap and triangular self-weight `U`.
+This does not invalidate Proposition 1.
+
+Campaign `LITERATURE-20260728-H11-MOVING-WINDOW-BOUNDARY-01` freezes the exact overlap kernel,
+the ordered-pair square-integral expansion, interior triangular mass plus a nonnegative local
+boundary remainder, a boundary-count bound, the explicit endpoint control, a one-sided
+interior-mass inequality, and the actual multiplicity-expanded zeta specialization. The missing
+first-zero certificate remains a premise. Fujii's estimate, PCC, absolute last-exception
+control, sparse-exception amplification, H11, and RH remain open.

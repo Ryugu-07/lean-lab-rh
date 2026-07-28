@@ -4547,3 +4547,26 @@ Docs-only immutable evidence `2d662d49ebb783d9f3e86a50e752191a12c69754` passed p
 `30336627329`, job `90202820261`, in `1m35s`; no proof source changed. The contradiction
 consumer is now at its local stop. Final-ledger CI is the only remaining gate before a fresh
 cross-family comparison.
+
+Final-ledger commit `72f13a727fd71604095c054cb0f0574436c9795a` passed run
+`30336884288`, build job `90203611755`, in `2m9s`; the conditional Hardy source-logic endpoint
+is publicly closed and `HardyXiAbelMomentLaw` remains open.
+
+## H11 Exact Moving-Window Boundary Selection
+
+Fresh H1/H2/H7/H10/H11/H12 comparison returns to H11 for a different reason than the completed
+triangular-mass campaign. Section 9 of the modern no-RH pair-correlation source first identifies
+the literal overlap measure for a moving interval, then replaces upper-boundary contributions
+by full triangular weights within an `O(L^2)` error.
+
+That replacement is asymptotically sufficient but not termwise exact. A point at `T+U` is seen
+only at the single integration endpoint and therefore contributes zero measure, while its full
+triangular self-weight is `U`. The selected campaign keeps the exact overlap and tests whether
+the second moment splits as interior triangular mass plus a nonnegative, locally supported
+top-boundary remainder.
+
+The resulting one-sided inequality may remove the top-boundary `O(L^2)` from an upper-bound
+consumer, but it does not remove Fujii's analytic error and does not yet detect one sparse
+off-line orbit. The fixed campaign also requires an actual-zeta multiplicity-preserving
+specialization and records the absent first-zero certificate as an explicit premise rather than
+an imported numerical fact.
