@@ -5315,6 +5315,29 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   selection; conjecture and direct-proof tracks remain open.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-29 H8 Conrey--Li half-strip selected
+
+- `parent_public_closure`: H12 closure receipt
+  `5861e2fcc0eacaef93db3a665cb29df7ca79d790`, run `30404007167`, job
+  `90425190201`, passed in `1m35s`.
+- `campaign`: `LITERATURE-20260729-H8-CONREY-LI-HALF-STRIP-01`.
+- `node`: `H8-CONREY-LI-HALF-STRIP-EXTENSION-01`.
+- `selection_reason`: Conrey--Li Theorem 2 contains a bounded second-stage Hardy-RKHS
+  continuation whose first upper-half-plane producer already compiles, but whose multiplier
+  well-definedness, restricted-center density, adjoint convention, and analytic continuation
+  have not been checked.
+- `full_endpoint`: construct the source half-strip Hardy RKHS and contractive multiplier, then
+  prove the actual upper Cayley transform extends analytically with norm at most one throughout
+  `Im z>-1/2`.
+- `meaningful_partial`: compile the restricted-center density and complete adjoint continuation
+  consumer under an explicit contractive multiplier, while recording the first concrete Hardy
+  construction failure.
+- `strict_boundary`: no concrete `F(W)` or positive shift for actual xi, H8, or RH.
+- `next_gate`: publish docs-only preregistration and require public CI before any `LeanLab/`
+  edit.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-29 H9 Conrey actual-seven publicly closed
 
 - `final_ledger`: `5dab6664c49e5e03effe9ac309256eaf91e5a171`.

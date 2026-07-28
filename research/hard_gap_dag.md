@@ -3377,3 +3377,28 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `final_ledger`: `b3fdeb26b8aa077c0d0db68c379b4433a3feeba6`.
 - `final_ledger_public_ci`: run `30403814535`, build job `90424563153`, passed in `1m35s`.
 - `next_gate`: publish docs-only closure receipt, then return to cross-family selection.
+
+## 2026-07-29 H8 Conrey--Li half-strip launch
+
+- `parent_public_closure`: H12 closure receipt
+  `5861e2fcc0eacaef93db3a665cb29df7ca79d790`, run `30404007167`, job
+  `90425190201`, passed in `1m35s`.
+- `H8-CONREY-LI-HALF-STRIP-EXTENSION-01`: selected after fresh
+  H8/H1/H2/H7/H10/H11/H12 comparison.
+- `compiled_predecessor`:
+  `upper RKHS shift semipositivity`;
+  `-> shifted-kernel positivity`;
+  `-> upper Cayley transform analytic with norm <= 1`.
+- `fixed_source_edge`:
+  `half-strip Hardy kernel + upper-center density`;
+  `+ positive-kernel contractive multiplier`;
+  `+ adjoint and analytic uniqueness`;
+  `-> analytic Cayley extension with norm <= 1 on Im z > -1/2`.
+- `meaningful_partial`: exact half-strip/kernel algebra, restricted-center density in an
+  analytic RKHS, and the adjoint continuation/norm consumer under an explicit contractive
+  multiplier; first failed concrete Hardy or multiplier theorem recorded exactly.
+- `negative_control`: bounded upper-half-plane analyticity alone does not provide a specified
+  continuation across the boundary.
+- `strict_boundary`: no concrete actual-xi RKHS or positive shift, H8, or RH.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- `global_goal`: active.
