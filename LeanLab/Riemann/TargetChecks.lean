@@ -15,6 +15,7 @@ import LeanLab.Riemann.TuringCompletenessConsumer
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.ConreyLiPhaseObstruction
+import LeanLab.Riemann.ConreyLiHalfStrip
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.BombieriStepanovPolarInjectivity
 import LeanLab.Riemann.WeilHodgeLattice
@@ -244,6 +245,7 @@ def checkedTargetNames : List Lean.Name :=
     ``dirichletFamilyInclusionAudit_endpoint,
     ``finiteHeightPromotionAudit_endpoint,
     ``turingCompletenessConsumer_endpoint,
+    ``conreyLiHalfStrip_endpoint_of_rkhs_shift,
     ``levinsonMontgomeryDenseBranch_of_not_cofinallyNegativeLogDerivAtIntegers,
     ``riemannHypothesis_iff_nontrivial_zeros_on_line ]
 
@@ -5432,6 +5434,87 @@ example {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]
     (hW : ∀ w : ℍ, W w ≠ 0) :
     ConreyLiRKHSShiftCertificate W :=
   conreyLiRKHSShift_endpoint W T hkernel hshift hpositive hW
+
+example (W : ℂ → ℂ) (w z : ℍ)
+    (hWw : W w + W (conreyLiUpperShift w) ≠ 0)
+    (hWz : W z + W (conreyLiUpperShift z) ≠ 0) :
+    conreyLiKernel W w (conreyLiUpperShift z) +
+        conreyLiKernel W (conreyLiUpperShift w) z =
+      ((W z + W (conreyLiUpperShift z)) *
+          conj (W w + W (conreyLiUpperShift w)) / 2) *
+        ((1 - conreyLiCayley W z * conj (conreyLiCayley W w)) *
+          conreyLiHardyKernel w z) :=
+  conreyLi_shiftedKernel_add_eq_halfStripDefect W w z hWw hWz
+
+example (H : Type*) [NormedAddCommGroup H] [InnerProductSpace ℂ H]
+    [CompleteSpace H] [RKHS ℂ H ℂ ℂ]
+    (hanalytic :
+      ∀ f : H, AnalyticOnNhd ℂ (fun z : ℂ => f z) conreyLiHalfStrip)
+    (hunique :
+      ∀ f : H, (∀ z ∈ conreyLiHalfStrip, f z = 0) → f = 0) :
+    (Submodule.span ℂ (conreyLiUpperKernelSet H)).topologicalClosure = ⊤ :=
+  conreyLiUpperKernel_span_dense H hanalytic hunique
+
+example (H : Type*) [NormedAddCommGroup H] [NormedSpace ℂ H]
+    [CompleteSpace H] {ι : Type*} (v u : ι → H)
+    (hdense :
+      (Submodule.span ℂ (Set.range v)).topologicalClosure = ⊤)
+    (hnorm : ∀ c : ι →₀ ℂ,
+      ‖Finsupp.linearCombination ℂ u c‖ ≤
+        ‖Finsupp.linearCombination ℂ v c‖) :
+    ∃ P : H →L[ℂ] H, ‖P‖ ≤ 1 ∧ ∀ i, P (v i) = u i :=
+  exists_contraction_of_finsupp_rule H v u hdense hnorm
+
+example
+    (Hupper Hhalf : Type*)
+    [NormedAddCommGroup Hupper] [InnerProductSpace ℂ Hupper]
+    [CompleteSpace Hupper] [RKHS ℂ Hupper ℍ ℂ]
+    [NormedAddCommGroup Hhalf] [InnerProductSpace ℂ Hhalf]
+    [CompleteSpace Hhalf] [RKHS ℂ Hhalf ℂ ℂ]
+    (W : ℂ → ℂ) (T : Hupper →ₗ[ℂ] Hupper)
+    (hkernelUpper : ∀ w z : ℍ,
+      RKHS.kernel Hupper z w 1 = conreyLiKernel W w z)
+    (hshift : ∀ w : ℍ,
+      T (RKHS.kerFun Hupper w 1) =
+        RKHS.kerFun Hupper (conreyLiUpperShift w) 1)
+    (hpositiveUpper :
+      ∀ f : Hupper, 0 ≤ (inner ℂ f (T f)).re)
+    (hW : ∀ w : ℍ, W w ≠ 0)
+    (hkernelHalf :
+      ∀ w ∈ conreyLiHalfStrip, ∀ z ∈ conreyLiHalfStrip,
+        RKHS.kernel Hhalf z w 1 = conreyLiHardyKernel w z)
+    (c : ℍ →₀ ℂ) :
+    0 ≤ (conreyLiMultiplierDefectQuadratic Hhalf W c).re :=
+  conreyLiMultiplierDefectQuadratic_re_nonneg_of_rkhs_shift
+    Hupper Hhalf W T hkernelUpper hshift hpositiveUpper hW
+      hkernelHalf c
+
+noncomputable example
+    (Hupper Hhalf : Type*)
+    [NormedAddCommGroup Hupper] [InnerProductSpace ℂ Hupper]
+    [CompleteSpace Hupper] [RKHS ℂ Hupper ℍ ℂ]
+    [NormedAddCommGroup Hhalf] [InnerProductSpace ℂ Hhalf]
+    [CompleteSpace Hhalf] [RKHS ℂ Hhalf ℂ ℂ]
+    (W : ℂ → ℂ) (T : Hupper →ₗ[ℂ] Hupper)
+    (hkernelUpper : ∀ w z : ℍ,
+      RKHS.kernel Hupper z w 1 = conreyLiKernel W w z)
+    (hshift : ∀ w : ℍ,
+      T (RKHS.kerFun Hupper w 1) =
+        RKHS.kerFun Hupper (conreyLiUpperShift w) 1)
+    (hpositiveUpper :
+      ∀ f : Hupper, 0 ≤ (inner ℂ f (T f)).re)
+    (hW : ∀ w : ℍ, W w ≠ 0)
+    (hanalytic :
+      ∀ f : Hhalf,
+        AnalyticOnNhd ℂ (fun z : ℂ => f z) conreyLiHalfStrip)
+    (hunique :
+      ∀ f : Hhalf, (∀ z ∈ conreyLiHalfStrip, f z = 0) → f = 0)
+    (hkernelHalf :
+      ∀ w ∈ conreyLiHalfStrip, ∀ z ∈ conreyLiHalfStrip,
+        RKHS.kernel Hhalf z w 1 = conreyLiHardyKernel w z) :
+    ConreyLiHalfStripCertificate W :=
+  conreyLiHalfStrip_endpoint_of_rkhs_shift Hupper W T
+    hkernelUpper hshift hpositiveUpper hW hanalytic hunique hkernelHalf
 
 example (coeff : ℕ → ℂ) (N : ℕ) :
     Continuous (fun t : ℝ =>

@@ -6096,3 +6096,31 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   cross-family `ROUTE_SELECTION`.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-29 H8 Conrey--Li half-strip local meaningful partial
+
+- `campaign`: `LITERATURE-20260729-H8-CONREY-LI-HALF-STRIP-01`.
+- `classification`: `MEANINGFUL_PARTIAL / LOCAL_AUDIT_GREEN`.
+- `compiled_edge`:
+  `upper RKHS shift positivity`;
+  `-> exact shifted-kernel/Hardy-defect factorization and defect positivity`;
+  `+ half-strip analytic RKHS with exact source kernel`;
+  `-> dense upper-center kernel span`;
+  `-> global contractive multiplier`;
+  `-> adjoint analytic Cayley continuation with norm <= 1`.
+- `source_hinge`: coefficient rescaling by
+  `1/conj(W(w)+W(w+i))` compiles the paper's first-positive-kernel to second-positive-kernel
+  implication; the sums are nonzero from ratio real-part nonnegativity.
+- `proven_target`: `H8.de-branges.conrey-li-half-strip-adjoint-consumer`.
+- `open_full_target`: `H8.de-branges.conrey-li-half-strip-extension`.
+- `first_unavailable_object`: the concrete Hardy RKHS on `Im z>-1/2`, including completeness,
+  continuous evaluation, the exact reproducing kernel, and analytic uniqueness.
+- `additional_boundary`: the final Cayley-to-`W` continuation and the actual `F(W)`/xi shift
+  premise remain open.
+- `audit`: 740-line no-sorry module; five new exact checks; eleven selected standard-only
+  axiom prints; empty forbidden scans; warning-as-error compiles; full build `8790/8790`.
+- `rh_frontier_delta`: `0`; H8 and RH remain open.
+- `next_gate`: freeze and publish the implementation, then docs-only immutable evidence and
+  final ledger.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.

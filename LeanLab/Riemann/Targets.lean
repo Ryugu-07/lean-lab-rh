@@ -122,6 +122,7 @@ import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.ConreyLiPhaseObstruction
 import LeanLab.Riemann.ConreyLiRKHSShift
+import LeanLab.Riemann.ConreyLiHalfStrip
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.BombieriStepanovPolarInjectivity
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
@@ -1754,13 +1755,21 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``conreyLiRKHSShift_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260729-H8-CONREY-LI-RKHS-SHIFT-01 reconstructs the first stage of Conrey-Li 1998 Theorem 2 using Mathlib's actual RKHS API. It compiles the source kernel normalization, both inner-product conventions, arbitrary finite-combination positivity, diagonal shifted-ratio nonnegativity, and the Cayley closed-unit-disk bound. The source premise is non-strict, so no zero-vector defect exists. The concrete space F(W), actual W=1/xi(1-i*z) shift-operator positivity, the second Hardy-RKHS multiplier/adjoint argument, analytic continuation to Im z > -1/2, H8, and RH remain open." },
+    { id := "H8.de-branges.conrey-li-half-strip-adjoint-consumer"
+      tier := .tier2
+      title := "Formalize the Conrey-Li half-strip adjoint consumer"
+      statement :=
+        "Assuming a scalar RKHS on Im z > -1/2 with the exact Hardy kernel and analytic uniqueness, derive the source defect-kernel positivity from the upper RKHS shift producer, extend the kernel multiplier by density, and construct an analytic contractive continuation of the source Cayley transform."
+      leanName := some ``conreyLiHalfStrip_endpoint_of_rkhs_shift
+      status := .proven
+      note := "Campaign LITERATURE-20260729-H8-CONREY-LI-HALF-STRIP-01 kernel-checks the second functional-analytic stage of Conrey-Li 1998 Theorem 2. The compiled chain proves the exact shifted-kernel/Hardy-defect identity, restricted upper-center density under analytic uniqueness, well-defined norm-decreasing extension from finite kernel combinations, the conjugated multiplier convention, adjoint analytic continuation, and the pointwise half-strip norm bound. It assumes rather than constructs the concrete half-strip Hardy RKHS instance and its exact kernel/analytic interface. It does not construct the actual F(W) space, prove the actual-xi shift positivity, continue W itself, prove H8, or prove RH." },
     { id := "H8.de-branges.conrey-li-half-strip-extension"
       tier := .tier2
       title := "Formalize the Conrey-Li Hardy-RKHS half-strip extension"
       statement :=
         "Construct the Hardy RKHS on Im z > -1/2 with kernel 1/(2*pi*i*(conj(w)-z-i)), extend the source contractive multiplier and its adjoint from upper-half-plane kernel centers by density, and prove analytic continuation and norm at most one for the Cayley transform throughout the half-strip."
       status := .inProgress
-      note := "The upper-half-plane RKHS producer now compiles. The remaining source stage needs the concrete half-strip Hardy space, density of kernel centers restricted to Im w>0, a bounded multiplier obtained from the positive kernel, its adjoint, and an identity-theorem continuation. No upper-half-plane bound is promoted to the half-strip without these inputs." },
+      note := "The upper RKHS producer and the complete abstract half-strip consumer now compile. The first unavailable source object is the concrete Hardy RKHS on Im z > -1/2, including its normed function-space construction, completeness, evaluation continuity, exact reproducing kernel, and analyticity/uniqueness interface. The actual F(W) space and actual-xi shift positivity also remain open; no abstract instance is presented as either construction." },
     { id := "D9.suzuki.actual-canonical-system-limit"
       tier := .tier2
       title := "Construct Suzuki's actual canonical-system limit"

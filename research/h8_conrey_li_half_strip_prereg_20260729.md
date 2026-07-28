@@ -8,7 +8,7 @@ Node: `H8-CONREY-LI-HALF-STRIP-EXTENSION-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTED_LOCAL / PUBLIC_IMPLEMENTATION_REQUIRED`
 
 ## Primary source and exact inference
 
@@ -141,3 +141,7 @@ found, `rh_frontier_delta=0`.
 
 Commit and push this docs-only preregistration first. Public Lean Action CI must pass before
 editing any `LeanLab/` proof source, target registry, exact check, or axiom-audit file.
+
+The preregistration was published as
+`e7aa9a11f39b478e54d4c061898e27804b277b3e`; Lean Action run `30404566877`, build job
+`90427003191`, passed in `1m47s`. The production gate then opened.

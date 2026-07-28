@@ -3402,3 +3402,30 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `strict_boundary`: no concrete actual-xi RKHS or positive shift, H8, or RH.
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.
+
+## 2026-07-29 H8 Conrey--Li half-strip local result
+
+- `classification`: `MEANINGFUL_PARTIAL / LOCAL_AUDIT_GREEN`.
+- `compiled_source_path`:
+  `upper RKHS shift semipositivity`;
+  `-> shifted-kernel positivity`;
+  `-> exact Hardy defect-kernel positivity by nonzero diagonal rescaling`;
+  `-> norm-decreasing finite kernel multiplier`;
+  `-> unique global contraction by dense extension`;
+  `-> adjoint analytic continuation and norm <= 1 on Im z>-1/2`.
+- `closed_hinges`: source kernel factorization, multiplier-sum nonvanishing, restricted-center
+  density, linear-dependence/well-definedness, conjugation convention, analytic identity, and
+  diagonal-kernel cancellation.
+- `proven_target`: `H8.de-branges.conrey-li-half-strip-adjoint-consumer`.
+- `first_open_producer`: concrete half-strip Hardy RKHS construction and exact kernel/analytic
+  instance.
+- `next_open_source_edge`: strict maximum modulus plus Cayley inversion to continue `W` and
+  `W(z)/W(z+i)`.
+- `actual_xi_edge`: construct `F(W)` and prove shift positivity for
+  `W=1/xi(1-i*z)`.
+- `audit`: 740 lines, no sorry, five new exact checks, eleven standard-only axiom prints,
+  three empty scans, and full build `8790/8790`.
+- `deltas`: historical functional-analytic hinge and positive-kernel transfer each `+1`;
+  concrete source space, actual-xi premise, H8, hard gap, and RH frontier remain `0`.
+- `next_gate`: frozen implementation public CI.
+- `global_goal`: active.

@@ -124,6 +124,7 @@ import LeanLab.Riemann.LevinsonMontgomeryLeftHalfPlaneWinding
 import LeanLab.Riemann.JensenEventualHyperbolicity
 import LeanLab.Riemann.ConreyLiPhaseObstruction
 import LeanLab.Riemann.ConreyLiRKHSShift
+import LeanLab.Riemann.ConreyLiHalfStrip
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.BombieriStepanovPolarInjectivity
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
@@ -1179,6 +1180,17 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.conreyLiShiftedKernelQuadratic_re_nonneg_of_rkhs_shift
 #print axioms LeanLab.Riemann.conreyLiUpperShiftRatio_re_nonneg_of_rkhs_shift
 #print axioms LeanLab.Riemann.conreyLiRKHSShift_endpoint
+#print axioms LeanLab.Riemann.conreyLiUpperHardyDenominator_ne_zero
+#print axioms LeanLab.Riemann.conreyLi_shiftedKernel_add_eq_halfStripDefect
+#print axioms LeanLab.Riemann.conreyLiUpperKernel_span_dense
+#print axioms LeanLab.Riemann.exists_contraction_of_finsupp_rule
+#print axioms LeanLab.Riemann.conreyLiMultiplierDefectQuadratic_eq_inner_sub
+#print axioms LeanLab.Riemann.conreyLiMultiplierDefectQuadratic_re_nonneg_of_rkhs_shift
+#print axioms LeanLab.Riemann.exists_conreyLiKernelMultiplier_of_defect_nonneg
+#print axioms LeanLab.Riemann.conreyLi_adjoint_apply_upper
+#print axioms LeanLab.Riemann.conreyLi_adjoint_multiplier_identity
+#print axioms LeanLab.Riemann.norm_conreyLiHalfStripCayleyExtension_le_one
+#print axioms LeanLab.Riemann.conreyLiHalfStrip_endpoint_of_rkhs_shift
 #print axioms LeanLab.Riemann.continuous_selbergRootMollifier_criticalLine
 #print axioms LeanLab.Riemann.selbergRootSquare_nonneg
 #print axioms LeanLab.Riemann.hardyXi_pos_of_selbergMollifiedHardyXi_pos
