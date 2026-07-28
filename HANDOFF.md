@@ -5258,11 +5258,11 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
-## 2026-07-29 H12 left-half-plane winding local success
+## 2026-07-29 H12 left-half-plane winding implementation public green
 
 - `preregistration_gate`: commit `a0f051cb09c8ef309cd9458e712adfcf1029851b`,
   run `30402375932`, build job `90420000555`, passed in `1m39s`.
-- `classification`: `FULL_SUCCESS_LOCAL / PUBLIC_IMPLEMENTATION_CI_REQUIRED`.
+- `classification`: `FULL_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN`.
 - `compiled_module`: `LeanLab/Riemann/LevinsonMontgomeryLeftHalfPlaneWinding.lean`.
 - `compiled_generic_edge`: strict-left differentiable paths have the principal-log endpoint
   formula for `integral g'/g`; a closed such path has zero logarithmic winding.
@@ -5276,7 +5276,11 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   scans; warning-as-error compiles; full build `8789/8789`.
 - `strict_boundary`: no actual strict-negative height, global indented argument principle,
   Jensen top bound, count theorem, Speiser equivalence, H12, or RH.
-- `next_gate`: publish frozen implementation and require public Lean Action CI.
+- `frozen_implementation`: `0a1248f2a02fec9d3cf0e774bc6eb4fe8959e0ec`.
+- `implementation_public_ci`: run `30403264392`, build job `90422806378`, passed in `3m4s`.
+- `proof_freeze`: the five proof and registration sources have an empty diff from the frozen
+  implementation.
+- `next_gate`: publish docs-only immutable evidence and require public Lean Action CI.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 

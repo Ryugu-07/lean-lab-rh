@@ -8,7 +8,7 @@ Node: `H12-LM-LEFT-HALF-PLANE-WINDING-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `FULL_SUCCESS_LOCAL / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `FULL_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_CI_REQUIRED`
 
 ## Fixed target
 
@@ -33,6 +33,8 @@ The full statement, negative control, and claim boundary are fixed in
 | `ACTUAL_RATIO_DERIVATIVE` | Differentiated `deriv riemannZeta / riemannZeta` and restricted it to a real horizontal parameter. | Compiled the exact factorization by `logDeriv zeta' - logDeriv zeta`. The horizontal theorem requires `0 < t` to prove the point is not `1`. | Record the totalized-zeta boundary; do not weaken the analytic premise. |
 | `ACTUAL_HORIZONTAL_ENDPOINT` | Combined the ratio derivative, inherited integrability, strict negativity, and the principal-log endpoint theorem. | Compiled the exact actual `zeta'/zeta` horizontal endpoint formula. | Register the aggregate target and exact checks. |
 | `LOCAL_AUDIT` | Ran warning-as-error compiles, seven exact TargetChecks, seven selected axiom prints, three forbidden scans, `git diff --check`, and the full build. | All checks passed; selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; full build completed `8789/8789`. | Freeze implementation and require public CI. |
+| `IMPLEMENTATION_PUBLIC_CI` | Published frozen implementation `0a1248f2a02fec9d3cf0e774bc6eb4fe8959e0ec`. | Lean Action run `30403264392`, build job `90422806378`, passed in `3m4s`. | Freeze proof-source hash and publish immutable evidence. |
+| `PROOF_FREEZE` | Compared the five proof and registration sources against the frozen implementation. | Diff is empty. | Evidence commit must remain documentation-only. |
 
 ## Current frontier
 
@@ -45,7 +47,8 @@ The full statement, negative control, and claim boundary are fixed in
 - `separate_asymptotic_edge`: Jensen `O(log T)` top variation.
 - `rh_frontier_delta`: `0`.
 - `local_classification`: `FULL_SUCCESS_LOCAL`.
-- `next_gate`: frozen implementation commit and public Lean Action CI.
+- `frozen_implementation`: `0a1248f2a02fec9d3cf0e774bc6eb4fe8959e0ec`.
+- `next_gate`: docs-only immutable evidence and public Lean Action CI.
 
 ## Runtime record
 

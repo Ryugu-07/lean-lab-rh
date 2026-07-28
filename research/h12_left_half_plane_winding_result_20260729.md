@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H12-LEFT-HALF-PLANE-WINDING-01`
 
 Node: `H12-LM-LEFT-HALF-PLANE-WINDING-01`
 
-Classification: `FULL_SUCCESS_LOCAL / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Classification: `FULL_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN`
 
 ## Compiled result
 
@@ -58,6 +58,10 @@ nonvanishing to analyticity was introduced.
   `axiom/constant`, or relaxed resource/trace option
 - `git diff --check`: passed
 - full build: `8789/8789` passed
+- frozen implementation commit:
+  `0a1248f2a02fec9d3cf0e774bc6eb4fe8959e0ec`
+- public Lean Action: run `30403264392`, build job `90422806378`, passed in `3m4s`
+- proof-source diff from the frozen implementation at evidence creation: empty
 
 ## Claim boundary
 

@@ -8,7 +8,7 @@ Node: `H12-LM-LEFT-HALF-PLANE-WINDING-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `PREREGISTERED_PUBLIC_GREEN / IMPLEMENTATION_LOCAL_FULL_SUCCESS`
+Status: `PREREGISTERED_PUBLIC_GREEN / IMPLEMENTATION_PUBLIC_GREEN`
 
 ## Primary source and exact inference
 
@@ -197,7 +197,9 @@ editing any `LeanLab/` proof source, target registry, exact check, or axiom-audi
 - `preregistration_commit`: `a0f051cb09c8ef309cd9458e712adfcf1029851b`
 - `public_ci`: run `30402375932`, build job `90420000555`, passed in `1m39s`
 - `production_gate`: satisfied before any `LeanLab/` proof-source edit
-- `local_classification`: `FULL_SUCCESS_LOCAL / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+- `classification`: `FULL_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN`
+- `frozen_implementation`: `0a1248f2a02fec9d3cf0e774bc6eb4fe8959e0ec`
+- `implementation_public_ci`: run `30403264392`, build job `90422806378`, passed in `3m4s`
 - `result_record`: `research/h12_left_half_plane_winding_result_20260729.md`
 - `definition_boundary_exposed`: the actual horizontal derivative theorem needs `0 < t`
   explicitly. Nonvanishing of Mathlib's totalized `riemannZeta` does not by itself exclude

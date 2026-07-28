@@ -3225,7 +3225,6 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   three empty forbidden scans; full build `8787/8787`.
 - `deltas`: historical subroute coverage, positive Turing consumer, and actual xi count bridge
   each `+1`; certified height, global tail, hard gap, and RH frontier remain `0`.
-- `next_gate`: freeze implementation and require public Lean Action CI.
 - `global_goal`: active.
 
 ### Public implementation receipt
@@ -3345,9 +3344,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.
 
-## 2026-07-29 H12 left-half-plane winding local result
+## 2026-07-29 H12 left-half-plane winding implementation public green
 
-- `classification`: `FULL_SUCCESS_LOCAL / PUBLIC_IMPLEMENTATION_CI_REQUIRED`.
+- `classification`: `FULL_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN`.
 - `preregistration_gate`: commit `a0f051cb09c8ef309cd9458e712adfcf1029851b`,
   run `30402375932`, build job `90420000555`, passed in `1m39s`.
 - `compiled_generic_edge`:
@@ -3369,3 +3368,8 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   analytic sign production, count outputs, Speiser equivalence, H12, and RH remain `0`.
 - `next_gate`: freeze implementation and require public Lean Action CI.
 - `global_goal`: active.
+- `frozen_implementation`: `0a1248f2a02fec9d3cf0e774bc6eb4fe8959e0ec`.
+- `implementation_public_ci`: run `30403264392`, build job `90422806378`, passed in `3m4s`.
+- `proof_freeze`: the five proof and registration sources have an empty diff from the frozen
+  implementation.
+- `next_gate`: publish docs-only immutable evidence and require public CI.
