@@ -2,7 +2,7 @@
 
 Campaign: `LITERATURE-20260728-H1-HARDY-ABEL-MOMENT-01`
 
-Status: `LOCAL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_CI_PENDING`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 
 ## Target
 
@@ -77,6 +77,16 @@ Status: `LOCAL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_CI_PENDING`
 - The project zero dictionary converts unbounded real zeros into an infinite set of actual
   critical-line nontrivial zeros.
 
+## Loop 4 frozen implementation public gate
+
+- Frozen implementation commit:
+  `2d5b5e2e692e8622263142a1205971c611736a78`.
+- Public Lean Action run `30336360223`, build job `90201998436`, passed in `2m17s`.
+- The public commit contains the 790-line production module, registry entries, exact checks,
+  axiom audit, and the loop logs listed in its 11-file manifest.
+- Proof sources are frozen. The next commit is docs-only immutable evidence and must have an
+  empty `LeanLab/` diff from the frozen implementation.
+
 ## Mechanical audit
 
 - exact module compilation: pass with `-DwarningAsError=true`
@@ -117,4 +127,6 @@ Status: `LOCAL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_CI_PENDING`
   `HANDOFF.md`, route files, production targets, source, git status, and external memory
 - `commit_and_CI`: preregistration commit
   `03a788e80e6ca0acfb82a41c8e3663bda3a9ef79` passed public run `30334772898`,
-  job `90197213274`; implementation commit and public CI pending
+  job `90197213274`; frozen implementation
+  `2d5b5e2e692e8622263142a1205971c611736a78` passed public run `30336360223`,
+  job `90201998436`; immutable evidence pending

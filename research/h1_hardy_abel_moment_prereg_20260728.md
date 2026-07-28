@@ -8,7 +8,7 @@ Selected node: `H1-HARDY-ABEL-MOMENT-AMPLIFICATION-01`
 
 Mode: `LITERATURE`
 
-Status: `LOCAL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_CI_PENDING`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 
 ## Exact historical statement
 
@@ -197,3 +197,7 @@ warning-as-error. Eight selected transitive axiom prints contain only `propext`,
 This is conditional historical-source logic. `HardyXiAbelMomentLaw` is a `Prop` structure
 supplied as a theorem hypothesis, not an axiom or compiled source theorem. The implementation
 must pass public CI before it is frozen.
+
+Frozen implementation `2d5b5e2e692e8622263142a1205971c611736a78` passed public Lean Action
+run `30336360223`, build job `90201998436`, in `2m17s`. The proof source and all registered
+statements are now frozen; immutable evidence must be docs-only.

@@ -2663,3 +2663,7 @@ implementation `15381a49ff4dfb92a0ab4e29d5e76383f9789139` is empty. This node re
   `hard_gap_delta=0`, `rh_frontier_delta=0`.
 - `next_gate`: frozen implementation public CI.
 - `global_goal`: active.
+
+Frozen implementation `2d5b5e2e692e8622263142a1205971c611736a78` passed public Lean Action
+run `30336360223`, build job `90201998436`, in `2m17s`. The complete conditional consumer is
+public-green. Proof sources remain frozen while docs-only immutable evidence is published.

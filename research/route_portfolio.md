@@ -4537,3 +4537,8 @@ remaining analytic door sharply: derive interior integrability and the left Abel
 Hardy's Cahen-Mellin/theta identity. The boundary integral at `alpha=pi/2` is still not assumed.
 Local audits pass with 11 exact checks, eight standard-only axiom prints, and the full
 `8777/8777` build. Public implementation CI remains the next gate.
+
+Frozen implementation `2d5b5e2e692e8622263142a1205971c611736a78` passed public run
+`30336360223`, build job `90201998436`, in `2m17s`. The conditional Hardy source-logic endpoint
+is public-green; docs-only immutable evidence is next, with the source Abel law retained as the
+open H1 analytic edge.

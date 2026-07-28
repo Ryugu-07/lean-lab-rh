@@ -1728,3 +1728,8 @@ Lebesgue integral. The next historical-source question is therefore whether Hard
 Cahen-Mellin/theta derivation can be compiled into `HardyXiAbelMomentLaw` without importing a
 stronger convergence premise. Until then, the zero-infinitude result is conditional and does
 not move H1 or RH.
+
+Frozen implementation `2d5b5e2e692e8622263142a1205971c611736a78` passed public run
+`30336360223`, build job `90201998436`, in `2m17s`. This freezes the exact conditional
+amplification logic. The atlas must continue to rank the unproved source Abel law separately
+from the now-closed contradiction consumer.

@@ -5175,3 +5175,16 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `next_gate`: commit and publish the frozen implementation, then require public Lean Action CI.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H1 Hardy Abel-moment implementation public green
+
+- `prereg_public`: `03a788e80e6ca0acfb82a41c8e3663bda3a9ef79`, run
+  `30334772898`, job `90197213274`, `1m38s`.
+- `frozen_implementation`: `2d5b5e2e692e8622263142a1205971c611736a78`.
+- `public_ci`: run `30336360223`, build job `90201998436`, `2m17s`.
+- `result`: `HARDY_ABEL_MOMENT_AMPLIFICATION_FORMALIZED`.
+- `proof_freeze`: do not modify any `LeanLab/` file before immutable-evidence CI.
+- `strict_boundary`: the source Abel law, quantitative counts, H1, and RH remain open.
+- `next_gate`: docs-only immutable evidence and public CI.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
