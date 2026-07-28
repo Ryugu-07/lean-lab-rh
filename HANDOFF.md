@@ -5611,3 +5611,17 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `next_gate`: publish docs-only immutable evidence and require public CI.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H10 Weil surface Hodge-lattice immutable evidence public green
+
+- `immutable_evidence`: `c4fef4621dbed9831a38a5774587672122d45dfd`.
+- `public_ci`: run `30384971222`, build job `90361859234`, passed in `2m3s`.
+- `proof_freeze`: `LeanLab/` has an empty diff from frozen implementation
+  `a97593c3609ec6ec3e1a699132c849dffd68a41c`.
+- `local_stop`: `FULL_SOURCE_NUMERICAL_HINGE_SUCCESS`, pending one docs-only final-ledger CI.
+- `remaining_H10`: actual curve intersections, Hodge index, Frobenius point-count identity,
+  number-field transfer, H10, and RH.
+- `next_gate`: publish one docs-only final ledger and require public CI, then return to fresh
+  cross-family `ROUTE_SELECTION`.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.

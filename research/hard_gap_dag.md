@@ -2989,3 +2989,7 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 Frozen implementation `a97593c3609ec6ec3e1a699132c849dffd68a41c` passed public Lean Action
 run `30384610038`, build job `90360629352`, in `3m1s`. The proof source is frozen while
 docs-only immutable evidence is published.
+
+Immutable evidence `c4fef4621dbed9831a38a5774587672122d45dfd` passed public Lean Action
+run `30384971222`, build job `90361859234`, in `2m3s`; the `LeanLab/` diff from the frozen
+implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`.

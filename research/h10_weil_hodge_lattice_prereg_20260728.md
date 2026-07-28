@@ -8,8 +8,8 @@ Node: `H10-WEIL-SURFACE-HODGE-LATTICE-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `FULL_SOURCE_NUMERICAL_HINGE_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN /
-IMMUTABLE_EVIDENCE_PENDING`
+Status: `FULL_SOURCE_NUMERICAL_HINGE_SUCCESS /
+IMPLEMENTATION_AND_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PENDING`
 
 ## Primary-source anchor
 
@@ -136,3 +136,7 @@ remain open.
 Frozen implementation `a97593c3609ec6ec3e1a699132c849dffd68a41c` passed public Lean Action
 run `30384610038`, build job `90360629352`, in `3m1s`. Proof sources remain frozen while
 docs-only immutable evidence is published.
+
+Docs-only immutable evidence `c4fef4621dbed9831a38a5774587672122d45dfd` passed public Lean
+Action run `30384971222`, build job `90361859234`, in `2m3s`. The `LeanLab/` diff from the
+frozen implementation is empty. One docs-only final ledger remains.

@@ -8,8 +8,8 @@ Node: `H10-WEIL-SURFACE-HODGE-LATTICE-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `FULL_SOURCE_NUMERICAL_HINGE_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN /
-IMMUTABLE_EVIDENCE_PENDING`
+Status: `FULL_SOURCE_NUMERICAL_HINGE_SUCCESS /
+IMPLEMENTATION_AND_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PENDING`
 
 ## Fixed target
 
@@ -37,6 +37,7 @@ The complete criteria and claim boundary are fixed in
 | `REGISTRATION` | Added one Target, seven exact TargetChecks, and seven selected axiom prints. | Every selected theorem uses only `propext`, `Classical.choice`, and `Quot.sound`. | Run local mechanical gates. |
 | `LOCAL_AUDIT` | Ran warning-as-error production and registry compiles, three forbidden scans, `git diff --check`, and the full build. | Scans are empty; patch check passes; full build passes `8783/8783`. | Freeze and publish the implementation. |
 | `IMPLEMENTATION_PUBLIC_CI` | Froze and pushed implementation `a97593c3609ec6ec3e1a699132c849dffd68a41c`. | Run `30384610038`, job `90360629352`, passed in `3m1s`. | Keep proof sources frozen and publish docs-only immutable evidence. |
+| `IMMUTABLE_EVIDENCE_PUBLIC_CI` | Published docs-only evidence `c4fef4621dbed9831a38a5774587672122d45dfd` after verifying an empty `LeanLab/` diff from the frozen implementation. | Run `30384971222`, job `90361859234`, passed in `2m3s`. | Publish one docs-only final ledger; proof sources remain frozen. |
 
 ## Runtime record
 
@@ -53,6 +54,9 @@ The complete criteria and claim boundary are fixed in
 - `local_build`: `8783/8783`.
 - `frozen_implementation`: `a97593c3609ec6ec3e1a699132c849dffd68a41c`, public-green on
   run `30384610038`, job `90360629352`, in `3m1s`.
+- `immutable_evidence`: `c4fef4621dbed9831a38a5774587672122d45dfd`, public-green on run
+  `30384971222`, job `90361859234`, in `2m3s`.
+- `proof_freeze`: the `LeanLab/` diff from the frozen implementation is empty.
 
 ## Current boundary
 
