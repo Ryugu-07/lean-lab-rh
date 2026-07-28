@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H8-CONREY-LI-HALF-STRIP-01`
 
 Classification: `MEANINGFUL_PARTIAL`
 
-Status: `PUBLIC_FINAL_LEDGER_CI_REQUIRED`
+Status: `PUBLIC_FINAL_LEDGER_PASS`
 
 ## Public chain
 
@@ -76,3 +76,10 @@ Cayley-to-`W` continuation, and the actual `F(W)`/xi shift premise as open candi
 
 Return the persistent RH Goal to fresh cross-family historical omission selection after
 final-ledger CI. Conjecture generation and direct RH proof attempts remain open.
+
+## Public final-ledger receipt
+
+Final ledger commit `bfd75580e589ae0e5261ff9257624bdfdcb7c0ab` passed Lean Action run
+`30406760896`, build job `90433821644`, in `2m19s`. The proof-source diff from frozen
+implementation through final ledger is empty. The local partial node is ready for a docs-only
+closure receipt.

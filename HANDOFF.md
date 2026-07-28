@@ -5233,6 +5233,20 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-29 H8 Conrey--Li half-strip final ledger public green
+
+- `final_ledger`: `bfd75580e589ae0e5261ff9257624bdfdcb7c0ab`.
+- `public_ci`: run `30406760896`, build job `90433821644`, passed in `2m19s`.
+- `proof_freeze`: proof and registration sources remain identical to frozen implementation
+  `c8605da897d423a7bdab4e4bd49426c482b8f7a5`.
+- `classification`: `PUBLICLY_CLOSED_MEANINGFUL_PARTIAL`.
+- `close_only`: `H8.de-branges.conrey-li-half-strip-adjoint-consumer`.
+- `open`: concrete half-strip Hardy RKHS, Cayley-to-`W` continuation, actual `F(W)`, actual-xi
+  shift positivity, the full H8 target, H8, and RH.
+- `after_closure`: stop this campaign and return the active RH Goal to fresh cross-family
+  historical omission selection after the requested rest/report point.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-29 H9 Conrey actual-seven immutable evidence public green
 
 - `immutable_evidence`: `d629fbd2fdacf1adf866831761f8e127ae3330c7`.

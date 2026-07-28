@@ -2678,6 +2678,16 @@ implementation `15381a49ff4dfb92a0ab4e29d5e76383f9789139` is empty. This node re
 - proof-source diff from frozen implementation through immutable evidence: empty;
 - next gate: docs-only final ledger public CI.
 
+### Public final-ledger receipt
+
+- final ledger: `bfd75580e589ae0e5261ff9257624bdfdcb7c0ab`;
+- Lean Action run `30406760896`, build job `90433821644`, `2m19s`, success;
+- proof-source diff from frozen implementation through final ledger: empty;
+- close only the abstract half-strip adjoint consumer;
+- retain the concrete Hardy RKHS, Cayley-to-`W`, actual `F(W)`/xi shift premise, full H8,
+  H8, and RH open;
+- stop this campaign after the docs-only closure receipt.
+
 ## 2026-07-28 H9 ordered Franel--Mertens correlation update
 
 - `node`: `H9-FRANEL-RANK-MERTENS-QUADRATIC-01`.

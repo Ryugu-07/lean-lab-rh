@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H8-CONREY-LI-HALF-STRIP-01`
 
 Classification: `MEANINGFUL_PARTIAL`
 
-Status: `PUBLIC_EVIDENCE_PASS / FINAL_LEDGER_CI_REQUIRED`
+Status: `PUBLIC_EVIDENCE_PASS / FINAL_LEDGER_PASS`
 
 ## Frozen implementation
 
@@ -65,3 +65,6 @@ H8 and RH remain open. `rh_frontier_delta=0`.
 Immutable evidence commit `a7765584e7078486c1c873a8283368061d5724e4` passed Lean Action run
 `30406546097`, build job `90433156392`, in `2m22s`. The proof-source diff from the frozen
 implementation through this commit is empty.
+
+Final ledger `bfd75580e589ae0e5261ff9257624bdfdcb7c0ab` passed Lean Action run
+`30406760896`, build job `90433821644`, in `2m19s`.

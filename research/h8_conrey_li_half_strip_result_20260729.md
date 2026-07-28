@@ -8,7 +8,7 @@ Node: `H8-CONREY-LI-HALF-STRIP-EXTENSION-01`
 
 Classification: `MEANINGFUL_PARTIAL / IMPLEMENTATION_PUBLIC_GREEN`
 
-Evidence status: `PUBLIC_EVIDENCE_GREEN / FINAL_LEDGER_CI_REQUIRED`
+Evidence status: `PUBLIC_CHAIN_GREEN / PARTIAL_NODE_CLOSED`
 
 ## Compiled result
 
@@ -74,6 +74,9 @@ well-definedness on linearly dependent kernel families rather than assuming it.
 - immutable evidence:
   `a7765584e7078486c1c873a8283368061d5724e4`
 - evidence Lean Action: run `30406546097`, build job `90433156392`, passed in `2m22s`
+- final ledger:
+  `bfd75580e589ae0e5261ff9257624bdfdcb7c0ab`
+- final-ledger Lean Action: run `30406760896`, build job `90433821644`, passed in `2m19s`
 
 ## Claim boundary
 
