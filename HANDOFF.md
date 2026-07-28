@@ -5224,3 +5224,22 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H11 exact moving-window local result
+
+- `prereg_public`: `3b1025c12cead7839a14a5346c39c4106525d3bc`, run
+  `30337779012`, build job `90206341961`, `1m56s`.
+- `result`: `EXACT_MOVING_WINDOW_BOUNDARY_FORMALIZED`.
+- `compiled`: 492-line module; literal ordered-pair overlap integral; exact window-square
+  expansion; interior triangular mass plus nonnegative top remainder; local
+  `(T-U,T+U]` support and `U*boundaryCount^2` bound; one-sided inequality; future-endpoint
+  mismatch; actual multiplicity-expanded zeta specialization.
+- `source_boundary`: this corrects only a termwise replacement inside the source's allowed
+  `O(L^2)` error. Proposition 1, Fujii's estimate, and PCC are not falsified.
+- `audits`: one aggregate Target, ten exact checks, eight standard-only axiom prints, empty
+  forbidden/resource scan, warning-as-error compiles, full `8778/8778` build.
+- `classification`: `source_bookkeeping_delta=1`, `historical_route_coverage_delta=1`,
+  `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `next_gate`: commit and publish frozen implementation, then require public CI.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.

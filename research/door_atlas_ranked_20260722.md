@@ -1759,3 +1759,20 @@ boundary remainder, a boundary-count bound, the explicit endpoint control, a one
 interior-mass inequality, and the actual multiplicity-expanded zeta specialization. The missing
 first-zero certificate remains a premise. Fujii's estimate, PCC, absolute last-exception
 control, sparse-exception amplification, H11, and RH remain open.
+
+### H11 exact moving-window boundary local result
+
+The literal boundary calculus compiles. For every finite multiplicity-copy population, the
+moving-window square integral is exactly the sum of the closed pair-overlap kernel. Under the
+source lower-support condition it equals interior triangular mass plus a nonnegative remainder
+supported only on `(T-U,T+U]`; the remainder is bounded by `U` times the square of that local
+population count.
+
+The `T+U` singleton proves the advertised omission-sensitive control: its overlap in `[0,T]`
+has measure zero while its full triangular self-weight is `U`. Thus the source's displayed
+future-block replacement is not a termwise equality, although its `O(L^2)` conclusion remains
+valid. The exact sign supplies a one-sided inequality without top-boundary loss.
+
+This does not reach the last-exception scale. Fujii's second-moment error, PCC's normalized
+error, sparse-exception amplification, H11, and RH remain open. The campaign is locally
+`EXACT_MOVING_WINDOW_BOUNDARY_FORMALIZED`; frozen implementation publication is next.

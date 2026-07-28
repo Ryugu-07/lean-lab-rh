@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260728-H11-MOVING-WINDOW-BOUNDARY-01`
 
 Selected node: `H11-GALLAGHER-MUELLER-EXACT-BOUNDARY-01`
 
-Status: `PREREGISTERED / PRODUCTION_GATE_CLOSED`
+Status: `LOCAL_FULL_SUCCESS / IMPLEMENTATION_PUBLIC_CI_PENDING`
 
 ## Selection reason
 
@@ -163,3 +163,26 @@ stop the global RH Goal. Direct RH attacks and conjecture verification remain op
   source proof of equations `(5.2)`--`(5.4)` before selection.
 - `global_goal`: active.
 
+## Local implementation result
+
+- `preregistration`: commit `3b1025c12cead7839a14a5346c39c4106525d3bc` passed public Lean
+  Action run `30337779012`, build job `90206341961`, in `1m56s`.
+- `module`: `LeanLab/Riemann/PairCorrelationMovingWindowBoundary.lean`, 492 lines.
+- `compiled_endpoint`: all nine fixed blocks compile. The aggregate theorem is
+  `pairCorrelationMovingWindowBoundary_endpoint`.
+- `exact_source_result`: the moving-window square is the ordered pair-overlap sum. Under lower
+  support, it is interior triangular mass plus a nonnegative remainder supported only on
+  `(T-U,T+U]`, bounded by `U * boundaryCount^2`.
+- `source_bookkeeping_correction`: a point at `T+U` has literal overlap zero but full
+  triangular self-weight `U`; future-block termwise replacement is false, while the source's
+  asymptotic `O(L^2)` proposition remains untouched.
+- `actual_zeta`: the exact decomposition is instantiated on
+  `PccPositiveZetaZeroIndex (T+U)` with every analytic-multiplicity copy retained. The missing
+  first-zero lower bound remains an explicit premise.
+- `local_audit`: one aggregate Target, ten exact TargetChecks, eight selected axiom prints,
+  standard axioms only, empty forbidden/resource scan, warning-as-error module and registry
+  compiles, and full `8778/8778` build.
+- `classification`: `EXACT_MOVING_WINDOW_BOUNDARY_FORMALIZED`,
+  `source_bookkeeping_delta=1`, `historical_route_coverage_delta=1`, `hard_gap_delta=0`,
+  `rh_frontier_delta=0`.
+- `next_gate`: freeze and publish the implementation, then require public CI.

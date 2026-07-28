@@ -4570,3 +4570,29 @@ consumer, but it does not remove Fujii's analytic error and does not yet detect 
 off-line orbit. The fixed campaign also requires an actual-zeta multiplicity-preserving
 specialization and records the absent first-zero certificate as an explicit premise rather than
 an imported numerical fact.
+
+## H11 Exact Moving-Window Boundary Local Result
+
+The full fixed endpoint compiles in the 492-line
+`PairCorrelationMovingWindowBoundary.lean`. The source window count is squared without changing
+endpoint conventions, producing the ordered pair-overlap kernel
+
+```text
+max(min(T,min(x,y)) - max(0,max(x,y)-U), 0).
+```
+
+For populations supported above `U`, Lean splits the exact second moment into interior
+triangular mass and a nonnegative top remainder. The remainder is supported only on the local
+band `(T-U,T+U]` and is at most `U` times the square of that band's multiplicity count. Hence
+interior triangular mass is bounded above by the literal second moment without an added upper
+boundary error.
+
+The endpoint point `T+U` kernel-checks the source bookkeeping distinction: literal overlap is
+zero while full triangular self-weight is `U`. This is not a rejection of the published
+`O(L^2)` formula. The actual-zeta specialization preserves analytic multiplicity and states the
+uncompiled first-zero lower support explicitly.
+
+One aggregate Target, ten exact checks, eight standard-only axiom prints, empty scans,
+warning-as-error compiles, and full `8778/8778` build pass. The result improves the exact
+interface but not the hard gap: Fujii's analytic error and PCC still do not exclude one sparse
+horizontal exception.

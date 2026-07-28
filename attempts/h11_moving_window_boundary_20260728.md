@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260728-H11-MOVING-WINDOW-BOUNDARY-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT`
 
-Status: `PREREGISTERED / PRODUCTION_GATE_CLOSED`
+Status: `LOCAL_FULL_SUCCESS / IMPLEMENTATION_PUBLIC_CI_PENDING`
 
 ## Runtime record
 
@@ -38,6 +38,11 @@ multiplicity-expanded actual-zeta cutoff.
 | 3 | `PRIMARY_SOURCE_RECONSTRUCTION` | Section 9 identifies the exact overlap measure for `t in [0,T]`, then replaces future-block overlaps by full triangular weights inside an `O(L^2)` error. | Preserve the overlap kernel and its sign instead of optimizing the error constant. |
 | 4 | `ADVERSARIAL_TEST` | A singleton at `T+U` has zero window overlap but triangular self-weight `U`. | Register a source-bookkeeping correction without rejecting the published asymptotic proposition. |
 | 5 | `PREREGISTRATION` | The fixed endpoint includes exact pair expansion, signed boundary decomposition, local support, one-sided inequality, and actual-zeta specialization. | Publish docs-only preregistration and require public CI before proof editing. |
+| 6 | `PREREGISTRATION_GATE` | Commit `3b1025c12cead7839a14a5346c39c4106525d3bc` passed run `30337779012`, job `90206341961`, in `1m56s`. | Open the production gate for the unchanged endpoint. |
+| 7 | `PAIR_OVERLAP_CALCULUS` | Lean identifies one ordered pair's window contribution with `max(min T (min x y)-max 0 (max x y-U),0)` and expands the count square into the exact ordered-pair sum. | Continue to the boundary split without an assumed integral identity. |
+| 8 | `BOUNDARY_SIGN_AND_SUPPORT` | Under lower support, the exact sum is interior triangular mass plus a nonnegative remainder supported on `(T-U,T+U]` and bounded by `U * boundaryCount^2`. | Record the loss-free one-sided interior-mass inequality. |
+| 9 | `SOURCE_ADVERSARY` | At ordinate `T+U`, literal overlap is zero while full triangular self-weight is `U>0`. | Classify as a termwise bookkeeping correction, not a falsification of the source asymptotic. |
+| 10 | `ACTUAL_ZETA_AND_AUDIT` | The multiplicity-expanded cutoff specialization compiles with lower support explicit; one Target, ten checks, eight standard-only axiom prints, empty scans, warning-as-error compiles, and full `8778/8778` build pass. | Freeze and publish the implementation. |
 
 ## Assumption and gap accounting
 
@@ -52,4 +57,9 @@ multiplicity-expanded actual-zeta cutoff.
 - `historical_route_coverage_delta_target`: `1`.
 - `rh_frontier_delta_target`: `0`.
 - `protected_files`: all six inherited user/exposure files remain untouched and unstaged.
-
+- `local_result`: `EXACT_MOVING_WINDOW_BOUNDARY_FORMALIZED`.
+- `source_bookkeeping_delta`: `1`.
+- `historical_route_coverage_delta`: `1`.
+- `hard_gap_delta`: `0`.
+- `rh_frontier_delta`: `0`.
+- `next_gate`: frozen implementation commit and public Lean Action CI.

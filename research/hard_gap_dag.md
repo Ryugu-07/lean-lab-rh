@@ -2694,3 +2694,24 @@ return to cross-family selection with `HardyXiAbelMomentLaw` retained as an open
 - `classification_target`: source-bookkeeping and historical-interface progress; no hard-gap or
   RH-frontier delta.
 - `global_goal`: active.
+
+## 2026-07-28 H11 exact moving-window boundary local result
+
+- `closed_edge`:
+  `source window indicator -> closed min/max overlap kernel`;
+  `count square -> exact ordered-pair overlap sum`;
+  `lower-supported interior pairs -> full triangular mass`;
+  `remaining pairs -> nonnegative top-boundary remainder`;
+  `support localization -> U * boundaryCount^2`;
+  `actual zeta cutoff T+U -> multiplicity-preserving exact decomposition`.
+- `compiled_endpoint`: `pairCorrelationMovingWindowBoundary_endpoint`.
+- `source_correction`: the future-block full-weight replacement is not termwise exact, witnessed
+  at `gamma=T+U`; the published asymptotic error statement is unaffected.
+- `new_one_sided_fact`: interior triangular mass is at most the literal short-window second
+  moment with no upper-boundary error term.
+- `remaining_H11_D`: prove the analytic second-moment/PCC estimate at absolute strength; Fujii's
+  current error remains too large to detect one horizontal excess.
+- `remaining_H11_E`: amplify or exclude the last sparse actual off-line orbit.
+- `classification`: `source_bookkeeping_delta=1`, `historical_route_coverage_delta=1`,
+  `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `next_gate`: frozen implementation public CI.

@@ -104,6 +104,7 @@ import LeanLab.Riemann.LevinsonMontgomeryBoundarySigns
 import LeanLab.Riemann.LevinsonMontgomeryCriticalIndentation
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
+import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -1641,6 +1642,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``pairCorrelationTriangularMass_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260728-H11-TRIANGULAR-PAIR-MASS-01 reconstructs Goldston-Lee-Schettler-Suriajaya equations (5.3)-(5.4) at every finite cutoff. The source identity now exposes horizontal multiplicity exactly and preserves analytic-multiplicity copies. Fujii's second moment, PCC, HMH, an absolute-error estimate, sparse-exception amplification, and RH remain open." },
+    { id := "H11.pcc.exact-moving-window-boundary"
+      tier := .tier2
+      title := "Formalize the exact moving-window boundary remainder"
+      statement :=
+        "Expand the short-window count square into literal ordered-pair overlaps, split it into interior triangular mass plus a nonnegative locally supported upper-boundary remainder, bound that remainder by its boundary population, falsify termwise full triangular replacement at T+U, and specialize the exact identity to multiplicity-expanded zeta zeros."
+      leanName := some ``pairCorrelationMovingWindowBoundary_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260728-H11-MOVING-WINDOW-BOUNDARY-01 audits the boundary bookkeeping in the proof of equation (5.3). A point at T+U has zero literal overlap with [0,T] but full triangular self-weight U, so the future block is not termwise identical to the displayed triangular replacement; the source's O(L^2) proposition remains valid. Lean retains an exact nonnegative remainder supported on (T-U,T+U], giving a loss-free one-sided interior-mass inequality. The actual-zeta theorem keeps the unavailable first-zero lower support as an explicit premise. Fujii's estimate, PCC, absolute last-exception control, sparse-exception amplification, H11, and RH remain open." },
     { id := "H11.pcc.sparse-exception-amplification"
       tier := .tier2
       title := "Eliminate sparse horizontal-multiplicity exceptions"

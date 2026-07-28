@@ -10,6 +10,7 @@ import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.FareyMobiusWeyl
+import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -1087,6 +1088,14 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.equalOrdinatePairCount_im_eq_horizontalPairCount
 #print axioms LeanLab.Riemann.pccPositiveZeta_triangularPairMass_eq
 #print axioms LeanLab.Riemann.pairCorrelationTriangularMass_endpoint
+#print axioms LeanLab.Riemann.integral_shortWindowPairIndicator_eq_pairWindowOverlap
+#print axioms LeanLab.Riemann.shortWindowSecondMoment_eq_pairOverlapSum
+#print axioms LeanLab.Riemann.shortWindowSecondMoment_eq_interior_add_topBoundary
+#print axioms LeanLab.Riemann.topBoundaryRemainder_nonneg
+#print axioms LeanLab.Riemann.topBoundaryRemainder_le
+#print axioms LeanLab.Riemann.futureEndpoint_overlap_ne_triangular
+#print axioms LeanLab.Riemann.pccMovingWindowSecondMoment_eq_interior_add_boundary
+#print axioms LeanLab.Riemann.pairCorrelationMovingWindowBoundary_endpoint
 #print axioms LeanLab.Riemann.hardyXi_two_mul_eq_deBruijnNewmanH_zero_four_mul
 #print axioms LeanLab.Riemann.exists_interior_hardyXiAbelMoment_odd_neg
 #print axioms LeanLab.Riemann.exists_interior_hardyXiAbelMoment_even_pos

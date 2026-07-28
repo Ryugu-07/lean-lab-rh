@@ -1,6 +1,7 @@
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
+import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
 import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
 import LeanLab.Riemann.LevinsonMontgomeryLogDerivMassBridge
 import LeanLab.Riemann.LevinsonMontgomeryBoundarySigns
@@ -4887,6 +4888,62 @@ example (T : ℝ) {U : ℝ} (hU : 0 ≤ U) :
 example :
     PairCorrelationTriangularMassCertificate :=
   pairCorrelationTriangularMass_endpoint
+
+example {T U x y : ℝ} (hT : 0 ≤ T) :
+    (∫ t : ℝ in 0..T, shortWindowPairIndicator U x y t) =
+      pairWindowOverlap T U x y :=
+  integral_shortWindowPairIndicator_eq_pairWindowOverlap hT
+
+example {ι : Type} [Fintype ι] (gamma : ι → ℝ)
+    {T U : ℝ} (hT : 0 ≤ T) :
+    shortWindowSecondMoment gamma T U =
+      ∑ i, ∑ j, pairWindowOverlap T U (gamma i) (gamma j) :=
+  shortWindowSecondMoment_eq_pairOverlapSum gamma hT
+
+example {ι : Type} [Fintype ι] (gamma : ι → ℝ)
+    {T U : ℝ} (hT : 0 ≤ T) (hlower : ∀ i, U ≤ gamma i) :
+    shortWindowSecondMoment gamma T U =
+      interiorTriangularPairMass gamma T U +
+        topBoundaryRemainder gamma T U :=
+  shortWindowSecondMoment_eq_interior_add_topBoundary gamma hT hlower
+
+example {ι : Type} [Fintype ι] (gamma : ι → ℝ)
+    (T U : ℝ) :
+    0 ≤ topBoundaryRemainder gamma T U :=
+  topBoundaryRemainder_nonneg gamma T U
+
+example {ι : Type} [Fintype ι] (gamma : ι → ℝ)
+    {T U : ℝ} (hU : 0 ≤ U) :
+    topBoundaryRemainder gamma T U ≤
+      U * (topBoundaryIndexCount gamma T U : ℝ) ^ 2 :=
+  topBoundaryRemainder_le gamma hU
+
+example {ι : Type} [Fintype ι] (gamma : ι → ℝ)
+    {T U : ℝ} (hT : 0 ≤ T) (hlower : ∀ i, U ≤ gamma i) :
+    interiorTriangularPairMass gamma T U ≤ shortWindowSecondMoment gamma T U :=
+  interiorTriangularPairMass_le_shortWindowSecondMoment gamma hT hlower
+
+example {T U : ℝ} (hT : 0 ≤ T) (hU : 0 < U) :
+    pairWindowOverlap T U (T + U) (T + U) ≠
+      max (U - |(T + U) - (T + U)|) 0 :=
+  futureEndpoint_overlap_ne_triangular hT hU
+
+example {T U : ℝ} (hT : 0 ≤ T)
+    (hlower : ∀ p : PccPositiveZetaZeroIndex (T + U),
+      U ≤ pccMovingWindowOrdinate T U p) :
+    pccMovingWindowSecondMoment T U =
+      pccMovingWindowInteriorMass T U +
+        pccMovingWindowTopBoundaryRemainder T U :=
+  pccMovingWindowSecondMoment_eq_interior_add_boundary hT hlower
+
+example {T U : ℝ} (hU : 0 ≤ U) :
+    pccMovingWindowTopBoundaryRemainder T U ≤
+      U * (pccMovingWindowBoundaryCount T U : ℝ) ^ 2 :=
+  pccMovingWindowTopBoundaryRemainder_le hU
+
+example :
+    PairCorrelationMovingWindowBoundaryCertificate :=
+  pairCorrelationMovingWindowBoundary_endpoint
 
 example {ι : Type} [Fintype ι] (gamma : ι → ℝ) :
     triangularPairMass gamma 0 = 0 := by
