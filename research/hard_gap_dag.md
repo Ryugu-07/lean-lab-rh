@@ -2887,3 +2887,28 @@ implementation is empty. This campaign stops locally at
 `MEANINGFUL_MELLIN_INVERSION_PARTIAL / SOURCE_NORMALIZATION_CORRECTION`. Preserve
 `open_H1_theta_C1`, `open_H1_theta_C2`, and `open_H1_theta_boundary` as re-entry nodes, and after
 final-ledger CI return to fresh cross-family route selection rather than constant optimization.
+
+## 2026-07-28 H12 Speiser admissible-contour launch
+
+- `node`: `H12-SPEISER-ADMISSIBLE-CONTOUR-01`.
+- `mode`: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`.
+- `parent_closure`: H1 Hardy theta final ledger
+  `183ace2f83deb2a5c5654761b74e2ca7a2d50202`, run `30379640249`, job
+  `90344021329`.
+- `source_edge`:
+  `local finiteness of zeta and derivative divisors -> common zero-free horizontal slice`;
+  `fixed bottom nonvanishing -> bounded bottom log-derivative contribution`;
+  `cofinal top slices + finite critical-zero indentations -> global argument principle`;
+  `boundary comparison -> O(log T) count difference and source dichotomy`;
+  `compiled count consumer -> Speiser equivalence`.
+- `omission_probe`: replace the source's `t=10` low-zero-table sign with an arbitrary fixed common
+  zero-free bottom; carry its argument variation as a fixed constant.
+- `full_success`: `levinsonMontgomeryTheoremOne_actual` compiles.
+- `meaningful_partial`: common-slice and fixed-bottom theorems compile and the first missing
+  global contour identity is isolated in theorem form.
+- `negative_controls`: closed segment endpoints, multiplicities, pole exclusion, critical-line
+  boundary zeros, top crossings, and no promotion of fixed bounded contribution to a sign.
+- `open_after_success`: actual derivative-zero exclusion, RH, mollifier estimates, density and
+  spectral routes.
+- `production_gate`: no proof-source edit before docs-only preregistration public CI.
+- `global_goal`: active.

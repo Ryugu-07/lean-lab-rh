@@ -5479,3 +5479,24 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   `ROUTE_SELECTION`; do not remain on constant or bound optimization by inertia.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H12 Speiser admissible contour selected
+
+- `parent_public_closure`: H1 Hardy theta final ledger
+  `183ace2f83deb2a5c5654761b74e2ca7a2d50202`, run `30379640249`, job
+  `90344021329`, `2m36s`.
+- `campaign`: `LITERATURE-20260728-H12-SPEISER-ADMISSIBLE-CONTOUR-01`.
+- `node`: `H12-SPEISER-ADMISSIBLE-CONTOUR-01`.
+- `selection_reason`: Levinson--Montgomery Theorem 1 is a known global count theorem with four
+  compiled local inputs. Its source proof's fixed `t=10` low-zero-table sign can be tested against
+  the weaker requirement of one fixed common zero-free bottom, whose contribution is constant.
+- `full_endpoint`: cofinal common zeta/zeta-derivative zero-free horizontal slices, bounded fixed
+  bottom, finite critical-line indentations, actual indented argument principle,
+  `LevinsonMontgomeryLogCountBound`, and `LevinsonMontgomeryCountDichotomy`.
+- `meaningful_partial`: common slices and fixed-bottom integral bound compile, with the first
+  missing global contour/count identity stated exactly.
+- `strict_boundary`: no zero table, numerical zero location, RH, derivative-zero exclusion, or
+  open count theorem as a premise.
+- `production_gate`: docs-only preregistration must pass public CI before any `LeanLab/` edit.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
