@@ -2669,6 +2669,12 @@ run `30342482471`, build job `90220996513`, in `2m8s`. The ordered-convergence b
 alternating semantic control are public-green. Proof sources remain frozen while docs-only
 immutable evidence is published.
 
+Immutable evidence `f038d09b6e3f8d337a59472d4eb8175e48e6f6d1` passed public run
+`30342848831`, build job `90222174052`, in `2m20s`; its `LeanLab/` diff from frozen
+implementation `0ff8a577cb4eb247d6cfdbc03d82a5d7dd36707e` is empty. The fixed H0 bridge node is
+at `FULL_FIXED_ENDPOINT_SUCCESS / LIBRARY_SEMANTICS_CORRECTION`. After final-ledger CI, return
+to cross-family selection with H0-A/H0-B retained as open.
+
 Frozen implementation `2d5b5e2e692e8622263142a1205971c611736a78` passed public Lean Action
 run `30336360223`, build job `90201998436`, in `2m17s`. The complete conditional consumer is
 public-green. Proof sources remain frozen while docs-only immutable evidence is published.

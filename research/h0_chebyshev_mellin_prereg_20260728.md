@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260728-H0-CHEBYSHEV-MELLIN-01`
 
 Selected node: `H0-RIEMANN-VON-KOCH-PSI-MELLIN-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Selection reason
 
@@ -245,3 +245,16 @@ subject to a fresh rerank. Direct RH attacks and conjecture verification remain 
   axiom prints are frozen.
 - `next_gate`: publish docs-only immutable evidence and verify an empty `LeanLab/` diff from the
   frozen implementation.
+
+## Immutable evidence
+
+- `immutable_evidence`: docs-only commit `f038d09b6e3f8d337a59472d4eb8175e48e6f6d1`
+  passed public Lean Action run `30342848831`, build job `90222174052`, in `2m20s`.
+- `proof_freeze_verified`: the `LeanLab/` diff from frozen implementation
+  `0ff8a577cb4eb247d6cfdbc03d82a5d7dd36707e` is empty.
+- `local_stop`: `FULL_FIXED_ENDPOINT_SUCCESS / LIBRARY_SEMANTICS_CORRECTION`.
+- `remaining`: an RH-strength Chebyshev error estimate, local uniform convergence or
+  holomorphy on the enlarged ordered-convergence half-plane, reverse zero exclusion, H0, H9,
+  and RH.
+- `next_gate`: one docs-only final ledger plus public CI, then fresh cross-family
+  `ROUTE_SELECTION`.

@@ -5327,3 +5327,18 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   reverse zero exclusion, H0, and RH.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H0 Chebyshev--Mellin immutable evidence public green
+
+- `frozen_implementation`: `0ff8a577cb4eb247d6cfdbc03d82a5d7dd36707e`, run
+  `30342482471`, job `90220996513`, `2m8s`.
+- `immutable_evidence`: `f038d09b6e3f8d337a59472d4eb8175e48e6f6d1`, run
+  `30342848831`, job `90222174052`, `2m20s`.
+- `proof_freeze`: the `LeanLab/` diff between those commits is empty.
+- `local_stop`: `FULL_FIXED_ENDPOINT_SUCCESS / LIBRARY_SEMANTICS_CORRECTION`.
+- `remaining_H0`: RH-strength Chebyshev error estimate, ordered-to-holomorphic continuation,
+  reverse zero exclusion, H0, and RH.
+- `next_gate`: one docs-only final ledger and public CI, then fresh cross-family
+  `ROUTE_SELECTION`.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
