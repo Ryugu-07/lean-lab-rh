@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H12-LEFT-HALF-PLANE-WINDING-01`
 
 Classification: `FULL_SUCCESS`
 
-Status: `PUBLIC_FINAL_LEDGER_CI_REQUIRED`
+Status: `PUBLIC_FINAL_LEDGER_PASS`
 
 ## Public chain
 
@@ -73,3 +73,10 @@ candidates, but do not select H12 again by inertia.
 
 Return the persistent RH Goal to fresh cross-family historical omission selection after
 final-ledger CI. Conjecture generation and direct RH proof attempts remain open.
+
+## Public final-ledger receipt
+
+Final ledger commit `b3fdeb26b8aa077c0d0db68c379b4433a3feeba6` passed Lean Action run
+`30403814535`, build job `90424563153`, in `1m35s`. The proof-source diff from frozen
+implementation through final ledger is empty. The local node is ready for a docs-only closure
+receipt.

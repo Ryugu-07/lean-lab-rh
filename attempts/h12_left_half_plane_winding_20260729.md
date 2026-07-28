@@ -8,7 +8,7 @@ Node: `H12-LM-LEFT-HALF-PLANE-WINDING-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `FULL_SUCCESS / EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
+Status: `FULL_SUCCESS / FINAL_LEDGER_PUBLIC_GREEN / CLOSURE_RECEIPT_CI_REQUIRED`
 
 ## Fixed target
 
@@ -36,6 +36,7 @@ The full statement, negative control, and claim boundary are fixed in
 | `IMPLEMENTATION_PUBLIC_CI` | Published frozen implementation `0a1248f2a02fec9d3cf0e774bc6eb4fe8959e0ec`. | Lean Action run `30403264392`, build job `90422806378`, passed in `3m4s`. | Freeze proof-source hash and publish immutable evidence. |
 | `PROOF_FREEZE` | Compared the five proof and registration sources against the frozen implementation. | Diff is empty. | Evidence commit must remain documentation-only. |
 | `EVIDENCE_PUBLIC_CI` | Published immutable evidence `016f0b50f552ee42126ecf5bf3e93be8edd15e3a`. | Lean Action run `30403576041`, build job `90423807382`, passed in `2m11s`; proof-source diff remains empty. | Publish one docs-only final ledger. |
+| `FINAL_LEDGER_PUBLIC_CI` | Published final ledger `b3fdeb26b8aa077c0d0db68c379b4433a3feeba6`. | Lean Action run `30403814535`, build job `90424563153`, passed in `1m35s`; proof-source diff remains empty. | Publish the docs-only closure receipt. |
 
 ## Current frontier
 
@@ -50,7 +51,8 @@ The full statement, negative control, and claim boundary are fixed in
 - `local_classification`: `FULL_SUCCESS_LOCAL`.
 - `frozen_implementation`: `0a1248f2a02fec9d3cf0e774bc6eb4fe8959e0ec`.
 - `immutable_evidence`: `016f0b50f552ee42126ecf5bf3e93be8edd15e3a`.
-- `next_gate`: docs-only final ledger and public Lean Action CI.
+- `final_ledger`: `b3fdeb26b8aa077c0d0db68c379b4433a3feeba6`.
+- `next_gate`: docs-only closure receipt and public Lean Action CI.
 
 ## Runtime record
 

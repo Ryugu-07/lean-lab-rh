@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H12-LEFT-HALF-PLANE-WINDING-01`
 
 Classification: `FULL_SUCCESS`
 
-Status: `PUBLIC_EVIDENCE_PASS / FINAL_LEDGER_CI_REQUIRED`
+Status: `PUBLIC_EVIDENCE_PASS / FINAL_LEDGER_PASS`
 
 ## Frozen implementation
 
@@ -67,3 +67,6 @@ This immutable evidence commit
 `016f0b50f552ee42126ecf5bf3e93be8edd15e3a` passed Lean Action run `30403576041`,
 build job `90423807382`, in `2m11s`. The proof-source diff from the frozen implementation
 through this commit is empty. One docs-only final ledger and closure receipt remain.
+
+Final ledger `b3fdeb26b8aa077c0d0db68c379b4433a3feeba6` passed Lean Action run
+`30403814535`, build job `90424563153`, in `1m35s`. Only the closure receipt remains.
