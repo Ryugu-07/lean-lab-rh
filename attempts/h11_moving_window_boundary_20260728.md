@@ -4,7 +4,7 @@ Campaign: `LITERATURE-20260728-H11-MOVING-WINDOW-BOUNDARY-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_PENDING`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Runtime record
 
@@ -44,6 +44,7 @@ multiplicity-expanded actual-zeta cutoff.
 | 9 | `SOURCE_ADVERSARY` | At ordinate `T+U`, literal overlap is zero while full triangular self-weight is `U>0`. | Classify as a termwise bookkeeping correction, not a falsification of the source asymptotic. |
 | 10 | `ACTUAL_ZETA_AND_AUDIT` | The multiplicity-expanded cutoff specialization compiles with lower support explicit; one Target, ten checks, eight standard-only axiom prints, empty scans, warning-as-error compiles, and full `8778/8778` build pass. | Freeze and publish the implementation. |
 | 11 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation `4bf9342866283d3b8d07f275ca8199e52413fd0b` passed run `30338649469`, job `90209012408`, in `2m35s`. | Keep every `LeanLab/` file frozen; publish docs-only immutable evidence. |
+| 12 | `EVIDENCE_PUBLIC_CI` | Docs-only evidence `ed2a400a98ca543d3a2795a80ea08544bcbb5df6` passed run `30338961956`, job `90209983168`, in `2m12s`; the `LeanLab/` diff from the frozen implementation is empty. | Publish one final ledger and stop the local node after its public CI. |
 
 ## Assumption and gap accounting
 
@@ -67,3 +68,8 @@ multiplicity-expanded actual-zeta cutoff.
 - `public_implementation_evidence`: commit `4bf9342866283d3b8d07f275ca8199e52413fd0b`,
   run `30338649469`, build job `90209012408`, `2m35s`.
 - `next_gate`: docs-only immutable evidence and independent public CI.
+- `public_closure_evidence`: commit `ed2a400a98ca543d3a2795a80ea08544bcbb5df6`,
+  run `30338961956`, build job `90209983168`, `2m12s`.
+- `local_stop`: the exact overlap, sign, support, bound, mismatch witness, and actual-zeta
+  specialization are complete. The analytic last-exception problem remains open.
+- `next_gate`: docs-only final ledger and public CI, then `ROUTE_SELECTION`.

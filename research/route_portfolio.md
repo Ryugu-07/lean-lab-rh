@@ -4600,3 +4600,7 @@ horizontal exception.
 Frozen implementation `4bf9342866283d3b8d07f275ca8199e52413fd0b` passed public run
 `30338649469`, build job `90209012408`, in `2m35s`. The proof source is frozen; docs-only
 immutable evidence is next.
+
+Docs-only immutable evidence `ed2a400a98ca543d3a2795a80ea08544bcbb5df6` passed public run
+`30338961956`, build job `90209983168`, in `2m12s`; no proof source changed. The fixed node is at
+its local stop. One final-ledger CI remains before fresh cross-family selection.

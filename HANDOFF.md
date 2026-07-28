@@ -5256,3 +5256,18 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   amplification, H11, and RH.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H11 exact moving-window immutable evidence public green
+
+- `frozen_implementation`: `4bf9342866283d3b8d07f275ca8199e52413fd0b`, run
+  `30338649469`, job `90209012408`, `2m35s`.
+- `immutable_evidence`: `ed2a400a98ca543d3a2795a80ea08544bcbb5df6`, run
+  `30338961956`, job `90209983168`, `2m12s`.
+- `proof_freeze`: the `LeanLab/` diff between those commits is empty.
+- `local_stop`: `FULL_FIXED_ENDPOINT_SUCCESS / SOURCE_BOOKKEEPING_CORRECTION`.
+- `next_gate`: one docs-only final ledger and public CI, then fresh cross-family
+  `ROUTE_SELECTION`.
+- `remaining_H11`: Fujii second moment, PCC, absolute last-exception control, sparse-exception
+  amplification, H11, and RH.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.

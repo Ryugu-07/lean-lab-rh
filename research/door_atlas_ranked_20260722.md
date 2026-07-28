@@ -1776,3 +1776,9 @@ valid. The exact sign supplies a one-sided inequality without top-boundary loss.
 This does not reach the last-exception scale. Fujii's second-moment error, PCC's normalized
 error, sparse-exception amplification, H11, and RH remain open. The campaign is locally
 `EXACT_MOVING_WINDOW_BOUNDARY_FORMALIZED`; frozen implementation publication is next.
+
+Frozen implementation `4bf9342866283d3b8d07f275ca8199e52413fd0b` passed run
+`30338649469`, job `90209012408`, in `2m35s`. Immutable evidence
+`ed2a400a98ca543d3a2795a80ea08544bcbb5df6` passed run `30338961956`, job
+`90209983168`, in `2m12s`, with an empty `LeanLab/` diff. The local boundary audit stops after
+final-ledger CI and cross-family selection resumes.

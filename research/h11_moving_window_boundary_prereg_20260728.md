@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260728-H11-MOVING-WINDOW-BOUNDARY-01`
 
 Selected node: `H11-GALLAGHER-MUELLER-EXACT-BOUNDARY-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_PENDING`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Selection reason
 
@@ -194,3 +194,15 @@ stop the global RH Goal. Direct RH attacks and conjecture verification remain op
 - `proof_freeze`: the 492-line module, aggregate Target, ten exact TargetChecks, and eight
   selected axiom prints are frozen.
 - `next_gate`: publish docs-only immutable evidence and require its independent public CI.
+
+## Immutable evidence
+
+- `immutable_evidence`: docs-only commit `ed2a400a98ca543d3a2795a80ea08544bcbb5df6`
+  passed public Lean Action run `30338961956`, build job `90209983168`, in `2m12s`.
+- `proof_freeze_verified`: the `LeanLab/` diff from frozen implementation
+  `4bf9342866283d3b8d07f275ca8199e52413fd0b` is empty.
+- `local_stop`: `FULL_FIXED_ENDPOINT_SUCCESS / SOURCE_BOOKKEEPING_CORRECTION`.
+- `remaining`: Fujii's analytic second moment, PCC, absolute last-exception control,
+  sparse-exception amplification, H11, and RH.
+- `next_gate`: one docs-only final ledger plus public CI, then fresh cross-family
+  `ROUTE_SELECTION`.

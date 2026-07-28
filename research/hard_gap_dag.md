@@ -2719,3 +2719,8 @@ return to cross-family selection with `HardyXiAbelMomentLaw` retained as an open
 Frozen implementation `4bf9342866283d3b8d07f275ca8199e52413fd0b` passed public Lean Action
 run `30338649469`, build job `90209012408`, in `2m35s`. Proof sources are frozen while
 docs-only immutable evidence is published.
+
+Immutable evidence `ed2a400a98ca543d3a2795a80ea08544bcbb5df6` passed public run
+`30338961956`, build job `90209983168`, in `2m12s`; its `LeanLab/` diff from the frozen
+implementation is empty. The fixed boundary node is at `FULL_FIXED_ENDPOINT_SUCCESS`. After
+final-ledger CI, return to cross-family selection with H11-D/H11-E retained as open.
