@@ -8,7 +8,7 @@ Node: `H9-CONREY-ACTUAL-SEVEN-FLAT-INTERVAL-01`
 
 Mode: `LITERATURE / FALSIFICATION / OMISSION_AUDIT`
 
-Status: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS / FINAL_LEDGER_CI_REQUIRED`
 
 ## Baseline
 
@@ -187,4 +187,7 @@ route selection, while a separately source-locked main-family repair may be rank
 - `implementation_public_ci`: Lean Action run `30400822025`, build job `90414919121`, passed in
   `2m55s`.
 - `proof_source_state`: frozen; diff at immutable-evidence creation is empty.
-- `next_gate`: publish docs-only immutable evidence and require public CI.
+- `evidence_commit`: `d629fbd2fdacf1adf866831761f8e127ae3330c7`.
+- `evidence_public_ci`: Lean Action run `30401127310`, build job `90415928990`, passed in
+  `1m32s`.
+- `next_gate`: publish one docs-only final ledger and require public CI.

@@ -6,7 +6,7 @@ Campaign: `FALSIFICATION-20260729-H9-CONREY-SEVEN-FLAT-INTERVAL-01`
 
 Classification: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS`
 
-Status: `IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `PUBLIC_EVIDENCE_PASS / FINAL_LEDGER_CI_REQUIRED`
 
 ## Frozen implementation
 
@@ -59,4 +59,7 @@ scope certificate proves that seven is `7 mod 8`, outside the paper's `3 mod 8` 
 family. No permitted-family flat interval or exclusion theorem, source refutation, Conjecture 1,
 Theorem 3, H9, or RH is claimed.
 
-This evidence record requires one public Lean Action CI before the final ledger.
+This immutable evidence commit
+`d629fbd2fdacf1adf866831761f8e127ae3330c7` passed Lean Action run `30401127310`,
+build job `90415928990`, in `1m32s`. The proof-source diff from the frozen implementation
+through this commit is empty. One docs-only final ledger and public CI remain.

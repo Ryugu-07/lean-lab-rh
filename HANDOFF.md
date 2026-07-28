@@ -5221,6 +5221,21 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-29 H9 Conrey actual-seven immutable evidence public green
+
+- `immutable_evidence`: `d629fbd2fdacf1adf866831761f8e127ae3330c7`.
+- `public_ci`: run `30401127310`, build job `90415928990`, passed in `1m32s`.
+- `proof_freeze`: `LeanLab/` has an empty diff from frozen implementation
+  `e259b79773d290435b332c119ad5c81ff0ac16dc`.
+- `local_stop`: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS`, pending one docs-only
+  final-ledger CI.
+- `remaining_H9`: source-permitted `3 mod 8` flat-branch repair, Conjecture 1, Theorem 3, H9,
+  and RH.
+- `next_gate`: publish one docs-only final ledger and require public CI, then return to fresh
+  cross-family `ROUTE_SELECTION`.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-29 H1 Selberg immutable evidence public green
 
 - `immutable_evidence`: `5a80c9736d95294a3baf8bc666f8b45c85e5342f`.

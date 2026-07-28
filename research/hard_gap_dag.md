@@ -3235,6 +3235,13 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - proof-source diff from the frozen implementation at immutable-evidence creation: empty;
 - next gate: docs-only immutable evidence public CI.
 
+### Public immutable-evidence receipt
+
+- immutable evidence: `d629fbd2fdacf1adf866831761f8e127ae3330c7`;
+- Lean Action run `30401127310`, build job `90415928990`, `1m32s`, success;
+- proof-source diff from frozen implementation through immutable evidence: empty;
+- next gate: docs-only final ledger public CI.
+
 ### Public implementation receipt
 
 - frozen implementation: `258a9ac8ce69f6dffe6beb4a6a7579845ca2a457`;
