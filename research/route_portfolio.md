@@ -4522,3 +4522,18 @@ Lebesgue integral at `alpha=pi/2`. It also compiles the exact H1/H6 bridge
 infinitely many actual project critical-line zeros conditional only on the exact source Abel
 moment law. Proving that law from Cahen-Mellin/theta inversion remains the next analytic edge;
 Hardy--Littlewood counts, H1, and RH remain open.
+
+## H1 Hardy Abel-Moment Local Result
+
+The complete contradiction consumer now compiles in
+`HardyAbelMomentAmplification.lean`. The source law selects a negative odd moment and a positive
+even moment. Uniform compact control gives `K*T^(2p)`, while a fixed signed tail interval gives
+`C*(2T)^(2p)`; powers of 16 close both contradictions. Continuity then promotes tail
+nonvanishing to one of those forbidden signs, yielding a zero above every height and infinitely
+many actual critical-line nontrivial zeros.
+
+The result is exactly conditional on `HardyXiAbelMomentLaw`. This isolates the historical route's
+remaining analytic door sharply: derive interior integrability and the left Abel limit from
+Hardy's Cahen-Mellin/theta identity. The boundary integral at `alpha=pi/2` is still not assumed.
+Local audits pass with 11 exact checks, eight standard-only axiom prints, and the full
+`8777/8777` build. Public implementation CI remains the next gate.

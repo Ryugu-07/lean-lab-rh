@@ -1713,3 +1713,18 @@ Campaign `LITERATURE-20260728-H1-HARDY-ABEL-MOMENT-01` also fixes the exact cros
 consumer conditional on Hardy's source Abel moment law. The law itself, quantitative counts,
 H1, and RH remain open. Production Lean editing is blocked until the docs-only preregistration
 passes public CI.
+
+### Hardy Abel moment: local implementation result
+
+The public preregistration gate passed at `03a788e80e6ca0acfb82a41c8e3663bda3a9ef79`, run
+`30334772898`, job `90197213274`, in `1m38s`. The full fixed conditional endpoint now compiles
+locally. No omitted factor or parity reversal was found: odd moments eliminate an eventually
+positive tail, even moments eliminate an eventually negative tail, and the source ratio is
+exactly the growth gap between `T^(2p)` and `(2T)^(2p)`.
+
+The omission-sensitive boundary remains real and localized. The contradiction needs only
+interior moments selected by the left Abel limit; it does not need an unconditional boundary
+Lebesgue integral. The next historical-source question is therefore whether Hardy's
+Cahen-Mellin/theta derivation can be compiled into `HardyXiAbelMomentLaw` without importing a
+stronger convergence premise. Until then, the zero-infinitude result is conditional and does
+not move H1 or RH.

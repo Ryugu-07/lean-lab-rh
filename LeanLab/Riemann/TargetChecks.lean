@@ -17,6 +17,7 @@ import LeanLab.Riemann.RedhefferMertensDeterminant
 import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
+import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
@@ -4909,5 +4910,66 @@ example (n : ℕ) :
       (fun i => (pccExceptionalValue n i).im) = n + 4 := by
   rw [equalOrdinatePairCount_im_eq_horizontalPairCount,
     pccExceptional_horizontalPairCount]
+
+example (alpha : ℝ) (p : ℕ) :
+    hardyXiAbelMoment alpha p =
+      ∫ t : ℝ in Set.Ioi 0,
+        ((Real.exp (alpha * t) + Real.exp (-alpha * t)) *
+            t ^ (2 * p) * hardyXi (2 * t)) /
+          (1 / 4 + 4 * t ^ 2) :=
+  rfl
+
+example (hLaw : HardyXiAbelMomentLaw) (alpha : ℝ) (p : ℕ)
+    (halpha : |alpha| < Real.pi / 2) :
+    MeasureTheory.IntegrableOn
+      (hardyXiAbelMomentIntegrand alpha p) (Set.Ioi 0) :=
+  hLaw.integrable alpha p halpha
+
+example (hLaw : HardyXiAbelMomentLaw) (p : ℕ) :
+    Filter.Tendsto (fun alpha ↦ hardyXiAbelMoment alpha p)
+      (nhdsWithin (Real.pi / 2) (Set.Iio (Real.pi / 2)))
+      (nhds (((-1 : ℝ) ^ p) * Real.pi * Real.cos (Real.pi / 8) /
+        4 ^ (2 * p))) :=
+  hLaw.tendsto p
+
+example (t : ℝ) :
+    hardyXi (2 * t) =
+      8 * (deBruijnNewmanH 0 (4 * t)).re :=
+  hardyXi_two_mul_eq_deBruijnNewmanH_zero_four_mul t
+
+example (hLaw : HardyXiAbelMomentLaw) (n : ℕ) :
+    ∃ alpha : ℝ,
+      0 < alpha ∧ alpha < Real.pi / 2 ∧
+        hardyXiAbelMoment alpha (2 * n + 1) < 0 :=
+  exists_interior_hardyXiAbelMoment_odd_neg hLaw n
+
+example (hLaw : HardyXiAbelMomentLaw) (n : ℕ) :
+    ∃ alpha : ℝ,
+      0 < alpha ∧ alpha < Real.pi / 2 ∧
+        0 < hardyXiAbelMoment alpha (2 * n) :=
+  exists_interior_hardyXiAbelMoment_even_pos hLaw n
+
+example (hLaw : HardyXiAbelMomentLaw) :
+    ¬ ∃ T : ℝ, 1 < T ∧
+      ∀ t : ℝ, T < t → 0 < hardyXi (2 * t) :=
+  not_eventually_hardyXi_two_mul_pos hLaw
+
+example (hLaw : HardyXiAbelMomentLaw) :
+    ¬ ∃ T : ℝ, 1 < T ∧
+      ∀ t : ℝ, T < t → hardyXi (2 * t) < 0 :=
+  not_eventually_hardyXi_two_mul_neg hLaw
+
+example (hLaw : HardyXiAbelMomentLaw) (T : ℝ) :
+    ∃ t : ℝ, T < t ∧ hardyXi t = 0 :=
+  exists_hardyXi_zero_above_of_abelMomentLaw hLaw T
+
+example (hLaw : HardyXiAbelMomentLaw) :
+    Set.Infinite {t : ℝ |
+      IsNontrivialZero (hardyCriticalLinePoint t)} :=
+  infinite_criticalLineZeros_of_hardyXiAbelMomentLaw hLaw
+
+example :
+    HardyXiAbelMomentAmplificationCertificate :=
+  hardyXiAbelMomentAmplification_endpoint
 
 end LeanLab.Riemann

@@ -5145,3 +5145,33 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   Lean Action CI.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H1 Hardy Abel-moment preregistration public green
+
+- `prereg_public`: `03a788e80e6ca0acfb82a41c8e3663bda3a9ef79`, run
+  `30334772898`, build job `90197213274`, `1m38s`.
+- `production_gate`: open for the exact preregistered conditional endpoint.
+- `implementation_order`: exact H1/H6 scaling; source integrand, moment, and Abel law;
+  interior sign selection; both eventual-sign contradictions; a zero above every height;
+  infinite actual critical-line zeros.
+- `strict_boundary`: the Abel law itself is an open analytic source theorem and may not be
+  promoted to an axiom or unconditional fact.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H1 Hardy Abel-moment local fixed endpoint
+
+- `campaign`: `LITERATURE-20260728-H1-HARDY-ABEL-MOMENT-01`.
+- `result`: `HARDY_ABEL_MOMENT_AMPLIFICATION_FORMALIZED`.
+- `compiled`: 790-line source; exact H1/H6 scaling; source integrand, moment, and one-sided
+  Abel-law definitions; both parity selectors; uniform initial bound; both signed tail lower
+  bounds; both eventual-sign contradictions; a zero above every height; infinite actual
+  critical-line nontrivial zeros; aggregate certificate.
+- `audits`: warning-as-error production and registry compiles, 11 exact TargetChecks, eight
+  standard-only axiom prints, empty new-module forbidden/resource scans, `git diff --check`,
+  and full `8777/8777` build.
+- `strict_boundary`: every zero conclusion assumes `HardyXiAbelMomentLaw`; proving that law from
+  Cahen-Mellin/theta inversion, quantitative counts, H1, and RH remain open.
+- `next_gate`: commit and publish the frozen implementation, then require public Lean Action CI.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.

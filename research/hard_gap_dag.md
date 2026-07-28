@@ -2643,3 +2643,23 @@ implementation `15381a49ff4dfb92a0ab4e29d5e76383f9789139` is empty. This node re
 - `classification_target`: historical mechanism and cross-route interface progress; no
   unconditional critical-line-infinitude, hard-gap, or RH-frontier delta.
 - `global_goal`: active.
+
+## 2026-07-28 H1 Hardy Abel-moment amplification local result
+
+- `closed_edge`:
+  `exact source Abel law -> parity-specific interior moment sign`;
+  `eventual positive/negative Xi tail -> fixed signed C*(2T)^(2p) lower bound`;
+  `uniform compact K*T^(2p) bound -> both eventual-sign contradictions`;
+  `tail nonvanishing plus continuity -> constant sign`;
+  `both sign contradictions -> zero above every height`;
+  `actual zero dictionary -> infinite critical-line nontrivial-zero set`.
+- `compiled_endpoint`: `hardyXiAbelMomentAmplification_endpoint`.
+- `local_audit`: 790-line source, 11 exact TargetChecks, eight standard-only axiom prints,
+  empty forbidden/resource scans, warning-as-error compiles, and full `8777/8777` build.
+- `remaining_H1A`: prove `HardyXiAbelMomentLaw` from the actual Cahen-Mellin/theta transform,
+  including interior integrability and the left Abel limit.
+- `remaining_H1B`: quantitative Hardy--Littlewood count, mollifier proportions, H1, and RH.
+- `classification`: `historical_route_coverage_delta=1`, `source_logic_delta=1`,
+  `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `next_gate`: frozen implementation public CI.
+- `global_goal`: active.

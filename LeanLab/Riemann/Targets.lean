@@ -94,6 +94,7 @@ import LeanLab.Riemann.RedhefferMertensDeterminant
 import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
+import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
@@ -1450,6 +1451,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``hardyCriticalLineSign_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260726-H1-HARDY-CRITICAL-LINE-SIGN-01 compiles the normalization-safe consumer at the entrance to Hardy's 1914 route. The proof uses only xi conjugation, the functional equation, entire continuity, and the real intermediate value theorem. Endpoint signs remain explicit premises, and sequence witnesses are not asserted distinct. Hardy's theta/Fourier transform, arbitrarily high sign changes, infinitely many critical-line zeros, critical-zero proportions, H1, and RH remain open; historical_route_coverage_delta=1, sign_change_consumer_delta=1, hard_gap_delta=0, rh_frontier_delta=0." },
+    { id := "H1.hardy.abel-moment-amplification"
+      tier := .tier2
+      title := "Formalize Hardy's Abel-moment amplification"
+      statement :=
+        "Define Hardy's exact interior even moments of the actual critical-line xi coordinate, retain the left Abel limit at pi/2 as an explicit source law, and prove that this law forbids both eventual tail signs, gives a zero above every height, and yields infinitely many actual critical-line nontrivial zeros."
+      leanName := some ``hardyXiAbelMomentAmplification_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260728-H1-HARDY-ABEL-MOMENT-01 reconstructs Hardy 1914 equations (2)-(6) without replacing the boundary by an unconditional Lebesgue integral. Lean compiles the exact hardyXi(2t)=8*H_0(4t) normalization, uniform compact initial bound, positive and negative tail amplification, both parity choices, unbounded zeros, and the actual-zero dictionary. Every conclusion is conditional on HardyXiAbelMomentLaw. Proving that law from Cahen-Mellin and theta inversion, quantitative critical-zero counts, H1, and RH remain open; historical_route_coverage_delta=1, source_logic_delta=1, rh_frontier_delta=0." },
     { id := "H1.short-mollifier.variational-global-minimizer"
       tier := .tier2
       title := "Certify the short-mollifier variational minimizer"

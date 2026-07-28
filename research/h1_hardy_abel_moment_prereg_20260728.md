@@ -8,7 +8,7 @@ Selected node: `H1-HARDY-ABEL-MOMENT-AMPLIFICATION-01`
 
 Mode: `LITERATURE`
 
-Status: `PREREGISTERED / PRODUCTION_LEAN_EDIT_BLOCKED_PENDING_PUBLIC_CI`
+Status: `LOCAL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_CI_PENDING`
 
 ## Exact historical statement
 
@@ -177,3 +177,23 @@ Hardy--Littlewood linear count, every positive-proportion result, H1, and RH.
 
 No theorem in this campaign is an unconditional proof of Hardy's theorem unless the source Abel
 law itself is later compiled.
+
+## Local implementation result
+
+The fixed endpoint is implemented in the 790-line
+`LeanLab/Riemann/HardyAbelMomentAmplification.lean` module. The exact H1/H6 scaling, both
+interior parity selectors, both eventual-sign contradictions, a zero above every real height,
+actual critical-line zero infinitude, and the aggregate certificate compile.
+
+The proof keeps the quantifier order required by Hardy's amplification: the compact constant is
+uniform in `alpha,p`, and each signed tail has a fixed positive interval constant independent of
+`alpha,p`. The odd and even branches use powers of 16 to make the `2^(2p)` ratio dominate.
+
+The production module, Targets, 11 exact TargetChecks, and AxiomsAudit compile directly under
+warning-as-error. Eight selected transitive axiom prints contain only `propext`,
+`Classical.choice`, and `Quot.sound`; forbidden and resource-relaxation scans are empty;
+`git diff --check` and the full `8777/8777` build pass.
+
+This is conditional historical-source logic. `HardyXiAbelMomentLaw` is a `Prop` structure
+supplied as a theorem hypothesis, not an axiom or compiled source theorem. The implementation
+must pass public CI before it is frozen.
