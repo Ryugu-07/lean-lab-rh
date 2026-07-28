@@ -47,31 +47,35 @@ L_vonMangoldt(s) = -zeta'(s) / zeta(s)       for Re(s) > 1,
 LSeries_eq_mul_integral                      after convergence is supplied.
 ```
 
-What it does not expose is the cancellation theorem needed by the reverse prime-error channel:
+What it does not expose is the ordered cancellation theorem needed by the reverse prime-error
+channel:
 
 ```text
 sum_{n <= N} a(n) = O(N^r)
-  implies
-sum a(n) / n^s converges for Re(s) > r.
+  implies the naturally ordered partial sums of
+sum a(n) / n^s converge for Re(s) > r.
 ```
 
-For `a(n)=vonMangoldt(n)-1`, the partial sum is exactly `psi(N)-N`. Proving this generic theorem
-and its exact specialization distinguishes the true von Koch exponent from the unconditional
-absolute-convergence line.
+For `a(n)=vonMangoldt(n)-1`, the partial sum is exactly `psi(N)-N`. Mathlib's
+`LSeriesSummable` means absolute convergence, so it cannot represent this cancellation theorem
+below the absolute-convergence line. The corrected campaign will define the natural ordering
+explicitly and prove compatibility with Mathlib's `LSeries` only where absolute convergence is
+independently available.
 
 ## Fixed next campaign
 
 - `campaign`: `LITERATURE-20260728-H0-CHEBYSHEV-MELLIN-01`.
 - `node`: `H0-RIEMANN-VON-KOCH-PSI-MELLIN-01`.
 - `mode`: `LITERATURE`.
-- `positive_endpoint`: cancellation-based L-series convergence from partial-sum growth; exact
+- `positive_endpoint`: naturally ordered Dirichlet convergence from partial-sum growth; exact
   `psi`/von-Mangoldt partial sums; source Mellin formulas; floor-corrected error coefficients;
   and a theorem sending any registered `psi(N)-N = O(N^r)` bound to convergence throughout
   `Re(s)>r`.
 - `open_analytic_edge`: prove locally uniform convergence or an analytic integral continuation
   on the same half-plane, identify it with the continued zeta logarithmic derivative, and exclude
   zeros by the pole-removed zeta differential equation.
-- `negative_controls`: no unconditional RH-strength error bound, no inference from pointwise
+- `negative_controls`: no identification of ordered convergence with Mathlib's absolute
+  `LSeriesSummable`, no unconditional RH-strength error bound, no inference from pointwise
   convergence to holomorphy, no use of the totalized logarithmic derivative at a zeta zero, no
   deletion of the floor correction, and no RH claim.
 - `strict_boundary`: von Koch's RH-equivalent error estimate, analytic continuation from the

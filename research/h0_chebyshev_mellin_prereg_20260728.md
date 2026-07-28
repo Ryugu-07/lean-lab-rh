@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260728-H0-CHEBYSHEV-MELLIN-01`
 
 Selected node: `H0-RIEMANN-VON-KOCH-PSI-MELLIN-01`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_PENDING`
+Status: `CORRECTED_PREREGISTERED_LOCAL / SECOND_PUBLIC_CI_PENDING`
 
 ## Selection reason
 
@@ -59,34 +59,59 @@ For every natural `N`, its partial sum over `1 <= n <= N` must be exactly
 For real `x`, the integral partial sum is `psi(floor x)-floor x`. It differs from the classical
 continuous error `psi(x)-x` by exactly `x-floor x`; this correction may not be discarded.
 
-## Fixed Lean endpoint
+## Pre-proof semantic correction
+
+The first public preregistration passed at commit
+`ef2b3e90abebc963522e78ee01a37c7cf5cf1bd9`, Lean Action run `30340366975`, build job
+`90214370358`, in `1m55s`. Before any `LeanLab/` edit, the oscillating-sequence adversarial case
+exposed a false API identification in block 1:
+
+```text
+Mathlib LSeriesSummable f s = Summable (LSeries.term f s),
+```
+
+and Mathlib documents this as absolute convergence. A cancellation bound on the complex partial
+sums does not imply absolute convergence. It implies convergence only for the naturally ordered
+partial sums. The original block 1 is therefore classified
+`LIBRARY_SEMANTICS_CORRECTION`; it may not be proved.
+
+The corrected endpoint below uses an explicit ordered partial-sum limit. Compatibility with
+Mathlib's `LSeries` is asserted only where absolute convergence is independently available. This
+changes no mathematical source claim: it makes the distinction required by Dirichlet's test
+visible in Lean.
+
+## Corrected fixed Lean endpoint
 
 Create `LeanLab/Riemann/ChebyshevMellin.lean` and compile all blocks below without placeholders.
 
-1. Prove a generic cancellation theorem: if
-   `sum_{1 <= k <= n} f(k) = O(n^r)`, `0 <= r`, and `r < Re(s)`, then the L-series of
-   `f : Nat -> Complex` is summable at `s`. The proof must use finite Abel summation and may not
-   replace the complex partial sum by the sum of coefficient norms.
-2. Combine the generic convergence theorem with `LSeries_eq_mul_integral` to obtain the exact
-   Mellin representation from the same partial-sum hypothesis.
-3. Prove the exact finite identification between Mathlib's `Chebyshev.psi` and the complex
+1. Define the naturally ordered Dirichlet partial sum
+   `sum_{1 <= k <= N} f(k) * k^(-s)` and a predicate or exact `Tendsto` statement for its limit.
+   Do not identify this predicate with `LSeriesSummable`.
+2. Prove a generic cancellation theorem: if
+   `sum_{1 <= k <= n} f(k) = O(n^r)`, `0 <= r`, and `r < Re(s)`, then the naturally ordered
+   Dirichlet partial sums converge. The proof must use finite Abel summation and may not replace
+   the complex partial sum by the sum of coefficient norms.
+3. Identify the exact ordered limit with the Abel/Mellin integral. Prove separately that, under
+   `LSeriesSummable f s`, the ordered limit agrees with Mathlib's `LSeries f s`.
+4. Prove the exact finite identification between Mathlib's `Chebyshev.psi` and the complex
    von Mangoldt partial sum.
-4. Prove the unconditional linear `O(N)` bound needed to recover the von Mangoldt Mellin formula
+5. Prove the unconditional linear `O(N)` bound needed to recover the von Mangoldt Mellin formula
    on `Re(s)>1`, using Mathlib's compiled Chebyshev bound.
-5. Prove
+6. Prove
    `L_vonMangoldt(s) = s * integral_{1}^{infinity} psi(x) x^(-s-1) dx`
    for `Re(s)>1`, with the precise set-integral convention.
-6. Identify the preceding formula with `-zeta'(s)/zeta(s)` on `Re(s)>1`.
-7. Define `psiErrorCoeff`; prove its exact natural partial sum and its exact floor-valued real
+7. Identify the preceding formula with `-zeta'(s)/zeta(s)` on `Re(s)>1`.
+8. Define `psiErrorCoeff`; prove its exact natural partial sum and its exact floor-valued real
    partial sum.
-8. Prove on `Re(s)>1` that its L-series equals
+9. Prove on `Re(s)>1` that its absolutely convergent L-series equals
    `-zeta'(s)/zeta(s)-zeta(s)` and equals the corresponding floor-error Mellin integral.
-9. Prove the von Koch convergence bridge: any registered asymptotic hypothesis
-   `psi(N)-N = O(N^r)`, with `0 <= r`, implies summability of the error-coefficient L-series
-   for every `s` with `r < Re(s)`, together with its Mellin representation there.
-10. Prove the exact floor correction and the bounds `0 <= x-floor(x) < 1` for `0 <= x`.
-11. Bundle the generic theorem and the actual Chebyshev/von Mangoldt statements in one aggregate
-    endpoint certificate.
+10. Prove the von Koch ordered-convergence bridge: any registered asymptotic hypothesis
+   `psi(N)-N = O(N^r)`, with `0 <= r`, implies convergence of the naturally ordered
+   error-coefficient Dirichlet partial sums for every `s` with `r < Re(s)`, together with their
+   Mellin limit there.
+11. Prove the exact floor correction and the bounds `0 <= x-floor(x) < 1` for `0 <= x`.
+12. Bundle the generic theorem, the absolute/ordered compatibility theorem, and the actual
+    Chebyshev/von Mangoldt statements in one aggregate endpoint certificate.
 
 Names may be adjusted to local APIs. The endpoint may retain natural-number casts or equivalent
 `norm` formulations, but it may not assume absolute convergence where only cancellation is
@@ -107,13 +132,16 @@ available.
 
 ## Success and falsification criteria
 
-`FULL_SUCCESS` requires all eleven endpoint blocks, an aggregate proven Target, exact
+`FULL_SUCCESS` requires all twelve corrected endpoint blocks, an aggregate proven Target, exact
 TargetChecks, selected transitive axiom prints, an empty forbidden scan, warning-as-error
 compilation, a full build, and independent public CI for preregistration, frozen implementation,
 immutable evidence, and final ledger.
 
-`MEANINGFUL_PARTIAL` requires the generic cancellation theorem plus the exact
-`psiErrorCoeff` partial-sum identity and its half-plane convergence specialization.
+`MEANINGFUL_PARTIAL` requires the generic ordered cancellation theorem plus the exact
+`psiErrorCoeff` partial-sum identity and its ordered half-plane convergence specialization.
+
+`LIBRARY_SEMANTICS_CORRECTION` is already recorded for the false identification of ordered
+convergence with `LSeriesSummable`.
 
 `LIBRARY_BOUNDARY_FOUND` is recorded if the finite Abel theorem compiles but an exact missing
 analytic or measurability premise prevents the Mellin equality. The missing premise must be
@@ -123,8 +151,8 @@ definition.
 ## Known obstacles and strict boundary
 
 - Mathlib's public `LSeriesSummable_of_sum_norm_bigO` proves absolute convergence and therefore
-  does not use the cancellation in `psi(N)-N`. A new theorem must be derived from the compiled
-  finite Abel-summation limit.
+  does not use the cancellation in `psi(N)-N`. The corrected theorem must use an explicit
+  naturally ordered partial-sum limit derived from the compiled finite Abel-summation theorem.
 - The zero coefficient is omitted by L-series terms but can affect raw function equalities.
 - Complex powers require positivity of the real integration variable and careful real-part
   arithmetic.
@@ -140,7 +168,7 @@ definition.
 
 Before proof-source editing:
 
-- publish this docs-only preregistration and route-selection record;
+- publish this corrected docs-only preregistration;
 - require public Lean Action CI to pass;
 - keep the six inherited protected files untouched and unstaged.
 
