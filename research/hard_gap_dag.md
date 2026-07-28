@@ -2944,6 +2944,32 @@ Immutable evidence `70b437177d7e990319e973bffc36053b413450c0` passed public Lean
 `30382794033`, build job `90354522762`, in `1m41s`; the `LeanLab/` diff from the frozen
 implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`.
 
+## 2026-07-29 H8 Conrey--Li RKHS-shift launch
+
+- `node`: `H8-CONREY-LI-RKHS-SHIFT-01`.
+- `mode`: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`.
+- `parent_closure`: H10 final ledger `bb3cb3ee20339e71930ac4fc7b667bf161364648`,
+  run `30385243402`, job `90362773315`.
+- `source_edge`:
+  `scalar RKHS + explicit Conrey--Li kernel`;
+  `kernel-center shift w -> w+i + Re <F,T F> >= 0`;
+  `-> positive-definite symmetrized shifted kernel`;
+  `-> upper-half-plane shifted-ratio nonnegativity`;
+  `-> Cayley contraction`.
+- `material_difference`: the closed D9 phase campaign is a consumer/falsifier of shifted-ratio
+  positivity; this campaign reconstructs its RKHS producer.
+- `source_quantifier`: non-strict semipositivity; no zero-vector defect.
+- `full_success`: finite-combination source positivity, ratio nonnegativity, and Cayley
+  contraction all compile.
+- `meaningful_partial`: the single-kernel ratio and Cayley consumer compile and the first
+  missing finite-combination or half-strip edge is isolated exactly.
+- `negative_controls`: conjugation convention, shift orientation, denominator sign,
+  nonvanishing, weak versus strict bounds, and no unproved half-strip promotion.
+- `open_after_success`: the second Hardy-RKHS multiplier, analytic continuation to
+  `Im z > -1/2`, actual `W=1/xi(1-i*z)` operator positivity, H8, and RH.
+- `production_gate`: docs-only preregistration public CI before any proof-source edit.
+- `global_goal`: active.
+
 ## 2026-07-28 H10 Weil surface Hodge-lattice launch
 
 - `node`: `H10-WEIL-SURFACE-HODGE-LATTICE-01`.

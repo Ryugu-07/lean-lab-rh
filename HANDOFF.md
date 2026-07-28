@@ -5555,6 +5555,31 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-29 H8 Conrey--Li RKHS shift selected
+
+- `parent_public_closure`: H10 final ledger
+  `bb3cb3ee20339e71930ac4fc7b667bf161364648`, run `30385243402`, job
+  `90362773315`, `2m22s`.
+- `campaign`: `LITERATURE-20260729-H8-CONREY-LI-RKHS-SHIFT-01`.
+- `node`: `H8-CONREY-LI-RKHS-SHIFT-01`.
+- `source`: Conrey--Li 1998, Theorem 2 and its two-stage proof.
+- `material_reentry`: the closed phase-obstruction module assumes shifted-ratio
+  nonnegativity and conditionally refutes it; this campaign derives that condition from a
+  scalar RKHS, the kernel-shift action, and operator semipositivity.
+- `source_correction`: the paper assumes `Re <F,T F> >= 0`, not strict positivity; no
+  zero-vector quantifier defect is claimed.
+- `fixed_edge`:
+  `RKHS + kernel shift + operator semipositivity`;
+  `-> finite-combination symmetrized shifted-kernel positivity`;
+  `-> upper-half-plane Re(W(z)/W(z+i)) >= 0`;
+  `-> source Cayley contraction`.
+- `strict_boundary`: the second Hardy-RKHS multiplier/adjoint argument for analytic extension
+  to `Im z > -1/2`, the concrete actual-xi RKHS and operator, H8, and RH remain open.
+- `next_gate`: publish docs-only preregistration and require public CI before any `LeanLab/`
+  edit.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-28 H10 Weil surface Hodge-lattice selected
 
 - `parent_public_closure`: H12 final ledger
