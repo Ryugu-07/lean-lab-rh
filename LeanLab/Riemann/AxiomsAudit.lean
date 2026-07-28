@@ -1,5 +1,6 @@
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.ChebyshevMellin
+import LeanLab.Riemann.FareyFranel
 import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.InfiniteReciprocalTraceAudit
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
@@ -1082,6 +1083,14 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.fareyReducedBlock_frequencyOne_eq_moebius
 #print axioms LeanLab.Riemann.farey_frequency_one_sum_eq_finiteMertens
 #print axioms LeanLab.Riemann.fareyMobiusWeyl_endpoint
+#print axioms LeanLab.Riemann.fareyRankValue_get_ordered
+#print axioms LeanLab.Riemann.image_fareyRank
+#print axioms LeanLab.Riemann.fareyMertensWeight_sum
+#print axioms LeanLab.Riemann.fareyDiscrepancy_eq_centered_mertens
+#print axioms LeanLab.Riemann.fareyPhi_sq_mul_squaredDiscrepancy_eq_correlation
+#print axioms LeanLab.Riemann.fareyCenteredCorrelation_eq_mertens_dedekind
+#print axioms LeanLab.Riemann.fareyDedekindThreeTerm_control_one_two_three
+#print axioms LeanLab.Riemann.fareyFranelCorrelation_endpoint
 #print axioms LeanLab.Riemann.triangularPairMass_eq_filtered
 #print axioms LeanLab.Riemann.integral_positiveGapPairCount_eq_positiveGapMass
 #print axioms LeanLab.Riemann.triangularPairMass_eq_equal_add_two_positive

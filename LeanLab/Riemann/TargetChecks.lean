@@ -20,6 +20,7 @@ import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.FareyMobiusWeyl
+import LeanLab.Riemann.FareyFranel
 import LeanLab.Riemann.DeBruijnNewmanHeat
 import LeanLab.Riemann.DeBruijnNewmanZeros
 import LeanLab.Riemann.DeBruijnNewmanThreshold
@@ -4847,6 +4848,90 @@ example :
 example :
     FareyMobiusWeylCertificate :=
   fareyMobiusWeyl_endpoint
+
+example (N : ℕ) (i : Fin (fareyPhi N)) :
+    fareyRankValue N
+        ((fareyOrderedValues N).get
+          (Fin.cast (length_fareyOrderedValues N).symm i)) =
+      (i : ℕ) + 1 :=
+  fareyRankValue_get_ordered N i
+
+example (N : ℕ) :
+    (fareyPairs N).image (fareyRank N) =
+      Finset.Ico 1 (fareyPhi N + 1) :=
+  image_fareyRank N
+
+example {N : ℕ} (hN : 1 ≤ N) :
+    fareyDiscrepancy N (1, 1) = 0 :=
+  fareyDiscrepancy_one_one hN
+
+example {N : ℕ} (hN : 1 ≤ N) :
+    (∑ n ∈ Finset.Ico 1 (N + 1), fareyMertensWeight N n) = 1 :=
+  fareyMertensWeight_sum hN
+
+example (N : ℕ) (xi : ℚ) :
+    (fareyRankValue N xi : ℚ) =
+      ∑ n ∈ Finset.Ico 1 (N + 1),
+        fareyMertensWeight N n * (fareyCompleteCount n xi : ℚ) :=
+  fareyRankValue_eq_mertens_completeCount N xi
+
+example (N : ℕ) :
+    (fareyPhi N : ℚ) =
+      ∑ n ∈ Finset.Ico 1 (N + 1),
+        fareyMertensWeight N n * (n : ℚ) :=
+  fareyPhi_eq_mertens_blocks N
+
+example {N : ℕ} {p : ℕ × ℕ} (hN : 1 ≤ N)
+    (hp : p ∈ fareyPairs N) :
+    fareyDiscrepancy N p =
+      (1 / (fareyPhi N : ℚ)) *
+        ((∑ n ∈ Finset.Ico 1 (N + 1),
+            fareyMertensWeight N n *
+              fareyCenteredRemainder n (fareyValue p)) +
+          1 / 2) :=
+  fareyDiscrepancy_eq_centered_mertens hN hp
+
+example (N : ℕ) :
+    (fareyPhi N : ℚ) ^ 2 * fareySquaredDiscrepancy N =
+      fareyMertensCorrelationQuadratic N :=
+  fareyPhi_sq_mul_squaredDiscrepancy_eq_correlation N
+
+example (N a b : ℕ) :
+    fareyCenteredCorrelation N a b =
+      ∑ c ∈ Finset.Ico 1 (N + 1),
+        fareyMertensWeight N c * fareyDedekindBlock a b c :=
+  fareyCenteredCorrelation_eq_mertens_dedekind N a b
+
+example (N : ℕ) :
+    fareyMertensCenteredQuadratic N =
+      fareyMertensDedekindTriple N :=
+  fareyMertensCenteredQuadratic_eq_dedekindTriple N
+
+example :
+    fareySquaredDiscrepancy 0 = 0 ∧
+      fareySquaredDiscrepancy 1 = 0 ∧
+      fareySquaredDiscrepancy 2 = 0 ∧
+      fareySquaredDiscrepancy 3 = 1 / 72 :=
+  ⟨fareySquaredDiscrepancy_zero, fareySquaredDiscrepancy_one,
+    fareySquaredDiscrepancy_two, fareySquaredDiscrepancy_three⟩
+
+example :
+    fareyMertensGcdKernel 1 = 1 ∧
+      fareyMertensGcdKernel 2 = 1 ∧
+      fareyMertensGcdKernel 3 = 5 / 3 :=
+  ⟨fareyMertensGcdKernel_one, fareyMertensGcdKernel_two,
+    fareyMertensGcdKernel_three⟩
+
+example :
+    fareyDedekindBlock 1 2 3 +
+        fareyDedekindBlock 2 3 1 +
+        fareyDedekindBlock 3 1 2 =
+      fareyDedekindThreeTermRhs 1 2 3 :=
+  fareyDedekindThreeTerm_control_one_two_three
+
+example :
+    FareyFranelCorrelationCertificate :=
+  fareyFranelCorrelation_endpoint
 
 example {ι : Type} [Fintype ι] (gamma : ι → ℝ) (U : ℝ) :
     triangularPairMass gamma U =

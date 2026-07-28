@@ -5225,6 +5225,27 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-28 H9 Franel rank--Mertens local meaningful partial
+
+- `result`: `MEANINGFUL_PARTIAL / FRANEL_MERTENS_CORRELATION_FORMALIZED`.
+- `compiled`: actual sorted positive Farey values; one-based rank and exact rank image; rank and
+  `Phi` Mertens transforms; `sum M(floor(N/n))=1`; pointwise remainder and source-centered
+  discrepancy; exact squared remainder-correlation quadratic; source Lemma 7 Dedekind transform.
+- `source_endpoint`: `B1(integer)=-1/2`; the source `+1/2` is independently derived.
+- `finite_controls`: final Franel formula at `N=1,2,3`, no-division boundary at `N=0`, and
+  Dedekind three-term controls at `(1,1,1)`, `(1,2,3)`, `(2,2,2)`.
+- `first_open_source_statement`: `FareyDedekindThreeTerm`; defined but not proved and excluded
+  from `FareyFranelCorrelationCertificate`.
+- `audits`: aggregate Target, exact checks, eight standard-only axiom prints, empty scans,
+  warning-as-error compiles, patch check, full `8780/8780` build.
+- `classification`: `historical_route_coverage_delta=1`, `finite_correlation_delta=1`,
+  `dedekind_three_term_delta=0`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `strict_boundary`: no general three-term relation, complete Franel gcd-kernel identity,
+  discrepancy asymptotic, Mertens growth estimate, H9, or RH.
+- `next_gate`: frozen implementation public CI.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-28 H11 exact moving-window local result
 
 - `prereg_public`: `3b1025c12cead7839a14a5346c39c4106525d3bc`, run

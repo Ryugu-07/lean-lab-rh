@@ -7465,3 +7465,25 @@ Future attempt records must include:
 - compaction state: resumed from a generated summary and rechecked target, source, and interfaces.
 - detailed record: `research/m1_baez_duarte_fixed_epsilon_prereg_m1_17_20260711.md` and
   `attempts/m1_17_baez_duarte_fixed_epsilon.md`.
+
+## Batch 2026-07-28-H9-FRANEL-RANK-MERTENS-01
+
+- `loop_id`: `LITERATURE-20260728-H9-FRANEL-RANK-MERTENS-01`
+- `node_id`: `H9-FRANEL-RANK-MERTENS-QUADRATIC-01`
+- `work_class`: `LITERATURE / FALSIFICATION`
+- fixed target: actual Farey ordering and rank, exact pointwise Mertens discrepancy, squared
+  finite correlation, and complete source gcd-kernel identity.
+- compiled result: ordering/rank; endpoint Mertens identity; pointwise remainder and centered
+  formulas; exact squared correlation; source Lemma 7; finite Franel and three-term controls.
+- `result_class`: `MEANINGFUL_PARTIAL / FRANEL_MERTENS_CORRELATION_FORMALIZED`
+- `first_open_statement`: `FareyDedekindThreeTerm`, with `B1(integer)=-1/2`.
+- `hard_gap_delta`: `0`; the general relation, complete finite Franel formula, discrepancy
+  asymptotic, H9, and RH remain open.
+- verification: warning-as-error compiles, eight selected standard-only axiom prints, empty
+  scans, patch check, and full `8780/8780` build.
+- model: Codex, GPT-5 family; exact backend and reasoning effort are not exposed.
+- budget: unbounded; no per-round numerical quota.
+- compaction state: resumed from a generated summary and rechecked target, source conventions,
+  worktree, and inherited transform.
+- detailed record: `research/h9_franel_rank_mertens_result_20260728.md` and
+  `attempts/h9_franel_rank_mertens_20260728.md`.

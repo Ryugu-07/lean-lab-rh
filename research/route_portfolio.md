@@ -4604,3 +4604,28 @@ immutable evidence is next.
 Docs-only immutable evidence `ed2a400a98ca543d3a2795a80ea08544bcbb5df6` passed public run
 `30338961956`, build job `90209983168`, in `2m12s`; no proof source changed. The fixed node is at
 its local stop. One final-ledger CI remains before fresh cross-family selection.
+
+## 2026-07-28 H9 Franel rank--Mertens correlation local result
+
+Campaign `LITERATURE-20260728-H9-FRANEL-RANK-MERTENS-01` reconstructs Franel's actual positive
+Farey ordering. Lean proves one-based rank at every sorted index, the exact rank image, the
+count-specialized Mertens transform, and
+
+```text
+Phi(N)^2 * sum_p (rho_p-rank(p)/Phi(N))^2
+  = sum_{m,n<=N} M(N/m) M(N/n) R_N(m,n).
+```
+
+An endpoint test proves `sum M(floor(N/n))=1`, yielding the source-centered formula with
+`B1(integer)=-1/2` and the exact `+1/2`. The arbitrary-test transform also compiles source
+Lemma 7 and the triple Mertens/Dedekind expansion.
+
+This is `MEANINGFUL_PARTIAL`, not complete Theorem 3. The exact first open proposition is
+`FareyDedekindThreeTerm`; it is defined but unproved and excluded from the certificate. Finite
+controls at `(1,1,1)`, `(1,2,3)`, `(2,2,2)` and final Franel controls at `N=1,2,3` validate
+conventions without replacing a general proof.
+
+The aggregate Target, checks, eight standard-only axiom prints, scans, warning-as-error compiles,
+patch check, and full `8780/8780` build pass. Classification:
+`historical_route_coverage_delta=1`, `finite_correlation_delta=1`,
+`dedekind_three_term_delta=0`, `hard_gap_delta=0`, `rh_frontier_delta=0`.

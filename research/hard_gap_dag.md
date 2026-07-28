@@ -2664,6 +2664,26 @@ implementation `15381a49ff4dfb92a0ab4e29d5e76383f9789139` is empty. This node re
 - `next_gate`: frozen implementation public CI.
 - `global_goal`: active.
 
+## 2026-07-28 H9 ordered Franel--Mertens correlation update
+
+- `node`: `H9-FRANEL-RANK-MERTENS-QUADRATIC-01`.
+- `status`: `MEANINGFUL_PARTIAL_LOCAL`.
+- `closed_edges`: actual rational order and one-based rank; exact rank and `Phi` Mertens
+  transforms; endpoint Mertens identity; pointwise centered discrepancy; exact squared finite
+  remainder correlation; source Lemma 7 Dedekind-block transform.
+- `first_open_edge`: `H9-FRANEL-DEDEKIND-THREE-TERM-01`, the compiled proposition
+  `FareyDedekindThreeTerm`.
+- `controls`: final Franel formula at `N=1,2,3`; three-term relation at `(1,1,1)`, `(1,2,3)`,
+  and noncoprime `(2,2,2)`.
+- `source_detail`: the registered convention is `B1(integer)=-1/2`.
+- `reentry_rule`: formalize the three-variable residue classification and Bernoulli
+  distribution relation, or give a direct finite bijective proof. Do not optimize constants.
+- `remaining_after_three_term`: triple Mertens/gcd collapses, complete finite Franel formula,
+  then separately the RH-equivalent discrepancy asymptotic.
+- `hard_gap_delta`: `0`.
+- `rh_frontier_delta`: `0`.
+- `global_goal`: active.
+
 Frozen implementation `0ff8a577cb4eb247d6cfdbc03d82a5d7dd36707e` passed public Lean Action
 run `30342482471`, build job `90220996513`, in `2m8s`. The ordered-convergence bridge and
 alternating semantic control are public-green. Proof sources remain frozen while docs-only

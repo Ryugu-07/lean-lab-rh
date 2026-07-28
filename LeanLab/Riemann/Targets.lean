@@ -96,6 +96,7 @@ import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.FareyMobiusWeyl
+import LeanLab.Riemann.FareyFranel
 import LeanLab.Riemann.ChebyshevMellin
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.SpeiserCountingEquivalence
@@ -1580,6 +1581,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``fareyMobiusWeyl_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260726-H9-FAREY-MOBIUS-WEYL-01 reconstructs the xi=1 finite transform in Kanemitsu-Yoshimoto Lemma 3. Lean verifies the convention 0<a<=q<=N, excludes 0/1, includes 1/1 once, proves reduced rational-value injectivity and sum(phi(q)) cardinality, and proves F_N(f)=sum_{n<=N}M(floor(N/n))V_f(n). At frequency one, every complete block above one vanishes, the primitive q-block is mu(q), and the total is M(N). No ordered Farey discrepancy estimate, equidistribution rate, Mertens growth, H9, or RH is proved; historical_route_coverage_delta=1, farey_mertens_transform_delta=1, rh_frontier_delta=0." },
+    { id := "H9.farey.franel-mertens-correlation"
+      tier := .tier2
+      title := "Formalize the ordered Franel--Mertens correlation bridge"
+      statement :=
+        "Sort the actual positive Farey values, identify one-based lower-set rank with sorted index plus one, specialize the finite Farey transform to exact ranks and endpoint Mobius sums, derive the pointwise centered Mertens discrepancy and its squared finite correlation quadratic, and reconstruct the source Lemma 7 Dedekind-block transform."
+      leanName := some ``fareyFranelCorrelation_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260728-H9-FRANEL-RANK-MERTENS-01 reaches MEANINGFUL_PARTIAL. Lean proves the actual rational ordering and rank image, the exact pointwise block-remainder formula, the source-shaped centered formula with its independently derived +1/2 endpoint correction, the exact squared remainder-correlation quadratic, and the centered Farey-to-Dedekind transform. The full Kanemitsu--Yoshimoto Theorem 3 gcd-kernel identity is not proved: the first exact open source statement is FareyDedekindThreeTerm, the endpoint-sensitive three-variable modified Dedekind relation. It passes compiled controls at (1,1,1), (1,2,3), and noncoprime (2,2,2), but those controls are not a general proof. No Franel asymptotic, Mertens growth estimate, H9, or RH is proved; historical_route_coverage_delta=1 and rh_frontier_delta=0." },
     { id := "H12.speiser.counting-equivalence-consumer"
       tier := .tier2
       title := "Formalize the Speiser zero-count consumer"
