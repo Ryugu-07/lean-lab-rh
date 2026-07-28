@@ -2715,3 +2715,7 @@ return to cross-family selection with `HardyXiAbelMomentLaw` retained as an open
 - `classification`: `source_bookkeeping_delta=1`, `historical_route_coverage_delta=1`,
   `hard_gap_delta=0`, `rh_frontier_delta=0`.
 - `next_gate`: frozen implementation public CI.
+
+Frozen implementation `4bf9342866283d3b8d07f275ca8199e52413fd0b` passed public Lean Action
+run `30338649469`, build job `90209012408`, in `2m35s`. Proof sources are frozen while
+docs-only immutable evidence is published.

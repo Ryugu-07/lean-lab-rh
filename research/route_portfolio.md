@@ -4596,3 +4596,7 @@ One aggregate Target, ten exact checks, eight standard-only axiom prints, empty 
 warning-as-error compiles, and full `8778/8778` build pass. The result improves the exact
 interface but not the hard gap: Fujii's analytic error and PCC still do not exclude one sparse
 horizontal exception.
+
+Frozen implementation `4bf9342866283d3b8d07f275ca8199e52413fd0b` passed public run
+`30338649469`, build job `90209012408`, in `2m35s`. The proof source is frozen; docs-only
+immutable evidence is next.

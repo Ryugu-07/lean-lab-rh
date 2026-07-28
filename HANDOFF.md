@@ -5243,3 +5243,16 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `next_gate`: commit and publish frozen implementation, then require public CI.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H11 exact moving-window implementation public green
+
+- `frozen_implementation`: `4bf9342866283d3b8d07f275ca8199e52413fd0b`.
+- `public_ci`: run `30338649469`, build job `90209012408`, passed in `2m35s`.
+- `result`: `EXACT_MOVING_WINDOW_BOUNDARY_FORMALIZED`.
+- `proof_freeze`: do not modify any `LeanLab/` file before immutable-evidence CI.
+- `next_gate`: docs-only immutable evidence; verify an empty `LeanLab/` diff from the frozen
+  implementation.
+- `remaining_H11`: Fujii second moment, PCC, absolute last-exception control, sparse-exception
+  amplification, H11, and RH.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.

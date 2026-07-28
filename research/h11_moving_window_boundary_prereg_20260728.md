@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260728-H11-MOVING-WINDOW-BOUNDARY-01`
 
 Selected node: `H11-GALLAGHER-MUELLER-EXACT-BOUNDARY-01`
 
-Status: `LOCAL_FULL_SUCCESS / IMPLEMENTATION_PUBLIC_CI_PENDING`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_PENDING`
 
 ## Selection reason
 
@@ -186,3 +186,11 @@ stop the global RH Goal. Direct RH attacks and conjecture verification remain op
   `source_bookkeeping_delta=1`, `historical_route_coverage_delta=1`, `hard_gap_delta=0`,
   `rh_frontier_delta=0`.
 - `next_gate`: freeze and publish the implementation, then require public CI.
+
+## Frozen implementation
+
+- `frozen_implementation`: commit `4bf9342866283d3b8d07f275ca8199e52413fd0b`.
+- `public_ci`: Lean Action run `30338649469`, build job `90209012408`, passed in `2m35s`.
+- `proof_freeze`: the 492-line module, aggregate Target, ten exact TargetChecks, and eight
+  selected axiom prints are frozen.
+- `next_gate`: publish docs-only immutable evidence and require its independent public CI.
