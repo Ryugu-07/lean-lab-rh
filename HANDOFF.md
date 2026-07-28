@@ -5138,6 +5138,31 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-29 H1 Selberg public closure and H2 classical detector launch
+
+- `H1-SELBERG-LOCAL-SIGN-CHANGE-01`: publicly closed at final ledger
+  `2be8491d89ba02acc01cb133f596bd46580303be`, run `30391193466`, job
+  `90382907452`, `1m43s`. Keep Selberg global moments, proportions, H1, and RH open.
+- Fresh cross-family audit finds that H2 has a compiled half-isolation geometry/control
+  campaign but no production reconstruction of the classical analytic zero detector used by
+  Ingham--Huxley and current zero-density proofs.
+- Selected campaign `LITERATURE-20260729-H2-CLASSICAL-ZERO-DETECTOR-MELLIN-01`, node
+  `H2-CLASSICAL-ZERO-DETECTOR-MELLIN-01`.
+- `fixed_edge`:
+  `truncated Mobius convolution -> coefficient gap`;
+  `-> actual right-half-plane zeta-product L-series`;
+  `-> exponential Gamma--Mellin identity`;
+  `-> contour shift at an actual off-line zeta zero`;
+  `-> large dyadic block or large critical-line remainder`.
+- `source`: Maynard--Pratt Appendix C, proof of Lemma 23; Guth--Maynard Section 13.1 confirms
+  the same classical detector before its new large-values input.
+- `strict_boundary`: no zero count, large-values theorem, density exponent, actual bow
+  exclusion, H2, or RH.
+- `next_gate`: publish docs-only preregistration and require public CI before any `LeanLab/`
+  edit.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-28 H11 triangular pair-mass immutable evidence public green
 
 - `frozen_implementation`: `15381a49ff4dfb92a0ab4e29d5e76383f9789139`, run

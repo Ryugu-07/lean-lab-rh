@@ -3115,3 +3115,27 @@ docs-only immutable evidence is published.
 Immutable evidence `5a80c9736d95294a3baf8bc666f8b45c85e5342f` passed public Lean Action
 run `30390974932`, build job `90382176746`, in `1m48s`; the `LeanLab/` diff from frozen
 implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`.
+
+## 2026-07-29 H1 Selberg closure and H2 classical zero-detector launch
+
+- `H1-SELBERG-LOCAL-SIGN-CHANGE-01`: publicly closed at final ledger
+  `2be8491d89ba02acc01cb133f596bd46580303be`, run `30391193466`, job
+  `90382907452`, `1m43s`.
+- `H2-CLASSICAL-ZERO-DETECTOR-MELLIN-01`: preregistered source reconstruction.
+- `fixed_edge`:
+  `a_M(n)=sum_{d|n,d<=M}mu(d)`;
+  `-> a_M(1)=1 and a_M(n)=0 for 2<=n<=M`;
+  `-> L(a_M,s)=M_M(s)*zeta(s)`;
+  `-> smoothed Gamma--Mellin identity`;
+  `-> actual-zero contour shift`;
+  `-> dyadic Type-I block or critical-line Type-II remainder`.
+- `OBS-H2-DETECTOR-CARDINALITY-01`: a large total does not give a uniform large block without
+  a proved bound on the number of blocks.
+- `H2-DETECTOR-MELLIN-INVERSION-01`: open until the source original-line identity compiles.
+- `H2-DETECTOR-CONTOUR-SHIFT-01`: open until Gamma-pole cancellation, zeta-pole residue, and
+  horizontal-edge decay compile at an actual nontrivial zero.
+- `H2-TYPE-I-LARGE-VALUES-01` and `H2-TYPE-II-MOMENT-01`: remain outside this campaign.
+- `H2-SPARSE-EXCEPTION-01`: retained. Density estimates alone do not exclude a finite or sparse
+  off-line orbit.
+- Production gate: no Lean source edit before docs-only preregistration public CI. Persistent RH
+  Goal active.
