@@ -3081,3 +3081,29 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   no RH consequence.
 - Production gate: no Lean source edit before the docs-only preregistration is public-green.
   Persistent RH Goal active.
+
+## 2026-07-29 H1 Selberg local sign-change result
+
+- `H1-SELBERG-LOCAL-SIGN-CHANGE-01`: `FULL_LOCAL_SIGN_CHANGE_PRODUCER_SUCCESS /
+  LOCAL_AUDIT_GREEN`.
+- `closed_H1_selberg_local`:
+  `strict local integral triangle gap`;
+  `-> both strict signs of the squared-root-mollified hardyXi`;
+  `-> both strict signs of actual hardyXi`;
+  `-> actual critical-line nontrivial zeta zero`;
+  `-> injective finite family over strongly separated intervals`.
+- `OBS-H1-SELBERG-PRODUCT-ZERO-01`: retained. The product can vanish because the root mollifier
+  vanishes, so the proof deliberately passes through two strict product signs.
+- `OBS-H1-SELBERG-ARBITRARY-MULTIPLIER-01`: compiled countermodel. Nonnegative squaring is
+  essential for sign transport.
+- `H1-SELBERG-MOMENTS-01`: open exact successor. Prove source-faithful global moment estimates
+  strong enough to produce many separated strict-gap intervals.
+- `H1-SELBERG-PROPORTION-01`: open. The local producer supplies no `T log T` count, positive
+  proportion, H1, or RH.
+- `classification`: `historical_subroute_coverage_delta=1`,
+  `selberg_sign_detector_delta=1`, `actual_zeta_zero_delta=1`,
+  `selberg_moment_delta=0`, `critical_zero_proportion_delta=0`, `hard_gap_delta=0`,
+  `rh_frontier_delta=0`.
+- `local_audit`: 267-line no-sorry module, eight exact checks, eight standard-only axiom
+  prints, empty forbidden scans, warning-as-error compiles, and full `8785/8785` build.
+- `next_gate`: public implementation evidence; persistent RH Goal active.

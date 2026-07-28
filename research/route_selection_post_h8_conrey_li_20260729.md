@@ -2,7 +2,7 @@
 
 Date: 2026-07-29
 
-Status: `RERANK_COMPLETE / H1_SELBERG_LOCAL_SIGN_CHANGE_SELECTED`
+Status: `SELECTED_CAMPAIGN_LOCAL_SUCCESS / PUBLIC_EVIDENCE_REQUIRED`
 
 ## Closed parent
 
@@ -99,3 +99,14 @@ never vanishes. A compiled countermodel must preserve this distinction.
 - `production_gate`: no `LeanLab/` edit before the docs-only preregistration passes public CI.
 
 The persistent RH Goal remains active.
+
+## Selected-campaign local result
+
+`H1-SELBERG-LOCAL-SIGN-CHANGE-01` reached
+`FULL_LOCAL_SIGN_CHANGE_PRODUCER_SUCCESS / LOCAL_AUDIT_GREEN`. The compiled endpoint proves the
+source-square local sign mechanism, an actual critical-line zeta-zero producer, finite injective
+assembly over strongly separated intervals, and the arbitrary-multiplier negative control.
+
+The local result does not supply the global Selberg moment estimates that make the detector fire
+on many intervals. Those estimates remain the exact H1-Selberg successor. Once this result is
+publicly closed, selection must rerank the full atlas instead of automatically continuing H1.

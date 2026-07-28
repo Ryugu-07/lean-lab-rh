@@ -5576,6 +5576,32 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   Production Lean editing is blocked until the docs-only preregistration passes public CI. The
   six protected files remain untouched and unstaged; persistent RH Goal active.
 
+## 2026-07-29 H1 Selberg local sign-change result
+
+- `campaign`: `LITERATURE-20260729-H1-SELBERG-LOCAL-SIGN-CHANGE-01`.
+- `result`: `FULL_LOCAL_SIGN_CHANGE_PRODUCER_SUCCESS / LOCAL_AUDIT_GREEN`.
+- `preregistration`: `18113427dae282e19a8d257360c6ffe318ada9a5`, run
+  `30389770527`, job `90378107379`, passed in `1m51s`.
+- `closed_edge`:
+  `strict local integral triangle gap`;
+  `-> positive and negative values of hardyXi * normSq(rootMollifier)`;
+  `-> opposite strict signs of actual hardyXi`;
+  `-> actual nontrivial zeta zero strictly inside the interval`;
+  `-> injective finite zero family on strongly separated intervals`.
+- `negative_control`: a sign-changing arbitrary multiplier can manufacture opposite product
+  signs while the base function is everywhere nonzero. A product zero alone is also
+  insufficient because the root mollifier may vanish.
+- `local_audit`: 267-line no-sorry module, one proven Target, one exact open successor, eight
+  exact TargetChecks, eight standard-only axiom prints, empty forbidden scans,
+  warning-as-error compiles, `git diff --check`, and full `8785/8785` build.
+- `open_H1_selberg_global`: prove source-faithful global moment estimates that generate many
+  separated strict-gap intervals. No moment asymptotic, `T log T` count, positive proportion,
+  H1, or RH is claimed.
+- `next_gate`: freeze and publish the implementation, then docs-only immutable evidence and
+  final ledger; afterward rerank the full historical atlas.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-29 H8 Conrey--Li RKHS shift selected
 
 - `parent_public_closure`: H10 final ledger

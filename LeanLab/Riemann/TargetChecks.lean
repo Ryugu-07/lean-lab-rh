@@ -20,6 +20,7 @@ import LeanLab.Riemann.RedhefferMertensDeterminant
 import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
+import LeanLab.Riemann.SelbergLocalSignChange
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.HardyThetaInversion
 import LeanLab.Riemann.FareyMobiusWeyl
@@ -5385,5 +5386,58 @@ example {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]
     (hW : ∀ w : ℍ, W w ≠ 0) :
     ConreyLiRKHSShiftCertificate W :=
   conreyLiRKHSShift_endpoint W T hkernel hshift hpositive hW
+
+example (coeff : ℕ → ℂ) (N : ℕ) :
+    Continuous (fun t : ℝ =>
+      selbergRootMollifier coeff N (hardyCriticalLinePoint t)) :=
+  continuous_selbergRootMollifier_criticalLine coeff N
+
+example (coeff : ℕ → ℂ) (N : ℕ) (t : ℝ) :
+    0 ≤ selbergRootSquare coeff N t :=
+  selbergRootSquare_nonneg coeff N t
+
+example {coeff : ℕ → ℂ} {N : ℕ} {t : ℝ}
+    (hpos : 0 < selbergMollifiedHardyXi coeff N t)
+    (hneg : selbergMollifiedHardyXi coeff N (-t) < 0) :
+    0 < hardyXi t ∧ hardyXi (-t) < 0 :=
+  ⟨hardyXi_pos_of_selbergMollifiedHardyXi_pos hpos,
+    hardyXi_neg_of_selbergMollifiedHardyXi_neg hneg⟩
+
+example {f : ℝ → ℝ} {a b : ℝ}
+    (hcont : ContinuousOn f (Set.Icc a b))
+    (hgap : SelbergLocalIntegralGap f a b) :
+    (∃ u ∈ Set.Icc a b, f u < 0) ∧
+      ∃ v ∈ Set.Icc a b, 0 < f v :=
+  exists_neg_and_pos_of_localIntegralGap hcont hgap
+
+example {coeff : ℕ → ℂ} {N : ℕ} {a b : ℝ}
+    (hgap : SelbergLocalIntegralGap
+      (selbergMollifiedHardyXi coeff N) a b) :
+    ∃ t ∈ Set.Ioo a b,
+      IsNontrivialZero (hardyCriticalLinePoint t) ∧
+        OnCriticalLine (hardyCriticalLinePoint t) :=
+  exists_criticalLine_zero_of_selbergLocalIntegralGap hgap
+
+example {n : ℕ} {coeff : ℕ → ℂ} {N : ℕ}
+    {left right : Fin n → ℝ}
+    (hsep : SelbergStronglySeparated left right)
+    (hgap : ∀ i, SelbergLocalIntegralGap
+      (selbergMollifiedHardyXi coeff N) (left i) (right i)) :
+    ∃ zeroOrdinate : Fin n → ℝ,
+      Function.Injective zeroOrdinate ∧
+        ∀ i, zeroOrdinate i ∈ Set.Ioo (left i) (right i) ∧
+          IsNontrivialZero (hardyCriticalLinePoint (zeroOrdinate i)) ∧
+            OnCriticalLine (hardyCriticalLinePoint (zeroOrdinate i)) :=
+  exists_injective_criticalLine_zeros_of_selbergLocalIntegralGaps hsep hgap
+
+example :
+    ∃ base multiplier : ℝ → ℝ,
+      (∀ t, base t ≠ 0) ∧
+        base (-1) * multiplier (-1) < 0 ∧
+          0 < base 1 * multiplier 1 :=
+  arbitrary_multiplier_false_sign_change
+
+example : SelbergLocalSignChangeCertificate :=
+  selbergLocalSignChange_endpoint
 
 end LeanLab.Riemann

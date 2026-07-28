@@ -10,6 +10,7 @@ import LeanLab.Riemann.RedhefferMertensDeterminant
 import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
+import LeanLab.Riemann.SelbergLocalSignChange
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.HardyThetaInversion
 import LeanLab.Riemann.WeilHodgeLattice
@@ -1159,3 +1160,11 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.conreyLiShiftedKernelQuadratic_re_nonneg_of_rkhs_shift
 #print axioms LeanLab.Riemann.conreyLiUpperShiftRatio_re_nonneg_of_rkhs_shift
 #print axioms LeanLab.Riemann.conreyLiRKHSShift_endpoint
+#print axioms LeanLab.Riemann.continuous_selbergRootMollifier_criticalLine
+#print axioms LeanLab.Riemann.selbergRootSquare_nonneg
+#print axioms LeanLab.Riemann.hardyXi_pos_of_selbergMollifiedHardyXi_pos
+#print axioms LeanLab.Riemann.exists_neg_and_pos_of_localIntegralGap
+#print axioms LeanLab.Riemann.exists_criticalLine_zero_of_selbergLocalIntegralGap
+#print axioms LeanLab.Riemann.exists_injective_criticalLine_zeros_of_selbergLocalIntegralGaps
+#print axioms LeanLab.Riemann.arbitrary_multiplier_false_sign_change
+#print axioms LeanLab.Riemann.selbergLocalSignChange_endpoint

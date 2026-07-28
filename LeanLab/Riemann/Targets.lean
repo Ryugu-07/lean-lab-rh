@@ -96,6 +96,7 @@ import LeanLab.Riemann.RedhefferMertensDeterminant
 import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
+import LeanLab.Riemann.SelbergLocalSignChange
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.FareyFranel
@@ -1801,6 +1802,21 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``hardyThetaInversion_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260728-H1-HARDY-THETA-INVERSION-01 completes Attacks A--B in literal source normalization. The proof corrects the preregistered interpretation of Mathlib's f_modif: it subtracts one pole term on each side of x=1, while a separate compiled pole-kernel inversion restores both terms in Hardy's equation. Strip analyticity, equation (2), the tangential Abel boundary, the all-order moment law, H1, and RH remain open." },
+    { id := "H1.selberg.local-sign-change-producer"
+      tier := .tier2
+      title := "Formalize Selberg's local squared-mollifier sign detector"
+      statement :=
+        "Define the finite root mollifier and actual mollified Hardy-xi coordinate, prove that a strict interval-integral triangle gap forces opposite actual Hardy-xi signs and a nontrivial critical-line zeta zero, assemble strongly separated detected intervals into injective zero witnesses, and falsify arbitrary-multiplier sign detection."
+      leanName := some ``selbergLocalSignChange_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260729-H1-SELBERG-LOCAL-SIGN-CHANGE-01 opens Selberg's distinct 1942 subroute, which was previously compressed into H1 without a production theorem. The compiled endpoint preserves the exact role of the source square: a product zero may come from the root mollifier, but strict positive and negative product values pass through the nonnegative norm square to opposite signs of the actual Hardy-xi coordinate. No Selberg global moment estimate, T log T count, positive proportion, H1, or RH is proved." },
+    { id := "H1.selberg.global-moment-production"
+      tier := .tier2
+      title := "Prove Selberg's global sign-producing moment estimates"
+      statement :=
+        "For a source-faithful squared root mollifier, prove the first, absolute, and higher moment estimates that force a positive-density family of strongly separated intervals satisfying the compiled local triangle-gap detector, and derive a T log T lower bound for actual critical-line zeta zeros."
+      status := .inProgress
+      note := "The actual local zero producer and finite separated-interval assembly compile. The open historical edge is the global analytic estimate that supplies many detector intervals; no numerical proportion is optimized before this mechanism is formalized." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

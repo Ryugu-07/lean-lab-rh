@@ -8,7 +8,7 @@ Node: `H1-SELBERG-LOCAL-SIGN-CHANGE-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `FULL_LOCAL_SIGN_CHANGE_PRODUCER_SUCCESS / LOCAL_AUDIT_GREEN`
 
 ## Primary-source anchor
 
@@ -134,3 +134,41 @@ created or edited until this docs-only preregistration passes public Lean Action
 
 The persistent RH Goal remains active. A local stop returns to fresh historical route selection
 after the full evidence chain.
+
+The docs-only preregistration commit
+`18113427dae282e19a8d257360c6ffe318ada9a5` passed Lean Action run `30389770527`,
+build job `90378107379`, in `1m51s`. The production gate opened before any Lean source edit.
+
+## Local production outcome
+
+All eight fixed clauses compile in `LeanLab/Riemann/SelbergLocalSignChange.lean`.
+
+- The finite positive-index root mollifier, its critical-line norm square, and the actual
+  mollified `hardyXi` coordinate are continuous.
+- The square is nonnegative, and strict product signs transfer to strict `hardyXi` signs.
+- A strict local integral triangle gap gives both product signs.
+- The resulting opposite `hardyXi` signs give an actual nontrivial critical-line zeta zero
+  strictly inside the interval.
+- Strongly separated finite intervals give an injective family of actual zero ordinates.
+- A compiled arbitrary-multiplier control shows why the nonnegative square is essential.
+- The aggregate endpoint packages the local detector, finite assembly, and control theorem.
+
+The module has 267 lines and no `sorry`, `admit`, new `axiom`, `opaque`, `unsafe`,
+`native_decide`, or `#eval`. Warning-as-error compilation passes for the module, Targets,
+TargetChecks, and AxiomsAudit. The full project build passes `8785/8785`. All eight selected
+declarations use only `propext`, `Classical.choice`, and `Quot.sound`.
+
+Classification:
+
+- `historical_subroute_coverage_delta=1`;
+- `selberg_sign_detector_delta=1`;
+- `actual_zeta_zero_delta=1`;
+- `selberg_moment_delta=0`;
+- `critical_zero_proportion_delta=0`;
+- `hard_gap_delta=0`;
+- `rh_frontier_delta=0`.
+
+The exact open successor is `H1.selberg.global-moment-production`: prove source-faithful global
+moment estimates that generate many separated intervals satisfying the compiled strict local
+gap. This campaign stops locally after the public evidence chain; the persistent RH Goal remains
+active.
