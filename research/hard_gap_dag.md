@@ -3227,3 +3227,10 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   each `+1`; certified height, global tail, hard gap, and RH frontier remain `0`.
 - `next_gate`: freeze implementation and require public Lean Action CI.
 - `global_goal`: active.
+
+### Public implementation receipt
+
+- frozen implementation: `258a9ac8ce69f6dffe6beb4a6a7579845ca2a457`;
+- Lean Action run `30397348488`, build job `90403505298`, `2m6s`, success;
+- proof-source diff from the frozen implementation at immutable-evidence creation: empty;
+- next gate: docs-only immutable evidence public CI.

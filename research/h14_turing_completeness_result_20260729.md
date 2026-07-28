@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H14-TURING-COMPLETENESS-CONSUMER-01`
 
 Node: `H14-TURING-COMPLETENESS-CONSUMER-01`
 
-Classification: `FULL_TURING_COMPLETENESS_CONSUMER_SUCCESS / LOCAL_AUDIT_PASS`
+Classification: `FULL_TURING_COMPLETENESS_CONSUMER_SUCCESS / IMPLEMENTATION_PUBLIC`
 
 ## Kernel-checked result
 
@@ -71,4 +71,6 @@ The separate global successor remains `H14.computation.global-tail-reduction`.
 - `hard_gap_delta=0`;
 - `rh_frontier_delta=0`.
 
-Public frozen-implementation CI is required before this local result is used downstream.
+Frozen implementation `258a9ac8ce69f6dffe6beb4a6a7579845ca2a457` passed public Lean Action
+run `30397348488`, build job `90403505298`, in `2m6s`. Immutable evidence CI is required
+before final ledger closure.

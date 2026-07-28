@@ -5151,6 +5151,11 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `claim_boundary`: no root isolation, concrete height, Turing average estimate, numerical zero
   table, global tail theorem, H14-to-RH promotion, or RH.
 - `next_gate`: freeze implementation and require public Lean Action CI.
+- `frozen_implementation`: `258a9ac8ce69f6dffe6beb4a6a7579845ca2a457`.
+- `implementation_ci`: Lean Action run `30397348488`, build job `90403505298`,
+  `2m6s`, success.
+- `proof_source_diff_since_frozen`: empty.
+- `next_gate`: publish docs-only immutable evidence and require public CI.
 
 ## 2026-07-29 H2 classical zero-detector local meaningful partial
 
