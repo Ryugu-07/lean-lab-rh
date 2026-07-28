@@ -8,7 +8,8 @@ Node: `H10-WEIL-SURFACE-HODGE-LATTICE-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `FULL_SOURCE_NUMERICAL_HINGE_SUCCESS / LOCAL_AUDIT_GREEN /
+IMPLEMENTATION_PUBLIC_CI_REQUIRED`
 
 ## Primary-source anchor
 
@@ -106,3 +107,28 @@ until this docs-only preregistration passes public Lean Action CI.
 
 The persistent RH Goal remains active. A local stop returns to fresh cross-family route
 selection after the full evidence chain.
+
+The production gate passed at preregistration commit
+`3c8742a23b6b955fa4ea976fd860593d6e052c27`, public Lean Action run `30383689739`, build job
+`90357535402`, in `2m32s`.
+
+## Local result
+
+`LeanLab/Riemann/WeilHodgeLattice.lean` is a 243-line no-sorry implementation of every fixed
+endpoint. It proves the source intersection-expression identity, common-denominator
+integer-to-rational scaling, rational-density extension to real coefficients, the exact
+Hasse--Weil point-count bound, and the extension-wise finite spectral critical-circle theorem.
+
+The spectral composition keeps power-sum reality and reciprocal pairing explicit and treats
+the zeroth power sum by a separate cardinal bound. The finite-box model is nonnegative on every
+integer pair in `{-1,0,1}^2` but negative at `(1,2)`, so finite divisor sampling cannot replace
+the universal integer lattice premise.
+
+One proven Target, seven exact checks, seven selected standard-only axiom prints, empty
+forbidden scans, warning-as-error compiles, `git diff --check`, and full `8783/8783` build pass
+locally.
+
+This is `FULL_SOURCE_NUMERICAL_HINGE_SUCCESS` with
+`actual_curve_geometry_delta=0`, `hard_gap_delta=0`, and `rh_frontier_delta=0`. Actual curve
+intersection theory, Hodge index, point-count identities, number-field transfer, H10, and RH
+remain open.

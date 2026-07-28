@@ -5576,3 +5576,26 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   edit.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H10 Weil surface Hodge-lattice local full endpoint
+
+- `campaign`: `LITERATURE-20260728-H10-WEIL-HODGE-LATTICE-01`.
+- `result`: `FULL_SOURCE_NUMERICAL_HINGE_SUCCESS`.
+- `preregistration`: `3c8742a23b6b955fa4ea976fd860593d6e052c27`, run `30383689739`,
+  job `90357535402`, `2m32s`.
+- `closed_edge`:
+  `integer Hodge lattice -> rational positivity by common denominators`;
+  `rational positivity -> real semipositivity by density and continuity`;
+  `real semipositivity -> exact Hasse--Weil point-count bound`;
+  `extension lattice bounds + real power sums + reciprocal pairing -> finite critical circle`.
+- `negative_control`: `(b-2*a)^2-a^2/2` passes all of `{-1,0,1}^2` but is negative at
+  `(1,2)`.
+- `local_audit`: 243-line no-sorry module, one Target, seven exact checks, seven standard-only
+  axiom prints, empty scans, warning-as-error compiles, `git diff --check`, and full
+  `8783/8783` build pass.
+- `remaining_H10`: actual curve intersection pairing, Hodge index, Frobenius point-count
+  identity, number-field transfer, H10, and RH.
+- `next_gate`: freeze and publish the implementation, then docs-only immutable evidence and
+  final ledger.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.

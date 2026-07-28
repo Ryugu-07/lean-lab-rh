@@ -12,6 +12,7 @@ import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.HardyThetaInversion
+import LeanLab.Riemann.WeilHodgeLattice
 import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
 import LeanLab.Riemann.PairCorrelationTriangularMass
@@ -1134,6 +1135,13 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.hardyXiPositiveRealIntegral_eq_pole_sub_f_modif
 #print axioms LeanLab.Riemann.hardyCahenMellinInversion
 #print axioms LeanLab.Riemann.hardyThetaInversion_endpoint
+#print axioms LeanLab.Riemann.weilHodgeForm_eq_intersectionExpression
+#print axioms LeanLab.Riemann.weilHodgeForm_nonneg_real_of_int
+#print axioms LeanLab.Riemann.abs_pointCount_sub_le_of_weilHodgeForm_nonneg_int
+#print axioms LeanLab.Riemann.norm_eq_sqrt_of_weilHodge_lattice_extensions
+#print axioms LeanLab.Riemann.finiteHodgeBoxModel_nonneg_of_abs_le_one
+#print axioms LeanLab.Riemann.finiteHodgeBoxModel_one_two_neg
+#print axioms LeanLab.Riemann.weilHodgeLattice_endpoint
 #print axioms LeanLab.Riemann.finite_speiserCommonBadHeightSet
 #print axioms LeanLab.Riemann.exists_speiserCommonZeroFreeHorizontal_between
 #print axioms LeanLab.Riemann.exists_speiserCommonZeroFreeHorizontal_above

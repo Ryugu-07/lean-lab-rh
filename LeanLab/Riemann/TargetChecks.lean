@@ -15,6 +15,7 @@ import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.ConreyLiPhaseObstruction
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.BombieriStepanovPolarInjectivity
+import LeanLab.Riemann.WeilHodgeLattice
 import LeanLab.Riemann.RedhefferMertensDeterminant
 import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
@@ -5215,6 +5216,47 @@ example {x : ℝ} (hx : 0 < x) :
 example :
     HardyThetaInversionCertificate :=
   hardyThetaInversion_endpoint
+
+example (q g N a b : ℝ) :
+    weilHodgeForm q g N a b =
+      2 * (a + b) * (q * a + b) -
+        a ^ 2 * q * (2 - 2 * g) -
+        b ^ 2 * (2 - 2 * g) -
+        2 * a * b * N :=
+  weilHodgeForm_eq_intersectionExpression q g N a b
+
+example {q g N : ℝ}
+    (hInt : ∀ a b : ℤ, 0 ≤ weilHodgeForm q g N a b) :
+    ∀ a b : ℝ, 0 ≤ weilHodgeForm q g N a b :=
+  weilHodgeForm_nonneg_real_of_int hInt
+
+example {q g N : ℝ} (hq : 0 < q) (hg : 0 ≤ g)
+    (hInt : ∀ a b : ℤ, 0 ≤ weilHodgeForm q g N a b) :
+    |N - (q + 1)| ≤ 2 * g * Real.sqrt q :=
+  abs_pointCount_sub_le_of_weilHodgeForm_nonneg_int hq hg hInt
+
+example {ι : Type*} [Fintype ι] (alpha : ι → ℂ)
+    (sigma : Equiv.Perm ι) {q g : ℝ} (hq : 0 < q) (hg : 0 ≤ g)
+    (hpair : ∀ i, alpha (sigma i) * alpha i = (q : ℂ))
+    (hreal : ∀ n, (finiteComplexPowerSum alpha n).im = 0)
+    (hHodge : ∀ n : ℕ, 0 < n →
+      ∀ a b : ℤ, 0 ≤ weilHodgeForm (q ^ n) g
+        (weilHodgeSpectralPointCount alpha q n) a b) :
+    ∀ i, ‖alpha i‖ = Real.sqrt q :=
+  norm_eq_sqrt_of_weilHodge_lattice_extensions
+    alpha sigma hq hg hpair hreal hHodge
+
+example (a b : ℤ) (ha : |a| ≤ 1) (hb : |b| ≤ 1) :
+    0 ≤ finiteHodgeBoxModel a b :=
+  finiteHodgeBoxModel_nonneg_of_abs_le_one a b ha hb
+
+example :
+    finiteHodgeBoxModel 1 2 < 0 :=
+  finiteHodgeBoxModel_one_two_neg
+
+example :
+    WeilHodgeLatticeCertificate :=
+  weilHodgeLattice_endpoint
 
 example {a b : ℝ} (ha : 0 < a) :
     (speiserCommonBadHeightSet a b).Finite :=

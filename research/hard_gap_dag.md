@@ -2965,3 +2965,23 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   and RH.
 - `production_gate`: docs-only preregistration public CI before any proof-source edit.
 - `global_goal`: active.
+
+## 2026-07-28 H10 Weil surface Hodge-lattice local result
+
+- `node`: `H10-WEIL-SURFACE-HODGE-LATTICE-01`.
+- `status`: `FULL_SOURCE_NUMERICAL_HINGE_SUCCESS / LOCAL_AUDIT_GREEN`.
+- `closed_H10_numerical`:
+  `integer divisor lattice -> real semipositivity`;
+  `semipositivity -> |N-(q+1)| <= 2*g*sqrt(q)`;
+  `extension-wise bounds -> finite reciprocal spectral critical circle`.
+- `obstruction_H10_finite_box`: the complete coefficient box `{-1,0,1}^2` can be nonnegative
+  while a larger lattice point is negative.
+- `open_H10_geometry`: actual diagonal and Frobenius graph intersections, Hodge index on
+  `X x X`, and the point-count identification.
+- `open_H10_transfer`: no infinite number-field spectral object or regularized trace is
+  constructed.
+- `classification`: `historical_route_coverage_delta=1`,
+  `integer_lattice_bridge_delta=1`, `source_numerical_hinge_delta=1`,
+  `finite_spectral_composition_delta=1`, `actual_curve_geometry_delta=0`,
+  `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `global_goal`: active.

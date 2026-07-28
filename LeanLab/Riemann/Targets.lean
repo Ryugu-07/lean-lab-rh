@@ -44,6 +44,7 @@ import LeanLab.Riemann.DeBruijnNewmanLiCriterion
 import LeanLab.Riemann.DeBruijnNewmanHeatLiMonotonicity
 import LeanLab.Riemann.HardyThetaInversion
 import LeanLab.Riemann.FinitePowerSumRigidity
+import LeanLab.Riemann.WeilHodgeLattice
 import LeanLab.Riemann.InfiniteReciprocalTraceAudit
 import LeanLab.Riemann.H6GapVelocityAudit
 import LeanLab.Riemann.H6PositiveCoshLiAudit
@@ -1330,6 +1331,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``norm_eq_sqrt_of_powerSum_bound_and_reciprocal
       status := .proven
       note := "Campaign CAMPAIGN-20260717-H10-FINITE-SPECTRAL-RIGIDITY-01 formalizes the final finite-spectral step in function-field RH using simultaneous phase recurrence. It assumes the aggregate point-count-scale bound and reciprocal pairing; it does not construct them for curves or transfer them to the infinite number-field zero divisor." },
+    { id := "H10.function-field.weil-surface-hodge-lattice"
+      tier := .tier2
+      title := "Formalize the Weil surface Hodge-lattice hinge"
+      statement :=
+        "Prove that the integral-divisor quadratic inequality from the Hodge-index proof extends by homogeneity and density to a semipositive real form, derive the exact Hasse-Weil point-count bound, and compose extension-wise lattice inequalities with finite reciprocal spectral rigidity."
+      leanName := some ``norm_eq_sqrt_of_weilHodge_lattice_extensions
+      status := .proven
+      note := "Campaign LITERATURE-20260728-H10-WEIL-HODGE-LATTICE-01 reconstructs the numerical hinge in Weil's surface proof. Integer-lattice positivity is enough; no silently strengthened real-coefficient premise is needed. A compiled homogeneous form passes the complete coefficient box {-1,0,1}^2 but is negative at (1,2), so finite divisor tests cannot replace the universal lattice premise. The spectral theorem handles n=0 separately and requires extension-wise lattice inequalities, real power sums, and reciprocal pairing explicitly. Actual curve intersections, the Hodge index theorem, point-count identities, number-field transfer, H10, and RH remain open." },
     { id := "H10.function-field.bombieri-stepanov-frobenius-auxiliary"
       tier := .tier2
       title := "Formalize the Bombieri-Stepanov Frobenius auxiliary mechanism"
