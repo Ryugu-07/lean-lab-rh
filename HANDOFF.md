@@ -6247,3 +6247,27 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - After the closure receipt's public CI, return to fresh cross-family selection; do not continue
   H7 by inertia.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H1 Levinson--Siegel step geometry selected
+
+- `parent_public_closure`: H7 Berry--Keating closure receipt
+  `9a545be84ea2bd053936195f5e616f92ee6730b6`, run `30408587106`, build job
+  `90439516550`, passed in `1m34s`.
+- `campaign`: `PROOF-ATTEMPT-20260729-H1-LEVINSON-SIEGEL-STEP-01`.
+- `node`: `H1-LEVINSON-SIEGEL-STEP-GEOMETRY-01`.
+- `selection_reason`: the project compiles the source variational sufficiency theorem but not
+  the structural explanation behind the 2025 result that arbitrarily short mollifiers can
+  work. The source optimizer approaches Siegel's discontinuous step, overturning a long-held
+  negative expectation.
+- `fixed_edge`: construct an explicit normalized logistic family satisfying
+  `Q(0)=1` and `Q(y)+Q(1-y)=1`; prove its pointwise three-case Siegel-step limit, exact
+  midpoint slope growth, and a general mean-value lower bound forcing large derivative on every
+  sharp transition.
+- `strict_boundary`: the explicit family is not the source optimizer; pointwise is not uniform;
+  no polynomial approximation rate, actual zeta auxiliary count, mollified mean value,
+  critical-zero proportion, H1, or RH is claimed.
+- `successor`: reconstruct Conrey equations `(32)`--`(39)` at the actual zeta auxiliary and test
+  whether complexity-uniform mean values, rather than mollifier length alone, are the decisive
+  barrier.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.

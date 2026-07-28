@@ -3513,3 +3513,31 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   remain `0`.
 - `next_gate`: freeze implementation and require public Lean Action CI.
 - `global_goal`: active.
+
+## 2026-07-29 H1 Levinson--Siegel step geometry launch
+
+- `parent_public_closure`: H7 Berry--Keating closure receipt
+  `9a545be84ea2bd053936195f5e616f92ee6730b6`, run `30408587106`, build job
+  `90439516550`, passed in `1m34s`.
+- `H1-LEVINSON-SIEGEL-STEP-GEOMETRY-01`: selected after fresh comparison with Connes trace,
+  function-field transfer, Montgomery statistics, Speiser counts, and zero-density analysis.
+- `source_observation`: the 2025 short-mollifier optimizer approaches Siegel's step as the
+  mollifier length tends to zero. This overturns the belief that short length alone defeats
+  Levinson's method.
+- `fixed_edge`:
+  `source endpoint and reflection conditions`;
+  `-> explicit smooth normalized logistic family`;
+  `-> exact pointwise Siegel-step limit`;
+  `-> unbounded midpoint slope`;
+  `-> general sharp-transition derivative lower bound`.
+- `OBS-H1-LEVINSON-COUNTING-BRIDGE-01`: open. Reconstruct the actual zeta auxiliary,
+  argument variation, right-zero count, Littlewood lemma, and critical-zero count.
+- `OBS-H1-MEAN-VALUE-01`: open. Prove the source mollified second moment with uniform control
+  for the changing derivative combination.
+- `OBS-H1-COMPLEXITY-UNIFORMITY-01`: open. The auxiliary becomes increasingly sharp; existing
+  fixed-complexity mean values cannot be promoted silently to this varying family.
+- `OBS-H1-SPARSE-EXCEPTION-01`: retained. Density one still does not imply RH.
+- `strict_boundary`: no source-optimizer identification, uniform convergence, polynomial degree
+  theorem, zeta-zero proportion, H1, or RH.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- `global_goal`: active.
