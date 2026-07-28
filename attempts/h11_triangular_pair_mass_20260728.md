@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260728-H11-TRIANGULAR-PAIR-MASS-01`
 
 Selected node: `H11-GALLAGHER-MUELLER-TRIANGULAR-MASS-01`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 
 ## Target
 
@@ -32,6 +32,12 @@ Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
 | `PRIMARY_SOURCE_AUDIT` | Read Goldston--Lee--Schettler--Suriajaya v4 Sections 5--9, Montgomery 1973, and the Gallagher--Mueller bibliographic record. | Equations `(5.4)` and `(9.2)`--`(9.6)` separate a finite exact pair identity from the hard second-moment and asymptotic inputs. The finite identity explicitly contains `N*(T)`. | Freeze only `(5.4)` and its actual finite zeta instantiation. |
 | `REPOSITORY_DUPLICATION_SCAN` | Searched production Lean and H11 ledgers. | `PairCorrelationHorizontalMultiplicity.lean` compiles `N*(T)` and its RH consumer, but no short-gap count, triangular mass, or count-integral identity exists. | Admit a new H11 source-mechanism node. |
 | `LEAN_API_SURVEY` | Checked finite sums, interval integrals, measurable indicators, interval measures, and the existing multiplicity-expanded zeta cutoff. | A no-sorry route is plausible. The main implementation risks are endpoint normalization and the ordered-pair swap. | Publish docs-only preregistration before proof editing. |
+| `PREREG_PUBLIC_GATE` | Published the fixed endpoint before proof-source editing. | Commit `1b9c9ce00d578ba69db3f3dc8a5db369458c9b1c` passed run `30331731095`, job `90188198625`, in `2m21s`. | Open production proof editing. |
+| `FINITE_LAYER_CAKE` | Proved interval integrability of each positive-gap step and moved both finite sums through the interval integral. | `integral_positiveGapPairCount_eq_positiveGapMass` compiles with the strict-positive/weak-upper convention intact. | Prove the ordered sign partition. |
+| `ORDERED_PAIR_SWAP` | Split each real gap into zero, positive, or negative and reindexed the negative contribution by `(i,j) -> (j,i)`. | `triangularPairMass_eq_equal_add_two_positive` and the combined source identity compile for every finite population and `0 <= U`. | Bridge zero gaps to horizontal multiplicity. |
+| `ACTUAL_ZETA_BRIDGE` | Identified equal ordinate gaps with `horizontalPairCount` and instantiated the identity on `PccPositiveZetaZeroIndex T`. | The actual cutoff retains xi analytic-multiplicity copies exactly; no second multiplicity factor appears. | Bundle the endpoint and run adversarial controls. |
+| `LOCAL_AUDIT` | Added one proven Target, 12 exact checks, seven axiom prints, forbidden scan, warning-as-error compile, and full build. | Standard axioms only; empty new-module scan; `8776/8776` local build passed. | Freeze and publish implementation. |
+| `IMPLEMENTATION_PUBLIC_GATE` | Pushed frozen proof sources and audit files. | Commit `15381a49ff4dfb92a0ab4e29d5e76383f9789139` passed run `30333046948`, job `90192073198`, in `2m11s`. | Publish docs-only immutable evidence without changing `LeanLab/`. |
 
 ## Assumption frontier
 
@@ -44,6 +50,20 @@ RH, an absolute pair-correlation error, or sparse-exception amplification.
 
 The six inherited user/exposure files remain untouched and unstaged.
 
+## Result classification
+
+- `result`: `H11_TRIANGULAR_PAIR_MASS_FORMALIZED`.
+- `historical_route_coverage_delta`: `1`.
+- `source_mechanism_delta`: `1`.
+- `horizontal_count_interface_delta`: `1`.
+- `hard_gap_delta`: `0`.
+- `rh_frontier_delta`: `0`.
+- `omission_audit`: no missing finite factor or endpoint correction was found in the locked
+  source. The useful exposed invariant is exact: horizontal multiplicity is the entire zero-gap
+  term in the triangular statistic. The unresolved omission question moves to whether known
+  second-moment/PCC estimates contain enough absolute-error information to force that term to
+  have no sparse excess.
+
 ## Runtime record
 
 - `model`: Codex, GPT-5 family; exact serving variant not exposed.
@@ -52,4 +72,3 @@ The six inherited user/exposure files remain untouched and unstaged.
 - `compaction_state`: resumed from compacted state and revalidated live repository, public Farey
   closure, source equations, existing H11 multiplicity API, and protected files.
 - `global_goal`: active.
-

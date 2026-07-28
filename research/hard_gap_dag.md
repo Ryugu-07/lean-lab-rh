@@ -2591,3 +2591,26 @@ is publicly closed and cross-family selection resumed.
 - `classification_target`: `H11_TRIANGULAR_PAIR_MASS_FORMALIZED`, with source-mechanism and
   horizontal-count-interface deltas but no hard-gap or RH-frontier delta.
 - `global_goal`: active.
+
+## 2026-07-28 H11 triangular pair-mass implementation public green
+
+- `node`: `H11-GALLAGHER-MUELLER-TRIANGULAR-MASS-01`.
+- `closed_edge`:
+  `finite ordered gaps -> exact filtered triangular mass`;
+  `sign partition plus index swap -> U*Nstar + 2*positive mass`;
+  `step-function integration -> positive mass = integral_0^U N(T,u) du`;
+  `zero-gap count -> horizontalPairCount`;
+  `multiplicity-expanded actual zeta cutoff -> source equation`.
+- `frozen_implementation`: `15381a49ff4dfb92a0ab4e29d5e76383f9789139`.
+- `public_ci`: run `30333046948`, build job `90192073198`, passed in `2m11s`.
+- `new_unconditional_fact`: at every finite actual-zeta cutoff and every `0 <= U`, the full
+  triangular ordinate-pair mass is exactly `U` times the horizontal ordered-pair count plus
+  twice the integral of the strict positive short-gap count.
+- `remaining_H11_D`: derive the required triangular statistic from Fujii's second moment or PCC,
+  including the moving-height boundary term and an error scale that remains sensitive to
+  horizontal excess.
+- `remaining_H11_E`: amplify or directly exclude one sparse actual off-line orbit; normalized
+  density one still does not imply exact horizontal count.
+- `classification`: `historical_route_coverage_delta=1`, `source_mechanism_delta=1`,
+  `horizontal_count_interface_delta=1`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
+- `next_gate`: docs-only immutable evidence; proof sources stay frozen.

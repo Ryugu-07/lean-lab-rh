@@ -1669,3 +1669,18 @@ actual interval-integral proof, exact agreement with project `horizontalPairCoun
 analytic-multiplicity-preserving positive zeta-zero cutoff instance. Fujii's second-moment
 estimate, the moving-height `O(L^2)` boundary, PCC, HMH, sparse-exception amplification, and RH
 remain outside. Production editing is closed until docs-only preregistration passes public CI.
+
+### H11 triangular pair mass: implementation result
+
+The finite source mechanism is now fully compiler-checked. Implementation
+`15381a49ff4dfb92a0ab4e29d5e76383f9789139` passed public run `30333046948`, build job
+`90192073198`, in `2m11s`. The exact actual-zeta identity contains
+`U * pccPositiveZetaHorizontalPairCount T`; all remaining terms are the integral of strict
+positive short-gap counts.
+
+This closes a historical interface, not the analytic pair-correlation route. No omitted factor,
+endpoint convention, or multiplicity mismatch was found. The omission search now has a sharper
+target: inspect Fujii/Gallagher--Mueller/PCC error terms for any absolute, local, or
+last-exception-sensitive control that was discarded when the literature normalized by the total
+zero count. Without such control, the already compiled persistent sparse-exception model remains
+compatible with density-one conclusions.

@@ -5092,3 +5092,21 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   last-exception edges as open.
 - `global_goal`: active.
 - `protected_files`: keep the inherited six user/exposure files untouched and unstaged.
+
+## 2026-07-28 H11 triangular pair-mass implementation public green
+
+- `prereg_public`: `1b9c9ce00d578ba69db3f3dc8a5db369458c9b1c`, run
+  `30331731095`, job `90188198625`, `2m21s`.
+- `frozen_implementation`: `15381a49ff4dfb92a0ab4e29d5e76383f9789139`.
+- `public_ci`: run `30333046948`, job `90192073198`, `2m11s`.
+- `result`: `H11_TRIANGULAR_PAIR_MASS_FORMALIZED`.
+- `compiled`: 357-line source; exact filtered sum; ordered zero/positive/negative partition;
+  finite interval layer cake; exact `horizontalPairCount` bridge; actual
+  `PccPositiveZetaZeroIndex T` specialization; aggregate endpoint.
+- `audits`: 12 exact TargetChecks, seven standard-only axiom prints, empty new-module forbidden
+  scan, warning-as-error compile, full `8776/8776` local build.
+- `strict_boundary`: Fujii second moment, moving-height error, PCC, HMH, absolute-error control,
+  sparse-exception amplification, direct zero exclusion, and RH remain open.
+- `next_gate`: docs-only immutable evidence and public CI; do not change `LeanLab/`.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.

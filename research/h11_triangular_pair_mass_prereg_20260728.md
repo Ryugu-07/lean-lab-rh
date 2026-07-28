@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260728-H11-TRIANGULAR-PAIR-MASS-01`
 
 Selected node: `H11-GALLAGHER-MUELLER-TRIANGULAR-MASS-01`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 
 ## Selection reason
 
@@ -201,3 +201,21 @@ amplification. Direct RH attacks and original conjectures remain open throughout
   equations `(5.3)`--`(5.5)`, and existing actual-zeta multiplicity API before selection.
 - `global_goal`: active.
 
+## Implementation result
+
+- `preregistration`: commit `1b9c9ce00d578ba69db3f3dc8a5db369458c9b1c` passed public
+  Lean Action run `30331731095`, build job `90188198625`, in `2m21s`.
+- `frozen_implementation`: commit `15381a49ff4dfb92a0ab4e29d5e76383f9789139` passed public
+  Lean Action run `30333046948`, build job `90192073198`, in `2m11s`.
+- `module`: `LeanLab/Riemann/PairCorrelationTriangularMass.lean`, 357 lines.
+- `compiled_endpoint`: all seven preregistered blocks compile. The aggregate theorem is
+  `pairCorrelationTriangularMass_endpoint`.
+- `local_audit`: 12 exact TargetChecks including the `U=0`, singleton, duplicate-ordinate,
+  upper-boundary, and reflected-pair controls; seven selected axiom prints; standard axioms
+  only; empty new-module forbidden scan; warning-as-error module compile; full `8776/8776`
+  build.
+- `strict_result`: the finite source identity is now connected to the actual
+  analytic-multiplicity-expanded zeta cutoff. No second-moment estimate, PCC, HMH, sparse
+  exception exclusion, or RH statement was assumed or proved.
+- `next_gate`: publish this docs-only immutable evidence and require public CI; keep all
+  `LeanLab/` proof sources frozen.

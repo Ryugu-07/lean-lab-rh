@@ -4473,3 +4473,27 @@ This is historical route coverage and an exact analytic interface, not PCC or RH
 Fujii's second moment, moving-height boundary errors, HMH, absolute-error control, and exclusion
 of the last sparse off-line orbit remain open. Public preregistration CI is required before any
 proof-source edit.
+
+## H11 Triangular Pair-Mass Local Result
+
+Preregistration commit `1b9c9ce00d578ba69db3f3dc8a5db369458c9b1c` passed public CI run
+`30331731095`, job `90188198625`, in `2m21s`. The 357-line implementation proves the complete
+fixed endpoint for arbitrary finite multiplicity-copy populations and for the actual positive
+zeta-zero cutoff.
+
+Lean proves the filtered triangular sum, the zero/positive/negative ordered-gap partition, and
+the exact layer-cake integral. The swap `(i,j) -> (j,i)` supplies the factor two. The zero-gap
+count is definitionally bridged to `horizontalPairCount`, so the actual-zeta theorem preserves
+every xi analytic-multiplicity copy and exposes no hidden set/multiset conversion.
+
+The aggregate endpoint `pairCorrelationTriangularMass_endpoint`, 12 exact checks, seven
+standard-only axiom prints, an empty new-module forbidden scan, warning-as-error compilation,
+and the full `8776/8776` build pass locally. Frozen implementation
+`15381a49ff4dfb92a0ab4e29d5e76383f9789139` passed public run `30333046948`, build job
+`90192073198`, in `2m11s`.
+
+Classification is `H11_TRIANGULAR_PAIR_MASS_FORMALIZED`, with historical/source-mechanism and
+horizontal-interface deltas but `hard_gap_delta=0` and `rh_frontier_delta=0`. The finite algebra
+is no longer an H11 ambiguity. The open analytic question is whether Fujii/PCC control can be
+strengthened from normalized density information to an absolute error that eliminates the
+horizontal excess of even one sparse off-line orbit.
