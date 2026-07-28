@@ -2675,6 +2675,30 @@ implementation `0ff8a577cb4eb247d6cfdbc03d82a5d7dd36707e` is empty. The fixed H0
 at `FULL_FIXED_ENDPOINT_SUCCESS / LIBRARY_SEMANTICS_CORRECTION`. After final-ledger CI, return
 to cross-family selection with H0-A/H0-B retained as open.
 
+## 2026-07-28 H9 Franel rank--Mertens quadratic launch
+
+- `parent_closed`: H0 final ledger `71705474e8d38968c39400a2455745c519a31818`
+  passed run `30343150121`, job `90223131928`, in `2m0s`.
+- `node`: `H9-FRANEL-RANK-MERTENS-QUADRATIC-01`.
+- `mode`: `LITERATURE / OMISSION_AUDIT`, with finite falsification controls.
+- `source_edge`:
+  `actual duplicate-free positive Farey set -> rational-value order`;
+  `order -> one-based lower-set rank`;
+  `Farey indicator transform -> pointwise Mertens block remainder`;
+  `square and finite Fubini -> remainder correlation quadratic`;
+  `finite sawtooth/Dedekind correlation -> Franel gcd kernel`.
+- `full_endpoint`: Kanemitsu--Yoshimoto Theorem 3 over exact rationals.
+- `meaningful_partial`: the complete order/rank/Mertens/correlation expansion, with the first
+  missing finite sawtooth correlation recorded exactly.
+- `open_H9_F1`: prove the full finite Franel identity.
+- `open_H9_F2`: prove the separate RH-equivalent asymptotic estimate; no finite identity alone
+  supplies it.
+- `negative_controls`: `N=0`; exact orders `N=1,2,3`; source exclusion of `0/1`; inclusion of
+  `1/1`; one-based rank; rational-value rather than pair-lexicographic order; integer-point
+  sawtooth convention.
+- `global_goal`: active.
+
+
 Frozen implementation `2d5b5e2e692e8622263142a1205971c611736a78` passed public Lean Action
 run `30336360223`, build job `90201998436`, in `2m17s`. The complete conditional consumer is
 public-green. Proof sources remain frozen while docs-only immutable evidence is published.

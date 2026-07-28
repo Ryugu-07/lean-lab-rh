@@ -5342,3 +5342,23 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   `ROUTE_SELECTION`.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H9 Franel rank--Mertens quadratic selected
+
+- `parent_public_closure`: H0 final ledger
+  `71705474e8d38968c39400a2455745c519a31818` passed run `30343150121`, job
+  `90223131928`, in `2m0s`.
+- `campaign`: `LITERATURE-20260728-H9-FRANEL-RANK-MERTENS-01`.
+- `node`: `H9-FRANEL-RANK-MERTENS-QUADRATIC-01`.
+- `selection_reason`: the project already compiles the actual duplicate-free positive Farey set
+  and arbitrary-test Mertens transform, while the source rational ordering, one-based rank, and
+  Franel quadratic identity remain absent.
+- `full_endpoint`: actual ordered list and rank; exact count-transform and pointwise Mertens
+  remainder; squared finite correlation expansion; complete Franel double Mertens/gcd formula.
+- `meaningful_partial`: ordering through the exact correlation expansion, with the missing
+  finite sawtooth/Dedekind correlation isolated in theorem form.
+- `strict_boundary`: the RH-equivalent Franel asymptotic estimate, Mertens growth, H9, and RH
+  remain outside the finite identity campaign.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
