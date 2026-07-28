@@ -8,7 +8,7 @@ Node: `H9-CONREY-ACTUAL-SEVEN-FLAT-INTERVAL-01`
 
 Mode: `LITERATURE / FALSIFICATION / OMISSION_AUDIT`
 
-Status: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
+Status: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Baseline
 
@@ -183,4 +183,8 @@ route selection, while a separately source-locked main-family repair may be rank
 - `compiled_endpoint`: all ten clauses compile, including the actual infinite Fourier series,
   full flat interval, irrational zero, and strict `7 mod 8` scope.
 - `full_build`: `8788/8788`, passed locally.
-- `next_gate`: freeze and publish the implementation, then require public CI.
+- `implementation_commit`: `e259b79773d290435b332c119ad5c81ff0ac16dc`.
+- `implementation_public_ci`: Lean Action run `30400822025`, build job `90414919121`, passed in
+  `2m55s`.
+- `proof_source_state`: frozen; diff at immutable-evidence creation is empty.
+- `next_gate`: publish docs-only immutable evidence and require public CI.

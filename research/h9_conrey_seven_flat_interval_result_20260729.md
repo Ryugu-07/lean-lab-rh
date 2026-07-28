@@ -4,7 +4,7 @@ Date: 2026-07-29
 
 Campaign: `FALSIFICATION-20260729-H9-CONREY-SEVEN-FLAT-INTERVAL-01`
 
-Status: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS / LOCAL_AUDIT_PASS`
+Status: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN`
 
 ## Result
 
@@ -79,3 +79,10 @@ Theorem 3, H9, and RH remain open.
 
 Freeze the current proof-source state and publish the implementation commit. Public Lean Action
 CI is required before immutable evidence or a final ledger is created.
+
+## Public implementation receipt
+
+- frozen implementation: `e259b79773d290435b332c119ad5c81ff0ac16dc`;
+- Lean Action run `30400822025`, build job `90414919121`, passed in `2m55s`;
+- proof-source diff from the frozen implementation at immutable-evidence creation: empty;
+- next gate: docs-only immutable evidence public CI.

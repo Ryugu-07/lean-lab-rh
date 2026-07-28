@@ -5283,6 +5283,18 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-29 H9 Conrey actual-seven implementation public green
+
+- `frozen_implementation`: `e259b79773d290435b332c119ad5c81ff0ac16dc`.
+- `public_ci`: run `30400822025`, build job `90414919121`, passed in `2m55s`.
+- `result`: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS`.
+- `proof_freeze`: the `LeanLab/` diff from the frozen implementation is empty.
+- `remaining_H9`: source-permitted `3 mod 8` flat-branch exclusion or witness, Conjecture 1,
+  Theorem 3, H9, and RH.
+- `next_gate`: publish docs-only immutable evidence and require public CI.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-29 H1 Selberg public closure and H2 classical detector launch
 
 - `H1-SELBERG-LOCAL-SIGN-CHANGE-01`: publicly closed at final ledger

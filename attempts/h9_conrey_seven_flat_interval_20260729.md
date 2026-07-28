@@ -4,7 +4,7 @@ Campaign: `FALSIFICATION-20260729-H9-CONREY-SEVEN-FLAT-INTERVAL-01`
 
 Mode: `LITERATURE / FALSIFICATION / OMISSION_AUDIT`
 
-Status: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS / IMPLEMENTATION_CI_REQUIRED`
+Status: `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Fixed question
 
@@ -26,6 +26,7 @@ RH-imitation family.
 | 5 | `PREREGISTRATION_CI` | Commit `37852c81e2d71f1ee95520f62929204f094f34d5` passed public Lean Action run `30399568275`, build job `90410810937`, in `2m19s`. | Open the production gate for the fixed endpoint. |
 | 6 | `LEAN_IMPLEMENTATION` | Compiled the genuine period table, exact flat prefix, all-index discrete sine transform, `K_7>0`, exponent-two Bernoulli cosine sums, six-shift cancellation, `f_7=0` on `[3/7,4/7]`, the irrational zero `sqrt(2)/3`, and the `7 mod 8` scope certificate. | Classify as full actual adjacent-family success, not a main-family source refutation. |
 | 7 | `LOCAL_AUDIT` | The 428-line module, one proven and one exact open Target, eight TargetChecks, eight standard-only axiom prints, empty forbidden scan, warning-as-error compiles, `git diff --check`, and full `8788/8788` build pass. | Freeze proof source, publish implementation, and require public CI. |
+| 8 | `IMPLEMENTATION_CI` | Frozen implementation `e259b79773d290435b332c119ad5c81ff0ac16dc` passed Lean Action run `30400822025`, build job `90414919121`, in `2m55s`. The proof-source diff at immutable-evidence creation is empty. | Publish docs-only immutable evidence, require public CI, then create the final ledger. |
 
 ## Stop conditions
 
