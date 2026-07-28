@@ -1,0 +1,37 @@
+# H9 Conrey Actual Seven Flat-Interval Attempt
+
+Campaign: `FALSIFICATION-20260729-H9-CONREY-SEVEN-FLAT-INTERVAL-01`
+
+Mode: `LITERATURE / FALSIFICATION / OMISSION_AUDIT`
+
+Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED`
+
+## Fixed question
+
+Does the flat branch omitted by the generic rationality inference occur for an actual Legendre
+character, and if so, what does the source's `q congruent to 3 mod 8` restriction prevent?
+
+Full success requires the actual infinite Fourier series for `q=7` to vanish on `[3/7,4/7]`,
+an explicit irrational zero, and an exact proof that this character lies outside the source's
+RH-imitation family.
+
+## Loop log
+
+| loop | mode | finding | decision |
+| --- | --- | --- | --- |
+| 1 | `COMPACTION_RECOVERY / ROUTE_SELECTION` | Re-read governance, historical-survey ruling, H0-H14 census, H9 prior campaign, source registry, obstacle DAG, handoff, and protected worktree state after inherited-summary recovery. The user reaffirmed that historical reconstruction is an omission search and remains the default main allocation; conjecture testing stays open. | Compare unfinished historical edges rather than continue numerical-height or constant optimization. |
+| 2 | `SOURCE_AUDIT` | Re-read Conrey 2024 through Proposition 1. The proof omits the zero numerator, and the paper later calls the resulting flat interval unlikely. Proposition 1 invokes Corollary 1, which is stated for `q>3`, squarefree, `q congruent to 3 mod 8`; this scope prevents treating `q=7` as a main-family counterexample. | Register an adjacent-family mechanism audit with an explicit no-refutation boundary. |
+| 3 | `LEAN_RECONNAISSANCE` | A `/tmp` kernel probe proves the exact period-seven Legendre table using ordinary `decide` and `legendreSym.mod`. Exact navigation gives mass `1`, first moment `0` at prefix `m=3`; numerical partial sums suggest a flat interval. | Fix a full actual-series endpoint. Navigation output remains outside the theorem ledger. |
+| 4 | `ANALYTIC_FEASIBILITY` | Mathlib exposes `hasSum_one_div_nat_pow_mul_cos`; the period reduction for the required discrete sine transform is locally accessible. Remaining work is finite trig normalization, `K_7 != 0`, exact HasSum algebra, and Bernoulli cancellation. | Publish docs-only preregistration before any production proof edit. |
+
+## Stop conditions
+
+- Stop locally at `FULL_ACTUAL_ADJACENT_FAMILY_FLAT_SUCCESS`,
+  `MEANINGFUL_ACTUAL_CHARACTER_PARTIAL`, `NO_FLAT_INTERVAL`, or `SCOPE_REPAIR`.
+- Record the first exact compiler or theorem obstruction; never insert `sorry`.
+- Do not classify the main-family proposition as false from a `7 mod 8` witness.
+- After public closure, return the persistent RH Goal to cross-family historical route selection.
+
+## Protected state
+
+The inherited modified/untracked files listed in the handoff remain untouched and unstaged.

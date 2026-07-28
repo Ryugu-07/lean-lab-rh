@@ -5236,6 +5236,33 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-29 H9 Conrey actual-seven flat interval selected
+
+- `parent_public_closure`: H14 Turing completeness closure receipt
+  `490e779c23a7bc3f32a40624dfdfb1f7a13c2b91`, run `30398241143`, job
+  `90406445477`, `1m30s`.
+- `campaign`: `FALSIFICATION-20260729-H9-CONREY-SEVEN-FLAT-INTERVAL-01`.
+- `node`: `H9-CONREY-ACTUAL-SEVEN-FLAT-INTERVAL-01`.
+- `user_selection_rule`: historical reconstruction seeks human omissions and remains the
+  default main allocation until admitted routes have received that audit. Original conjectures
+  and direct RH proof attempts remain open at all times.
+- `source_omission`: Conrey 2024 Proposition 1's rationality argument omits the zero first-moment
+  branch; the paper later records it and calls the resulting flat interval unlikely.
+- `actual_probe`: kernel reconnaissance proves the `legendreSym 7` period table. The production
+  endpoint must prove the actual infinite Fourier series vanishes on `[3/7,4/7]` and exhibit an
+  irrational zero.
+- `strict_scope`: the proof of Proposition 1 invokes Corollary 1 with
+  `q congruent to 3 mod 8`, while `7 % 8 = 7`. Full `q=7` success demonstrates a real adjacent
+  quadratic-character mechanism but does not refute the contextually scoped proposition,
+  Conjecture 1, Theorem 3, H9, or RH.
+- `meaningful_partial`: actual character table, flat prefix, discrete sine transform, nonzero
+  transform constant, and an exact named missing Fourier identity. A finite prefix alone is
+  infrastructure.
+- `next_gate`: commit only docs and ledgers, require public Lean Action CI, then edit production
+  Lean files.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-29 H1 Selberg public closure and H2 classical detector launch
 
 - `H1-SELBERG-LOCAL-SIGN-CHANGE-01`: publicly closed at final ledger

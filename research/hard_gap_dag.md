@@ -3251,3 +3251,27 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - retain `H14-TURING-NUMERICAL-CERTIFICATE-01`,
   `H14-GLOBAL-TAIL-REDUCTION-01`, H14, and RH open;
 - return to fresh historical route selection.
+
+## 2026-07-29 H9 Conrey actual-seven flat-interval launch
+
+- `parent_public_closure`: H14 Turing completeness closure receipt
+  `490e779c23a7bc3f32a40624dfdfb1f7a13c2b91`, run `30398241143`, job
+  `90406445477`.
+- `H9-CONREY-ACTUAL-SEVEN-FLAT-INTERVAL-01`: preregistered omission audit on the actual
+  Legendre character modulo seven and its infinite Fourier sine series.
+- `compiled_predecessor`: the generic source algebra already has an exact flat-or-rational
+  dichotomy; no actual character flat interval was previously certified.
+- `fixed_edge`:
+  `actual chi_7 period table and flat prefix`;
+  `+ discrete sine transform and nonzero transform constant`;
+  `+ exact Bernoulli cosine-series cancellation`;
+  `-> f_7 vanishes on [3/7,4/7]`;
+  `-> explicit irrational actual-character zero`.
+- `OBS-H9-CONREY-MOD8-SCOPE-01`: `7 % 8 = 7`, so this candidate is outside the source's
+  `q congruent to 3 mod 8` RH-imitation family. Even full success gives no source-refutation,
+  hard-gap, or RH-frontier delta.
+- `H9-CONREY-MAIN-FAMILY-FLAT-EXCLUSION-01`: remains open. No permitted-character flat prefix,
+  irrational zero, or general nonzero-moment theorem is assumed.
+- `production_gate`: no Lean production edit before docs-only preregistration public CI.
+- `global_goal`: active; historical omission search remains the default selection discipline,
+  with conjecture and direct-proof tracks open.
