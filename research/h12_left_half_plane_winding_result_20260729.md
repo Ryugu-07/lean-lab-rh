@@ -8,6 +8,8 @@ Node: `H12-LM-LEFT-HALF-PLANE-WINDING-01`
 
 Classification: `FULL_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN`
 
+Evidence status: `PUBLIC_GREEN`
+
 ## Compiled result
 
 The new module
@@ -62,6 +64,9 @@ nonvanishing to analyticity was introduced.
   `0a1248f2a02fec9d3cf0e774bc6eb4fe8959e0ec`
 - public Lean Action: run `30403264392`, build job `90422806378`, passed in `3m4s`
 - proof-source diff from the frozen implementation at evidence creation: empty
+- immutable evidence commit:
+  `016f0b50f552ee42126ecf5bf3e93be8edd15e3a`
+- evidence Lean Action: run `30403576041`, build job `90423807382`, passed in `2m11s`
 
 ## Claim boundary
 

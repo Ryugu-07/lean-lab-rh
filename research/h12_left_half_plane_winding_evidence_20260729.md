@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H12-LEFT-HALF-PLANE-WINDING-01`
 
 Classification: `FULL_SUCCESS`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_CI_REQUIRED`
+Status: `PUBLIC_EVIDENCE_PASS / FINAL_LEDGER_CI_REQUIRED`
 
 ## Frozen implementation
 
@@ -62,4 +62,8 @@ actual ratio under `SpeiserStrictNegativeHorizontal`.
 
 It does not prove existence of such a height, the global indented argument principle, Jensen
 top variation, either Levinson--Montgomery count theorem, Speiser equivalence, H12, or RH.
-One docs-only evidence CI, final ledger, and closure receipt remain.
+
+This immutable evidence commit
+`016f0b50f552ee42126ecf5bf3e93be8edd15e3a` passed Lean Action run `30403576041`,
+build job `90423807382`, in `2m11s`. The proof-source diff from the frozen implementation
+through this commit is empty. One docs-only final ledger and closure receipt remain.

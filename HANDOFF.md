@@ -5284,6 +5284,22 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-29 H12 left-half-plane winding immutable evidence public green
+
+- `immutable_evidence`: `016f0b50f552ee42126ecf5bf3e93be8edd15e3a`.
+- `public_ci`: run `30403576041`, build job `90423807382`, passed in `2m11s`.
+- `proof_freeze`: `LeanLab/` has an empty diff from frozen implementation
+  `0a1248f2a02fec9d3cf0e774bc6eb4fe8959e0ec`.
+- `classification`: `FULL_SUCCESS`, pending one docs-only final-ledger CI.
+- `closed_after_final_ledger`: only `H12-LM-LEFT-HALF-PLANE-WINDING-01`.
+- `remaining_H12`: actual strict-negative height, finite indented contour assembly,
+  multiplicity-aware argument principle, Jensen top variation, both count outputs, Speiser
+  equivalence, H12, and RH.
+- `next_gate`: publish one docs-only final ledger and require public CI, then return to fresh
+  cross-family route selection.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-29 H9 Conrey actual-seven publicly closed
 
 - `final_ledger`: `5dab6664c49e5e03effe9ac309256eaf91e5a171`.

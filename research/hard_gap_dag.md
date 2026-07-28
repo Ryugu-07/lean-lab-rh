@@ -3344,7 +3344,7 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.
 
-## 2026-07-29 H12 left-half-plane winding implementation public green
+## 2026-07-29 H12 left-half-plane winding evidence public green
 
 - `classification`: `FULL_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN`.
 - `preregistration_gate`: commit `a0f051cb09c8ef309cd9458e712adfcf1029851b`,
@@ -3372,4 +3372,6 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `implementation_public_ci`: run `30403264392`, build job `90422806378`, passed in `3m4s`.
 - `proof_freeze`: the five proof and registration sources have an empty diff from the frozen
   implementation.
-- `next_gate`: publish docs-only immutable evidence and require public CI.
+- `immutable_evidence`: `016f0b50f552ee42126ecf5bf3e93be8edd15e3a`.
+- `evidence_public_ci`: run `30403576041`, build job `90423807382`, passed in `2m11s`.
+- `next_gate`: publish one docs-only final ledger and require public CI.
