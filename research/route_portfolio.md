@@ -4497,3 +4497,8 @@ horizontal-interface deltas but `hard_gap_delta=0` and `rh_frontier_delta=0`. Th
 is no longer an H11 ambiguity. The open analytic question is whether Fujii/PCC control can be
 strengthened from normalized density information to an absolute error that eliminates the
 horizontal excess of even one sparse off-line orbit.
+
+Docs-only immutable evidence `b6f34cbfef5790fa9e94b338d828fe1b79d37369` passed public run
+`30333303052`, build job `90192852899`, in `1m40s`; no `LeanLab/` file differs from the frozen
+implementation. The fixed H11 node is at its local stop. One final-ledger CI remains before
+cross-family route selection resumes.

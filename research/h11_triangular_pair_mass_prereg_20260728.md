@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260728-H11-TRIANGULAR-PAIR-MASS-01`
 
 Selected node: `H11-GALLAGHER-MUELLER-TRIANGULAR-MASS-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Selection reason
 
@@ -219,3 +219,14 @@ amplification. Direct RH attacks and original conjectures remain open throughout
   exception exclusion, or RH statement was assumed or proved.
 - `next_gate`: publish this docs-only immutable evidence and require public CI; keep all
   `LeanLab/` proof sources frozen.
+
+## Immutable evidence result
+
+- `immutable_evidence`: docs-only commit `b6f34cbfef5790fa9e94b338d828fe1b79d37369`
+  passed public Lean Action run `30333303052`, build job `90192852899`, in `1m40s`.
+- `proof_freeze_verified`: `LeanLab/` has no difference between implementation
+  `15381a49ff4dfb92a0ab4e29d5e76383f9789139` and the evidence commit.
+- `local_stop`: the seven-block fixed endpoint is complete. H11 remains open only at the
+  explicitly excluded analytic and sparse-exception edges.
+- `next_gate`: publish one docs-only final ledger and require public CI, then return the active
+  RH Goal to fresh cross-family historical route selection.

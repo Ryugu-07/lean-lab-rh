@@ -1684,3 +1684,8 @@ target: inspect Fujii/Gallagher--Mueller/PCC error terms for any absolute, local
 last-exception-sensitive control that was discarded when the literature normalized by the total
 zero count. Without such control, the already compiled persistent sparse-exception model remains
 compatible with density-one conclusions.
+
+Immutable evidence `b6f34cbfef5790fa9e94b338d828fe1b79d37369` passed public run
+`30333303052`, job `90192852899`, in `1m40s`, with no proof-source change. H11 triangular mass
+therefore leaves the active shortlist at a local stop; its Fujii/PCC and sparse-exception nodes
+stay open, but the next campaign must be chosen by a fresh cross-family comparison.

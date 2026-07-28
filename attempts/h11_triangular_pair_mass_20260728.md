@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260728-H11-TRIANGULAR-PAIR-MASS-01`
 
 Selected node: `H11-GALLAGHER-MUELLER-TRIANGULAR-MASS-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Target
 
@@ -38,6 +38,7 @@ Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 | `ACTUAL_ZETA_BRIDGE` | Identified equal ordinate gaps with `horizontalPairCount` and instantiated the identity on `PccPositiveZetaZeroIndex T`. | The actual cutoff retains xi analytic-multiplicity copies exactly; no second multiplicity factor appears. | Bundle the endpoint and run adversarial controls. |
 | `LOCAL_AUDIT` | Added one proven Target, 12 exact checks, seven axiom prints, forbidden scan, warning-as-error compile, and full build. | Standard axioms only; empty new-module scan; `8776/8776` local build passed. | Freeze and publish implementation. |
 | `IMPLEMENTATION_PUBLIC_GATE` | Pushed frozen proof sources and audit files. | Commit `15381a49ff4dfb92a0ab4e29d5e76383f9789139` passed run `30333046948`, job `90192073198`, in `2m11s`. | Publish docs-only immutable evidence without changing `LeanLab/`. |
+| `IMMUTABLE_EVIDENCE_GATE` | Published the source/result/boundary record with proof sources frozen. | Docs-only `b6f34cbfef5790fa9e94b338d828fe1b79d37369` passed run `30333303052`, job `90192852899`, in `1m40s`; `LeanLab/` diff from implementation is empty. | Publish the final ledger and return to route selection after its CI. |
 
 ## Assumption frontier
 
@@ -63,6 +64,9 @@ The six inherited user/exposure files remain untouched and unstaged.
   term in the triangular statistic. The unresolved omission question moves to whether known
   second-moment/PCC estimates contain enough absolute-error information to force that term to
   have no sparse excess.
+- `local_stop_reason`: `FULL_FIXED_ENDPOINT_SUCCESS`; no further numerical optimization belongs
+  to this campaign.
+- `successor_state`: `ROUTE_SELECTION`, with direct RH and conjecture tracks still open.
 
 ## Runtime record
 

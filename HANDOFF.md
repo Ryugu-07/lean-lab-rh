@@ -5110,3 +5110,17 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `next_gate`: docs-only immutable evidence and public CI; do not change `LeanLab/`.
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
+
+## 2026-07-28 H11 triangular pair-mass immutable evidence public green
+
+- `frozen_implementation`: `15381a49ff4dfb92a0ab4e29d5e76383f9789139`, run
+  `30333046948`, job `90192073198`, `2m11s`.
+- `immutable_evidence`: `b6f34cbfef5790fa9e94b338d828fe1b79d37369`, run
+  `30333303052`, job `90192852899`, `1m40s`.
+- `proof_freeze`: `LeanLab/` diff between those commits is empty.
+- `local_stop`: `FULL_FIXED_ENDPOINT_SUCCESS`.
+- `remaining_H11`: moving-height boundary error, Fujii second moment, PCC, HMH,
+  last-exception-sensitive absolute error, sparse-exception amplification, and RH.
+- `next_gate`: one docs-only final ledger plus public CI, then `ROUTE_SELECTION`.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.

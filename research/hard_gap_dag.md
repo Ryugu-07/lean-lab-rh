@@ -2614,3 +2614,8 @@ is publicly closed and cross-family selection resumed.
 - `classification`: `historical_route_coverage_delta=1`, `source_mechanism_delta=1`,
   `horizontal_count_interface_delta=1`, `hard_gap_delta=0`, `rh_frontier_delta=0`.
 - `next_gate`: docs-only immutable evidence; proof sources stay frozen.
+
+Immutable-evidence commit `b6f34cbfef5790fa9e94b338d828fe1b79d37369` passed public Lean
+Action run `30333303052`, build job `90192852899`, in `1m40s`. The `LeanLab/` diff from frozen
+implementation `15381a49ff4dfb92a0ab4e29d5e76383f9789139` is empty. This node returns to
+`ROUTE_SELECTION` after final-ledger CI; H11-D and H11-E remain open.
