@@ -1,5 +1,6 @@
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
+import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
 import LeanLab.Riemann.LevinsonMontgomeryLogDerivMassBridge
 import LeanLab.Riemann.LevinsonMontgomeryBoundarySigns
@@ -4844,5 +4845,69 @@ example :
 example :
     FareyMobiusWeylCertificate :=
   fareyMobiusWeyl_endpoint
+
+example {ι : Type} [Fintype ι] (gamma : ι → ℝ) (U : ℝ) :
+    triangularPairMass gamma U =
+      Finset.univ.sum fun i =>
+        (Finset.univ.filter
+          fun j => |pairCorrelationGap gamma i j| ≤ U).sum fun j =>
+            U - |pairCorrelationGap gamma i j| :=
+  triangularPairMass_eq_filtered gamma U
+
+example {ι : Type} [Fintype ι] (gamma : ι → ℝ)
+    {U : ℝ} (hU : 0 ≤ U) :
+    triangularPairMass gamma U =
+      U * (equalOrdinatePairCount gamma : ℝ) + 2 * positiveGapMass gamma U :=
+  triangularPairMass_eq_equal_add_two_positive gamma hU
+
+example {ι : Type} [Fintype ι] (gamma : ι → ℝ)
+    {U : ℝ} (hU : 0 ≤ U) :
+    (∫ u : ℝ in 0..U, (positiveGapPairCount gamma u : ℝ)) =
+      positiveGapMass gamma U :=
+  integral_positiveGapPairCount_eq_positiveGapMass gamma hU
+
+example {ι : Type} [Fintype ι] (gamma : ι → ℝ)
+    {U : ℝ} (hU : 0 ≤ U) :
+    triangularPairMass gamma U =
+      U * (equalOrdinatePairCount gamma : ℝ) +
+        2 * (∫ u : ℝ in 0..U, (positiveGapPairCount gamma u : ℝ)) :=
+  triangularPairMass_eq_equal_add_integral gamma hU
+
+example {ι : Type} [Fintype ι] (z : ι → ℂ) :
+    equalOrdinatePairCount (fun i => (z i).im) = horizontalPairCount z :=
+  equalOrdinatePairCount_im_eq_horizontalPairCount z
+
+example (T : ℝ) {U : ℝ} (hU : 0 ≤ U) :
+    pccPositiveZetaTriangularPairMass T U =
+      U * (pccPositiveZetaHorizontalPairCount T : ℝ) +
+        2 * (∫ u : ℝ in 0..U, (pccPositiveZetaGapPairCount T u : ℝ)) :=
+  pccPositiveZeta_triangularPairMass_eq T hU
+
+example :
+    PairCorrelationTriangularMassCertificate :=
+  pairCorrelationTriangularMass_endpoint
+
+example {ι : Type} [Fintype ι] (gamma : ι → ℝ) :
+    triangularPairMass gamma 0 = 0 := by
+  simp [triangularPairMass]
+
+example (U : ℝ) (hU : 0 ≤ U) :
+    triangularPairMass (fun _i : Fin 1 => 7) U = U := by
+  simp [triangularPairMass, pairCorrelationGap, max_eq_right hU]
+
+example (c : ℝ) :
+    equalOrdinatePairCount (fun _i : Bool => c) = 4 := by
+  simp [equalOrdinatePairCount, pairCorrelationGap]
+
+example {U : ℝ} (hU : 0 ≤ U) :
+    max 0 (U -
+      |pairCorrelationGap (fun b : Bool => if b then U else 0) false true|) = 0 := by
+  simp [pairCorrelationGap, abs_of_nonneg hU]
+
+example (n : ℕ) :
+    equalOrdinatePairCount
+      (fun i => (pccExceptionalValue n i).im) = n + 4 := by
+  rw [equalOrdinatePairCount_im_eq_horizontalPairCount,
+    pccExceptional_horizontalPairCount]
 
 end LeanLab.Riemann

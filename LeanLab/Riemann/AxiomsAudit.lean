@@ -9,6 +9,7 @@ import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.FareyMobiusWeyl
+import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
 import LeanLab.Riemann.ThetaInfinityMollifier
@@ -1078,3 +1079,10 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.fareyReducedBlock_frequencyOne_eq_moebius
 #print axioms LeanLab.Riemann.farey_frequency_one_sum_eq_finiteMertens
 #print axioms LeanLab.Riemann.fareyMobiusWeyl_endpoint
+#print axioms LeanLab.Riemann.triangularPairMass_eq_filtered
+#print axioms LeanLab.Riemann.integral_positiveGapPairCount_eq_positiveGapMass
+#print axioms LeanLab.Riemann.triangularPairMass_eq_equal_add_two_positive
+#print axioms LeanLab.Riemann.triangularPairMass_eq_equal_add_integral
+#print axioms LeanLab.Riemann.equalOrdinatePairCount_im_eq_horizontalPairCount
+#print axioms LeanLab.Riemann.pccPositiveZeta_triangularPairMass_eq
+#print axioms LeanLab.Riemann.pairCorrelationTriangularMass_endpoint

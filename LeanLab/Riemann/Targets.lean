@@ -102,6 +102,7 @@ import LeanLab.Riemann.LevinsonMontgomeryLogDerivMassBridge
 import LeanLab.Riemann.LevinsonMontgomeryBoundarySigns
 import LeanLab.Riemann.LevinsonMontgomeryCriticalIndentation
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
+import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -1623,6 +1624,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``riemannHypothesis_of_exactHorizontalPairCountCofinal
       status := .proven
       note := "Campaign LITERATURE-20260723-H11-PCC-HORIZONTAL-MULTIPLICITY-01 corrects the stale route-map claim that pair correlation has no horizontal information. The compiled endpoint is a conditional exact-count consumer plus an unconditional sparse-exception countermodel; it does not prove PCC, exact cofinal equality, or RH. Zeta and xi analytic multiplicities are proved equal at every nontrivial zero." },
+    { id := "H11.pcc.triangular-pair-mass"
+      tier := .tier2
+      title := "Formalize the Gallagher-Mueller triangular pair mass"
+      statement :=
+        "Prove the exact finite ordered-pair triangular-mass decomposition, its interval layer-cake identity, the equality between zero-gap count and horizontalPairCount, and the complete specialization to multiplicity-expanded positive zeta zeros."
+      leanName := some ``pairCorrelationTriangularMass_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260728-H11-TRIANGULAR-PAIR-MASS-01 reconstructs Goldston-Lee-Schettler-Suriajaya equations (5.3)-(5.4) at every finite cutoff. The source identity now exposes horizontal multiplicity exactly and preserves analytic-multiplicity copies. Fujii's second moment, PCC, HMH, an absolute-error estimate, sparse-exception amplification, and RH remain open." },
     { id := "H11.pcc.sparse-exception-amplification"
       tier := .tier2
       title := "Eliminate sparse horizontal-multiplicity exceptions"
