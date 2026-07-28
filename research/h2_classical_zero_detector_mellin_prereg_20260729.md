@@ -8,7 +8,7 @@ Node: `H2-CLASSICAL-ZERO-DETECTOR-MELLIN-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `MEANINGFUL_MELLIN_PARTIAL / LOCAL_AUDIT_GREEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `MEANINGFUL_MELLIN_PARTIAL / IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Source statement
 
@@ -142,3 +142,7 @@ The first unavailable theorem is the vertical inverse identity
 `ClassicalDetectorInverseMellinLine`. Therefore the infinite rectangle shift, horizontal-edge
 limits, shifted detector identity, Type-I/Type-II counts, density estimates, H2, and RH remain
 open. The accepted classification is `MEANINGFUL_MELLIN_PARTIAL`, not full success.
+
+The frozen implementation commit `b050e9d027ca0fa27619803df1e764b1a65f887c` passed public Lean
+Action run `30394320528`, job `90393394704`, in `2m37s`. Proof sources remain frozen while
+docs-only immutable evidence is published.

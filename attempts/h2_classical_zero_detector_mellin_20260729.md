@@ -4,7 +4,7 @@ Date: 2026-07-29
 
 Campaign: `LITERATURE-20260729-H2-CLASSICAL-ZERO-DETECTOR-MELLIN-01`
 
-Status: `MEANINGFUL_MELLIN_PARTIAL / LOCAL_AUDIT_GREEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `MEANINGFUL_MELLIN_PARTIAL / IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Attempt ledger
 
@@ -25,6 +25,7 @@ Status: `MEANINGFUL_MELLIN_PARTIAL / LOCAL_AUDIT_GREEN / PUBLIC_IMPLEMENTATION_C
 | `FINITE_DETECTOR_IMPLEMENTATION` | Formalized the source-independent mass inequality and cardinality-sensitive detector. | Lean proves a large remainder or block at threshold `1/(3*(card+1))`; uniform blocks compile as the negative control against a cardinality-free threshold. | Keep later Type-I/Type-II counting separate. |
 | `LOCAL_CLASSIFICATION` | Packaged only the compiled layers in `ClassicalDetectorMellinPartialCertificate`. | Clauses 1--5, the abstract part of clause 8, clause 10, the full forward Mellin identity, and both local singularity calculations compile. The aggregate intentionally has no inverse-Mellin or global contour-shift field. | Classify `MEANINGFUL_MELLIN_PARTIAL`; run the full local and public evidence chain. |
 | `LOCAL_AUDIT` | Ran warning-as-error checks, selected axiom prints, forbidden scans, diff checks, and the complete repository build. | The new module, Targets, and TargetChecks pass warning-as-error; seven selected declarations use only standard axioms; scans and `git diff --check` are empty; full build passes `8786/8786`. | Freeze the implementation and require public CI. |
+| `IMPLEMENTATION_PUBLIC_GATE` | Published the frozen implementation and waited for the complete remote Lean Action. | Commit `b050e9d027ca0fa27619803df1e764b1a65f887c` passed run `30394320528`, job `90393394704`, in `2m37s`. The subsequent `LeanLab/` diff is empty. | Publish docs-only immutable evidence. |
 
 ## Frozen boundary
 

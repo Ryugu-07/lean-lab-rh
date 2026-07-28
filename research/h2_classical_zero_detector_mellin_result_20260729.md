@@ -4,7 +4,7 @@ Date: 2026-07-29
 
 Campaign: `LITERATURE-20260729-H2-CLASSICAL-ZERO-DETECTOR-MELLIN-01`
 
-Result: `MEANINGFUL_MELLIN_PARTIAL / LOCAL_AUDIT_GREEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Result: `MEANINGFUL_MELLIN_PARTIAL / IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Public prerequisite
 
@@ -68,6 +68,12 @@ theorem.
 - Forbidden scans of the new production surface are empty.
 - `git diff --check` passes.
 - The full repository build passes `8786/8786`.
+
+## Public implementation evidence
+
+Frozen implementation `b050e9d027ca0fa27619803df1e764b1a65f887c` passed public Lean Action
+run `30394320528`, build job `90393394704`, in `2m37s`. The `LeanLab/` diff after that commit is
+empty; this evidence update changes documentation only.
 
 ## Classification
 
