@@ -8,7 +8,7 @@ Node: `H7-BERRY-KEATING-NAIVE-HALFLINE-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / FALSIFICATION`
 
-Status: `EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_REQUIRED`
+Status: `PUBLICLY_CLOSED_FULL_SUCCESS`
 
 Preregistration commit `5ec1e2b9b5e8028517934b986f407f2a210748e6` passed public Lean
 Action run `30407563102`, build job `90436305353`, in `1m40s`. Proof-source editing began only
@@ -21,6 +21,10 @@ are frozen while immutable evidence is published.
 Immutable-evidence commit `d3cb2713740581d40027748f345389899bc8c2a5` passed public Lean
 Action run `30408221987`, build job `90438382124`, in `1m56s`. The five frozen proof and
 registration files are unchanged from the implementation commit.
+
+Final-ledger commit `403510b919884e23226c3b051ae8e1f0d7cfd1c4` passed public Lean
+Action run `30408401817`, build job `90438937042`, in `1m46s`. The local campaign stops at its
+registered standard-mode obstruction.
 
 ## Primary sources and exact inference
 

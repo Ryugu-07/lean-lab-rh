@@ -8,7 +8,7 @@ Node: `H7-BERRY-KEATING-NAIVE-HALFLINE-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / FALSIFICATION`
 
-Status: `EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_REQUIRED`
+Status: `PUBLICLY_CLOSED_FULL_SUCCESS`
 
 ## Fixed target
 
@@ -36,6 +36,7 @@ The exact endpoint, controls, and claim boundary are fixed in
 | `LOCAL_AUDIT` | Registered one proven Target, five exact TargetChecks, five selected axiom prints, forbidden scans, warning-as-error module compile, and full build. | 93-line no-sorry module; selected axioms are only `propext`, `Classical.choice`, and `Quot.sound`; full build `8791/8791`. | Classify `FULL_SUCCESS / LOCAL_AUDIT_GREEN` and publish the frozen implementation. |
 | `IMPLEMENTATION_PUBLIC` | Published the frozen proof and registration sources. | Commit `56ec4c84d894899afb132b50aece303cb40f7cd7`; run `30408034816`, job `90437803648`, passed in `2m11s`. | Freeze five proof/registration files and publish docs-only immutable evidence. |
 | `IMMUTABLE_EVIDENCE_PUBLIC` | Published the frozen-file receipt and exact claim boundary without changing proof sources. | Commit `d3cb2713740581d40027748f345389899bc8c2a5`; run `30408221987`, job `90438382124`, passed in `1m56s`. | Publish one docs-only final ledger and require its own public CI. |
+| `FINAL_LEDGER_PUBLIC` | Published the exact closed node, open spectral successors, and zero hard-gap/RH-frontier deltas. | Commit `403510b919884e23226c3b051ae8e1f0d7cfd1c4`; run `30408401817`, job `90438937042`, passed in `1m46s`. | Publish the closure receipt and stop this campaign. |
 
 ## Current frontier
 

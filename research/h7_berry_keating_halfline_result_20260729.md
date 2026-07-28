@@ -143,3 +143,7 @@ Keep open:
 
 The local stop returns the active RH Goal to fresh historical-route comparison. It does not
 authorize immediate continuation into another Berry--Keating lemma by inertia.
+
+Final-ledger commit `403510b919884e23226c3b051ae8e1f0d7cfd1c4` passed public Lean
+Action run `30408401817`, build job `90438937042`, in `1m46s`. The full public chain is recorded
+in `research/h7_berry_keating_halfline_closure_receipt_20260729.md`.

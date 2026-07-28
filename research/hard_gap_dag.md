@@ -3350,6 +3350,10 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   continuity, compact-graph Weyl no-go, every global arithmetic confinement/absorption
   mechanism, Hilbert--Polya, H7, and RH open.
 - `next_gate`: docs-only final ledger and public CI, then closure receipt.
+- `final_ledger`: `403510b919884e23226c3b051ae8e1f0d7cfd1c4`.
+- `final_ledger_public_ci`: run `30408401817`, build job `90438937042`, passed in `1m46s`.
+- `local_stop`: publish the closure receipt, then return the active RH Goal to fresh
+  cross-family historical omission selection.
 
 ## 2026-07-29 H12 left-half-plane winding launch
 

@@ -6234,3 +6234,16 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - Next gate: publish this docs-only final ledger and require public CI, then one closure receipt
   before fresh cross-family route selection.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H7 Berry--Keating final ledger public green
+
+- Final-ledger commit `403510b919884e23226c3b051ae8e1f0d7cfd1c4` passed Lean Action
+  run `30408401817`, build job `90438937042`, in `1m46s`.
+- The complete preregistration, frozen implementation, immutable evidence, and final-ledger
+  chain is green; the frozen proof-source diff remains empty.
+- Closure receipt closes only `H7.berry-keating.naive-halfline-mode-obstruction`.
+- Keep the full half-line operator theorem, compact-graph Weyl no-go, every global arithmetic
+  confinement/absorption repair, Hilbert--Polya, H7, and RH open.
+- After the closure receipt's public CI, return to fresh cross-family selection; do not continue
+  H7 by inertia.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
