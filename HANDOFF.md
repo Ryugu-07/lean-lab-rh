@@ -5111,6 +5111,34 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `global_goal`: active.
 - `protected_files`: inherited six files remain untouched and unstaged.
 
+## 2026-07-29 H2 classical zero-detector local meaningful partial
+
+- `campaign`: `LITERATURE-20260729-H2-CLASSICAL-ZERO-DETECTOR-MELLIN-01`.
+- `preregistration`: `fc6e3c1ac5a8effc4db842716078229c869f6f56`, run
+  `30391792808`, job `90384919913`, `2m0s`.
+- `result`: `MEANINGFUL_MELLIN_PARTIAL / LOCAL_AUDIT_GREEN`.
+- `compiled`:
+  `truncated Mobius convolution -> coefficient gap`;
+  `-> actual L(a_M,s)=M_M(s)*zeta(s) on Re(s)>1`;
+  `-> exponential smoothing and full forward Mellin transform`;
+  `-> local Gamma-pole cancellation at an actual zeta zero`;
+  `-> exact translated-zeta residue`;
+  `-> cardinality-audited finite detector and uniform-block control`.
+- `first_open_theorem`: `ClassicalDetectorInverseMellinLine`.
+- `strict_boundary`: no vertical inverse Mellin theorem, global contour shift, horizontal-edge
+  decay, shifted detector identity, Type-I/Type-II count, density exponent, H2, or RH.
+- `classification`: `historical_subroute_coverage_delta=1`,
+  `mobius_coefficient_gap_delta=1`, `classical_zero_detector_delta=0`,
+  `mellin_shift_delta=0`, `zero_density_delta=0`, `hard_gap_delta=0`,
+  `rh_frontier_delta=0`.
+- `local_audit`: 681-line no-sorry module, one proven Target, one exact open successor, seven
+  selected standard-only axiom prints, empty forbidden scans, warning-as-error compiles,
+  `git diff --check`, and full `8786/8786` build.
+- `next_gate`: frozen implementation public CI, followed by docs-only immutable evidence and
+  final ledger; then fresh historical route selection.
+- `global_goal`: active.
+- `protected_files`: inherited six files remain untouched and unstaged.
+
 ## 2026-07-29 H1 Selberg implementation public green
 
 - `frozen_implementation`: `8d9373fa6325a857541fb112b3ec137162a343c9`.

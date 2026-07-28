@@ -97,6 +97,7 @@ import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.SelbergLocalSignChange
+import LeanLab.Riemann.ClassicalZeroDetectorMellin
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.FareyFranel
@@ -1817,6 +1818,21 @@ def rhTargets : List ResearchTarget :=
         "For a source-faithful squared root mollifier, prove the first, absolute, and higher moment estimates that force a positive-density family of strongly separated intervals satisfying the compiled local triangle-gap detector, and derive a T log T lower bound for actual critical-line zeta zeros."
       status := .inProgress
       note := "The actual local zero producer and finite separated-interval assembly compile. The open historical edge is the global analytic estimate that supplies many detector intervals; no numerical proportion is optimized before this mechanism is formalized." },
+    { id := "H2.classical-detector.mellin-partial-producer"
+      tier := .tier2
+      title := "Formalize the classical zero detector through local Mellin residues"
+      statement :=
+        "Construct the truncated-Mobius detector coefficients, prove their exact gap and actual zeta product, justify the full forward Mellin sum-integral exchange, remove the Gamma pole at an actual zeta zero, identify the retained translated-zeta residue, and compile the cardinality-audited finite detector."
+      leanName := some ``classicalDetectorMellinPartialCertificate_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260729-H2-CLASSICAL-ZERO-DETECTOR-MELLIN-01 reconstructs the arithmetic and local analytic core of the Ingham-Huxley detector. Lean proves the exact coefficient gap, M0-aligned Mobius polynomial, actual L-series product, smoothed head-tail split, full forward Mellin transform with absolute sum-integral exchange, a dslope-based holomorphic cancellation of Gamma(w)*zeta(rho+w) at w=0, the retained residue at w=1-rho, finite cardinality-dependent block detection, and the uniform-block negative control. The inverse Mellin vertical formula and global contour shift remain open, so this is MEANINGFUL_MELLIN_PARTIAL, not a density theorem, H2, or RH." },
+    { id := "H2.classical-detector.inverse-mellin-contour-shift"
+      tier := .tier2
+      title := "Close the classical detector inverse Mellin contour shift"
+      statement :=
+        "Prove ClassicalDetectorInverseMellinLine from the compiled forward transform, then shift the actual Gamma-Mobius-zeta contour from a source-valid line to Re(w)=1/2-Re(rho), discharge both horizontal edges with explicit Gamma decay and zeta strip growth, and derive the source dyadic-block versus shifted-line detector identity."
+      status := .inProgress
+      note := "The forward transform, both local singularity calculations, and the abstract finite detector compile. The first unavailable theorem is the inverse Mellin vertical-line identity ClassicalDetectorInverseMellinLine. Existing project inputs include a linear zeta bound on 1/2<=Re(s)<=8, an exact half-line Gamma norm, and fixed-positive-strip Gamma-ratio bounds; these have not yet been assembled into the required inverse theorem and infinite rectangle shift." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

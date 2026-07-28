@@ -8,7 +8,7 @@ Node: `H2-CLASSICAL-ZERO-DETECTOR-MELLIN-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `MEANINGFUL_MELLIN_PARTIAL / LOCAL_AUDIT_GREEN / PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 
 ## Source statement
 
@@ -122,3 +122,23 @@ created or edited until this docs-only preregistration passes public Lean Action
 
 The persistent RH Goal remains active. Local completion returns to fresh historical route
 selection after the full evidence chain.
+
+## Implementation result
+
+The docs-only preregistration commit
+`fc6e3c1ac5a8effc4db842716078229c869f6f56` passed public Lean Action run
+`30391792808`, job `90384919913`, in `2m0s` before production edits.
+
+The production module now compiles clauses 1--5, the source-independent finite theorem from
+clause 8, and clause 10. It additionally compiles the complete forward Mellin transform and the
+two local singularity calculations required by clause 7:
+
+- `Gamma(w)*zeta(rho+w)` has a differentiable `dslope` replacement at `w=0` for every actual
+  `IsNontrivialZero rho`;
+- the translated zeta pole at `w=1-rho` has the exact retained residue
+  `Y^(1-rho)*Gamma(1-rho)*M_M(1)`.
+
+The first unavailable theorem is the vertical inverse identity
+`ClassicalDetectorInverseMellinLine`. Therefore the infinite rectangle shift, horizontal-edge
+limits, shifted detector identity, Type-I/Type-II counts, density estimates, H2, and RH remain
+open. The accepted classification is `MEANINGFUL_MELLIN_PARTIAL`, not full success.

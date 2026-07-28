@@ -3139,3 +3139,35 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   off-line orbit.
 - Production gate: no Lean source edit before docs-only preregistration public CI. Persistent RH
   Goal active.
+
+## 2026-07-29 H2 classical zero-detector local meaningful partial
+
+- `H2-CLASSICAL-ZERO-DETECTOR-MELLIN-01`: local result
+  `MEANINGFUL_MELLIN_PARTIAL`.
+- `H2-DETECTOR-COEFFICIENT-GAP-01`: closed. The truncated Mobius convolution has the exact
+  divisor-sum formula, value one at `n=1`, and zero coefficients for `2<=n<=M`.
+- `H2-DETECTOR-SOURCE-PRODUCT-01`: closed on `Re(s)>1` with the actual project Mobius
+  polynomial and actual `riemannZeta`.
+- `H2-DETECTOR-FORWARD-MELLIN-01`: closed for `1<Re(z)` and `0<Re(w)`, including absolute
+  sum-integral exchange.
+- `H2-DETECTOR-GAMMA-CANCELLATION-01`: closed locally at an actual zeta zero by the
+  differentiable `dslope` replacement; no simple-zero premise.
+- `H2-DETECTOR-ZETA-RESIDUE-01`: closed locally with exact residue
+  `Y^(1-rho)*Gamma(1-rho)*M_M(1)`.
+- `OBS-H2-DETECTOR-CARDINALITY-01`: closed by the exact
+  `1/(3*(card+1))` detector and uniform-block control.
+- `H2-DETECTOR-MELLIN-INVERSION-01`: first open theorem, represented exactly by
+  `ClassicalDetectorInverseMellinLine`.
+- `H2-DETECTOR-CONTOUR-SHIFT-01`: open. Local singularity calculations do not supply the
+  vertical inversion, infinite rectangle theorem, or horizontal-edge limits.
+- `H2-TYPE-I-LARGE-VALUES-01`, `H2-TYPE-II-MOMENT-01`, every density exponent, actual bow
+  exclusion, H2, and RH remain open.
+- `classification`: `historical_subroute_coverage_delta=1`,
+  `mobius_coefficient_gap_delta=1`, `classical_zero_detector_delta=0`,
+  `mellin_shift_delta=0`, `zero_density_delta=0`, `hard_gap_delta=0`,
+  `rh_frontier_delta=0`.
+- `local_audit`: 681-line no-sorry module, one proven Target, one exact open successor, seven
+  selected standard-only axiom prints, empty forbidden scans, warning-as-error compiles,
+  `git diff --check`, and full `8786/8786` build.
+- `next_gate`: frozen implementation public CI, immutable evidence, and final ledger; then fresh
+  historical route selection.

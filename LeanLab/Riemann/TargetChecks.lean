@@ -137,7 +137,7 @@ examples.
 
 namespace LeanLab.Riemann
 
-open Matrix Polynomial
+open Filter Matrix Polynomial
 open scoped BigOperators Matrix Polynomial
 
 example
@@ -5439,5 +5439,52 @@ example :
 
 example : SelbergLocalSignChangeCertificate :=
   selbergLocalSignChange_endpoint
+
+example {M n : ℕ} (hn : 2 ≤ n) (hnM : n ≤ M) :
+    classicalDetectorCoefficient M n = 0 :=
+  classicalDetectorCoefficient_eq_zero hn hnM
+
+example (M : ℕ) {z w : ℂ} (hz : 1 < z.re) (hw : 0 < w.re) :
+    mellin (classicalDetectorExponentialSeries M z) w =
+      Complex.Gamma w *
+        (classicalDetectorMollifier M (z + w) * riemannZeta (z + w)) :=
+  mellin_classicalDetectorExponentialSeries_eq_gamma_mul_mollifier_mul_zeta M hz hw
+
+example {rho : ℂ} (hrho : IsNontrivialZero rho) {w : ℂ} (hw : w ≠ 0) :
+    classicalDetectorCancelledGammaZeta rho w =
+      Complex.Gamma w * riemannZeta (rho + w) :=
+  classicalDetectorCancelledGammaZeta_eq_source hrho hw
+
+example {rho : ℂ} (hrho : IsNontrivialZero rho) :
+    DifferentiableOn ℂ (classicalDetectorCancelledGammaZeta rho)
+      (classicalDetectorCancelledGammaZetaDomain rho) :=
+  differentiableOn_classicalDetectorCancelledGammaZeta hrho
+
+example (M : ℕ) {rho : ℂ} (hrho : IsNontrivialZero rho)
+    {Y : ℝ} (hY : 0 < Y) :
+    Tendsto
+      (fun w : ℂ =>
+        (w - (1 - rho)) *
+          classicalDetectorMellinContourFactor M rho Y w)
+      (𝓝[≠] (1 - rho))
+      (𝓝 ((Y : ℂ) ^ (1 - rho) * Complex.Gamma (1 - rho) *
+        classicalDetectorMollifier M 1)) :=
+  tendsto_classicalDetectorMellinContourFactor_zetaPole M hrho hY
+
+example {ι : Type*} [Fintype ι] (block : ι → ℂ) (error remainder : ℂ)
+    (hidentity : (1 : ℂ) + error + ∑ i, block i = remainder)
+    (herror : ‖error‖ ≤ 1 / 3) :
+    1 / (3 * (Fintype.card ι + 1) : ℝ) ≤ ‖remainder‖ ∨
+      ∃ i, 1 / (3 * (Fintype.card ι + 1) : ℝ) ≤ ‖block i‖ :=
+  exists_large_block_or_remainder block error remainder hidentity herror
+
+example (k : ℕ) (hk : 0 < k) :
+    ∃ block : Fin k → ℂ,
+      (∑ i, block i) = 1 ∧
+        ∀ i, ‖block i‖ = 1 / k :=
+  uniform_blocks_sum_one k hk
+
+example : ClassicalDetectorMellinPartialCertificate :=
+  classicalDetectorMellinPartialCertificate_endpoint
 
 end LeanLab.Riemann

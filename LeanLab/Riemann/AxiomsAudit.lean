@@ -11,6 +11,7 @@ import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.SelbergLocalSignChange
+import LeanLab.Riemann.ClassicalZeroDetectorMellin
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.HardyThetaInversion
 import LeanLab.Riemann.WeilHodgeLattice
@@ -1168,3 +1169,10 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.exists_injective_criticalLine_zeros_of_selbergLocalIntegralGaps
 #print axioms LeanLab.Riemann.arbitrary_multiplier_false_sign_change
 #print axioms LeanLab.Riemann.selbergLocalSignChange_endpoint
+#print axioms LeanLab.Riemann.classicalDetectorCoefficient_eq_zero
+#print axioms LeanLab.Riemann.mellin_classicalDetectorExponentialSeries_eq_gamma_mul_mollifier_mul_zeta
+#print axioms LeanLab.Riemann.differentiableOn_classicalDetectorCancelledGammaZeta
+#print axioms LeanLab.Riemann.tendsto_classicalDetectorMellinContourFactor_zetaPole
+#print axioms LeanLab.Riemann.exists_large_block_or_remainder
+#print axioms LeanLab.Riemann.uniform_blocks_sum_one
+#print axioms LeanLab.Riemann.classicalDetectorMellinPartialCertificate_endpoint

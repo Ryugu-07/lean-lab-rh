@@ -89,3 +89,15 @@ exponent or treat a better exponent as progress toward excluding one exceptional
 - `production_gate`: no `LeanLab/` edit before the docs-only preregistration passes public CI.
 
 The persistent RH Goal remains active.
+
+## Selection outcome
+
+The selected campaign reaches `MEANINGFUL_MELLIN_PARTIAL`. Lean compiles the exact arithmetic
+coefficient gap, actual right-half-plane zeta-product, exponential head-tail split, full forward
+Mellin transform, removable Gamma-pole cancellation at an actual zeta zero, retained
+translated-zeta residue, and cardinality-audited finite detector.
+
+The first unavailable theorem is `ClassicalDetectorInverseMellinLine`. Consequently the global
+contour shift, shifted Type-I/Type-II detector identity, density estimates, H2, and RH remain
+open. After the evidence chain, selection returns to the historical atlas instead of optimizing
+a density constant or continuing H2 by inertia.
