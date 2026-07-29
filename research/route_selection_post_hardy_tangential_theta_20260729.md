@@ -2,7 +2,7 @@
 
 Date: 2026-07-29
 
-Status: `H1_HARDY_LITTLEWOOD_LINEAR_COUNT_SELECTED`
+Status: `H1_HARDY_LITTLEWOOD_LINEAR_COUNT_LOCAL_SUCCESS`
 
 ## Closed parent
 
@@ -94,3 +94,16 @@ it does not derive many such intervals from a quantitative exceptional-set estim
 
 This campaign studies a missing proof mechanism, not optimization of a numerical constant. The
 persistent RH Goal remains active.
+
+## Selection outcome
+
+The selected finite inference is now compiled by
+`hardyLittlewood_source_finite_count`. The result preserves the literal whole-interval charge,
+the `[T,2T]` restricted measure, natural-number pair counts, and injective actual-zero witnesses.
+The endpoint-sampling weakening is formally rejected by a null-set countermodel.
+
+This closes the previously missing count bridge but not the 1921 theorem's analytic producers.
+After public closure, the next selection must compare source-faithful production of the
+Hardy--Littlewood eta and `X/Z` moments against Selberg's global mollified moments,
+Levinson--Conrey's auxiliary count, and the highest-value open nodes in other historical
+families. Constant optimization is not a default successor.

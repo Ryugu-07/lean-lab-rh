@@ -99,6 +99,7 @@ import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.SelbergLocalSignChange
+import LeanLab.Riemann.HardyLittlewoodLinearCount
 import LeanLab.Riemann.ClassicalZeroDetectorMellin
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.HardyAbelMomentAmplification
@@ -1899,6 +1900,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``infinite_criticalLineZeros_hardy
       status := .proven
       note := "Campaign LITERATURE-20260729-H1-HARDY-TANGENTIAL-THETA-01 replaces Hardy's invoked Bohr--Riesz summability step by Mathlib's branch-explicit Jacobi theta functional equation, an all-order Cauchy derivative estimate, and Gaussian cusp decay. Lean compiles the literal left Abel filter and endpoint constant, without endpoint Lebesgue integrability or a custom summability axiom. This formalizes Hardy's 1914 theorem of infinitely many critical-line zeros. It proves no quantitative count, positive proportion, H1, or RH; historical_route_coverage_delta=1, source_logic_delta=1, rh_frontier_delta=0." },
+    { id := "H1.hardy-littlewood.exceptional-set-linear-count"
+      tier := .tier2
+      title := "Formalize Hardy--Littlewood's exceptional-set count bridge"
+      statement :=
+        "Define the moving Hardy coordinate integrals and source bad sets, derive their exact denominator-free Chebyshev bounds from two second moments, charge every failed adjacent interval pair by a full length-H block, and convert the remaining pairs into an injective family of actual critical-line zeta zeros."
+      leanName := some ``hardyLittlewoodLinearCount_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260729-H1-HARDY-LITTLEWOOD-LINEAR-COUNT-01 reconstructs equations (2.81)--(2.87) and section 2.9 of Hardy--Littlewood 1921 at the finite exact level. Lean checks the moving-window continuity, strict and non-strict square Markov bounds, bad-set union bound, [T,2T] restricted-measure interval charge, natural good-pair lower bound, injective actual-zero selection, positive-half corollary, and the endpoint-sampling null-set control. The actual source Hardy X/Z normalization, eta lower estimate, and two source second moments remain explicit producer hypotheses; no unconditional linear count, positive proportion, H1, or RH is proved." },
     { id := "H1.selberg.local-sign-change-producer"
       tier := .tier2
       title := "Formalize Selberg's local squared-mollifier sign detector"

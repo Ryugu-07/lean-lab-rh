@@ -11,6 +11,7 @@ import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.SelbergLocalSignChange
+import LeanLab.Riemann.HardyLittlewoodLinearCount
 import LeanLab.Riemann.ClassicalZeroDetectorMellin
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.HardyAbelMomentAmplification
@@ -1235,6 +1236,15 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.exists_injective_criticalLine_zeros_of_selbergLocalIntegralGaps
 #print axioms LeanLab.Riemann.arbitrary_multiplier_false_sign_change
 #print axioms LeanLab.Riemann.selbergLocalSignChange_endpoint
+#print axioms LeanLab.Riemann.hardyLittlewood_markov_square_strict
+#print axioms LeanLab.Riemann.hardyLittlewood_badSet_union_bound
+#print axioms LeanLab.Riemann.hardyLittlewood_failed_card_mul_le_measure
+#print axioms LeanLab.Riemann.hardyLittlewood_good_card_lower_bound
+#print axioms LeanLab.Riemann.exists_injective_criticalLine_zeros_of_hardyLittlewoodGoodPairs
+#print axioms LeanLab.Riemann.hardyLittlewood_source_finite_count
+#print axioms LeanLab.Riemann.hardyLittlewood_positiveHalf_corollary
+#print axioms LeanLab.Riemann.hardyLittlewoodEndpointSet_volume_zero
+#print axioms LeanLab.Riemann.hardyLittlewoodLinearCount_endpoint
 #print axioms LeanLab.Riemann.classicalDetectorCoefficient_eq_zero
 #print axioms LeanLab.Riemann.mellin_classicalDetectorExponentialSeries_eq_gamma_mul_mollifier_mul_zeta
 #print axioms LeanLab.Riemann.differentiableOn_classicalDetectorCancelledGammaZeta

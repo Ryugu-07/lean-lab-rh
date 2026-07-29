@@ -26,6 +26,7 @@ import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.SelbergLocalSignChange
+import LeanLab.Riemann.HardyLittlewoodLinearCount
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.HardyThetaInversion
@@ -5952,5 +5953,60 @@ example {c x : ℝ} (hc : 0 < c) (hx : 0 < x) :
 
 example : ClassicalDetectorInverseMellinLine :=
   classicalDetectorInverseMellinLine
+
+example {alpha : Type*} [MeasurableSpace alpha]
+    {mu : MeasureTheory.Measure alpha} {f : alpha → ℝ}
+    (hf : Measurable f) {threshold : ℝ}
+    (hthreshold : 0 ≤ threshold) {moment : ENNReal}
+    (hmoment :
+      (∫⁻ x, ENNReal.ofReal (|f x| ^ 2) ∂mu) ≤ moment) :
+    ENNReal.ofReal (threshold ^ 2) *
+        mu {x | threshold < |f x|} ≤ moment :=
+  hardyLittlewood_markov_square_strict hf hthreshold hmoment
+
+example {X psi : ℝ → ℝ} {A H t : ℝ}
+    (hH : 0 < H)
+    (hlower :
+      A * H - |psi t| ≤ hardyLittlewoodAbsWindowIntegral X H t)
+    (ht :
+      t ∉ hardyLittlewoodBadSet X psi H (A * H / 2)) :
+    SelbergLocalIntegralGap X t (t + H) :=
+  hardyLittlewood_localIntegralGap_of_not_mem_badSet hH hlower ht
+
+example {n : ℕ} {mu : MeasureTheory.Measure ℝ}
+    (base H : ℝ) (bad : Set ℝ)
+    (hdisjoint :
+      Set.univ.PairwiseDisjoint
+        (hardyLittlewoodFirstBlock (n := n) base H))
+    (hblock :
+      ∀ i : Fin n, mu (hardyLittlewoodFirstBlock base H i) =
+        ENNReal.ofReal H) :
+    ((hardyLittlewoodFailedIndices (n := n) base H bad).card :
+        ENNReal) * ENNReal.ofReal H ≤ mu bad :=
+  hardyLittlewood_failed_card_mul_le_measure
+    base H bad hdisjoint hblock
+
+example {n b : ℕ} {mu : MeasureTheory.Measure ℝ}
+    {base H : ℝ} {bad : Set ℝ}
+    (hbn : b ≤ n) (hH : 0 < H)
+    (hcharge :
+      ((hardyLittlewoodFailedIndices (n := n) base H bad).card :
+          ENNReal) * ENNReal.ofReal H ≤ mu bad)
+    (hsmall : mu bad ≤ (b : ENNReal) * ENNReal.ofReal H) :
+    n - b ≤
+      (hardyLittlewoodGoodIndices (n := n) base H bad).card :=
+  hardyLittlewood_good_card_lower_bound hbn hH hcharge hsmall
+
+example {n : ℕ} (base H : ℝ) :
+    MeasureTheory.volume
+        (hardyLittlewoodEndpointSet (n := n) base H) = 0 ∧
+      ∀ i : Fin n,
+        hardyLittlewoodPairLeft base H i ∈
+          hardyLittlewoodEndpointSet (n := n) base H :=
+  ⟨hardyLittlewoodEndpointSet_volume_zero base H,
+    hardyLittlewoodPairLeft_mem_endpointSet base H⟩
+
+example : HardyLittlewoodLinearCountCertificate :=
+  hardyLittlewoodLinearCount_endpoint
 
 end LeanLab.Riemann

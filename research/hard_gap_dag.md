@@ -3851,3 +3851,35 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   count, positive proportion, H1, or RH.
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.
+
+## 2026-07-29 H1 Hardy--Littlewood finite count local closure
+
+- `classification`: `FULL_SUCCESS / FINITE_EXCEPTIONAL_SET_COUNT_BRIDGE_FORMALIZED`.
+- `H1-HARDY-LITTLEWOOD-EXCEPTIONAL-SET-COUNT-01`: locally closed by
+  `hardyLittlewood_source_finite_count`.
+- `compiled_chain`:
+  continuous moving source windows;
+  `->` exact strict/non-strict square Markov bounds;
+  `->` denominator-free exceptional-union bound;
+  `->` strict triangle gap outside the bad set;
+  `->` exact `[T,2T]` restricted-measure charge `failed.card * H`;
+  `->` natural lower bound `n-b` for good adjacent pairs;
+  `->` injective actual critical-line zero witnesses.
+- `premise_minimization`: the absolute-integral lower estimate is required only on `[T,2T]`
+  in the source theorem and only on first blocks in the generic consumer; no global-in-`t`
+  strengthening remains.
+- `negative_control`: `hardyLittlewoodEndpointSet_volume_zero` proves that a null set can contain
+  every finitely sampled left endpoint, so endpoint testing cannot replace whole-block inclusion.
+- `OBS-H1-HARDY-LITTLEWOOD-COUNT-BRIDGE-01`: closed.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-LOWER-01`: remains open.
+- `OBS-H1-HARDY-LITTLEWOOD-X-MEAN-SQUARE-01`: remains open.
+- `OBS-H1-HARDY-Z-NORMALIZATION-01`: remains open.
+- `first_open_after_result`: source-faithful construction of the real Hardy coordinate and the
+  two Hardy--Littlewood second-moment producers, including the asymptotic parameter budget.
+- `cross_route_repair`: the compiled finite charge/count theorem can be reused by Selberg or any
+  later route that supplies a small bad-start set and disjoint local sign-change windows.
+- `strict_boundary`: no unconditional `N_0(T) >> T`, positive proportion, H1, or RH.
+- `local_audit`: 867-line no-sorry module; six exact checks; nine selected standard-only axiom
+  prints; empty forbidden scans and patch check; warning-as-error module, Target, TargetChecks,
+  root import, and axiom-audit compiles; full build `8798/8798`.
+- `global_goal`: active.

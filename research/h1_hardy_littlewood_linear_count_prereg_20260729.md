@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-EXCEPTIONAL-SET-COUNT-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `FULL_SUCCESS_LOCAL / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
 
 ## Parent and selection
 
@@ -162,3 +162,48 @@ Before implementation publication:
 After frozen implementation public CI, publish immutable evidence, final ledger, and closure
 receipt through separate public-green commits. Then stop this local campaign and rerank all
 historical routes.
+
+## Local implementation result
+
+The frozen endpoint is implemented in
+`LeanLab/Riemann/HardyLittlewoodLinearCount.lean`.
+
+The compiled chain is:
+
+```text
+continuous X
+-> continuous moving integrals I(t,H) and absI(t,H)
+-> strict/non-strict square Markov inequalities
+-> the two source-shaped bad-set bounds
+-> a denominator-free bound for their union
+-> strict local triangle gap outside the union
+-> a whole length-H first-block charge for every failed pair
+-> a natural lower bound n-b for good pairs
+-> injective actual critical-line zeta-zero ordinates
+```
+
+`hardyLittlewood_source_finite_count` combines the two moment hypotheses, the source lower
+estimate, the exact `[T,2T]` restricted-measure block calculation, the cardinality argument, and
+the actual-zero adapter in one theorem. `hardyLittlewood_positiveHalf_corollary` packages a fixed
+positive-fraction finite consequence. `hardyLittlewoodEndpointSet_volume_zero` compiles the
+endpoint-sampling negative control.
+
+The final theorem requires the lower estimate only on `[T,2T]`; its generic zero consumer requires
+it only inside the finitely many first blocks. An earlier local draft used an unnecessary global
+quantifier, which was removed before freeze so that the producer premise matches the source.
+
+The implementation is 867 lines, compiles with `-DwarningAsError=true`, has exact TargetChecks,
+and the selected axiom audit reports only `propext`, `Classical.choice`, and `Quot.sound`.
+The three forbidden scans and `git diff --check` are empty, and the full build passes
+`8798/8798` with inherited replay warnings only.
+
+The following source producers remain open exactly as preregistered:
+
+- the actual Hardy `X`/`Z` normalization and exact zero adapter;
+- the Dirichlet-eta lower estimate and its error second moment;
+- the actual source-coordinate moving-integral second moment;
+- the asymptotic choice of `H`, `n`, and `b` that discharges the finite budget uniformly.
+
+Consequently this is the full finite measure-to-count inference from Hardy--Littlewood 1921,
+not the paper's unconditional asymptotic linear-count theorem, a positive-proportion theorem,
+H1, or RH.
