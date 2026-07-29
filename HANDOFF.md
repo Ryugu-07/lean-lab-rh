@@ -6338,3 +6338,26 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - After the closure receipt public CI, return to fresh cross-family historical omission
   selection; do not continue H1 by inertia.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H7 Connes nested-projection positive-type selected
+
+- `parent_public_closure`: H1 Levinson--Siegel step closure receipt
+  `00b731ca0686c44e899acfacea6bb51e18b8cfbb`, run `30410732753`, build job
+  `90445972599`, passed in `1m31s`.
+- `campaign`: `LITERATURE-20260729-H7-CONNES-PROJECTION-DEFECT-01`.
+- `node`: `H7-CONNES-NESTED-PROJECTION-POSITIVE-TYPE-01`.
+- `selection_reason`: the original Connes absorption-spectrum trace mechanism remains distinct
+  from both Berry--Keating and the recent finite-prime Weil ground-state program.
+- `source_edge`: Connes 1998 Theorem 5 equations `(23)`--`(25)` use
+  `Q'_Lambda <= S_Lambda` to prove
+  `Trace((S_Lambda-Q'_Lambda) V(f*f*)) >= 0`.
+- `fixed_edge`: nested finite complex orthogonal projections;
+  `->` self-adjoint idempotent defect;
+  `->` exact trace/Frobenius-square identity;
+  `->` positive-type trace and zero characterization.
+- `negative_control`: individual projection hypotheses without nesting permit trace real part
+  `-1` in dimension one.
+- `strict_boundary`: no actual adèle Hilbert space, trace-class theorem, distributional limit,
+  Weil positivity, H7, or RH.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.

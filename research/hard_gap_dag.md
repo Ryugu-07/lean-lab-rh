@@ -3580,3 +3580,26 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `final_ledger`: `f0ebc6755a84626f325ef2a58efdbb4361a6edf4`.
 - `final_ledger_public_ci`: run `30410543932`, build job `90445390713`, passed in `1m53s`.
 - `next_gate`: publish the docs-only closure receipt, then fresh cross-family selection.
+
+## 2026-07-29 H7 Connes nested-projection positive-type launch
+
+- `parent_public_closure`: H1 step-geometry receipt
+  `00b731ca0686c44e899acfacea6bb51e18b8cfbb`, run `30410732753`, job
+  `90445972599`, passed in `1m31s`.
+- `H7-CONNES-NESTED-PROJECTION-POSITIVE-TYPE-01`: selected after fresh comparison with H10
+  trace transfer, H11 statistics, H12 Speiser counts, H2 density, and H14 computation.
+- `source_edge`:
+  `actual cutoff-subspace containment Q'_Lambda <= S_Lambda`;
+  `-> positive defect projection`;
+  `-> Trace((S_Lambda-Q'_Lambda) V(f*f*)) >= 0`;
+  `-> distributional limit to the Weil distribution`.
+- `fixed_edge`: compile the finite matrix trace-square inference and zero characterization.
+- `negative_control`: two independent orthogonal projections without nesting can give a
+  negative defect trace.
+- `OBS-H7-CONNES-ADELE-PROJECTIONS-01`: open.
+- `OBS-H7-CONNES-TRACE-CLASS-01`: open.
+- `OBS-H7-CONNES-DISTRIBUTION-LIMIT-01`: open.
+- `OBS-H7-CONNES-POSITIVITY-TO-RH-01`: open.
+- `strict_boundary`: no actual number-field operator, trace limit, Weil positivity, H7, or RH.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- `global_goal`: active.
