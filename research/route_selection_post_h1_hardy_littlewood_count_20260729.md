@@ -2,7 +2,7 @@
 
 Date: 2026-07-29
 
-Status: `H1_SOURCE_NORMALIZATION_LOCAL_SUCCESS / IMPLEMENTATION_PUBLIC_CI_PENDING`
+Status: `H1_SOURCE_NORMALIZATION_IMPLEMENTATION_PUBLIC_GREEN`
 
 ## Closed parent
 
@@ -101,3 +101,7 @@ integral primitive with Hardy--Littlewood's Lemma 7 Dirichlet series and does no
 second moment. After public closure, compare the Lemma 7 series/moment edge and Lemma 11 source
 window moment against Selberg's global moment producer and the leading open nodes in the other
 historical families.
+
+Frozen implementation `728acf822fad197fa4f60bd3f89fe502863b830a` passed public Lean
+Action run `30468913754`, build job `90633769051`, in `2m43s`. Proof-source freeze is active
+while the docs-only evidence chain is completed.

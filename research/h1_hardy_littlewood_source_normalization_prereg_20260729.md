@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-SOURCE-NORMALIZATION-ETA-LOWER-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `LOCAL_FULL_SUCCESS / IMPLEMENTATION_PUBLIC_CI_PENDING`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 
 ## Parent and selection
 
@@ -192,3 +192,7 @@ The following source producers remain open:
 
 Consequently this is the full source normalization and eta lower-premise edge, not the
 unconditional Hardy--Littlewood linear-count theorem, a positive-proportion theorem, H1, or RH.
+
+Frozen implementation commit `728acf822fad197fa4f60bd3f89fe502863b830a` passed public Lean
+Action run `30468913754`, build job `90633769051`, in `2m43s`. The five proof and registration
+files are now frozen; publish docs-only immutable evidence next.
