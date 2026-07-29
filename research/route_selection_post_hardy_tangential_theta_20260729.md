@@ -107,3 +107,7 @@ After public closure, the next selection must compare source-faithful production
 Hardy--Littlewood eta and `X/Z` moments against Selberg's global mollified moments,
 Levinson--Conrey's auxiliary count, and the highest-value open nodes in other historical
 families. Constant optimization is not a default successor.
+
+The frozen implementation commit `8f3742c62a381293fa201358cf58130d2c333c48` passed public Lean
+Action run `30464674314`, build job `90619318156`, in `2m52s`. Proof-source freeze is active
+while the docs-only evidence chain is completed.

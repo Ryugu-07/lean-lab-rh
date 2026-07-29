@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H1-HARDY-LITTLEWOOD-LINEAR-COUNT-01`
 
 Node: `H1-HARDY-LITTLEWOOD-EXCEPTIONAL-SET-COUNT-01`
 
-Status: `FULL_SUCCESS_LOCAL / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 
 ## Fixed question
 
@@ -32,6 +32,7 @@ producers, weakening interval measure to sampled points, or double-counting over
 | 12 | `NEGATIVE_CONTROL` | The finite set of all pair left endpoints has Lebesgue measure zero while containing every sampled endpoint. | Reject endpoint sampling as a replacement for whole-interval inclusion. |
 | 13 | `PREMISE_MINIMIZATION` | The first compiled draft asked for the absolute-integral lower estimate at every real non-bad start, although the proof selects starts only inside the first blocks and the source proves its estimate on `[T,2T]`. | Weaken the generic consumer to first-block-local lower estimates and the source theorem to `[T,2T]`; keep the conclusion unchanged. |
 | 14 | `LOCAL_AUDIT` | The 867-line module, exact checks, root import, and selected axiom prints compile with warning-as-error. Axiom output is exactly standard foundations; three forbidden scans and patch check are empty; full build passes `8798/8798`. | Publish the frozen implementation and require independent public CI before immutable evidence and closure. |
+| 15 | `PUBLIC_IMPLEMENTATION` | Frozen commit `8f3742c62a381293fa201358cf58130d2c333c48` passed Lean Action run `30464674314`, build job `90619318156`, in `2m52s`. | Freeze the five proof/registration files and publish docs-only immutable evidence. |
 
 ## Current frontier
 

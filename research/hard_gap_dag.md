@@ -3882,4 +3882,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `local_audit`: 867-line no-sorry module; six exact checks; nine selected standard-only axiom
   prints; empty forbidden scans and patch check; warning-as-error module, Target, TargetChecks,
   root import, and axiom-audit compiles; full build `8798/8798`.
+- `public_implementation`: frozen commit
+  `8f3742c62a381293fa201358cf58130d2c333c48`, Lean Action run `30464674314`, build job
+  `90619318156`, passed in `2m52s`.
+- `proof_freeze`: the five proof and registration files must retain an empty diff from the
+  implementation commit through immutable evidence and the final ledger.
 - `global_goal`: active.

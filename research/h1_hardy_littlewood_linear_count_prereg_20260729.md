@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-EXCEPTIONAL-SET-COUNT-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `FULL_SUCCESS_LOCAL / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 
 ## Parent and selection
 
@@ -207,3 +207,7 @@ The following source producers remain open exactly as preregistered:
 Consequently this is the full finite measure-to-count inference from Hardy--Littlewood 1921,
 not the paper's unconditional asymptotic linear-count theorem, a positive-proportion theorem,
 H1, or RH.
+
+Frozen implementation commit `8f3742c62a381293fa201358cf58130d2c333c48` passed public Lean
+Action run `30464674314`, build job `90619318156`, in `2m52s`. The five proof and registration
+files are now frozen; the next gate is docs-only immutable evidence.
