@@ -66,6 +66,10 @@ conditional-series truncation in Lemmas 3--4, followed by eta-series identificat
 moment, the actual source-X moment, and the count parameter budget. Other historical families
 remain live, and original conjectures remain open at every stage.
 
+The finite campaign's implementation, immutable evidence, and final ledger are public green.
+After its closure receipt, selection returns to a fresh cross-family rerank rather than
+continuing H1 by inertia.
+
 An independent auditor may add a route only with a primary-source anchor and a reason it is not a
 subroute of an existing row. Renaming a route does not create a new campaign slot.
 

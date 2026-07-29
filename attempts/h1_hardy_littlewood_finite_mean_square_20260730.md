@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260730-H1-HARDY-LITTLEWOOD-FINITE-MEAN-SQUARE-01`
 
 Node: `H1-HARDY-LITTLEWOOD-FINITE-MEAN-SQUARE-01`
 
-Status: `IMMUTABLE_EVIDENCE_GREEN / FINAL_LEDGER_CI_PENDING`
+Status: `FINAL_LEDGER_PUBLIC_GREEN / CLOSURE_RECEIPT_CI_PENDING`
 
 ## Fixed question
 
@@ -29,6 +29,7 @@ Does the finite Hardy--Littlewood mean-square step require the source's
 | 10 | `LOCAL_AUDIT` | Five warning-as-error compiles pass; six selected axiom prints are standard only; forbidden/resource scans and patch check are empty; full build passes `8800/8800`. | Freeze and publish the implementation, then require independent public CI. |
 | 11 | `PUBLIC_IMPLEMENTATION` | Frozen commit `b63bda16e7b899ab88a6ebf12a541f579ab770fe` passed Lean Action run `30475443085`, build job `90655877270`, in `2m17s`. | Publish docs-only immutable evidence while preserving an empty frozen-file diff. |
 | 12 | `IMMUTABLE_EVIDENCE` | Docs-only commit `10f3db1ba9de088f581ecbbd16af2199732fd8d8` passed Lean Action run `30475775980`, build job `90656982894`, in `2m13s`; the frozen diff remains empty. | Publish the docs-only final ledger and require public CI. |
+| 13 | `FINAL_LEDGER` | Docs-only commit `e378118fcbade95543d259dae4330810ab85d735` passed Lean Action run `30476034463`, build job `90657843142`, in `1m55s`; the frozen diff remains empty. | Publish one closure receipt, then stop only this local campaign. |
 
 ## Current frontier
 

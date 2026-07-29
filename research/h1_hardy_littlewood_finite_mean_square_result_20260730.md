@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-FINITE-MEAN-SQUARE-01`
 
 Classification: `FULL_SUCCESS / FINITE_MEAN_SQUARE_FORMALIZED`
 
-Public state: `IMMUTABLE_EVIDENCE_GREEN / FINAL_LEDGER_CI_PENDING`
+Public state: `FINAL_LEDGER_PUBLIC_GREEN / CLOSURE_RECEIPT_CI_PENDING`
 
 ## Compiled result
 
@@ -75,3 +75,6 @@ run `30475443085`, build job `90655877270`, in `2m17s`.
 
 Immutable-evidence commit `10f3db1ba9de088f581ecbbd16af2199732fd8d8` passed Lean Action
 run `30475775980`, build job `90656982894`, in `2m13s`; the frozen five-file diff is empty.
+
+Final-ledger commit `e378118fcbade95543d259dae4330810ab85d735` passed Lean Action run
+`30476034463`, build job `90657843142`, in `1m55s`; the frozen five-file diff remains empty.
