@@ -17,6 +17,7 @@ import LeanLab.Riemann.HardyLittlewoodFiniteMeanSquare
 import LeanLab.Riemann.HardyLittlewoodEtaAbelTransfer
 import LeanLab.Riemann.ClassicalZeroDetectorMellin
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
+import LeanLab.Riemann.ClassicalZeroDetectorContourShift
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.HardyThetaInversion
 import LeanLab.Riemann.HardyComplexAlpha
@@ -1279,6 +1280,13 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.verticalIntegrable_Gamma_of_pos
 #print axioms LeanLab.Riemann.exp_eq_inverseMellin_Gamma
 #print axioms LeanLab.Riemann.classicalDetectorInverseMellinLine
+#print axioms LeanLab.Riemann.classicalDetectorContourWeight_translatedZetaPole
+#print axioms LeanLab.Riemann.exists_norm_classicalDetectorMellinContourFactor_horizontal_le
+#print axioms LeanLab.Riemann.tendsto_integral_classicalDetectorMellinContourFactor_top
+#print axioms LeanLab.Riemann.integrable_classicalDetectorMellinContourFactor_left
+#print axioms LeanLab.Riemann.classicalDetectorSmoothedSeries_eq_residue_add_shifted
+#print axioms LeanLab.Riemann.classicalDetectorCoefficientGap_shifted_identity
+#print axioms LeanLab.Riemann.classicalDetectorContourShift_endpoint
 #print axioms LeanLab.Riemann.mem_turingXiZeroIndexFinset_iff
 #print axioms LeanLab.Riemann.rectangleBoundaryIntegral_logDeriv_riemannXi_eq_turingXiZeroIndexFinset_card
 #print axioms LeanLab.Riemann.TuringXiRectangleCertificate.candidates_eq_actual

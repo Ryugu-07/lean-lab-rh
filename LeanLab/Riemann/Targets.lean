@@ -105,6 +105,7 @@ import LeanLab.Riemann.HardyLittlewoodFiniteMeanSquare
 import LeanLab.Riemann.HardyLittlewoodEtaAbelTransfer
 import LeanLab.Riemann.ClassicalZeroDetectorMellin
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
+import LeanLab.Riemann.ClassicalZeroDetectorContourShift
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.FareyFranel
@@ -1970,9 +1971,10 @@ def rhTargets : List ResearchTarget :=
       tier := .tier2
       title := "Close the classical detector inverse Mellin contour shift"
       statement :=
-        "Prove ClassicalDetectorInverseMellinLine from the compiled forward transform, then shift the actual Gamma-Mobius-zeta contour from a source-valid line to Re(w)=1/2-Re(rho), discharge both horizontal edges with explicit Gamma decay and zeta strip growth, and derive the source dyadic-block versus shifted-line detector identity."
-      status := .inProgress
-      note := "The forward transform, inverse Mellin vertical-line identity, both local singularity calculations, and the abstract finite detector compile. The first unavailable theorem is now the infinite rectangle shift to Re(w)=1/2-Re(rho), including uniform horizontal-edge decay for the actual Gamma-Mobius-zeta factor and the source dyadic-block identity." },
+        "For every actual nontrivial zeta zero rho with Re(rho)>1/2, shift the actual Gamma-Mobius-zeta inverse-Mellin contour from Re(w)=2 to Re(w)=1/2-Re(rho), prove both horizontal edges vanish and both vertical lines are integrable, retain exactly the translated-zeta residue, and expose the coefficient-gap head/tail identity preceding the source dyadic split."
+      leanName := some ``classicalDetectorContourShift_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260730-H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01 closes the first global analytic edge after the compiled inverse-Mellin line. A dslope of zetaPoleRemoved simultaneously fills the canceled Gamma pole at w=0 and leaves the translated zeta pole at w=1-rho. Lean proves the exact residue, a uniform fixed-strip Gamma-Mobius-zeta majorant, both horizontal integral limits, actual integrability on Re(w)=2 and Re(w)=1/2-Re(rho), the one-pole finite rectangle, the infinite shifted-line identity, absolute summability at rho, and the coefficient-gap head/tail equation. No dyadic block estimate, Type-I/Type-II density theorem, density exponent, H2, or RH is proved." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

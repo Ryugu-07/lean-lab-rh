@@ -8,7 +8,7 @@ Node: `H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTRATION_LOCAL / PUBLIC_GATE_PENDING`
+Status: `LOCAL_FULL_SUCCESS / FROZEN_IMPLEMENTATION_PENDING`
 
 ## Parent and available chain
 
@@ -158,3 +158,31 @@ Before implementation publication:
 After frozen implementation public CI, publish immutable evidence, final ledger, and closure
 receipt through separate public-green commits. Then stop only this local campaign and rerank
 all historical families.
+
+## Local implementation result
+
+The docs-only production gate passed at commit
+`c82a77039e939d904038de1c39625bef50ea9dd3`, Lean Action run `30482171994`, build job
+`90678758000`, in `2m12s`.
+
+All nine full-success criteria now compile in
+`LeanLab/Riemann/ClassicalZeroDetectorContourShift.lean`. The implementation proves:
+
+- the pole-removed numerator is differentiable on the required half-plane;
+- equality with the actual source factor away from `0` and `1-rho`;
+- the exact retained residue at `1-rho`, with no simple-zero assumption;
+- a uniform fixed-strip majorant and both horizontal-edge limits;
+- integrability on the source line and the actual shifted line;
+- the finite one-pole rectangle and infinite shifted-line identity;
+- the shifted smoothed-series identity and exact coefficient-gap head/tail identity.
+
+The aggregate certificate is `classicalDetectorContourShift_endpoint`, and Target
+`H2.classical-detector.inverse-mellin-contour-shift` is locally registered as proven.
+Warning-as-error passes for the new module and all registrations. Seven selected axiom prints
+use only `propext`, `Classical.choice`, and `Quot.sound`; forbidden/resource scans and
+`git diff --check` are empty; the full project build succeeds with `8802/8802`.
+
+Local classification:
+`FULL_SUCCESS / KNOWN_CONTOUR_SHIFT_FORMALIZED`.
+The strict successor remains the actual dyadic Type-I/Type-II block and tail estimates used to
+derive a zero-density dichotomy. No density exponent, H2 theorem, or RH is claimed.

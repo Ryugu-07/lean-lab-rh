@@ -31,6 +31,7 @@ import LeanLab.Riemann.HardyLittlewoodSourceNormalization
 import LeanLab.Riemann.HardyLittlewoodFiniteMeanSquare
 import LeanLab.Riemann.HardyLittlewoodEtaAbelTransfer
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
+import LeanLab.Riemann.ClassicalZeroDetectorContourShift
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.HardyThetaInversion
 import LeanLab.Riemann.HardyComplexAlpha
@@ -5956,6 +5957,52 @@ example {c x : ℝ} (hc : 0 < c) (hx : 0 < x) :
 
 example : ClassicalDetectorInverseMellinLine :=
   classicalDetectorInverseMellinLine
+
+example (M : ℕ) {rho : ℂ} (hrho : IsNontrivialZero rho) {Y : ℝ} :
+    classicalDetectorContourWeight M rho Y (1 - rho) =
+      (Y : ℂ) ^ (1 - rho) * Complex.Gamma (1 - rho) *
+        classicalDetectorMollifier M 1 :=
+  classicalDetectorContourWeight_translatedZetaPole M hrho
+
+example (M : ℕ) {rho : ℂ} (hrho : IsNontrivialZero rho)
+    {Y : ℝ} (hY : 0 < Y) :
+    Tendsto
+      (fun T : ℝ => ∫ x : ℝ in (1 / 2 - rho.re)..2,
+        classicalDetectorMellinContourFactor M rho Y
+          ((x : ℂ) + T * Complex.I))
+      atTop (nhds 0) :=
+  tendsto_integral_classicalDetectorMellinContourFactor_top M hrho hY
+
+example (M : ℕ) {rho : ℂ} (hrho : IsNontrivialZero rho)
+    (hbeta : 1 / 2 < rho.re) {Y : ℝ} (hY : 0 < Y) :
+    MeasureTheory.Integrable (fun t : ℝ =>
+      classicalDetectorMellinContourFactor M rho Y
+        ((1 / 2 - rho.re : ℝ) + t * Complex.I)) :=
+  integrable_classicalDetectorMellinContourFactor_left M hrho hbeta hY
+
+example (M : ℕ) {rho : ℂ} (hrho : IsNontrivialZero rho)
+    (hbeta : 1 / 2 < rho.re) {Y : ℝ} (hY : 0 < Y) :
+    classicalDetectorSmoothedSeries M Y rho =
+      (Y : ℂ) ^ (1 - rho) * Complex.Gamma (1 - rho) *
+          classicalDetectorMollifier M 1 +
+        classicalDetectorMellinLineIntegral M rho Y (1 / 2 - rho.re) :=
+  classicalDetectorSmoothedSeries_eq_residue_add_shifted
+    M hrho hbeta hY
+
+example {M : ℕ} (hM : 1 ≤ M) {rho : ℂ}
+    (hrho : IsNontrivialZero rho) (hbeta : 1 / 2 < rho.re)
+    {Y : ℝ} (hY : 0 < Y) :
+    (1 : ℂ) + (Complex.exp (-(1 / Y : ℝ)) - 1) +
+        (∑' n : ℕ,
+          classicalDetectorSmoothedTerm M Y rho (n + (M + 1))) =
+      (Y : ℂ) ^ (1 - rho) * Complex.Gamma (1 - rho) *
+          classicalDetectorMollifier M 1 +
+        classicalDetectorMellinLineIntegral M rho Y (1 / 2 - rho.re) :=
+  classicalDetectorCoefficientGap_shifted_identity
+    hM hrho hbeta hY
+
+example : ClassicalDetectorContourShiftCertificate :=
+  classicalDetectorContourShift_endpoint
 
 example {alpha : Type*} [MeasurableSpace alpha]
     {mu : MeasureTheory.Measure alpha} {f : alpha → ℝ}

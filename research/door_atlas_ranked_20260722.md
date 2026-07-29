@@ -1914,3 +1914,15 @@ decisions, and the proof must combine existing weighted-Cauchy rectangles, posit
 Gamma ratios, exact half-line Gamma decay, finite mollifier bounds, and polynomial zeta-strip
 growth. The coefficient-gap head/tail identity is included, but the later dyadic Type-I/Type-II
 bounds, density exponent, H2, and RH remain open.
+
+**2026-07-30 local result.** Full success compiles as
+`classicalDetectorContourShift_endpoint`. The implementation proves the actual one-pole finite
+rectangle, both horizontal limits, both vertical-line integrability statements, the infinite
+shifted-line identity, the shifted smoothed series, and the exact coefficient-gap head/tail
+identity. The canceled Gamma pole requires no simple-zero assumption.
+
+The historical omission test therefore moves one step deeper: the contour shift itself hides no
+extra hypothesis beyond the source's actual off-line-zero and positive-scale assumptions. The
+first live H2 successor is the dyadic Type-I/Type-II quantitative detector estimate, not a
+further optimization of the contour normalization. The zero-density theorem, H2, and RH remain
+open.

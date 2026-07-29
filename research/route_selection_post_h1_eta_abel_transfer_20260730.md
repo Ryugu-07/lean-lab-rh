@@ -2,7 +2,7 @@
 
 Date: 2026-07-30
 
-Status: `H2_CLASSICAL_DETECTOR_CONTOUR_SHIFT_SELECTED / PREREGISTRATION_LOCAL`
+Status: `H2_CLASSICAL_DETECTOR_CONTOUR_SHIFT_LOCAL_FULL_SUCCESS`
 
 ## Closed parent
 
@@ -89,3 +89,16 @@ it does not preregister the later density estimate as already available.
   preregistration passes public CI.
 
 The persistent RH Goal remains active.
+
+## Local selection outcome
+
+The selected historical inference compiles in full. The actual detector contour shifts from
+`Re(w)=2` to `Re(w)=1/2-Re(rho)`, the zero condition removes the Gamma pole at `w=0`, and the
+only retained residue is the translated-zeta pole at `w=1-rho`. Uniform horizontal decay and
+actual integrability on both vertical lines justify the infinite shift; inverse Mellin and the
+coefficient gap then give the source-aligned head/tail identity.
+
+The result is packaged as `classicalDetectorContourShift_endpoint` and locally classified
+`FULL_SUCCESS / KNOWN_CONTOUR_SHIFT_FORMALIZED`. The next H2 edge is not another contour
+normalization: it is the quantitative dyadic Type-I/Type-II block and tail estimates that turn
+the coefficient gap into a zero-density dichotomy. Those estimates, H2, and RH remain open.

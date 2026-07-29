@@ -259,3 +259,19 @@ original and shifted lines. A local residue theorem or conditional contour premi
 insufficient. The later dyadic large-value bounds, zero-density theorem, H2, and RH remain
 outside the endpoint. This re-entry tests a decisive historical inference for an overlooked
 weakening or cross-route repair; it is not numerical optimization.
+
+## 2026-07-30 H2 contour-shift local implementation result
+
+The selected inference closes locally in Lean. A holomorphic pole-removed numerator encodes the
+two distinct singularity decisions without a simple-zero assumption. Fixed-strip Gamma and zeta
+estimates discharge both horizontal edges; the actual source and shifted lines are integrable;
+and the finite weighted-Cauchy rectangle passes to the exact infinite line identity.
+
+Composing with inverse Mellin proves the shifted smoothed detector series, while absolute
+summability exposes the exact coefficient-gap head/tail formula before the source's dyadic
+split. The aggregate certificate is `classicalDetectorContourShift_endpoint`.
+
+This audit found no omitted shortcut from the contour shift to H2: the next substantive human
+input is the quantitative Type-I/Type-II block and tail control. That successor, the resulting
+zero-density estimate, H2, and RH remain open. The local result is
+`FULL_SUCCESS / KNOWN_CONTOUR_SHIFT_FORMALIZED`; public evidence closure is pending.

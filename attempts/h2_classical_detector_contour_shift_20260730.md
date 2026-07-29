@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260730-H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01`
 
 Node: `H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01`
 
-Status: `PREREGISTRATION_LOCAL / PUBLIC_GATE_PENDING`
+Status: `LOCAL_FULL_SUCCESS / FROZEN_IMPLEMENTATION_PENDING`
 
 ## Fixed question
 
@@ -24,14 +24,25 @@ both horizontal edges discharged by compiled Gamma and zeta estimates?
 | 4 | `LIBRARY_AUDIT` | `WeilZeroCutoff` supplies weighted-Cauchy rectangle calculus; `BettinGonekInverseMellinConvolution` supplies finite-strip horizontal-limit patterns; `BaezDuarteZetaRatio` and the exact half-line Gamma norm supply exponential decay after polynomial losses; `ReciprocalZetaSubpower` supplies linear zeta growth on the required strip. | Preregister the unconditional actual-factor contour theorem. No abstract contour-shift premise is allowed. |
 | 5 | `FEASIBILITY_BOUNDARY` | The right line is in the absolute Dirichlet-series region. The shifted line has `Re(rho+w)=1/2` and `-1/2<Re(w)<0`, so Gamma recurrence moves to a positive strip and contributes a harmless reciprocal factor away from zero. | Require actual integrability on both lines and uniform horizontal decay; Gamma integrability alone is an explicit negative control. |
 | 6 | `PREREGISTRATION` | Full, partial, falsification, singularity, normalization, and claim-boundary criteria are fixed. | Publish docs only and await public CI before editing `LeanLab/`. |
+| 7 | `PUBLIC_GATE` | Docs-only commit `c82a77039e939d904038de1c39625bef50ea9dd3` passed Lean Action run `30482171994`, build job `90678758000`, in `2m12s`. | Open the production gate without changing the frozen endpoint. |
+| 8 | `SINGULARITY_AND_RESIDUE` | The source factor is represented by `P(w)/(w-(1-rho))`. The actual zero removes `w=0` with no simplicity premise, and `P(1-rho)` compiles to the exact source residue. | Count only `w=1-rho` in the rectangle. |
+| 9 | `HORIZONTAL_DECAY` | Finite mollifier growth, complex-power control, zeta strip growth, Gamma recurrence, and exponential Gamma decay combine into a uniform fixed-strip majorant. Both horizontal interval integrals tend to zero. | The local residue can now be promoted beyond a finite rectangle. |
+| 10 | `VERTICAL_INTEGRABILITY` | The actual contour factor is integrable on `Re(w)=2` and on `Re(w)=1/2-Re(rho)`. On the left, `beta>1/2` keeps the line strictly left of the canceled point and Gamma recurrence supplies an integrable inverse-square majorant. | Preserve the source's strict off-line hypothesis for the shifted raw line. |
+| 11 | `FINITE_RECTANGLE` | Weighted Cauchy calculus gives the oriented finite rectangle identity with exactly one pole and the exact `2*pi*i` normalization. | Pass to infinite height using the compiled edge limits and line integrability. |
+| 12 | `INFINITE_SHIFT` | `classicalDetectorMellinLineIntegral_two_eq_residue_add_shifted` proves the actual source line shift. Composing with inverse Mellin proves `classicalDetectorSmoothedSeries_eq_residue_add_shifted`. | Close the fixed historical inference; do not infer a density estimate. |
+| 13 | `COEFFICIENT_GAP` | Absolute summability for `Re(z)>0` permits an exact head/tail split. For `M>=1`, `classicalDetectorCoefficientGap_shifted_identity` exposes the source gap before the dyadic decomposition. | Name the dyadic Type-I/Type-II block estimates as the strict successor. |
+| 14 | `LOCAL_AUDIT` | The 1305-line module, Targets, TargetChecks, AxiomsAudit, and root import pass warning-as-error. Seven selected axiom prints contain only `propext`, `Classical.choice`, and `Quot.sound`; forbidden/resource scans and `git diff --check` are empty; full build succeeds with `8802/8802`. | Freeze and publish the implementation before creating immutable evidence. |
 
 ## Current frontier
 
-- `selected_edge`: actual infinite rectangle shift with one retained translated-zeta residue.
+- `selected_edge`: closed locally as
+  `classicalDetectorContourShift_endpoint`.
 - `compiled_left_context`: coefficient gap, source product, local singularity calculations,
   inverse Mellin line, and generic finite detector.
 - `strict_successor`: source dyadic decomposition and quantitative block/tail estimates leading
   to a zero-density dichotomy.
+- `local_classification`: `FULL_SUCCESS / KNOWN_CONTOUR_SHIFT_FORMALIZED`.
+- `current_gate`: frozen implementation commit and public Lean Action.
 - `not_claimed`: density exponent, exclusion of all off-line zeros, H2, or RH.
 - `protected_files`: inherited modified and untracked files remain untouched and unstaged.
 - `global_goal`: active.

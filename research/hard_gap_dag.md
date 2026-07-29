@@ -3429,6 +3429,29 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.
 
+## 2026-07-30 H2 classical detector contour-shift local result
+
+- `campaign`: `LITERATURE-20260730-H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01`.
+- `classification`: `FULL_SUCCESS / KNOWN_CONTOUR_SHIFT_FORMALIZED`.
+- `compiled_edge`:
+  actual pole-removed numerator and exact source equality;
+  `->` exact residue at `w=1-rho` with the Gamma pole at `w=0` canceled;
+  `->` uniform fixed-strip majorant and both horizontal limits;
+  `->` integrability on `Re(w)=2` and `Re(w)=1/2-Re(rho)`;
+  `->` finite one-pole rectangle;
+  `->` infinite shifted-line identity;
+  `->` shifted smoothed series;
+  `->` exact coefficient-gap head/tail identity.
+- `compiled_endpoint`: `classicalDetectorContourShift_endpoint`.
+- `OBS-H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01`: closed locally.
+- `first_open_after_result`: `OBS-H2-CLASSICAL-DETECTOR-DYADIC-BOUNDS-01`, the actual
+  Type-I/Type-II block and tail estimates preceding the zero-density dichotomy.
+- `audit`: warning-as-error passes; selected axiom prints are standard-only; forbidden and
+  resource scans are empty; full build `8802/8802`.
+- `strict_boundary`: no zero-density exponent, sparse-exception exclusion, H2, or RH.
+- `next_gate`: frozen implementation public CI.
+- `global_goal`: active.
+
 ## 2026-07-30 H1 Hardy--Littlewood eta-to-Theta Abel-transfer local result
 
 - `classification`: `FULL_SUCCESS / ETA_TO_THETA_TRANSFER_FORMALIZED`.
