@@ -31,6 +31,7 @@ ordinary norm shortcuts fail on expanding supports?
 | 11 | `REGISTRATION_AND_AXIOMS` | One proven Target, nine exact TargetChecks, nine selected axiom prints, and the project root compile. Every selected declaration depends only on `propext`, `Classical.choice`, and `Quot.sound`; forbidden and resource scans are empty. | Run the full repository build before freezing implementation. |
 | 12 | `LOCAL_AUDIT` | The 527-line module, Targets, nine TargetChecks, AxiomsAudit, and root pass warning-as-error; `git diff --check` is empty; the full build passes `8803/8803`. | Freeze and publish the implementation, then require public CI before immutable evidence. |
 | 13 | `PUBLIC_IMPLEMENTATION_GATE` | Frozen implementation commit `2be884b27f505542f11ca380d8ac384b0e4bdfd2` passed run `30487452115`, job `90696590632`, in `2m32s`; the frozen five-file diff is empty. | Publish immutable evidence and require an independent public CI run. |
+| 14 | `IMMUTABLE_EVIDENCE_GATE` | Evidence commit `68cd1fa4e4e1621c6a37e600dae3e4e3f9bc8a45` passed run `30487724579`, job `90697494425`, in `2m28s`; the frozen five-file diff remains empty. | Publish the final ledger and require public CI before the closure receipt. |
 
 ## Current frontier
 
