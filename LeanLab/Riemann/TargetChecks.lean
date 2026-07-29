@@ -29,6 +29,7 @@ import LeanLab.Riemann.SelbergLocalSignChange
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.HardyThetaInversion
+import LeanLab.Riemann.HardyComplexAlpha
 import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.FareyFranel
 import LeanLab.Riemann.DeBruijnNewmanHeat
@@ -5272,6 +5273,28 @@ example {x : ℝ} (hx : 0 < x) :
 example :
     HardyThetaInversionCertificate :=
   hardyThetaInversion_endpoint
+
+example {a : ℝ} (ha : a < Real.pi / 2) :
+    MeasureTheory.Integrable (hardyXiExponentialWeight a) :=
+  integrable_hardyXiExponentialWeight ha
+
+example :
+    AnalyticOnNhd ℂ hardyXiInteriorIntegral hardyAlphaStrip :=
+  analyticOnNhd_hardyXiInteriorIntegral
+
+example {x : ℝ} (hx : 0 < x) :
+    hardyThetaSeries (((Real.pi * x : ℝ) : ℂ)) =
+      (HurwitzZeta.evenKernel 0 x : ℂ) :=
+  hardyThetaSeries_pi_mul_eq_evenKernel hx
+
+example (y : ℝ) :
+    hardyEquationTwoLeft (Complex.I * (y : ℂ)) =
+      hardyThetaAlpha (Complex.I * (y : ℂ)) :=
+  hardyEquationTwoLeft_imaginary y
+
+example {alpha : ℂ} (halpha : alpha ∈ hardyAlphaStrip) :
+    hardyEquationTwoLeft alpha = hardyThetaAlpha alpha :=
+  hardyEquationTwo halpha
 
 example (q g N a b : ℝ) :
     weilHodgeForm q g N a b =

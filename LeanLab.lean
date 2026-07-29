@@ -114,6 +114,7 @@ import LeanLab.Riemann.M2LadderFrequencyAudit
 import LeanLab.Riemann.M2GramGeometry
 import LeanLab.Riemann.M2SparseObstruction
 import LeanLab.Riemann.HardyCriticalLineSign
+import LeanLab.Riemann.HardyComplexAlpha
 import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.TargetChecks

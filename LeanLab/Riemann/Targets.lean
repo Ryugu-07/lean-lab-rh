@@ -43,6 +43,7 @@ import LeanLab.Riemann.DeBruijnNewmanThirdLi
 import LeanLab.Riemann.DeBruijnNewmanLiCriterion
 import LeanLab.Riemann.DeBruijnNewmanHeatLiMonotonicity
 import LeanLab.Riemann.HardyThetaInversion
+import LeanLab.Riemann.HardyComplexAlpha
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.WeilHodgeLattice
 import LeanLab.Riemann.InfiniteReciprocalTraceAudit
@@ -1880,7 +1881,15 @@ def rhTargets : List ResearchTarget :=
         "Prove the completed critical-line Mellin transform vertically integrable, independently invert its elementary pole kernel, and derive Hardy's exact 1914 Cahen--Mellin equation (1) for every positive real x."
       leanName := some ``hardyThetaInversion_endpoint
       status := .proven
-      note := "Campaign LITERATURE-20260728-H1-HARDY-THETA-INVERSION-01 completes Attacks A--B in literal source normalization. The proof corrects the preregistered interpretation of Mathlib's f_modif: it subtracts one pole term on each side of x=1, while a separate compiled pole-kernel inversion restores both terms in Hardy's equation. Strip analyticity, equation (2), the tangential Abel boundary, the all-order moment law, H1, and RH remain open." },
+      note := "Campaign LITERATURE-20260728-H1-HARDY-THETA-INVERSION-01 completes Attacks A--B in literal source normalization. The proof corrects the preregistered interpretation of Mathlib's f_modif: it subtracts one pole term on each side of x=1, while a separate compiled pole-kernel inversion restores both terms in Hardy's equation. The subsequent complex-alpha campaign closes strip analyticity and equation (2); the tangential Abel boundary, the all-order moment law, H1, and RH remain open." },
+    { id := "H1.hardy.complex-alpha-equation-two"
+      tier := .tier2
+      title := "Reconstruct Hardy's complex-alpha equation (2)"
+      statement :=
+        "Retain the full pi/2 critical-line Gamma decay, prove polynomially weighted integrability of the actual Hardy-xi kernel throughout |Re(alpha)|<pi/2, establish analyticity of both sides, derive the branch-correct imaginary-axis identity from the compiled positive-real Cahen--Mellin equation, and extend it to the connected strip by the identity theorem."
+      leanName := some ``hardyEquationTwo
+      status := .proven
+      note := "Campaign LITERATURE-20260729-H1-HARDY-COMPLEX-ALPHA-01 closes Hardy 1914's exact inference from equation (1) to equation (2). Lean checks the full exp(-(pi/2)|t|) Gamma rate, arbitrary polynomial losses inside the strip, differentiation under the half-line integral, Jacobi-theta normalization, principal real-power branch, full-line split by hardyXi evenness, and identity-theorem accumulation on the imaginary axis. The tangential theta boundary limit, HardyXiAbelMomentLaw, unconditional infinitely many critical-line zeros, H1, and RH remain open; historical_route_coverage_delta=1, source_logic_delta=1, rh_frontier_delta=0." },
     { id := "H1.selberg.local-sign-change-producer"
       tier := .tier2
       title := "Formalize Selberg's local squared-mollifier sign detector"
