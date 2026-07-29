@@ -8,7 +8,7 @@ Node: `H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01`
 
 Classification: `FULL_SUCCESS / KNOWN_CONTOUR_SHIFT_FORMALIZED`
 
-Public state: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_PENDING`
+Public state: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Result
 
@@ -91,3 +91,6 @@ The persistent RH Goal remains active.
 Frozen implementation commit `b87e9164395b14723f61d8451e3ed1b0cd0ae1c8` passed Lean Action
 run `30484701769`, build job `90687338466`, in `2m39s`. The five proof and registration files
 have an empty diff from that commit at immutable-evidence publication.
+
+Immutable-evidence commit `1cc20bca2455d9eb9ca27a0e42fbaf86b340b4e8` passed Lean Action
+run `30485116278`, build job `90688732121`, in `1m36s`. The frozen diff remains empty.

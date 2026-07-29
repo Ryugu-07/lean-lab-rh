@@ -3453,7 +3453,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   Lean Action run `30484701769`, build job `90687338466`, passed in `2m39s`.
 - `frozen_diff`: the five proof and registration files are unchanged from the implementation
   commit.
-- `next_gate`: immutable-evidence public CI.
+- `immutable_evidence`: commit `1cc20bca2455d9eb9ca27a0e42fbaf86b340b4e8`,
+  Lean Action run `30485116278`, build job `90688732121`, passed in `1m36s`.
+- `next_gate`: final-ledger public CI.
 - `global_goal`: active.
 
 ## 2026-07-30 H1 Hardy--Littlewood eta-to-Theta Abel-transfer local result
