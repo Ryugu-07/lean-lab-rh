@@ -6665,3 +6665,22 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - After closure-receipt public CI, stop this local campaign and return to fresh cross-family
   historical omission selection. Original conjectures and direct RH attacks remain open.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H1 Hardy--Littlewood linear-count bridge selected
+
+- Hardy tangential-theta is publicly closed at receipt
+  `af2dece69203d9f9fa83cee9dc896d5a6ec8fe76`, Lean Action run `30436760730`,
+  build job `90526205899`, in `2m44s`.
+- Fresh H1/H2/H7/H10/H11/H12/H14 comparison selects
+  `LITERATURE-20260729-H1-HARDY-LITTLEWOOD-LINEAR-COUNT-01`, node
+  `H1-HARDY-LITTLEWOOD-EXCEPTIONAL-SET-COUNT-01`.
+- Primary-source pages 296--298 fix the endpoint: equations `(2.82)`--`(2.87)` turn two L2
+  estimates into a small bad-start set; section `2.9` charges each failed adjacent pair one
+  whole interval of measure `H` and selects distinct critical-line zeros from the remaining
+  disjoint pairs.
+- The existing Selberg local module consumes supplied strict gaps and a supplied separated
+  family; it does not prove this exceptional-measure-to-linear-cardinality transition.
+- The actual Dirichlet-eta lower estimate, Hardy `X`/`Z` normalization and mean square,
+  unconditional linear count, Selberg positive proportion, H1, and RH remain open.
+- Publish docs-only preregistration and require public CI before any `LeanLab/` edit. The six
+  inherited protected files remain untouched and unstaged; persistent RH Goal active.

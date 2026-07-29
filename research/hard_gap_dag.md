@@ -3813,6 +3813,7 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `local_audit`: 2,489 proof lines; four exact TargetChecks; six standard-only axiom prints;
   empty forbidden/resource scans and patch check; warning-as-error compiles; full `8797/8797`
   build.
+
 - `deltas`: historical route coverage `+1`, source logic `+1`, hard gap `0`, RH frontier `0`.
 - `public_implementation`: commit `75f5c575b2c3f050f0e5703efb5ce6851d97775c`, Lean Action run
   `30435633763`, build job `90522592740`, passed in `2m17s`.
@@ -3824,4 +3825,29 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `final_ledger`: docs-only commit `2365765bf5ec9eb155312dce119fe6cccbbbff56`,
   Lean Action run `30436418445`, build job `90525116015`, passed in `1m44s`.
 - `next_gate`: one closure receipt and public CI, then local STOP and fresh route selection.
+- `global_goal`: active.
+
+## 2026-07-29 Hardy--Littlewood quantitative successor selection
+
+- `H1-HARDY-TANGENTIAL-THETA-LIMIT-01`: publicly closed at receipt
+  `af2dece69203d9f9fa83cee9dc896d5a6ec8fe76`, run `30436760730`, job
+  `90526205899`, `2m44s`.
+- `H1-HARDY-LITTLEWOOD-EXCEPTIONAL-SET-COUNT-01`: selected and preregistered.
+- `source_chain`:
+  `two L2 estimates`;
+  `-> two Chebyshev bad-start bounds`;
+  `-> strict window integral gap outside their union`;
+  `-> adjacent length-H interval pairs`;
+  `-> each failed pair charges a whole H-interval to the bad set`;
+  `-> injective actual critical-line zero witnesses from good disjoint pairs`.
+- `material_difference`: the existing Selberg local theorem consumes supplied strict gaps and a
+  supplied separated family. It does not derive a linear family from a small exceptional set.
+- `negative_control`: a finite set of sampled left endpoints has measure zero while hitting every
+  sample; source section `2.9` needs a whole first interval contained in the exceptional set.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-LOWER-01`: open.
+- `OBS-H1-HARDY-LITTLEWOOD-X-MEAN-SQUARE-01`: open.
+- `OBS-H1-HARDY-Z-NORMALIZATION-01`: open.
+- `strict_boundary`: the campaign closes no actual source moment estimate, unconditional linear
+  count, positive proportion, H1, or RH.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.
