@@ -8,7 +8,7 @@ Node: `H2-CLASSICAL-DETECTOR-DYADIC-DICHOTOMY-01`
 
 Classification: `FULL_SUCCESS_LOCAL / SOURCE_DYADIC_DICHOTOMY_FORMALIZED`
 
-Publication status: `IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_PUBLIC_CI_PENDING`
+Publication status: `EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PUBLIC_CI_PENDING`
 
 ## Public preregistration gate
 
@@ -27,6 +27,15 @@ No production Lean or registration file was edited before this public gate passe
 - result: passed in `2m18s`
 
 The five proof and registration files are frozen at this implementation commit.
+
+## Public immutable-evidence gate
+
+- commit: `c509cf6f475fa19e86d4734fb39b4b4f740255ef`
+- Lean Action run: `30491565903`
+- build job: `90710420038`
+- result: passed in `1m37s`
+
+The frozen five-file diff remains empty.
 
 ## Compiled endpoint
 

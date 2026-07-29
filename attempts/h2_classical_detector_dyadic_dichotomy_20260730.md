@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260730-H2-CLASSICAL-DETECTOR-DYADIC-DICHOTOMY-01`
 
 Node: `H2-CLASSICAL-DETECTOR-DYADIC-DICHOTOMY-01`
 
-Status: `FULL_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_PUBLIC_CI_PENDING`
+Status: `FULL_SUCCESS / EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PUBLIC_CI_PENDING`
 
 ## Fixed question
 
@@ -32,6 +32,7 @@ pigeonhole theorem?
 | 11 | `LOCAL_AUDIT` | `classicalDetectorDyadicDichotomy_endpoint` compiles with nine exact TargetChecks and nine selected axiom prints using only `propext`, `Classical.choice`, and `Quot.sound`. Warning-as-error passes for proof, registration, audit, and root import. | Classify locally as `FULL_SUCCESS / SOURCE_DYADIC_DICHOTOMY_FORMALIZED`; run full scans/build, then publish the frozen implementation. |
 | 12 | `FULL_BUILD` | Forbidden and resource-relaxation scans are empty, `git diff --check` passes, and the full repository build succeeds with `8804/8804`. | Freeze the proof/registration set and publish the implementation for independent public CI. |
 | 13 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation `207953d7cff153eddc017a7d2e2612a786a0c050` passed Lean Action run `30491308421`, build job `90709585747`, in `2m18s`. The five-file proof diff is empty. | Publish docs-only immutable evidence and require independent public CI. |
+| 14 | `EVIDENCE_PUBLIC_CI` | Immutable-evidence commit `c509cf6f475fa19e86d4734fb39b4b4f740255ef` passed Lean Action run `30491565903`, build job `90710420038`, in `1m37s`; the frozen five-file diff remains empty. | Publish the docs-only final ledger and require public CI. |
 
 ## Current frontier
 

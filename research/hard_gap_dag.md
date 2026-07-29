@@ -1998,8 +1998,11 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   `90709585747`, passed in `2m18s`.
 - `proof_freeze`: the five proof and registration files have an empty diff from the
   implementation commit and remain frozen.
-- `next_gate`: publish immutable evidence, final ledger, and closure receipt through separate
-  public-green commits.
+- `immutable_evidence`: docs-only commit
+  `c509cf6f475fa19e86d4734fb39b4b4f740255ef`, Lean Action run `30491565903`, build job
+  `90710420038`, passed in `1m37s`; frozen five-file diff empty.
+- `next_gate`: publish the final ledger and closure receipt through separate public-green
+  commits.
 - `global_goal`: active.
 
 ## 2026-07-26 H1 Bettin--Gonek moment-to-power bridge local endpoint
