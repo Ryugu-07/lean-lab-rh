@@ -16,6 +16,7 @@ import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.HardyThetaInversion
 import LeanLab.Riemann.HardyComplexAlpha
+import LeanLab.Riemann.HardyTangentialThetaIntegral
 import LeanLab.Riemann.WeilHodgeLattice
 import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -1160,6 +1161,12 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.hardyThetaSeries_pi_mul_eq_evenKernel
 #print axioms LeanLab.Riemann.hardyEquationTwoLeft_imaginary
 #print axioms LeanLab.Riemann.hardyEquationTwo
+#print axioms LeanLab.Riemann.tendsto_pow_mul_iteratedDeriv_jacobiThetaHalf_cusp
+#print axioms LeanLab.Riemann.tendsto_iteratedDeriv_hardyThetaBoundaryTerm_all
+#print axioms LeanLab.Riemann.hardyXiInteriorIntegral_iteratedDeriv_real
+#print axioms LeanLab.Riemann.hardyEquationThreeMomentIdentity
+#print axioms LeanLab.Riemann.hardyXiAbelMomentLaw_unconditional
+#print axioms LeanLab.Riemann.infinite_criticalLineZeros_hardy
 #print axioms LeanLab.Riemann.weilHodgeForm_eq_intersectionExpression
 #print axioms LeanLab.Riemann.weilHodgeForm_nonneg_real_of_int
 #print axioms LeanLab.Riemann.abs_pointCount_sub_le_of_weilHodgeForm_nonneg_int

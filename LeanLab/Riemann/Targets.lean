@@ -44,6 +44,7 @@ import LeanLab.Riemann.DeBruijnNewmanLiCriterion
 import LeanLab.Riemann.DeBruijnNewmanHeatLiMonotonicity
 import LeanLab.Riemann.HardyThetaInversion
 import LeanLab.Riemann.HardyComplexAlpha
+import LeanLab.Riemann.HardyTangentialThetaIntegral
 import LeanLab.Riemann.FinitePowerSumRigidity
 import LeanLab.Riemann.WeilHodgeLattice
 import LeanLab.Riemann.InfiniteReciprocalTraceAudit
@@ -1500,7 +1501,7 @@ def rhTargets : List ResearchTarget :=
         "Define Hardy's exact interior even moments of the actual critical-line xi coordinate, retain the left Abel limit at pi/2 as an explicit source law, and prove that this law forbids both eventual tail signs, gives a zero above every height, and yields infinitely many actual critical-line nontrivial zeros."
       leanName := some ``hardyXiAbelMomentAmplification_endpoint
       status := .proven
-      note := "Campaign LITERATURE-20260728-H1-HARDY-ABEL-MOMENT-01 reconstructs Hardy 1914 equations (2)-(6) without replacing the boundary by an unconditional Lebesgue integral. Lean compiles the exact hardyXi(2t)=8*H_0(4t) normalization, uniform compact initial bound, positive and negative tail amplification, both parity choices, unbounded zeros, and the actual-zero dictionary. Every conclusion is conditional on HardyXiAbelMomentLaw. Proving that law from Cahen-Mellin and theta inversion, quantitative critical-zero counts, H1, and RH remain open; historical_route_coverage_delta=1, source_logic_delta=1, rh_frontier_delta=0." },
+      note := "Campaign LITERATURE-20260728-H1-HARDY-ABEL-MOMENT-01 reconstructs Hardy 1914 equations (2)-(6) without replacing the boundary by an unconditional Lebesgue integral. Lean compiles the exact hardyXi(2t)=8*H_0(4t) normalization, uniform compact initial bound, positive and negative tail amplification, both parity choices, unbounded zeros, and the actual-zero dictionary. This module's consumer is conditional on HardyXiAbelMomentLaw; the subsequent tangential-theta campaign constructs that law unconditionally. Quantitative critical-zero counts, H1, and RH remain open; historical_route_coverage_delta=1, source_logic_delta=1, rh_frontier_delta=0." },
     { id := "H1.short-mollifier.variational-global-minimizer"
       tier := .tier2
       title := "Certify the short-mollifier variational minimizer"
@@ -1881,7 +1882,7 @@ def rhTargets : List ResearchTarget :=
         "Prove the completed critical-line Mellin transform vertically integrable, independently invert its elementary pole kernel, and derive Hardy's exact 1914 Cahen--Mellin equation (1) for every positive real x."
       leanName := some ``hardyThetaInversion_endpoint
       status := .proven
-      note := "Campaign LITERATURE-20260728-H1-HARDY-THETA-INVERSION-01 completes Attacks A--B in literal source normalization. The proof corrects the preregistered interpretation of Mathlib's f_modif: it subtracts one pole term on each side of x=1, while a separate compiled pole-kernel inversion restores both terms in Hardy's equation. The subsequent complex-alpha campaign closes strip analyticity and equation (2); the tangential Abel boundary, the all-order moment law, H1, and RH remain open." },
+      note := "Campaign LITERATURE-20260728-H1-HARDY-THETA-INVERSION-01 completes Attacks A--B in literal source normalization. The proof corrects the preregistered interpretation of Mathlib's f_modif: it subtracts one pole term on each side of x=1, while a separate compiled pole-kernel inversion restores both terms in Hardy's equation. The subsequent complex-alpha and tangential-theta campaigns close equation (2), the Abel boundary law, and Hardy's critical-line infinitude theorem. Quantitative critical-zero counts, H1, and RH remain open." },
     { id := "H1.hardy.complex-alpha-equation-two"
       tier := .tier2
       title := "Reconstruct Hardy's complex-alpha equation (2)"
@@ -1889,7 +1890,15 @@ def rhTargets : List ResearchTarget :=
         "Retain the full pi/2 critical-line Gamma decay, prove polynomially weighted integrability of the actual Hardy-xi kernel throughout |Re(alpha)|<pi/2, establish analyticity of both sides, derive the branch-correct imaginary-axis identity from the compiled positive-real Cahen--Mellin equation, and extend it to the connected strip by the identity theorem."
       leanName := some ``hardyEquationTwo
       status := .proven
-      note := "Campaign LITERATURE-20260729-H1-HARDY-COMPLEX-ALPHA-01 closes Hardy 1914's exact inference from equation (1) to equation (2). Lean checks the full exp(-(pi/2)|t|) Gamma rate, arbitrary polynomial losses inside the strip, differentiation under the half-line integral, Jacobi-theta normalization, principal real-power branch, full-line split by hardyXi evenness, and identity-theorem accumulation on the imaginary axis. The tangential theta boundary limit, HardyXiAbelMomentLaw, unconditional infinitely many critical-line zeros, H1, and RH remain open; historical_route_coverage_delta=1, source_logic_delta=1, rh_frontier_delta=0." },
+      note := "Campaign LITERATURE-20260729-H1-HARDY-COMPLEX-ALPHA-01 closes Hardy 1914's exact inference from equation (1) to equation (2). Lean checks the full exp(-(pi/2)|t|) Gamma rate, arbitrary polynomial losses inside the strip, differentiation under the half-line integral, Jacobi-theta normalization, principal real-power branch, full-line split by hardyXi evenness, and identity-theorem accumulation on the imaginary axis. The subsequent tangential-theta campaign closes equation (3), HardyXiAbelMomentLaw, and unconditional critical-line zero infinitude. Quantitative critical-zero counts, H1, and RH remain open; historical_route_coverage_delta=1, source_logic_delta=1, rh_frontier_delta=0." },
+    { id := "H1.hardy.tangential-theta-abel-law"
+      tier := .tier2
+      title := "Close Hardy's tangential theta limit and Abel moment law"
+      statement :=
+        "Differentiate Hardy's actual Xi integral to every order inside the source strip, identify its even real derivatives with the source Abel moments, transform the theta boundary term from the cusp -1 to imaginary infinity with the principal complex power branch, prove all of its iterated derivatives tend to zero tangentially, derive equation (3) with the exact sign and 4^(2p) coefficient, construct HardyXiAbelMomentLaw unconditionally, and deduce infinitely many actual critical-line nontrivial zeros."
+      leanName := some ``infinite_criticalLineZeros_hardy
+      status := .proven
+      note := "Campaign LITERATURE-20260729-H1-HARDY-TANGENTIAL-THETA-01 replaces Hardy's invoked Bohr--Riesz summability step by Mathlib's branch-explicit Jacobi theta functional equation, an all-order Cauchy derivative estimate, and Gaussian cusp decay. Lean compiles the literal left Abel filter and endpoint constant, without endpoint Lebesgue integrability or a custom summability axiom. This formalizes Hardy's 1914 theorem of infinitely many critical-line zeros. It proves no quantitative count, positive proportion, H1, or RH; historical_route_coverage_delta=1, source_logic_delta=1, rh_frontier_delta=0." },
     { id := "H1.selberg.local-sign-change-producer"
       tier := .tier2
       title := "Formalize Selberg's local squared-mollifier sign detector"

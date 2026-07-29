@@ -30,6 +30,7 @@ import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.HardyThetaInversion
 import LeanLab.Riemann.HardyComplexAlpha
+import LeanLab.Riemann.HardyTangentialThetaIntegral
 import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.FareyFranel
 import LeanLab.Riemann.DeBruijnNewmanHeat
@@ -5173,6 +5174,32 @@ example (hLaw : HardyXiAbelMomentLaw) :
 example :
     HardyXiAbelMomentAmplificationCertificate :=
   hardyXiAbelMomentAmplification_endpoint
+
+example (m : ℕ) :
+    Filter.Tendsto
+      (fun alpha : ℝ =>
+        iteratedDeriv m hardyThetaBoundaryTerm
+          (alpha : ℂ))
+      (nhdsWithin (Real.pi / 2)
+        (Set.Iio (Real.pi / 2)))
+      (nhds 0) :=
+  tendsto_iteratedDeriv_hardyThetaBoundaryTerm_all m
+
+example (p : ℕ) {alpha : ℝ}
+    (halpha : |alpha| < Real.pi / 2) :
+    iteratedDeriv (2 * p)
+        hardyXiInteriorIntegral (alpha : ℂ) =
+      (hardyXiAbelMoment alpha p : ℂ) :=
+  hardyXiInteriorIntegral_iteratedDeriv_real p halpha
+
+example :
+    HardyXiAbelMomentLaw :=
+  hardyXiAbelMomentLaw_unconditional
+
+example :
+    Set.Infinite {t : ℝ |
+      IsNontrivialZero (hardyCriticalLinePoint t)} :=
+  infinite_criticalLineZeros_hardy
 
 example (f : ℕ → ℂ) {r : ℝ}
     (hO : (fun n => ∑ k ∈ Finset.Icc 1 n, f k) =O[Filter.atTop]
