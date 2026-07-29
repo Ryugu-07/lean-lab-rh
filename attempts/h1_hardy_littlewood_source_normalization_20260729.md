@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H1-HARDY-LITTLEWOOD-SOURCE-NORMALIZATION-01`
 
 Node: `H1-HARDY-LITTLEWOOD-SOURCE-NORMALIZATION-ETA-LOWER-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PENDING`
 
 ## Fixed question
 
@@ -30,6 +30,7 @@ explicit Stirling remainder, without assuming either source second moment?
 | 10 | `IMPLEMENTATION` | The 674-line production module compiles the positive extension, exact zero adapter, source norm identity, H6-to-Gamma repair, zeta/eta lower bounds, primitive identity, source-range consumer premise, negative control, and aggregate certificate. | Register one proven Target, twelve exact checks, and nine selected axiom prints. |
 | 11 | `LOCAL_AUDIT` | All five production/registration files compile with warning-as-error; selected axioms are standard only; forbidden/resource scans and patch check are empty; full build passes `8799/8799`. | Freeze and publish the implementation, then require independent public CI. |
 | 12 | `PUBLIC_IMPLEMENTATION` | Frozen commit `728acf822fad197fa4f60bd3f89fe502863b830a` passed Lean Action run `30468913754`, build job `90633769051`, in `2m43s`; the five-file frozen diff is empty. | Publish docs-only immutable evidence. |
+| 13 | `IMMUTABLE_EVIDENCE` | Docs-only commit `d3af00a675bf4e99f422a230630e2877a9d266f9` passed Lean Action run `30469279435`, build job `90634996505`, in `2m0s`; the frozen five-file diff remains empty. | Publish the docs-only final ledger and require public CI. |
 
 ## Current frontier
 

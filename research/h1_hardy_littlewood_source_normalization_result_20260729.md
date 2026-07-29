@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-SOURCE-NORMALIZATION-ETA-LOWER-01`
 
 Classification: `FULL_SUCCESS / SOURCE_NORMALIZATION_ETA_LOWER_FORMALIZED`
 
-Public state: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+Public state: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PENDING`
 
 ## Compiled result
 
@@ -128,5 +128,7 @@ The persistent RH Goal remains active.
   run `30468092999`, build job `90631003060`, in `1m37s`.
 - Frozen implementation commit `728acf822fad197fa4f60bd3f89fe502863b830a` passed Lean Action
   run `30468913754`, build job `90633769051`, in `2m43s`.
+- Immutable-evidence commit `d3af00a675bf4e99f422a230630e2877a9d266f9` passed Lean Action
+  run `30469279435`, build job `90634996505`, in `2m0s`.
 
-The next gate is docs-only immutable evidence.
+The next gate is the docs-only final ledger.

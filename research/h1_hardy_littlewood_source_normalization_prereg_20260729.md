@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-SOURCE-NORMALIZATION-ETA-LOWER-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PENDING`
 
 ## Parent and selection
 
@@ -195,4 +195,6 @@ unconditional Hardy--Littlewood linear-count theorem, a positive-proportion theo
 
 Frozen implementation commit `728acf822fad197fa4f60bd3f89fe502863b830a` passed public Lean
 Action run `30468913754`, build job `90633769051`, in `2m43s`. The five proof and registration
-files are now frozen; publish docs-only immutable evidence next.
+files are frozen. Immutable-evidence commit `d3af00a675bf4e99f422a230630e2877a9d266f9`
+passed public Lean Action run `30469279435`, build job `90634996505`, in `2m0s`; the frozen
+five-file diff remains empty. Publish the docs-only final ledger next.
