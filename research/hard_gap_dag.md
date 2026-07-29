@@ -4020,6 +4020,11 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `local_audit`: 1171-line no-sorry module; six exact checks; six selected standard-only
   axiom prints; empty forbidden/resource scans and patch check; warning-as-error module and
   registration compiles; full build `8800/8800`.
-- `public_state`: frozen implementation publication pending.
+- `public_implementation`: frozen commit
+  `b63bda16e7b899ab88a6ebf12a541f579ab770fe`, Lean Action run `30475443085`, build job
+  `90655877270`, passed in `2m17s`.
+- `proof_freeze`: the five proof and registration files must retain an empty diff through
+  immutable evidence, final ledger, and closure receipt.
+- `public_state`: immutable evidence publication pending.
 - `global_goal`: active.
 - `global_goal`: active.

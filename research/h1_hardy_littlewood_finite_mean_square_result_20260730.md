@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-FINITE-MEAN-SQUARE-01`
 
 Classification: `FULL_SUCCESS / FINITE_MEAN_SQUARE_FORMALIZED`
 
-Public state: `LOCAL_AUDIT_GREEN / PUBLIC_IMPLEMENTATION_CI_PENDING`
+Public state: `PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_CI_PENDING`
 
 ## Compiled result
 
@@ -67,3 +67,8 @@ The persistent RH Goal remains active.
 - full project build: `8800/8800`;
 - forbidden/resource scans and `git diff --check`: empty;
 - inherited protected files remain unstaged.
+
+## Public implementation
+
+Frozen implementation commit `b63bda16e7b899ab88a6ebf12a541f579ab770fe` passed Lean Action
+run `30475443085`, build job `90655877270`, in `2m17s`.
