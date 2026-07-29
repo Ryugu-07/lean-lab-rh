@@ -30,6 +30,7 @@ ordinary norm shortcuts fail on expanding supports?
 | 10 | `ESCAPING_PACKET` | The normalized project bump, modulated at rate `1/4`, translated to `n`, and scaled by `exp(-n/4)` is smooth and compactly supported. Its transform at `z=-i/4` is exactly one for every `n`, while its ordinary `L1` mass and squared `L2` mass both tend to zero. Lean also proves the transform sequence is not uniformly zero on the closed quarter-strip. | Reject unweighted `L1`, unweighted `L2`, and support-blind projective convergence as sufficient source premises. |
 | 11 | `REGISTRATION_AND_AXIOMS` | One proven Target, nine exact TargetChecks, nine selected axiom prints, and the project root compile. Every selected declaration depends only on `propext`, `Classical.choice`, and `Quot.sound`; forbidden and resource scans are empty. | Run the full repository build before freezing implementation. |
 | 12 | `LOCAL_AUDIT` | The 527-line module, Targets, nine TargetChecks, AxiomsAudit, and root pass warning-as-error; `git diff --check` is empty; the full build passes `8803/8803`. | Freeze and publish the implementation, then require public CI before immutable evidence. |
+| 13 | `PUBLIC_IMPLEMENTATION_GATE` | Frozen implementation commit `2be884b27f505542f11ca380d8ac384b0e4bdfd2` passed run `30487452115`, job `90696590632`, in `2m32s`; the frozen five-file diff is empty. | Publish immutable evidence and require an independent public CI run. |
 
 ## Current frontier
 

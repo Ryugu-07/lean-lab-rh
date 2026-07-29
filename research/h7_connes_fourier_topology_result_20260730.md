@@ -85,6 +85,8 @@ projective estimate needs an additional support-sensitive tail rate.
 
 - preregistration commit: `fde35b125edd7de20e80727911fc1dad22471d78`;
 - preregistration Lean Action: run `30486451346`, job `90693225570`, passed in `1m36s`;
+- frozen implementation commit: `2be884b27f505542f11ca380d8ac384b0e4bdfd2`;
+- implementation Lean Action: run `30487452115`, job `90696590632`, passed in `2m32s`;
 - one proven Target: `H7.weil-ground-state.fourier-strip-topology`;
 - nine exact TargetChecks;
 - nine selected transitive axiom prints, each containing only `propext`,
