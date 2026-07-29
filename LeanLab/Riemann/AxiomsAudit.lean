@@ -12,6 +12,7 @@ import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.SelbergLocalSignChange
 import LeanLab.Riemann.ClassicalZeroDetectorMellin
+import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.HardyThetaInversion
 import LeanLab.Riemann.WeilHodgeLattice
@@ -1228,6 +1229,9 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.exists_large_block_or_remainder
 #print axioms LeanLab.Riemann.uniform_blocks_sum_one
 #print axioms LeanLab.Riemann.classicalDetectorMellinPartialCertificate_endpoint
+#print axioms LeanLab.Riemann.verticalIntegrable_Gamma_of_pos
+#print axioms LeanLab.Riemann.exp_eq_inverseMellin_Gamma
+#print axioms LeanLab.Riemann.classicalDetectorInverseMellinLine
 #print axioms LeanLab.Riemann.mem_turingXiZeroIndexFinset_iff
 #print axioms LeanLab.Riemann.rectangleBoundaryIntegral_logDeriv_riemannXi_eq_turingXiZeroIndexFinset_card
 #print axioms LeanLab.Riemann.TuringXiRectangleCertificate.candidates_eq_actual

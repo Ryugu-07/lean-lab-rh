@@ -26,6 +26,7 @@ import LeanLab.Riemann.RedhefferCharacteristicPolynomial
 import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.SelbergLocalSignChange
+import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.HardyThetaInversion
 import LeanLab.Riemann.FareyMobiusWeyl
@@ -5886,5 +5887,20 @@ example :
     (connesFiniteDefectTrace connesNonNestedLeft connesNonNestedRight
       connesNonNestedTest).re = -1 :=
   connesProjectionDefect_endpoint
+
+example {c : ℝ} (hc : 0 < c) :
+    Complex.VerticalIntegrable Complex.Gamma c :=
+  verticalIntegrable_Gamma_of_pos hc
+
+example {c x : ℝ} (hc : 0 < c) (hx : 0 < x) :
+    (Real.exp (-x) : ℂ) =
+      (1 / (2 * Real.pi) : ℝ) *
+        ∫ t : ℝ,
+          (x : ℂ) ^ (-(c + t * Complex.I)) *
+            Complex.Gamma (c + t * Complex.I) :=
+  exp_eq_inverseMellin_Gamma hc hx
+
+example : ClassicalDetectorInverseMellinLine :=
+  classicalDetectorInverseMellinLine
 
 end LeanLab.Riemann

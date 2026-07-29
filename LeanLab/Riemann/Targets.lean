@@ -98,6 +98,7 @@ import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.SelbergLocalSignChange
 import LeanLab.Riemann.ClassicalZeroDetectorMellin
+import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.FareyFranel
@@ -1902,14 +1903,22 @@ def rhTargets : List ResearchTarget :=
         "Construct the truncated-Mobius detector coefficients, prove their exact gap and actual zeta product, justify the full forward Mellin sum-integral exchange, remove the Gamma pole at an actual zeta zero, identify the retained translated-zeta residue, and compile the cardinality-audited finite detector."
       leanName := some ``classicalDetectorMellinPartialCertificate_endpoint
       status := .proven
-      note := "Campaign LITERATURE-20260729-H2-CLASSICAL-ZERO-DETECTOR-MELLIN-01 reconstructs the arithmetic and local analytic core of the Ingham-Huxley detector. Lean proves the exact coefficient gap, M0-aligned Mobius polynomial, actual L-series product, smoothed head-tail split, full forward Mellin transform with absolute sum-integral exchange, a dslope-based holomorphic cancellation of Gamma(w)*zeta(rho+w) at w=0, the retained residue at w=1-rho, finite cardinality-dependent block detection, and the uniform-block negative control. The inverse Mellin vertical formula and global contour shift remain open, so this is MEANINGFUL_MELLIN_PARTIAL, not a density theorem, H2, or RH." },
+      note := "Campaign LITERATURE-20260729-H2-CLASSICAL-ZERO-DETECTOR-MELLIN-01 reconstructs the arithmetic and local analytic core of the Ingham-Huxley detector. Lean proves the exact coefficient gap, M0-aligned Mobius polynomial, actual L-series product, smoothed head-tail split, full forward Mellin transform with absolute sum-integral exchange, a dslope-based holomorphic cancellation of Gamma(w)*zeta(rho+w) at w=0, the retained residue at w=1-rho, finite cardinality-dependent block detection, and the uniform-block negative control. The inverse Mellin line was closed by the subsequent dedicated campaign; the global contour shift remains open, so this certificate is not a density theorem, H2, or RH." },
+    { id := "H2.classical-detector.inverse-mellin-line"
+      tier := .tier2
+      title := "Prove the classical detector inverse Mellin line"
+      statement :=
+        "Prove Gamma is integrable on every positive vertical line, specialize Mellin inversion to the exponential kernel, justify the detector sum-integral exchange on Re(z)+c>1, and discharge ClassicalDetectorInverseMellinLine."
+      leanName := some ``classicalDetectorInverseMellinLine
+      status := .proven
+      note := "Campaign LITERATURE-20260729-H2-CLASSICAL-DETECTOR-INVERSE-MELLIN-01 closes the first open analytic edge after the forward transform. Lean derives arbitrary positive-line Gamma integrability from the exact half-line norm and fixed-strip Gamma-ratio bounds, specializes Mathlib Mellin inversion to exp(-x), proves summability of the integral norms, and obtains the actual Gamma-Mobius-zeta vertical formula for every Y>0, c>0, and Re(z)+c>1. No contour shift, zero-density estimate, H2, or RH is proved." },
     { id := "H2.classical-detector.inverse-mellin-contour-shift"
       tier := .tier2
       title := "Close the classical detector inverse Mellin contour shift"
       statement :=
         "Prove ClassicalDetectorInverseMellinLine from the compiled forward transform, then shift the actual Gamma-Mobius-zeta contour from a source-valid line to Re(w)=1/2-Re(rho), discharge both horizontal edges with explicit Gamma decay and zeta strip growth, and derive the source dyadic-block versus shifted-line detector identity."
       status := .inProgress
-      note := "The forward transform, both local singularity calculations, and the abstract finite detector compile. The first unavailable theorem is the inverse Mellin vertical-line identity ClassicalDetectorInverseMellinLine. Existing project inputs include a linear zeta bound on 1/2<=Re(s)<=8, an exact half-line Gamma norm, and fixed-positive-strip Gamma-ratio bounds; these have not yet been assembled into the required inverse theorem and infinite rectangle shift." },
+      note := "The forward transform, inverse Mellin vertical-line identity, both local singularity calculations, and the abstract finite detector compile. The first unavailable theorem is now the infinite rectangle shift to Re(w)=1/2-Re(rho), including uniform horizontal-edge decay for the actual Gamma-Mobius-zeta factor and the source dyadic-block identity." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

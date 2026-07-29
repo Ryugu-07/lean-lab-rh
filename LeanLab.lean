@@ -81,6 +81,7 @@ import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.ConreyLiHalfStrip
 import LeanLab.Riemann.BerryKeatingHalfLine
 import LeanLab.Riemann.ConnesProjectionDefect
+import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit

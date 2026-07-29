@@ -3660,10 +3660,25 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   `-> exact exponential-kernel inverse Mellin formula`;
   `-> absolute detector sum-integral exchange`;
   `-> ClassicalDetectorInverseMellinLine`.
-- `OBS-H2-INVERSE-MELLIN-GAMMA-VERTICAL-01`: open.
-- `OBS-H2-INVERSE-MELLIN-SUM-INTEGRAL-01`: open.
+- `OBS-H2-INVERSE-MELLIN-GAMMA-VERTICAL-01`: closed locally by
+  `verticalIntegrable_Gamma_of_pos`.
+- `OBS-H2-INVERSE-MELLIN-SUM-INTEGRAL-01`: closed locally by
+  `classicalDetectorInverseMellinLine`.
 - `OBS-H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01`: remains open after the selected endpoint.
 - `strict_boundary`: no global contour shift, density estimate, exceptional-zero exclusion, H2,
   or RH.
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.
+- `preregistration_public_gate`: commit `b760e6becaa981c412ba2d3935daaecc82a50742`,
+  run `30412943783`, build job `90453042732`, passed in `2m7s`.
+- `local_result`: `FULL_SUCCESS / KNOWN_INVERSE_MELLIN_EDGE_FORMALIZED`.
+- `compiled_endpoint`:
+  `verticalIntegrable_Gamma_of_pos`;
+  `-> exp_eq_inverseMellin_Gamma`;
+  `-> classicalDetectorInverseMellinLine`.
+- `first_open_after_result`:
+  `OBS-H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01`, including both infinite horizontal-edge
+  limits for the actual Gamma-Mobius-zeta factor.
+- `deltas`: historical route coverage and source analytic bridge each `+1`; hard gap and RH
+  frontier remain `0`.
+- `next_gate`: frozen implementation public CI.

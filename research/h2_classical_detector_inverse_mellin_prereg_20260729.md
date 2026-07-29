@@ -8,7 +8,7 @@ Node: `H2-CLASSICAL-DETECTOR-INVERSE-MELLIN-LINE-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT`
 
-Status: `PREREGISTERED_LOCAL_PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTED_LOCAL / PUBLIC_CI_REQUIRED`
 
 ## Parent and available producer
 
@@ -115,3 +115,12 @@ Before implementation publication:
 After frozen implementation public CI, publish immutable evidence, final ledger, and closure
 receipt through separate public-green commits. Then stop this local campaign and rerank all
 historical routes.
+
+## Preregistration public gate
+
+Preregistration commit `b760e6becaa981c412ba2d3935daaecc82a50742` passed public Lean
+Action run `30412943783`, build job `90453042732`, in `2m7s`. Production editing began only
+after that gate passed.
+
+The local implementation satisfies all seven fixed full-success criteria. Public implementation
+CI remains required before the result can be frozen.

@@ -6449,3 +6449,27 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   then feed the compiled finite detector.
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H2 classical detector inverse Mellin local result
+
+- `classification`: `FULL_SUCCESS / KNOWN_INVERSE_MELLIN_EDGE_FORMALIZED`.
+- Preregistration commit `b760e6becaa981c412ba2d3935daaecc82a50742` passed Lean Action run
+  `30412943783`, build job `90453042732`, in `2m7s`; proof editing began afterward.
+- New module `LeanLab/Riemann/ClassicalZeroDetectorInverseMellin.lean` proves Gamma vertical
+  integrability for every `c>0`, the exact `1/(2*pi)` inverse Mellin formula for `exp(-x)`,
+  detector-line integrability, summability of integral norms, and the actual coefficient
+  sum-integral exchange on `Re(z)+c>1`.
+- Lean proves the existing open proposition exactly:
+  `classicalDetectorInverseMellinLine : ClassicalDetectorInverseMellinLine`.
+- Proven Target: `H2.classical-detector.inverse-mellin-line`.
+- The next route edge is the infinite rectangle shift to `Re(w)=1/2-Re(rho)`, with uniform
+  horizontal-edge decay for the actual Gamma-Mobius-zeta factor.
+- Audit so far: 702-line no-sorry module; three exact new TargetChecks; three standard-only
+  axiom prints; empty forbidden/resource scans; warning-as-error compiles for production,
+  registration, audit, and root files; full build `8794/8794`.
+- Keep the contour shift, shifted detector identity, Type-I/Type-II production, density
+  estimates, sparse-exception exclusion, H2, and RH open.
+- Deltas: historical route coverage `+1`, source analytic bridge `+1`, hard gap `0`, RH
+  frontier `0`.
+- Next gate: full build and diff audit, then frozen implementation public CI.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.

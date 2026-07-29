@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H2-CLASSICAL-DETECTOR-INVERSE-MELLIN-01`
 
 Node: `H2-CLASSICAL-DETECTOR-INVERSE-MELLIN-LINE-01`
 
-Status: `PREREGISTERED_LOCAL_PUBLIC_CI_REQUIRED`
+Status: `FULL_SUCCESS_LOCAL / PUBLIC_CI_REQUIRED`
 
 ## Fixed question
 
@@ -22,15 +22,22 @@ the infinite sum-integral exchange?
 | 2 | `SOURCE_RECHECK` | Maynard--Pratt Appendix C and Guth--Maynard Section 13.1 use the same smoothed truncated-Mobius inverse-Mellin entry before Type-I/Type-II detection. | Preserve the exact `Y`, `c`, and `Re(z)+c>1` domain; do not merge inversion with the later contour shift. |
 | 3 | `LIBRARY_AUDIT` | Mathlib 4.31 contains `mellinInv_mellin_eq`, derived from Fourier inversion. The project contains the forward detector transform, an exact half-line Gamma norm, positive-strip Gamma-ratio control, and absolute detector L-series summability. | Preregister a direct specialization plus absolute sum-integral exchange; no abstract inversion premise is allowed. |
 | 4 | `PREREGISTRATION` | Full, partial, falsification, normalization, and claim-boundary criteria are fixed. | Publish docs only and await public CI before editing `LeanLab/`. |
+| 5 | `PUBLIC_GATE` | Preregistration commit `b760e6becaa981c412ba2d3935daaecc82a50742` passed run `30412943783`, build job `90453042732`, in `2m7s`. | Open the production gate. |
+| 6 | `GAMMA_HALF_LINE` | The exact half-line norm gives `norm Gamma(1/2+i*t) <= 3*exp(-abs t)`. Exponential-series domination converts every real-power loss into a `K*abs(t)^-2` majorant. | Use the existing positive-strip Gamma-ratio theorem instead of adding a Stirling premise. |
+| 7 | `GAMMA_ALL_POSITIVE_LINES` | Fixed-strip transport closes every `c>=1/2`; the Gamma recurrence reduces `0<c<1/2` to `c+1`. | Compile `verticalIntegrable_Gamma_of_pos` for every exact `c>0`. |
+| 8 | `SINGLE_KERNEL_INVERSION` | Mathlib's `mellinInv_mellin_eq` applies to `exp(-x)` after identifying its Mellin transform with `Gamma` on the positive line. | Compile the exact `1/(2*pi)` formula `exp_eq_inverseMellin_Gamma`. |
+| 9 | `DETECTOR_EXCHANGE` | Each actual detector line term is integrable; its norm integral factors into a common Gamma integral times the norm of the L-series term at `z+c`. Absolute L-series summability therefore justifies the infinite exchange. | Rewrite the pointwise sum through the actual coefficient L-series and contour factor. |
+| 10 | `ENDPOINT` | `classicalDetectorInverseMellinLine : ClassicalDetectorInverseMellinLine` compiles with no extra premise. Targets, exact checks, root import, and standard-only axiom audit compile. | Classify `FULL_SUCCESS / KNOWN_INVERSE_MELLIN_EDGE_FORMALIZED`; move the route frontier to the infinite contour shift. |
 
 ## Current frontier
 
-- `fixed_next`: Gamma vertical integrability on every positive line, exact inverse transform of
-  `exp(-x)`, detector-line integrability, sum-integral exchange, and the final open proposition.
-- `open_after_success`: the infinite rectangle shift, horizontal-edge decay, shifted detector
+- `closed_here`: Gamma vertical integrability on every positive line, exact inverse transform of
+  `exp(-x)`, detector-line integrability, sum-integral exchange, and the exact previously open
+  proposition.
+- `fixed_next`: the infinite rectangle shift, horizontal-edge decay, shifted detector
   identity, Type-I/Type-II estimates, density exponents, sparse-exception exclusion, H2, and RH.
-- `historical_role`: this tests whether a modern formal Fourier/Mellin API closes a technical
-  interruption in a classical detector route; success is known-theorem infrastructure, not RH
-  progress.
+- `historical_role`: a modern formal Fourier/Mellin API does close the technical interruption in
+  the classical detector route. This is known-theorem infrastructure and one source analytic
+  bridge, not RH progress.
 - `protected_files`: the six inherited modified/untracked files remain untouched and unstaged.
 - `global_goal`: active.
