@@ -4343,5 +4343,8 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `immutable_evidence`: docs-only commit
   `4994f8bf406f252ed5f6de467cab30faa2254497`, Lean Action run `30496035652`, build job
   `90724980466`, passed in `1m33s`; frozen five-file diff empty.
-- `next_gate`: docs-only final ledger and independent public CI.
+- `final_ledger`: docs-only commit `777a291700131dfbb157017398cf0d6115f61ebc`,
+  Lean Action run `30496233624`, build job `90725622666`, passed in `1m38s`; frozen five-file
+  diff empty.
+- `next_gate`: one closure receipt and public CI, then stop this local campaign and rerank.
 - `global_goal`: active.

@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01`
 
 Classification: `FULL_SUCCESS / HARDY_LITTLEWOOD_LEMMA3_FORMALIZED`
 
-Public state: `EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
+Public state: `FINAL_LEDGER_PUBLIC_GREEN / CLOSURE_RECEIPT_CI_PENDING`
 
 ## Result
 
@@ -102,3 +102,6 @@ have an empty diff from that commit at immutable-evidence publication.
 
 Immutable-evidence commit `4994f8bf406f252ed5f6de467cab30faa2254497` passed Lean Action
 run `30496035652`, build job `90724980466`, in `1m33s`; the frozen diff remains empty.
+
+Final-ledger commit `777a291700131dfbb157017398cf0d6115f61ebc` passed Lean Action run
+`30496233624`, build job `90725622666`, in `1m38s`; the frozen diff remains empty.

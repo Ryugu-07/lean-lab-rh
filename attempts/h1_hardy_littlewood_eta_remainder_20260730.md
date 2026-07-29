@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260730-H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01`
 
 Node: `H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01`
 
-Status: `FULL_SUCCESS / EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
+Status: `FULL_SUCCESS / FINAL_LEDGER_PUBLIC_GREEN / CLOSURE_RECEIPT_CI_PENDING`
 
 ## Fixed question
 
@@ -37,6 +37,7 @@ logarithmic phases, and then identify the ordered limit with
 | 16 | `LOCAL_AUDIT` | The 1181-line module and all registration files compile with warnings as errors; nine exact checks and nine axiom prints pass with only `propext`, `Classical.choice`, and `Quot.sound`; forbidden/resource scans and `git diff --check` are empty; full build passes `8805/8805`. | Freeze the implementation and publish the evidence chain before closing only this campaign. |
 | 17 | `IMPLEMENTATION_PUBLIC_CI` | Frozen commit `e3341491b34959f2b1eb5d4e1fe2f6fc6cb6ac6f` passed Lean Action run `30495767931`, build job `90724079010`, in `2m17s`; the frozen five-file diff is empty. | Publish docs-only immutable evidence and require a second public CI. |
 | 18 | `IMMUTABLE_EVIDENCE_PUBLIC_CI` | Docs-only evidence commit `4994f8bf406f252ed5f6de467cab30faa2254497` passed Lean Action run `30496035652`, build job `90724980466`, in `1m33s`; the frozen five-file diff remains empty. | Publish the docs-only final ledger and require public CI. |
+| 19 | `FINAL_LEDGER_PUBLIC_CI` | Docs-only final-ledger commit `777a291700131dfbb157017398cf0d6115f61ebc` passed Lean Action run `30496233624`, build job `90725622666`, in `1m38s`; the frozen five-file diff remains empty. | Publish one closure receipt and require public CI, then stop only this campaign. |
 
 ## Current frontier
 

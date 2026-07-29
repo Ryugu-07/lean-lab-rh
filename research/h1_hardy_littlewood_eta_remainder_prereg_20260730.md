@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `FULL_SUCCESS / EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
+Status: `FULL_SUCCESS / FINAL_LEDGER_PUBLIC_GREEN / CLOSURE_RECEIPT_CI_PENDING`
 
 Public preregistration gate: commit `5402fc312747bf68a0bedcdd6e67b8dd71241ed2`,
 Lean Action run `30492875305`, build job `90714768715`, passed in `1m53s`.
@@ -152,7 +152,11 @@ publication, immutable-evidence CI, final-ledger CI, and closure-receipt CI rema
 
 Docs-only immutable-evidence commit `4994f8bf406f252ed5f6de467cab30faa2254497`
 passed Lean Action run `30496035652`, build job `90724980466`, in `1m33s`. The frozen
-five-file diff remains empty. Final-ledger CI and closure-receipt CI remain required.
+five-file diff remains empty.
+
+Docs-only final-ledger commit `777a291700131dfbb157017398cf0d6115f61ebc` passed Lean Action
+run `30496233624`, build job `90725622666`, in `1m38s`; the frozen diff remains empty. One
+closure-receipt CI remains required.
 
 ## Meaningful partial, falsification, and hard gap
 
