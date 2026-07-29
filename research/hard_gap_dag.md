@@ -4025,6 +4025,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   `90655877270`, passed in `2m17s`.
 - `proof_freeze`: the five proof and registration files must retain an empty diff through
   immutable evidence, final ledger, and closure receipt.
-- `public_state`: immutable evidence publication pending.
+- `immutable_evidence`: docs-only commit
+  `10f3db1ba9de088f581ecbbd16af2199732fd8d8`, Lean Action run `30475775980`, build job
+  `90656982894`, passed in `2m13s`; frozen five-file diff empty.
+- `public_state`: final ledger publication pending.
 - `global_goal`: active.
 - `global_goal`: active.

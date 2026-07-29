@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-FINITE-MEAN-SQUARE-01`
 
 Classification: `FULL_SUCCESS / FINITE_MEAN_SQUARE_FORMALIZED`
 
-Public state: `PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_CI_PENDING`
+Public state: `IMMUTABLE_EVIDENCE_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Compiled result
 
@@ -72,3 +72,6 @@ The persistent RH Goal remains active.
 
 Frozen implementation commit `b63bda16e7b899ab88a6ebf12a541f579ab770fe` passed Lean Action
 run `30475443085`, build job `90655877270`, in `2m17s`.
+
+Immutable-evidence commit `10f3db1ba9de088f581ecbbd16af2199732fd8d8` passed Lean Action
+run `30475775980`, build job `90656982894`, in `2m13s`; the frozen five-file diff is empty.
