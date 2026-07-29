@@ -2009,3 +2009,23 @@ inverse-difference mechanism, so its eta conclusion does not require formalizing
 Fourier-integral proof of Lemma 2. No shortcut to RH appears. The next H1 doors are the
 eta-error second moment, the source-X mean square, and their parameter budget for the linear
 critical-zero count; H1 and RH remain open.
+
+### Post-eta-remainder rerank: Hardy--Littlewood eta primitive mean square
+
+The eta-remainder campaign is publicly closed at receipt
+`5bce854bcfbcb30b8f27c1ff629d6311792c5614`. Fresh comparison retains the Selberg and
+Levinson--Conrey global moments, H2 detector rarity, H7/H8 concrete spectral objects, H10 curve
+geometry, H11 sparse amplification, and H12 global counts.
+
+H1 is reselected for a newly exposed source interface, not by adjacency. The project now
+compiles Lemma 3's actual eta remainder, the eta-to-Theta ordered tail, and a finite shifted
+Theta-polynomial mean square. Hardy--Littlewood Lemma 7 asks for the uniform infinite-series
+bound `integral_T^(2T) |psi(t+u)|^2 = O(T)` for `0<=u<=T`, while the existing count consumer
+needs the corresponding eta-primitive window-error moment.
+
+Campaign
+`LITERATURE-20260730-H1-HARDY-LITTLEWOOD-ETA-PRIMITIVE-MEAN-SQUARE-01`
+tests whether one cutoff above `3T`, the explicit ordered tail, and the weaker finite
+`O(L+N)` estimate already suffice. Full success must also prove the exact primitive-series
+sign and the restricted-measure `lintegral`; no source-X moment, parameter budget, linear
+count, H1, or RH is included.

@@ -366,3 +366,20 @@ appears. The next H1 source edges are the eta-error second moment, the source-X 
 and the asymptotic parameter budget producing a linear critical-zero count. Selberg,
 Levinson--Conrey, all other historical families, original conjectures, falsification, and
 direct RH attacks remain open.
+
+## 2026-07-30 H1 Hardy--Littlewood eta primitive mean-square selection
+
+After public closure of the eta remainder, a fresh cross-family comparison selects
+Hardy--Littlewood Lemma 7's shifted mean square. This H1 re-entry is not automatic: for the
+first time, the project has all three adjacent interfaces needed to test the source inference:
+the actual infinite eta remainder and Theta tail, the exact finite shifted polynomial mean
+square, and the eta-primitive finite-count consumer.
+
+The omission question is whether the weaker compiled finite `O(L+N)` estimate, together with
+one source-valid cutoff above `3T`, proves the uniform infinite-series `O(T)` moment. Full
+success also requires identifying the integral primitive with the correct imaginary part of
+the source logarithmically weighted series and producing the exact restricted-measure moment
+used by the count theorem.
+
+The source-X moving-window moment, parameter budget, unconditional linear count, Selberg and
+Levinson--Conrey global moments, every other historical family, H1, and RH remain open.

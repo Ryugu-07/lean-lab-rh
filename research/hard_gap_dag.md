@@ -4346,5 +4346,33 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `final_ledger`: docs-only commit `777a291700131dfbb157017398cf0d6115f61ebc`,
   Lean Action run `30496233624`, build job `90725622666`, passed in `1m38s`; frozen five-file
   diff empty.
-- `next_gate`: one closure receipt and public CI, then stop this local campaign and rerank.
+- `closure_receipt`: docs-only commit
+  `5bce854bcfbcb30b8f27c1ff629d6311792c5614`, Lean Action run `30496464584`, build job
+  `90726356672`, passed in `1m45s`; frozen five-file diff empty.
+- `local_stop`: stop only the eta-remainder campaign and rerank all historical families.
+- `global_goal`: active.
+
+## 2026-07-30 H1 Hardy--Littlewood eta primitive mean-square launch
+
+- `parent_public_closure`: eta-remainder receipt
+  `5bce854bcfbcb30b8f27c1ff629d6311792c5614`, Lean Action run `30496464584`, build job
+  `90726356672`.
+- `H1-HARDY-LITTLEWOOD-ETA-PRIMITIVE-MEAN-SQUARE-01`: selected after fresh comparison with
+  H1 Selberg--Levinson--Conrey, H2, H7/H8, H10, H11, and H12.
+- `historical_omission_test`: test whether the public Lemma 3 remainder and weaker finite
+  `O(L+N)` mean square suffice for Lemma 7's shifted `O(T)` upper bound, without the source's
+  stronger Lemma 6 saving or Lemma 8 asymptotic.
+- `fixed_edge`: canonical ordered source psi; `->` exact finite-polynomial alignment; `->`
+  eta primitive identity with checked sign; `->` explicit uniform shifted mean square; `->`
+  eta-window-error restricted `lintegral`; `->` exact finite-count premise.
+- `negative_control`: pointwise convergence, an unshifted-only estimate, or an assumed
+  primitive identity is not full success.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-ERROR-MEAN-SQUARE-01`: selected.
+- `OBS-H1-HARDY-LITTLEWOOD-X-MEAN-SQUARE-01`: remains outside the endpoint.
+- `OBS-H1-HARDY-LITTLEWOOD-PARAMETER-BUDGET-01`: remains outside the endpoint.
+- `strict_boundary`: no source-X moment, parameter budget, unconditional linear count, H1, or
+  RH.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- `historical_policy`: the route is selected because a newly closed human-source inference
+  creates a fixed omission test; original conjectures and direct RH attacks remain open.
 - `global_goal`: active.
