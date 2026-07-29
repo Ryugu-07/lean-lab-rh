@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260730-H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01`
 
 Node: `H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
+Status: `FINAL_LEDGER_PUBLIC_GREEN / CLOSURE_RECEIPT_CI_PENDING`
 
 ## Fixed question
 
@@ -34,6 +34,7 @@ both horizontal edges discharged by compiled Gamma and zeta estimates?
 | 14 | `LOCAL_AUDIT` | The 1305-line module, Targets, TargetChecks, AxiomsAudit, and root import pass warning-as-error. Seven selected axiom prints contain only `propext`, `Classical.choice`, and `Quot.sound`; forbidden/resource scans and `git diff --check` are empty; full build succeeds with `8802/8802`. | Freeze and publish the implementation before creating immutable evidence. |
 | 15 | `PUBLIC_IMPLEMENTATION` | Frozen commit `b87e9164395b14723f61d8451e3ed1b0cd0ae1c8` passed Lean Action run `30484701769`, build job `90687338466`, in `2m39s`. The five proof and registration files have an empty diff from the frozen commit. | Publish immutable evidence as a docs-only commit and require a fresh public-green run. |
 | 16 | `IMMUTABLE_EVIDENCE` | Docs-only commit `1cc20bca2455d9eb9ca27a0e42fbaf86b340b4e8` passed Lean Action run `30485116278`, build job `90688732121`, in `1m36s`. The frozen proof diff remains empty. | Publish the final ledger and require public CI before issuing the closure receipt. |
+| 17 | `FINAL_LEDGER` | Docs-only commit `8ab5c9f0fcf187a240ad3bb371e14f788e127997` passed Lean Action run `30485360308`, build job `90689557179`, in `2m13s`. The frozen proof diff remains empty. | Publish one closure receipt and require public CI, then stop only this campaign. |
 
 ## Current frontier
 
@@ -44,7 +45,7 @@ both horizontal edges discharged by compiled Gamma and zeta estimates?
 - `strict_successor`: source dyadic decomposition and quantitative block/tail estimates leading
   to a zero-density dichotomy.
 - `local_classification`: `FULL_SUCCESS / KNOWN_CONTOUR_SHIFT_FORMALIZED`.
-- `current_gate`: final-ledger docs-only commit and public Lean Action.
+- `current_gate`: closure-receipt docs-only commit and public Lean Action.
 - `not_claimed`: density exponent, exclusion of all off-line zeros, H2, or RH.
 - `protected_files`: inherited modified and untracked files remain untouched and unstaged.
 - `global_goal`: active.

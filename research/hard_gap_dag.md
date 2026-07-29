@@ -3455,7 +3455,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   commit.
 - `immutable_evidence`: commit `1cc20bca2455d9eb9ca27a0e42fbaf86b340b4e8`,
   Lean Action run `30485116278`, build job `90688732121`, passed in `1m36s`.
-- `next_gate`: final-ledger public CI.
+- `final_ledger`: commit `8ab5c9f0fcf187a240ad3bb371e14f788e127997`,
+  Lean Action run `30485360308`, build job `90689557179`, passed in `2m13s`.
+- `next_gate`: one closure receipt and public CI, then stop this local campaign and rerank.
 - `global_goal`: active.
 
 ## 2026-07-30 H1 Hardy--Littlewood eta-to-Theta Abel-transfer local result

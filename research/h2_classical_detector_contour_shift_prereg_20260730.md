@@ -8,7 +8,7 @@ Node: `H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
+Status: `FINAL_LEDGER_PUBLIC_GREEN / CLOSURE_RECEIPT_CI_PENDING`
 
 ## Parent and available chain
 
@@ -195,3 +195,7 @@ fresh public run before the final ledger.
 Immutable-evidence commit `1cc20bca2455d9eb9ca27a0e42fbaf86b340b4e8` passed Lean Action
 run `30485116278`, build job `90688732121`, in `1m36s`. The frozen diff remains empty. The
 final ledger is the next public gate.
+
+Final-ledger commit `8ab5c9f0fcf187a240ad3bb371e14f788e127997` passed Lean Action
+run `30485360308`, build job `90689557179`, in `2m13s`. The frozen diff remains empty. One
+closure-receipt CI remains required.

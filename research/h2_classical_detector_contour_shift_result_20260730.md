@@ -8,7 +8,7 @@ Node: `H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01`
 
 Classification: `FULL_SUCCESS / KNOWN_CONTOUR_SHIFT_FORMALIZED`
 
-Public state: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
+Public state: `FINAL_LEDGER_PUBLIC_GREEN / CLOSURE_RECEIPT_CI_PENDING`
 
 ## Result
 
@@ -94,3 +94,6 @@ have an empty diff from that commit at immutable-evidence publication.
 
 Immutable-evidence commit `1cc20bca2455d9eb9ca27a0e42fbaf86b340b4e8` passed Lean Action
 run `30485116278`, build job `90688732121`, in `1m36s`. The frozen diff remains empty.
+
+Final-ledger commit `8ab5c9f0fcf187a240ad3bb371e14f788e127997` passed Lean Action run
+`30485360308`, build job `90689557179`, in `2m13s`; the frozen diff remains empty.
