@@ -77,6 +77,7 @@ import LeanLab.Riemann.WeilCompactLaplaceZeroCutoff
 import LeanLab.Riemann.WeilCompactLaplaceArithmeticFormula
 import LeanLab.Riemann.WeilCompactPositivityCriterion
 import LeanLab.Riemann.WeilGroundStateAlignment
+import LeanLab.Riemann.WeilGroundStateFourierTopology
 import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.WeilGroundStateRayleighGap
@@ -1484,6 +1485,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``WeilQuantitativeGroundStateCertificate.gap_mul_one_sub_groundCoefficient_sq_le
       status := .proven
       note := "Campaign DISCOVERY-20260723-H7-PROLATE-RAYLEIGH-GAP-01 compiles a generic finite-dimensional variational consumer and an exact two-dimensional falsification model. For normalized test vectors the generalized defect is 1-<xi,x>^2. The result does not instantiate the arithmetic Weil matrix, the prolate vector, either source cutoff limit, the simple-even theorem, or RH; hard_gap_delta=0." },
+    { id := "H7.weil-ground-state.fourier-strip-topology"
+      tier := .tier2
+      title := "Identify the Fourier-strip topology required by the Connes ground-state limit"
+      statement :=
+        "Prove that exponentially weighted L1 error controls the centered Fourier transform uniformly on every closed horizontal strip, specialize the two-stage transfer to the actual ground-state source coordinate, and construct smooth compactly supported escaping packets whose unweighted L1 and squared L2 masses tend to zero while one fixed interior Fourier value remains one."
+      leanName := some ``weilGroundStateFourierTopology_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260730-H7-CONNES-FOURIER-TOPOLOGY-01 formalizes the topology hidden in Connes arXiv:2602.04022 section 6.6's requirement that the explicit prolate packet approximate the true minimizer sufficiently well. The compiled positive theorem uses exp(A*abs(x))-weighted L1 error to transfer compact-uniform convergence on abs(Im z)<=A. The translated smooth packet proves that ordinary unweighted L1 and L2 convergence cannot replace that support-sensitive rate, even at the fixed point -i/4 strictly inside the critical half-strip. No actual theta_x-k_lambda estimate, simple-even ground-state theorem, zero-limit theorem, H7, or RH is proved." },
     { id := "H7.weil-ground-state.prolate-source-rayleigh-gap-ratio"
       tier := .tier2
       title := "Prove the arithmetic prolate Rayleigh-excess-to-gap ratio tends to zero"

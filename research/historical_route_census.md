@@ -294,3 +294,20 @@ The selected campaign tests this exact boundary. It targets an exponentially wei
 criterion sufficient for uniform strip convergence and a smooth escaping-packet counterexample
 to unweighted promotion. The actual source comparison, simple-even ground states, the
 all-real-zero limit, H7, and RH remain open.
+
+## 2026-07-30 H7 Fourier-topology local implementation result
+
+The topology test succeeds in both directions relevant to the audit. Lean proves that
+`exp(A*abs(x))`-weighted `L1` error controls centered Fourier error uniformly for every point of
+the closed strip `abs(Im z)<=A`, and proves the corresponding two-stage convergence transfer in
+the exact ground-state source coordinate.
+
+Lean also constructs a smooth compactly supported packet whose support escapes to `+infinity`.
+Its unweighted `L1` mass and squared `L2` mass tend to zero, but its Fourier value at the fixed
+interior point `-i/4` remains exactly one. This formally rules out a support-blind interpretation
+of "sufficiently good" approximation.
+
+No overlooked shortcut to H7 was found. The source comparison obligation is now more precise:
+prove exponential-strip weighted convergence of `theta_x-k_lambda` for each fixed width below
+`1/2`, or prove a different estimate strong enough to imply it. Simple-even ground states, the
+actual comparison, the all-real-zero limit, H7, and RH remain open.

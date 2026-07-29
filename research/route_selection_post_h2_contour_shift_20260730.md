@@ -2,7 +2,7 @@
 
 Date: 2026-07-30
 
-Status: `H7_CONNES_FOURIER_TOPOLOGY_SELECTED / PREREGISTRATION_LOCAL`
+Status: `H7_CONNES_FOURIER_TOPOLOGY_SELECTED / FULL_SUCCESS_LOCAL_AUDIT_GREEN`
 
 ## Closed parent
 
@@ -77,3 +77,21 @@ strong enough for compact-uniform convergence of Fourier transforms when support
   preregistration passes public CI.
 
 The persistent RH Goal remains active.
+
+## Local implementation result
+
+The fixed endpoint compiles as `weilGroundStateFourierTopology_endpoint`. For every `A>=0`,
+the norm of the centered Fourier kernel on `abs(Im z)<=A` is bounded by
+`exp(A*abs(x))`; hence exponential-strip weighted `L1` error gives one bound uniform over the
+whole closed strip. Lean also proves the two-stage transfer from prolate-transform convergence
+and specializes it to `weilGroundStateCenteredFourier`.
+
+The negative control is exact. A smooth compactly supported packet translated to `n` and scaled
+by `exp(-n/4)` has both unweighted `L1` mass and squared `L2` mass tending to zero, but its
+Fourier value at `-i/4` is exactly one for every `n`. Thus a support-blind norm or the existing
+finite-dimensional projective defect cannot by itself discharge Connes's approximation step.
+
+The first actual H7 successor is now sharper: prove an
+`exp(A*abs(x))`-weighted comparison between the true ground state `theta_x` and the explicit
+packet `k_lambda`, for every fixed `A<1/2`, together with the simple-even ground-state premise.
+No such estimate, all-real-zero limit, H7, or RH is claimed.

@@ -8,7 +8,7 @@ Node: `H7-CONNES-GROUNDSTATE-FOURIER-TOPOLOGY-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTRATION_LOCAL / PUBLIC_GATE_PENDING`
+Status: `FULL_SUCCESS / LOCAL_AUDIT_GREEN`
 
 ## Parent and available chain
 
@@ -122,3 +122,10 @@ Before implementation publication:
 After frozen implementation public CI, publish immutable evidence, final ledger, and closure
 receipt through separate public-green commits. Then stop only this local campaign and rerank
 all historical families.
+
+## Public preregistration gate
+
+The docs-only preregistration commit
+`fde35b125edd7de20e80727911fc1dad22471d78` passed Lean Action run `30486451346`,
+build job `90693225570`, in `1m36s`. Production implementation began only after that
+public result.

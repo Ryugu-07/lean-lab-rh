@@ -109,6 +109,7 @@ import LeanLab.Riemann.WeilCompactLaplaceSeparator
 import LeanLab.Riemann.WeilCompactLaplaceZeroCutoff
 import LeanLab.Riemann.WeilCompactLaplaceArithmeticFormula
 import LeanLab.Riemann.WeilGroundStateAlignment
+import LeanLab.Riemann.WeilGroundStateFourierTopology
 import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.WeilGroundStateRayleighGap
@@ -6206,5 +6207,73 @@ example : 0 < hardyLittlewoodEtaAbelTransferConstant :=
 
 example : HardyLittlewoodEtaAbelTransferCertificate :=
   hardyLittlewoodEtaAbelTransfer_endpoint
+
+example {A : ℝ} (hA : 0 ≤ A) {z : ℂ} (hz : |z.im| ≤ A) (x : ℝ) :
+    ‖Complex.exp (Complex.I * z * (x : ℂ))‖ ≤
+      Real.exp (A * |x|) :=
+  norm_exp_I_mul_mul_real_le_stripWeight hA hz x
+
+example {A : ℝ} (hA : 0 ≤ A) {f g : ℝ → ℂ}
+    (hf : Continuous f) (hg : Continuous g)
+    (hfsupp : HasCompactSupport f) (hgsupp : HasCompactSupport g)
+    {z : ℂ} (hz : |z.im| ≤ A) :
+    ‖weilGroundStateFourierTransform f z -
+        weilGroundStateFourierTransform g z‖ ≤
+      weilGroundStateFourierStripError A f g :=
+  norm_weilGroundStateFourierTransform_sub_le_stripError
+    hA hf hg hfsupp hgsupp hz
+
+example {A : ℝ} (hA : 0 ≤ A) {L : ℕ → ℝ}
+    {f g : ℕ → ℝ → ℂ} {target : ℂ → ℂ}
+    (hf : ∀ n, Continuous (fun x ↦ f n (x + L n / 2)))
+    (hg : ∀ n, Continuous (fun x ↦ g n (x + L n / 2)))
+    (hfsupp : ∀ n, HasCompactSupport (fun x ↦ f n (x + L n / 2)))
+    (hgsupp : ∀ n, HasCompactSupport (fun x ↦ g n (x + L n / 2)))
+    (hgTarget :
+      WeilGroundStateUniformOnClosedStrip A
+        (fun n z ↦ weilGroundStateCenteredFourier (L n) (g n) z) target)
+    (herror :
+      Filter.Tendsto
+        (fun n ↦ weilGroundStateFourierStripError A
+          (fun x ↦ f n (x + L n / 2))
+          (fun x ↦ g n (x + L n / 2)))
+        Filter.atTop (nhds 0)) :
+    WeilGroundStateUniformOnClosedStrip A
+      (fun n z ↦ weilGroundStateCenteredFourier (L n) (f n) z) target :=
+  weilGroundStateCenteredFourier_uniform_transfer
+    hA hf hg hfsupp hgsupp hgTarget herror
+
+example :
+    |weilGroundStateEscapingPoint.im| < 1 / 2 :=
+  weilGroundStateEscapingPoint_mem_open_halfStrip
+
+example (n : ℕ) :
+    weilGroundStateCenteredFourier 0
+      (weilGroundStateEscapingPacket n) weilGroundStateEscapingPoint = 1 :=
+  weilGroundStateCenteredFourier_zero_escapingPacket n
+
+example :
+    Filter.Tendsto
+      (fun n : ℕ ↦
+        weilGroundStateUnweightedMass (weilGroundStateEscapingPacket n))
+      Filter.atTop (nhds 0) :=
+  tendsto_weilGroundStateUnweightedMass_escapingPacket
+
+example :
+    Filter.Tendsto
+      (fun n : ℕ ↦
+        weilGroundStateUnweightedSqMass (weilGroundStateEscapingPacket n))
+      Filter.atTop (nhds 0) :=
+  tendsto_weilGroundStateUnweightedSqMass_escapingPacket
+
+example :
+    ¬ WeilGroundStateUniformOnClosedStrip (1 / 4)
+      (fun n ↦ weilGroundStateFourierTransform
+        (weilGroundStateEscapingPacket n))
+      (fun _ ↦ 0) :=
+  not_weilGroundStateEscapingPacket_uniform_zero
+
+example : WeilGroundStateFourierTopologyCertificate :=
+  weilGroundStateFourierTopology_endpoint
 
 end LeanLab.Riemann

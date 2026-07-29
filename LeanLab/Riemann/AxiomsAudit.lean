@@ -23,6 +23,7 @@ import LeanLab.Riemann.HardyThetaInversion
 import LeanLab.Riemann.HardyComplexAlpha
 import LeanLab.Riemann.HardyTangentialThetaIntegral
 import LeanLab.Riemann.WeilHodgeLattice
+import LeanLab.Riemann.WeilGroundStateFourierTopology
 import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
 import LeanLab.Riemann.PairCorrelationTriangularMass
@@ -1287,6 +1288,15 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.classicalDetectorSmoothedSeries_eq_residue_add_shifted
 #print axioms LeanLab.Riemann.classicalDetectorCoefficientGap_shifted_identity
 #print axioms LeanLab.Riemann.classicalDetectorContourShift_endpoint
+#print axioms LeanLab.Riemann.norm_exp_I_mul_mul_real_le_stripWeight
+#print axioms LeanLab.Riemann.norm_weilGroundStateFourierTransform_sub_le_stripError
+#print axioms LeanLab.Riemann.weilGroundStateFourier_uniform_transfer
+#print axioms LeanLab.Riemann.weilGroundStateCenteredFourier_uniform_transfer
+#print axioms LeanLab.Riemann.weilGroundStateFourierTransform_escapingPacket
+#print axioms LeanLab.Riemann.tendsto_weilGroundStateUnweightedMass_escapingPacket
+#print axioms LeanLab.Riemann.tendsto_weilGroundStateUnweightedSqMass_escapingPacket
+#print axioms LeanLab.Riemann.not_weilGroundStateEscapingPacket_uniform_zero
+#print axioms LeanLab.Riemann.weilGroundStateFourierTopology_endpoint
 #print axioms LeanLab.Riemann.mem_turingXiZeroIndexFinset_iff
 #print axioms LeanLab.Riemann.rectangleBoundaryIntegral_logDeriv_riemannXi_eq_turingXiZeroIndexFinset_card
 #print axioms LeanLab.Riemann.TuringXiRectangleCertificate.candidates_eq_actual

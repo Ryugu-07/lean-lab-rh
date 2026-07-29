@@ -1945,3 +1945,16 @@ It freezes an exponential-strip weighted error sufficient for compact-uniform Fo
 convergence and an escaping smooth packet that tests whether ordinary unweighted convergence
 can be promoted. It does not assume the actual comparison, simple-even source ground states,
 the all-real-zero limit, H7, or RH.
+
+**2026-07-30 local result.** Full success compiles as
+`weilGroundStateFourierTopology_endpoint`. Exponential-strip weighted `L1` error controls the
+entire closed Fourier strip simultaneously and supports the two-stage transfer in the literal
+centered source coordinate. Conversely, a smooth compact packet escaping to `+infinity` has
+ordinary `L1` and squared `L2` masses tending to zero while its transform at `-i/4` remains
+exactly one.
+
+The omission search therefore sharpens, rather than closes, the source comparison step. A valid
+comparison must prove exponential-tail control at every fixed strip width below `1/2` (or a
+different theorem implying the same transform topology). The actual weighted
+`theta_x-k_lambda` estimate and simple-even ground-state theorem remain the first H7 source
+obstacles; the all-real-zero limit, H7, and RH remain open.

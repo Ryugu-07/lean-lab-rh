@@ -3490,6 +3490,39 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.
 
+### H7 Fourier-topology local result
+
+- `classification`: `FULL_SUCCESS / FOURIER_TOPOLOGY_IDENTIFIED`.
+- `compiled_endpoint`: `weilGroundStateFourierTopology_endpoint`.
+- `positive_chain`: exponential kernel identity;
+  `->` closed-strip pointwise majorant;
+  `->` actual integral-difference bound;
+  `->` whole-closed-strip uniform sequence control;
+  `->` two-stage target transfer;
+  `->` exact `weilGroundStateCenteredFourier` specialization.
+- `negative_chain`: normalized smooth compact bump;
+  `->` modulation at Laplace rate `1/4`;
+  `->` translation to `n` and scale `exp(-n/4)`;
+  `->` unweighted `L1 -> 0` and squared `L2 -> 0`;
+  `->` Fourier value at `-i/4` remains exactly one;
+  `->` no uniform convergence to zero on the closed quarter-strip.
+- `OBS-H7-CONNES-FOURIER-TOPOLOGY-01`: closed locally.
+- `OBS-H7-CONNES-ACTUAL-GROUNDSTATE-COMPARISON-01`: sharpened to an
+  `exp(A*abs(x))`-weighted comparison for every fixed `A<1/2`.
+- `OBS-H7-CONNES-SIMPLE-EVEN-GROUNDSTATE-01`: remains open.
+- `historical_omission_result`: "sufficiently good approximation" cannot mean ordinary
+  unweighted `L1`, unweighted `L2`, or support-blind projective convergence when support
+  expands; an exponential-tail rate is sufficient.
+- `strict_boundary`: no actual `theta_x-k_lambda` estimate, simple-even theorem,
+  all-real-zero limit, H7, or RH.
+- `preregistration_public_gate`: commit `fde35b125edd7de20e80727911fc1dad22471d78`,
+  run `30486451346`, job `90693225570`, passed in `1m36s`.
+- `local_audit`: 527-line no-sorry module; nine exact checks; nine selected standard-only
+  axiom prints; empty forbidden/resource scans and patch check; full build `8803/8803`.
+- `next_gate`: freeze and publish the implementation, then require public CI before immutable
+  evidence.
+- `global_goal`: active.
+
 ## 2026-07-30 H1 Hardy--Littlewood eta-to-Theta Abel-transfer local result
 
 - `classification`: `FULL_SUCCESS / ETA_TO_THETA_TRANSFER_FORMALIZED`.
