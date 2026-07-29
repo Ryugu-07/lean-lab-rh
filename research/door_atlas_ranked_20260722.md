@@ -303,6 +303,14 @@ reflection-symmetric bow may show why zeta symmetry alone does not. The larger o
 remains cross-route: amplify one off-line bow faster than the density error. No source-backed
 functional with the required uniform tail was found.
 
+Post-dichotomy update, 2026-07-30: the project now compiles Maynard--Pratt's actual source-scale
+Type-I/Type-II alternative. Campaign
+`LITERATURE-20260730-H2-MAYNARD-PRATT-TYPE-II-RARITY-01` selects Lemma 24, the easier Type-II
+branch. The omission test is exact: the source cites arbitrary-polynomial twisted fourth-moment
+asymptotics, while its consumer needs only an upper bound for one Mobius polynomial of length
+`2*T^(1/100)`. This campaign cannot remove the bow obstruction, which remains in the
+Type-I/clustering branch.
+
 Formalization fit: `1/5`. Machine-task fit: `2/5` for exponent bookkeeping and finite Dirichlet
 polynomials, `1/5` for the core estimates.
 
@@ -312,7 +320,9 @@ polynomials, `1/5` for the core estimates.
    expose where it excludes a single orbit.
 2. Test the exact half-isolation disjunction on a finite critical-reflection-symmetric bow and
    identify the precise vertical-gap premise that fails.
-3. Monitor improvements only when they change the exceptional-zero logic, not merely an exponent.
+3. Formalize Type-II local fourth-moment charging and test whether the fixed short-Mobius moment
+   admits a weaker proof than the cited general asymptotics.
+4. Monitor improvements only when they change the exceptional-zero logic, not merely an exponent.
 
 ## D5. Zero statistics and random matrices
 

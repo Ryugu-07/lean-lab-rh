@@ -4411,3 +4411,33 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   diff empty.
 - `next_gate`: one closure receipt and public CI, then stop this local campaign and rerank.
 - `global_goal`: active.
+
+## 2026-07-30 H2 Maynard--Pratt Type-II rarity launch
+
+- `parent_public_closure`: H1 eta-primitive mean-square receipt
+  `dd593af9c0a838016f4ca954221dc7408a9d662a`, Lean Action run `30500121527`, build job
+  `90737729961`, passed in `1m56s`.
+- `H2-MAYNARD-PRATT-TYPE-II-RARITY-01`: selected after fresh comparison with H1 source-X and
+  mollifier moments, H7/H8 concrete spectral objects, H10 curve geometry, H11 sparse
+  amplification, and H12 global counts.
+- `compiled_parent`: literal source-scale actual-zero Type-I/Type-II dichotomy in
+  `eventually_classicalDetectorSource_typeILog_or_typeII`.
+- `source_edge`: Maynard--Pratt Lemma 24:
+  Type-II shifted-integral largeness; `->` Gamma truncation; `->` local fourth-moment charge;
+  `->` multiplicity-aware separated packing; `->` one fixed short-Mobius twisted fourth
+  moment; `->` `R_II(sigma,T) <= T^(2*(1-sigma))*log(T)^O(1)`.
+- `historical_omission_test`: the source cites arbitrary-polynomial asymptotics valid beyond
+  length `T^(1/11-epsilon)`, while the consumer needs only an upper bound for its fixed
+  `2*T^(1/100)` Mobius polynomial.
+- `OBS-H2-MAYNARD-PRATT-TYPE-II-RARITY-01`: selected.
+- `OBS-H2-TYPE-II-LOCAL-FOURTH-MOMENT-CHARGE-01`: selected subedge.
+- `OBS-H2-TYPE-II-MULTIPLICITY-PACKING-01`: selected subedge.
+- `OBS-H2-SOURCE-MOBIUS-TWISTED-FOURTH-MOMENT-01`: selected producer.
+- `OBS-H2-TYPE-I-RARITY-01`: remains open outside the endpoint.
+- `OBS-H2-ACTUAL-ZETA-BOW-EXCLUSION-01`: remains open outside the endpoint.
+- `negative_control`: a theorem conditional on the twisted fourth moment or local zero count
+  is a source reduction, not the Type-II rarity estimate.
+- `strict_boundary`: no Type-I rarity, bow exclusion, full density theorem, H2, zero-free
+  result, or RH.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- `global_goal`: active.
