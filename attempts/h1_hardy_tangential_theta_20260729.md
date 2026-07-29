@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H1-HARDY-TANGENTIAL-THETA-01`
 
 Node: `H1-HARDY-TANGENTIAL-THETA-LIMIT-01`
 
-Status: `FULL_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
+Status: `FULL_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PUBLIC_GREEN / CLOSURE_RECEIPT_CI_PENDING`
 
 ## Fixed question
 
@@ -32,6 +32,7 @@ critical-line zeros?
 | 12 | `LOCAL_AUDIT` | The two new modules total 2,489 lines and contain no forbidden declarations or resource relaxations. Four exact TargetChecks compile; six selected axiom prints contain only `propext`, `Classical.choice`, and `Quot.sound`; warning-as-error checks, `git diff --check`, and full build `8797/8797` pass. | Freeze the six implementation files and require public CI. |
 | 13 | `PUBLIC_IMPLEMENTATION_GATE` | Frozen implementation commit `75f5c575b2c3f050f0e5703efb5ce6851d97775c` passed Lean Action run `30435633763`, build job `90522592740`, in `2m17s`. | Publish immutable evidence without changing proof source. |
 | 14 | `PUBLIC_EVIDENCE_GATE` | Docs-only immutable-evidence commit `85f0ae62feb457961a3e71ca15db50fa195ce459` passed Lean Action run `30436167642`, build job `90524303908`, in `2m7s`; the six frozen files retain an empty diff from implementation. | Publish the final ledger, then a separate closure receipt. |
+| 15 | `PUBLIC_FINAL_LEDGER_GATE` | Docs-only final-ledger commit `2365765bf5ec9eb155312dce119fe6cccbbbff56` passed Lean Action run `30436418445`, build job `90525116015`, in `1m44s`; the six-file freeze is intact. | Publish one closure receipt and require its public CI before local STOP. |
 
 ## Current frontier
 

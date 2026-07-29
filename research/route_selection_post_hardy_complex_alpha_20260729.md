@@ -101,3 +101,7 @@ RH remain open; the persistent RH Goal remains active.
 Docs-only immutable evidence `85f0ae62feb457961a3e71ca15db50fa195ce459` passed Lean Action
 run `30436167642`, build job `90524303908`, in `2m7s`; the six frozen implementation files
 remain unchanged.
+
+Final ledger `2365765bf5ec9eb155312dce119fe6cccbbbff56` passed Lean Action run
+`30436418445`, build job `90525116015`, in `1m44s`. One closure-receipt CI remains before local
+STOP and fresh cross-family selection.

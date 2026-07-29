@@ -6652,3 +6652,16 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   `75f5c575b2c3f050f0e5703efb5ce6851d97775c`.
 - Next gate is a docs-only final ledger and public CI, followed by a closure receipt. Persistent
   RH Goal active.
+
+## 2026-07-29 H1 Hardy tangential-theta final ledger public green
+
+- Final-ledger commit `2365765bf5ec9eb155312dce119fe6cccbbbff56` passed public Lean
+  Action run `30436418445`, build job `90525116015`, in `1m44s`.
+- Preregistration, frozen implementation, immutable evidence, and final ledger are public-green;
+  the frozen six-file diff remains empty.
+- The closure receipt closes only `H1.hardy.tangential-theta-abel-law`.
+- Keep quantitative critical-zero counts, positive proportion, Selberg's global moment
+  producer, the Levinson--Conrey auxiliary count, H1, and RH open.
+- After closure-receipt public CI, stop this local campaign and return to fresh cross-family
+  historical omission selection. Original conjectures and direct RH attacks remain open.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.

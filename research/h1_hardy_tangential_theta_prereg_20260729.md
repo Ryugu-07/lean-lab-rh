@@ -8,7 +8,7 @@ Node: `H1-HARDY-TANGENTIAL-THETA-LIMIT-01`
 
 Primary mode: `LITERATURE`
 
-Status: `PREREGISTRATION_PUBLIC_GREEN / IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
+Status: `PREREGISTRATION_PUBLIC_GREEN / IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PUBLIC_GREEN / CLOSURE_RECEIPT_CI_PENDING`
 
 Public preregistration evidence: commit
 `648d8e8140f1af0ea5726cf030b8ab4bc4dc8581`, Lean Action run `30429533400`, build job
@@ -21,6 +21,10 @@ that commit.
 
 Immutable evidence: docs-only commit `85f0ae62feb457961a3e71ca15db50fa195ce459`, Lean Action run
 `30436167642`, build job `90524303908`, passed in `2m7s`. The frozen six-file diff remains empty.
+
+Final ledger: docs-only commit `2365765bf5ec9eb155312dce119fe6cccbbbff56`, Lean Action run
+`30436418445`, build job `90525116015`, passed in `1m44s`. The frozen six-file diff remains
+empty.
 
 ## Fixed historical question
 
