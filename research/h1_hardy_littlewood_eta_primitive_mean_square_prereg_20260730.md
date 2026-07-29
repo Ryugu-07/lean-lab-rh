@@ -9,7 +9,7 @@ Node: `H1-HARDY-LITTLEWOOD-ETA-PRIMITIVE-MEAN-SQUARE-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_PENDING`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Local implementation result
 
@@ -25,7 +25,11 @@ The no-sorry module and registration files compile with warning-as-error; the mo
 
 Frozen implementation commit `6245bdbc920be5129442da9cfa8d4df586e2730d` passed independent
 Lean Action run `30499538237`, build job `90735916929`, in `2m21s`. The five-file frozen proof
-and registration diff is empty. Immutable evidence is the next public gate.
+and registration diff is empty.
+
+Docs-only immutable-evidence commit `b2a2b5122f0ab326b0c36e3bab614c4c95e598f5`
+passed Lean Action run `30499767836`, build job `90736633735`, in `2m2s`. The frozen diff
+remains empty. The final ledger is the next public gate.
 
 ## Parent and fixed source
 
