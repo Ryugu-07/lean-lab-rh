@@ -2,7 +2,7 @@
 
 Date: 2026-07-29
 
-Status: `H7_CONNES_NESTED_PROJECTION_POSITIVE_TYPE_IMPLEMENTATION_PUBLIC_GREEN`
+Status: `H7_CONNES_NESTED_PROJECTION_POSITIVE_TYPE_IMMUTABLE_EVIDENCE_GREEN`
 
 ## Closed parent
 
@@ -113,4 +113,6 @@ The persistent RH Goal remains active.
 - Local audit passes through the full `8793/8793` build. Frozen implementation commit
   `25c18e31cd882f9ad2f43fe26900e450d98c0500` passed Lean Action run `30411787173`, build
   job `90449324931`, in `2m1s`; its five proof/registration files remain unchanged.
-- The next gate is docs-only immutable evidence and independent public CI.
+- Immutable-evidence commit `78f1810d722e9b846a4fb7c4b40c8d78b3edf95a` passed Lean Action
+  run `30411999399`, build job `90450005443`, in `1m31s`; the frozen-set diff remains empty.
+- The next gate is a docs-only final ledger and independent public CI, then a closure receipt.

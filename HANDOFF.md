@@ -6399,3 +6399,18 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   distributional Weil limit, unconditional Weil positivity, H7, and RH open.
 - Next gate is one docs-only immutable-evidence commit and its own public CI.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H7 Connes projection-defect immutable evidence public green
+
+- Immutable-evidence commit `78f1810d722e9b846a4fb7c4b40c8d78b3edf95a` passed Lean Action
+  run `30411999399`, build job `90450005443`, in `1m31s`.
+- The five frozen proof/registration files have an empty diff from implementation
+  `25c18e31cd882f9ad2f43fe26900e450d98c0500`.
+- Final ledger closes only `H7.connes.nested-projection-defect-positive-type` as
+  `FULL_SUCCESS / SOURCE_POSITIVE_TYPE_HINGE_FORMALIZED`.
+- Keep actual adèle projections and containment, trace class, prolate and archimedean
+  asymptotics, the distributional Weil limit, unconditional Weil positivity, Hilbert--Polya,
+  H7, and RH open.
+- Next gate: publish this docs-only final ledger and require public CI, then one closure receipt
+  before fresh cross-family route selection.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.

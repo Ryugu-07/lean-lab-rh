@@ -8,7 +8,7 @@ Node: `H7-CONNES-NESTED-PROJECTION-POSITIVE-TYPE-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / FALSIFICATION`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_REQUIRED`
 
 ## Parent and selection
 
@@ -152,13 +152,18 @@ active after every local outcome.
   scans, warning-as-error compiles, `git diff --check`, and full build `8793/8793`.
 - `deltas`: historical route coverage `+1`, source-logic map `+1`, hard gap `0`, RH frontier
   `0`.
-- `next_gate`: freeze the implementation and require independent public CI before publishing
-  immutable evidence.
+- `implementation_public_green`: frozen commit
+  `25c18e31cd882f9ad2f43fe26900e450d98c0500`, run `30411787173`, build job
+  `90449324931`, passed in `2m1s`.
 
 The frozen implementation commit `25c18e31cd882f9ad2f43fe26900e450d98c0500` passed public Lean
 Action run `30411787173`, build job `90449324931`, in `2m1s`. The five frozen proof and
 registration files have an empty diff from that commit. The next gate is docs-only immutable
-evidence and its independent public CI.
+evidence and its independent public CI; that gate is now complete below.
+
+Immutable-evidence commit `78f1810d722e9b846a4fb7c4b40c8d78b3edf95a` passed public Lean
+Action run `30411999399`, build job `90450005443`, in `1m31s`. The frozen-set diff remains
+empty. The next gate is the docs-only final ledger and independent public CI.
 
 ## Audit gates
 

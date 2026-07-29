@@ -2668,6 +2668,11 @@ implementation `15381a49ff4dfb92a0ab4e29d5e76383f9789139` is empty. This node re
 - `proof_freeze`: the five proof and registration sources have an empty diff from the frozen
   implementation.
 - `next_gate`: docs-only immutable evidence and public CI.
+- `immutable_evidence`: `78f1810d722e9b846a4fb7c4b40c8d78b3edf95a`.
+- `evidence_public_ci`: run `30411999399`, build job `90450005443`, passed in `1m31s`.
+- `local_stop`: close only `H7.connes.nested-projection-defect-positive-type`; every actual
+  number-field projection, trace, limit, positivity, H7, and RH edge remains open.
+- `next_gate`: docs-only final ledger and public CI, then closure receipt.
 
 ### Public implementation receipt
 

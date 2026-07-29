@@ -8,7 +8,7 @@ Node: `H7-CONNES-NESTED-PROJECTION-POSITIVE-TYPE-01`
 
 Classification: `FULL_SUCCESS / SOURCE_POSITIVE_TYPE_HINGE_FORMALIZED`
 
-Public state: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Public state: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
 
 ## Source question
 
@@ -124,3 +124,36 @@ The frozen proof and registration set is:
 
 The immutable-evidence and final-ledger commits must leave this set unchanged from the frozen
 implementation.
+
+Immutable-evidence commit `78f1810d722e9b846a4fb7c4b40c8d78b3edf95a` passed public Lean
+Action run `30411999399`, build job `90450005443`, in `1m31s`. The frozen-set diff from
+`25c18e31cd882f9ad2f43fe26900e450d98c0500` is empty.
+
+## Final ledger
+
+Close exactly:
+
+```text
+H7.connes.nested-projection-defect-positive-type
+```
+
+as `FULL_SUCCESS / SOURCE_POSITIVE_TYPE_HINGE_FORMALIZED`.
+
+Keep open:
+
+1. construction of the actual number-field adèle-class Hilbert space and cutoff projections;
+2. proof of the exact source containment `Q'_Lambda <= S_Lambda`;
+3. trace-class and normalization control for the cutoff products;
+4. prolate and archimedean cutoff asymptotics;
+5. a uniform distributional limit equal to the complete Weil distribution;
+6. unconditional Weil positivity on an RH-equivalent test class;
+7. an actual Hilbert--Polya or absorption-spectrum realization;
+8. H7 and RH.
+
+The durable conclusion is that the finite sign is completely rigid after projection
+containment: it is an exact norm-square identity. Historical omission work in this route should
+therefore inspect the infinite and arithmetic producers, not repeat the finite positivity
+consumer.
+
+After final-ledger public CI, publish one closure receipt and return the active RH Goal to fresh
+cross-family historical omission selection.
