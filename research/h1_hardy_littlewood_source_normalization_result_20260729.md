@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-SOURCE-NORMALIZATION-ETA-LOWER-01`
 
 Classification: `FULL_SUCCESS / SOURCE_NORMALIZATION_ETA_LOWER_FORMALIZED`
 
-Public state: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PENDING`
+Public state: `FINAL_LEDGER_PUBLIC_GREEN / CLOSURE_RECEIPT_PENDING`
 
 ## Compiled result
 
@@ -130,5 +130,8 @@ The persistent RH Goal remains active.
   run `30468913754`, build job `90633769051`, in `2m43s`.
 - Immutable-evidence commit `d3af00a675bf4e99f422a230630e2877a9d266f9` passed Lean Action
   run `30469279435`, build job `90634996505`, in `2m0s`.
+- Final-ledger commit `0bb0b20f07717a72fbefb397d5f70e4876f03e57` passed Lean Action
+  run `30469539221`, build job `90635882124`, in `2m16s`.
 
-The next gate is the docs-only final ledger.
+The closure receipt records this chain and closes only the fixed source normalization and eta
+lower-premise node.

@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-SOURCE-NORMALIZATION-ETA-LOWER-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PENDING`
+Status: `FINAL_LEDGER_PUBLIC_GREEN / CLOSURE_RECEIPT_PENDING`
 
 ## Parent and selection
 
@@ -198,3 +198,7 @@ Action run `30468913754`, build job `90633769051`, in `2m43s`. The five proof an
 files are frozen. Immutable-evidence commit `d3af00a675bf4e99f422a230630e2877a9d266f9`
 passed public Lean Action run `30469279435`, build job `90634996505`, in `2m0s`; the frozen
 five-file diff remains empty. Publish the docs-only final ledger next.
+
+Final-ledger commit `0bb0b20f07717a72fbefb397d5f70e4876f03e57` passed public Lean
+Action run `30469539221`, build job `90635882124`, in `2m16s`. Publish one docs-only closure
+receipt; after its public CI succeeds, close only this fixed normalization/eta-lower node.
