@@ -8,7 +8,7 @@ Node: `H2-CLASSICAL-DETECTOR-INVERSE-MELLIN-LINE-01`
 
 Classification: `FULL_SUCCESS / KNOWN_INVERSE_MELLIN_EDGE_FORMALIZED`
 
-Public state: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PENDING`
+Public state: `FINAL_LEDGER_PUBLIC_GREEN / CLOSURE_RECEIPT_PENDING`
 
 ## Compiled result
 
@@ -131,3 +131,7 @@ Keep open:
 The durable conclusion is that the inverse vertical line was an omitted formal bridge that
 modern Mellin inversion closes exactly. The next campaign must attack the contour shift or rerank
 against another historical family; it should not return to Gamma-constant optimization.
+
+Final-ledger commit `2749e85f2ab999ab5adaf87431453a3dcea8aa6a` passed public Lean
+Action run `30415195469`, build job `90460076360`, in `1m59s`. The frozen-set diff remains
+empty. The closure receipt records the complete public chain.

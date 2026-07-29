@@ -6497,3 +6497,16 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   H2, and RH open.
 - Next gate is the docs-only final-ledger commit and public CI, then one closure receipt.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H2 inverse Mellin final ledger public green
+
+- Final-ledger commit `2749e85f2ab999ab5adaf87431453a3dcea8aa6a` passed Lean Action
+  run `30415195469`, build job `90460076360`, in `1m59s`.
+- The preregistration, frozen implementation, immutable evidence, and final ledger are all
+  public-green; the frozen proof-source diff remains empty.
+- Closure receipt closes only `H2.classical-detector.inverse-mellin-line`.
+- Keep the infinite contour shift, both horizontal edges, shifted detector, density mechanism,
+  H2, and RH open.
+- After closure-receipt public CI, return to fresh cross-family historical omission selection;
+  do not continue H2 by inertia.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.

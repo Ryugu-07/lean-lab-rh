@@ -2673,6 +2673,10 @@ implementation `15381a49ff4dfb92a0ab4e29d5e76383f9789139` is empty. This node re
 - `local_stop`: close only `H2.classical-detector.inverse-mellin-line`; the contour shift,
   density mechanism, H2, and RH remain open.
 - `next_gate`: docs-only final ledger.
+- `final_ledger`: `2749e85f2ab999ab5adaf87431453a3dcea8aa6a`.
+- `final_ledger_public_ci`: run `30415195469`, build job `90460076360`, passed in `1m59s`.
+- `frozen_set_diff_through_ledger`: empty.
+- `next_gate`: one closure receipt, then fresh cross-family selection.
 - `global_goal`: active.
 
 ### Public implementation receipt

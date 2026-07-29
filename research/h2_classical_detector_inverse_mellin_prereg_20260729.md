@@ -8,7 +8,7 @@ Node: `H2-CLASSICAL-DETECTOR-INVERSE-MELLIN-LINE-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PENDING`
+Status: `FINAL_LEDGER_PUBLIC_GREEN / CLOSURE_RECEIPT_PENDING`
 
 ## Parent and available producer
 
@@ -131,3 +131,6 @@ now frozen.
 
 Immutable-evidence commit `292edf1ee14cab188b2b8696df2f7722350f4f58` passed run
 `30415037051`, build job `90459582118`, in `2m10s`, with an empty frozen-set diff.
+
+Final-ledger commit `2749e85f2ab999ab5adaf87431453a3dcea8aa6a` passed run
+`30415195469`, build job `90460076360`, in `1m59s`. Only the closure receipt remains.

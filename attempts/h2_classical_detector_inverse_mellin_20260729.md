@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H2-CLASSICAL-DETECTOR-INVERSE-MELLIN-01`
 
 Node: `H2-CLASSICAL-DETECTOR-INVERSE-MELLIN-LINE-01`
 
-Status: `FULL_SUCCESS / IMMUTABLE_EVIDENCE_PUBLIC_GREEN`
+Status: `FULL_SUCCESS / FINAL_LEDGER_PUBLIC_GREEN`
 
 ## Fixed question
 
@@ -30,6 +30,7 @@ the infinite sum-integral exchange?
 | 10 | `ENDPOINT` | `classicalDetectorInverseMellinLine : ClassicalDetectorInverseMellinLine` compiles with no extra premise. Targets, exact checks, root import, and standard-only axiom audit compile. | Classify `FULL_SUCCESS / KNOWN_INVERSE_MELLIN_EDGE_FORMALIZED`; move the route frontier to the infinite contour shift. |
 | 11 | `PUBLIC_IMPLEMENTATION_GATE` | Frozen implementation `8c5d820a92178dfd3ad3582e9ffe733a7377bb0e` passed run `30414837829`, build job `90458965005`, in `2m59s`. | Freeze the five proof/registration files and publish immutable evidence without changing them. |
 | 12 | `IMMUTABLE_EVIDENCE_GATE` | Evidence commit `292edf1ee14cab188b2b8696df2f7722350f4f58` passed run `30415037051`, build job `90459582118`, in `2m10s`; the frozen-set diff is empty. | Publish the docs-only final ledger, then one closure receipt. |
+| 13 | `FINAL_LEDGER_GATE` | Final ledger `2749e85f2ab999ab5adaf87431453a3dcea8aa6a` passed run `30415195469`, build job `90460076360`, in `1m59s`; the frozen-set diff remains empty. | Publish one closure receipt, then stop this local campaign and rerank. |
 
 ## Current frontier
 
