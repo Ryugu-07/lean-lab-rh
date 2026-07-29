@@ -2029,3 +2029,16 @@ tests whether one cutoff above `3T`, the explicit ordered tail, and the weaker f
 `O(L+N)` estimate already suffice. Full success must also prove the exact primitive-series
 sign and the restricted-measure `lintegral`; no source-X moment, parameter budget, linear
 count, H1, or RH is included.
+
+**2026-07-30 local result.** Full success compiles as
+`hardyLittlewoodEtaPrimitiveMeanSquare_endpoint`. Lean proves the exact finite derivative and
+primitive identities, passes both sides through separately controlled ordered limits, and
+identifies the eta primitive with the negative imaginary source-psi increment. With
+`N=ceil(3T)`, it checks `abs(t+u)<=N` and `N<=4T`, then combines the finite `O(T+N)` estimate
+and explicit tail into the uniform shifted `O(T)` source-psi mean square. The resulting
+eta-window square moment is converted to the exact `[T,2T]` restricted `lintegral`.
+
+The omission search finds that Lemma 8's full asymptotic and the stronger finite
+`O(N/log N)` saving are not needed for this consumer-strength result. The actual source-X
+moving-window moment and parameter budget remain open, as do the other historical families,
+H1, and RH.

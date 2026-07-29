@@ -7,7 +7,7 @@ Campaign:
 
 Node: `H1-HARDY-LITTLEWOOD-ETA-PRIMITIVE-MEAN-SQUARE-01`
 
-Status: `PREREGISTRATION_LOCAL / PUBLIC_CI_PENDING`
+Status: `LOCAL_FULL_SUCCESS / PUBLIC_IMPLEMENTATION_CI_PENDING`
 
 ## Fixed question
 
@@ -27,16 +27,23 @@ eta-window-error moment premise of the finite count consumer?
 | 5 | `PROOF_CANDIDATE` | For `t in [T,2T]`, `0<=u<=T`, a cutoff above `3T` makes the compiled Theta remainder uniform; the finite `O(T+N)` estimate remains `O(T)`. | Preregister direct finite-to-infinite passage with explicit rounding and constants. |
 | 6 | `NEGATIVE_CONTROLS` | Pointwise convergence, the unshifted moment alone, or an assumed primitive identity does not discharge the source window-error premise. | Freeze all three interfaces as full-success requirements. |
 | 7 | `PREREGISTRATION` | The endpoint includes canonical psi, primitive identity, shifted ordinary mean square, restricted `lintegral`, registration, and audit. | Publish docs only; do not edit `LeanLab/` before public CI. |
+| 8 | `FINITE_CALCULUS` | Lean verifies the literal source-term/Theta-term alignment, the `n=1` cancellation, and that the derivative of the negative imaginary finite Theta polynomial is `Re(eta_N)-1`. | Use the finite fundamental theorem of calculus; do not differentiate the infinite series termwise. |
+| 9 | `ORDERED_LIMITS` | The eta remainder controls the primitive integral uniformly on each fixed interval, while the public eta-to-Theta transfer gives the canonical ordered Theta limit. | Pass the two sides of the finite primitive identity to their limits separately and use uniqueness. |
+| 10 | `UNIFORM_CUTOFF` | For `t in [T,2T]`, `0<=u<=T`, `N=ceil(3T)` satisfies `abs(t+u)<=N` and `N<=4T`. The finite `O(T+N)` theorem plus the explicit tail yields a constant times `T`. | The source's stronger Lemma 8 asymptotic and `O(N/log N)` saving are unnecessary for this consumer. |
+| 11 | `WINDOW_CONSUMER` | The primitive identity rewrites the eta-window error as a scaled imaginary difference of two shifted psi values. The two uniform mean squares give the ordinary window moment. | Convert the nonnegative continuous integrand exactly from `[T,2T]` interval integral to the restricted-measure `lintegral`. |
+| 12 | `LOCAL_AUDIT` | `HardyLittlewoodEtaPrimitiveMeanSquare.lean` and all registration files compile with warning-as-error; module build is `8724/8724`; forbidden scan is empty; selected axiom prints are standard-only. | Classify local full success and freeze the implementation for public CI. |
 
 ## Current frontier
 
 - `compiled_left_context`: actual Lemma 3 eta remainder and eta-to-Theta ordered tail.
 - `compiled_finite_producer`: exact shifted polynomial mean square `O(L+N)`.
 - `compiled_right_consumer`: eta primitive/window error and finite exceptional-set count.
-- `selected_edge`: canonical source psi, primitive identification, and uniform shifted
-  square moment.
+- `closed_edge_local`: canonical source psi, primitive identification, uniform shifted square
+  moment, and the exact eta-window-error restricted `lintegral`.
 - `strict_successor`: actual source-X moving-window moment, then the Hardy--Littlewood
   parameter budget.
 - `not_claimed`: source-X moment, unconditional linear count, H1, or RH.
+- `local_endpoint`: `hardyLittlewoodEtaPrimitiveMeanSquare_endpoint`.
+- `public_status`: implementation commit and independent public CI pending.
 - `protected_files`: inherited modified and untracked files remain untouched and unstaged.
 - `global_goal`: active.

@@ -105,6 +105,7 @@ import LeanLab.Riemann.HardyLittlewoodSourceNormalization
 import LeanLab.Riemann.HardyLittlewoodFiniteMeanSquare
 import LeanLab.Riemann.HardyLittlewoodEtaAbelTransfer
 import LeanLab.Riemann.HardyLittlewoodEtaRemainder
+import LeanLab.Riemann.HardyLittlewoodEtaPrimitiveMeanSquare
 import LeanLab.Riemann.ClassicalZeroDetectorMellin
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.ClassicalZeroDetectorContourShift
@@ -1955,6 +1956,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``hardyLittlewoodEtaRemainder_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260730-H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01 reconstructs Hardy--Littlewood 1921 Lemma 3 through a direct finite inverse-difference argument on the actual logarithmic phases. Lean proves denominator separation, inverse-coefficient total variation at most one, phase-block constant 4, the actual eta remainder 4*N^(-sigma) without an abs(s) loss, local uniform convergence and holomorphy, odd/even identification on re(s)>1, identity-theorem continuation to re(s)>0 away from one, the critical-line specialization, and the existing Lemma 4 consumer. This does not prove the primitive-series error moment, source-X moment, parameter budget, unconditional linear count, H1, or RH." },
+    { id := "H1.hardy-littlewood.eta-primitive-mean-square"
+      tier := .tier2
+      title := "Formalize Hardy--Littlewood's eta primitive mean square"
+      statement :=
+        "Define the canonical ordered logarithmically weighted source series, identify its imaginary increment exactly with the eta primitive, combine the finite O(L+N) polynomial estimate with the eta-to-Theta remainder to prove the uniform shifted O(T) mean square, and discharge the eta-window restricted-lintegral premise of the finite count theorem."
+      leanName := some ``hardyLittlewoodEtaPrimitiveMeanSquare_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260730-H1-HARDY-LITTLEWOOD-ETA-PRIMITIVE-MEAN-SQUARE-01 reconstructs Hardy--Littlewood 1921 Lemma 7 at the exact consumer strength. Lean checks the source coefficient and phase alignment, the n=1 cancellation, finite derivative and primitive identities, separate ordered limit passages with no termwise infinite differentiation, a cutoff N=ceil(3T), the uniform shifted psi mean square, and the exact [T,2T] restricted-measure eta-window moment. The proof uses the compiled weaker finite O(L+N) estimate rather than Lemma 8's full asymptotic. The source-X moving-window moment, parameter budget, unconditional linear count, H1, and RH remain open." },
     { id := "H1.selberg.local-sign-change-producer"
       tier := .tier2
       title := "Formalize Selberg's local squared-mollifier sign detector"

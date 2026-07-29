@@ -31,6 +31,7 @@ import LeanLab.Riemann.HardyLittlewoodSourceNormalization
 import LeanLab.Riemann.HardyLittlewoodFiniteMeanSquare
 import LeanLab.Riemann.HardyLittlewoodEtaAbelTransfer
 import LeanLab.Riemann.HardyLittlewoodEtaRemainder
+import LeanLab.Riemann.HardyLittlewoodEtaPrimitiveMeanSquare
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.ClassicalZeroDetectorContourShift
 import LeanLab.Riemann.ClassicalZeroDetectorDyadicDichotomy
@@ -6337,6 +6338,35 @@ example (s : ℂ) (hs_ne : s ≠ 1) (hs_re : 0 < s.re) :
 
 example : HardyLittlewoodEtaRemainderCertificate :=
   hardyLittlewoodEtaRemainder_endpoint
+
+example (t : ℝ) :
+    hardyLittlewoodEtaPrimitive t =
+      -(hardyLittlewoodThetaSeriesValue (hardyCriticalLinePoint t) -
+          hardyLittlewoodThetaSeriesValue
+            (hardyCriticalLinePoint 0)).im :=
+  hardyLittlewoodEtaPrimitive_eq_thetaSeriesValue t
+
+example {T u : ℝ} (hT : 1 ≤ T) (hu0 : 0 ≤ u) (huT : u ≤ T) :
+    (∫ t in T..2 * T,
+      Complex.normSq
+        (hardyLittlewoodThetaSeriesValue
+          (hardyCriticalLinePoint (t + u)))) ≤
+      hardyLittlewoodThetaMeanSquareConstant * T :=
+  integral_normSq_hardyLittlewoodThetaSeriesValue_shift_le
+    hT hu0 huT
+
+example {T H : ℝ} (hT : 1 ≤ T) (hH0 : 0 ≤ H) (hHT : H ≤ T) :
+    (∫⁻ t, ENNReal.ofReal
+        (|hardyLittlewoodEtaWindowError H t| ^ 2)
+      ∂(MeasureTheory.volume.restrict
+        (Set.Icc T (2 * T)))) ≤
+      ENNReal.ofReal
+        (hardyLittlewoodEtaWindowMomentConstant * T) :=
+  lintegral_hardyLittlewoodEtaWindowError_sq_le
+    hT hH0 hHT
+
+example : HardyLittlewoodEtaPrimitiveMeanSquareCertificate :=
+  hardyLittlewoodEtaPrimitiveMeanSquare_endpoint
 
 example {A : ℝ} (hA : 0 ≤ A) {z : ℂ} (hz : |z.im| ≤ A) (x : ℝ) :
     ‖Complex.exp (Complex.I * z * (x : ℂ))‖ ≤

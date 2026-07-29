@@ -9,7 +9,19 @@ Node: `H1-HARDY-LITTLEWOOD-ETA-PRIMITIVE-MEAN-SQUARE-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTRATION_LOCAL / PUBLIC_CI_PENDING`
+Status: `LOCAL_FULL_SUCCESS / PUBLIC_IMPLEMENTATION_CI_PENDING`
+
+## Local implementation result
+
+The frozen endpoint compiles as
+`hardyLittlewoodEtaPrimitiveMeanSquare_endpoint`. Lean proves the canonical ordered source
+series and explicit critical-line tail, exact eta-primitive identity with checked sign and
+`n=1` cancellation, the uniform shifted `O(T)` mean square from the weaker finite `O(L+N)`
+bound at cutoff `ceil(3T)`, and the exact restricted-measure eta-window-error `lintegral`.
+
+The no-sorry module and registration files compile with warning-as-error; the module build is
+`8724/8724`; the forbidden scan is empty; selected axiom prints use only `propext`,
+`Classical.choice`, and `Quot.sound`. Independent public implementation CI is still pending.
 
 ## Parent and fixed source
 

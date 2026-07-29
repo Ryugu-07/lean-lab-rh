@@ -383,3 +383,22 @@ used by the count theorem.
 
 The source-X moving-window moment, parameter budget, unconditional linear count, Selberg and
 Levinson--Conrey global moments, every other historical family, H1, and RH remain open.
+
+## 2026-07-30 H1 Hardy--Littlewood eta primitive mean-square local result
+
+The omission test succeeds locally. Lean identifies the integral eta primitive exactly with
+the negative imaginary increment of the canonical ordered logarithmically weighted source
+series. The proof first establishes the finite derivative and primitive identities, including
+the source `n=1` cancellation, and then passes the eta integral and Theta polynomial through
+separate ordered limits. It does not differentiate the infinite series termwise.
+
+For `t in [T,2T]` and `0<=u<=T`, the source-valid cutoff `N=ceil(3T)` is at most `4T`.
+Consequently, the public finite `O(T+N)` mean square and explicit Theta tail prove the uniform
+infinite-series `O(T)` upper bound. This in turn supplies the ordinary eta-window moment and
+the exact restricted-measure `lintegral` required by the finite count consumer.
+
+The historical omission is a second premise reduction: neither Lemma 8's full asymptotic nor
+the stronger finite `O(N/log N)` saving is required for this consumer-strength Lemma 7 edge.
+No shortcut to RH has appeared. The actual source-X moving-window mean square and the
+Hardy--Littlewood parameter budget are the first open H1 successors; all other historical
+families, original conjectures, falsification, direct RH attacks, H1, and RH remain open.

@@ -4376,3 +4376,27 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `historical_policy`: the route is selected because a newly closed human-source inference
   creates a fixed omission test; original conjectures and direct RH attacks remain open.
 - `global_goal`: active.
+
+## 2026-07-30 H1 Hardy--Littlewood eta primitive mean-square local result
+
+- `classification`: `LOCAL_FULL_SUCCESS / HARDY_LITTLEWOOD_LEMMA7_CONSUMER_FORMALIZED`.
+- `H1-HARDY-LITTLEWOOD-ETA-PRIMITIVE-MEAN-SQUARE-01`: locally closed by
+  `hardyLittlewoodEtaPrimitiveMeanSquare_endpoint`.
+- `compiled_chain`: literal finite source alignment and `n=1` cancellation; `->` finite
+  derivative and primitive identity; `->` separate eta-integral and Theta ordered limit
+  passages; `->` exact eta primitive/source-psi identity; `->` cutoff `N=ceil(3T)` with
+  `N<=4T`; `->` uniform shifted source-psi `O(T)` mean square; `->` scaled eta-window
+  ordinary moment; `->` exact restricted-measure `lintegral` consumed by
+  `hardyLittlewood_source_finite_count`.
+- `historical_omission_result`: the public eta remainder and weaker finite `O(L+N)` theorem
+  suffice for the Lemma 7 upper bound needed by the count consumer; Lemma 8's full asymptotic
+  and the stronger finite `O(N/log N)` saving are not necessary premises for this edge.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-ERROR-MEAN-SQUARE-01`: locally closed.
+- `OBS-H1-HARDY-LITTLEWOOD-X-MEAN-SQUARE-01`: first open H1 successor.
+- `OBS-H1-HARDY-LITTLEWOOD-PARAMETER-BUDGET-01`: open.
+- `strict_boundary`: no source-X moment, parameter budget, unconditional linear count, H1, or
+  RH.
+- `local_audit`: warning-as-error module and registration compiles; module build `8724/8724`;
+  empty forbidden scan; selected standard-only axiom prints.
+- `public_status`: implementation commit and independent public CI pending.
+- `global_goal`: active.
