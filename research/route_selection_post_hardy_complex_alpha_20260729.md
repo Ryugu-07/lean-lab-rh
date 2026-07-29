@@ -85,3 +85,15 @@ The proof must establish that claim in Lean for every derivative order.
 
 Original conjectures, falsification, and direct RH attacks remain open. The persistent RH Goal
 remains active.
+
+## Implementation outcome
+
+The selected campaign reached full success. The two new no-sorry modules compile the exact
+cusp-to-infinity theta transformation, all-order theta flatness, all-order actual Xi-integral
+differentiation, equation (3), `hardyXiAbelMomentLaw_unconditional`, and
+`infinite_criticalLineZeros_hardy`.
+
+Frozen implementation commit `75f5c575b2c3f050f0e5703efb5ce6851d97775c` passed public Lean
+Action run `30435633763`, build job `90522592740`, in `2m17s`. The campaign closes only Hardy's
+qualitative critical-line infinitude theorem. Quantitative counts, positive proportion, H1, and
+RH remain open; the persistent RH Goal remains active.

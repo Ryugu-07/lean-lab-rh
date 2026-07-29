@@ -3787,3 +3787,36 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `strict_boundary`: quantitative counts, positive proportion, H1, and RH remain open.
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.
+
+## 2026-07-29 H1 Hardy tangential-theta local closure
+
+- `classification`: `FULL_SUCCESS / HARDY_1914_UNCONDITIONAL_INFINITY_FORMALIZED`.
+- `H1-HARDY-TANGENTIAL-THETA-LIMIT-01`: locally closed by
+  `hardyXiAbelMomentLaw_unconditional` and `infinite_criticalLineZeros_hardy`.
+- `compiled_chain`:
+  principal-branch cusp transform of `hardyThetaBoundaryTerm`;
+  `-> tendsto_pow_mul_iteratedDeriv_jacobiThetaHalf_cusp`;
+  `-> tendsto_iteratedDeriv_hardyThetaBoundaryTerm_all`;
+  `-> iteratedDeriv_hardyXiInteriorIntegral_eq`;
+  `-> hardyXiInteriorIntegral_iteratedDeriv_real`;
+  `-> hardyEquationThreeMomentIdentity`;
+  `-> tendsto_hardyXiAbelMoment_unconditional`;
+  `-> hardyXiAbelMomentLaw_unconditional`;
+  `-> infinite_criticalLineZeros_hardy`.
+- `OBS-H1-HARDY-TANGENTIAL-THETA-LIMIT-01`: closed.
+- `OBS-H1-HARDY-ABEL-MOMENT-LAW-01`: closed without boundary integrability or a custom
+  Bohr--Riesz axiom.
+- `first_open_after_result`: quantitative Hardy--Littlewood critical-zero counts; Selberg's
+  positive-proportion global moment producer; Levinson--Conrey's auxiliary count; H1 and RH.
+- `strict_boundary`: the theorem is infinitude on the critical line, not a positive proportion,
+  H1, or RH.
+- `local_audit`: 2,489 proof lines; four exact TargetChecks; six standard-only axiom prints;
+  empty forbidden/resource scans and patch check; warning-as-error compiles; full `8797/8797`
+  build.
+- `deltas`: historical route coverage `+1`, source logic `+1`, hard gap `0`, RH frontier `0`.
+- `public_implementation`: commit `75f5c575b2c3f050f0e5703efb5ce6851d97775c`, Lean Action run
+  `30435633763`, build job `90522592740`, passed in `2m17s`.
+- `proof_freeze`: the six proof and registration files must retain an empty diff from the
+  implementation commit.
+- `next_gate`: docs-only immutable evidence and public CI.
+- `global_goal`: active.

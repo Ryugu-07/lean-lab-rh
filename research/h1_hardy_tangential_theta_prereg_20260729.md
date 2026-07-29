@@ -8,7 +8,16 @@ Node: `H1-HARDY-TANGENTIAL-THETA-LIMIT-01`
 
 Primary mode: `LITERATURE`
 
-Status: `PREREGISTRATION_LOCAL / PUBLIC_CI_PENDING`
+Status: `PREREGISTRATION_PUBLIC_GREEN / IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_CI_PENDING`
+
+Public preregistration evidence: commit
+`648d8e8140f1af0ea5726cf030b8ab4bc4dc8581`, Lean Action run `30429533400`, build job
+`90503309053`, passed in `2m43s`.
+
+Frozen implementation evidence: commit
+`75f5c575b2c3f050f0e5703efb5ce6851d97775c`, Lean Action run `30435633763`, build job
+`90522592740`, passed in `2m17s`. The six proof and registration files remain unchanged after
+that commit.
 
 ## Fixed historical question
 

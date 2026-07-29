@@ -25,7 +25,7 @@ Coverage labels:
 | route_id | priority | route family | RH strength | current coverage | next census deliverable |
 | --- | --- | --- | --- | --- | --- |
 | H0 | CANONICAL | Riemann's xi function, functional equation, explicit formula, and prime-counting error terms | EQUIVALENT / FOUNDATION | DEEP_FORMALIZATION / CHEBYSHEV_MELLIN_EVIDENCE_PUBLIC_GREEN | Campaign `LITERATURE-20260728-H0-CHEBYSHEV-MELLIN-01`, frozen implementation `0ff8a577cb4eb247d6cfdbc03d82a5d7dd36707e` and immutable evidence `f038d09b6e3f8d337a59472d4eb8175e48e6f6d1`, compiles the exact `psi`/von Mangoldt partial sum, the `Re(s)>1` Mellin and `-zeta'/zeta` identities, and the cancellation-preserving ordered Dirichlet bridge from any `psi(N)-N=O(N^r)` hypothesis to `Re(s)>r`. An alternating control proves that this ordered convergence cannot be identified with Mathlib's absolute `LSeriesSummable`. The RH-strength error estimate, local uniform continuation, reverse zero exclusion, H0, and RH remain open. |
-| H1 | CANONICAL | Classical critical-line methods: Hardy-Littlewood, Selberg, Levinson-Conrey mollifiers, critical-zero proportions | PARTIAL_PROGRESS | DEEP_FORMALIZATION / LEVINSON_SIEGEL_STEP_GEOMETRY_PUBLICLY_CLOSED | Operational audit splits the compressed H1 row into Hardy--Littlewood oscillation, Selberg's 1942 squared-root-mollifier sign-change method, and Levinson--Conrey's off-line argument-principle method. The Selberg local detector and short-mollifier variational sufficiency compile, but the actual Levinson counting bridge remains open. Publicly closed campaign `PROOF-ATTEMPT-20260729-H1-LEVINSON-SIEGEL-STEP-01` compiles the overlooked source freedom connecting length-dependent derivative combinations to Siegel's step: an explicit smooth admissible family converges pointwise to the step, while both its midpoint slope and every sufficiently sharp transition obey quantitative derivative growth. The source optimizer, polynomial approximation rates, complexity-uniform mollified mean values, actual zeta auxiliary count, sparse-exception exclusion, H1, and RH remain open. |
+| H1 | CANONICAL | Classical critical-line methods: Hardy-Littlewood, Selberg, Levinson-Conrey mollifiers, critical-zero proportions | PARTIAL_PROGRESS | DEEP_FORMALIZATION / HARDY_1914_INFINITY_IMPLEMENTATION_PUBLIC_GREEN | The project now compiles Hardy's complete 1914 route to infinitely many actual critical-line nontrivial zeros: equations (1)--(3), all-order actual Xi-integral differentiation, a principal-branch Jacobi cusp transform, all-order tangential theta flatness, the unconditional Abel-moment law, and the sign-amplification consumer. The implementation is public-green at `75f5c575b2c3f050f0e5703efb5ce6851d97775c`. The Selberg local detector, short-mollifier variational sufficiency, and Levinson-Siegel step geometry also compile. Quantitative Hardy--Littlewood counts, Selberg's global positive-proportion moments, the actual Levinson--Conrey auxiliary count, sparse-exception exclusion, H1, and RH remain open. |
 | H2 | CANONICAL | Zero-free regions, zero-density estimates, moments, mean values, subconvexity, and Lindelof-type bounds | RH_IMPLIED / PARTIAL_PROGRESS | DEEP_FORMALIZATION / CLASSICAL_DETECTOR_INVERSE_MELLIN_PROVEN | Campaign `LITERATURE-20260729-H2-CLASSICAL-ZERO-DETECTOR-MELLIN-01` compiles the common Ingham--Huxley/Maynard--Pratt/Guth--Maynard entry mechanism through the exact truncated-Mobius coefficient gap, actual zeta-product L-series, exponential smoothing, full forward Mellin transform, removable Gamma-pole cancellation at an actual zeta zero, retained translated-zeta residue, and a cardinality-audited finite detector. Campaign `LITERATURE-20260729-H2-CLASSICAL-DETECTOR-INVERSE-MELLIN-01` proves the exact previously unavailable `ClassicalDetectorInverseMellinLine`, including arbitrary positive-line Gamma integrability and the absolute coefficient sum-integral exchange. The first open source edge is now the infinite contour shift with horizontal-edge decay; the shifted detector identity, Type-I/Type-II counts, large-value estimates, density exponents, actual-zeta bow exclusion, H2, and RH remain open. |
 | H3 | CANONICAL | Nyman-Beurling and Baez-Duarte Hilbert-space closure criteria | EQUIVALENT | DEEP_FORMALIZATION | Consolidated route card from the compiled criterion through Burnol's obstruction to the still-open unconditional approximation edge. |
 | H4 | CANONICAL | Li/Keiper coefficients and Bombieri-Lagarias transformed-zero criteria | EQUIVALENT | DEEP_FORMALIZATION | External source audit of the project-specific all-index reverse theorem and a clean statement crosswalk. |
@@ -163,3 +163,23 @@ targets all-order Gaussian flatness with every branch and derivative checked in 
 shifts, H7/H8 concrete spectral objects, H10 geometric transfer, H11 sparse amplification, H12
 global counts, and H14 computation remain live alternatives. Quantitative Hardy--Littlewood,
 Selberg, and Levinson--Conrey estimates, H1, and RH remain open.
+
+## 2026-07-29 H1 Hardy tangential-theta implementation result
+
+The selected edge succeeds. Lean now proves an exact branch-preserving translation and inversion
+of Hardy's theta boundary term from the cusp `-1` to a half-integer theta series at imaginary
+infinity. Cauchy estimates plus Gaussian domination establish rapid decay of every iterated
+theta derivative after every fixed polynomial loss. Separately, full-strip Xi domination
+justifies every derivative of Hardy's actual parameter integral and identifies order `2p` with
+the literal Abel moment.
+
+Differentiating the compiled equation (2) yields equation (3) with the source sign and
+`4^(2*p)` denominator. The left endpoint proves `hardyXiAbelMomentLaw_unconditional`, and the
+existing sign-amplification consumer yields `infinite_criticalLineZeros_hardy`. Frozen commit
+`75f5c575b2c3f050f0e5703efb5ce6851d97775c` passed Lean Action run `30435633763`, build job
+`90522592740`, in `2m17s`.
+
+This closes Hardy's qualitative infinitude theorem, not the broader H1 family. The next live
+historical producers are quantitative Hardy--Littlewood counts, Selberg's global moment
+estimates for a positive proportion, and the Levinson--Conrey auxiliary count. Original
+conjectures, falsification, and direct RH attacks remain open.

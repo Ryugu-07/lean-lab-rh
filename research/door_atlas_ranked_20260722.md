@@ -1834,3 +1834,13 @@ equation, identify the half-integer series at imaginary infinity, and prove that
 decay absorbs every derivative and square-root loss. Full success constructs
 `HardyXiAbelMomentLaw` without hypotheses and composes it with the existing consumer to prove
 infinitely many actual critical-line zeros. Quantitative counts, H1, and RH remain open.
+
+**2026-07-29 implementation result.** Full success compiles. The principal-branch cusp transform,
+all-order Cauchy/Gaussian flatness, all-order differentiation of the actual Xi integral,
+equation (3), and the literal left Abel limit construct
+`hardyXiAbelMomentLaw_unconditional`. The existing consumer then gives
+`infinite_criticalLineZeros_hardy`. Frozen implementation
+`75f5c575b2c3f050f0e5703efb5ce6851d97775c` passed Lean Action run `30435633763`, build job
+`90522592740`, in `2m17s`. This closes Hardy's qualitative theorem only; quantitative
+Hardy--Littlewood counts, Selberg's positive proportion, Levinson--Conrey, H1, and RH remain
+open.

@@ -6618,3 +6618,28 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - `strict_boundary`: no quantitative critical-zero count, positive proportion, H1, or RH.
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H1 Hardy tangential-theta implementation public green
+
+- `classification`: `FULL_SUCCESS / HARDY_1914_UNCONDITIONAL_INFINITY_FORMALIZED`.
+- The new no-sorry modules `HardyTangentialTheta.lean` and
+  `HardyTangentialThetaIntegral.lean` total 2,489 lines.
+- The compiled chain is:
+  exact principal-branch cusp transform;
+  `->` all-polynomial Gaussian decay for every half-integer theta derivative;
+  `-> tendsto_iteratedDeriv_hardyThetaBoundaryTerm_all`;
+  `->` all-order dominated differentiation of Hardy's actual Xi integral;
+  `-> hardyEquationThreeMomentIdentity`;
+  `-> tendsto_hardyXiAbelMoment_unconditional`;
+  `-> hardyXiAbelMomentLaw_unconditional`;
+  `-> infinite_criticalLineZeros_hardy`.
+- Lean checks the literal left Abel filter, sign `(-1)^p`, and denominator `4^(2*p)` without
+  endpoint Lebesgue integrability, a custom summability axiom, or an assumed moment law.
+- Local audit: four exact TargetChecks, six standard-only axiom prints, empty forbidden and
+  resource scans, warning-as-error checks, `git diff --check`, and full `8797/8797` build.
+- Frozen implementation commit `75f5c575b2c3f050f0e5703efb5ce6851d97775c` passed public Lean
+  Action run `30435633763`, build job `90522592740`, in `2m17s`.
+- Freeze the six proof and registration files. Next gate is a docs-only immutable-evidence
+  commit and public CI.
+- Close no quantitative count, positive-proportion, H1, or RH node. The six inherited protected
+  files remain untouched and unstaged; persistent RH Goal active.
