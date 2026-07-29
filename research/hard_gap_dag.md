@@ -3449,7 +3449,11 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `audit`: warning-as-error passes; selected axiom prints are standard-only; forbidden and
   resource scans are empty; full build `8802/8802`.
 - `strict_boundary`: no zero-density exponent, sparse-exception exclusion, H2, or RH.
-- `next_gate`: frozen implementation public CI.
+- `public_implementation`: commit `b87e9164395b14723f61d8451e3ed1b0cd0ae1c8`,
+  Lean Action run `30484701769`, build job `90687338466`, passed in `2m39s`.
+- `frozen_diff`: the five proof and registration files are unchanged from the implementation
+  commit.
+- `next_gate`: immutable-evidence public CI.
 - `global_goal`: active.
 
 ## 2026-07-30 H1 Hardy--Littlewood eta-to-Theta Abel-transfer local result

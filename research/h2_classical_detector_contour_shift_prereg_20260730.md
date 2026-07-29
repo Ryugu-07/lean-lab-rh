@@ -8,7 +8,7 @@ Node: `H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `LOCAL_FULL_SUCCESS / FROZEN_IMPLEMENTATION_PENDING`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_PENDING`
 
 ## Parent and available chain
 
@@ -186,3 +186,8 @@ Local classification:
 `FULL_SUCCESS / KNOWN_CONTOUR_SHIFT_FORMALIZED`.
 The strict successor remains the actual dyadic Type-I/Type-II block and tail estimates used to
 derive a zero-density dichotomy. No density exponent, H2 theorem, or RH is claimed.
+
+Frozen implementation commit `b87e9164395b14723f61d8451e3ed1b0cd0ae1c8` passed Lean Action
+run `30484701769`, build job `90687338466`, in `2m39s`. The five proof and registration files
+have an empty diff from that commit. Immutable evidence is published separately and must pass a
+fresh public run before the final ledger.

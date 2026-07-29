@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260730-H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01`
 
 Node: `H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01`
 
-Status: `LOCAL_FULL_SUCCESS / FROZEN_IMPLEMENTATION_PENDING`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_PENDING`
 
 ## Fixed question
 
@@ -32,6 +32,7 @@ both horizontal edges discharged by compiled Gamma and zeta estimates?
 | 12 | `INFINITE_SHIFT` | `classicalDetectorMellinLineIntegral_two_eq_residue_add_shifted` proves the actual source line shift. Composing with inverse Mellin proves `classicalDetectorSmoothedSeries_eq_residue_add_shifted`. | Close the fixed historical inference; do not infer a density estimate. |
 | 13 | `COEFFICIENT_GAP` | Absolute summability for `Re(z)>0` permits an exact head/tail split. For `M>=1`, `classicalDetectorCoefficientGap_shifted_identity` exposes the source gap before the dyadic decomposition. | Name the dyadic Type-I/Type-II block estimates as the strict successor. |
 | 14 | `LOCAL_AUDIT` | The 1305-line module, Targets, TargetChecks, AxiomsAudit, and root import pass warning-as-error. Seven selected axiom prints contain only `propext`, `Classical.choice`, and `Quot.sound`; forbidden/resource scans and `git diff --check` are empty; full build succeeds with `8802/8802`. | Freeze and publish the implementation before creating immutable evidence. |
+| 15 | `PUBLIC_IMPLEMENTATION` | Frozen commit `b87e9164395b14723f61d8451e3ed1b0cd0ae1c8` passed Lean Action run `30484701769`, build job `90687338466`, in `2m39s`. The five proof and registration files have an empty diff from the frozen commit. | Publish immutable evidence as a docs-only commit and require a fresh public-green run. |
 
 ## Current frontier
 
@@ -42,7 +43,7 @@ both horizontal edges discharged by compiled Gamma and zeta estimates?
 - `strict_successor`: source dyadic decomposition and quantitative block/tail estimates leading
   to a zero-density dichotomy.
 - `local_classification`: `FULL_SUCCESS / KNOWN_CONTOUR_SHIFT_FORMALIZED`.
-- `current_gate`: frozen implementation commit and public Lean Action.
+- `current_gate`: immutable-evidence docs-only commit and public Lean Action.
 - `not_claimed`: density exponent, exclusion of all off-line zeros, H2, or RH.
 - `protected_files`: inherited modified and untracked files remain untouched and unstaged.
 - `global_goal`: active.
