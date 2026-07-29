@@ -3890,4 +3890,8 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `immutable_evidence`: docs-only commit `9f161104ed086a137e221b6c8ffe3d3bdda65005`,
   Lean Action run `30465073931`, build job `90620648692`, passed in `2m14s`; frozen five-file
   diff empty.
+- `final_ledger`: docs-only commit `25316ea1b408731da6581a371afcaccd2bf169f7`,
+  Lean Action run `30465345680`, build job `90621575136`, passed in `1m41s`; frozen five-file
+  diff empty.
+- `next_gate`: one closure receipt and public CI, then local STOP and fresh route selection.
 - `global_goal`: active.

@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-EXCEPTIONAL-SET-COUNT-01`
 
 Classification: `FULL_SUCCESS / FINITE_EXCEPTIONAL_SET_COUNT_BRIDGE_FORMALIZED`
 
-Public state: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PENDING`
+Public state: `FINAL_LEDGER_PUBLIC_GREEN / CLOSURE_RECEIPT_PENDING`
 
 ## Compiled result
 
@@ -113,10 +113,12 @@ The persistent RH Goal remains active.
 ## Public chain
 
 - Preregistration commit `d36f9d0c8005691e9043165c062bf60a9e311722` passed Lean Action
-  run `30438867401`.
+  run `30438867401`, build job `90533061533`, in `1m57s`.
 - Frozen implementation commit `8f3742c62a381293fa201358cf58130d2c333c48` passed Lean Action
   run `30464674314`, build job `90619318156`, in `2m52s`.
 - Immutable-evidence commit `9f161104ed086a137e221b6c8ffe3d3bdda65005` passed Lean Action
   run `30465073931`, build job `90620648692`, in `2m14s`.
+- Final-ledger commit `25316ea1b408731da6581a371afcaccd2bf169f7` passed Lean Action
+  run `30465345680`, build job `90621575136`, in `1m41s`.
 
-The final ledger and closure receipt remain pending.
+The closure receipt records this chain and closes only the fixed finite count bridge.

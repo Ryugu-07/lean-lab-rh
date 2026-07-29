@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H1-HARDY-LITTLEWOOD-LINEAR-COUNT-01`
 
 Node: `H1-HARDY-LITTLEWOOD-EXCEPTIONAL-SET-COUNT-01`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PENDING`
+Status: `FINAL_LEDGER_PUBLIC_GREEN / CLOSURE_RECEIPT_PENDING`
 
 ## Fixed question
 
@@ -34,6 +34,7 @@ producers, weakening interval measure to sampled points, or double-counting over
 | 14 | `LOCAL_AUDIT` | The 867-line module, exact checks, root import, and selected axiom prints compile with warning-as-error. Axiom output is exactly standard foundations; three forbidden scans and patch check are empty; full build passes `8798/8798`. | Publish the frozen implementation and require independent public CI before immutable evidence and closure. |
 | 15 | `PUBLIC_IMPLEMENTATION` | Frozen commit `8f3742c62a381293fa201358cf58130d2c333c48` passed Lean Action run `30464674314`, build job `90619318156`, in `2m52s`. | Freeze the five proof/registration files and publish docs-only immutable evidence. |
 | 16 | `IMMUTABLE_EVIDENCE` | Docs-only commit `9f161104ed086a137e221b6c8ffe3d3bdda65005` passed Lean Action run `30465073931`, build job `90620648692`, in `2m14s`; the frozen five-file diff is empty. | Publish the docs-only final ledger and require public CI. |
+| 17 | `FINAL_LEDGER` | Docs-only commit `25316ea1b408731da6581a371afcaccd2bf169f7` passed Lean Action run `30465345680`, build job `90621575136`, in `1m41s`; the frozen five-file diff remains empty. | Publish one closure receipt, then stop only this campaign and rerank historical routes. |
 
 ## Current frontier
 
