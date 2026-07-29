@@ -9,7 +9,7 @@ Node: `H1-HARDY-LITTLEWOOD-ETA-PRIMITIVE-MEAN-SQUARE-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
+Status: `FINAL_LEDGER_PUBLIC_GREEN / CLOSURE_RECEIPT_CI_PENDING`
 
 ## Local implementation result
 
@@ -29,7 +29,11 @@ and registration diff is empty.
 
 Docs-only immutable-evidence commit `b2a2b5122f0ab326b0c36e3bab614c4c95e598f5`
 passed Lean Action run `30499767836`, build job `90736633735`, in `2m2s`. The frozen diff
-remains empty. The final ledger is the next public gate.
+remains empty.
+
+Docs-only final-ledger commit `f8efaf8f394dcde04c81e510cf6e43b6b8f38065` passed Lean Action
+run `30499944299`, build job `90737182587`, in `1m42s`. The frozen diff remains empty. One
+closure receipt is the final local-campaign gate.
 
 ## Parent and fixed source
 

@@ -7,7 +7,7 @@ Campaign:
 
 Node: `H1-HARDY-LITTLEWOOD-ETA-PRIMITIVE-MEAN-SQUARE-01`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
+Status: `FINAL_LEDGER_PUBLIC_GREEN / CLOSURE_RECEIPT_CI_PENDING`
 
 ## Fixed question
 
@@ -34,6 +34,7 @@ eta-window-error moment premise of the finite count consumer?
 | 12 | `LOCAL_AUDIT` | `HardyLittlewoodEtaPrimitiveMeanSquare.lean` and all registration files compile with warning-as-error; module build is `8724/8724`; forbidden scan is empty; selected axiom prints are standard-only. | Classify local full success and freeze the implementation for public CI. |
 | 13 | `IMPLEMENTATION_PUBLIC_CI` | Frozen commit `6245bdbc920be5129442da9cfa8d4df586e2730d` passed Lean Action run `30499538237`, build job `90735916929`, in `2m21s`; the frozen five-file diff is empty. | Publish docs-only immutable evidence and require a second public CI. |
 | 14 | `IMMUTABLE_EVIDENCE_PUBLIC_CI` | Docs-only evidence commit `b2a2b5122f0ab326b0c36e3bab614c4c95e598f5` passed Lean Action run `30499767836`, build job `90736633735`, in `2m2s`; the frozen five-file diff remains empty. | Publish the docs-only final ledger and require another public CI. |
+| 15 | `FINAL_LEDGER_PUBLIC_CI` | Docs-only final-ledger commit `f8efaf8f394dcde04c81e510cf6e43b6b8f38065` passed Lean Action run `30499944299`, build job `90737182587`, in `1m42s`; the frozen five-file diff remains empty. | Publish one docs-only closure receipt and require public CI. |
 
 ## Current frontier
 
@@ -46,7 +47,7 @@ eta-window-error moment premise of the finite count consumer?
   parameter budget.
 - `not_claimed`: source-X moment, unconditional linear count, H1, or RH.
 - `local_endpoint`: `hardyLittlewoodEtaPrimitiveMeanSquare_endpoint`.
-- `public_status`: implementation and immutable evidence are public green; final-ledger CI
-  pending.
+- `public_status`: implementation, immutable evidence, and final ledger are public green;
+  closure-receipt CI pending.
 - `protected_files`: inherited modified and untracked files remain untouched and unstaged.
 - `global_goal`: active.
