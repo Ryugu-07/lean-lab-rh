@@ -1893,3 +1893,24 @@ completeness supplies the ordered limit. The explicit uniform output is
 The omission result is structural: Lemma 4 has no separate oscillatory producer. The next H1
 door is precisely Lemma 3's uniform eta remainder without an extra `abs(s)` loss. Primitive
 identification, both source moments, the count budget, H1, and RH remain open.
+
+### Post-eta-Abel-transfer rerank: H2 classical detector contour shift
+
+The eta-to-Theta campaign is publicly closed at receipt
+`524903f18b58322629f38ca7371920adf8d10765`. Its omission result leaves the actual
+Hardy--Littlewood Lemma 3 eta remainder open. Fresh comparison also retains Selberg and
+Levinson--Conrey global moments, H7/H8 concrete spectral producers, H10 geometry, H11 sparse
+amplification, and H12/H14 global count infrastructure.
+
+H2 is selected at the exact historical inference immediately after the compiled inverse-Mellin
+line. In Maynard--Pratt Appendix C, an actual off-line zero `rho` moves the detector contour
+from `Re(w)=2` to `Re(w)=1/2-Re(rho)`. The Gamma pole at zero is canceled by the zero condition;
+the translated zeta pole at `1-rho` is retained. Both horizontal sides must vanish before the
+local residue becomes the source shifted-line identity.
+
+Campaign `LITERATURE-20260730-H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01` fixes an unconditional
+actual-factor theorem. A `dslope zetaPoleRemoved rho` numerator must encode both singularity
+decisions, and the proof must combine existing weighted-Cauchy rectangles, positive-strip
+Gamma ratios, exact half-line Gamma decay, finite mollifier bounds, and polynomial zeta-strip
+growth. The coefficient-gap head/tail identity is included, but the later dyadic Type-I/Type-II
+bounds, density exponent, H2, and RH remain open.

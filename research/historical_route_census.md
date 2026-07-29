@@ -239,3 +239,23 @@ This closes Hardy's qualitative infinitude theorem, not the broader H1 family. T
 historical producers are quantitative Hardy--Littlewood counts, Selberg's global moment
 estimates for a positive proportion, and the Levinson--Conrey auxiliary count. Original
 conjectures, falsification, and direct RH attacks remain open.
+
+## 2026-07-30 H2 contour-shift omission re-entry
+
+After public closure of the Hardy--Littlewood eta-to-Theta transfer, the census is reranked
+across H1, H2, H7/H8, H10, H11, H12, and H14. H2 is selected for a materially new source
+edge: not the already compiled local residues or inverse-Mellin line, but the infinite
+rectangle that connects them to the classical Type-I/Type-II detector.
+
+Maynard--Pratt Appendix C makes the singularity split explicit. At an actual nontrivial zero
+`rho`, the Gamma pole at `w=0` is canceled by `zeta(rho)=0`, while the translated zeta pole at
+`w=1-rho` contributes
+`Y^(1-rho)*Gamma(1-rho)*M(1)`. The project can encode both decisions in one
+`dslope zetaPoleRemoved rho` numerator and can reuse independent rectangle, Gamma-ratio, and
+zeta-strip infrastructure.
+
+The selected campaign must prove uniform horizontal-edge decay and actual integrability on the
+original and shifted lines. A local residue theorem or conditional contour premise is
+insufficient. The later dyadic large-value bounds, zero-density theorem, H2, and RH remain
+outside the endpoint. This re-entry tests a decisive historical inference for an overlooked
+weakening or cross-route repair; it is not numerical optimization.

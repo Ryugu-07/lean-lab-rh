@@ -3397,6 +3397,38 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.
 
+## 2026-07-30 H2 classical detector contour-shift launch
+
+- `parent_public_closure`: eta-to-Theta Abel-transfer receipt
+  `524903f18b58322629f38ca7371920adf8d10765`, Lean Action run `30480635103`, build job
+  `90673552785`.
+- `H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01`: selected after fresh comparison with the first
+  open Hardy--Littlewood eta remainder, Selberg/Levinson global moments, H7/H8 concrete
+  spectral objects, H10 geometry, H11 sparse amplification, and H12/H14 counts.
+- `historical_omission_test`: Maynard--Pratt Appendix C uses one infinite contour shift between
+  the compiled inverse-Mellin line and the later Type-I/Type-II detector. The Gamma pole at
+  `w=0` is removable at an actual zeta zero; only `w=1-rho` contributes.
+- `available_edge`: exact coefficient gap and source product;
+  `->` complete forward Mellin transform;
+  `->` both local singularity calculations;
+  `->` exact inverse Mellin line.
+- `fixed_edge`: `dslope zetaPoleRemoved rho` numerator;
+  `->` exact source equality and retained residue;
+  `->` fixed-strip actual-factor bound;
+  `->` both horizontal-edge limits and both vertical integrability theorems;
+  `->` finite one-pole rectangle;
+  `->` infinite shifted-line identity;
+  `->` shifted smoothed-series and coefficient-gap head/tail identity.
+- `OBS-H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01`: selected.
+- `OBS-H2-CLASSICAL-DETECTOR-DYADIC-BOUNDS-01`: remains outside the endpoint.
+- `OBS-H2-CLASSICAL-DETECTOR-ZERO-DENSITY-01`: remains outside the endpoint.
+- `strict_boundary`: no Type-I/Type-II quantitative estimate, density exponent,
+  sparse-exception exclusion, H2, or RH.
+- `material_difference`: unlike the earlier H2 inverse-Mellin campaign, this attack crosses the
+  actual source pole and must prove global edge decay.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- `global_goal`: active.
+
 ## 2026-07-30 H1 Hardy--Littlewood eta-to-Theta Abel-transfer local result
 
 - `classification`: `FULL_SUCCESS / ETA_TO_THETA_TRANSFER_FORMALIZED`.
