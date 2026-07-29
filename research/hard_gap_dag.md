@@ -2667,6 +2667,12 @@ implementation `15381a49ff4dfb92a0ab4e29d5e76383f9789139` is empty. This node re
 - `proof_freeze`: the five proof and registration sources must remain unchanged through the
   immutable-evidence, final-ledger, and closure gates.
 - `next_gate`: docs-only immutable evidence.
+- `immutable_evidence`: `292edf1ee14cab188b2b8696df2f7722350f4f58`.
+- `evidence_public_ci`: run `30415037051`, build job `90459582118`, passed in `2m10s`.
+- `frozen_set_diff`: empty from `8c5d820a92178dfd3ad3582e9ffe733a7377bb0e`.
+- `local_stop`: close only `H2.classical-detector.inverse-mellin-line`; the contour shift,
+  density mechanism, H2, and RH remain open.
+- `next_gate`: docs-only final ledger.
 - `global_goal`: active.
 
 ### Public implementation receipt

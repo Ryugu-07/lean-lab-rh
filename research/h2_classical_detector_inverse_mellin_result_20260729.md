@@ -8,7 +8,7 @@ Node: `H2-CLASSICAL-DETECTOR-INVERSE-MELLIN-LINE-01`
 
 Classification: `FULL_SUCCESS / KNOWN_INVERSE_MELLIN_EDGE_FORMALIZED`
 
-Public state: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+Public state: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PENDING`
 
 ## Compiled result
 
@@ -103,3 +103,31 @@ The frozen proof and registration set is:
 
 The immutable-evidence, final-ledger, and closure commits must leave this set unchanged from the
 frozen implementation.
+
+Immutable-evidence commit `292edf1ee14cab188b2b8696df2f7722350f4f58` passed public Lean
+Action run `30415037051`, build job `90459582118`, in `2m10s`. The frozen-set diff from
+`8c5d820a92178dfd3ad3582e9ffe733a7377bb0e` is empty.
+
+## Final ledger
+
+Close exactly:
+
+```text
+H2.classical-detector.inverse-mellin-line
+```
+
+as `FULL_SUCCESS / KNOWN_INVERSE_MELLIN_EDGE_FORMALIZED`.
+
+Keep open:
+
+1. the infinite rectangle shift from the source-valid line to
+   `Re(w)=1/2-Re(rho)`;
+2. uniform decay of both horizontal edges for the actual Gamma-Mobius-zeta factor;
+3. the shifted detector and dyadic-block identity;
+4. Type-I/Type-II and large-value estimates supplying detector mass;
+5. zero-density estimates and sparse-exception exclusion;
+6. H2 and RH.
+
+The durable conclusion is that the inverse vertical line was an omitted formal bridge that
+modern Mellin inversion closes exactly. The next campaign must attack the contour shift or rerank
+against another historical family; it should not return to Gamma-constant optimization.

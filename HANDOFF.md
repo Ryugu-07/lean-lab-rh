@@ -6484,3 +6484,16 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   horizontal-edge decay, shifted detector, density production, H2, and RH open.
 - Next gate is a docs-only immutable-evidence commit and its own public CI.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H2 inverse Mellin immutable evidence public green
+
+- Immutable-evidence commit `292edf1ee14cab188b2b8696df2f7722350f4f58` passed Lean Action
+  run `30415037051`, build job `90459582118`, in `2m10s`.
+- The five frozen proof/registration files have an empty diff from implementation
+  `8c5d820a92178dfd3ad3582e9ffe733a7377bb0e`.
+- Final ledger closes only `H2.classical-detector.inverse-mellin-line` as
+  `FULL_SUCCESS / KNOWN_INVERSE_MELLIN_EDGE_FORMALIZED`.
+- Keep the infinite contour shift, both horizontal edges, shifted detector, density production,
+  H2, and RH open.
+- Next gate is the docs-only final-ledger commit and public CI, then one closure receipt.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.

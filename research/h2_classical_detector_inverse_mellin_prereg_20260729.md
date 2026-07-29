@@ -8,7 +8,7 @@ Node: `H2-CLASSICAL-DETECTOR-INVERSE-MELLIN-LINE-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PENDING`
 
 ## Parent and available producer
 
@@ -128,3 +128,6 @@ CI remains required before the result can be frozen.
 Frozen implementation commit `8c5d820a92178dfd3ad3582e9ffe733a7377bb0e` passed public Lean
 Action run `30414837829`, build job `90458965005`, in `2m59s`. The proof and registration set is
 now frozen.
+
+Immutable-evidence commit `292edf1ee14cab188b2b8696df2f7722350f4f58` passed run
+`30415037051`, build job `90459582118`, in `2m10s`, with an empty frozen-set diff.
