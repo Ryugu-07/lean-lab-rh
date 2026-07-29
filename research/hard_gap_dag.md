@@ -2663,19 +2663,6 @@ implementation `15381a49ff4dfb92a0ab4e29d5e76383f9789139` is empty. This node re
   `hard_gap_delta=0`, `rh_frontier_delta=0`.
 - `next_gate`: frozen implementation public CI.
 - `global_goal`: active.
-- `frozen_implementation`: `25c18e31cd882f9ad2f43fe26900e450d98c0500`.
-- `implementation_public_ci`: run `30411787173`, build job `90449324931`, passed in `2m1s`.
-- `proof_freeze`: the five proof and registration sources have an empty diff from the frozen
-  implementation.
-- `next_gate`: docs-only immutable evidence and public CI.
-- `immutable_evidence`: `78f1810d722e9b846a4fb7c4b40c8d78b3edf95a`.
-- `evidence_public_ci`: run `30411999399`, build job `90450005443`, passed in `1m31s`.
-- `local_stop`: close only `H7.connes.nested-projection-defect-positive-type`; every actual
-  number-field projection, trace, limit, positivity, H7, and RH edge remains open.
-- `next_gate`: docs-only final ledger and public CI, then closure receipt.
-- `final_ledger`: `6ad4a77323b3fa163fe415d26fd01b0ce1073c92`.
-- `final_ledger_public_ci`: run `30412182228`, build job `90450618374`, passed in `1m32s`.
-- `next_gate`: publish the docs-only closure receipt, then fresh cross-family selection.
 
 ### Public implementation receipt
 
@@ -3641,4 +3628,42 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `deltas`: historical route coverage and source-logic map each `+1`; hard gap and RH frontier
   remain `0`.
 - `next_gate`: frozen implementation public CI.
+- `global_goal`: active.
+- `frozen_implementation`: `25c18e31cd882f9ad2f43fe26900e450d98c0500`.
+- `implementation_public_ci`: run `30411787173`, build job `90449324931`, passed in `2m1s`.
+- `proof_freeze`: the five proof and registration sources have an empty diff from the frozen
+  implementation.
+- `immutable_evidence`: `78f1810d722e9b846a4fb7c4b40c8d78b3edf95a`.
+- `evidence_public_ci`: run `30411999399`, build job `90450005443`, passed in `1m31s`.
+- `local_stop`: close only `H7.connes.nested-projection-defect-positive-type`; every actual
+  number-field projection, trace, limit, positivity, H7, and RH edge remains open.
+- `final_ledger`: `6ad4a77323b3fa163fe415d26fd01b0ce1073c92`.
+- `final_ledger_public_ci`: run `30412182228`, build job `90450618374`, passed in `1m32s`.
+- `closure_receipt`: `11e020fcfe8d2d616a0d42a061f638152fc73636`.
+- `closure_public_ci`: run `30412357592`, build job `90451181471`, passed in `1m55s`.
+- `next_gate`: fresh cross-family route selection.
+
+## 2026-07-29 H2 classical detector inverse Mellin launch
+
+- `parent_public_closure`: H7 Connes projection-defect receipt
+  `11e020fcfe8d2d616a0d42a061f638152fc73636`, run `30412357592`, build job
+  `90451181471`, passed in `1m55s`.
+- `H2-CLASSICAL-DETECTOR-INVERSE-MELLIN-LINE-01`: selected after comparison with H10 curve
+  geometry, H11 sparse-exception statistics, H1 mollifiers, H8 concrete RKHS production, H12
+  Speiser counts, and H14 computation.
+- `available_edge`:
+  `actual truncated-Mobius coefficient gap and source product`;
+  `-> complete forward Mellin transform`;
+  `-> both local residue calculations`.
+- `fixed_edge`:
+  `Gamma vertical integrability for every c>0`;
+  `-> exact exponential-kernel inverse Mellin formula`;
+  `-> absolute detector sum-integral exchange`;
+  `-> ClassicalDetectorInverseMellinLine`.
+- `OBS-H2-INVERSE-MELLIN-GAMMA-VERTICAL-01`: open.
+- `OBS-H2-INVERSE-MELLIN-SUM-INTEGRAL-01`: open.
+- `OBS-H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01`: remains open after the selected endpoint.
+- `strict_boundary`: no global contour shift, density estimate, exceptional-zero exclusion, H2,
+  or RH.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.

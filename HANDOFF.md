@@ -6427,3 +6427,25 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - After the closure receipt public CI, return to fresh cross-family historical omission
   selection; do not continue H7 by inertia.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H2 classical detector inverse Mellin selected
+
+- `parent_public_closure`: H7 Connes projection-defect receipt
+  `11e020fcfe8d2d616a0d42a061f638152fc73636`, run `30412357592`, build job
+  `90451181471`, passed in `1m55s`.
+- `campaign`: `LITERATURE-20260729-H2-CLASSICAL-DETECTOR-INVERSE-MELLIN-01`.
+- `node`: `H2-CLASSICAL-DETECTOR-INVERSE-MELLIN-LINE-01`.
+- `selection_reason`: the actual classical detector arithmetic, forward Mellin transform, and
+  local residues compile, while the exact inverse line is one named source edge. Mathlib now
+  provides a general Fourier-derived Mellin inversion theorem not yet connected to this
+  detector.
+- `fixed_edge`: positive-line Gamma vertical integrability;
+  `->` exact inverse Mellin formula for `exp(-x)`;
+  `->` absolute detector sum-integral exchange;
+  `-> classicalDetectorInverseMellinLine : ClassicalDetectorInverseMellinLine`.
+- `strict_boundary`: no global contour shift, horizontal-edge limit, shifted detector identity,
+  density theorem, H2, or RH.
+- `successor`: shift to `Re(w)=1/2-Re(rho)` using explicit Gamma decay and zeta strip growth,
+  then feed the compiled finite detector.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
