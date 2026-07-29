@@ -17,6 +17,9 @@ Classification: `FULL_SUCCESS / SOURCE_DYADIC_DICHOTOMY_FORMALIZED`
 
 The five-file frozen proof and registration diff remains empty.
 
+Public final-ledger gate: commit `ae35eae20c5f5dcdd2c266e3af4f4fc9dddaa20c`,
+Lean Action run `30491754062`, build job `90711045096`, passed in `2m7s`.
+
 ## Result
 
 Lean verifies the actual finite Maynard--Pratt detector alternative at

@@ -2001,8 +2001,10 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `immutable_evidence`: docs-only commit
   `c509cf6f475fa19e86d4734fb39b4b4f740255ef`, Lean Action run `30491565903`, build job
   `90710420038`, passed in `1m37s`; frozen five-file diff empty.
-- `next_gate`: publish the final ledger and closure receipt through separate public-green
-  commits.
+- `final_ledger`: docs-only commit
+  `ae35eae20c5f5dcdd2c266e3af4f4fc9dddaa20c`, Lean Action run `30491754062`, build job
+  `90711045096`, passed in `2m7s`; frozen five-file diff empty.
+- `next_gate`: one closure receipt and public CI, then local STOP and fresh route selection.
 - `global_goal`: active.
 
 ## 2026-07-26 H1 Bettin--Gonek moment-to-power bridge local endpoint

@@ -8,7 +8,7 @@ Node: `H2-CLASSICAL-DETECTOR-DYADIC-DICHOTOMY-01`
 
 Classification: `FULL_SUCCESS_LOCAL / SOURCE_DYADIC_DICHOTOMY_FORMALIZED`
 
-Publication status: `EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PUBLIC_CI_PENDING`
+Publication status: `PUBLICLY_CLOSED`
 
 ## Public preregistration gate
 
@@ -36,6 +36,15 @@ The five proof and registration files are frozen at this implementation commit.
 - result: passed in `1m37s`
 
 The frozen five-file diff remains empty.
+
+## Public final-ledger gate
+
+- commit: `ae35eae20c5f5dcdd2c266e3af4f4fc9dddaa20c`
+- Lean Action run: `30491754062`
+- build job: `90711045096`
+- result: passed in `2m7s`
+
+The closure receipt is the final public gate for this local campaign.
 
 ## Compiled endpoint
 

@@ -8,7 +8,7 @@ Node: `H2-CLASSICAL-DETECTOR-DYADIC-DICHOTOMY-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `FULL_SUCCESS / EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PUBLIC_CI_PENDING`
+Status: `FULL_SUCCESS / PUBLICLY_CLOSED`
 
 Public preregistration gate: commit `af32194ba854e6df168f9ec09f1bd8581bbef772`,
 Lean Action run `30489281045`, build job `90702801282`, passed in `2m0s`.
@@ -189,3 +189,7 @@ files are frozen with an empty diff.
 Immutable-evidence commit `c509cf6f475fa19e86d4734fb39b4b4f740255ef` passed public Lean
 Action run `30491565903`, build job `90710420038`, in `1m37s`. The frozen five-file diff
 remains empty.
+
+Final-ledger commit `ae35eae20c5f5dcdd2c266e3af4f4fc9dddaa20c` passed public Lean
+Action run `30491754062`, build job `90711045096`, in `2m7s`. Publish one closure receipt and
+stop only this local campaign after that receipt is public green.
