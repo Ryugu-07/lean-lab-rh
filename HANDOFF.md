@@ -6643,3 +6643,12 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   commit and public CI.
 - Close no quantitative count, positive-proportion, H1, or RH node. The six inherited protected
   files remain untouched and unstaged; persistent RH Goal active.
+
+## 2026-07-29 H1 Hardy tangential-theta immutable evidence public green
+
+- Docs-only evidence commit `85f0ae62feb457961a3e71ca15db50fa195ce459` passed public Lean
+  Action run `30436167642`, build job `90524303908`, in `2m7s`.
+- The six frozen proof and registration files retain an empty diff from implementation commit
+  `75f5c575b2c3f050f0e5703efb5ce6851d97775c`.
+- Next gate is a docs-only final ledger and public CI, followed by a closure receipt. Persistent
+  RH Goal active.

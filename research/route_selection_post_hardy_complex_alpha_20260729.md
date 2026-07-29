@@ -97,3 +97,7 @@ Frozen implementation commit `75f5c575b2c3f050f0e5703efb5ce6851d97775c` passed p
 Action run `30435633763`, build job `90522592740`, in `2m17s`. The campaign closes only Hardy's
 qualitative critical-line infinitude theorem. Quantitative counts, positive proportion, H1, and
 RH remain open; the persistent RH Goal remains active.
+
+Docs-only immutable evidence `85f0ae62feb457961a3e71ca15db50fa195ce459` passed Lean Action
+run `30436167642`, build job `90524303908`, in `2m7s`; the six frozen implementation files
+remain unchanged.
