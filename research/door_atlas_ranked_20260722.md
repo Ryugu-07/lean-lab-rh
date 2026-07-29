@@ -1859,3 +1859,9 @@ stronger than the finite mean-square step needs. Campaign
 `O(N)` kernel bound, exact finite norm-square expansion, and shifted `O(L+N)` polynomial mean
 square. It excludes the infinite conditional-series truncation, eta identification, actual
 source-coordinate second moment, parameter budget, unconditional count, H1, and RH.
+
+The production result compiles this weaker premise exactly. The upper triangle is split at
+`r=n`: harmonic summation handles the near range and the bounded diagonal coefficient sum plus
+Cauchy--Schwarz handles the far range. Thus this finite door is locally closed without
+optimizing the source constant. The next H1 source door is the uniform conditional-series
+truncation of Lemmas 3--4; the global portfolio is reranked only after public closure.

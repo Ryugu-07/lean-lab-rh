@@ -13,6 +13,7 @@ import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.SelbergLocalSignChange
 import LeanLab.Riemann.HardyLittlewoodLinearCount
 import LeanLab.Riemann.HardyLittlewoodSourceNormalization
+import LeanLab.Riemann.HardyLittlewoodFiniteMeanSquare
 import LeanLab.Riemann.ClassicalZeroDetectorMellin
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.HardyAbelMomentAmplification
@@ -1255,6 +1256,12 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.hardyLittlewood_eta_interval_lower
 #print axioms LeanLab.Riemann.hardyLittlewood_eta_lower_on_source_range
 #print axioms LeanLab.Riemann.hardyLittlewoodSourceNormalization_endpoint
+#print axioms LeanLab.Riemann.summable_hardyLittlewoodLogSquareCoeff
+#print axioms LeanLab.Riemann.hardyLittlewoodUpperPairSum_le
+#print axioms LeanLab.Riemann.hardyLittlewoodFiniteMeanSquare_eq_diag_add_upper
+#print axioms LeanLab.Riemann.hardyLittlewoodFiniteMeanSquare_le_length_add_truncation
+#print axioms LeanLab.Riemann.hardyLittlewoodFiniteMeanSquare_le_length
+#print axioms LeanLab.Riemann.hardyLittlewoodFiniteMeanSquare_endpoint
 #print axioms LeanLab.Riemann.classicalDetectorCoefficient_eq_zero
 #print axioms LeanLab.Riemann.mellin_classicalDetectorExponentialSeries_eq_gamma_mul_mollifier_mul_zeta
 #print axioms LeanLab.Riemann.differentiableOn_classicalDetectorCancelledGammaZeta

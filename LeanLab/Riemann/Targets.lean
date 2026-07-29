@@ -101,6 +101,7 @@ import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.SelbergLocalSignChange
 import LeanLab.Riemann.HardyLittlewoodLinearCount
 import LeanLab.Riemann.HardyLittlewoodSourceNormalization
+import LeanLab.Riemann.HardyLittlewoodFiniteMeanSquare
 import LeanLab.Riemann.ClassicalZeroDetectorMellin
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.HardyAbelMomentAmplification
@@ -1917,6 +1918,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``hardyLittlewoodSourceNormalization_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260729-H1-HARDY-LITTLEWOOD-SOURCE-NORMALIZATION-01 closes the source coordinate and eta lower-premise edge. The max-|t|-one extension agrees with the literal source scaling for t>=1 while retaining a strictly positive global weight; the naive symmetric raw weight is formally zero at t=0. Lean derives the t>=8 Gamma lower estimate from the H6 Stieltjes--Stirling remainder, then the zeta and eta lower estimates, exact eta primitive identity, and [T,2T] consumer interface. The Lemma 7 primitive-series identification and error moment, Lemma 11 moving-integral moment, parameter budget, unconditional linear count, H1, and RH remain open." },
+    { id := "H1.hardy-littlewood.finite-mean-square"
+      tier := .tier2
+      title := "Formalize Hardy--Littlewood's finite mean-square core"
+      statement :=
+        "Prove a truncation-independent diagonal coefficient bound, a universal linear upper-triangular logarithmic-kernel bound, the exact shifted finite norm-square expansion, an O(L+N) interval mean square, and its uniform O(L) corollary when N<=L."
+      leanName := some ``hardyLittlewoodFiniteMeanSquare_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260730-H1-HARDY-LITTLEWOOD-FINITE-MEAN-SQUARE-01 reconstructs the finite core of Lemmas 6--8 and verifies the omission-seeking premise minimization: the source's stronger O(N/log N) kernel estimate is not needed for this finite conclusion; an explicit O(N) near/far decomposition suffices. Lean checks the literal alternating coefficient, shifted logarithmic phases, exact double expansion, cosine integral bound, and uniform interval theorem. This does not identify or uniformly truncate the conditionally convergent eta primitive series, prove its error moment, prove the actual source-X moment, instantiate the count parameter budget, or prove an unconditional linear count, H1, or RH." },
     { id := "H1.selberg.local-sign-change-producer"
       tier := .tier2
       title := "Formalize Selberg's local squared-mollifier sign detector"

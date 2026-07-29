@@ -3998,4 +3998,28 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   or RH.
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.
+
+## 2026-07-30 H1 Hardy--Littlewood finite mean-square local result
+
+- `classification`: `FULL_SUCCESS / FINITE_MEAN_SQUARE_FORMALIZED`.
+- `H1-HARDY-LITTLEWOOD-FINITE-MEAN-SQUARE-01`: locally closed by
+  `hardyLittlewoodFiniteMeanSquare_endpoint`.
+- `compiled_chain`: bounded diagonal coefficient sum; `->` near/far universal linear
+  upper-triangular kernel; `->` exact shifted norm-square expansion; `->` interval
+  `O(L+N)`; `->` uniform `O(L)` when `N<=L`.
+- `historical_omission_result`: the source's stronger `O(N/log N)` Lemma 6 estimate is not
+  required for this finite mean-square conclusion; `O(N)` suffices.
+- `OBS-H1-HARDY-LITTLEWOOD-FINITE-MEAN-SQUARE-01`: locally closed.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-TRUNCATION-01`: first open successor.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-SERIES-IDENTIFICATION-01`: remains open.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-ERROR-MEAN-SQUARE-01`: remains open.
+- `OBS-H1-HARDY-LITTLEWOOD-X-MEAN-SQUARE-01`: remains open.
+- `OBS-H1-HARDY-LITTLEWOOD-PARAMETER-BUDGET-01`: remains open.
+- `strict_boundary`: finite polynomial only; no infinite-series truncation theorem,
+  unconditional linear count, H1, or RH.
+- `local_audit`: 1171-line no-sorry module; six exact checks; six selected standard-only
+  axiom prints; empty forbidden/resource scans and patch check; warning-as-error module and
+  registration compiles; full build `8800/8800`.
+- `public_state`: frozen implementation publication pending.
+- `global_goal`: active.
 - `global_goal`: active.

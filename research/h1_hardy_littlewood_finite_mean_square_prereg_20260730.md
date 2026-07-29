@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-FINITE-MEAN-SQUARE-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTERED / PRODUCTION_EDIT_BLOCKED_PENDING_PUBLIC_CI`
+Status: `LOCAL_AUDIT_GREEN / PUBLIC_IMPLEMENTATION_CI_PENDING`
 
 ## Parent and route selection
 
@@ -124,8 +124,9 @@ Register one proven Target and exact TargetChecks. Add selected standard-only ax
 ```
 
 The first telescope inequality and the resulting infinite diagonal bound were compiled in a
-temporary no-sorry feasibility probe before preregistration. They are not repository theorems
-and cannot be used downstream until the production module and mechanical gates pass.
+temporary no-sorry feasibility probe before preregistration. They are now production theorems
+in `LeanLab/Riemann/HardyLittlewoodFiniteMeanSquare.lean`; downstream use remains subject to
+the mechanical and public-CI gates below.
 
 ## Success, partial, falsification, and obstruction criteria
 

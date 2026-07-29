@@ -28,6 +28,7 @@ import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.SelbergLocalSignChange
 import LeanLab.Riemann.HardyLittlewoodLinearCount
 import LeanLab.Riemann.HardyLittlewoodSourceNormalization
+import LeanLab.Riemann.HardyLittlewoodFiniteMeanSquare
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.HardyThetaInversion
@@ -6080,5 +6081,41 @@ example {T H : ℝ} (hT : 8 ≤ T) (hH : 0 ≤ H) :
 
 example : HardyLittlewoodSourceNormalizationCertificate :=
   hardyLittlewoodSourceNormalization_endpoint
+
+example :
+    Summable hardyLittlewoodLogSquareCoeff :=
+  summable_hardyLittlewoodLogSquareCoeff
+
+example (N : ℕ) :
+    hardyLittlewoodUpperPairSum N ≤
+      (N : ℝ) *
+        (hardyLittlewoodNearPairConstant + hardyLittlewoodFarPairConstant) :=
+  hardyLittlewoodUpperPairSum_le N
+
+example (N : ℕ) (shift A L : ℝ) :
+    hardyLittlewoodFiniteMeanSquare N shift A L =
+      (∑ n ∈ Finset.Icc 2 N,
+        L * hardyLittlewoodLogSquareCoeff n) +
+      2 * (∑ n ∈ Finset.Icc 2 N,
+        ∑ r ∈ Finset.Icc 1 (N - n),
+          hardyLittlewoodPairIntegral shift A L n (n + r)) :=
+  hardyLittlewoodFiniteMeanSquare_eq_diag_add_upper N shift A L
+
+example (N : ℕ) (shift A L : ℝ) (hL : 0 ≤ L) :
+    hardyLittlewoodFiniteMeanSquare N shift A L ≤
+      L * (6 / Real.log 2) +
+        4 * (N : ℝ) *
+          (hardyLittlewoodNearPairConstant +
+            hardyLittlewoodFarPairConstant) :=
+  hardyLittlewoodFiniteMeanSquare_le_length_add_truncation
+    N shift A L hL
+
+example (N : ℕ) (shift A L : ℝ) (hL : 0 ≤ L) (hNL : (N : ℝ) ≤ L) :
+    hardyLittlewoodFiniteMeanSquare N shift A L ≤
+      L * hardyLittlewoodFiniteMeanSquareConstant :=
+  hardyLittlewoodFiniteMeanSquare_le_length N shift A L hL hNL
+
+example : HardyLittlewoodFiniteMeanSquareCertificate :=
+  hardyLittlewoodFiniteMeanSquare_endpoint
 
 end LeanLab.Riemann

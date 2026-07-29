@@ -54,6 +54,18 @@ The source's uniform infinite-series truncation, eta-primitive identification, a
 coordinate second moment, count parameter budget, H1, and RH remain open. H2, H7/H8, H10, H11,
 H12, and H14 remain live alternatives after this fixed finite campaign.
 
+## 2026-07-30 H1 Hardy--Littlewood finite mean-square result
+
+The omission test succeeds locally. Lean proves that the finite shifted Dirichlet polynomial has
+mean square `O(L+N)` and hence `O(L)` for `N<=L`, using a universal linear near/far
+off-diagonal bound. The extra `1/log N` saving in source Lemma 6 is therefore not logically
+needed at this finite stage.
+
+This does not close the 1921 route. The first remaining source inference is the uniform
+conditional-series truncation in Lemmas 3--4, followed by eta-series identification/error
+moment, the actual source-X moment, and the count parameter budget. Other historical families
+remain live, and original conjectures remain open at every stage.
+
 An independent auditor may add a route only with a primary-source anchor and a reason it is not a
 subroute of an existing row. Renaming a route does not create a new campaign slot.
 
