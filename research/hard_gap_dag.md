@@ -3430,7 +3430,10 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `immutable_evidence`: docs-only commit
   `6b151d4cbecd963ea4be9d208c9dff3d20ac47ac`, Lean Action run `30480041592`, build job
   `90671423054`, passed in `2m22s`; frozen five-file diff empty.
-- `next_gate`: docs-only final ledger and public CI, then a closure receipt.
+- `final_ledger`: docs-only commit `0341cb75df491de2642cdaeb02ef5b8e3041b140`,
+  Lean Action run `30480335673`, build job `90672503333`, passed in `2m8s`; frozen five-file
+  diff empty.
+- `next_gate`: one closure receipt and public CI, then stop this local campaign and rerank.
 - `global_goal`: active.
 
 ## 2026-07-29 H12 left-half-plane winding final ledger public green
