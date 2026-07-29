@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-SOURCE-NORMALIZATION-ETA-LOWER-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTERED / PUBLIC_CI_PENDING`
+Status: `LOCAL_FULL_SUCCESS / IMPLEMENTATION_PUBLIC_CI_PENDING`
 
 ## Parent and selection
 
@@ -154,3 +154,41 @@ Before implementation publication:
 After frozen implementation public CI, publish immutable evidence, final ledger, and closure
 receipt through separate public-green commits. Then stop only this local campaign and rerank the
 historical routes. The persistent RH Goal remains active.
+
+## Local implementation result
+
+The frozen endpoint is implemented in
+`LeanLab/Riemann/HardyLittlewoodSourceNormalization.lean`.
+
+The compiled chain is:
+
+```text
+raw symmetric source weight is zero at t=0
+-> max-|t|-one extension is continuous and strictly positive
+-> exact global actual-zero adapter
+-> exact project xi/Gamma/zeta norm identity
+-> H6 explicit Stirling remainder at 1/4+i*t/2
+-> explicit Gamma and zeta lower estimates for t>=8
+-> eta factor norm <= 3*zeta norm
+-> positive eta pointwise lower estimate
+-> exact eta primitive interval identity
+-> absolute-window lower estimate
+-> [T,2T] premise accepted by the finite count consumer.
+```
+
+The implementation is 674 lines. The module, Targets, TargetChecks, AxiomsAudit, and root import
+compile with warning-as-error. Twelve exact endpoint checks compile. Nine selected axiom prints
+report only `propext`, `Classical.choice`, and `Quot.sound`. Forbidden and resource scans and
+`git diff --check` are empty. The full build passes `8799/8799` with inherited replay warnings
+only.
+
+The following source producers remain open:
+
+- identification of the integral eta primitive with the relevant component of the Lemma 7
+  Dirichlet series;
+- the eta-window error square-mean estimate;
+- the actual source-coordinate moving-integral square-mean estimate of Lemma 11;
+- the uniform asymptotic parameter budget.
+
+Consequently this is the full source normalization and eta lower-premise edge, not the
+unconditional Hardy--Littlewood linear-count theorem, a positive-proportion theorem, H1, or RH.

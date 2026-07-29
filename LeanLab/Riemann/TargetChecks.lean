@@ -27,6 +27,7 @@ import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.SelbergLocalSignChange
 import LeanLab.Riemann.HardyLittlewoodLinearCount
+import LeanLab.Riemann.HardyLittlewoodSourceNormalization
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.HardyThetaInversion
@@ -6008,5 +6009,76 @@ example {n : ℕ} (base H : ℝ) :
 
 example : HardyLittlewoodLinearCountCertificate :=
   hardyLittlewoodLinearCount_endpoint
+
+example : hardyLittlewoodRawSourceWeight 0 = 0 :=
+  hardyLittlewoodRawSourceWeight_zero
+
+example {t : ℝ} (ht : 1 ≤ t) :
+    hardyLittlewoodSourceWeight t =
+      hardyLittlewoodRawSourceWeight t :=
+  hardyLittlewoodSourceWeight_eq_rawWeight ht
+
+example : HardyLittlewoodZeroCoordinate hardyLittlewoodSourceX :=
+  hardyLittlewoodSourceCoordinate
+
+example {t : ℝ} (ht : 0 < t) :
+    |hardyXi t| =
+      (t ^ 2 + 1 / 4) / 2 *
+        Real.pi ^ (-1 / 4 : ℝ) *
+          ‖Complex.Gamma (hardyLittlewoodGammaPoint t)‖ *
+            ‖riemannZeta (hardyCriticalLinePoint t)‖ :=
+  norm_hardyXi_source_factor ht
+
+example {t : ℝ} (ht : 8 ≤ t) :
+    (1 / 2 : ℝ) *
+        ‖deBruijnNewmanPolymathGammaStirlingMain
+          (hardyLittlewoodGammaPoint t)‖ ≤
+      ‖Complex.Gamma (hardyLittlewoodGammaPoint t)‖ :=
+  hardyLittlewoodGamma_lower ht
+
+example {t : ℝ} (ht : 8 ≤ t) :
+    hardyLittlewoodZetaLowerConstant *
+        ‖riemannZeta (hardyCriticalLinePoint t)‖ ≤
+      |hardyLittlewoodSourceX t| :=
+  hardyLittlewood_zeta_lower ht
+
+example (t : ℝ) :
+    ‖hardyLittlewoodEtaCritical t‖ ≤
+      3 * ‖riemannZeta (hardyCriticalLinePoint t)‖ :=
+  norm_hardyLittlewoodEtaCritical_le t
+
+example {t : ℝ} (ht : 8 ≤ t) :
+    hardyLittlewoodEtaLowerConstant *
+        ‖hardyLittlewoodEtaCritical t‖ ≤
+      |hardyLittlewoodSourceX t| :=
+  hardyLittlewood_eta_lower ht
+
+example (t H : ℝ) :
+    (∫ u in t..t + H, hardyLittlewoodEtaReal u) =
+      H + hardyLittlewoodEtaPrimitive (t + H) -
+        hardyLittlewoodEtaPrimitive t :=
+  integral_hardyLittlewoodEtaReal_eq t H
+
+example {t H : ℝ} (ht : 8 ≤ t) (hH : 0 ≤ H) :
+    hardyLittlewoodEtaLowerConstant * H -
+        |hardyLittlewoodEtaWindowError H t| ≤
+      hardyLittlewoodAbsWindowIntegral
+        hardyLittlewoodSourceX H t :=
+  hardyLittlewood_eta_interval_lower ht hH
+
+example {T H : ℝ} (hT : 8 ≤ T) (hH : 0 ≤ H) :
+    ∀ t ∈ Set.Icc T (2 * T),
+      t ∉ hardyLittlewoodBadSet
+        hardyLittlewoodSourceX
+          (hardyLittlewoodEtaWindowError H) H
+          (hardyLittlewoodEtaLowerConstant * H / 2) →
+      hardyLittlewoodEtaLowerConstant * H -
+          |hardyLittlewoodEtaWindowError H t| ≤
+        hardyLittlewoodAbsWindowIntegral
+          hardyLittlewoodSourceX H t :=
+  hardyLittlewood_eta_lower_on_source_range hT hH
+
+example : HardyLittlewoodSourceNormalizationCertificate :=
+  hardyLittlewoodSourceNormalization_endpoint
 
 end LeanLab.Riemann

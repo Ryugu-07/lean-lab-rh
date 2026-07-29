@@ -2,7 +2,7 @@
 
 Date: 2026-07-29
 
-Status: `H1_SOURCE_NORMALIZATION_SELECTED / PREREGISTRATION_PENDING`
+Status: `H1_SOURCE_NORMALIZATION_LOCAL_SUCCESS / IMPLEMENTATION_PUBLIC_CI_PENDING`
 
 ## Closed parent
 
@@ -87,3 +87,17 @@ statement.
 
 The selected endpoint moves a premise boundary; it does not optimize a numerical constant.
 The persistent RH Goal remains active.
+
+## Selection outcome
+
+The selected endpoint is compiled by `hardyLittlewoodSourceNormalization_endpoint`. The
+674-line module constructs the positive global extension, proves exact actual-zero equivalence,
+derives the project xi/Gamma/zeta norm identity, uses the H6 explicit Stirling remainder for a
+concrete `t>=8` Gamma lower estimate, and obtains the eta pointwise and absolute-window lower
+estimates.
+
+This closes the source normalization and `ETA-LOWER` premise locally. It does not identify the
+integral primitive with Hardy--Littlewood's Lemma 7 Dirichlet series and does not prove either
+second moment. After public closure, compare the Lemma 7 series/moment edge and Lemma 11 source
+window moment against Selberg's global moment producer and the leading open nodes in the other
+historical families.

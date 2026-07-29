@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H1-HARDY-LITTLEWOOD-SOURCE-NORMALIZATION-01`
 
 Node: `H1-HARDY-LITTLEWOOD-SOURCE-NORMALIZATION-ETA-LOWER-01`
 
-Status: `PREREGISTERED / PUBLIC_CI_PENDING`
+Status: `LOCAL_FULL_SUCCESS / IMPLEMENTATION_PUBLIC_CI_PENDING`
 
 ## Fixed question
 
@@ -26,13 +26,16 @@ explicit Stirling remainder, without assuming either source second moment?
 | 6 | `ETA_FACTOR` | The analytic identity `eta(s)=(1-2^(1-s))*zeta(s)` and `|2^(1-s)|=sqrt 2<=2` give `|eta|<=3|zeta|` on the critical line. | Divide the zeta witness constant by three. |
 | 7 | `PRIMITIVE_ALIGNMENT` | Defining the primitive of `Re eta-1` gives an exact interval identity and the lower bound `A*H-|error|<=integral |X|`. This does not identify the primitive with the source Dirichlet series or prove its moment. | Make the exact consumer premise the endpoint; retain series identification and mean square as successor obstacles. |
 | 8 | `LEAN_PROBE` | A 590-line temporary module compiles without `sorry`: global zero adapter, exact xi/Gamma/zeta norm formula, explicit Gamma/zeta/eta lower estimates, primitive identity, and absolute-window lower estimate. | Publish docs-only preregistration; make no production edit before public CI. |
+| 9 | `PUBLIC_PREREGISTRATION` | Docs-only commit `65dc6f89905e52deaac1c22a65a2f7ea745a124e` passed Lean Action run `30468092999`, build job `90631003060`, in `1m37s`. | Open the production gate for the frozen eleven-item endpoint. |
+| 10 | `IMPLEMENTATION` | The 674-line production module compiles the positive extension, exact zero adapter, source norm identity, H6-to-Gamma repair, zeta/eta lower bounds, primitive identity, source-range consumer premise, negative control, and aggregate certificate. | Register one proven Target, twelve exact checks, and nine selected axiom prints. |
+| 11 | `LOCAL_AUDIT` | All five production/registration files compile with warning-as-error; selected axioms are standard only; forbidden/resource scans and patch check are empty; full build passes `8799/8799`. | Freeze and publish the implementation, then require independent public CI. |
 
 ## Current frontier
 
 - `closed_parent`: finite exceptional-set-to-injective-zero-count bridge.
-- `selected_edge`: source real normalization and eta absolute-window lower estimate.
+- `locally_closed_edge`: source real normalization and eta absolute-window lower estimate.
 - `compiled_cross_route_input`: H6 explicit Stieltjes--Stirling remainder.
-- `first_open_after_endpoint`: eta series identification/error moment, actual source moving
+- `first_open_after_result`: eta series identification/error moment, actual source moving
   integral second moment, and the asymptotic parameter budget.
 - `strict_boundary`: no unconditional linear count, positive proportion, H1, or RH.
 - `global_goal`: active.

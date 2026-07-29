@@ -100,6 +100,7 @@ import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.SelbergLocalSignChange
 import LeanLab.Riemann.HardyLittlewoodLinearCount
+import LeanLab.Riemann.HardyLittlewoodSourceNormalization
 import LeanLab.Riemann.ClassicalZeroDetectorMellin
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.HardyAbelMomentAmplification
@@ -1908,6 +1909,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``hardyLittlewoodLinearCount_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260729-H1-HARDY-LITTLEWOOD-LINEAR-COUNT-01 reconstructs equations (2.81)--(2.87) and section 2.9 of Hardy--Littlewood 1921 at the finite exact level. Lean checks the moving-window continuity, strict and non-strict square Markov bounds, bad-set union bound, [T,2T] restricted-measure interval charge, natural good-pair lower bound, injective actual-zero selection, positive-half corollary, and the endpoint-sampling null-set control. The actual source Hardy X/Z normalization, eta lower estimate, and two source second moments remain explicit producer hypotheses; no unconditional linear count, positive proportion, H1, or RH is proved." },
+    { id := "H1.hardy-littlewood.source-normalization-eta-lower"
+      tier := .tier2
+      title := "Formalize Hardy--Littlewood's source normalization and eta lower estimate"
+      statement :=
+        "Construct a globally positive extension of the 1921 real source coordinate, prove exact critical-line zero equivalence and the project xi/Gamma/zeta norm identity, use the H6 explicit Stirling remainder for a positive zeta and eta comparison, and derive the eta-window absolute-integral lower premise consumed by the finite count theorem."
+      leanName := some ``hardyLittlewoodSourceNormalization_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260729-H1-HARDY-LITTLEWOOD-SOURCE-NORMALIZATION-01 closes the source coordinate and eta lower-premise edge. The max-|t|-one extension agrees with the literal source scaling for t>=1 while retaining a strictly positive global weight; the naive symmetric raw weight is formally zero at t=0. Lean derives the t>=8 Gamma lower estimate from the H6 Stieltjes--Stirling remainder, then the zeta and eta lower estimates, exact eta primitive identity, and [T,2T] consumer interface. The Lemma 7 primitive-series identification and error moment, Lemma 11 moving-integral moment, parameter budget, unconditional linear count, H1, and RH remain open." },
     { id := "H1.selberg.local-sign-change-producer"
       tier := .tier2
       title := "Formalize Selberg's local squared-mollifier sign detector"

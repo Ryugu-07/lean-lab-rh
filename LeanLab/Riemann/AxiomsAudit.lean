@@ -12,6 +12,7 @@ import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.SelbergLocalSignChange
 import LeanLab.Riemann.HardyLittlewoodLinearCount
+import LeanLab.Riemann.HardyLittlewoodSourceNormalization
 import LeanLab.Riemann.ClassicalZeroDetectorMellin
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.HardyAbelMomentAmplification
@@ -1245,6 +1246,15 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.hardyLittlewood_positiveHalf_corollary
 #print axioms LeanLab.Riemann.hardyLittlewoodEndpointSet_volume_zero
 #print axioms LeanLab.Riemann.hardyLittlewoodLinearCount_endpoint
+#print axioms LeanLab.Riemann.hardyLittlewoodRawSourceWeight_zero
+#print axioms LeanLab.Riemann.hardyLittlewoodSourceCoordinate
+#print axioms LeanLab.Riemann.norm_hardyXi_source_factor
+#print axioms LeanLab.Riemann.hardyLittlewoodGamma_lower
+#print axioms LeanLab.Riemann.hardyLittlewood_zeta_lower
+#print axioms LeanLab.Riemann.hardyLittlewood_eta_lower
+#print axioms LeanLab.Riemann.hardyLittlewood_eta_interval_lower
+#print axioms LeanLab.Riemann.hardyLittlewood_eta_lower_on_source_range
+#print axioms LeanLab.Riemann.hardyLittlewoodSourceNormalization_endpoint
 #print axioms LeanLab.Riemann.classicalDetectorCoefficient_eq_zero
 #print axioms LeanLab.Riemann.mellin_classicalDetectorExponentialSeries_eq_gamma_mul_mollifier_mul_zeta
 #print axioms LeanLab.Riemann.differentiableOn_classicalDetectorCancelledGammaZeta

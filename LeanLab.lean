@@ -117,6 +117,7 @@ import LeanLab.Riemann.HardyCriticalLineSign
 import LeanLab.Riemann.HardyComplexAlpha
 import LeanLab.Riemann.HardyTangentialThetaIntegral
 import LeanLab.Riemann.HardyLittlewoodLinearCount
+import LeanLab.Riemann.HardyLittlewoodSourceNormalization
 import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.TargetChecks

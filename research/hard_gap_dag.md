@@ -3929,3 +3929,32 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   received source-level decisive-edge treatment; original conjectures and direct RH attempts
   remain open at every time.
 - `global_goal`: active.
+
+## 2026-07-29 H1 Hardy--Littlewood source normalization local closure
+
+- `classification`: `FULL_SUCCESS / SOURCE_NORMALIZATION_ETA_LOWER_FORMALIZED`.
+- `H1-HARDY-LITTLEWOOD-SOURCE-NORMALIZATION-ETA-LOWER-01`: locally closed by
+  `hardyLittlewoodSourceNormalization_endpoint`.
+- `compiled_chain`:
+  positive source-faithful global extension;
+  `->` exact actual-zero adapter;
+  `->` exact project xi/Gamma/zeta norm identity;
+  `->` H6 explicit-remainder Gamma lower estimate for `t>=8`;
+  `->` zeta and eta pointwise lower estimates;
+  `->` exact eta primitive identity;
+  `->` source absolute-window lower premise on `[T,2T]`.
+- `negative_control`: `hardyLittlewoodRawSourceWeight_zero` records why the literal
+  positive-height algebraic weight cannot be naively globalized.
+- `OBS-H1-HARDY-Z-NORMALIZATION-01`: closed.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-LOWER-01`: closed.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-SERIES-IDENTIFICATION-01`: remains open.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-ERROR-MEAN-SQUARE-01`: remains open.
+- `OBS-H1-HARDY-LITTLEWOOD-X-MEAN-SQUARE-01`: remains open.
+- `OBS-H1-HARDY-LITTLEWOOD-PARAMETER-BUDGET-01`: remains open.
+- `strict_boundary`: no source second moment, unconditional linear count, positive proportion,
+  H1, or RH.
+- `local_audit`: 674-line no-sorry module; twelve exact checks; nine selected standard-only
+  axiom prints; empty forbidden/resource scans and patch check; warning-as-error module and
+  registration compiles; full build `8799/8799`.
+- `next_gate`: frozen implementation public CI.
+- `global_goal`: active.
