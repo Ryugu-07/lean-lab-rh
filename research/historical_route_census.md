@@ -275,3 +275,22 @@ This audit found no omitted shortcut from the contour shift to H2: the next subs
 input is the quantitative Type-I/Type-II block and tail control. That successor, the resulting
 zero-density estimate, H2, and RH remain open. The local result is
 `FULL_SUCCESS / KNOWN_CONTOUR_SHIFT_FORMALIZED`; public evidence closure is pending.
+
+## 2026-07-30 H7 Fourier-topology omission re-entry
+
+After public closure of the H2 contour shift, the census is reranked across H1, H2, H7/H8, H10,
+and H11. H7 is selected because its old source-instantiation boundary has materially changed:
+the project now compiles actual finite Weil source blocks, finite-dictionary admissibility, and
+the unconditional explicit formula in addition to the earlier parity and Rayleigh-gap
+consumers.
+
+Connes's 2026 Fact 6.4 proves that the explicit prolate packet transforms converge to `Xi`
+uniformly on closed substrips. Section 6.6 still requires a sufficiently good approximation of
+the true ground state by that packet. The phrase hides a topology question when support expands:
+ordinary finite-dimensional or unweighted function convergence need not control Fourier values
+at nonreal points.
+
+The selected campaign tests this exact boundary. It targets an exponentially weighted `L1`
+criterion sufficient for uniform strip convergence and a smooth escaping-packet counterexample
+to unweighted promotion. The actual source comparison, simple-even ground states, the
+all-real-zero limit, H7, and RH remain open.

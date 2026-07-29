@@ -1926,3 +1926,22 @@ extra hypothesis beyond the source's actual off-line-zero and positive-scale ass
 first live H2 successor is the dyadic Type-I/Type-II quantitative detector estimate, not a
 further optimization of the contour normalization. The zero-density theorem, H2, and RH remain
 open.
+
+### Post-H2-contour rerank: H7 ground-state Fourier topology
+
+The H2 contour campaign is publicly closed at receipt
+`a141b4acd1a606c815e7f179a703e882a27fd8bb`. Fresh comparison retains the H1 eta remainder and
+Selberg moments, H2 dyadic detector bounds, H8 actual RKHS positivity, H10 regularized trace,
+and H11 sparse amplification as open.
+
+H7 is reselected at a materially changed boundary. Since the earlier prolate Rayleigh-gap audit,
+the project has compiled actual pole, prime, and archimedean source blocks, finite-dictionary
+admissibility, and the unconditional explicit formula. Connes's Fact 6.4 supplies convergence of
+the explicit prolate transforms to `Xi`, while Section 6.6 still asks for a sufficiently good
+approximation of the true minimum-eigenvalue vector.
+
+Campaign `LITERATURE-20260730-H7-CONNES-FOURIER-TOPOLOGY-01` makes "sufficiently good" testable.
+It freezes an exponential-strip weighted error sufficient for compact-uniform Fourier
+convergence and an escaping smooth packet that tests whether ordinary unweighted convergence
+can be promoted. It does not assume the actual comparison, simple-even source ground states,
+the all-real-zero limit, H7, or RH.

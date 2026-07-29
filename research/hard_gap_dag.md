@@ -3460,6 +3460,36 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `next_gate`: one closure receipt and public CI, then stop this local campaign and rerank.
 - `global_goal`: active.
 
+## 2026-07-30 H7 Connes ground-state Fourier-topology launch
+
+- `parent_public_closure`: H2 classical detector contour-shift receipt
+  `a141b4acd1a606c815e7f179a703e882a27fd8bb`, Lean Action run `30485670826`, build job
+  `90690587648`.
+- `H7-CONNES-GROUNDSTATE-FOURIER-TOPOLOGY-01`: selected after fresh comparison with H1
+  oscillatory/global moments, H2 dyadic density estimates, H8 concrete RKHS infrastructure,
+  H10 regularized trace, and H11 sparse amplification.
+- `historical_omission_test`: Connes Fact 6.4 proves
+  `Fourier(k_lambda) -> Xi` uniformly on closed substrips, while Section 6.6 requires
+  `k_lambda` to be a sufficiently good approximation of the true minimizer `theta_x` without
+  naming the support-sensitive transform topology.
+- `available_edge`: actual finite Weil blocks and explicit formula;
+  `->` source/project Fourier coordinate alignment;
+  `->` finite parity and simple-even consumers;
+  `->` Rayleigh-excess-to-gap projective-defect theorem.
+- `fixed_edge`: exponential-strip weighted error;
+  `->` uniform Fourier difference bound;
+  `->` two-stage target convergence transfer;
+  `->` smooth escaping packet with ordinary mass tending to zero and one fixed interior
+  transform value remaining nonzero.
+- `negative_control`: unweighted `L1`, unweighted `L2`, absolute Rayleigh excess, or projective
+  convergence alone is not promoted to compact-uniform strip convergence.
+- `OBS-H7-CONNES-FOURIER-TOPOLOGY-01`: selected.
+- `OBS-H7-CONNES-ACTUAL-GROUNDSTATE-COMPARISON-01`: remains outside the endpoint.
+- `OBS-H7-CONNES-SIMPLE-EVEN-GROUNDSTATE-01`: remains outside the endpoint.
+- `strict_boundary`: no actual source comparison, all-real-zero limit theorem, H7, or RH.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- `global_goal`: active.
+
 ## 2026-07-30 H1 Hardy--Littlewood eta-to-Theta Abel-transfer local result
 
 - `classification`: `FULL_SUCCESS / ETA_TO_THETA_TRANSFER_FORMALIZED`.
