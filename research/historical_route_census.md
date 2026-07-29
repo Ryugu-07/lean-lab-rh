@@ -70,6 +70,20 @@ The finite campaign's implementation, immutable evidence, and final ledger are p
 After its closure receipt, selection returns to a fresh cross-family rerank rather than
 continuing H1 by inertia.
 
+## 2026-07-30 H1 Hardy--Littlewood eta-to-Theta Abel-transfer selection
+
+After the finite mean-square receipt passed public CI, the portfolio was reranked against H2,
+H7/H8, H10, H11, H12, and H14. Those families remain at broad global analytic or object
+construction producers. The 1921 Hardy--Littlewood proof instead exposes one exact source edge:
+Lemma 4 transfers Lemma 3's uniform eta remainder to the logarithmically weighted Theta series
+by discrete Abel summation.
+
+Campaign `LITERATURE-20260730-H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01` selects only that
+transfer. It will compile the finite identity, reciprocal-log telescope, Cauchy argument, and
+uniform ordered-series remainder under an explicit Lemma 3 hypothesis. It will not claim the
+actual eta remainder, primitive identification, infinite-series moment, unconditional linear
+count, H1, or RH. This is conditional-convergence reconstruction, not numerical optimization.
+
 An independent auditor may add a route only with a primary-source anchor and a reason it is not a
 subroute of an existing row. Renaming a route does not create a new campaign slot.
 

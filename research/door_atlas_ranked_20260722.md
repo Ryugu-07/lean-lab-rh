@@ -1865,3 +1865,21 @@ The production result compiles this weaker premise exactly. The upper triangle i
 Cauchy--Schwarz handles the far range. Thus this finite door is locally closed without
 optimizing the source constant. The next H1 source door is the uniform conditional-series
 truncation of Lemmas 3--4; the global portfolio is reranked only after public closure.
+
+### Post-finite-mean-square rerank: eta-to-Theta Abel transfer
+
+The finite mean-square campaign is publicly closed at receipt
+`5ad0b8b5795820dee3766c6ca2dd816bb41acdb1`. Fresh comparison leaves H2 at an infinite contour
+shift, H7/H8 at concrete spectral objects, H10 at a number-field cohomological transfer, H11 at
+sparse-exception amplification, and H12/H14 at global analytic count producers.
+
+H1 is reselected for one source-exact conditional-convergence edge. On pages 286--287,
+Hardy--Littlewood Lemma 3 gives a uniform eta partial-sum remainder
+`O(x^(-sigma))` for `abs(t)<A*x`; Lemma 4 then applies a reciprocal-log Abel transform and
+claims the same order for Theta. The key block is a difference of two eta remainders, and the
+positive reciprocal-log differences telescope.
+
+Campaign `LITERATURE-20260730-H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01` freezes that implication
+as a no-sorry Lean target. The actual Lemma 3 oscillatory estimate remains a named input and
+the first successor obstacle. This avoids both a false infinite-series claim and a return to
+finite constant optimization.

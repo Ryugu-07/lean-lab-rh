@@ -4034,3 +4034,31 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `next_gate`: closure receipt public CI, then stop this local campaign and rerank.
 - `global_goal`: active.
 - `global_goal`: active.
+
+## 2026-07-30 H1 Hardy--Littlewood eta-to-Theta Abel-transfer launch
+
+- `parent_public_closure`: finite mean-square receipt
+  `5ad0b8b5795820dee3766c6ca2dd816bb41acdb1`, Lean Action run `30476269858`, build job
+  `90658643380`.
+- `H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01`: selected after fresh comparison with H2,
+  H7/H8, H10, H11, H12, and H14.
+- `historical_omission_test`: source Lemma 4 appears to require no new oscillatory estimate
+  beyond Lemma 3; its reciprocal-log Abel transform should preserve the
+  `O(N^(-sigma))` order.
+- `fixed_edge`: exact shifted finite Abel identity;
+  `->` positive reciprocal-log telescope;
+  `->` bounded eta blocks imply bounded weighted blocks;
+  `->` Cauchy and ordered convergence of Theta partial sums;
+  `->` uniform `O(N^(-sigma))` Theta remainder.
+- `negative_control`: qualitative alternating convergence or a bound with an extra
+  `1+abs(s)` factor is not Hardy--Littlewood Lemma 3.
+- `material_difference`: conditional-series transfer, not finite-kernel constant
+  optimization and not selection by H1 adjacency.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01`: selected.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01`: remains outside the endpoint.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-SERIES-IDENTIFICATION-01`: remains outside the endpoint.
+- `OBS-H1-HARDY-LITTLEWOOD-X-MEAN-SQUARE-01`: remains outside the endpoint.
+- `strict_boundary`: no actual Lemma 3 remainder, primitive identification, infinite-series
+  second moment, source-X moment, parameter budget, unconditional linear count, H1, or RH.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- `global_goal`: active.
