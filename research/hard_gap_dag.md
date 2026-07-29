@@ -4398,5 +4398,10 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   RH.
 - `local_audit`: warning-as-error module and registration compiles; module build `8724/8724`;
   empty forbidden scan; selected standard-only axiom prints.
-- `public_status`: implementation commit and independent public CI pending.
+- `public_implementation`: frozen commit
+  `6245bdbc920be5129442da9cfa8d4df586e2730d`, Lean Action run `30499538237`, build job
+  `90735916929`, passed in `2m21s`.
+- `proof_freeze`: the five proof and registration files have an empty diff from the
+  implementation commit and must remain frozen through evidence, final ledger, and receipt.
+- `public_status`: immutable-evidence CI pending.
 - `global_goal`: active.

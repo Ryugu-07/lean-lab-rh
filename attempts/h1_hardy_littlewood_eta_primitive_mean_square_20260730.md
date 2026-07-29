@@ -7,7 +7,7 @@ Campaign:
 
 Node: `H1-HARDY-LITTLEWOOD-ETA-PRIMITIVE-MEAN-SQUARE-01`
 
-Status: `LOCAL_FULL_SUCCESS / PUBLIC_IMPLEMENTATION_CI_PENDING`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_PENDING`
 
 ## Fixed question
 
@@ -32,6 +32,7 @@ eta-window-error moment premise of the finite count consumer?
 | 10 | `UNIFORM_CUTOFF` | For `t in [T,2T]`, `0<=u<=T`, `N=ceil(3T)` satisfies `abs(t+u)<=N` and `N<=4T`. The finite `O(T+N)` theorem plus the explicit tail yields a constant times `T`. | The source's stronger Lemma 8 asymptotic and `O(N/log N)` saving are unnecessary for this consumer. |
 | 11 | `WINDOW_CONSUMER` | The primitive identity rewrites the eta-window error as a scaled imaginary difference of two shifted psi values. The two uniform mean squares give the ordinary window moment. | Convert the nonnegative continuous integrand exactly from `[T,2T]` interval integral to the restricted-measure `lintegral`. |
 | 12 | `LOCAL_AUDIT` | `HardyLittlewoodEtaPrimitiveMeanSquare.lean` and all registration files compile with warning-as-error; module build is `8724/8724`; forbidden scan is empty; selected axiom prints are standard-only. | Classify local full success and freeze the implementation for public CI. |
+| 13 | `IMPLEMENTATION_PUBLIC_CI` | Frozen commit `6245bdbc920be5129442da9cfa8d4df586e2730d` passed Lean Action run `30499538237`, build job `90735916929`, in `2m21s`; the frozen five-file diff is empty. | Publish docs-only immutable evidence and require a second public CI. |
 
 ## Current frontier
 
@@ -44,6 +45,6 @@ eta-window-error moment premise of the finite count consumer?
   parameter budget.
 - `not_claimed`: source-X moment, unconditional linear count, H1, or RH.
 - `local_endpoint`: `hardyLittlewoodEtaPrimitiveMeanSquare_endpoint`.
-- `public_status`: implementation commit and independent public CI pending.
+- `public_status`: frozen implementation is public green; immutable-evidence CI pending.
 - `protected_files`: inherited modified and untracked files remain untouched and unstaged.
 - `global_goal`: active.

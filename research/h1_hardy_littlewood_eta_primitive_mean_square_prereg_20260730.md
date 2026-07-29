@@ -9,7 +9,7 @@ Node: `H1-HARDY-LITTLEWOOD-ETA-PRIMITIVE-MEAN-SQUARE-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `LOCAL_FULL_SUCCESS / PUBLIC_IMPLEMENTATION_CI_PENDING`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_PENDING`
 
 ## Local implementation result
 
@@ -21,7 +21,11 @@ bound at cutoff `ceil(3T)`, and the exact restricted-measure eta-window-error `l
 
 The no-sorry module and registration files compile with warning-as-error; the module build is
 `8724/8724`; the forbidden scan is empty; selected axiom prints use only `propext`,
-`Classical.choice`, and `Quot.sound`. Independent public implementation CI is still pending.
+`Classical.choice`, and `Quot.sound`.
+
+Frozen implementation commit `6245bdbc920be5129442da9cfa8d4df586e2730d` passed independent
+Lean Action run `30499538237`, build job `90735916929`, in `2m21s`. The five-file frozen proof
+and registration diff is empty. Immutable evidence is the next public gate.
 
 ## Parent and fixed source
 
