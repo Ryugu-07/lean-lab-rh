@@ -4335,6 +4335,10 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `local_audit`: 1181-line no-sorry module; nine exact checks; nine selected standard-only
   axiom prints; empty forbidden/resource scans and patch check; warning-as-error module and
   registration compiles; full build `8805/8805`.
-- `next_gate`: frozen implementation and public CI, then immutable evidence, final ledger,
-  closure receipt, and fresh route selection.
+- `public_implementation`: frozen commit
+  `e3341491b34959f2b1eb5d4e1fe2f6fc6cb6ac6f`, Lean Action run `30495767931`, build job
+  `90724079010`, passed in `2m17s`.
+- `proof_freeze`: the five proof and registration files have an empty diff from the
+  implementation commit and must remain frozen through evidence, final ledger, and receipt.
+- `next_gate`: docs-only immutable evidence and independent public CI.
 - `global_goal`: active.

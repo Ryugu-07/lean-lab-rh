@@ -130,6 +130,9 @@ convergence, holomorphy, and analytic identification with the project's eta norm
 - `local_audit`: 1181-line no-sorry module; nine exact checks; nine selected standard-only
   axiom prints; empty forbidden/resource scans and patch check; warning-as-error module and
   registration compiles; full build `8805/8805`.
+- `public_implementation`: frozen commit
+  `e3341491b34959f2b1eb5d4e1fe2f6fc6cb6ac6f`, Lean Action run `30495767931`, build job
+  `90724079010`, passed in `2m17s`; frozen five-file diff empty.
 - `strict_boundary`: no eta-error second moment, source-X moment, parameter budget,
   unconditional linear count, H1, or RH.
 

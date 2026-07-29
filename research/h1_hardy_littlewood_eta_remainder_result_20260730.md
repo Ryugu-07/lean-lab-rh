@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01`
 
 Classification: `FULL_SUCCESS / HARDY_LITTLEWOOD_LEMMA3_FORMALIZED`
 
-Public state: `LOCAL_AUDIT_GREEN / IMPLEMENTATION_PUBLICATION_PENDING`
+Public state: `IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_CI_PENDING`
 
 ## Result
 
@@ -93,3 +93,9 @@ Hardy--Littlewood parameter budget, or prove an unconditional linear critical-ze
 or RH.
 
 The persistent RH Goal remains active.
+
+## Public implementation
+
+Frozen implementation commit `e3341491b34959f2b1eb5d4e1fe2f6fc6cb6ac6f` passed Lean Action
+run `30495767931`, build job `90724079010`, in `2m17s`. The five proof and registration files
+have an empty diff from that commit at immutable-evidence publication.

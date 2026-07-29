@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `LOCAL_FULL_SUCCESS / LOCAL_AUDIT_GREEN`
+Status: `FULL_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_CI_PENDING`
 
 Public preregistration gate: commit `5402fc312747bf68a0bedcdd6e67b8dd71241ed2`,
 Lean Action run `30492875305`, build job `90714768715`, passed in `1m53s`.
@@ -145,7 +145,10 @@ Registration and local audit are green:
 - empty forbidden/resource scans and `git diff --check`;
 - full build `8805/8805`.
 
-Frozen implementation publication and the public evidence chain remain open.
+Frozen implementation commit `e3341491b34959f2b1eb5d4e1fe2f6fc6cb6ac6f` passed independent
+Lean Action run `30495767931`, build job `90724079010`, in `2m17s`. The five proof and
+registration files are frozen and have an empty diff from that commit. Immutable-evidence CI,
+final-ledger CI, and closure-receipt CI remain required.
 
 ## Meaningful partial, falsification, and hard gap
 

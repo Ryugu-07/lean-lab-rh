@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260730-H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01`
 
 Node: `H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01`
 
-Status: `LOCAL_FULL_SUCCESS / LOCAL_AUDIT_GREEN`
+Status: `FULL_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_CI_PENDING`
 
 ## Fixed question
 
@@ -35,6 +35,7 @@ logarithmic phases, and then identify the ordered limit with
 | 14 | `SOURCE_SPECIALIZATION` | The actual project eta remainder and its critical-line specialization compile with constant `4` and source regime `abs(t)<=N`. | Discharge the existing Lemma 4 Abel-transfer premise. |
 | 15 | `THETA_COMPOSITION` | `exists_hardyLittlewoodThetaValue_of_re_pos` composes the proved eta remainder with the existing Theta consumer and gives an explicit `8*(log 2)^-1*N^(-re(s))` tail. | Classify locally as full success; register Target/checks/axioms and run the full audit. |
 | 16 | `LOCAL_AUDIT` | The 1181-line module and all registration files compile with warnings as errors; nine exact checks and nine axiom prints pass with only `propext`, `Classical.choice`, and `Quot.sound`; forbidden/resource scans and `git diff --check` are empty; full build passes `8805/8805`. | Freeze the implementation and publish the evidence chain before closing only this campaign. |
+| 17 | `IMPLEMENTATION_PUBLIC_CI` | Frozen commit `e3341491b34959f2b1eb5d4e1fe2f6fc6cb6ac6f` passed Lean Action run `30495767931`, build job `90724079010`, in `2m17s`; the frozen five-file diff is empty. | Publish docs-only immutable evidence and require a second public CI. |
 
 ## Current frontier
 
@@ -49,7 +50,8 @@ logarithmic phases, and then identify the ordered limit with
   eta-error second moment, source-X moment, and the Hardy--Littlewood parameter budget.
 - `closed_obstacles`: `OBS-H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01` and
   `OBS-H1-HARDY-LITTLEWOOD-ETA-SERIES-IDENTIFICATION-01`.
-- `audit_state`: local green; implementation publication and public CI remain.
+- `audit_state`: implementation public green; immutable-evidence CI, final-ledger CI, and
+  closure-receipt CI remain.
 - `not_claimed`: an eta-error moment, unconditional linear count, H1, or RH.
 - `protected_files`: inherited modified and untracked files remain untouched and unstaged.
 - `global_goal`: active.
