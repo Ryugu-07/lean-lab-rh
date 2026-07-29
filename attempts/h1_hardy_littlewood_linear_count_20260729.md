@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H1-HARDY-LITTLEWOOD-LINEAR-COUNT-01`
 
 Node: `H1-HARDY-LITTLEWOOD-EXCEPTIONAL-SET-COUNT-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PENDING`
 
 ## Fixed question
 
@@ -33,6 +33,7 @@ producers, weakening interval measure to sampled points, or double-counting over
 | 13 | `PREMISE_MINIMIZATION` | The first compiled draft asked for the absolute-integral lower estimate at every real non-bad start, although the proof selects starts only inside the first blocks and the source proves its estimate on `[T,2T]`. | Weaken the generic consumer to first-block-local lower estimates and the source theorem to `[T,2T]`; keep the conclusion unchanged. |
 | 14 | `LOCAL_AUDIT` | The 867-line module, exact checks, root import, and selected axiom prints compile with warning-as-error. Axiom output is exactly standard foundations; three forbidden scans and patch check are empty; full build passes `8798/8798`. | Publish the frozen implementation and require independent public CI before immutable evidence and closure. |
 | 15 | `PUBLIC_IMPLEMENTATION` | Frozen commit `8f3742c62a381293fa201358cf58130d2c333c48` passed Lean Action run `30464674314`, build job `90619318156`, in `2m52s`. | Freeze the five proof/registration files and publish docs-only immutable evidence. |
+| 16 | `IMMUTABLE_EVIDENCE` | Docs-only commit `9f161104ed086a137e221b6c8ffe3d3bdda65005` passed Lean Action run `30465073931`, build job `90620648692`, in `2m14s`; the frozen five-file diff is empty. | Publish the docs-only final ledger and require public CI. |
 
 ## Current frontier
 

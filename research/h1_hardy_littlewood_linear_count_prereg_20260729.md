@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-EXCEPTIONAL-SET-COUNT-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_PENDING`
 
 ## Parent and selection
 
@@ -211,3 +211,7 @@ H1, or RH.
 Frozen implementation commit `8f3742c62a381293fa201358cf58130d2c333c48` passed public Lean
 Action run `30464674314`, build job `90619318156`, in `2m52s`. The five proof and registration
 files are now frozen; the next gate is docs-only immutable evidence.
+
+Immutable-evidence commit `9f161104ed086a137e221b6c8ffe3d3bdda65005` passed public Lean
+Action run `30465073931`, build job `90620648692`, in `2m14s`. The frozen five-file diff remains
+empty. The next gate is the docs-only final ledger.
