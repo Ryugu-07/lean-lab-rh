@@ -120,3 +120,6 @@ Frozen implementation commit `0f0cb7c2829dd8c35ccf926e0bfb6a79d75147eb` passed p
 Action run `30418152861`, build job `90469028889`, in `3m0s`.
 Docs-only immutable evidence commit `389dc3790e2affe3cc6cb7329f78a37cff04023e` passed public Lean
 Action run `30418420614`, build job `90469840559`, in `1m56s`.
+Final-ledger commit `1de09f4d05dd114a0eca8b89c45fdb0408e6eda7` passed public Lean
+Action run `30418635244`, build job `90470496834`, in `1m37s`. The frozen proof-source diff
+remains empty.

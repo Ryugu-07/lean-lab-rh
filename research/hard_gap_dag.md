@@ -3758,4 +3758,8 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   `30418152861`, build job `90469028889`, passed in `3m0s`.
 - `immutable_evidence`: docs-only commit `389dc3790e2affe3cc6cb7329f78a37cff04023e`,
   Lean Action run `30418420614`, build job `90469840559`, passed in `1m56s`.
-- `next_gate`: final-ledger public CI.
+- `final_ledger`: docs-only commit `1de09f4d05dd114a0eca8b89c45fdb0408e6eda7`,
+  Lean Action run `30418635244`, build job `90470496834`, passed in `1m37s`.
+- `proof_freeze`: the five proof and registration sources have an empty diff from frozen
+  implementation `0f0cb7c2829dd8c35ccf926e0bfb6a79d75147eb`.
+- `next_gate`: one closure receipt, then pause and fresh cross-family selection on resumption.

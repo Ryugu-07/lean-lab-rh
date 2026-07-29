@@ -6582,3 +6582,17 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   commit `0f0cb7c2829dd8c35ccf926e0bfb6a79d75147eb`.
 - Next gate is the final ledger public CI, followed by a closure receipt. Persistent RH Goal
   remains active.
+
+## 2026-07-29 H1 Hardy complex-alpha final ledger public green
+
+- Final-ledger commit `1de09f4d05dd114a0eca8b89c45fdb0408e6eda7` passed public Lean
+  Action run `30418635244`, build job `90470496834`, in `1m37s`.
+- The preregistration, frozen implementation, immutable evidence, and final ledger are all
+  public-green; the frozen five-file proof-source diff remains empty.
+- Closure receipt closes only `H1.hardy.complex-alpha-equation-two`.
+- Keep equation (3), the tangential theta derivative limit, `HardyXiAbelMomentLaw`,
+  unconditional Hardy infinitude, H1, and RH open.
+- After closure-receipt public CI, pause this campaign. On resumption perform a fresh
+  cross-family historical omission selection; original conjectures and direct RH attacks remain
+  open.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.

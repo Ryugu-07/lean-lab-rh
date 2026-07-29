@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H1-HARDY-COMPLEX-ALPHA-01`
 
 Node: `H1-HARDY-COMPLEX-ALPHA-EQUATION-TWO-01`
 
-Status: `FULL_SUCCESS / IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
+Status: `FULL_SUCCESS / FINAL_LEDGER_PUBLIC_GREEN`
 
 ## Fixed question
 
@@ -31,6 +31,7 @@ condition checked, to Hardy's literal equation (2) on `abs (Re alpha) < pi/2`?
 | 12 | `LOCAL_AUDIT` | The 1,318-line module and all registry files pass warning-as-error checks; five exact TargetChecks compile; five new axiom prints use only `propext`, `Classical.choice`, and `Quot.sound`; scans and `git diff --check` are empty; full build passes `8795/8795`. | Classify the fixed endpoint as full success, freeze the five implementation files, and seek public CI. |
 | 13 | `PUBLIC_IMPLEMENTATION_GATE` | Frozen implementation commit `0f0cb7c2829dd8c35ccf926e0bfb6a79d75147eb` passed Lean Action run `30418152861`, build job `90469028889`, in `3m0s`; its five-file proof/registration diff remains empty afterward. | Publish the immutable evidence ledger without changing proof source. |
 | 14 | `IMMUTABLE_EVIDENCE_GATE` | Docs-only evidence commit `389dc3790e2affe3cc6cb7329f78a37cff04023e` passed Lean Action run `30418420614`, build job `90469840559`, in `1m56s`; the frozen proof-source diff remains empty. | Publish the final ledger, then issue a closure receipt after its public CI. |
+| 15 | `FINAL_LEDGER_GATE` | Final-ledger commit `1de09f4d05dd114a0eca8b89c45fdb0408e6eda7` passed Lean Action run `30418635244`, build job `90470496834`, in `1m37s`; the frozen proof-source diff remains empty. | Publish one closure receipt, pause this campaign, and rerank historical families on resumption. |
 
 ## Current frontier
 

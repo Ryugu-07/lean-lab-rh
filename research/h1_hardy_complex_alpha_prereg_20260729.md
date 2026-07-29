@@ -8,7 +8,7 @@ Node: `H1-HARDY-COMPLEX-ALPHA-EQUATION-TWO-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `PREREGISTRATION_PUBLIC_GREEN / IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
+Status: `FINAL_LEDGER_PUBLIC_GREEN / CLOSURE_RECEIPT_PENDING`
 
 Public preregistration evidence: commit
 `ef1752a44ca1b3242348e7ac40ac4b50529b0efe`, Lean Action run `30415933876`, build job
@@ -22,6 +22,10 @@ that commit.
 Immutable evidence: docs-only commit
 `389dc3790e2affe3cc6cb7329f78a37cff04023e`, Lean Action run `30418420614`, build job
 `90469840559`, passed in `1m56s`. The frozen proof-source diff remains empty.
+
+Final-ledger evidence: docs-only commit
+`1de09f4d05dd114a0eca8b89c45fdb0408e6eda7`, Lean Action run `30418635244`, build job
+`90470496834`, passed in `1m37s`. The frozen proof-source diff remains empty.
 
 ## Fixed historical question
 
