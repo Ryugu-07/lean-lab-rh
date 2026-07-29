@@ -30,6 +30,7 @@ import LeanLab.Riemann.HardyLittlewoodLinearCount
 import LeanLab.Riemann.HardyLittlewoodSourceNormalization
 import LeanLab.Riemann.HardyLittlewoodFiniteMeanSquare
 import LeanLab.Riemann.HardyLittlewoodEtaAbelTransfer
+import LeanLab.Riemann.HardyLittlewoodEtaRemainder
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.ClassicalZeroDetectorContourShift
 import LeanLab.Riemann.ClassicalZeroDetectorDyadicDichotomy
@@ -6281,6 +6282,61 @@ example : 0 < hardyLittlewoodEtaAbelTransferConstant :=
 
 example : HardyLittlewoodEtaAbelTransferCertificate :=
   hardyLittlewoodEtaAbelTransfer_endpoint
+
+example (t : ℝ) {N K : ℕ} (hN : 1 ≤ N) (ht : |t| ≤ N) :
+    (∑ j ∈ Finset.range K,
+      ‖hardyLittlewoodEtaInverseDifference t (N + j + 1) -
+        hardyLittlewoodEtaInverseDifference t (N + j)‖) ≤ 1 :=
+  sum_norm_hardyLittlewoodEtaInverseDifference_sub_le_one t hN ht
+
+example (t : ℝ) {N K : ℕ} (hN : 1 ≤ N) (ht : |t| ≤ N) :
+    ‖hardyLittlewoodShiftedPrefix
+      (hardyLittlewoodEtaUnitPhase t) N K‖ ≤ 4 :=
+  norm_hardyLittlewoodEtaUnitPhaseShiftedPrefix_le_four t hN ht
+
+example (sigma t : ℝ) {N K : ℕ}
+    (hsigma : 0 < sigma) (hN : 1 ≤ N) (ht : |t| ≤ N) :
+    ‖hardyLittlewoodShiftedPrefix
+      (hardyLittlewoodEtaSourceTerm
+        (sigma + t * Complex.I)) N K‖ ≤
+      4 * (N : ℝ) ^ (-sigma) :=
+  norm_hardyLittlewoodEtaShiftedPrefix_le_four_mul_rpow
+    sigma t hsigma hN ht
+
+example :
+    TendstoLocallyUniformlyOn
+      (fun N s => hardyLittlewoodEtaPartialSum s N)
+      hardyLittlewoodEtaSeriesValue Filter.atTop
+      {s : ℂ | 0 < s.re} :=
+  tendstoLocallyUniformlyOn_hardyLittlewoodEtaPartialSum
+
+example (s : ℂ) (hs_ne : s ≠ 1) (hs_re : 0 < s.re) :
+    hardyLittlewoodEtaSeriesValue s = hardyLittlewoodEta s :=
+  hardyLittlewoodEtaSeriesValue_eq_hardyLittlewoodEta s hs_ne hs_re
+
+example (s : ℂ) (hs_ne : s ≠ 1) (hs_re : 0 < s.re)
+    {N : ℕ} (hN : 1 ≤ N) (ht : |s.im| ≤ N) :
+    ‖hardyLittlewoodEta s - hardyLittlewoodEtaPartialSum s N‖ ≤
+      4 * (N : ℝ) ^ (-s.re) :=
+  norm_hardyLittlewoodEta_sub_partialSum_le s hs_ne hs_re hN ht
+
+example (t : ℝ) {N : ℕ} (hN : 1 ≤ N) (ht : |t| ≤ N) :
+    ‖hardyLittlewoodEtaCritical t -
+        hardyLittlewoodEtaPartialSum (hardyCriticalLinePoint t) N‖ ≤
+      4 * (N : ℝ) ^ (-(1 / 2 : ℝ)) :=
+  norm_hardyLittlewoodEtaCritical_sub_partialSum_le t hN ht
+
+example (s : ℂ) (hs_ne : s ≠ 1) (hs_re : 0 < s.re) :
+    ∃ thetaValue : ℂ,
+      Filter.Tendsto (hardyLittlewoodThetaPartialSum s)
+        Filter.atTop (nhds thetaValue) ∧
+      ∀ N : ℕ, max 2 ⌈|s.im|⌉₊ ≤ N →
+        ‖thetaValue - hardyLittlewoodThetaPartialSum s N‖ ≤
+          8 * (Real.log 2)⁻¹ * (N : ℝ) ^ (-s.re) :=
+  exists_hardyLittlewoodThetaValue_of_re_pos s hs_ne hs_re
+
+example : HardyLittlewoodEtaRemainderCertificate :=
+  hardyLittlewoodEtaRemainder_endpoint
 
 example {A : ℝ} (hA : 0 ≤ A) {z : ℂ} (hz : |z.im| ≤ A) (x : ℝ) :
     ‖Complex.exp (Complex.I * z * (x : ℂ))‖ ≤

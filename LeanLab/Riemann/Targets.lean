@@ -104,6 +104,7 @@ import LeanLab.Riemann.HardyLittlewoodLinearCount
 import LeanLab.Riemann.HardyLittlewoodSourceNormalization
 import LeanLab.Riemann.HardyLittlewoodFiniteMeanSquare
 import LeanLab.Riemann.HardyLittlewoodEtaAbelTransfer
+import LeanLab.Riemann.HardyLittlewoodEtaRemainder
 import LeanLab.Riemann.ClassicalZeroDetectorMellin
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.ClassicalZeroDetectorContourShift
@@ -1946,6 +1947,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``hardyLittlewoodEtaAbelTransfer_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260730-H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01 reconstructs the exact inference from Hardy--Littlewood 1921 Lemma 3 to Lemma 4. Lean checks the source sign, finite shifted Abel identity, positive reciprocal-log differences, bounded-block estimate, Cauchy completeness, limit passage, and parameter-family uniformity. The actual Lemma 3 eta remainder remains an explicit premise; qualitative alternating convergence or a bound carrying an extra abs(s) factor is not promoted to that premise. No primitive identification, infinite-series mean square, source-X moment, parameter budget, unconditional linear count, H1, or RH is proved." },
+    { id := "H1.hardy-littlewood.eta-remainder"
+      tier := .tier2
+      title := "Prove Hardy--Littlewood's actual eta remainder"
+      statement :=
+        "For the literal alternating eta source, prove an explicit uniform O(N^(-sigma)) ordered remainder on re(s)>0 in the source regime abs(im(s))<=N, identify the canonical ordered limit with (1-2^(1-s))*riemannZeta(s) away from s=1, specialize to the critical line, and discharge the compiled eta-to-Theta Abel transfer."
+      leanName := some ``hardyLittlewoodEtaRemainder_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260730-H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01 reconstructs Hardy--Littlewood 1921 Lemma 3 through a direct finite inverse-difference argument on the actual logarithmic phases. Lean proves denominator separation, inverse-coefficient total variation at most one, phase-block constant 4, the actual eta remainder 4*N^(-sigma) without an abs(s) loss, local uniform convergence and holomorphy, odd/even identification on re(s)>1, identity-theorem continuation to re(s)>0 away from one, the critical-line specialization, and the existing Lemma 4 consumer. This does not prove the primitive-series error moment, source-X moment, parameter budget, unconditional linear count, H1, or RH." },
     { id := "H1.selberg.local-sign-change-producer"
       tier := .tier2
       title := "Formalize Selberg's local squared-mollifier sign detector"

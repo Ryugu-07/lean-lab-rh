@@ -332,3 +332,37 @@ The historical audit finds no omitted shortcut from Lemma 23 to RH. The finite m
 complete, but the actual Type-I large-block rarity and Type-II shifted-integral rarity estimates
 remain open, as do the zero-density theorem, H2, and RH. Local classification:
 `FULL_SUCCESS / SOURCE_DYADIC_DICHOTOMY_FORMALIZED`.
+
+## 2026-07-30 H1 Hardy--Littlewood eta-remainder selection
+
+After public closure of the H2 dyadic detector, the census is reranked across H1, H2, H7/H8,
+H10, H11, and H12. H1 is selected for Hardy--Littlewood Lemma 3's exact uniform eta remainder.
+The source subtracts its Lemma 2 formulas at `x` and `x/2`, canceling both principal terms.
+The omission test asks whether the resulting eta conclusion can instead be proved from the
+finite variation of the actual consecutive logarithmic phases.
+
+The fixed endpoint includes the literal phase ratio, denominator separation, total inverse
+variation, finite phase and eta blocks, ordered convergence, locally uniform holomorphy,
+identification with `(1-2^(1-s))*riemannZeta(s)`, and composition with the already compiled
+eta-to-Theta transfer. A bound retaining `abs(s)`, an unnamed ordered limit, or a theorem
+assuming Lemma 2 is insufficient.
+
+## 2026-07-30 H1 Hardy--Littlewood eta-remainder result
+
+The omission test succeeds locally. Lean proves the actual Lemma 3 eta remainder
+`4*N^(-sigma)` under `sigma>0`, `1<=N`, and `abs(t)<=N`. The finite proof uses exact
+inverse-difference summation: the denominator is uniformly separated, the inverse
+coefficients have total variation at most one, and every actual unit-phase block is bounded
+by four. A decreasing-power Abel transform preserves the order.
+
+The ordered eta limit converges locally uniformly and is holomorphic on `re(s)>0`. Odd/even
+splitting identifies it with the project eta on `re(s)>1`, and the identity theorem extends
+the equality to `re(s)>0`, `s!=1`. Thus both the eta remainder and eta-series identification
+obstacles are locally closed.
+
+This is an overlooked premise reduction, not a route completion: the full Lemma 2
+Fourier-integral proof is unnecessary for Lemma 3's eta conclusion, but no direct jump to RH
+appears. The next H1 source edges are the eta-error second moment, the source-X mean square,
+and the asymptotic parameter budget producing a linear critical-zero count. Selberg,
+Levinson--Conrey, all other historical families, original conjectures, falsification, and
+direct RH attacks remain open.

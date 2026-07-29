@@ -2,7 +2,7 @@
 
 Date: 2026-07-30
 
-Status: `H1_HARDY_LITTLEWOOD_ETA_REMAINDER_SELECTED / PREREGISTRATION_LOCAL`
+Status: `H1_HARDY_LITTLEWOOD_ETA_REMAINDER_LOCAL_FULL_SUCCESS / LOCAL_AUDIT_GREEN`
 
 ## Closed parent
 
@@ -67,7 +67,7 @@ eta(s) = (1-2^(1-s))*zeta(s)
 Thus the source contains no separate `abs(s)`-sized eta error. The apparent loss from pairing
 adjacent terms is an artifact of taking absolute values too early.
 
-## Omission candidate
+## Omission result
 
 Write the unit-modulus part of the alternating term as `u_n`. Consecutive terms satisfy
 
@@ -84,17 +84,15 @@ When `abs(t)<=N` and `n>=N`, `q_n` stays uniformly near `-1`. Set
 u_n = c_n*(u_n-u_(n+1)).
 ```
 
-Summing telescopes. The chord estimate
-`norm(exp(i*x)-1)<=abs(x)`, monotonicity of `log(1+1/n)`, and the variation of `c_n` should give
-a uniform finite bound for every phase block. A second finite Abel transform against
-`n^(-sigma)` would then give the actual `O(N^(-sigma))` eta tail without first formalizing the
-full Fourier-integral proof of Lemma 2.
+Summing telescopes. Lean verifies the chord estimate, monotonicity of the logarithmic
+increments, and total variation of `c_n`, giving the uniform phase-block bound `4`. A second
+finite Abel transform against `n^(-sigma)` gives the actual `4*N^(-sigma)` eta tail without
+first formalizing the full Fourier-integral proof of Lemma 2.
 
-This is a proof candidate, not a claimed theorem. Lean must check the ratio identity,
-denominator separation, total variation, weighted tail, convergence, and analytic
-identification.
+Lean also checks the ratio identity, denominator separation, ordered convergence, local uniform
+convergence, holomorphy, and analytic identification with the project's eta normalization.
 
-## Fixed next campaign
+## Fixed campaign
 
 - `campaign`: `LITERATURE-20260730-H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01`.
 - `node`: `H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01`.
@@ -108,7 +106,31 @@ identification.
   or a theorem assuming Hardy--Littlewood Lemma 2 does not count as full success.
 - `strict_boundary`: no eta-error second moment, source-X moving-window moment, parameter
   budget, unconditional linear count, H1, or RH.
-- `production_gate`: no `LeanLab/` proof or registration edit before docs-only
-  preregistration passes public CI.
+- `production_gate`: satisfied by docs-only preregistration commit
+  `5402fc312747bf68a0bedcdd6e67b8dd71241ed2`, Lean Action run `30492875305`, build job
+  `90714768715`.
+
+## Local result
+
+- `classification`: `FULL_SUCCESS / HARDY_LITTLEWOOD_LEMMA3_FORMALIZED`.
+- `endpoint`: `hardyLittlewoodEtaRemainder_endpoint`.
+- `compiled_chain`: exact logarithmic phase ratio; `->` denominator separation and inverse
+  variation at most `1`; `->` phase blocks at most `4`; `->` eta blocks and ordered remainder
+  at most `4*N^(-sigma)`; `->` local uniform convergence and holomorphy on `re(s)>0`; `->`
+  identification with `(1-2^(1-s))*riemannZeta(s)` away from `s=1`; `->` critical-line
+  specialization and the existing eta-to-Theta transfer.
+- `historical_omission_result`: Lemma 3 can be reconstructed from a direct finite
+  inverse-difference argument; the full Lemma 2 Fourier-integral proof is not logically needed
+  for this eta remainder.
+- `closed_obstacles`: `OBS-H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01` and
+  `OBS-H1-HARDY-LITTLEWOOD-ETA-SERIES-IDENTIFICATION-01`.
+- `strict_successors`: `OBS-H1-HARDY-LITTLEWOOD-ETA-ERROR-MEAN-SQUARE-01`,
+  `OBS-H1-HARDY-LITTLEWOOD-X-MEAN-SQUARE-01`, and
+  `OBS-H1-HARDY-LITTLEWOOD-PARAMETER-BUDGET-01`.
+- `local_audit`: 1181-line no-sorry module; nine exact checks; nine selected standard-only
+  axiom prints; empty forbidden/resource scans and patch check; warning-as-error module and
+  registration compiles; full build `8805/8805`.
+- `strict_boundary`: no eta-error second moment, source-X moment, parameter budget,
+  unconditional linear count, H1, or RH.
 
 The persistent RH Goal remains active.

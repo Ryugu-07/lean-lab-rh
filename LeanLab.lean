@@ -123,6 +123,7 @@ import LeanLab.Riemann.HardyLittlewoodLinearCount
 import LeanLab.Riemann.HardyLittlewoodSourceNormalization
 import LeanLab.Riemann.HardyLittlewoodFiniteMeanSquare
 import LeanLab.Riemann.HardyLittlewoodEtaAbelTransfer
+import LeanLab.Riemann.HardyLittlewoodEtaRemainder
 import LeanLab.Riemann.RieszMellinBoundary
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.TargetChecks

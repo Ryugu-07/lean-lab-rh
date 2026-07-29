@@ -1983,3 +1983,29 @@ block is large on the `1/log T` scale or the actual shifted Mellin integral is a
 The omission search finds no direct jump from this finite alternative to RH. The next H2 doors
 are rarity estimates for the actual Type-I blocks and actual Type-II shifted integrals, followed
 by the zero-density count. Those analytic large-value estimates, H2, and RH remain open.
+
+### Post-H2-dyadic rerank: Hardy--Littlewood eta remainder
+
+The H2 dyadic-dichotomy campaign is publicly closed at receipt
+`d85a370e4adaffdcf51e86fa8b38ff459518d491`. A fresh comparison across H1, H2, H7/H8, H10,
+H11, and H12 selects the exact Hardy--Littlewood Lemma 3 remainder. This is not constant
+optimization: the existing eta-to-Theta consumer requires the actual `N^(-sigma)` order
+without an `abs(s)` loss, and the source's two-scale cancellation suggests a smaller finite
+mechanism than the full Lemma 2 proof.
+
+Campaign `LITERATURE-20260730-H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01` freezes the actual
+logarithmic phase ratios, denominator separation, inverse-coefficient variation, phase and eta
+blocks, ordered convergence, analytic zeta identification, critical-line specialization, and
+Theta composition. An unnamed limit or a theorem assuming Lemma 2 is excluded.
+
+**2026-07-30 local result.** Full success compiles as
+`hardyLittlewoodEtaRemainder_endpoint`. Lean proves inverse variation at most `1`, phase blocks
+at most `4`, and the actual eta remainder
+`4*N^(-sigma)` for `sigma>0`, `1<=N`, and `abs(t)<=N`. The ordered limit converges locally
+uniformly and is identified with `(1-2^(1-s))*riemannZeta(s)` throughout `re(s)>0`, `s!=1`.
+
+The omission result is a premise reduction: Lemma 3 follows from a direct finite
+inverse-difference mechanism, so its eta conclusion does not require formalizing the full
+Fourier-integral proof of Lemma 2. No shortcut to RH appears. The next H1 doors are the
+eta-error second moment, the source-X mean square, and their parameter budget for the linear
+critical-zero count; H1 and RH remain open.

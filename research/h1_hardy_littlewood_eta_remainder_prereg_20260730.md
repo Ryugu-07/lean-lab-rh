@@ -8,7 +8,10 @@ Node: `H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_GATE_PENDING`
+Status: `LOCAL_FULL_SUCCESS / LOCAL_AUDIT_GREEN`
+
+Public preregistration gate: commit `5402fc312747bf68a0bedcdd6e67b8dd71241ed2`,
+Lean Action run `30492875305`, build job `90714768715`, passed in `1m53s`.
 
 ## Parent and fixed source
 
@@ -108,6 +111,41 @@ public interface.
 
 The final constant may be larger than the exploratory value `3`; it must be explicit,
 uniform, and independent of `t`, `N`, and block length in the stated regime.
+
+## Local implementation result
+
+All ten full-success mathematical criteria now compile in
+`LeanLab/Riemann/HardyLittlewoodEtaRemainder.lean`.
+
+- The actual unit phases have the exact consecutive ratio
+  `-exp(-i*t*log((n+1)/n))`.
+- In the source regime `1<=N` and `abs(t)<=N`, the inverse-difference denominator has norm at
+  least one, its inverse has norm at most one, and the total inverse-coefficient variation is
+  at most one.
+- Every actual unit-phase block after `N` has norm at most `4`.
+- Every actual eta block after `N` has norm at most `4*N^(-sigma)` for `sigma>0`, with no
+  `abs(s)` factor.
+- The naturally ordered partial sums are Cauchy and converge locally uniformly on
+  `re(s)>0`; their canonical `limUnder atTop` value has the same explicit remainder.
+- Odd/even splitting identifies that value with
+  `(1-2^(1-s))*riemannZeta s` for `re(s)>1`, and the identity theorem extends the equality to
+  `re(s)>0`, `s!=1`.
+- The resulting project-eta remainder, critical-line specialization, and composition with
+  `exists_hardyLittlewoodThetaValue_of_etaRemainder` compile.
+
+Local classification: `FULL_SUCCESS / HARDY_LITTLEWOOD_LEMMA3_FORMALIZED`.
+
+Registration and local audit are green:
+
+- 1181-line production module;
+- one proven Target and nine exact TargetChecks;
+- nine selected axiom prints, each exactly
+  `[propext, Classical.choice, Quot.sound]`;
+- warning-as-error compiles for the production module, all registration files, and root import;
+- empty forbidden/resource scans and `git diff --check`;
+- full build `8805/8805`.
+
+Frozen implementation publication and the public evidence chain remain open.
 
 ## Meaningful partial, falsification, and hard gap
 

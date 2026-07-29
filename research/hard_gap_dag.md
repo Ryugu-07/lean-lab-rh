@@ -4285,3 +4285,56 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   second moment, source-X moment, parameter budget, unconditional linear count, H1, or RH.
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.
+
+## 2026-07-30 H1 Hardy--Littlewood eta remainder launch
+
+- `parent_public_closure`: H2 classical detector dyadic-dichotomy receipt
+  `d85a370e4adaffdcf51e86fa8b38ff459518d491`, Lean Action run `30492021514`, build job
+  `90711944691`.
+- `H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01`: selected after fresh comparison with H2, H7/H8,
+  H10, H11, and H12.
+- `historical_omission_test`: source Lemma 3 obtains the eta remainder by subtracting Lemma 2
+  at two scales; test whether the full Lemma 2 integral proof can be replaced by a finite
+  inverse-difference argument for the actual logarithmic phases.
+- `fixed_edge`: actual phase ratio; `->` denominator separation and inverse variation; `->`
+  uniform phase blocks; `->` decreasing-power eta blocks; `->` ordered convergence; `->`
+  local uniform holomorphic limit; `->` zeta identification; `->` critical-line and Theta
+  consumers.
+- `negative_control`: an unnamed ordered limit, a bound with an `abs(s)` loss, or a proof
+  assuming Lemma 2 is not full success.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01`: selected.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-SERIES-IDENTIFICATION-01`: selected.
+- `strict_boundary`: no eta-error second moment, source-X moment, parameter budget,
+  unconditional linear count, H1, or RH.
+- `production_gate`: docs-only preregistration commit
+  `5402fc312747bf68a0bedcdd6e67b8dd71241ed2` passed Lean Action run `30492875305`, build job
+  `90714768715`.
+- `global_goal`: active.
+
+## 2026-07-30 H1 Hardy--Littlewood eta remainder local result
+
+- `classification`: `FULL_SUCCESS / HARDY_LITTLEWOOD_LEMMA3_FORMALIZED`.
+- `H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01`: locally closed by
+  `hardyLittlewoodEtaRemainder_endpoint`.
+- `compiled_chain`: actual logarithmic phase ratio; `->` denominator norm at least `1`; `->`
+  inverse coefficient norm at most `1`; `->` total inverse variation at most `1`; `->` phase
+  blocks at most `4`; `->` eta blocks and ordered remainder at most `4*N^(-sigma)`; `->`
+  local uniform convergence and holomorphy on `re(s)>0`; `->` odd/even identification on
+  `re(s)>1`; `->` identity-theorem extension on `re(s)>0`, `s!=1`; `->` critical-line and
+  Theta consumers.
+- `historical_omission_result`: the actual Lemma 3 eta remainder follows from a direct finite
+  inverse-difference mechanism; the full Lemma 2 Fourier-integral proof is not a necessary
+  premise for this conclusion.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01`: closed.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-SERIES-IDENTIFICATION-01`: closed.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-ERROR-MEAN-SQUARE-01`: first open successor.
+- `OBS-H1-HARDY-LITTLEWOOD-X-MEAN-SQUARE-01`: open.
+- `OBS-H1-HARDY-LITTLEWOOD-PARAMETER-BUDGET-01`: open.
+- `strict_boundary`: no eta-error second moment, source-X moment, parameter budget,
+  unconditional linear count, H1, or RH.
+- `local_audit`: 1181-line no-sorry module; nine exact checks; nine selected standard-only
+  axiom prints; empty forbidden/resource scans and patch check; warning-as-error module and
+  registration compiles; full build `8805/8805`.
+- `next_gate`: frozen implementation and public CI, then immutable evidence, final ledger,
+  closure receipt, and fresh route selection.
+- `global_goal`: active.

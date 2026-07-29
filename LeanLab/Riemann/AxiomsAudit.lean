@@ -15,6 +15,7 @@ import LeanLab.Riemann.HardyLittlewoodLinearCount
 import LeanLab.Riemann.HardyLittlewoodSourceNormalization
 import LeanLab.Riemann.HardyLittlewoodFiniteMeanSquare
 import LeanLab.Riemann.HardyLittlewoodEtaAbelTransfer
+import LeanLab.Riemann.HardyLittlewoodEtaRemainder
 import LeanLab.Riemann.ClassicalZeroDetectorMellin
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.ClassicalZeroDetectorContourShift
@@ -1272,6 +1273,15 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.exists_hardyLittlewoodThetaValue_of_etaRemainder
 #print axioms LeanLab.Riemann.hardyLittlewoodTheta_uniform_of_eta_uniform
 #print axioms LeanLab.Riemann.hardyLittlewoodEtaAbelTransfer_endpoint
+#print axioms LeanLab.Riemann.sum_norm_hardyLittlewoodEtaInverseDifference_sub_le_one
+#print axioms LeanLab.Riemann.norm_hardyLittlewoodEtaUnitPhaseShiftedPrefix_le_four
+#print axioms LeanLab.Riemann.norm_hardyLittlewoodEtaShiftedPrefix_le_four_mul_rpow
+#print axioms LeanLab.Riemann.tendstoLocallyUniformlyOn_hardyLittlewoodEtaPartialSum
+#print axioms LeanLab.Riemann.hardyLittlewoodEtaSeriesValue_eq_hardyLittlewoodEta
+#print axioms LeanLab.Riemann.norm_hardyLittlewoodEta_sub_partialSum_le
+#print axioms LeanLab.Riemann.norm_hardyLittlewoodEtaCritical_sub_partialSum_le
+#print axioms LeanLab.Riemann.exists_hardyLittlewoodThetaValue_of_re_pos
+#print axioms LeanLab.Riemann.hardyLittlewoodEtaRemainder_endpoint
 #print axioms LeanLab.Riemann.classicalDetectorCoefficient_eq_zero
 #print axioms LeanLab.Riemann.mellin_classicalDetectorExponentialSeries_eq_gamma_mul_mollifier_mul_zeta
 #print axioms LeanLab.Riemann.differentiableOn_classicalDetectorCancelledGammaZeta
