@@ -3763,3 +3763,27 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `proof_freeze`: the five proof and registration sources have an empty diff from frozen
   implementation `0f0cb7c2829dd8c35ccf926e0bfb6a79d75147eb`.
 - `next_gate`: one closure receipt, then pause and fresh cross-family selection on resumption.
+
+## 2026-07-29 H1 Hardy tangential-theta launch
+
+- `parent_public_closure`: complex-alpha receipt
+  `5a5bb5eb823bf4bc59f4ebb9b483a0bd6cc77408`, Lean Action run `30418898319`,
+  build job `90471308431`, passed in `1m32s`.
+- `H1-HARDY-TANGENTIAL-THETA-LIMIT-01`: selected after fresh comparison with H2 contour shift,
+  H7/H8 concrete spectral producers, H10 curve geometry, H11 sparse amplification, H12 global
+  counts, and H14 computation.
+- `available_left_edge`: `hardyEquationTwo` and full-strip polynomially weighted actual-xi
+  integrability.
+- `available_right_consumer`: `infinite_criticalLineZeros_of_hardyXiAbelMomentLaw`.
+- `fixed_edge`:
+  all-order actual integral differentiation;
+  `->` branch-correct cusp-to-infinity theta transformation;
+  `->` all-order tangential theta flatness;
+  `-> hardyXiAbelMomentLaw_unconditional`;
+  `->` unconditional infinitely many actual critical-line zeros.
+- `OBS-H1-HARDY-TANGENTIAL-THETA-LIMIT-01`: open at preregistration.
+- `materially_new_attack`: replace Hardy's general Bohr--Riesz summability invocation with
+  Mathlib's concrete Jacobi theta functional equation and half-integer Gaussian decay.
+- `strict_boundary`: quantitative counts, positive proportion, H1, and RH remain open.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- `global_goal`: active.

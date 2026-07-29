@@ -1814,3 +1814,23 @@ checked, and the identity theorem closes the connected strip. The next H1 source
 tangential theta derivative limit needed for `HardyXiAbelMomentLaw`; H1 and RH remain open.
 Frozen implementation commit `0f0cb7c2829dd8c35ccf926e0bfb6a79d75147eb` passed public Lean
 Action run `30418152861`, build job `90469028889`, in `3m0s`.
+
+### Post-Hardy-complex-alpha rerank: tangential theta limit
+
+The complex-alpha campaign is publicly closed at receipt
+`5a5bb5eb823bf4bc59f4ebb9b483a0bd6cc77408`. Fresh comparison retains the H2 infinite contour
+shift, H7/H8 actual spectral producers, H9 RH-strength estimates, H10 curve geometry, H11 sparse
+amplification, H12 global counts, and H14 certified computation as open.
+
+H1 is reselected for a materially different source edge, not by adjacency alone. Hardy equation
+(2), full-strip polynomial xi domination, and the complete conditional Abel-moment consumer now
+compile. The sole missing premise in that exact historical chain is equation (3)'s all-order
+differentiation and the tangential theta limit.
+
+Campaign `LITERATURE-20260729-H1-HARDY-TANGENTIAL-THETA-01` replaces Hardy's invoked general
+Bohr--Riesz summability theorem with a concrete modern repair already supported by Mathlib:
+translate the theta cusp from `-1` to `0`, apply the two-variable Jacobi theta functional
+equation, identify the half-integer series at imaginary infinity, and prove that its exponential
+decay absorbs every derivative and square-root loss. Full success constructs
+`HardyXiAbelMomentLaw` without hypotheses and composes it with the existing consumer to prove
+infinitely many actual critical-line zeros. Quantitative counts, H1, and RH remain open.

@@ -6596,3 +6596,25 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   cross-family historical omission selection; original conjectures and direct RH attacks remain
   open.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H1 Hardy tangential-theta selected
+
+- `parent_public_closure`: Hardy complex-alpha receipt
+  `5a5bb5eb823bf4bc59f4ebb9b483a0bd6cc77408`, Lean Action run `30418898319`,
+  build job `90471308431`, passed in `1m32s`.
+- `campaign`: `LITERATURE-20260729-H1-HARDY-TANGENTIAL-THETA-01`.
+- `node`: `H1-HARDY-TANGENTIAL-THETA-LIMIT-01`.
+- `selection_reason`: fresh H1/H2/H7/H8/H9/H10/H11/H12/H14 comparison finds that this is the
+  only known source edge whose closure removes one explicit premise and immediately yields a
+  compiled unconditional historical theorem.
+- `materially_new_angle`: use Mathlib's branch-explicit Jacobi theta Poisson transformation,
+  translate the cusp `-1` to `0`, invert to imaginary infinity, and prove all-order half-integer
+  Gaussian flatness instead of assuming Hardy's invoked general Bohr--Riesz theorem.
+- `fixed_edge`: all-order actual xi-integral differentiation;
+  `->` exact transformed cusp geometry and theta identity;
+  `->` all-order tangential theta flatness;
+  `-> hardyXiAbelMomentLaw_unconditional`;
+  `->` infinitely many actual critical-line nontrivial zeros.
+- `strict_boundary`: no quantitative critical-zero count, positive proportion, H1, or RH.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.

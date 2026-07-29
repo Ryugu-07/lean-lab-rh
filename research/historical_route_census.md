@@ -148,3 +148,18 @@ The census interpretation is strengthened accordingly: a family is not exhausted
 listing or peripheral formalization. Its decisive inference, failed premise, and possible
 cross-route repairs must be recorded. Original conjectures and direct RH attacks remain open
 during this historical coverage phase.
+
+## 2026-07-29 H1 Hardy tangential-theta selection
+
+After public closure of the complex-alpha equation, a fresh cross-family comparison selects the
+remaining Hardy 1914 source edge rather than assuming H1 continuity. Equation (3) and the
+tangential theta limit are uniquely positioned between two compiled endpoints: equation (2) and
+the conditional consumer proving infinitely many critical-line zeros from
+`HardyXiAbelMomentLaw`.
+
+The new attack does not assume the source's general Bohr--Riesz summability theorem. It uses the
+compiled Jacobi theta Poisson transformation to move the cusp `-1` to imaginary infinity and
+targets all-order Gaussian flatness with every branch and derivative checked in Lean. H2 contour
+shifts, H7/H8 concrete spectral objects, H10 geometric transfer, H11 sparse amplification, H12
+global counts, and H14 computation remain live alternatives. Quantitative Hardy--Littlewood,
+Selberg, and Levinson--Conrey estimates, H1, and RH remain open.
