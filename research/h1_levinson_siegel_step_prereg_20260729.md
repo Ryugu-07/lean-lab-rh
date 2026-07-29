@@ -8,7 +8,7 @@ Node: `H1-LEVINSON-SIEGEL-STEP-GEOMETRY-01`
 
 Mode: `PROOF-ATTEMPT / HISTORICAL_OMISSION / CROSS_ROUTE`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_REQUIRED`
 
 Preregistration commit `ab02915f8719c6715e0cadd06dcaad9fa7a10a7d` passed public Lean
 Action run `30409200376`, build job `90441363357`, in `1m30s`. Production proof editing began
@@ -160,3 +160,6 @@ The preregistration gate passed at commit
 The frozen implementation commit `fb5d03e268849dbac7c7d51375d245eba944a92b` passed public Lean
 Action run `30410129919`, build job `90444149672`, in `2m6s`. The five frozen proof and
 registration files have an empty diff from that commit.
+
+Immutable-evidence commit `a7d1e38bba631fb7deb9b9a9adbd19a9198dd9fc` passed public Lean
+Action run `30410358415`, build job `90444833678`, in `2m1s`. The frozen-set diff remains empty.

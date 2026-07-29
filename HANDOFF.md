@@ -6309,3 +6309,18 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   actual zeta count, zero proportions, H1, and RH open.
 - Next gate is one docs-only immutable-evidence commit and its own public CI.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H1 Levinson--Siegel step immutable evidence public green
+
+- Immutable-evidence commit `a7d1e38bba631fb7deb9b9a9adbd19a9198dd9fc` passed Lean Action
+  run `30410358415`, build job `90444833678`, in `2m1s`.
+- The five frozen proof/registration files have an empty diff from implementation
+  `fb5d03e268849dbac7c7d51375d245eba944a92b`.
+- Final ledger closes only `H1.levinson-siegel.step-geometry` as
+  `FULL_SUCCESS / STRUCTURAL_OMISSION_GEOMETRY_FORMALIZED`.
+- Keep source optimizer identification, quantitative polynomial approximation,
+  complexity-uniform mean values, actual zeta auxiliary counts, zero proportions,
+  sparse-exception exclusion, H1, and RH open.
+- Next gate: publish this docs-only final ledger and require public CI, then one closure receipt
+  before fresh cross-family route selection.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.

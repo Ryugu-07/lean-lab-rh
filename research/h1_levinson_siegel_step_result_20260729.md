@@ -119,3 +119,34 @@ The frozen proof and registration set is:
 
 The immutable-evidence and final-ledger commits must leave this set unchanged from the frozen
 implementation.
+
+Immutable-evidence commit `a7d1e38bba631fb7deb9b9a9adbd19a9198dd9fc` passed public Lean
+Action run `30410358415`, build job `90444833678`, in `2m1s`. The frozen-set diff from
+`fb5d03e268849dbac7c7d51375d245eba944a92b` is empty.
+
+## Final ledger
+
+Close exactly:
+
+```text
+H1.levinson-siegel.step-geometry
+```
+
+as `FULL_SUCCESS / STRUCTURAL_OMISSION_GEOMETRY_FORMALIZED`.
+
+Keep open:
+
+1. identification and independent formalization of the source hypergeometric optimizer;
+2. source-faithful polynomial approximation with explicit derivative and degree growth;
+3. mollified zeta mean-value estimates uniform in that growing complexity;
+4. Conrey's actual auxiliary-function argument variation and right-zero count;
+5. Littlewood-lemma conversion to critical-line zero proportions;
+6. exclusion of finite or density-zero off-line zero orbits;
+7. H1 and RH.
+
+The key durable conclusion is that short mollifier length is not a geometric obstruction
+inside the source endpoint/reflection class. The newly isolated obstruction is quantitative
+uniformity as the derivative combination becomes step-like.
+
+After the final-ledger public CI, publish one closure receipt and return the active RH Goal to
+fresh cross-family historical omission selection.

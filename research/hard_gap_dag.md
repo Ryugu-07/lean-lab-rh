@@ -3572,3 +3572,8 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `proof_freeze`: the five proof and registration sources have an empty diff from the frozen
   implementation.
 - `next_gate`: docs-only immutable evidence and public CI.
+- `immutable_evidence`: `a7d1e38bba631fb7deb9b9a9adbd19a9198dd9fc`.
+- `evidence_public_ci`: run `30410358415`, build job `90444833678`, passed in `2m1s`.
+- `local_stop`: close only `H1.levinson-siegel.step-geometry`; all analytic producers and RH
+  remain open.
+- `next_gate`: docs-only final ledger and public CI, then closure receipt.
