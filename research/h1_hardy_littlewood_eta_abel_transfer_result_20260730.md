@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01`
 
 Classification: `FULL_SUCCESS / ETA_TO_THETA_ABEL_TRANSFER_FORMALIZED`
 
-Public state: `IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_CI_PENDING`
+Public state: `EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Result
 
@@ -102,3 +102,6 @@ The persistent RH Goal remains active.
 Frozen implementation commit `f03c6a8f5d35945d34407d0627b7a5f4f629cb9e` passed Lean Action
 run `30479693865`, build job `90670228283`, in `2m17s`. The five proof and registration files
 have an empty diff from that commit at immutable-evidence publication.
+
+Immutable-evidence commit `6b151d4cbecd963ea4be9d208c9dff3d20ac47ac` passed Lean Action
+run `30480041592`, build job `90671423054`, in `2m22s`. The frozen diff remains empty.

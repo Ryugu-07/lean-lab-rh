@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260730-H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01`
 
 Node: `H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01`
 
-Status: `FULL_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_CI_PENDING`
+Status: `FULL_SUCCESS / EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Fixed question
 
@@ -30,6 +30,7 @@ localize the remaining analytic difficulty entirely in Lemma 3's uniform eta rem
 | 11 | `REGISTRATION` | One proven Target, five exact TargetChecks, six selected axiom prints, and the root import compile under warning-as-error. | Run the complete mechanical audit and full build. |
 | 12 | `LOCAL_AUDIT` | The 488-line module has empty forbidden/resource scans and patch check; selected axioms are standard only; full build passes `8801/8801`. | Freeze and publish the implementation, then require independent public CI. |
 | 13 | `IMPLEMENTATION_PUBLIC_CI` | Frozen commit `f03c6a8f5d35945d34407d0627b7a5f4f629cb9e` passed Lean Action run `30479693865`, build job `90670228283`, in `2m17s`; the frozen five-file diff is empty. | Publish docs-only immutable evidence and require a second public CI. |
+| 14 | `IMMUTABLE_EVIDENCE_PUBLIC_CI` | Docs-only evidence commit `6b151d4cbecd963ea4be9d208c9dff3d20ac47ac` passed Lean Action run `30480041592`, build job `90671423054`, in `2m22s`; the frozen five-file diff remains empty. | Publish the final ledger and require public CI before a closure receipt. |
 
 ## Current frontier
 

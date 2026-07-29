@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `FULL_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_CI_PENDING`
+Status: `FULL_SUCCESS / EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Parent and route selection
 
@@ -203,5 +203,8 @@ passes `8801/8801`.
 
 Frozen implementation commit `f03c6a8f5d35945d34407d0627b7a5f4f629cb9e` passed independent
 Lean Action run `30479693865`, build job `90670228283`, in `2m17s`. The five proof and
-registration files are now frozen. Immutable-evidence CI, final-ledger CI, and closure-receipt
-CI remain required.
+registration files are now frozen.
+
+Docs-only immutable-evidence commit `6b151d4cbecd963ea4be9d208c9dff3d20ac47ac` passed Lean Action
+run `30480041592`, build job `90671423054`, in `2m22s`; the frozen five-file diff remains
+empty. Final-ledger CI and closure-receipt CI remain required.
