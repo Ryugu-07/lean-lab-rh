@@ -6573,3 +6573,12 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - Close only `H1.hardy.complex-alpha-equation-two`. Keep the tangential theta derivative limit,
   `HardyXiAbelMomentLaw`, unconditional Hardy infinitude, H1, and RH open.
 - Next gate is a docs-only immutable-evidence commit and public CI. Persistent RH Goal active.
+
+## 2026-07-29 H1 Hardy complex-alpha immutable evidence public green
+
+- Docs-only evidence commit `389dc3790e2affe3cc6cb7329f78a37cff04023e` passed public Lean
+  Action run `30418420614`, build job `90469840559`, in `1m56s`.
+- The five frozen proof and registration files still have an empty diff from implementation
+  commit `0f0cb7c2829dd8c35ccf926e0bfb6a79d75147eb`.
+- Next gate is the final ledger public CI, followed by a closure receipt. Persistent RH Goal
+  remains active.

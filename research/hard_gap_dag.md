@@ -3756,4 +3756,6 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `deltas`: historical route coverage `+1`, source logic `+1`, hard gap `0`, RH frontier `0`.
 - `public_implementation`: commit `0f0cb7c2829dd8c35ccf926e0bfb6a79d75147eb`, Lean Action run
   `30418152861`, build job `90469028889`, passed in `3m0s`.
-- `next_gate`: immutable-evidence public CI.
+- `immutable_evidence`: docs-only commit `389dc3790e2affe3cc6cb7329f78a37cff04023e`,
+  Lean Action run `30418420614`, build job `90469840559`, passed in `1m56s`.
+- `next_gate`: final-ledger public CI.
