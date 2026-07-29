@@ -8,7 +8,7 @@ Node: `H7-CONNES-NESTED-PROJECTION-POSITIVE-TYPE-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / FALSIFICATION`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_REQUIRED`
+Status: `PUBLICLY_CLOSED / TARGET_PROVEN`
 
 ## Parent and selection
 
@@ -163,7 +163,11 @@ evidence and its independent public CI; that gate is now complete below.
 
 Immutable-evidence commit `78f1810d722e9b846a4fb7c4b40c8d78b3edf95a` passed public Lean
 Action run `30411999399`, build job `90450005443`, in `1m31s`. The frozen-set diff remains
-empty. The next gate is the docs-only final ledger and independent public CI.
+empty. The docs-only final ledger gate is complete below.
+
+Final-ledger commit `6ad4a77323b3fa163fe415d26fd01b0ce1073c92` passed public Lean
+Action run `30412182228`, build job `90450618374`, in `1m32s`. The frozen-set diff remains
+empty. Publish the closure receipt, then return to fresh cross-family route selection.
 
 ## Audit gates
 

@@ -6414,3 +6414,16 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - Next gate: publish this docs-only final ledger and require public CI, then one closure receipt
   before fresh cross-family route selection.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H7 Connes projection-defect final ledger public green
+
+- Final-ledger commit `6ad4a77323b3fa163fe415d26fd01b0ce1073c92` passed Lean Action run
+  `30412182228`, build job `90450618374`, in `1m32s`.
+- The preregistration, frozen implementation, immutable evidence, and final ledger are all
+  public-green; the frozen proof-source diff remains empty.
+- Closure receipt closes only `H7.connes.nested-projection-defect-positive-type`.
+- Keep actual adèle projections and containment, trace class, cutoff asymptotics,
+  distributional Weil limit, unconditional Weil positivity, Hilbert--Polya, H7, and RH open.
+- After the closure receipt public CI, return to fresh cross-family historical omission
+  selection; do not continue H7 by inertia.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.

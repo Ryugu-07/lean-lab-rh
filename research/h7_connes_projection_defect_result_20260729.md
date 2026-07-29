@@ -8,7 +8,7 @@ Node: `H7-CONNES-NESTED-PROJECTION-POSITIVE-TYPE-01`
 
 Classification: `FULL_SUCCESS / SOURCE_POSITIVE_TYPE_HINGE_FORMALIZED`
 
-Public state: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_REQUIRED`
+Public state: `PUBLICLY_CLOSED / TARGET_PROVEN`
 
 ## Source question
 
@@ -156,4 +156,8 @@ therefore inspect the infinite and arithmetic producers, not repeat the finite p
 consumer.
 
 After final-ledger public CI, publish one closure receipt and return the active RH Goal to fresh
-cross-family historical omission selection.
+cross-family historical omission selection; the final-ledger gate is complete below.
+
+Final-ledger commit `6ad4a77323b3fa163fe415d26fd01b0ce1073c92` passed public Lean
+Action run `30412182228`, build job `90450618374`, in `1m32s`. The frozen-set diff remains
+empty. The closure receipt records the complete public chain.

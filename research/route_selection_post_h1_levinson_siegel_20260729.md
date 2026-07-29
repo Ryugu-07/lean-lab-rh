@@ -2,7 +2,7 @@
 
 Date: 2026-07-29
 
-Status: `H7_CONNES_NESTED_PROJECTION_POSITIVE_TYPE_IMMUTABLE_EVIDENCE_GREEN`
+Status: `H7_CONNES_NESTED_PROJECTION_POSITIVE_TYPE_PUBLICLY_CLOSED`
 
 ## Closed parent
 
@@ -115,4 +115,6 @@ The persistent RH Goal remains active.
   job `90449324931`, in `2m1s`; its five proof/registration files remain unchanged.
 - Immutable-evidence commit `78f1810d722e9b846a4fb7c4b40c8d78b3edf95a` passed Lean Action
   run `30411999399`, build job `90450005443`, in `1m31s`; the frozen-set diff remains empty.
-- The next gate is a docs-only final ledger and independent public CI, then a closure receipt.
+- Final-ledger commit `6ad4a77323b3fa163fe415d26fd01b0ce1073c92` passed Lean Action run
+  `30412182228`, build job `90450618374`, in `1m32s`; the frozen-set diff remains empty.
+- Publish the closure receipt, then rerank all historical routes without H7 inertia.

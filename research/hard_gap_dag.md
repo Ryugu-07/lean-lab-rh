@@ -2673,6 +2673,9 @@ implementation `15381a49ff4dfb92a0ab4e29d5e76383f9789139` is empty. This node re
 - `local_stop`: close only `H7.connes.nested-projection-defect-positive-type`; every actual
   number-field projection, trace, limit, positivity, H7, and RH edge remains open.
 - `next_gate`: docs-only final ledger and public CI, then closure receipt.
+- `final_ledger`: `6ad4a77323b3fa163fe415d26fd01b0ce1073c92`.
+- `final_ledger_public_ci`: run `30412182228`, build job `90450618374`, passed in `1m32s`.
+- `next_gate`: publish the docs-only closure receipt, then fresh cross-family selection.
 
 ### Public implementation receipt
 
