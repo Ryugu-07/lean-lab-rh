@@ -1806,3 +1806,11 @@ The tangential theta derivative limit remains a separate historical edge. No equ
 moment law, unconditional Hardy theorem, H1 result, or RH result is claimed by preregistration.
 This choice implements the standing rule that inventory alone does not exhaust a historical
 route: its decisive inference and exact premise frontier must be tested.
+
+**2026-07-29 local result.** The endpoint compiles as `hardyEquationTwo`. The actual Hardy-xi
+kernel is exponentially integrable throughout the full source strip, both sides are analytic,
+the pure-imaginary anchor follows from the positive-real equation with the principal branch
+checked, and the identity theorem closes the connected strip. The next H1 source edge is the
+tangential theta derivative limit needed for `HardyXiAbelMomentLaw`; H1 and RH remain open.
+Frozen implementation commit `0f0cb7c2829dd8c35ccf926e0bfb6a79d75147eb` passed public Lean
+Action run `30418152861`, build job `90469028889`, in `3m0s`.

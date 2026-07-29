@@ -6536,3 +6536,40 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - Original conjectures, falsification, and direct RH attacks remain open throughout the
   historical survey.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H1 Hardy complex-alpha equation local result
+
+- `classification`: `FULL_SUCCESS / KNOWN_HARDY_1914_COMPLEX_ALPHA_EDGE_FORMALIZED`.
+- Preregistration commit `ef1752a44ca1b3242348e7ac40ac4b50529b0efe` passed public Lean
+  Action run `30415933876`, build job `90462332932`, in `1m37s` before proof editing began.
+- The new 1,318-line no-sorry module `LeanLab/Riemann/HardyComplexAlpha.lean` preserves the exact
+  critical-line Gamma rate `exp(-(pi/2)|t|)`, proves actual Hardy-xi integrability under every
+  exponential weight inside the full source strip and every natural polynomial loss, and
+  proves `analyticOnNhd_hardyXiInteriorIntegral`.
+- Mathlib's one-variable Jacobi theta is identified with the project's
+  `hardyThetaSeries`; the alpha-normalized theta side is analytic and agrees exactly with
+  `HurwitzZeta.evenKernel` on the positive real axis.
+- The full-line xi integral is split into two half-lines using `hardyXi_even`; the principal
+  positive-real power branch and coefficient `4/(2*pi)=2/pi` are checked; the compiled
+  `hardyCahenMellinInversion` yields `hardyEquationTwoLeft_imaginary`.
+- Convexity of `hardyAlphaStrip` and the accumulating nonzero sequence `I/(n+1)` feed the
+  analytic identity theorem, giving `hardyEquationTwo` throughout `|Re(alpha)|<pi/2`.
+- Proven Target: `H1.hardy.complex-alpha-equation-two`.
+- Local audit: five exact TargetChecks, five standard-only axiom prints, empty
+  forbidden/resource scans, warning-as-error production and registry checks,
+  `git diff --check`, and full `8795/8795` build.
+- Keep equation (3), the tangential theta derivative limit, `HardyXiAbelMomentLaw`,
+  unconditional infinitely many critical-line zeros, H1, and RH open. RH-frontier delta is
+  zero.
+- Next gate: frozen implementation commit and public CI. The six inherited protected files
+  remain untouched and unstaged; persistent RH Goal active.
+
+## 2026-07-29 H1 Hardy complex-alpha implementation public green
+
+- Frozen implementation commit `0f0cb7c2829dd8c35ccf926e0bfb6a79d75147eb` passed public Lean
+  Action run `30418152861`, build job `90469028889`, in `3m0s`.
+- Freeze `LeanLab/Riemann/HardyComplexAlpha.lean`, `Targets.lean`, `TargetChecks.lean`,
+  `AxiomsAudit.lean`, and `LeanLab.lean`; their diff from the frozen commit is empty.
+- Close only `H1.hardy.complex-alpha-equation-two`. Keep the tangential theta derivative limit,
+  `HardyXiAbelMomentLaw`, unconditional Hardy infinitude, H1, and RH open.
+- Next gate is a docs-only immutable-evidence commit and public CI. Persistent RH Goal active.

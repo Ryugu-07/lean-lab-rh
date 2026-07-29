@@ -131,15 +131,15 @@ and the sparse-exception barrier still operative. `rh_frontier_delta=0`.
 
 ## 2026-07-29 H1 Hardy omission re-entry
 
-The H1 row remains deep but not exhausted. The repository compiles Hardy's positive-real
-Cahen-Mellin equation (1) and the complete Abel-moment contradiction consumer, but not the
-source's central complex-alpha equation (2). Campaign
-`LITERATURE-20260729-H1-HARDY-COMPLEX-ALPHA-01` is preregistered to test that exact transition,
-including exponential xi integrability, analytic continuation, theta normalization, branch
-alignment, evenness, and the identity theorem.
+The H1 row remains deep but not exhausted. The repository now compiles Hardy's positive-real
+Cahen-Mellin equation (1), the source's central complex-alpha equation (2), and the complete
+conditional Abel-moment contradiction consumer. Campaign
+`LITERATURE-20260729-H1-HARDY-COMPLEX-ALPHA-01` closed the exact equation (1) to equation (2)
+transition, including exponential xi integrability on the full source strip, analytic
+continuation, theta normalization, branch alignment, evenness, and the identity theorem.
 
 This re-entry is materially different from the preceding H1 campaigns: it neither adds another
-conditional consumer nor optimizes a critical-zero percentage. It attempts the missing known
+conditional consumer nor optimizes a critical-zero percentage. It formalizes the missing known
 theorem connecting two compiled endpoints. The subsequent tangential theta derivative limit,
 Hardy's unconditional infinitude theorem, quantitative Hardy-Littlewood counts, Selberg and
 Levinson-Conrey global moments, H1, and RH remain open.

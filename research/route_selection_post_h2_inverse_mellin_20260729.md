@@ -107,3 +107,14 @@ H2's Gamma vertical-line machinery and the project's zeta convexity bounds suppl
 input that was absent when the first Hardy inversion campaign stopped.
 
 The persistent RH Goal remains active.
+
+## Local result
+
+The selected edge reached full local success. `LeanLab/Riemann/HardyComplexAlpha.lean` compiles
+the full source strip, both analytic sides, exact theta normalization, branch-correct
+imaginary-axis anchor, and `hardyEquationTwo` by the identity theorem. This closes only Hardy
+equation (1) `->` equation (2). The tangential theta derivative limit and
+`HardyXiAbelMomentLaw` are now the first open H1 source edges.
+
+Frozen implementation commit `0f0cb7c2829dd8c35ccf926e0bfb6a79d75147eb` passed public Lean
+Action run `30418152861`, build job `90469028889`, in `3m0s`.

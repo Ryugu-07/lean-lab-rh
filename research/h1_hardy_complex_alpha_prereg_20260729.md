@@ -8,7 +8,16 @@ Node: `H1-HARDY-COMPLEX-ALPHA-EQUATION-TWO-01`
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_PENDING`
+Status: `PREREGISTRATION_PUBLIC_GREEN / IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_CI_PENDING`
+
+Public preregistration evidence: commit
+`ef1752a44ca1b3242348e7ac40ac4b50529b0efe`, Lean Action run `30415933876`, build job
+`90462332932`, passed in `1m37s`.
+
+Frozen implementation evidence: commit
+`0f0cb7c2829dd8c35ccf926e0bfb6a79d75147eb`, Lean Action run `30418152861`, build job
+`90469028889`, passed in `3m0s`. The five proof and registration files remain unchanged after
+that commit.
 
 ## Fixed historical question
 

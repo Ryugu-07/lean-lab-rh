@@ -3729,3 +3729,31 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   direct attacks remain open.
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.
+
+## 2026-07-29 H1 Hardy complex-alpha equation local closure
+
+- `classification`: `FULL_SUCCESS / KNOWN_HARDY_1914_COMPLEX_ALPHA_EDGE_FORMALIZED`.
+- `H1-HARDY-COMPLEX-ALPHA-EQUATION-TWO-01`: locally closed by
+  `hardyEquationTwo`.
+- `compiled_chain`:
+  exact `exp(-(pi/2)|t|)` Gamma decay;
+  `-> integrable_hardyXiExponentialWeight` for every `a<pi/2`;
+  `-> integrable_abs_pow_mul_hardyXiExponentialWeight`;
+  `-> analyticOnNhd_hardyXiInteriorIntegral`;
+  `-> analyticOnNhd_hardyThetaAlpha`;
+  `-> hardyEquationTwoLeft_imaginary`;
+  `-> hardyEquationTwo`.
+- `OBS-H1-HARDY-EXPONENTIAL-INTEGRABILITY-01`: closed.
+- `OBS-H1-HARDY-THETA-ANALYTICITY-01`: closed.
+- `OBS-H1-HARDY-COMPLEX-POWER-BRANCH-01`: closed on the positive-real anchor.
+- `OBS-H1-HARDY-IDENTITY-THEOREM-01`: closed.
+- `OBS-H1-HARDY-TANGENTIAL-THETA-LIMIT-01`: remains the first open source edge.
+- `strict_boundary`: equation (3), the tangential theta derivative limit,
+  `HardyXiAbelMomentLaw`, unconditional Hardy infinitude, H1, and RH remain open.
+- `local_audit`: 1,318-line no-sorry module; five exact checks; five standard-only axiom
+  prints; empty forbidden/resource scans and patch check; warning-as-error compiles; full
+  `8795/8795` build.
+- `deltas`: historical route coverage `+1`, source logic `+1`, hard gap `0`, RH frontier `0`.
+- `public_implementation`: commit `0f0cb7c2829dd8c35ccf926e0bfb6a79d75147eb`, Lean Action run
+  `30418152861`, build job `90469028889`, passed in `3m0s`.
+- `next_gate`: immutable-evidence public CI.
