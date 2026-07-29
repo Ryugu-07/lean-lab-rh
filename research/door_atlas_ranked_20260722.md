@@ -1782,3 +1782,27 @@ Frozen implementation `4bf9342866283d3b8d07f275ca8199e52413fd0b` passed run
 `ed2a400a98ca543d3a2795a80ea08544bcbb5df6` passed run `30338961956`, job
 `90209983168`, in `2m12s`, with an empty `LeanLab/` diff. The local boundary audit stops after
 final-ledger CI and cross-family selection resumes.
+
+### Post-H2 inverse Mellin rerank: Hardy complex-alpha equation
+
+The H2 inverse Mellin line is publicly closed at receipt
+`51eaa3313b775a7ae1cac5414a1265fb23e8f4cf`. Its infinite contour shift remains open, but fresh
+selection rotates away from the adjacent edge.
+
+The omission-seeking survey now returns to Hardy 1914. The repository has both the positive-real
+Cahen-Mellin equation (1) and the complete high-moment contradiction conditional on the source
+Abel law. The central transition between them, equation (2) on the complex alpha strip, is still
+unformalized. It suppresses exponential xi decay, analytic parameter integration, theta-series
+analyticity, complex-power branch alignment, exact half-line normalization, and a connected-domain
+identity theorem.
+
+Campaign `LITERATURE-20260729-H1-HARDY-COMPLEX-ALPHA-01` fixes that entire transition as one
+source theorem. The newly relevant cross-route observation is that Gamma vertical-line machinery
+and polynomial critical-line zeta bounds now compile elsewhere in the project, so the exponential
+integrability obstruction from the first Hardy inversion campaign can be attacked without a new
+abstract premise.
+
+The tangential theta derivative limit remains a separate historical edge. No equation (3), Abel
+moment law, unconditional Hardy theorem, H1 result, or RH result is claimed by preregistration.
+This choice implements the standing rule that inventory alone does not exhaust a historical
+route: its decisive inference and exact premise frontier must be tested.

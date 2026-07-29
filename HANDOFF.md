@@ -6510,3 +6510,29 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - After closure-receipt public CI, return to fresh cross-family historical omission selection;
   do not continue H2 by inertia.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H1 Hardy complex-alpha equation selected
+
+- `parent_public_closure`: H2 inverse Mellin closure receipt
+  `51eaa3313b775a7ae1cac5414a1265fb23e8f4cf`.
+- `campaign`: `LITERATURE-20260729-H1-HARDY-COMPLEX-ALPHA-01`.
+- `node`: `H1-HARDY-COMPLEX-ALPHA-EQUATION-TWO-01`.
+- `selection_reason`: the historical survey is an omission search. Hardy's compiled
+  positive-real equation (1) and conditional Abel-moment amplification are separated by the
+  literal central transition to equation (2), while H2's next contour shift and H12's global
+  count package are broader.
+- `fixed_edge`:
+  actual critical-line xi exponential integrability below rate `pi/2`;
+  `->` analytic xi parameter integral on `abs(Re(alpha))<pi/2`;
+  `->` analytic and source-normalized theta side;
+  `->` branch-correct imaginary-axis anchor from equation (1);
+  `->` Hardy equation (2) by the identity theorem.
+- `cross_route_input`: use the compiled critical-line zeta polynomial bound and Gamma
+  exponential machinery developed in the H2/H12 work rather than assume a new xi-decay premise.
+- `strict_boundary`: no all-order differentiated identity, tangential theta limit,
+  `HardyXiAbelMomentLaw`, unconditional Hardy infinitude, H1, or RH.
+- `production_gate`: publish the docs-only preregistration and require public CI before any
+  `LeanLab/` edit.
+- Original conjectures, falsification, and direct RH attacks remain open throughout the
+  historical survey.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.

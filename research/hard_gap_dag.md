@@ -3697,3 +3697,35 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `deltas`: historical route coverage and source analytic bridge each `+1`; hard gap and RH
   frontier remain `0`.
 - `next_gate`: frozen implementation public CI.
+
+## 2026-07-29 H1 Hardy complex-alpha equation launch
+
+- `parent_public_closure`: H2 inverse Mellin receipt
+  `51eaa3313b775a7ae1cac5414a1265fb23e8f4cf`.
+- `H1-HARDY-COMPLEX-ALPHA-EQUATION-TWO-01`: selected after a fresh comparison with H12 global
+  counts, H10 curve geometry, H8 concrete de Branges production, H1 global mollified moments,
+  and the adjacent H2 contour shift.
+- `available_left_edge`:
+  `hardyCahenMellinInversion`, Hardy equation (1) for every positive real `x`.
+- `available_right_consumer`:
+  `hardyXiAbelMomentAmplification_endpoint`, conditional on `HardyXiAbelMomentLaw`.
+- `fixed_edge`:
+  `actual xi exponential integrability for every a<pi/2`;
+  `-> differentiableOn hardyXiInteriorIntegral hardyAlphaStrip`;
+  `-> analytic source-normalized theta side`;
+  `-> exact imaginary-alpha anchor`;
+  `-> hardyCahenMellinEquationTwo`.
+- `cross_route_repair`: H2/H12 Gamma vertical-line estimates plus the H2 zeta convexity module
+  may close the decay premise that blocked the first Hardy inversion campaign.
+- `OBS-H1-HARDY-EXPONENTIAL-INTEGRABILITY-01`: open at preregistration.
+- `OBS-H1-HARDY-THETA-ANALYTICITY-01`: open at preregistration.
+- `OBS-H1-HARDY-COMPLEX-POWER-BRANCH-01`: open at preregistration.
+- `OBS-H1-HARDY-IDENTITY-THEOREM-01`: open at preregistration.
+- `OBS-H1-HARDY-TANGENTIAL-THETA-LIMIT-01`: remains outside the selected endpoint.
+- `strict_boundary`: no differentiated equation (3), tangential Abel limit,
+  `HardyXiAbelMomentLaw`, unconditional critical-line zero infinitude, H1, or RH.
+- `historical_policy`: a route is counted as tried only after its decisive inference and premise
+  frontier are exposed; inventory coverage alone is insufficient. Original conjectures and
+  direct attacks remain open.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- `global_goal`: active.

@@ -128,3 +128,23 @@ The selected opening is the H5/H7 finite-prime Weil ground-state program introdu
 even ground states and convergence to the Riemann xi transform remain open. H1's 2025
 short-mollifier derivative-combination optimization is the runner-up, with both long mean values
 and the sparse-exception barrier still operative. `rh_frontier_delta=0`.
+
+## 2026-07-29 H1 Hardy omission re-entry
+
+The H1 row remains deep but not exhausted. The repository compiles Hardy's positive-real
+Cahen-Mellin equation (1) and the complete Abel-moment contradiction consumer, but not the
+source's central complex-alpha equation (2). Campaign
+`LITERATURE-20260729-H1-HARDY-COMPLEX-ALPHA-01` is preregistered to test that exact transition,
+including exponential xi integrability, analytic continuation, theta normalization, branch
+alignment, evenness, and the identity theorem.
+
+This re-entry is materially different from the preceding H1 campaigns: it neither adds another
+conditional consumer nor optimizes a critical-zero percentage. It attempts the missing known
+theorem connecting two compiled endpoints. The subsequent tangential theta derivative limit,
+Hardy's unconditional infinitude theorem, quantitative Hardy-Littlewood counts, Selberg and
+Levinson-Conrey global moments, H1, and RH remain open.
+
+The census interpretation is strengthened accordingly: a family is not exhausted by source
+listing or peripheral formalization. Its decisive inference, failed premise, and possible
+cross-route repairs must be recorded. Original conjectures and direct RH attacks remain open
+during this historical coverage phase.
