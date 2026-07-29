@@ -8,7 +8,7 @@ Node: `H2-CLASSICAL-DETECTOR-INVERSE-MELLIN-LINE-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT`
 
-Status: `IMPLEMENTED_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 
 ## Parent and available producer
 
@@ -124,3 +124,7 @@ after that gate passed.
 
 The local implementation satisfies all seven fixed full-success criteria. Public implementation
 CI remains required before the result can be frozen.
+
+Frozen implementation commit `8c5d820a92178dfd3ad3582e9ffe733a7377bb0e` passed public Lean
+Action run `30414837829`, build job `90458965005`, in `2m59s`. The proof and registration set is
+now frozen.

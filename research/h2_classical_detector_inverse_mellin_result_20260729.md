@@ -8,7 +8,7 @@ Node: `H2-CLASSICAL-DETECTOR-INVERSE-MELLIN-LINE-01`
 
 Classification: `FULL_SUCCESS / KNOWN_INVERSE_MELLIN_EDGE_FORMALIZED`
 
-Public state: `LOCAL_IMPLEMENTATION / PUBLIC_CI_REQUIRED`
+Public state: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING`
 
 ## Compiled result
 
@@ -87,3 +87,19 @@ Deltas: historical route coverage `+1`, source analytic bridge `+1`, hard gap `0
 
 The persistent RH Goal remains active. The implementation must pass public CI before immutable
 evidence or final closure is recorded.
+
+## Public implementation evidence
+
+Frozen implementation commit `8c5d820a92178dfd3ad3582e9ffe733a7377bb0e` passed public Lean
+Action run `30414837829`, build job `90458965005`, in `2m59s`.
+
+The frozen proof and registration set is:
+
+- `LeanLab/Riemann/ClassicalZeroDetectorInverseMellin.lean`;
+- `LeanLab/Riemann/Targets.lean`;
+- `LeanLab/Riemann/TargetChecks.lean`;
+- `LeanLab/Riemann/AxiomsAudit.lean`;
+- `LeanLab.lean`.
+
+The immutable-evidence, final-ledger, and closure commits must leave this set unchanged from the
+frozen implementation.

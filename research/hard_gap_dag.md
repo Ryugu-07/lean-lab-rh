@@ -2662,6 +2662,11 @@ implementation `15381a49ff4dfb92a0ab4e29d5e76383f9789139` is empty. This node re
 - `classification`: `historical_route_coverage_delta=1`, `source_logic_delta=1`,
   `hard_gap_delta=0`, `rh_frontier_delta=0`.
 - `next_gate`: frozen implementation public CI.
+- `frozen_implementation`: `8c5d820a92178dfd3ad3582e9ffe733a7377bb0e`.
+- `implementation_public_ci`: run `30414837829`, build job `90458965005`, passed in `2m59s`.
+- `proof_freeze`: the five proof and registration sources must remain unchanged through the
+  immutable-evidence, final-ledger, and closure gates.
+- `next_gate`: docs-only immutable evidence.
 - `global_goal`: active.
 
 ### Public implementation receipt

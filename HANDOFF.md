@@ -6473,3 +6473,14 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   frontier `0`.
 - Next gate: full build and diff audit, then frozen implementation public CI.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H2 inverse Mellin implementation public green
+
+- Frozen implementation commit `8c5d820a92178dfd3ad3582e9ffe733a7377bb0e` passed Lean Action
+  run `30414837829`, build job `90458965005`, in `2m59s`.
+- Freeze `ClassicalZeroDetectorInverseMellin.lean`, `Targets.lean`, `TargetChecks.lean`,
+  `AxiomsAudit.lean`, and `LeanLab.lean`.
+- Close only `H2.classical-detector.inverse-mellin-line`; keep the infinite rectangle shift,
+  horizontal-edge decay, shifted detector, density production, H2, and RH open.
+- Next gate is a docs-only immutable-evidence commit and its own public CI.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.

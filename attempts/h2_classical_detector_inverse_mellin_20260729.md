@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H2-CLASSICAL-DETECTOR-INVERSE-MELLIN-01`
 
 Node: `H2-CLASSICAL-DETECTOR-INVERSE-MELLIN-LINE-01`
 
-Status: `FULL_SUCCESS_LOCAL / PUBLIC_CI_REQUIRED`
+Status: `FULL_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN`
 
 ## Fixed question
 
@@ -28,6 +28,7 @@ the infinite sum-integral exchange?
 | 8 | `SINGLE_KERNEL_INVERSION` | Mathlib's `mellinInv_mellin_eq` applies to `exp(-x)` after identifying its Mellin transform with `Gamma` on the positive line. | Compile the exact `1/(2*pi)` formula `exp_eq_inverseMellin_Gamma`. |
 | 9 | `DETECTOR_EXCHANGE` | Each actual detector line term is integrable; its norm integral factors into a common Gamma integral times the norm of the L-series term at `z+c`. Absolute L-series summability therefore justifies the infinite exchange. | Rewrite the pointwise sum through the actual coefficient L-series and contour factor. |
 | 10 | `ENDPOINT` | `classicalDetectorInverseMellinLine : ClassicalDetectorInverseMellinLine` compiles with no extra premise. Targets, exact checks, root import, and standard-only axiom audit compile. | Classify `FULL_SUCCESS / KNOWN_INVERSE_MELLIN_EDGE_FORMALIZED`; move the route frontier to the infinite contour shift. |
+| 11 | `PUBLIC_IMPLEMENTATION_GATE` | Frozen implementation `8c5d820a92178dfd3ad3582e9ffe733a7377bb0e` passed run `30414837829`, build job `90458965005`, in `2m59s`. | Freeze the five proof/registration files and publish immutable evidence without changing them. |
 
 ## Current frontier
 
