@@ -1958,3 +1958,28 @@ comparison must prove exponential-tail control at every fixed strip width below 
 different theorem implying the same transform topology). The actual weighted
 `theta_x-k_lambda` estimate and simple-even ground-state theorem remain the first H7 source
 obstacles; the all-real-zero limit, H7, and RH remain open.
+
+### Post-H7-Fourier-topology rerank: H2 dyadic detector dichotomy
+
+The H7 Fourier-topology campaign is publicly closed at receipt
+`2408208cbadbf7ba1c5bfe1dae28849a429627fc`. A fresh comparison across H1, H2, H7/H8, H10,
+H11, and H12 selects Maynard--Pratt Appendix C, Lemma 23. H1's next eta remainder requires new
+nonstationary oscillatory analysis, while H12's exact count branch still combines an indented
+argument principle, Jensen top variation, and signed boundary orientation. H2 offers one fixed
+source paragraph whose actual contour identity already compiles.
+
+Campaign `LITERATURE-20260730-H2-CLASSICAL-DETECTOR-DYADIC-DICHOTOMY-01` freezes the actual
+finite cutoff, powers-of-two block fibers, head/far-tail/retained-residue budget, logarithmic
+block count, and final actual-zero Type-I/Type-II alternative. An arbitrary finite block family,
+an assumed tail, or asymptotic notation without a kernel-checked eventual theorem is excluded.
+
+**2026-07-30 local result.** Full success compiles as
+`classicalDetectorDyadicDichotomy_endpoint`. At
+`Y=sqrt T`, `M=floor(2*T^(1/100))`, and
+`K=ceil(sqrt(T)*(log T)^2/2)`, Lean proves the literal source scales are eventually admissible,
+the actual far tail and retained residue fit the reserved error budget, and one actual dyadic
+block is large on the `1/log T` scale or the actual shifted Mellin integral is at least `1/3`.
+
+The omission search finds no direct jump from this finite alternative to RH. The next H2 doors
+are rarity estimates for the actual Type-I blocks and actual Type-II shifted integrals, followed
+by the zero-density count. Those analytic large-value estimates, H2, and RH remain open.

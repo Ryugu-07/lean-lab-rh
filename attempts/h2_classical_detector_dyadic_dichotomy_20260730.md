@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260730-H2-CLASSICAL-DETECTOR-DYADIC-DICHOTOMY-01`
 
 Node: `H2-CLASSICAL-DETECTOR-DYADIC-DICHOTOMY-01`
 
-Status: `PREREGISTRATION_LOCAL / PUBLIC_CI_PENDING`
+Status: `FULL_SUCCESS_LOCAL / IMPLEMENTATION_PUBLIC_CI_PENDING`
 
 ## Fixed question
 
@@ -25,6 +25,12 @@ pigeonhole theorem?
 | 4 | `PRIMARY_SOURCE_AUDIT` | Maynard--Pratt Appendix C uses the coefficient gap, a far-tail truncation, powers-of-two blocks, a small retained residue, and a finite mass comparison. The project has the first two identities at infinite-tail level but only generic block logic. | Freeze the actual dyadic and analytic budget as the endpoint. |
 | 5 | `H12_SOURCE_CONTROL` | Levinson--Montgomery Section 2 confirms that the dense branch is already represented by the compiled eventual-nonnegative log-derivative chain. Its exact branch still requires global count assembly. | Retain H12 as a high-value open route rather than choosing a local wrapper. |
 | 6 | `PREREGISTRATION` | Full success requires actual coefficient, tail, head, residue, dyadic-cardinality, and actual-zero dichotomy theorems. An assumed tail or arbitrary block family is explicitly excluded. | Publish docs only and await public CI before editing `LeanLab/`. |
+| 7 | `PUBLIC_GATE` | Docs-only preregistration commit `af32194ba854e6df168f9ec09f1bd8581bbef772` passed public Lean Action run `30489281045`, build job `90702801282`, in `2m0s`. | Open production editing at the frozen endpoint. |
+| 8 | `ACTUAL_FINITE_DECOMPOSITION` | Lean proves the exact head/middle/far-tail split of the actual smoothed series and the exact binary-logarithmic fiber decomposition. A contributing term in block `j` satisfies `2^j <= n < 2^(j+1)`. | The generic-block negative control is no longer the operative endpoint. |
+| 9 | `ERROR_BUDGET` | Lean bounds the actual far tail by `K*(1+2Y)*exp(-K/Y)`, the head by `1/Y`, and the actual translated-zeta residue by a fixed polynomial times `exp(-(pi/2)T)`, eventually below `1/9`. | The three reserved ninths compile simultaneously and imply the source third-error budget. |
+| 10 | `SOURCE_SPECIALIZATION` | Lean reconciles the literal source scales with natural cutoffs: `Y=sqrt T`, `M=floor(2*T^(1/100))`, and `K=ceil(sqrt(T)*(log T)^2/2)`. These eventually satisfy every finite-detector hypothesis and the binary block count is at most `3*log T`. | Retain the source normalization rather than reporting only a flexible surrogate regime. |
+| 11 | `LOCAL_AUDIT` | `classicalDetectorDyadicDichotomy_endpoint` compiles with nine exact TargetChecks and nine selected axiom prints using only `propext`, `Classical.choice`, and `Quot.sound`. Warning-as-error passes for proof, registration, audit, and root import. | Classify locally as `FULL_SUCCESS / SOURCE_DYADIC_DICHOTOMY_FORMALIZED`; run full scans/build, then publish the frozen implementation. |
+| 12 | `FULL_BUILD` | Forbidden and resource-relaxation scans are empty, `git diff --check` passes, and the full repository build succeeds with `8804/8804`. | Freeze the proof/registration set and publish the implementation for independent public CI. |
 
 ## Current frontier
 
@@ -32,10 +38,12 @@ pigeonhole theorem?
   smoothed series; inverse Mellin formula; one-pole contour shift; shifted-line integrability;
   exact retained residue; actual coefficient-gap head/tail identity.
 - `compiled_right_context`: source-independent finite block-or-remainder detector.
-- `selected_edge`: actual finite tail truncation, source dyadic partition, quantitative
-  head/residue/tail budget, and actual Type-I/Type-II disjunction.
-- `strict_successor`: Type-I block count estimates and Type-II shifted-integral fourth-moment
-  estimates, followed by a zero-density theorem.
+- `closed_edge`: actual finite tail truncation, source dyadic partition, quantitative
+  head/residue/tail budget, logarithmic block-cardinality comparison, and actual Type-I/Type-II
+  disjunction at the literal source scales.
+- `strict_successor`: Type-I large-block rarity and Type-II shifted-integral rarity estimates,
+  followed by the source zero-density theorem. The dyadic family cardinality itself is already
+  closed.
 - `not_claimed`: a density exponent, H2, a zero-free region, or RH.
 - `protected_files`: inherited modified and untracked files remain untouched and unstaged.
 - `global_goal`: active.

@@ -107,6 +107,7 @@ import LeanLab.Riemann.HardyLittlewoodEtaAbelTransfer
 import LeanLab.Riemann.ClassicalZeroDetectorMellin
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.ClassicalZeroDetectorContourShift
+import LeanLab.Riemann.ClassicalZeroDetectorDyadicDichotomy
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.FareyFranel
@@ -1984,6 +1985,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``classicalDetectorContourShift_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260730-H2-CLASSICAL-DETECTOR-CONTOUR-SHIFT-01 closes the first global analytic edge after the compiled inverse-Mellin line. A dslope of zetaPoleRemoved simultaneously fills the canceled Gamma pole at w=0 and leaves the translated zeta pole at w=1-rho. Lean proves the exact residue, a uniform fixed-strip Gamma-Mobius-zeta majorant, both horizontal integral limits, actual integrability on Re(w)=2 and Re(w)=1/2-Re(rho), the one-pole finite rectangle, the infinite shifted-line identity, absolute summability at rho, and the coefficient-gap head/tail equation. No dyadic block estimate, Type-I/Type-II density theorem, density exponent, H2, or RH is proved." },
+    { id := "H2.classical-detector.dyadic-type-dichotomy"
+      tier := .tier2
+      title := "Close the classical detector dyadic Type-I/Type-II dichotomy"
+      statement :=
+        "At the literal Maynard-Pratt scales Y=sqrt(T), M=floor(2*T^(1/100)), and K=ceil(Y*(log T)^2/2), split the actual smoothed detector into binary logarithmic blocks, prove the actual head, far-tail, and retained-residue errors are small, bound the block count by 3*log T, and derive the eventual source Type-I/Type-II alternative for every actual nontrivial zero in the source height range."
+      leanName := some ``classicalDetectorDyadicDichotomy_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260730-H2-CLASSICAL-DETECTOR-DYADIC-DICHOTOMY-01 formalizes Maynard-Pratt Appendix C, Lemma 23 through its finite detector alternative. Lean checks the divisor-count coefficient estimate, exact finite cutoff, binary block fibers and ranges, exponential far tail, head error, uniform Gamma-decaying translated-zeta residue, logarithmic block count, natural-number rounding of the literal source scales, and the actual-zero Type-I/Type-II disjunction. This is an input to zero-density arguments, not a zero-density estimate: no Type-I Dirichlet-polynomial mean value, Type-II shifted-integral sparsity estimate, density exponent, H2, or RH is proved." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

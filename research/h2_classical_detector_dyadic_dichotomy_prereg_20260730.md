@@ -8,7 +8,10 @@ Node: `H2-CLASSICAL-DETECTOR-DYADIC-DICHOTOMY-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTRATION_LOCAL / PUBLIC_CI_PENDING`
+Status: `FULL_SUCCESS_LOCAL / IMPLEMENTATION_PUBLIC_CI_PENDING`
+
+Public preregistration gate: commit `af32194ba854e6df168f9ec09f1bd8581bbef772`,
+Lean Action run `30489281045`, build job `90702801282`, passed in `2m0s`.
 
 ## Parent and fixed source
 
@@ -150,3 +153,31 @@ Before implementation publication:
 After frozen implementation public CI, publish immutable evidence, final ledger, and closure
 receipt through separate public-green commits. Then stop only this local campaign and rerank
 all historical families.
+
+## Local implementation result
+
+The fixed endpoint is implemented in
+`LeanLab/Riemann/ClassicalZeroDetectorDyadicDichotomy.lean`.
+
+Lean now proves:
+
+1. the divisor-cardinality coefficient estimate;
+2. the exact actual head/middle/far-tail cutoff;
+3. the exact binary-logarithmic block decomposition and block ranges;
+4. the explicit actual far-tail estimate
+   `K*(1+2Y)*exp(-K/Y)`;
+5. the head estimate `norm(exp(-1/Y)-1) <= 1/Y`;
+6. a uniform source-range retained-residue majorant tending to zero;
+7. the binary block count bound `count <= 3*log T`;
+8. eventual admissibility of the literal rounded source scales
+   `Y=sqrt T`, `M=floor(2*T^(1/100))`,
+   `K=ceil(sqrt(T)*(log T)^2/2)`;
+9. the final actual-zero Type-I/Type-II disjunction at those scales.
+
+Aggregate endpoint: `classicalDetectorDyadicDichotomy_endpoint`.
+
+Local classification:
+`FULL_SUCCESS / SOURCE_DYADIC_DICHOTOMY_FORMALIZED`.
+
+The result is the finite detector alternative used before the density estimates. It proves no
+Type-I or Type-II rarity bound, zero-density exponent, H2 theorem, zero-free region, or RH.

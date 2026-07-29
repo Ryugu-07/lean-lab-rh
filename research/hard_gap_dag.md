@@ -1963,6 +1963,40 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
   Lean editing.
 - `global_goal`: active.
 
+## 2026-07-30 H2 classical detector dyadic dichotomy local result
+
+- `campaign`: `LITERATURE-20260730-H2-CLASSICAL-DETECTOR-DYADIC-DICHOTOMY-01`.
+- `classification`: `FULL_SUCCESS / SOURCE_DYADIC_DICHOTOMY_FORMALIZED`.
+- `parent_public_closure`: H7 Fourier-topology receipt
+  `2408208cbadbf7ba1c5bfe1dae28849a429627fc`.
+- `public_preregistration`: commit `af32194ba854e6df168f9ec09f1bd8581bbef772`,
+  Lean Action run `30489281045`, build job `90702801282`, passed in `2m0s`.
+- `compiled_chain`:
+  actual coefficient divisor bound;
+  `->` exact head/middle/far-tail cutoff;
+  `->` exact binary-logarithmic fibers and block ranges;
+  `->` explicit exponentially small actual far tail;
+  `->` uniform Gamma-decaying actual retained residue;
+  `->` block count at most `3*log T`;
+  `->` literal rounded source-scale admissibility;
+  `->` eventual actual-zero Type-I/Type-II alternative.
+- `historical_omission_result`: the source finite detector hides no assumed tail, abstract
+  remainder, or simple-zero premise. The literal cutoff has slack relative to the explicit
+  tail estimate, but retaining it creates no additional obstacle.
+- `OBS-H2-CLASSICAL-DETECTOR-DYADIC-BOUNDS-01`: refined.
+- `OBS-H2-CLASSICAL-DETECTOR-DYADIC-DICHOTOMY-01`: locally closed.
+- `OBS-H2-CLASSICAL-DETECTOR-TYPE-I-RARITY-01`: open.
+- `OBS-H2-CLASSICAL-DETECTOR-TYPE-II-RARITY-01`: open.
+- `OBS-H2-CLASSICAL-DETECTOR-ZERO-DENSITY-01`: open.
+- `strict_boundary`: no Type-I mean value, Type-II fourth moment, density exponent, H2,
+  zero-free region, or RH.
+- `local_audit`: 1112-line no-sorry module; nine exact checks; nine selected standard-only
+  axiom prints; empty forbidden/resource scans and patch check; warning-as-error proof and
+  registration compiles; full build `8804/8804`.
+- `next_gate`: freeze and publish the implementation, require public CI, then publish immutable
+  evidence, final ledger, and closure receipt through separate public-green commits.
+- `global_goal`: active.
+
 ## 2026-07-26 H1 Bettin--Gonek moment-to-power bridge local endpoint
 
 - `node`: `H1-BETTIN-GONEK-MOMENT-TO-POWER-BRIDGE-01`.

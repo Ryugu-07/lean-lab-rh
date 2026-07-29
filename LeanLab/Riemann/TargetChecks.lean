@@ -32,6 +32,7 @@ import LeanLab.Riemann.HardyLittlewoodFiniteMeanSquare
 import LeanLab.Riemann.HardyLittlewoodEtaAbelTransfer
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.ClassicalZeroDetectorContourShift
+import LeanLab.Riemann.ClassicalZeroDetectorDyadicDichotomy
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.HardyThetaInversion
 import LeanLab.Riemann.HardyComplexAlpha
@@ -6004,6 +6005,79 @@ example {M : ℕ} (hM : 1 ≤ M) {rho : ℂ}
 
 example : ClassicalDetectorContourShiftCertificate :=
   classicalDetectorContourShift_endpoint
+
+example (M n : ℕ) :
+    ‖classicalDetectorCoefficient M n‖ ≤ n.divisors.card :=
+  norm_classicalDetectorCoefficient_le_card_divisors M n
+
+example {M K n : ℕ}
+    {j : Fin (classicalDetectorDyadicIndexCount K)}
+    (hn : n ∈ Finset.Ico (M + 1) K)
+    (hj : classicalDetectorDyadicIndex K n = j) :
+    2 ^ (j : ℕ) ≤ n ∧ n < 2 ^ ((j : ℕ) + 1) :=
+  classicalDetectorDyadicBlock_membership_range hn hj
+
+example (M K : ℕ) (Y : ℝ) (rho : ℂ) :
+    (∑ j : Fin (classicalDetectorDyadicIndexCount K),
+        classicalDetectorDyadicBlock M K Y rho j) =
+      ∑ n ∈ Finset.Ico (M + 1) K,
+        classicalDetectorSmoothedTerm M Y rho n :=
+  sum_classicalDetectorDyadicBlock_eq_middle M K Y rho
+
+example {M K : ℕ} (hM : 1 ≤ M) (hMK : M + 1 ≤ K)
+    {rho : ℂ} (hrhoRe : 0 < rho.re)
+    {Y : ℝ} (hY : 0 < Y) :
+    classicalDetectorSmoothedSeries M Y rho =
+      Complex.exp (-(1 / Y : ℝ)) +
+        (∑ n ∈ Finset.Ico (M + 1) K,
+          classicalDetectorSmoothedTerm M Y rho n) +
+        classicalDetectorFarTail M K Y rho :=
+  classicalDetectorSmoothedSeries_eq_head_add_middle_add_farTail
+    hM hMK hrhoRe hY
+
+example (M K : ℕ) {Y : ℝ} (hY : 0 < Y)
+    {rho : ℂ} (hrhoRe : 0 < rho.re)
+    (hKY : 2 * Y ≤ K) :
+    ‖classicalDetectorFarTail M K Y rho‖ ≤
+      (K : ℝ) * (1 + 2 * Y) *
+        Real.exp (-((K : ℝ) / Y)) :=
+  norm_classicalDetectorFarTail_le_explicit M K hY hrhoRe hKY
+
+example {K : ℕ} (hK : 1 ≤ K) {T : ℝ}
+    (hT : Real.exp 1 ≤ T) (hKT : (K : ℝ) ≤ T) :
+    (classicalDetectorDyadicIndexCount K : ℝ) ≤
+      3 * Real.log T :=
+  classicalDetectorDyadicIndexCount_le_three_log hK hT hKT
+
+example :
+    ∀ᶠ T : ℝ in atTop,
+      9 ≤ classicalDetectorSourceY T ∧
+      classicalDetectorSourceY T ≤ T ∧
+      1 ≤ classicalDetectorSourceM T ∧
+      classicalDetectorSourceM T + 1 ≤ classicalDetectorSourceK T ∧
+      (classicalDetectorSourceM T : ℝ) ≤
+        2 * T ^ (1 / 100 : ℝ) ∧
+      (classicalDetectorSourceK T : ℝ) ≤ T ∧
+      8 * classicalDetectorSourceY T * Real.log T ≤
+        classicalDetectorSourceK T :=
+  eventually_classicalDetectorSourceParameters
+
+example :
+    ∀ᶠ T : ℝ in atTop,
+      ∀ {rho : ℂ}, IsNontrivialZero rho →
+        1 / 2 < rho.re →
+        T ≤ |rho.im| → |rho.im| ≤ 2 * T →
+        ClassicalDetectorTypeII
+            (classicalDetectorSourceM T)
+            (classicalDetectorSourceY T) rho ∨
+          ClassicalDetectorTypeILog T
+            (classicalDetectorSourceM T)
+            (classicalDetectorSourceK T)
+            (classicalDetectorSourceY T) rho :=
+  eventually_classicalDetectorSource_typeILog_or_typeII
+
+example : ClassicalDetectorDyadicDichotomyCertificate :=
+  classicalDetectorDyadicDichotomy_endpoint
 
 example {alpha : Type*} [MeasurableSpace alpha]
     {mu : MeasureTheory.Measure alpha} {f : alpha → ℝ}

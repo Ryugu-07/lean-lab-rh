@@ -2,7 +2,7 @@
 
 Date: 2026-07-30
 
-Status: `H2_CLASSICAL_DETECTOR_DYADIC_DICHOTOMY_SELECTED / PREREGISTRATION_LOCAL`
+Status: `H2_CLASSICAL_DETECTOR_DYADIC_DICHOTOMY_FULL_SUCCESS_LOCAL`
 
 ## Closed parent
 
@@ -81,3 +81,16 @@ simultaneous specialization.
   preregistration passes public CI.
 
 The persistent RH Goal remains active.
+
+## Local result
+
+The selected H2 edge closes locally as
+`FULL_SUCCESS / SOURCE_DYADIC_DICHOTOMY_FORMALIZED`.
+The proof uses the literal source scales with explicit natural-number rounding and derives the
+actual-zero Type-I/Type-II disjunction after proving every head, tail, residue, and logarithmic
+block-count estimate required by the preregistration.
+
+This reconstruction exposes no omitted shortcut from Lemma 23 directly to a zero-density
+theorem. Its precise open successors are rarity estimates for the actual Type-I blocks and
+actual Type-II shifted integrals. The finite detector mechanism itself is no longer an open H2
+interface.

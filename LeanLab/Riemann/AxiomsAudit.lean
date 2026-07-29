@@ -18,6 +18,7 @@ import LeanLab.Riemann.HardyLittlewoodEtaAbelTransfer
 import LeanLab.Riemann.ClassicalZeroDetectorMellin
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.ClassicalZeroDetectorContourShift
+import LeanLab.Riemann.ClassicalZeroDetectorDyadicDichotomy
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.HardyThetaInversion
 import LeanLab.Riemann.HardyComplexAlpha
@@ -1288,6 +1289,15 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.classicalDetectorSmoothedSeries_eq_residue_add_shifted
 #print axioms LeanLab.Riemann.classicalDetectorCoefficientGap_shifted_identity
 #print axioms LeanLab.Riemann.classicalDetectorContourShift_endpoint
+#print axioms LeanLab.Riemann.norm_classicalDetectorCoefficient_le_card_divisors
+#print axioms LeanLab.Riemann.sum_classicalDetectorDyadicBlock_eq_middle
+#print axioms LeanLab.Riemann.classicalDetectorDyadic_shifted_identity
+#print axioms LeanLab.Riemann.norm_classicalDetectorFarTail_le_explicit
+#print axioms LeanLab.Riemann.eventually_norm_classicalDetectorRetainedResidue_le_one_ninth
+#print axioms LeanLab.Riemann.classicalDetectorDyadicIndexCount_le_three_log
+#print axioms LeanLab.Riemann.eventually_classicalDetectorSourceParameters
+#print axioms LeanLab.Riemann.eventually_classicalDetectorSource_typeILog_or_typeII
+#print axioms LeanLab.Riemann.classicalDetectorDyadicDichotomy_endpoint
 #print axioms LeanLab.Riemann.norm_exp_I_mul_mul_real_le_stripWeight
 #print axioms LeanLab.Riemann.norm_weilGroundStateFourierTransform_sub_le_stripError
 #print axioms LeanLab.Riemann.weilGroundStateFourier_uniform_transfer
