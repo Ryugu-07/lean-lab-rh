@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01`
 
 Classification: `FULL_SUCCESS / HARDY_LITTLEWOOD_LEMMA3_FORMALIZED`
 
-Public state: `IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_CI_PENDING`
+Public state: `EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_CI_PENDING`
 
 ## Result
 
@@ -99,3 +99,6 @@ The persistent RH Goal remains active.
 Frozen implementation commit `e3341491b34959f2b1eb5d4e1fe2f6fc6cb6ac6f` passed Lean Action
 run `30495767931`, build job `90724079010`, in `2m17s`. The five proof and registration files
 have an empty diff from that commit at immutable-evidence publication.
+
+Immutable-evidence commit `4994f8bf406f252ed5f6de467cab30faa2254497` passed Lean Action
+run `30496035652`, build job `90724980466`, in `1m33s`; the frozen diff remains empty.

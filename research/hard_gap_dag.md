@@ -4340,5 +4340,8 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   `90724079010`, passed in `2m17s`.
 - `proof_freeze`: the five proof and registration files have an empty diff from the
   implementation commit and must remain frozen through evidence, final ledger, and receipt.
-- `next_gate`: docs-only immutable evidence and independent public CI.
+- `immutable_evidence`: docs-only commit
+  `4994f8bf406f252ed5f6de467cab30faa2254497`, Lean Action run `30496035652`, build job
+  `90724980466`, passed in `1m33s`; frozen five-file diff empty.
+- `next_gate`: docs-only final ledger and independent public CI.
 - `global_goal`: active.
