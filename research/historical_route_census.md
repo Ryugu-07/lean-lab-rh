@@ -40,6 +40,20 @@ Coverage labels:
 | H13 | SUPPORTING | Generalized zeta/L-functions and automorphic transfer | STRUCTURAL_ANALOGY / GENERALIZATION | DEEP_FORMALIZATION | The exact modulus-one Dirichlet-family equivalence, all-family implication, zeta-factor transfer, and extra-factor obstruction now compile; actual generalized RH and p-adic/archimedean individual-zeta transfer remain open. |
 | H14 | SUPPORTING | Rigorous computation and finite-height zero verification | FINITE_VERIFICATION | DEEP_FORMALIZATION / TURING_COMPLETENESS_CONSUMER_COMPILED | The arbitrary-height symmetric finite-orbit theorem compiles, so finite verification plus the two basic zeta symmetries cannot alone promote to a global claim. Campaign `LITERATURE-20260729-H14-TURING-COMPLETENESS-CONSUMER-01` compiles the complementary positive mechanism: actual multiplicity-bearing xi divisor candidates plus an exact rectangle argument-principle count imply finite completeness and critical-line location throughout that rectangle. Interval root isolation, Turing's average bound, every concrete certified height, the global tail reduction, and RH remain open. |
 
+## 2026-07-30 H1 Hardy--Littlewood finite mean-square selection
+
+The omission search re-enters the 1921 Hardy--Littlewood quantitative critical-line proof at its
+finite Dirichlet-polynomial hinge. This is not constant optimization: the source proves the
+stronger Lemma 6 estimate `O(N / log N)`, while the subsequent finite Lemma 8 mean-square
+argument only needs a universal `O(N)` off-diagonal bound. Campaign
+`LITERATURE-20260730-H1-HARDY-LITTLEWOOD-FINITE-MEAN-SQUARE-01` preregisters that weakened
+kernel estimate, the exact finite norm-square expansion, and a shifted `O(L+N)` polynomial
+mean square.
+
+The source's uniform infinite-series truncation, eta-primitive identification, actual source
+coordinate second moment, count parameter budget, H1, and RH remain open. H2, H7/H8, H10, H11,
+H12, and H14 remain live alternatives after this fixed finite campaign.
+
 An independent auditor may add a route only with a primary-source anchor and a reason it is not a
 subroute of an existing row. Renaming a route does not create a new campaign slot.
 

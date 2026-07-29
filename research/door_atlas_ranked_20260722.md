@@ -1844,3 +1844,18 @@ equation (3), and the literal left Abel limit construct
 `90522592740`, in `2m17s`. This closes Hardy's qualitative theorem only; quantitative
 Hardy--Littlewood counts, Selberg's positive proportion, Levinson--Conrey, H1, and RH remain
 open.
+
+### Post-source-normalization rerank: Hardy--Littlewood finite mean square
+
+The source-normalization campaign is publicly closed at receipt
+`4ba4cdf4cdefde88b483e03d4871abf63d6e4020`. Fresh comparison retains H2 localization,
+H7/H8 concrete spectral producers, H10 number-field transfer, H11 sparse-exception
+amplification, H12 global counts, and H14 analytic tail certification as open global inputs.
+
+H1 is selected for a fixed, materially different source hinge: Hardy--Littlewood Lemmas 6--8.
+The omission-sensitive question is whether the source's `O(N / log N)` off-diagonal estimate is
+stronger than the finite mean-square step needs. Campaign
+`LITERATURE-20260730-H1-HARDY-LITTLEWOOD-FINITE-MEAN-SQUARE-01` freezes the weaker universal
+`O(N)` kernel bound, exact finite norm-square expansion, and shifted `O(L+N)` polynomial mean
+square. It excludes the infinite conditional-series truncation, eta identification, actual
+source-coordinate second moment, parameter budget, unconditional count, H1, and RH.

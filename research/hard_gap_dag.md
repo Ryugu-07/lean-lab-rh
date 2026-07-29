@@ -3968,4 +3968,34 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   Lean Action run `30469539221`, build job `90635882124`, passed in `2m16s`; frozen five-file
   diff empty.
 - `next_gate`: one closure receipt and public CI, then local STOP and fresh route selection.
+
+## 2026-07-30 H1 Hardy--Littlewood finite mean-square launch
+
+- `parent_public_closure`: source-normalization receipt
+  `4ba4cdf4cdefde88b483e03d4871abf63d6e4020`, Lean Action run `30469848450`, build job
+  `90636930282`.
+- `H1-HARDY-LITTLEWOOD-FINITE-MEAN-SQUARE-01`: selected after fresh comparison with H2,
+  H7/H8, H10, H11, H12, and H14.
+- `historical_omission_test`: Hardy--Littlewood Lemma 6 proves an off-diagonal
+  `O(N / log N)` estimate, but its finite Lemma 8 mean-square step only requires `O(N)`.
+- `fixed_edge`:
+  bounded diagonal coefficient sum;
+  `->` exact finite Dirichlet-polynomial norm-square expansion;
+  `->` universal linear off-diagonal logarithmic-kernel bound;
+  `->` shifted finite mean square `O(L+N)`;
+  `->` uniform `O(L)` when `N<=L`.
+- `feasibility_probe`: a temporary no-sorry Lean file compiles the explicit telescope
+  `1/(n*log(n)^2) <= 6*(1/log(n)-1/log(n+1))` and the resulting diagonal bound
+  `sum_(n>=2) 1/(n*log(n)^2) <= 6/log(2)`. It is not a downstream premise.
+- `material_difference`: this is premise minimization, not numerical-constant optimization and
+  not a continuation selected by H1 adjacency.
+- `OBS-H1-HARDY-LITTLEWOOD-FINITE-MEAN-SQUARE-01`: selected.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-TRUNCATION-01`: remains outside the endpoint.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-SERIES-IDENTIFICATION-01`: remains outside the endpoint.
+- `OBS-H1-HARDY-LITTLEWOOD-X-MEAN-SQUARE-01`: remains outside the endpoint.
+- `strict_boundary`: no infinite-series truncation theorem, eta-error second moment,
+  source-coordinate second moment, unconditional linear zero count, positive proportion, H1,
+  or RH.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- `global_goal`: active.
 - `global_goal`: active.
