@@ -86,3 +86,20 @@ This source check rejects the naive proof plan based only on differentiating
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration passes public CI.
 
 The persistent RH Goal remains active.
+
+## Selection outcome
+
+The selected endpoint compiles as `hardyLittlewoodEtaAbelTransfer_endpoint`. Lean proves the
+literal source sign, exact shifted Abel identity, reciprocal-log telescope, finite block
+estimate, Cauchy convergence, limit remainder, and arbitrary-parameter-family uniformity.
+
+The resulting explicit bound is
+
+```text
+norm(thetaValue-Q_N(s)) <= (2/log 2)*Ceta*N^(-sigma).
+```
+
+Thus Lemma 4 introduces no new oscillatory estimate beyond Lemma 3. The first open source edge
+is now the actual uniform Lemma 3 eta remainder. The implementation proves no primitive
+identification, infinite-series moment, source-X moment, unconditional linear count, H1, or
+RH. Independent public CI remains required before campaign closure.

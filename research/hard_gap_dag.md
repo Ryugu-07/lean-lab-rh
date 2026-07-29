@@ -3397,6 +3397,34 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.
 
+## 2026-07-30 H1 Hardy--Littlewood eta-to-Theta Abel-transfer local result
+
+- `classification`: `FULL_SUCCESS_LOCAL / ETA_TO_THETA_TRANSFER_FORMALIZED`.
+- `H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01`: locally closed by
+  `hardyLittlewoodEtaAbelTransfer_endpoint`.
+- `compiled_chain`: literal eta term;
+  `->` shifted finite Abel identity;
+  `->` reciprocal-log positivity and telescope;
+  `->` eta block `2*Ceta*N^(-sigma)`;
+  `->` Theta block `(2/log 2)*Ceta*N^(-sigma)`;
+  `->` Cauchy and ordered limit;
+  `->` limit remainder;
+  `->` arbitrary-family uniformity.
+- `historical_omission_result`: Lemma 4 requires no independent oscillatory estimate beyond
+  Lemma 3 and preserves the eta remainder exponent.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01`: locally closed.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-REMAINDER-01`: first open successor; prove source Lemma 3
+  uniformly without an extra `abs(s)` loss.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-SERIES-IDENTIFICATION-01`: remains open.
+- `OBS-H1-HARDY-LITTLEWOOD-X-MEAN-SQUARE-01`: remains open.
+- `strict_boundary`: no actual Lemma 3 remainder, primitive identification, infinite-series
+  moment, source-X moment, parameter budget, unconditional linear count, H1, or RH.
+- `local_audit`: 488-line no-sorry module; five exact checks; six selected standard-only axiom
+  prints; empty forbidden/resource scans and patch check; five warning-as-error compiles; full
+  build `8801/8801`.
+- `next_gate`: frozen implementation commit and independent public CI.
+- `global_goal`: active.
+
 ## 2026-07-29 H12 left-half-plane winding final ledger public green
 
 - `classification`: `FULL_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN`.

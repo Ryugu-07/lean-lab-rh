@@ -84,6 +84,18 @@ uniform ordered-series remainder under an explicit Lemma 3 hypothesis. It will n
 actual eta remainder, primitive identification, infinite-series moment, unconditional linear
 count, H1, or RH. This is conditional-convergence reconstruction, not numerical optimization.
 
+## 2026-07-30 H1 Hardy--Littlewood eta-to-Theta Abel-transfer result
+
+The selected source inference succeeds locally. Lean compiles Hardy--Littlewood's reciprocal-log
+Abel transform and proves that a uniform `Ceta*N^(-sigma)` eta remainder implies ordered Theta
+convergence with a uniform `(2/log 2)*Ceta*N^(-sigma)` remainder. The result is quantified over
+arbitrary parameter families, so uniformity is not lost when the limit value varies.
+
+This localizes the first genuine remaining analytic obstacle to Lemma 3 itself. The project
+still needs its uniform eta remainder in the source region, then the ordered-series/primitive
+identification and error moment, actual source-X moment, and parameter budget. The result is
+not an unconditional linear count, H1, or RH.
+
 An independent auditor may add a route only with a primary-source anchor and a reason it is not a
 subroute of an existing row. Renaming a route does not create a new campaign slot.
 

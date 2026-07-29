@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260730-H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01`
 
 Node: `H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01`
 
-Status: `PREREGISTRATION_PUBLIC_CI_PENDING`
+Status: `FULL_SUCCESS_LOCAL / IMPLEMENTATION_PUBLIC_CI_PENDING`
 
 ## Fixed question
 
@@ -21,12 +21,21 @@ localize the remaining analytic difficulty entirely in Lemma 3's uniform eta rem
 | 2 | `PRIMARY_SOURCE` | Pages 286--287 state the same `O(x^(-sigma))` order for eta and Theta under `sigma>=sigma0>0`, `abs(t)<A*x`. The proof uses reciprocal-log differences times eta block sums. | Lock the source indexing and uniformity; reject a crude termwise derivative proof carrying an extra `abs(s)` loss. |
 | 3 | `LEAN_SURVEY` | Mathlib has `Finset.sum_Ico_by_parts`; the project has ordered Dirichlet partial sums and the finite Hardy--Littlewood logarithmic coefficients. No theorem currently identifies the source eta remainder or Theta ordered value. | Reuse the finite Abel primitive and keep both identifications outside the endpoint. |
 | 4 | `PREREGISTRATION` | Route selection, exact endpoint, negative controls, and obstruction map are written before any `LeanLab/` edit. | Publish the docs-only commit and require public CI before implementation. |
+| 5 | `PUBLIC_PREREGISTRATION` | Docs-only commit `e770d76f85ab9d363b50c606fc195a2401b93390` passed Lean Action run `30477686788`, build job `90663405809`, in `1m33s`. | Open the production gate. |
+| 6 | `FINITE_ABEL` | Mathlib's range summation-by-parts theorem matches a shifted block after making the endpoint convention explicit. | Compile both the raw and decreasing-weight forms before using analytic hypotheses. |
+| 7 | `ETA_BLOCK` | A block after `N` is the difference of the eta remainders at `N` and `N+K`; negative exponent monotonicity gives `2*Ceta*N^(-sigma)`. | Localize every oscillatory input in the stated eta remainder hypothesis. |
+| 8 | `THETA_BLOCK` | Reciprocal-log differences are nonnegative and telescope exactly. | Derive the finite weighted-block bound with explicit universal factor `2/log 2`. |
+| 9 | `CAUCHY_LIMIT` | The finite block bound tends to zero for every `sigma>0`, and `Complex` is complete. | Construct the ordered Theta value and pass the closed norm bound to the limit. |
+| 10 | `UNIFORMITY` | The proof uses no property of a parameter beyond the common eta remainder constant. | Compile an arbitrary-family theorem preserving one uniform constant. |
+| 11 | `REGISTRATION` | One proven Target, five exact TargetChecks, six selected axiom prints, and the root import compile under warning-as-error. | Run the complete mechanical audit and full build. |
+| 12 | `LOCAL_AUDIT` | The 488-line module has empty forbidden/resource scans and patch check; selected axioms are standard only; full build passes `8801/8801`. | Freeze and publish the implementation, then require independent public CI. |
 
 ## Current frontier
 
-- `selected_edge`: uniform eta remainder `->` ordered Theta convergence and remainder.
+- `closed_edge_local`: uniform eta remainder `->` ordered Theta convergence and remainder.
 - `exact_input`: a single `K*N^(-sigma)` eta remainder for every `N` after the source cutoff.
-- `expected_output`: a universal-constant `K*N^(-sigma)` Theta remainder.
+- `compiled_output`: `(2/log 2)*K*N^(-sigma)` Theta remainder, uniform over arbitrary
+  parameter families.
 - `first_open_after_result`: prove the actual Lemma 3 eta remainder without an extra
   `1+abs(s)` loss.
 - `strict_boundary`: no primitive identification, infinite mean square, source-X moment,

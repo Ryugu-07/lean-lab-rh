@@ -102,6 +102,7 @@ import LeanLab.Riemann.SelbergLocalSignChange
 import LeanLab.Riemann.HardyLittlewoodLinearCount
 import LeanLab.Riemann.HardyLittlewoodSourceNormalization
 import LeanLab.Riemann.HardyLittlewoodFiniteMeanSquare
+import LeanLab.Riemann.HardyLittlewoodEtaAbelTransfer
 import LeanLab.Riemann.ClassicalZeroDetectorMellin
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.HardyAbelMomentAmplification
@@ -1926,6 +1927,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``hardyLittlewoodFiniteMeanSquare_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260730-H1-HARDY-LITTLEWOOD-FINITE-MEAN-SQUARE-01 reconstructs the finite core of Lemmas 6--8 and verifies the omission-seeking premise minimization: the source's stronger O(N/log N) kernel estimate is not needed for this finite conclusion; an explicit O(N) near/far decomposition suffices. Lean checks the literal alternating coefficient, shifted logarithmic phases, exact double expansion, cosine integral bound, and uniform interval theorem. This does not identify or uniformly truncate the conditionally convergent eta primitive series, prove its error moment, prove the actual source-X moment, instantiate the count parameter budget, or prove an unconditional linear count, H1, or RH." },
+    { id := "H1.hardy-littlewood.eta-abel-transfer"
+      tier := .tier2
+      title := "Formalize Hardy--Littlewood's eta-to-Theta Abel transfer"
+      statement :=
+        "Define the literal ordered eta and logarithmically weighted Theta partial sums, prove the exact shifted finite Abel identity and reciprocal-log telescope, and show uniformly that any K*N^(-sigma) eta remainder with sigma>0 gives ordered Theta convergence and a (2/log 2)*K*N^(-sigma) remainder."
+      leanName := some ``hardyLittlewoodEtaAbelTransfer_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260730-H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01 reconstructs the exact inference from Hardy--Littlewood 1921 Lemma 3 to Lemma 4. Lean checks the source sign, finite shifted Abel identity, positive reciprocal-log differences, bounded-block estimate, Cauchy completeness, limit passage, and parameter-family uniformity. The actual Lemma 3 eta remainder remains an explicit premise; qualitative alternating convergence or a bound carrying an extra abs(s) factor is not promoted to that premise. No primitive identification, infinite-series mean square, source-X moment, parameter budget, unconditional linear count, H1, or RH is proved." },
     { id := "H1.selberg.local-sign-change-producer"
       tier := .tier2
       title := "Formalize Selberg's local squared-mollifier sign detector"

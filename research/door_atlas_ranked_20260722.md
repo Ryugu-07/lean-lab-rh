@@ -1883,3 +1883,13 @@ Campaign `LITERATURE-20260730-H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01` freezes 
 as a no-sorry Lean target. The actual Lemma 3 oscillatory estimate remains a named input and
 the first successor obstacle. This avoids both a false infinite-series claim and a return to
 finite constant optimization.
+
+**2026-07-30 local result.** Full success compiles as
+`hardyLittlewoodEtaAbelTransfer_endpoint`. The exact shifted Abel identity and
+reciprocal-log telescope turn two eta remainders into a Theta block bound, after which
+completeness supplies the ordered limit. The explicit uniform output is
+`(2/log 2)*Ceta*N^(-sigma)`, including for arbitrary parameter families.
+
+The omission result is structural: Lemma 4 has no separate oscillatory producer. The next H1
+door is precisely Lemma 3's uniform eta remainder without an extra `abs(s)` loss. Primitive
+identification, both source moments, the count budget, H1, and RH remain open.

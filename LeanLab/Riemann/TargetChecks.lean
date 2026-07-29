@@ -29,6 +29,7 @@ import LeanLab.Riemann.SelbergLocalSignChange
 import LeanLab.Riemann.HardyLittlewoodLinearCount
 import LeanLab.Riemann.HardyLittlewoodSourceNormalization
 import LeanLab.Riemann.HardyLittlewoodFiniteMeanSquare
+import LeanLab.Riemann.HardyLittlewoodEtaAbelTransfer
 import LeanLab.Riemann.ClassicalZeroDetectorInverseMellin
 import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.HardyThetaInversion
@@ -6117,5 +6118,46 @@ example (N : ℕ) (shift A L : ℝ) (hL : 0 ≤ L) (hNL : (N : ℝ) ≤ L) :
 
 example : HardyLittlewoodFiniteMeanSquareCertificate :=
   hardyLittlewoodFiniteMeanSquare_endpoint
+
+example (w : ℕ → ℝ) (a : ℕ → ℂ) (N K : ℕ) :
+    hardyLittlewoodShiftedWeightedBlock w a N K =
+      w (N + 1 + (K - 1)) • hardyLittlewoodShiftedPrefix a N K +
+        ∑ j ∈ Finset.range (K - 1),
+          (w (N + 1 + j) - w (N + 1 + (j + 1))) •
+            hardyLittlewoodShiftedPrefix a N (j + 1) :=
+  hardyLittlewood_shiftedWeightedBlock_eq_abel_decreasing w a N K
+
+example (s etaValue : ℂ) (sigma Ceta : ℝ) (N0 : ℕ)
+    (hsigma : 0 < sigma) (hCeta : 0 ≤ Ceta)
+    (hN0 : 2 ≤ N0)
+    (hremainder :
+      ∀ n : ℕ, N0 ≤ n →
+        ‖etaValue - hardyLittlewoodEtaPartialSum s n‖ ≤
+          Ceta * (n : ℝ) ^ (-sigma)) :
+    CauchySeq (hardyLittlewoodThetaPartialSum s) :=
+  cauchySeq_hardyLittlewoodThetaPartialSum
+    s etaValue sigma Ceta N0 hsigma hCeta hN0 hremainder
+
+example (s etaValue : ℂ) (sigma Ceta : ℝ) (N0 : ℕ)
+    (hsigma : 0 < sigma) (hCeta : 0 ≤ Ceta)
+    (hN0 : 2 ≤ N0)
+    (hremainder :
+      ∀ n : ℕ, N0 ≤ n →
+        ‖etaValue - hardyLittlewoodEtaPartialSum s n‖ ≤
+          Ceta * (n : ℝ) ^ (-sigma)) :
+    ∃ thetaValue : ℂ,
+      Filter.Tendsto (hardyLittlewoodThetaPartialSum s)
+        Filter.atTop (nhds thetaValue) ∧
+      ∀ N : ℕ, N0 ≤ N →
+        ‖thetaValue - hardyLittlewoodThetaPartialSum s N‖ ≤
+          2 * (Real.log 2)⁻¹ * Ceta * (N : ℝ) ^ (-sigma) :=
+  exists_hardyLittlewoodThetaValue_of_etaRemainder
+    s etaValue sigma Ceta N0 hsigma hCeta hN0 hremainder
+
+example : 0 < hardyLittlewoodEtaAbelTransferConstant :=
+  hardyLittlewoodEtaAbelTransferConstant_pos
+
+example : HardyLittlewoodEtaAbelTransferCertificate :=
+  hardyLittlewoodEtaAbelTransfer_endpoint
 
 end LeanLab.Riemann

@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTERED / PUBLIC_CI_PENDING`
+Status: `FULL_SUCCESS_LOCAL / IMPLEMENTATION_PUBLIC_CI_PENDING`
 
 ## Parent and route selection
 
@@ -189,3 +189,14 @@ Before implementation publication:
 After frozen implementation public CI, publish immutable evidence, final ledger, and closure
 receipt through separate public-green commits. Then stop only this local campaign and rerank
 the historical routes. The persistent RH Goal remains active.
+
+## Local result
+
+All nine endpoint items compile in the 488-line no-sorry module
+`LeanLab/Riemann/HardyLittlewoodEtaAbelTransfer.lean`. The explicit transfer constant is
+`2/log 2`. The arbitrary-parameter-family theorem confirms that one eta remainder constant
+uniform on a source region gives one Theta remainder constant on the same region.
+
+The historical omission test succeeds: Lemma 4 contains no independent oscillatory estimate;
+the first remaining analytic producer is the actual Lemma 3 eta remainder. Full local audit
+passes `8801/8801`. Independent public CI is still required before evidence and closure.
