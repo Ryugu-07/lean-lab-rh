@@ -8,7 +8,7 @@ Node: `H7-CONNES-NESTED-PROJECTION-POSITIVE-TYPE-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / FALSIFICATION`
 
-Status: `PREREGISTERED_LOCAL_PUBLIC_CI_REQUIRED`
+Status: `LOCAL_FULL_SUCCESS_AUDITED_PUBLIC_IMPLEMENTATION_REQUIRED`
 
 ## Parent and selection
 
@@ -134,6 +134,26 @@ subtheorem.
 
 The campaign may close only the finite positive-type inference. The persistent RH Goal remains
 active after every local outcome.
+
+## Preregistration and local outcome
+
+- `preregistration_commit`: `59a6d8aa74fb48c3123e391e50e2e932408bcf66`.
+- `preregistration_public_ci`: Lean Action run `30411132179`, build job `90447227409`,
+  passed in `1m33s`.
+- `classification`: `FULL_SUCCESS / SOURCE_POSITIVE_TYPE_HINGE_FORMALIZED`.
+- `production_module`: `LeanLab/Riemann/ConnesProjectionDefect.lean`.
+- `proven_target`: `H7.connes.nested-projection-defect-positive-type`.
+- `positive_result`: the six exact nesting hypotheses make `P-Q` a self-adjoint idempotent,
+  and the defect trace is exactly the sum of the squared norms of the entries of `(P-Q)A`.
+- `boundary_result`: `P=0`, `Q=1`, and `A=1` in dimension one satisfy the individual
+  projection laws but have defect-trace real part `-1`; nesting is therefore essential.
+- `audit`: 192-line production module, eight exact TargetChecks, seven selected axiom prints
+  containing only `propext`, `Classical.choice`, and `Quot.sound`, empty forbidden/resource
+  scans, warning-as-error compiles, `git diff --check`, and full build `8793/8793`.
+- `deltas`: historical route coverage `+1`, source-logic map `+1`, hard gap `0`, RH frontier
+  `0`.
+- `next_gate`: freeze the implementation and require independent public CI before publishing
+  immutable evidence.
 
 ## Audit gates
 

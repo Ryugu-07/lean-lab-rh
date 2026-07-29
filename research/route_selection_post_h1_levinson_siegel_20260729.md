@@ -2,7 +2,7 @@
 
 Date: 2026-07-29
 
-Status: `H7_CONNES_NESTED_PROJECTION_POSITIVE_TYPE_SELECTED`
+Status: `H7_CONNES_NESTED_PROJECTION_POSITIVE_TYPE_LOCAL_FULL_SUCCESS`
 
 ## Closed parent
 
@@ -97,3 +97,18 @@ Historical successors:
   passes public CI.
 
 The persistent RH Goal remains active.
+
+## Local outcome
+
+- Preregistration commit `59a6d8aa74fb48c3123e391e50e2e932408bcf66` passed Lean Action run
+  `30411132179`, build job `90447227409`, in `1m33s`.
+- `LeanLab/Riemann/ConnesProjectionDefect.lean` compiles the complete fixed endpoint.
+- `classification`: `FULL_SUCCESS / SOURCE_POSITIVE_TYPE_HINGE_FORMALIZED`.
+- The source containment is the exact finite algebraic hinge: it turns the projection
+  difference into an orthogonal projection and the trace into a Frobenius norm square.
+- The dimension-one negative control proves that individual orthogonal projections without
+  nesting do not preserve the sign.
+- This closes no actual adèle projection, trace-class, distribution-limit, Weil-positivity,
+  H7, or RH edge.
+- Local audit passes through the full `8793/8793` build. The next gate is frozen
+  implementation public CI.

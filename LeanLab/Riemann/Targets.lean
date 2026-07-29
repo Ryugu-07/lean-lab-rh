@@ -125,6 +125,7 @@ import LeanLab.Riemann.ConreyLiPhaseObstruction
 import LeanLab.Riemann.ConreyLiRKHSShift
 import LeanLab.Riemann.ConreyLiHalfStrip
 import LeanLab.Riemann.BerryKeatingHalfLine
+import LeanLab.Riemann.ConnesProjectionDefect
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.BombieriStepanovPolarInjectivity
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
@@ -1387,6 +1388,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``berryKeatingHalfLine_endpoint
       status := .proven
       note := "Campaign FALSIFICATION-20260729-H7-BERRY-KEATING-HALFLINE-01 kernel-checks the first no-go boundary in the Berry--Keating H=xp route. The displayed generalized mode solves the formal equation but is not an L2 eigenvector. This does not formalize an unbounded operator domain, prove pure continuity, treat compact quantum graphs or their Weyl asymptotics, rule out global arithmetic confinement or Connes' absorption spectrum, construct Hilbert--Polya, prove H7, or prove RH." },
+    { id := "H7.connes.nested-projection-defect-positive-type"
+      tier := .tier2
+      title := "Formalize the Connes nested-projection trace mechanism"
+      statement :=
+        "For finite complex nested orthogonal projections P and Q, prove that H=P-Q is an orthogonal projection and that Trace(H*A*A*) is exactly the Frobenius norm square of H*A; derive positive type and its zero characterization, and falsify positivity for individual nonnested projections."
+      leanName := some ``connesProjectionDefect_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260729-H7-CONNES-PROJECTION-DEFECT-01 formalizes the finite algebraic core of Connes 1998 Theorem 5 equations (23)-(25). The exact trace square proves positivity under source-style projection containment; the one-dimensional P=0, Q=1 control proves that individual projection properties without nesting are insufficient. This does not construct the actual adele-class projections, prove trace class, identify the distributional Weil limit, establish full Weil positivity, construct an absorption spectrum, prove H7, or prove RH; historical_route_coverage_delta=1, source_logic_delta=1, and rh_frontier_delta=0." },
     { id := "H7.weil-ground-state.weighted-coordinate-alignment"
       tier := .tier2
       title := "Align finite-prime Weil ground-state coordinates"

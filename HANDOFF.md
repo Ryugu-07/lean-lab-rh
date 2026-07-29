@@ -6361,3 +6361,28 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   Weil positivity, H7, or RH.
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H7 Connes nested-projection positive-type local result
+
+- `classification`: `FULL_SUCCESS / SOURCE_POSITIVE_TYPE_HINGE_FORMALIZED`.
+- Preregistration commit `59a6d8aa74fb48c3123e391e50e2e932408bcf66` passed Lean Action run
+  `30411132179`, build job `90447227409`, in `1m33s`; proof editing began afterward.
+- New module `LeanLab/Riemann/ConnesProjectionDefect.lean` formalizes the finite algebraic core
+  of Connes 1998 Theorem 5 equations `(23)`--`(25)`.
+- Under the six exact nested orthogonal-projection laws, Lean proves `P-Q` is self-adjoint and
+  idempotent and identifies `Trace((P-Q)*(A*Aᴴ))` exactly with the Frobenius norm square of
+  `(P-Q)*A`.
+- It derives zero imaginary part, nonnegative real part, and vanishing exactly when
+  `(P-Q)*A=0`.
+- The compiled dimension-one control `P=0`, `Q=1`, `A=1` has individual projection laws but no
+  nesting and trace real part `-1`; nesting is the exact finite sign boundary.
+- Proven Target: `H7.connes.nested-projection-defect-positive-type`.
+- Audit: 192-line no-sorry module; eight exact TargetChecks; seven standard-only axiom prints;
+  empty forbidden/resource scans; warning-as-error compiles; `git diff --check`; full build
+  `8793/8793`.
+- Keep the actual adèle projections, source containment, trace class, prolate cutoff
+  asymptotics, distributional Weil limit, unconditional Weil positivity, Hilbert--Polya, H7,
+  and RH open.
+- Deltas: historical route coverage `+1`, source-logic map `+1`, hard gap `0`, RH frontier `0`.
+- Next gate: frozen implementation public CI, then immutable evidence and final ledger.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.

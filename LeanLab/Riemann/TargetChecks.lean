@@ -17,6 +17,7 @@ import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.ConreyLiPhaseObstruction
 import LeanLab.Riemann.ConreyLiHalfStrip
 import LeanLab.Riemann.BerryKeatingHalfLine
+import LeanLab.Riemann.ConnesProjectionDefect
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.BombieriStepanovPolarInjectivity
 import LeanLab.Riemann.WeilHodgeLattice
@@ -248,6 +249,7 @@ def checkedTargetNames : List Lean.Name :=
     ``turingCompletenessConsumer_endpoint,
     ``conreyLiHalfStrip_endpoint_of_rkhs_shift,
     ``berryKeatingHalfLine_endpoint,
+    ``connesProjectionDefect_endpoint,
     ``levinsonSiegelStep_endpoint,
     ``levinsonMontgomeryDenseBranch_of_not_cofinallyNegativeLogDerivAtIntegers,
     ``riemannHypothesis_iff_nontrivial_zeros_on_line ]
@@ -5817,5 +5819,72 @@ example :
       f b < f a →
       ∃ c ∈ Set.Ioo a b, (f a - f b) / (b - a) ≤ |deriv f c|) :=
   levinsonSiegelStep_endpoint
+
+example {n : Type*} [Fintype n] {P Q : Matrix n n ℂ}
+    (h : ConnesNestedOrthogonalProjections P Q) :
+    (connesProjectionDefect P Q)ᴴ = connesProjectionDefect P Q :=
+  connesProjectionDefect_selfAdjoint h
+
+example {n : Type*} [Fintype n] {P Q : Matrix n n ℂ}
+    (h : ConnesNestedOrthogonalProjections P Q) :
+    connesProjectionDefect P Q * connesProjectionDefect P Q =
+      connesProjectionDefect P Q :=
+  connesProjectionDefect_idempotent h
+
+example {n : Type*} [Fintype n] {P Q : Matrix n n ℂ}
+    (h : ConnesNestedOrthogonalProjections P Q) (A : Matrix n n ℂ) :
+    connesFiniteDefectTrace P Q A =
+      ((∑ i : n, ∑ j : n,
+        Complex.normSq ((connesProjectionDefect P Q * A) i j) : ℝ) : ℂ) :=
+  connesFiniteDefectTrace_eq_sum_normSq h A
+
+example {n : Type*} [Fintype n] {P Q : Matrix n n ℂ}
+    (h : ConnesNestedOrthogonalProjections P Q) (A : Matrix n n ℂ) :
+    (connesFiniteDefectTrace P Q A).im = 0 ∧
+      0 ≤ (connesFiniteDefectTrace P Q A).re ∧
+      (connesFiniteDefectTrace P Q A = 0 ↔
+        connesProjectionDefect P Q * A = 0) :=
+  ⟨connesFiniteDefectTrace_im_eq_zero h A,
+    connesFiniteDefectTrace_re_nonneg h A,
+    connesFiniteDefectTrace_eq_zero_iff h A⟩
+
+example :
+    connesNonNestedLeftᴴ = connesNonNestedLeft ∧
+      connesNonNestedLeft * connesNonNestedLeft = connesNonNestedLeft ∧
+      connesNonNestedRightᴴ = connesNonNestedRight ∧
+      connesNonNestedRight * connesNonNestedRight = connesNonNestedRight :=
+  connesNonNested_individual_projections
+
+example :
+    ¬ConnesNestedOrthogonalProjections connesNonNestedLeft connesNonNestedRight :=
+  connesNonNested_not_nested
+
+example :
+    (connesFiniteDefectTrace connesNonNestedLeft connesNonNestedRight
+      connesNonNestedTest).re = -1 :=
+  connesNonNested_trace_re_eq_neg_one
+
+example :
+    (∀ {n : Type} [Fintype n] {P Q : Matrix n n ℂ},
+      ConnesNestedOrthogonalProjections P Q →
+      ∀ A : Matrix n n ℂ,
+        (connesProjectionDefect P Q)ᴴ = connesProjectionDefect P Q ∧
+        connesProjectionDefect P Q * connesProjectionDefect P Q =
+          connesProjectionDefect P Q ∧
+        connesFiniteDefectTrace P Q A =
+          ((∑ i : n, ∑ j : n,
+            Complex.normSq ((connesProjectionDefect P Q * A) i j) : ℝ) : ℂ) ∧
+        (connesFiniteDefectTrace P Q A).im = 0 ∧
+        0 ≤ (connesFiniteDefectTrace P Q A).re ∧
+        (connesFiniteDefectTrace P Q A = 0 ↔
+          connesProjectionDefect P Q * A = 0)) ∧
+    (connesNonNestedLeftᴴ = connesNonNestedLeft ∧
+      connesNonNestedLeft * connesNonNestedLeft = connesNonNestedLeft ∧
+      connesNonNestedRightᴴ = connesNonNestedRight ∧
+      connesNonNestedRight * connesNonNestedRight = connesNonNestedRight) ∧
+    ¬ConnesNestedOrthogonalProjections connesNonNestedLeft connesNonNestedRight ∧
+    (connesFiniteDefectTrace connesNonNestedLeft connesNonNestedRight
+      connesNonNestedTest).re = -1 :=
+  connesProjectionDefect_endpoint
 
 end LeanLab.Riemann

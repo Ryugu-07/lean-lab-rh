@@ -3603,3 +3603,29 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `strict_boundary`: no actual number-field operator, trace limit, Weil positivity, H7, or RH.
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.
+
+## 2026-07-29 H7 Connes nested-projection positive-type local result
+
+- `classification`: `FULL_SUCCESS / SOURCE_POSITIVE_TYPE_HINGE_FORMALIZED`.
+- `preregistration`: `59a6d8aa74fb48c3123e391e50e2e932408bcf66`.
+- `preregistration_public_ci`: run `30411132179`, build job `90447227409`, passed in `1m33s`.
+- `compiled_edge`:
+  `six exact nested orthogonal-projection laws`;
+  `-> P-Q is a self-adjoint idempotent`;
+  `-> Trace((P-Q)*(A*Aᴴ)) is exactly ||(P-Q)A||_F^2`;
+  `-> zero imaginary part, nonnegative real part, and exact zero characterization`.
+- `negative_control`: individual orthogonal projections are insufficient; the compiled
+  dimension-one instance `P=0`, `Q=1`, `A=1` is nonnested and has trace real part `-1`.
+- `obstacle_relocation`: finite positivity is rigid once containment is known. The live source
+  gap is the actual adèle cutoff containment, followed by trace-class normalization and the
+  uniform distributional limit.
+- `OBS-H7-CONNES-ADELE-PROJECTIONS-01`: open.
+- `OBS-H7-CONNES-TRACE-CLASS-01`: open.
+- `OBS-H7-CONNES-DISTRIBUTION-LIMIT-01`: open.
+- `OBS-H7-CONNES-POSITIVITY-TO-RH-01`: open.
+- `audit`: 192 lines, no sorry, eight exact checks, seven standard-only axiom prints, empty
+  scans, warning-as-error compiles, `git diff --check`, full build `8793/8793`.
+- `deltas`: historical route coverage and source-logic map each `+1`; hard gap and RH frontier
+  remain `0`.
+- `next_gate`: frozen implementation public CI.
+- `global_goal`: active.

@@ -126,6 +126,7 @@ import LeanLab.Riemann.ConreyLiPhaseObstruction
 import LeanLab.Riemann.ConreyLiRKHSShift
 import LeanLab.Riemann.ConreyLiHalfStrip
 import LeanLab.Riemann.BerryKeatingHalfLine
+import LeanLab.Riemann.ConnesProjectionDefect
 import LeanLab.Riemann.LevinsonSiegelStep
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.BombieriStepanovPolarInjectivity
@@ -1198,6 +1199,13 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.norm_berryKeatingMode_sq
 #print axioms LeanLab.Riemann.not_memLp_two_berryKeatingMode
 #print axioms LeanLab.Riemann.berryKeatingHalfLine_endpoint
+#print axioms LeanLab.Riemann.connesProjectionDefect_selfAdjoint
+#print axioms LeanLab.Riemann.connesProjectionDefect_idempotent
+#print axioms LeanLab.Riemann.connesFiniteDefectTrace_eq_sum_normSq
+#print axioms LeanLab.Riemann.connesFiniteDefectTrace_re_nonneg
+#print axioms LeanLab.Riemann.connesFiniteDefectTrace_eq_zero_iff
+#print axioms LeanLab.Riemann.connesNonNested_trace_re_eq_neg_one
+#print axioms LeanLab.Riemann.connesProjectionDefect_endpoint
 #print axioms LeanLab.Riemann.levinsonLogistic_reflection
 #print axioms LeanLab.Riemann.levinsonSiegelProfile_reflection
 #print axioms LeanLab.Riemann.deriv_levinsonSiegelProfile_half
