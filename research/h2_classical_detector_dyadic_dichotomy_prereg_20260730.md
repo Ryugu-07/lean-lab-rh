@@ -8,7 +8,7 @@ Node: `H2-CLASSICAL-DETECTOR-DYADIC-DICHOTOMY-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `FULL_SUCCESS_LOCAL / IMPLEMENTATION_PUBLIC_CI_PENDING`
+Status: `FULL_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_PUBLIC_CI_PENDING`
 
 Public preregistration gate: commit `af32194ba854e6df168f9ec09f1bd8581bbef772`,
 Lean Action run `30489281045`, build job `90702801282`, passed in `2m0s`.
@@ -181,3 +181,7 @@ Local classification:
 
 The result is the finite detector alternative used before the density estimates. It proves no
 Type-I or Type-II rarity bound, zero-density exponent, H2 theorem, zero-free region, or RH.
+
+Frozen implementation commit `207953d7cff153eddc017a7d2e2612a786a0c050` passed public Lean
+Action run `30491308421`, build job `90709585747`, in `2m18s`. The five proof and registration
+files are frozen with an empty diff.

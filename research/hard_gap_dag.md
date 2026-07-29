@@ -1993,8 +1993,13 @@ closed; `H13-AUTOMORPHIC-INDIVIDUAL-TRANSFER-01`, H13, and RH remain open.
 - `local_audit`: 1112-line no-sorry module; nine exact checks; nine selected standard-only
   axiom prints; empty forbidden/resource scans and patch check; warning-as-error proof and
   registration compiles; full build `8804/8804`.
-- `next_gate`: freeze and publish the implementation, require public CI, then publish immutable
-  evidence, final ledger, and closure receipt through separate public-green commits.
+- `public_implementation`: frozen commit
+  `207953d7cff153eddc017a7d2e2612a786a0c050`, Lean Action run `30491308421`, build job
+  `90709585747`, passed in `2m18s`.
+- `proof_freeze`: the five proof and registration files have an empty diff from the
+  implementation commit and remain frozen.
+- `next_gate`: publish immutable evidence, final ledger, and closure receipt through separate
+  public-green commits.
 - `global_goal`: active.
 
 ## 2026-07-26 H1 Bettin--Gonek moment-to-power bridge local endpoint

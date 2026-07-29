@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260730-H2-CLASSICAL-DETECTOR-DYADIC-DICHOTOMY-01`
 
 Node: `H2-CLASSICAL-DETECTOR-DYADIC-DICHOTOMY-01`
 
-Status: `FULL_SUCCESS_LOCAL / IMPLEMENTATION_PUBLIC_CI_PENDING`
+Status: `FULL_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_PUBLIC_CI_PENDING`
 
 ## Fixed question
 
@@ -31,6 +31,7 @@ pigeonhole theorem?
 | 10 | `SOURCE_SPECIALIZATION` | Lean reconciles the literal source scales with natural cutoffs: `Y=sqrt T`, `M=floor(2*T^(1/100))`, and `K=ceil(sqrt(T)*(log T)^2/2)`. These eventually satisfy every finite-detector hypothesis and the binary block count is at most `3*log T`. | Retain the source normalization rather than reporting only a flexible surrogate regime. |
 | 11 | `LOCAL_AUDIT` | `classicalDetectorDyadicDichotomy_endpoint` compiles with nine exact TargetChecks and nine selected axiom prints using only `propext`, `Classical.choice`, and `Quot.sound`. Warning-as-error passes for proof, registration, audit, and root import. | Classify locally as `FULL_SUCCESS / SOURCE_DYADIC_DICHOTOMY_FORMALIZED`; run full scans/build, then publish the frozen implementation. |
 | 12 | `FULL_BUILD` | Forbidden and resource-relaxation scans are empty, `git diff --check` passes, and the full repository build succeeds with `8804/8804`. | Freeze the proof/registration set and publish the implementation for independent public CI. |
+| 13 | `IMPLEMENTATION_PUBLIC_CI` | Frozen implementation `207953d7cff153eddc017a7d2e2612a786a0c050` passed Lean Action run `30491308421`, build job `90709585747`, in `2m18s`. The five-file proof diff is empty. | Publish docs-only immutable evidence and require independent public CI. |
 
 ## Current frontier
 
