@@ -6386,3 +6386,16 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - Deltas: historical route coverage `+1`, source-logic map `+1`, hard gap `0`, RH frontier `0`.
 - Next gate: frozen implementation public CI, then immutable evidence and final ledger.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H7 Connes projection-defect implementation public green
+
+- Frozen implementation commit `25c18e31cd882f9ad2f43fe26900e450d98c0500` passed Lean Action
+  run `30411787173`, build job `90449324931`, in `2m1s`.
+- Freeze `ConnesProjectionDefect.lean`, `Targets.lean`, `TargetChecks.lean`,
+  `AxiomsAudit.lean`, and `LeanLab.lean`.
+- The five-file diff from the frozen implementation is empty.
+- Close only the finite nested-projection positive-type inference and its no-nesting boundary;
+  keep actual adèle projections, source containment, trace class, cutoff asymptotics,
+  distributional Weil limit, unconditional Weil positivity, H7, and RH open.
+- Next gate is one docs-only immutable-evidence commit and its own public CI.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.

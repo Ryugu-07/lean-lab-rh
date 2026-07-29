@@ -2,7 +2,7 @@
 
 Date: 2026-07-29
 
-Status: `H7_CONNES_NESTED_PROJECTION_POSITIVE_TYPE_LOCAL_FULL_SUCCESS`
+Status: `H7_CONNES_NESTED_PROJECTION_POSITIVE_TYPE_IMPLEMENTATION_PUBLIC_GREEN`
 
 ## Closed parent
 
@@ -110,5 +110,7 @@ The persistent RH Goal remains active.
   nesting do not preserve the sign.
 - This closes no actual adèle projection, trace-class, distribution-limit, Weil-positivity,
   H7, or RH edge.
-- Local audit passes through the full `8793/8793` build. The next gate is frozen
-  implementation public CI.
+- Local audit passes through the full `8793/8793` build. Frozen implementation commit
+  `25c18e31cd882f9ad2f43fe26900e450d98c0500` passed Lean Action run `30411787173`, build
+  job `90449324931`, in `2m1s`; its five proof/registration files remain unchanged.
+- The next gate is docs-only immutable evidence and independent public CI.

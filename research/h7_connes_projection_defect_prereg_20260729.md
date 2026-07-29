@@ -8,7 +8,7 @@ Node: `H7-CONNES-NESTED-PROJECTION-POSITIVE-TYPE-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / FALSIFICATION`
 
-Status: `LOCAL_FULL_SUCCESS_AUDITED_PUBLIC_IMPLEMENTATION_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Parent and selection
 
@@ -154,6 +154,11 @@ active after every local outcome.
   `0`.
 - `next_gate`: freeze the implementation and require independent public CI before publishing
   immutable evidence.
+
+The frozen implementation commit `25c18e31cd882f9ad2f43fe26900e450d98c0500` passed public Lean
+Action run `30411787173`, build job `90449324931`, in `2m1s`. The five frozen proof and
+registration files have an empty diff from that commit. The next gate is docs-only immutable
+evidence and its independent public CI.
 
 ## Audit gates
 

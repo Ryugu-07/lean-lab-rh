@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260729-H7-CONNES-PROJECTION-DEFECT-01`
 
 Node: `H7-CONNES-NESTED-PROJECTION-POSITIVE-TYPE-01`
 
-Status: `LOCAL_FULL_SUCCESS_AUDITED_PUBLIC_IMPLEMENTATION_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Fixed question
 
@@ -26,6 +26,7 @@ when nesting is removed?
 | 6 | `ZERO_CHARACTERIZATION` | The exact trace is a finite sum of nonnegative `Complex.normSq` terms. | Compile real nonnegativity, zero imaginary part, and vanishing iff `H*A=0`. |
 | 7 | `FALSIFICATION_CONTROL` | In dimension one, `P=0` and `Q=1` are each orthogonal projections, but they are not nested and the defect trace at `A=1` has real part `-1`. | Record nesting as the exact algebraic boundary; individual projection laws are insufficient. |
 | 8 | `LOCAL_AUDIT` | The 192-line module, proven Target, eight exact checks, seven standard-only axiom prints, empty scans, warning-as-error compiles, `git diff --check`, and full build `8793/8793` pass. | Classify `FULL_SUCCESS / SOURCE_POSITIVE_TYPE_HINGE_FORMALIZED`; freeze and publish the implementation next. |
+| 9 | `IMPLEMENTATION_PUBLIC` | Frozen commit `25c18e31cd882f9ad2f43fe26900e450d98c0500` passed public run `30411787173`, job `90449324931`, in `2m1s`. The five-file proof/registration diff is empty. | Publish a docs-only immutable-evidence commit; do not modify the frozen set. |
 
 ## Current frontier
 
@@ -36,6 +37,6 @@ when nesting is removed?
   after it in trace-class control and the distributional limit.
 - `open_after_success`: actual adèle projections, number-field trace class, prolate cutoff
   asymptotics, distributional limit, full Weil positivity, H7, and RH.
-- `next_gate`: frozen implementation commit and independent public CI.
+- `next_gate`: docs-only immutable evidence and independent public CI.
 - `protected_files`: the six inherited modified/untracked files remain untouched and unstaged.
 - `global_goal`: active.

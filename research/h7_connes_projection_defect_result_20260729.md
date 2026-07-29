@@ -8,7 +8,7 @@ Node: `H7-CONNES-NESTED-PROJECTION-POSITIVE-TYPE-01`
 
 Classification: `FULL_SUCCESS / SOURCE_POSITIVE_TYPE_HINGE_FORMALIZED`
 
-Public state: `LOCAL_AUDITED / FROZEN_IMPLEMENTATION_CI_REQUIRED`
+Public state: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Source question
 
@@ -108,3 +108,19 @@ Deltas: historical route coverage `+1`, source-logic map `+1`, hard gap `0`, RH 
 
 The persistent RH Goal remains active. After public closure, route selection must compare all
 historical families and may also select an original conjecture or direct RH attack.
+
+## Public implementation evidence
+
+Frozen implementation commit `25c18e31cd882f9ad2f43fe26900e450d98c0500` passed public Lean
+Action run `30411787173`, build job `90449324931`, in `2m1s`.
+
+The frozen proof and registration set is:
+
+- `LeanLab/Riemann/ConnesProjectionDefect.lean`;
+- `LeanLab/Riemann/Targets.lean`;
+- `LeanLab/Riemann/TargetChecks.lean`;
+- `LeanLab/Riemann/AxiomsAudit.lean`;
+- `LeanLab.lean`.
+
+The immutable-evidence and final-ledger commits must leave this set unchanged from the frozen
+implementation.

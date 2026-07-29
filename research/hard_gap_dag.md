@@ -2663,6 +2663,11 @@ implementation `15381a49ff4dfb92a0ab4e29d5e76383f9789139` is empty. This node re
   `hard_gap_delta=0`, `rh_frontier_delta=0`.
 - `next_gate`: frozen implementation public CI.
 - `global_goal`: active.
+- `frozen_implementation`: `25c18e31cd882f9ad2f43fe26900e450d98c0500`.
+- `implementation_public_ci`: run `30411787173`, build job `90449324931`, passed in `2m1s`.
+- `proof_freeze`: the five proof and registration sources have an empty diff from the frozen
+  implementation.
+- `next_gate`: docs-only immutable evidence and public CI.
 
 ### Public implementation receipt
 
