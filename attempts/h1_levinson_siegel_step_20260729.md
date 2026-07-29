@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260729-H1-LEVINSON-SIEGEL-STEP-01`
 
 Node: `H1-LEVINSON-SIEGEL-STEP-GEOMETRY-01`
 
-Status: `IMPLEMENTED_LOCAL / PUBLIC_IMPLEMENTATION_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 ## Fixed question
 
@@ -24,6 +24,7 @@ Siegel's step, and must every increasingly sharp transition pay an unbounded der
 | 5 | `DERIVATIVE_AND_LIMITS` | Mathlib's exponential and inverse derivative APIs prove the exact profile derivative. The three exponential regimes give the left, midpoint, and right pointwise limits. | Record the exact midpoint derivative and prove `R/2 <= |Q_R'(1/2)|`. |
 | 6 | `GENERAL_OBSTRUCTION` | The real mean-value theorem supplies an interior derivative equal to the secant slope. A quantitative epsilon-step corollary handles arbitrary positive slope bounds and the negative-bound edge case separately. | Close the no-uniform-slope statement without claiming a polynomial degree theorem. |
 | 7 | `LOCAL_AUDIT` | One proven Target, eight exact TargetChecks, seven selected axiom prints, empty production scans, warning-as-error compiles, and full build pass. | Classify `FULL_SUCCESS / STRUCTURAL_OMISSION_GEOMETRY_FORMALIZED`; publish the frozen implementation. |
+| 8 | `IMPLEMENTATION_PUBLIC` | Frozen commit `fb5d03e268849dbac7c7d51375d245eba944a92b` passed public run `30410129919`, job `90444149672`, in `2m6s`. The five-file frozen proof/registration diff is empty. | Publish a docs-only immutable-evidence commit; do not modify the frozen set. |
 
 ## Current frontier
 

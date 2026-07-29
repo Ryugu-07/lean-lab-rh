@@ -6296,3 +6296,16 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - Next gate: freeze and publish implementation, then immutable evidence and final ledger;
   after closure return to fresh cross-family selection.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H1 Levinson--Siegel step implementation public green
+
+- Frozen implementation commit `fb5d03e268849dbac7c7d51375d245eba944a92b` passed Lean Action
+  run `30410129919`, build job `90444149672`, in `2m6s`.
+- Freeze `LevinsonSiegelStep.lean`, `Targets.lean`, `TargetChecks.lean`,
+  `AxiomsAudit.lean`, and `LeanLab.lean`.
+- The five-file diff from the frozen implementation is empty.
+- Close only the source-admissible step geometry and general steepness obstruction; keep the
+  source optimizer, quantitative polynomial approximation, complexity-uniform mean values,
+  actual zeta count, zero proportions, H1, and RH open.
+- Next gate is one docs-only immutable-evidence commit and its own public CI.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.

@@ -8,7 +8,7 @@ Node: `H1-LEVINSON-SIEGEL-STEP-GEOMETRY-01`
 
 Mode: `PROOF-ATTEMPT / HISTORICAL_OMISSION / CROSS_ROUTE`
 
-Status: `IMPLEMENTED_LOCAL / PUBLIC_IMPLEMENTATION_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_REQUIRED`
 
 Preregistration commit `ab02915f8719c6715e0cadd06dcaad9fa7a10a7d` passed public Lean
 Action run `30409200376`, build job `90441363357`, in `1m30s`. Production proof editing began
@@ -156,3 +156,7 @@ historical routes.
 The preregistration gate passed at commit
 `ab02915f8719c6715e0cadd06dcaad9fa7a10a7d`, Lean Action run `30409200376`, build job
 `90441363357`, in `1m30s`.
+
+The frozen implementation commit `fb5d03e268849dbac7c7d51375d245eba944a92b` passed public Lean
+Action run `30410129919`, build job `90444149672`, in `2m6s`. The five frozen proof and
+registration files have an empty diff from that commit.

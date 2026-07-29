@@ -3567,3 +3567,8 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   frontier remain `0`.
 - `next_gate`: frozen implementation public CI.
 - `global_goal`: active.
+- `frozen_implementation`: `fb5d03e268849dbac7c7d51375d245eba944a92b`.
+- `implementation_public_ci`: run `30410129919`, build job `90444149672`, passed in `2m6s`.
+- `proof_freeze`: the five proof and registration sources have an empty diff from the frozen
+  implementation.
+- `next_gate`: docs-only immutable evidence and public CI.

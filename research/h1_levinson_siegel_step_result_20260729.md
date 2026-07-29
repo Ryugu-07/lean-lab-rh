@@ -103,3 +103,19 @@ The next H1 work should compare two source-faithful producers:
 The actual zeta auxiliary count in Conrey 1989 equations `(32)`--`(39)` remains the downstream
 consumer. The campaign must close locally after public evidence and return to fresh
 cross-family ranking rather than continuing H1 by inertia.
+
+## Public implementation evidence
+
+Frozen implementation commit `fb5d03e268849dbac7c7d51375d245eba944a92b` passed public Lean
+Action run `30410129919`, build job `90444149672`, in `2m6s`.
+
+The frozen proof and registration set is:
+
+- `LeanLab/Riemann/LevinsonSiegelStep.lean`;
+- `LeanLab/Riemann/Targets.lean`;
+- `LeanLab/Riemann/TargetChecks.lean`;
+- `LeanLab/Riemann/AxiomsAudit.lean`;
+- `LeanLab.lean`.
+
+The immutable-evidence and final-ledger commits must leave this set unchanged from the frozen
+implementation.
