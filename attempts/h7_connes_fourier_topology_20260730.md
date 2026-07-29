@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260730-H7-CONNES-FOURIER-TOPOLOGY-01`
 
 Node: `H7-CONNES-GROUNDSTATE-FOURIER-TOPOLOGY-01`
 
-Status: `FULL_SUCCESS / LOCAL_AUDIT_GREEN`
+Status: `FULL_SUCCESS / PUBLICLY_CLOSED`
 
 ## Fixed question
 
@@ -32,6 +32,7 @@ ordinary norm shortcuts fail on expanding supports?
 | 12 | `LOCAL_AUDIT` | The 527-line module, Targets, nine TargetChecks, AxiomsAudit, and root pass warning-as-error; `git diff --check` is empty; the full build passes `8803/8803`. | Freeze and publish the implementation, then require public CI before immutable evidence. |
 | 13 | `PUBLIC_IMPLEMENTATION_GATE` | Frozen implementation commit `2be884b27f505542f11ca380d8ac384b0e4bdfd2` passed run `30487452115`, job `90696590632`, in `2m32s`; the frozen five-file diff is empty. | Publish immutable evidence and require an independent public CI run. |
 | 14 | `IMMUTABLE_EVIDENCE_GATE` | Evidence commit `68cd1fa4e4e1621c6a37e600dae3e4e3f9bc8a45` passed run `30487724579`, job `90697494425`, in `2m28s`; the frozen five-file diff remains empty. | Publish the final ledger and require public CI before the closure receipt. |
+| 15 | `FINAL_LEDGER_GATE` | Final-ledger commit `4658e2fcbd4617e75962058e3baefcefb4d546fe` passed run `30487953757`, job `90698256763`, in `1m52s`; every preceding gate is public green and the frozen five-file diff remains empty. | Publish one closure receipt, require public CI, then stop only this local campaign and rerank all families. |
 
 ## Current frontier
 

@@ -3523,6 +3523,20 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   evidence.
 - `global_goal`: active.
 
+### H7 Fourier-topology public closure
+
+- `implementation`: `2be884b27f505542f11ca380d8ac384b0e4bdfd2`, run `30487452115`,
+  job `90696590632`, passed in `2m32s`.
+- `immutable_evidence`: `68cd1fa4e4e1621c6a37e600dae3e4e3f9bc8a45`, run
+  `30487724579`, job `90697494425`, passed in `2m28s`.
+- `final_ledger`: `4658e2fcbd4617e75962058e3baefcefb4d546fe`, run `30487953757`,
+  job `90698256763`, passed in `1m52s`.
+- `frozen_diff`: the five proof and registration files remain unchanged from the implementation
+  commit.
+- `local_campaign`: stop after the closure-receipt public gate.
+- `next_action`: fresh cross-family rerank; do not select the actual H7 comparison by adjacency.
+- `global_goal`: active.
+
 ## 2026-07-30 H1 Hardy--Littlewood eta-to-Theta Abel-transfer local result
 
 - `classification`: `FULL_SUCCESS / ETA_TO_THETA_TRANSFER_FORMALIZED`.
