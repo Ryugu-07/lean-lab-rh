@@ -8,7 +8,7 @@ Node: `H1-LEVINSON-SIEGEL-STEP-GEOMETRY-01`
 
 Mode: `PROOF-ATTEMPT / HISTORICAL_OMISSION / CROSS_ROUTE`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_REQUIRED`
+Status: `PUBLICLY_CLOSED_FULL_SUCCESS`
 
 Preregistration commit `ab02915f8719c6715e0cadd06dcaad9fa7a10a7d` passed public Lean
 Action run `30409200376`, build job `90441363357`, in `1m30s`. Production proof editing began
@@ -163,3 +163,7 @@ registration files have an empty diff from that commit.
 
 Immutable-evidence commit `a7d1e38bba631fb7deb9b9a9adbd19a9198dd9fc` passed public Lean
 Action run `30410358415`, build job `90444833678`, in `2m1s`. The frozen-set diff remains empty.
+
+Final-ledger commit `f0ebc6755a84626f325ef2a58efdbb4361a6edf4` passed public Lean
+Action run `30410543932`, build job `90445390713`, in `1m53s`. The campaign closes only the
+registered step-geometry Target.

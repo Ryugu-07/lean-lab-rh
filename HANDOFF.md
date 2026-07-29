@@ -6324,3 +6324,17 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
 - Next gate: publish this docs-only final ledger and require public CI, then one closure receipt
   before fresh cross-family route selection.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H1 Levinson--Siegel step final ledger public green
+
+- Final-ledger commit `f0ebc6755a84626f325ef2a58efdbb4361a6edf4` passed Lean Action
+  run `30410543932`, build job `90445390713`, in `1m53s`.
+- The preregistration, frozen implementation, immutable evidence, and final ledger are all
+  public-green; the frozen proof-source diff remains empty.
+- Closure receipt closes only `H1.levinson-siegel.step-geometry`.
+- Keep the source optimizer, quantitative polynomial approximation, complexity-uniform mean
+  values, actual zeta auxiliary count, critical-zero proportions, sparse-exception exclusion,
+  H1, and RH open.
+- After the closure receipt public CI, return to fresh cross-family historical omission
+  selection; do not continue H1 by inertia.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.

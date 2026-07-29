@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260729-H1-LEVINSON-SIEGEL-STEP-01`
 
 Node: `H1-LEVINSON-SIEGEL-STEP-GEOMETRY-01`
 
-Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDGER_REQUIRED`
+Status: `PUBLICLY_CLOSED_FULL_SUCCESS`
 
 ## Fixed question
 
@@ -26,6 +26,7 @@ Siegel's step, and must every increasingly sharp transition pay an unbounded der
 | 7 | `LOCAL_AUDIT` | One proven Target, eight exact TargetChecks, seven selected axiom prints, empty production scans, warning-as-error compiles, and full build pass. | Classify `FULL_SUCCESS / STRUCTURAL_OMISSION_GEOMETRY_FORMALIZED`; publish the frozen implementation. |
 | 8 | `IMPLEMENTATION_PUBLIC` | Frozen commit `fb5d03e268849dbac7c7d51375d245eba944a92b` passed public run `30410129919`, job `90444149672`, in `2m6s`. The five-file frozen proof/registration diff is empty. | Publish a docs-only immutable-evidence commit; do not modify the frozen set. |
 | 9 | `IMMUTABLE_EVIDENCE_PUBLIC` | Docs-only commit `a7d1e38bba631fb7deb9b9a9adbd19a9198dd9fc` passed public run `30410358415`, job `90444833678`, in `2m1s`; frozen-set diff remains empty. | Publish the final ledger, closing only the step-geometry Target. |
+| 10 | `FINAL_LEDGER_PUBLIC` | Docs-only commit `f0ebc6755a84626f325ef2a58efdbb4361a6edf4` passed public run `30410543932`, job `90445390713`, in `1m53s`. | Publish the closure receipt and return to fresh cross-family selection. |
 
 ## Current frontier
 

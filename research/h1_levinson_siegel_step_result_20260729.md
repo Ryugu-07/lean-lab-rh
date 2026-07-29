@@ -150,3 +150,7 @@ uniformity as the derivative combination becomes step-like.
 
 After the final-ledger public CI, publish one closure receipt and return the active RH Goal to
 fresh cross-family historical omission selection.
+
+Final-ledger commit `f0ebc6755a84626f325ef2a58efdbb4361a6edf4` passed public Lean
+Action run `30410543932`, build job `90445390713`, in `1m53s`. The complete public chain is
+recorded in `research/h1_levinson_siegel_step_closure_receipt_20260729.md`.

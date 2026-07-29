@@ -3577,3 +3577,6 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `local_stop`: close only `H1.levinson-siegel.step-geometry`; all analytic producers and RH
   remain open.
 - `next_gate`: docs-only final ledger and public CI, then closure receipt.
+- `final_ledger`: `f0ebc6755a84626f325ef2a58efdbb4361a6edf4`.
+- `final_ledger_public_ci`: run `30410543932`, build job `90445390713`, passed in `1m53s`.
+- `next_gate`: publish the docs-only closure receipt, then fresh cross-family selection.
