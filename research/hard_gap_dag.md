@@ -3895,3 +3895,37 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   diff empty.
 - `next_gate`: one closure receipt and public CI, then local STOP and fresh route selection.
 - `global_goal`: active.
+
+## 2026-07-29 H1 Hardy--Littlewood source normalization launch
+
+- `parent_public_closure`: finite count receipt
+  `3dda5779e156771e873485f1128446fcc1508d70`, Lean Action run `30465646740`.
+- `H1-HARDY-LITTLEWOOD-SOURCE-NORMALIZATION-ETA-LOWER-01`: selected after a fresh comparison
+  with H2, H7/H8, H10, H11, H12, H14, Selberg, and Levinson--Conrey.
+- `available_left_edge`: exact project xi/Gamma/zeta identity and H6 explicit
+  Stieltjes--Stirling remainder.
+- `available_right_consumer`: `hardyLittlewood_source_finite_count`.
+- `fixed_edge`:
+  globally positive source-faithful extension;
+  `->` exact actual-zero adapter;
+  `->` explicit Gamma and zeta lower estimate for `t>=8`;
+  `->` eta factor lower estimate;
+  `->` exact eta primitive/window error;
+  `->` source absolute-window lower premise on `[T,2T]`.
+- `cross_route_repair`: the H6 remainder theorem closes the normalization estimate that was
+  previously left as an H1 black box.
+- `negative_control`: the naive all-real extension of the literal positive-height weight
+  vanishes at zero; a positive low-height extension is required for a global zero adapter.
+- `OBS-H1-HARDY-Z-NORMALIZATION-01`: selected.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-LOWER-01`: selected.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-SERIES-IDENTIFICATION-01`: remains outside the endpoint.
+- `OBS-H1-HARDY-LITTLEWOOD-ETA-ERROR-MEAN-SQUARE-01`: remains outside the endpoint.
+- `OBS-H1-HARDY-LITTLEWOOD-X-MEAN-SQUARE-01`: remains outside the endpoint.
+- `OBS-H1-HARDY-LITTLEWOOD-PARAMETER-BUDGET-01`: remains outside the endpoint.
+- `strict_boundary`: no source second moment, unconditional linear count, positive proportion,
+  H1, or RH.
+- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- `historical_policy`: omission-seeking remains the main line until all major families have
+  received source-level decisive-edge treatment; original conjectures and direct RH attempts
+  remain open at every time.
+- `global_goal`: active.
