@@ -248,6 +248,7 @@ def checkedTargetNames : List Lean.Name :=
     ``turingCompletenessConsumer_endpoint,
     ``conreyLiHalfStrip_endpoint_of_rkhs_shift,
     ``berryKeatingHalfLine_endpoint,
+    ``levinsonSiegelStep_endpoint,
     ``levinsonMontgomeryDenseBranch_of_not_cofinallyNegativeLogDerivAtIntegers,
     ``riemannHypothesis_iff_nontrivial_zeros_on_line ]
 
@@ -5761,5 +5762,60 @@ example (E : ℝ) :
     ¬ MeasureTheory.MemLp (berryKeatingMode E) 2
       (MeasureTheory.volume.restrict (Set.Ioi 0)) :=
   berryKeatingHalfLine_endpoint E
+
+example (R y : ℝ) :
+    levinsonLogistic R (1 - y) = 1 - levinsonLogistic R y :=
+  levinsonLogistic_reflection R y
+
+example {R : ℝ} (hR : 0 < R) (y : ℝ) :
+    levinsonSiegelProfile R y + levinsonSiegelProfile R (1 - y) = 1 :=
+  levinsonSiegelProfile_reflection hR y
+
+example (R : ℝ) :
+    deriv (levinsonSiegelProfile R) (1 / 2) =
+      -(R / 2) / (levinsonLogistic R 0 - levinsonLogistic R 1) :=
+  deriv_levinsonSiegelProfile_half R
+
+example {R : ℝ} (hR : 0 < R) :
+    R / 2 ≤ |deriv (levinsonSiegelProfile R) (1 / 2)| :=
+  half_le_abs_deriv_levinsonSiegelProfile_half hR
+
+example (y : ℝ) :
+    Tendsto (fun R : ℝ => levinsonSiegelProfile R y) atTop
+      (𝓝 (levinsonSiegelStep y)) :=
+  tendsto_levinsonSiegelProfile_step y
+
+example {f : ℝ → ℝ} {a b : ℝ} (hab : a < b)
+    (hcont : ContinuousOn f (Set.Icc a b))
+    (hdiff : DifferentiableOn ℝ f (Set.Ioo a b))
+    (hfall : f b < f a) :
+    ∃ c ∈ Set.Ioo a b, (f a - f b) / (b - a) ≤ |deriv f c| :=
+  exists_abs_deriv_ge_transition hab hcont hdiff hfall
+
+example {f : ℝ → ℝ} {M delta epsilon : ℝ}
+    (hdelta : 0 < delta)
+    (hcont : ContinuousOn f (Set.Icc (1 / 2 - delta) (1 / 2 + delta)))
+    (hdiff : DifferentiableOn ℝ f (Set.Ioo (1 / 2 - delta) (1 / 2 + delta)))
+    (hleft : 1 - epsilon ≤ f (1 / 2 - delta))
+    (hright : f (1 / 2 + delta) ≤ epsilon)
+    (hsharp : M < (1 - 2 * epsilon) / (2 * delta)) :
+    ∃ c ∈ Set.Ioo (1 / 2 - delta) (1 / 2 + delta), M < |deriv f c| :=
+  exists_abs_deriv_gt_of_step_transition hdelta hcont hdiff hleft hright hsharp
+
+example :
+    (∀ R : ℝ, 0 < R →
+      levinsonSiegelProfile R 0 = 1 ∧
+      levinsonSiegelProfile R 1 = 0 ∧
+      (∀ y : ℝ,
+        levinsonSiegelProfile R y + levinsonSiegelProfile R (1 - y) = 1) ∧
+      R / 2 ≤ |deriv (levinsonSiegelProfile R) (1 / 2)|) ∧
+    (∀ y : ℝ, Tendsto (fun R : ℝ => levinsonSiegelProfile R y) atTop
+      (𝓝 (levinsonSiegelStep y))) ∧
+    (∀ (f : ℝ → ℝ) (a b : ℝ), a < b →
+      ContinuousOn f (Set.Icc a b) →
+      DifferentiableOn ℝ f (Set.Ioo a b) →
+      f b < f a →
+      ∃ c ∈ Set.Ioo a b, (f a - f b) / (b - a) ≤ |deriv f c|) :=
+  levinsonSiegelStep_endpoint
 
 end LeanLab.Riemann

@@ -8,7 +8,11 @@ Node: `H1-LEVINSON-SIEGEL-STEP-GEOMETRY-01`
 
 Mode: `PROOF-ATTEMPT / HISTORICAL_OMISSION / CROSS_ROUTE`
 
-Status: `PREREGISTERED_LOCAL_PUBLIC_CI_REQUIRED`
+Status: `IMPLEMENTED_LOCAL / PUBLIC_IMPLEMENTATION_REQUIRED`
+
+Preregistration commit `ab02915f8719c6715e0cadd06dcaad9fa7a10a7d` passed public Lean
+Action run `30409200376`, build job `90441363357`, in `1m30s`. Production proof editing began
+only after this gate passed.
 
 ## Parent and selection
 
@@ -148,3 +152,7 @@ Before implementation publication:
 After frozen implementation public CI, publish immutable evidence, final ledger, and closure
 receipt through separate public-green commits. Then stop this local campaign and rerank all
 historical routes.
+
+The preregistration gate passed at commit
+`ab02915f8719c6715e0cadd06dcaad9fa7a10a7d`, Lean Action run `30409200376`, build job
+`90441363357`, in `1m30s`.

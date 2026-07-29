@@ -119,6 +119,7 @@ import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
 import LeanLab.Riemann.TuringCompletenessConsumer
 import LeanLab.Riemann.JensenEventualHyperbolicity
+import LeanLab.Riemann.LevinsonSiegelStep
 import LeanLab.Riemann.SuzukiReciprocalLogDerivativeAudit
 import LeanLab.Riemann.ConreyLiPhaseObstruction
 import LeanLab.Riemann.ConreyLiRKHSShift
@@ -1497,6 +1498,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``shortMollifierSourceEnergy_unique_minimizer
       status := .proven
       note := "Campaign LITERATURE-20260722-H1-SHORT-MOLLIFIER-VARIATIONAL-01 proves an exact cosh-weighted Hardy completion identity, aligns the source and normalized energies, derives the exact second variation, and kernel-checks strict global minimality. This is a structural sufficiency audit of equations (58)-(63), not a mollified mean-value theorem, a numerical proportion improvement, an exceptional-zero eliminator, or a proof of RH. Classification is known-analysis formalization with rh_frontier_delta=0 and hard_gap_delta=0." },
+    { id := "H1.levinson-siegel.step-geometry"
+      tier := .tier2
+      title := "Formalize the Levinson-Siegel step geometry"
+      statement :=
+        "Construct an explicit smooth normalized logistic family satisfying Q(0)=1, Q(1)=0, and Q(y)+Q(1-y)=1; prove pointwise convergence to the Siegel step, an explicit unbounded midpoint slope, and a general mean-value lower bound for every sharp step transition."
+      leanName := some ``levinsonSiegelStep_endpoint
+      status := .proven
+      note := "Campaign PROOF-ATTEMPT-20260729-H1-LEVINSON-SIEGEL-STEP-01 formalizes the structural geometry highlighted by the 2025 short-mollifier optimizer: the source endpoint and reflection class itself permits smooth pointwise approach to Siegel's discontinuous step, while transition steepness must diverge. The explicit normalized logistic family is an original witness for the admissibility geometry, not the source hypergeometric optimizer. This proves no polynomial approximation with source-uniform estimates, mollified mean-value theorem, critical-line zero proportion, H1, or RH; historical_route_coverage_delta=1, structural_obstacle_delta=1, and rh_frontier_delta=0." },
     { id := "H1.theta-infinity.real-cutoff-interpolation"
       tier := .tier2
       title := "Interpolate Farmer mollifiers between integer cutoffs"

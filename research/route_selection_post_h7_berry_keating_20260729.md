@@ -2,7 +2,7 @@
 
 Date: 2026-07-29
 
-Status: `H1_LEVINSON_SIEGEL_STEP_GEOMETRY_SELECTED`
+Status: `H1_LEVINSON_SIEGEL_STEP_GEOMETRY_LOCAL_GREEN`
 
 ## Closed parent
 
@@ -102,3 +102,18 @@ test necessity. Success separates two barriers that have often been conflated:
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration passes public CI.
 
 The persistent RH Goal remains active.
+
+## Local outcome
+
+The selected endpoint compiles in `LeanLab/Riemann/LevinsonSiegelStep.lean`.
+
+- The explicit normalized logistic family satisfies the exact endpoint and reflection
+  conditions.
+- It converges pointwise, in all three cases, to the Siegel step.
+- Its midpoint derivative has magnitude at least `R/2`.
+- Every differentiable epsilon-step transition has an interior derivative exceeding each bound
+  below the corresponding secant threshold.
+
+This closes the selected geometry node and moves the historical omission question to
+complexity-uniform polynomial approximation and mollified mean values. It does not identify
+the source optimizer or advance a zeta zero count by itself.

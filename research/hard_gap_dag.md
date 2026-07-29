@@ -3541,3 +3541,29 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   theorem, zeta-zero proportion, H1, or RH.
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - `global_goal`: active.
+
+## 2026-07-29 H1 Levinson--Siegel step geometry local result
+
+- `classification`: `FULL_SUCCESS / STRUCTURAL_OMISSION_GEOMETRY_FORMALIZED`.
+- `preregistration_gate`: commit `ab02915f8719c6715e0cadd06dcaad9fa7a10a7d`,
+  run `30409200376`, build job `90441363357`, passed in `1m30s`.
+- `compiled_edge`:
+  `source endpoint/reflection class`;
+  `-> explicit smooth normalized logistic family`;
+  `-> exact three-case pointwise Siegel-step limit`;
+  `-> midpoint slope magnitude at least R/2`;
+  `-> general sharp-transition derivative lower bound`.
+- `proven_target`: `H1.levinson-siegel.step-geometry`.
+- `closed_observation`: mollifier length alone is not a geometric obstruction in the source
+  admissibility class.
+- `OBS-H1-COMPLEXITY-UNIFORMITY-01`: sharpened, not closed. Quantitative polynomial
+  approximation and source mean-value errors must remain controlled as transition steepness
+  diverges.
+- `OBS-H1-LEVINSON-COUNTING-BRIDGE-01`, `OBS-H1-MEAN-VALUE-01`, and
+  `OBS-H1-SPARSE-EXCEPTION-01`: remain open.
+- `audit`: 319 lines, no sorry, eight exact checks, seven standard-only axiom prints, empty
+  scans, warning-as-error compiles, full build `8792/8792`.
+- `deltas`: historical route coverage and structural obstacle map each `+1`; hard gap and RH
+  frontier remain `0`.
+- `next_gate`: frozen implementation public CI.
+- `global_goal`: active.

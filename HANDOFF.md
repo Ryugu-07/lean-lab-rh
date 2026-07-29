@@ -6271,3 +6271,28 @@ Mac（M4/24G）上搭 Lean4 + mathlib 环境，建立 AI 辅助证明工作流�
   barrier.
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
 - The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
+
+## 2026-07-29 H1 Levinson--Siegel step geometry local result
+
+- `classification`: `FULL_SUCCESS / STRUCTURAL_OMISSION_GEOMETRY_FORMALIZED`.
+- Preregistration commit `ab02915f8719c6715e0cadd06dcaad9fa7a10a7d` passed Lean Action run
+  `30409200376`, build job `90441363357`, in `1m30s`; proof editing began afterward.
+- New module `LeanLab/Riemann/LevinsonSiegelStep.lean` constructs a smooth normalized logistic
+  family satisfying `Q(0)=1`, `Q(1)=0`, and `Q(y)+Q(1-y)=1`.
+- Lean proves the exact three-case pointwise limit to Siegel's step, the exact midpoint
+  derivative formula, `R/2 <= |Q_R'(1/2)|`, a general secant-slope derivative lower bound, and
+  a quantitative epsilon-step corollary.
+- Proven Target: `H1.levinson-siegel.step-geometry`.
+- `key_reading`: short mollifier length is not a geometric obstruction inside the source
+  symmetry class; the pressure moves to growing derivative/polynomial complexity and uniform
+  mollified mean-value estimates.
+- Audit: 319-line no-sorry module; eight exact TargetChecks; seven standard-only axiom prints;
+  empty forbidden/resource scans; warning-as-error compiles; full build `8792/8792`.
+- Keep source optimizer identification, quantitative polynomial approximation, complexity-
+  uniform mean values, Conrey's actual zeta count, zero proportions, sparse-exception
+  exclusion, H1, and RH open.
+- Deltas: historical route coverage `+1`, structural obstacle map `+1`, hard gap `0`, RH
+  frontier `0`.
+- Next gate: freeze and publish implementation, then immutable evidence and final ledger;
+  after closure return to fresh cross-family selection.
+- The six inherited protected files remain untouched and unstaged. Persistent RH Goal active.
