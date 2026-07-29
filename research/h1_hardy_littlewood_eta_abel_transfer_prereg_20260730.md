@@ -8,7 +8,7 @@ Node: `H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `FULL_SUCCESS_LOCAL / IMPLEMENTATION_PUBLIC_CI_PENDING`
+Status: `FULL_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_CI_PENDING`
 
 ## Parent and route selection
 
@@ -199,4 +199,9 @@ uniform on a source region gives one Theta remainder constant on the same region
 
 The historical omission test succeeds: Lemma 4 contains no independent oscillatory estimate;
 the first remaining analytic producer is the actual Lemma 3 eta remainder. Full local audit
-passes `8801/8801`. Independent public CI is still required before evidence and closure.
+passes `8801/8801`.
+
+Frozen implementation commit `f03c6a8f5d35945d34407d0627b7a5f4f629cb9e` passed independent
+Lean Action run `30479693865`, build job `90670228283`, in `2m17s`. The five proof and
+registration files are now frozen. Immutable-evidence CI, final-ledger CI, and closure-receipt
+CI remain required.

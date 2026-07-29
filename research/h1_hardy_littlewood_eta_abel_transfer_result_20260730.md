@@ -6,7 +6,9 @@ Campaign: `LITERATURE-20260730-H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01`
 
 Node: `H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01`
 
-Status: `FULL_SUCCESS_LOCAL / IMPLEMENTATION_PUBLIC_CI_PENDING`
+Classification: `FULL_SUCCESS / ETA_TO_THETA_ABEL_TRANSFER_FORMALIZED`
+
+Public state: `IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_CI_PENDING`
 
 ## Result
 
@@ -94,3 +96,9 @@ source-X moment, instantiate the count parameter budget, or prove an uncondition
 critical-zero count, H1, or RH.
 
 The persistent RH Goal remains active.
+
+## Public implementation
+
+Frozen implementation commit `f03c6a8f5d35945d34407d0627b7a5f4f629cb9e` passed Lean Action
+run `30479693865`, build job `90670228283`, in `2m17s`. The five proof and registration files
+have an empty diff from that commit at immutable-evidence publication.

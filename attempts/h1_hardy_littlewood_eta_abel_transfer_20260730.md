@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260730-H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01`
 
 Node: `H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01`
 
-Status: `FULL_SUCCESS_LOCAL / IMPLEMENTATION_PUBLIC_CI_PENDING`
+Status: `FULL_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_CI_PENDING`
 
 ## Fixed question
 
@@ -29,10 +29,11 @@ localize the remaining analytic difficulty entirely in Lemma 3's uniform eta rem
 | 10 | `UNIFORMITY` | The proof uses no property of a parameter beyond the common eta remainder constant. | Compile an arbitrary-family theorem preserving one uniform constant. |
 | 11 | `REGISTRATION` | One proven Target, five exact TargetChecks, six selected axiom prints, and the root import compile under warning-as-error. | Run the complete mechanical audit and full build. |
 | 12 | `LOCAL_AUDIT` | The 488-line module has empty forbidden/resource scans and patch check; selected axioms are standard only; full build passes `8801/8801`. | Freeze and publish the implementation, then require independent public CI. |
+| 13 | `IMPLEMENTATION_PUBLIC_CI` | Frozen commit `f03c6a8f5d35945d34407d0627b7a5f4f629cb9e` passed Lean Action run `30479693865`, build job `90670228283`, in `2m17s`; the frozen five-file diff is empty. | Publish docs-only immutable evidence and require a second public CI. |
 
 ## Current frontier
 
-- `closed_edge_local`: uniform eta remainder `->` ordered Theta convergence and remainder.
+- `closed_edge_public`: uniform eta remainder `->` ordered Theta convergence and remainder.
 - `exact_input`: a single `K*N^(-sigma)` eta remainder for every `N` after the source cutoff.
 - `compiled_output`: `(2/log 2)*K*N^(-sigma)` Theta remainder, uniform over arbitrary
   parameter families.

@@ -3399,7 +3399,7 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 
 ## 2026-07-30 H1 Hardy--Littlewood eta-to-Theta Abel-transfer local result
 
-- `classification`: `FULL_SUCCESS_LOCAL / ETA_TO_THETA_TRANSFER_FORMALIZED`.
+- `classification`: `FULL_SUCCESS / ETA_TO_THETA_TRANSFER_FORMALIZED`.
 - `H1-HARDY-LITTLEWOOD-ETA-ABEL-TRANSFER-01`: locally closed by
   `hardyLittlewoodEtaAbelTransfer_endpoint`.
 - `compiled_chain`: literal eta term;
@@ -3422,7 +3422,12 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `local_audit`: 488-line no-sorry module; five exact checks; six selected standard-only axiom
   prints; empty forbidden/resource scans and patch check; five warning-as-error compiles; full
   build `8801/8801`.
-- `next_gate`: frozen implementation commit and independent public CI.
+- `public_implementation`: frozen commit
+  `f03c6a8f5d35945d34407d0627b7a5f4f629cb9e`, Lean Action run `30479693865`, build job
+  `90670228283`, passed in `2m17s`.
+- `proof_freeze`: the five proof and registration files have an empty diff from the
+  implementation commit and must remain frozen through evidence, final ledger, and receipt.
+- `next_gate`: docs-only immutable evidence and independent public CI.
 - `global_goal`: active.
 
 ## 2026-07-29 H12 left-half-plane winding final ledger public green
