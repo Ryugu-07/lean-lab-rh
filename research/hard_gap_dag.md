@@ -2940,6 +2940,35 @@ final-ledger CI, return to cross-family selection with H11-D/H11-E retained as o
 - `next_gate`: frozen implementation public CI.
 - `global_goal`: active.
 
+## 2026-07-30 H0 Chebyshev reverse zero-exclusion launch
+
+- `campaign`: `LITERATURE-20260730-H0-CHEBYSHEV-REVERSE-ZERO-EXCLUSION-01`.
+- `node`: `H0-VON-KOCH-REVERSE-ZERO-EXCLUSION-01`.
+- `selection_reason`: historical coverage is omission search. The prior H0 campaign compiled
+  the exact positive Mellin entrance but stopped before the historically decisive reverse
+  implication.
+- `source_edge`:
+  `psi(N)-N=O(N^r)`
+  `-> holomorphic floor-error Mellin continuation on Re(s)>r`
+  `-> pole-removed zeta differential identity`
+  `-> zeta zero exclusion on Re(s)>r`
+  `-> every r=1/2+epsilon plus reflection`
+  `-> RH`.
+- `pole_removal`: with `Z=(s-1)zeta(s)` and error continuation `E`, continue
+  `(s-1)Z'=Z*(1-(s-1)E-Z)` across the full convex half-plane. No logarithmic derivative is
+  evaluated at a zero.
+- `zero_order_hinge`: a zero of order `m>0` makes the left side have order `m-1` and the right
+  side order at least `m`.
+- `negative_control`: a single `r=3/4` bound only confines a reflected real part to
+  `[1/4,3/4]`; `beta=3/4` is not forced onto the critical line.
+- `success_boundary`: conditional zero exclusion and the full every-epsilon implication to
+  `Mathlib.RiemannHypothesis`, all kernel-checked and axiom-audited.
+- `strict_boundary`: the RH-strength Chebyshev error estimate itself, any unconditional
+  zero-free improvement, and RH remain open.
+- `production_gate`: docs-only preregistration must pass public Lean Action before any
+  production or registration edit.
+- `global_goal`: active.
+
 ## 2026-07-28 H1 Hardy theta inversion local result
 
 - `node`: `H1-HARDY-THETA-INVERSION-01`.
