@@ -28,6 +28,7 @@ import LeanLab.Riemann.HardyComplexAlpha
 import LeanLab.Riemann.HardyTangentialThetaIntegral
 import LeanLab.Riemann.WeilHodgeLattice
 import LeanLab.Riemann.WeilGroundStateFourierTopology
+import LeanLab.Riemann.ConnesGroundStateWeightedComparison
 import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
 import LeanLab.Riemann.PairCorrelationTriangularMass
@@ -1323,6 +1324,17 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.tendsto_weilGroundStateUnweightedSqMass_escapingPacket
 #print axioms LeanLab.Riemann.not_weilGroundStateEscapingPacket_uniform_zero
 #print axioms LeanLab.Riemann.weilGroundStateFourierTopology_endpoint
+#print axioms LeanLab.Riemann.integral_exp_sqWeight_Icc
+#print axioms LeanLab.Riemann.connesGroundStateFourierStripError_le
+#print axioms LeanLab.Riemann.connesGroundStateFourierStripError_zero_le
+#print axioms LeanLab.Riemann.connesGroundStateL2Error_le_two_projectiveDefect
+#print axioms LeanLab.Riemann.tendsto_connesGroundStateWeightMass_mul_of_rpow_rate
+#print axioms LeanLab.Riemann.tendsto_log_mul_of_rpow_rate
+#print axioms LeanLab.Riemann.connesGroundStateWeightedComparison_of_rayleighGapRate
+#print axioms LeanLab.Riemann.connesGroundStateFourier_uniform_transfer_of_rayleighGapRate
+#print axioms LeanLab.Riemann.connesCollapsingGap_absoluteExcessRate
+#print axioms LeanLab.Riemann.connesCollapsingGap_ratio_eq_one
+#print axioms LeanLab.Riemann.connesGroundStateAbsoluteExcessFalsification_endpoint
 #print axioms LeanLab.Riemann.mem_turingXiZeroIndexFinset_iff
 #print axioms LeanLab.Riemann.rectangleBoundaryIntegral_logDeriv_riemannXi_eq_turingXiZeroIndexFinset_card
 #print axioms LeanLab.Riemann.TuringXiRectangleCertificate.candidates_eq_actual

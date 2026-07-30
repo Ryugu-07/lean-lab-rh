@@ -4606,3 +4606,43 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   comparison, true-ground transform limit, all-real-zero conclusion, H7, or RH is claimed.
 - `production_gate`: no `LeanLab/` or registration edit before preregistration public CI.
 - `global_goal`: active.
+
+## 2026-07-30 H7 weighted comparison local endpoint
+
+- `campaign`:
+  `PROOF-ATTEMPT-20260730-H7-CONNES-WEIGHTED-GROUNDSTATE-COMPARISON-01`.
+- `preregistration_public_green`: commit
+  `b8e4bc67b1d6cc57a46b4beccddf4d83aded291c`, Lean Action run `30515442164`, build job
+  `90784093901`, passed in `1m32s`.
+- `K0-H7-CONNES-WEIGHTED-RATE-CONSUMER-01`: locally closed. On support `[-R,R]`, Lean proves
+  the exact squared exponential weight mass `(exp(2*A*R)-1)/A` for `A>0` and `2*R` at
+  `A=0`.
+- `K0-H7-CONNES-ORIENTED-PROJECTIVE-TO-L2-01`: locally closed. Unit normalization and
+  nonnegative real inner product give `L2Error <= 2*projectiveDefect`.
+- `K0-H7-CONNES-SOURCE-SCALE-CONSUMER-01`: locally closed. For
+  `R=log(lambda)`, the rate `lambda^(2*A)*ratio -> 0` for every `0<A<1/2` implies weighted
+  comparison for every `0<=A<1/2`; the endpoint follows from a positive-power rate.
+- `K0-H7-CONNES-FOURIER-COMPOSITION-01`: locally closed as a conditional consumer. Any
+  independently compiled packet-transform limit transfers to the coherently oriented true
+  ground-state family.
+- `OBS-H7-CONNES-ABSOLUTE-EXCESS-PROMOTION-01`: closed negatively. The exact family
+  `lambda_n=exp(n)`, `gap_n=exp(-n)`, and `absoluteExcess_n=exp(-n)` satisfies every
+  support-weighted absolute-excess rate below `A=1/2`, while excess/gap and projective defect
+  stay exactly one.
+- `source_reaudit`: Connes--Consani 2023 reports roughly `lambda^2` simultaneous minuscule
+  even eigenvalues, constructs prolate candidates with approximate equalities, and supplies
+  numerical graph agreement. It proves no actual packet Rayleigh bound, first Weil gap, or
+  ratio estimate.
+- `OBS-H7-CONNES-SOURCE-RAYLEIGH-GAP-RATE-01`: remains open and is now isolated as the first
+  actual producer. Tiny absolute packet value is formally insufficient.
+- `possible_material_reentry`: prove the source ratio directly, or replace the tiny internal
+  Weil gap by an approximate-commutator/joint-spectral argument using a separated prolate
+  label operator. The latter is a proposed attack angle, not a premise.
+- `local_stop`: meaningful partial. The conditional consumer and negative control compile;
+  the preregistered actual source comparison does not.
+- `strict_boundary`: no source ground/prolate comparison, packet-to-`Xi` Lean theorem,
+  simple-even theorem, H7, or RH.
+- `result`:
+  `research/h7_connes_weighted_groundstate_comparison_result_20260730.md`.
+- `rotation`: publish the local endpoint, then rerank across historical families.
+- `global_goal`: active.

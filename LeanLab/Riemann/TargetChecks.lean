@@ -114,6 +114,7 @@ import LeanLab.Riemann.WeilCompactLaplaceZeroCutoff
 import LeanLab.Riemann.WeilCompactLaplaceArithmeticFormula
 import LeanLab.Riemann.WeilGroundStateAlignment
 import LeanLab.Riemann.WeilGroundStateFourierTopology
+import LeanLab.Riemann.ConnesGroundStateWeightedComparison
 import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.WeilGroundStateRayleighGap
@@ -6436,6 +6437,52 @@ example :
 
 example : WeilGroundStateFourierTopologyCertificate :=
   weilGroundStateFourierTopology_endpoint
+
+example (A R : ℝ) (hA : 0 < A) (hR : 0 ≤ R) :
+    ∫ x : ℝ in Set.Icc (-R) R, Real.exp (2 * A * |x|) =
+      (Real.exp (2 * A * R) - 1) / A :=
+  integral_exp_sqWeight_Icc A R hA hR
+
+example
+    {lambda ratio : ℕ → ℝ} {f g : ℕ → ℝ → ℂ}
+    (hlambda : ∀ n, 1 ≤ lambda n)
+    (hf : ∀ n, Continuous (f n)) (hg : ∀ n, Continuous (g n))
+    (hfcompact : ∀ n, HasCompactSupport (f n))
+    (hgcompact : ∀ n, HasCompactSupport (g n))
+    (hfsupp :
+      ∀ n,
+        Function.support (f n) ⊆
+          Set.Icc (-Real.log (lambda n)) (Real.log (lambda n)))
+    (hgsupp :
+      ∀ n,
+        Function.support (g n) ⊆
+          Set.Icc (-Real.log (lambda n)) (Real.log (lambda n)))
+    (hfnorm : ∀ n, connesGroundStateL2NormSq (f n) = 1)
+    (hgnorm : ∀ n, connesGroundStateL2NormSq (g n) = 1)
+    (horient : ∀ n, 0 ≤ connesGroundStateRealInner (f n) (g n))
+    (hratio : ∀ n, 0 ≤ ratio n)
+    (hdefect :
+      ∀ n, connesGroundStateProjectiveDefect (f n) (g n) ≤ ratio n)
+    (hrate : ConnesGroundStateRayleighGapRate lambda ratio) :
+    ConnesGroundStateWeightedComparison f g :=
+  connesGroundStateWeightedComparison_of_rayleighGapRate
+    hlambda hf hg hfcompact hgcompact hfsupp hgsupp
+    hfnorm hgnorm horient hratio hdefect hrate
+
+example :
+    ConnesGroundStateRayleighGapRate
+      connesCollapsingGapLambda connesCollapsingGapScale :=
+  connesCollapsingGap_absoluteExcessRate
+
+example (n : ℕ) :
+    weilRayleighExcess
+        (weilCollapsingGapMatrix (connesCollapsingGapScale n)) 0
+        weilCollapsingGapTest /
+      connesCollapsingGapScale n = 1 :=
+  connesCollapsingGap_ratio_eq_one n
+
+example : ConnesGroundStateAbsoluteExcessFalsificationCertificate :=
+  connesGroundStateAbsoluteExcessFalsification_endpoint
 
 example
     (M : ℕ) (rho : ℂ) {R : ℝ} (hR : 0 ≤ R) :

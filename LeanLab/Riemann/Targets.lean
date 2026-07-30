@@ -78,6 +78,7 @@ import LeanLab.Riemann.WeilCompactLaplaceArithmeticFormula
 import LeanLab.Riemann.WeilCompactPositivityCriterion
 import LeanLab.Riemann.WeilGroundStateAlignment
 import LeanLab.Riemann.WeilGroundStateFourierTopology
+import LeanLab.Riemann.ConnesGroundStateWeightedComparison
 import LeanLab.Riemann.WeilGroundStateFiniteMatrix
 import LeanLab.Riemann.WeilGroundStateHerglotz
 import LeanLab.Riemann.WeilGroundStateRayleighGap
@@ -1496,13 +1497,29 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``weilGroundStateFourierTopology_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260730-H7-CONNES-FOURIER-TOPOLOGY-01 formalizes the topology hidden in Connes arXiv:2602.04022 section 6.6's requirement that the explicit prolate packet approximate the true minimizer sufficiently well. The compiled positive theorem uses exp(A*abs(x))-weighted L1 error to transfer compact-uniform convergence on abs(Im z)<=A. The translated smooth packet proves that ordinary unweighted L1 and L2 convergence cannot replace that support-sensitive rate, even at the fixed point -i/4 strictly inside the critical half-strip. No actual theta_x-k_lambda estimate, simple-even ground-state theorem, zero-limit theorem, H7, or RH is proved." },
+    { id := "H7.weil-ground-state.weighted-rayleigh-gap-rate-consumer"
+      tier := .tier2
+      title := "Convert source Rayleigh-gap rates into weighted ground-state comparison"
+      statement :=
+        "On common support [-log(lambda),log(lambda)], prove the exact positive-strip and A=0 Holder costs, convert coherently oriented normalized projective defect into L2 error, and show that lambda^(2*A) times the defect ratio tending to zero for every 0<A<1/2 implies exponentially weighted L1 comparison for every 0<=A<1/2 and hence transfers any independently proved packet-transform limit."
+      leanName := some ``connesGroundStateWeightedComparison_of_rayleighGapRate
+      status := .proven
+      note := "Campaign PROOF-ATTEMPT-20260730-H7-CONNES-WEIGHTED-GROUNDSTATE-COMPARISON-01 compiles the exact conditional consumer. The squared exponential weight mass is (exp(2*A*R)-1)/A, with no extra log(lambda) loss for A>0; the A=0 endpoint costs 2*R and follows from any positive source power rate. Coherent orientation is explicit. This theorem does not instantiate Connes' true ground state or prolate packet, prove the actual Rayleigh-excess-to-gap rate, reconstruct the packet-to-Xi source theorem, prove simple-even structure, H7, or RH; rh_frontier_delta=0." },
+    { id := "H7.weil-ground-state.absolute-excess-collapsing-gap-obstruction"
+      tier := .tier2
+      title := "Falsify support-weighted absolute-excess promotion under a collapsing gap"
+      statement :=
+        "Construct an expanding source scale lambda_n=exp(n) and a two-dimensional symmetric ground-state family with gap and test-vector Rayleigh excess both exp(-n), so lambda_n^(2*A) times the absolute excess tends to zero for every A<1/2 while the excess/gap ratio and projective defect remain exactly one."
+      leanName := some ``connesGroundStateAbsoluteExcessFalsification_endpoint
+      status := .proven
+      note := "This is a generic finite-dimensional negative control motivated by the source's report of many simultaneously minuscule Weil eigenvalues. It proves that an extremely small packet Rayleigh value, even with the exact support-weighted absolute rate, cannot replace control of excess divided by the actual spectral gap. The family is not Connes' arithmetic Weil operator and does not prove that its source ratio fails; the actual rate, simple-even structure, H7, and RH remain open." },
     { id := "H7.weil-ground-state.prolate-source-rayleigh-gap-ratio"
       tier := .tier2
       title := "Prove the arithmetic prolate Rayleigh-excess-to-gap ratio tends to zero"
       statement :=
         "Instantiate the exact finite-prime Weil matrix, its normalized true ground vector and gap, and the normalized prolate coefficient vector, then prove that Rayleigh excess divided by the certified gap tends to zero in the source-prescribed Galerkin and prime-cutoff limit."
       status := .inProgress
-      note := "This is an original open candidate suggested by the quantitative consumer, not a theorem stated in the locked Connes sources. Individual pole, finite-prime, and archimedean tail blocks now compile, but no current declaration assembles their total source matrix with the prolate vector and two uniform cutoff limits. It has no leanName and is unavailable as a premise." },
+      note := "This remains the actual source producer after the weighted comparison consumer was compiled. It is an original open candidate rather than a theorem stated in the locked Connes sources. Individual pole, finite-prime, and archimedean tail blocks compile, but no current declaration assembles their total source matrix with the prolate vector and two uniform cutoff limits or proves lambda^(2*A) times the excess/gap ratio tends to zero. It has no leanName and is unavailable as a premise." },
     { id := "H1.hardy.critical-line-real-sign-bridge"
       tier := .tier2
       title := "Formalize Hardy's real critical-line xi sign bridge"

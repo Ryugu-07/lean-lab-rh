@@ -9,7 +9,15 @@ Node: `H7-CONNES-ACTUAL-GROUNDSTATE-COMPARISON-01`
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTERED / PUBLIC_CI_PENDING`
+Status:
+`PREREGISTRATION_PUBLIC_GREEN / PRODUCTION_LOCAL_AUDIT_GREEN / ACTUAL_SOURCE_RATE_OPEN`
+
+Preregistration receipt:
+
+- commit `b8e4bc67b1d6cc57a46b4beccddf4d83aded291c`;
+- Lean Action run `30515442164`;
+- build job `90784093901`;
+- passed in `1m32s`.
 
 ## Exact mathematical target
 
@@ -179,6 +187,32 @@ Numerical disagreement may select a falsification target but is not itself a Lea
 - The support weight costs approximately `lambda^A`, so ratio convergence without rate is
   insufficient.
 - Simple-even ground-state structure is a separate unresolved branch.
+
+## Local production outcome
+
+Criteria 2 and 3 now compile in
+`LeanLab/Riemann/ConnesGroundStateWeightedComparison.lean`:
+
+- for `A>0`, the exact squared weight mass on `[-R,R]` is
+  `(exp(2*A*R)-1)/A`;
+- for `A=0`, the exact squared weight mass is `2*R`;
+- coherent orientation converts normalized projective defect into actual squared `L2` error;
+- the proposed `lambda^(2*A)*ratio -> 0` producer implies the complete weighted comparison,
+  including the `A=0` endpoint;
+- an independently proved packet-transform limit then transfers through the existing Fourier
+  topology theorem.
+
+Criterion 4 remains open and therefore the full campaign target is not proved.  A new Lean
+negative control sets `lambda_n=exp(n)` and both absolute Rayleigh excess and spectral gap to
+`exp(-n)`.  The absolute excess satisfies every required support-weighted rate for `A<1/2`,
+while excess divided by gap and projective defect remain exactly one.  Thus the source's report
+that `QW_lambda(k_lambda)` is extremely small cannot replace an actual gap-ratio estimate.
+
+The primary 2023 source `Spectral triples and zeta-cycles` was re-audited.  It reports roughly
+`lambda^2` simultaneous minuscule eigenvalues and gives numerical graph agreement and
+approximate formulas, but no theorem bounding the actual packet Rayleigh excess, the first
+spectral gap, or their ratio.  This is an exact source-availability obstruction, not a proof
+that the arithmetic ratio fails.
 
 ## Assumption frontier
 
