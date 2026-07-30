@@ -4648,5 +4648,29 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   Action run `30517091377`, build job `90789265240`, in `2m14s`.
 - `immutable_evidence`:
   `research/h7_connes_weighted_groundstate_comparison_evidence_20260730.md`.
+- `immutable_evidence_public_green`: commit
+  `61e0a6a64d892c87bce8a2b9c3aa3958e6c3c0e8`, Lean Action run `30517299848`, build job
+  `90789903323`, passed in `2m16s`.
 - `rotation`: publish the local endpoint, then rerank across historical families.
+- `global_goal`: active.
+
+## 2026-07-30 H10 rational-function-field polar realization launch
+
+- `campaign`:
+  `LITERATURE-20260730-H10-BOMBIERI-STEPANOV-RATIONAL-POLAR-REALIZATION-01`.
+- `node`: `H10-F-BOMBIERI-STEPANOV-RATIONAL-POLAR-REALIZATION-01`.
+- `historical_reason`: Bombieri's successful curve proof establishes polar-order injectivity
+  before using the Riemann--Roch dimension surplus. The existing Lean block equivalence records
+  only the abstract logic.
+- `selected_actual_instance`: the rational function field `K(t)` with source exponents
+  `i*pPower+j*q` and `RatFunc.inftyValuation`.
+- `positive_gate`: prove the rational realization injective when `pPower>0` and
+  `l*pPower<q`, then compose it with the descent-kernel producer.
+- `negative_gate`: compile exact cancellation at the equality boundary
+  `l=1`, `pPower=q=1`.
+- `strict_boundary`: this is the rational-curve specialization, not the general curve
+  polar-expansion or Riemann--Roch theorem. No point count, function-field RH, number-field
+  transfer, or RH is claimed.
+- `production_gate`: no `LeanLab/` or registration edit before docs-only preregistration public
+  CI.
 - `global_goal`: active.

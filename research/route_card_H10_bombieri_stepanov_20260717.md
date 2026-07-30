@@ -180,6 +180,25 @@ polar-order theorem remains open.
 Immutable-evidence commit `66071f7a4cb4685be1434f8b28558c209a004f78` passed run
 `30206663217` with proof source unchanged. Final-ledger CI remains.
 
+Final-ledger commit `76c21bb536ad205b53eb8aee2035c2529e32eb96` passed run
+`30206809306`, build job `89806209072`, in `1m33s`; H10-E is publicly closed.
+
+## Candidate H10-F: actual rational-function-field polar realization
+
+**Exact proposition.** In the rational function field `K(t)`, send the source basis indexed by
+`0 <= i <= l`, `0 <= j <= m` to `X^(i*pPower+j*q)`. If `pPower>0` and
+`l*pPower<q`, this realization is injective; a descent map into a smaller finite-dimensional
+target therefore has a kernel vector realizing to a nonzero rational function.
+
+**Source alignment.** This is the genus-zero specialization of Bombieri's polar-order key lemma,
+not another coefficient-block analogy. Its equality boundary is sharp: when `l=1` and
+`pPower=q`, the `(1,0)` and `(0,1)` basis exponents collide and opposite coefficients cancel.
+
+**Boundary.** The general curve local-parameter argument, Riemann--Roch dimensions, point-count
+optimization and lower bound, number-field transfer, and RH remain open.
+
+**Verdict:** `PREREGISTERED / PUBLIC_CI_REQUIRED`.
+
 ## Recommendation
 
 Keep H10-B as the finite spectral endpoint and H10-D as the source-algebra endpoint. Continue the
