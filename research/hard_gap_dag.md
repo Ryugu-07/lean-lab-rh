@@ -4644,5 +4644,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   simple-even theorem, H7, or RH.
 - `result`:
   `research/h7_connes_weighted_groundstate_comparison_result_20260730.md`.
+- `public_implementation`: commit `f55c334050cf135997308a287701ed5239978a86` passed Lean
+  Action run `30517091377`, build job `90789265240`, in `2m14s`.
+- `immutable_evidence`:
+  `research/h7_connes_weighted_groundstate_comparison_evidence_20260730.md`.
 - `rotation`: publish the local endpoint, then rerank across historical families.
 - `global_goal`: active.

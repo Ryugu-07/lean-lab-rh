@@ -8,7 +8,7 @@ Node: `H7-CONNES-ACTUAL-GROUNDSTATE-COMPARISON-01`
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
 Status:
-`MEANINGFUL_PARTIAL / EXACT_CONSUMER_COMPILED / ACTUAL_SOURCE_RATE_LOCAL_STOP`
+`PUBLIC_GREEN_MEANINGFUL_PARTIAL / EXACT_CONSUMER_COMPILED / ACTUAL_SOURCE_RATE_LOCAL_STOP`
 
 ## Runtime record
 
@@ -65,5 +65,14 @@ compact-uniform Fourier convergence to `Xi`?
   identify `k_lambda` without dividing by the tiny internal Weil gap.
 - `next_action`: publish the meaningful-partial implementation and local-stop ledger, then
   perform cross-family route selection rather than optimizing constants inside this consumer.
+
+## Public implementation receipt
+
+- commit: `f55c334050cf135997308a287701ed5239978a86`;
+- Lean Action run: `30517091377`;
+- build job: `90789265240`;
+- result: passed in `2m14s`;
+- immutable evidence:
+  `research/h7_connes_weighted_groundstate_comparison_evidence_20260730.md`.
 
 The persistent RH Goal remains active.

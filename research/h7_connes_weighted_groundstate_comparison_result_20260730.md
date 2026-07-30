@@ -113,6 +113,8 @@ not a proved source fact.
 - three forbidden declaration/proof/resource scans are empty;
 - `git diff --check` is empty;
 - full repository build passes `8811/8811`; its warnings are inherited from older modules.
+- implementation commit `f55c334050cf135997308a287701ed5239978a86` passed Lean Action run
+  `30517091377`, build job `90789265240`, in `2m14s`.
 
 No actual ground/prolate comparison, packet-to-`Xi` Lean theorem, simple-even ground-state
 theorem, H7, or RH is proved.  The global RH Goal remains active.
