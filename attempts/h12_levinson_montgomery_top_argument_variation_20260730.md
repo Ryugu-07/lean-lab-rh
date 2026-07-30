@@ -5,8 +5,8 @@ Date: 2026-07-30
 Campaign:
 `LITERATURE-20260730-H12-LEVINSON-MONTGOMERY-TOP-ARGUMENT-VARIATION-01`
 
-Status: `FULL_FIXED_ENDPOINT_SUCCESS / PUBLIC_IMPLEMENTATION_GREEN /
-IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMMUTABLE_EVIDENCE_PUBLIC_GREEN /
+CLOSURE_LEDGER_CI_REQUIRED`
 
 ## Attempt log
 
@@ -26,6 +26,7 @@ IMMUTABLE_EVIDENCE_CI_REQUIRED`
 | 12 | `ACTUAL_LOG_BOUND` | Both actual horizontal integral imaginary parts are bounded by one common `C*log(t+2)` at every sufficiently large admissible height, and simultaneously at arbitrarily large admissible heights. | Register exact checks and audit axioms. |
 | 13 | `LOCAL_AUDIT` | The 946-line no-sorry module, aggregate import, target registry, nine exact TargetChecks, and eight selected axiom prints pass warning-as-error. Every selected theorem uses only `propext`, `Classical.choice`, and `Quot.sound`; the forbidden scan and `git diff --check` are empty; full build passes `8816/8816` with inherited warnings only. | Freeze and publish the implementation, then require public Lean Action CI before immutable evidence. |
 | 14 | `PUBLIC_IMPLEMENTATION_GATE` | Frozen implementation commit `adfc63d2d4c33fe3535180a8eac83d6d9e703c50` passed Lean Action run `30534415162`, build job `90844126333`, in `2m39s`. | Publish the five-blob immutable evidence and require its independent public CI. |
+| 15 | `IMMUTABLE_EVIDENCE_GATE` | Docs-only evidence commit `631465d872cbbf3f82666b757cc1ee0c14d49df1` passed Lean Action run `30534722076`, build job `90845147950`, in `1m59s`; all five frozen Lean blobs are unchanged. | Publish the closure ledger, stop this local campaign after its public CI, and rerank across historical families. |
 
 ## Current obstruction map
 
@@ -43,8 +44,7 @@ The no-sorry production module
 `LeanLab/Riemann/LevinsonMontgomeryTopArgumentVariation.lean` compiles the generic bridge,
 actual support charge, both actual top variations, and the cofinal simultaneous endpoint.
 Registration, the full local audit, and frozen implementation public CI are green. The five
-Lean blobs are frozen in
-`research/h12_levinson_montgomery_top_argument_variation_evidence_20260730.md`; immutable-
-evidence and closure-ledger CI remain. The global indented argument principle, bottom
-orientation, Levinson--Montgomery counts, Speiser, H12, and RH remain open. The persistent RH
-Goal remains active.
+Lean blobs are frozen and publicly evidenced in
+`research/h12_levinson_montgomery_top_argument_variation_evidence_20260730.md`. Closure-ledger
+CI remains. The global indented argument principle, bottom orientation, Levinson--Montgomery
+counts, Speiser, H12, and RH remain open. The persistent RH Goal remains active.

@@ -10,8 +10,8 @@ Selected node:
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `FULL_FIXED_ENDPOINT_SUCCESS / PUBLIC_IMPLEMENTATION_GREEN /
-IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMMUTABLE_EVIDENCE_PUBLIC_GREEN /
+CLOSURE_LEDGER_CI_REQUIRED`
 
 ## Historical statement
 
@@ -238,6 +238,8 @@ theorems depend only on `propext`, `Classical.choice`, and `Quot.sound`. The for
 
 Frozen implementation commit `adfc63d2d4c33fe3535180a8eac83d6d9e703c50` passed Lean Action
 run `30534415162`, build job `90844126333`, in `2m39s`. Immutable evidence is recorded in
-`research/h12_levinson_montgomery_top_argument_variation_evidence_20260730.md`; its independent
-public CI remains required. The global indented argument principle, bottom orientation, both
-Levinson--Montgomery count outputs, Speiser equivalence, H12, and RH remain open.
+`research/h12_levinson_montgomery_top_argument_variation_evidence_20260730.md`. Docs-only
+evidence commit `631465d872cbbf3f82666b757cc1ee0c14d49df1` passed Lean Action run
+`30534722076`, build job `90845147950`, in `1m59s`; all five frozen Lean blobs are unchanged.
+Closure-ledger CI remains required. The global indented argument principle, bottom orientation,
+both Levinson--Montgomery count outputs, Speiser equivalence, H12, and RH remain open.

@@ -4696,3 +4696,8 @@ run `30534415162`, build job `90844126333`, in `2m39s`. The five proof and regis
 are frozen in
 `research/h12_levinson_montgomery_top_argument_variation_evidence_20260730.md`; docs-only
 immutable-evidence CI is the next gate.
+
+Docs-only immutable evidence `631465d872cbbf3f82666b757cc1ee0c14d49df1` passed Lean Action
+run `30534722076`, build job `90845147950`, in `1m59s`; all five frozen Lean blobs are
+unchanged. The exact top-variation node now awaits only closure-ledger CI before local stop
+and fresh cross-family selection.

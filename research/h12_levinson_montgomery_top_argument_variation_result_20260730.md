@@ -5,8 +5,8 @@ Date: 2026-07-30
 Campaign:
 `LITERATURE-20260730-H12-LEVINSON-MONTGOMERY-TOP-ARGUMENT-VARIATION-01`
 
-Status: `FULL_FIXED_ENDPOINT_SUCCESS / PUBLIC_IMPLEMENTATION_GREEN /
-IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMMUTABLE_EVIDENCE_PUBLIC_GREEN /
+CLOSURE_LEDGER_CI_REQUIRED`
 
 ## Result
 
@@ -94,6 +94,8 @@ The complete Levinson--Montgomery dichotomy, Speiser equivalence, H12, and RH re
 
 Frozen implementation commit `adfc63d2d4c33fe3535180a8eac83d6d9e703c50` passed Lean Action
 run `30534415162`, build job `90844126333`, in `2m39s`. Immutable evidence is recorded in
-`research/h12_levinson_montgomery_top_argument_variation_evidence_20260730.md`; its public CI
-and the final closure ledger remain. After closure, the next route is selected by a fresh
+`research/h12_levinson_montgomery_top_argument_variation_evidence_20260730.md`. Docs-only
+evidence commit `631465d872cbbf3f82666b757cc1ee0c14d49df1` passed Lean Action run
+`30534722076`, build job `90845147950`, in `1m59s`; all five frozen Lean blobs are unchanged.
+Final closure-ledger CI remains. After closure, the next route is selected by a fresh
 cross-family omission-seeking comparison, not by adjacency.

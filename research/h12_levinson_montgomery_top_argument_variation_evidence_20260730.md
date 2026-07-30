@@ -5,7 +5,7 @@ Date: 2026-07-30
 Campaign:
 `LITERATURE-20260730-H12-LEVINSON-MONTGOMERY-TOP-ARGUMENT-VARIATION-01`
 
-Status: `IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / CLOSURE_LEDGER_CI_REQUIRED`
 
 ## Public implementation receipt
 
@@ -28,6 +28,9 @@ At the public implementation commit:
 | `LeanLab.lean` | `b25a891456b7ff4da4da1be54b3649d92de5d884` |
 
 This evidence commit is docs-only and must leave every frozen blob unchanged.
+
+The evidence commit `631465d872cbbf3f82666b757cc1ee0c14d49df1` passed Lean Action run
+`30534722076`, build job `90845147950`, in `1m59s`; all five frozen blobs are unchanged.
 
 ## Proven endpoint
 
