@@ -2,7 +2,7 @@
 
 Date: 2026-07-30
 
-Status: `H2_MAYNARD_PRATT_TYPE_II_RARITY_SELECTED / PREREGISTRATION_LOCAL`
+Status: `H2_MAYNARD_PRATT_TYPE_II_RARITY_SELECTED / PREREGISTRATION_PUBLIC_GREEN`
 
 ## Closed parent
 
@@ -47,16 +47,22 @@ Primary source:
   <https://arxiv.org/abs/2206.11729>.
 
 For a Type-II zero `rho=beta+i*gamma`, the source changes variables in the shifted Mellin
-integral and obtains a lower bound for
+integral. Direct parametrization of the stated line gives a lower bound for
 
 ```text
-integral |Gamma(-1/2+beta+i*u)|
+integral |Gamma(1/2-beta+i*u)|
   * |M(1/2+i*gamma+i*u) * zeta(1/2+i*gamma+i*u)| du.
 ```
 
-Gamma decay truncates to `|u| <= (log T)^2`. Holder then charges every Type-II zero by local
-fourth-moment mass. A `(log T)^3`-separated subfamily turns the local sum into one global
-integral, and the source invokes
+The proof of Lemma 24 instead displays `Gamma(-1/2+beta+i*u)`. Lean proves that these
+arguments differ for `beta>1/2`, but also proves a recurrence repair:
+`(beta-1/2)|Gamma(1/2-beta+i*u)| <= 2`. Thus the source restriction
+`beta>=sigma>=1/2+1/log T` still supplies the intended `O(log T)` pointwise bound.
+
+The corrected Gamma decay must still be integrated uniformly to justify truncation to
+`|u| <= (log T)^2`. Holder then charges every Type-II zero by local fourth-moment mass. A
+`(log T)^3`-separated subfamily turns the local sum into one global integral, and the source
+invokes
 
 ```text
 integral_(T/2)^(3T) |M(1/2+i*t) * zeta(1/2+i*t)|^4 dt
@@ -93,13 +99,32 @@ Packaging it as a hypothesis is not a Type-II rarity theorem.
   Lemma 24 for the actual source Type-II predicate and literal source mollifier.
 - `omission_probe`: attempt the required fixed-mollifier fourth-moment upper bound without
   formalizing the cited arbitrary-polynomial asymptotic.
+- `source_sign_result`: the displayed Gamma argument is incorrect for the stated contour;
+  the kernel-checked recurrence repair preserves the claimed logarithmic order. The uniform
+  corrected tail at `|u|>(log T)^2` and the resulting local fourth-moment charge now compile.
+- `packing_result`: finite greedy separation and multiplicity bookkeeping compile from the
+  explicit local occupancy count; no distinct-zero simplification is used. The occupancy
+  producer now also compiles with bound `ceil(30*(log T)^7)` by charging zeros to
+  `Re((xi'/xi)(2+i*t))`.
+- `local_count_omission_result`: the consumer does not need a full Riemann--von Mangoldt
+  theorem; the Euler-product-half-plane logarithmic derivative supplies a sufficient
+  polylogarithmic count while preserving analytic multiplicity.
+- `global_charging_result`: the centered local moments, pairwise-disjoint absolute windows,
+  source interval `[T/2,3T]`, uniform `Y^(1/2-sigma)` charge, and composition with the full
+  multiplicity count now compile in
+  `eventually_exists_typeIISeparated_fullCount_charge_le_of_sourceMomentEstimate`.
+- `exact_open_premise`: `MaynardPrattTypeIISourceTwistedFourthMomentEstimate A`, namely the
+  literal source mollifier's fourth moment bounded by `T*(log T)^A` on `[T/2,3T]`.
+- `next_producer`: the specific fixed short-Mobius twisted fourth-moment upper bound remains
+  the historical omission probe and sole deep analytic input before the rarity exponent.
 - `meaningful_partial`: the exact local charge, separated packing, and conditional exponent
   theorem may compile only if every unproved producer remains an explicit named premise.
 - `negative_control`: a generic Markov inequality, an unweighted zero count, or an assumed
   twisted fourth moment is not full success.
 - `strict_boundary`: no Type-I rarity, bow exclusion, density theorem for all zeros, H2,
   zero-free statement, or RH.
-- `production_gate`: no `LeanLab/` proof or registration edit before docs-only
-  preregistration passes public CI.
+- `production_gate`: docs-only commit
+  `58a77f7ca4ee0b04dfe4f4653bdc93d8df080be5` passed Lean Action run
+  `30500943541`, build job `90740248215`, in `2m1s`.
 
 The persistent RH Goal remains active.

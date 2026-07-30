@@ -3438,7 +3438,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `H12-LM-JENSEN-TOP-VARIATION-01`: remains a separate open asymptotic edge.
 - `claim_boundary`: no actual strict-negative height, global count output, Speiser equivalence,
   derivative-zero exclusion, H12, or RH is assumed or inferred.
-- `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- `production_gate`: docs-only commit
+  `58a77f7ca4ee0b04dfe4f4653bdc93d8df080be5` passed Lean Action run
+  `30500943541`, build job `90740248215`, in `2m1s`.
 - `global_goal`: active.
 
 ## 2026-07-30 H2 classical detector contour-shift launch
@@ -4440,4 +4442,101 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `strict_boundary`: no Type-I rarity, bow exclusion, full density theorem, H2, zero-free
   result, or RH.
 - `production_gate`: no `LeanLab/` edit before docs-only preregistration public CI.
+- `global_goal`: active.
+
+## 2026-07-30 H2 Maynard--Pratt Type-II source-sign audit
+
+- `compiled_actual_chain`: multiplicity-bearing Type-II count; actual critical-line
+  mollifier--zeta value; exact shifted-integrand norm identity; full critical-mass charge;
+  compact-window `L1`--`L4` Holder.
+- `source_falsification`: the stated line `Re(s)=1/2-beta` produces
+  `Gamma(1/2-beta+i*u)`, not the displayed `Gamma(beta-1/2+i*u)`;
+  `maynardPrattActualGammaArgument_ne_displayed` kernel-checks the mismatch for
+  `beta>1/2`.
+- `compiled_repair`:
+  `(beta-1/2)*norm(Gamma(1/2-beta+i*u)) <= 2` for `1/2<beta<1`, hence
+  `norm(Gamma(1/2-beta+i*u)) <= 2*log T` under the literal source range
+  `beta>=sigma>=1/2+1/log T`.
+- `OBS-H2-TYPE-II-CORRECTED-GAMMA-TAIL-01`: selected. Combine the existing negative-strip
+  Gamma exponential decay, mollifier bound, and global critical-line zeta growth into a
+  uniform integral estimate on `|u|>(log T)^2`.
+- `classification_boundary`: the displayed change-of-variables formula is falsified and
+  locally repaired; no tail truncation, Type-II rarity exponent, H2, zero-free statement,
+  or RH is claimed.
+- `global_goal`: active.
+
+## 2026-07-30 H2 corrected tail, local charge, and packing checkpoint
+
+- `OBS-H2-TYPE-II-CORRECTED-GAMMA-TAIL-01`: locally closed.
+- `compiled_tail`: a uniform pure exponential majorant for the actual negative-real-part
+  Gamma contour; an explicit integrated tail bound; and eventual tail at most `1` for the
+  literal source scales and `R=(log T)^2`.
+- `OBS-H2-TYPE-II-LOCAL-FOURTH-MOMENT-CHARGE-01`: locally closed by
+  `eventually_one_sixth_le_source_typeIILocalFourthMoment`, with no tail-smallness or
+  fourth-moment premise.
+- `OBS-H2-TYPE-II-MULTIPLICITY-PACKING-01`: combinatorial half locally closed. The compiled
+  greedy cover preserves analytic multiplicity and reduces the count to a separated
+  subfamily plus the explicit local occupancy
+  `maynardPrattTypeIILocalMultiplicityCount`.
+- `OBS-H2-TYPE-II-LOCAL-ZERO-COUNT-01`: selected analytic producer. Required shape:
+  uniformly for source-range centers, a fixed polylogarithmic upper bound for the
+  multiplicity-bearing zero count in radius `(log T)^3`.
+- `repository_audit`: no existing compiled Riemann--von Mangoldt or short-interval zero
+  count discharges this producer.
+- `OBS-H2-SOURCE-MOBIUS-TWISTED-FOURTH-MOMENT-01`: remains independently open.
+- `classification_boundary`: criteria 1--4 of the preregistration are compiled; criterion 5
+  still lacks its local zero-count half; criteria 6--9 remain open. No Type-II rarity
+  exponent, H2, zero-free statement, or RH is claimed.
+- `global_goal`: active.
+
+## 2026-07-30 H2 local zero-count producer closed
+
+- `OBS-H2-TYPE-II-LOCAL-ZERO-COUNT-01`: locally closed by
+  `eventually_maynardPrattTypeIILocalMultiplicityCount_source_le`.
+- `omission_result`: a full Riemann--von Mangoldt reconstruction is not needed by the
+  packing consumer. Inject the Type-II multiplicity copies into the global xi divisor and
+  charge a radius-`H` window to the positive paired reciprocal mass at `2+i*t`.
+- `compiled_right_half_plane_chain`: local count divided by `2*(4+H^2)`; `->`
+  `Re((xi'/xi)(2+i*t))`; `->` exact pole/Gamma/von-Mangoldt decomposition; `->` Stieltjes
+  digamma bound plus a fixed absolutely convergent von-Mangoldt mass; `->`
+  `log(|t|+2)+C`.
+- `source_specialization`: at `H=(log T)^3` and `t in [T,2T]`, the local analytic
+  multiplicity count is eventually at most `ceil(30*(log T)^7)`.
+- `OBS-H2-TYPE-II-MULTIPLICITY-PACKING-01`: locally closed in full by
+  `eventually_exists_maynardPrattTypeIISeparated_source_card_control`.
+- `remaining_dominant_producer`:
+  `OBS-H2-SOURCE-MOBIUS-TWISTED-FOURTH-MOMENT-01`.
+- `classification_boundary`: criteria 1--5 compile; criteria 6--9 remain open. No
+  Type-II rarity exponent, H2, zero-free statement, or RH is claimed.
+- `global_goal`: active.
+
+## 2026-07-30 H2 global fourth-moment charging reduction
+
+- `compiled_window_translation`:
+  `maynardPrattTypeIILocalFourthMoment_eq_integral_ordinateWindow` identifies the centered
+  source integral with the absolute half-open ordinate window.
+- `compiled_disjoint_charge`:
+  `(log T)^3`-separation and radius `(log T)^2` make the windows pairwise disjoint;
+  `eventually_sum_maynardPrattTypeIILocalFourthMoment_source_le_global` charges their total
+  to the literal interval `[T/2,3T]`.
+- `compiled_sigma_uniformity`:
+  `eventually_one_sixth_le_sourceChargeScale_mul_localFourthRoot` preserves
+  `Y^(1/2-sigma)` uniformly over every selected multiplicity copy.
+- `compiled_conditional_endpoint`:
+  `eventually_exists_typeIISeparated_fullCount_charge_le_of_sourceMomentEstimate` combines
+  local zero count, packing, local charge, and global charging. Its only undischarged
+  analytic premise is `MaynardPrattTypeIISourceTwistedFourthMomentEstimate A`.
+- `OBS-H2-SOURCE-MOBIUS-TWISTED-FOURTH-MOMENT-01`: remains open in the exact form
+  `integral_[T/2,3T] |M(1/2+it) zeta(1/2+it)|^4 dt <= T*(log T)^A`, with
+  `M=floor(2*T^(1/100))`.
+- `remaining_elementary_postprocessing`: after fixing `A`, normalize the exact charge
+  factors to the displayed exponent `T^(2*(1-sigma))*(log T)^B`.
+- `audit`: standalone compile has no warnings; target build passes `8724/8724`; the full
+  project build passes `8810/8810` with only inherited warnings; five exact statement
+  witnesses compile in `TargetChecks.lean`; forbidden scans are empty; seven registered
+  declarations have only `propext`, `Classical.choice`, and `Quot.sound`; `git diff --check`
+  passes.
+- `classification_boundary`: the structural reduction is compiled but the moment estimate
+  and therefore the Type-II rarity theorem remain open. No H2, zero-free statement, or RH is
+  claimed.
 - `global_goal`: active.

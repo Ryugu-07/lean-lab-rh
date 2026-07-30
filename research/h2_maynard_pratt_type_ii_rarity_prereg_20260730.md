@@ -8,7 +8,10 @@ Node: `H2-MAYNARD-PRATT-TYPE-II-RARITY-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTRATION_LOCAL / PRODUCTION_LOCKED`
+Status: `PREREGISTRATION_PUBLIC_GREEN / PRODUCTION_OPEN`
+
+Public preregistration gate: commit `58a77f7ca4ee0b04dfe4f4653bdc93d8df080be5`,
+Lean Action run `30500943541`, build job `90740248215`, passed in `2m1s`.
 
 ## Parent and fixed sources
 
@@ -72,6 +75,82 @@ integral_(T/2)^(3T)
 Here `M` is the actual project mollifier with length
 `classicalDetectorSourceM T = floor(2*T^(1/100))`.
 
+## Source sign audit and corrected form
+
+The arXiv v2 Type-II definition and Appendix C contour both integrate on
+
+```text
+Re(s) = 1/2 - beta.
+```
+
+Directly writing `s=1/2-beta+i*u` therefore produces
+
+```text
+Gamma(1/2-beta+i*u),
+```
+
+not the `Gamma(beta-1/2+i*u)` displayed in the proof of Lemma 24.
+`MaynardPrattTypeIIRarity.lean` kernel-checks that the two arguments are unequal for
+`beta>1/2`. It also kernel-checks the recurrence repair
+
+```text
+(beta-1/2) * |Gamma(1/2-beta+i*u)| <= 2
+```
+
+for `1/2<beta<1`. Consequently the literal source restriction
+`beta>=sigma>=1/2+1/log T` recovers the corrected bound
+
+```text
+|Gamma(1/2-beta+i*u)| <= 2*log T.
+```
+
+This repairs the pointwise logarithmic estimate but does not by itself prove the uniform
+tail truncation, local charge, packing theorem, twisted fourth moment, or rarity exponent.
+
+## Production checkpoint after the source-sign repair
+
+The corrected tail and local charge are now compiled rather than assumed:
+
+- `exists_maynardPrattTypeIIContourNormTailMass_le` gives an explicit integrated
+  `exp(-pi*R/4)` tail bound for the actual shifted Mellin integrand.
+- `eventually_maynardPrattTypeIIContourNormTailMass_source_le_one` specializes it to the
+  literal source scales and `R=(log T)^2`.
+- `eventually_one_sixth_le_source_typeIILocalFourthMoment` derives the source local
+  fourth-moment lower charge with no tail or moment premise.
+- `exists_maynardPrattTypeIISeparated_card_control` proves the finite separated-cover and
+  multiplicity bookkeeping from an explicit local occupancy premise.
+
+Thus full-success criteria 1--4 are compiled. Criterion 5 is also now compiled:
+`eventually_maynardPrattTypeIILocalMultiplicityCount_source_le` bounds every source local
+window by `ceil(30*(log T)^7)`, and
+`eventually_exists_maynardPrattTypeIISeparated_source_card_control` composes this with the
+multiplicity-aware packing theorem. This uses positivity of the xi reciprocal zero mass at
+`2+i*t` and the Euler-product-half-plane logarithmic derivative, so a full
+Riemann--von Mangoldt theorem is not a premise.
+
+Criterion 6, the fixed short-Mobius twisted fourth moment, remains open. No Type-II rarity
+exponent is claimed at this checkpoint.
+
+The subsequent global charging layer is also compiled:
+
+- `eventually_sum_maynardPrattTypeIILocalFourthMoment_source_le_global` proves that the
+  separated radius-`(log T)^2` local windows are disjoint and charge to the literal global
+  fourth moment on `[T/2,3T]`;
+- `eventually_one_sixth_le_sourceChargeScale_mul_localFourthRoot` keeps the uniform
+  `Y^(1/2-sigma)` factor in every local charge;
+- `MaynardPrattTypeIISourceTwistedFourthMomentEstimate A` names the exact remaining
+  polylogarithmic moment producer for the literal source mollifier; and
+- `eventually_exists_typeIISeparated_fullCount_charge_le_of_sourceMomentEstimate` composes
+  that single named premise with the discharged local zero count, packing, local charge, and
+  global charging theorem.
+
+Thus every structural and measure-theoretic edge through the full Type-II count now compiles.
+This is a conditional reduction only: criterion 6 remains open, and the exact factors still
+need routine normalization to the criterion-7 exponent display after a moment exponent is
+proved. Five exact statement witnesses and seven standard-only axiom prints are registered,
+but no Type-II rarity Target is marked proven. Criteria 7--9 and the Type-II rarity claim
+remain open.
+
 ## Required definitions
 
 The implementation should define, with equivalent names allowed:
@@ -98,7 +177,8 @@ it with an arbitrary complex variable.
 2. Prove the exact change of variables from the existing shifted Mellin line integral to the
    source critical-line `u` integral.
 3. Prove an explicit Gamma-decay truncation to `|u| <= (log T)^2`, including the actual
-   mollifier-zeta growth needed to control the discarded tail.
+   mollifier-zeta growth needed to control the discarded tail and using the corrected
+   negative-real-part Gamma argument.
 4. Derive the source local fourth-moment lower charge from Type-II largeness by explicit
    integral inequalities.
 5. Prove a multiplicity-aware separated-subfamily or bounded-overlap theorem sufficient to

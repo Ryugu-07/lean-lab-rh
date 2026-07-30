@@ -1,4 +1,5 @@
 import LeanLab.Riemann.Targets
+import LeanLab.Riemann.MaynardPrattTypeIIGlobalCharge
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -6435,5 +6436,83 @@ example :
 
 example : WeilGroundStateFourierTopologyCertificate :=
   weilGroundStateFourierTopology_endpoint
+
+example
+    (M : ℕ) (rho : ℂ) {R : ℝ} (hR : 0 ≤ R) :
+    maynardPrattTypeIILocalFourthMoment M rho R =
+      ∫ t : ℝ in Set.Ioc (rho.im - R) (rho.im + R),
+        maynardPrattTypeIIFourthIntegrand M t :=
+  maynardPrattTypeIILocalFourthMoment_eq_integral_ordinateWindow M rho hR
+
+example
+    {T sigma H R A B : ℝ}
+    {S : Finset (MaynardPrattTypeIIZeroIndex T sigma)}
+    (hR : 0 ≤ R)
+    (hsep :
+      IsOrdinateSeparated S
+        (fun i => (maynardPrattTypeIIZeroValue T sigma i).im) H)
+    (hRH : 2 * R ≤ H)
+    (hwindow :
+      ∀ i ∈ S,
+        maynardPrattTypeIIOrdinateWindow T sigma R i ⊆ Set.Icc A B) :
+    (∑ i ∈ S,
+        maynardPrattTypeIILocalFourthMoment
+          (classicalDetectorSourceM T)
+          (maynardPrattTypeIIZeroValue T sigma i) R) ≤
+      maynardPrattTypeIIGlobalFourthMoment
+        (classicalDetectorSourceM T) A B :=
+  sum_maynardPrattTypeIILocalFourthMoment_le_global
+    hR hsep hRH hwindow
+
+example :
+    ∀ᶠ T : ℝ in Filter.atTop,
+      ∀ (sigma : ℝ)
+        (S : Finset (MaynardPrattTypeIIZeroIndex T sigma)),
+        IsOrdinateSeparated S
+            (fun i => (maynardPrattTypeIIZeroValue T sigma i).im)
+            (Real.log T ^ (3 : ℕ)) →
+        (∑ i ∈ S,
+            maynardPrattTypeIILocalFourthMoment
+              (classicalDetectorSourceM T)
+              (maynardPrattTypeIIZeroValue T sigma i)
+              (Real.log T ^ (2 : ℕ))) ≤
+          maynardPrattTypeIIGlobalFourthMoment
+            (classicalDetectorSourceM T) (T / 2) (3 * T) :=
+  eventually_sum_maynardPrattTypeIILocalFourthMoment_source_le_global
+
+example :
+    ∀ᶠ T : ℝ in Filter.atTop,
+      ∀ (sigma : ℝ) (i : MaynardPrattTypeIIZeroIndex T sigma),
+        1 / 2 + 1 / Real.log T ≤ sigma →
+        (1 / 6 : ℝ) ≤
+          maynardPrattTypeIISourceChargeScale T sigma *
+            (maynardPrattTypeIILocalFourthMoment
+              (classicalDetectorSourceM T)
+              (maynardPrattTypeIIZeroValue T sigma i)
+              (Real.log T ^ (2 : ℕ))) ^ (1 / 4 : ℝ) :=
+  eventually_one_sixth_le_sourceChargeScale_mul_localFourthRoot
+
+example
+    {A : ℕ}
+    (hmoment : MaynardPrattTypeIISourceTwistedFourthMomentEstimate A) :
+    ∀ᶠ T : ℝ in Filter.atTop,
+      ∀ sigma : ℝ,
+        1 / 2 + 1 / Real.log T ≤ sigma →
+        ∃ S : Finset (MaynardPrattTypeIIZeroIndex T sigma),
+          IsOrdinateSeparated S
+              (fun i => (maynardPrattTypeIIZeroValue T sigma i).im)
+              (Real.log T ^ (3 : ℕ)) ∧
+          IsOrdinateCover S Finset.univ
+              (fun i => (maynardPrattTypeIIZeroValue T sigma i).im)
+              (Real.log T ^ (3 : ℕ)) ∧
+          maynardPrattTypeIIZeroCount T sigma ≤
+            Nat.ceil (30 * Real.log T ^ (7 : ℕ)) * S.card ∧
+          (maynardPrattTypeIIZeroCount T sigma : ℝ) *
+              (1 / 6 : ℝ) ^ (4 : ℕ) ≤
+            (Nat.ceil (30 * Real.log T ^ (7 : ℕ)) : ℝ) *
+              (maynardPrattTypeIISourceChargeScale T sigma ^ (4 : ℕ) *
+                (T * Real.log T ^ A)) :=
+  eventually_exists_typeIISeparated_fullCount_charge_le_of_sourceMomentEstimate
+    hmoment
 
 end LeanLab.Riemann

@@ -1,4 +1,5 @@
 import LeanLab.Riemann.BalazardSaias
+import LeanLab.Riemann.MaynardPrattTypeIIGlobalCharge
 import LeanLab.Riemann.ChebyshevMellin
 import LeanLab.Riemann.FareyFranel
 import LeanLab.Riemann.DeBruijnNewman
@@ -1329,3 +1330,10 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.TuringXiBoundaryCountCertificate.toRectangleCertificate
 #print axioms LeanLab.Riemann.exists_line_candidate_proper_subset_with_offline_ambient
 #print axioms LeanLab.Riemann.turingCompletenessConsumer_endpoint
+#print axioms LeanLab.Riemann.maynardPrattTypeIILocalFourthMoment_eq_integral_ordinateWindow
+#print axioms LeanLab.Riemann.pairwise_disjoint_maynardPrattTypeIIOrdinateWindow
+#print axioms LeanLab.Riemann.sum_maynardPrattTypeIILocalFourthMoment_le_global
+#print axioms LeanLab.Riemann.eventually_sum_maynardPrattTypeIILocalFourthMoment_source_le_global
+#print axioms LeanLab.Riemann.eventually_one_sixth_le_sourceChargeScale_mul_localFourthRoot
+#print axioms LeanLab.Riemann.eventually_card_mul_charge_le_sourceChargeScale_pow_mul_globalFourthMoment
+#print axioms LeanLab.Riemann.eventually_exists_typeIISeparated_fullCount_charge_le_of_sourceMomentEstimate
