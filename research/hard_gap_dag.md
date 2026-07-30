@@ -3040,8 +3040,8 @@ producer remains open, and the next loop returns to cross-family historical omis
 - `campaign`:
   `LITERATURE-20260730-H12-LEVINSON-MONTGOMERY-JENSEN-TOP-ZERO-COUNT-01`.
 - `node`: `H12-LM-JENSEN-TOP-REAL-ZERO-COUNT-01`.
-- `status`: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN /
-  IMMUTABLE_EVIDENCE_CI_REQUIRED`.
+- `status`: `FULL_FIXED_ENDPOINT_SUCCESS / IMMUTABLE_EVIDENCE_PUBLIC_GREEN /
+  CLOSURE_LEDGER_CI_REQUIRED`.
 - `compiled_edge`:
   actual analytic zeta and phase-normalized zeta-derivative symmetrizations
   `->` fixed-strip polynomial zeta growth and Cauchy derivative growth
@@ -3067,6 +3067,12 @@ producer remains open, and the next loop returns to cross-family historical omis
 - `public_implementation`: frozen commit
   `12ddf9bb10f68d3826897bb5403a2ac803da45b0` passed Lean Action run `30530385387`,
   build job `90831064393`, in `2m52s`; proof and registration sources are frozen.
+- `immutable_evidence`: docs-only commit
+  `e1c1364405e0d827f8506d9de302e9f8ffd1d735` passed Lean Action run `30530768264`,
+  build job `90832307094`, in `1m58s`; all five frozen Lean blobs are unchanged.
+- `rotation`: after closure-ledger CI, stop this local campaign and freshly compare the open
+  H12 argument-variation successor with non-adjacent historical families. Adjacency is not a
+  selection reason.
 - `global_goal`: active.
 
 ## 2026-07-28 H1 Hardy theta inversion local result

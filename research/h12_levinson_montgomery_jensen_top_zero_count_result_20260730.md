@@ -5,8 +5,8 @@ Date: 2026-07-30
 Campaign:
 `LITERATURE-20260730-H12-LEVINSON-MONTGOMERY-JENSEN-TOP-ZERO-COUNT-01`
 
-Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN /
-IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMMUTABLE_EVIDENCE_PUBLIC_GREEN /
+CLOSURE_LEDGER_CI_REQUIRED`
 
 ## Result
 
@@ -106,3 +106,7 @@ H12 and RH remain open. The persistent RH Goal remains active.
 Frozen implementation commit `12ddf9bb10f68d3826897bb5403a2ac803da45b0` passed Lean Action
 run `30530385387`, build job `90831064393`, in `2m52s`. Immutable evidence is recorded in
 `research/h12_levinson_montgomery_jensen_top_zero_count_evidence_20260730.md`.
+
+Docs-only immutable-evidence commit `e1c1364405e0d827f8506d9de302e9f8ffd1d735` passed Lean
+Action run `30530768264`, build job `90832307094`, in `1m58s`; the frozen proof and
+registration blobs are unchanged.
