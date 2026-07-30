@@ -4895,3 +4895,36 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   `research/h11_pcc_slow_window_diagonal_evidence_20260730.md`.
 - `public_gate`: docs-only immutable-evidence CI remains required.
 - `global_goal`: active.
+
+## 2026-07-30 H12 top argument variation launch
+
+- `parent_public_closure`: Jensen top zero-count closure-ledger commit
+  `eab0fafd0e21101a759e9ccb20c1ba3b2ea4494a`, Lean Action run `30531096109`,
+  build job `90833363620`, passed in `2m3s`.
+- `selection_rule`: historical coverage is omission search. H12 is reentered because the
+  parent campaign materially changed the first live edge, not because of adjacency.
+- `campaign`:
+  `LITERATURE-20260730-H12-LEVINSON-MONTGOMERY-TOP-ARGUMENT-VARIATION-01`.
+- `node`: `H12-LM-JENSEN-TOP-VARIATION-01`.
+- `source_hinge`: Levinson--Montgomery page 52 compresses the crossing-count-to-continuous-
+  argument conversion into a standard Jensen argument.
+- `compiled_left_input`: actual zeta and phase-normalized derivative real crossings enter
+  finite multiplicity-bearing Jensen divisor supports whose sums are `O(log(t+2))`.
+- `K0-H12-FINITE-CROSSING-VARIATION-01`: selected. A nonvanishing differentiable path with
+  all real-part crossings in a finite set has logarithmic-derivative argument variation at
+  most `pi*(card+1)`.
+- `K0-H12-DIVISOR-SUPPORT-CARDINALITY-01`: selected. For the analytic Jensen
+  symmetrizations, real support projection cardinality is at most the nonnegative divisor
+  multiplicity sum.
+- `K0-H12-FULL-TOP-ADMISSIBILITY-01`: selected. Common zero-free actual top heights on
+  `[0,1]` occur cofinally.
+- `H12-LM-JENSEN-TOP-VARIATION-01`: selected actual composition for both `zeta'/zeta` and
+  `zeta''/zeta'`.
+- `negative_controls`: no global principal-argument subtraction; no endpoint-zero passage;
+  no cardinality/multiplicity identification without proof; no derivative phase omission;
+  no abstract theorem claimed as actual variation.
+- `strict_boundary`: global indentation and argument-principle bookkeeping, bottom
+  orientation, both Levinson--Montgomery count identities, Speiser, H12, and RH remain open.
+- `production_gate`: no `LeanLab/` or registration edit before docs-only preregistration
+  public CI.
+- `global_goal`: active.

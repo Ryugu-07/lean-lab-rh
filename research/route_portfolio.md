@@ -4638,3 +4638,21 @@ evidence is next.
 Immutable evidence `10f45b94f4844baa6e4883b86f6cea4299fc40d3` passed run
 `30372716950`, job `90320456175`, in `2m20s`; no `LeanLab/` source changed. One final-ledger
 CI remains before this local meaningful partial returns to cross-family selection.
+## H12 Levinson--Montgomery Top Argument Variation Selection
+
+Historical omission search re-ranks the newly closed H12 Jensen producer against the live
+frontiers in H1/H2, H7/H8, H10, and H11. H12 is selected because its boundary has materially
+changed: actual zeta and phase-normalized derivative crossings now enter finite
+multiplicity-bearing divisor supports with `O(log(t+2))` total mass.
+
+Levinson--Montgomery page 52 suppresses the remaining inference as a standard Jensen
+argument. Campaign
+`LITERATURE-20260730-H12-LEVINSON-MONTGOMERY-TOP-ARGUMENT-VARIATION-01`
+will reconstruct the omitted branch logic: one half-plane logarithm per crossing-free gap,
+finite partition by an arbitrary crossing superset, support-cardinality charge to divisor
+multiplicity, and both actual horizontal logarithmic-derivative integrals at cofinal common
+zero-free heights.
+
+Global principal `Complex.arg` is an explicit negative control because it can jump while the
+continuous argument winds. The campaign does not include the global indented argument
+principle, bottom orientation, either Levinson--Montgomery count identity, Speiser, H12, or RH.
