@@ -4656,3 +4656,37 @@ zero-free heights.
 Global principal `Complex.arg` is an explicit negative control because it can jump while the
 continuous argument winds. The campaign does not include the global indented argument
 principle, bottom orientation, either Levinson--Montgomery count identity, Speiser, H12, or RH.
+
+## H12 Levinson--Montgomery Top Argument Variation Local Result
+
+The full fixed endpoint compiles in the 946-line
+`LevinsonMontgomeryTopArgumentVariation.lean`. The generic bridge proves that a
+nonvanishing differentiable complex path whose interior real-part crossings lie in a finite
+set has
+
+```text
+abs(Im integral(g'/g)) <= pi * (card crossings + 1).
+```
+
+The proof filters and sorts an arbitrary crossing superset, allows endpoint crossings and
+extraneous points, and uses a separate valid right- or left-half-plane logarithm on each gap.
+It therefore controls continuous argument variation rather than merely subtracting
+discontinuous principal endpoint arguments.
+
+For the actual source paths, Lean constructs cofinal common zero-free heights on `[0,1]`,
+charges projected crossing-set cardinality to the multiplicity-bearing Jensen divisor sums,
+and proves that the constant phase in the derivative normalization cancels exactly from
+`zeta''/zeta'`. Both actual top-side integral imaginary parts are bounded by one common
+`C*log(t+2)` at all sufficiently large admissible heights and simultaneously at arbitrarily
+large such heights.
+
+The module, aggregate import, target registry, nine exact checks, and eight selected axiom
+prints pass warning-as-error. The selected axioms are only `propext`, `Classical.choice`, and
+`Quot.sound`; the forbidden scan and patch check are empty; full build passes `8816/8816`
+with inherited warnings only.
+
+This closes a literal page-52 omission in the historical proof chain, but not the global
+Levinson--Montgomery theorem. The multiplicity-aware global indented argument principle,
+exact bottom orientation, both count identities, the full dichotomy, Speiser equivalence,
+H12, and RH remain open. The implementation must pass public CI and immutable-evidence gates;
+after closure, route selection returns to a fresh cross-family comparison.

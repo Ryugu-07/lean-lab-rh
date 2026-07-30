@@ -126,6 +126,7 @@ import LeanLab.Riemann.LevinsonMontgomeryCriticalIndentation
 import LeanLab.Riemann.SpeiserAdmissibleContour
 import LeanLab.Riemann.LevinsonMontgomeryLeftHalfPlaneWinding
 import LeanLab.Riemann.LevinsonMontgomeryJensenTopZeroCount
+import LeanLab.Riemann.LevinsonMontgomeryTopArgumentVariation
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -2064,6 +2065,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``exists_levinsonMontgomeryZetaDerivTopSymm_sum_divisor_le_log
       status := .proven
       note := "Campaign LITERATURE-20260730-H12-LEVINSON-MONTGOMERY-JENSEN-TOP-ZERO-COUNT-01 expands the sentence 'a standard use of Jensen's theorem' on page 52 of Levinson--Montgomery 1974. Lean checks both moving pole exclusions; actual zeta growth on the complete fixed strip via Abel continuation and the functional equation with Gamma-cosine exponential cancellation; actual zeta-derivative growth via Cauchy; the zeta center lower bound; and the derivative center lower bound from the phase-fixed n=2 Dirichlet term and a complete p-series tail estimate. Both actual symmetrizations have multiplicity-bearing O(log T) divisor counts, and every source crossing enters the inner divisor support. This closes the local top-edge Jensen producer, not the conversion from crossings to argument variation, the global indented argument-principle bookkeeping, either Levinson--Montgomery count identity, Speiser equivalence, H12, or RH; historical_route_coverage_delta=1, actual_zeta_top_count_delta=1, actual_zeta_deriv_top_count_delta=1, argument_variation_delta=0, rh_frontier_delta=0." },
+    { id := "H12.levinson-montgomery.top-argument-variation"
+      tier := .tier2
+      title := "Close the Levinson--Montgomery top argument variation"
+      statement :=
+        "Prove that a nonvanishing differentiable path with finitely many real-part crossings has continuous argument variation at most pi times one plus the crossing count, charge the actual zeta and phase-normalized derivative crossings to their multiplicity-bearing Jensen divisors, and obtain simultaneous O(log T) top-side bounds at cofinally many common zero-free heights."
+      leanName := some ``levinsonMontgomeryTopArgumentVariation_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260730-H12-LEVINSON-MONTGOMERY-TOP-ARGUMENT-VARIATION-01 reconstructs the inference suppressed after the page-52 Jensen sentence. Lean uses a valid principal logarithm separately on each crossing-free right or left half-plane gap, recursively consumes a strictly sorted finite crossing superset, proves real support projection cardinality is at most analytic divisor support cardinality and hence at most its multiplicity sum, constructs cofinal common zero-free actual top heights on [0,1], and proves simultaneous O(log(T+2)) bounds for the imaginary horizontal integrals of zeta'/zeta and zeta''/zeta'. The global indented argument principle, bottom orientation, both Levinson--Montgomery count identities, Speiser equivalence, H12, and RH remain open; historical_route_coverage_delta=1, generic_crossing_variation_bridge_delta=1, actual_zeta_top_variation_delta=1, actual_zeta_deriv_top_variation_delta=1, rh_frontier_delta=0." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

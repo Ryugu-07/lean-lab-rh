@@ -10,7 +10,8 @@ Selected node:
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `PREREGISTERED / PRODUCTION_BLOCKED_PENDING_PUBLIC_CI`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / LOCAL_AUDIT_GREEN /
+PUBLIC_IMPLEMENTATION_CI_REQUIRED`
 
 ## Historical statement
 
@@ -210,3 +211,31 @@ separately compiled.
 No `LeanLab/`, `LeanLab/Riemann/Targets.lean`, `LeanLab/Riemann/TargetChecks.lean`,
 `LeanLab/Riemann/AxiomsAudit.lean`, or `LeanLab.lean` edit is allowed until this docs-only
 preregistration passes public Lean Action CI.
+
+The production gate passed at commit `01a51d79a350f4dd4d9a8bf46bd3458b9ec44ff2`,
+Lean Action run `30532626405`, build job `90838279704`, in `1m37s`.
+
+## Local outcome
+
+All nine fixed proof-chain steps compile in the 946-line no-sorry
+`LeanLab/Riemann/LevinsonMontgomeryTopArgumentVariation.lean`.
+
+The generic theorem partitions a nonvanishing differentiable path at a finite real-part
+crossing superset and proves
+
+```text
+abs(Im integral(g'/g)) <= pi * (card crossings + 1).
+```
+
+Each crossing-free gap uses its own valid right- or left-half-plane logarithm. The actual
+zeta and phase-normalized zeta-derivative crossings are charged to their Jensen divisor
+supports, support cardinality is charged to multiplicity, common zero-free heights on
+`[0,1]` occur cofinally, and the phase cancels exactly from `zeta''/zeta'`.
+
+Nine exact TargetChecks and eight selected axiom prints pass warning-as-error. The selected
+theorems depend only on `propext`, `Classical.choice`, and `Quot.sound`. The forbidden scan and
+`git diff --check` are empty; full `lake build` passes `8816/8816` with inherited warnings only.
+
+The implementation must now pass public Lean Action CI before immutable evidence is published.
+The global indented argument principle, bottom orientation, both Levinson--Montgomery count
+outputs, Speiser equivalence, H12, and RH remain open.

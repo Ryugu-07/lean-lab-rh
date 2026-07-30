@@ -3,6 +3,7 @@ import LeanLab.Riemann.MaynardPrattTypeIIGlobalCharge
 import LeanLab.Riemann.ChebyshevMellin
 import LeanLab.Riemann.ChebyshevReverseZeroExclusion
 import LeanLab.Riemann.LevinsonMontgomeryJensenTopZeroCount
+import LeanLab.Riemann.LevinsonMontgomeryTopArgumentVariation
 import LeanLab.Riemann.FareyFranel
 import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.InfiniteReciprocalTraceAudit
@@ -1382,3 +1383,11 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.exists_levinsonMontgomeryZetaDerivTopSymm_sum_divisor_le_log
 #print axioms LeanLab.Riemann.levinsonMontgomeryZetaTop_crossing_mem_divisorSupport
 #print axioms LeanLab.Riemann.levinsonMontgomeryZetaDerivTop_crossing_mem_divisorSupport
+#print axioms LeanLab.Riemann.abs_im_intervalIntegral_deriv_div_le_of_crossings_subset
+#print axioms LeanLab.Riemann.exists_levinsonMontgomeryTopAdmissible_above
+#print axioms LeanLab.Riemann.compactDivisorSupportFinset_card_le_finsum
+#print axioms LeanLab.Riemann.abs_im_levinsonMontgomeryZetaTopLogDeriv_le_card
+#print axioms LeanLab.Riemann.abs_im_levinsonMontgomeryZetaDerivTopLogDeriv_le_card
+#print axioms LeanLab.Riemann.exists_levinsonMontgomeryTopArgumentVariation_le_log
+#print axioms LeanLab.Riemann.exists_cofinal_levinsonMontgomeryTopArgumentVariation
+#print axioms LeanLab.Riemann.levinsonMontgomeryTopArgumentVariation_endpoint

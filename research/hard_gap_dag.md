@@ -4928,3 +4928,38 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `production_gate`: no `LeanLab/` or registration edit before docs-only preregistration
   public CI.
 - `global_goal`: active.
+
+## 2026-07-30 H12 top argument variation local result
+
+- `campaign`:
+  `LITERATURE-20260730-H12-LEVINSON-MONTGOMERY-TOP-ARGUMENT-VARIATION-01`.
+- `node`: `H12-LM-JENSEN-TOP-VARIATION-01`.
+- `status`: `FULL_FIXED_ENDPOINT_SUCCESS / LOCAL_AUDIT_GREEN /
+  PUBLIC_IMPLEMENTATION_CI_REQUIRED`.
+- `K0-H12-FINITE-CROSSING-VARIATION-01`: closed. A finite superset of all interior
+  real-part crossings gives `abs(Im integral(g'/g)) <= pi*(card+1)` for a differentiable
+  nonvanishing path. Each gap uses a valid local half-plane logarithm.
+- `K0-H12-DIVISOR-SUPPORT-CARDINALITY-01`: closed. Analyticity makes support
+  multiplicities positive integers, so support cardinality is at most the divisor finsum.
+- `K0-H12-FULL-TOP-ADMISSIBILITY-01`: closed. Actual zeta and derivative divisors admit
+  common zero-free heights on the full source interval `[0,1]` above every bound.
+- `H12-LM-JENSEN-TOP-VARIATION-01`: closed locally. Both actual top-side logarithmic-
+  derivative integral imaginary parts are `O(log(t+2))` at every sufficiently large
+  admissible height and simultaneously at cofinal admissible heights. The derivative phase
+  cancels exactly from `zeta''/zeta'`.
+- `local_audit`: 946-line no-sorry module; nine exact checks; eight selected axiom prints
+  using only `propext`, `Classical.choice`, and `Quot.sound`; empty forbidden scan and patch
+  check; full build `8816/8816`.
+- `result`: `research/h12_levinson_montgomery_top_argument_variation_result_20260730.md`.
+- `classification`: `historical_route_coverage_delta=1`,
+  `generic_crossing_variation_bridge_delta=1`, `actual_zeta_top_variation_delta=1`,
+  `actual_zeta_deriv_top_variation_delta=1`, `global_argument_principle_delta=0`,
+  `levinson_montgomery_count_delta=0`, `speiser_delta=0`, `rh_frontier_delta=0`,
+  `rh_proved=0`.
+- `strict_boundary`: the multiplicity-aware global indented argument principle, exact bottom
+  orientation, both count identities, the full dichotomy, Speiser equivalence, H12, and RH
+  remain open.
+- `next_gate`: frozen implementation public Lean Action CI, then docs-only immutable evidence.
+- `rotation_after_closure`: fresh cross-family selection is mandatory; the adjacent global
+  count edge receives no automatic priority.
+- `global_goal`: active.

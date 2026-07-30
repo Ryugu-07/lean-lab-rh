@@ -11,6 +11,7 @@ import LeanLab.Riemann.LevinsonMontgomeryCriticalIndentation
 import LeanLab.Riemann.SpeiserAdmissibleContour
 import LeanLab.Riemann.LevinsonMontgomeryLeftHalfPlaneWinding
 import LeanLab.Riemann.LevinsonMontgomeryJensenTopZeroCount
+import LeanLab.Riemann.LevinsonMontgomeryTopArgumentVariation
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -6780,5 +6781,85 @@ example {t x : ℝ} (ht : 23 ≤ t)
         (Metric.closedBall levinsonMontgomeryJensenCenter
           levinsonMontgomeryJensenInnerRadius)) :=
   levinsonMontgomeryZetaDerivTop_crossing_mem_divisorSupport ht hx hzero
+
+example
+    {g g' : ℝ → ℂ} {a b : ℝ}
+    (hab : a ≤ b)
+    (hderiv : ∀ x ∈ Set.Icc a b, HasDerivAt g (g' x) x)
+    (hintegrable :
+      IntervalIntegrable (fun x => g' x / g x)
+        (MeasureTheory.volume : MeasureTheory.Measure ℝ) a b)
+    (hne : ∀ x ∈ Set.Icc a b, g x ≠ 0)
+    (S : Finset ℝ)
+    (hcross : ∀ x ∈ Set.Ioo a b, (g x).re = 0 → x ∈ S) :
+    abs ((∫ x : ℝ in a..b, g' x / g x).im) ≤
+      Real.pi * ((S.card : ℝ) + 1) :=
+  abs_im_intervalIntegral_deriv_div_le_of_crossings_subset
+    hab hderiv hintegrable hne S hcross
+
+example (B : ℝ) :
+    ∃ t : ℝ, B < t ∧ LevinsonMontgomeryTopAdmissible t :=
+  exists_levinsonMontgomeryTopAdmissible_above B
+
+example
+    {f : ℂ → ℂ} {K : Set ℂ} (hK : IsCompact K)
+    (hanalytic : AnalyticOnNhd ℂ f K) :
+    ((compactDivisorSupportFinset f K hK).card : ℤ) ≤
+      ∑ᶠ z : ℂ, MeromorphicOn.divisor f K z :=
+  compactDivisorSupportFinset_card_le_finsum hK hanalytic
+
+example {t : ℝ} (htLarge : 23 ≤ t)
+    (ht : LevinsonMontgomeryTopAdmissible t) :
+    abs ((∫ sigma : ℝ in (0 : ℝ)..1,
+      logDeriv riemannZeta (sigma + t * Complex.I)).im) ≤
+      Real.pi *
+        (((levinsonMontgomeryZetaTopCrossingFinset t).card : ℝ) + 1) :=
+  abs_im_levinsonMontgomeryZetaTopLogDeriv_le_card htLarge ht
+
+example {t : ℝ} (htLarge : 23 ≤ t)
+    (ht : LevinsonMontgomeryTopAdmissible t) :
+    abs ((∫ sigma : ℝ in (0 : ℝ)..1,
+      logDeriv (deriv riemannZeta) (sigma + t * Complex.I)).im) ≤
+      Real.pi *
+        (((levinsonMontgomeryZetaDerivTopCrossingFinset t).card : ℝ) + 1) :=
+  abs_im_levinsonMontgomeryZetaDerivTopLogDeriv_le_card htLarge ht
+
+example :
+    ∃ C T0 : ℝ, 0 ≤ C ∧
+      ∀ t : ℝ, T0 ≤ t → LevinsonMontgomeryTopAdmissible t →
+        abs ((∫ sigma : ℝ in (0 : ℝ)..1,
+          logDeriv riemannZeta (sigma + t * Complex.I)).im) ≤
+            C * Real.log (t + 2) :=
+  exists_abs_im_levinsonMontgomeryZetaTopLogDeriv_le_log
+
+example :
+    ∃ C T0 : ℝ, 0 ≤ C ∧
+      ∀ t : ℝ, T0 ≤ t → LevinsonMontgomeryTopAdmissible t →
+        abs ((∫ sigma : ℝ in (0 : ℝ)..1,
+          logDeriv (deriv riemannZeta) (sigma + t * Complex.I)).im) ≤
+            C * Real.log (t + 2) :=
+  exists_abs_im_levinsonMontgomeryZetaDerivTopLogDeriv_le_log
+
+example :
+    ∃ C T0 : ℝ, 0 ≤ C ∧
+      ∀ t : ℝ, T0 ≤ t → LevinsonMontgomeryTopAdmissible t →
+        abs ((∫ sigma : ℝ in (0 : ℝ)..1,
+          logDeriv riemannZeta (sigma + t * Complex.I)).im) ≤
+            C * Real.log (t + 2) ∧
+        abs ((∫ sigma : ℝ in (0 : ℝ)..1,
+          logDeriv (deriv riemannZeta) (sigma + t * Complex.I)).im) ≤
+            C * Real.log (t + 2) :=
+  exists_levinsonMontgomeryTopArgumentVariation_le_log
+
+example :
+    ∃ C : ℝ, 0 ≤ C ∧
+      ∀ B : ℝ, ∃ t : ℝ, B < t ∧ LevinsonMontgomeryTopAdmissible t ∧
+        abs ((∫ sigma : ℝ in (0 : ℝ)..1,
+          logDeriv riemannZeta (sigma + t * Complex.I)).im) ≤
+            C * Real.log (t + 2) ∧
+        abs ((∫ sigma : ℝ in (0 : ℝ)..1,
+          logDeriv (deriv riemannZeta) (sigma + t * Complex.I)).im) ≤
+            C * Real.log (t + 2) :=
+  exists_cofinal_levinsonMontgomeryTopArgumentVariation
 
 end LeanLab.Riemann
