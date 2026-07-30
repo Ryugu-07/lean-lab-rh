@@ -4971,3 +4971,37 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `rotation_after_closure`: fresh cross-family selection is mandatory; the adjacent global
   count edge receives no automatic priority.
 - `global_goal`: active.
+
+## 2026-07-31 H12 Levinson--Montgomery global count re-entry launch
+
+- `parent_public_closure`: actual top argument variation closure-ledger commit
+  `08ab39cf512b7820a7c78f5fd87425486566e633`, Lean Action run `30535005156`,
+  build job `90846086790`, passed in `1m34s`.
+- `selection_rule`: historical work is omission search. H12 is selected after cross-family
+  comparison because newly compiled actual top bounds surround a precise source-logic gap, not
+  because the node is adjacent.
+- `campaign`:
+  `LITERATURE-20260731-H12-LEVINSON-MONTGOMERY-GLOBAL-COUNT-REENTRY-01`.
+- `node`: `H12-LM-GLOBAL-INDENTED-COUNT-01`.
+- `source_hinge`: strict negativity at every nonzero point of an integer-height open segment
+  should itself exclude interior zeta zeros. A positive-multiplicity zero forces
+  `Re(zeta'/zeta)>0` immediately to its right.
+- `K0-H12-NEGATIVE-HEIGHT-INTERIOR-ZERO-EXCLUSION-01`: selected. Prove the contradiction using
+  actual analytic factorization and punctured nonzero points, never the totalized value at the
+  zero.
+- `K0-H12-NEGATIVE-HEIGHT-CONTOUR-GEOMETRY-01`: selected. Upgrade the open segment to actual
+  zeta and derivative nonvanishing, add the left boundary, and split the critical endpoint into
+  nonzero or the compiled multiplicity-aware indentation.
+- `K0-H12-CONTOUR-OR-DENSE-DICHOTOMY-01`: selected. Combine the source integer-height
+  alternative with the actual negative geometry or the already compiled linear-density branch.
+- `H12-LM-GLOBAL-INDENTED-COUNT-01`: selected full endpoint. Prove the actual finite
+  multiplicity-aware argument principle, count identity, logarithmic count bound, and
+  exact-or-dense dichotomy.
+- `material_reentry`: unlike the failed common-bottom orientation, this attack uses a
+  source-produced strict-left branch plus the compiled principal-log winding and actual top
+  variation theorems.
+- `negative_controls`: no log derivative at a zero, no zero simplicity, no principal endpoint
+  argument substitution, no nonvanishing-to-zero-winding inference, and no conditional count or
+  RH premise.
+- `production_gate`: no Lean or registration edit before docs-only preregistration public CI.
+- `global_goal`: active.
