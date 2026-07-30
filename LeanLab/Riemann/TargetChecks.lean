@@ -3,6 +3,7 @@ import LeanLab.Riemann.MaynardPrattTypeIIGlobalCharge
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
+import LeanLab.Riemann.PCCSlowWindowDiagonal
 import LeanLab.Riemann.LevinsonMontgomeryPairedMassDensity
 import LeanLab.Riemann.LevinsonMontgomeryLogDerivMassBridge
 import LeanLab.Riemann.LevinsonMontgomeryBoundarySigns
@@ -5146,6 +5147,59 @@ example {T U : ℝ} (hU : 0 ≤ U) :
 example :
     PairCorrelationMovingWindowBoundaryCertificate :=
   pairCorrelationMovingWindowBoundary_endpoint
+
+example {e : ℕ → ℕ → ℝ} {cap : ℕ → ℕ}
+    (hcap : Tendsto cap atTop atTop)
+    (he : ∀ k, 0 < k → Tendsto (fun n => e n k) atTop (𝓝 0)) :
+    Tendsto (pccSlowWindow e cap) atTop atTop :=
+  tendsto_pccSlowWindow_atTop hcap he
+
+example {e : ℕ → ℕ → ℝ} {cap : ℕ → ℕ}
+    (hcap : Tendsto cap atTop atTop)
+    (he : ∀ k, 0 < k → Tendsto (fun n => e n k) atTop (𝓝 0)) :
+    ∀ᶠ n in atTop, pccSlowWindow e cap n ≤ cap n :=
+  eventually_pccSlowWindow_le_cap hcap he
+
+example {e : ℕ → ℕ → ℝ} {cap : ℕ → ℕ}
+    (hcap : Tendsto cap atTop atTop)
+    (he : ∀ k, 0 < k → Tendsto (fun n => e n k) atTop (𝓝 0)) :
+    Tendsto (fun n => e n (pccSlowWindow e cap n)) atTop (𝓝 0) :=
+  tendsto_pccSlowWindow_error_zero hcap he
+
+example {e : ℕ → ℕ → ℝ} {cap : ℕ → ℕ}
+    (hcap : Tendsto cap atTop atTop)
+    (he : ∀ k, 0 < k → Tendsto (fun n => e n k) atTop (𝓝 0)) :
+    ∃ window : ℕ → ℕ,
+      Tendsto window atTop atTop ∧
+      (∀ᶠ n in atTop, 0 < window n) ∧
+      (∀ᶠ n in atTop, window n ≤ cap n) ∧
+      Tendsto (fun n => e n (window n)) atTop (𝓝 0) ∧
+      Tendsto (fun n => ((window n : ℝ)⁻¹)) atTop (𝓝 0) ∧
+      Tendsto (fun n => (window n : ℝ)) atTop atTop :=
+  exists_pccSlowWindow hcap he
+
+example {e : ℕ → ℕ → ℝ} {L : ℕ → ℕ}
+    (hsqrt : Tendsto (fun n => Nat.sqrt (L n)) atTop atTop)
+    (he : ∀ k, 0 < k → Tendsto (fun n => e n k) atTop (𝓝 0)) :
+    ∃ window : ℕ → ℕ,
+      Tendsto window atTop atTop ∧
+      (∀ᶠ n in atTop, 0 < window n) ∧
+      (∀ᶠ n in atTop, window n ^ 2 ≤ L n) ∧
+      Tendsto (fun n => e n (window n)) atTop (𝓝 0) ∧
+      Tendsto (fun n => ((window n : ℝ)⁻¹)) atTop (𝓝 0) :=
+  exists_pccSlowWindow_sq_le hsqrt he
+
+example (k : ℕ) :
+    Tendsto (fun n => pccFastDiagonalError n k) atTop (𝓝 0) :=
+  tendsto_pccFastDiagonalError_fixed k
+
+example (n : ℕ) :
+    pccFastDiagonalError n (n + 1) = 1 :=
+  pccFastDiagonalError_fast n
+
+example :
+    ¬Tendsto (fun n => pccFastDiagonalError n (n + 1)) atTop (𝓝 0) :=
+  not_tendsto_pccFastDiagonalError_fast
 
 example {ι : Type} [Fintype ι] (gamma : ι → ℝ) :
     triangularPairMass gamma 0 = 0 := by

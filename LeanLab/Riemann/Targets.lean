@@ -142,6 +142,7 @@ import LeanLab.Riemann.ConnesProjectionDefect
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.BombieriStepanovPolarInjectivity
 import LeanLab.Riemann.BombieriStepanovRationalPolar
+import LeanLab.Riemann.PCCSlowWindowDiagonal
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -1782,6 +1783,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``pairCorrelationMovingWindowBoundary_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260728-H11-MOVING-WINDOW-BOUNDARY-01 audits the boundary bookkeeping in the proof of equation (5.3). A point at T+U has zero literal overlap with [0,T] but full triangular self-weight U, so the future block is not termwise identical to the displayed triangular replacement; the source's O(L^2) proposition remains valid. Lean retains an exact nonnegative remainder supported on (T-U,T+U], giving a loss-free one-sided interior-mass inequality. The actual-zeta theorem keeps the unavailable first-zero lower support as an explicit premise. Fujii's estimate, PCC, absolute last-exception control, sparse-exception amplification, H11, and RH remain open." },
+    { id := "H11.pcc.slow-window-diagonal"
+      tier := .tier2
+      title := "Justify the PCC slow moving-window diagonal"
+      statement :=
+        "From convergence of every fixed positive parameter and any external cap tending to infinity, construct a positive moving parameter tending to infinity, staying eventually below the cap, and carrying the error to zero; prove reciprocal lower-window convergence, preserve the square constraint under a Nat.sqrt cap, and exhibit a fixed-parameter-convergent array whose fast diagonal stays equal to one."
+      leanName := some ``exists_pccSlowWindow_sq_le
+      status := .proven
+      note := "Campaign LITERATURE-20260730-H11-PCC-SLOW-WINDOW-DIAGONAL-01 formalizes the quantifier bridge behind Goldston--Lee--Schettler--Suriajaya Remark 1 and Section 8. The selector takes the greatest currently admissible positive stage with error below its reciprocal. Every fixed stage eventually becomes admissible, so the selected stage diverges while retaining any divergent cap; a Nat.sqrt cap gives the exact square constraint. The fast-diagonal counterexample proves fixed-parameter convergence does not license arbitrary moving parameters. This does not prove PCC, its required uniform error estimate, HMH, sparse-exception amplification, H11, or RH." },
     { id := "H11.pcc.sparse-exception-amplification"
       tier := .tier2
       title := "Eliminate sparse horizontal-multiplicity exceptions"

@@ -4727,3 +4727,32 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   conclusion, sparse-exception exclusion, H11, or RH.
 - `production_gate`: no `LeanLab/` or registration edit before preregistration public CI.
 - `global_goal`: active.
+
+## 2026-07-30 H11 PCC slow-window diagonal local closure
+
+- `campaign`: `LITERATURE-20260730-H11-PCC-SLOW-WINDOW-DIAGONAL-01`.
+- `prereg_public_green`: commit `3ab1ad271ccd4ea61b99097774d2607fb777b5df`,
+  Lean Action run `30519421563`, build job `90796328588`, passed in `2m3s`.
+- `K0-H11-SLOW-WINDOW-SELECTOR-01`: complete. `pccSlowWindow` is the greatest currently
+  admissible positive stage below the sample horizon.
+- `K0-H11-SLOW-WINDOW-DIVERGENCE-01`: complete. Every fixed positive stage eventually becomes
+  admissible, forcing the selected stage to infinity.
+- `K0-H11-SLOW-WINDOW-CAP-01`: complete. The selected stage is eventually positive and below
+  every supplied divergent cap.
+- `K0-H11-SLOW-WINDOW-ERROR-01`: complete. The selected error is bounded by the reciprocal
+  selected stage and tends to zero; the reciprocal lower window tends to zero and the upper
+  window tends to infinity.
+- `K0-H11-SLOW-WINDOW-SQUARE-CAP-01`: complete. A `Nat.sqrt (L n)` cap preserves
+  `window(n)^2<=L(n)` eventually.
+- `OBS-H11-ARBITRARY-FAST-DIAGONAL-01`: closed negatively. The array equal to zero for
+  `k<=n` and one for `k>n` converges at every fixed stage, while `k=n+1` has constant error one.
+- `local_audit`: standalone warning-as-error module, Targets, TargetChecks, and AxiomsAudit
+  pass; eight exact checks and seven selected standard-only axiom prints pass; three forbidden
+  scans are empty; full build passes `8813/8813` with inherited warnings only.
+- `next_source_edge`: instantiate the abstract error array with the actual fixed-compact PCC
+  remainder and compose the chosen window through the Fejer/Fujii calculation toward HMH.
+- `strict_boundary`: no PCC remainder estimate, Fujii theorem, Fejer asymptotic, HMH,
+  density-one conclusion, sparse-exception exclusion, H11, or RH.
+- `result`: `research/h11_pcc_slow_window_diagonal_result_20260730.md`.
+- `public_gate`: implementation public CI and immutable evidence remain required.
+- `global_goal`: active.

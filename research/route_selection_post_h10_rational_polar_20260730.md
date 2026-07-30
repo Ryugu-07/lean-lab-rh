@@ -2,7 +2,7 @@
 
 Date: 2026-07-30
 
-Status: `H11_PCC_SLOW_WINDOW_DIAGONAL_SELECTED`
+Status: `H11_PCC_SLOW_WINDOW_DIAGONAL_LOCAL_SUCCESS`
 
 Parent campaign:
 `LITERATURE-20260730-H10-BOMBIERI-STEPANOV-RATIONAL-POLAR-REALIZATION-01`
@@ -49,3 +49,15 @@ This node does not prove PCC, Fujii's moment theorem, the Fejer-kernel asymptoti
 density-one critical zeros, sparse-exception exclusion, H11, or RH. It tests whether the source's
 moving-window passage is logically available from its stated fixed-window uniformity.
 
+## Local outcome
+
+The selected bridge compiles. The greatest currently admissible stage tends to infinity while
+staying below any prescribed divergent cap and carrying the error to zero. A `Nat.sqrt L` cap
+retains the exact square constraint from Section 8. The fixed-stage-convergent fast-diagonal
+counterexample also compiles, so the result licenses a sufficiently slow choice and no stronger
+moving-parameter claim.
+
+The next source-facing H11 edge is no longer the abstract diagonal argument. It is to express the
+actual PCC remainder as a fixed-stage error family and verify that the source's fixed compact
+uniformity supplies each hypothesis before composing the selected window with the
+PCC-to-HMH calculation.

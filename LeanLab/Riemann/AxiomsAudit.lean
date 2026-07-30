@@ -32,6 +32,7 @@ import LeanLab.Riemann.ConnesGroundStateWeightedComparison
 import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
 import LeanLab.Riemann.PairCorrelationTriangularMass
+import LeanLab.Riemann.PCCSlowWindowDiagonal
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
 import LeanLab.Riemann.TuringCompletenessConsumer
@@ -1148,6 +1149,13 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.futureEndpoint_overlap_ne_triangular
 #print axioms LeanLab.Riemann.pccMovingWindowSecondMoment_eq_interior_add_boundary
 #print axioms LeanLab.Riemann.pairCorrelationMovingWindowBoundary_endpoint
+#print axioms LeanLab.Riemann.tendsto_pccSlowWindow_atTop
+#print axioms LeanLab.Riemann.eventually_pccSlowWindow_le_cap
+#print axioms LeanLab.Riemann.tendsto_pccSlowWindow_error_zero
+#print axioms LeanLab.Riemann.exists_pccSlowWindow
+#print axioms LeanLab.Riemann.exists_pccSlowWindow_sq_le
+#print axioms LeanLab.Riemann.tendsto_pccFastDiagonalError_fixed
+#print axioms LeanLab.Riemann.not_tendsto_pccFastDiagonalError_fast
 #print axioms LeanLab.Riemann.hardyXi_two_mul_eq_deBruijnNewmanH_zero_four_mul
 #print axioms LeanLab.Riemann.exists_interior_hardyXiAbelMoment_odd_neg
 #print axioms LeanLab.Riemann.exists_interior_hardyXiAbelMoment_even_pos

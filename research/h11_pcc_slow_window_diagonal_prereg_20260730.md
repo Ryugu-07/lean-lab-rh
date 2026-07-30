@@ -10,7 +10,15 @@ Selected node:
 
 Mode: `LITERATURE / OMISSION-AUDIT / FALSIFICATION`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `PREREGISTRATION_PUBLIC_GREEN / IMPLEMENTATION_LOCAL_GREEN`
+
+Preregistration public receipt:
+
+- commit: `3ab1ad271ccd4ea61b99097774d2607fb777b5df`;
+- Lean Action run: `30519421563`;
+- build job: `90796328588`;
+- duration: `2m3s`;
+- result: pass.
 
 ## Primary-source anchor
 
@@ -79,4 +87,3 @@ Expected classification:
 
 No `LeanLab/` or theorem-registration file may be created or edited before this docs-only
 preregistration passes public Lean Action CI.
-
