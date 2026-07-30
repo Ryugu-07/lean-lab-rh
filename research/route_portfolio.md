@@ -4690,3 +4690,9 @@ Levinson--Montgomery theorem. The multiplicity-aware global indented argument pr
 exact bottom orientation, both count identities, the full dichotomy, Speiser equivalence,
 H12, and RH remain open. The implementation must pass public CI and immutable-evidence gates;
 after closure, route selection returns to a fresh cross-family comparison.
+
+Frozen implementation `adfc63d2d4c33fe3535180a8eac83d6d9e703c50` passed Lean Action
+run `30534415162`, build job `90844126333`, in `2m39s`. The five proof and registration blobs
+are frozen in
+`research/h12_levinson_montgomery_top_argument_variation_evidence_20260730.md`; docs-only
+immutable-evidence CI is the next gate.

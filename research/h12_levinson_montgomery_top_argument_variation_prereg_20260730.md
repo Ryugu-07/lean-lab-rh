@@ -10,8 +10,8 @@ Selected node:
 
 Mode: `LITERATURE / OMISSION_AUDIT / PROOF-ATTEMPT`
 
-Status: `FULL_FIXED_ENDPOINT_SUCCESS / LOCAL_AUDIT_GREEN /
-PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / PUBLIC_IMPLEMENTATION_GREEN /
+IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Historical statement
 
@@ -236,6 +236,8 @@ Nine exact TargetChecks and eight selected axiom prints pass warning-as-error. T
 theorems depend only on `propext`, `Classical.choice`, and `Quot.sound`. The forbidden scan and
 `git diff --check` are empty; full `lake build` passes `8816/8816` with inherited warnings only.
 
-The implementation must now pass public Lean Action CI before immutable evidence is published.
-The global indented argument principle, bottom orientation, both Levinson--Montgomery count
-outputs, Speiser equivalence, H12, and RH remain open.
+Frozen implementation commit `adfc63d2d4c33fe3535180a8eac83d6d9e703c50` passed Lean Action
+run `30534415162`, build job `90844126333`, in `2m39s`. Immutable evidence is recorded in
+`research/h12_levinson_montgomery_top_argument_variation_evidence_20260730.md`; its independent
+public CI remains required. The global indented argument principle, bottom orientation, both
+Levinson--Montgomery count outputs, Speiser equivalence, H12, and RH remain open.

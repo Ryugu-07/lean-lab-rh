@@ -5,8 +5,8 @@ Date: 2026-07-30
 Campaign:
 `LITERATURE-20260730-H12-LEVINSON-MONTGOMERY-TOP-ARGUMENT-VARIATION-01`
 
-Status: `FULL_FIXED_ENDPOINT_SUCCESS / LOCAL_AUDIT_GREEN /
-PUBLIC_IMPLEMENTATION_CI_REQUIRED`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / PUBLIC_IMPLEMENTATION_GREEN /
+IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Result
 
@@ -92,6 +92,8 @@ Levinson--Montgomery page 52. It does not assemble the multiplicity-aware global
 argument principle, prove the exact bottom orientation, or derive either global count identity.
 The complete Levinson--Montgomery dichotomy, Speiser equivalence, H12, and RH remain open.
 
-The implementation must pass public Lean Action CI before immutable evidence and a closure
-ledger are published. After closure, the next route is selected by a fresh cross-family
-omission-seeking comparison, not by adjacency.
+Frozen implementation commit `adfc63d2d4c33fe3535180a8eac83d6d9e703c50` passed Lean Action
+run `30534415162`, build job `90844126333`, in `2m39s`. Immutable evidence is recorded in
+`research/h12_levinson_montgomery_top_argument_variation_evidence_20260730.md`; its public CI
+and the final closure ledger remain. After closure, the next route is selected by a fresh
+cross-family omission-seeking comparison, not by adjacency.

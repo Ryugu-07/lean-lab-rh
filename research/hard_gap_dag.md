@@ -4934,8 +4934,8 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `campaign`:
   `LITERATURE-20260730-H12-LEVINSON-MONTGOMERY-TOP-ARGUMENT-VARIATION-01`.
 - `node`: `H12-LM-JENSEN-TOP-VARIATION-01`.
-- `status`: `FULL_FIXED_ENDPOINT_SUCCESS / LOCAL_AUDIT_GREEN /
-  PUBLIC_IMPLEMENTATION_CI_REQUIRED`.
+- `status`: `FULL_FIXED_ENDPOINT_SUCCESS / PUBLIC_IMPLEMENTATION_GREEN /
+  IMMUTABLE_EVIDENCE_CI_REQUIRED`.
 - `K0-H12-FINITE-CROSSING-VARIATION-01`: closed. A finite superset of all interior
   real-part crossings gives `abs(Im integral(g'/g)) <= pi*(card+1)` for a differentiable
   nonvanishing path. Each gap uses a valid local half-plane logarithm.
@@ -4959,7 +4959,11 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `strict_boundary`: the multiplicity-aware global indented argument principle, exact bottom
   orientation, both count identities, the full dichotomy, Speiser equivalence, H12, and RH
   remain open.
-- `next_gate`: frozen implementation public Lean Action CI, then docs-only immutable evidence.
+- `public_implementation`: commit `adfc63d2d4c33fe3535180a8eac83d6d9e703c50`,
+  Lean Action run `30534415162`, build job `90844126333`, passed in `2m39s`.
+- `immutable_evidence`:
+  `research/h12_levinson_montgomery_top_argument_variation_evidence_20260730.md`.
+- `next_gate`: docs-only immutable-evidence public Lean Action CI.
 - `rotation_after_closure`: fresh cross-family selection is mandatory; the adjacent global
   count edge receives no automatic priority.
 - `global_goal`: active.
