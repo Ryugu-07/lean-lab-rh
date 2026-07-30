@@ -5,7 +5,7 @@ Date: 2026-07-30
 Campaign:
 `LITERATURE-20260730-H10-BOMBIERI-STEPANOV-RATIONAL-POLAR-REALIZATION-01`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLICATION_REQUIRED`
 
 ## Goal
 
@@ -23,11 +23,16 @@ condition at its equality boundary.
 | 4 | `MATHLIB_SURVEY` | Mathlib supplies `RatFunc K`, its injective polynomial algebra map, integer degree, and `RatFunc.inftyValuation`; it does not supply a ready general-curve Riemann--Roch theorem. | Select the rational-curve specialization with an explicit general-curve boundary. |
 | 5 | `FALSIFICATION_DESIGN` | The source condition `l * pPower < q` has a sharp collision at equality: exponents `(1,0)` and `(0,1)` coincide when `pPower=q`. | Require this negative witness in the fixed endpoint. |
 | 6 | `PREREGISTRATION` | Exact positive, negative, valuation, audit, and claim-boundary gates are frozen in `research/h10_bombieri_stepanov_rational_polar_prereg_20260730.md`. | Publish docs-only preregistration and wait for public CI before Lean edits. |
+| 7 | `PREREGISTRATION_PUBLIC_CI` | Commit `e0101629812eb788a6d579e6f5d9b02a4db43fb9` passed Lean Action run `30517894620`, build job `90791696200`, in `1m40s`. | Open production. |
+| 8 | `EXPONENT_SEPARATION` | Division by `q` recovers the block index because `i*pPower<q`; positive multiplication cancellation recovers the within-block index. No coprimality premise is needed. | Build the polynomial and rational realizations. |
+| 9 | `ACTUAL_FUNCTION_FIELD` | `stepanovRationalPolarRealize` maps the finite source through `K[X]` into `RatFunc K`; exact coefficient recovery proves it injective under the source inequality. | Compose with the descent-kernel producer. |
+| 10 | `NONZERO_PRODUCTION` | `exists_stepanovRationalPolar_ne_zero_mem_ker` produces a descent-kernel coefficient family whose rational realization is nonzero whenever the target finrank is smaller. | Check the valued-field interpretation. |
+| 11 | `VALUATION_CERTIFICATE` | Every basis vector realizes to the expected power of `RatFunc.X`; its infinity valuation is exactly the exponential of the source polar exponent. | Run the strict-boundary falsification. |
+| 12 | `FALSIFICATION` | `stepanovPolar_strict_separation_is_sharp` proves a nonzero two-term source realizes to zero at `l=1`, `pPower=q=1`. | Register and audit. |
+| 13 | `LOCAL_AUDIT` | Module, target registry, six exact checks, selected standard-only axiom prints, three forbidden scans, `git diff --check`, and full `8812/8812` build pass. | Publish the frozen implementation. |
 
 ## Current boundary
 
-No production proof has started. The selected endpoint is an actual `K(t)` specialization, not
-the general smooth projective curve. Riemann--Roch dimensions, the general polar lemma, the
-Bombieri--Stepanov point count, function-field RH composition, number-field transfer, and RH
-remain open.
-
+The fixed `K(t)` endpoint is locally complete. It is not the general smooth projective curve.
+Riemann--Roch dimensions, the general pole-filtration lemma, the Bombieri--Stepanov point count,
+function-field RH composition, number-field transfer, and RH remain open.

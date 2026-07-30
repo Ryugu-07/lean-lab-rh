@@ -10,7 +10,7 @@ Selected node:
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTERED / PUBLIC_CI_REQUIRED`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLICATION_REQUIRED`
 
 ## Primary-source anchor
 
@@ -98,3 +98,17 @@ No `LeanLab/` or theorem-registration file may be created or edited until this d
 preregistration commit passes public Lean Action CI. Local failure after the gate must be logged
 with the first exact Lean or mathematical obstruction; it does not stop the persistent RH Goal.
 
+The production gate passed at commit `e0101629812eb788a6d579e6f5d9b02a4db43fb9`, public Lean
+Action run `30517894620`, build job `90791696200`, in `1m40s`.
+
+## Local result
+
+`LeanLab/Riemann/BombieriStepanovRationalPolar.lean` compiles the full fixed endpoint. The
+actual `RatFunc K` realization is injective under `pPower>0` and `l*pPower<q`, composes with the
+finite-dimensional kernel producer, and has exact infinity-valuation certificates. A compiled
+nonzero source vector realizes to zero at the equality boundary.
+
+All local gates pass: warning-as-error module/registry/check/audit compilation, six exact
+TargetChecks, six selected standard-only axiom prints, empty forbidden scans,
+`git diff --check`, and full `8812/8812` build. General curve geometry and every RH-strength
+successor remain open.

@@ -21,6 +21,7 @@ import LeanLab.Riemann.BerryKeatingHalfLine
 import LeanLab.Riemann.ConnesProjectionDefect
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.BombieriStepanovPolarInjectivity
+import LeanLab.Riemann.BombieriStepanovRationalPolar
 import LeanLab.Riemann.WeilHodgeLattice
 import LeanLab.Riemann.RedhefferMertensDeterminant
 import LeanLab.Riemann.RedhefferCharacteristicPolynomial
@@ -4750,6 +4751,50 @@ example :
           Polynomial.degreeLT ℚ 4) : ℚ[X]).coeff
         (finProdFinEquiv ((1 : Fin 2), (1 : Fin 2)))) = 1 :=
   stepanovPolarBlock_two_witness
+
+example (l m pPower q : ℕ) (hpPower : 0 < pPower)
+    (hseparate : l * pPower < q) :
+    Function.Injective (stepanovPolarExponent l m pPower q) :=
+  stepanovPolarExponent_injective l m pPower q hpPower hseparate
+
+example (K : Type*) [Field K] (l m pPower q : ℕ)
+    (hpPower : 0 < pPower) (hseparate : l * pPower < q)
+    (u : StepanovPolarSource K l m)
+    (ij : Fin (l + 1) × Fin (m + 1)) :
+    (stepanovPolarPolynomialRealize K l m pPower q u).coeff
+        (stepanovPolarExponent l m pPower q ij) = u ij :=
+  stepanovPolarPolynomialRealize_coeff K l m pPower q
+    hpPower hseparate u ij
+
+example (K : Type*) [Field K] (l m pPower q : ℕ)
+    (hpPower : 0 < pPower) (hseparate : l * pPower < q) :
+    Function.Injective (stepanovRationalPolarRealize K l m pPower q) :=
+  stepanovRationalPolarRealize_injective K l m pPower q hpPower hseparate
+
+example {K W : Type*} [Field K]
+    [AddCommGroup W] [Module K W] [FiniteDimensional K W]
+    (l m pPower q : ℕ) (hpPower : 0 < pPower)
+    (hseparate : l * pPower < q)
+    (delta : StepanovPolarSource K l m →ₗ[K] W)
+    (hdim : Module.finrank K W <
+      Module.finrank K (StepanovPolarSource K l m)) :
+    ∃ u : StepanovPolarSource K l m,
+      delta u = 0 ∧ stepanovRationalPolarRealize K l m pPower q u ≠ 0 :=
+  exists_stepanovRationalPolar_ne_zero_mem_ker
+    l m pPower q hpPower hseparate delta hdim
+
+example (K : Type*) [Field K] [DecidableEq (RatFunc K)]
+    (l m pPower q : ℕ) (ij : Fin (l + 1) × Fin (m + 1)) :
+    RatFunc.inftyValuation K
+        (stepanovRationalPolarRealize K l m pPower q (Finsupp.single ij 1)) =
+      WithZero.exp (stepanovPolarExponent l m pPower q ij : ℤ) :=
+  stepanovRationalPolarRealize_single_inftyValuation K l m pPower q ij
+
+example :
+    stepanovPolarEqualityCollision ≠ 0 ∧
+      stepanovRationalPolarRealize ℚ 1 1 1 1
+        stepanovPolarEqualityCollision = 0 :=
+  stepanovPolar_strict_separation_is_sharp
 
 example (N : ℕ) :
     finiteMertens N =

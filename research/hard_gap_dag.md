@@ -4674,3 +4674,32 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `production_gate`: no `LeanLab/` or registration edit before docs-only preregistration public
   CI.
 - `global_goal`: active.
+
+## 2026-07-30 H10 rational-function-field polar realization local endpoint
+
+- `preregistration_public_green`: commit
+  `e0101629812eb788a6d579e6f5d9b02a4db43fb9`, Lean Action run `30517894620`, build job
+  `90791696200`, passed in `1m40s`.
+- `K0-H10-RATIONAL-POLAR-EXPONENT-SEPARATION-01`: complete. Under `pPower>0` and
+  `l*pPower<q`, division by `q` recovers the block index and multiplication cancellation
+  recovers the within-block index. No coprimality premise is used.
+- `K0-H10-RATIONAL-POLAR-REALIZATION-01`: complete. The finite coefficient source embeds in
+  `K[X]` and then through the actual algebra map into `RatFunc K`; exact coefficient recovery
+  proves both maps injective.
+- `K0-H10-RATIONAL-POLAR-NONZERO-PRODUCER-01`: complete. A descent target of smaller finrank
+  has a kernel vector whose realized rational function is nonzero.
+- `K0-H10-RATIONAL-POLAR-VALUATION-01`: complete. Source basis vectors have the exact
+  `RatFunc.inftyValuation` prescribed by their polar exponents.
+- `OBS-H10-RATIONAL-POLAR-WEAK-SEPARATION-01`: closed negatively. At
+  `l=1`, `pPower=q=1`, a nonzero difference of two basis vectors realizes to zero.
+- `local_audit`: warning-as-error compilation passes; six TargetChecks and six selected
+  standard-only axiom prints pass; forbidden scans and `git diff --check` are empty; full
+  build passes `8812/8812` with inherited warnings only.
+- `general_curve_frontier`: construct the actual one-point pole filtration, pole-ordered basis,
+  Frobenius order multiplication, no-poles-implies-constant theorem, and Riemann--Roch dimension
+  producer.
+- `strict_boundary`: no general curve polar theorem, Riemann--Roch theorem, point count,
+  function-field RH composition, number-field transfer, H10, or RH.
+- `result`:
+  `research/h10_bombieri_stepanov_rational_polar_result_20260730.md`.
+- `global_goal`: active.

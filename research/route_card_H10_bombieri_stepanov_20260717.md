@@ -197,7 +197,12 @@ not another coefficient-block analogy. Its equality boundary is sharp: when `l=1
 **Boundary.** The general curve local-parameter argument, Riemann--Roch dimensions, point-count
 optimization and lower bound, number-field transfer, and RH remain open.
 
-**Verdict:** `PREREGISTERED / PUBLIC_CI_REQUIRED`.
+**Implementation result.** `BombieriStepanovRationalPolar.lean` proves exact exponent and
+coefficient recovery, injectivity in `K(t)`, descent-kernel nonzero production, and the infinity
+valuation certificate. It also proves a nonzero two-term cancellation witness at the equality
+boundary. No coprimality assumption is needed.
+
+**Verdict:** `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLICATION_REQUIRED`.
 
 ## Recommendation
 

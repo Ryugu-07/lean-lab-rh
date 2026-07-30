@@ -141,6 +141,7 @@ import LeanLab.Riemann.BerryKeatingHalfLine
 import LeanLab.Riemann.ConnesProjectionDefect
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.BombieriStepanovPolarInjectivity
+import LeanLab.Riemann.BombieriStepanovRationalPolar
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -1378,6 +1379,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``exists_stepanovPolarBlock_ne_zero_mem_ker
       status := .proven
       note := "Campaign LITERATURE-20260726-H10-BOMBIERI-STEPANOV-POLAR-INJECTIVITY-01 isolates the logic of Bombieri's product-isomorphism lemma. The coefficient-block equivalence is a polynomial model, not the actual curve valuation theorem. Riemann-Roch spaces, curve polar-order separation, optimized parameters, point counts, number-field transfer, and RH remain open." },
+    { id := "H10.function-field.bombieri-stepanov-rational-polar-realization"
+      tier := .tier2
+      title := "Realize Bombieri-Stepanov polar separation in K(t)"
+      statement :=
+        "For the rational function field K(t), prove that the basis realization (i,j) maps to X^(i*pPower+j*q), that pPower>0 and l*pPower<q make it injective, and that a smaller-dimensional descent target therefore has a kernel vector realizing to a nonzero rational function; certify exact cancellation when strict separation is weakened to equality."
+      leanName := some ``exists_stepanovRationalPolar_ne_zero_mem_ker
+      status := .proven
+      note := "Campaign LITERATURE-20260730-H10-BOMBIERI-STEPANOV-RATIONAL-POLAR-REALIZATION-01 advances the prior coefficient-block model to the actual valued rational function field. Exact coefficient recovery and RatFunc.inftyValuation certificates compile. The strict source inequality is sharp: at l=1 and pPower=q=1 two distinct basis terms cancel. This is the rational-curve specialization, not the general smooth-projective-curve polar lemma or Riemann-Roch theorem. Point counts, function-field RH composition, number-field transfer, H10, and RH remain open." },
     { id := "H10.function-field.infinite-ordinary-trace-obstruction"
       tier := .tier2
       title := "Audit ordinary power traces under infinite reciprocal pairing"

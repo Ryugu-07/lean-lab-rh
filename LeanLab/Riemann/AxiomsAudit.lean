@@ -144,6 +144,7 @@ import LeanLab.Riemann.ConnesProjectionDefect
 import LeanLab.Riemann.LevinsonSiegelStep
 import LeanLab.Riemann.BombieriStepanovFrobeniusAuxiliary
 import LeanLab.Riemann.BombieriStepanovPolarInjectivity
+import LeanLab.Riemann.BombieriStepanovRationalPolar
 import LeanLab.Riemann.WeilGaussianPrimeKernelSignAudit
 import LeanLab.Riemann.PolsonGGCContinuationAudit
 import LeanLab.Riemann.FreedmanGreenLiftAudit
@@ -1079,6 +1080,12 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.exists_stepanovPolarBlock_ne_zero_mem_ker
 #print axioms LeanLab.Riemann.stepanovDimensionSurplus_not_enough_without_injective
 #print axioms LeanLab.Riemann.stepanovPolarBlock_two_witness
+#print axioms LeanLab.Riemann.stepanovPolarExponent_injective
+#print axioms LeanLab.Riemann.stepanovPolarPolynomialRealize_coeff
+#print axioms LeanLab.Riemann.stepanovRationalPolarRealize_injective
+#print axioms LeanLab.Riemann.exists_stepanovRationalPolar_ne_zero_mem_ker
+#print axioms LeanLab.Riemann.stepanovRationalPolarRealize_single_inftyValuation
+#print axioms LeanLab.Riemann.stepanovPolar_strict_separation_is_sharp
 #print axioms LeanLab.Riemann.det_redhefferEliminator
 #print axioms LeanLab.Riemann.det_redhefferTail
 #print axioms LeanLab.Riemann.redhefferEliminator_mul_redhefferMatrix
