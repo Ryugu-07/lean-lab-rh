@@ -126,5 +126,8 @@ Packaging it as a hypothesis is not a Type-II rarity theorem.
 - `production_gate`: docs-only commit
   `58a77f7ca4ee0b04dfe4f4653bdc93d8df080be5` passed Lean Action run
   `30500943541`, build job `90740248215`, in `2m1s`.
+- `conditional_reduction_gate`: implementation commit
+  `b44255fdeb49f12a55214888d26c40d761dfe8e5` passed Lean Action run `30505660293`, build job
+  `90754736822`, in `2m49s`; the Type-II rarity campaign remains open.
 
 The persistent RH Goal remains active.

@@ -151,6 +151,11 @@ proved. Five exact statement witnesses and seven standard-only axiom prints are 
 but no Type-II rarity Target is marked proven. Criteria 7--9 and the Type-II rarity claim
 remain open.
 
+Implementation commit `b44255fdeb49f12a55214888d26c40d761dfe8e5` passed public Lean
+Action run `30505660293`, build job `90754736822`, in `2m49s`. This public-green checkpoint
+does not close the campaign; it freezes the conditional reduction before the fixed
+short-Mobius twisted fourth-moment attempt.
+
 ## Required definitions
 
 The implementation should define, with equivalent names allowed:

@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260730-H2-MAYNARD-PRATT-TYPE-II-RARITY-01`
 
 Node: `H2-MAYNARD-PRATT-TYPE-II-RARITY-01`
 
-Status: `PREREGISTRATION_PUBLIC_GREEN / PRODUCTION_OPEN`
+Status: `CONDITIONAL_REDUCTION_PUBLIC_GREEN / PRODUCTION_OPEN`
 
 ## Fixed question
 
@@ -42,6 +42,7 @@ upper-bound proof than the general twisted fourth-moment asymptotics cited by th
 | 22 | `UNIFORM_SIGMA_CHARGE` | `eventually_one_sixth_le_sourceChargeScale_mul_localFourthRoot` retains the monotone factor `Y^(1/2-sigma)` while making the local charge uniform over every selected Type-II multiplicity copy. `fourthMoment_lower_bound_of_charge` removes the fourth root by a checked nonnegative fourth power. | Preserve the horizontal rarity exponent instead of weakening the charge to a sigma-free polylogarithmic bound. |
 | 23 | `CONDITIONAL_FULL_COUNT_REDUCTION` | `MaynardPrattTypeIISourceTwistedFourthMomentEstimate A` names exactly the fixed source-mollifier estimate on `[T/2,3T]`. `eventually_exists_typeIISeparated_fullCount_charge_le_of_sourceMomentEstimate` composes it with the compiled local count, packing, local charge, and global charging; no additional analytic premise remains. | Classify the structural reduction as compiled conditional progress, not as a proved Type-II rarity estimate. The moment producer remains open. |
 | 24 | `LOCAL_AUDIT` | The new module compiles independently without warnings; its target build completes `8724/8724`, and the full project build completes `8810/8810` with only inherited warnings. Five exact statement witnesses compile in `TargetChecks.lean`; seven registered axiom prints use only `propext`, `Classical.choice`, and `Quot.sound`. The four Type-II modules have empty `sorry/admit/native_decide/axiom/opaque/unsafe` scans, and `git diff --check` passes. | Freeze this loop checkpoint in the ledgers before attacking the fixed twisted fourth moment. Do not register Type-II rarity as proven. |
+| 25 | `PUBLIC_CHECKPOINT` | Implementation commit `b44255fdeb49f12a55214888d26c40d761dfe8e5` passed Lean Action run `30505660293`, build job `90754736822`, in `2m49s`. The public checkpoint includes the four production modules, five exact checks, seven axiom audits, and the conditional full-count theorem. | Keep the campaign active. Attack `MaynardPrattTypeIISourceTwistedFourthMomentEstimate A`; do not close the Type-II rarity node. |
 
 ## Frozen frontier
 

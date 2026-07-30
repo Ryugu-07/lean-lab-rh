@@ -4536,6 +4536,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   witnesses compile in `TargetChecks.lean`; forbidden scans are empty; seven registered
   declarations have only `propext`, `Classical.choice`, and `Quot.sound`; `git diff --check`
   passes.
+- `public_checkpoint`: implementation commit
+  `b44255fdeb49f12a55214888d26c40d761dfe8e5` passed Lean Action run `30505660293`, build job
+  `90754736822`, in `2m49s`.
 - `classification_boundary`: the structural reduction is compiled but the moment estimate
   and therefore the Type-II rarity theorem remain open. No H2, zero-free statement, or RH is
   claimed.
