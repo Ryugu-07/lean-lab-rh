@@ -3009,6 +3009,32 @@ Evidence commit `54ce15d9b12552f610397001bcd16e5aa0648849` passed public Lean Ac
 Node `H0-VON-KOCH-REVERSE-ZERO-EXCLUSION-01` is locally closed. The unconditional error
 producer remains open, and the next loop returns to cross-family historical omission search.
 
+## 2026-07-30 H12 Levinson--Montgomery Jensen top zero-count launch
+
+- `campaign`:
+  `LITERATURE-20260730-H12-LEVINSON-MONTGOMERY-JENSEN-TOP-ZERO-COUNT-01`.
+- `node`: `H12-LM-JENSEN-TOP-REAL-ZERO-COUNT-01`.
+- `source_edge`: the page-52 sentence
+  `"standard use of Jensen's theorem"`
+  `-> O(log T)` top argument variation for actual `zeta` and `zeta'`
+  `-> N_1^-(T)=N^-(T)+O(log T)`.
+- `fixed_subedge`:
+  actual real-part analytic symmetrizations
+  `->` fixed-circle polynomial growth and center separation
+  `->` multiplicity-bearing Jensen divisor count `O(log T)`
+  `->` inclusion of every real top crossing.
+- `derivative_normalization`: multiply `zeta'(z+i*t)` by
+  `exp(i*t*log 2)` so its dominant `n=2` term has fixed negative phase.
+- `negative_control`: global exponential-square finite-order growth produces only a quadratic
+  Jensen numerator; the unnormalized derivative center rotates.
+- `success_boundary`: actual zeta and derivative endpoints, not only an abstract Jensen family.
+- `open_after_success`: crossing-to-argument conversion, indented argument-principle count,
+  strict-negative base for the exact branch, both count outputs, Speiser equivalence, H12,
+  and RH.
+- `production_gate`: docs-only preregistration public CI before any proof-source or
+  registration edit.
+- `global_goal`: active.
+
 ## 2026-07-28 H1 Hardy theta inversion local result
 
 - `node`: `H1-HARDY-THETA-INVERSION-01`.
