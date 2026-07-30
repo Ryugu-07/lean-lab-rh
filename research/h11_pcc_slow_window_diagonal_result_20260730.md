@@ -5,7 +5,7 @@ Date: 2026-07-30
 Campaign:
 `LITERATURE-20260730-H11-PCC-SLOW-WINDOW-DIAGONAL-01`
 
-Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN`
 
 ## Result
 
@@ -80,3 +80,9 @@ through the Fejer-kernel and Fujii calculations.
 
 PCC itself, the relevant analytic asymptotics, HMH, density one of simple critical zeros,
 elimination of the last sparse off-line exception, H11, and RH remain open.
+
+## Public implementation receipt
+
+Frozen implementation commit `bea2f6bbe1106a5c728408fdfdf45d5f49ebd49e` passed Lean Action
+run `30520277721`, build job `90798883929`, in `2m21s`. Immutable evidence is recorded in
+`research/h11_pcc_slow_window_diagonal_evidence_20260730.md`.

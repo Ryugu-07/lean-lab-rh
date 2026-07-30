@@ -5,7 +5,7 @@ Date: 2026-07-30
 Campaign:
 `LITERATURE-20260730-H11-PCC-SLOW-WINDOW-DIAGONAL-01`
 
-Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN`
 
 ## Attempt log
 
@@ -24,6 +24,7 @@ Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_CI_REQUIRED`
 | 11 | `SOURCE_CAP_SPECIALIZATION` | With `cap(n)=Nat.sqrt(L(n))`, Lean retains `window(n)^2<=L(n)` eventually. | Compile the arbitrary-fast negative control. |
 | 12 | `NEGATIVE_CONTROL` | `pccFastDiagonalError(n,k)=0` for `k<=n` and one otherwise tends to zero for every fixed `k`, while the diagonal `k=n+1` is identically one and does not tend to zero. | Register and audit. |
 | 13 | `LOCAL_AUDIT` | The 173-line no-sorry module, target ledger, eight exact checks, seven selected axiom prints, three forbidden scans, and full `8813/8813` build pass. Every selected declaration uses only standard project axioms. | Publish the implementation and freeze immutable evidence. |
+| 14 | `IMPLEMENTATION_PUBLIC_GATE` | Commit `bea2f6bbe1106a5c728408fdfdf45d5f49ebd49e` passed Lean Action run `30520277721`, job `90798883929`, in `2m21s`. | Freeze the five Lean blobs and publish docs-only immutable evidence. |
 
 ## Boundary
 

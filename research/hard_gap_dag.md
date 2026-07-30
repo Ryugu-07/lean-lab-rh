@@ -4754,5 +4754,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `strict_boundary`: no PCC remainder estimate, Fujii theorem, Fejer asymptotic, HMH,
   density-one conclusion, sparse-exception exclusion, H11, or RH.
 - `result`: `research/h11_pcc_slow_window_diagonal_result_20260730.md`.
-- `public_gate`: implementation public CI and immutable evidence remain required.
+- `public_implementation`: commit `bea2f6bbe1106a5c728408fdfdf45d5f49ebd49e`,
+  Lean Action run `30520277721`, build job `90798883929`, passed in `2m21s`.
+- `immutable_evidence`:
+  `research/h11_pcc_slow_window_diagonal_evidence_20260730.md`.
+- `public_gate`: docs-only immutable-evidence CI remains required.
 - `global_goal`: active.

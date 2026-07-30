@@ -2,7 +2,7 @@
 
 Date: 2026-07-30
 
-Status: `H11_PCC_SLOW_WINDOW_DIAGONAL_LOCAL_SUCCESS`
+Status: `H11_PCC_SLOW_WINDOW_DIAGONAL_IMPLEMENTATION_PUBLIC_GREEN`
 
 Parent campaign:
 `LITERATURE-20260730-H10-BOMBIERI-STEPANOV-RATIONAL-POLAR-REALIZATION-01`
@@ -61,3 +61,6 @@ The next source-facing H11 edge is no longer the abstract diagonal argument. It 
 actual PCC remainder as a fixed-stage error family and verify that the source's fixed compact
 uniformity supplies each hypothesis before composing the selected window with the
 PCC-to-HMH calculation.
+
+Implementation commit `bea2f6bbe1106a5c728408fdfdf45d5f49ebd49e` passed Lean Action
+run `30520277721`, build job `90798883929`, in `2m21s`.
