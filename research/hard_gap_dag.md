@@ -3040,8 +3040,8 @@ producer remains open, and the next loop returns to cross-family historical omis
 - `campaign`:
   `LITERATURE-20260730-H12-LEVINSON-MONTGOMERY-JENSEN-TOP-ZERO-COUNT-01`.
 - `node`: `H12-LM-JENSEN-TOP-REAL-ZERO-COUNT-01`.
-- `status`: `FULL_FIXED_ENDPOINT_SUCCESS / LOCAL_AUDIT_GREEN /
-  PUBLIC_IMPLEMENTATION_PENDING`.
+- `status`: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN /
+  IMMUTABLE_EVIDENCE_CI_REQUIRED`.
 - `compiled_edge`:
   actual analytic zeta and phase-normalized zeta-derivative symmetrizations
   `->` fixed-strip polynomial zeta growth and Cauchy derivative growth
@@ -3064,6 +3064,9 @@ producer remains open, and the next loop returns to cross-family historical omis
 - `deltas`: historical route coverage `+1`; actual zeta top count `+1`; actual zeta-derivative
   top count `+1`; argument variation, global Levinson--Montgomery count, RH frontier, and RH
   remain `0`.
+- `public_implementation`: frozen commit
+  `12ddf9bb10f68d3826897bb5403a2ac803da45b0` passed Lean Action run `30530385387`,
+  build job `90831064393`, in `2m52s`; proof and registration sources are frozen.
 - `global_goal`: active.
 
 ## 2026-07-28 H1 Hardy theta inversion local result

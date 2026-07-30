@@ -5,7 +5,8 @@ Date: 2026-07-30
 Campaign:
 `LITERATURE-20260730-H12-LEVINSON-MONTGOMERY-JENSEN-TOP-ZERO-COUNT-01`
 
-Status: `FULL_FIXED_ENDPOINT_SUCCESS / LOCAL_AUDIT_GREEN / PUBLIC_IMPLEMENTATION_PENDING`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN /
+IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Attempt log
 
@@ -22,6 +23,7 @@ Status: `FULL_FIXED_ENDPOINT_SUCCESS / LOCAL_AUDIT_GREEN / PUBLIC_IMPLEMENTATION
 | 9 | `DERIVATIVE_CENTER` | The phase-normalized `n=2` derivative term is exactly `-log(2)/2^20`; the complete tail is at most `2/3^17`, giving a kernel-checked fixed positive center separation. | Apply Jensen to both actual symmetrizations. |
 | 10 | `JENSEN_DIVISOR_COUNT` | Both actual symmetrizations are analytic on the fixed outer ball and have multiplicity-bearing inner-ball divisor sums bounded by `C*log(t+2)`. | Compile source crossing inclusion. |
 | 11 | `CROSSING_SUPPORT` | Every source real-part crossing on `[0,1]` at `t>=23` lies in the support of the corresponding actual divisor. | Register exact checks, audit axioms, and isolate the next source edge. |
+| 12 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `12ddf9bb10f68d3826897bb5403a2ac803da45b0` passed Lean Action run `30530385387`, build job `90831064393`, in `2m52s`. | Publish docs-only immutable evidence with the five Lean blobs unchanged. |
 
 ## Resolved obstruction map
 

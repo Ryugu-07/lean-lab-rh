@@ -5,8 +5,8 @@ Date: 2026-07-30
 Campaign:
 `LITERATURE-20260730-H12-LEVINSON-MONTGOMERY-JENSEN-TOP-ZERO-COUNT-01`
 
-Status: `FULL_FIXED_ENDPOINT_SUCCESS / LOCAL_AUDIT_GREEN /
-PUBLIC_IMPLEMENTATION_PENDING`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN /
+IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Result
 
@@ -100,3 +100,9 @@ The live H12 chain is:
 5. the complete Levinson--Montgomery dichotomy and Speiser equivalence.
 
 H12 and RH remain open. The persistent RH Goal remains active.
+
+## Public implementation receipt
+
+Frozen implementation commit `12ddf9bb10f68d3826897bb5403a2ac803da45b0` passed Lean Action
+run `30530385387`, build job `90831064393`, in `2m52s`. Immutable evidence is recorded in
+`research/h12_levinson_montgomery_jensen_top_zero_count_evidence_20260730.md`.
