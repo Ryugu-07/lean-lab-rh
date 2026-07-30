@@ -5,7 +5,7 @@ Date: 2026-07-30
 Campaign:
 `LITERATURE-20260730-H10-BOMBIERI-STEPANOV-RATIONAL-POLAR-REALIZATION-01`
 
-Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / PUBLICLY_EVIDENCED / LOCAL_STOP`
 
 ## Goal
 
@@ -31,6 +31,7 @@ condition at its equality boundary.
 | 12 | `FALSIFICATION` | `stepanovPolar_strict_separation_is_sharp` proves a nonzero two-term source realizes to zero at `l=1`, `pPower=q=1`. | Register and audit. |
 | 13 | `LOCAL_AUDIT` | Module, target registry, six exact checks, selected standard-only axiom prints, three forbidden scans, `git diff --check`, and full `8812/8812` build pass. | Publish the frozen implementation. |
 | 14 | `IMPLEMENTATION_PUBLIC_CI` | Commit `97b055c30194e61853820ab263d949fd49cc12de` passed Lean Action run `30518731227`, build job `90794240899`, in `2m37s`. | Publish docs-only immutable evidence with frozen Lean blob hashes. |
+| 15 | `IMMUTABLE_EVIDENCE_PUBLIC_CI` | Docs-only commit `bb2f134424bf4d569d22219fa8acad06c500ef35` passed run `30518970625`, build job `90794957095`, in `1m38s`; every frozen Lean blob is unchanged. | Stop only this local node and rerank across historical families. |
 
 ## Current boundary
 

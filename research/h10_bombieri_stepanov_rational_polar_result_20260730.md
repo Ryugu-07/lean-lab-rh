@@ -5,7 +5,7 @@ Date: 2026-07-30
 Campaign:
 `LITERATURE-20260730-H10-BOMBIERI-STEPANOV-RATIONAL-POLAR-REALIZATION-01`
 
-Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / PUBLICLY_EVIDENCED / LOCAL_STOP`
 
 ## Result
 
@@ -87,5 +87,7 @@ and RH remain open.
 
 Frozen implementation commit `97b055c30194e61853820ab263d949fd49cc12de` passed Lean Action
 run `30518731227`, build job `90794240899`, in `2m37s`. The immutable evidence file is
-`research/h10_bombieri_stepanov_rational_polar_evidence_20260730.md`; its docs-only commit and
-public CI remain required.
+`research/h10_bombieri_stepanov_rational_polar_evidence_20260730.md`. Evidence commit
+`bb2f134424bf4d569d22219fa8acad06c500ef35` passed run `30518970625`, build job
+`90794957095`, in `1m38s`; all frozen Lean blobs remained unchanged. Fresh cross-family route
+selection resumes.

@@ -4706,4 +4706,24 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   `30518731227`, build job `90794240899`, passed in `2m37s`.
 - `immutable_evidence`:
   `research/h10_bombieri_stepanov_rational_polar_evidence_20260730.md`.
+- `immutable_evidence_public_green`: commit
+  `bb2f134424bf4d569d22219fa8acad06c500ef35`, Lean Action run `30518970625`, build job
+  `90794957095`, passed in `1m38s`; frozen Lean blobs unchanged.
+- `local_stop`: the rational-curve node is publicly evidenced; return to fresh cross-family
+  selection.
+- `global_goal`: active.
+
+## 2026-07-30 H11 PCC slow-window diagonal launch
+
+- `campaign`: `LITERATURE-20260730-H11-PCC-SLOW-WINDOW-DIAGONAL-01`.
+- `node`: `H11-GOLDSTON-PCC-SLOW-WINDOW-DIAGONAL-01`.
+- `source_hinge`: fixed-compact uniform PCC is used with
+  `lambda0(T)->0`, `lambda(T)->infinity`, and `lambda(T)^2<=L(T)` in Remark 1 and Section 8.
+- `selected_endpoint`: prove a cap-preserving slow diagonal for fixed-stage vanishing errors,
+  together with lower reciprocal and upper divergent windows.
+- `negative_control`: fixed-stage convergence does not control the arbitrary fast diagonal
+  `k=n+1`.
+- `strict_boundary`: no PCC, Fujii moment theorem, Fejer-kernel asymptotic, HMH, density-one
+  conclusion, sparse-exception exclusion, H11, or RH.
+- `production_gate`: no `LeanLab/` or registration edit before preregistration public CI.
 - `global_goal`: active.
