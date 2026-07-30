@@ -5,7 +5,7 @@ Date: 2026-07-30
 Campaign:
 `LITERATURE-20260730-H10-BOMBIERI-STEPANOV-RATIONAL-POLAR-REALIZATION-01`
 
-Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLICATION_REQUIRED`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Goal
 
@@ -30,6 +30,7 @@ condition at its equality boundary.
 | 11 | `VALUATION_CERTIFICATE` | Every basis vector realizes to the expected power of `RatFunc.X`; its infinity valuation is exactly the exponential of the source polar exponent. | Run the strict-boundary falsification. |
 | 12 | `FALSIFICATION` | `stepanovPolar_strict_separation_is_sharp` proves a nonzero two-term source realizes to zero at `l=1`, `pPower=q=1`. | Register and audit. |
 | 13 | `LOCAL_AUDIT` | Module, target registry, six exact checks, selected standard-only axiom prints, three forbidden scans, `git diff --check`, and full `8812/8812` build pass. | Publish the frozen implementation. |
+| 14 | `IMPLEMENTATION_PUBLIC_CI` | Commit `97b055c30194e61853820ab263d949fd49cc12de` passed Lean Action run `30518731227`, build job `90794240899`, in `2m37s`. | Publish docs-only immutable evidence with frozen Lean blob hashes. |
 
 ## Current boundary
 

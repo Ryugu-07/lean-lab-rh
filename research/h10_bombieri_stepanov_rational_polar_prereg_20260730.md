@@ -10,7 +10,7 @@ Selected node:
 
 Mode: `LITERATURE / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLICATION_REQUIRED`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Primary-source anchor
 
@@ -112,3 +112,7 @@ All local gates pass: warning-as-error module/registry/check/audit compilation, 
 TargetChecks, six selected standard-only axiom prints, empty forbidden scans,
 `git diff --check`, and full `8812/8812` build. General curve geometry and every RH-strength
 successor remain open.
+
+Frozen implementation commit `97b055c30194e61853820ab263d949fd49cc12de` passed public Lean
+Action run `30518731227`, build job `90794240899`, in `2m37s`. Proof source is frozen while the
+docs-only immutable-evidence gate runs.

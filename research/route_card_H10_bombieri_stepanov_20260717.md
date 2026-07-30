@@ -202,7 +202,10 @@ coefficient recovery, injectivity in `K(t)`, descent-kernel nonzero production, 
 valuation certificate. It also proves a nonzero two-term cancellation witness at the equality
 boundary. No coprimality assumption is needed.
 
-**Verdict:** `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLICATION_REQUIRED`.
+**Verdict:** `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN /
+IMMUTABLE_EVIDENCE_CI_REQUIRED`. Frozen implementation
+`97b055c30194e61853820ab263d949fd49cc12de` passed run `30518731227`, build job
+`90794240899`, in `2m37s`.
 
 ## Recommendation
 

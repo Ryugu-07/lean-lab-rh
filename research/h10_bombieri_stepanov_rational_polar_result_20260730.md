@@ -5,7 +5,7 @@ Date: 2026-07-30
 Campaign:
 `LITERATURE-20260730-H10-BOMBIERI-STEPANOV-RATIONAL-POLAR-REALIZATION-01`
 
-Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLICATION_REQUIRED`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Result
 
@@ -83,3 +83,9 @@ the separate dimension producer. None is supplied by this result. The Bombieri--
 count, its lower-bound Galois step, function-field RH composition, number-field transfer, H10,
 and RH remain open.
 
+## Public implementation receipt
+
+Frozen implementation commit `97b055c30194e61853820ab263d949fd49cc12de` passed Lean Action
+run `30518731227`, build job `90794240899`, in `2m37s`. The immutable evidence file is
+`research/h10_bombieri_stepanov_rational_polar_evidence_20260730.md`; its docs-only commit and
+public CI remain required.

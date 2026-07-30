@@ -4702,4 +4702,8 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   function-field RH composition, number-field transfer, H10, or RH.
 - `result`:
   `research/h10_bombieri_stepanov_rational_polar_result_20260730.md`.
+- `public_implementation`: commit `97b055c30194e61853820ab263d949fd49cc12de`, Lean Action run
+  `30518731227`, build job `90794240899`, passed in `2m37s`.
+- `immutable_evidence`:
+  `research/h10_bombieri_stepanov_rational_polar_evidence_20260730.md`.
 - `global_goal`: active.
