@@ -2,7 +2,7 @@
 
 Date: 2026-07-30
 
-Status: `H0_REVERSE_ZERO_EXCLUSION_IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_PENDING`
+Status: `H0_REVERSE_ZERO_EXCLUSION_PUBLICLY_CLOSED / CROSS_FAMILY_RERANK_REQUIRED`
 
 ## Governing interpretation
 
@@ -108,3 +108,12 @@ remain before campaign closure.
 Frozen implementation commit `247ea4c176505b9186faa51a69f5c53bbdbe80f2` passed Lean Action
 run `30524180060`, build job `90811183408`, in `2m16s`. The five proof and registration blobs
 are frozen while docs-only immutable evidence is published.
+
+Docs-only immutable-evidence commit `54ce15d9b12552f610397001bcd16e5aa0648849`
+passed Lean Action run `30524462493`, build job `90812091728`, in `1m50s`; every frozen
+blob is unchanged.
+
+This closes only node `H0-VON-KOCH-REVERSE-ZERO-EXCLUSION-01`. The H0 error producer, H0,
+and RH remain open. The next loop must compare non-adjacent historical families under the
+omission-search rule. It must not select further H0 numerical or constant optimization merely
+because the new consumer is available.

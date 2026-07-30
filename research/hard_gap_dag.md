@@ -3004,6 +3004,11 @@ final-ledger CI, return to cross-family selection with H11-D/H11-E retained as o
 - `next_gate`: docs-only immutable evidence with all five Lean blobs unchanged.
 - `global_goal`: active.
 
+Evidence commit `54ce15d9b12552f610397001bcd16e5aa0648849` passed public Lean Action run
+`30524462493`, build job `90812091728`, in `1m50s`; all five frozen blobs are unchanged.
+Node `H0-VON-KOCH-REVERSE-ZERO-EXCLUSION-01` is locally closed. The unconditional error
+producer remains open, and the next loop returns to cross-family historical omission search.
+
 ## 2026-07-28 H1 Hardy theta inversion local result
 
 - `node`: `H1-HARDY-THETA-INVERSION-01`.

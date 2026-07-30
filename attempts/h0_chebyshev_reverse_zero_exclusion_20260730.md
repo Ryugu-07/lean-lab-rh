@@ -5,7 +5,7 @@ Date: 2026-07-30
 Campaign:
 `LITERATURE-20260730-H0-CHEBYSHEV-REVERSE-ZERO-EXCLUSION-01`
 
-Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMMUTABLE_EVIDENCE_PUBLIC_GREEN`
 
 ## Attempt log
 
@@ -28,6 +28,7 @@ Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN`
 | 15 | `NEGATIVE_CONTROL` | The explicit witness `r=beta=3/4` satisfies both reflected strip bounds but is off the critical line. One fixed exponent above one half is therefore insufficient. | Register, audit, and run the full build. |
 | 16 | `LOCAL_AUDIT` | The 559-line no-sorry module, target ledger, eight exact checks, nine selected standard-only axiom prints, forbidden scans, and full `8814/8814` build pass. | Publish the implementation and freeze immutable evidence. |
 | 17 | `IMPLEMENTATION_PUBLIC_GATE` | Commit `247ea4c176505b9186faa51a69f5c53bbdbe80f2` passed Lean Action run `30524180060`, job `90811183408`, in `2m16s`. | Freeze the five Lean blobs and publish docs-only immutable evidence. |
+| 18 | `IMMUTABLE_EVIDENCE_GATE` | Docs-only evidence commit `54ce15d9b12552f610397001bcd16e5aa0648849` passed Lean Action run `30524462493`, job `90812091728`, in `1m50s`; all five frozen blobs are unchanged. | Close only this local node and rerank across historical families. |
 
 ## Current obstruction map
 
@@ -41,3 +42,16 @@ The campaign is conditional. It does not prove a new prime-number error estimate
 assume RH, and does not claim progress on the unconditional RH frontier. It proves that the
 displayed family of Chebyshev error estimates is sufficient for RH and makes the exact open
 producer explicit.
+
+## Loop runtime record
+
+- `model`: Codex based on GPT-5;
+- `reasoning_effort`: not exposed by the current task interface;
+- `per_loop_budget`: not exposed; the active Goal reports no completion budget;
+- `compaction_state`: resumed from an inherited compaction summary during this loop, then
+  re-read the active governance, RTK rule, external memory, Git status, preregistration,
+  attempt log, result conventions, and actual Lean implementation before publication;
+- `local_stop`: the preregistered endpoint and immutable evidence are complete;
+- `global_goal`: active;
+- `next_route_decision`: fresh cross-family omission-sensitive reranking; do not continue with
+  H0 constant optimization or treat this conditional consumer as an unconditional RH advance.

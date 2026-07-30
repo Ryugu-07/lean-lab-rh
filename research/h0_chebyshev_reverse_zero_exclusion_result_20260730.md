@@ -5,7 +5,7 @@ Date: 2026-07-30
 Campaign:
 `LITERATURE-20260730-H0-CHEBYSHEV-REVERSE-ZERO-EXCLUSION-01`
 
-Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMMUTABLE_EVIDENCE_PUBLIC_GREEN`
 
 ## Result
 
@@ -104,3 +104,7 @@ without assuming RH or an equivalent statement. H0 and RH remain open.
 Frozen implementation commit `247ea4c176505b9186faa51a69f5c53bbdbe80f2` passed Lean Action
 run `30524180060`, build job `90811183408`, in `2m16s`. Immutable evidence is recorded in
 `research/h0_chebyshev_reverse_zero_exclusion_evidence_20260730.md`.
+
+The docs-only evidence commit `54ce15d9b12552f610397001bcd16e5aa0648849` passed Lean Action
+run `30524462493`, build job `90812091728`, in `1m50s`; all five frozen Lean blobs are
+unchanged.

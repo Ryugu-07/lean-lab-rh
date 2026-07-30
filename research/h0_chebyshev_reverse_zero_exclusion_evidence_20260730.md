@@ -5,7 +5,7 @@ Date: 2026-07-30
 Campaign:
 `LITERATURE-20260730-H0-CHEBYSHEV-REVERSE-ZERO-EXCLUSION-01`
 
-Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+Status: `IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PUBLIC_GREEN`
 
 ## Public Implementation Receipt
 
@@ -28,6 +28,15 @@ At the public implementation commit:
 | `LeanLab.lean` | `f3df63e2215a312a621c24c11b172a3b0d55a65d` |
 
 This evidence commit is docs-only and must leave every frozen blob unchanged.
+
+## Public Evidence Receipt
+
+- evidence commit: `54ce15d9b12552f610397001bcd16e5aa0648849`;
+- Lean Action run: `30524462493`;
+- build job: `90812091728`;
+- duration: `1m50s`;
+- result: pass;
+- frozen Lean blobs: unchanged.
 
 ## Proven Endpoint
 
