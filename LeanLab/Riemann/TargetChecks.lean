@@ -144,6 +144,7 @@ import LeanLab.Riemann.M2ProjectionNormAudit
 import LeanLab.Riemann.M2LadderFrequencyAudit
 import LeanLab.Riemann.M2GramGeometry
 import LeanLab.Riemann.M2SparseObstruction
+import LeanLab.Riemann.ChebyshevReverseZeroExclusion
 
 set_option linter.style.header false
 set_option linter.style.longLine false
@@ -6660,5 +6661,62 @@ example
                 (T * Real.log T ^ A)) :=
   eventually_exists_typeIISeparated_fullCount_charge_le_of_sourceMomentEstimate
     hmoment
+
+example {r : ℝ}
+    (hO : (fun n : ℕ => (Chebyshev.psi n : ℂ) - (n : ℂ)) =O[Filter.atTop]
+      fun n => (n : ℝ) ^ r)
+    (hr : 0 ≤ r) {s : ℂ} (hs : r < s.re) :
+    DifferentiableAt ℂ chebyshevPsiErrorContinuation s :=
+  differentiableAt_chebyshevPsiErrorContinuation_of_isBigO hO hr hs
+
+example {s : ℂ} (hs : 1 < s.re) :
+    chebyshevPsiErrorContinuation s =
+      LSeries chebyshevPsiErrorCoeff s :=
+  chebyshevPsiErrorContinuation_eq_LSeries hs
+
+example {r : ℝ}
+    (hO : (fun n : ℕ => (Chebyshev.psi n : ℂ) - (n : ℂ)) =O[Filter.atTop]
+      fun n => (n : ℝ) ^ r)
+    (hr0 : 0 ≤ r) (hr1 : r < 1)
+    {s : ℂ} (hs : r < s.re) :
+    (s - 1) * deriv zetaPoleRemoved s =
+      zetaPoleRemoved s *
+        (1 - (s - 1) * chebyshevPsiErrorContinuation s -
+          zetaPoleRemoved s) :=
+  chebyshevPoleRemovedODE_of_isBigO hO hr0 hr1 hs
+
+example {r : ℝ}
+    (hO : (fun n : ℕ => (Chebyshev.psi n : ℂ) - (n : ℂ)) =O[Filter.atTop]
+      fun n => (n : ℝ) ^ r)
+    (hr0 : 0 ≤ r) (hr1 : r < 1)
+    {s : ℂ} (hs : r < s.re) :
+    zetaPoleRemoved s ≠ 0 :=
+  zetaPoleRemoved_ne_zero_of_chebyshevPsiError_isBigO hO hr0 hr1 hs
+
+example {r : ℝ}
+    (hO : (fun n : ℕ => (Chebyshev.psi n : ℂ) - (n : ℂ)) =O[Filter.atTop]
+      fun n => (n : ℝ) ^ r)
+    (hr0 : 0 ≤ r) (hr1 : r < 1)
+    {rho : ℂ} (hrho : IsNontrivialZero rho) :
+    rho.re ≤ r :=
+  nontrivialZero_re_le_of_chebyshevPsiError_isBigO hO hr0 hr1 hrho
+
+example
+    (hO : ∀ epsilon : ℝ, 0 < epsilon →
+      (fun n : ℕ => (Chebyshev.psi n : ℂ) - (n : ℂ)) =O[Filter.atTop]
+        fun n => (n : ℝ) ^ (1 / 2 + epsilon)) :
+    RiemannHypothesis :=
+  riemannHypothesis_of_chebyshevPsiError_isBigO hO
+
+example :
+    ∃ beta : ℝ,
+      0 < beta ∧ beta < 1 ∧
+      beta ≤ 3 / 4 ∧ 1 - beta ≤ 3 / 4 ∧
+      beta ≠ 1 / 2 :=
+  fixed_three_quarters_symmetric_band_not_critical
+
+example :
+    ChebyshevReverseZeroExclusionCertificate :=
+  chebyshevReverseZeroExclusion_endpoint
 
 end LeanLab.Riemann

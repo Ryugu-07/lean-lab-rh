@@ -1,6 +1,7 @@
 import LeanLab.Riemann.BalazardSaias
 import LeanLab.Riemann.MaynardPrattTypeIIGlobalCharge
 import LeanLab.Riemann.ChebyshevMellin
+import LeanLab.Riemann.ChebyshevReverseZeroExclusion
 import LeanLab.Riemann.FareyFranel
 import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.InfiniteReciprocalTraceAudit
@@ -1364,3 +1365,12 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.eventually_one_sixth_le_sourceChargeScale_mul_localFourthRoot
 #print axioms LeanLab.Riemann.eventually_card_mul_charge_le_sourceChargeScale_pow_mul_globalFourthMoment
 #print axioms LeanLab.Riemann.eventually_exists_typeIISeparated_fullCount_charge_le_of_sourceMomentEstimate
+#print axioms LeanLab.Riemann.differentiableAt_chebyshevPsiErrorContinuation_of_isBigO
+#print axioms LeanLab.Riemann.chebyshevPsiErrorContinuation_eq_LSeries
+#print axioms LeanLab.Riemann.chebyshevPoleRemovedODE_of_isBigO
+#print axioms LeanLab.Riemann.analyticOrderAt_zetaPoleRemoved_ne_top
+#print axioms LeanLab.Riemann.zetaPoleRemoved_ne_zero_of_chebyshevPsiError_isBigO
+#print axioms LeanLab.Riemann.nontrivialZero_re_le_of_chebyshevPsiError_isBigO
+#print axioms LeanLab.Riemann.riemannHypothesis_of_chebyshevPsiError_isBigO
+#print axioms LeanLab.Riemann.fixed_three_quarters_symmetric_band_not_critical
+#print axioms LeanLab.Riemann.chebyshevReverseZeroExclusion_endpoint

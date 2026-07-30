@@ -5,7 +5,7 @@ Date: 2026-07-30
 Campaign:
 `LITERATURE-20260730-H0-CHEBYSHEV-REVERSE-ZERO-EXCLUSION-01`
 
-Status: `PREREGISTERED_LOCALLY / PRODUCTION_BLOCKED`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_LOCAL_GREEN`
 
 ## Attempt log
 
@@ -19,22 +19,24 @@ Status: `PREREGISTERED_LOCALLY / PRODUCTION_BLOCKED`
 | 6 | `POLE_REMOVAL_DESIGN` | Rewriting with `Z(s)=(s-1)zeta(s)` turns the meromorphic logarithmic-derivative identity into `(s-1)Z'=Z*(1-(s-1)E-Z)`, analytic even at `s=1`. This avoids a punctured-domain connectedness detour and any division at a zero. | Use analytic order to preregister zero exclusion. |
 | 7 | `FALSIFICATION_BOUNDARY` | One fixed exponent `r>1/2` gives only the symmetric band `1-r<=Re(rho)<=r`; `r=beta=3/4` is an explicit off-line witness to that logic. | Require all positive epsilon in the RH endpoint. |
 | 8 | `PREREGISTRATION` | The exact Mellin holomorphy, common-region identity, pole-removed ODE, zero-order contradiction, nontrivial-zero bound, RH implication, and negative control are frozen. | Publish docs-only preregistration and await public CI. |
+| 9 | `PREREG_PUBLIC_GATE` | Commit `c9c561aaeeff665db804828663719ee9be0745ae` passed Lean Action run `30522338862`, job `90805348547`, in `1m57s`. | Begin the fixed production implementation. |
+| 10 | `MELLIN_HOLOMORPHY` | The natural-number `O(N^r)` premise transports to the floor-error cutoff on the real axis. Local integrability and Mathlib's power-bounded Mellin theorem give genuine complex differentiability on `Re(s)>r`. | Identify the continuation with the existing L-series on `Re(s)>1`. |
+| 11 | `COMMON_REGION_IDENTITY` | Exact indicator and set-integral normalization prove that the new Mellin continuation equals `LSeries chebyshevPsiErrorCoeff` on the original absolute-convergence half-plane. | Remove the zeta pole before continuation. |
+| 12 | `POLE_REMOVED_ODE` | With `Z=(s-1)zeta(s)`, Lean derives `(s-1)Z'=Z*(1-(s-1)E-Z)` on `Re(s)>1` and continues it through the convex half-plane `Re(s)>r`, including `s=1`. | Exclude zeros without division. |
+| 13 | `ANALYTIC_ORDER_EXCLUSION` | At a hypothetical zero of order `m>0`, the left side of the ODE has order `m-1` while the right side has order at least `m`; the finite/infinite multiplier cases both contradict the order identity. | Derive the zero bound and RH implication. |
+| 14 | `RH_CONSUMER` | Every nontrivial zero satisfies `Re(rho)<=r` under the fixed-exponent premise. Choosing an exponent strictly between `1/2` and a hypothetical right-half zero, then reflecting `rho` to `1-rho`, proves RH from all positive-epsilon Chebyshev bounds. | Compile the fixed-exponent falsification boundary. |
+| 15 | `NEGATIVE_CONTROL` | The explicit witness `r=beta=3/4` satisfies both reflected strip bounds but is off the critical line. One fixed exponent above one half is therefore insufficient. | Register, audit, and run the full build. |
+| 16 | `LOCAL_AUDIT` | The 559-line no-sorry module, target ledger, eight exact checks, nine selected standard-only axiom prints, forbidden scans, and full `8814/8814` build pass. | Publish the implementation and freeze immutable evidence. |
 
 ## Current obstruction map
 
 No mathematical premise beyond the displayed Chebyshev error hypothesis is to be introduced.
-The first implementation risks, in order, are:
-
-1. transporting the natural-number `O(N^r)` bound to the floor-valued real-axis cutoff;
-2. proving local integrability of the monotone Chebyshev term minus the floor term;
-3. aligning Mathlib `mellin` with the existing set integral on `Ioi 1`;
-4. applying analytic identity uniqueness on `{s | r<Re(s)}`;
-5. making the analytic-order contradiction robust when the multiplier on the right has
-   arbitrary finite or infinite order.
+All five preregistered implementation risks are discharged locally. The remaining mathematical
+obstruction is the unconditional producer of the RH-strength Chebyshev error estimate itself.
 
 ## Boundary
 
 The campaign is conditional. It does not prove a new prime-number error estimate, does not
-assume RH, and does not claim progress on the unconditional RH frontier unless the error
-hypothesis itself is later discharged.
-
+assume RH, and does not claim progress on the unconditional RH frontier. It proves that the
+displayed family of Chebyshev error estimates is sufficient for RH and makes the exact open
+producer explicit.

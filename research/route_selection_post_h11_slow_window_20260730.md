@@ -2,7 +2,7 @@
 
 Date: 2026-07-30
 
-Status: `RERANK_COMPLETE / H0_REVERSE_ZERO_EXCLUSION_SELECTED`
+Status: `H0_REVERSE_ZERO_EXCLUSION_LOCAL_GREEN / PUBLIC_IMPLEMENTATION_GATE_PENDING`
 
 ## Governing interpretation
 
@@ -87,3 +87,20 @@ Mellin value is holomorphic or exclude a zeta zero.
 - `production_gate`: no `LeanLab/` or theorem-registration edit before the docs-only
   preregistration passes public Lean Action CI.
 
+## Local campaign result
+
+The preregistration gate passed at commit
+`c9c561aaeeff665db804828663719ee9be0745ae`, Lean Action run `30522338862`, build job
+`90805348547`, in `1m57s`.
+
+The complete fixed endpoint now compiles locally in
+`LeanLab/Riemann/ChebyshevReverseZeroExclusion.lean`. The result closes the historical reverse
+inference
+
+```text
+all positive-epsilon Chebyshev error bounds -> RiemannHypothesis
+```
+
+through genuine Mellin holomorphy, a pole-removed analytic ODE, and zero-order exclusion. It
+does not supply the Chebyshev error bounds. Public implementation CI and immutable evidence
+remain before campaign closure.

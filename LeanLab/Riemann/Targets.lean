@@ -115,6 +115,7 @@ import LeanLab.Riemann.HardyAbelMomentAmplification
 import LeanLab.Riemann.FareyMobiusWeyl
 import LeanLab.Riemann.FareyFranel
 import LeanLab.Riemann.ChebyshevMellin
+import LeanLab.Riemann.ChebyshevReverseZeroExclusion
 import LeanLab.Riemann.ConreyCharacterSumRationality
 import LeanLab.Riemann.ConreySevenFlatInterval
 import LeanLab.Riemann.SpeiserCountingEquivalence
@@ -2046,6 +2047,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``classicalDetectorDyadicDichotomy_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260730-H2-CLASSICAL-DETECTOR-DYADIC-DICHOTOMY-01 formalizes Maynard-Pratt Appendix C, Lemma 23 through its finite detector alternative. Lean checks the divisor-count coefficient estimate, exact finite cutoff, binary block fibers and ranges, exponential far tail, head error, uniform Gamma-decaying translated-zeta residue, logarithmic block count, natural-number rounding of the literal source scales, and the actual-zero Type-I/Type-II disjunction. This is an input to zero-density arguments, not a zero-density estimate: no Type-I Dirichlet-polynomial mean value, Type-II shifted-integral sparsity estimate, density exponent, H2, or RH is proved." },
+    { id := "H0.chebyshev.reverse-zero-exclusion"
+      tier := .tier2
+      title := "Formalize the reverse Chebyshev--von Koch zero exclusion"
+      statement :=
+        "Turn any Chebyshev error estimate psi(N)-N=O(N^r), with 0<=r<1, into a holomorphic floor-error Mellin continuation on Re(s)>r, continue its pole-removed zeta differential equation, exclude every nontrivial zero to the right of r by analytic zero order, and derive Mathlib.RiemannHypothesis from the source estimate for every r=1/2+epsilon."
+      leanName := some ``chebyshevReverseZeroExclusion_endpoint
+      status := .proven
+      note := "Campaign LITERATURE-20260730-H0-CHEBYSHEV-REVERSE-ZERO-EXCLUSION-01 closes the conditional reverse half of the DLMF 25.16.4 Chebyshev criterion. Mathlib's Mellin differentiability theorem supplies genuine holomorphy rather than pointwise ordered convergence. With Z=(s-1)zeta(s), Lean continues (s-1)Z'=Z*(1-(s-1)E-Z) across Re(s)>r and uses analytic order to forbid a zero there without dividing at a zero or crossing the zeta pole. Applying the bound for every positive epsilon and reflecting rho to 1-rho yields RiemannHypothesis. The Chebyshev error estimate remains an explicit unproved premise; no unconditional zero-free region, H0, or RH is claimed. A compiled r=beta=3/4 control shows why one fixed exponent above one half is insufficient." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

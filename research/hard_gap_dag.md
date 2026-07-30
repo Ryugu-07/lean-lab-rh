@@ -2969,6 +2969,38 @@ final-ledger CI, return to cross-family selection with H11-D/H11-E retained as o
   production or registration edit.
 - `global_goal`: active.
 
+## 2026-07-30 H0 Chebyshev reverse zero-exclusion local result
+
+- `gate_receipt`: preregistration commit
+  `c9c561aaeeff665db804828663719ee9be0745ae`, public run `30522338862`, build job
+  `90805348547`, passed in `1m57s`.
+- `closed_edge`:
+  `psi(N)-N=O(N^r)`
+  `-> holomorphic floor-error Mellin continuation on Re(s)>r`
+  `-> exact common-region Chebyshev error L-series`
+  `-> analytic pole-removed zeta ODE on Re(s)>r`
+  `-> zetaPoleRemoved nonvanishing on Re(s)>r`
+  `-> Re(rho)<=r for every nontrivial zero`.
+- `conditional_RH_endpoint`: the error estimate for every
+  `r=1/2+epsilon`, `epsilon>0`, plus the existing `rho -> 1-rho` reflection theorem compiles
+  to `Mathlib.RiemannHypothesis`.
+- `zero_order_mechanism`: at a hypothetical zero of order `m>0`, the left ODE side has order
+  `m-1` and the right side has order at least `m`; no division at the zero occurs.
+- `negative_control`: `r=beta=3/4` satisfies both reflected strip bounds while
+  `beta!=1/2`.
+- `remaining_H0A`: prove the every-positive-epsilon Chebyshev error estimate unconditionally,
+  or find a genuinely weaker non-equivalent producer that still feeds the compiled analytic
+  consumer.
+- `remaining_H0B`: inspect historical explicit-formula, zero-density, and cancellation routes
+  for a producer of H0A or a cross-family bridge; do not return to constant optimization.
+- `classification`: `historical_route_coverage_delta=1`,
+  `conditional_rh_implication_delta=1`, `unconditional_chebyshev_error_delta=0`,
+  `rh_frontier_delta=0`, `rh_proved=0`.
+- `local_audit`: 559-line source, eight exact TargetChecks, nine standard-only axiom prints,
+  empty forbidden/resource scans, warning-as-error compiles, and full `8814/8814` build.
+- `next_gate`: frozen implementation public CI, then docs-only immutable evidence.
+- `global_goal`: active.
+
 ## 2026-07-28 H1 Hardy theta inversion local result
 
 - `node`: `H1-HARDY-THETA-INVERSION-01`.
