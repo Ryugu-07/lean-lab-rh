@@ -4575,3 +4575,34 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   coefficients is not a selection reason.
 - `result`: `research/h2_maynard_pratt_type_ii_rarity_result_20260730.md`.
 - `global_goal`: active.
+
+## 2026-07-30 H7 actual weighted ground-state comparison launch
+
+- `parent_public_stop`: H2 Type-II final-ledger commit
+  `e9a1831952cc3983f9a1a272e961c05af270b26e`, Lean Action run `30514927416`, build job
+  `90782516677`, passed in `1m43s`.
+- `campaign`:
+  `PROOF-ATTEMPT-20260730-H7-CONNES-WEIGHTED-GROUNDSTATE-COMPARISON-01`.
+- `node`: `H7-CONNES-ACTUAL-GROUNDSTATE-COMPARISON-01`.
+- `source_chain`: explicit prolate packet `k_lambda`; `->` source-established but currently
+  uncompiled compact-uniform `Fourier(k_lambda)->Xi`; true lowest Weil eigenfunction
+  `theta_lambda`; `->` simple-even real-zero theorem; actual weighted comparison; `->`
+  true-ground transform convergence; `->` Hurwitz.
+- `selected_edge`: actual weighted comparison, independently of the still-open simple-even
+  branch.
+- `compiled_left_consumer`: exponential-strip weighted `L1` error transfers Fourier transforms
+  uniformly on each closed strip.
+- `compiled_variational_consumer`: projective defect is at most Rayleigh excess divided by a
+  certified ground gap.
+- `new_rate_probe`: source support radius is `log(lambda)`, so weighted Cauchy--Schwarz costs
+  about `lambda^A`. A sufficient squared-defect target is therefore
+  `lambda^(2*A)*RayleighExcess/sourceGroundGap -> 0` for every `A<1/2`.
+- `negative_controls`: unweighted `L1`, unweighted `L2`, absolute Rayleigh excess, an unscaled
+  ratio, numerical agreement, or an assumed source rate.
+- `OBS-H7-CONNES-ACTUAL-GROUNDSTATE-COMPARISON-01`: selected.
+- `OBS-H7-CONNES-SOURCE-RAYLEIGH-GAP-RATE-01`: selected producer.
+- `OBS-H7-CONNES-SIMPLE-EVEN-GROUNDSTATE-01`: remains independently open.
+- `strict_boundary`: a conditional support-rate reduction is infrastructure; no actual
+  comparison, true-ground transform limit, all-real-zero conclusion, H7, or RH is claimed.
+- `production_gate`: no `LeanLab/` or registration edit before preregistration public CI.
+- `global_goal`: active.
