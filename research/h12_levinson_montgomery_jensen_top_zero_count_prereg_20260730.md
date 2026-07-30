@@ -10,7 +10,7 @@ Selected node:
 
 Mode: `LITERATURE / OMISSION-AUDIT / PROOF-ATTEMPT`
 
-Status: `PREREGISTERED_LOCALLY / PRODUCTION_BLOCKED`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / LOCAL_AUDIT_GREEN / PUBLIC_IMPLEMENTATION_PENDING`
 
 ## Historical target
 
@@ -173,3 +173,22 @@ Expected full-success classification:
 No `LeanLab/`, `LeanLab/Riemann/Targets.lean`, `LeanLab/Riemann/TargetChecks.lean`,
 `LeanLab/Riemann/AxiomsAudit.lean`, or `LeanLab.lean` edit is allowed until this docs-only
 preregistration passes public Lean Action CI.
+
+The production gate passed at commit `90d078eed410ec31a98df0203cc295a5d1967318`,
+Lean Action run `30526085450`, build job `90817192932`.
+
+## Outcome
+
+All seven fixed proof-chain steps compile for the actual project zeta and zeta derivative in
+`LeanLab/Riemann/LevinsonMontgomeryJensenTopZeroCount.lean`.
+
+The decisive source-facing detail is the derivative center normalization. Lean proves the
+rotated `n=2` term is exactly `-log(2)/2^20`, bounds the complete remaining derivative
+Dirichlet tail by `2/3^17`, and obtains a fixed nonzero center value. Together with the actual
+fixed-strip zeta bound, its Cauchy derivative transfer, and analytic conjugate reflection, this
+supplies logarithmic Jensen divisor counts for both source symmetrizations.
+
+Every real source crossing on `[0,1]` is also proved to lie in the support of the corresponding
+multiplicity-bearing divisor. The crossing-to-continuous-argument theorem, admissible top-height
+selection, global indented argument principle, both Levinson--Montgomery count outputs, Speiser
+equivalence, H12, and RH remain open.

@@ -125,6 +125,7 @@ import LeanLab.Riemann.LevinsonMontgomeryBoundarySigns
 import LeanLab.Riemann.LevinsonMontgomeryCriticalIndentation
 import LeanLab.Riemann.SpeiserAdmissibleContour
 import LeanLab.Riemann.LevinsonMontgomeryLeftHalfPlaneWinding
+import LeanLab.Riemann.LevinsonMontgomeryJensenTopZeroCount
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -2055,6 +2056,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``chebyshevReverseZeroExclusion_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260730-H0-CHEBYSHEV-REVERSE-ZERO-EXCLUSION-01 closes the conditional reverse half of the DLMF 25.16.4 Chebyshev criterion. Mathlib's Mellin differentiability theorem supplies genuine holomorphy rather than pointwise ordered convergence. With Z=(s-1)zeta(s), Lean continues (s-1)Z'=Z*(1-(s-1)E-Z) across Re(s)>r and uses analytic order to forbid a zero there without dividing at a zero or crossing the zeta pole. Applying the bound for every positive epsilon and reflecting rho to 1-rho yields RiemannHypothesis. The Chebyshev error estimate remains an explicit unproved premise; no unconditional zero-free region, H0, or RH is claimed. A compiled r=beta=3/4 control shows why one fixed exponent above one half is insufficient." },
+    { id := "H12.levinson-montgomery.jensen-top-zero-count"
+      tier := .tier2
+      title := "Close the Levinson--Montgomery Jensen top zero count"
+      statement :=
+        "Construct the actual real-part symmetrizations of zeta and its phase-normalized derivative, prove fixed-strip polynomial growth and uniform far-right center lower bounds, apply Jensen's inequality to obtain multiplicity-bearing O(log T) inner-disc divisor counts, and put every source real crossing on [0,1] into the corresponding divisor support."
+      leanName := some ``exists_levinsonMontgomeryZetaDerivTopSymm_sum_divisor_le_log
+      status := .proven
+      note := "Campaign LITERATURE-20260730-H12-LEVINSON-MONTGOMERY-JENSEN-TOP-ZERO-COUNT-01 expands the sentence 'a standard use of Jensen's theorem' on page 52 of Levinson--Montgomery 1974. Lean checks both moving pole exclusions; actual zeta growth on the complete fixed strip via Abel continuation and the functional equation with Gamma-cosine exponential cancellation; actual zeta-derivative growth via Cauchy; the zeta center lower bound; and the derivative center lower bound from the phase-fixed n=2 Dirichlet term and a complete p-series tail estimate. Both actual symmetrizations have multiplicity-bearing O(log T) divisor counts, and every source crossing enters the inner divisor support. This closes the local top-edge Jensen producer, not the conversion from crossings to argument variation, the global indented argument-principle bookkeeping, either Levinson--Montgomery count identity, Speiser equivalence, H12, or RH; historical_route_coverage_delta=1, actual_zeta_top_count_delta=1, actual_zeta_deriv_top_count_delta=1, argument_variation_delta=0, rh_frontier_delta=0." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

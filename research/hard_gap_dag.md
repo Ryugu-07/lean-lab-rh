@@ -3035,6 +3035,37 @@ producer remains open, and the next loop returns to cross-family historical omis
   registration edit.
 - `global_goal`: active.
 
+## 2026-07-30 H12 Levinson--Montgomery Jensen top zero-count local result
+
+- `campaign`:
+  `LITERATURE-20260730-H12-LEVINSON-MONTGOMERY-JENSEN-TOP-ZERO-COUNT-01`.
+- `node`: `H12-LM-JENSEN-TOP-REAL-ZERO-COUNT-01`.
+- `status`: `FULL_FIXED_ENDPOINT_SUCCESS / LOCAL_AUDIT_GREEN /
+  PUBLIC_IMPLEMENTATION_PENDING`.
+- `compiled_edge`:
+  actual analytic zeta and phase-normalized zeta-derivative symmetrizations
+  `->` fixed-strip polynomial zeta growth and Cauchy derivative growth
+  `->` quantitative far-right center separation
+  `->` multiplicity-bearing Jensen divisor `O(log T)` counts
+  `->` actual real crossing inclusion in divisor support.
+- `hidden_source_detail`: the zeta-derivative center requires the phase
+  `exp(i*t*log 2)`. It makes the `n=2` Dirichlet term exactly
+  `-log(2)/2^20`; the remaining tail is bounded by `2/3^17`.
+- `closed_gap`: the page-52 "standard use of Jensen's theorem" is now formalized through
+  the actual crossing-count producer.
+- `first_open_successor`: `H12-LM-JENSEN-TOP-VARIATION-01`, converting the real-part
+  crossing bound into the source continuous argument variation on the top horizontal side.
+- `later_open_chain`: admissible cofinal top heights or the strict-negative branch; finite
+  indented argument-principle assembly; global count identity;
+  `N_1^-(T)=N^-(T)+O(log T)`; the full dichotomy; Speiser equivalence; H12; RH.
+- `local_audit`: 1552-line no-sorry module; seven exact TargetChecks; seven selected
+  standard-only axiom prints; empty forbidden scan and diff check; full `8815/8815` build
+  with inherited warnings only.
+- `deltas`: historical route coverage `+1`; actual zeta top count `+1`; actual zeta-derivative
+  top count `+1`; argument variation, global Levinson--Montgomery count, RH frontier, and RH
+  remain `0`.
+- `global_goal`: active.
+
 ## 2026-07-28 H1 Hardy theta inversion local result
 
 - `node`: `H1-HARDY-THETA-INVERSION-01`.

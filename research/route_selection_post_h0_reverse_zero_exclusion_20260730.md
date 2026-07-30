@@ -2,7 +2,7 @@
 
 Date: 2026-07-30
 
-Status: `RERANK_COMPLETE / H12_JENSEN_TOP_ZERO_COUNT_SELECTED`
+Status: `SELECTED_CAMPAIGN_LOCAL_SUCCESS / ARGUMENT_VARIATION_NEXT_OPEN`
 
 ## Closed parent
 
@@ -88,3 +88,15 @@ the count comparison `N_1^-(T)=N^-(T)+O(log T)`.
   preregistration passes public Lean Action CI.
 
 The persistent RH Goal remains active.
+
+## Campaign outcome
+
+The selected omission was reconstructible for the actual zeta objects. The complete local
+Jensen producer now compiles: fixed-disc analyticity, polynomial bounds for zeta and its
+derivative, quantitative center separation, logarithmic multiplicity-bearing divisor counts,
+and real-crossing inclusion.
+
+The source sentence still compresses one distinct topological-analytic edge not supplied by
+Jensen alone: turn the ordered real-part crossings into the continuous change of argument used
+by the horizontal contour. This is the first H12 successor to compare against non-adjacent
+historical candidates; it is not automatically selected merely because it is adjacent.

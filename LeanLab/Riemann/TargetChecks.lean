@@ -10,6 +10,7 @@ import LeanLab.Riemann.LevinsonMontgomeryBoundarySigns
 import LeanLab.Riemann.LevinsonMontgomeryCriticalIndentation
 import LeanLab.Riemann.SpeiserAdmissibleContour
 import LeanLab.Riemann.LevinsonMontgomeryLeftHalfPlaneWinding
+import LeanLab.Riemann.LevinsonMontgomeryJensenTopZeroCount
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -6718,5 +6719,66 @@ example :
 example :
     ChebyshevReverseZeroExclusionCertificate :=
   chebyshevReverseZeroExclusion_endpoint
+
+example :
+    levinsonMontgomeryJensenCenter = (20 : ℂ) ∧
+      levinsonMontgomeryJensenInnerRadius = 20 ∧
+      levinsonMontgomeryJensenOuterRadius = 21 := by
+  norm_num [levinsonMontgomeryJensenCenter,
+    levinsonMontgomeryJensenInnerRadius,
+    levinsonMontgomeryJensenOuterRadius]
+
+example (t x : ℝ) :
+    levinsonMontgomeryZetaTopSymm t x =
+      ((riemannZeta (x + t * Complex.I)).re : ℂ) :=
+  levinsonMontgomeryZetaTopSymm_real t x
+
+example (t x : ℝ) :
+    levinsonMontgomeryZetaDerivTopSymm t x =
+      (((levinsonMontgomeryDerivPhase t *
+        deriv riemannZeta (x + t * Complex.I)).re : ℝ) : ℂ) :=
+  levinsonMontgomeryZetaDerivTopSymm_real t x
+
+example :
+    ∃ C T0 : ℝ, 0 ≤ C ∧
+      ∀ t : ℝ, T0 ≤ t →
+        (((∑ᶠ z,
+          MeromorphicOn.divisor (levinsonMontgomeryZetaTopSymm t)
+            (Metric.closedBall levinsonMontgomeryJensenCenter
+              levinsonMontgomeryJensenInnerRadius) z) : ℤ) : ℝ) ≤
+          C * Real.log (t + 2) :=
+  exists_levinsonMontgomeryZetaTopSymm_sum_divisor_le_log
+
+example :
+    ∃ C T0 : ℝ, 0 ≤ C ∧
+      ∀ t : ℝ, T0 ≤ t →
+        (((∑ᶠ z,
+          MeromorphicOn.divisor
+            (levinsonMontgomeryZetaDerivTopSymm t)
+            (Metric.closedBall levinsonMontgomeryJensenCenter
+              levinsonMontgomeryJensenInnerRadius) z) : ℤ) : ℝ) ≤
+          C * Real.log (t + 2) :=
+  exists_levinsonMontgomeryZetaDerivTopSymm_sum_divisor_le_log
+
+example {t x : ℝ} (ht : 23 ≤ t)
+    (hx : x ∈ Set.Icc (0 : ℝ) 1)
+    (hzero : (riemannZeta (x + t * Complex.I)).re = 0) :
+    (x : ℂ) ∈ Function.support
+      (MeromorphicOn.divisor (levinsonMontgomeryZetaTopSymm t)
+        (Metric.closedBall levinsonMontgomeryJensenCenter
+          levinsonMontgomeryJensenInnerRadius)) :=
+  levinsonMontgomeryZetaTop_crossing_mem_divisorSupport ht hx hzero
+
+example {t x : ℝ} (ht : 23 ≤ t)
+    (hx : x ∈ Set.Icc (0 : ℝ) 1)
+    (hzero :
+      (levinsonMontgomeryDerivPhase t *
+        deriv riemannZeta (x + t * Complex.I)).re = 0) :
+    (x : ℂ) ∈ Function.support
+      (MeromorphicOn.divisor
+        (levinsonMontgomeryZetaDerivTopSymm t)
+        (Metric.closedBall levinsonMontgomeryJensenCenter
+          levinsonMontgomeryJensenInnerRadius)) :=
+  levinsonMontgomeryZetaDerivTop_crossing_mem_divisorSupport ht hx hzero
 
 end LeanLab.Riemann
