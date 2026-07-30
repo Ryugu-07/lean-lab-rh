@@ -10,7 +10,7 @@ Selected node:
 
 Mode: `LITERATURE / OMISSION-AUDIT / PROOF-ATTEMPT`
 
-Status: `PREREGISTRATION_PUBLIC_GREEN / IMPLEMENTATION_LOCAL_GREEN`
+Status: `PREREGISTRATION_PUBLIC_GREEN / IMPLEMENTATION_PUBLIC_GREEN`
 
 Preregistration public receipt:
 
@@ -201,5 +201,6 @@ No `LeanLab/`, `LeanLab/Riemann/Targets.lean`, `LeanLab/Riemann/TargetChecks.lea
 `LeanLab/Riemann/AxiomsAudit.lean`, or `LeanLab.lean` edit is allowed until this docs-only
 preregistration passes public Lean Action CI.
 
-The gate passed at the receipt above. The fixed endpoint now compiles locally and awaits its
-independent public implementation gate.
+The gate passed at the receipt above. The frozen implementation commit
+`247ea4c176505b9186faa51a69f5c53bbdbe80f2` passed independent public Lean Action run
+`30524180060`, build job `90811183408`, in `2m16s`.

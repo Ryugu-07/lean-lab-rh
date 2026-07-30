@@ -5,7 +5,7 @@ Date: 2026-07-30
 Campaign:
 `LITERATURE-20260730-H0-CHEBYSHEV-REVERSE-ZERO-EXCLUSION-01`
 
-Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_LOCAL_GREEN`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN`
 
 ## Result
 
@@ -99,4 +99,8 @@ forall epsilon > 0, psi(N)-N = O(N^(1/2+epsilon))
 
 without assuming RH or an equivalent statement. H0 and RH remain open.
 
-Public implementation CI and immutable evidence are still required.
+## Public Implementation Receipt
+
+Frozen implementation commit `247ea4c176505b9186faa51a69f5c53bbdbe80f2` passed Lean Action
+run `30524180060`, build job `90811183408`, in `2m16s`. Immutable evidence is recorded in
+`research/h0_chebyshev_reverse_zero_exclusion_evidence_20260730.md`.

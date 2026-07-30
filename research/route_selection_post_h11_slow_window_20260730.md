@@ -2,7 +2,7 @@
 
 Date: 2026-07-30
 
-Status: `H0_REVERSE_ZERO_EXCLUSION_LOCAL_GREEN / PUBLIC_IMPLEMENTATION_GATE_PENDING`
+Status: `H0_REVERSE_ZERO_EXCLUSION_IMPLEMENTATION_PUBLIC_GREEN / EVIDENCE_PENDING`
 
 ## Governing interpretation
 
@@ -104,3 +104,7 @@ all positive-epsilon Chebyshev error bounds -> RiemannHypothesis
 through genuine Mellin holomorphy, a pole-removed analytic ODE, and zero-order exclusion. It
 does not supply the Chebyshev error bounds. Public implementation CI and immutable evidence
 remain before campaign closure.
+
+Frozen implementation commit `247ea4c176505b9186faa51a69f5c53bbdbe80f2` passed Lean Action
+run `30524180060`, build job `90811183408`, in `2m16s`. The five proof and registration blobs
+are frozen while docs-only immutable evidence is published.

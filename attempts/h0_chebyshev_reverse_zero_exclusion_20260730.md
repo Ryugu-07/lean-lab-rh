@@ -5,7 +5,7 @@ Date: 2026-07-30
 Campaign:
 `LITERATURE-20260730-H0-CHEBYSHEV-REVERSE-ZERO-EXCLUSION-01`
 
-Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_LOCAL_GREEN`
+Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_PUBLIC_GREEN`
 
 ## Attempt log
 
@@ -27,6 +27,7 @@ Status: `FULL_FIXED_ENDPOINT_SUCCESS / IMPLEMENTATION_LOCAL_GREEN`
 | 14 | `RH_CONSUMER` | Every nontrivial zero satisfies `Re(rho)<=r` under the fixed-exponent premise. Choosing an exponent strictly between `1/2` and a hypothetical right-half zero, then reflecting `rho` to `1-rho`, proves RH from all positive-epsilon Chebyshev bounds. | Compile the fixed-exponent falsification boundary. |
 | 15 | `NEGATIVE_CONTROL` | The explicit witness `r=beta=3/4` satisfies both reflected strip bounds but is off the critical line. One fixed exponent above one half is therefore insufficient. | Register, audit, and run the full build. |
 | 16 | `LOCAL_AUDIT` | The 559-line no-sorry module, target ledger, eight exact checks, nine selected standard-only axiom prints, forbidden scans, and full `8814/8814` build pass. | Publish the implementation and freeze immutable evidence. |
+| 17 | `IMPLEMENTATION_PUBLIC_GATE` | Commit `247ea4c176505b9186faa51a69f5c53bbdbe80f2` passed Lean Action run `30524180060`, job `90811183408`, in `2m16s`. | Freeze the five Lean blobs and publish docs-only immutable evidence. |
 
 ## Current obstruction map
 

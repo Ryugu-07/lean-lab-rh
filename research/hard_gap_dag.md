@@ -2998,7 +2998,10 @@ final-ledger CI, return to cross-family selection with H11-D/H11-E retained as o
   `rh_frontier_delta=0`, `rh_proved=0`.
 - `local_audit`: 559-line source, eight exact TargetChecks, nine standard-only axiom prints,
   empty forbidden/resource scans, warning-as-error compiles, and full `8814/8814` build.
-- `next_gate`: frozen implementation public CI, then docs-only immutable evidence.
+- `implementation_public_receipt`: commit
+  `247ea4c176505b9186faa51a69f5c53bbdbe80f2`, Lean Action run `30524180060`, build job
+  `90811183408`, passed in `2m16s`.
+- `next_gate`: docs-only immutable evidence with all five Lean blobs unchanged.
 - `global_goal`: active.
 
 ## 2026-07-28 H1 Hardy theta inversion local result
