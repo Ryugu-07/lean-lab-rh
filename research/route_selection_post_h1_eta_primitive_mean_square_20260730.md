@@ -2,7 +2,7 @@
 
 Date: 2026-07-30
 
-Status: `H2_MAYNARD_PRATT_TYPE_II_RARITY_SELECTED / PREREGISTRATION_PUBLIC_GREEN`
+Status: `H2_MAYNARD_PRATT_TYPE_II_LOCAL_CAMPAIGN_PARKED / CROSS_FAMILY_RERANK_REQUIRED`
 
 ## Closed parent
 
@@ -128,6 +128,16 @@ Packaging it as a hypothesis is not a Type-II rarity theorem.
   `30500943541`, build job `90740248215`, in `2m1s`.
 - `conditional_reduction_gate`: implementation commit
   `b44255fdeb49f12a55214888d26c40d761dfe8e5` passed Lean Action run `30505660293`, build job
-  `90754736822`, in `2m49s`; the Type-II rarity campaign remains open.
+  `90754736822`, in `2m49s`.
+- `short_moment_probe_result`: direct mean square and square-root approximate functional
+  equations incur generic length `T^(1+1/50)`; Watt's published max-coefficient estimate
+  retains the twist-length factor `T^(1/50)` and hence a positive power loss; HRS
+  Proposition 5.1 invokes the BBLR asymptotic rather than replacing it.
+- `local_stop`: park this campaign at
+  `OBS-H2-SOURCE-MOBIUS-TWISTED-FOURTH-MOMENT-01`. This is an exact surviving analytic
+  producer, not a route falsification.
+- `next_selection_rule`: rerank across historical families. Do not select a further Type-II
+  numerical or coefficient optimization merely because it is adjacent.
+- `result`: `research/h2_maynard_pratt_type_ii_rarity_result_20260730.md`.
 
 The persistent RH Goal remains active.

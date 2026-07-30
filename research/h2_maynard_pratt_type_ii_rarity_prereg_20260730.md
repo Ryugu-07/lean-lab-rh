@@ -8,7 +8,10 @@ Node: `H2-MAYNARD-PRATT-TYPE-II-RARITY-01`
 
 Mode: `LITERATURE / HISTORICAL_OMISSION / PROOF-ATTEMPT / FALSIFICATION`
 
-Status: `PREREGISTRATION_PUBLIC_GREEN / PRODUCTION_OPEN`
+Status: `LOCAL_CAMPAIGN_PARKED / EXACT_ANALYTIC_PRODUCER_OPEN`
+
+Result:
+`research/h2_maynard_pratt_type_ii_rarity_result_20260730.md`
 
 Public preregistration gate: commit `58a77f7ca4ee0b04dfe4f4653bdc93d8df080be5`,
 Lean Action run `30500943541`, build job `90740248215`, passed in `2m1s`.
@@ -153,8 +156,12 @@ remain open.
 
 Implementation commit `b44255fdeb49f12a55214888d26c40d761dfe8e5` passed public Lean
 Action run `30505660293`, build job `90754736822`, in `2m49s`. This public-green checkpoint
-does not close the campaign; it freezes the conditional reduction before the fixed
-short-Mobius twisted fourth-moment attempt.
+freezes the conditional reduction before the fixed short-Mobius twisted fourth-moment
+attempt. Direct finite mean square, an upper-bound-only approximate functional equation,
+Watt's max-coefficient estimate, and the HRS proposition were then audited. None supplies
+the required fixed-polylogarithmic moment without returning to deep twisted-moment or
+spectral machinery. The local campaign is therefore parked at the exact named moment
+producer. The producer, H2 route, and persistent RH Goal remain open.
 
 ## Required definitions
 

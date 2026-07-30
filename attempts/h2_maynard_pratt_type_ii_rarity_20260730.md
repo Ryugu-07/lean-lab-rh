@@ -6,7 +6,7 @@ Campaign: `LITERATURE-20260730-H2-MAYNARD-PRATT-TYPE-II-RARITY-01`
 
 Node: `H2-MAYNARD-PRATT-TYPE-II-RARITY-01`
 
-Status: `CONDITIONAL_REDUCTION_PUBLIC_GREEN / PRODUCTION_OPEN`
+Status: `LOCAL_CAMPAIGN_PARKED / EXACT_ANALYTIC_PRODUCER_OPEN`
 
 ## Fixed question
 
@@ -43,6 +43,10 @@ upper-bound proof than the general twisted fourth-moment asymptotics cited by th
 | 23 | `CONDITIONAL_FULL_COUNT_REDUCTION` | `MaynardPrattTypeIISourceTwistedFourthMomentEstimate A` names exactly the fixed source-mollifier estimate on `[T/2,3T]`. `eventually_exists_typeIISeparated_fullCount_charge_le_of_sourceMomentEstimate` composes it with the compiled local count, packing, local charge, and global charging; no additional analytic premise remains. | Classify the structural reduction as compiled conditional progress, not as a proved Type-II rarity estimate. The moment producer remains open. |
 | 24 | `LOCAL_AUDIT` | The new module compiles independently without warnings; its target build completes `8724/8724`, and the full project build completes `8810/8810` with only inherited warnings. Five exact statement witnesses compile in `TargetChecks.lean`; seven registered axiom prints use only `propext`, `Classical.choice`, and `Quot.sound`. The four Type-II modules have empty `sorry/admit/native_decide/axiom/opaque/unsafe` scans, and `git diff --check` passes. | Freeze this loop checkpoint in the ledgers before attacking the fixed twisted fourth moment. Do not register Type-II rarity as proven. |
 | 25 | `PUBLIC_CHECKPOINT` | Implementation commit `b44255fdeb49f12a55214888d26c40d761dfe8e5` passed Lean Action run `30505660293`, build job `90754736822`, in `2m49s`. The public checkpoint includes the four production modules, five exact checks, seven axiom audits, and the conditional full-count theorem. | Keep the campaign active. Attack `MaynardPrattTypeIISourceTwistedFourthMomentEstimate A`; do not close the Type-II rarity node. |
+| 26 | `DIRECT_MEAN_SQUARE_FALSIFICATION` | Squaring the mollifier and using a length-`T` approximate functional equation for `zeta^2` creates generic polynomial length `T^(1+1/50)`. The available `O(L+N)` mean-square mechanism retains a positive power loss. | Reject direct expansion through the existing finite mean square as a producer of `T*(log T)^A`. |
+| 27 | `WATT_SHORTCUT_AUDIT` | Watt's source theorem can treat `M^2` as the twisting polynomial. In its `sum a_m*m^(-it)` normalization the maximum coefficient has a coarse absolute bound, but the theorem still contributes the polynomial length `T^(1/50)` times `T^(1+epsilon)`. | Record a possible coefficient-`L2` Watt variant as a new exact theorem shape, but reject the published length-times-maximum theorem because it retains a positive power loss. |
+| 28 | `HRS_FALLBACK_AUDIT` | Heap--Radziwill--Soundararajan Proposition 5.1 proves the needed style of twisted fourth moment by explicitly invoking the Bettin--Bui--Li--Radziwill asymptotic. It is not an independent upper-bound-only shortcut. | Retain Hughes--Young/BBLR reconstruction as the deep fallback, not as a small omitted lemma. |
+| 29 | `LOCAL_STOP` | The source repair, local count omission, structural charging, conditional full-count theorem, audits, and public receipts are complete. The sole deep producer remains the fixed short-Mobius twisted fourth moment; no smaller source-backed proof survived the three probes. | Park only this local campaign at `OBS-H2-SOURCE-MOBIUS-TWISTED-FOURTH-MOMENT-01` and rerank the historical atlas. Keep the producer and global RH Goal open. |
 
 ## Frozen frontier
 
@@ -69,6 +73,12 @@ upper-bound proof than the general twisted fourth-moment asymptotics cited by th
   `MaynardPrattTypeIISourceTwistedFourthMomentEstimate A` as an undischarged analytic input.
 - `remaining_elementary_postprocessing`: normalize the exact compiled charge factors to the
   preregistered `T^(2*(1-sigma))*(log T)^B` display once the moment exponent `A` is fixed.
+- `local_stop_reason`: direct finite mean square and upper-bound-only approximate functional
+  equations incur length `T^(1+1/50)`; Watt's available max-coefficient theorem retains
+  the twist-length factor `T^(1/50)` and a positive power loss; HRS returns to the full BBLR
+  asymptotic.
+- `next_action`: cross-family rerank. Do not select another Type-II numerical or coefficient
+  optimization by adjacency.
 - `strict_successor`: Type-I rarity, half-isolated clustering without finite-real-part
   rigidity, and actual-zeta bow exclusion.
 - `not_claimed`: a full zero-density theorem, H2, a zero-free region, or RH.

@@ -4543,3 +4543,35 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   and therefore the Type-II rarity theorem remain open. No H2, zero-free statement, or RH is
   claimed.
 - `global_goal`: active.
+
+## 2026-07-30 H2 Type-II rarity local stop at exact analytic producer
+
+- `campaign`: `LITERATURE-20260730-H2-MAYNARD-PRATT-TYPE-II-RARITY-01`.
+- `local_status`: `PARKED_AT_EXACT_ANALYTIC_PRODUCER`.
+- `compiled_reduction`: the source-sign repair, uniform corrected Gamma tail, unconditional
+  local fourth-moment charge, analytic-multiplicity-preserving packing, right-half-plane
+  local zero count, disjoint global charging, and the conditional full-count theorem are
+  public green.
+- `historical_omission_found`: the packing consumer needs no full Riemann--von Mangoldt
+  theorem; positivity of the xi reciprocal zero mass at `2+i*t` and the Euler-product
+  logarithmic derivative give the required source occupancy.
+- `failed_small_producer_probe_1`: direct expansion and a critical-line approximate
+  functional equation produce generic length `T^(1+1/50)`, so the finite
+  `O(interval length + polynomial length)` mean square retains a positive power loss.
+- `failed_small_producer_probe_2`: Watt's available twisted fourth-moment upper bound uses
+  polynomial length times the maximum squared coefficient and a `T^epsilon` loss. In the
+  theorem's coefficient normalization the maximum admits a coarse absolute bound, but the
+  length remains `T^(1/50)`, so the selected predicate still suffers a positive power loss.
+- `failed_small_producer_probe_3`: Heap--Radziwill--Soundararajan Proposition 5.1 invokes
+  the Bettin--Bui--Li--Radziwill asymptotic, so it is not an independent weak shortcut.
+- `exact_surviving_edge`: `OBS-H2-SOURCE-MOBIUS-TWISTED-FOURTH-MOMENT-01`, represented by
+  `MaynardPrattTypeIISourceTwistedFourthMomentEstimate A`.
+- `future_reopen_conditions`: a coefficient-`L2` twisted-fourth-moment operator estimate, a
+  source-specific shifted-convolution estimate for the truncated Mobius square, or a full
+  Hughes--Young/BBLR specialization.
+- `claim_boundary`: no unconditional Type-II rarity estimate, density theorem, H2,
+  zero-free statement, or RH.
+- `rotation`: cross-family historical rerank is required; adjacency to Type-II constants or
+  coefficients is not a selection reason.
+- `result`: `research/h2_maynard_pratt_type_ii_rarity_result_20260730.md`.
+- `global_goal`: active.
