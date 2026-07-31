@@ -51,6 +51,9 @@ Local audit: the 705-line module, five exact TargetChecks, five selected axiom p
 import, forbidden scan, and patch check pass. The selected declarations use only `propext`,
 `Classical.choice`, and `Quot.sound`; the full build passes `8820/8820`.
 
+Frozen implementation commit `6f1b51b33304bffd756522c06dc36cfc79ecfd01` passed public
+Lean Action run `30656931596`, build job `91243536693`, in `2m37s`.
+
 ## Claim boundary
 
 This checkpoint reduces an actual analytic producer. It is not a numerical certificate, the

@@ -25,6 +25,7 @@ GLOBAL_GOAL_ACTIVE`
 | 10 | `CROSS_ROUTE_REPAIR` | Choosing `r` near `1/log N` restores the expected `N^-sigma log N` scale. At the worst reflected real part `1/2`, navigation first found all three sign margins favorable around `N=10^6`. Xi reflection moves every positive left-half point to real part at least `1/2`; the existing left-boundary theorem handles `sigma=0`. | Formalize reflection and the archimedean correction before any numerical certificate. |
 | 11 | `MEANINGFUL_PARTIAL` | The new no-sorry module proves the actual eta/zeta derivative bounds, factor nonvanishing, exact reflected zeta logarithmic-derivative identity, explicit Stieltjes digamma enclosure, robust quotient inequalities, and a theorem turning finite reflected margins into actual zeta nonvanishing, derivative nonvanishing, and `Re(zeta'/zeta)<0`. | Build a proof-producing transcendental interval evaluator and cover the height-ten segment. |
 | 12 | `LOCAL_AUDIT` | Standalone module, Targets, TargetChecks, and AxiomsAudit pass warning-as-error. Five selected endpoint audits use only `propext`, `Classical.choice`, and `Quot.sound`; forbidden scan and `git diff --check` are empty; full build passes `8820/8820`. | Publish a frozen implementation checkpoint. |
+| 13 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `6f1b51b33304bffd756522c06dc36cfc79ecfd01` passed Lean Action run `30656931596`, build job `91243536693`, in `2m37s`. | Publish docs-only immutable evidence with all five Lean blobs frozen. |
 
 ## Current obstruction map
 

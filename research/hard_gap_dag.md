@@ -5125,6 +5125,13 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `local_audit`: 705-line no-sorry module; five exact TargetChecks; five selected axiom prints
   using only `propext`, `Classical.choice`, and `Quot.sound`; empty forbidden scan and patch
   check; full build `8820/8820`.
+- `public_implementation`: frozen commit `6f1b51b33304bffd756522c06dc36cfc79ecfd01`
+  passed Lean Action run `30656931596`, build job `91243536693`, in `2m37s`.
+- `frozen_blobs`: module `452b7b029715d53ca47b1e1350f088f393910363`; Targets
+  `d414921d54565e4a815d5484ab341c80b6994687`; TargetChecks
+  `8eb12b44fb60bf89daaa3807f4026c1c9056092a`; AxiomsAudit
+  `e3c519d840952396c21eeef91022379dd86e3878`; LeanLab.lean
+  `a1bb3e96f482474dae0e926d08799c706f4e0fda`.
 - `next_attack`: prioritize Johansson-style Euler--Maclaurin with a kernel-checked Taylor/rational
   interval backend; retain the eta-reflection evaluator as independent cross-check and fallback.
 - `global_goal`: active.
