@@ -5006,12 +5006,12 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `production_gate`: no Lean or registration edit before docs-only preregistration public CI.
 - `global_goal`: active.
 
-## 2026-07-31 H12 global count step 7 local checkpoint
+## 2026-07-31 H12 global count steps 8-9 local checkpoint
 
 - `campaign`:
   `LITERATURE-20260731-H12-LEVINSON-MONTGOMERY-GLOBAL-COUNT-REENTRY-01`.
-- `status`: `STEPS_1_7_IMMUTABLE_EVIDENCE_PUBLIC_GREEN /
-  CHECKPOINT_RECEIPT_CI_REQUIRED / CAMPAIGN_ACTIVE`.
+- `status`: `STEP_8_FULL_SUCCESS / STEP_9_MEANINGFUL_PARTIAL /
+  LOCAL_AUDIT_GREEN / IMPLEMENTATION_CI_REQUIRED / CAMPAIGN_ACTIVE`.
 - `closed_edge_1`: actual positive-multiplicity zeta factorization and punctured positive-right
   logarithmic derivative exclude every interior zero under the strict-negative integer-height
   predicate.
@@ -5026,22 +5026,31 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `omission_candidate`: source indentation bookkeeping is replaceable for this finite open-left
   count identity by an adaptive vertical cutoff plus a finite-support stabilization theorem.
   No claim is made that indentation is redundant in the remaining source argument.
-- `first_open_theorem`: `LevinsonMontgomeryLogCountBound`.
-- `exact_obstruction`: after taking imaginary parts of the rectangle identity, actual top
-  `O(log(t+2))` and fixed-bottom bounds leave the real parts of both zeta and zeta-derivative
-  logarithmic-derivative integrals on the left and adaptive right vertical sides. No compiled
-  cancellation or uniform endpoint-modulus estimate currently closes them.
-- `next_attack`: prove a zero-free vertical logarithmic-modulus endpoint identity, instantiate it
-  on both sides, and test uniform `O(log T)` bounds before attempting the all-real-cutoff transfer.
-- `strict_boundary`: `LevinsonMontgomeryLogCountBound`, exact-count sequence, full count
-  dichotomy, unconditional Speiser equivalence, H12, and RH remain open.
+- `checkpoint_correction`: the vertical contribution is a principal-log argument change of
+  `-zeta'/zeta`, not an endpoint-modulus term. A uniform strict-left adaptive side bounds its
+  imaginary part by `pi`.
+- `closed_edge_6`: `levinsonMontgomeryLogCountBound_actual` proves the first source count
+  conclusion for every sufficiently large real cutoff; finite bad-height support supplies the
+  all-real transfer.
+- `closed_edge_7_conditional`: four-side principal-log cancellation proves the exact-count
+  sequence from one strict-negative zero-offset base, and the literal source
+  `LevinsonMontgomeryHeightTenCertificate` supplies that base after compact propagation.
+- `first_open_theorem`: `LevinsonMontgomeryHeightTenCertificate`.
+- `exact_obstruction`: source page 52 invokes explicit low-zero information at `t=10`. Neither
+  pinned Mathlib nor the project has a certified actual-zeta and zeta-derivative low-height
+  enumeration proving the strict sign and zero count offset.
+- `strict_boundary`: the unconditional count dichotomy, full theorem-one conjunction,
+  unconditional Speiser equivalence, H12, and RH remain open.
 - `local_audit`: exact warning-as-error entry checks pass; selected axioms are only `propext`,
-  `Classical.choice`, and `Quot.sound`; forbidden scan empty; full build `8818/8818`.
+  `Classical.choice`, and `Quot.sound`; forbidden scan and diff check are empty; full build
+  `8819/8819`.
 - `public_implementation`: frozen commit
   `87b06e0c258b5fbc8f141a7242ce0ac8ae9ac4dc` passed Lean Action run `30645129522`, build job
   `91204516436`, in `2m43s`.
 - `immutable_evidence`: docs-only commit
   `88c5e8f4552548de67a5d345f2fcb7e9f7f45a2e` passed Lean Action run `30645443955`, build job
-  `91205557565`, in `2m21s`; all six frozen Lean blobs are unchanged. Checkpoint receipt CI
-  remains before step-8 production resumes.
+  `91205557565`, in `2m21s`; all six frozen Lean blobs are unchanged.
+- `checkpoint_receipt`: docs-only commit
+  `6cbe54fc16e32cab02e1e77da9620aead0f0992f` passed Lean Action run `30645718046`, opening
+  step-8 production.
 - `global_goal`: active.

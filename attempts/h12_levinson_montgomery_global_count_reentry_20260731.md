@@ -5,8 +5,8 @@ Date: 2026-07-31
 Campaign:
 `LITERATURE-20260731-H12-LEVINSON-MONTGOMERY-GLOBAL-COUNT-REENTRY-01`
 
-Status: `STEPS_1_7_IMMUTABLE_EVIDENCE_PUBLIC_GREEN /
-CHECKPOINT_RECEIPT_CI_REQUIRED / CAMPAIGN_ACTIVE`
+Status: `STEP_8_FULL_SUCCESS / STEP_9_MEANINGFUL_PARTIAL /
+LOCAL_AUDIT_GREEN / IMPLEMENTATION_CI_REQUIRED / CAMPAIGN_ACTIVE`
 
 ## Attempt log
 
@@ -27,6 +27,16 @@ CHECKPOINT_RECEIPT_CI_REQUIRED / CAMPAIGN_ACTIVE`
 | 13 | `LOG_COUNT_ATTACK_1` | Expanding the rectangle identity and taking imaginary parts uses the compiled `O(log(t+2))` top integrals and fixed-bottom terms, but leaves the real parts of both logarithmic-derivative integrals on both vertical sides. No repository theorem presently bounds or cancels these terms. | Isolate the vertical obstruction in theorem-shaped form and test a logarithmic-modulus endpoint formula. |
 | 14 | `PUBLIC_IMPLEMENTATION` | Frozen implementation `87b06e0c258b5fbc8f141a7242ce0ac8ae9ac4dc` passed Lean Action run `30645129522`, build job `91204516436`, in `2m43s`. | Publish docs-only immutable evidence; keep the campaign active at step 8. |
 | 15 | `IMMUTABLE_EVIDENCE` | Docs-only evidence `88c5e8f4552548de67a5d345f2fcb7e9f7f45a2e` passed run `30645443955`, build job `91205557565`, in `2m21s`; all six frozen Lean blobs are unchanged. | Publish the checkpoint receipt, then attack the step-8 vertical terms. |
+| 16 | `CHECKPOINT_RECEIPT` | Docs-only receipt `6cbe54fc16e32cab02e1e77da9620aead0f0992f` passed run `30645718046`. | Resume step 8 from the frozen global count identity. |
+| 17 | `LOG_COUNT_ATTACK_2_CORRECTION` | Differentiating `q=zeta'/zeta` along a vertical line shows `I*integral(logDeriv zeta'-logDeriv zeta)` is the principal-log change of `-q`. Its imaginary part is argument variation, not endpoint log modulus. The earlier four-real-part obstruction was a decomposition artifact. | Prove one uniform strict-left line that also preserves every open-left divisor point. |
+| 18 | `UNIFORM_CRITICAL_STRIP` | Compactness of the critical segment and the multiplicity-aware punctured zero neighborhoods produce one uniform negative strip. The finite-support cutoff is selected inside that strip, so the same `r` gives exact counts and strict-left vertical geometry. | Reassemble all four boundary contributions. |
+| 19 | `STEP_8_FULL_SUCCESS` | `levinsonMontgomeryLogCountBound_actual` compiles. Both vertical sides contribute at most `pi` in argument; the top has the compiled Jensen `O(log(t+2))` bound; the bottom has a uniform partial-segment constant; and a finite bad-height cutoff transfers the estimate to every sufficiently large real `T`. | Attack `LevinsonMontgomeryCountDichotomy`. |
+| 20 | `DICHOTOMY_ATTACK_1_COFINAL_PAIR` | Two cofinal negative heights make the count difference invariant between them, but do not prove that the invariant integer is zero. `O(log T)` does not remove a fixed offset. | Re-read the source base contour rather than assume zero offset. |
+| 21 | `PRIMARY_SOURCE_BASE_AUDIT` | Page 52 uses the rectangle with bottom `t=10` and explicitly invokes low-zero verification before asserting the whole ratio contour lies in the left half-plane. This finite base input was omitted from preregistered step 9. | State the exact finite certificate and test whether the remaining contour logic closes from it. |
+| 22 | `DICHOTOMY_ATTACK_2_ZERO_OFFSET_BASE` | Lean proves four-side principal-log cancellation on the adaptive rectangle and proves that one strict-negative zero-offset base plus cofinal negative geometry gives `LevinsonMontgomeryExactCountSequence`. Combining the other integer-height branch gives the full dichotomy conditionally. | Align the conditional premise with literal height ten. |
+| 23 | `DICHOTOMY_ATTACK_3_HEIGHT_TEN_ALIGNMENT` | `LevinsonMontgomeryHeightTenCertificate` is defined as strict negativity at `t=10` plus equality of the two actual multiplicity counts there. Compactness propagates the sign to some `b>10`, and finite-zero-set extensionality proves both counts unchanged. The conditional full Theorem 1 then compiles. | Search for an existing certified low-height zeta and zeta-derivative zero enumeration. |
+| 24 | `LOW_HEIGHT_INVENTORY` | The primary source cites explicit low-zero information, but neither pinned Mathlib nor the project contains a theorem certifying the required height-ten sign and count offset. Public zero tables are numerical evidence, not Lean premises. | Record the first unavailable theorem exactly; close this campaign as meaningful partial after public evidence. |
+| 25 | `LOCAL_AUDIT` | The new module, aggregate import, Targets, TargetChecks, and AxiomsAudit pass warning-as-error. Nine selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; the forbidden scan and diff check are empty; the full build passes `8819/8819`. | Freeze the implementation, publish it, and require public Lean Action evidence. |
 
 ## Current obstruction map
 
@@ -36,17 +46,21 @@ CHECKPOINT_RECEIPT_CI_REQUIRED / CAMPAIGN_ACTIVE`
    `zeta'`.
 4. `CLOSED`: adaptive common cutoff, open-left filter stabilization, and exact global count
    difference at negative integer heights.
-5. `OPEN`: express and control the real parts of the left/right vertical logarithmic-derivative
-   integrals. The natural candidate is a zero-free logarithmic-modulus endpoint identity, with
-   explicit treatment of the adaptive side and the line `Re(s)=0`.
-6. `OPEN`: transfer the resulting logarithmic count estimate from admissible integer heights to
-   every sufficiently large real cutoff without assuming a new zero-density theorem.
-7. `OPEN`: derive the exact-count sequence in the negative branch and combine it with the compiled
-   dense branch.
+5. `CLOSED`: vertical contributions are principal-log argument changes on strict-left paths;
+   their imaginary parts are bounded by `pi` independently of height.
+6. `CLOSED`: finite bad-height support transfers the admissible estimate to every sufficiently
+   large real cutoff. `levinsonMontgomeryLogCountBound_actual` is unconditional.
+7. `CLOSED_CONDITIONALLY`: the exact-count sequence and full dichotomy follow from
+   `LevinsonMontgomeryNegativeExactCountBase`, and the literal source predicate
+   `LevinsonMontgomeryHeightTenCertificate` supplies that base.
+8. `OPEN`: prove `LevinsonMontgomeryHeightTenCertificate` by a certified low-height analysis of
+   the actual zeta and zeta-derivative divisors. This is now the first unavailable theorem.
 
 ## Assumption frontier
 
-Open and forbidden as premises: `LevinsonMontgomeryLogCountBound`,
+Compiled and available: `LevinsonMontgomeryLogCountBound`.
+
+Open and forbidden as premises: `LevinsonMontgomeryHeightTenCertificate`,
 `LevinsonMontgomeryCountDichotomy`, `SpeiserDerivativeZeroFree`, RH, and any equivalent
 zero-free or count theorem.
 
@@ -61,6 +75,11 @@ finite, so one can choose a vertical side `r<1/2` beyond every support point tha
 left of the critical line. Lean then proves that filtering the compact divisor by `Re(s)<r`
 equals filtering it by `Re(s)<1/2`. This is not a claim that indentation is globally redundant;
 it is a compiled replacement for this particular count-bookkeeping step.
+
+The second omission-sensitive finding is negative but decisive: source page 52 does not derive
+the exact-count sequence from cofinal high contours alone. It anchors the winding at `t=10` with
+explicit low-zero information. Lean confirms that every later step closes from precisely that
+finite certificate and that common nonvanishing cannot determine the count offset.
 
 ## Runtime record
 

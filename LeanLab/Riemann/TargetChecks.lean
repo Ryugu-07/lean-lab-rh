@@ -14,6 +14,7 @@ import LeanLab.Riemann.LevinsonMontgomeryJensenTopZeroCount
 import LeanLab.Riemann.LevinsonMontgomeryTopArgumentVariation
 import LeanLab.Riemann.LevinsonMontgomeryNegativeHeightGeometry
 import LeanLab.Riemann.LevinsonMontgomeryFiniteArgumentPrinciple
+import LeanLab.Riemann.LevinsonMontgomeryCriticalStrip
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -6888,5 +6889,44 @@ example {b : ℝ} {n : ℕ} (hbTen : 10 ≤ b) (hbn : b < n)
             ((speiserUpperLeftDerivZeroCount b : ℂ) -
               (speiserUpperLeftZetaZeroCount b : ℂ))) :=
   levinsonMontgomery_globalCountDifference_actual hbTen hbn hbottom htop
+
+example : LevinsonMontgomeryLogCountBound :=
+  levinsonMontgomeryLogCountBound_actual
+
+example {b : ℝ} {n : ℕ} (hb : 10 < b) (hbn : b < n)
+    (hbottom : SpeiserCommonZeroFreeHorizontal b)
+    (htop : LevinsonMontgomeryNegativeHeightGeometry n) :
+    ∃ r : ℝ, 0 < r ∧ r < 1 / 2 ∧
+      (∀ y : ℝ, y ∈ Set.Icc b n →
+        riemannZeta ((r : ℂ) + y * Complex.I) ≠ 0 ∧
+          deriv riemannZeta ((r : ℂ) + y * Complex.I) ≠ 0 ∧
+          (speiserZetaDerivRatio ((r : ℂ) + y * Complex.I)).re < 0) ∧
+      rectangleBoundaryIntegral (logDeriv (deriv riemannZeta)) 0 r b n -
+          rectangleBoundaryIntegral (logDeriv riemannZeta) 0 r b n =
+        2 * (Real.pi : ℂ) * Complex.I *
+          (((speiserUpperLeftDerivZeroCount n : ℂ) -
+              (speiserUpperLeftZetaZeroCount n : ℂ)) -
+            ((speiserUpperLeftDerivZeroCount b : ℂ) -
+              (speiserUpperLeftZetaZeroCount b : ℂ))) :=
+  exists_levinsonMontgomery_negativeRight_globalCountDifference_of_negativeHeightGeometry
+    hb hbn hbottom htop
+
+example (hbase : LevinsonMontgomeryNegativeExactCountBase)
+    (hcofinal : LevinsonMontgomeryCofinalNegativeHeightGeometry) :
+    LevinsonMontgomeryExactCountSequence :=
+  levinsonMontgomeryExactCountSequence_of_negativeExactCountBase_of_cofinalGeometry
+    hbase hcofinal
+
+example (hbase : LevinsonMontgomeryNegativeExactCountBase) :
+    LevinsonMontgomeryCountDichotomy :=
+  levinsonMontgomeryCountDichotomy_of_negativeExactCountBase hbase
+
+example (hcert : LevinsonMontgomeryHeightTenCertificate) :
+    LevinsonMontgomeryNegativeExactCountBase :=
+  levinsonMontgomeryNegativeExactCountBase_of_heightTenCertificate hcert
+
+example (hcert : LevinsonMontgomeryHeightTenCertificate) :
+    LevinsonMontgomeryLogCountBound ∧ LevinsonMontgomeryCountDichotomy :=
+  levinsonMontgomeryTheoremOne_of_heightTenCertificate hcert
 
 end LeanLab.Riemann

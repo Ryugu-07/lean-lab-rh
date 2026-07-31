@@ -52,20 +52,16 @@ different logical levels. The repair is
 
 This domain distinction is now part of the reusable argument-principle API.
 
-## First open theorem
+## Subsequent correction
 
-The first unavailable preregistered theorem remains `LevinsonMontgomeryLogCountBound`.
-Expanding the rectangle equality and taking imaginary parts leaves four vertical-side terms:
-the real parts of the `zeta'/zeta` and `zeta''/zeta'` integrals on `Re(s)=0` and on the adaptive
-line `Re(s)=r`.
+The checkpoint's proposed vertical endpoint-modulus obstruction was corrected in step 8. Along a
+vertical line, the derivative of `q=zeta'/zeta` carries a factor `I`; therefore
+`I*integral(logDeriv zeta'-logDeriv zeta)` is a principal-log change of `-q`, and its imaginary
+part is an argument variation. A uniform strict-left adaptive side bounds it by `pi`.
 
-The compiled top argument variations provide `O(log(t+2))`; the fixed bottom contributes only a
-height-independent term. No existing project theorem currently controls or cancels those
-vertical real integrals. The next attack is to formalize a zero-free vertical
-logarithmic-modulus endpoint identity and determine whether available zeta and derivative
-modulus bounds imply `O(log T)` uniformly in the adaptive `r`.
-
-The subsequent all-real-cutoff transfer also remains open.
+The new module `LevinsonMontgomeryCriticalStrip.lean` uses this correction to prove the actual
+all-real `LevinsonMontgomeryLogCountBound`. The first remaining source dependency is instead the
+finite `LevinsonMontgomeryHeightTenCertificate` needed to set the exact-count offset to zero.
 
 ## Audit
 

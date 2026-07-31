@@ -129,6 +129,7 @@ import LeanLab.Riemann.LevinsonMontgomeryJensenTopZeroCount
 import LeanLab.Riemann.LevinsonMontgomeryTopArgumentVariation
 import LeanLab.Riemann.LevinsonMontgomeryNegativeHeightGeometry
 import LeanLab.Riemann.LevinsonMontgomeryFiniteArgumentPrinciple
+import LeanLab.Riemann.LevinsonMontgomeryCriticalStrip
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -1771,7 +1772,15 @@ def rhTargets : List ResearchTarget :=
       statement :=
         "Prove LevinsonMontgomeryLogCountBound and LevinsonMontgomeryCountDichotomy for the actual multiplicity-bearing zeta and zeta-derivative rectangle counts, including the functional-equation zero sum, Gamma estimates, low-height boundary sign, indented critical-line contour, and argument-principle bookkeeping."
       status := .inProgress
-      note := "The paired xi zero-mass identity, equation (2.1), explicit Stieltjes digamma bound, dense branch, local critical geometry, common zero-free slices, actual top O(log T) variation, finite multiplicity-bearing argument principle, adaptive critical-line-open cutoff, and exact global count-difference identity are compiled. The first remaining theorem is LevinsonMontgomeryLogCountBound. Expanding the compiled rectangle identity shows the precise missing estimate: top and bottom horizontal imaginary parts are controlled, but the real parts of the zeta and zeta-derivative logarithmic-derivative integrals on both vertical sides still require endpoint-modulus control, followed by transfer from admissible heights to every sufficiently large real cutoff. The exact-count branch must then combine the negative-height geometry with the principal-log winding theorem; the full count dichotomy, Speiser equivalence, and RH remain open." },
+      note := "The actual multiplicity-bearing LevinsonMontgomeryLogCountBound now compiles for every sufficiently large real cutoff. One uniform near-critical straight side simultaneously preserves every strict-left divisor point, keeps zeta'/zeta in the left half-plane, and turns both vertical contributions into principal-log argument changes; finite-support height stabilization transfers the admissible estimate to all real T. For the exact-count branch, Lean proves complete four-side principal-log cancellation and reduces CountDichotomy to the literal finite LevinsonMontgomeryHeightTenCertificate used on source page 52. That certificate asserts a strict-negative t=10 horizontal and zero count offset there. Mathlib and the project contain no certified low-height zeta/zeta-derivative zero enumeration proving it. Thus the first count conclusion is closed, while the height-ten certificate, unconditional CountDichotomy, the full theorem-one conjunction, Speiser equivalence, and RH remain open." },
+    { id := "H12.speiser.levinson-montgomery-log-count-and-base-reduction"
+      tier := .tier2
+      title := "Close the logarithmic count and isolate the exact low-height base"
+      statement :=
+        "Prove the actual all-real LevinsonMontgomeryLogCountBound, prove exact winding cancellation on the same adaptive strict-left rectangle, reduce the cofinal negative-height branch to one zero-offset strict-negative base, and show the literal height-ten source certificate supplies that base without changing either finite multiplicity count."
+      leanName := some ``levinsonMontgomeryLogCountBound_actual
+      status := .proven
+      note := "Campaign LITERATURE-20260731-H12-LEVINSON-MONTGOMERY-GLOBAL-COUNT-REENTRY-01 reaches MEANINGFUL_PARTIAL at preregistered steps 8-9. The first source conclusion is fully compiled. The second is conditionally closed from exactly one finite datum: LevinsonMontgomeryHeightTenCertificate. Compactness propagates its strict sign to b>10, actual finite zero-set extensionality proves both counts unchanged, and the adaptive negative right side plus four endpoint logarithms force zero winding. Primary-source page 52 confirms that the authors invoke explicit low-zero verification at t=10; no such certified theorem is present locally. This is a source dependency isolation, not an unconditional CountDichotomy or RH result." },
     { id := "H11.pcc.horizontal-multiplicity-consumer"
       tier := .tier2
       title := "Formalize pair-correlation horizontal multiplicity"
