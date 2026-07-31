@@ -6,7 +6,8 @@ Campaign:
 `LITERATURE-20260731-H12-LEVINSON-MONTGOMERY-GLOBAL-COUNT-REENTRY-01`
 
 Status: `STEP_8_FULL_SUCCESS / STEP_9_MEANINGFUL_PARTIAL /
-IMMUTABLE_EVIDENCE_PUBLIC_GREEN / CLOSURE_LEDGER_CI_REQUIRED`
+CLOSURE_LEDGER_PUBLIC_GREEN / LOCAL_STOP / RECEIPT_CI_REQUIRED /
+GLOBAL_GOAL_ACTIVE`
 
 ## Source recheck
 
@@ -141,3 +142,7 @@ Action run `30653076645`, build job `91230777600`, in `2m18s`. Immutable docs-on
 recorded at commit `0e22bd751a4e51c16fef3015fb1361b76f865df0`; Lean Action run
 `30653415405`, build job `91231875566`, passed in `2m5s` with all five frozen Lean blobs
 unchanged. A docs-only local closure ledger remains required.
+
+Closure-ledger commit `25910921e9e57781b86d111d1e996c21fcd457a4` passed Lean Action run
+`30653735976`, build job `91232931773`, in `1m38s`. Close only the proven log-count-and-base-
+reduction subnode; the parent global-count node and persistent RH Goal remain open.

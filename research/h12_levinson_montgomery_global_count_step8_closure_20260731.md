@@ -11,7 +11,8 @@ Closed subnode:
 Open parent:
 `H12-LM-GLOBAL-INDENTED-COUNT-01`
 
-Status: `CLOSURE_LEDGER / PUBLIC_CI_REQUIRED / GLOBAL_GOAL_ACTIVE`
+Status: `CLOSURE_LEDGER_PUBLIC_GREEN / RECEIPT_CI_REQUIRED /
+GLOBAL_GOAL_ACTIVE`
 
 ## Public chain
 
@@ -28,10 +29,12 @@ Status: `CLOSURE_LEDGER / PUBLIC_CI_REQUIRED / GLOBAL_GOAL_ACTIVE`
 5. The five frozen Lean blobs are identical between the step-8 implementation and evidence
    commits.
 
+Closure-ledger commit `25910921e9e57781b86d111d1e996c21fcd457a4` passed Lean Action run
+`30653735976`, build job `91232931773`, in `1m38s`.
+
 ## Closed subnode
 
-Once this closure ledger passes public CI, close only
-`H12.speiser.levinson-montgomery-log-count-and-base-reduction`.
+Close only `H12.speiser.levinson-montgomery-log-count-and-base-reduction`.
 
 The unconditional compiled edge is:
 

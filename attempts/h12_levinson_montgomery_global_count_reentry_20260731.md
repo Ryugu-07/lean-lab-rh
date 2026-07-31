@@ -6,7 +6,8 @@ Campaign:
 `LITERATURE-20260731-H12-LEVINSON-MONTGOMERY-GLOBAL-COUNT-REENTRY-01`
 
 Status: `STEP_8_FULL_SUCCESS / STEP_9_MEANINGFUL_PARTIAL /
-IMMUTABLE_EVIDENCE_PUBLIC_GREEN / CLOSURE_LEDGER_CI_REQUIRED / CAMPAIGN_ACTIVE`
+CLOSURE_LEDGER_PUBLIC_GREEN / LOCAL_STOP / RECEIPT_CI_REQUIRED /
+GLOBAL_GOAL_ACTIVE`
 
 ## Attempt log
 
@@ -39,6 +40,7 @@ IMMUTABLE_EVIDENCE_PUBLIC_GREEN / CLOSURE_LEDGER_CI_REQUIRED / CAMPAIGN_ACTIVE`
 | 25 | `LOCAL_AUDIT` | The new module, aggregate import, Targets, TargetChecks, and AxiomsAudit pass warning-as-error. Nine selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; the forbidden scan and diff check are empty; the full build passes `8819/8819`. | Freeze the implementation, publish it, and require public Lean Action evidence. |
 | 26 | `PUBLIC_IMPLEMENTATION` | Frozen implementation `6863823d119977a660d0643595cbfc61b7282018` passed Lean Action run `30653076645`, build job `91230777600`, in `2m18s`. | Publish docs-only immutable evidence and verify that all five frozen Lean blobs remain unchanged. |
 | 27 | `IMMUTABLE_EVIDENCE` | Docs-only evidence `0e22bd751a4e51c16fef3015fb1361b76f865df0` passed Lean Action run `30653415405`, build job `91231875566`, in `2m5s`; all five frozen Lean blobs are unchanged. | Publish the local closure ledger; keep the parent global-count node and the persistent RH Goal open. |
+| 28 | `CLOSURE_LEDGER` | Docs-only closure commit `25910921e9e57781b86d111d1e996c21fcd457a4` passed Lean Action run `30653735976`, build job `91232931773`, in `1m38s`. | Stop this local campaign after the receipt; begin the next loop with fresh cross-family omission-seeking selection. |
 
 ## Current obstruction map
 
