@@ -6,7 +6,7 @@ Campaign:
 `LITERATURE-20260731-H12-LEVINSON-MONTGOMERY-GLOBAL-COUNT-REENTRY-01`
 
 Status: `STEP_8_FULL_SUCCESS / STEP_9_MEANINGFUL_PARTIAL /
-IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
+IMMUTABLE_EVIDENCE_PUBLIC_GREEN / CLOSURE_LEDGER_CI_REQUIRED`
 
 ## Source recheck
 
@@ -138,4 +138,6 @@ derivative-zero exclusion, and RH remain open. The persistent RH Goal remains ac
 
 Frozen implementation commit `6863823d119977a660d0643595cbfc61b7282018` passed public Lean
 Action run `30653076645`, build job `91230777600`, in `2m18s`. Immutable docs-only evidence is
-required before this local campaign is closed.
+recorded at commit `0e22bd751a4e51c16fef3015fb1361b76f865df0`; Lean Action run
+`30653415405`, build job `91231875566`, passed in `2m5s` with all five frozen Lean blobs
+unchanged. A docs-only local closure ledger remains required.

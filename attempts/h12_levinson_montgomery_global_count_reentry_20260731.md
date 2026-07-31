@@ -6,7 +6,7 @@ Campaign:
 `LITERATURE-20260731-H12-LEVINSON-MONTGOMERY-GLOBAL-COUNT-REENTRY-01`
 
 Status: `STEP_8_FULL_SUCCESS / STEP_9_MEANINGFUL_PARTIAL /
-IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED / CAMPAIGN_ACTIVE`
+IMMUTABLE_EVIDENCE_PUBLIC_GREEN / CLOSURE_LEDGER_CI_REQUIRED / CAMPAIGN_ACTIVE`
 
 ## Attempt log
 
@@ -38,6 +38,7 @@ IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED / CAMPAIGN_ACTIVE`
 | 24 | `LOW_HEIGHT_INVENTORY` | The primary source cites explicit low-zero information, but neither pinned Mathlib nor the project contains a theorem certifying the required height-ten sign and count offset. Public zero tables are numerical evidence, not Lean premises. | Record the first unavailable theorem exactly; close this campaign as meaningful partial after public evidence. |
 | 25 | `LOCAL_AUDIT` | The new module, aggregate import, Targets, TargetChecks, and AxiomsAudit pass warning-as-error. Nine selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; the forbidden scan and diff check are empty; the full build passes `8819/8819`. | Freeze the implementation, publish it, and require public Lean Action evidence. |
 | 26 | `PUBLIC_IMPLEMENTATION` | Frozen implementation `6863823d119977a660d0643595cbfc61b7282018` passed Lean Action run `30653076645`, build job `91230777600`, in `2m18s`. | Publish docs-only immutable evidence and verify that all five frozen Lean blobs remain unchanged. |
+| 27 | `IMMUTABLE_EVIDENCE` | Docs-only evidence `0e22bd751a4e51c16fef3015fb1361b76f865df0` passed Lean Action run `30653415405`, build job `91231875566`, in `2m5s`; all five frozen Lean blobs are unchanged. | Publish the local closure ledger; keep the parent global-count node and the persistent RH Goal open. |
 
 ## Current obstruction map
 

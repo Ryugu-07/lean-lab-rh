@@ -5,7 +5,8 @@ Date: 2026-07-31
 Campaign:
 `LITERATURE-20260731-H12-LEVINSON-MONTGOMERY-GLOBAL-COUNT-REENTRY-01`
 
-Status: `IMMUTABLE_EVIDENCE_CI_REQUIRED / CAMPAIGN_ACTIVE`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / CLOSURE_LEDGER_CI_REQUIRED /
+CAMPAIGN_ACTIVE`
 
 ## Public implementation receipt
 
@@ -32,6 +33,9 @@ At the public implementation commit:
 | `LeanLab.lean` | `0ded4bd589c8ce4b69743d6b6a8e5e11fbbb7592` |
 
 This evidence commit is documentation-only and must leave every frozen blob unchanged.
+
+Evidence commit `0e22bd751a4e51c16fef3015fb1361b76f865df0` passed Lean Action run
+`30653415405`, build job `91231875566`, in `2m5s`. All five frozen Lean blobs are unchanged.
 
 ## Proven endpoint
 
