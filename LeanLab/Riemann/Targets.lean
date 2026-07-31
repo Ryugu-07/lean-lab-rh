@@ -134,6 +134,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenCertificate
 import LeanLab.Riemann.LevinsonMontgomeryEulerMaclaurin
 import LeanLab.Riemann.LevinsonMontgomeryTranscendentalInterval
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenFiniteEvaluator
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenEndpoint
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -2121,6 +2122,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``eulerMaclaurinOne_finite_cross_re_lt_neg_fiftyThree_div_oneHundred
       status := .proven
       note := "Campaign PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01 now kernel-checks the N=30 finite evaluator at the reflected endpoint w=1/2-10i. Binary range reduction keeps every logarithm ratio at most the selected worst case near 0.164; scaling-and-squaring reduces complex-exp Taylor order to 16. Lean checks thirty rational rounded cpow centers, their ordinary and log-weighted sums, an explicit finite derivative formula, complete value and derivative center balls of 2e-8 and 1e-6, value-center norm greater than 3/2, derivative-center norm below 2, and finite cross real part below -53/100. This does not yet combine the analytic Euler--Maclaurin remainder and archimedean upper at the endpoint, prove variation over any positive sigma interval, give the finite subcover, prove the low-zero multiplicity count, the height-ten certificate, H12, or RH." },
+    { id := "H12.levinson-montgomery.height-ten-endpoint-actual-speiser"
+      tier := .tier1
+      title := "Certify the actual zeta Speiser sign at height ten"
+      statement :=
+        "Combine the thirty-term finite centers with kernel-checked Euler--Maclaurin remainders and the reflected pole/Gamma correction to prove zeta and its derivative are nonzero and Re(zeta'/zeta)<0 at s=1/2+10i."
+      leanName := some ``speiserStrictNegativePoint_heightTenEndpoint
+      status := .proven
+      note := "Campaign PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01 now closes the actual critical endpoint s=1/2+10i. A Machin-formula alternating-series certificate proves pi<3.142, rational logarithm enclosures prove log(pi)<1.145 and the needed Gamma-parameter log-norm lower bound, and exact norm-square arithmetic proves Euler--Maclaurin value and derivative radii below 13/250 and 11/50. These bounds compose with the frozen finite centers to prove actual zeta nonvanishing, derivative nonvanishing, and strict negative real logarithmic derivative at this one endpoint. No positive-width sigma interval, finite horizontal cover, low-zero multiplicity count, height-ten certificate, H12, or RH is proved." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

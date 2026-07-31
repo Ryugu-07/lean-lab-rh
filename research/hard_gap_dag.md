@@ -5216,3 +5216,33 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   Action run `30666031209`, build job `91273160412`, in `2m14s`; all seven frozen Lean blobs in
   `research/h14_h12_height_ten_endpoint_finite_evaluator_evidence_20260801.md` are unchanged.
 - `global_goal`: active.
+
+## 2026-08-01 H14 x H12 actual endpoint Speiser checkpoint
+
+- `campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `route_policy`: this closes a fixed finite-height producer from the historical
+  Levinson--Montgomery route using Johansson-style Euler--Maclaurin evaluation. It does not
+  displace the broader historical-route survey, and conjecture tests remain open.
+- `closed_edge_13`: Machin's formula, alternating arctangent bounds, and monotonicity of `log`
+  prove `pi < 3142/1000` and `log pi < 229/200` without importing a decimal approximation.
+- `closed_edge_14`: exact endpoint norm inequalities combine with the compiled Stieltjes
+  digamma enclosure to put the reflected archimedean logarithmic-derivative contribution below
+  `-11/25`.
+- `closed_edge_15`: at `w=1/2-10i`, the actual one-correction Euler--Maclaurin value error is
+  below `13/250` and the derivative error is below `11/50`. Tighter finite-center estimates give
+  the strict cross margin needed after error propagation.
+- `closed_edge_16`: `speiserStrictNegativePoint_heightTenEndpoint` proves actual zeta
+  nonvanishing, actual zeta-derivative nonvanishing, and strict
+  `Re(zeta'/zeta)(1/2+10i) < 0`.
+- `first_open_producer`: explicit sigma-variation estimates and a finite rational subcover of a
+  positive-width portion of `0 <= sigma <= 1/2`. A single endpoint does not imply the horizontal
+  sign condition.
+- `second_open_producer`: actual multiplicity-bearing equality of zeta and zeta-derivative zero
+  counts below height ten.
+- `strict_boundary`: no positive-width horizontal theorem, low-zero count equality,
+  `LevinsonMontgomeryHeightTenCertificate`, CountDichotomy, Speiser equivalence, H12, or RH.
+- `local_audit`: new module and registration files pass warning-as-error; seven selected axiom
+  prints use only `propext`, `Classical.choice`, and `Quot.sound`; placeholder, resource-option,
+  unsafe-declaration, and patch scans are clean; full build `8824/8824`.
+- `public_evidence`: pending.
+- `global_goal`: active.

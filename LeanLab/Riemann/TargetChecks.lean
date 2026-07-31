@@ -19,6 +19,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenCertificate
 import LeanLab.Riemann.LevinsonMontgomeryEulerMaclaurin
 import LeanLab.Riemann.LevinsonMontgomeryTranscendentalInterval
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenFiniteEvaluator
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenEndpoint
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -7051,5 +7052,29 @@ example :
         conj (eulerMaclaurinOneZetaApprox heightTenReflectedEndpoint 30)).re <
       (-53 / 100 : ℝ) :=
   eulerMaclaurinOne_finite_cross_re_lt_neg_fiftyThree_div_oneHundred
+
+example : Real.pi < (3142 / 1000 : ℝ) :=
+  pi_lt_threeThousandOneHundredFortyTwo_div_oneThousand
+
+example :
+    levinsonMontgomeryReflectedArchimedeanUpper heightTenEndpoint <
+      (-11 / 25 : ℝ) :=
+  heightTen_reflectedArchimedeanUpper_lt_neg_eleven_div_twentyFive
+
+example :
+    eulerMaclaurinOneZetaError heightTenReflectedEndpoint 30 <
+      (13 / 250 : ℝ) :=
+  heightTen_eulerMaclaurinOneZetaError_lt_thirteen_div_twoHundredFifty
+
+example :
+    eulerMaclaurinOneZetaDerivError heightTenReflectedEndpoint 30 <
+      (11 / 50 : ℝ) :=
+  heightTen_eulerMaclaurinOneZetaDerivError_lt_eleven_div_fifty
+
+example :
+    riemannZeta heightTenEndpoint ≠ 0 ∧
+      deriv riemannZeta heightTenEndpoint ≠ 0 ∧
+      (speiserZetaDerivRatio heightTenEndpoint).re < 0 :=
+  speiserStrictNegativePoint_heightTenEndpoint
 
 end LeanLab.Riemann

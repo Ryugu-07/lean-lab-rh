@@ -39,6 +39,10 @@ GLOBAL_GOAL_ACTIVE`
 | 24 | `LOCAL_AUDIT` | The new module and all registration files pass warning-as-error; selected axiom prints use only `propext`, `Classical.choice`, and `Quot.sound`; placeholder and resource-option scans are empty; `git diff --check` passes; full build passes `8823/8823`. | Publish the implementation, freeze exact blobs after public CI, and keep the campaign open at the analytic endpoint composition, interval cover, and low-zero count producers. |
 | 25 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `9f3d28f7e4c1dbbf7647c8cd1418b50a7c34d656` passed Lean Action run `30665506516`, build job `91271458715`, in `6m19s`. Seven Lean blobs are frozen in the docs-only immutable-evidence record. | Publish the immutable-evidence commit, verify its CI and blob identity, then resume the analytic endpoint composition. |
 | 26 | `IMMUTABLE_EVIDENCE` | Docs-only evidence commit `936e0dd6afd4dfb38e50bc27b2cb18252d5e1a80` passed Lean Action run `30666031209`, build job `91273160412`, in `2m14s`; all seven frozen Lean blobs are unchanged. | Keep the campaign open and attack the analytic endpoint composition before extending to a positive-width sigma cover. |
+| 27 | `MACHIN_AND_ARCHIMEDEAN_ENDPOINT` | A no-sorry Machin-formula proof gives `pi < 3142/1000`, hence `log pi < 229/200`; exact endpoint norm estimates and the compiled digamma enclosure prove that the reflected archimedean contribution is below `-11/25`. | Bound the actual Euler--Maclaurin value and derivative remainders at the reflected endpoint. |
+| 28 | `ANALYTIC_REMAINDER_ENDPOINT` | Exact rational estimates prove the value error below `13/250` and derivative error below `11/50` at `w=1/2-10i`. Tighter finite-center norms and cross bounds leave a strict negative margin after both errors are propagated. | Feed the endpoint inequalities into the actual-zeta Speiser consumer. |
+| 29 | `ACTUAL_ZETA_ENDPOINT` | Lean proves that `riemannZeta (1/2+10i)` and `deriv riemannZeta (1/2+10i)` are nonzero and that `Re(zeta'/zeta)(1/2+10i) < 0`. This is an actual-zeta theorem, not merely a finite-center statement. | Extend the result from one endpoint to a positive-width rational sigma cover; keep the low-zero count producer independent. |
+| 30 | `LOCAL_AUDIT` | The new module, Targets, TargetChecks, and AxiomsAudit pass warning-as-error; seven selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; placeholder, resource-option, unsafe-declaration, and patch scans are clean; full build passes `8824/8824`. | Publish the implementation, then freeze exact blobs and attach public CI evidence. |
 
 ## Current obstruction map
 
@@ -53,9 +57,9 @@ GLOBAL_GOAL_ACTIVE`
 6. `CLOSED_AT_ONE_POINT`: all 30 complex powers, ordinary and log-weighted sums, complete finite
    value and derivative centers, and strict finite cross negativity compile at the reflected
    endpoint `w=1/2-10i`. No external boolean or floating-point result is a premise.
-7. `OPEN`: combine the analytic Euler--Maclaurin value and derivative remainders with the
-   reflected archimedean upper bound at that endpoint. The present finite-center inequalities are
-   not yet an actual-zeta Speiser sign theorem.
+7. `CLOSED_AT_ONE_POINT`: the analytic Euler--Maclaurin value and derivative remainder bounds,
+   reflected archimedean upper bound, and finite-center inequalities now compose to actual zeta
+   and derivative nonvanishing and strict Speiser negativity at `s=1/2+10i`.
 8. `OPEN`: explicit variation bounds and a finite rational subcover of the positive-width segment
    `0 <= sigma <= 1/2`.
 9. `OPEN`: actual multiplicity-bearing height-ten zeta/zeta-derivative count equality.
@@ -66,7 +70,7 @@ GLOBAL_GOAL_ACTIVE`
 - `model`: Codex, GPT-5 family; exact serving variant is not exposed.
 - `reasoning_effort`: not exposed.
 - `budget`: no numerical quota under V4.1.
-- `compaction_state`: resumed from a context summary and rechecked live Goal state, source
-  declarations, frozen evidence, and every theorem extended in rounds 15--17.
+- `compaction_state`: resumed from a context summary and rechecked source declarations, frozen
+  evidence, endpoint theorem registration, local audits, and full build through round 30.
 - `global_goal`: active.
 - `protected_files`: inherited protected files remain untouched and unstaged.
