@@ -5067,3 +5067,26 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   `H12-LM-GLOBAL-INDENTED-COUNT-01` open at the height-ten certificate and return to fresh
   cross-family omission-seeking selection.
 - `global_goal`: active.
+
+## 2026-08-01 H14 x H12 height-ten certificate launch
+
+- `parent_public_closure`: H12 step-8 receipt commit
+  `f00d0cd3a914ada0f77186a41f7b6f5bec8b8773` passed Lean Action run `30653992269`, build job
+  `91233778972`, in `2m6s`.
+- `selection_rule`: H14 is selected after a fresh cross-family comparison because the global
+  Levinson--Montgomery proof now reduces exactly to one finite certificate. This is not standalone
+  finite-to-global promotion and not H12 adjacency.
+- `campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`.
+- `node`: `H14-H12-HEIGHT-TEN-CERTIFICATE-01`.
+- `full_endpoint`: `levinsonMontgomeryHeightTenCertificate_actual`, followed by unconditional
+  theorem-one and Speiser-equivalence composition.
+- `source_inputs`: Levinson--Montgomery page 52 low-zero base; Platt--Trudgian rigorous interval
+  verification; Johansson Euler--Maclaurin evaluation of zeta and derivatives with explicit
+  remainder.
+- `cross_route_input`: the compiled H1 Hardy--Littlewood eta remainder and the actual zeta
+  functional equation provide a distinct evaluator attack.
+- `negative_controls`: no floating-point premise, no external boolean, no finite-height-to-RH
+  promotion, no support-cardinality substitution for multiplicity, and no point-sample-to-uniform
+  inference.
+- `production_gate`: no Lean or registration edit before docs-only preregistration public CI.
+- `global_goal`: active.
