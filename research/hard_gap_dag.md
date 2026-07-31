@@ -5011,7 +5011,7 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `campaign`:
   `LITERATURE-20260731-H12-LEVINSON-MONTGOMERY-GLOBAL-COUNT-REENTRY-01`.
 - `status`: `STEP_8_FULL_SUCCESS / STEP_9_MEANINGFUL_PARTIAL /
-  LOCAL_AUDIT_GREEN / IMPLEMENTATION_CI_REQUIRED / CAMPAIGN_ACTIVE`.
+  IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED / CAMPAIGN_ACTIVE`.
 - `closed_edge_1`: actual positive-multiplicity zeta factorization and punctured positive-right
   logarithmic derivative exclude every interior zero under the strict-negative integer-height
   predicate.
@@ -5053,4 +5053,7 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `checkpoint_receipt`: docs-only commit
   `6cbe54fc16e32cab02e1e77da9620aead0f0992f` passed Lean Action run `30645718046`, opening
   step-8 production.
+- `step_8_public_implementation`: frozen commit
+  `6863823d119977a660d0643595cbfc61b7282018` passed Lean Action run `30653076645`, build job
+  `91230777600`, in `2m18s`.
 - `global_goal`: active.

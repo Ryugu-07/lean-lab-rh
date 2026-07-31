@@ -6,7 +6,7 @@ Campaign:
 `LITERATURE-20260731-H12-LEVINSON-MONTGOMERY-GLOBAL-COUNT-REENTRY-01`
 
 Status: `STEP_8_FULL_SUCCESS / STEP_9_MEANINGFUL_PARTIAL /
-LOCAL_AUDIT_GREEN / IMPLEMENTATION_CI_REQUIRED`
+IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED`
 
 ## Source recheck
 
@@ -135,3 +135,7 @@ Nine selected theorem prints use only `propext`, `Classical.choice`, and `Quot.s
 campaign forbidden scan and `git diff --check` are empty; the full build passes `8819/8819` with
 inherited warnings only. The full Theorem 1 conjunction, unconditional Speiser equivalence,
 derivative-zero exclusion, and RH remain open. The persistent RH Goal remains active.
+
+Frozen implementation commit `6863823d119977a660d0643595cbfc61b7282018` passed public Lean
+Action run `30653076645`, build job `91230777600`, in `2m18s`. Immutable docs-only evidence is
+required before this local campaign is closed.
