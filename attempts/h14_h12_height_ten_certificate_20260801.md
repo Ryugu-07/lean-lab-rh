@@ -33,6 +33,10 @@ GLOBAL_GOAL_ACTIVE`
 | 18 | `LOCAL_AUDIT` | Both standalone modules, Targets, TargetChecks, and AxiomsAudit pass warning-as-error. Eleven selected endpoints use only `propext`, `Classical.choice`, and `Quot.sound`; forbidden/resource scans and `git diff --check` are clean; the full build passes `8822/8822`. | Publish the implementation checkpoint, then freeze blobs and attach public CI evidence. |
 | 19 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `f55f2efce7ae21e6fc0f78d677fecbb6606b526c` passed Lean Action run `30661192482`, build job `91257563206`, in `2m24s`. Six Lean blobs are frozen in the docs-only immutable-evidence record. | Publish the immutable-evidence commit, verify its CI and blob identity, then resume the 30-term certificate producer. |
 | 20 | `IMMUTABLE_EVIDENCE` | Docs-only evidence commit `1e33d4a762301785e329bf6477a8152134efa734` passed Lean Action run `30661486385`, build job `91258507742`, in `1m35s`; all six frozen Lean blobs are unchanged. | Keep the campaign open and resume generated rational enclosures for the 30-term finite cover. |
+| 21 | `RANGE_REDUCTION_AND_SCALING` | Binary logarithm range reduction lowers the largest selected ratio for `1 <= u <= 30` to about `0.164`. A no-sorry scaling-and-squaring theorem turns a degree-16 exponential Taylor center into a complex-power enclosure, and the Euler--Maclaurin derivative center is rewritten as a completely explicit finite formula. | Generate compact rational centers and kernel-check each of the thirty complex powers at `w=1/2-10i`. |
+| 22 | `THIRTY_TERM_KERNEL_CERTIFICATES` | Lean checks thirty separate rounded complex-power certificates with radius `2e-10`, then aggregates the ordinary partial sum within `6e-9` and the logarithm-weighted derivative sum within `3e-8`. The declarations are split so every certificate checks under default resource limits. | Assemble complete rational centers for the one-correction finite value and derivative. |
+| 23 | `ENDPOINT_FINITE_CENTER` | At the reflected endpoint, the complete finite value center is within `2e-8` of a compact rational center and the finite derivative center is within `1e-6`. Lean proves finite value norm `> 3/2`, finite derivative norm `< 2`, and `Re(D * conj Z) < -53/100`. | Combine the analytic Euler--Maclaurin remainder and reflected archimedean bound at the endpoint, then derive variation bounds for a positive-width cover. |
+| 24 | `LOCAL_AUDIT` | The new module and all registration files pass warning-as-error; selected axiom prints use only `propext`, `Classical.choice`, and `Quot.sound`; placeholder and resource-option scans are empty; `git diff --check` passes; full build passes `8823/8823`. | Publish the implementation, freeze exact blobs after public CI, and keep the campaign open at the analytic endpoint composition, interval cover, and low-zero count producers. |
 
 ## Current obstruction map
 
@@ -44,13 +48,16 @@ GLOBAL_GOAL_ACTIVE`
    left-boundary theorem covers `sigma=0`.
 5. `FAILED_SUBATTACK`: fixed-radius eta-Cauchy evaluation. Its exponent loss is numerically
    unusable and mathematically unnecessary.
-6. `PARTIALLY_CLOSED`: generic proof-producing enclosures for positive-ratio logarithms, perturbed
-   complex exponentials, and positive-real complex powers compile, with closed rational smoke
-   certificates. Generated enclosures for all 30 finite terms and their aggregate norms remain
-   open.
-7. `OPEN`: finite subcover of the actual height-ten horizontal and compiled strict negativity.
-8. `OPEN`: actual multiplicity-bearing height-ten zeta/zeta-derivative count equality.
-9. `OPEN`: `levinsonMontgomeryHeightTenCertificate_actual`.
+6. `CLOSED_AT_ONE_POINT`: all 30 complex powers, ordinary and log-weighted sums, complete finite
+   value and derivative centers, and strict finite cross negativity compile at the reflected
+   endpoint `w=1/2-10i`. No external boolean or floating-point result is a premise.
+7. `OPEN`: combine the analytic Euler--Maclaurin value and derivative remainders with the
+   reflected archimedean upper bound at that endpoint. The present finite-center inequalities are
+   not yet an actual-zeta Speiser sign theorem.
+8. `OPEN`: explicit variation bounds and a finite rational subcover of the positive-width segment
+   `0 <= sigma <= 1/2`.
+9. `OPEN`: actual multiplicity-bearing height-ten zeta/zeta-derivative count equality.
+10. `OPEN`: `levinsonMontgomeryHeightTenCertificate_actual`.
 
 ## Runtime record
 

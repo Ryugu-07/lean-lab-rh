@@ -133,6 +133,7 @@ import LeanLab.Riemann.LevinsonMontgomeryCriticalStrip
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenCertificate
 import LeanLab.Riemann.LevinsonMontgomeryEulerMaclaurin
 import LeanLab.Riemann.LevinsonMontgomeryTranscendentalInterval
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenFiniteEvaluator
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -2112,6 +2113,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``speiserStrictNegativePoint_of_reflected_eulerMaclaurinOne_margins
       status := .proven
       note := "Campaign PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01 now has an actual-zeta first-order Euler--Maclaurin evaluator. Lean proves the centered fractional-part integration by parts, the quadratic periodic remainder with sharp 1/8 bound, dominated parameter differentiation, explicit value and derivative balls of order N^(-sigma-1), and a reflected-margin consumer for the actual Speiser sign. A separate proof-producing layer gives rational atanh-log, perturbed complex-exp Taylor, and positive-real cpow enclosures, with closed log-two and height-ten-scale exponential smoke certificates. Non-premise navigation indicates N=30 has positive sampled margins whereas N=20 does not. The finite rational subcover, actual low-height multiplicity counts, LevinsonMontgomeryHeightTenCertificate, CountDichotomy, Speiser equivalence, and RH remain open; numerical samples are not theorem premises." },
+    { id := "H12.levinson-montgomery.height-ten-endpoint-finite-evaluator"
+      tier := .tier1
+      title := "Certify the thirty-term height-ten endpoint finite centers"
+      statement :=
+        "Use binary logarithm range reduction and scaling-and-squaring to kernel-check all thirty complex powers at the reflected critical endpoint, aggregate rational value and derivative centers, and prove their finite-center nonvanishing and negative cross margins."
+      leanName := some ``eulerMaclaurinOne_finite_cross_re_lt_neg_fiftyThree_div_oneHundred
+      status := .proven
+      note := "Campaign PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01 now kernel-checks the N=30 finite evaluator at the reflected endpoint w=1/2-10i. Binary range reduction keeps every logarithm ratio at most the selected worst case near 0.164; scaling-and-squaring reduces complex-exp Taylor order to 16. Lean checks thirty rational rounded cpow centers, their ordinary and log-weighted sums, an explicit finite derivative formula, complete value and derivative center balls of 2e-8 and 1e-6, value-center norm greater than 3/2, derivative-center norm below 2, and finite cross real part below -53/100. This does not yet combine the analytic Euler--Maclaurin remainder and archimedean upper at the endpoint, prove variation over any positive sigma interval, give the finite subcover, prove the low-zero multiplicity count, the height-ten certificate, H12, or RH." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

@@ -10,6 +10,7 @@ import LeanLab.Riemann.LevinsonMontgomeryCriticalStrip
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenCertificate
 import LeanLab.Riemann.LevinsonMontgomeryEulerMaclaurin
 import LeanLab.Riemann.LevinsonMontgomeryTranscendentalInterval
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenFiniteEvaluator
 import LeanLab.Riemann.FareyFranel
 import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.InfiniteReciprocalTraceAudit
@@ -1434,3 +1435,11 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.norm_ofReal_cpow_sub_taylor_of_log_near
 #print axioms LeanLab.Riemann.abs_log_two_sub_logAtanhPartial_eight_le
 #print axioms LeanLab.Riemann.norm_exp_heightTenScale_sub_taylor_eighty_le
+#print axioms LeanLab.Riemann.norm_pow_sub_pow_le_of_norm_le
+#print axioms LeanLab.Riemann.norm_ofReal_cpow_sub_binaryScaledCpowCenter_le
+#print axioms LeanLab.Riemann.eulerMaclaurinOneZetaDerivApprox_eq_finiteFormula
+#print axioms LeanLab.Riemann.norm_cpow_reflectedEndpoint_sub_heightTenRoundedCpowCenter_le
+#print axioms LeanLab.Riemann.norm_zetaPartialSum_reflectedEndpoint_sub_rounded_le
+#print axioms LeanLab.Riemann.norm_eulerMaclaurinOneZetaApprox_reflectedEndpoint_sub_rounded_le
+#print axioms LeanLab.Riemann.norm_eulerMaclaurinOneZetaDerivApprox_reflectedEndpoint_sub_rounded_le
+#print axioms LeanLab.Riemann.eulerMaclaurinOne_finite_cross_re_lt_neg_fiftyThree_div_oneHundred

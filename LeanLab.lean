@@ -138,6 +138,7 @@ import LeanLab.Riemann.LevinsonMontgomeryCriticalStrip
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenCertificate
 import LeanLab.Riemann.LevinsonMontgomeryEulerMaclaurin
 import LeanLab.Riemann.LevinsonMontgomeryTranscendentalInterval
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenFiniteEvaluator
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.TargetChecks
 import LeanLab.Riemann.AxiomsAudit

@@ -389,6 +389,17 @@ def eulerMaclaurinOneZetaApprox (s : ℂ) (N : ℕ) : ℂ :=
 def eulerMaclaurinOneZetaDerivApprox (s : ℂ) (N : ℕ) : ℂ :=
   deriv (fun w => eulerMaclaurinOneZetaApprox w N) s
 
+/-- Explicit finite formula for the derivative center.  Every transcendental occurrence is now
+either `Real.log` of a positive integer or a positive-real complex power, so the proof-producing
+interval backend can evaluate it. -/
+def eulerMaclaurinOneZetaDerivFiniteFormula (s : ℂ) (N : ℕ) : ℂ :=
+  (∑ n ∈ range N,
+      -(((Real.log ((n : ℝ) + 1) : ℝ) : ℂ)) *
+        (((n : ℂ) + 1) ^ (-s))) -
+    (((N : ℂ) ^ (1 - s) * (((Real.log (N : ℝ) : ℝ) : ℂ)) * (-1) * (1 - s) -
+        (N : ℂ) ^ (1 - s) * (-1)) / (1 - s) ^ 2) -
+    ((N : ℂ) ^ (-s) * (((Real.log (N : ℝ) : ℝ) : ℂ)) * (-1)) / 2
+
 /-- The first corrected Euler--Maclaurin remainder. -/
 def eulerMaclaurinOneZetaRemainder (s : ℂ) (N : ℕ) : ℂ :=
   -s * (s + 1) * ∫ u in Ioi (N : ℝ), abelQuadraticTailKernel s u
@@ -801,6 +812,68 @@ private theorem differentiableAt_eulerMaclaurinOneZetaApprox
   have hraw := hbase.hasDerivAt.sub (hpow.div_const 2).hasDerivAt
   refine (hraw.congr_of_eventuallyEq (Eventually.of_forall fun w => ?_)).differentiableAt
   simp only [eulerMaclaurinOneZetaApprox, Pi.sub_apply]
+
+/-- The opaque derivative in `eulerMaclaurinOneZetaDerivApprox` equals its explicit finite
+formula. -/
+theorem eulerMaclaurinOneZetaDerivApprox_eq_finiteFormula
+    (s : ℂ) (hs1 : s ≠ 1) {N : ℕ} (hN : 1 ≤ N) :
+    eulerMaclaurinOneZetaDerivApprox s N =
+      eulerMaclaurinOneZetaDerivFiniteFormula s N := by
+  have hsum : HasDerivAt (fun w => zetaPartialSum w N)
+      (∑ n ∈ range N,
+        -(((Real.log ((n : ℝ) + 1) : ℝ) : ℂ)) *
+          (((n : ℂ) + 1) ^ (-s))) s := by
+    unfold zetaPartialSum
+    apply HasDerivAt.fun_sum
+    intro n _hn
+    have hbase : (n : ℂ) + 1 ≠ 0 := by
+      intro h
+      have hre := congrArg Complex.re h
+      norm_num at hre
+      have hn : (0 : ℝ) ≤ n := Nat.cast_nonneg n
+      linarith
+    have hraw := (hasDerivAt_id s).neg.const_cpow (Or.inl hbase)
+    have hlog :
+        Complex.log ((n : ℂ) + 1) =
+          ((Real.log ((n : ℝ) + 1) : ℝ) : ℂ) := by
+      have hn0 : (0 : ℝ) ≤ (n : ℝ) + 1 := by positivity
+      rw [show (n : ℂ) + 1 = (((n : ℝ) + 1 : ℝ) : ℂ) by norm_num,
+        ← Complex.ofReal_log hn0]
+    have hraw' := hraw.congr_deriv (show
+        ((n : ℂ) + 1) ^ (-s) * Complex.log ((n : ℂ) + 1) * (-1) =
+          -(((Real.log ((n : ℝ) + 1) : ℝ) : ℂ)) *
+            (((n : ℂ) + 1) ^ (-s)) by
+      rw [hlog]
+      ring)
+    simpa only [Pi.neg_apply, id_eq] using hraw'
+  have hNzero : (N : ℂ) ≠ 0 := by
+    exact_mod_cast (Nat.ne_zero_of_lt hN)
+  have hNreal : (0 : ℝ) ≤ N := Nat.cast_nonneg N
+  have hNlog : Complex.log (N : ℂ) = ((Real.log (N : ℝ) : ℝ) : ℂ) := by
+    rw [show (N : ℂ) = ((N : ℝ) : ℂ) by norm_num, ← Complex.ofReal_log hNreal]
+  have hnum :=
+    ((hasDerivAt_const (x := s) (c := (1 : ℂ))).sub (hasDerivAt_id s)).const_cpow
+      (Or.inl hNzero)
+  have hden := (hasDerivAt_const (x := s) (c := (1 : ℂ))).sub (hasDerivAt_id s)
+  have hmain := hnum.div hden (sub_ne_zero.mpr hs1.symm)
+  have hcorrection := (hasDerivAt_id s).neg.const_cpow (Or.inl hNzero)
+  have htotal := (hsum.sub hmain).sub (hcorrection.div_const 2)
+  have htotalCoeff := htotal.congr_deriv (show
+      (∑ n ∈ range N,
+          -(((Real.log ((n : ℝ) + 1) : ℝ) : ℂ)) *
+            (((n : ℂ) + 1) ^ (-s))) -
+        (((N : ℂ) ^ (1 - s) * Complex.log (N : ℂ) * (0 - 1) * (1 - s) -
+            (N : ℂ) ^ (1 - s) * (0 - 1)) / (1 - s) ^ 2) -
+        ((N : ℂ) ^ (-s) * Complex.log (N : ℂ) * (-1)) / 2 =
+      eulerMaclaurinOneZetaDerivFiniteFormula s N by
+    simp only [eulerMaclaurinOneZetaDerivFiniteFormula, hNlog, zero_sub])
+  have htotal' : HasDerivAt (fun w => eulerMaclaurinOneZetaApprox w N)
+      (eulerMaclaurinOneZetaDerivFiniteFormula s N) s := by
+    exact htotalCoeff.congr_of_eventuallyEq (Eventually.of_forall fun w => by
+      simp only [eulerMaclaurinOneZetaApprox, abelZetaApprox, Function.id_def,
+        Pi.sub_apply, Pi.div_apply, Pi.neg_apply])
+  unfold eulerMaclaurinOneZetaDerivApprox
+  exact htotal'.deriv
 
 /-- The actual zeta derivative differs from the first corrected finite derivative by the
 derivative of the quadratic-periodic remainder. -/

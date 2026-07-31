@@ -5180,3 +5180,34 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `strict_boundary`: no complete height-ten horizontal theorem, low-zero count equality,
   `LevinsonMontgomeryHeightTenCertificate`, CountDichotomy, Speiser equivalence, H12, or RH.
 - `global_goal`: active.
+
+## 2026-08-01 H14 x H12 endpoint finite evaluator checkpoint
+
+- `campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `route_policy`: this is a fixed producer inside the historical Levinson--Montgomery and
+  Johansson route reconstruction. Historical omission search remains the default selection
+  discipline; direct RH attacks and new conjecture tests remain open.
+- `closed_edge_9`: binary logarithm range reduction plus sixty-fourfold scaling-and-squaring gives
+  a degree-16 proof-producing complex exponential and positive-real complex-power enclosure.
+- `closed_edge_10`: Lean separately kernel-checks all thirty rounded complex powers at the
+  reflected endpoint `w=1/2-10i`, then aggregates the ordinary partial sum within `6e-9` and the
+  logarithm-weighted sum within `3e-8`.
+- `closed_edge_11`: the one-correction finite derivative is rewritten as an explicit finite
+  formula, and complete compact rational centers enclose the finite value within `2e-8` and the
+  finite derivative within `1e-6`.
+- `closed_edge_12`: the actual finite centers satisfy value norm `>3/2`, derivative norm `<2`, and
+  cross real part `<-53/100`.
+- `first_open_producer`: combine the existing analytic Euler--Maclaurin value and derivative
+  remainder bounds with the reflected archimedean upper bound at the endpoint. The finite-center
+  result alone is not an actual-zeta sign theorem.
+- `second_open_producer`: prove explicit sigma variation and a finite rational subcover of
+  `0 <= sigma <= 1/2`.
+- `third_open_producer`: prove the actual multiplicity-bearing equality of zeta and
+  zeta-derivative zero counts below height ten.
+- `local_audit`: new module `8739/8739`; registration files warning-as-error; selected axioms only
+  `propext`, `Classical.choice`, and `Quot.sound`; empty placeholder and resource-option scans;
+  patch check clean; full build `8823/8823`.
+- `strict_boundary`: no actual-zeta endpoint Speiser theorem, positive-width horizontal theorem,
+  low-zero count equality, `LevinsonMontgomeryHeightTenCertificate`, CountDichotomy, Speiser
+  equivalence, H12, or RH.
+- `global_goal`: active.

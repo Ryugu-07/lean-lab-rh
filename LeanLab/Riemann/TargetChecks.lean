@@ -18,6 +18,7 @@ import LeanLab.Riemann.LevinsonMontgomeryCriticalStrip
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenCertificate
 import LeanLab.Riemann.LevinsonMontgomeryEulerMaclaurin
 import LeanLab.Riemann.LevinsonMontgomeryTranscendentalInterval
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenFiniteEvaluator
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -7009,5 +7010,46 @@ example :
           (((-1 / 2 : ℝ) : ℂ) + (10 : ℂ) * Complex.I)‖ ≤
       1 / 100000000000000000000 :=
   norm_exp_heightTenScale_sub_taylor_eighty_le
+
+example (s : ℂ) (hs1 : s ≠ 1) {N : ℕ} (hN : 1 ≤ N) :
+    eulerMaclaurinOneZetaDerivApprox s N =
+      eulerMaclaurinOneZetaDerivFiniteFormula s N :=
+  eulerMaclaurinOneZetaDerivApprox_eq_finiteFormula s hs1 hN
+
+example :
+    ‖(23 : ℂ) ^ (-heightTenReflectedEndpoint) -
+        heightTenRoundedCpowCenter 23‖ ≤
+      1 / 5000000000 :=
+  norm_cpow_reflectedEndpoint_sub_heightTenRoundedCpowCenter_le
+    (u := 23) (by norm_num) (by norm_num)
+
+example :
+    ‖zetaPartialSum heightTenReflectedEndpoint 30 -
+        heightTenRoundedZetaPartialSum‖ ≤
+      3 / 500000000 :=
+  norm_zetaPartialSum_reflectedEndpoint_sub_rounded_le
+
+example :
+    ‖eulerMaclaurinOneZetaApprox heightTenReflectedEndpoint 30 -
+        heightTenRoundedEulerZetaApprox‖ ≤
+      1 / 50000000 :=
+  norm_eulerMaclaurinOneZetaApprox_reflectedEndpoint_sub_rounded_le
+
+example :
+    ‖eulerMaclaurinOneZetaDerivApprox heightTenReflectedEndpoint 30 -
+        heightTenRoundedEulerZetaDerivApprox‖ ≤
+      1 / 1000000 :=
+  norm_eulerMaclaurinOneZetaDerivApprox_reflectedEndpoint_sub_rounded_le
+
+example :
+    (3 / 2 : ℝ) <
+      ‖eulerMaclaurinOneZetaApprox heightTenReflectedEndpoint 30‖ :=
+  three_halves_lt_norm_eulerMaclaurinOneZetaApprox_reflectedEndpoint
+
+example :
+    (eulerMaclaurinOneZetaDerivApprox heightTenReflectedEndpoint 30 *
+        conj (eulerMaclaurinOneZetaApprox heightTenReflectedEndpoint 30)).re <
+      (-53 / 100 : ℝ) :=
+  eulerMaclaurinOne_finite_cross_re_lt_neg_fiftyThree_div_oneHundred
 
 end LeanLab.Riemann
