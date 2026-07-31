@@ -12,6 +12,8 @@ import LeanLab.Riemann.SpeiserAdmissibleContour
 import LeanLab.Riemann.LevinsonMontgomeryLeftHalfPlaneWinding
 import LeanLab.Riemann.LevinsonMontgomeryJensenTopZeroCount
 import LeanLab.Riemann.LevinsonMontgomeryTopArgumentVariation
+import LeanLab.Riemann.LevinsonMontgomeryNegativeHeightGeometry
+import LeanLab.Riemann.LevinsonMontgomeryFiniteArgumentPrinciple
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -6861,5 +6863,30 @@ example :
           logDeriv (deriv riemannZeta) (sigma + t * Complex.I)).im) ≤
             C * Real.log (t + 2) :=
   exists_cofinal_levinsonMontgomeryTopArgumentVariation
+
+example {n : ℕ} (hn : 10 ≤ n)
+    (hneg : LevinsonMontgomeryNegativeLogDerivAtIntegerHeight n) :
+    ∀ sigma : ℝ, 0 < sigma → sigma < 1 / 2 →
+      riemannZeta (levinsonMontgomeryIntegerPoint sigma n) ≠ 0 :=
+  levinsonMontgomery_negativeIntegerHeight_interiorZeroFree hn hneg
+
+example :
+    LevinsonMontgomeryCofinalNegativeHeightGeometry ∨
+      ∃ T0 : ℝ, ∀ T : ℝ, T0 ≤ T →
+        T / 2 < (speiserUpperLeftZetaZeroCount T : ℝ) :=
+  levinsonMontgomery_negativeGeometry_or_dense_dichotomy
+
+example {b : ℝ} {n : ℕ} (hbTen : 10 ≤ b) (hbn : b < n)
+    (hbottom : SpeiserCommonZeroFreeHorizontal b)
+    (htop : LevinsonMontgomeryNegativeHeightGeometry n) :
+    ∃ r : ℝ, 0 < r ∧ r < 1 / 2 ∧
+      rectangleBoundaryIntegral (logDeriv (deriv riemannZeta)) 0 r b n -
+          rectangleBoundaryIntegral (logDeriv riemannZeta) 0 r b n =
+        2 * (Real.pi : ℂ) * Complex.I *
+          (((speiserUpperLeftDerivZeroCount n : ℂ) -
+              (speiserUpperLeftZetaZeroCount n : ℂ)) -
+            ((speiserUpperLeftDerivZeroCount b : ℂ) -
+              (speiserUpperLeftZetaZeroCount b : ℂ))) :=
+  levinsonMontgomery_globalCountDifference_actual hbTen hbn hbottom htop
 
 end LeanLab.Riemann

@@ -4,6 +4,8 @@ import LeanLab.Riemann.ChebyshevMellin
 import LeanLab.Riemann.ChebyshevReverseZeroExclusion
 import LeanLab.Riemann.LevinsonMontgomeryJensenTopZeroCount
 import LeanLab.Riemann.LevinsonMontgomeryTopArgumentVariation
+import LeanLab.Riemann.LevinsonMontgomeryNegativeHeightGeometry
+import LeanLab.Riemann.LevinsonMontgomeryFiniteArgumentPrinciple
 import LeanLab.Riemann.FareyFranel
 import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.InfiniteReciprocalTraceAudit
@@ -1391,3 +1393,15 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.exists_levinsonMontgomeryTopArgumentVariation_le_log
 #print axioms LeanLab.Riemann.exists_cofinal_levinsonMontgomeryTopArgumentVariation
 #print axioms LeanLab.Riemann.levinsonMontgomeryTopArgumentVariation_endpoint
+#print axioms LeanLab.Riemann.exists_riemannZeta_zero_analytic_factor
+#print axioms LeanLab.Riemann.exists_logDeriv_re_pos_right_of_analytic_zero_factor
+#print axioms LeanLab.Riemann.levinsonMontgomery_negativeIntegerHeight_interiorZeroFree
+#print axioms LeanLab.Riemann.levinsonMontgomery_negativeIntegerHeight_interiorGeometry
+#print axioms LeanLab.Riemann.levinsonMontgomery_negativeGeometry_or_dense_dichotomy
+#print axioms LeanLab.Riemann.AnalyticOnNhd.extract_zeros_eqOn_openSubset
+#print axioms LeanLab.Riemann.logDeriv_factorizedRational_eq_divisor_sum
+#print axioms LeanLab.Riemann.finite_analytic_rectangle_argumentPrinciple_of_boundaryNonzero
+#print axioms LeanLab.Riemann.riemannZeta_finiteRectangle_argumentPrinciple
+#print axioms LeanLab.Riemann.riemannZetaDeriv_finiteRectangle_argumentPrinciple
+#print axioms LeanLab.Riemann.exists_levinsonMontgomery_commonRightCutoff
+#print axioms LeanLab.Riemann.levinsonMontgomery_globalCountDifference_actual

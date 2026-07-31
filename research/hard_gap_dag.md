@@ -5005,3 +5005,36 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   RH premise.
 - `production_gate`: no Lean or registration edit before docs-only preregistration public CI.
 - `global_goal`: active.
+
+## 2026-07-31 H12 global count step 7 local checkpoint
+
+- `campaign`:
+  `LITERATURE-20260731-H12-LEVINSON-MONTGOMERY-GLOBAL-COUNT-REENTRY-01`.
+- `status`: `STEPS_1_7_COMPILED / LOCAL_AUDIT_GREEN / IMPLEMENTATION_CI_REQUIRED /
+  CAMPAIGN_ACTIVE`.
+- `closed_edge_1`: actual positive-multiplicity zeta factorization and punctured positive-right
+  logarithmic derivative exclude every interior zero under the strict-negative integer-height
+  predicate.
+- `closed_edge_2`: actual negative top geometry or the compiled dense branch.
+- `closed_edge_3`: two-domain finite analytic factorization; multiplicity-aware rectangle
+  argument principle; actual zeta and zeta-derivative instantiations.
+- `closed_edge_4`: compact divisor finiteness selects a common adaptive `r<1/2`; proved filter
+  stabilization preserves exactly the open-left zeros and excludes critical-line support.
+- `closed_edge_5`: `levinsonMontgomery_globalCountDifference_actual` gives the exact change in
+  global multiplicity-bearing Speiser count difference between bottom `b` and negative integer
+  height `n`.
+- `omission_candidate`: source indentation bookkeeping is replaceable for this finite open-left
+  count identity by an adaptive vertical cutoff plus a finite-support stabilization theorem.
+  No claim is made that indentation is redundant in the remaining source argument.
+- `first_open_theorem`: `LevinsonMontgomeryLogCountBound`.
+- `exact_obstruction`: after taking imaginary parts of the rectangle identity, actual top
+  `O(log(t+2))` and fixed-bottom bounds leave the real parts of both zeta and zeta-derivative
+  logarithmic-derivative integrals on the left and adaptive right vertical sides. No compiled
+  cancellation or uniform endpoint-modulus estimate currently closes them.
+- `next_attack`: prove a zero-free vertical logarithmic-modulus endpoint identity, instantiate it
+  on both sides, and test uniform `O(log T)` bounds before attempting the all-real-cutoff transfer.
+- `strict_boundary`: `LevinsonMontgomeryLogCountBound`, exact-count sequence, full count
+  dichotomy, unconditional Speiser equivalence, H12, and RH remain open.
+- `local_audit`: exact warning-as-error entry checks pass; selected axioms are only `propext`,
+  `Classical.choice`, and `Quot.sound`; forbidden scan empty; full build `8818/8818`.
+- `global_goal`: active.

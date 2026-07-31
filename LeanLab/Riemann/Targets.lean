@@ -127,6 +127,8 @@ import LeanLab.Riemann.SpeiserAdmissibleContour
 import LeanLab.Riemann.LevinsonMontgomeryLeftHalfPlaneWinding
 import LeanLab.Riemann.LevinsonMontgomeryJensenTopZeroCount
 import LeanLab.Riemann.LevinsonMontgomeryTopArgumentVariation
+import LeanLab.Riemann.LevinsonMontgomeryNegativeHeightGeometry
+import LeanLab.Riemann.LevinsonMontgomeryFiniteArgumentPrinciple
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -1755,13 +1757,21 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``levinsonMontgomeryLeftHalfPlaneWinding_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260729-H12-LEFT-HALF-PLANE-WINDING-01 kernel-checks the positive topological counterpart to the preceding winding-one falsification. Strict left-half-plane containment gives a single principal-log primitive and zero integral on a closed path. For the actual zeta'/zeta horizontal ratio, Lean proves the exact complex and real-parameter derivatives and the endpoint formula with integrand logDeriv(zeta')-logDeriv(zeta). This does not produce a strict-negative height, enumerate a global indented contour, prove an argument-principle count or Jensen top bound, establish either Levinson--Montgomery count output, prove Speiser equivalence, exclude derivative zeros, or prove RH; historical_route_coverage_delta=1, source_topological_bridge_delta=1, and rh_frontier_delta=0." },
+    { id := "H12.speiser.levinson-montgomery-global-count-reentry"
+      tier := .tier2
+      title := "Reconstruct the actual finite argument principle and count identity"
+      statement :=
+        "Prove negative integer-height interior zero exclusion, reconstruct a finite multiplicity-bearing rectangle argument principle from local divisor factorization, instantiate it for zeta and zeta', and derive the exact global upper-left count-difference identity with the open critical-line convention."
+      leanName := some ``levinsonMontgomery_globalCountDifference_actual
+      status := .proven
+      note := "Campaign LITERATURE-20260731-H12-LEVINSON-MONTGOMERY-GLOBAL-COUNT-REENTRY-01 compiles preregistered steps 1-7. A positive principal part to the right of every positive-multiplicity analytic zero upgrades the conditional negative-height predicate to actual zero and derivative exclusion. Since Mathlib has no packaged argument principle, the proof extracts the finite divisor on a compact cutoff, promotes the codiscrete factorization on a connected open interior, integrates every multiplicity-bearing Cauchy kernel, and kills the nonvanishing analytic residual by Cauchy-Goursat. Actual zeta and zeta' instances use a common adaptive right boundary r<1/2 lying to the right of every finite support point with Re<1/2. Thus critical-line zeros are excluded by a proved open-boundary stabilization rather than silently discarded, and the divisor sums are identified with the existing speiserUpperLeft counts at the top and fixed bottom. The remaining first theorem is LevinsonMontgomeryLogCountBound: after taking imaginary parts, the existing top O(log T) and fixed-bottom O(1) bounds still require control of the real parts of both vertical logarithmic-derivative integrals and transfer from admissible heights to every large real cutoff. Count dichotomy, Speiser equivalence, and RH remain open; historical_route_coverage_delta=1, negative_height_zero_exclusion_delta=1, global_argument_principle_delta=1, levinson_montgomery_count_identity_delta=1, rh_frontier_delta=0." },
     { id := "H12.speiser.levinson-montgomery-analytic-counts"
       tier := .tier2
       title := "Prove the Levinson-Montgomery analytic count theorem"
       statement :=
         "Prove LevinsonMontgomeryLogCountBound and LevinsonMontgomeryCountDichotomy for the actual multiplicity-bearing zeta and zeta-derivative rectangle counts, including the functional-equation zero sum, Gamma estimates, low-height boundary sign, indented critical-line contour, and argument-principle bookkeeping."
       status := .inProgress
-      note := "The paired xi zero-mass identity, equation (2.1), explicit Stieltjes digamma bound, negative-mass implication, half-unit localizer, integer-height dense branch, local critical indentations, and cofinal common zero-free horizontal slices are compiled. A fixed unsigned bottom now contributes only O(1) to the asymptotic count comparison, but a compiled winding-one model proves that nonvanishing alone cannot supply the zero-winding base orientation required by the exact-count branch. The first remaining global edges are the multiplicity-aware indented argument principle, the top Jensen O(log T) variation bound, and either a strict negative bottom or an equivalent zero-winding base theorem. Mathlib has no specialized Levinson-Montgomery contour theorem." },
+      note := "The paired xi zero-mass identity, equation (2.1), explicit Stieltjes digamma bound, dense branch, local critical geometry, common zero-free slices, actual top O(log T) variation, finite multiplicity-bearing argument principle, adaptive critical-line-open cutoff, and exact global count-difference identity are compiled. The first remaining theorem is LevinsonMontgomeryLogCountBound. Expanding the compiled rectangle identity shows the precise missing estimate: top and bottom horizontal imaginary parts are controlled, but the real parts of the zeta and zeta-derivative logarithmic-derivative integrals on both vertical sides still require endpoint-modulus control, followed by transfer from admissible heights to every sufficiently large real cutoff. The exact-count branch must then combine the negative-height geometry with the principal-log winding theorem; the full count dichotomy, Speiser equivalence, and RH remain open." },
     { id := "H11.pcc.horizontal-multiplicity-consumer"
       tier := .tier2
       title := "Formalize pair-correlation horizontal multiplicity"
