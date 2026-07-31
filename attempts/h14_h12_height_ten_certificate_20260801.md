@@ -27,6 +27,10 @@ GLOBAL_GOAL_ACTIVE`
 | 12 | `LOCAL_AUDIT` | Standalone module, Targets, TargetChecks, and AxiomsAudit pass warning-as-error. Five selected endpoint audits use only `propext`, `Classical.choice`, and `Quot.sound`; forbidden scan and `git diff --check` are empty; full build passes `8820/8820`. | Publish a frozen implementation checkpoint. |
 | 13 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `6f1b51b33304bffd756522c06dc36cfc79ecfd01` passed Lean Action run `30656931596`, build job `91243536693`, in `2m37s`. | Publish docs-only immutable evidence with all five Lean blobs frozen. |
 | 14 | `IMMUTABLE_EVIDENCE` | Docs-only evidence commit `b691569b0c08277bf26debebe44670faf8ae6394` passed Lean Action run `30657223620`, build job `91244526442`, in `1m58s`; all five frozen Lean blobs are unchanged. | Keep the campaign open and attack the proof-producing Euler--Maclaurin/interval backend. |
+| 15 | `ATTACK_A / EULER_MACLAURIN_ONE` | Lean derives the centered fractional-part integration by parts, quadratic periodic remainder, sharp `1/8` kernel bound, dominated parameter derivative, and actual value/derivative error balls of order `N^(-sigma-1)`. A reflected finite-margin theorem feeds these balls into the existing Speiser consumer. | Determine whether the order gain makes a proof-producing finite cover practical. |
+| 16 | `FALSIFICATION_NAVIGATION` | Standard-library complex arithmetic, used only for navigation, sampled the full reflected segment at spacing `0.001`. `N=20` had negative cross margin near `sigma=1/2`; `N=30` had sampled minimum about `0.0867`, with zeta norm margin above `1.38` and reflected archimedean upper below `-0.445`. | Use `N=30` as the first formal certificate candidate; do not import sampled values as premises. |
+| 17 | `MEANINGFUL_PARTIAL` | A new proof-producing foundation proves rational atanh enclosures for `log(a/b)`, Taylor enclosures for a complex exponential whose exponent is itself enclosed, and positive-real complex-power enclosures. Closed Lean smoke certificates verify `log 2` and a height-ten-scale complex exponential. | Generate the 30 finite term certificates, aggregate rational centers, and prove a finite sigma subcover. |
+| 18 | `LOCAL_AUDIT` | Both standalone modules, Targets, TargetChecks, and AxiomsAudit pass warning-as-error. Eleven selected endpoints use only `propext`, `Classical.choice`, and `Quot.sound`; forbidden/resource scans and `git diff --check` are clean; the full build passes `8822/8822`. | Publish the implementation checkpoint, then freeze blobs and attach public CI evidence. |
 
 ## Current obstruction map
 
@@ -38,9 +42,10 @@ GLOBAL_GOAL_ACTIVE`
    left-boundary theorem covers `sigma=0`.
 5. `FAILED_SUBATTACK`: fixed-radius eta-Cauchy evaluation. Its exponent loss is numerically
    unusable and mathematically unnecessary.
-6. `OPEN`: proof-producing enclosures for the finite complex powers, logarithms, exponentials,
-   and norms, preferably through a short Euler--Maclaurin evaluator; the compiled PF5 Taylor
-   certificate is a local design precedent.
+6. `PARTIALLY_CLOSED`: generic proof-producing enclosures for positive-ratio logarithms, perturbed
+   complex exponentials, and positive-real complex powers compile, with closed rational smoke
+   certificates. Generated enclosures for all 30 finite terms and their aggregate norms remain
+   open.
 7. `OPEN`: finite subcover of the actual height-ten horizontal and compiled strict negativity.
 8. `OPEN`: actual multiplicity-bearing height-ten zeta/zeta-derivative count equality.
 9. `OPEN`: `levinsonMontgomeryHeightTenCertificate_actual`.
@@ -50,7 +55,7 @@ GLOBAL_GOAL_ACTIVE`
 - `model`: Codex, GPT-5 family; exact serving variant is not exposed.
 - `reasoning_effort`: not exposed.
 - `budget`: no numerical quota under V4.1.
-- `compaction_state`: resumed from a context summary and rechecked live Goal state, RTK/memory
-  protocol, Git status, source declarations, preregistration CI, and every theorem used here.
+- `compaction_state`: resumed from a context summary and rechecked live Goal state, source
+  declarations, frozen evidence, and every theorem extended in rounds 15--17.
 - `global_goal`: active.
 - `protected_files`: inherited protected files remain untouched and unstaged.

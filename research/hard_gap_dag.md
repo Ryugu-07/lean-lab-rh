@@ -5138,3 +5138,33 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `next_attack`: prioritize Johansson-style Euler--Maclaurin with a kernel-checked Taylor/rational
   interval backend; retain the eta-reflection evaluator as independent cross-check and fallback.
 - `global_goal`: active.
+
+## 2026-08-01 H14 x H12 Euler--Maclaurin checkpoint
+
+- `campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `route_policy`: this remains historical-route omission search inside Levinson--Montgomery and
+  Johansson, not a new RH door. Historical route coverage remains the default priority; direct
+  proof attempts and model-generated conjectures remain open at every selection point.
+- `closed_edge_5`: the actual Abel tail is integrated by parts against the centered fractional
+  part. Its quadratic periodic primitive has sharp norm at most `1/8`, giving an actual-zeta
+  one-correction Euler--Maclaurin value ball of order `N^(-sigma-1)`.
+- `closed_edge_6`: dominated parameter differentiation of the quadratic tail gives the matching
+  actual zeta-derivative formula and explicit logarithmic remainder radius.
+- `closed_edge_7`: finite Euler--Maclaurin value and derivative margins at `1-s` now imply actual
+  zeta and derivative nonvanishing and strict `Re(zeta'/zeta)<0` at `s` through the compiled
+  reflection and digamma correction.
+- `closed_edge_8`: rational atanh-log, perturbed complex-exp Taylor, and positive-real cpow
+  enclosures compile. Closed smoke certificates check `log 2` and a complex exponential at
+  height-ten scale.
+- `navigation_only`: a `0.001` grid suggests `N=20` fails while `N=30` has minimum cross margin
+  about `0.0867`. These values select certificate parameters and are not premises.
+- `first_open_producer`: generated rational enclosures and norm bounds for all 30 finite terms,
+  followed by an explicit finite cover of `0 <= sigma <= 1/2`.
+- `second_open_producer`: actual multiplicity-bearing equality of zeta and zeta-derivative counts
+  below height ten.
+- `local_audit`: standalone modules, Targets, TargetChecks, and AxiomsAudit pass warning-as-error;
+  11 selected endpoint audits use only `propext`, `Classical.choice`, and `Quot.sound`; forbidden
+  and resource scans are clean; full build passes `8822/8822`.
+- `strict_boundary`: no complete height-ten horizontal theorem, low-zero count equality,
+  `LevinsonMontgomeryHeightTenCertificate`, CountDichotomy, Speiser equivalence, H12, or RH.
+- `global_goal`: active.

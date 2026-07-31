@@ -16,6 +16,8 @@ import LeanLab.Riemann.LevinsonMontgomeryNegativeHeightGeometry
 import LeanLab.Riemann.LevinsonMontgomeryFiniteArgumentPrinciple
 import LeanLab.Riemann.LevinsonMontgomeryCriticalStrip
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenCertificate
+import LeanLab.Riemann.LevinsonMontgomeryEulerMaclaurin
+import LeanLab.Riemann.LevinsonMontgomeryTranscendentalInterval
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -6984,5 +6986,28 @@ example
       (speiserZetaDerivRatio s).re < 0 :=
   speiserStrictNegativePoint_of_reflected_hardyLittlewood_margins
     s hs0 hs1 hr hrRe hN hNim hzMargin hupper hcross
+
+example {s : ℂ} (hs : s ∈ zetaAbelContinuationDomain)
+    {N : ℕ} (hN : 1 ≤ N) :
+    ‖riemannZeta s - eulerMaclaurinOneZetaApprox s N‖ ≤
+      eulerMaclaurinOneZetaError s N :=
+  norm_riemannZeta_sub_eulerMaclaurinOneZetaApprox_le hs hN
+
+example {s : ℂ} (hs : s ∈ zetaAbelContinuationDomain)
+    {N : ℕ} (hN : 1 ≤ N) :
+    ‖deriv riemannZeta s - eulerMaclaurinOneZetaDerivApprox s N‖ ≤
+      eulerMaclaurinOneZetaDerivError s N :=
+  norm_deriv_riemannZeta_sub_eulerMaclaurinOneZetaDerivApprox_le hs hN
+
+example :
+    |Real.log 2 - logAtanhPartial 8 (1 / 3)| ≤ 1 / 10000000 :=
+  abs_log_two_sub_logAtanhPartial_eight_le
+
+example :
+    ‖Complex.exp (((-1 / 2 : ℝ) : ℂ) + (10 : ℂ) * Complex.I) -
+        complexExpTaylor 80
+          (((-1 / 2 : ℝ) : ℂ) + (10 : ℂ) * Complex.I)‖ ≤
+      1 / 100000000000000000000 :=
+  norm_exp_heightTenScale_sub_taylor_eighty_le
 
 end LeanLab.Riemann

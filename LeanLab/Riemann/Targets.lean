@@ -131,6 +131,8 @@ import LeanLab.Riemann.LevinsonMontgomeryNegativeHeightGeometry
 import LeanLab.Riemann.LevinsonMontgomeryFiniteArgumentPrinciple
 import LeanLab.Riemann.LevinsonMontgomeryCriticalStrip
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenCertificate
+import LeanLab.Riemann.LevinsonMontgomeryEulerMaclaurin
+import LeanLab.Riemann.LevinsonMontgomeryTranscendentalInterval
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -2102,6 +2104,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``levinsonMontgomeryTopArgumentVariation_endpoint
       status := .proven
       note := "Campaign LITERATURE-20260730-H12-LEVINSON-MONTGOMERY-TOP-ARGUMENT-VARIATION-01 reconstructs the inference suppressed after the page-52 Jensen sentence. Lean uses a valid principal logarithm separately on each crossing-free right or left half-plane gap, recursively consumes a strictly sorted finite crossing superset, proves real support projection cardinality is at most analytic divisor support cardinality and hence at most its multiplicity sum, constructs cofinal common zero-free actual top heights on [0,1], and proves simultaneous O(log(T+2)) bounds for the imaginary horizontal integrals of zeta'/zeta and zeta''/zeta'. The global indented argument principle, bottom orientation, both Levinson--Montgomery count identities, Speiser equivalence, H12, and RH remain open; historical_route_coverage_delta=1, generic_crossing_variation_bridge_delta=1, actual_zeta_top_variation_delta=1, actual_zeta_deriv_top_variation_delta=1, rh_frontier_delta=0." },
+    { id := "H12.levinson-montgomery.height-ten-euler-maclaurin-evaluator"
+      tier := .tier1
+      title := "Build the height-ten Euler--Maclaurin certificate evaluator"
+      statement :=
+        "Derive actual-zeta value and derivative balls from one Euler--Maclaurin correction, connect finite reflected margins to the Speiser sign, and provide proof-producing rational enclosures for the logarithms, complex exponentials, and complex powers in the finite centers."
+      leanName := some ``speiserStrictNegativePoint_of_reflected_eulerMaclaurinOne_margins
+      status := .proven
+      note := "Campaign PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01 now has an actual-zeta first-order Euler--Maclaurin evaluator. Lean proves the centered fractional-part integration by parts, the quadratic periodic remainder with sharp 1/8 bound, dominated parameter differentiation, explicit value and derivative balls of order N^(-sigma-1), and a reflected-margin consumer for the actual Speiser sign. A separate proof-producing layer gives rational atanh-log, perturbed complex-exp Taylor, and positive-real cpow enclosures, with closed log-two and height-ten-scale exponential smoke certificates. Non-premise navigation indicates N=30 has positive sampled margins whereas N=20 does not. The finite rational subcover, actual low-height multiplicity counts, LevinsonMontgomeryHeightTenCertificate, CountDichotomy, Speiser equivalence, and RH remain open; numerical samples are not theorem premises." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

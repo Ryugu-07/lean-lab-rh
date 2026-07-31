@@ -8,6 +8,8 @@ import LeanLab.Riemann.LevinsonMontgomeryNegativeHeightGeometry
 import LeanLab.Riemann.LevinsonMontgomeryFiniteArgumentPrinciple
 import LeanLab.Riemann.LevinsonMontgomeryCriticalStrip
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenCertificate
+import LeanLab.Riemann.LevinsonMontgomeryEulerMaclaurin
+import LeanLab.Riemann.LevinsonMontgomeryTranscendentalInterval
 import LeanLab.Riemann.FareyFranel
 import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.InfiniteReciprocalTraceAudit
@@ -1421,3 +1423,14 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.norm_deriv_riemannZeta_sub_hardyLittlewoodZetaDerivApprox_le
 #print axioms LeanLab.Riemann.logDeriv_riemannZeta_re_reflection
 #print axioms LeanLab.Riemann.speiserStrictNegativePoint_of_reflected_hardyLittlewood_margins
+#print axioms LeanLab.Riemann.integral_abelCenteredFractKernel_eq_quadraticTail
+#print axioms LeanLab.Riemann.riemannZeta_eq_eulerMaclaurinOneZetaApprox_add_remainder
+#print axioms LeanLab.Riemann.norm_riemannZeta_sub_eulerMaclaurinOneZetaApprox_le
+#print axioms LeanLab.Riemann.deriv_riemannZeta_sub_eulerMaclaurinOneZetaDerivApprox
+#print axioms LeanLab.Riemann.norm_deriv_riemannZeta_sub_eulerMaclaurinOneZetaDerivApprox_le
+#print axioms LeanLab.Riemann.speiserStrictNegativePoint_of_reflected_eulerMaclaurinOne_margins
+#print axioms LeanLab.Riemann.abs_log_div_sub_logAtanhPartial_le
+#print axioms LeanLab.Riemann.norm_complex_exp_sub_taylor_of_near
+#print axioms LeanLab.Riemann.norm_ofReal_cpow_sub_taylor_of_log_near
+#print axioms LeanLab.Riemann.abs_log_two_sub_logAtanhPartial_eight_le
+#print axioms LeanLab.Riemann.norm_exp_heightTenScale_sub_taylor_eighty_le
