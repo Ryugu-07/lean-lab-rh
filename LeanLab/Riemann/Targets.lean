@@ -130,6 +130,7 @@ import LeanLab.Riemann.LevinsonMontgomeryTopArgumentVariation
 import LeanLab.Riemann.LevinsonMontgomeryNegativeHeightGeometry
 import LeanLab.Riemann.LevinsonMontgomeryFiniteArgumentPrinciple
 import LeanLab.Riemann.LevinsonMontgomeryCriticalStrip
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenCertificate
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -1934,6 +1935,15 @@ def rhTargets : List ResearchTarget :=
         "Implement interval-certified isolation and critical-line location for every xi zero in a specified finite rectangle, prove the zero-free boundary and exact analytic count required by TuringXiBoundaryCountCertificate, and instantiate the compiled completeness consumer at a concrete height."
       status := .inProgress
       note := "The abstract consumer is kernel-checked and uses the actual multiplicity-bearing xi divisor. The open historical edge is the producer: rigorous root isolation, boundary nonvanishing, and a source-valid Turing or Weil-Barner count for a concrete rectangle. No numerical zero table is accepted as an unproved premise." },
+    { id := "H14.computation.height-ten-reflected-evaluator"
+      tier := .tier2
+      title := "Reduce the Levinson--Montgomery height-ten sign to finite reflected margins"
+      statement :=
+        "Derive explicit actual-zeta and zeta-derivative error balls from finite eta sums, reflect the left half-strip through the completed-zeta functional equation, enclose both pole-Gamma corrections by the compiled Stieltjes digamma remainder, and prove finite center margins imply the pointwise strict-negative Speiser condition."
+      leanName := some ``speiserStrictNegativePoint_of_reflected_hardyLittlewood_margins
+      status := .proven
+      note := "Campaign PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01 reaches a meaningful producer reduction, not the height-ten certificate. Cauchy's estimate transfers the actual ordered eta remainder to its derivative; quotient differentiation gives explicit zeta and zeta-derivative balls. Xi reflection moves every 0<sigma<=1/2 point to Re(1-s)>=1/2, while the compiled digamma--Stirling remainder encloses the two archimedean corrections. A cross-multiplied rational-margin theorem then yields actual zeta nonvanishing, derivative nonvanishing, and Re(zeta'/zeta)<0. Navigation suggests adaptive r approximately 1/log N succeeds near the worst reflected real part only around N=10^6; those numerics are not premises. A proof-producing transcendental interval engine or a shorter Euler--Maclaurin evaluator, plus the exact low-height zeta/zeta-derivative zero-count equality, remains open."
+    },
     { id := "H14.computation.global-tail-reduction"
       tier := .tier2
       title := "Reduce all higher zeta zeros to a finite certificate"

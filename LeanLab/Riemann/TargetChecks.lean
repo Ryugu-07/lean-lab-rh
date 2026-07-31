@@ -15,6 +15,7 @@ import LeanLab.Riemann.LevinsonMontgomeryTopArgumentVariation
 import LeanLab.Riemann.LevinsonMontgomeryNegativeHeightGeometry
 import LeanLab.Riemann.LevinsonMontgomeryFiniteArgumentPrinciple
 import LeanLab.Riemann.LevinsonMontgomeryCriticalStrip
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenCertificate
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -6928,5 +6929,60 @@ example (hcert : LevinsonMontgomeryHeightTenCertificate) :
 example (hcert : LevinsonMontgomeryHeightTenCertificate) :
     LevinsonMontgomeryLogCountBound ∧ LevinsonMontgomeryCountDichotomy :=
   levinsonMontgomeryTheoremOne_of_heightTenCertificate hcert
+
+example {s : ℂ} (hs : s.re < 1) :
+    hardyLittlewoodEtaFactor s ≠ 0 :=
+  hardyLittlewoodEtaFactor_ne_zero_of_re_lt_one hs
+
+example
+    (s : ℂ) (hs_ne : s ≠ 1) {r : ℝ} (hr : 0 < r) (hrRe : r < s.re)
+    {N : ℕ} (hN : 1 ≤ N) (hNim : |s.im| + r ≤ N) :
+    ‖deriv hardyLittlewoodEta s -
+        deriv (fun z => hardyLittlewoodEtaPartialSum z N) s‖ ≤
+      (4 * (N : ℝ) ^ (-(s.re - r))) / r :=
+  norm_deriv_hardyLittlewoodEta_sub_partialSum_le
+    s hs_ne hr hrRe hN hNim
+
+example
+    (s : ℂ) (hs_ne : s ≠ 1) {r : ℝ} (hr : 0 < r) (hrRe : r < s.re)
+    {N : ℕ} (hN : 1 ≤ N) (hNim : |s.im| + r ≤ N)
+    (hfactor : hardyLittlewoodEtaFactor s ≠ 0) :
+    ‖deriv riemannZeta s - hardyLittlewoodZetaDerivApprox s N‖ ≤
+      hardyLittlewoodZetaDerivError s r N := by
+  exact norm_deriv_riemannZeta_sub_hardyLittlewoodZetaDerivApprox_le
+    s hs_ne hr hrRe hN hNim hfactor
+
+example {s : ℂ} (hs0 : 0 < s.re) (hs1 : s.re < 1)
+    (hzeta : riemannZeta s ≠ 0)
+    (hreflected : riemannZeta (1 - s) ≠ 0) :
+    (logDeriv riemannZeta s).re =
+      -(logDeriv riemannZeta (1 - s)).re +
+        levinsonMontgomeryLogDerivArchimedeanTerm s +
+        levinsonMontgomeryLogDerivArchimedeanTerm (1 - s) :=
+  logDeriv_riemannZeta_re_reflection hs0 hs1 hzeta hreflected
+
+example
+    (s : ℂ) (hs0 : 0 < s.re) (hs1 : s.re < 1)
+    {r : ℝ} (hr : 0 < r) (hrRe : r < (1 - s).re)
+    {N : ℕ} (hN : 1 ≤ N) (hNim : |(1 - s).im| + r ≤ N)
+    (hzMargin :
+      hardyLittlewoodZetaError (1 - s) N <
+        ‖hardyLittlewoodZetaApprox (1 - s) N‖)
+    (hupper : levinsonMontgomeryReflectedArchimedeanUpper s < 0)
+    (hcross :
+      levinsonMontgomeryReflectedArchimedeanUpper s *
+          (‖hardyLittlewoodZetaApprox (1 - s) N‖ -
+            hardyLittlewoodZetaError (1 - s) N) ^ 2 <
+        (hardyLittlewoodZetaDerivApprox (1 - s) N *
+            conj (hardyLittlewoodZetaApprox (1 - s) N)).re -
+          (hardyLittlewoodZetaDerivError (1 - s) r N *
+              (‖hardyLittlewoodZetaApprox (1 - s) N‖ +
+                hardyLittlewoodZetaError (1 - s) N) +
+            ‖hardyLittlewoodZetaDerivApprox (1 - s) N‖ *
+              hardyLittlewoodZetaError (1 - s) N)) :
+    riemannZeta s ≠ 0 ∧ deriv riemannZeta s ≠ 0 ∧
+      (speiserZetaDerivRatio s).re < 0 :=
+  speiserStrictNegativePoint_of_reflected_hardyLittlewood_margins
+    s hs0 hs1 hr hrRe hN hNim hzMargin hupper hcross
 
 end LeanLab.Riemann

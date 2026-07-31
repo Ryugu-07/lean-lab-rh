@@ -6,7 +6,8 @@ Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Node: `H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED / GLOBAL_GOAL_ACTIVE`
+Status: `MEANINGFUL_PARTIAL_LOCAL / PRODUCTION_CI_REQUIRED / CAMPAIGN_ACTIVE /
+GLOBAL_GOAL_ACTIVE`
 
 ## Attempt ledger
 
@@ -18,27 +19,36 @@ Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED / GLOBAL_GOAL_ACTIVE`
 | 4 | `CROSS_ROUTE_INPUT` | The project already proves a uniform Hardy--Littlewood eta remainder and the zeta functional equation. This gives an evaluator fallback independent of the Euler--Maclaurin implementation. | Preregister three materially different attacks. |
 | 5 | `FALSIFICATION_NAVIGATION` | A nonrigorous high-precision grid found no candidate zero and observed comfortable margins for `zeta`, `zeta'`, and the top ratio sign. | Treat the target as numerically plausible, but admit none of these values as premises. |
 | 6 | `PREREGISTRATION` | Full success is the actual height-ten certificate plus theorem-one and Speiser-equivalence composition. Generic interval infrastructure alone is not campaign success. | Publish docs only and await public Lean Action CI before production editing. |
+| 7 | `PUBLIC_GATE` | Docs-only preregistration commit `81170ddbf6645bf8fca775c26cb0c79e29764061` passed Lean Action run `30655041174`, build job `91237248516`, in `1m54s`. | Open production editing for the fixed endpoint. |
+| 8 | `ATTACK_C / ETA_DERIVATIVE` | Cauchy's estimate transfers the compiled ordered eta remainder to an explicit derivative remainder. Quotient differentiation gives actual finite-sum error balls for both `riemannZeta` and `deriv riemannZeta`. | Test whether the bounds can certify the height-ten sign. |
+| 9 | `FALSIFICATION_NAVIGATION` | With the naive radius `r=sigma/2`, even at `sigma=1/2` and `N=10^5` the derivative error radius exceeds the finite center; toward `sigma=0` the exponent loss is much worse. These floating-point tests are navigation only. | Reject the fixed-radius eta attack rather than optimize its constants. |
+| 10 | `CROSS_ROUTE_REPAIR` | Choosing `r` near `1/log N` restores the expected `N^-sigma log N` scale. At the worst reflected real part `1/2`, navigation first found all three sign margins favorable around `N=10^6`. Xi reflection moves every positive left-half point to real part at least `1/2`; the existing left-boundary theorem handles `sigma=0`. | Formalize reflection and the archimedean correction before any numerical certificate. |
+| 11 | `MEANINGFUL_PARTIAL` | The new no-sorry module proves the actual eta/zeta derivative bounds, factor nonvanishing, exact reflected zeta logarithmic-derivative identity, explicit Stieltjes digamma enclosure, robust quotient inequalities, and a theorem turning finite reflected margins into actual zeta nonvanishing, derivative nonvanishing, and `Re(zeta'/zeta)<0`. | Build a proof-producing transcendental interval evaluator and cover the height-ten segment. |
+| 12 | `LOCAL_AUDIT` | Standalone module, Targets, TargetChecks, and AxiomsAudit pass warning-as-error. Five selected endpoint audits use only `propext`, `Classical.choice`, and `Quot.sound`; forbidden scan and `git diff --check` are empty; full build passes `8820/8820`. | Publish a frozen implementation checkpoint. |
 
 ## Current obstruction map
 
 1. `CLOSED`: global H12 reduction from the finite certificate to the full analytic count theorem.
 2. `CLOSED`: multiplicity-aware finite argument-principle and count infrastructure.
-3. `AVAILABLE_SOURCE`: rigorous Euler--Maclaurin zeta/derivative evaluation with explicit
-   remainder in Johansson's source.
-4. `AVAILABLE_PROJECT_INPUT`: uniform eta remainder, functional equation, analytic derivatives,
-   and rational/transcendental inequality infrastructure.
-5. `OPEN`: formalize a proof-producing evaluator strong enough for a finite height-ten cover.
-6. `OPEN`: compile actual top-edge strict negativity.
-7. `OPEN`: compile actual multiplicity-bearing height-ten count equality.
-8. `OPEN`: `levinsonMontgomeryHeightTenCertificate_actual`.
+3. `CLOSED`: actual eta derivative remainder and quotient error balls for zeta and its derivative.
+4. `CLOSED`: Xi reflection plus explicit digamma--Stirling correction reduces every
+   `0 < sigma <= 1/2` sign point to finite margins at `Re(1-s) >= 1/2`; the existing analytic
+   left-boundary theorem covers `sigma=0`.
+5. `FAILED_SUBATTACK`: fixed-radius eta-Cauchy evaluation. Its exponent loss is numerically
+   unusable and mathematically unnecessary.
+6. `OPEN`: proof-producing enclosures for the finite complex powers, logarithms, exponentials,
+   and norms, preferably through a short Euler--Maclaurin evaluator; the compiled PF5 Taylor
+   certificate is a local design precedent.
+7. `OPEN`: finite subcover of the actual height-ten horizontal and compiled strict negativity.
+8. `OPEN`: actual multiplicity-bearing height-ten zeta/zeta-derivative count equality.
+9. `OPEN`: `levinsonMontgomeryHeightTenCertificate_actual`.
 
 ## Runtime record
 
 - `model`: Codex, GPT-5 family; exact serving variant is not exposed.
 - `reasoning_effort`: not exposed.
 - `budget`: no numerical quota under V4.1.
-- `compaction_state`: fresh goal continuation; live Git state, governance, current atlas, latest
-  H12 closure, relevant H1/H14 attempts, source registry, theorem signatures, and primary-source
-  evaluator formulas were rechecked before selection.
+- `compaction_state`: resumed from a context summary and rechecked live Goal state, RTK/memory
+  protocol, Git status, source declarations, preregistration CI, and every theorem used here.
 - `global_goal`: active.
 - `protected_files`: inherited protected files remain untouched and unstaged.

@@ -5090,3 +5090,41 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   inference.
 - `production_gate`: no Lean or registration edit before docs-only preregistration public CI.
 - `global_goal`: active.
+
+## 2026-08-01 H14 x H12 reflected evaluator checkpoint
+
+- `campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`.
+- `node`: `H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains open.
+- `status`: `MEANINGFUL_PARTIAL_LOCAL / PRODUCTION_CI_REQUIRED / CAMPAIGN_ACTIVE /
+  GLOBAL_GOAL_ACTIVE`.
+- `public_preregistration`: commit `81170ddbf6645bf8fca775c26cb0c79e29764061`, Lean Action
+  run `30655041174`, build job `91237248516`, passed in `1m54s`.
+- `closed_edge_1`: Cauchy's derivative estimate transfers the actual ordered eta remainder to
+  an explicit derivative error with tunable radius.
+- `closed_edge_2`: finite eta quotient differentiation gives actual error balls for zeta and
+  its derivative wherever the eta factor is nonzero; real part below one proves that
+  nonvanishing analytically.
+- `closed_edge_3`: completed-zeta reflection gives the exact left/right zeta logarithmic-
+  derivative identity. The compiled Stieltjes digamma remainder bounds both archimedean terms.
+- `closed_edge_4`: robust complex error-ball algebra converts four finite reflected margins into
+  actual zeta nonvanishing, derivative nonvanishing, and strict negativity of
+  `Re(zeta'/zeta)` at the left-half point.
+- `failed_subattack`: fixed `r=sigma/2` Cauchy circles lose too much exponent. Navigation at
+  `sigma=1/2`, `N=10^5` still had a derivative radius larger than its center. No floating-point
+  value is a premise.
+- `cross_route_repair`: reflection makes the worst evaluator real part `1/2`; adaptive
+  `r` near `1/log N` restores an `N^-sigma log N` scale. Navigation found favorable margins near
+  `N=10^6`, but this is not a Lean certificate.
+- `first_open_producer`: a proof-generating transcendental interval engine or shorter
+  Euler--Maclaurin implementation that proves the finite margins over a rational subcover.
+- `second_open_producer`: actual multiplicity-bearing zeta and zeta-derivative zero-count
+  equality below height ten.
+- `strict_boundary`: no height-ten horizontal sign theorem, count equality,
+  `levinsonMontgomeryHeightTenCertificate_actual`, CountDichotomy, Speiser equivalence, H12, or
+  RH is proved.
+- `local_audit`: 705-line no-sorry module; five exact TargetChecks; five selected axiom prints
+  using only `propext`, `Classical.choice`, and `Quot.sound`; empty forbidden scan and patch
+  check; full build `8820/8820`.
+- `next_attack`: prioritize Johansson-style Euler--Maclaurin with a kernel-checked Taylor/rational
+  interval backend; retain the eta-reflection evaluator as independent cross-check and fallback.
+- `global_goal`: active.

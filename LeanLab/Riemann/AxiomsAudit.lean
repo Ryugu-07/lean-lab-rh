@@ -7,6 +7,7 @@ import LeanLab.Riemann.LevinsonMontgomeryTopArgumentVariation
 import LeanLab.Riemann.LevinsonMontgomeryNegativeHeightGeometry
 import LeanLab.Riemann.LevinsonMontgomeryFiniteArgumentPrinciple
 import LeanLab.Riemann.LevinsonMontgomeryCriticalStrip
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenCertificate
 import LeanLab.Riemann.FareyFranel
 import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.InfiniteReciprocalTraceAudit
@@ -1415,3 +1416,8 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.levinsonMontgomeryCountDichotomy_of_negativeExactCountBase
 #print axioms LeanLab.Riemann.levinsonMontgomeryNegativeExactCountBase_of_heightTenCertificate
 #print axioms LeanLab.Riemann.levinsonMontgomeryTheoremOne_of_heightTenCertificate
+#print axioms LeanLab.Riemann.hardyLittlewoodEtaFactor_ne_zero_of_re_lt_one
+#print axioms LeanLab.Riemann.norm_deriv_hardyLittlewoodEta_sub_partialSum_le
+#print axioms LeanLab.Riemann.norm_deriv_riemannZeta_sub_hardyLittlewoodZetaDerivApprox_le
+#print axioms LeanLab.Riemann.logDeriv_riemannZeta_re_reflection
+#print axioms LeanLab.Riemann.speiserStrictNegativePoint_of_reflected_hardyLittlewood_margins
