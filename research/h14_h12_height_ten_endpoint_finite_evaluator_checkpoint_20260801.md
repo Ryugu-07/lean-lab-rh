@@ -4,8 +4,8 @@ Date: 2026-08-01
 
 Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
-Status: `MEANINGFUL_PARTIAL_LOCAL_GREEN / PUBLIC_CI_PENDING /
-CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
+Status: `MEANINGFUL_PARTIAL_PUBLIC_IMPLEMENTATION_GREEN /
+IMMUTABLE_EVIDENCE_CI_PENDING / CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 
 ## Historical-route role
 
@@ -72,3 +72,12 @@ CountDichotomy, Speiser equivalence, H12, or RH is claimed.
 4. Compose both producers into `levinsonMontgomeryHeightTenCertificate_actual`.
 
 The global RH Goal and this campaign remain active.
+
+## Public implementation
+
+- Commit `9f3d28f7e4c1dbbf7647c8cd1418b50a7c34d656` passed Lean Action run
+  `30665506516`, build job `91271458715`, in `6m19s`.
+- The three implementation modules, `Targets.lean`, `TargetChecks.lean`, `AxiomsAudit.lean`, and
+  `LeanLab.lean` are frozen by Git blob in
+  `research/h14_h12_height_ten_endpoint_finite_evaluator_evidence_20260801.md`.
+- The immutable-evidence documentation commit is pending public CI.

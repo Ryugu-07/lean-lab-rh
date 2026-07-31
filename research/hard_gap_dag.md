@@ -5210,4 +5210,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `strict_boundary`: no actual-zeta endpoint Speiser theorem, positive-width horizontal theorem,
   low-zero count equality, `LevinsonMontgomeryHeightTenCertificate`, CountDichotomy, Speiser
   equivalence, H12, or RH.
+- `public_implementation`: frozen commit `9f3d28f7e4c1dbbf7647c8cd1418b50a7c34d656`
+  passed Lean Action run `30665506516`, build job `91271458715`, in `6m19s`.
+- `immutable_evidence_pending`: seven Lean blobs are frozen in
+  `research/h14_h12_height_ten_endpoint_finite_evaluator_evidence_20260801.md`; the docs-only
+  evidence commit still requires public CI.
 - `global_goal`: active.
