@@ -5244,5 +5244,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `local_audit`: new module and registration files pass warning-as-error; seven selected axiom
   prints use only `propext`, `Classical.choice`, and `Quot.sound`; placeholder, resource-option,
   unsafe-declaration, and patch scans are clean; full build `8824/8824`.
-- `public_evidence`: pending.
+- `public_implementation`: frozen commit
+  `3ed50eed1abefea20a810d39ce3ce89f2f61fe3a` passed Lean Action run `30668355865`, build job
+  `91280491604`, in `2m50s`.
+- `immutable_evidence`: docs-only record
+  `research/h14_h12_height_ten_actual_endpoint_evidence_20260801.md`; public CI pending.
 - `global_goal`: active.

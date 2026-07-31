@@ -4,7 +4,7 @@ Date: 2026-08-01
 
 Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
-Status: `MEANINGFUL_PARTIAL_LOCAL_GREEN / PUBLIC_CI_PENDING /
+Status: `MEANINGFUL_PARTIAL_IMPLEMENTATION_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_CI_PENDING /
 CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 
 ## Historical-route role
@@ -73,6 +73,11 @@ equivalence, H12, or RH is claimed.
 
 The global RH Goal and this campaign remain active.
 
-## Public evidence
+## Public implementation
 
-Pending implementation CI and immutable blob evidence.
+- Commit `3ed50eed1abefea20a810d39ce3ce89f2f61fe3a` passed Lean Action run
+  `30668355865`, build job `91280491604`, in `2m50s`.
+- The endpoint module, `Targets.lean`, `TargetChecks.lean`, `AxiomsAudit.lean`, and
+  `LeanLab.lean` are frozen by Git blob in
+  `research/h14_h12_height_ten_actual_endpoint_evidence_20260801.md`.
+- The documentation-only immutable-evidence commit and its public CI are pending.
