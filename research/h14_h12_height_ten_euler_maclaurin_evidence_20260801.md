@@ -4,8 +4,8 @@ Date: 2026-08-01
 
 Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
-Classification: `MEANINGFUL_PARTIAL / PUBLIC_IMPLEMENTATION_GREEN /
-IMMUTABLE_EVIDENCE_CI_PENDING / HEIGHT_TEN_CERTIFICATE_OPEN`
+Classification: `MEANINGFUL_PARTIAL / IMMUTABLE_EVIDENCE_PUBLIC_GREEN /
+HEIGHT_TEN_CERTIFICATE_OPEN`
 
 ## Public implementation
 
@@ -28,6 +28,14 @@ IMMUTABLE_EVIDENCE_CI_PENDING / HEIGHT_TEN_CERTIFICATE_OPEN`
 
 This immutable-evidence change is documentation only. These six blobs must remain identical to
 the public implementation commit.
+
+## Immutable evidence
+
+- Documentation-only commit: `1e33d4a762301785e329bf6477a8152134efa734`
+- Lean Action run: `30661486385`
+- Build job: `91258507742`
+- Result: passed in `1m35s`
+- Blob check: all six frozen Lean blobs are unchanged from the public implementation commit
 
 ## Audited endpoints
 

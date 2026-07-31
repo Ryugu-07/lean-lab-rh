@@ -5174,7 +5174,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   `32fb78b01e6066e8b27d1bfc32be0cd967f80514`; LeanLab.lean
   `b1dfe2e8e26b8a09d0bfbb3e4c5848685e851fd2`.
 - `immutable_evidence`: docs-only record
-  `research/h14_h12_height_ten_euler_maclaurin_evidence_20260801.md`; public CI pending.
+  `research/h14_h12_height_ten_euler_maclaurin_evidence_20260801.md`, commit
+  `1e33d4a762301785e329bf6477a8152134efa734`, passed Lean Action run `30661486385`, build job
+  `91258507742`, in `1m35s`; all six frozen Lean blobs are unchanged.
 - `strict_boundary`: no complete height-ten horizontal theorem, low-zero count equality,
   `LevinsonMontgomeryHeightTenCertificate`, CountDichotomy, Speiser equivalence, H12, or RH.
 - `global_goal`: active.

@@ -4,8 +4,8 @@ Date: 2026-08-01
 
 Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
-Status: `MEANINGFUL_PARTIAL_PUBLIC_IMPLEMENTATION_GREEN /
-IMMUTABLE_EVIDENCE_CI_PENDING / CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
+Status: `MEANINGFUL_PARTIAL_IMMUTABLE_EVIDENCE_PUBLIC_GREEN /
+CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 
 ## Why this bound was formalized
 
@@ -76,4 +76,6 @@ claimed here.
 - The two implementation modules, `Targets.lean`, `TargetChecks.lean`, `AxiomsAudit.lean`, and
   `LeanLab.lean` are frozen by Git blob in
   `research/h14_h12_height_ten_euler_maclaurin_evidence_20260801.md`.
-- The evidence change is documentation only and awaits its own public CI and blob-identity check.
+- Documentation-only evidence commit `1e33d4a762301785e329bf6477a8152134efa734` passed Lean
+  Action run `30661486385`, build job `91258507742`, in `1m35s`; all six frozen Lean blobs remain
+  unchanged.

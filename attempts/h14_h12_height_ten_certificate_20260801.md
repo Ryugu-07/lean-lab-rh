@@ -32,6 +32,7 @@ GLOBAL_GOAL_ACTIVE`
 | 17 | `MEANINGFUL_PARTIAL` | A new proof-producing foundation proves rational atanh enclosures for `log(a/b)`, Taylor enclosures for a complex exponential whose exponent is itself enclosed, and positive-real complex-power enclosures. Closed Lean smoke certificates verify `log 2` and a height-ten-scale complex exponential. | Generate the 30 finite term certificates, aggregate rational centers, and prove a finite sigma subcover. |
 | 18 | `LOCAL_AUDIT` | Both standalone modules, Targets, TargetChecks, and AxiomsAudit pass warning-as-error. Eleven selected endpoints use only `propext`, `Classical.choice`, and `Quot.sound`; forbidden/resource scans and `git diff --check` are clean; the full build passes `8822/8822`. | Publish the implementation checkpoint, then freeze blobs and attach public CI evidence. |
 | 19 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `f55f2efce7ae21e6fc0f78d677fecbb6606b526c` passed Lean Action run `30661192482`, build job `91257563206`, in `2m24s`. Six Lean blobs are frozen in the docs-only immutable-evidence record. | Publish the immutable-evidence commit, verify its CI and blob identity, then resume the 30-term certificate producer. |
+| 20 | `IMMUTABLE_EVIDENCE` | Docs-only evidence commit `1e33d4a762301785e329bf6477a8152134efa734` passed Lean Action run `30661486385`, build job `91258507742`, in `1m35s`; all six frozen Lean blobs are unchanged. | Keep the campaign open and resume generated rational enclosures for the 30-term finite cover. |
 
 ## Current obstruction map
 
