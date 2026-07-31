@@ -5,8 +5,8 @@ Date: 2026-07-31
 Campaign:
 `LITERATURE-20260731-H12-LEVINSON-MONTGOMERY-GLOBAL-COUNT-REENTRY-01`
 
-Status: `STEPS_1_7_COMPILED / LOCAL_AUDIT_GREEN / IMPLEMENTATION_CI_REQUIRED /
-CAMPAIGN_ACTIVE`
+Status: `STEPS_1_7_COMPILED / PUBLIC_IMPLEMENTATION_GREEN /
+IMMUTABLE_EVIDENCE_CI_REQUIRED / CAMPAIGN_ACTIVE`
 
 ## Attempt log
 
@@ -25,6 +25,7 @@ CAMPAIGN_ACTIVE`
 | 11 | `ADAPTIVE_CUTOFF_ATTACK` | Direct critical-line indentation bookkeeping is unnecessary for this finite count identity. Local finiteness selects a common `r<1/2` to the right of every divisor support point whose real part is strictly below `1/2`; this preserves all open-left zeros and excludes critical-line zeros by a proved filter stabilization. | Split compact counts at the lower height. |
 | 12 | `GLOBAL_COUNT_IDENTITY` | `levinsonMontgomery_globalCountDifference_actual` compiles. It expresses the difference of actual zeta-derivative and zeta rectangle integrals as the change in the multiplicity-bearing global Speiser count difference between `b` and `n`. | Attack `LevinsonMontgomeryLogCountBound`. |
 | 13 | `LOG_COUNT_ATTACK_1` | Expanding the rectangle identity and taking imaginary parts uses the compiled `O(log(t+2))` top integrals and fixed-bottom terms, but leaves the real parts of both logarithmic-derivative integrals on both vertical sides. No repository theorem presently bounds or cancels these terms. | Isolate the vertical obstruction in theorem-shaped form and test a logarithmic-modulus endpoint formula. |
+| 14 | `PUBLIC_IMPLEMENTATION` | Frozen implementation `87b06e0c258b5fbc8f141a7242ce0ac8ae9ac4dc` passed Lean Action run `30645129522`, build job `91204516436`, in `2m43s`. | Publish docs-only immutable evidence; keep the campaign active at step 8. |
 
 ## Current obstruction map
 

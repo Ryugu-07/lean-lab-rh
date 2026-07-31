@@ -5010,8 +5010,8 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 
 - `campaign`:
   `LITERATURE-20260731-H12-LEVINSON-MONTGOMERY-GLOBAL-COUNT-REENTRY-01`.
-- `status`: `STEPS_1_7_COMPILED / LOCAL_AUDIT_GREEN / IMPLEMENTATION_CI_REQUIRED /
-  CAMPAIGN_ACTIVE`.
+- `status`: `STEPS_1_7_COMPILED / PUBLIC_IMPLEMENTATION_GREEN /
+  IMMUTABLE_EVIDENCE_CI_REQUIRED / CAMPAIGN_ACTIVE`.
 - `closed_edge_1`: actual positive-multiplicity zeta factorization and punctured positive-right
   logarithmic derivative exclude every interior zero under the strict-negative integer-height
   predicate.
@@ -5037,4 +5037,7 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   dichotomy, unconditional Speiser equivalence, H12, and RH remain open.
 - `local_audit`: exact warning-as-error entry checks pass; selected axioms are only `propext`,
   `Classical.choice`, and `Quot.sound`; forbidden scan empty; full build `8818/8818`.
+- `public_implementation`: frozen commit
+  `87b06e0c258b5fbc8f141a7242ce0ac8ae9ac4dc` passed Lean Action run `30645129522`, build job
+  `91204516436`, in `2m43s`; immutable-evidence CI remains.
 - `global_goal`: active.

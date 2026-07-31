@@ -5,8 +5,8 @@ Date: 2026-07-31
 Campaign:
 `LITERATURE-20260731-H12-LEVINSON-MONTGOMERY-GLOBAL-COUNT-REENTRY-01`
 
-Status: `STEPS_1_7_COMPILED / LOCAL_AUDIT_GREEN / IMPLEMENTATION_CI_REQUIRED /
-CAMPAIGN_ACTIVE`
+Status: `STEPS_1_7_COMPILED / PUBLIC_IMPLEMENTATION_GREEN /
+IMMUTABLE_EVIDENCE_CI_REQUIRED / CAMPAIGN_ACTIVE`
 
 ## Exact result
 
@@ -93,3 +93,9 @@ The subsequent all-real-cutoff transfer also remains open.
 The full campaign endpoint
 `LevinsonMontgomeryLogCountBound and LevinsonMontgomeryCountDichotomy` remains open. The
 persistent RH Goal remains active.
+
+Frozen implementation commit `87b06e0c258b5fbc8f141a7242ce0ac8ae9ac4dc` passed public Lean
+Action run `30645129522`, build job `91204516436`, in `2m43s`. Immutable blob evidence is
+recorded in
+`research/h12_levinson_montgomery_global_count_step7_evidence_20260731.md`; its docs-only CI
+remains required.
