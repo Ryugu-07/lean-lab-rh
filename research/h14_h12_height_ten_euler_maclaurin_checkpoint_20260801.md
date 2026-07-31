@@ -4,7 +4,8 @@ Date: 2026-08-01
 
 Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
-Status: `MEANINGFUL_PARTIAL_LOCAL_GREEN / CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
+Status: `MEANINGFUL_PARTIAL_PUBLIC_IMPLEMENTATION_GREEN /
+IMMUTABLE_EVIDENCE_CI_PENDING / CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 
 ## Why this bound was formalized
 
@@ -67,3 +68,12 @@ claimed here.
   has no hit in any changed Lean file.
 - `git diff --check` passes.
 - Full `lake build` passes `8822/8822` jobs.
+
+## Public implementation
+
+- Commit `f55f2efce7ae21e6fc0f78d677fecbb6606b526c` passed Lean Action run
+  `30661192482`, build job `91257563206`, in `2m24s`.
+- The two implementation modules, `Targets.lean`, `TargetChecks.lean`, `AxiomsAudit.lean`, and
+  `LeanLab.lean` are frozen by Git blob in
+  `research/h14_h12_height_ten_euler_maclaurin_evidence_20260801.md`.
+- The evidence change is documentation only and awaits its own public CI and blob-identity check.

@@ -5165,6 +5165,16 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `local_audit`: standalone modules, Targets, TargetChecks, and AxiomsAudit pass warning-as-error;
   11 selected endpoint audits use only `propext`, `Classical.choice`, and `Quot.sound`; forbidden
   and resource scans are clean; full build passes `8822/8822`.
+- `public_implementation`: frozen commit `f55f2efce7ae21e6fc0f78d677fecbb6606b526c`
+  passed Lean Action run `30661192482`, build job `91257563206`, in `2m24s`.
+- `frozen_blobs`: Euler--Maclaurin module `4858a9ac1f3a036df7b81026626d2c03b96b8e5b`;
+  transcendental interval module `9f7eb4c944e482113976a65fc33cd777ec7aa1d0`; Targets
+  `788a6eb01b3c9709fde76203c874b971a1ead57d`; TargetChecks
+  `efbf5bf3be73c423cecdd1970aba716150b7953b`; AxiomsAudit
+  `32fb78b01e6066e8b27d1bfc32be0cd967f80514`; LeanLab.lean
+  `b1dfe2e8e26b8a09d0bfbb3e4c5848685e851fd2`.
+- `immutable_evidence`: docs-only record
+  `research/h14_h12_height_ten_euler_maclaurin_evidence_20260801.md`; public CI pending.
 - `strict_boundary`: no complete height-ten horizontal theorem, low-zero count equality,
   `LevinsonMontgomeryHeightTenCertificate`, CountDichotomy, Speiser equivalence, H12, or RH.
 - `global_goal`: active.
