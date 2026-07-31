@@ -44,6 +44,7 @@ GLOBAL_GOAL_ACTIVE`
 | 29 | `ACTUAL_ZETA_ENDPOINT` | Lean proves that `riemannZeta (1/2+10i)` and `deriv riemannZeta (1/2+10i)` are nonzero and that `Re(zeta'/zeta)(1/2+10i) < 0`. This is an actual-zeta theorem, not merely a finite-center statement. | Extend the result from one endpoint to a positive-width rational sigma cover; keep the low-zero count producer independent. |
 | 30 | `LOCAL_AUDIT` | The new module, Targets, TargetChecks, and AxiomsAudit pass warning-as-error; seven selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; placeholder, resource-option, unsafe-declaration, and patch scans are clean; full build passes `8824/8824`. | Publish the implementation, then freeze exact blobs and attach public CI evidence. |
 | 31 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `3ed50eed1abefea20a810d39ce3ce89f2f61fe3a` passed Lean Action run `30668355865`, build job `91280491604`, in `2m50s`. Five Lean blobs are frozen in the docs-only immutable-evidence record. | Publish the immutable-evidence commit, verify its CI and blob identity, then resume the positive-width producer. |
+| 32 | `IMMUTABLE_EVIDENCE` | Docs-only evidence commit `443926da46a6c60fd5d1f251652f971c89635868` passed Lean Action run `30668627578`, build job `91281333939`, in `1m59s`; all five frozen Lean blobs are unchanged. | Publish the receipt, then compare positive-width variation and low-zero multiplicity producers without returning to constant optimization. |
 
 ## Current obstruction map
 
