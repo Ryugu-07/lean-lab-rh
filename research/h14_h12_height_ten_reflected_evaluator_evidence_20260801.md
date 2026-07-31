@@ -28,6 +28,14 @@ HEIGHT_TEN_CERTIFICATE_OPEN`
 The immutable-evidence commit is documentation only. These five blobs must remain identical to
 the public implementation commit.
 
+## Immutable evidence
+
+- Documentation-only commit: `b691569b0c08277bf26debebe44670faf8ae6394`
+- Lean Action run: `30657223620`
+- Build job: `91244526442`
+- Result: passed in `1m58s`
+- Blob check: all five frozen Lean blobs are unchanged from the public implementation commit
+
 ## Audited endpoints
 
 1. `hardyLittlewoodEtaFactor_ne_zero_of_re_lt_one`

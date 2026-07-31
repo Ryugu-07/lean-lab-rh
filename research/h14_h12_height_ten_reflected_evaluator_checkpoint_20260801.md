@@ -53,6 +53,9 @@ import, forbidden scan, and patch check pass. The selected declarations use only
 
 Frozen implementation commit `6f1b51b33304bffd756522c06dc36cfc79ecfd01` passed public
 Lean Action run `30656931596`, build job `91243536693`, in `2m37s`.
+Documentation-only immutable-evidence commit
+`b691569b0c08277bf26debebe44670faf8ae6394` passed Lean Action run `30657223620`, build job
+`91244526442`, in `1m58s`; all five frozen Lean blobs remain unchanged.
 
 ## Claim boundary
 

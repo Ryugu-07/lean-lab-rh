@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Node: `H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
-Status: `MEANINGFUL_PARTIAL_LOCAL / PRODUCTION_CI_REQUIRED / CAMPAIGN_ACTIVE /
+Status: `MEANINGFUL_PARTIAL_PUBLIC_GREEN / CAMPAIGN_ACTIVE /
 GLOBAL_GOAL_ACTIVE`
 
 ## Attempt ledger
@@ -26,6 +26,7 @@ GLOBAL_GOAL_ACTIVE`
 | 11 | `MEANINGFUL_PARTIAL` | The new no-sorry module proves the actual eta/zeta derivative bounds, factor nonvanishing, exact reflected zeta logarithmic-derivative identity, explicit Stieltjes digamma enclosure, robust quotient inequalities, and a theorem turning finite reflected margins into actual zeta nonvanishing, derivative nonvanishing, and `Re(zeta'/zeta)<0`. | Build a proof-producing transcendental interval evaluator and cover the height-ten segment. |
 | 12 | `LOCAL_AUDIT` | Standalone module, Targets, TargetChecks, and AxiomsAudit pass warning-as-error. Five selected endpoint audits use only `propext`, `Classical.choice`, and `Quot.sound`; forbidden scan and `git diff --check` are empty; full build passes `8820/8820`. | Publish a frozen implementation checkpoint. |
 | 13 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `6f1b51b33304bffd756522c06dc36cfc79ecfd01` passed Lean Action run `30656931596`, build job `91243536693`, in `2m37s`. | Publish docs-only immutable evidence with all five Lean blobs frozen. |
+| 14 | `IMMUTABLE_EVIDENCE` | Docs-only evidence commit `b691569b0c08277bf26debebe44670faf8ae6394` passed Lean Action run `30657223620`, build job `91244526442`, in `1m58s`; all five frozen Lean blobs are unchanged. | Keep the campaign open and attack the proof-producing Euler--Maclaurin/interval backend. |
 
 ## Current obstruction map
 

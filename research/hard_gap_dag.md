@@ -5095,7 +5095,7 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 
 - `campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`.
 - `node`: `H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains open.
-- `status`: `MEANINGFUL_PARTIAL_LOCAL / PRODUCTION_CI_REQUIRED / CAMPAIGN_ACTIVE /
+- `status`: `MEANINGFUL_PARTIAL_PUBLIC_GREEN / CAMPAIGN_ACTIVE /
   GLOBAL_GOAL_ACTIVE`.
 - `public_preregistration`: commit `81170ddbf6645bf8fca775c26cb0c79e29764061`, Lean Action
   run `30655041174`, build job `91237248516`, passed in `1m54s`.
@@ -5132,6 +5132,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   `8eb12b44fb60bf89daaa3807f4026c1c9056092a`; AxiomsAudit
   `e3c519d840952396c21eeef91022379dd86e3878`; LeanLab.lean
   `a1bb3e96f482474dae0e926d08799c706f4e0fda`.
+- `immutable_evidence`: docs-only commit
+  `b691569b0c08277bf26debebe44670faf8ae6394` passed Lean Action run `30657223620`, build job
+  `91244526442`, in `1m58s`; all five frozen Lean blobs are unchanged.
 - `next_attack`: prioritize Johansson-style Euler--Maclaurin with a kernel-checked Taylor/rational
   interval backend; retain the eta-reflection evaluator as independent cross-check and fallback.
 - `global_goal`: active.
