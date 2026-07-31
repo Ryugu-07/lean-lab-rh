@@ -5,7 +5,7 @@ Date: 2026-07-31
 Campaign:
 `LITERATURE-20260731-H12-LEVINSON-MONTGOMERY-GLOBAL-COUNT-REENTRY-01`
 
-Status: `PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_CI_REQUIRED /
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / CHECKPOINT_RECEIPT_CI_REQUIRED /
 CAMPAIGN_ACTIVE`
 
 ## Frozen implementation
@@ -43,3 +43,6 @@ transfer, `LevinsonMontgomeryCountDichotomy`, unconditional Speiser equivalence,
 
 This evidence commit is documentation-only. The frozen Lean blobs above must remain unchanged.
 The campaign remains active at the vertical logarithmic-derivative integral obstruction.
+
+Evidence commit `88c5e8f4552548de67a5d345f2fcb7e9f7f45a2e` passed Lean Action run
+`30645443955`, build job `91205557565`, in `2m21s`. The six frozen blobs remain unchanged.

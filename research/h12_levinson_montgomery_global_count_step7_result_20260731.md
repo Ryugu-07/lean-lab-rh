@@ -5,8 +5,8 @@ Date: 2026-07-31
 Campaign:
 `LITERATURE-20260731-H12-LEVINSON-MONTGOMERY-GLOBAL-COUNT-REENTRY-01`
 
-Status: `STEPS_1_7_COMPILED / PUBLIC_IMPLEMENTATION_GREEN /
-IMMUTABLE_EVIDENCE_CI_REQUIRED / CAMPAIGN_ACTIVE`
+Status: `STEPS_1_7_IMMUTABLE_EVIDENCE_PUBLIC_GREEN /
+CHECKPOINT_RECEIPT_CI_REQUIRED / CAMPAIGN_ACTIVE`
 
 ## Exact result
 
@@ -98,4 +98,5 @@ Frozen implementation commit `87b06e0c258b5fbc8f141a7242ce0ac8ae9ac4dc` passed p
 Action run `30645129522`, build job `91204516436`, in `2m43s`. Immutable blob evidence is
 recorded in
 `research/h12_levinson_montgomery_global_count_step7_evidence_20260731.md`; its docs-only CI
-remains required.
+passed at commit `88c5e8f4552548de67a5d345f2fcb7e9f7f45a2e`, run `30645443955`, build
+job `91205557565`, in `2m21s`. The checkpoint receipt CI remains required.
