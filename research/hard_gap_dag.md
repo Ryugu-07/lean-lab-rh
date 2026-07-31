@@ -5212,7 +5212,7 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   equivalence, H12, or RH.
 - `public_implementation`: frozen commit `9f3d28f7e4c1dbbf7647c8cd1418b50a7c34d656`
   passed Lean Action run `30665506516`, build job `91271458715`, in `6m19s`.
-- `immutable_evidence_pending`: seven Lean blobs are frozen in
-  `research/h14_h12_height_ten_endpoint_finite_evaluator_evidence_20260801.md`; the docs-only
-  evidence commit still requires public CI.
+- `immutable_evidence`: docs-only commit `936e0dd6afd4dfb38e50bc27b2cb18252d5e1a80` passed Lean
+  Action run `30666031209`, build job `91273160412`, in `2m14s`; all seven frozen Lean blobs in
+  `research/h14_h12_height_ten_endpoint_finite_evaluator_evidence_20260801.md` are unchanged.
 - `global_goal`: active.

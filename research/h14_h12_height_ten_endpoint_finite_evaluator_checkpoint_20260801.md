@@ -4,8 +4,8 @@ Date: 2026-08-01
 
 Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
-Status: `MEANINGFUL_PARTIAL_PUBLIC_IMPLEMENTATION_GREEN /
-IMMUTABLE_EVIDENCE_CI_PENDING / CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
+Status: `MEANINGFUL_PARTIAL_IMMUTABLE_EVIDENCE_PUBLIC_GREEN /
+CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 
 ## Historical-route role
 
@@ -80,4 +80,6 @@ The global RH Goal and this campaign remain active.
 - The three implementation modules, `Targets.lean`, `TargetChecks.lean`, `AxiomsAudit.lean`, and
   `LeanLab.lean` are frozen by Git blob in
   `research/h14_h12_height_ten_endpoint_finite_evaluator_evidence_20260801.md`.
-- The immutable-evidence documentation commit is pending public CI.
+- Documentation-only evidence commit `936e0dd6afd4dfb38e50bc27b2cb18252d5e1a80` passed Lean
+  Action run `30666031209`, build job `91273160412`, in `2m14s`; all seven frozen Lean blobs
+  remain unchanged.
