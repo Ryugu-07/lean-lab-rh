@@ -5387,6 +5387,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `public_implementation`: frozen commit
   `82c2e991a22d0a21db318f9023941c7b2a764ff2` passed Lean Action run `30711032719`, build job
   `91398404697`, in `17m17s`; seven Lean blobs are frozen for immutable evidence.
+- `immutable_evidence`: docs-only commit
+  `b679dd8d7b73f282f68071842af3cd82f9c99825` passed Lean Action run `30711720009`, build job
+  `91400251532`, in `1m44s`; all seven frozen Lean blobs are unchanged.
 - `classification`: `ACTUAL_BOTTOM_EDGE / HISTORICAL_EVALUATOR_REUSE /
   SOURCE_DEPENDENCY_REDUCTION / RH_FRONTIER_DELTA_0`.
 - `historical_route_value`: the result identifies exactly where this
@@ -5394,4 +5397,6 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   avoidances and one compact-middle top sign, rather than a generic four-edge winding premise.
 - `conjecture_policy`: independent conjecture proposal and falsification remain open while the
   historical-route omission search continues.
+- `local_stop`: close only `HEIGHT-TEN-BOUNDARY-RAY-PRODUCER-01`; keep both vertical producers,
+  the compact-middle top sign, parent height-ten certificate campaign, and global RH Goal active.
 - `global_goal`: active.

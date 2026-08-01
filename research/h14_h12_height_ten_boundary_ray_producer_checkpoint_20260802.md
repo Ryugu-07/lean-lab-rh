@@ -6,7 +6,8 @@ Parent campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Subattack: `HEIGHT-TEN-BOUNDARY-RAY-PRODUCER-01`
 
-Status: `PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_PENDING / GLOBAL_GOAL_ACTIVE`
+Status: `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / LOCAL_SUBATTACK_STOP /
+PARENT_CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 
 ## Result
 
@@ -102,6 +103,9 @@ The production implementation is frozen at commit
 `91398404697`, passed in `17m17s`.
 
 Seven exact Lean blobs are recorded in the docs-only immutable-evidence file. Public CI for that
-evidence record and a final blob-identity replay remain pending.
+evidence record passed at commit `b679dd8d7b73f282f68071842af3cd82f9c99825`: Lean Action run
+`30711720009`, build job `91400251532`, in `1m44s`. All seven blob identities match the public
+implementation commit.
 
-The parent campaign and global RH Goal remain active.
+This local subattack stops successfully. Both vertical producers, the compact-middle top sign,
+the parent campaign, and the global RH Goal remain active.

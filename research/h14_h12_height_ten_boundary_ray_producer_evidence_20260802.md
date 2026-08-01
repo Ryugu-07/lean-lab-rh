@@ -7,7 +7,7 @@ Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 Subattack: `HEIGHT-TEN-BOUNDARY-RAY-PRODUCER-01`
 
 Classification: `ACTUAL_BOTTOM_EDGE / HISTORICAL_EVALUATOR_REUSE /
-PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_PENDING / RH_FRONTIER_DELTA_0`
+IMMUTABLE_EVIDENCE_PUBLIC_GREEN / LOCAL_SUBATTACK_STOP / RH_FRONTIER_DELTA_0`
 
 ## Public implementation
 
@@ -30,8 +30,15 @@ PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_PENDING / RH_FRONTIER_DELTA_0`
 | `LeanLab.lean` | `b10cd38bf58d3fab040aed2e197d01ef7cfd160a` |
 
 This change is documentation only. These seven blobs must remain identical to the public
-implementation commit. The immutable-evidence state becomes public green only after this record's
-own Lean Action succeeds and all blob identities are replayed.
+implementation commit.
+
+## Immutable evidence
+
+- Documentation-only commit: `b679dd8d7b73f282f68071842af3cd82f9c99825`
+- Lean Action run: `30711720009`
+- Build job: `91400251532`
+- Result: passed in `1m44s`
+- Blob check: all seven frozen Lean blobs are unchanged from the public implementation commit
 
 ## Audited endpoints
 
