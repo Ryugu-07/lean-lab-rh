@@ -50,6 +50,7 @@ GLOBAL_GOAL_ACTIVE`
 | 35 | `PUBLIC_GATE` | Docs-only preregistration commit `13d5a8d90caad0b613aa305ffab2839552dff2e7` passed Lean Action run `30706106727`, build job `91385402460`, in `1m45s`. | Open production editing for the two-boundary topological reduction. |
 | 36 | `TWO_BOUNDARY_OPENNESS` | Lean proves actual strict-negative positive-width sigma intervals at both `0+10i` and `1/2+10i`, trims their widths, and constructs `0<a<=b<1/2` such that strict data on `[a,b]` imply the complete height-ten horizontal. | Audit the exact statements and record that the existential cut points are not yet a computable finite cover. |
 | 37 | `LOCAL_AUDIT` | The new module, Targets, three exact TargetChecks, and three axiom prints pass warning-as-error. The selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; placeholder, resource-option, unsafe-declaration, and patch scans are clean; full build passes `8825/8825`. | Publish and freeze this topological reduction, then return to quantitative middle certification or the independent low-zero count producer. |
+| 38 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `cb466395ba6f9cd828497386090c7f0723a0a009` passed Lean Action run `30706556950`, build job `91386580043`, in `3m3s`. Five Lean blobs are frozen in the docs-only immutable-evidence record. | Publish the immutable-evidence commit and verify both its CI and blob identity. |
 
 ## Current obstruction map
 

@@ -6,7 +6,8 @@ Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Subattack: `HEIGHT-TEN-TWO-BOUNDARY-NEIGHBORHOODS-01`
 
-Status: `ACTUAL_TOPOLOGICAL_REDUCTION_LOCAL_GREEN / PUBLIC_CI_PENDING /
+Status: `ACTUAL_TOPOLOGICAL_REDUCTION_IMPLEMENTATION_PUBLIC_GREEN /
+IMMUTABLE_EVIDENCE_CI_PENDING /
 CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 
 ## Historical-route role
@@ -65,6 +66,11 @@ claimed.
 
 The global RH Goal and parent campaign remain active.
 
-## Public evidence
+## Public implementation
 
-Pending implementation CI and immutable blob evidence.
+- Commit `cb466395ba6f9cd828497386090c7f0723a0a009` passed Lean Action run
+  `30706556950`, build job `91386580043`, in `3m3s`.
+- The new module, `Targets.lean`, `TargetChecks.lean`, `AxiomsAudit.lean`, and `LeanLab.lean` are
+  frozen by Git blob in
+  `research/h14_h12_height_ten_boundary_neighborhood_evidence_20260801.md`.
+- The documentation-only immutable-evidence commit and its public CI are pending.
