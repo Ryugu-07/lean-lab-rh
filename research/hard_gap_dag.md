@@ -5340,3 +5340,22 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   unconditional boundary-ray producer, parent height-ten certificate campaign, and global RH Goal
   active.
 - `global_goal`: active.
+
+## 2026-08-02 H14 x H12 boundary-ray producer selection
+
+- `campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `selected_subattack`: prove the real bottom ray condition unconditionally and reduce the
+  complete rotated-slit boundary to the two low vertical edges plus the independently required
+  strict-negative top.
+- `cross_route_input`: the Johansson-style one-correction Euler--Maclaurin actual-zeta evaluator
+  built for height ten has strong enough symbolic error at cutoff `N=1` on the real bottom.
+- `exact_center_navigation`: zeta center `1/2-1/(1-sigma)` and derivative center
+  `-1/(1-sigma)^2` for `0<sigma<=1/2`; endpoint zero uses exact Mathlib formulas. These symbolic
+  observations select the proof and are not premises until Lean compiles them.
+- `fixed_outputs`: actual zeta real-part negativity, actual derivative real-part negativity,
+  quotient real-part positivity, unconditional bottom slit membership, two-vertical boundary
+  definition, generic assembly, and height-ten constructor.
+- `strict_boundary`: left and right low vertical ray avoidance, compact-middle top sign, full
+  height-ten certificate, CountDichotomy, Speiser equivalence, H12, and RH remain open.
+- `production_gate`: docs-only preregistration public CI before Lean edits.
+- `global_goal`: active.
