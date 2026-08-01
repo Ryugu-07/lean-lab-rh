@@ -6,7 +6,7 @@ Parent campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Subattack: `HEIGHT-TEN-BOUNDARY-RAY-PRODUCER-01`
 
-Status: `LOCAL_AUDITED / PUBLIC_IMPLEMENTATION_PENDING / GLOBAL_GOAL_ACTIVE`
+Status: `PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_PENDING / GLOBAL_GOAL_ACTIVE`
 
 ## Result
 
@@ -97,7 +97,11 @@ proof graph.
 
 ## Publication state
 
-The production implementation is locally compiled and audited but is not yet frozen in a public
-implementation commit. Immutable blob evidence and public Lean Action CI remain pending.
+The production implementation is frozen at commit
+`82c2e991a22d0a21db318f9023941c7b2a764ff2`. Lean Action run `30711032719`, build job
+`91398404697`, passed in `17m17s`.
+
+Seven exact Lean blobs are recorded in the docs-only immutable-evidence file. Public CI for that
+evidence record and a final blob-identity replay remain pending.
 
 The parent campaign and global RH Goal remain active.

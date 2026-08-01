@@ -5384,6 +5384,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `local_audit`: new module `8743/8743`; production and registration files pass
   warning-as-error; selected axiom prints use only `propext`, `Classical.choice`, and
   `Quot.sound`; focused forbidden scans and diff check are clean; full build `8827/8827`.
+- `public_implementation`: frozen commit
+  `82c2e991a22d0a21db318f9023941c7b2a764ff2` passed Lean Action run `30711032719`, build job
+  `91398404697`, in `17m17s`; seven Lean blobs are frozen for immutable evidence.
 - `classification`: `ACTUAL_BOTTOM_EDGE / HISTORICAL_EVALUATOR_REUSE /
   SOURCE_DEPENDENCY_REDUCTION / RH_FRONTIER_DELTA_0`.
 - `historical_route_value`: the result identifies exactly where this
