@@ -6,7 +6,7 @@ Parent campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Subattack: `HEIGHT-TEN-RIEMANN-SIEGEL-LOW-ZERO-01`
 
-Status: `MEANINGFUL_PARTIAL / LOCAL_AUDIT_GREEN / SUBATTACK_ACTIVE /
+Status: `MEANINGFUL_PARTIAL / PUBLIC_IMPLEMENTATION_GREEN / SUBATTACK_ACTIVE /
 GLOBAL_GOAL_ACTIVE`
 
 ## Historical purpose
@@ -83,6 +83,13 @@ height-ten boundary, `LevinsonMontgomeryHeightTenCertificate`, H12, or RH.
 
 The other five vertical zones and the compact-middle top sign are independent open producers.
 The subattack and parent campaign remain active.
+
+## Public implementation
+
+Frozen implementation commit `440a70b4d8f34445948f50e7befe13d8a8d13321` passed Lean Action
+run `30714830344`, build job `91408552652`, in `2m25s`. The module, aggregate import, target
+registry, exact checks, and axiom audit are frozen in the accompanying docs-only immutable
+evidence record.
 
 ## Next producer
 

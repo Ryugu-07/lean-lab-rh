@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Node: `H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
-Status: `RIEMANN_SIEGEL_LOW_ZERO_MEANINGFUL_PARTIAL_LOCAL_AUDIT_GREEN /
+Status: `RIEMANN_SIEGEL_LOW_ZERO_MEANINGFUL_PARTIAL_PUBLIC_IMPLEMENTATION_GREEN /
 COMPLETE_BOUNDARY_SUBATTACK_ACTIVE / CAMPAIGN_ACTIVE /
 GLOBAL_GOAL_ACTIVE`
 
@@ -91,6 +91,7 @@ GLOBAL_GOAL_ACTIVE`
 | 75 | `SHARP_BOUND_OBSTACLE` | Lean integrates the existing absolute majorant in closed form and proves that its displayed upper-bound right side is strictly greater than `1` throughout the target interval. This is not a lower bound on the true remainder; it proves only that the current cancellation-free estimate cannot directly certify the required `<1`-scale margin. | Preserve the principal-argument phase or reconstruct the classical saddle/remainder expansion. |
 | 76 | `MEANINGFUL_PARTIAL` | The cross-route bridge is complete and the exact first missing producer has narrowed from generic low-zero verification to a phase-sensitive uniform real-part remainder bound. Full subattack success, actual interval nonvanishing, and the unconditional right-high zone remain open. | Register the bridge and exact obstruction without closing the subattack. |
 | 77 | `LOCAL_AUDIT` | The new module, Targets, TargetChecks, AxiomsAudit, and project entry pass warning-as-error. Seven selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; the focused forbidden scan and `git diff --check` are clean; full build passes `8829/8829`. | Publish a frozen implementation and immutable evidence, then compare a phase-preserving contour bound with the classical Riemann--Siegel remainder theorem. |
+| 78 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `440a70b4d8f34445948f50e7befe13d8a8d13321` passed Lean Action run `30714830344`, build job `91408552652`, in `2m25s`. Five Lean blobs are frozen in the docs-only immutable-evidence record. | Publish immutable evidence, verify public CI and all five blob identities, then record the exact live producer without closing the subattack. |
 
 ## Current obstruction map
 
