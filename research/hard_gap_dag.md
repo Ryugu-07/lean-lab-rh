@@ -5272,4 +5272,26 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `strict_boundary`: the compact middle interval, low-zero multiplicity count, full height-ten
   certificate, CountDichotomy, Speiser equivalence, H12, and RH remain open.
 - `production_gate`: docs-only preregistration public CI before Lean edits.
+- `public_preregistration`: commit `13d5a8d90caad0b613aa305ffab2839552dff2e7` passed Lean Action
+  run `30706106727`, build job `91385402460`, in `1m45s`.
+- `closed_edge_17`: actual zeta and zeta-derivative nonvanishing plus strict negativity of their
+  ratio form an open condition at every non-pole point where the data hold.
+- `closed_edge_18`: the analytic left endpoint at `0+10i` and the certified Euler--Maclaurin
+  right endpoint at `1/2+10i` each generate a positive-width real-part interval with the full
+  actual strict data.
+- `closed_edge_19`: Lean chooses trimmed `0<a<=b<1/2` and proves that strict data on `[a,b]`
+  imply `SpeiserStrictNegativeHorizontal 10` by a complete three-interval split.
+- `strict_limit`: the cut points are existential continuity witnesses rather than explicit
+  rationals. This removes both endpoint pathologies but does not itself supply a replayable finite
+  cover of the middle.
+- `first_open_producer`: quantitative finite boxes or variation bounds certifying the remaining
+  compact middle.
+- `second_open_producer`: actual multiplicity-bearing equality of zeta and zeta-derivative zero
+  counts below height ten.
+- `local_audit`: new module `8741/8741`; production and registration files pass warning-as-error;
+  three selected axiom prints use only `propext`, `Classical.choice`, and `Quot.sound`; forbidden
+  and resource scans are clean; full build `8825/8825`.
+- `classification`: `ACTUAL_TOPOLOGICAL_REDUCTION / SOURCE_TOPOLOGICAL_DELTA_1 /
+  RH_FRONTIER_DELTA_0`.
+- `public_implementation`: pending.
 - `global_goal`: active.

@@ -140,6 +140,7 @@ import LeanLab.Riemann.LevinsonMontgomeryEulerMaclaurin
 import LeanLab.Riemann.LevinsonMontgomeryTranscendentalInterval
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenFiniteEvaluator
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenEndpoint
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryNeighborhood
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.TargetChecks
 import LeanLab.Riemann.AxiomsAudit

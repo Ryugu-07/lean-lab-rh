@@ -47,6 +47,9 @@ GLOBAL_GOAL_ACTIVE`
 | 32 | `IMMUTABLE_EVIDENCE` | Docs-only evidence commit `443926da46a6c60fd5d1f251652f971c89635868` passed Lean Action run `30668627578`, build job `91281333939`, in `1m59s`; all five frozen Lean blobs are unchanged. | Publish the receipt, then compare positive-width variation and low-zero multiplicity producers without returning to constant optimization. |
 | 33 | `ROUTE_SELECTION` | The count producer still requires either a two-dimensional actual-zeta/zeta-derivative box cover or a complete quotient-winding certificate. The top-sign producer already has actual strict data at both `sigma=0` and `sigma=1/2`, plus analytic continuity of zeta, its derivative, and their ratio. | Select the two-boundary neighborhood and compact-middle reduction before any further finite-center generation. |
 | 34 | `PREREGISTRATION` | Fix three actual-function outputs: positive-width strict-negative intervals at both height-ten endpoints, and an existential compact-middle reduction whose middle hypothesis implies `SpeiserStrictNegativeHorizontal 10`. Point continuity alone without the middle reduction is not success. | Publish the docs-only subattack gate, then edit production Lean only after public CI. |
+| 35 | `PUBLIC_GATE` | Docs-only preregistration commit `13d5a8d90caad0b613aa305ffab2839552dff2e7` passed Lean Action run `30706106727`, build job `91385402460`, in `1m45s`. | Open production editing for the two-boundary topological reduction. |
+| 36 | `TWO_BOUNDARY_OPENNESS` | Lean proves actual strict-negative positive-width sigma intervals at both `0+10i` and `1/2+10i`, trims their widths, and constructs `0<a<=b<1/2` such that strict data on `[a,b]` imply the complete height-ten horizontal. | Audit the exact statements and record that the existential cut points are not yet a computable finite cover. |
+| 37 | `LOCAL_AUDIT` | The new module, Targets, three exact TargetChecks, and three axiom prints pass warning-as-error. The selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; placeholder, resource-option, unsafe-declaration, and patch scans are clean; full build passes `8825/8825`. | Publish and freeze this topological reduction, then return to quantitative middle certification or the independent low-zero count producer. |
 
 ## Current obstruction map
 
@@ -64,8 +67,10 @@ GLOBAL_GOAL_ACTIVE`
 7. `CLOSED_AT_ONE_POINT`: the analytic Euler--Maclaurin value and derivative remainder bounds,
    reflected archimedean upper bound, and finite-center inequalities now compose to actual zeta
    and derivative nonvanishing and strict Speiser negativity at `s=1/2+10i`.
-8. `OPEN`: explicit variation bounds and a finite rational subcover of the positive-width segment
-   `0 <= sigma <= 1/2`.
+8. `PARTIALLY_CLOSED_BOUNDARIES`: actual strict-negative neighborhoods exist at both ends of the
+   height-ten segment, and the full top edge is reduced to one compact middle `[a,b]` with
+   `0<a<=b<1/2`. The cut points are noncomputable existence witnesses, so explicit variation
+   bounds and a finite rational subcover remain open.
 9. `OPEN`: actual multiplicity-bearing height-ten zeta/zeta-derivative count equality.
 10. `OPEN`: `levinsonMontgomeryHeightTenCertificate_actual`.
 
@@ -74,7 +79,8 @@ GLOBAL_GOAL_ACTIVE`
 - `model`: Codex, GPT-5 family; exact serving variant is not exposed.
 - `reasoning_effort`: not exposed.
 - `budget`: no numerical quota under V4.1.
-- `compaction_state`: resumed from a context summary and rechecked source declarations, frozen
-  evidence, endpoint theorem registration, local audits, and full build through round 30.
+- `compaction_state`: resumed from a context summary and re-read current governance, HANDOFF,
+  source declarations, Targets, TargetChecks, the active attempt log, hard-gap DAG, and campaign
+  preregistration before selecting rounds 33--37.
 - `global_goal`: active.
 - `protected_files`: inherited protected files remain untouched and unstaged.

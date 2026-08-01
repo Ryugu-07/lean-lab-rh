@@ -12,6 +12,7 @@ import LeanLab.Riemann.LevinsonMontgomeryEulerMaclaurin
 import LeanLab.Riemann.LevinsonMontgomeryTranscendentalInterval
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenFiniteEvaluator
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenEndpoint
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryNeighborhood
 import LeanLab.Riemann.FareyFranel
 import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.InfiniteReciprocalTraceAudit
@@ -1451,3 +1452,6 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.heightTen_eulerMaclaurinOneZetaDerivError_lt_eleven_div_fifty
 #print axioms LeanLab.Riemann.neg_fiveHundredFortyNine_div_oneThousand_lt_eulerMaclaurinOne_finite_cross_re
 #print axioms LeanLab.Riemann.speiserStrictNegativePoint_heightTenEndpoint
+#print axioms LeanLab.Riemann.exists_heightTen_left_strictNegative_interval
+#print axioms LeanLab.Riemann.exists_heightTen_right_strictNegative_interval
+#print axioms LeanLab.Riemann.exists_heightTen_compactMiddle_reduction

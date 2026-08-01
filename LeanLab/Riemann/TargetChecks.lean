@@ -20,6 +20,7 @@ import LeanLab.Riemann.LevinsonMontgomeryEulerMaclaurin
 import LeanLab.Riemann.LevinsonMontgomeryTranscendentalInterval
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenFiniteEvaluator
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenEndpoint
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryNeighborhood
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -7076,5 +7077,33 @@ example :
       deriv riemannZeta heightTenEndpoint ≠ 0 ∧
       (speiserZetaDerivRatio heightTenEndpoint).re < 0 :=
   speiserStrictNegativePoint_heightTenEndpoint
+
+example :
+    ∃ a : ℝ, 0 < a ∧
+      ∀ sigma : ℝ, sigma ∈ Set.Icc 0 a →
+        riemannZeta ((sigma : ℂ) + (10 : ℂ) * Complex.I) ≠ 0 ∧
+          deriv riemannZeta ((sigma : ℂ) + (10 : ℂ) * Complex.I) ≠ 0 ∧
+          (speiserZetaDerivRatio
+            ((sigma : ℂ) + (10 : ℂ) * Complex.I)).re < 0 :=
+  exists_heightTen_left_strictNegative_interval
+
+example :
+    ∃ b : ℝ, b < 1 / 2 ∧
+      ∀ sigma : ℝ, sigma ∈ Set.Icc b (1 / 2) →
+        riemannZeta ((sigma : ℂ) + (10 : ℂ) * Complex.I) ≠ 0 ∧
+          deriv riemannZeta ((sigma : ℂ) + (10 : ℂ) * Complex.I) ≠ 0 ∧
+          (speiserZetaDerivRatio
+            ((sigma : ℂ) + (10 : ℂ) * Complex.I)).re < 0 :=
+  exists_heightTen_right_strictNegative_interval
+
+example :
+    ∃ a b : ℝ, 0 < a ∧ a ≤ b ∧ b < 1 / 2 ∧
+      ((∀ sigma : ℝ, sigma ∈ Set.Icc a b →
+          riemannZeta ((sigma : ℂ) + (10 : ℂ) * Complex.I) ≠ 0 ∧
+            deriv riemannZeta ((sigma : ℂ) + (10 : ℂ) * Complex.I) ≠ 0 ∧
+            (speiserZetaDerivRatio
+              ((sigma : ℂ) + (10 : ℂ) * Complex.I)).re < 0) →
+        SpeiserStrictNegativeHorizontal 10) :=
+  exists_heightTen_compactMiddle_reduction
 
 end LeanLab.Riemann

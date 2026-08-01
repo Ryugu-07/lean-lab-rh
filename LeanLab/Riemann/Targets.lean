@@ -135,6 +135,7 @@ import LeanLab.Riemann.LevinsonMontgomeryEulerMaclaurin
 import LeanLab.Riemann.LevinsonMontgomeryTranscendentalInterval
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenFiniteEvaluator
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenEndpoint
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryNeighborhood
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -2130,6 +2131,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``speiserStrictNegativePoint_heightTenEndpoint
       status := .proven
       note := "Campaign PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01 now closes the actual critical endpoint s=1/2+10i. A Machin-formula alternating-series certificate proves pi<3.142, rational logarithm enclosures prove log(pi)<1.145 and the needed Gamma-parameter log-norm lower bound, and exact norm-square arithmetic proves Euler--Maclaurin value and derivative radii below 13/250 and 11/50. These bounds compose with the frozen finite centers to prove actual zeta nonvanishing, derivative nonvanishing, and strict negative real logarithmic derivative at this one endpoint. No positive-width sigma interval, finite horizontal cover, low-zero multiplicity count, height-ten certificate, H12, or RH is proved." },
+    { id := "H12.levinson-montgomery.height-ten-boundary-neighborhoods"
+      tier := .tier1
+      title := "Reduce the height-ten top edge to a compact middle"
+      statement :=
+        "Prove actual strict-negative positive-width neighborhoods at both ends of the height-ten horizontal and construct ordered interior cut points such that certification of the remaining compact middle interval implies the complete top-edge condition."
+      leanName := some ``exists_heightTen_compactMiddle_reduction
+      status := .proven
+      note := "Subattack HEIGHT-TEN-TWO-BOUNDARY-NEIGHBORHOODS-01 combines the analytic left endpoint with the kernel-checked Euler--Maclaurin right endpoint. Analytic continuity of zeta and its derivative and continuity of their nonvanishing quotient give positive-width actual-function neighborhoods at both ends. Trimmed cut points 0<a<=b<1/2 make a three-interval case split reduce SpeiserStrictNegativeHorizontal 10 to the compact middle [a,b]. No numerical radius is assumed. The compact middle, low-zero multiplicity count, height-ten certificate, H12, and RH remain open." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

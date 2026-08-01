@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Subattack: `HEIGHT-TEN-TWO-BOUNDARY-NEIGHBORHOODS-01`
 
-Status: `PREREGISTERED_LOCAL / PUBLIC_CI_REQUIRED / GLOBAL_GOAL_ACTIVE`
+Status: `PREREGISTERED_PUBLIC_GREEN / PRODUCTION_ACTIVE / GLOBAL_GOAL_ACTIVE`
 
 ## Exact mathematical target
 
@@ -91,3 +91,10 @@ division is a proof obstruction, not mathematical falsification, and must be log
   multiplicity-bearing low-zero counts remain open.
 
 The global RH Goal and parent campaign remain active.
+
+## Public gate
+
+- Preregistration commit: `13d5a8d90caad0b613aa305ffab2839552dff2e7`
+- Lean Action run: `30706106727`
+- Build job: `91385402460`
+- Result: passed in `1m45s`
