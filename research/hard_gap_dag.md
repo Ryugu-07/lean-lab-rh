@@ -5541,3 +5541,30 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `strict_limit`: the uniform margin, actual interval nonvanishing, unconditional right-high
   zone, complete boundary, height-ten certificate, H12, and RH remain open.
 - `global_goal`: active.
+
+## 2026-08-02 H6 x H14 x H12 Riemann--Siegel phase-norm selection
+
+- `parent_campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `parent_subattack`: `HEIGHT-TEN-RIEMANN-SIEGEL-LOW-ZERO-01` remains active at its literal
+  uniform remainder-margin producer.
+- `selected_subattack`: `HEIGHT-TEN-RIEMANN-SIEGEL-PHASE-NORM-01`.
+- `source_boundary`: O'Sullivan aligns the symmetric expansion for `t>2*pi`; Gabcke's simple
+  explicit constant begins at `t=200`; Titchmarsh's simplified displayed error bound is also a
+  high-parameter result. No such constant is imported on `[13/2,10]`.
+- `open_edge_35`: prove the exact norm formula for the principal complex power and the sign of
+  `arg(3/2+exp(5*pi*i/4)*v)` on the two real half-lines.
+- `open_edge_36`: convert those signs into endpoint domination and certify the negative and
+  positive endpoint half-line integrals by `1/10` and `1/2`, hence the uniform raw-integral norm
+  bound `3/5`.
+- `open_edge_37`: prove uniformly that the real part of the `N=1` source prefactor exceeds
+  `9/10` of its norm in absolute value.
+- `open_edge_38`: compose the raw-integral and prefactor bounds through the exact remainder
+  factorization to `HeightTenRiemannSiegelOneRemainderMargin`, actual zeta nonvanishing on the
+  closed interval, and unconditional right-high Speiser negativity.
+- `success_boundary`: endpoint geometry, generic integral infrastructure, one half-line bound,
+  or conditional consumers are partial progress only. Full success requires all four open edges.
+- `route_policy`: historical reconstruction is omission search. It remains primary until the
+  graph-ranked human routes have been seriously replayed; independent conjectures and direct RH
+  attacks remain open at every stage.
+- `production_gate`: docs-only preregistration public CI before production Lean edits.
+- `global_goal`: active.

@@ -6,8 +6,8 @@ Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Node: `H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
-Status: `RIEMANN_SIEGEL_LOW_ZERO_MEANINGFUL_PARTIAL_IMMUTABLE_EVIDENCE_GREEN /
-COMPLETE_BOUNDARY_SUBATTACK_ACTIVE / CAMPAIGN_ACTIVE /
+Status: `RIEMANN_SIEGEL_PHASE_NORM_SUBATTACK_PREREGISTERED /
+RIEMANN_SIEGEL_LOW_ZERO_SUBATTACK_ACTIVE / COMPLETE_BOUNDARY_SUBATTACK_ACTIVE / CAMPAIGN_ACTIVE /
 GLOBAL_GOAL_ACTIVE`
 
 ## Attempt ledger
@@ -93,6 +93,11 @@ GLOBAL_GOAL_ACTIVE`
 | 77 | `LOCAL_AUDIT` | The new module, Targets, TargetChecks, AxiomsAudit, and project entry pass warning-as-error. Seven selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; the focused forbidden scan and `git diff --check` are clean; full build passes `8829/8829`. | Publish a frozen implementation and immutable evidence, then compare a phase-preserving contour bound with the classical Riemann--Siegel remainder theorem. |
 | 78 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `440a70b4d8f34445948f50e7befe13d8a8d13321` passed Lean Action run `30714830344`, build job `91408552652`, in `2m25s`. Five Lean blobs are frozen in the docs-only immutable-evidence record. | Publish immutable evidence, verify public CI and all five blob identities, then record the exact live producer without closing the subattack. |
 | 79 | `IMMUTABLE_EVIDENCE` | Docs-only evidence commit `11f3de01fb7fadcb9ac5ba0ce6534e3887eea7ec` passed Lean Action run `30714989369`, build job `91408961299`, in `1m43s`; all five frozen Lean blobs are unchanged. The exact bridge and obstruction are public green, while the margin producer and subattack remain active. | Publish the final docs-only ledger, then compare phase-preserving contour and classical saddle-remainder sources. |
+| 80 | `FINAL_LEDGER_PUBLIC` | Docs-only ledger commit `a61947732c3bf5e316b2ff4730aba68ee6f840e5` passed Lean Action run `30715117919`, build job `91409290671`, in `1m51s`; all five frozen Lean blobs remained unchanged. | Re-audit the primary Riemann--Siegel remainder sources at the actual low-height interval. |
+| 81 | `PRIMARY_SOURCE_REAUDIT` | O'Sullivan's symmetric expansion is valid for `t>2*pi` but supplies no explicit low-height error. Gabcke's simple `0.127*t^(-3/4)` bound is stated only for `t>=200`, and Titchmarsh's simplified displayed bound is likewise high-parameter. None is a valid direct premise on `[13/2,10]`. | Retain the exact source contour and identify which discarded factor caused the coarse project majorant. |
+| 82 | `PHASE_NORM_DISCOVERY` | For `w(v)=3/2+exp(5*pi*i/4)*v`, the exact critical-line power norm contains `exp(y*arg w)`. The argument is nonnegative on `v<=0` and nonpositive on `v>=0`, so the two halves are uniformly dominated by the `y=10` and `y=13/2` endpoint integrands respectively. Navigation-only quadrature suggested a combined bound below `0.55` and prefactor phase ratio above `0.925`; no decimal is a premise. | Freeze wider proof targets whose composition already proves the literal remainder margin. |
+| 83 | `ROUTE_SELECTION` | Select the phase-aware contour norm producer with raw-integral target `<=3/5` and prefactor real-to-norm target `>9/10`. This reconstructs the historical source mechanism and attacks the exact missing producer without optimizing an arbitrary best constant. | Preregister endpoint domination, half-line bounds, prefactor phase, and the unconditional consumers. |
+| 84 | `PREREGISTRATION` | Subattack `HEIGHT-TEN-RIEMANN-SIEGEL-PHASE-NORM-01` fixes exact argument-sign geometry, endpoint half-line domination, a uniform raw-integral norm bound, a prefactor phase margin, the literal existing remainder margin, actual interval nonvanishing, and the right-high quotient sign. Generic helpers or conditional consumers alone are partial progress. | Publish docs only and require public Lean Action CI before production proof edits. |
 
 ## Current obstruction map
 
@@ -136,6 +141,10 @@ GLOBAL_GOAL_ACTIVE`
     does not show the true remainder is large; it identifies the discarded principal-argument
     phase as the first exact obstruction. The next producer must retain that phase or formalize
     the classical saddle remainder, rather than optimize endpoint tables or this coarse bound.
+16. `SELECTED_PHASE_NORM_PRODUCER`: split the exact source line at `v=0`, prove principal-argument
+    signs and endpoint domination, certify endpoint half-line bounds summing to at most `3/5`,
+    and prove that the prefactor real part exceeds `9/10` of its norm. Their composition must
+    discharge the already compiled literal remainder-margin producer.
 
 ## Runtime record
 
