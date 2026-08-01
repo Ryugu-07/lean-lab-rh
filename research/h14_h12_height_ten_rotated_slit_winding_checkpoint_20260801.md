@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Subattack: `HEIGHT-TEN-POSITIVE-IMAGINARY-RAY-WINDING-01`
 
-Status: `ACTUAL_COUNT_CONSUMER_LOCAL_GREEN / PUBLIC_IMPLEMENTATION_PENDING /
+Status: `ACTUAL_COUNT_CONSUMER_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING /
 CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 
 ## Historical-route role
@@ -65,3 +65,11 @@ Speiser equivalence, H12, and RH remain open.
 3. Compose both producers into `levinsonMontgomeryHeightTenCertificate_actual`.
 
 The global RH Goal and parent campaign remain active.
+
+## Public implementation
+
+- Commit `8ec5dfba37d050dbcb0ac9889b3bc95f9cbf2253` passed Lean Action run
+  `30708752970`, build job `91392334217`, in `2m51s`.
+- The new module, `Targets.lean`, `TargetChecks.lean`, `AxiomsAudit.lean`, and `LeanLab.lean` are
+  frozen by Git blob in
+  `research/h14_h12_height_ten_rotated_slit_winding_evidence_20260801.md`.
