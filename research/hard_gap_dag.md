@@ -5430,3 +5430,38 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   Broader historical omission search and independent conjecture tests remain open.
 - `production_gate`: docs-only preregistration public CI before Lean edits.
 - `global_goal`: active.
+
+## 2026-08-02 H14 x H12 complete-boundary structural checkpoint
+
+- `campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `subattack`: `HEIGHT-TEN-COMPLETE-BOUNDARY-01` remains active; this is a structural checkpoint,
+  not the preregistered literal certificate.
+- `public_preregistration`: commit `b5ce6a81db1c54e166efe62128e450ab59f185a2` passed Lean Action
+  run `30712326447`, build job `91401847586`, in `2m42s` before production edits.
+- `closed_edge_28`: for actual nonzero zeta on `Re(s)=1/2`, the real part of `zeta'/zeta` is
+  exactly the Levinson--Montgomery archimedean term; the paired-zero contribution vanishes.
+- `closed_edge_29`: the exact Levinson--Montgomery Equation (2.1) with its paired-zero sum now
+  compiles for every point with positive imaginary part, rather than only the inherited
+  `Im(s)>=10` range.
+- `closed_edge_30`: a shifted-digamma/Stieltjes remainder proof gives a nonoptimized strict
+  negative archimedean sign on the critical line for every `y>=13/2`. Consequently the actual
+  right-vertical quotient has negative real part there, conditional only on zeta nonvanishing.
+- `route_split`: on the imaginary axis, the paired-zero sum is nonpositive but does not vanish.
+  The right-edge Gamma proof therefore does not close the corresponding left high zone; that
+  zone remains assigned to direct actual-function evaluation or a sharper zero-sum argument.
+- `first_open_producer`: prove actual zeta nonvanishing on the low critical-line interval needed
+  by the right vertical, beginning with `[13/2,10]` and preserving the full `[0,10]` target.
+- `second_open_producer`: proof-producing finite covers for the left vertical and the middle/low
+  right zones, including value and derivative nonvanishing wherever the quotient is formed.
+- `third_open_producer`: the compact-middle top sign, complete rotated-slit boundary, and literal
+  `LevinsonMontgomeryHeightTenCertificate`.
+- `local_audit`: new module `8744/8744`; production and registration files pass
+  warning-as-error; five selected axiom prints use only `propext`, `Classical.choice`, and
+  `Quot.sound`; the focused forbidden scan and patch check are clean; full build `8828/8828`.
+- `strict_limit`: no unconditional vertical zone, complete top sign, rotated-slit boundary,
+  height-ten certificate, H12, or RH follows from this checkpoint.
+- `route_policy`: the work reconstructs the source's low-height direct consideration and records
+  exactly where its two boundary edges cease to share an argument. It is not a constant-
+  optimization campaign. Historical omission search stays primary; conjecture proposal and
+  falsification remain open.
+- `global_goal`: active.

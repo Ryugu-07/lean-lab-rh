@@ -15,6 +15,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenEndpoint
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryNeighborhood
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRotatedSlitWinding
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryRayProducer
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenCompleteBoundary
 import LeanLab.Riemann.FareyFranel
 import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.InfiniteReciprocalTraceAudit
@@ -1470,3 +1471,8 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.speiserBottom_mem_rotatedSlit
 #print axioms LeanLab.Riemann.SpeiserStrictNegativeHorizontal.toRotatedSlitBoundary_of_vertical
 #print axioms LeanLab.Riemann.levinsonMontgomeryHeightTenCertificate_of_verticalRayAvoidance
+#print axioms LeanLab.Riemann.logDeriv_riemannZeta_re_eq_archimedean_on_criticalLine
+#print axioms LeanLab.Riemann.levinsonMontgomery_equation_two_one_of_im_pos
+#print axioms LeanLab.Riemann.logDeriv_riemannZeta_re_le_archimedean_on_imaginaryAxis
+#print axioms LeanLab.Riemann.levinsonMontgomeryArchimedean_criticalLine_neg_of_thirteenHalves_le
+#print axioms LeanLab.Riemann.speiserZetaDerivRatio_rightVertical_re_neg_of_thirteenHalves_le

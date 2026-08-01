@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Node: `H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
-Status: `COMPLETE_BOUNDARY_SUBATTACK_PREREGISTERED / CAMPAIGN_ACTIVE /
+Status: `MEANINGFUL_PARTIAL_LOCAL_AUDITED / COMPLETE_BOUNDARY_SUBATTACK_ACTIVE / CAMPAIGN_ACTIVE /
 GLOBAL_GOAL_ACTIVE`
 
 ## Attempt ledger
@@ -75,6 +75,11 @@ GLOBAL_GOAL_ACTIVE`
 | 60 | `FALSIFICATION_NAVIGATION` | Navigation-only high-precision grids support the same rational three-zone geometry on both verticals: positive quotient real part on `[0,6]`, negative quotient imaginary part on `[6,13/2]`, and negative quotient real part on `[13/2,10]`. The complete top sampled with negative real part. No decimal, grid result, or external computation is a premise. | Prefer one complete-boundary producer over separate constant-optimization subattacks. |
 | 61 | `ROUTE_SELECTION` | Select the literal remaining height-ten boundary. Critical-line completion/Gamma structure, the left functional-equation argument, and the existing Euler--Maclaurin evaluator can share one three-zone certificate; proving only an abstract partition would not shorten the parent source dependency. | Preregister unconditional signs on all seven zones and the actual height-ten certificate. |
 | 62 | `PREREGISTRATION` | Subattack `HEIGHT-TEN-COMPLETE-BOUNDARY-01` fixes both vertical three-zone sign packages, the complete top strict sign, the rotated-slit boundary, and `LevinsonMontgomeryHeightTenCertificate` as required outputs. | Publish docs only and await public Lean Action CI before production proof edits. |
+| 63 | `PUBLIC_GATE` | Docs-only preregistration commit `b5ce6a81db1c54e166efe62128e450ab59f185a2` passed Lean Action run `30712326447`, build job `91401847586`, in `2m42s`. | Open production editing for the fixed complete-boundary outputs. |
+| 64 | `CRITICAL_LINE_STRUCTURE` | Lean proves that, wherever actual zeta is nonzero on `Re(s)=1/2`, the real part of its logarithmic derivative is exactly the Levinson--Montgomery archimedean term. Equation (2.1), including the paired-zero contribution, is also extended from the inherited `Im(s)>=10` range to every `Im(s)>0`. | Determine which proposed zones are structural and which still require direct actual-function evaluation. |
+| 65 | `ROUTE_SPLIT` | On the imaginary axis the paired-zero sum is nonpositive, giving only an upper bound by the archimedean term. On the critical line the paired term vanishes exactly, and a shifted-digamma/Stieltjes argument proves the archimedean term negative for `y>=13/2`. The left high zone cannot be closed by copying this right-edge proof because its paired-zero term remains essential. | Preserve separate left-axis evaluation and critical-line completion producers. |
+| 66 | `MEANINGFUL_PARTIAL` | Conditional only on actual zeta nonvanishing, Lean proves `Re(zeta'/zeta)(1/2+iy)<0` for every `y>=13/2`. This validates the proposed right-high zone structurally, but supplies neither its required unconditional nonvanishing nor any of the other five vertical zones, the complete top, or the literal certificate. | Complete the local audit, publish frozen evidence, then select a proof-producing low-height nonvanishing and finite-cover backend. |
+| 67 | `LOCAL_AUDIT` | The new module, Targets, TargetChecks, AxiomsAudit, and project entry pass warning-as-error. Five selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; the focused forbidden scan and `git diff --check` are clean; the full build passes `8828/8828`. | Publish the frozen structural checkpoint and attach immutable public CI evidence without closing the active complete-boundary subattack. |
 
 ## Current obstruction map
 
@@ -102,6 +107,13 @@ GLOBAL_GOAL_ACTIVE`
 10. `OPEN_TWO_VERTICALS`: prove `SpeiserPositiveImaginaryRayVerticalBoundary 10`; neither
     vertical clause is assumed closed by the current actual-zeta estimates.
 11. `OPEN`: the compact-middle top sign and `levinsonMontgomeryHeightTenCertificate_actual`.
+12. `PARTIALLY_CLOSED_RIGHT_HIGH_STRUCTURE`: on the critical line, the paired-zero term vanishes
+    and the archimedean term is strictly negative for `y>=13/2`. The actual quotient sign is
+    compiled conditional on `riemannZeta(1/2+iy) != 0`; proving this nonvanishing uniformly on
+    `[13/2,10]` remains part of the fixed certificate target.
+13. `OPEN_LEFT_ROUTE_SPLIT`: on `s=iy`, Equation (2.1) yields a nonpositive paired-zero
+    contribution but not an exact Gamma-only formula. The left high zone therefore still needs
+    actual low-height evaluation or a sharper zero-sum argument.
 
 ## Runtime record
 

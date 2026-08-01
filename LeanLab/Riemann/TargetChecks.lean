@@ -23,6 +23,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenEndpoint
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryNeighborhood
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRotatedSlitWinding
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryRayProducer
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenCompleteBoundary
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -7154,5 +7155,32 @@ example (hsign : SpeiserStrictNegativeHorizontal 10)
     (hvertical : SpeiserPositiveImaginaryRayVerticalBoundary 10) :
     LevinsonMontgomeryHeightTenCertificate :=
   levinsonMontgomeryHeightTenCertificate_of_verticalRayAvoidance hsign hvertical
+
+example {s : ℂ} (hsRe : s.re = 1 / 2) (hzeta : riemannZeta s ≠ 0) :
+    (logDeriv riemannZeta s).re =
+      levinsonMontgomeryLogDerivArchimedeanTerm s :=
+  logDeriv_riemannZeta_re_eq_archimedean_on_criticalLine hsRe hzeta
+
+example {s : ℂ} (hsIm : 0 < s.im) (hzeta : riemannZeta s ≠ 0) :
+    (logDeriv riemannZeta s).re =
+      levinsonMontgomeryLogDerivArchimedeanTerm s +
+        levinsonMontgomeryRealPairedZeroSum s :=
+  levinsonMontgomery_equation_two_one_of_im_pos hsIm hzeta
+
+example {y : ℝ} (hy : 0 < y) (hzeta : riemannZeta ((y : ℂ) * Complex.I) ≠ 0) :
+    (logDeriv riemannZeta ((y : ℂ) * Complex.I)).re ≤
+      levinsonMontgomeryLogDerivArchimedeanTerm ((y : ℂ) * Complex.I) :=
+  logDeriv_riemannZeta_re_le_archimedean_on_imaginaryAxis hy hzeta
+
+example {y : ℝ} (hy : 13 / 2 ≤ y) :
+    levinsonMontgomeryLogDerivArchimedeanTerm
+        ((1 / 2 : ℂ) + (y : ℂ) * Complex.I) < 0 :=
+  levinsonMontgomeryArchimedean_criticalLine_neg_of_thirteenHalves_le hy
+
+example {y : ℝ} (hy : 13 / 2 ≤ y)
+    (hzeta : riemannZeta ((1 / 2 : ℂ) + (y : ℂ) * Complex.I) ≠ 0) :
+    (speiserZetaDerivRatio
+      ((1 / 2 : ℂ) + (y : ℂ) * Complex.I)).re < 0 :=
+  speiserZetaDerivRatio_rightVertical_re_neg_of_thirteenHalves_le hy hzeta
 
 end LeanLab.Riemann

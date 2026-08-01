@@ -138,6 +138,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenEndpoint
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryNeighborhood
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRotatedSlitWinding
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryRayProducer
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenCompleteBoundary
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -2157,6 +2158,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``levinsonMontgomeryHeightTenCertificate_of_verticalRayAvoidance
       status := .proven
       note := "Subattack HEIGHT-TEN-BOUNDARY-RAY-PRODUCER-01 removes two of the four boundary obligations. Lean first extends the finite Abel and first-corrected Euler--Maclaurin value and derivative bounds from the inherited artificial Re(s)>1/10 domain to their natural Re(s)>0 half-plane. At cutoff N=1 the exact centers and symbolic remainders prove Re zeta(sigma)<0 and Re zeta'(sigma)<0 for 0<sigma<=1/2; exact formulas close sigma=0. Conjugation makes both values real, hence Re(zeta'/zeta)>0 and the complete bottom edge avoids the positive imaginary ray after rotation by I. The top edge follows from SpeiserStrictNegativeHorizontal. Exactly the left and right vertical ray-avoidance clauses remain; no vertical producer, complete height-ten certificate, H12, or RH is claimed unconditionally." },
+    { id := "H12.levinson-montgomery.height-ten-complete-boundary-structural"
+      tier := .tier1
+      title := "Expose the low-height vertical structural split"
+      statement :=
+        "Prove the exact critical-line and positive-height logarithmic-derivative decompositions, bound the imaginary-axis real part by its paired-zero archimedean contribution, and certify a nonoptimized negative Gamma contribution on the critical line above height 13/2."
+      leanName := some ``speiserZetaDerivRatio_rightVertical_re_neg_of_thirteenHalves_le
+      status := .proven
+      note := "Subattack HEIGHT-TEN-COMPLETE-BOUNDARY-01 remains active. Lean removes the old t>=10 restriction from the exact positive-height Levinson--Montgomery equation (2.1), proves that Re(zeta'/zeta) on a zero-free critical-line point is exactly the archimedean term, and proves that the imaginary-axis real part is at most the same term. A one-step digamma shift plus a proof-producing rational logarithm enclosure proves the critical-line archimedean term negative for y>=13/2, yielding the actual quotient sign conditional only on zeta nonvanishing. This is a source-structure checkpoint, not the preregistered complete boundary: critical-line nonvanishing, both unconditional vertical clauses, the complete top, height-ten certificate, H12, and RH remain open." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"
