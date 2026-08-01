@@ -5471,3 +5471,29 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   optimization campaign. Historical omission search stays primary; conjecture proposal and
   falsification remain open.
 - `global_goal`: active.
+
+## 2026-08-02 H6 x H14 x H12 Riemann--Siegel low-zero selection
+
+- `parent_campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `selected_subattack`: `HEIGHT-TEN-RIEMANN-SIEGEL-LOW-ZERO-01`.
+- `historical_reentry`: use the project's compiled Titchmarsh--Riemann--Siegel xi identity and
+  finite contour-residue decomposition at the historical low-height cutoff `N=1`.
+- `material_difference`: the previous producer evaluated thirty Euler--Maclaurin powers at one
+  endpoint. This attack uses one exact Riemann--Siegel residue plus its source contour remainder
+  on the whole low-height interval and reuses the independently formalized H6 contour route.
+- `fixed_outputs`: exact critical-line real decomposition; exact `N=1` main-plus-remainder
+  identity; a proof-producing uniform strict remainder margin on `13/2<=y<=10`; actual zeta
+  nonvanishing there; unconditional right-high `Re(zeta'/zeta)<0`.
+- `success_boundary`: the structural decomposition or a theorem conditional on the uniform
+  margin is only meaningful partial progress. Full success requires the actual margin and actual
+  nonvanishing declaration to compile.
+- `known_obstacle`: the existing source-integral majorant deliberately replaces the exact
+  principal-argument contribution by `|Im(s)|*pi`; it proves integrability but discards the
+  cancellation needed for a small low-height remainder. A new sharp critical-line integrand or
+  classical remainder estimate is required.
+- `strict_limit`: no new low-height zero-free interval, unconditional vertical zone, complete
+  boundary, height-ten certificate, H12, or RH is yet proved.
+- `route_policy`: this cross-route reuse advances historical omission search and avoids further
+  isolated endpoint-table expansion. Independent conjecture tests remain open.
+- `production_gate`: docs-only preregistration public CI before production edits.
+- `global_goal`: active.

@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Node: `H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
-Status: `MEANINGFUL_PARTIAL_IMMUTABLE_EVIDENCE_GREEN /
+Status: `RIEMANN_SIEGEL_LOW_ZERO_SUBATTACK_PREREGISTERED /
 COMPLETE_BOUNDARY_SUBATTACK_ACTIVE / CAMPAIGN_ACTIVE /
 GLOBAL_GOAL_ACTIVE`
 
@@ -83,6 +83,8 @@ GLOBAL_GOAL_ACTIVE`
 | 67 | `LOCAL_AUDIT` | The new module, Targets, TargetChecks, AxiomsAudit, and project entry pass warning-as-error. Five selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; the focused forbidden scan and `git diff --check` are clean; the full build passes `8828/8828`. | Publish the frozen structural checkpoint and attach immutable public CI evidence without closing the active complete-boundary subattack. |
 | 68 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `d3d975d3c4202a3d14f8ea2e931a400ea7ef65ff` passed Lean Action run `30713362289`, build job `91404656086`, in `3m34s`. Five Lean blobs are frozen in the docs-only immutable-evidence record. | Publish the evidence commit, verify its CI and all five blob identities, then continue the active low-height certificate producer. |
 | 69 | `IMMUTABLE_EVIDENCE` | Docs-only evidence commit `8b7cb43028e04917c510d96b0fe89050a1f7e947` passed Lean Action run `30713557491`, build job `91405164201`, in `2m50s`; all five frozen Lean blobs are unchanged. | Keep `HEIGHT-TEN-COMPLETE-BOUNDARY-01` active and select the shared proof-producing low-height nonvanishing/interval backend. |
+| 70 | `CROSS_ROUTE_SELECTION` | The Euler--Maclaurin value radius is strong pointwise, but a full `[13/2,10]` cover still needs cancellation-sensitive finite tables or derivative control. The H6 branch already compiles the exact Titchmarsh--Riemann--Siegel xi identity and every finite residue decomposition. At these heights the historical optimal cutoff is the single residue `N=1`. | Re-enter Riemann--Siegel as a materially different H6 x H14 x H12 low-zero producer rather than extend the endpoint table. |
+| 71 | `PREREGISTRATION` | Subattack `HEIGHT-TEN-RIEMANN-SIEGEL-LOW-ZERO-01` fixes an exact critical-line real decomposition, its `N=1` specialization, a literal uniform remainder-margin target on `[13/2,10]`, actual zeta nonvanishing there, and the unconditional right-high quotient sign. A generic conditional consumer alone is not full success. | Publish docs only and await public Lean Action CI before production proof edits. |
 
 ## Current obstruction map
 
@@ -117,6 +119,11 @@ GLOBAL_GOAL_ACTIVE`
 13. `OPEN_LEFT_ROUTE_SPLIT`: on `s=iy`, Equation (2.1) yields a nonpositive paired-zero
     contribution but not an exact Gamma-only formula. The left high zone therefore still needs
     actual low-height evaluation or a sharper zero-sum argument.
+14. `SELECTED_RIEMANN_SIEGEL_LOW_ZERO_PRODUCER`: the project has an exact finite
+    Titchmarsh--Riemann--Siegel xi decomposition, but its existing absolute source-integral
+    majorant is designed for integrability and contour shifting, not a sharp low-height remainder
+    constant. The selected cross-route attack first exposes the exact critical-line `N=1` margin
+    and then attempts the missing uniform bound on `[13/2,10]`.
 
 ## Runtime record
 
