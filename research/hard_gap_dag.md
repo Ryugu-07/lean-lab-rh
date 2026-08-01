@@ -5497,3 +5497,41 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   isolated endpoint-table expansion. Independent conjecture tests remain open.
 - `production_gate`: docs-only preregistration public CI before production edits.
 - `global_goal`: active.
+
+## 2026-08-02 H6 x H14 x H12 Riemann--Siegel low-zero checkpoint
+
+- `parent_campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `subattack`: `HEIGHT-TEN-RIEMANN-SIEGEL-LOW-ZERO-01` reaches meaningful partial progress and
+  remains active at its exact uniform-remainder producer.
+- `public_preregistration`: commit `ea5bc3488daffbd38e1fdab2551d2cc7067b6713` passed Lean
+  Action run `30714195699`, build job `91406858114`, in `1m46s` before production edits.
+- `closed_edge_31`: on the critical line, the two arbitrary-`N` finite halves of the compiled
+  Titchmarsh--Riemann--Siegel xi identity are exact complex conjugates.
+- `closed_edge_32`: at `N=1`, Lean reduces the finite contribution to the single historical
+  prefactor and proves that `(1/8)*xi` is twice the real part of prefactor plus contour remainder.
+- `closed_edge_33`: a literal uniform strict real-part remainder margin on `13/2<=y<=10` implies
+  xi nonvanishing, actual zeta nonvanishing, and the existing strict-negative right-high
+  `zeta'/zeta` sign.
+- `closed_edge_34`: the existing cancellation-free source-line majorant integrates to
+  `1/2*exp(C)*sqrt(2)`, and Lean proves this displayed upper-bound right side is greater than
+  `1` throughout the target interval.
+- `logical_limit`: `closed_edge_34` is not a lower bound on the actual contour remainder and does
+  not falsify the desired margin. It proves only that the current absolute majorant cannot
+  directly supply that margin.
+- `first_open_producer`: retain the exact principal-argument phase on the source line and prove a
+  cancellation-sensitive uniform real-part bound, or formalize the classical Riemann--Siegel
+  saddle/remainder expansion with a replayable constant.
+- `second_open_producer`: after the margin, close actual critical-line nonvanishing on
+  `[13/2,10]`; the remaining five vertical zones and compact-middle top sign stay independent.
+- `local_audit`: new module `8745/8745`; production and registration files pass
+  warning-as-error; seven selected axiom prints use only `propext`, `Classical.choice`, and
+  `Quot.sound`; the focused forbidden scan and patch check are clean; full build `8829/8829`.
+- `classification`: `EXACT_CROSS_ROUTE_BRIDGE / SHARP_BOUND_OBSTRUCTION /
+  MEANINGFUL_PARTIAL / RH_FRONTIER_DELTA_0`.
+- `route_policy`: this reconstructs a historical low-zero mechanism and locates the exact phase
+  discarded by the current formal estimate. It is not an endpoint-table or arbitrary-constant
+  optimization. Historical omission search remains primary; conjecture proposal, falsification,
+  and direct RH attacks remain open at every stage.
+- `strict_limit`: the uniform margin, actual interval nonvanishing, unconditional right-high
+  zone, complete boundary, height-ten certificate, H12, and RH remain open.
+- `global_goal`: active.

@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Node: `H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
-Status: `RIEMANN_SIEGEL_LOW_ZERO_SUBATTACK_PREREGISTERED /
+Status: `RIEMANN_SIEGEL_LOW_ZERO_MEANINGFUL_PARTIAL_LOCAL_AUDIT_GREEN /
 COMPLETE_BOUNDARY_SUBATTACK_ACTIVE / CAMPAIGN_ACTIVE /
 GLOBAL_GOAL_ACTIVE`
 
@@ -85,6 +85,12 @@ GLOBAL_GOAL_ACTIVE`
 | 69 | `IMMUTABLE_EVIDENCE` | Docs-only evidence commit `8b7cb43028e04917c510d96b0fe89050a1f7e947` passed Lean Action run `30713557491`, build job `91405164201`, in `2m50s`; all five frozen Lean blobs are unchanged. | Keep `HEIGHT-TEN-COMPLETE-BOUNDARY-01` active and select the shared proof-producing low-height nonvanishing/interval backend. |
 | 70 | `CROSS_ROUTE_SELECTION` | The Euler--Maclaurin value radius is strong pointwise, but a full `[13/2,10]` cover still needs cancellation-sensitive finite tables or derivative control. The H6 branch already compiles the exact Titchmarsh--Riemann--Siegel xi identity and every finite residue decomposition. At these heights the historical optimal cutoff is the single residue `N=1`. | Re-enter Riemann--Siegel as a materially different H6 x H14 x H12 low-zero producer rather than extend the endpoint table. |
 | 71 | `PREREGISTRATION` | Subattack `HEIGHT-TEN-RIEMANN-SIEGEL-LOW-ZERO-01` fixes an exact critical-line real decomposition, its `N=1` specialization, a literal uniform remainder-margin target on `[13/2,10]`, actual zeta nonvanishing there, and the unconditional right-high quotient sign. A generic conditional consumer alone is not full success. | Publish docs only and await public Lean Action CI before production proof edits. |
+| 72 | `PUBLIC_GATE` | Docs-only preregistration commit `ea5bc3488daffbd38e1fdab2551d2cc7067b6713` passed Lean Action run `30714195699`, build job `91406858114`, in `1m46s`. | Open production editing for the fixed Riemann--Siegel low-zero endpoint. |
+| 73 | `CRITICAL_LINE_CONJUGATION` | Lean proves the exact arbitrary-`N` critical-line identity in which the two finite Riemann--Siegel halves are conjugates. At `N=1`, the finite term is exactly the source prefactor and `(1/8)*xi` is twice the real part of prefactor plus contour remainder. | Isolate the exact real-part margin that implies xi nonvanishing. |
+| 74 | `LOW_ZERO_CONSUMER` | The uniform strict remainder-margin definition now compiles through xi nonvanishing, actual zeta nonvanishing on `13/2<=y<=10`, and the existing right-high Levinson--Montgomery quotient sign. The margin is still an explicit unproved producer, so none of these conditional consumers is claimed unconditionally. | Test the existing source-integral majorant against the required one-term scale. |
+| 75 | `SHARP_BOUND_OBSTACLE` | Lean integrates the existing absolute majorant in closed form and proves that its displayed upper-bound right side is strictly greater than `1` throughout the target interval. This is not a lower bound on the true remainder; it proves only that the current cancellation-free estimate cannot directly certify the required `<1`-scale margin. | Preserve the principal-argument phase or reconstruct the classical saddle/remainder expansion. |
+| 76 | `MEANINGFUL_PARTIAL` | The cross-route bridge is complete and the exact first missing producer has narrowed from generic low-zero verification to a phase-sensitive uniform real-part remainder bound. Full subattack success, actual interval nonvanishing, and the unconditional right-high zone remain open. | Register the bridge and exact obstruction without closing the subattack. |
+| 77 | `LOCAL_AUDIT` | The new module, Targets, TargetChecks, AxiomsAudit, and project entry pass warning-as-error. Seven selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; the focused forbidden scan and `git diff --check` are clean; full build passes `8829/8829`. | Publish a frozen implementation and immutable evidence, then compare a phase-preserving contour bound with the classical Riemann--Siegel remainder theorem. |
 
 ## Current obstruction map
 
@@ -119,11 +125,15 @@ GLOBAL_GOAL_ACTIVE`
 13. `OPEN_LEFT_ROUTE_SPLIT`: on `s=iy`, Equation (2.1) yields a nonpositive paired-zero
     contribution but not an exact Gamma-only formula. The left high zone therefore still needs
     actual low-height evaluation or a sharper zero-sum argument.
-14. `SELECTED_RIEMANN_SIEGEL_LOW_ZERO_PRODUCER`: the project has an exact finite
-    Titchmarsh--Riemann--Siegel xi decomposition, but its existing absolute source-integral
-    majorant is designed for integrability and contour shifting, not a sharp low-height remainder
-    constant. The selected cross-route attack first exposes the exact critical-line `N=1` margin
-    and then attempts the missing uniform bound on `[13/2,10]`.
+14. `PARTIALLY_CLOSED_RIEMANN_SIEGEL_LOW_ZERO_PRODUCER`: the exact arbitrary-`N`
+    critical-line conjugation, `N=1` main-plus-remainder formula, and the full chain from a
+    uniform real-part remainder margin to actual zeta nonvanishing and right-high quotient sign
+    compile. The literal margin remains open.
+15. `OPEN_PHASE_SENSITIVE_REMAINDER`: the existing cancellation-free contour majorant integrates
+    to an explicit right side that Lean proves is greater than `1` throughout `[13/2,10]`. This
+    does not show the true remainder is large; it identifies the discarded principal-argument
+    phase as the first exact obstruction. The next producer must retain that phase or formalize
+    the classical saddle remainder, rather than optimize endpoint tables or this coarse bound.
 
 ## Runtime record
 

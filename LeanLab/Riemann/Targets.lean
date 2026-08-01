@@ -139,6 +139,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryNeighborhood
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRotatedSlitWinding
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryRayProducer
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenCompleteBoundary
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelLowZero
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -2166,6 +2167,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``speiserZetaDerivRatio_rightVertical_re_neg_of_thirteenHalves_le
       status := .proven
       note := "Subattack HEIGHT-TEN-COMPLETE-BOUNDARY-01 remains active. Lean removes the old t>=10 restriction from the exact positive-height Levinson--Montgomery equation (2.1), proves that Re(zeta'/zeta) on a zero-free critical-line point is exactly the archimedean term, and proves that the imaginary-axis real part is at most the same term. A one-step digamma shift plus a proof-producing rational logarithm enclosure proves the critical-line archimedean term negative for y>=13/2, yielding the actual quotient sign conditional only on zeta nonvanishing. This is a source-structure checkpoint, not the preregistered complete boundary: critical-line nonvanishing, both unconditional vertical clauses, the complete top, height-ten certificate, H12, and RH remain open." },
+    { id := "H14.riemann-siegel.height-ten-low-zero-bridge"
+      tier := .tier1
+      title := "Connect the one-term Riemann--Siegel formula to the height-ten boundary"
+      statement :=
+        "Specialize the compiled finite Titchmarsh--Riemann--Siegel xi identity to the critical line and cutoff one, expose the exact real remainder margin that implies zeta nonvanishing on heights 13/2 through 10, and connect that margin to the right-high Speiser sign."
+      leanName := some ``speiserZetaDerivRatio_rightVertical_re_neg_thirteenHalves_ten_of_riemannSiegel
+      status := .proven
+      note := "Subattack HEIGHT-TEN-RIEMANN-SIEGEL-LOW-ZERO-01 remains active. Lean proves that the two finite Riemann--Siegel halves are exact conjugates on the critical line and that cutoff N=1 leaves precisely the completed-zeta prefactor plus R_(0,1). A strict real-part remainder margin now implies actual xi and zeta nonvanishing on [13/2,10], hence the right-high quotient sign through the previously compiled Gamma theorem. The existing global source-integral majorant also receives a closed Gaussian integral bound, and Lean proves its displayed right side is already greater than one throughout this interval; that majorant is therefore not the missing sharp low-height certificate. The uniform Riemann--Siegel margin, actual interval nonvanishing, every other open boundary zone, the height-ten certificate, H12, and RH remain open." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

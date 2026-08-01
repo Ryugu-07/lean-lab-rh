@@ -24,6 +24,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryNeighborhood
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRotatedSlitWinding
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryRayProducer
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenCompleteBoundary
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelLowZero
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -7182,5 +7183,46 @@ example {y : ℝ} (hy : 13 / 2 ≤ y)
     (speiserZetaDerivRatio
       ((1 / 2 : ℂ) + (y : ℂ) * Complex.I)).re < 0 :=
   speiserZetaDerivRatio_rightVertical_re_neg_of_thirteenHalves_le hy hzeta
+
+example {N : ℕ} {s : ℂ} (hsRe : s.re = 1 / 2)
+    (hs : deBruijnNewmanRiemannSiegelIsNoninteger s) :
+    (1 / 8) * riemannXi s =
+      heightTenRiemannSiegelFiniteRight N s +
+        conj (heightTenRiemannSiegelFiniteRight N s) :=
+  riemannSiegel_criticalLine_eq_add_conj hsRe hs
+
+example {s : ℂ} (hsRe : s.re = 1 / 2)
+    (hs : deBruijnNewmanRiemannSiegelIsNoninteger s) :
+    (1 / 8) * riemannXi s =
+      2 * ((deBruijnNewmanRiemannSiegelPrefactor s +
+        deBruijnNewmanRiemannSiegelR0N 1 s).re : ℂ) :=
+  riemannSiegel_criticalLine_one_eq_prefactor_remainder_re hsRe hs
+
+example (hmargin : HeightTenRiemannSiegelOneRemainderMargin)
+    {y : ℝ} (hy0 : 13 / 2 ≤ y) (hy1 : y ≤ 10) :
+    riemannZeta ((1 / 2 : ℂ) + (y : ℂ) * Complex.I) ≠ 0 :=
+  riemannZeta_criticalLine_ne_zero_thirteenHalves_ten_of_riemannSiegel
+    hmargin hy0 hy1
+
+example (hmargin : HeightTenRiemannSiegelOneRemainderMargin)
+    {y : ℝ} (hy0 : 13 / 2 ≤ y) (hy1 : y ≤ 10) :
+    (speiserZetaDerivRatio
+      ((1 / 2 : ℂ) + (y : ℂ) * Complex.I)).re < 0 :=
+  speiserZetaDerivRatio_rightVertical_re_neg_thirteenHalves_ten_of_riemannSiegel
+    hmargin hy0 hy1
+
+example (N : ℕ) (s : ℂ) :
+    ‖deBruijnNewmanRiemannSiegelRawIntegral N s‖ ≤
+      (1 / 2) *
+        Real.exp (deBruijnNewmanRiemannSiegelMajorantConstant N s) *
+          Real.sqrt 2 :=
+  norm_deBruijnNewmanRiemannSiegelRawIntegral_le_globalMajorant N s
+
+example {y : ℝ} (hy : 13 / 2 ≤ y) :
+    1 <
+      (1 / 2) * Real.exp
+        (deBruijnNewmanRiemannSiegelMajorantConstant 1
+          ((1 / 2 : ℂ) + (y : ℂ) * Complex.I)) * Real.sqrt 2 :=
+  one_lt_riemannSiegel_globalMajorant_rhs_on_heightTenHigh hy
 
 end LeanLab.Riemann
