@@ -5529,6 +5529,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `public_implementation`: frozen commit
   `440a70b4d8f34445948f50e7befe13d8a8d13321` passed Lean Action run `30714830344`, build job
   `91408552652`, in `2m25s`; five Lean blobs are frozen for docs-only immutable evidence.
+- `immutable_evidence`: docs-only commit
+  `11f3de01fb7fadcb9ac5ba0ce6534e3887eea7ec` passed Lean Action run `30714989369`, build job
+  `91408961299`, in `1m43s`; all five frozen Lean blobs are unchanged.
 - `classification`: `EXACT_CROSS_ROUTE_BRIDGE / SHARP_BOUND_OBSTRUCTION /
   MEANINGFUL_PARTIAL / RH_FRONTIER_DELTA_0`.
 - `route_policy`: this reconstructs a historical low-zero mechanism and locates the exact phase

@@ -6,7 +6,7 @@ Parent campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Subattack: `HEIGHT-TEN-RIEMANN-SIEGEL-LOW-ZERO-01`
 
-Status: `MEANINGFUL_PARTIAL / PUBLIC_IMPLEMENTATION_GREEN / SUBATTACK_ACTIVE /
+Status: `MEANINGFUL_PARTIAL / IMMUTABLE_EVIDENCE_GREEN / SUBATTACK_ACTIVE /
 GLOBAL_GOAL_ACTIVE`
 
 ## Historical purpose
@@ -90,6 +90,10 @@ Frozen implementation commit `440a70b4d8f34445948f50e7befe13d8a8d13321` passed L
 run `30714830344`, build job `91408552652`, in `2m25s`. The module, aggregate import, target
 registry, exact checks, and axiom audit are frozen in the accompanying docs-only immutable
 evidence record.
+
+Docs-only evidence commit `11f3de01fb7fadcb9ac5ba0ce6534e3887eea7ec` passed Lean Action
+run `30714989369`, build job `91408961299`, in `1m43s`. All five frozen production blobs are
+identical to the implementation commit.
 
 ## Next producer
 

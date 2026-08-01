@@ -6,7 +6,7 @@ Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Node: `H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
-Status: `RIEMANN_SIEGEL_LOW_ZERO_MEANINGFUL_PARTIAL_PUBLIC_IMPLEMENTATION_GREEN /
+Status: `RIEMANN_SIEGEL_LOW_ZERO_MEANINGFUL_PARTIAL_IMMUTABLE_EVIDENCE_GREEN /
 COMPLETE_BOUNDARY_SUBATTACK_ACTIVE / CAMPAIGN_ACTIVE /
 GLOBAL_GOAL_ACTIVE`
 
@@ -92,6 +92,7 @@ GLOBAL_GOAL_ACTIVE`
 | 76 | `MEANINGFUL_PARTIAL` | The cross-route bridge is complete and the exact first missing producer has narrowed from generic low-zero verification to a phase-sensitive uniform real-part remainder bound. Full subattack success, actual interval nonvanishing, and the unconditional right-high zone remain open. | Register the bridge and exact obstruction without closing the subattack. |
 | 77 | `LOCAL_AUDIT` | The new module, Targets, TargetChecks, AxiomsAudit, and project entry pass warning-as-error. Seven selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; the focused forbidden scan and `git diff --check` are clean; full build passes `8829/8829`. | Publish a frozen implementation and immutable evidence, then compare a phase-preserving contour bound with the classical Riemann--Siegel remainder theorem. |
 | 78 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `440a70b4d8f34445948f50e7befe13d8a8d13321` passed Lean Action run `30714830344`, build job `91408552652`, in `2m25s`. Five Lean blobs are frozen in the docs-only immutable-evidence record. | Publish immutable evidence, verify public CI and all five blob identities, then record the exact live producer without closing the subattack. |
+| 79 | `IMMUTABLE_EVIDENCE` | Docs-only evidence commit `11f3de01fb7fadcb9ac5ba0ce6534e3887eea7ec` passed Lean Action run `30714989369`, build job `91408961299`, in `1m43s`; all five frozen Lean blobs are unchanged. The exact bridge and obstruction are public green, while the margin producer and subattack remain active. | Publish the final docs-only ledger, then compare phase-preserving contour and classical saddle-remainder sources. |
 
 ## Current obstruction map
 
