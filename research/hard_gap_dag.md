@@ -5700,6 +5700,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `public_implementation`: frozen commit
   `687d301d60a4c7bcbae0b4cb36f0a015a94a9b34` passed Lean Action run `30723016379`, build job
   `91429744340`, in `2m38s`; five Lean blobs are frozen for docs-only immutable evidence.
+- `immutable_evidence`: docs-only commit
+  `604e8c73246b1a4eacdf65764ceb7b6caede5493` passed Lean Action run `30723158790`, build job
+  `91430133639`, in `1m45s`; all five frozen Lean blobs are unchanged.
 - `next_exact_producer`: prove the two source-contour tails have combined mass at most `3/20`,
   retaining phase-sensitive Gaussian decay rather than optimizing unrelated constants.
 - `strict_limit`: no individual endpoint mass, total endpoint mass `<=3/5`, literal remainder

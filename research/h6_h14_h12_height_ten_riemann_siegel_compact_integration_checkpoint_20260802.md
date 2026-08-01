@@ -56,6 +56,10 @@ differences exactly. No quadrature or floating-point output is a theorem premise
 Frozen implementation commit `687d301d60a4c7bcbae0b4cb36f0a015a94a9b34` passed public Lean Action
 run `30723016379`, build job `91429744340`, in `2m38s`.
 
+Docs-only evidence commit `604e8c73246b1a4eacdf65764ceb7b6caede5493` passed public Lean Action
+run `30723158790`, build job `91430133639`, in `1m45s`. A post-CI tree check confirms that all
+five frozen Lean blobs are unchanged.
+
 Three exact polynomial normalization theorems use local `maxHeartbeats 4000000` scopes. Their
 corresponding `maxRecDepth` scopes are `1000000`, `100000`, and `100000`. These options do not
 escape the individual declarations.

@@ -31,6 +31,12 @@ Frozen production blobs:
 This evidence commit is docs only. Its CI and a post-CI `git ls-tree` check must preserve every
 blob in this table.
 
+## Immutable evidence verification
+
+Docs-only evidence commit `604e8c73246b1a4eacdf65764ceb7b6caede5493` passed Lean Action run
+`30723158790`, build job `91430133639`, in `1m45s`. A post-CI `git ls-tree` check confirms that
+all five production blobs remain exactly equal to the frozen table.
+
 ## Compiled claim boundary
 
 The frozen implementation proves rational polynomial exponential bounds and exact formal
