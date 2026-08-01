@@ -106,6 +106,12 @@ GLOBAL_GOAL_ACTIVE`
 | 90 | `MEANINGFUL_PARTIAL_AND_LOCAL_AUDIT` | Two production modules pass warning-as-error; Targets, TargetChecks, AxiomsAudit, and the project entry compile; six selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; focused forbidden scans and `git diff --check` are clean; full build passes `8831/8831`. The phase/Gamma obstacle is closed, but no interval nonvanishing is claimed because the endpoint masses remain unproved. | Publish the frozen implementation checkpoint, then certify the total fixed endpoint mass `<=3/5` using denominator growth and proof-producing compact/tail bounds. |
 | 91 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `6191095ff2bf8da3634059e36b46c55dd9a1183f` passed Lean Action run `30718017024`, build job `91416905387`, in `3m30s`. Six Lean blobs are frozen for the docs-only immutable-evidence record. | Publish the evidence commit, verify its CI and all six blob identities, then resume at the exact endpoint-mass producer. |
 | 92 | `IMMUTABLE_EVIDENCE_AND_CHECKPOINT_STOP` | Docs-only evidence commit `41b2006719acdc14fcfc7ac52c2263f13b93e26e` passed Lean Action run `30718252798`, build job `91417523983`, in `2m22s`; all six frozen Lean blobs are unchanged. The prefactor phase producer stops successfully, while the endpoint-mass producer, parent campaign, and global RH Goal remain active. | On resumption, assess a proof-producing compact/tail certificate for `HeightTenRiemannSiegelOneEndpointMassBound`; switch historical route if that producer does not justify its graph value. |
+| 93 | `USER_ROUTE_POLICY_CLARIFICATION` | Historical coverage is an omission search, not a bibliography or a family-name checklist. A route is attempted only after a decisive source inference, its first exact open producer, failed probes, and surviving frontier are recorded. Original conjectures and direct attacks remain open throughout, but original route construction becomes the default main allocation only after broad historical replay. | Record the distinction between census completion and route-attempt completion, then continue the fixed Riemann--Siegel source hinge without drifting into arbitrary constant optimization. |
+| 94 | `QUARTIC_DENOMINATOR_DISCOVERY` | Lean derives `2*u^4/3 <= sinh(u)^2-sin(u)^2` from the nonnegative cosh-plus-cos power series, then transfers it to the exact Riemann--Siegel sine denominator. The first navigated inverse-square-root statement on `x<=21/20` is false near its endpoint and did not compile; the corrected theorem on `x<=51/50` compiles and contains the actual `abs(v)<=1/2` contour parameter. | Use the corrected range to derive a polynomial reciprocal-denominator envelope on the compact interval. |
+| 95 | `COMPACT_AND_TAIL_DENOMINATOR_ENVELOPES` | Rational bounds on `pi*sqrt(2)/2` place the compact quartic parameter below `51/50`. Lean proves a negative quartic correction for the reciprocal denominator there. A finite exponential-series certificate proves `9<=exp(11/5)`, yielding the tail bound `1/norm(D(v)) <= (9/8)*exp(-pi*sqrt(2)*abs(v)/2)` for `abs(v)>=1/2`. | Retain the principal argument and control the distance-power factor before integrating. |
+| 96 | `PHASE_AND_DISTANCE_ENVELOPES` | Exact principal-argument formulas reduce both half-lines to arctangent ratios. Alternating-series bounds plus Bernstein-positive polynomial certificates prove cubic compact phase bounds. Separate fourth-power certificates prove `norm(w(-x))^(-1/2)<=1633/2000` and the positive compact linear envelope `<=1633/2000+197*v/1000`. | Combine phase, Gaussian, distance, and denominator bounds on the actual endpoint integrands. |
+| 97 | `ACTUAL_INTEGRAND_POINTWISE_ENVELOPES` | Lean factors the actual line-integrand norm exactly into distance power, total phase/Gaussian exponential, and reciprocal denominator. The fixed positive endpoint receives an explicit cubic-exponential compact bound, and the fixed negative endpoint receives an explicit negative-quadratic-exponential compact bound. No floating-point value is a premise. | Formalize proof-producing exponential Taylor/scaling certificates and exact compact integrals; then close the remaining phase-sensitive tails. |
+| 98 | `MEANINGFUL_PARTIAL_AND_LOCAL_AUDIT` | The new module, project entry, Targets, exact TargetChecks, and five axiom prints pass warning-as-error. The selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; focused forbidden scans and `git diff --check` are clean; full build passes `8832/8832`. The endpoint-mass proposition itself is still open. | Publish this structural implementation checkpoint, then continue with compact integration and tail phase bounds rather than optimize unrelated constants. |
 
 ## Current obstruction map
 
@@ -154,13 +160,19 @@ GLOBAL_GOAL_ACTIVE`
     factorization, and prefactor real-to-norm margin `>9/10` compile. The sole remaining
     proposition in this producer is that the two fixed endpoint masses sum to at most `3/5`.
     Until it compiles, the literal remainder margin and interval nonvanishing remain open.
+17. `PARTIALLY_CLOSED_ENDPOINT_MASS_ENVELOPE`: exact quartic compact denominator growth,
+    exponential tail denominator decay, compact phase and distance-power bounds, and both actual
+    endpoint-integrand compact pointwise envelopes compile. The failed `x<=21/20` reciprocal-
+    square-root candidate is rejected and replaced by the proved `x<=51/50` statement. Exact
+    exponential integration certificates and phase-sensitive tail envelopes remain open; hence
+    neither individual endpoint mass nor their total `<=3/5` is yet proved.
 
 ## Runtime record
 
 - `model`: Codex, GPT-5 family; exact serving variant is not exposed.
 - `reasoning_effort`: not exposed.
 - `budget`: no numerical quota under V4.1.
-- `compaction_state`: resumed from summaries before rounds 33 and 40; after each transition the
+- `compaction_state`: resumed from summaries before rounds 33, 40, and 93; after each transition the
   current governance, HANDOFF, source declarations, Targets, TargetChecks, active attempt log,
   hard-gap DAG, and applicable preregistration were re-read before continuing.
 - `global_goal`: active.

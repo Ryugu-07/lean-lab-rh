@@ -34,6 +34,28 @@ input or mechanical output gates.
 - "All routes" means the auditable census and any genuinely distinct source-backed additions,
   not an unverifiable claim that every idea ever considered by a human has been enumerated.
 
+## Census completion is not route-attempt completion (2026-08-02 user clarification)
+
+- A source-backed card completes bibliographic coverage only. It does not count as an attempted
+  route and does not justify calling the route exhausted or failed.
+- Historical replay is an omission search. Each admitted family must be reconstructed far enough
+  to expose at least one decisive source-level inference: the last theorem that survives formal
+  checking, the first exact unproved producer, and the assumptions or losses introduced there.
+- A local campaign may stop when that exact producer has been proved, falsified, reduced to a
+  named open theorem, or shown to require a missing mathematical object. The route remains open
+  whenever another materially distinct source hinge or cross-route repair survives.
+- A family receives an `ATTEMPTED_TO_RECORDED_FRONTIER` status only when its source-level attempt,
+  compiled Lean assets, failed probes, and surviving frontier are all linked from the route atlas
+  and attempts ledger. A family name, survey paragraph, abstract conditional theorem, or numerical
+  illustration is not enough.
+- Original route construction becomes the default main allocation only after every admitted major
+  historical family has reached that status or an equally explicit stronger status. This is a
+  priority rule, not an input gate: direct RH attacks, original conjectures, falsification, and
+  Lean verification remain open at every stage and may immediately change the ranking.
+- The purpose of broad replay is not to reproduce history ceremonially. It is to detect a human
+  omission: a needlessly strong premise, an avoidable estimate loss, an overlooked endpoint, a
+  modern tool that removes an old obstruction, or a compatible mechanism from another family.
+
 ## H6 upper-bound successor status
 
 The H6 Boyd/Polymath numerical upper-bound successor is parked at the clean public Loop 31

@@ -27,6 +27,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenCompleteBoundary
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelLowZero
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseNorm
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseMargin
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelEndpointMass
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -7239,5 +7240,24 @@ example (hmass : HeightTenRiemannSiegelOneEndpointMassBound) :
     HeightTenRiemannSiegelOneRemainderMargin :=
   heightTenRiemannSiegelOneRemainderMargin_of_phaseNormBounds
     hmass heightTenRiemannSiegelOnePrefactorPhaseMargin
+
+example {v : ℝ} (hv0 : 0 ≤ v) (hv1 : v ≤ 1 / 2) :
+    ‖deBruijnNewmanRiemannSiegelLineIntegrand 1
+        (heightTenRiemannSiegelCriticalPoint (13 / 2)) v‖ ≤
+      ((1633 / 2000 : ℝ) + (197 / 1000) * v) *
+        Real.exp
+          ((361 / 100 : ℝ) * v - (2063 / 450) * v ^ 2 -
+            (13 / 36) * v ^ 3) *
+        ((1 / 2 : ℝ) *
+          (1 - (29 / 100) * (2 / 3) *
+            (Real.pi * (deBruijnNewmanRiemannSiegelLine 1 v).im) ^ 4)) :=
+  norm_heightTenRiemannSiegelLineIntegrand_one_positiveCompact_le hv0 hv1
+
+example {v : ℝ} (hv : 1 / 2 ≤ |v|) :
+    1 / ‖deBruijnNewmanRiemannSiegelDenominator
+        (deBruijnNewmanRiemannSiegelLine 1 v)‖ ≤
+      (9 / 8 : ℝ) *
+        Real.exp (-(Real.pi * (Real.sqrt 2 / 2) * |v|)) :=
+  one_div_norm_deBruijnNewmanRiemannSiegelDenominator_tail_le hv
 
 end LeanLab.Riemann

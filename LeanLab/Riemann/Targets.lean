@@ -142,6 +142,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenCompleteBoundary
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelLowZero
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseNorm
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseMargin
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelEndpointMass
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -2185,6 +2186,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``heightTenRiemannSiegelOnePrefactorPhaseMargin
       status := .proven
       note := "Subattack HEIGHT-TEN-RIEMANN-SIEGEL-PHASE-NORM-01 closes the prefactor producer without a Gamma approximation premise. Lean proves exact sign-sensitive endpoint domination for the contour complex power, a rectangular Stieltjes majorant giving norm of the logarithmic Gamma remainder at most 1/16, an explicit shifted Stirling phase strictly between -3/8 and 1/8 on the full interval, and an exact factorization of the actual prefactor as a positive scale times the phase exponential. The resulting real-part-to-norm ratio is strictly greater than 9/10. The total endpoint-mass bound at most 3/5 remains open; therefore the literal Riemann--Siegel remainder margin, interval zeta nonvanishing, height-ten certificate, H12, and RH are not yet unconditional." },
+    { id := "H14.riemann-siegel.height-ten-endpoint-mass-structural-envelope"
+      tier := .tier1
+      title := "Expose compact and tail decay in the height-ten endpoint masses"
+      statement :=
+        "Retain the exact principal argument and sine denominator on the cutoff-one source line, prove quartic compact denominator suppression and exponential tail suppression, and derive explicit kernel-checked pointwise compact envelopes for both fixed endpoint integrands."
+      leanName := some ``norm_heightTenRiemannSiegelLineIntegrand_one_positiveCompact_le
+      status := .proven
+      note := "The endpoint-mass subattack now compiles the exact quartic denominator identity, a polynomial reciprocal-denominator envelope on abs(v)<=1/2, a sinh-based exponential tail envelope, exact arctangent formulas and cubic phase bounds, rational distance-power bounds, and actual-integrand pointwise envelopes at y=13/2 and y=10. Lean also rejected the initially navigated inverse-square-root range x<=21/20; the corrected proved range is x<=51/50 and contains the actual compact contour parameter. This is structural progress inside the fixed historical source mechanism. The compact exponential integrations, remaining phase-sensitive tails, total endpoint mass <=3/5, literal remainder margin, interval nonvanishing, height-ten certificate, H12, and RH remain open." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

@@ -5605,3 +5605,42 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `strict_limit`: no unconditional interval nonvanishing, vertical zone, complete boundary,
   height-ten certificate, H12, or RH theorem follows yet.
 - `global_goal`: active.
+
+## 2026-08-02 H6 x H14 x H12 endpoint-mass structural envelope checkpoint
+
+- `parent_campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `subattack`: the fixed `HeightTenRiemannSiegelOneEndpointMassBound` producer remains open.
+- `closed_edge_39`: Lean proves the source-independent inequality
+  `2*u^4/3 <= sinh(u)^2-sin(u)^2` and transfers it to exact quartic growth of the cutoff-one
+  Riemann--Siegel denominator.
+- `rejected_candidate_40`: the navigated generic reciprocal-square-root envelope on
+  `0<=x<=21/20` is false at the upper end. It is not retained as a premise or theorem.
+- `closed_edge_41`: the corrected `0<=x<=51/50` envelope, rational `pi*sqrt(2)/2` bounds, and
+  actual compact-parameter inclusion compile, giving a negative quartic reciprocal-denominator
+  correction for `abs(v)<=1/2`.
+- `closed_edge_42`: a finite real-exp series certificate and the exact sinh denominator give
+  `1/norm(D(v)) <= (9/8)*exp(-pi*sqrt(2)*abs(v)/2)` for `abs(v)>=1/2`.
+- `closed_edge_43`: exact arctangent formulas, alternating-series inequalities, and two
+  Bernstein-positive certificates produce cubic compact phase bounds on both half-lines.
+- `closed_edge_44`: fourth-power distance certificates bound the negative compact power by
+  `1633/2000` and the positive compact power by `1633/2000+197*v/1000`.
+- `closed_edge_45`: the actual endpoint-integrand norm is factored exactly and receives explicit
+  pointwise compact envelopes at heights `10` and `13/2`.
+- `open_edge_46`: replace each compact exponential by a proof-producing rational polynomial and
+  integrate it exactly; no sampled quadrature may enter the proof.
+- `open_edge_47`: combine the tail denominator decay with phase-sensitive angle bounds and exact
+  Gaussian decay on the remaining half-lines.
+- `open_edge_48`: assemble both fixed masses and prove their sum `<=3/5`. Only this closes the
+  endpoint-mass proposition and unlocks the literal remainder-margin consumer.
+- `classification`: `STRUCTURAL_SOURCE_ENVELOPE / MEANINGFUL_PARTIAL /
+  ENDPOINT_MASS_OPEN / RH_FRONTIER_DELTA_0`.
+- `route_policy`: this is a replay of the exact historical contour intended to search for a
+  discarded-factor omission. It is not an optimization of a Newman upper-bound constant.
+  Historical census completion does not count as a route attempt; original conjectures,
+  falsification, and direct RH attacks remain open at every stage.
+- `local_audit`: new module and registration files pass warning-as-error; five selected axiom
+  prints use only `propext`, `Classical.choice`, and `Quot.sound`; full build passes `8832/8832`.
+- `strict_limit`: no endpoint integral, total endpoint mass, literal remainder margin, interval
+  nonvanishing, vertical boundary zone, complete height-ten certificate, H12, or RH theorem is
+  claimed by this checkpoint.
+- `global_goal`: active.
