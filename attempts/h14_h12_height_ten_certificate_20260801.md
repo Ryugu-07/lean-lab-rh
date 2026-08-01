@@ -115,6 +115,11 @@ GLOBAL_GOAL_ACTIVE`
 | 99 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `5cc6e43fad122b1bf40c1ff614183183ff4ccf53` passed Lean Action run `30721026723`, build job `91424754896`, in `2m59s`. Five Lean production blobs are frozen for a docs-only immutable-evidence record. | Publish the evidence record, verify its public CI and all five blob identities, then resume exact compact integration and tail phase bounds. |
 | 100 | `IMMUTABLE_EVIDENCE_AND_CHECKPOINT_STOP` | Docs-only evidence commit `650c11dd157be5ba6c8da5d9bc14273c568fd6ea` passed Lean Action run `30721199125`, build job `91425204813`, in `2m1s`; all five frozen Lean blobs are unchanged. The structural-envelope checkpoint stops successfully, while the endpoint-mass proposition, parent campaign, and global RH Goal remain active. | Resume with proof-producing compact exponential integration and phase-sensitive tail integration. Rerank the historical portfolio if those exact producers cease to justify their graph value; conjectures and direct attacks remain open. |
 | 101 | `COMPACT_INTEGRATION_PREREGISTRATION` | Subattack `HEIGHT-TEN-ENDPOINT-COMPACT-INTEGRATION-01` fixes the two actual compact endpoint integrals at `7/20` and `1/10`, requires their connection to the literal source integrand, and rejects numerical quadrature as a premise. The combined `9/20` result is explicitly insufficient without a tail total `<=3/20`. | Publish the docs-only target and falsification record before exposing the production Lean implementation. |
+| 102 | `PUBLIC_GATE` | Docs-only preregistration commit `90e5b79f0da8063963c87c6c4434451d9a9432d7` passed Lean Action run `30722867389`, build job `91429374054`, in `2m18s`. | Publish the frozen production implementation for the fixed compact targets. |
+| 103 | `POSITIVE_COMPACT_CERTIFICATE` | Lean proves `0<=q(v)<=7/10`, applies a fourth-power Pade polynomial bound to `exp(q(v))`, transfers the actual quartic denominator correction, and integrates the degree-thirty rational envelope exactly. The literal height `13/2` compact integral is at most `7/20`. | Close the negative compact certificate with an independent decaying exponential polynomial. |
+| 104 | `NEGATIVE_COMPACT_CERTIFICATE` | Lean proves a fourth-power quadratic upper bound for `exp(-t(x))`, transfers the actual negative compact pointwise envelope, and integrates the degree-twenty rational envelope exactly. The literal height `10` compact integral after `v=-x` is at most `1/10`. | Combine the two actual compact integrals and isolate the remaining tail budget. |
+| 105 | `ACTUAL_COMPACT_COMPOSITION` | The two source-integrand compact integrals compose unconditionally to `<=9/20`. Since the fixed endpoint-mass target is `<=3/5`, the exact remaining producer is a combined tail bound `<=3/20`; no endpoint mass or remainder margin is claimed yet. | Complete local audits and publish this compact producer as a meaningful partial checkpoint. |
+| 106 | `MEANINGFUL_PARTIAL_AND_LOCAL_AUDIT` | The new module, project entry, Targets, TargetChecks, and AxiomsAudit pass warning-as-error. Seven selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; the exact polynomial normalization uses three theorem-local resource scopes; focused placeholder and patch scans are clean; full build passes `8833/8833`. | Publish the implementation, freeze exact Lean blobs after public CI, and continue at the phase-sensitive tails. |
 
 ## Current obstruction map
 
@@ -163,19 +168,20 @@ GLOBAL_GOAL_ACTIVE`
     factorization, and prefactor real-to-norm margin `>9/10` compile. The sole remaining
     proposition in this producer is that the two fixed endpoint masses sum to at most `3/5`.
     Until it compiles, the literal remainder margin and interval nonvanishing remain open.
-17. `PARTIALLY_CLOSED_ENDPOINT_MASS_ENVELOPE`: exact quartic compact denominator growth,
-    exponential tail denominator decay, compact phase and distance-power bounds, and both actual
-    endpoint-integrand compact pointwise envelopes compile. The failed `x<=21/20` reciprocal-
-    square-root candidate is rejected and replaced by the proved `x<=51/50` statement. Exact
-    exponential integration certificates and phase-sensitive tail envelopes remain open; hence
-    neither individual endpoint mass nor their total `<=3/5` is yet proved.
+17. `CLOSED_COMPACT_ENDPOINT_MASSES`: exact quartic compact denominator growth, compact phase and
+    distance-power bounds, rational exponential envelopes, exact polynomial primitives, and both
+    actual compact endpoint integrals compile. Their bounds are `7/20` and `1/10`, hence their
+    combined compact contribution is at most `9/20`.
+18. `OPEN_PHASE_SENSITIVE_TAILS`: the compiled exponential denominator tail decay must be combined
+    with retained phase/Gaussian control to prove that both remaining tails total at most `3/20`.
+    Until then neither endpoint mass nor their total `<=3/5` is proved.
 
 ## Runtime record
 
 - `model`: Codex, GPT-5 family; exact serving variant is not exposed.
 - `reasoning_effort`: not exposed.
 - `budget`: no numerical quota under V4.1.
-- `compaction_state`: resumed from summaries before rounds 33, 40, and 93; after each transition the
+- `compaction_state`: resumed from summaries before rounds 33, 40, 93, and 101; after each transition the
   current governance, HANDOFF, source declarations, Targets, TargetChecks, active attempt log,
   hard-gap DAG, and applicable preregistration were re-read before continuing.
 - `global_goal`: active.

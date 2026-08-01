@@ -5675,3 +5675,32 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `route_policy`: this continues the exact historical contour omission search. Independent
   conjectures, falsification, and direct RH attacks remain open.
 - `global_goal`: active.
+
+## 2026-08-02 H6 x H14 x H12 endpoint compact-integration checkpoint
+
+- `parent_campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `subattack`: `HEIGHT-TEN-ENDPOINT-COMPACT-INTEGRATION-01` reaches its fixed compact outputs and
+  stops successfully after immutable evidence; the parent endpoint-mass producer remains active.
+- `public_preregistration`: commit `90e5b79f0da8063963c87c6c4434451d9a9432d7` passed Lean
+  Action run `30722867389`, build job `91429374054`, in `2m18s`.
+- `closed_edge_50`: Lean proves the positive compact exponent lies in `[0,7/10]` and bounds its
+  exponential by a fourth power of an explicit rational quadratic.
+- `closed_edge_51`: Lean proves the negative compact exponential is bounded by an independent
+  fourth-power quadratic certificate.
+- `closed_edge_52`: exact degree-thirty and degree-twenty rational polynomial primitives prove
+  the envelope integrals are at most `7/20` and `1/10`.
+- `closed_edge_53`: both envelopes transfer to the literal source-contour integrand, proving the
+  actual compact endpoint integrals and their combined bound `<=9/20`.
+- `resource_record`: three theorem-local scopes set `maxHeartbeats` to `4000000`; two also set
+  `maxRecDepth` to `100000` and one to `1000000`, solely for exact rational polynomial
+  normalization. The module passes direct warning-as-error compilation.
+- `local_audit`: production and registration files pass warning-as-error; seven selected axiom
+  prints use only `propext`, `Classical.choice`, and `Quot.sound`; focused placeholder and patch
+  scans are clean; full build passes `8833/8833`.
+- `next_exact_producer`: prove the two source-contour tails have combined mass at most `3/20`,
+  retaining phase-sensitive Gaussian decay rather than optimizing unrelated constants.
+- `strict_limit`: no individual endpoint mass, total endpoint mass `<=3/5`, literal remainder
+  margin, interval nonvanishing, complete height-ten certificate, H12, or RH follows yet.
+- `route_policy`: this is an exact historical-contour omission checkpoint. Independent
+  conjectures, falsification, and direct RH attacks remain open.
+- `global_goal`: active.

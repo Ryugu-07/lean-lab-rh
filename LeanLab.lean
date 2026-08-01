@@ -148,6 +148,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelLowZero
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseNorm
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseMargin
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelEndpointMass
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelCompactIntegral
 import LeanLab.Riemann.Targets
 import LeanLab.Riemann.TargetChecks
 import LeanLab.Riemann.AxiomsAudit

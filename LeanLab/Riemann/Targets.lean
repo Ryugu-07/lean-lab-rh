@@ -143,6 +143,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelLowZero
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseNorm
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseMargin
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelEndpointMass
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelCompactIntegral
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -2194,6 +2195,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``norm_heightTenRiemannSiegelLineIntegrand_one_positiveCompact_le
       status := .proven
       note := "The endpoint-mass subattack now compiles the exact quartic denominator identity, a polynomial reciprocal-denominator envelope on abs(v)<=1/2, a sinh-based exponential tail envelope, exact arctangent formulas and cubic phase bounds, rational distance-power bounds, and actual-integrand pointwise envelopes at y=13/2 and y=10. Lean also rejected the initially navigated inverse-square-root range x<=21/20; the corrected proved range is x<=51/50 and contains the actual compact contour parameter. This is structural progress inside the fixed historical source mechanism. The compact exponential integrations, remaining phase-sensitive tails, total endpoint mass <=3/5, literal remainder margin, interval nonvanishing, height-ten certificate, H12, and RH remain open." },
+    { id := "H14.riemann-siegel.height-ten-endpoint-mass-compact-integration"
+      tier := .tier1
+      title := "Integrate the compact height-ten endpoint masses exactly"
+      statement :=
+        "Replace both compact endpoint exponentials by proof-producing rational polynomial envelopes, integrate the literal endpoint-integrand bounds exactly on 0<v<=1/2, and prove that the two compact masses total at most 9/20."
+      leanName := some ``sum_integral_norm_heightTenRiemannSiegelLineIntegrand_one_compact_le_nineTwentieths
+      status := .proven
+      note := "The compact endpoint subattack compiles a concave-tangent range certificate for the positive cubic exponent, a fourth-power Pade polynomial upper bound, a fourth-power quadratic bound for the negative exponential, and rational quartic denominator transfer. Formal polynomial primitives prove the actual positive compact mass at most 7/20 and the actual negative compact mass at most 1/10, hence compact total at most 9/20. The two phase-sensitive tails must now total at most 3/20 before HeightTenRiemannSiegelOneEndpointMassBound can close. No individual full endpoint mass, total endpoint mass <=3/5, literal remainder margin, interval nonvanishing, height-ten certificate, H12, or RH is proved." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"
