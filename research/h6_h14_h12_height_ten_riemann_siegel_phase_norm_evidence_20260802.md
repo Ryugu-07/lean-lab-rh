@@ -7,7 +7,7 @@ Parent campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 Subattack: `HEIGHT-TEN-RIEMANN-SIEGEL-PHASE-NORM-01`
 
 Classification: `HISTORICAL_OMISSION_CHECKPOINT / PREFACTOR_PRODUCER_CLOSED /
-ENDPOINT_MASS_OPEN / PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_PENDING_CI /
+ENDPOINT_MASS_OPEN / PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_GREEN /
 SUBATTACK_ACTIVE / GLOBAL_GOAL_ACTIVE`
 
 ## Frozen implementation
@@ -32,8 +32,14 @@ Frozen production blobs:
 | `LeanLab/Riemann/TargetChecks.lean` | `6a53df17596ec6b2ba1df93ef31c7632ac6c1792` |
 | `LeanLab/Riemann/AxiomsAudit.lean` | `236788b244c070ae49c52efb7a6311d244a44f26` |
 
-This evidence commit is docs only. All six blob identities must remain equal to the table above
-after its public CI passes.
+The evidence commit is docs only. Its public CI and the post-CI blob check preserve all six
+identities in the table above.
+
+## Immutable evidence verification
+
+Docs-only evidence commit `41b2006719acdc14fcfc7ac52c2263f13b93e26e` passed Lean Action run
+`30718252798`, build job `91417523983`, in `2m22s`. A post-CI `git ls-tree` check confirms that
+all six production blobs remain exactly equal to the frozen table.
 
 ## Compiled claim boundary
 

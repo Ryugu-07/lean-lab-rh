@@ -70,8 +70,9 @@ entirely in the absolute mass of the phase-aware source contour at two fixed end
 
 Frozen implementation commit `6191095ff2bf8da3634059e36b46c55dd9a1183f` passed Lean Action
 run `30718017024`, build job `91416905387`, in `3m30s`. Six production blobs are frozen in the
-docs-only immutable-evidence record; that record still requires its own public CI and post-CI
-identity check.
+docs-only immutable-evidence record. Evidence commit
+`41b2006719acdc14fcfc7ac52c2263f13b93e26e` passed Lean Action run `30718252798`, build job
+`91417523983`, in `2m22s`; the post-CI check preserves all six blob identities.
 
 ## Next exact producer
 

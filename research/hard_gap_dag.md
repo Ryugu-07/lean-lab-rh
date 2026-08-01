@@ -5592,6 +5592,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `public_implementation`: frozen commit
   `6191095ff2bf8da3634059e36b46c55dd9a1183f` passed Lean Action run `30718017024`, build job
   `91416905387`, in `3m30s`; six Lean blobs are frozen for docs-only immutable evidence.
+- `immutable_evidence`: docs-only commit
+  `41b2006719acdc14fcfc7ac52c2263f13b93e26e` passed Lean Action run `30718252798`, build job
+  `91417523983`, in `2m22s`; all six frozen Lean blobs are unchanged.
 - `classification`: `HISTORICAL_OMISSION_CHECKPOINT / PREFACTOR_PRODUCER_CLOSED /
   ENDPOINT_MASS_OPEN / RH_FRONTIER_DELTA_0`.
 - `next_exact_producer`: certify the two fixed endpoint masses with their exact denominator
