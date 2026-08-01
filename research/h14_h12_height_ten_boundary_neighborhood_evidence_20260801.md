@@ -6,8 +6,8 @@ Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Subattack: `HEIGHT-TEN-TWO-BOUNDARY-NEIGHBORHOODS-01`
 
-Classification: `ACTUAL_TOPOLOGICAL_REDUCTION / IMPLEMENTATION_PUBLIC_GREEN /
-IMMUTABLE_EVIDENCE_CI_PENDING / RH_FRONTIER_DELTA_0`
+Classification: `ACTUAL_TOPOLOGICAL_REDUCTION / IMMUTABLE_EVIDENCE_PUBLIC_GREEN /
+RH_FRONTIER_DELTA_0`
 
 ## Public implementation
 
@@ -32,11 +32,11 @@ the public implementation commit.
 
 ## Immutable evidence
 
-- Documentation-only commit: pending
-- Lean Action run: pending
-- Build job: pending
-- Result: pending
-- Blob check: pending
+- Documentation-only commit: `055ee2ff0cfd3afedd6a9227016f3d3c8e6ffade`
+- Lean Action run: `30706763852`
+- Build job: `91387115826`
+- Result: passed in `1m43s`
+- Blob check: all five frozen Lean blobs are unchanged from the public implementation commit
 
 ## Audited endpoints
 

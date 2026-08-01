@@ -5296,6 +5296,7 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `public_implementation`: frozen commit
   `cb466395ba6f9cd828497386090c7f0723a0a009` passed Lean Action run `30706556950`, build job
   `91386580043`, in `3m3s`.
-- `immutable_evidence`: docs-only record
-  `research/h14_h12_height_ten_boundary_neighborhood_evidence_20260801.md`; public CI pending.
+- `immutable_evidence`: docs-only commit
+  `055ee2ff0cfd3afedd6a9227016f3d3c8e6ffade` passed Lean Action run `30706763852`, build job
+  `91387115826`, in `1m43s`; all five frozen Lean blobs are unchanged.
 - `global_goal`: active.

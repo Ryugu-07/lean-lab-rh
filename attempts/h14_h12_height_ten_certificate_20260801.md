@@ -51,6 +51,7 @@ GLOBAL_GOAL_ACTIVE`
 | 36 | `TWO_BOUNDARY_OPENNESS` | Lean proves actual strict-negative positive-width sigma intervals at both `0+10i` and `1/2+10i`, trims their widths, and constructs `0<a<=b<1/2` such that strict data on `[a,b]` imply the complete height-ten horizontal. | Audit the exact statements and record that the existential cut points are not yet a computable finite cover. |
 | 37 | `LOCAL_AUDIT` | The new module, Targets, three exact TargetChecks, and three axiom prints pass warning-as-error. The selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; placeholder, resource-option, unsafe-declaration, and patch scans are clean; full build passes `8825/8825`. | Publish and freeze this topological reduction, then return to quantitative middle certification or the independent low-zero count producer. |
 | 38 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `cb466395ba6f9cd828497386090c7f0723a0a009` passed Lean Action run `30706556950`, build job `91386580043`, in `3m3s`. Five Lean blobs are frozen in the docs-only immutable-evidence record. | Publish the immutable-evidence commit and verify both its CI and blob identity. |
+| 39 | `IMMUTABLE_EVIDENCE` | Docs-only evidence commit `055ee2ff0cfd3afedd6a9227016f3d3c8e6ffade` passed Lean Action run `30706763852`, build job `91387115826`, in `1m43s`; all five frozen Lean blobs are unchanged. | Publish the receipt, then rerank quantitative middle boxes against one-dimensional low-zero quotient winding. |
 
 ## Current obstruction map
 
