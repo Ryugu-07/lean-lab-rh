@@ -77,3 +77,9 @@ This checkpoint does not prove either individual endpoint integral, their total 
 literal Riemann--Siegel remainder margin, interval zeta nonvanishing, an unconditional vertical
 boundary zone, the complete height-ten certificate, H12, or RH. The parent campaign and global RH
 Goal remain active.
+
+## Public implementation
+
+Frozen implementation commit `5cc6e43fad122b1bf40c1ff614183183ff4ccf53` passed Lean Action
+run `30721026723`, build job `91424754896`, in `2m59s`. The five Lean production blobs are
+recorded in the immutable-evidence document and must remain unchanged in its docs-only commit.

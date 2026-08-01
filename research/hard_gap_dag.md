@@ -5640,6 +5640,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   falsification, and direct RH attacks remain open at every stage.
 - `local_audit`: new module and registration files pass warning-as-error; five selected axiom
   prints use only `propext`, `Classical.choice`, and `Quot.sound`; full build passes `8832/8832`.
+- `public_implementation`: frozen commit `5cc6e43fad122b1bf40c1ff614183183ff4ccf53`
+  passed Lean Action run `30721026723`, build job `91424754896`, in `2m59s`; five Lean blobs are
+  frozen in the docs-only evidence record.
 - `strict_limit`: no endpoint integral, total endpoint mass, literal remainder margin, interval
   nonvanishing, vertical boundary zone, complete height-ten certificate, H12, or RH theorem is
   claimed by this checkpoint.
