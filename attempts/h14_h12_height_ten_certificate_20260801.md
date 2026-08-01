@@ -6,8 +6,8 @@ Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Node: `H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
-Status: `MEANINGFUL_PARTIAL_PUBLIC_GREEN / CAMPAIGN_ACTIVE /
-GLOBAL_GOAL_ACTIVE`
+Status: `MEANINGFUL_PARTIAL_LOCAL_AUDITED / PRODUCER_SUBATTACK_LOCAL_COMPLETE /
+CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 
 ## Attempt ledger
 
@@ -64,6 +64,11 @@ GLOBAL_GOAL_ACTIVE`
 | 49 | `ROUTE_SELECTION_AND_EDGE_AUDIT` | The complete boundary condition splits into bottom, top, left, and right clauses. The top clause follows from the already required strict-negative horizontal; conjugation reduces the bottom clause to nonvanishing of real zeta and its derivative; the two vertical clauses remain genuine low-height ray-avoidance producers. | Seek an unconditional bottom proof before introducing any new boundary hypothesis. |
 | 50 | `CROSS_ROUTE_DISCOVERY` | The historical one-correction Euler--Maclaurin evaluator at cutoff `N=1` has symbolic real centers `1/2-1/(1-sigma)` and `-1/(1-sigma)^2`. Its compiled value and derivative errors have strict navigation margins throughout `0<sigma<=1/2`, while `sigma=0` has exact Mathlib formulas. No decimal is a premise. | Preregister actual-function negativity, unconditional bottom slit membership, and reduction to two vertical clauses. |
 | 51 | `PREREGISTRATION` | Subattack `HEIGHT-TEN-BOUNDARY-RAY-PRODUCER-01` fixes unconditional bottom actual-zeta outputs and the exact two-vertical certificate constructor. An abstract decomposition alone is explicitly insufficient. | Publish the docs-only gate and require public Lean Action CI before production proof edits. |
+| 52 | `PUBLIC_GATE` | Docs-only preregistration commit `87d3d144e237667a8fe54d4d17877ee0767f0ac3` passed Lean Action run `30709645182`, build job `91394727872`, in `1m42s`. | Open production editing for the fixed bottom and two-vertical outputs. |
+| 53 | `DOMAIN_OBSTACLE_AND_REPAIR` | The inherited Abel continuation-domain wrapper exposes only `Re(s)>1/10`, which does not cover the intended open bottom segment. The project already proves the actual Abel finite-tail identity for `Re(s)>0`; Lean now transfers the one-correction Euler--Maclaurin value and derivative identities and norm bounds to that natural domain. | Instantiate the repaired evaluator at cutoff `N=1` and prove symbolic margins. |
+| 54 | `ACTUAL_BOTTOM_SIGN` | Exact `N=1` centers and errors compile. They prove `Re zeta(sigma)<0` and `Re zeta'(sigma)<0` for every `0<=sigma<=1/2`, with `sigma=0` discharged by exact zeta and derivative formulas. Conjugation makes both values real, so the actual quotient has positive real part. | Convert quotient positivity into unconditional bottom slit-plane membership. |
+| 55 | `TWO_VERTICAL_REDUCTION` | `I*(zeta'/zeta)` lies in `Complex.slitPlane` on the complete bottom. The existing strict-negative top target supplies the top clause, and Lean constructs both `SpeiserRotatedSlitBoundary I t` and the literal height-ten certificate from exactly the two remaining vertical clauses. | Audit the new source dependency boundary without claiming either vertical clause. |
+| 56 | `LOCAL_AUDIT` | The new module, Targets, TargetChecks, AxiomsAudit, and project entry pass warning-as-error. Selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; focused forbidden scans and `git diff --check` are clean; the full build passes `8827/8827`. | Publish the frozen implementation, then attach immutable public CI evidence. |
 
 ## Current obstruction map
 
@@ -85,10 +90,12 @@ GLOBAL_GOAL_ACTIVE`
    height-ten segment, and the full top edge is reduced to one compact middle `[a,b]` with
    `0<a<=b<1/2`. The cut points are noncomputable existence witnesses, so explicit variation
    bounds and a finite rational subcover remain open.
-9. `REDUCED_TO_BOUNDARY_RAY_AVOIDANCE`: for every `c,t`, one common rotated slit-plane branch on
-   the four source-rectangle edges now proves the actual multiplicity-bearing count equality.
-   The unconditional height-ten producer `SpeiserRotatedSlitBoundary I 10` remains open.
-10. `OPEN`: `levinsonMontgomeryHeightTenCertificate_actual`.
+9. `PARTIALLY_CLOSED_BOUNDARY_RAY_PRODUCER`: the complete real bottom edge is unconditional, and
+   the top slit clause follows from `SpeiserStrictNegativeHorizontal t`. The four-edge producer
+   is reduced exactly to positive-imaginary-ray avoidance on the left and right vertical edges.
+10. `OPEN_TWO_VERTICALS`: prove `SpeiserPositiveImaginaryRayVerticalBoundary 10`; neither
+    vertical clause is assumed closed by the current actual-zeta estimates.
+11. `OPEN`: the compact-middle top sign and `levinsonMontgomeryHeightTenCertificate_actual`.
 
 ## Runtime record
 

@@ -424,6 +424,26 @@ theorem riemannZeta_eq_eulerMaclaurinOneZetaApprox_add_remainder
   field_simp [hsZero]
   ring
 
+/-- The first corrected Euler--Maclaurin formula on its natural half-plane `re(s) > 0`,
+away from the pole at one. -/
+theorem riemannZeta_eq_eulerMaclaurinOneZetaApprox_add_remainder_of_re_pos
+    {s : ℂ} (hsOne : s ≠ 1) (hsRe : 0 < s.re) {N : ℕ} (hN : 1 ≤ N) :
+    riemannZeta s =
+      eulerMaclaurinOneZetaApprox s N + eulerMaclaurinOneZetaRemainder s N := by
+  rw [riemannZeta_eq_zetaPartialSum_sub_tail_of_re_pos s hsOne hsRe N hN]
+  change zetaPartialSum s N - (N : ℂ) ^ (1 - s) / (1 - s) -
+      s * abelZetaTailIntegral s N =
+    eulerMaclaurinOneZetaApprox s N + eulerMaclaurinOneZetaRemainder s N
+  rw [abelZetaTailIntegral_eq_half_cpow_add_quadraticTail hsRe hN]
+  unfold eulerMaclaurinOneZetaApprox eulerMaclaurinOneZetaRemainder
+    abelZetaApprox
+  have hsZero : s ≠ 0 := by
+    intro h
+    rw [h] at hsRe
+    norm_num at hsRe
+  field_simp [hsZero]
+  ring
+
 /-- Explicit value radius for the first corrected Euler--Maclaurin formula. -/
 def eulerMaclaurinOneZetaError (s : ℂ) (N : ℕ) : ℝ :=
   ‖s * (s + 1)‖ * ((N : ℝ) ^ (-s.re - 1) / (8 * (s.re + 1)))
@@ -468,6 +488,25 @@ theorem norm_riemannZeta_sub_eulerMaclaurinOneZetaApprox_le
   have hsRe := zetaAbelContinuationDomain_re_pos hs
   have htail := norm_integral_abelQuadraticTailKernel_le hsRe hN
   rw [riemannZeta_eq_eulerMaclaurinOneZetaApprox_add_remainder hs hN,
+    add_sub_cancel_left]
+  unfold eulerMaclaurinOneZetaRemainder eulerMaclaurinOneZetaError
+  rw [norm_mul, norm_mul, norm_neg]
+  calc
+    ‖s‖ * ‖s + 1‖ * ‖∫ u in Ioi (N : ℝ), abelQuadraticTailKernel s u‖ =
+        ‖s * (s + 1)‖ * ‖∫ u in Ioi (N : ℝ), abelQuadraticTailKernel s u‖ := by
+      rw [norm_mul]
+    _ ≤ ‖s * (s + 1)‖ * ((N : ℝ) ^ (-s.re - 1) / (8 * (s.re + 1))) :=
+      mul_le_mul_of_nonneg_left htail (norm_nonneg (s * (s + 1)))
+
+/-- The first corrected actual-zeta value bound on the full half-plane `re(s) > 0`, away from
+the pole at one. -/
+theorem norm_riemannZeta_sub_eulerMaclaurinOneZetaApprox_le_of_re_pos
+    {s : ℂ} (hsOne : s ≠ 1) (hsRe : 0 < s.re) {N : ℕ} (hN : 1 ≤ N) :
+    ‖riemannZeta s - eulerMaclaurinOneZetaApprox s N‖ ≤
+      eulerMaclaurinOneZetaError s N := by
+  have htail := norm_integral_abelQuadraticTailKernel_le hsRe hN
+  rw [riemannZeta_eq_eulerMaclaurinOneZetaApprox_add_remainder_of_re_pos
+      hsOne hsRe hN,
     add_sub_cancel_left]
   unfold eulerMaclaurinOneZetaRemainder eulerMaclaurinOneZetaError
   rw [norm_mul, norm_mul, norm_neg]
@@ -914,6 +953,46 @@ theorem deriv_riemannZeta_sub_eulerMaclaurinOneZetaDerivApprox
     ring
   exact (hright.unique (hleft.congr_of_eventuallyEq heq.symm)).symm
 
+/-- The differentiated first-corrected Euler--Maclaurin identity on the full half-plane
+`re(s) > 0`, away from the pole at one. -/
+theorem deriv_riemannZeta_sub_eulerMaclaurinOneZetaDerivApprox_of_re_pos
+    {s : ℂ} (hsOne : s ≠ 1) (hsRe : 0 < s.re) {N : ℕ} (hN : 1 ≤ N) :
+    deriv riemannZeta s - eulerMaclaurinOneZetaDerivApprox s N =
+      -((2 * s + 1) *
+          (∫ u in Ioi (N : ℝ), abelQuadraticTailKernel s u) +
+        s * (s + 1) * abelQuadraticTailDerivIntegral s N) := by
+  have hzeta : HasDerivAt riemannZeta (deriv riemannZeta s) s :=
+    (differentiableAt_riemannZeta hsOne).hasDerivAt
+  have happDiff := differentiableAt_eulerMaclaurinOneZetaApprox s hsOne hN
+  have happ : HasDerivAt (fun w => eulerMaclaurinOneZetaApprox w N)
+      (eulerMaclaurinOneZetaDerivApprox s N) s := by
+    simpa [eulerMaclaurinOneZetaDerivApprox] using happDiff.hasDerivAt
+  have hleft := hzeta.sub happ
+  have htail := abelQuadraticTailIntegral_hasDerivAt hsRe hN
+  have hrightRaw :=
+    (((hasDerivAt_id s).neg.mul ((hasDerivAt_id s).add_const (1 : ℂ))).mul htail)
+  have hright : HasDerivAt
+      (fun w => eulerMaclaurinOneZetaRemainder w N)
+      (-((2 * s + 1) *
+          (∫ u in Ioi (N : ℝ), abelQuadraticTailKernel s u) +
+        s * (s + 1) * abelQuadraticTailDerivIntegral s N)) s := by
+    refine (hrightRaw.congr_deriv (by
+      simp only [Function.id_def, Pi.neg_apply, Pi.mul_apply]
+      ring)).congr_of_eventuallyEq (Eventually.of_forall fun w => ?_)
+    simp only [eulerMaclaurinOneZetaRemainder, Function.id_def,
+      Pi.neg_apply, Pi.mul_apply]
+  have hmem : s ∈ zetaAbelPositiveDomain := ⟨hsOne, hsRe⟩
+  have hdomain : ∀ᶠ w in nhds s, w ∈ zetaAbelPositiveDomain :=
+    isOpen_zetaAbelPositiveDomain.mem_nhds hmem
+  have heq :
+      (fun w => riemannZeta w - eulerMaclaurinOneZetaApprox w N) =ᶠ[nhds s]
+        fun w => eulerMaclaurinOneZetaRemainder w N := by
+    filter_upwards [hdomain] with w hw
+    rw [riemannZeta_eq_eulerMaclaurinOneZetaApprox_add_remainder_of_re_pos
+      hw.1 hw.2 hN]
+    ring
+  exact (hright.unique (hleft.congr_of_eventuallyEq heq.symm)).symm
+
 /-- Explicit norm bound for the parameter derivative of the quadratic-periodic tail. -/
 theorem norm_abelQuadraticTailDerivIntegral_le
     {s : ℂ} (hs : 0 < s.re) {N : ℕ} (hN : 1 ≤ N) :
@@ -1074,6 +1153,32 @@ theorem norm_deriv_riemannZeta_sub_eulerMaclaurinOneZetaDerivApprox_le
   have hvalue := norm_integral_abelQuadraticTailKernel_le hsRe hN
   have hderiv := norm_abelQuadraticTailDerivIntegral_le hsRe hN
   rw [deriv_riemannZeta_sub_eulerMaclaurinOneZetaDerivApprox hs hN, norm_neg]
+  unfold eulerMaclaurinOneZetaDerivError
+  calc
+    ‖(2 * s + 1) * (∫ u in Ioi (N : ℝ), abelQuadraticTailKernel s u) +
+        s * (s + 1) * abelQuadraticTailDerivIntegral s N‖ ≤
+        ‖(2 * s + 1) *
+          (∫ u in Ioi (N : ℝ), abelQuadraticTailKernel s u)‖ +
+        ‖s * (s + 1) * abelQuadraticTailDerivIntegral s N‖ := norm_add_le _ _
+    _ = ‖2 * s + 1‖ *
+          ‖∫ u in Ioi (N : ℝ), abelQuadraticTailKernel s u‖ +
+        ‖s * (s + 1)‖ * ‖abelQuadraticTailDerivIntegral s N‖ := by
+      rw [norm_mul, norm_mul]
+    _ ≤ ‖2 * s + 1‖ * ((N : ℝ) ^ (-s.re - 1) / (8 * (s.re + 1))) +
+        ‖s * (s + 1)‖ * ((1 / 8 : ℝ) * ((N : ℝ) ^ (-(s.re + 1)) *
+          (Real.log (N : ℝ) / (s.re + 1) + 1 / (s.re + 1) ^ 2))) := by
+      gcongr
+
+/-- The first corrected actual-zeta derivative bound on the full half-plane `re(s) > 0`, away
+from the pole at one. -/
+theorem norm_deriv_riemannZeta_sub_eulerMaclaurinOneZetaDerivApprox_le_of_re_pos
+    {s : ℂ} (hsOne : s ≠ 1) (hsRe : 0 < s.re) {N : ℕ} (hN : 1 ≤ N) :
+    ‖deriv riemannZeta s - eulerMaclaurinOneZetaDerivApprox s N‖ ≤
+      eulerMaclaurinOneZetaDerivError s N := by
+  have hvalue := norm_integral_abelQuadraticTailKernel_le hsRe hN
+  have hderiv := norm_abelQuadraticTailDerivIntegral_le hsRe hN
+  rw [deriv_riemannZeta_sub_eulerMaclaurinOneZetaDerivApprox_of_re_pos
+    hsOne hsRe hN, norm_neg]
   unfold eulerMaclaurinOneZetaDerivError
   calc
     ‖(2 * s + 1) * (∫ u in Ioi (N : ℝ), abelQuadraticTailKernel s u) +

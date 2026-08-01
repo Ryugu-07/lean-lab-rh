@@ -5357,5 +5357,38 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   definition, generic assembly, and height-ten constructor.
 - `strict_boundary`: left and right low vertical ray avoidance, compact-middle top sign, full
   height-ten certificate, CountDichotomy, Speiser equivalence, H12, and RH remain open.
-- `production_gate`: docs-only preregistration public CI before Lean edits.
+- `production_gate`: docs-only preregistration commit
+  `87d3d144e237667a8fe54d4d17877ee0767f0ac3` passed Lean Action run `30709645182`, build job
+  `91394727872`, in `1m42s` before Lean edits.
+- `global_goal`: active.
+
+## 2026-08-02 H14 x H12 boundary-ray producer checkpoint
+
+- `campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `subattack`: `HEIGHT-TEN-BOUNDARY-RAY-PRODUCER-01` is locally complete and awaits a frozen
+  public implementation commit.
+- `closed_edge_24`: the actual Abel finite-tail identity, one-correction Euler--Maclaurin value
+  identity, derivative identity, and both norm bounds now hold on the natural domain
+  `Re(s)>0`; this removes the inherited wrapper's artificial `Re(s)>1/10` restriction.
+- `closed_edge_25`: exact cutoff-one centers and symbolic errors prove actual
+  `Re zeta(sigma)<0` and `Re zeta'(sigma)<0` on the full real segment
+  `0<=sigma<=1/2`, including exact endpoint handling at zero.
+- `closed_edge_26`: conjugation and the strict signs prove
+  `Re(zeta'(sigma)/zeta(sigma))>0`, hence unconditional rotated-slit membership on the complete
+  bottom edge.
+- `closed_edge_27`: `SpeiserStrictNegativeHorizontal t` supplies the top slit clause, so the
+  complete rotated-slit boundary and literal height-ten certificate are reduced to exactly the
+  left and right vertical positive-imaginary-ray avoidance clauses.
+- `strict_limit`: neither vertical clause nor the compact-middle top sign is proved. Therefore
+  `SpeiserRotatedSlitBoundary I 10`, the height-ten certificate, H12, and RH remain open.
+- `local_audit`: new module `8743/8743`; production and registration files pass
+  warning-as-error; selected axiom prints use only `propext`, `Classical.choice`, and
+  `Quot.sound`; focused forbidden scans and diff check are clean; full build `8827/8827`.
+- `classification`: `ACTUAL_BOTTOM_EDGE / HISTORICAL_EVALUATOR_REUSE /
+  SOURCE_DEPENDENCY_REDUCTION / RH_FRONTIER_DELTA_0`.
+- `historical_route_value`: the result identifies exactly where this
+  Levinson--Montgomery/argument-principle branch still needs new content: two low vertical ray
+  avoidances and one compact-middle top sign, rather than a generic four-edge winding premise.
+- `conjecture_policy`: independent conjecture proposal and falsification remain open while the
+  historical-route omission search continues.
 - `global_goal`: active.

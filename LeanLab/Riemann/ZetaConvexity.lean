@@ -82,6 +82,28 @@ theorem riemannZeta_eq_zetaPartialSum_sub_tail
   rw [← hsplit]
   linear_combination -habel
 
+/-- Abel summation with a finite Dirichlet sum and explicit tail on its natural half-plane
+`re(s) > 0`, away from the pole at one. -/
+theorem riemannZeta_eq_zetaPartialSum_sub_tail_of_re_pos
+    (s : ℂ) (hsOne : s ≠ 1) (hsRe : 0 < s.re) (N : ℕ) (hN : 1 ≤ N) :
+    riemannZeta s =
+      zetaPartialSum s N - (N : ℂ) ^ (1 - s) / (1 - s) -
+        s * ∫ u in Set.Ioi (N : ℝ), zetaAbelFractKernel s u := by
+  have hNReal : (1 : ℝ) ≤ N := by exact_mod_cast hN
+  have htail : IntegrableOn (fun u => zetaAbelFractKernel s u)
+      (Set.Ioi (N : ℝ)) volume := by
+    exact IntegrableOn.mono_set
+      (show IntegrableOn (fun u => zetaAbelFractKernel s u) (Set.Ioi (1 : ℝ)) volume from
+        ZetaAbelFractKernel.integrableOn_Ioi s hsRe)
+      (fun u hu => lt_of_le_of_lt hNReal hu)
+  have hsplit := intervalIntegral.integral_interval_add_Ioi'
+    (ZetaAbelFractKernel.intervalIntegrable s le_rfl hNReal) htail
+  have habel := ZetaPartialSum.abel_formula s hsOne N hN
+  rw [riemannZeta_eq_zetaAbelContinuationFormula_of_re_pos s hsOne hsRe,
+    zetaAbelContinuationFormula]
+  rw [← hsplit]
+  linear_combination -habel
+
 private theorem norm_zetaPartialSum_one_add_mul_I_le (t : ℝ) (N : ℕ) :
     ‖zetaPartialSum ((1 : ℂ) + t * Complex.I) N‖ ≤ (harmonic N : ℝ) := by
   rw [zetaPartialSum]

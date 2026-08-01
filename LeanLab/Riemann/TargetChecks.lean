@@ -22,6 +22,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenFiniteEvaluator
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenEndpoint
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryNeighborhood
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRotatedSlitWinding
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryRayProducer
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -7121,5 +7122,37 @@ example (hsign : SpeiserStrictNegativeHorizontal 10)
     LevinsonMontgomeryHeightTenCertificate :=
   levinsonMontgomeryHeightTenCertificate_of_positiveImaginaryRayAvoidance
     hsign hboundary
+
+example {s : ℂ} (hsOne : s ≠ 1) (hsRe : 0 < s.re) {N : ℕ} (hN : 1 ≤ N) :
+    ‖riemannZeta s - eulerMaclaurinOneZetaApprox s N‖ ≤
+      eulerMaclaurinOneZetaError s N :=
+  norm_riemannZeta_sub_eulerMaclaurinOneZetaApprox_le_of_re_pos hsOne hsRe hN
+
+example {s : ℂ} (hsOne : s ≠ 1) (hsRe : 0 < s.re) {N : ℕ} (hN : 1 ≤ N) :
+    ‖deriv riemannZeta s - eulerMaclaurinOneZetaDerivApprox s N‖ ≤
+      eulerMaclaurinOneZetaDerivError s N :=
+  norm_deriv_riemannZeta_sub_eulerMaclaurinOneZetaDerivApprox_le_of_re_pos hsOne hsRe hN
+
+example (sigma : ℝ) (hsigma : sigma ∈ Set.Icc (0 : ℝ) (1 / 2)) :
+    (riemannZeta (sigma : ℂ)).re < 0 :=
+  riemannZeta_realSegment_re_neg sigma hsigma
+
+example (sigma : ℝ) (hsigma : sigma ∈ Set.Icc (0 : ℝ) (1 / 2)) :
+    (deriv riemannZeta (sigma : ℂ)).re < 0 :=
+  deriv_riemannZeta_realSegment_re_neg sigma hsigma
+
+example (sigma : ℝ) (hsigma : sigma ∈ Set.Icc (0 : ℝ) (1 / 2)) :
+    Complex.I * speiserZetaDerivRatio (sigma : ℂ) ∈ Complex.slitPlane :=
+  speiserBottom_mem_rotatedSlit sigma hsigma
+
+example {t : ℝ} (hsign : SpeiserStrictNegativeHorizontal t)
+    (hvertical : SpeiserPositiveImaginaryRayVerticalBoundary t) :
+    SpeiserRotatedSlitBoundary Complex.I t :=
+  hsign.toRotatedSlitBoundary_of_vertical hvertical
+
+example (hsign : SpeiserStrictNegativeHorizontal 10)
+    (hvertical : SpeiserPositiveImaginaryRayVerticalBoundary 10) :
+    LevinsonMontgomeryHeightTenCertificate :=
+  levinsonMontgomeryHeightTenCertificate_of_verticalRayAvoidance hsign hvertical
 
 end LeanLab.Riemann

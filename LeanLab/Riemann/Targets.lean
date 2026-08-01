@@ -137,6 +137,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenFiniteEvaluator
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenEndpoint
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryNeighborhood
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRotatedSlitWinding
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryRayProducer
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -2148,6 +2149,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``speiserUpperLeftCounts_eq_of_rotatedSlitBoundary
       status := .proven
       note := "Subattack HEIGHT-TEN-POSITIVE-IMAGINARY-RAY-WINDING-01 closes the count-equality consumer. Lean derives horizontal and vertical endpoint formulas for the actual quotient, proves exact four-edge cancellation through one common principal-log branch, invokes the finite argument principle for zeta and zeta', and identifies the resulting compact divisor sums with the source multiplicity counts. At height ten, SpeiserRotatedSlitBoundary I 10 means that zeta'/zeta avoids the positive imaginary ray on all four sides and is now a sufficient one-dimensional boundary producer for the count equality. That avoidance statement is not yet proved; neither the height-ten certificate, H12, nor RH follows unconditionally." },
+    { id := "H12.levinson-montgomery.height-ten-boundary-ray-producer"
+      tier := .tier1
+      title := "Remove the bottom and top height-ten ray obligations"
+      statement :=
+        "Prove unconditionally that zeta and zeta' have negative real part on the complete real segment [0,1/2], place I*(zeta'/zeta) in the slit plane on the bottom edge, derive the top slit condition from the existing strict-negative horizontal target, and reduce the complete height-ten certificate to positive-imaginary-ray avoidance on only the two vertical edges."
+      leanName := some ``levinsonMontgomeryHeightTenCertificate_of_verticalRayAvoidance
+      status := .proven
+      note := "Subattack HEIGHT-TEN-BOUNDARY-RAY-PRODUCER-01 removes two of the four boundary obligations. Lean first extends the finite Abel and first-corrected Euler--Maclaurin value and derivative bounds from the inherited artificial Re(s)>1/10 domain to their natural Re(s)>0 half-plane. At cutoff N=1 the exact centers and symbolic remainders prove Re zeta(sigma)<0 and Re zeta'(sigma)<0 for 0<sigma<=1/2; exact formulas close sigma=0. Conjugation makes both values real, hence Re(zeta'/zeta)>0 and the complete bottom edge avoids the positive imaginary ray after rotation by I. The top edge follows from SpeiserStrictNegativeHorizontal. Exactly the left and right vertical ray-avoidance clauses remain; no vertical producer, complete height-ten certificate, H12, or RH is claimed unconditionally." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"
