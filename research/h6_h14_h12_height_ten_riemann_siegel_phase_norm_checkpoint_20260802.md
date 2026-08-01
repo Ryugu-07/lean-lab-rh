@@ -66,6 +66,13 @@ entirely in the absolute mass of the phase-aware source contour at two fixed end
 - `git diff --check` is clean;
 - full local build passes `8831/8831`.
 
+## Public implementation
+
+Frozen implementation commit `6191095ff2bf8da3634059e36b46c55dd9a1183f` passed Lean Action
+run `30718017024`, build job `91416905387`, in `3m30s`. Six production blobs are frozen in the
+docs-only immutable-evidence record; that record still requires its own public CI and post-CI
+identity check.
+
 ## Next exact producer
 
 Prove `HeightTenRiemannSiegelOneEndpointMassBound`. The preferred attack should exploit the exact

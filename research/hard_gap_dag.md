@@ -5589,6 +5589,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `local_audit`: both new modules pass warning-as-error; six selected axiom prints use only
   `propext`, `Classical.choice`, and `Quot.sound`; focused forbidden scans and patch checks are
   clean; full build passes `8831/8831`.
+- `public_implementation`: frozen commit
+  `6191095ff2bf8da3634059e36b46c55dd9a1183f` passed Lean Action run `30718017024`, build job
+  `91416905387`, in `3m30s`; six Lean blobs are frozen for docs-only immutable evidence.
 - `classification`: `HISTORICAL_OMISSION_CHECKPOINT / PREFACTOR_PRODUCER_CLOSED /
   ENDPOINT_MASS_OPEN / RH_FRONTIER_DELTA_0`.
 - `next_exact_producer`: certify the two fixed endpoint masses with their exact denominator
