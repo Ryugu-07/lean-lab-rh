@@ -6,8 +6,8 @@ Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Node: `H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
-Status: `MEANINGFUL_PARTIAL_LOCAL_AUDITED / PRODUCER_SUBATTACK_LOCAL_COMPLETE /
-CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
+Status: `COMPLETE_BOUNDARY_SUBATTACK_PREREGISTERED / CAMPAIGN_ACTIVE /
+GLOBAL_GOAL_ACTIVE`
 
 ## Attempt ledger
 
@@ -71,6 +71,10 @@ CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 | 56 | `LOCAL_AUDIT` | The new module, Targets, TargetChecks, AxiomsAudit, and project entry pass warning-as-error. Selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; focused forbidden scans and `git diff --check` are clean; the full build passes `8827/8827`. | Publish the frozen implementation, then attach immutable public CI evidence. |
 | 57 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `82c2e991a22d0a21db318f9023941c7b2a764ff2` passed Lean Action run `30711032719`, build job `91398404697`, in `17m17s`. Seven Lean blobs are frozen for the docs-only immutable-evidence record. | Publish the evidence record, verify its CI and all seven blob identities, then issue the local closure receipt. |
 | 58 | `IMMUTABLE_EVIDENCE_AND_LOCAL_STOP` | Docs-only evidence commit `b679dd8d7b73f282f68071842af3cd82f9c99825` passed Lean Action run `30711720009`, build job `91400251532`, in `1m44s`; all seven frozen Lean blobs are unchanged. The bottom-edge/two-vertical reduction subattack stops successfully, while both vertical producers, the compact-middle top sign, parent certificate campaign, and global RH Goal remain active. | Rerank the two vertical edges against the compact-middle top producer by historical-route value and structural leverage. |
+| 59 | `HISTORICAL_SOURCE_REENTRY` | Levinson--Montgomery's proof of Theorem 9 explicitly invokes direct consideration of `zeta'(it)/zeta(it)` and reports an approximate `-2*pi` argument change between `-6.254` and `6.254`. The project's open left vertical crosses the same low-height region, while its `t>=10` continuation is already closed. | Test whether the source's distinguished transition can organize both low vertical edges. |
+| 60 | `FALSIFICATION_NAVIGATION` | Navigation-only high-precision grids support the same rational three-zone geometry on both verticals: positive quotient real part on `[0,6]`, negative quotient imaginary part on `[6,13/2]`, and negative quotient real part on `[13/2,10]`. The complete top sampled with negative real part. No decimal, grid result, or external computation is a premise. | Prefer one complete-boundary producer over separate constant-optimization subattacks. |
+| 61 | `ROUTE_SELECTION` | Select the literal remaining height-ten boundary. Critical-line completion/Gamma structure, the left functional-equation argument, and the existing Euler--Maclaurin evaluator can share one three-zone certificate; proving only an abstract partition would not shorten the parent source dependency. | Preregister unconditional signs on all seven zones and the actual height-ten certificate. |
+| 62 | `PREREGISTRATION` | Subattack `HEIGHT-TEN-COMPLETE-BOUNDARY-01` fixes both vertical three-zone sign packages, the complete top strict sign, the rotated-slit boundary, and `LevinsonMontgomeryHeightTenCertificate` as required outputs. | Publish docs only and await public Lean Action CI before production proof edits. |
 
 ## Current obstruction map
 

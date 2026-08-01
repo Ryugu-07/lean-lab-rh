@@ -5400,3 +5400,33 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `local_stop`: close only `HEIGHT-TEN-BOUNDARY-RAY-PRODUCER-01`; keep both vertical producers,
   the compact-middle top sign, parent height-ten certificate campaign, and global RH Goal active.
 - `global_goal`: active.
+
+## 2026-08-02 H14 x H12 complete-boundary selection
+
+- `campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `selected_subattack`: prove the complete remaining height-ten boundary with one shared
+  three-zone vertical geometry and the already isolated top segment.
+- `historical_source_reentry`: Levinson--Montgomery's proof of Theorem 9 directly considers
+  `zeta'(it)/zeta(it)` and locates an approximate full argument turn between `-6.254` and
+  `6.254`. The open left vertical contains the positive half of this distinguished transition.
+- `candidate_partition`: on each of `s=iy` and `s=1/2+iy`, use `[0,6]`, `[6,13/2]`, and
+  `[13/2,10]`, with candidate signs `Re q>0`, `Im q<0`, and `Re q<0` respectively for
+  `q=zeta'/zeta`.
+- `navigation_only`: high-precision grids found strict margins in all six vertical zones and
+  strict negative real part on the complete top. No sampled value or decimal is a theorem
+  premise.
+- `structural_inputs`: completed-zeta reality and Gamma logarithmic derivative on the critical
+  line; functional-equation reflection on the imaginary axis; natural-domain one-correction
+  Euler--Maclaurin value and derivative balls; compactness and explicit variation bounds.
+- `fixed_success`: unconditional signs on all six vertical zones, unconditional
+  `SpeiserStrictNegativeHorizontal 10`, `SpeiserRotatedSlitBoundary I 10`, and the literal
+  `LevinsonMontgomeryHeightTenCertificate`.
+- `failure_boundary`: an abstract three-zone consumer, isolated point certificates, navigation
+  grids, or a nonreplayable external zero table do not close the subattack.
+- `strict_limit`: all candidate signs and the literal certificate remain open until their exact
+  Lean declarations compile and pass the standard axiom audit.
+- `historical_route_policy`: this is a fixed source dependency in the
+  Levinson--Montgomery/Speiser route, not an optimization of an arbitrary upper-bound constant.
+  Broader historical omission search and independent conjecture tests remain open.
+- `production_gate`: docs-only preregistration public CI before Lean edits.
+- `global_goal`: active.
