@@ -5650,3 +5650,28 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   nonvanishing, vertical boundary zone, complete height-ten certificate, H12, or RH theorem is
   claimed by this checkpoint.
 - `global_goal`: active.
+
+## 2026-08-02 H6 x H14 x H12 endpoint compact-integration selection
+
+- `parent_campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `selected_subattack`: `HEIGHT-TEN-ENDPOINT-COMPACT-INTEGRATION-01`.
+- `fixed_positive_output`: the actual height `13/2` endpoint-integrand norm over
+  `Ioc 0 (1/2)` is at most `7/20`.
+- `fixed_negative_output`: after the exact `v=-x` substitution, the actual height `10`
+  endpoint-integrand norm over `Ioc 0 (1/2)` is at most `1/10`.
+- `proof_shape`: retain the compiled cubic phase and quartic denominator correction, replace
+  each exponential by a rational polynomial certificate, and integrate by exact polynomial
+  primitives checked by Lean.
+- `rejected_candidate_49`: deleting the quartic correction leaves insufficient budget; coarse
+  ten- and twenty-bin constant envelopes also remain too large. These navigation values are not
+  theorem premises.
+- `success_boundary`: both literal compact integrals and their combined `9/20` bound must
+  compile. Generic exponential estimates or disconnected polynomial integrals are partial only.
+- `strict_limit`: the endpoint-mass producer still needs both tails to total at most `3/20`.
+  No endpoint total, remainder margin, interval nonvanishing, complete certificate, H12, or RH
+  follows from the compact outputs alone.
+- `production_gate`: publish this target and falsification record before the production Lean
+  implementation is exposed.
+- `route_policy`: this continues the exact historical contour omission search. Independent
+  conjectures, falsification, and direct RH attacks remain open.
+- `global_goal`: active.
