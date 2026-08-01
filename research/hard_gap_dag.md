@@ -5300,3 +5300,34 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   `055ee2ff0cfd3afedd6a9227016f3d3c8e6ffade` passed Lean Action run `30706763852`, build job
   `91387115826`, in `1m43s`; all five frozen Lean blobs are unchanged.
 - `global_goal`: active.
+
+## 2026-08-01 H14 x H12 rotated-slit winding checkpoint
+
+- `campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `selected_subattack`: replace separate low-zero enumeration by one common principal-log branch
+  for `zeta'/zeta` on the complete height-ten rectangle boundary.
+- `selection_reason`: the finite argument principle already expresses the multiplicity-count
+  difference as a boundary integral. A slit-plane certificate is one-dimensional and permits
+  interior zeros and poles, unlike a two-dimensional zero-free cover.
+- `public_preregistration`: commit `a557c9bf06b970a75e09d66c8a18cf9342b9d7db` passed Lean
+  Action run `30707509879`, build job `91389064687`, in `1m44s`.
+- `closed_edge_20`: a generic differentiable nonvanishing path whose fixed nonzero rotation stays
+  in `Complex.slitPlane` has integral of `g'/g` equal to one principal-log endpoint difference.
+- `closed_edge_21`: actual horizontal and vertical `zeta'/zeta` formulas establish edge
+  integrability and use a single rotated branch at all four corners.
+- `closed_edge_22`: the project's oriented rectangle boundary difference telescopes exactly to
+  zero under `SpeiserRotatedSlitBoundary c t`.
+- `closed_edge_23`: the actual finite argument principle and direct bottom-zero finset
+  identification prove equality of the existing zeta and zeta-derivative natural multiplicity
+  counts.
+- `strict_limit`: `SpeiserRotatedSlitBoundary I 10` is not yet proved. Navigation-only sampling
+  suggests positive-imaginary-ray avoidance, but no decimal or external computation is a premise.
+- `first_open_producer`: kernel-check positive-imaginary-ray avoidance for `zeta'/zeta` on the four
+  one-dimensional boundary edges, reusing analytic identities where they remove edges.
+- `second_open_producer`: certify the compact middle of the strict-negative height-ten top edge.
+- `local_audit`: new module `8742/8742`; production and registration files pass warning-as-error;
+  four selected axiom prints use only `propext`, `Classical.choice`, and `Quot.sound`; forbidden
+  scans and diff check are clean; full build `8826/8826`.
+- `classification`: `ACTUAL_COUNT_CONSUMER / SOURCE_DEPENDENCY_REDUCTION /
+  RH_FRONTIER_DELTA_0`.
+- `global_goal`: active.

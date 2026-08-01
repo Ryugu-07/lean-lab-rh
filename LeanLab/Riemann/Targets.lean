@@ -136,6 +136,7 @@ import LeanLab.Riemann.LevinsonMontgomeryTranscendentalInterval
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenFiniteEvaluator
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenEndpoint
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryNeighborhood
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenRotatedSlitWinding
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -2139,6 +2140,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``exists_heightTen_compactMiddle_reduction
       status := .proven
       note := "Subattack HEIGHT-TEN-TWO-BOUNDARY-NEIGHBORHOODS-01 combines the analytic left endpoint with the kernel-checked Euler--Maclaurin right endpoint. Analytic continuity of zeta and its derivative and continuity of their nonvanishing quotient give positive-width actual-function neighborhoods at both ends. Trimmed cut points 0<a<=b<1/2 make a three-interval case split reduce SpeiserStrictNegativeHorizontal 10 to the compact middle [a,b]. No numerical radius is assumed. The compact middle, low-zero multiplicity count, height-ten certificate, H12, and RH remain open." },
+    { id := "H12.levinson-montgomery.height-ten-rotated-slit-winding-consumer"
+      tier := .tier1
+      title := "Cancel the height-ten count difference through one slit-plane branch"
+      statement :=
+        "Show that if one nonzero rotation of zeta'/zeta maps all four sides of the source rectangle into the complex slit plane, then a single principal-log branch telescopes around the boundary and the multiplicity-bearing zeta and zeta-derivative counts are equal."
+      leanName := some ``speiserUpperLeftCounts_eq_of_rotatedSlitBoundary
+      status := .proven
+      note := "Subattack HEIGHT-TEN-POSITIVE-IMAGINARY-RAY-WINDING-01 closes the count-equality consumer. Lean derives horizontal and vertical endpoint formulas for the actual quotient, proves exact four-edge cancellation through one common principal-log branch, invokes the finite argument principle for zeta and zeta', and identifies the resulting compact divisor sums with the source multiplicity counts. At height ten, SpeiserRotatedSlitBoundary I 10 means that zeta'/zeta avoids the positive imaginary ray on all four sides and is now a sufficient one-dimensional boundary producer for the count equality. That avoidance statement is not yet proved; neither the height-ten certificate, H12, nor RH follows unconditionally." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

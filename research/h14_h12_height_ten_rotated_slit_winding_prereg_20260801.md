@@ -8,7 +8,8 @@ Subattack: `HEIGHT-TEN-POSITIVE-IMAGINARY-RAY-WINDING-01`
 
 Primary mode: `PROOF-ATTEMPT`
 
-Status: `PREREGISTERED / PRODUCTION_EDIT_PENDING_PUBLIC_CI / GLOBAL_GOAL_ACTIVE`
+Status: `IMPLEMENTED / LOCAL_AUDIT_GREEN / PUBLIC_IMPLEMENTATION_PENDING /
+GLOBAL_GOAL_ACTIVE`
 
 ## Route selection
 
@@ -161,12 +162,32 @@ zeros and poles in the interior, but a single branch cut missed by its one-dimen
 image forces their total multiplicities to agree. It therefore targets exactly the count
 difference and can be certified by boundary boxes alone.
 
+## Implementation result
+
+All preregistered consumer outputs now compile in
+`LeanLab/Riemann/LevinsonMontgomeryHeightTenRotatedSlitWinding.lean`.
+
+- `intervalIntegral_deriv_div_eq_log_sub_of_smul_mem_slitPlane` gives the generic rotated-path
+  principal-log endpoint formula.
+- Horizontal and vertical quotient formulas use the actual derivatives of `riemannZeta` and its
+  derivative and prove the needed edge integrability from the slit hypothesis.
+- `rectangleBoundaryIntegral_logDerivDifference_eq_zero_of_rotatedSlit` proves exact four-edge
+  cancellation under the project's orientation.
+- `speiserUpperLeftCounts_eq_of_rotatedSlitBoundary` invokes the actual finite argument principle
+  and identifies both strict-rectangle divisor sums with the existing multiplicity counts.
+- `levinsonMontgomeryHeightTenCertificate_of_positiveImaginaryRayAvoidance` composes the count
+  consumer with the still-independent top-sign producer.
+
+The unconditional proposition `SpeiserRotatedSlitBoundary Complex.I 10` is deliberately not
+claimed. It is the next finite boundary producer.
+
 ## Runtime record
 
 - `model`: Codex, GPT-5 family; exact serving variant not exposed.
 - `reasoning_effort`: not exposed.
 - `budget`: no numerical quota under V4.1.
-- `compaction_state`: inherited summary; current governance, route ruling, HANDOFF, Targets,
-  TargetChecks, active attempts, hard-gap DAG, certificate source, finite argument principle,
-  and winding modules were re-read before selection.
+- `compaction_state`: inherited summary before selection and a later implementation summary after
+  the formal module move; in both cases current governance, HANDOFF, Targets, TargetChecks,
+  attempts, hard-gap DAG, preregistration, and affected Lean modules were re-read before work
+  continued.
 - `global_goal`: active.

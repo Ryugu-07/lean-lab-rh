@@ -13,6 +13,7 @@ import LeanLab.Riemann.LevinsonMontgomeryTranscendentalInterval
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenFiniteEvaluator
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenEndpoint
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryNeighborhood
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenRotatedSlitWinding
 import LeanLab.Riemann.FareyFranel
 import LeanLab.Riemann.DeBruijnNewman
 import LeanLab.Riemann.InfiniteReciprocalTraceAudit
@@ -1455,3 +1456,7 @@ principles for each theorem below.
 #print axioms LeanLab.Riemann.exists_heightTen_left_strictNegative_interval
 #print axioms LeanLab.Riemann.exists_heightTen_right_strictNegative_interval
 #print axioms LeanLab.Riemann.exists_heightTen_compactMiddle_reduction
+#print axioms LeanLab.Riemann.intervalIntegral_deriv_div_eq_log_sub_of_smul_mem_slitPlane
+#print axioms LeanLab.Riemann.rectangleBoundaryIntegral_logDerivDifference_eq_zero_of_rotatedSlit
+#print axioms LeanLab.Riemann.speiserUpperLeftCounts_eq_of_rotatedSlitBoundary
+#print axioms LeanLab.Riemann.levinsonMontgomeryHeightTenCertificate_of_positiveImaginaryRayAvoidance

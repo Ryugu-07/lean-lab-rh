@@ -52,6 +52,13 @@ GLOBAL_GOAL_ACTIVE`
 | 37 | `LOCAL_AUDIT` | The new module, Targets, three exact TargetChecks, and three axiom prints pass warning-as-error. The selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; placeholder, resource-option, unsafe-declaration, and patch scans are clean; full build passes `8825/8825`. | Publish and freeze this topological reduction, then return to quantitative middle certification or the independent low-zero count producer. |
 | 38 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `cb466395ba6f9cd828497386090c7f0723a0a009` passed Lean Action run `30706556950`, build job `91386580043`, in `3m3s`. Five Lean blobs are frozen in the docs-only immutable-evidence record. | Publish the immutable-evidence commit and verify both its CI and blob identity. |
 | 39 | `IMMUTABLE_EVIDENCE` | Docs-only evidence commit `055ee2ff0cfd3afedd6a9227016f3d3c8e6ffade` passed Lean Action run `30706763852`, build job `91387115826`, in `1m43s`; all five frozen Lean blobs are unchanged. | Publish the receipt, then rerank quantitative middle boxes against one-dimensional low-zero quotient winding. |
+| 40 | `ROUTE_SELECTION` | Quantitative top-middle boxes, a two-dimensional low-zero cover, and one-dimensional quotient winding were compared. The existing finite argument principle makes quotient winding the only option that can prove multiplicity-count equality without excluding every interior zero separately. | Select a common rotated slit-plane branch on all four source-rectangle edges. |
+| 41 | `FALSIFICATION_NAVIGATION` | Navigation-only high-precision sampling found zero net quotient winding, sampled quotient norm at least about `0.188`, and no positive-imaginary-ray hit on the height-ten boundary. These decimals are neither premises nor certificates. | Preregister `c=I` as the first boundary-ray producer, while proving the consumer generically in `c` and `t`. |
+| 42 | `PREREGISTRATION_AND_PUBLIC_GATE` | The exact generic path, four-edge cancellation, multiplicity-count equality, and height-ten constructor were frozen. Docs-only commit `a557c9bf06b970a75e09d66c8a18cf9342b9d7db` passed Lean Action run `30707509879`, build job `91389064687`, in `1m44s`. | Open production editing without weakening the boundary premise. |
+| 43 | `COMMON_LOG_BRANCH` | Lean proves a generic endpoint formula for `g'/g` when one nonzero rotation of `g` remains in `Complex.slitPlane`. Specialized horizontal and vertical formulas for the actual `zeta'/zeta` establish integrability and expose the four corner log values. | Match the formulas to the project's rectangle orientation. |
+| 44 | `FOUR_EDGE_TELESCOPE` | One common principal-log branch makes the bottom, top, right, and left increments cancel exactly. `rectangleBoundaryIntegral_logDerivDifference_eq_zero_of_rotatedSlit` compiles under default resources. | Feed zero boundary difference to the multiplicity-bearing finite argument principle. |
+| 45 | `ACTUAL_COUNT_CONSUMER` | Lean identifies the strict rectangle counts with `speiserUpperLeftZetaZeroCount` and `speiserUpperLeftDerivZeroCount`, including the bottom-zero convention, and proves `speiserUpperLeftCounts_eq_of_rotatedSlitBoundary`. At height ten, positive-imaginary-ray avoidance plus the independent top sign constructs the literal certificate. | Audit and publish; then attack unconditional `SpeiserRotatedSlitBoundary I 10`. |
+| 46 | `LOCAL_AUDIT` | The new module, Targets, exact TargetChecks, AxiomsAudit, and project entry pass warning-as-error. Four selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; placeholder/resource/unsafe scans and `git diff --check` are clean; full build passes `8826/8826`. | Publish a frozen implementation checkpoint and immutable evidence while keeping the producer and parent campaign open. |
 
 ## Current obstruction map
 
@@ -73,7 +80,9 @@ GLOBAL_GOAL_ACTIVE`
    height-ten segment, and the full top edge is reduced to one compact middle `[a,b]` with
    `0<a<=b<1/2`. The cut points are noncomputable existence witnesses, so explicit variation
    bounds and a finite rational subcover remain open.
-9. `OPEN`: actual multiplicity-bearing height-ten zeta/zeta-derivative count equality.
+9. `REDUCED_TO_BOUNDARY_RAY_AVOIDANCE`: for every `c,t`, one common rotated slit-plane branch on
+   the four source-rectangle edges now proves the actual multiplicity-bearing count equality.
+   The unconditional height-ten producer `SpeiserRotatedSlitBoundary I 10` remains open.
 10. `OPEN`: `levinsonMontgomeryHeightTenCertificate_actual`.
 
 ## Runtime record
@@ -81,8 +90,8 @@ GLOBAL_GOAL_ACTIVE`
 - `model`: Codex, GPT-5 family; exact serving variant is not exposed.
 - `reasoning_effort`: not exposed.
 - `budget`: no numerical quota under V4.1.
-- `compaction_state`: resumed from a context summary and re-read current governance, HANDOFF,
-  source declarations, Targets, TargetChecks, the active attempt log, hard-gap DAG, and campaign
-  preregistration before selecting rounds 33--37.
+- `compaction_state`: resumed from summaries before rounds 33 and 40; after each transition the
+  current governance, HANDOFF, source declarations, Targets, TargetChecks, active attempt log,
+  hard-gap DAG, and applicable preregistration were re-read before continuing.
 - `global_goal`: active.
 - `protected_files`: inherited protected files remain untouched and unstaged.

@@ -21,6 +21,7 @@ import LeanLab.Riemann.LevinsonMontgomeryTranscendentalInterval
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenFiniteEvaluator
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenEndpoint
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryNeighborhood
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenRotatedSlitWinding
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -7105,5 +7106,20 @@ example :
               ((sigma : ℂ) + (10 : ℂ) * Complex.I)).re < 0) →
         SpeiserStrictNegativeHorizontal 10) :=
   exists_heightTen_compactMiddle_reduction
+
+example {c : ℂ} {t : ℝ} (h : SpeiserRotatedSlitBoundary c t) :
+    rectangleBoundaryIntegral (logDeriv (deriv riemannZeta)) 0 (1 / 2) 0 t -
+        rectangleBoundaryIntegral (logDeriv riemannZeta) 0 (1 / 2) 0 t = 0 :=
+  rectangleBoundaryIntegral_logDerivDifference_eq_zero_of_rotatedSlit h
+
+example {c : ℂ} {t : ℝ} (h : SpeiserRotatedSlitBoundary c t) :
+    speiserUpperLeftDerivZeroCount t = speiserUpperLeftZetaZeroCount t :=
+  speiserUpperLeftCounts_eq_of_rotatedSlitBoundary h
+
+example (hsign : SpeiserStrictNegativeHorizontal 10)
+    (hboundary : SpeiserRotatedSlitBoundary Complex.I 10) :
+    LevinsonMontgomeryHeightTenCertificate :=
+  levinsonMontgomeryHeightTenCertificate_of_positiveImaginaryRayAvoidance
+    hsign hboundary
 
 end LeanLab.Riemann
