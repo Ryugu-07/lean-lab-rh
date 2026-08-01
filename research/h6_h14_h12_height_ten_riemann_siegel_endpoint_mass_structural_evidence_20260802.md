@@ -31,6 +31,12 @@ Frozen production blobs:
 This evidence commit is docs only. Its CI and a post-CI `git ls-tree` check must preserve every
 blob in this table.
 
+## Immutable evidence verification
+
+Docs-only evidence commit `650c11dd157be5ba6c8da5d9bc14273c568fd6ea` passed Lean Action run
+`30721199125`, build job `91425204813`, in `2m1s`. A post-CI `git ls-tree` check confirms that
+all five production blobs remain exactly equal to the frozen table.
+
 ## Compiled claim boundary
 
 The frozen implementation proves exact quartic compact denominator growth, an actual compact

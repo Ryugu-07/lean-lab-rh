@@ -5643,6 +5643,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `public_implementation`: frozen commit `5cc6e43fad122b1bf40c1ff614183183ff4ccf53`
   passed Lean Action run `30721026723`, build job `91424754896`, in `2m59s`; five Lean blobs are
   frozen in the docs-only evidence record.
+- `immutable_evidence`: docs-only commit `650c11dd157be5ba6c8da5d9bc14273c568fd6ea`
+  passed Lean Action run `30721199125`, build job `91425204813`, in `2m1s`; all five frozen Lean
+  blobs are unchanged.
 - `strict_limit`: no endpoint integral, total endpoint mass, literal remainder margin, interval
   nonvanishing, vertical boundary zone, complete height-ten certificate, H12, or RH theorem is
   claimed by this checkpoint.
