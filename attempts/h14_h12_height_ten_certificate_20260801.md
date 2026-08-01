@@ -6,7 +6,8 @@ Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Node: `H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
-Status: `MEANINGFUL_PARTIAL_LOCAL_AUDITED / COMPLETE_BOUNDARY_SUBATTACK_ACTIVE / CAMPAIGN_ACTIVE /
+Status: `MEANINGFUL_PARTIAL_PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_PENDING /
+COMPLETE_BOUNDARY_SUBATTACK_ACTIVE / CAMPAIGN_ACTIVE /
 GLOBAL_GOAL_ACTIVE`
 
 ## Attempt ledger
@@ -80,6 +81,7 @@ GLOBAL_GOAL_ACTIVE`
 | 65 | `ROUTE_SPLIT` | On the imaginary axis the paired-zero sum is nonpositive, giving only an upper bound by the archimedean term. On the critical line the paired term vanishes exactly, and a shifted-digamma/Stieltjes argument proves the archimedean term negative for `y>=13/2`. The left high zone cannot be closed by copying this right-edge proof because its paired-zero term remains essential. | Preserve separate left-axis evaluation and critical-line completion producers. |
 | 66 | `MEANINGFUL_PARTIAL` | Conditional only on actual zeta nonvanishing, Lean proves `Re(zeta'/zeta)(1/2+iy)<0` for every `y>=13/2`. This validates the proposed right-high zone structurally, but supplies neither its required unconditional nonvanishing nor any of the other five vertical zones, the complete top, or the literal certificate. | Complete the local audit, publish frozen evidence, then select a proof-producing low-height nonvanishing and finite-cover backend. |
 | 67 | `LOCAL_AUDIT` | The new module, Targets, TargetChecks, AxiomsAudit, and project entry pass warning-as-error. Five selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; the focused forbidden scan and `git diff --check` are clean; the full build passes `8828/8828`. | Publish the frozen structural checkpoint and attach immutable public CI evidence without closing the active complete-boundary subattack. |
+| 68 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `d3d975d3c4202a3d14f8ea2e931a400ea7ef65ff` passed Lean Action run `30713362289`, build job `91404656086`, in `3m34s`. Five Lean blobs are frozen in the docs-only immutable-evidence record. | Publish the evidence commit, verify its CI and all five blob identities, then continue the active low-height certificate producer. |
 
 ## Current obstruction map
 

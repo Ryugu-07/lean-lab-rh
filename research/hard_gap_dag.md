@@ -5458,6 +5458,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `local_audit`: new module `8744/8744`; production and registration files pass
   warning-as-error; five selected axiom prints use only `propext`, `Classical.choice`, and
   `Quot.sound`; the focused forbidden scan and patch check are clean; full build `8828/8828`.
+- `public_implementation`: frozen commit
+  `d3d975d3c4202a3d14f8ea2e931a400ea7ef65ff` passed Lean Action run `30713362289`, build job
+  `91404656086`, in `3m34s`; five Lean blobs are frozen for docs-only immutable evidence.
 - `strict_limit`: no unconditional vertical zone, complete top sign, rotated-slit boundary,
   height-ten certificate, H12, or RH follows from this checkpoint.
 - `route_policy`: the work reconstructs the source's low-height direct consideration and records

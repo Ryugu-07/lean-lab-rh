@@ -72,8 +72,12 @@ The docs-only preregistration commit `b5ce6a81db1c54e166efe62128e450ab59f185a2`
 passed Lean Action run `30712326447`, build job `91401847586`, in `2m42s` before production
 editing.
 
-The implementation commit, public CI run, frozen blobs, and immutable-evidence commit will be
-added after local audit and publication.
+Frozen implementation commit `d3d975d3c4202a3d14f8ea2e931a400ea7ef65ff` passed Lean Action
+run `30713362289`, build job `91404656086`, in `3m34s`. The five proof and registration blobs
+are frozen in
+`research/h14_h12_height_ten_complete_boundary_structural_evidence_20260802.md`.
+
+The docs-only immutable-evidence commit and its CI result remain pending.
 
 ## Local audit
 
