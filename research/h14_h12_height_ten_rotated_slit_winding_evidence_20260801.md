@@ -6,8 +6,8 @@ Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Subattack: `HEIGHT-TEN-POSITIVE-IMAGINARY-RAY-WINDING-01`
 
-Classification: `ACTUAL_COUNT_CONSUMER / PUBLIC_IMPLEMENTATION_GREEN /
-IMMUTABLE_EVIDENCE_PENDING / RH_FRONTIER_DELTA_0`
+Classification: `ACTUAL_COUNT_CONSUMER / IMMUTABLE_EVIDENCE_PUBLIC_GREEN /
+LOCAL_SUBATTACK_STOP / RH_FRONTIER_DELTA_0`
 
 ## Public implementation
 
@@ -29,6 +29,14 @@ IMMUTABLE_EVIDENCE_PENDING / RH_FRONTIER_DELTA_0`
 
 This immutable-evidence change is documentation only. These five blobs must remain identical to
 the public implementation commit.
+
+## Immutable evidence
+
+- Documentation-only commit: `4a7606b1d3b4a49428fbe16a8346ba2f3b6fd65d`
+- Lean Action run: `30708950255`
+- Build job: `91392860631`
+- Result: passed in `1m51s`
+- Blob check: all five frozen Lean blobs are unchanged from the public implementation commit
 
 ## Audited endpoints
 

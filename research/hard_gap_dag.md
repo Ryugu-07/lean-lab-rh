@@ -5333,4 +5333,10 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `public_implementation`: frozen commit
   `8ec5dfba37d050dbcb0ac9889b3bc95f9cbf2253` passed Lean Action run `30708752970`, build job
   `91392334217`, in `2m51s`.
+- `immutable_evidence`: docs-only commit
+  `4a7606b1d3b4a49428fbe16a8346ba2f3b6fd65d` passed Lean Action run `30708950255`, build job
+  `91392860631`, in `1m51s`; all five frozen Lean blobs are unchanged.
+- `local_stop`: close only `H14-H12-HEIGHT-TEN-COUNT-WINDING-CONSUMER-01`; keep the
+  unconditional boundary-ray producer, parent height-ten certificate campaign, and global RH Goal
+  active.
 - `global_goal`: active.

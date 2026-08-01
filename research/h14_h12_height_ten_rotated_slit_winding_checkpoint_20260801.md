@@ -6,8 +6,8 @@ Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Subattack: `HEIGHT-TEN-POSITIVE-IMAGINARY-RAY-WINDING-01`
 
-Status: `ACTUAL_COUNT_CONSUMER_PUBLIC_GREEN / IMMUTABLE_EVIDENCE_PENDING /
-CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
+Status: `ACTUAL_COUNT_CONSUMER_IMMUTABLE_EVIDENCE_PUBLIC_GREEN /
+LOCAL_SUBATTACK_STOP / CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 
 ## Historical-route role
 
@@ -73,3 +73,6 @@ The global RH Goal and parent campaign remain active.
 - The new module, `Targets.lean`, `TargetChecks.lean`, `AxiomsAudit.lean`, and `LeanLab.lean` are
   frozen by Git blob in
   `research/h14_h12_height_ten_rotated_slit_winding_evidence_20260801.md`.
+- Documentation-only evidence commit `4a7606b1d3b4a49428fbe16a8346ba2f3b6fd65d` passed Lean
+  Action run `30708950255`, build job `91392860631`, in `1m51s`; all five frozen Lean blobs are
+  unchanged.
