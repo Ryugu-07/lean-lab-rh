@@ -5461,6 +5461,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `public_implementation`: frozen commit
   `d3d975d3c4202a3d14f8ea2e931a400ea7ef65ff` passed Lean Action run `30713362289`, build job
   `91404656086`, in `3m34s`; five Lean blobs are frozen for docs-only immutable evidence.
+- `immutable_evidence`: docs-only commit
+  `8b7cb43028e04917c510d96b0fe89050a1f7e947` passed Lean Action run `30713557491`, build job
+  `91405164201`, in `2m50s`; all five frozen Lean blobs are unchanged.
 - `strict_limit`: no unconditional vertical zone, complete top sign, rotated-slit boundary,
   height-ten certificate, H12, or RH follows from this checkpoint.
 - `route_policy`: the work reconstructs the source's low-height direct consideration and records

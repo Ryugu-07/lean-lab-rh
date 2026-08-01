@@ -77,7 +77,9 @@ run `30713362289`, build job `91404656086`, in `3m34s`. The five proof and regis
 are frozen in
 `research/h14_h12_height_ten_complete_boundary_structural_evidence_20260802.md`.
 
-The docs-only immutable-evidence commit and its CI result remain pending.
+Docs-only immutable-evidence commit `8b7cb43028e04917c510d96b0fe89050a1f7e947` passed Lean Action
+run `30713557491`, build job `91405164201`, in `2m50s`; all five frozen Lean blobs are unchanged.
+The complete-boundary subattack remains active.
 
 ## Local audit
 

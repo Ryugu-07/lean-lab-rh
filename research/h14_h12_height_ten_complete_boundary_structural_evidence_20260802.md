@@ -32,6 +32,15 @@ Public Lean Action:
 The immutable-evidence commit is docs only. Its post-push audit must reproduce these five blob
 identities exactly.
 
+## Immutable-evidence verification
+
+Docs-only commit `8b7cb43028e04917c510d96b0fe89050a1f7e947` passed Lean Action run
+`30713557491`, build job `91405164201`, in `2m50s`. Post-push `git rev-parse` reproduced all five
+frozen blob identities exactly.
+
+This closes only the evidence gate for the structural checkpoint. The preregistered complete-
+boundary subattack remains active.
+
 ## Compiled mathematical content
 
 - exact critical-line equality between `Re(zeta'/zeta)` and the Levinson--Montgomery
