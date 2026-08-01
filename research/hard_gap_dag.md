@@ -5710,3 +5710,30 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `route_policy`: this is an exact historical-contour omission checkpoint. Independent
   conjectures, falsification, and direct RH attacks remain open.
 - `global_goal`: active.
+
+## 2026-08-02 H6 x H14 x H12 endpoint tail-integration selection
+
+- `parent_campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `selected_subattack`: `HEIGHT-TEN-ENDPOINT-TAIL-INTEGRATION-01`.
+- `fixed_negative_tail`: after `v=-x`, prove the actual height `10` source-integrand integral on
+  `Ioi (1/2)` is at most `19/2000`.
+- `fixed_positive_near_tail`: prove the actual height `13/2` source-integrand integral on
+  `Ioc (1/2) 1` is at most `27/200`.
+- `fixed_positive_far_tail`: prove the same actual integrand on `Ioi 1` has integral at most
+  `11/2000`.
+- `fixed_composition`: combine the three bounds to tail total `<=3/20`, then combine with the
+  compiled compact total `<=9/20` to prove `HeightTenRiemannSiegelOneEndpointMassBound`.
+- `new_attack_angle`: recenter the positive principal angle as `pi/4+arctan(z)`, use short
+  alternating-series bounds on rational ranges, and integrate rational exponential envelopes by
+  a kernel-checked convex trapezoidal rule. This differs from the compact module's degree-thirty
+  and degree-twenty exact primitives.
+- `rejected_candidate_54`: retaining only a constant negative angle on the positive tail yields
+  an envelope far above the available budget. It is not a theorem premise.
+- `success_boundary`: generic angle identities, denominator decay, model-envelope integrals, or
+  a conditional endpoint-mass consumer are partial only. Full success requires the actual three
+  tail integrals, full endpoint mass, literal remainder margin, and actual right-high critical-line
+  nonvanishing/sign consumers to compile.
+- `strict_limit`: even full success closes only the right-high vertical zone. The other boundary
+  zones, compact-middle top sign, complete height-ten certificate, H12, and RH remain open.
+- `production_gate`: docs-only public CI before production Lean edits.
+- `global_goal`: active.
