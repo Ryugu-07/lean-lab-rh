@@ -5251,3 +5251,25 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   `443926da46a6c60fd5d1f251652f971c89635868` passed Lean Action run `30668627578`, build job
   `91281333939`, in `1m59s`; all five frozen Lean blobs are unchanged.
 - `global_goal`: active.
+
+## 2026-08-01 H14 x H12 boundary-neighborhood selection
+
+- `campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `selected_subattack`: actual positive-width neighborhoods at both ends of the height-ten
+  horizontal, followed by a compact-middle reduction.
+- `selection_reason`: the right endpoint is now certified by the Euler--Maclaurin evaluator and
+  the left endpoint is already certified analytically. Local analyticity makes both strict data
+  open. The alternative count producer still needs a two-dimensional zeta/zeta-derivative cover
+  or a complete boundary-winding certificate.
+- `material_difference`: the preceding attack certified one endpoint numerically. This attack
+  uses both actual endpoints and topological openness to remove both boundary regions from every
+  later finite cover; it does not optimize the endpoint constants.
+- `fixed_outputs`: left positive-width interval; right positive-width interval; two ordered
+  interior cut points whose middle strict-negativity hypothesis implies the complete
+  `SpeiserStrictNegativeHorizontal 10` statement.
+- `success_boundary`: an isolated continuity neighborhood is insufficient unless the compiled
+  theorem reduces the complete top edge to one compact middle interval.
+- `strict_boundary`: the compact middle interval, low-zero multiplicity count, full height-ten
+  certificate, CountDichotomy, Speiser equivalence, H12, and RH remain open.
+- `production_gate`: docs-only preregistration public CI before Lean edits.
+- `global_goal`: active.
