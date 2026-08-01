@@ -5568,3 +5568,34 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   attacks remain open at every stage.
 - `production_gate`: docs-only preregistration public CI before production Lean edits.
 - `global_goal`: active.
+
+## 2026-08-02 H6 x H14 x H12 Riemann--Siegel phase-norm checkpoint
+
+- `parent_campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `subattack`: `HEIGHT-TEN-RIEMANN-SIEGEL-PHASE-NORM-01` remains active at one fixed endpoint-
+  mass producer.
+- `public_preregistration`: commit `2df33c55e2f26c5ac811abe22c82258836d306b4` passed Lean
+  Action run `30715661154`, build job `91410676799`, in `2m16s` before production edits.
+- `closed_edge_35`: the exact principal-argument norm identity, half-line argument signs, and
+  endpoint domination compile.
+- `reduced_open_edge_36`: the raw contour norm is at most the sum of two fixed endpoint masses.
+  The exact live proposition is `HeightTenRiemannSiegelOneEndpointMassBound`, total mass `<=3/5`.
+- `closed_edge_37`: the actual prefactor phase margin compiles unconditionally. The proof uses an
+  exact rectangular Stieltjes `1/16` bound, a monotone shifted Stirling phase in `(-3/8,1/8)`,
+  and an exact actual-Gamma factorization.
+- `conditional_edge_38`: the total-mass proposition plus the closed phase theorem imply the
+  literal Riemann--Siegel remainder margin and its existing actual-zeta consumers. The mass
+  proposition is not proved, so edge 38 is not unconditional.
+- `local_audit`: both new modules pass warning-as-error; six selected axiom prints use only
+  `propext`, `Classical.choice`, and `Quot.sound`; focused forbidden scans and patch checks are
+  clean; full build passes `8831/8831`.
+- `classification`: `HISTORICAL_OMISSION_CHECKPOINT / PREFACTOR_PRODUCER_CLOSED /
+  ENDPOINT_MASS_OPEN / RH_FRONTIER_DELTA_0`.
+- `next_exact_producer`: certify the two fixed endpoint masses with their exact denominator
+  growth, using compact/tail pieces only as needed. Do not optimize navigation constants.
+- `route_policy`: historical replay remains omission search; the closed phase edge shows that
+  low-height Gamma phase is not the obstruction. Independent conjectures, falsification, and
+  direct RH attacks remain open.
+- `strict_limit`: no unconditional interval nonvanishing, vertical zone, complete boundary,
+  height-ten certificate, H12, or RH theorem follows yet.
+- `global_goal`: active.

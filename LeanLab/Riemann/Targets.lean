@@ -140,6 +140,8 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenRotatedSlitWinding
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryRayProducer
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenCompleteBoundary
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelLowZero
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseNorm
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseMargin
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -2175,6 +2177,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``speiserZetaDerivRatio_rightVertical_re_neg_thirteenHalves_ten_of_riemannSiegel
       status := .proven
       note := "Subattack HEIGHT-TEN-RIEMANN-SIEGEL-LOW-ZERO-01 remains active. Lean proves that the two finite Riemann--Siegel halves are exact conjugates on the critical line and that cutoff N=1 leaves precisely the completed-zeta prefactor plus R_(0,1). A strict real-part remainder margin now implies actual xi and zeta nonvanishing on [13/2,10], hence the right-high quotient sign through the previously compiled Gamma theorem. The existing global source-integral majorant also receives a closed Gaussian integral bound, and Lean proves its displayed right side is already greater than one throughout this interval; that majorant is therefore not the missing sharp low-height certificate. The uniform Riemann--Siegel margin, actual interval nonvanishing, every other open boundary zone, the height-ten certificate, H12, and RH remain open." },
+    { id := "H14.riemann-siegel.height-ten-prefactor-phase-margin"
+      tier := .tier1
+      title := "Close the height-ten Riemann--Siegel prefactor phase margin"
+      statement :=
+        "Retain the principal-argument contribution in the source contour, reduce the raw integral to two fixed endpoint masses, and prove unconditionally that the actual completed-zeta prefactor has real-part-to-norm ratio greater than 9/10 throughout heights 13/2 through 10."
+      leanName := some ``heightTenRiemannSiegelOnePrefactorPhaseMargin
+      status := .proven
+      note := "Subattack HEIGHT-TEN-RIEMANN-SIEGEL-PHASE-NORM-01 closes the prefactor producer without a Gamma approximation premise. Lean proves exact sign-sensitive endpoint domination for the contour complex power, a rectangular Stieltjes majorant giving norm of the logarithmic Gamma remainder at most 1/16, an explicit shifted Stirling phase strictly between -3/8 and 1/8 on the full interval, and an exact factorization of the actual prefactor as a positive scale times the phase exponential. The resulting real-part-to-norm ratio is strictly greater than 9/10. The total endpoint-mass bound at most 3/5 remains open; therefore the literal Riemann--Siegel remainder margin, interval zeta nonvanishing, height-ten certificate, H12, and RH are not yet unconditional." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

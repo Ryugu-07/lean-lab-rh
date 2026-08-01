@@ -98,6 +98,12 @@ GLOBAL_GOAL_ACTIVE`
 | 82 | `PHASE_NORM_DISCOVERY` | For `w(v)=3/2+exp(5*pi*i/4)*v`, the exact critical-line power norm contains `exp(y*arg w)`. The argument is nonnegative on `v<=0` and nonpositive on `v>=0`, so the two halves are uniformly dominated by the `y=10` and `y=13/2` endpoint integrands respectively. Navigation-only quadrature suggested a combined bound below `0.55` and prefactor phase ratio above `0.925`; no decimal is a premise. | Freeze wider proof targets whose composition already proves the literal remainder margin. |
 | 83 | `ROUTE_SELECTION` | Select the phase-aware contour norm producer with raw-integral target `<=3/5` and prefactor real-to-norm target `>9/10`. This reconstructs the historical source mechanism and attacks the exact missing producer without optimizing an arbitrary best constant. | Preregister endpoint domination, half-line bounds, prefactor phase, and the unconditional consumers. |
 | 84 | `PREREGISTRATION` | Subattack `HEIGHT-TEN-RIEMANN-SIEGEL-PHASE-NORM-01` fixes exact argument-sign geometry, endpoint half-line domination, a uniform raw-integral norm bound, a prefactor phase margin, the literal existing remainder margin, actual interval nonvanishing, and the right-high quotient sign. Generic helpers or conditional consumers alone are partial progress. | Publish docs only and require public Lean Action CI before production proof edits. |
+| 85 | `PUBLIC_GATE` | Docs-only preregistration commit `2df33c55e2f26c5ac811abe22c82258836d306b4` passed Lean Action run `30715661154`, build job `91410676799`, in `2m16s`. | Open production editing for the frozen phase-norm outputs. |
+| 86 | `ENDPOINT_DOMINATION` | Lean proves the exact critical-line complex-power norm with its principal argument, signs that argument on both source half-lines, and dominates the complete two-variable line integrand by the fixed endpoint integrands at `y=10` and `y=13/2`. | Split the Bochner integral at zero and expose one fixed total endpoint-mass proposition. |
+| 87 | `RAW_INTEGRAL_REDUCTION` | The raw contour integral is bounded by the sum of two fixed endpoint half-line norm integrals. `HeightTenRiemannSiegelOneEndpointMassBound` records the exact remaining total target `<=3/5`; conditional composition to the literal remainder margin compiles. | Attack the independent prefactor phase producer before committing to a compact integral cover. |
+| 88 | `RECTANGULAR_STIELTJES_BOUND` | A new rectangular majorant integrates exactly to `pi/(16*Im z)` and proves the actual Stieltjes logarithmic Gamma remainder has norm at most `1/16` on the full height interval. This improves the relevant vertical control without using a high-height asymptotic constant. | Derive and trap the exact main Stirling phase. |
+| 89 | `PREFACTOR_PHASE_CLOSED` | Lean proves the explicit shifted main phase is strictly increasing and lies in `(-3/8,1/8)`, identifies the actual prefactor exactly as a positive scale times `exp(E+L)` up to sign, and proves its absolute real part is strictly greater than `9/10` of its norm. | Register the producer and leave only the endpoint-mass proposition open. |
+| 90 | `MEANINGFUL_PARTIAL_AND_LOCAL_AUDIT` | Two production modules pass warning-as-error; Targets, TargetChecks, AxiomsAudit, and the project entry compile; six selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; focused forbidden scans and `git diff --check` are clean; full build passes `8831/8831`. The phase/Gamma obstacle is closed, but no interval nonvanishing is claimed because the endpoint masses remain unproved. | Publish the frozen implementation checkpoint, then certify the total fixed endpoint mass `<=3/5` using denominator growth and proof-producing compact/tail bounds. |
 
 ## Current obstruction map
 
@@ -141,10 +147,11 @@ GLOBAL_GOAL_ACTIVE`
     does not show the true remainder is large; it identifies the discarded principal-argument
     phase as the first exact obstruction. The next producer must retain that phase or formalize
     the classical saddle remainder, rather than optimize endpoint tables or this coarse bound.
-16. `SELECTED_PHASE_NORM_PRODUCER`: split the exact source line at `v=0`, prove principal-argument
-    signs and endpoint domination, certify endpoint half-line bounds summing to at most `3/5`,
-    and prove that the prefactor real part exceeds `9/10` of its norm. Their composition must
-    discharge the already compiled literal remainder-margin producer.
+16. `PARTIALLY_CLOSED_PHASE_NORM_PRODUCER`: the exact principal-argument signs, endpoint
+    domination, total-mass reduction, rectangular Stieltjes `1/16` remainder, actual Gamma
+    factorization, and prefactor real-to-norm margin `>9/10` compile. The sole remaining
+    proposition in this producer is that the two fixed endpoint masses sum to at most `3/5`.
+    Until it compiles, the literal remainder margin and interval nonvanishing remain open.
 
 ## Runtime record
 

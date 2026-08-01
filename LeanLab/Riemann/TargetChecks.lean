@@ -25,6 +25,8 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenRotatedSlitWinding
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryRayProducer
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenCompleteBoundary
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelLowZero
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseNorm
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseMargin
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -7224,5 +7226,18 @@ example {y : ℝ} (hy : 13 / 2 ≤ y) :
         (deBruijnNewmanRiemannSiegelMajorantConstant 1
           ((1 / 2 : ℂ) + (y : ℂ) * Complex.I)) * Real.sqrt 2 :=
   one_lt_riemannSiegel_globalMajorant_rhs_on_heightTenHigh hy
+
+example : HeightTenRiemannSiegelOnePrefactorPhaseMargin :=
+  heightTenRiemannSiegelOnePrefactorPhaseMargin
+
+example {y : ℝ} (hy : 13 / 2 ≤ y) :
+    ‖deBruijnNewmanPolymathStieltjesLogRemainder
+      (heightTenRiemannSiegelCriticalPoint y / 2)‖ ≤ 1 / 16 :=
+  norm_heightTenStieltjesLogRemainder_halfCritical_le_oneSixteenth hy
+
+example (hmass : HeightTenRiemannSiegelOneEndpointMassBound) :
+    HeightTenRiemannSiegelOneRemainderMargin :=
+  heightTenRiemannSiegelOneRemainderMargin_of_phaseNormBounds
+    hmass heightTenRiemannSiegelOnePrefactorPhaseMargin
 
 end LeanLab.Riemann
