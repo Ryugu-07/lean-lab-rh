@@ -25,7 +25,12 @@ witnesses, and selected axiom prints used by the passing public run.
 
 ## Immutable verification
 
-Pending a docs-only evidence commit and public Lean Action run.
+Docs-only evidence commit: `923cfcdcf167b12cc176ce8d6a90a7f23f7d4119`.
+
+Lean Action run `30734147586`, build job `91459639278`, passed in `1m44s`.
+
+Each of the five paths was read again from that commit. Every blob identity exactly matches the
+implementation record above.
 
 ## Compiled result
 

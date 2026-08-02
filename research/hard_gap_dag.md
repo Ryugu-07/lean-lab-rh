@@ -5987,6 +5987,12 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `public_implementation`: frozen commit `38105ab4fffb2b99dd9ebe1dd13e02ba22d296e4`
   passed Lean Action run `30734001479`, build job `91459212576`, in `3m12s`; five Lean blob
   identities are frozen in the docs-only evidence record.
+- `immutable_evidence`: docs-only commit `923cfcdcf167b12cc176ce8d6a90a7f23f7d4119`
+  passed Lean Action run `30734147586`, build job `91459639278`, in `1m44s`; all five frozen Lean
+  blob identities match the implementation record.
+- `subattack_status`: `HEIGHT-TEN-TOP-ENDPOINT-TRANSPORT-01` stops at a meaningful endpoint
+  backend checkpoint. `HEIGHT-TEN-COMPLETE-BOUNDARY-01`, its parent campaign, and the global RH
+  Goal remain active.
 - `remaining_boundary`: left low/middle, right low/middle, and compact-middle top are open. The
   complete height-ten certificate, H12, and RH remain open.
 - `route_policy`: historical-source coverage remains the main line for omission discovery;

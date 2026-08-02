@@ -33,4 +33,7 @@ theorem norm_deriv_deriv_riemannZeta_heightTenReflectedEndpoint_lt :
 It does not prove a new positive-width top interval. `SpeiserStrictNegativeHorizontal 10`, both
 remaining vertical low/middle producers, the complete height-ten certificate, H12, and RH remain
 open. Implementation commit `38105ab4fffb2b99dd9ebe1dd13e02ba22d296e4` passed public Lean
-Action run `30734001479`, build job `91459212576`, in `3m12s`. Immutable evidence is pending.
+Action run `30734001479`, build job `91459212576`, in `3m12s`. Docs-only evidence commit
+`923cfcdcf167b12cc176ce8d6a90a7f23f7d4119` passed run `30734147586`, build job
+`91459639278`, in `1m44s`; all five frozen Lean blobs match. The one-endpoint subattack stops as
+a meaningful backend checkpoint. The complete-boundary campaign and global RH Goal remain active.

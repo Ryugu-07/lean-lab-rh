@@ -236,6 +236,9 @@ CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 25. `OPEN_TOP_UNIFORM_TRANSPORT`: the new theorem is pointwise and does not replace the existing
     existential endpoint neighborhood by a verified explicit interval. The compact-middle top
     still requires a uniform phase-preserving finite cover or another source-level producer.
+26. `AUDITED_TOP_ENDPOINT_BACKEND`: implementation and immutable-evidence public CI pass with
+    five matching Lean blobs. The one-endpoint subattack stops without closing any open boundary
+    zone; the parent complete-boundary campaign and global RH Goal remain active.
 
 ## Runtime record
 
