@@ -144,6 +144,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseNorm
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseMargin
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelEndpointMass
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelCompactIntegral
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelTailIntegral
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
 import LeanLab.Riemann.PairCorrelationMovingWindowBoundary
@@ -2203,6 +2204,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``sum_integral_norm_heightTenRiemannSiegelLineIntegrand_one_compact_le_nineTwentieths
       status := .proven
       note := "The compact endpoint subattack compiles a concave-tangent range certificate for the positive cubic exponent, a fourth-power Pade polynomial upper bound, a fourth-power quadratic bound for the negative exponential, and rational quartic denominator transfer. Formal polynomial primitives prove the actual positive compact mass at most 7/20 and the actual negative compact mass at most 1/10, hence compact total at most 9/20. The two phase-sensitive tails must now total at most 3/20 before HeightTenRiemannSiegelOneEndpointMassBound can close. No individual full endpoint mass, total endpoint mass <=3/5, literal remainder margin, interval nonvanishing, height-ten certificate, H12, or RH is proved." },
+    { id := "H14.riemann-siegel.height-ten-endpoint-tail-partial"
+      tier := .tier1
+      title := "Close the negative and positive-near endpoint tails"
+      statement :=
+        "Retain the principal-argument phase beyond the compact interval, prove the actual negative endpoint tail is at most 19/2000 and the actual positive endpoint tail on 1/2<v<=1 is at most 27/200, and isolate the remaining positive far-tail budget."
+      leanName := some ``integral_norm_heightTenRiemannSiegelLineIntegrand_one_positiveNearTail_le
+      status := .proven
+      note := "Subattack HEIGHT-TEN-ENDPOINT-TAIL-INTEGRATION-01 remains active. Lean recenters the positive angle as pi/4+arctan(z), proves separate Bernstein-positive angle certificates on [1/2,1] and [1,2], and establishes a kernel-checked convex trapezoid theorem. Eight exact rational trapezoids prove the actual positive near-tail mass at most 27/200. On the negative half-line, retained phase, Gaussian, and denominator decay give an exp(-57*x/10) envelope and the actual tail at most 19/2000. These closed pieces total 289/2000; the positive tail on v>1 must still be at most 11/2000 before the full tail, endpoint mass, remainder margin, interval nonvanishing, height-ten certificate, H12, or RH can close." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

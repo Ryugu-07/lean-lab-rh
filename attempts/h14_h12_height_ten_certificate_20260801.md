@@ -123,6 +123,11 @@ GLOBAL_GOAL_ACTIVE`
 | 107 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `687d301d60a4c7bcbae0b4cb36f0a015a94a9b34` passed Lean Action run `30723016379`, build job `91429744340`, in `2m38s`. Five Lean blobs are frozen for the docs-only immutable-evidence record. | Publish the evidence record, verify its CI and all five blob identities, then close only the compact-integration subattack. |
 | 108 | `IMMUTABLE_EVIDENCE_AND_LOCAL_STOP` | Docs-only evidence commit `604e8c73246b1a4eacdf65764ceb7b6caede5493` passed Lean Action run `30723158790`, build job `91430133639`, in `1m45s`; all five frozen Lean blobs are unchanged. The compact-integration subattack stops successfully, while the tail producer, endpoint-mass parent, certificate campaign, and global RH Goal remain active. | Resume at the combined tail target `<=3/20`; rerank against other historical routes if a phase-sensitive tail certificate no longer has sufficient graph value. |
 | 109 | `TAIL_ROUTE_SELECTION_AND_PREREGISTRATION` | Subattack `HEIGHT-TEN-ENDPOINT-TAIL-INTEGRATION-01` fixes negative tail `<=19/2000`, positive near tail `<=27/200`, and positive far tail `<=11/2000`, hence combined tails `<=3/20`. Navigation rejects a constant-angle positive envelope as too weak. The materially new mechanism recenters the principal angle through `pi/4+arctan(z)` and uses convex trapezoidal integration instead of another large exact primitive. | Publish the docs-only target, falsification criteria, and strict downstream boundary before production Lean edits. |
+| 110 | `PHASE_SENSITIVE_ANGLE_CERTIFICATES` | Lean recenters the positive principal angle as `pi/4+arctan((2*sqrt(2)*v-3)/3)`. Separate alternating-series and Bernstein-positive certificates prove the selected cubic lower phase on `[1/2,1]` and quadratic lower phase on `[1,2]`; no sampled angle enters either proof. | Transfer the phase certificates to actual endpoint-integrand exponent envelopes. |
+| 111 | `NEGATIVE_TAIL_CLOSED` | Retained negative-half-line phase, Gaussian decay, and the compiled sine-denominator decay give a literal actual-integrand envelope proportional to `exp(-57*x/10)`. A finite exponential-series certificate proves the actual height `10` tail on `Ioi (1/2)` is at most `19/2000`. | Close the positive near tail without replacing its varying phase by a constant. |
+| 112 | `CONVEX_TRAPEZOID_BACKEND` | Lean proves a general one-interval convex trapezoid integral bound. A Bernstein-positive fourth-degree certificate proves `exp(q0(v))` convex on `[1/2,1]`; an eighth-power rational exponential envelope at nine exact nodes proves its integral is at most `3/25`. | Multiply by the literal `9/8` source-integrand factor and discharge the actual set integral. |
+| 113 | `POSITIVE_NEAR_TAIL_CLOSED` | The exact phase/Gaussian/denominator factorization transfers the convex certificate to the actual height `13/2` endpoint integrand. Its integral on `Ioc (1/2) 1` is at most `27/200`. Together with the negative tail, `289/2000` of the `300/2000` tail budget is now compiled. | Prove the still-open actual positive far tail on `Ioi 1` is at most `11/2000`; do not claim the combined tail or endpoint mass before this compiles. |
+| 114 | `MEANINGFUL_PARTIAL_AND_LOCAL_AUDIT` | The production module, Targets, exact TargetChecks, and AxiomsAudit pass warning-as-error. Both actual tail declarations use only `propext`, `Classical.choice`, and `Quot.sound`; focused forbidden scans are clean; full build passes `8834/8834`. The subattack remains active because the positive far tail is open. | Publish this frozen partial implementation and immutable evidence, then resume at `[1,2]` convex integration and the `v>2` exponential tail. |
 
 ## Current obstruction map
 
@@ -175,9 +180,11 @@ GLOBAL_GOAL_ACTIVE`
     distance-power bounds, rational exponential envelopes, exact polynomial primitives, and both
     actual compact endpoint integrals compile. Their bounds are `7/20` and `1/10`, hence their
     combined compact contribution is at most `9/20`.
-18. `OPEN_PHASE_SENSITIVE_TAILS`: the compiled exponential denominator tail decay must be combined
-    with retained phase/Gaussian control to prove that both remaining tails total at most `3/20`.
-    Until then neither endpoint mass nor their total `<=3/5` is proved.
+18. `PARTIALLY_CLOSED_PHASE_SENSITIVE_TAILS`: retained phase/Gaussian control now proves the actual
+    negative tail at most `19/2000` and the actual positive near tail at most `27/200`. Their
+    combined `289/2000` contribution leaves exactly the preregistered `11/2000` budget for the
+    actual positive tail on `Ioi 1`. Until that final far tail compiles, neither the combined tail,
+    endpoint mass, nor total endpoint mass `<=3/5` is proved.
 
 ## Runtime record
 

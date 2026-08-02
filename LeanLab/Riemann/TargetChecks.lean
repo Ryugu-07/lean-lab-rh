@@ -29,6 +29,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseNorm
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseMargin
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelEndpointMass
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelCompactIntegral
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelTailIntegral
 import LeanLab.Riemann.HalfIsolatedBowAudit
 import LeanLab.Riemann.DirichletFamilyInclusionAudit
 import LeanLab.Riemann.FiniteHeightPromotionAudit
@@ -7281,5 +7282,17 @@ example :
         ‖deBruijnNewmanRiemannSiegelLineIntegrand 1
           (heightTenRiemannSiegelCriticalPoint (13 / 2)) v‖) ≤ 9 / 20 :=
   sum_integral_norm_heightTenRiemannSiegelLineIntegrand_one_compact_le_nineTwentieths
+
+example :
+    (∫ x in Set.Ioi (1 / 2 : ℝ),
+      ‖deBruijnNewmanRiemannSiegelLineIntegrand 1
+        (heightTenRiemannSiegelCriticalPoint 10) (-x)‖) ≤ 19 / 2000 :=
+  integral_norm_heightTenRiemannSiegelLineIntegrand_one_negativeTail_le
+
+example :
+    (∫ v in Set.Ioc (1 / 2 : ℝ) 1,
+      ‖deBruijnNewmanRiemannSiegelLineIntegrand 1
+        (heightTenRiemannSiegelCriticalPoint (13 / 2)) v‖) ≤ 27 / 200 :=
+  integral_norm_heightTenRiemannSiegelLineIntegrand_one_positiveNearTail_le
 
 end LeanLab.Riemann

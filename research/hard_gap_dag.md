@@ -5737,3 +5737,30 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   zones, compact-middle top sign, complete height-ten certificate, H12, and RH remain open.
 - `production_gate`: docs-only public CI before production Lean edits.
 - `global_goal`: active.
+
+## 2026-08-02 H6 x H14 x H12 endpoint tail-integration partial checkpoint
+
+- `parent_campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `subattack`: `HEIGHT-TEN-ENDPOINT-TAIL-INTEGRATION-01` remains active.
+- `closed_edge_55`: the recentered principal-angle identity and two Bernstein-positive
+  certificates prove phase polynomials on `[1/2,1]` and `[1,2]`.
+- `closed_edge_56`: the actual height `10` negative endpoint-integrand tail on `Ioi (1/2)` is at
+  most `19/2000`.
+- `closed_edge_57`: a generic convex trapezoid theorem, a fourth-degree convexity certificate,
+  nine rational exponential node bounds, and the literal source factor prove the actual height
+  `13/2` positive tail on `Ioc (1/2) 1` is at most `27/200`.
+- `open_edge_58`: prove the actual positive tail on `Ioi 1` is at most `11/2000`. The selected
+  split is `[1,2]` by a convex eight-trapezoid certificate and `Ioi 2` by direct exponential decay.
+- `open_edge_59`: only after edge 58, combine tails to `<=3/20`, compact mass to `<=9/20`, and
+  discharge `HeightTenRiemannSiegelOneEndpointMassBound`.
+- `local_audit`: production module, Targets, TargetChecks, and AxiomsAudit pass warning-as-error;
+  both actual tail declarations use only `propext`, `Classical.choice`, and `Quot.sound`; focused
+  forbidden scans are clean; full build passes `8834/8834`.
+- `classification`: `HISTORICAL_OMISSION_CHECKPOINT / TWO_TAIL_PIECES_CLOSED /
+  POSITIVE_FAR_TAIL_OPEN / RH_FRONTIER_DELTA_0`.
+- `strict_limit`: no combined tail, endpoint mass, literal remainder margin, interval
+  nonvanishing, complete height-ten certificate, H12, or RH theorem is claimed.
+- `route_policy`: the constants serve only the fixed historical source-contour budget; this is
+  not an unrelated constant-optimization campaign. Original conjectures and direct attacks
+  remain open.
+- `global_goal`: active.
