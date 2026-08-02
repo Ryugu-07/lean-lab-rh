@@ -5873,6 +5873,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   pass focused warning-as-error builds; selected declarations use only `propext`,
   `Classical.choice`, and `Quot.sound`; focused forbidden scans and `git diff --check` are clean;
   the full local build passes `8837/8837`.
+- `public_implementation`: frozen commit `299ced5b6825e98ff52462d7e2743e3c8441f834`
+  passed Lean Action run `30729012677`, build job `91445811240`, in `2m42s`; six Lean blobs are
+  frozen in the docs-only evidence record.
 - `classification`: `HISTORICAL_FORMULA_LOSS_IDENTIFIED / SECOND_EULER_BACKEND_CLOSED /
   VIRTUAL_AXIS_REFLECTION_CLOSED / FINITE_SUBCOVER_OPEN / RH_FRONTIER_DELTA_0`.
 - `strict_limit`: the residual interval `[13/2,7]`, complete vertical boundary, compact-middle top,

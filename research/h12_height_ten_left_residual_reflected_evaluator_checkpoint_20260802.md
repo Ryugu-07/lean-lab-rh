@@ -70,8 +70,10 @@ H12, or RH.
 The production modules, project entry, Targets, exact TargetChecks witnesses, and AxiomsAudit
 compile. The selected declarations report only `propext`, `Classical.choice`, and `Quot.sound`.
 Focused forbidden-token and declaration scans are clean, `git diff --check` is clean, and the full
-local build passes `8837/8837`. Public CI and immutable evidence are recorded separately once
-complete.
+local build passes `8837/8837`. Implementation commit
+`299ced5b6825e98ff52462d7e2743e3c8441f834` passed public Lean Action run `30729012677`, build job
+`91445811240`, in `2m42s`; six Lean blobs are frozen in the evidence record. Immutable evidence is
+recorded separately once complete.
 
 ## Runtime
 
