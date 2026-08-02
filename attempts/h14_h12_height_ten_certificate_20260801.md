@@ -156,6 +156,7 @@ CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 | 140 | `HARDY_BRACKET_CLOSED` | A rational Stirling-phase enclosure proves prefactor ratio below `-4/5`; compact and affine-tail integrals bound the raw contour norm by `3/4`. Thus `hardyXi 17<0`, and Lean compiles the actual bracket `HardyXiBracketsZero 10 17`. | Extract one actual zero term with multiplicity. |
 | 141 | `PAIRED_MASS_AND_ARCHIMEDEAN_BALANCE` | One divisor copy from the actual critical-line zero contributes at most `-1/221` uniformly on `[13/2,7]`. Eight digamma shifts and a proof-producing binary logarithm enclosure give the archimedean term `<9/2000`. | Compose equation `(2.1)`. |
 | 142 | `CLOSED_RESIDUAL_LEFT_HIGH_LOCAL` | Since `9/2000<1/221`, the actual quotient real part is strictly negative and its rotation lies in the slit plane throughout `[13/2,7]`. Focused production, registries, exact witnesses, and standard-only axiom audit pass; the full project build passes `8838/8838`. | Freeze implementation and public evidence; then rerank the remaining boundary zones. |
+| 143 | `PUBLIC_LOW_ZERO_MASS_IMPLEMENTATION` | Implementation `53199a715aa5a0c61be34046e9b0f0ebd2f811a8` passed Lean Action run `30731573751`, build job `91452790708`, in `2m49s`; five Lean blobs are frozen in the docs-only evidence record. | Pass immutable evidence CI, verify blobs, and issue the closure receipt. |
 
 ## Current obstruction map
 

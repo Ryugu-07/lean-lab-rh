@@ -20,6 +20,7 @@ Global RH Goal: active.
 | 8 | `ACTUAL_BRACKET_AND_PAIRED_MASS` | `HardyXiBracketsZero 10 17` compiles without a zero table. The interval consumer produces an actual critical-line zero; a multiplicity-bearing divisor copy contributes at most `-1/221` uniformly for `13/2<=y<=7`, and all omitted paired terms are proved nonpositive. | Close the archimedean side of the exact balance. |
 | 9 | `EIGHT_SHIFT_ARCHIMEDEAN_BALANCE` | A binary-range-reduced rational certificate proves `2.2581<log(9.568)`. Eight exact digamma shifts then prove the imaginary-axis archimedean term `<9/2000` uniformly on the residual interval. | Compose `9/2000<1/221` in equation `(2.1)`. |
 | 10 | `RESIDUAL_LEFT_HIGH_CLOSED_LOCAL` | Lean proves the unconditional actual quotient real part is negative and its rotation by `I` lies in `Complex.slitPlane` for every `13/2<=y<=7`. Production, project entry, Targets, exact TargetChecks witnesses, and AxiomsAudit pass focused warning-as-error builds; selected final declarations use only `propext`, `Classical.choice`, and `Quot.sound`; the full build passes `8838/8838`. | Freeze implementation, run public CI, then record immutable evidence and select the next open height-ten boundary zone. |
+| 11 | `PUBLIC_IMPLEMENTATION` | Implementation commit `53199a715aa5a0c61be34046e9b0f0ebd2f811a8` passed public Lean Action run `30731573751`, build job `91452790708`, in `2m49s`. Five Lean blob identities are frozen in the docs-only evidence record. | Run the evidence commit through public CI and verify every frozen Lean blob. |
 
 ## Assumption frontier
 

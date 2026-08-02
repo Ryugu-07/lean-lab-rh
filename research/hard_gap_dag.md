@@ -5946,6 +5946,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   warning-as-error builds. Selected final declarations use only `propext`, `Classical.choice`,
   and `Quot.sound`; the production forbidden-token scan and `git diff --check` are clean; the
   full project build passes `8838/8838`.
+- `public_implementation`: frozen commit `53199a715aa5a0c61be34046e9b0f0ebd2f811a8`
+  passed Lean Action run `30731573751`, build job `91452790708`, in `2m49s`; five Lean blob
+  identities are frozen in the docs-only evidence record.
 - `superseded_open_edge_70`: the direct finite reflected subcover remains a valid evaluator
   backend but is no longer required to close `[13/2,7]`.
 - `next_boundary_frontier`: left low/middle, right low/middle, compact-middle top, and the
