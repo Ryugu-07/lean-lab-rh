@@ -139,6 +139,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryNeighborhood
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRotatedSlitWinding
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryRayProducer
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenCompleteBoundary
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftHigh
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelLowZero
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseNorm
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseMargin
@@ -2220,6 +2221,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``speiserZetaDerivRatio_rightVertical_re_neg_thirteenHalves_ten
       status := .proven
       note := "Subattack HEIGHT-TEN-ENDPOINT-TAIL-INTEGRATION-01 closes successfully. A uniform 49/50 distance-power bound, the compiled middle phase polynomial, convexity of exp(q1), eight exact rational trapezoids, and a 32-step quadratic exponential envelope prove the actual [1,2] contribution at most 21/4000. A quadrant-aware principal-argument proof gives 6/5<=-arg for v>=2; direct exp(-9v/2) integration gives the remaining 1/4000. Thus the positive far tail is at most 11/2000, all tails total at most 3/20, and the endpoint masses are at most 219/2000 and 981/2000. Their exact 3/5 sum composes with the prefactor phase margin to the literal remainder margin, actual zeta nonvanishing, and strict-negative right-high quotient sign on 13/2<=y<=10. The other vertical zones, compact-middle top sign, complete height-ten certificate, H12, and RH remain open." },
+    { id := "H12.levinson-montgomery.height-ten-left-high-seven"
+      tier := .tier1
+      title := "Close the left vertical boundary above height seven"
+      statement :=
+        "Prove structurally that zeta has no zero on the positive imaginary axis and that the actual logarithmic derivative has negative real part for y>=7, placing its rotation by I in the slit plane."
+      leanName := some ``speiserZetaDerivRatio_leftVertical_rotated_mem_slitPlane_of_seven_le
+      status := .proven
+      note := "The active HEIGHT-TEN-COMPLETE-BOUNDARY-01 subattack now closes the left vertical ray condition for y>=7 without a numerical zeta table. Xi nonvanishing follows because every nontrivial zero has positive real part; the nonpole xi factorization then gives zeta(iy)!=0. A one-step digamma shift and exact rational estimates prove the imaginary-axis archimedean term negative for y>=7. Equation (2.1) contributes a nonpositive paired-zero sum, so the actual quotient has negative real part and its rotation by I lies in the slit plane. Navigation falsifies the same archimedean-only route at y=13/2: that term is still positive there. The exact residual high interval [13/2,7] must retain paired-zero information or use direct actual-zeta evaluation. The left low/middle zones, this residual interval, right low/middle zones, compact-middle top, complete certificate, H12, and RH remain open." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

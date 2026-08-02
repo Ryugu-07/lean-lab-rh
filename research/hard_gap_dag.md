@@ -5802,3 +5802,40 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `strict_limit`: no right low/middle zone, left vertical, complete top sign, rotated-slit
   boundary, height-ten certificate, H12, or RH theorem is claimed.
 - `global_goal`: active.
+
+## 2026-08-02 H12 height-ten left-high structural selection
+
+- `parent_campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `active_subattack`: `HEIGHT-TEN-COMPLETE-BOUNDARY-01`.
+- `rejected_candidate_61`: use imaginary-axis zeta nonvanishing plus negativity of the
+  archimedean term to close the full preregistered left-high interval `13/2<=y<=10`. Navigation
+  evaluates that term as positive at `y=13/2`; this value is not a theorem premise and does not
+  refute the actual quotient sign because the paired-zero sum remains nonpositive.
+- `selected_edge_61`: prove structural zeta nonvanishing on every positive imaginary-axis point,
+  then prove a simple exact archimedean negative range `y>=7` and transfer it to the actual
+  quotient and rotated slit condition.
+- `strict_limit`: do not claim the full left-high zone. The residual `[13/2,7]` interval must use
+  the paired-zero contribution or a proof-producing actual-zeta evaluator.
+- `route_policy`: this is an omission probe inside the fixed historical source route. Independent
+  conjectures, falsification, and direct RH attacks remain open.
+- `global_goal`: active.
+
+## 2026-08-02 H12 height-ten left-above-seven compiled checkpoint
+
+- `closed_edge_61`: Lean proves `riemannZeta (iy) != 0` for every `y>0`, since a hypothetical xi
+  zero at real part zero would contradict positivity of the real part of every nontrivial zero;
+  the nonpole xi factorization transfers this to zeta.
+- `closed_edge_62`: a one-step digamma shift, exact norm-square lower bounds at `y>=7`, and rational
+  logarithm/remainder estimates prove the imaginary-axis archimedean term strictly negative.
+- `closed_edge_63`: the positive-height Levinson--Montgomery equation and nonpositive paired-zero
+  sum prove the actual logarithmic derivative has negative real part for `y>=7`; multiplying by
+  `I` places it in `Complex.slitPlane`.
+- `local_audit`: production, project entry, Targets, TargetChecks, and AxiomsAudit pass
+  warning-as-error; the four final declarations use only `propext`, `Classical.choice`, and
+  `Quot.sound`; focused scans and `git diff --check` are clean; full build passes `8835/8835`.
+- `open_edge_64`: close the residual left-high interval `[13/2,7]` using retained paired-zero mass
+  or direct actual-zeta interval evaluation. Left low/middle, right low/middle, compact-middle top,
+  complete certificate, H12, and RH remain open.
+- `classification`: `HISTORICAL_SOURCE_STRUCTURE / LEFT_ABOVE_SEVEN_CLOSED /
+  LEFT_HIGH_RESIDUAL_OPEN / RH_FRONTIER_DELTA_0`.
+- `global_goal`: active.

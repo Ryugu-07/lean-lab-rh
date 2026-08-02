@@ -7,7 +7,7 @@ Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 Node: `H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Status: `RIEMANN_SIEGEL_ENDPOINT_TAIL_SUBATTACK_SUCCESS /
-RIEMANN_SIEGEL_LOW_ZERO_RIGHT_HIGH_CLOSED / COMPLETE_BOUNDARY_SUBATTACK_ACTIVE /
+RIGHT_HIGH_AND_LEFT_ABOVE_SEVEN_CLOSED / COMPLETE_BOUNDARY_SUBATTACK_ACTIVE /
 CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 
 ## Attempt ledger
@@ -136,6 +136,9 @@ CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 | 120 | `LOCAL_AUDIT` | Production, Targets, exact TargetChecks, and AxiomsAudit pass warning-as-error. All selected final declarations use only `propext`, `Classical.choice`, and `Quot.sound`; focused forbidden scans and `git diff --check` are clean; full build passes `8834/8834`. | Publish the frozen implementation and immutable evidence, then select an actual quotient interval producer for the remaining boundary zones. |
 | 121 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `6430a3cc5424610c79e26454617614b0784f0fe3` passed Lean Action run `30726439356`, build job `91438921597`, in `2m43s`. Four Lean blobs are frozen in the docs-only evidence record. | Publish the immutable-evidence commit, verify its CI and all four blob identities, then close only this tail-integration subattack. |
 | 122 | `IMMUTABLE_EVIDENCE_AND_LOCAL_STOP` | Docs-only evidence commit `dbdb1a897d6daad15a9c1925f676486d0f1dd801` passed Lean Action run `30726577764`, build job `91439300538`, in `1m48s`; all four frozen Lean blobs are unchanged. The endpoint tail-integration subattack stops successfully. The complete-boundary campaign and global RH Goal remain active. | Resume the existing complete-boundary preregistration at an actual quotient interval evaluator for the right low/middle zones, full left vertical, and compact-middle top interval. |
+| 123 | `LEFT_HIGH_STRUCTURAL_FALSIFICATION` | The positive imaginary axis is structurally zero-free, but navigation-only high precision evaluates the imaginary-axis archimedean term as positive at `y=13/2` and locates its sign change between `13/2` and `7`. This decimal evidence is not a theorem premise and does not falsify the preregistered actual quotient sign, because Equation (2.1) retains a nonpositive paired-zero term. It does falsify selection of the Gamma-only proof mechanism for the complete `[13/2,10]` left-high zone. | Prove a simple rational structural subinterval above the observed transition, and reserve the residual interval for paired-zero information or direct actual-zeta evaluation. |
+| 124 | `LEFT_ABOVE_SEVEN_COMPILED` | Lean proves `zeta(iy)!=0` for every `y>0` from xi nonvanishing and the nonpole factorization. A one-step digamma shift with exact rational bounds proves the archimedean term negative for `y>=7`; Equation (2.1) then proves the actual quotient real part negative and its rotation by `I` lies in the slit plane. The exact residual high interval is `[13/2,7]`. | Complete local audits, publish immutable evidence, and build the actual quotient evaluator only for the remaining left intervals rather than rechecking `y>=7`. |
+| 125 | `LOCAL_AUDIT` | The production module, project entry, Targets, exact TargetChecks, and AxiomsAudit pass warning-as-error. All four selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; focused forbidden and resource-option scans plus `git diff --check` are clean; full build passes `8835/8835`. | Publish the frozen implementation and immutable evidence without closing the active complete-boundary subattack. |
 
 ## Current obstruction map
 
@@ -161,15 +164,17 @@ CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
    the top slit clause follows from `SpeiserStrictNegativeHorizontal t`. The four-edge producer
    is reduced exactly to positive-imaginary-ray avoidance on the left and right vertical edges.
 10. `PARTIALLY_CLOSED_TWO_VERTICALS`: the right critical-line clause is closed for
-    `13/2<=y<=10`. Its low and middle zones and the entire left vertical remain open, so
+    `13/2<=y<=10`, and the left imaginary-axis clause is closed for `7<=y<=10`. The right low and
+    middle zones and the left interval below seven remain open, so
     `SpeiserPositiveImaginaryRayVerticalBoundary 10` is not yet proved.
 11. `OPEN`: the compact-middle top sign and `levinsonMontgomeryHeightTenCertificate_actual`.
 12. `CLOSED_RIGHT_HIGH_ZONE`: on the critical line, the paired-zero term vanishes, the
     archimedean term is strictly negative for `y>=13/2`, and the literal source-contour estimate
     now proves actual zeta nonvanishing and strict quotient negativity on `[13/2,10]`.
-13. `OPEN_LEFT_ROUTE_SPLIT`: on `s=iy`, Equation (2.1) yields a nonpositive paired-zero
-    contribution but not an exact Gamma-only formula. The left high zone therefore still needs
-    actual low-height evaluation or a sharper zero-sum argument.
+13. `PARTIALLY_CLOSED_LEFT_ROUTE_SPLIT`: on `s=iy`, zeta nonvanishing is structural and Equation
+    (2.1) yields a nonpositive paired-zero contribution. The Gamma-only estimate closes `y>=7`,
+    but navigation shows that mechanism has the wrong sign at `y=13/2`. The residual high interval
+    `[13/2,7]` therefore needs actual low-height evaluation or a sharper zero-sum argument.
 14. `CLOSED_RIEMANN_SIEGEL_LOW_ZERO_PRODUCER`: the exact arbitrary-`N` critical-line
     conjugation, `N=1` main-plus-remainder formula, literal uniform real-part margin, actual zeta
     nonvanishing, and right-high quotient sign all compile.
