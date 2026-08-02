@@ -5833,6 +5833,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `local_audit`: production, project entry, Targets, TargetChecks, and AxiomsAudit pass
   warning-as-error; the four final declarations use only `propext`, `Classical.choice`, and
   `Quot.sound`; focused scans and `git diff --check` are clean; full build passes `8835/8835`.
+- `public_implementation`: frozen commit `135d631c24c2a51b0158c3d3ef335c9d6a16dcdd`
+  passed Lean Action run `30727229831`, build job `91441050957`, in `2m33s`; five Lean blobs are
+  frozen in the docs-only evidence record.
 - `open_edge_64`: close the residual left-high interval `[13/2,7]` using retained paired-zero mass
   or direct actual-zeta interval evaluation. Left low/middle, right low/middle, compact-middle top,
   complete certificate, H12, and RH remain open.

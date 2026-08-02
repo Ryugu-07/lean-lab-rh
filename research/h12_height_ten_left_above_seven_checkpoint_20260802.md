@@ -6,7 +6,8 @@ Parent campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Active subattack: `HEIGHT-TEN-COMPLETE-BOUNDARY-01`
 
-Status: `LOCAL_SUCCESS / PUBLIC_IMPLEMENTATION_PENDING / COMPLETE_BOUNDARY_ACTIVE /
+Status: `LOCAL_SUCCESS / PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_PENDING /
+COMPLETE_BOUNDARY_ACTIVE /
 GLOBAL_GOAL_ACTIVE`
 
 ## Route decision
@@ -52,6 +53,14 @@ this to the actual quotient.
   scans are clean.
 - `git diff --check` is clean.
 - Full local build passes `8835/8835`.
+
+## Public implementation
+
+Frozen implementation commit: `135d631c24c2a51b0158c3d3ef335c9d6a16dcdd`.
+
+Lean Action run `30727229831`, build job `91441050957`, passed in `2m33s`.
+
+Five Lean blob identities are recorded in the docs-only immutable-evidence file.
 
 ## Strict boundary
 
