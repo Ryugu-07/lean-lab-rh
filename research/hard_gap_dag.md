@@ -5756,6 +5756,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `local_audit`: production module, Targets, TargetChecks, and AxiomsAudit pass warning-as-error;
   both actual tail declarations use only `propext`, `Classical.choice`, and `Quot.sound`; focused
   forbidden scans are clean; full build passes `8834/8834`.
+- `public_implementation`: frozen commit `f1ebf9266e931a3ca8653bf87048d1cfad076f29`
+  passed Lean Action run `30725305088`, build job `91435753140`, in `2m52s`; four Lean blobs are
+  frozen in the docs-only evidence record.
 - `classification`: `HISTORICAL_OMISSION_CHECKPOINT / TWO_TAIL_PIECES_CLOSED /
   POSITIVE_FAR_TAIL_OPEN / RH_FRONTIER_DELTA_0`.
 - `strict_limit`: no combined tail, endpoint mass, literal remainder margin, interval

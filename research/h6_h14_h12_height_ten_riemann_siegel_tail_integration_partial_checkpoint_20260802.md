@@ -29,6 +29,20 @@ so the remaining positive tail on `Ioi 1` must compile at `<=11/2000`.
 - Focused `sorry`, `admit`, `native_decide`, `axiom`, `opaque`, and `unsafe` scans are empty.
 - Full build passes `8834/8834`.
 
+## Public implementation evidence
+
+Frozen implementation commit: `f1ebf9266e931a3ca8653bf87048d1cfad076f29`.
+
+Lean Action run `30725305088`, build job `91435753140`, passed in `2m52s`.
+
+Frozen Lean blobs:
+
+- `LevinsonMontgomeryHeightTenRiemannSiegelTailIntegral.lean`:
+  `46beda13072c30ff8c430cb520693f8c70226850`
+- `Targets.lean`: `03bdc801670546cd1be728e066996e6e2d419b08`
+- `TargetChecks.lean`: `9568dd0fdd763b7d4b3b645b793d68fde09540ea`
+- `AxiomsAudit.lean`: `c6ce1667ea1c902c9648da46c1da0adeaf14b869`
+
 ## Strict boundary
 
 This checkpoint does not prove the positive far tail, combined tail `<=3/20`, endpoint mass
