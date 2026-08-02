@@ -5845,3 +5845,36 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `classification`: `HISTORICAL_SOURCE_STRUCTURE / LEFT_ABOVE_SEVEN_CLOSED /
   LEFT_HIGH_RESIDUAL_OPEN / RH_FRONTIER_DELTA_0`.
 - `global_goal`: active.
+
+## 2026-08-02 H12 residual-left reflected evaluator checkpoint
+
+- `parent_campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `route_policy`: historical-route reconstruction is an omission search. Major human routes remain
+  the default main line until their decisive inferences have been tested for neglected branches,
+  weakened premises, or cross-route repairs. Original conjectures, falsification, and direct RH
+  attacks remain open throughout.
+- `closed_edge_65`: exact second Euler--Maclaurin extraction gives
+  `zeta(s)=A_2(s,N)-s(s+1)(s+2)*integral(B_3({u})u^(-s-3))` on `Re(s)>0`, with
+  `|B_3|<=1/48` and an explicit actual-zeta value ball of order `N^(-Re(s)-2)`.
+- `closed_edge_66`: dominated parameter differentiation of the cubic half-line tail gives a finite
+  derivative center and explicit derivative ball using the majorant
+  `1/48*log(u)*u^(-epsilon-3)`.
+- `closed_edge_67`: shifting the digamma argument twice gives a compiled reflected archimedean
+  upper with error `27/(128*||s/2+3||^2)` per point.
+- `closed_edge_68`: Lean proves the exact positive-imaginary-axis reflection identity for the
+  actual logarithmic derivative, avoiding the strict-strip hypothesis of the prior reflection
+  consumer.
+- `closed_edge_69`: second-corrected right-half finite margins imply actual imaginary-axis zeta and
+  derivative nonvanishing, strict negative quotient real part, and the rotated slit condition.
+- `open_edge_70`: produce a kernel-checked finite rational subcover discharging those margins for
+  every `13/2<=y<=7`. Navigation suggests low-tens cutoffs and identifies finite rounded centers
+  as the remaining producer; no navigation value is a theorem premise.
+- `local_audit`: both production modules, project entry, Targets, TargetChecks, and AxiomsAudit
+  pass focused warning-as-error builds; selected declarations use only `propext`,
+  `Classical.choice`, and `Quot.sound`; focused forbidden scans and `git diff --check` are clean;
+  the full local build passes `8837/8837`.
+- `classification`: `HISTORICAL_FORMULA_LOSS_IDENTIFIED / SECOND_EULER_BACKEND_CLOSED /
+  VIRTUAL_AXIS_REFLECTION_CLOSED / FINITE_SUBCOVER_OPEN / RH_FRONTIER_DELTA_0`.
+- `strict_limit`: the residual interval `[13/2,7]`, complete vertical boundary, compact-middle top,
+  height-ten certificate, H12, and RH remain open.
+- `global_goal`: active.

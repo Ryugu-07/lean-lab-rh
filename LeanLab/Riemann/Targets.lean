@@ -140,6 +140,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenRotatedSlitWinding
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryRayProducer
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenCompleteBoundary
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftHigh
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftResidual
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelLowZero
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseNorm
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseMargin
@@ -2229,6 +2230,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``speiserZetaDerivRatio_leftVertical_rotated_mem_slitPlane_of_seven_le
       status := .proven
       note := "The active HEIGHT-TEN-COMPLETE-BOUNDARY-01 subattack now closes the left vertical ray condition for y>=7 without a numerical zeta table. Xi nonvanishing follows because every nontrivial zero has positive real part; the nonpole xi factorization then gives zeta(iy)!=0. A one-step digamma shift and exact rational estimates prove the imaginary-axis archimedean term negative for y>=7. Equation (2.1) contributes a nonpositive paired-zero sum, so the actual quotient has negative real part and its rotation by I lies in the slit plane. Navigation falsifies the same archimedean-only route at y=13/2: that term is still positive there. The exact residual high interval [13/2,7] must retain paired-zero information or use direct actual-zeta evaluation. The left low/middle zones, this residual interval, right low/middle zones, compact-middle top, complete certificate, H12, and RH remain open." },
+    { id := "H12.levinson-montgomery.height-ten-left-residual-reflected-evaluator"
+      tier := .tier1
+      title := "Build the reflected evaluator for the residual left-high interval"
+      statement :=
+        "Extract the next Bernoulli correction from the actual Euler--Maclaurin remainder, prove value and derivative balls with a cubic periodic kernel, shift the reflected digamma enclosure twice, prove the exact imaginary-axis reflection identity, and connect finite reflected margins to the actual left-vertical slit condition."
+      leanName := some ``speiserZetaDerivRatio_leftVertical_rotated_mem_slitPlane_of_reflected_eulerMaclaurinTwo
+      status := .proven
+      note := "The residual-left evaluator infrastructure now compiles without a numerical premise. Lean extracts s*N^(-s-1)/12 from the first corrected formula, bounds the cubic periodic kernel by 1/48, differentiates its half-line integral under an explicit dominated bound, exposes finite value and derivative centers, and proves actual zeta/zeta' error balls of order N^(-Re(s)-2). A twice-shifted digamma enclosure and a new exact virtual-axis reflection theorem feed those balls into a generic margin consumer for Re(zeta'/zeta)(iy)<0 and the rotated slit condition. Navigation indicates this materially reduces the cutoff burden and identifies the remaining producer as a proof-producing finite rational subcover of [13/2,7]. That subcover is not proved here; the residual interval, complete boundary, height-ten certificate, H12, and RH remain open." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

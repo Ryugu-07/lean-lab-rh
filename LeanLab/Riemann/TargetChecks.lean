@@ -25,6 +25,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenRotatedSlitWinding
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryRayProducer
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenCompleteBoundary
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftHigh
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftResidual
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelLowZero
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseNorm
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseMargin
@@ -7351,5 +7352,49 @@ example {y : ℝ} (hy : 7 ≤ y) :
     Complex.I * speiserZetaDerivRatio ((y : ℂ) * Complex.I) ∈
       Complex.slitPlane :=
   speiserZetaDerivRatio_leftVertical_rotated_mem_slitPlane_of_seven_le hy
+
+example {s : ℂ} (hsOne : s ≠ 1) (hsRe : 0 < s.re) {N : ℕ} (hN : 1 ≤ N) :
+    ‖riemannZeta s - eulerMaclaurinTwoZetaApprox s N‖ ≤
+      eulerMaclaurinTwoZetaError s N :=
+  norm_riemannZeta_sub_eulerMaclaurinTwoZetaApprox_le_of_re_pos hsOne hsRe hN
+
+example {s : ℂ} (hsOne : s ≠ 1) (hsRe : 0 < s.re) {N : ℕ} (hN : 1 ≤ N) :
+    ‖deriv riemannZeta s - eulerMaclaurinTwoZetaDerivApprox s N‖ ≤
+      eulerMaclaurinTwoZetaDerivError s N :=
+  norm_deriv_riemannZeta_sub_eulerMaclaurinTwoZetaDerivApprox_le_of_re_pos hsOne hsRe hN
+
+example {y : ℝ} (hy : 0 < y)
+    (hzeta : riemannZeta ((y : ℂ) * Complex.I) ≠ 0)
+    (hreflected : riemannZeta (1 - (y : ℂ) * Complex.I) ≠ 0) :
+    (logDeriv riemannZeta ((y : ℂ) * Complex.I)).re =
+      -(logDeriv riemannZeta (1 - (y : ℂ) * Complex.I)).re +
+        levinsonMontgomeryLogDerivArchimedeanTerm ((y : ℂ) * Complex.I) +
+        levinsonMontgomeryLogDerivArchimedeanTerm (1 - (y : ℂ) * Complex.I) :=
+  logDeriv_riemannZeta_re_reflection_on_imaginaryAxis hy hzeta hreflected
+
+example (y : ℝ) (hy : 0 < y) {N : ℕ} (hN : 1 ≤ N)
+    (hzMargin :
+      eulerMaclaurinTwoZetaError (1 - (y : ℂ) * Complex.I) N <
+        ‖eulerMaclaurinTwoZetaApprox (1 - (y : ℂ) * Complex.I) N‖)
+    (hupper :
+      levinsonMontgomeryReflectedArchimedeanShiftTwoUpper
+        ((y : ℂ) * Complex.I) < 0)
+    (hcross :
+      levinsonMontgomeryReflectedArchimedeanShiftTwoUpper
+          ((y : ℂ) * Complex.I) *
+          (‖eulerMaclaurinTwoZetaApprox (1 - (y : ℂ) * Complex.I) N‖ -
+            eulerMaclaurinTwoZetaError (1 - (y : ℂ) * Complex.I) N) ^ 2 <
+        (eulerMaclaurinTwoZetaDerivApprox (1 - (y : ℂ) * Complex.I) N *
+            conj (eulerMaclaurinTwoZetaApprox
+              (1 - (y : ℂ) * Complex.I) N)).re -
+          (eulerMaclaurinTwoZetaDerivError (1 - (y : ℂ) * Complex.I) N *
+              (‖eulerMaclaurinTwoZetaApprox (1 - (y : ℂ) * Complex.I) N‖ +
+                eulerMaclaurinTwoZetaError (1 - (y : ℂ) * Complex.I) N) +
+            ‖eulerMaclaurinTwoZetaDerivApprox (1 - (y : ℂ) * Complex.I) N‖ *
+              eulerMaclaurinTwoZetaError (1 - (y : ℂ) * Complex.I) N)) :
+    Complex.I * speiserZetaDerivRatio ((y : ℂ) * Complex.I) ∈
+      Complex.slitPlane :=
+  speiserZetaDerivRatio_leftVertical_rotated_mem_slitPlane_of_reflected_eulerMaclaurinTwo
+    y hy hN hzMargin hupper hcross
 
 end LeanLab.Riemann

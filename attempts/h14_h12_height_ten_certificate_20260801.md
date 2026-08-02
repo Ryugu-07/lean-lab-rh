@@ -141,6 +141,13 @@ CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 | 125 | `LOCAL_AUDIT` | The production module, project entry, Targets, exact TargetChecks, and AxiomsAudit pass warning-as-error. All four selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; focused forbidden and resource-option scans plus `git diff --check` are clean; full build passes `8835/8835`. | Publish the frozen implementation and immutable evidence without closing the active complete-boundary subattack. |
 | 126 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `135d631c24c2a51b0158c3d3ef335c9d6a16dcdd` passed Lean Action run `30727229831`, build job `91441050957`, in `2m33s`. Five Lean blobs are frozen in the docs-only evidence record. | Publish the evidence commit, verify its CI and all five blob identities, then keep the complete-boundary subattack active at `[13/2,7]` and the other open zones. |
 | 127 | `IMMUTABLE_EVIDENCE_AND_CHECKPOINT_STOP` | Docs-only evidence commit `b0a2d35b0882364fae153df3eeb79e7a29f09228` passed Lean Action run `30727358310`, build job `91441411867`, in `1m47s`; all five frozen Lean blobs match the implementation commit. The left-above-seven probe stops successfully, while the complete-boundary subattack, parent campaign, and global RH Goal remain active. | Resume with a proof-producing actual quotient evaluator for `[13/2,7]` or another higher-value open boundary zone; do not optimize the now-closed structural threshold. |
+| 128 | `ROUTE_PRIORITY_CONFIRMED` | The user confirms that historical-route coverage is an omission search: reconstruct human attempts far enough to detect overlooked near-closures, keep historical coverage as the default main line until the major families have been tried, and move most effort to original routes only if that search fails. Precise original conjectures, falsification, and direct attacks remain open throughout. The canonical governance already records this ruling. | Continue the historically genuine Levinson--Montgomery residual evaluator; do not turn the closed `y>=7` threshold into a constant-optimization campaign. |
+| 129 | `SECOND_EULER_MACLAURIN_VALUE_BACKEND` | Lean extracts the Bernoulli term `s*N^(-s-1)/12` from the actual first-corrected zeta formula. A cubic periodic primitive is bounded by `1/48`; finite-interval integration by parts and a half-line limit prove the exact second-corrected remainder and an actual-zeta value ball of order `N^(-Re(s)-2)`. | Differentiate the cubic half-line integral under a checked dominating function. |
+| 130 | `SECOND_EULER_MACLAURIN_DERIVATIVE_BACKEND` | Lean proves parameter differentiability of the cubic kernel and dominated differentiation with majorant `1/48*log(u)*u^(-epsilon-3)`. The actual zeta derivative equals a finite second-corrected center plus an explicit cubic-tail derivative; both the finite formula and the derivative error ball compile. | Derive the exact virtual-axis reflection needed to consume right-half-plane centers. |
+| 131 | `VIRTUAL_AXIS_REFLECTION_AND_SHIFTED_GAMMA` | A twice-shifted digamma--Stirling enclosure compiles with explicit remainder `27/(128*||s/2+3||^2)`. Lean also proves the exact identity expressing `Re(zeta'/zeta)(iy)` as minus the reflected right-half quotient real part plus the two pole/Gamma terms. | Feed the second-corrected right-half value/derivative balls into a generic left-axis margin theorem. |
+| 132 | `REFLECTED_MARGIN_CONSUMER_COMPILED` | The generic consumer proves that finite reflected margins imply actual `zeta(iy)!=0`, `zeta'(iy)!=0`, `Re(zeta'/zeta)(iy)<0`, and membership of `I*(zeta'/zeta)(iy)` in `Complex.slitPlane`. No grid, decimal, or unproved interval claim enters the theorem. | Test whether the inherited transcendental backend can produce a finite rational subcover of `[13/2,7]`. |
+| 133 | `PRODUCER_BOUNDARY_IDENTIFIED` | Navigation-only arithmetic indicates the second correction materially lowers the useful cutoff into the low tens; it also shows the inherited unshifted reflected archimedean upper, not the Euler value radius, was the immediate lost margin. Two exact digamma shifts restore pointwise margin in navigation. The existing Taylor/scaling-and-squaring backend can support a finite cover, but the cover and its rounded centers are not yet Lean theorems. | Stop this infrastructure loop at the honest boundary. Preregister or extend the existing complete-boundary attack with a proof-producing finite rational subcover; do not claim `[13/2,7]` closed. |
+| 134 | `LOCAL_AUDIT` | The two production modules, project entry, Targets, exact TargetChecks witnesses, and AxiomsAudit pass focused warning-as-error builds. Selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; focused forbidden-token and custom-declaration scans and `git diff --check` are clean; the full local build passes `8837/8837`. | Freeze the implementation, run public Lean Action, and record immutable evidence before selecting the finite-subcover producer. |
 
 ## Current obstruction map
 
@@ -196,13 +203,22 @@ CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 19. `CLOSED_ENDPOINT_MASS_AND_REMAINDER`: the actual endpoint masses are at most `219/2000` and
     `981/2000`; their sum is `<=3/5`, yielding the literal remainder margin and right-high zone.
     This does not close the other boundary zones, the complete height-ten certificate, H12, or RH.
+20. `CLOSED_SECOND_EULER_BACKEND`: the next Bernoulli correction, cubic periodic remainder,
+    dominated parameter derivative, finite value/derivative centers, and actual zeta/zeta'
+    error balls compile on `Re(s)>0`.
+21. `CLOSED_VIRTUAL_AXIS_CONSUMER`: a twice-shifted digamma upper and exact virtual-axis
+    logarithmic-derivative reflection compose with the second evaluator margins to the actual
+    left-axis quotient sign and rotated slit condition.
+22. `OPEN_FINITE_SUBCOVER`: no theorem yet discharges those margins uniformly on
+    `[13/2,7]`. The remaining producer is a finite rational cover with kernel-checked rounded
+    centers; navigation values cannot be used as premises.
 
 ## Runtime record
 
 - `model`: Codex, GPT-5 family; exact serving variant is not exposed.
 - `reasoning_effort`: not exposed.
 - `budget`: no numerical quota under V4.1.
-- `compaction_state`: resumed from summaries before rounds 33, 40, 93, and 101; after each transition the
+- `compaction_state`: resumed from summaries before rounds 33, 40, 93, 101, and 128; after each transition the
   current governance, HANDOFF, source declarations, Targets, TargetChecks, active attempt log,
   hard-gap DAG, and applicable preregistration were re-read before continuing.
 - `global_goal`: active.
