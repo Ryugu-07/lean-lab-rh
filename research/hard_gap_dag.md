@@ -5884,3 +5884,22 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `strict_limit`: the residual interval `[13/2,7]`, complete vertical boundary, compact-middle top,
   height-ten certificate, H12, and RH remain open.
 - `global_goal`: active.
+
+## 2026-08-02 H1 x H12 low-zero paired-mass selection
+
+- `parent`: `HEIGHT-TEN-COMPLETE-BOUNDARY-01` remains active.
+- `rejected_continuation_71`: immediately generate a finite reflected quotient subcover on
+  `[13/2,7]`. The evaluator remains valid, but this continuation still discards the source's
+  negative paired-zero mass and has lower omission value than testing that retained term.
+- `selected_edge_71`: prove the imaginary-axis archimedean term `<3/500` on `[13/2,7]`; isolate
+  one actual critical-line zero with `14<=gamma<=15`, whose divisor term is `<=-1/145`; then use
+  equation `(2.1)` to close the entire interval.
+- `open_producer_72`: prove `HardyXiBracketsZero 14 15` by kernel-checked endpoint evaluation.
+  This is an H1 critical-line sign producer feeding the H12 paired-mass consumer. No known zero
+  table or navigation decimal may be a premise.
+- `material_difference`: unlike the previous second Euler--Maclaurin attack, this route preserves
+  a single source zero-mass term and converts a continuum quotient certificate into two endpoint
+  signs.
+- `strict_limit`: no low-zero bracket, residual interval, complete boundary, height-ten
+  certificate, H12, or RH theorem is claimed at selection time.
+- `global_goal`: active.
