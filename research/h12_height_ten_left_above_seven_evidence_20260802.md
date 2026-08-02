@@ -22,6 +22,15 @@ Result: passed in `2m33s`.
 These blobs contain the project import, production theorem chain, exact target registration,
 exact statement checks, and axiom prints used by the passing implementation run.
 
+## Immutable verification
+
+Docs-only evidence commit: `b0a2d35b0882364fae153df3eeb79e7a29f09228`.
+
+Lean Action run `30727358310`, build job `91441411867`, passed in `1m47s`.
+
+Each of the five paths was read again from that commit. Every blob identity exactly matches the
+implementation record above.
+
 ## Claim boundary
 
 The implementation proves positive-imaginary-axis zeta nonvanishing and closes the actual left

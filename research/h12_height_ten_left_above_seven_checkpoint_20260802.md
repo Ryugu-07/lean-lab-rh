@@ -6,8 +6,8 @@ Parent campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Active subattack: `HEIGHT-TEN-COMPLETE-BOUNDARY-01`
 
-Status: `LOCAL_SUCCESS / PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_PENDING /
-COMPLETE_BOUNDARY_ACTIVE /
+Status: `LOCAL_SUCCESS / PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_GREEN /
+CHECKPOINT_STOP_SUCCESS / COMPLETE_BOUNDARY_ACTIVE /
 GLOBAL_GOAL_ACTIVE`
 
 ## Route decision
@@ -61,6 +61,10 @@ Frozen implementation commit: `135d631c24c2a51b0158c3d3ef335c9d6a16dcdd`.
 Lean Action run `30727229831`, build job `91441050957`, passed in `2m33s`.
 
 Five Lean blob identities are recorded in the docs-only immutable-evidence file.
+
+Docs-only evidence commit `b0a2d35b0882364fae153df3eeb79e7a29f09228` passed Lean Action run
+`30727358310`, build job `91441411867`, in `1m47s`. Re-reading all five paths at that commit
+reproduced the implementation blob identities exactly.
 
 ## Strict boundary
 

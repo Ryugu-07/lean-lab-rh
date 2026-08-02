@@ -5836,6 +5836,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `public_implementation`: frozen commit `135d631c24c2a51b0158c3d3ef335c9d6a16dcdd`
   passed Lean Action run `30727229831`, build job `91441050957`, in `2m33s`; five Lean blobs are
   frozen in the docs-only evidence record.
+- `immutable_evidence`: docs-only commit `b0a2d35b0882364fae153df3eeb79e7a29f09228`
+  passed Lean Action run `30727358310`, build job `91441411867`, in `1m47s`; all five frozen Lean
+  blob identities match the implementation record.
 - `open_edge_64`: close the residual left-high interval `[13/2,7]` using retained paired-zero mass
   or direct actual-zeta interval evaluation. Left low/middle, right low/middle, compact-middle top,
   complete certificate, H12, and RH remain open.
