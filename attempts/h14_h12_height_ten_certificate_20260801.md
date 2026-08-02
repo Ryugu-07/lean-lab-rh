@@ -229,6 +229,13 @@ CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
     infrastructure but is no longer required for this interval. Exact Hardy-xi signs at ten and
     seventeen produce one actual critical-line zero; retaining its paired divisor mass closes
     the actual quotient sign and rotated slit condition on `[13/2,7]`.
+24. `CLOSED_TOP_ENDPOINT_SECOND_DERIVATIVE_BACKEND`: explicit differentiation of the
+    second-corrected finite center, thirty squared-log rounded complex-power certificates, a
+    radius-`1/4` circle error bound, and Cauchy's estimate prove the actual endpoint theorem
+    `||zeta''(1/2-10i)||<33/50`.
+25. `OPEN_TOP_UNIFORM_TRANSPORT`: the new theorem is pointwise and does not replace the existing
+    existential endpoint neighborhood by a verified explicit interval. The compact-middle top
+    still requires a uniform phase-preserving finite cover or another source-level producer.
 
 ## Runtime record
 

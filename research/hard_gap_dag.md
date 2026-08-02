@@ -5961,3 +5961,27 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `classification`: `HISTORICAL_CROSS_ROUTE_OMISSION_FORMALIZED / ACTUAL_LOW_ZERO_BRACKET /
   RESIDUAL_LEFT_HIGH_CLOSED / RH_FRONTIER_DELTA_0`.
 - `global_goal`: active.
+
+## 2026-08-02 H12 height-ten top endpoint second-derivative checkpoint
+
+- `parent`: `HEIGHT-TEN-COMPLETE-BOUNDARY-01` remains active.
+- `selected_edge_78`: differentiate the second-corrected Euler--Maclaurin finite derivative,
+  retain all complex phases in the squared-log sum, and use a radius-`1/4` Cauchy circle to
+  certify the actual second derivative at the reflected height-ten endpoint.
+- `closed_edge_78`: Lean proves the explicit finite second-derivative formula, encloses all thirty
+  squared-log complex-power terms, and verifies the rounded center has norm `<1/4` with total
+  explicit-formula error `<=1/1000000`.
+- `closed_edge_79`: the second-corrected first-derivative remainder is `<=1/10` on the complete
+  radius-`1/4` circle. A generic Cauchy bridge gives actual-to-finite second-derivative error
+  `<=2/5`, hence `||zeta''(1/2-10i)||<33/50`.
+- `obstruction_80`: this is a one-point curvature certificate. A pointwise second derivative
+  bound supplies no uniform variation bound over `1/2<=Re(w)<=1`; continuity only recovers the
+  already compiled existential endpoint neighborhood. The missing producer is a uniform
+  phase-preserving finite subcover or a different structural proof of the top sign.
+- `local_stop`: stop `HEIGHT-TEN-TOP-ENDPOINT-TRANSPORT-01` after public audit as a meaningful
+  backend checkpoint, without claiming `SpeiserStrictNegativeHorizontal 10`.
+- `remaining_boundary`: left low/middle, right low/middle, and compact-middle top are open. The
+  complete height-ten certificate, H12, and RH remain open.
+- `route_policy`: historical-source coverage remains the main line for omission discovery;
+  original conjectures, falsification, and direct RH attacks remain open at every stage.
+- `global_goal`: active.

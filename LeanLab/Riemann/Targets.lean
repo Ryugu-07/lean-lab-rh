@@ -142,6 +142,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenCompleteBoundary
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftHigh
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftResidual
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftLowZeroMass
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenTopTransport
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelLowZero
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseNorm
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseMargin
@@ -2247,6 +2248,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``speiserZetaDerivRatio_leftVertical_rotated_mem_slitPlane_thirteenHalves_seven_lowZeroMass
       status := .proven
       note := "Campaign PROOF-ATTEMPT-20260802-H12-H1-LOW-ZERO-MASS-01 closes the residual left-high interval through a cross-route H1 x H12 repair. The exact Riemann--Siegel contour identity proves hardyXi(10)>0. At height 17, a rational Stirling-phase enclosure gives prefactor real part less than -(4/5) of its norm; new compact and affine-tail envelopes bound the raw integral norm by 3/4, proving hardyXi(17)<0 and an actual critical-line zero in [10,17]. Eight exact digamma shifts prove the imaginary-axis archimedean term below 9/2000, while the retained divisor term is at most -1/221 uniformly on [13/2,7]. Since 9/2000<1/221, the actual quotient real part is negative and its rotation lies in the slit plane throughout the residual interval. No decimal zero ordinate or external zero table is a premise. This closes the left-high vertical zone together with the y>=7 theorem; left low/middle, right low/middle, compact-middle top, the complete height-ten certificate, H12, and RH remain open." },
+    { id := "H12.levinson-montgomery.height-ten-top-second-derivative-endpoint"
+      tier := .tier1
+      title := "Certify the reflected height-ten endpoint second derivative"
+      statement :=
+        "Differentiate the second-corrected Euler--Maclaurin center, kernel-check its phase-preserving rational value at 1/2-10i, use a uniform derivative-error bound on a surrounding circle with Cauchy's estimate, and prove an actual zeta second-derivative norm bound at the reflected endpoint."
+      leanName := some ``norm_deriv_deriv_riemannZeta_heightTenReflectedEndpoint_lt
+      status := .proven
+      note := "Subattack HEIGHT-TEN-TOP-ENDPOINT-TRANSPORT-01 closes its endpoint second-derivative backend. Lean proves the explicit derivative of the finite second-corrected center, thirty squared-log complex-power enclosures, a rational center of norm below 1/4, a 1/10 first-derivative remainder bound on the radius-1/4 circle, a generic Cauchy bridge, and the actual theorem ||zeta''(1/2-10i)||<33/50. This is a one-point curvature certificate: it does not supply a uniform second-derivative bound or finite phase-preserving subcover across 1/2<=Re(w)<=1, so no new positive-width top interval, complete horizontal, height-ten certificate, H12, or RH is claimed." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

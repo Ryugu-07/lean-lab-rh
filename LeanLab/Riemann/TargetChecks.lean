@@ -27,6 +27,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenCompleteBoundary
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftHigh
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftResidual
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftLowZeroMass
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenTopTransport
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelLowZero
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseNorm
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseMargin
@@ -7420,5 +7421,27 @@ example {y : ℝ} (hy0 : 13 / 2 ≤ y) (hy1 : y ≤ 7) :
       Complex.slitPlane :=
   speiserZetaDerivRatio_leftVertical_rotated_mem_slitPlane_thirteenHalves_seven_lowZeroMass
     hy0 hy1
+
+example (s : ℂ) (hsOne : s ≠ 1) {N : ℕ} (hN : 1 ≤ N) :
+    eulerMaclaurinTwoZetaSecondFiniteFormula s N =
+      eulerMaclaurinTwoZetaSecondExplicitFormula s N :=
+  eulerMaclaurinTwoZetaSecondFiniteFormula_eq_explicit s hsOne hN
+
+example : ‖heightTenRoundedEulerZetaSecondApprox‖ < (1 / 4 : ℝ) :=
+  norm_heightTenRoundedEulerZetaSecondApprox_lt_oneQuarter
+
+example {z : ℂ}
+    (hz : z ∈ Metric.sphere heightTenReflectedEndpoint (1 / 4 : ℝ)) :
+    eulerMaclaurinTwoZetaDerivError z 30 ≤ (1 / 10 : ℝ) :=
+  heightTenReflectedEndpoint_circle_derivError_le_oneTenth hz
+
+example :
+    ‖eulerMaclaurinTwoZetaSecondFiniteFormula heightTenReflectedEndpoint 30‖ <
+      (13 / 50 : ℝ) :=
+  norm_eulerMaclaurinTwoZetaSecondFiniteFormula_heightTenReflectedEndpoint_lt
+
+example :
+    ‖deriv (deriv riemannZeta) heightTenReflectedEndpoint‖ < (33 / 50 : ℝ) :=
+  norm_deriv_deriv_riemannZeta_heightTenReflectedEndpoint_lt
 
 end LeanLab.Riemann
