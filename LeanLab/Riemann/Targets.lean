@@ -141,6 +141,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryRayProducer
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenCompleteBoundary
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftHigh
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftResidual
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftLowZeroMass
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelLowZero
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseNorm
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseMargin
@@ -2238,6 +2239,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``speiserZetaDerivRatio_leftVertical_rotated_mem_slitPlane_of_reflected_eulerMaclaurinTwo
       status := .proven
       note := "The residual-left evaluator infrastructure now compiles without a numerical premise. Lean extracts s*N^(-s-1)/12 from the first corrected formula, bounds the cubic periodic kernel by 1/48, differentiates its half-line integral under an explicit dominated bound, exposes finite value and derivative centers, and proves actual zeta/zeta' error balls of order N^(-Re(s)-2). A twice-shifted digamma enclosure and a new exact virtual-axis reflection theorem feed those balls into a generic margin consumer for Re(zeta'/zeta)(iy)<0 and the rotated slit condition. Navigation indicates this materially reduces the cutoff burden and identifies the remaining producer as a proof-producing finite rational subcover of [13/2,7]. That subcover is not proved here; the residual interval, complete boundary, height-ten certificate, H12, and RH remain open." },
+    { id := "H12.H1.levinson-montgomery.height-ten-left-residual-low-zero-mass"
+      tier := .tier1
+      title := "Close the residual left-high interval with one actual critical-line zero"
+      statement :=
+        "Prove exact Hardy-xi endpoint signs at heights 10 and 17, extract one actual multiplicity-bearing critical-line divisor term, and use its retained paired mass to prove the left-vertical quotient sign and rotated slit condition on 13/2<=y<=7."
+      leanName := some ``speiserZetaDerivRatio_leftVertical_rotated_mem_slitPlane_thirteenHalves_seven_lowZeroMass
+      status := .proven
+      note := "Campaign PROOF-ATTEMPT-20260802-H12-H1-LOW-ZERO-MASS-01 closes the residual left-high interval through a cross-route H1 x H12 repair. The exact Riemann--Siegel contour identity proves hardyXi(10)>0. At height 17, a rational Stirling-phase enclosure gives prefactor real part less than -(4/5) of its norm; new compact and affine-tail envelopes bound the raw integral norm by 3/4, proving hardyXi(17)<0 and an actual critical-line zero in [10,17]. Eight exact digamma shifts prove the imaginary-axis archimedean term below 9/2000, while the retained divisor term is at most -1/221 uniformly on [13/2,7]. Since 9/2000<1/221, the actual quotient real part is negative and its rotation lies in the slit plane throughout the residual interval. No decimal zero ordinate or external zero table is a premise. This closes the left-high vertical zone together with the y>=7 theorem; left low/middle, right low/middle, compact-middle top, the complete height-ten certificate, H12, and RH remain open." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

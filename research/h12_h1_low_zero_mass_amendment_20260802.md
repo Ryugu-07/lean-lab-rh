@@ -4,7 +4,10 @@ Date: 2026-08-02
 
 Campaign: `PROOF-ATTEMPT-20260802-H12-H1-LOW-ZERO-MASS-01`
 
-Status: preregistered amendment; public docs gate required before reliance on the amended target.
+Status: public docs gate passed; amended production theorem compiled locally.
+
+Gate: commit `c45dfa50430a73ed861e7dcd3a93603b391aee7b`, Lean Action run
+`30730702585`, build job `91450510326`, `1m46s`.
 
 Global RH Goal: active.
 
@@ -94,4 +97,3 @@ implementation/evidence/receipt CI.
 
 Before the endpoint bracket, mass balance, registries, audits, and public CI all pass, do not claim
 the residual left interval, complete boundary, height-ten certificate, H12, or RH.
-

@@ -5923,3 +5923,33 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `strict_limit`: no actual bracket, residual interval, complete boundary, height-ten
   certificate, H12, or RH theorem is claimed at amendment time.
 - `global_goal`: active.
+
+## 2026-08-02 H1 x H12 residual-left low-zero closure
+
+- `public_gate_73`: amendment commit `c45dfa50430a73ed861e7dcd3a93603b391aee7b`
+  passed Lean Action run `30730702585`, build job `91450510326`, in `1m46s`.
+- `closed_edge_73`: the exact Riemann--Siegel identity and oriented phase prove
+  `0<hardyXi(10)`. At height seventeen, the shifted phase gives prefactor real part below
+  `-(4/5)` of its norm.
+- `closed_edge_74`: a compact negative-half-line envelope integrates to `9/40`; an affine bound
+  for the exact argument ratio gives a tail envelope integrating to `3/100`. With the inherited
+  positive mass `981/2000`, the raw contour integral norm is at most `3/4`, so
+  `hardyXi(17)<0`.
+- `closed_edge_75`: Lean compiles the actual bracket `HardyXiBracketsZero 10 17`, produces an
+  actual critical-line zero by continuity, maps it to a multiplicity-bearing xi divisor copy,
+  and proves that selected paired term is at most `-1/221` uniformly on `[13/2,7]`.
+- `closed_edge_76`: eight exact digamma shifts and the rational certificate
+  `2.2581<log(9.568)` prove the archimedean term `<9/2000` uniformly on `[13/2,7]`.
+- `closed_edge_77`: equation `(2.1)` and `9/2000<1/221` prove the actual quotient real part
+  negative and the rotated slit condition throughout the residual left-high interval.
+- `local_audit`: production, project entry, Targets, TargetChecks, and AxiomsAudit pass focused
+  warning-as-error builds. Selected final declarations use only `propext`, `Classical.choice`,
+  and `Quot.sound`; the production forbidden-token scan and `git diff --check` are clean; the
+  full project build passes `8838/8838`.
+- `superseded_open_edge_70`: the direct finite reflected subcover remains a valid evaluator
+  backend but is no longer required to close `[13/2,7]`.
+- `next_boundary_frontier`: left low/middle, right low/middle, compact-middle top, and the
+  complete height-ten certificate remain open. H12 and RH remain open.
+- `classification`: `HISTORICAL_CROSS_ROUTE_OMISSION_FORMALIZED / ACTUAL_LOW_ZERO_BRACKET /
+  RESIDUAL_LEFT_HIGH_CLOSED / RH_FRONTIER_DELTA_0`.
+- `global_goal`: active.

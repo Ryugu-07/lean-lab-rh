@@ -151,6 +151,11 @@ CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 | 135 | `PUBLIC_IMPLEMENTATION` | Implementation commit `299ced5b6825e98ff52462d7e2743e3c8441f834` passed Lean Action run `30729012677`, build job `91445811240`, in `2m42s`. Six Lean blob identities are frozen in the docs-only evidence record. | Run the evidence commit through public CI and verify that every frozen Lean blob is unchanged. |
 | 136 | `IMMUTABLE_EVIDENCE_AND_CHECKPOINT_STOP` | Docs-only evidence commit `121a96e344b7dbb8a2191b5e6425ec02b7c8ede3` passed Lean Action run `30729165366`, build job `91446218169`, in `1m50s`; all six frozen Lean blobs match the implementation commit. The reflected-evaluator checkpoint stops successfully, while the complete-boundary subattack, parent campaign, and global RH Goal remain active. | Resume with a proof-producing finite rational subcover for `[13/2,7]`, unless historical-route graph reranking selects a higher-value open family. Original conjectures, falsification, and direct attacks remain open. |
 | 137 | `ROUTE_SELECTION_H1_X_H12_LOW_ZERO_MASS` | Re-enter equation `(2.1)` with a materially different attack: retain one actual low critical-line zero term instead of discarding the complete paired-zero sum. Conservative exact targets `archimedean<3/500` and `one term<=-1/145` reduce all of `[13/2,7]` to `HardyXiBracketsZero 14 15`. | Publish `PROOF-ATTEMPT-20260802-H12-H1-LOW-ZERO-MASS-01`; after public gate, compile the uniform consumer and attack the two endpoint signs. |
+| 138 | `LOW_ZERO_CONDITIONAL_CONSUMER` | Six digamma shifts, imaginary-axis paired-term nonpositivity, multiplicity-copy extraction, and the conditional `[14,15]` consumer compile. The exact phase orientation additionally proves `0<hardyXi 10`. | Test the remaining endpoint signs against the actual Riemann--Siegel norm budget. |
+| 139 | `ENDPOINT_FALSIFICATION_AND_AMENDMENT` | The existing norm budget cannot decide the delicate `[14,15]` endpoint projection. The campaign preregisters `[10,17]`, where the negative prefactor phase is robust, with amended balances `<9/2000` and `<=-1/221`. Public gate `c45dfa50430a73ed861e7dcd3a93603b391aee7b` passes run `30730702585`. | Prove the actual height-seventeen sign. |
+| 140 | `HARDY_BRACKET_CLOSED` | A rational Stirling-phase enclosure proves prefactor ratio below `-4/5`; compact and affine-tail integrals bound the raw contour norm by `3/4`. Thus `hardyXi 17<0`, and Lean compiles the actual bracket `HardyXiBracketsZero 10 17`. | Extract one actual zero term with multiplicity. |
+| 141 | `PAIRED_MASS_AND_ARCHIMEDEAN_BALANCE` | One divisor copy from the actual critical-line zero contributes at most `-1/221` uniformly on `[13/2,7]`. Eight digamma shifts and a proof-producing binary logarithm enclosure give the archimedean term `<9/2000`. | Compose equation `(2.1)`. |
+| 142 | `CLOSED_RESIDUAL_LEFT_HIGH_LOCAL` | Since `9/2000<1/221`, the actual quotient real part is strictly negative and its rotation lies in the slit plane throughout `[13/2,7]`. Focused production, registries, exact witnesses, and standard-only axiom audit pass; the full project build passes `8838/8838`. | Freeze implementation and public evidence; then rerank the remaining boundary zones. |
 
 ## Current obstruction map
 
@@ -215,6 +220,10 @@ CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 22. `OPEN_FINITE_SUBCOVER`: no theorem yet discharges those margins uniformly on
     `[13/2,7]`. The remaining producer is a finite rational cover with kernel-checked rounded
     centers; navigation values cannot be used as premises.
+23. `CLOSED_RESIDUAL_LEFT_HIGH_BY_LOW_ZERO_MASS`: the finite reflected subcover remains valid
+    infrastructure but is no longer required for this interval. Exact Hardy-xi signs at ten and
+    seventeen produce one actual critical-line zero; retaining its paired divisor mass closes
+    the actual quotient sign and rotated slit condition on `[13/2,7]`.
 
 ## Runtime record
 

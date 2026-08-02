@@ -26,6 +26,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenBoundaryRayProducer
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenCompleteBoundary
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftHigh
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftResidual
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftLowZeroMass
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelLowZero
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseNorm
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseMargin
@@ -7396,5 +7397,28 @@ example (y : ℝ) (hy : 0 < y) {N : ℕ} (hN : 1 ≤ N)
       Complex.slitPlane :=
   speiserZetaDerivRatio_leftVertical_rotated_mem_slitPlane_of_reflected_eulerMaclaurinTwo
     y hy hN hzMargin hupper hcross
+
+example : 0 < hardyXi 10 :=
+  hardyXi_ten_pos
+
+example : hardyXi 17 < 0 :=
+  hardyXi_seventeen_neg
+
+example : HardyXiBracketsZero 10 17 :=
+  hardyXiBracketsZero_ten_seventeen
+
+example {y : ℝ} (hy0 : 13 / 2 ≤ y) (hy1 : y ≤ 7) :
+    levinsonMontgomeryLogDerivArchimedeanTerm ((y : ℂ) * Complex.I) < 9 / 2000 :=
+  levinsonMontgomeryArchimedean_imaginaryAxis_lt_nine_div_twoThousand hy0 hy1
+
+example {y : ℝ} (hy0 : 13 / 2 ≤ y) (hy1 : y ≤ 7) :
+    (speiserZetaDerivRatio ((y : ℂ) * Complex.I)).re < 0 :=
+  speiserZetaDerivRatio_leftVertical_re_neg_thirteenHalves_seven_lowZeroMass hy0 hy1
+
+example {y : ℝ} (hy0 : 13 / 2 ≤ y) (hy1 : y ≤ 7) :
+    Complex.I * speiserZetaDerivRatio ((y : ℂ) * Complex.I) ∈
+      Complex.slitPlane :=
+  speiserZetaDerivRatio_leftVertical_rotated_mem_slitPlane_thirteenHalves_seven_lowZeroMass
+    hy0 hy1
 
 end LeanLab.Riemann
