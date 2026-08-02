@@ -6,7 +6,8 @@ Parent campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Subattack: `HEIGHT-TEN-ENDPOINT-TAIL-INTEGRATION-01`
 
-Status: `LOCAL_SUCCESS / PUBLIC_EVIDENCE_PENDING / GLOBAL_GOAL_ACTIVE`
+Status: `LOCAL_SUCCESS / PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_PENDING /
+GLOBAL_GOAL_ACTIVE`
 
 ## Compiled actual-integral outputs
 
@@ -42,6 +43,20 @@ prefactor phase margin, Lean proves the literal `HeightTenRiemannSiegelOneRemain
 - Selected final declarations use only `propext`, `Classical.choice`, and `Quot.sound`.
 - Focused forbidden scans and `git diff --check` are clean.
 - Full local build passes `8834/8834`.
+
+## Public implementation evidence
+
+Frozen implementation commit: `6430a3cc5424610c79e26454617614b0784f0fe3`.
+
+Lean Action run `30726439356`, build job `91438921597`, passed in `2m43s`.
+
+Frozen Lean blobs:
+
+- `LevinsonMontgomeryHeightTenRiemannSiegelTailIntegral.lean`:
+  `d8b4baa6b14000698a859d6100e7961c83c22a93`
+- `Targets.lean`: `d1cb081dc4f1e3fa274854dde2c73809d5763eda`
+- `TargetChecks.lean`: `4d057536b26b78f029541711757db0cc05450468`
+- `AxiomsAudit.lean`: `950efd857ac458840625aa0a07dee011cb513e88`
 
 ## Strict boundary and next producer
 
