@@ -72,8 +72,9 @@ compile. The selected declarations report only `propext`, `Classical.choice`, an
 Focused forbidden-token and declaration scans are clean, `git diff --check` is clean, and the full
 local build passes `8837/8837`. Implementation commit
 `299ced5b6825e98ff52462d7e2743e3c8441f834` passed public Lean Action run `30729012677`, build job
-`91445811240`, in `2m42s`; six Lean blobs are frozen in the evidence record. Immutable evidence is
-recorded separately once complete.
+`91445811240`, in `2m42s`; six Lean blobs are frozen in the evidence record. Docs-only evidence
+commit `121a96e344b7dbb8a2191b5e6425ec02b7c8ede3` passed Lean Action run `30729165366`, build job
+`91446218169`, in `1m50s`; all six frozen Lean blobs match the implementation commit.
 
 ## Runtime
 

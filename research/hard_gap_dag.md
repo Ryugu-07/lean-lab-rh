@@ -5876,6 +5876,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `public_implementation`: frozen commit `299ced5b6825e98ff52462d7e2743e3c8441f834`
   passed Lean Action run `30729012677`, build job `91445811240`, in `2m42s`; six Lean blobs are
   frozen in the docs-only evidence record.
+- `immutable_evidence`: docs-only commit `121a96e344b7dbb8a2191b5e6425ec02b7c8ede3`
+  passed Lean Action run `30729165366`, build job `91446218169`, in `1m50s`; all six frozen Lean
+  blob identities match the implementation record.
 - `classification`: `HISTORICAL_FORMULA_LOSS_IDENTIFIED / SECOND_EULER_BACKEND_CLOSED /
   VIRTUAL_AXIS_REFLECTION_CLOSED / FINITE_SUBCOVER_OPEN / RH_FRONTIER_DELTA_0`.
 - `strict_limit`: the residual interval `[13/2,7]`, complete vertical boundary, compact-middle top,

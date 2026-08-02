@@ -24,6 +24,15 @@ Result: passed in `2m42s`.
 These blobs contain the project imports, both production theorem chains, exact target registration,
 exact statement checks, and axiom prints used by the passing implementation run.
 
+## Immutable verification
+
+Docs-only evidence commit: `121a96e344b7dbb8a2191b5e6425ec02b7c8ede3`.
+
+Lean Action run `30729165366`, build job `91446218169`, passed in `1m50s`.
+
+Each of the six paths was read again from that commit. Every blob identity exactly matches the
+implementation record above.
+
 ## Claim boundary
 
 The implementation proves an actual second-corrected Euler--Maclaurin value and derivative
