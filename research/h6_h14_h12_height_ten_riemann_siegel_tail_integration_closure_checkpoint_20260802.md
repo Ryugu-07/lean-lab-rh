@@ -6,8 +6,8 @@ Parent campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Subattack: `HEIGHT-TEN-ENDPOINT-TAIL-INTEGRATION-01`
 
-Status: `LOCAL_SUCCESS / PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_PENDING /
-GLOBAL_GOAL_ACTIVE`
+Status: `LOCAL_SUCCESS / PUBLIC_IMPLEMENTATION_GREEN / IMMUTABLE_EVIDENCE_GREEN /
+SUBATTACK_STOP_SUCCESS / GLOBAL_GOAL_ACTIVE`
 
 ## Compiled actual-integral outputs
 
@@ -57,6 +57,10 @@ Frozen Lean blobs:
 - `Targets.lean`: `d1cb081dc4f1e3fa274854dde2c73809d5763eda`
 - `TargetChecks.lean`: `4d057536b26b78f029541711757db0cc05450468`
 - `AxiomsAudit.lean`: `950efd857ac458840625aa0a07dee011cb513e88`
+
+Docs-only immutable-evidence commit `dbdb1a897d6daad15a9c1925f676486d0f1dd801` passed Lean
+Action run `30726577764`, build job `91439300538`, in `1m48s`. Re-reading all four paths at that
+commit produced the same blob identities listed above.
 
 ## Strict boundary and next producer
 

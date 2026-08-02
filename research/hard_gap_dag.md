@@ -5774,8 +5774,8 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 ## 2026-08-02 H6 x H14 x H12 endpoint tail-integration closure checkpoint
 
 - `parent_campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
-- `subattack`: `HEIGHT-TEN-ENDPOINT-TAIL-INTEGRATION-01` reaches every preregistered output;
-  successful stop is pending docs-only immutable evidence.
+- `subattack`: `HEIGHT-TEN-ENDPOINT-TAIL-INTEGRATION-01` reaches every preregistered output and
+  stops successfully after immutable evidence; the complete-boundary parent remains active.
 - `closed_edge_58`: the actual positive endpoint-integrand tail on `Ioi 1` is at most `11/2000`.
   Lean proves `[1,2] <=21/4000` by convex exact trapezoids and `Ioi 2 <=1/4000` by a quadrant-aware
   phase bound and direct exponential integration.
@@ -5791,6 +5791,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `public_implementation`: frozen commit `6430a3cc5424610c79e26454617614b0784f0fe3`
   passed Lean Action run `30726439356`, build job `91438921597`, in `2m43s`; four Lean blobs are
   frozen in the docs-only evidence record.
+- `immutable_evidence`: docs-only commit `dbdb1a897d6daad15a9c1925f676486d0f1dd801`
+  passed Lean Action run `30726577764`, build job `91439300538`, in `1m48s`; all four frozen Lean
+  blob identities match the implementation record.
 - `next_exact_producer`: return to the existing complete-boundary preregistration. Build an actual
   quotient interval evaluator for the right low/middle zones, the full left vertical, and the
   compact-middle top interval; do not optimize the now-closed endpoint constants.
