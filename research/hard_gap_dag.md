@@ -5903,3 +5903,23 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `strict_limit`: no low-zero bracket, residual interval, complete boundary, height-ten
   certificate, H12, or RH theorem is claimed at selection time.
 - `global_goal`: active.
+
+## 2026-08-02 H1 x H12 low-zero endpoint amendment
+
+- `compiled_local_edge_72a`: the exact Riemann--Siegel identity, existing endpoint-mass bound,
+  and a newly oriented prefactor phase prove `0 < hardyXi 10` locally; this is an actual endpoint
+  sign, not a conditional interface.
+- `obstruction_72b`: the original `[14,15]` bracket remains sufficient, but the prefactor real
+  projection there is too small for the existing contour-integral norm majorant. Closing it by
+  that majorant would discard decisive phase information.
+- `amended_selected_edge_73`: target `HardyXiBracketsZero 10 17`. At height `17`, prove a
+  `-4/5` prefactor orientation and raw-integral norm at most `3/4`; this gives the actual negative
+  endpoint sign.
+- `amended_balance_edge_74`: a zero with `10<=gamma<=17` contributes at most `-1/221` uniformly
+  on `[13/2,7]`; eight digamma shifts target an archimedean upper `<9/2000`, and
+  `9/2000<1/221` closes the quotient sign.
+- `open_producer_73`: compile `hardyXi 17 < 0`, the actual bracket, the amended mass balance, and
+  the unconditional residual-left consumer.
+- `strict_limit`: no actual bracket, residual interval, complete boundary, height-ten
+  certificate, H12, or RH theorem is claimed at amendment time.
+- `global_goal`: active.
