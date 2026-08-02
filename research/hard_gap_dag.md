@@ -5980,6 +5980,13 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   phase-preserving finite subcover or a different structural proof of the top sign.
 - `local_stop`: stop `HEIGHT-TEN-TOP-ENDPOINT-TRANSPORT-01` after public audit as a meaningful
   backend checkpoint, without claiming `SpeiserStrictNegativeHorizontal 10`.
+- `local_audit`: the production module, project entry, Targets, TargetChecks, and AxiomsAudit pass
+  warning-as-error; the six selected declarations use only `propext`, `Classical.choice`, and
+  `Quot.sound`; the production forbidden-token scan and `git diff --check` are clean; full build
+  passes `8839/8839`.
+- `public_implementation`: frozen commit `38105ab4fffb2b99dd9ebe1dd13e02ba22d296e4`
+  passed Lean Action run `30734001479`, build job `91459212576`, in `3m12s`; five Lean blob
+  identities are frozen in the docs-only evidence record.
 - `remaining_boundary`: left low/middle, right low/middle, and compact-middle top are open. The
   complete height-ten certificate, H12, and RH remain open.
 - `route_policy`: historical-source coverage remains the main line for omission discovery;

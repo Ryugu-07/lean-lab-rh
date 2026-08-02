@@ -32,4 +32,5 @@ theorem norm_deriv_deriv_riemannZeta_heightTenReflectedEndpoint_lt :
 
 It does not prove a new positive-width top interval. `SpeiserStrictNegativeHorizontal 10`, both
 remaining vertical low/middle producers, the complete height-ten certificate, H12, and RH remain
-open. Public implementation CI and immutable evidence are still pending.
+open. Implementation commit `38105ab4fffb2b99dd9ebe1dd13e02ba22d296e4` passed public Lean
+Action run `30734001479`, build job `91459212576`, in `3m12s`. Immutable evidence is pending.
