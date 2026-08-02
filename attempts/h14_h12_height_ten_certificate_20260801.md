@@ -6,9 +6,9 @@ Campaign: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
 Node: `H14-H12-HEIGHT-TEN-CERTIFICATE-01`
 
-Status: `RIEMANN_SIEGEL_PHASE_NORM_SUBATTACK_PREREGISTERED /
-RIEMANN_SIEGEL_LOW_ZERO_SUBATTACK_ACTIVE / COMPLETE_BOUNDARY_SUBATTACK_ACTIVE / CAMPAIGN_ACTIVE /
-GLOBAL_GOAL_ACTIVE`
+Status: `RIEMANN_SIEGEL_ENDPOINT_TAIL_SUBATTACK_SUCCESS /
+RIEMANN_SIEGEL_LOW_ZERO_RIGHT_HIGH_CLOSED / COMPLETE_BOUNDARY_SUBATTACK_ACTIVE /
+CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 
 ## Attempt ledger
 
@@ -130,6 +130,10 @@ GLOBAL_GOAL_ACTIVE`
 | 114 | `MEANINGFUL_PARTIAL_AND_LOCAL_AUDIT` | The production module, Targets, exact TargetChecks, and AxiomsAudit pass warning-as-error. Both actual tail declarations use only `propext`, `Classical.choice`, and `Quot.sound`; focused forbidden scans are clean; full build passes `8834/8834`. The subattack remains active because the positive far tail is open. | Publish this frozen partial implementation and immutable evidence, then resume at `[1,2]` convex integration and the `v>2` exponential tail. |
 | 115 | `PUBLIC_IMPLEMENTATION` | Frozen implementation commit `f1ebf9266e931a3ca8653bf87048d1cfad076f29` passed Lean Action run `30725305088`, build job `91435753140`, in `2m52s`. Four Lean blobs are frozen in the docs-only evidence record. | Publish the immutable-evidence receipt, verify public CI and blob identity, then resume the still-open positive far tail. |
 | 116 | `IMMUTABLE_EVIDENCE` | Docs-only evidence commit `2c205eba8bd6c55d32a125d92401975fc4af6d3f` passed Lean Action run `30725440089`, build job `91436127767`, in `2m1s`; all four frozen Lean blobs are unchanged. The tail-integration subattack, endpoint-mass parent, certificate campaign, and global RH Goal remain active. | Resume at the actual positive far-tail target `<=11/2000`: `[1,2]` by convex integration and `Ioi 2` by direct exponential decay. |
+| 117 | `POSITIVE_MIDDLE_TAIL_CLOSED` | A uniform distance-power bound `<=49/50`, the compiled middle phase polynomial, convexity of `exp(q1)`, and a 32-step quadratic exponential envelope at nine exact rational nodes prove the actual `[1,2]` integral at most `21/4000`. The convex trapezoid sum is kernel-checked; navigation decimals are not premises. | Prove the remaining actual `Ioi 2` integral at most `1/4000`. |
+| 118 | `POSITIVE_FAR_TAIL_CLOSED` | Lean splits on the source-line real-part sign and proves `6/5<=-arg` for every `v>=2`. The full phase/Gaussian/denominator exponent is at most `-9*v/2`; `1000<=exp(9)` integrates the actual `Ioi 2` contribution to `<=1/4000`. Hence the complete positive far tail on `Ioi 1` is at most `11/2000`. | Compose all actual tails and the compact endpoint pieces without weakening their exact budgets. |
+| 119 | `ENDPOINT_MASS_REMAINDER_AND_RIGHT_HIGH_CLOSED` | Exact set-integral decompositions prove negative endpoint mass `<=219/2000` and positive endpoint mass `<=981/2000`, hence `HeightTenRiemannSiegelOneEndpointMassBound`. It composes with the prefactor phase theorem to the literal remainder margin, actual `zeta(1/2+iy) != 0`, and `Re(zeta'/zeta)<0` for `13/2<=y<=10`. | Stop this successful local subattack and return to the remaining complete-boundary zones. |
+| 120 | `LOCAL_AUDIT` | Production, Targets, exact TargetChecks, and AxiomsAudit pass warning-as-error. All selected final declarations use only `propext`, `Classical.choice`, and `Quot.sound`; focused forbidden scans and `git diff --check` are clean; full build passes `8834/8834`. | Publish the frozen implementation and immutable evidence, then select an actual quotient interval producer for the remaining boundary zones. |
 
 ## Current obstruction map
 
@@ -154,39 +158,35 @@ GLOBAL_GOAL_ACTIVE`
 9. `PARTIALLY_CLOSED_BOUNDARY_RAY_PRODUCER`: the complete real bottom edge is unconditional, and
    the top slit clause follows from `SpeiserStrictNegativeHorizontal t`. The four-edge producer
    is reduced exactly to positive-imaginary-ray avoidance on the left and right vertical edges.
-10. `OPEN_TWO_VERTICALS`: prove `SpeiserPositiveImaginaryRayVerticalBoundary 10`; neither
-    vertical clause is assumed closed by the current actual-zeta estimates.
+10. `PARTIALLY_CLOSED_TWO_VERTICALS`: the right critical-line clause is closed for
+    `13/2<=y<=10`. Its low and middle zones and the entire left vertical remain open, so
+    `SpeiserPositiveImaginaryRayVerticalBoundary 10` is not yet proved.
 11. `OPEN`: the compact-middle top sign and `levinsonMontgomeryHeightTenCertificate_actual`.
-12. `PARTIALLY_CLOSED_RIGHT_HIGH_STRUCTURE`: on the critical line, the paired-zero term vanishes
-    and the archimedean term is strictly negative for `y>=13/2`. The actual quotient sign is
-    compiled conditional on `riemannZeta(1/2+iy) != 0`; proving this nonvanishing uniformly on
-    `[13/2,10]` remains part of the fixed certificate target.
+12. `CLOSED_RIGHT_HIGH_ZONE`: on the critical line, the paired-zero term vanishes, the
+    archimedean term is strictly negative for `y>=13/2`, and the literal source-contour estimate
+    now proves actual zeta nonvanishing and strict quotient negativity on `[13/2,10]`.
 13. `OPEN_LEFT_ROUTE_SPLIT`: on `s=iy`, Equation (2.1) yields a nonpositive paired-zero
     contribution but not an exact Gamma-only formula. The left high zone therefore still needs
     actual low-height evaluation or a sharper zero-sum argument.
-14. `PARTIALLY_CLOSED_RIEMANN_SIEGEL_LOW_ZERO_PRODUCER`: the exact arbitrary-`N`
-    critical-line conjugation, `N=1` main-plus-remainder formula, and the full chain from a
-    uniform real-part remainder margin to actual zeta nonvanishing and right-high quotient sign
-    compile. The literal margin remains open.
-15. `OPEN_PHASE_SENSITIVE_REMAINDER`: the existing cancellation-free contour majorant integrates
-    to an explicit right side that Lean proves is greater than `1` throughout `[13/2,10]`. This
-    does not show the true remainder is large; it identifies the discarded principal-argument
-    phase as the first exact obstruction. The next producer must retain that phase or formalize
-    the classical saddle remainder, rather than optimize endpoint tables or this coarse bound.
-16. `PARTIALLY_CLOSED_PHASE_NORM_PRODUCER`: the exact principal-argument signs, endpoint
-    domination, total-mass reduction, rectangular Stieltjes `1/16` remainder, actual Gamma
-    factorization, and prefactor real-to-norm margin `>9/10` compile. The sole remaining
-    proposition in this producer is that the two fixed endpoint masses sum to at most `3/5`.
-    Until it compiles, the literal remainder margin and interval nonvanishing remain open.
+14. `CLOSED_RIEMANN_SIEGEL_LOW_ZERO_PRODUCER`: the exact arbitrary-`N` critical-line
+    conjugation, `N=1` main-plus-remainder formula, literal uniform real-part margin, actual zeta
+    nonvanishing, and right-high quotient sign all compile.
+15. `CLOSED_PHASE_SENSITIVE_REMAINDER`: the rejected cancellation-free majorant remains recorded,
+    while the successful replacement retains the principal-argument phase through fixed endpoint
+    integrals and proves the literal remainder margin.
+16. `CLOSED_PHASE_NORM_PRODUCER`: exact endpoint domination, total-mass reduction, the rectangular
+    Stieltjes `1/16` bound, Gamma factorization, prefactor real-to-norm margin `>9/10`, and total
+    endpoint mass `<=3/5` compile and compose.
 17. `CLOSED_COMPACT_ENDPOINT_MASSES`: exact quartic compact denominator growth, compact phase and
     distance-power bounds, rational exponential envelopes, exact polynomial primitives, and both
     actual compact endpoint integrals compile. Their bounds are `7/20` and `1/10`, hence their
     combined compact contribution is at most `9/20`.
-18. `PARTIALLY_CLOSED_PHASE_SENSITIVE_TAILS`: retained phase/Gaussian control now proves the actual
-    negative tail at most `19/2000` and the actual positive near tail at most `27/200`. Their
-    combined `289/2000` contribution leaves exactly the preregistered `11/2000` budget for the
-    actual positive tail on `Ioi 1`. Until that final far tail compiles, neither the combined tail,
-    endpoint mass, nor total endpoint mass `<=3/5` is proved.
+18. `CLOSED_PHASE_SENSITIVE_TAILS`: the actual negative, positive-near, positive-middle, and
+    positive-far pieces compile at `19/2000`, `27/200`, `21/4000`, and `1/4000`. The positive
+    far tail is `<=11/2000`, all tails total `<=3/20`, and no tail budget remains open.
+19. `CLOSED_ENDPOINT_MASS_AND_REMAINDER`: the actual endpoint masses are at most `219/2000` and
+    `981/2000`; their sum is `<=3/5`, yielding the literal remainder margin and right-high zone.
+    This does not close the other boundary zones, the complete height-ten certificate, H12, or RH.
 
 ## Runtime record
 

@@ -7295,4 +7295,43 @@ example :
         (heightTenRiemannSiegelCriticalPoint (13 / 2)) v‖) ≤ 27 / 200 :=
   integral_norm_heightTenRiemannSiegelLineIntegrand_one_positiveNearTail_le
 
+example :
+    (∫ v in Set.Ioc (1 : ℝ) 2,
+      ‖deBruijnNewmanRiemannSiegelLineIntegrand 1
+        (heightTenRiemannSiegelCriticalPoint (13 / 2)) v‖) ≤ 21 / 4000 :=
+  integral_norm_heightTenRiemannSiegelLineIntegrand_one_positiveMiddleTail_le
+
+example :
+    (∫ v in Set.Ioi (2 : ℝ),
+      ‖deBruijnNewmanRiemannSiegelLineIntegrand 1
+        (heightTenRiemannSiegelCriticalPoint (13 / 2)) v‖) ≤ 1 / 4000 :=
+  integral_norm_heightTenRiemannSiegelLineIntegrand_one_positiveFarFarTail_le
+
+example :
+    (∫ v in Set.Ioi (1 : ℝ),
+      ‖deBruijnNewmanRiemannSiegelLineIntegrand 1
+        (heightTenRiemannSiegelCriticalPoint (13 / 2)) v‖) ≤ 11 / 2000 :=
+  integral_norm_heightTenRiemannSiegelLineIntegrand_one_positiveFarTail_le
+
+example : heightTenRiemannSiegelNegativeEndpointMass 1 ≤ 219 / 2000 :=
+  heightTenRiemannSiegelNegativeEndpointMass_one_le_twoHundredNineteenTwoThousandths
+
+example : heightTenRiemannSiegelPositiveEndpointMass 1 ≤ 981 / 2000 :=
+  heightTenRiemannSiegelPositiveEndpointMass_one_le_nineHundredEightyOneTwoThousandths
+
+example : HeightTenRiemannSiegelOneEndpointMassBound :=
+  heightTenRiemannSiegelOneEndpointMassBound
+
+example : HeightTenRiemannSiegelOneRemainderMargin :=
+  heightTenRiemannSiegelOneRemainderMargin
+
+example {y : ℝ} (hy0 : 13 / 2 ≤ y) (hy1 : y ≤ 10) :
+    riemannZeta ((1 / 2 : ℂ) + (y : ℂ) * Complex.I) ≠ 0 :=
+  riemannZeta_criticalLine_ne_zero_thirteenHalves_ten hy0 hy1
+
+example {y : ℝ} (hy0 : 13 / 2 ≤ y) (hy1 : y ≤ 10) :
+    (speiserZetaDerivRatio
+      ((1 / 2 : ℂ) + (y : ℂ) * Complex.I)).re < 0 :=
+  speiserZetaDerivRatio_rightVertical_re_neg_thirteenHalves_ten hy0 hy1
+
 end LeanLab.Riemann

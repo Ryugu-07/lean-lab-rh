@@ -5770,3 +5770,29 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   not an unrelated constant-optimization campaign. Original conjectures and direct attacks
   remain open.
 - `global_goal`: active.
+
+## 2026-08-02 H6 x H14 x H12 endpoint tail-integration closure checkpoint
+
+- `parent_campaign`: `PROOF-ATTEMPT-20260801-H14-H12-HEIGHT-TEN-CERTIFICATE-01` remains active.
+- `subattack`: `HEIGHT-TEN-ENDPOINT-TAIL-INTEGRATION-01` reaches every preregistered output
+  locally; successful stop is pending public immutable evidence.
+- `closed_edge_58`: the actual positive endpoint-integrand tail on `Ioi 1` is at most `11/2000`.
+  Lean proves `[1,2] <=21/4000` by convex exact trapezoids and `Ioi 2 <=1/4000` by a quadrant-aware
+  phase bound and direct exponential integration.
+- `closed_edge_59`: all actual tails total at most `3/20`; exact set-integral decompositions give
+  endpoint masses at most `219/2000` and `981/2000`, hence
+  `HeightTenRiemannSiegelOneEndpointMassBound`.
+- `closed_edge_60`: the endpoint mass and compiled prefactor phase compose to the literal
+  `HeightTenRiemannSiegelOneRemainderMargin`, actual critical-line zeta nonvanishing, and strict
+  negative quotient real part for `13/2<=y<=10`.
+- `local_audit`: production, Targets, TargetChecks, and AxiomsAudit pass warning-as-error; selected
+  final declarations use only `propext`, `Classical.choice`, and `Quot.sound`; focused forbidden
+  scans and `git diff --check` are clean; full build passes `8834/8834`.
+- `next_exact_producer`: return to the existing complete-boundary preregistration. Build an actual
+  quotient interval evaluator for the right low/middle zones, the full left vertical, and the
+  compact-middle top interval; do not optimize the now-closed endpoint constants.
+- `classification`: `HISTORICAL_OMISSION_FOUND_AND_FORMALIZED / ENDPOINT_MASS_CLOSED /
+  RIGHT_HIGH_VERTICAL_CLOSED / COMPLETE_BOUNDARY_OPEN / RH_FRONTIER_DELTA_0`.
+- `strict_limit`: no right low/middle zone, left vertical, complete top sign, rotated-slit
+  boundary, height-ten certificate, H12, or RH theorem is claimed.
+- `global_goal`: active.
