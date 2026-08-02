@@ -5759,6 +5759,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `public_implementation`: frozen commit `f1ebf9266e931a3ca8653bf87048d1cfad076f29`
   passed Lean Action run `30725305088`, build job `91435753140`, in `2m52s`; four Lean blobs are
   frozen in the docs-only evidence record.
+- `immutable_evidence`: docs-only commit `2c205eba8bd6c55d32a125d92401975fc4af6d3f`
+  passed Lean Action run `30725440089`, build job `91436127767`, in `2m1s`; all four frozen Lean
+  blob identities match the implementation record.
 - `classification`: `HISTORICAL_OMISSION_CHECKPOINT / TWO_TAIL_PIECES_CLOSED /
   POSITIVE_FAR_TAIL_OPEN / RH_FRONTIER_DELTA_0`.
 - `strict_limit`: no combined tail, endpoint mass, literal remainder margin, interval

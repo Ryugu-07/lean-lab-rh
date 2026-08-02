@@ -43,6 +43,10 @@ Frozen Lean blobs:
 - `TargetChecks.lean`: `9568dd0fdd763b7d4b3b645b793d68fde09540ea`
 - `AxiomsAudit.lean`: `c6ce1667ea1c902c9648da46c1da0adeaf14b869`
 
+Docs-only immutable-evidence commit `2c205eba8bd6c55d32a125d92401975fc4af6d3f` passed Lean
+Action run `30725440089`, build job `91436127767`, in `2m1s`. Re-reading all four paths at that
+commit produced the same blob identities listed above.
+
 ## Strict boundary
 
 This checkpoint does not prove the positive far tail, combined tail `<=3/20`, endpoint mass
