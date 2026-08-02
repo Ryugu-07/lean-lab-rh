@@ -22,6 +22,15 @@ Result: passed in `2m49s`.
 These blobs contain the project import, the complete low-zero paired-mass production chain, exact
 target registration, exact statement witnesses, and axiom prints used by the passing public run.
 
+## Immutable verification
+
+Docs-only evidence commit: `9185790247f0ab4098da14be422afac1ed52e52c`.
+
+Lean Action run `30731746028`, build job `91453211188`, passed in `2m39s`.
+
+Each of the five paths was read again from that commit. Every blob identity exactly matches the
+implementation record above.
+
 ## Compiled result
 
 Lean proves the actual signs `0<hardyXi(10)` and `hardyXi(17)<0`, hence an actual critical-line

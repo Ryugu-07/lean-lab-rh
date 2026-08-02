@@ -5949,6 +5949,11 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `public_implementation`: frozen commit `53199a715aa5a0c61be34046e9b0f0ebd2f811a8`
   passed Lean Action run `30731573751`, build job `91452790708`, in `2m49s`; five Lean blob
   identities are frozen in the docs-only evidence record.
+- `immutable_evidence`: docs-only commit `9185790247f0ab4098da14be422afac1ed52e52c`
+  passed Lean Action run `30731746028`, build job `91453211188`, in `2m39s`; all five frozen Lean
+  blob identities match the implementation record.
+- `subattack_status`: `PROOF-ATTEMPT-20260802-H12-H1-LOW-ZERO-MASS-01` stops successfully.
+  `HEIGHT-TEN-COMPLETE-BOUNDARY-01`, its parent campaign, and the global RH Goal remain active.
 - `superseded_open_edge_70`: the direct finite reflected subcover remains a valid evaluator
   backend but is no longer required to close `[13/2,7]`.
 - `next_boundary_frontier`: left low/middle, right low/middle, compact-middle top, and the
