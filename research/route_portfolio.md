@@ -4725,4 +4725,6 @@ conjectures and falsification remain available at every route-selection point.
 
 Frozen implementation `a4ded06a39519fa1c37d0e97aef8e60a32eb33fb` passed Lean Action run
 `30819281694`, build job `91704779376`, in `3m51s`. Five Lean blobs are frozen in the docs-only
-evidence record; immutable-evidence CI is the next gate.
+evidence record. Evidence commit `b084ee0599599dd16c278669071adca4465b9016` passed run
+`30819751545`, build job `91706377959`, in `2m42s`; all blobs match. The middle-cell subattack is
+publicly closed, while the low phase producer and enclosing campaign remain active.

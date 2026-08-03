@@ -84,4 +84,7 @@ H12, or RH. The campaign and global Goal remain active.
 - full local build: `8841/8841` jobs passed;
 - public implementation commit `a4ded06a39519fa1c37d0e97aef8e60a32eb33fb`: Lean Action run
   `30819281694`, build job `91704779376`, passed in `3m51s`;
-- immutable evidence and closure receipt: pending.
+- immutable-evidence commit `b084ee0599599dd16c278669071adca4465b9016`: Lean Action run
+  `30819751545`, build job `91706377959`, passed in `2m42s`; all five frozen Lean blobs match;
+- closure receipt records successful local stop at `meaningful_partial`; the enclosing phase
+  campaign remains active.

@@ -6083,6 +6083,11 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `public_implementation`: frozen commit `a4ded06a39519fa1c37d0e97aef8e60a32eb33fb`
   passed Lean Action run `30819281694`, build job `91704779376`, in `3m51s`; five Lean blob
   identities are frozen for docs-only independent verification.
+- `immutable_evidence`: docs-only commit `b084ee0599599dd16c278669071adca4465b9016`
+  passed Lean Action run `30819751545`, build job `91706377959`, in `2m42s`; all five frozen Lean
+  blob identities match the implementation record.
+- `subattack_status`: the middle-cell subattack stops successfully at the preregistered
+  `meaningful_partial`. The enclosing low/middle phase campaign and global RH Goal remain active.
 - `open_edge_92`: prove positive actual quotient real part on `(0,6]`. The exact value at zero is
   already positive, but the reflected Euler--Maclaurin representation approaches the zeta pole
   and hides cancellation in separate value/derivative balls. Compare a pole-cancelled evaluator

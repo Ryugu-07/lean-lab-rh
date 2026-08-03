@@ -49,5 +49,10 @@ RH Goal remain active.
 
 ## Immutable verification
 
-Pending a docs-only evidence commit and independent public Lean Action run. The next commit must
-not change any of the five frozen Lean paths.
+Docs-only evidence commit: `b084ee0599599dd16c278669071adca4465b9016`.
+
+Lean Action run `30819751545`, build job `91706377959`, passed in `2m42s`.
+
+Each of the five paths was read again from the evidence commit. Every blob identity exactly
+matches the implementation record above. This verifies the middle-cell meaningful partial only;
+the low phase interval and enclosing campaign remain active.

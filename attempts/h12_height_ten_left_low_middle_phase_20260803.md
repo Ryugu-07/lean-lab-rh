@@ -39,4 +39,7 @@ height-ten certificate, H12, and RH remain open.
 
 Implementation commit `a4ded06a39519fa1c37d0e97aef8e60a32eb33fb` passed public Lean
 Action run `30819281694`, build job `91704779376`, in `3m51s`. The five proof and registration
-blobs are frozen in the immutable-evidence record; docs-only evidence CI is the next gate.
+blobs are frozen in immutable-evidence commit
+`b084ee0599599dd16c278669071adca4465b9016`. Evidence run `30819751545`, build job
+`91706377959`, passed in `2m42s`; every blob matches. The middle-cell subattack stops
+successfully. The low phase producer, enclosing campaign, and global RH Goal remain active.
