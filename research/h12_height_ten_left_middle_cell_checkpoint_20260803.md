@@ -82,5 +82,6 @@ H12, or RH. The campaign and global Goal remain active.
 - selected AxiomsAudit declarations: only `propext`, `Classical.choice`, and `Quot.sound`;
 - focused forbidden-token scan and `git diff --check`: clean;
 - full local build: `8841/8841` jobs passed;
-- public implementation CI, immutable evidence, and closure receipt: pending at this
-  checkpoint-writing stage.
+- public implementation commit `a4ded06a39519fa1c37d0e97aef8e60a32eb33fb`: Lean Action run
+  `30819281694`, build job `91704779376`, passed in `3m51s`;
+- immutable evidence and closure receipt: pending.

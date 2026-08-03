@@ -36,3 +36,7 @@ The theorem is unconditional and uses no external zero table, sampled decimal, c
 `sorry`, `admit`, `native_decide`, resource relaxation, or opaque proof escape. The positive-real
 interval `(0,6]`, the complete left edge, other height-ten boundary producers, the complete
 height-ten certificate, H12, and RH remain open.
+
+Implementation commit `a4ded06a39519fa1c37d0e97aef8e60a32eb33fb` passed public Lean
+Action run `30819281694`, build job `91704779376`, in `3m51s`. The five proof and registration
+blobs are frozen in the immutable-evidence record; docs-only evidence CI is the next gate.

@@ -4722,3 +4722,7 @@ preregistered `meaningful_partial`, not complete left-edge closure. Positive rea
 `(0,6]`, the other boundary producers, the height-ten certificate, H12, and RH remain open.
 The historical omission-search main line and the global RH Goal remain active; original
 conjectures and falsification remain available at every route-selection point.
+
+Frozen implementation `a4ded06a39519fa1c37d0e97aef8e60a32eb33fb` passed Lean Action run
+`30819281694`, build job `91704779376`, in `3m51s`. Five Lean blobs are frozen in the docs-only
+evidence record; immutable-evidence CI is the next gate.
