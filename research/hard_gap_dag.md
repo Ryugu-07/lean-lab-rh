@@ -6024,3 +6024,32 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `strict_limit`: preregistration proves no new phase sign, boundary closure, height-ten
   certificate, H12, or RH result.
 - `global_goal`: active.
+
+## 2026-08-03 H12 left low/middle full-phase backend checkpoint
+
+- `parent`: `HEIGHT-TEN-COMPLETE-BOUNDARY-01`, the phase campaign, and the global RH Goal
+  remain active.
+- `closed_edge_84`: Lean compiles the full complex logarithmic-derivative reflection on the
+  positive imaginary axis, rather than only its real projection.
+- `closed_edge_85`: second-corrected reflected value and derivative balls, a generic quotient
+  perturbation theorem, and twice-shifted complex digamma bounds compose to a norm ball for the
+  actual quotient. Exact component consumers handle positive real and negative imaginary phase
+  margins.
+- `closed_edge_86`: the singular reflected endpoint is separated exactly. The real-bottom
+  theorem proves positive quotient real part at `y=0`, and a join reduces `[0,6]` to `0<y<=6`.
+- `open_edge_87`: no theorem yet supplies a rational finite subcover of `(0,6]` with positive
+  real margin or `[6,13/2]` with negative imaginary margin. The reflected point approaches the
+  zeta pole near zero, so fixed-center cell transport must account for the cancellation instead
+  of treating zero as an ordinary grid point.
+- `classification`: `PHASE_PRESERVING_BACKEND / EXACT_ZERO_ENDPOINT /
+  BELOW_MEANINGFUL_PARTIAL / NO_POSITIVE_WIDTH_BOUNDARY_DELTA`.
+- `local_audit`: production, project entry, Targets, exact TargetChecks, and AxiomsAudit pass;
+  selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; full local
+  build passes `8840/8840`.
+- `next_producer`: prove a reusable rational cell theorem separating finite-power rounding,
+  Euler--Maclaurin error, archimedean error, and height variation, then instantiate it on both
+  frozen intervals. If a checked cell loses the strict margin, record that exact cell and rerank
+  only the local mechanism.
+- `strict_limit`: the complete left edge, other boundary producers, height-ten certificate,
+  H12, and RH remain open.
+- `global_goal`: active.

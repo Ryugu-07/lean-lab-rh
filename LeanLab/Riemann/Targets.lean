@@ -142,6 +142,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenCompleteBoundary
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftHigh
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftResidual
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftLowZeroMass
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftLowMiddlePhase
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenTopTransport
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelLowZero
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseNorm
@@ -2256,6 +2257,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``norm_deriv_deriv_riemannZeta_heightTenReflectedEndpoint_lt
       status := .proven
       note := "Subattack HEIGHT-TEN-TOP-ENDPOINT-TRANSPORT-01 closes its endpoint second-derivative backend. Lean proves the explicit derivative of the finite second-corrected center, thirty squared-log complex-power enclosures, a rational center of norm below 1/4, a 1/10 first-derivative remainder bound on the radius-1/4 circle, a generic Cauchy bridge, and the actual theorem ||zeta''(1/2-10i)||<33/50. This is a one-point curvature certificate: it does not supply a uniform second-derivative bound or finite phase-preserving subcover across 1/2<=Re(w)<=1, so no new positive-width top interval, complete horizontal, height-ten certificate, H12, or RH is claimed." },
+    { id := "H12.levinson-montgomery.height-ten-left-low-middle-phase-backend"
+      tier := .tier1
+      title := "Preserve the full phase in the left low/middle evaluator"
+      statement :=
+        "Prove the full complex logarithmic-derivative reflection on the positive imaginary axis, turn reflected zeta value and derivative balls into a complex quotient ball, expose exact real and imaginary phase-margin consumers, and reduce the complete left vertical edge to the two frozen interval sign producers."
+      leanName := some ``speiserZetaDerivRatio_leftVertical_rotated_mem_slitPlane_zero_ten_of_phaseSigns
+      status := .proven
+      note := "Campaign PROOF-ATTEMPT-20260803-H12-HEIGHT-TEN-LEFT-LOW-MIDDLE-PHASE-01 reaches a phase-preserving backend checkpoint. Lean reconstructs the full complex imaginary-axis reflection through the nonpole Gamma formula, proves a reusable quotient-ball perturbation theorem, encloses both complex archimedean corrections after two digamma shifts, and composes the resulting actual quotient ball with exact real-positive and imaginary-negative consumers. A final theorem joins any proofs of Re(zeta'/zeta)>0 on [0,6] and Im(zeta'/zeta)<0 on [6,13/2] with the already compiled high-left route to the complete [0,10] left edge. Neither frozen interval sign producer is discharged here, so no new positive-width boundary zone, complete height-ten certificate, H12, or RH theorem is claimed." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

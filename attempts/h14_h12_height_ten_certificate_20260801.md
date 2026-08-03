@@ -163,6 +163,11 @@ CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 | 147 | `TOP_PREREGISTRATION` | Subattack `HEIGHT-TEN-TOP-ENDPOINT-TRANSPORT-01` freezes the literal `SpeiserStrictNegativeHorizontal 10` output, a one-endpoint finite-center variation attack, and a small rational-subdivision fallback. | Publish docs only and await public CI before Lean source edits. |
 | 148 | `ROUTE_SELECTION_AFTER_TOP_CHECKPOINT` | Compared the left low/middle vertical, right low/middle vertical, compact-middle top, and broader H1/H7/H10/H11 source frontiers. The left route alone has unconditional zeta nonvanishing on its full open segment and can close one complete literal boundary producer through the existing reflected evaluator. | Select the left low/middle phase attack; do not optimize the top endpoint constant. |
 | 149 | `LEFT_LOW_MIDDLE_PREREGISTRATION` | Campaign `PROOF-ATTEMPT-20260803-H12-HEIGHT-TEN-LEFT-LOW-MIDDLE-PHASE-01` freezes positive real part on `[0,6]`, negative imaginary part on `[6,13/2]`, the complete rotated-slit clause on `[0,13/2]`, and composition with the already closed high segment. | Publish the docs-only preregistration and await public CI before Lean source edits. |
+| 150 | `FULL_COMPLEX_REFLECTION` | Lean compiles the complete complex logarithmic-derivative reflection on the positive imaginary axis. A twice-shifted complex digamma--Stirling enclosure preserves both components rather than projecting immediately to the real part. | Combine value and derivative balls into an actual quotient phase ball. |
+| 151 | `PHASE_BALL_CONSUMER` | Independent second-corrected Euler--Maclaurin value and derivative balls now give a norm ball for the reflected quotient and hence for the actual `zeta'(iy)/zeta(iy)`. Separate consumers convert exact center margins into positive real or negative imaginary actual signs. | Remove the singular zero endpoint exactly, then construct the two finite rational interval covers. |
+| 152 | `ZERO_ENDPOINT_CLOSED` | The reflected center approaches the zeta pole as `y` tends to zero, so the endpoint is separated from the interval evaluator. The already compiled real-bottom theorem proves the exact strict sign at `y=0`; a new join reduces `[0,6]` to the positive-height producer without moving the frozen endpoint. | Build a fixed-center cell theorem on `(0,6]` and `[6,13/2]`. |
+| 153 | `BACKEND_CHECKPOINT_BELOW_MEANINGFUL_PARTIAL` | The full phase backend, exact endpoint, conditional interval signs, and complete-left join compile, but neither positive-width frozen interval is proved. Under the preregistered criteria this is below `meaningful_partial`: no boundary zone or complete left edge is claimed. The campaign remains active at the exact finite rational subcover. | Complete local/public audit and resume with proof-generating cell variation plus rounded complex-power certificates. |
+| 154 | `LOCAL_AUDIT` | Production, project entry, Targets, exact TargetChecks, and selected AxiomsAudit pass. The selected new declarations use only `propext`, `Classical.choice`, and `Quot.sound`; the production forbidden scan and `git diff --check` are clean; full build passes `8840/8840`. | Freeze and publish this backend checkpoint, then record immutable evidence without issuing a closure receipt. |
 
 ## Current obstruction map
 
@@ -245,6 +250,13 @@ CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
     `[0,13/2]`, split at `6` by positive real part and negative imaginary part. The route uses
     structural imaginary-axis zeta nonvanishing plus a full-phase reflected Euler--Maclaurin
     finite cover. No point grid or moved endpoint counts as closure.
+28. `CLOSED_LEFT_PHASE_BACKEND`: the full complex reflection identity, quotient error ball,
+    twice-shifted complex archimedean enclosure, both phase-margin consumers, and conditional
+    complete-left join compile. The exact zero endpoint also has positive quotient real part.
+29. `OPEN_LEFT_LOW_MIDDLE_FINITE_SUBCOVER`: no positive-width cell is yet closed. The reflected
+    center has pole-cancellation structure as `y` approaches zero, so the next producer must
+    separate the exact endpoint and prove variable-height cell transport. Both frozen interval
+    signs, the complete left edge, the height-ten certificate, H12, and RH remain open.
 
 ## Runtime record
 

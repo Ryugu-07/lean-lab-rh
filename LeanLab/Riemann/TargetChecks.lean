@@ -7444,4 +7444,50 @@ example :
     ‖deriv (deriv riemannZeta) heightTenReflectedEndpoint‖ < (33 / 50 : ℝ) :=
   norm_deriv_deriv_riemannZeta_heightTenReflectedEndpoint_lt
 
+example {y : ℝ} (hy : 0 < y)
+    (hzeta : riemannZeta ((y : ℂ) * Complex.I) ≠ 0)
+    (hreflected : riemannZeta (1 - (y : ℂ) * Complex.I) ≠ 0) :
+    logDeriv riemannZeta ((y : ℂ) * Complex.I) =
+      -logDeriv riemannZeta (1 - (y : ℂ) * Complex.I) +
+        levinsonMontgomeryLogDerivArchimedeanComplex ((y : ℂ) * Complex.I) +
+        levinsonMontgomeryLogDerivArchimedeanComplex
+          (1 - (y : ℂ) * Complex.I) :=
+  logDeriv_riemannZeta_reflection_on_imaginaryAxis hy hzeta hreflected
+
+example {z d Z D : ℂ} {ez ed : ℝ}
+    (hz : ‖z - Z‖ ≤ ez) (hd : ‖d - D‖ ≤ ed) (hmargin : ez < ‖Z‖) :
+    ‖d / z - D / Z‖ ≤
+      ed / (‖Z‖ - ez) + ‖D‖ * ez / ((‖Z‖ - ez) * ‖Z‖) :=
+  norm_ratio_sub_approx_ratio_le hz hd hmargin
+
+example (y : ℝ) (hy : 0 < y) {N : ℕ} (hN : 1 ≤ N)
+    (hzMargin :
+      eulerMaclaurinTwoZetaError (1 - (y : ℂ) * Complex.I) N <
+        ‖eulerMaclaurinTwoZetaApprox (1 - (y : ℂ) * Complex.I) N‖) :
+    ‖speiserZetaDerivRatio ((y : ℂ) * Complex.I) -
+        leftLowMiddlePhaseCenter y N‖ ≤ leftLowMiddlePhaseError y N :=
+  norm_speiserZetaDerivRatio_sub_leftLowMiddlePhaseCenter_le y hy hN hzMargin
+
+example :
+    0 < (speiserZetaDerivRatio ((0 : ℂ) * Complex.I)).re :=
+  speiserZetaDerivRatio_leftVertical_re_pos_at_zero
+
+example
+    (hpos : ∀ y : ℝ, 0 < y → y ≤ 6 →
+      0 < (speiserZetaDerivRatio ((y : ℂ) * Complex.I)).re)
+    {y : ℝ} (hy0 : 0 ≤ y) (hy6 : y ≤ 6) :
+    0 < (speiserZetaDerivRatio ((y : ℂ) * Complex.I)).re :=
+  speiserZetaDerivRatio_leftVertical_re_pos_zero_six_of_pos hpos hy0 hy6
+
+example
+    (hre : ∀ y : ℝ, 0 ≤ y → y ≤ 6 →
+      0 < (speiserZetaDerivRatio ((y : ℂ) * Complex.I)).re)
+    (him : ∀ y : ℝ, 6 ≤ y → y ≤ 13 / 2 →
+      (speiserZetaDerivRatio ((y : ℂ) * Complex.I)).im < 0)
+    {y : ℝ} (hy0 : 0 ≤ y) (hy10 : y ≤ 10) :
+    Complex.I * speiserZetaDerivRatio ((y : ℂ) * Complex.I) ∈
+      Complex.slitPlane :=
+  speiserZetaDerivRatio_leftVertical_rotated_mem_slitPlane_zero_ten_of_phaseSigns
+    hre him hy0 hy10
+
 end LeanLab.Riemann
