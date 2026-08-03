@@ -143,6 +143,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftHigh
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftResidual
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftLowZeroMass
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftLowMiddlePhase
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftMiddleCell
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenTopTransport
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelLowZero
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseNorm
@@ -2265,6 +2266,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``speiserZetaDerivRatio_leftVertical_rotated_mem_slitPlane_zero_ten_of_phaseSigns
       status := .proven
       note := "Campaign PROOF-ATTEMPT-20260803-H12-HEIGHT-TEN-LEFT-LOW-MIDDLE-PHASE-01 reaches a phase-preserving backend checkpoint. Lean reconstructs the full complex imaginary-axis reflection through the nonpole Gamma formula, proves a reusable quotient-ball perturbation theorem, encloses both complex archimedean corrections after two digamma shifts, and composes the resulting actual quotient ball with exact real-positive and imaginary-negative consumers. A final theorem joins any proofs of Re(zeta'/zeta)>0 on [0,6] and Im(zeta'/zeta)<0 on [6,13/2] with the already compiled high-left route to the complete [0,10] left edge. Neither frozen interval sign producer is discharged here, so no new positive-width boundary zone, complete height-ten certificate, H12, or RH theorem is claimed." },
+    { id := "H12.levinson-montgomery.height-ten-left-middle-cell"
+      tier := .tier1
+      title := "Close the middle left phase interval"
+      statement :=
+        "Use a phase-preserving rational N=4 Euler--Maclaurin cell centered at height 25/4 to prove that the actual imaginary part of zeta'(iy)/zeta(iy) is negative for every 6<=y<=13/2."
+      leanName := some ``speiserZetaDerivRatio_leftVertical_im_neg_six_thirteenHalves
+      status := .proven
+      note := "Campaign PROOF-ATTEMPT-20260803-H12-HEIGHT-TEN-LEFT-LOW-MIDDLE-PHASE-01 reaches its preregistered meaningful-partial gate. Exact fixed-center complex-power Taylor enclosures, componentwise Bernstein certificates, second-corrected Euler--Maclaurin value and derivative balls, and a paired arctangent decomposition of the shifted archimedean term prove the actual quotient imaginary part negative on the complete frozen interval [6,13/2]. A direct degree-20 joint Bernstein certificate exceeded the default heartbeat limit and was replaced, without relaxing resources, by lower-degree component certificates. The positive-real interval (0,6] remains open, so the complete left edge, height-ten certificate, H12, and RH remain open." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"

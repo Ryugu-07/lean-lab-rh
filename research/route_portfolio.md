@@ -4701,3 +4701,24 @@ Docs-only immutable evidence `631465d872cbbf3f82666b757cc1ee0c14d49df1` passed L
 run `30534722076`, build job `90845147950`, in `1m59s`; all five frozen Lean blobs are
 unchanged. The exact top-variation node now awaits only closure-ledger CI before local stop
 and fresh cross-family selection.
+
+## 2026-08-03 H12 Left Middle-Cell Meaningful Partial
+
+The active left low/middle phase campaign now closes its first complete frozen interval. A
+phase-preserving `N=4` second-corrected Euler--Maclaurin cell centered at `25/4` proves the actual
+theorem
+
+```text
+Im(zeta'(iy)/zeta(iy)) < 0 for every 6<=y<=13/2.
+```
+
+The proof uses exact complex-power transport, componentwise Bernstein certificates, an exact
+paired arctangent decomposition for the shifted archimedean phase, and a complete quotient-error
+ball. Its center margin is below `-9/50` and its actual phase radius is at most `3/25`.
+
+A direct degree-20 joint Bernstein certificate exceeded default heartbeats; no resource limit
+was changed, and lower-degree component certificates repaired the proof. This is the
+preregistered `meaningful_partial`, not complete left-edge closure. Positive real part on
+`(0,6]`, the other boundary producers, the height-ten certificate, H12, and RH remain open.
+The historical omission-search main line and the global RH Goal remain active; original
+conjectures and falsification remain available at every route-selection point.

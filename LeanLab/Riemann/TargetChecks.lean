@@ -1,4 +1,5 @@
 import LeanLab.Riemann.Targets
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftMiddleCell
 import LeanLab.Riemann.MaynardPrattTypeIIGlobalCharge
 import LeanLab.Riemann.PairCorrelationHorizontalMultiplicity
 import LeanLab.Riemann.PairCorrelationTriangularMass
@@ -7478,6 +7479,10 @@ example
     {y : ℝ} (hy0 : 0 ≤ y) (hy6 : y ≤ 6) :
     0 < (speiserZetaDerivRatio ((y : ℂ) * Complex.I)).re :=
   speiserZetaDerivRatio_leftVertical_re_pos_zero_six_of_pos hpos hy0 hy6
+
+example {y : ℝ} (hy0 : 6 ≤ y) (hy1 : y ≤ 13 / 2) :
+    (speiserZetaDerivRatio ((y : ℂ) * Complex.I)).im < 0 :=
+  speiserZetaDerivRatio_leftVertical_im_neg_six_thirteenHalves hy0 hy1
 
 example
     (hre : ∀ y : ℝ, 0 ≤ y → y ≤ 6 →

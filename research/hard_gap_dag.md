@@ -6059,3 +6059,33 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `strict_limit`: the complete left edge, other boundary producers, height-ten certificate,
   H12, and RH remain open.
 - `global_goal`: active.
+
+## 2026-08-03 H12 left middle-cell closure
+
+- `parent`: `HEIGHT-TEN-COMPLETE-BOUNDARY-01` and campaign
+  `PROOF-ATTEMPT-20260803-H12-HEIGHT-TEN-LEFT-LOW-MIDDLE-PHASE-01` remain active.
+- `selected_edge_88`: cover the complete frozen interval `[6,13/2]` with one rational cell
+  centered at `25/4`, retaining the phase of the `N=4` second-corrected Euler--Maclaurin center.
+- `implementation_obstruction_89`: a direct degree-20 joint Bernstein certificate exceeded the
+  default heartbeat budget during normalization. Resources were not relaxed; componentwise
+  lower-degree Bernstein certificates replaced it and compile under defaults.
+- `closed_edge_90`: exact rational certificates prove the finite quotient imaginary part below
+  `-3/25`, the paired shifted archimedean imaginary part below `-3/50`, and the complete phase
+  center below `-9/50`.
+- `closed_edge_91`: the actual-function phase radius is at most `3/25`, with exact value norm at
+  least `437/500`; therefore Lean proves
+  `Im(speiserZetaDerivRatio(iy))<0` for every `6<=y<=13/2`.
+- `meaningful_partial`: one complete preregistered positive-width phase interval is closed.
+- `local_audit`: production, Targets, exact TargetChecks, and AxiomsAudit pass focused
+  warning-as-error checks; selected declarations use only `propext`, `Classical.choice`, and
+  `Quot.sound`; the production forbidden-token scan and `git diff --check` are clean; full build
+  passes `8841/8841`.
+- `open_edge_92`: prove positive actual quotient real part on `(0,6]`. The exact value at zero is
+  already positive, but the reflected Euler--Maclaurin representation approaches the zeta pole
+  and hides cancellation in separate value/derivative balls. Compare a pole-cancelled evaluator
+  against a direct local analytic expansion, then use ordinary rational cells away from zero.
+- `strict_limit`: the complete left edge, other height-ten boundary producers, complete
+  height-ten certificate, H12, and RH remain open.
+- `route_policy`: historical-route reconstruction remains the main omission-search line;
+  original conjectures, falsification, and direct RH attacks remain open throughout.
+- `global_goal`: active.
