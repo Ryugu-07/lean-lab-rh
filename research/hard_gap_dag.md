@@ -6046,6 +6046,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `local_audit`: production, project entry, Targets, exact TargetChecks, and AxiomsAudit pass;
   selected declarations use only `propext`, `Classical.choice`, and `Quot.sound`; full local
   build passes `8840/8840`.
+- `public_implementation`: frozen commit `ad7be0212564aa81fff35b490082ec3dab847446`
+  passed Lean Action run `30808239467`, build job `91668512733`, in `2m28s`; five Lean blob
+  identities are frozen for independent evidence verification.
 - `next_producer`: prove a reusable rational cell theorem separating finite-power rounding,
   Euler--Maclaurin error, archimedean error, and height variation, then instantiate it on both
   frozen intervals. If a checked cell loses the strict margin, record that exact cell and rerank
