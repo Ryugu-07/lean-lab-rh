@@ -161,6 +161,8 @@ CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 | 145 | `TOP_ROUTE_SELECTION` | The left and right low/middle verticals both retain sign transitions; the right side also retains critical-line nonvanishing. The compact-middle top is one-dimensional with actual strict endpoint neighborhoods and no navigated sign transition. | Select the top endpoint-transport producer. |
 | 146 | `TOP_PAIRED_KERNEL_OBSTRUCTION` | A top paired kernel can be negative only if a nontrivial zero ordinate is within `1/2` of ten, but no independent band-exclusion theorem is compiled. Deriving it from the target height-ten count would be circular. | Use direct reflected Euler--Maclaurin transport, while recording band exclusion as a possible later cross-route repair. |
 | 147 | `TOP_PREREGISTRATION` | Subattack `HEIGHT-TEN-TOP-ENDPOINT-TRANSPORT-01` freezes the literal `SpeiserStrictNegativeHorizontal 10` output, a one-endpoint finite-center variation attack, and a small rational-subdivision fallback. | Publish docs only and await public CI before Lean source edits. |
+| 148 | `ROUTE_SELECTION_AFTER_TOP_CHECKPOINT` | Compared the left low/middle vertical, right low/middle vertical, compact-middle top, and broader H1/H7/H10/H11 source frontiers. The left route alone has unconditional zeta nonvanishing on its full open segment and can close one complete literal boundary producer through the existing reflected evaluator. | Select the left low/middle phase attack; do not optimize the top endpoint constant. |
+| 149 | `LEFT_LOW_MIDDLE_PREREGISTRATION` | Campaign `PROOF-ATTEMPT-20260803-H12-HEIGHT-TEN-LEFT-LOW-MIDDLE-PHASE-01` freezes positive real part on `[0,6]`, negative imaginary part on `[6,13/2]`, the complete rotated-slit clause on `[0,13/2]`, and composition with the already closed high segment. | Publish the docs-only preregistration and await public CI before Lean source edits. |
 
 ## Current obstruction map
 
@@ -239,6 +241,10 @@ CAMPAIGN_ACTIVE / GLOBAL_GOAL_ACTIVE`
 26. `AUDITED_TOP_ENDPOINT_BACKEND`: implementation and immutable-evidence public CI pass with
     five matching Lean blobs. The one-endpoint subattack stops without closing any open boundary
     zone; the parent complete-boundary campaign and global RH Goal remain active.
+27. `SELECTED_LEFT_LOW_MIDDLE_PHASE`: the next fixed endpoint is the whole left interval
+    `[0,13/2]`, split at `6` by positive real part and negative imaginary part. The route uses
+    structural imaginary-axis zeta nonvanishing plus a full-phase reflected Euler--Maclaurin
+    finite cover. No point grid or moved endpoint counts as closure.
 
 ## Runtime record
 

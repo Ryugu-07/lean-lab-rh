@@ -5998,3 +5998,29 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `route_policy`: historical-source coverage remains the main line for omission discovery;
   original conjectures, falsification, and direct RH attacks remain open at every stage.
 - `global_goal`: active.
+
+## 2026-08-03 H12 height-ten left low/middle phase selection
+
+- `parent`: `HEIGHT-TEN-COMPLETE-BOUNDARY-01` and the global RH Goal remain active.
+- `comparison_edge_81`: the right low/middle producer first needs exact critical-line
+  nonvanishing below `13/2`; the compact-middle top still lacks a uniform phase cover after its
+  pointwise curvature checkpoint; broader H1/H7/H10/H11 successors require their recorded global
+  moment, infinite spectral, number-field transfer, or amplification producers.
+- `selected_edge_82`: prove positive actual quotient real part on the complete left interval
+  `[0,6]`, negative actual quotient imaginary part on `[6,13/2]`, and join them into the rotated
+  slit condition on `[0,13/2]`.
+- `structural_advantage`: actual zeta is already proved nonzero on the complete positive
+  imaginary axis. The attack therefore needs a phase certificate but no separate low-zero-free
+  theorem.
+- `producer_edge_83`: retain the full complex logarithmic-derivative reflection formula and turn
+  the second-corrected reflected value/derivative error balls into a finite rational phase
+  subcover. The frozen split is `6`; navigation values are not premises.
+- `success_gate`: the whole `[0,13/2]` theorem plus composition with the closed high-left segment,
+  exact witnesses, standard-only axiom audit, frozen public implementation, immutable evidence,
+  and closure receipt.
+- `falsification_gate`: record the first rational cell on which a checked center/error inequality
+  cannot separate the requested component, then stop only that local mechanism and preserve the
+  interval as open.
+- `strict_limit`: preregistration proves no new phase sign, boundary closure, height-ten
+  certificate, H12, or RH result.
+- `global_goal`: active.
