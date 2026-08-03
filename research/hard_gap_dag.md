@@ -6049,6 +6049,9 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `public_implementation`: frozen commit `ad7be0212564aa81fff35b490082ec3dab847446`
   passed Lean Action run `30808239467`, build job `91668512733`, in `2m28s`; five Lean blob
   identities are frozen for independent evidence verification.
+- `immutable_evidence`: docs-only commit `e063abd86db7f6c9332bc6345daa750e940ab79f`
+  passed Lean Action run `30808538451`, build job `91669474203`, in `1m46s`; all five frozen Lean
+  blobs match. This verifies a backend checkpoint and does not close the active phase campaign.
 - `next_producer`: prove a reusable rational cell theorem separating finite-power rounding,
   Euler--Maclaurin error, archimedean error, and height variation, then instantiate it on both
   frozen intervals. If a checked cell loses the strict margin, record that exact cell and rerank

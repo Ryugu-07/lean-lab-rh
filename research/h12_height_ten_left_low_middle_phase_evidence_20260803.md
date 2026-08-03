@@ -46,5 +46,10 @@ campaign, parent complete-boundary campaign, and global RH Goal remain active.
 
 ## Immutable verification
 
-Pending an independent docs-only evidence commit and public Lean Action run.
+Docs-only evidence commit: `e063abd86db7f6c9332bc6345daa750e940ab79f`.
 
+Lean Action run `30808538451`, build job `91669474203`, passed in `1m46s`.
+
+Each of the five paths was read again from the evidence commit. Every blob identity exactly
+matches the implementation record above. This verifies the backend checkpoint only; it is not a
+closure receipt for the still-active interval campaign.
