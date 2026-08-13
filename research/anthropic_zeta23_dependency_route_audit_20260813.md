@@ -380,3 +380,14 @@ decision. It does not claim RH progress, does not discharge the `PairCeiling.Enc
 does not prove any proposed extension, and does not import an external theorem into the local
 trust graph. All future mathematical intermediates remain subject to the local no-placeholder,
 exact-witness, TargetChecks, and axiom-audit gates.
+
+## Verification Receipt
+
+- External reference commit: `3635e74826a4c1fcece7d1cd2b6fa75e43a00510`.
+- External default build: `9010/9010` jobs completed.
+- External `Solution`, `Solution.Multiplicity`, and `Solution.XiPrime` build: `9002/9002`
+  jobs completed.
+- External standard, multiplicity, `xi'`, and `PairCeiling` axiom audits completed; headline
+  declarations use only the standard trust base recorded above.
+- Local docs-only audit commit: `bb0c30deb478030170ae8bb87b7942b1057bea00`.
+- Public Lean Action CI: run `31670157608`, build job `94352936721`, passed in `1m42s`.

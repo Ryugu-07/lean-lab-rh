@@ -19,6 +19,7 @@ Global goal: active
 | 9 | `AUXILIARY_FAMILY_TEST` | Character averaging can restore bandwidth but has no proved transfer from a zeta zero to the family. | Require a coupling identity first. |
 | 10 | `PORTFOLIO_RULING` | The old H11 proportion producer and further Theorem-D constant optimization are superseded; H12 interval slicing is paused after its closed `[0,1/4]` result. Exact-cofinal sparse localization and historical routes remain active. | Select a cross-Gram novel-information/no-gain campaign candidate for the next loop. |
 | 11 | `EXTERNAL_REPRODUCTION` | `lake build` completed `9010/9010`; `Solution`, `Solution.Multiplicity`, and `Solution.XiPrime` completed `9002/9002`; all four documented axiom-audit entries ran successfully and reported only the standard trust base. | Freeze the external verification receipt at the pinned commit. |
+| 12 | `PUBLIC_AUDIT_CI` | Docs-only audit commit `bb0c30deb478030170ae8bb87b7942b1057bea00` passed Lean Action run `31670157608`, build job `94352936721`, in `1m42s`. | Close the dependency/route audit as public green; keep the global RH Goal active. |
 
 ## Outcome
 

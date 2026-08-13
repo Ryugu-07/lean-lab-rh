@@ -6190,6 +6190,10 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `selected_candidate_109`: preregister a two-profile cross-Gram campaign with symmetric terminal
   gates: either Lean proves a genuinely new joint invariant that excludes the single-compression
   extremal law, or Lean proves a formal extremal no-gain model and freezes that observable.
+- `audit_receipt_110`: docs-only commit `bb0c30deb478030170ae8bb87b7942b1057bea00`
+  passed Lean Action run `31670157608`, build job `94352936721`, in `1m42s`; the external
+  reference independently completed its `9010/9010` default build, `9002/9002` comparator
+  solution build, and all four documented axiom audits at the pinned commit.
 - `strict_limit`: this audit adds no local mathematical theorem, imports no external source, and
   admits no speculative cross-Gram, local-trace, or family-amplification claim.
 - `global_goal`: active.
