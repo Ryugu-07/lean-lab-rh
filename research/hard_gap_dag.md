@@ -6120,3 +6120,30 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `strict_limit`: no new interval theorem, complete left edge, height-ten certificate, H12, or RH
   is claimed at selection time.
 - `global_goal`: active.
+
+## 2026-08-13 H12 left-low pole-cancelled closure
+
+- `parent`: the left low/middle phase campaign, `HEIGHT-TEN-COMPLETE-BOUNDARY-01`, and the global
+  RH Goal remain active.
+- `closed_edge_96`: Lean proves the exact logarithmic-derivative identity after replacing
+  reflected zeta by `F(w)=(w-1)zeta(w)`; the pole term cancels before error transport.
+- `closed_edge_97`: at `N=1`, exact simplification gives
+  `F_center=(1-y^2/12)-(7y/12)i` and `F'_center=7/12-(y/6)i`.
+- `closed_edge_98`: exact rational certificates give center real part greater than `2/5`, total
+  phase error at most `1/8`, and value norm at least `99/100`; together with the exact zero
+  endpoint, Lean proves positive actual quotient real part throughout `[0,1/4]`.
+- `implementation_obstruction_99`: the raw finite quotient center has a junk totalized-division
+  value at `y=0`, although its positive-height analytic limit is regular. The compiled proof uses
+  the existing exact zero theorem and applies the pole-cancelled evaluator only at positive
+  height. A monolithic denominator-product inequality was also replaced by six exact component
+  bounds after nonlinear arithmetic failed to close it directly.
+- `classification`: `POLE_CANCELLATION / POSITIVE_WIDTH_BOUNDARY_DELTA /
+  FULL_LOCAL_SUCCESS`.
+- `open_edge_100`: prove positive actual quotient real part on `[1/4,6]`. The endpoint pole is now
+  isolated and no longer blocks this producer; rational cells or a larger-cutoff pole-cancelled
+  evaluator can start at the explicit join point `1/4`.
+- `strict_limit`: the complete left edge, other height-ten boundary producers, complete
+  height-ten certificate, H12, and RH remain open.
+- `route_policy`: historical-route reconstruction remains the main omission-search line;
+  original conjectures, falsification, and direct RH attacks remain open throughout.
+- `global_goal`: active.

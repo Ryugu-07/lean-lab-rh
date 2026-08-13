@@ -144,6 +144,7 @@ import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftResidual
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftLowZeroMass
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftLowMiddlePhase
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftMiddleCell
+import LeanLab.Riemann.LevinsonMontgomeryHeightTenLeftLowPoleCancelled
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenTopTransport
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelLowZero
 import LeanLab.Riemann.LevinsonMontgomeryHeightTenRiemannSiegelPhaseNorm
@@ -2274,6 +2275,14 @@ def rhTargets : List ResearchTarget :=
       leanName := some ``speiserZetaDerivRatio_leftVertical_im_neg_six_thirteenHalves
       status := .proven
       note := "Campaign PROOF-ATTEMPT-20260803-H12-HEIGHT-TEN-LEFT-LOW-MIDDLE-PHASE-01 reaches its preregistered meaningful-partial gate. Exact fixed-center complex-power Taylor enclosures, componentwise Bernstein certificates, second-corrected Euler--Maclaurin value and derivative balls, and a paired arctangent decomposition of the shifted archimedean term prove the actual quotient imaginary part negative on the complete frozen interval [6,13/2]. A direct degree-20 joint Bernstein certificate exceeded the default heartbeat limit and was replaced, without relaxing resources, by lower-degree component certificates. The positive-real interval (0,6] remains open, so the complete left edge, height-ten certificate, H12, and RH remain open." },
+    { id := "H12.levinson-montgomery.height-ten-left-low-pole-cancelled"
+      tier := .tier1
+      title := "Close the first left-low phase interval"
+      statement :=
+        "Cancel the reflected zeta pole inside F(w)=(w-1)zeta(w), specialize the second-corrected Euler--Maclaurin evaluator at cutoff one, and prove that the actual real part of zeta'(iy)/zeta(iy) is positive for every 0<=y<=1/4."
+      leanName := some ``speiserZetaDerivRatio_leftVertical_re_pos_zero_oneQuarter
+      status := .proven
+      note := "Campaign PROOF-ATTEMPT-20260813-H12-HEIGHT-TEN-LEFT-LOW-POLE-CANCELLED-01 reaches full_success. Lean proves the exact pole-cancelled reflection identity and complex error ball. At cutoff N=1 every complex power and integer logarithm disappears: the pole-removed value and derivative centers become exact rational polynomials. Wide rational bounds prove center real part >2/5 and total actual-function radius <=1/8, while the exact y=0 theorem closes the endpoint. The raw product center has a junk value at y=0 under totalized division, so only positive heights use that representation. The interval (1/4,6] remains open; no complete left edge, height-ten certificate, H12, or RH theorem is claimed." },
     { id := "T3.rh.goal"
       tier := .tier3
       title := "Riemann Hypothesis"
