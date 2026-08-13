@@ -6097,3 +6097,26 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `route_policy`: historical-route reconstruction remains the main omission-search line;
   original conjectures, falsification, and direct RH attacks remain open throughout.
 - `global_goal`: active.
+
+## 2026-08-13 H12 left-low pole-cancelled selection
+
+- `parent`: the left low/middle phase campaign, `HEIGHT-TEN-COMPLETE-BOUNDARY-01`, and the global
+  RH Goal remain active.
+- `representation_gap_93`: the reflected value/derivative balls approximate `zeta(1-iy)` near
+  its pole separately, hiding cancellation although the actual quotient at `iy` is regular and
+  strictly positive at zero.
+- `rejected_mechanism_94`: the available direct Hardy--Littlewood eta derivative ball requires
+  `0<r<Re(s)` and therefore cannot be instantiated on the imaginary axis. Qualitative
+  continuity gives no rational join point and is not accepted as the main producer.
+- `selected_edge_95`: replace reflected zeta by the entire pole removal
+  `F(w)=(w-1)zeta(w)`, cancel the pole exactly in the reflection identity, and prove a rational
+  positive-real certificate on the frozen interval `[0,1/4]`.
+- `error_advantage`: the pole-removed value error is `y*ez` and its derivative error is
+  `ez+y*ed`, instead of the separately singular reflected quotient errors.
+- `success_gate`: compile the actual `[0,1/4]` theorem, exact witnesses, standard-only axiom
+  audit, full build, public implementation/evidence CI, and closure receipt.
+- `falsification_gate`: if the frozen endpoint loses strict margin, record the first exact failed
+  cell and rerank between a smaller rational endpoint and a direct Taylor expansion.
+- `strict_limit`: no new interval theorem, complete left edge, height-ten certificate, H12, or RH
+  is claimed at selection time.
+- `global_goal`: active.
