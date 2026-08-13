@@ -52,5 +52,10 @@ active.
 
 ## Immutable verification
 
-This evidence commit is docs-only. After its public Lean Action run passes, each of the five paths
-will be read again from the evidence commit and compared with the implementation blobs above.
+Docs-only evidence commit: `5c1869fa413e7af67a33a45a06adbac3840cf8e5`.
+
+Lean Action run `31666841899`, build job `94343181130`, passed in `2m7s`.
+
+Each of the five paths was read again from the evidence commit. Every blob identity exactly
+matches the implementation record above. This verifies the pole-cancelled `[0,1/4]` interval
+only; the `[1/4,6]` producer and enclosing campaigns remain active.

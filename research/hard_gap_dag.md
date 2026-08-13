@@ -6139,6 +6139,19 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
   bounds after nonlinear arithmetic failed to close it directly.
 - `classification`: `POLE_CANCELLATION / POSITIVE_WIDTH_BOUNDARY_DELTA /
   FULL_LOCAL_SUCCESS`.
+- `local_audit`: production, Targets, exact TargetChecks, and AxiomsAudit pass focused
+  warning-as-error checks; selected declarations use only `propext`, `Classical.choice`, and
+  `Quot.sound`; the production forbidden-token scan and `git diff --check` are clean; full local
+  build passes `8842/8842`.
+- `public_implementation`: frozen commit `69eb02d96f64ba3e94794c7b8f79f9d2f2171834`
+  passed Lean Action run `31666657844`, build job `94342566271`, in `2m46s`; five Lean blob
+  identities are frozen for independent evidence verification.
+- `immutable_evidence`: docs-only commit `5c1869fa413e7af67a33a45a06adbac3840cf8e5`
+  passed Lean Action run `31666841899`, build job `94343181130`, in `2m7s`; all five frozen Lean
+  blob identities match the implementation record.
+- `subattack_status`: the pole-cancelled low-cell subattack stops successfully at its
+  preregistered `full_success`. The enclosing low/middle phase campaign and global RH Goal remain
+  active.
 - `open_edge_100`: prove positive actual quotient real part on `[1/4,6]`. The endpoint pole is now
   isolated and no longer blocks this producer; rational cells or a larger-cutoff pole-cancelled
   evaluator can start at the explicit join point `1/4`.

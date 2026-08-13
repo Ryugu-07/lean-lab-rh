@@ -91,4 +91,11 @@ certificate, H12, or RH. The enclosing campaign and global Goal remain active.
 - selected AxiomsAudit declarations: only `propext`, `Classical.choice`, and `Quot.sound`;
 - production forbidden-token scan and `git diff --check`: clean;
 - full local build: `8842/8842` jobs passed;
-- public implementation, immutable evidence, and closure receipt: pending.
+- public preregistration commit `fe81ed5c57d37829ed07994426b8c1c5f66a6a34`: Lean Action run
+  `31664365098`, build job `94335663536`, passed;
+- public implementation commit `69eb02d96f64ba3e94794c7b8f79f9d2f2171834`: Lean Action run
+  `31666657844`, build job `94342566271`, passed in `2m46s`;
+- immutable-evidence commit `5c1869fa413e7af67a33a45a06adbac3840cf8e5`: Lean Action run
+  `31666841899`, build job `94343181130`, passed in `2m7s`; all five frozen Lean blobs match;
+- closure receipt records successful local stop at `full_success`; the enclosing phase campaign
+  and global RH Goal remain active.
