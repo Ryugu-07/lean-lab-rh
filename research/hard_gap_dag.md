@@ -6160,3 +6160,36 @@ implementation is empty. Status is `IMMUTABLE_EVIDENCE_PUBLIC_GREEN / FINAL_LEDG
 - `route_policy`: historical-route reconstruction remains the main omission-search line;
   original conjectures, falsification, and direct RH attacks remain open throughout.
 - `global_goal`: active.
+
+## 2026-08-13 Anthropic Zeta23 dependency and route audit
+
+- `external_reference_101`: pinned `anthropics/zeta-23-lean` at
+  `3635e74826a4c1fcece7d1cd2b6fa75e43a00510`; keep it external and do not vendor it.
+- `closed_external_edge_102`: the external no-hypothesis Lean development proves the paper's
+  `2/3` critical/simple-critical proportion, `5/6` distinct proportion, optimized-window, and
+  fixed primitive Dirichlet L-function theorems. External production axiom reports use only
+  `propext`, `Classical.choice`, and `Quot.sound`.
+- `new_mechanism_103`: moving critical-density Gabor compression, positive-index zero blocks,
+  and the rank-trace inequality convert two prime-side trace moments into an unconditional
+  proportion theorem. This mechanism is absent from the local project.
+- `information_gap_104`: one compression retains only dimension, first and second trace,
+  rank/positive-index bounds, and coarse block counts. The resulting inequality is sharp at an
+  explicit extremal configuration; window optimization does not add a new observable.
+- `arithmetic_gap_105`: bandwidth beyond one requires prime-pair information of
+  Hardy--Littlewood strength. Unconditionally available higher moments do not improve the
+  certificate in the useful dimension range.
+- `sparse_gap_106`: all trace laws are asymptotic on the `N(T,2T)` scale and cannot exclude one,
+  finitely many, or `o(N)` off-line reflected pairs. This is a separate quantifier obstruction
+  from the two-trace ceiling.
+- `local_complement_107`: the compiled exact-cofinal horizontal-pair consumer remains a genuine
+  last-exception RH localizer, but no producer connects the external density theorem to its exact
+  premise.
+- `route_ruling_108`: freeze the old H11 PCC/Fujii proportion producer and further optimal-window
+  constant work; pause H12 numerical interval expansion after the closed `[0,1/4]` result; retain
+  all compiled results, H12 itself, historical-route discovery, and the global RH Goal.
+- `selected_candidate_109`: preregister a two-profile cross-Gram campaign with symmetric terminal
+  gates: either Lean proves a genuinely new joint invariant that excludes the single-compression
+  extremal law, or Lean proves a formal extremal no-gain model and freezes that observable.
+- `strict_limit`: this audit adds no local mathematical theorem, imports no external source, and
+  admits no speculative cross-Gram, local-trace, or family-amplification claim.
+- `global_goal`: active.

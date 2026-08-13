@@ -4728,3 +4728,29 @@ Frozen implementation `a4ded06a39519fa1c37d0e97aef8e60a32eb33fb` passed Lean Act
 evidence record. Evidence commit `b084ee0599599dd16c278669071adca4465b9016` passed run
 `30819751545`, build job `91706377959`, in `2m42s`; all blobs match. The middle-cell subattack is
 publicly closed, while the low phase producer and enclosing campaign remain active.
+
+## 2026-08-13 Anthropic Zeta23 Reprioritization
+
+The external `anthropics/zeta-23-lean` repository is pinned at
+`3635e74826a4c1fcece7d1cd2b6fa75e43a00510` as a reference implementation only. Its complete
+formal theorem changes the H11 frontier: the old PCC/Fujii proportion producer and further
+Montgomery--Taylor window-constant optimization are frozen as redundant for their proportion
+endpoints. The local finite pair identities remain reusable infrastructure, and the exact-cofinal
+horizontal-multiplicity consumer remains high priority because the external asymptotic theorem
+cannot exclude a finite or `o(N)` exceptional set.
+
+The H12 `[0,1/4]` low-cell theorem remains closed and valid, but further rational interval slicing
+is paused by reprioritization; H12 itself remains open. H5/H7 compact Weil infrastructure is
+retained specifically for definition bridges and polarized/multiple compression experiments, not
+for another sequence of fixed-test formulas. H1 mollifiers, H2 density, spectral routes,
+function-field analogies, and other historical families remain in the survey because the new
+compression method does not subsume their information.
+
+The selected next candidate is a two-profile cross-Gram information audit. It must terminate
+either in a Lean theorem proving a genuinely new joint constraint that excludes the sharp
+single-compression extremal configuration, or in a Lean-checked extremal no-gain model. Separate
+direct sums, numerical separation, and an unproved auxiliary-family transfer do not count.
+
+Full dependency, bottleneck, and falsification analysis:
+[`anthropic_zeta23_dependency_route_audit_20260813.md`](anthropic_zeta23_dependency_route_audit_20260813.md).
+The global RH Goal remains active.
